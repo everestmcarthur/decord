@@ -1,12 +1,12 @@
 // Module ID: 16300
 // Function ID: 16301
 // Name: ChannelBadge
-// Dependencies: [19, 17, 2025, 21, 4607, 563, 16301, 12391, 4603, 1880, 2]
+// Dependencies: [19, 17, 2025, 21, 4606, 563, 16301, 12389, 4602, 1880, 2]
 // Exports: default
 
 // Module 16300 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import NewBadgeDefault from "NewBadge" /* 12391 */;
+import NewBadgeDefault from "NewBadge" /* 12389 */;
 import MentionsBadgeDefault from "MentionsBadge" /* 16301 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -14,7 +14,7 @@ import LocaleStore from "LocaleStore" /* 2025 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
@@ -48,7 +48,7 @@ export default function ChannelBadge(arg0) {
           if (postsWithUnreadsCount > 0) {
             const obj5 = { style: tmp.channelInfoContainer, children: null };
             const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: tmp2(1880).humanizeValue(postsWithUnreadsCount, stateFromStores) };
-            obj5.children = jsx(tmp2(4603).Text, { variant: "text-xs/semibold", color: "text-muted", children: tmp2(1880).humanizeValue(postsWithUnreadsCount, stateFromStores) });
+            obj5.children = jsx(tmp2(4602).Text, { variant: "text-xs/semibold", color: "text-muted", children: tmp2(1880).humanizeValue(postsWithUnreadsCount, stateFromStores) });
             tmp5 = <View style={tmp.channelInfoContainer}>{null}</View>;
             const tmp2Result = tmp2(1880);
           }

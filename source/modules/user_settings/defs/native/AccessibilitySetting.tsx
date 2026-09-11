@@ -1,11 +1,11 @@
 // Module ID: 15389
 // Function ID: 15390
 // Name: AccessibilitySetting
-// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7462, 1178, 1114, 11564, 15390, 15392, 2]
+// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7461, 1178, 1114, 11562, 15390, 15392, 2]
 
 // Module 15389 (AccessibilitySetting)
 import util from "util" /* 1114 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7462 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7461 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [fn(1943).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -40,7 +40,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = _slicedToArray(first(7462).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7461).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

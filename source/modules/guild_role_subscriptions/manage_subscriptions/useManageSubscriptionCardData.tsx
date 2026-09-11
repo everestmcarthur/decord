@@ -1,7 +1,7 @@
 // Module ID: 15284
 // Function ID: 15285
 // Name: useManageSubscriptionCardData
-// Dependencies: [32, 19, 1979, 4239, 1074, 4198, 7308, 1114, 15275, 504, 15273, 2]
+// Dependencies: [32, 19, 1979, 4239, 1074, 4198, 7307, 1114, 15275, 504, 15273, 2]
 // Exports: default
 
 // Module 15284 (useManageSubscriptionCardData)

@@ -1,9 +1,9 @@
-// Module ID: 4513
-// Function ID: 4514
+// Module ID: 4512
+// Function ID: 4513
 // Name: AppliedGuildBoostError
 // Dependencies: [4287, 4288, 1090, 1114, 2]
 
-// Module 4513 (AppliedGuildBoostError)
+// Module 4512 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import DateUtils from "DateUtils" /* 4288 */;

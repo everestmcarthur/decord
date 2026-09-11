@@ -1,12 +1,12 @@
-// Module ID: 13074
-// Function ID: 13075
+// Module ID: 13072
+// Function ID: 13073
 // Name: MediaModalSpoilerOverlay
-// Dependencies: [32, 19, 17, 21, 4607, 576, 1115, 4308, 13059, 4343, 5017, 5133, 4603, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 1115, 4308, 13057, 4343, 5016, 5132, 4602, 1114, 2]
 
-// Module 13074 (MediaModalSpoilerOverlay)
+// Module 13072 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13059 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
 let PlatformUtils = fn(1115);
@@ -47,17 +47,17 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
       const tmpResult = tmp(1115);
     }
     const obj4 = { blurTheme: str, android_fallbackColor: token, style: absoluteFill.absoluteFill };
-    const items1 = [timestampProducer(tmp3(5017), obj4), ];
+    const items1 = [timestampProducer(tmp3(5016), obj4), ];
     let obj5 = { style: items2.spoilerOverlayContainer, children: null };
     const obj6 = { style: null, children: null };
     if (source.obscure) {
       obj6.style = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(5133).ImageWarningIcon, { size: "lg", color: "white" }), ];
+      items2 = [tmp9(tmp(5132).ImageWarningIcon, { size: "lg", color: "white" }), ];
       const obj7 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
       const intl2 = tmp(1114).intl;
       stringResult = intl2.string(tmp(1114).t.SpxcUR);
       obj7.children = stringResult;
-      items2[1] = tmp9(tmp(4603).Text, obj7);
+      items2[1] = tmp9(tmp(4602).Text, obj7);
       obj6.children = items2;
       let tmp9Result = tmp7(tmp11, obj6);
     } else {
@@ -65,7 +65,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
       const obj8 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
       const intl = tmp(1114).intl;
       obj8.children = intl.string(tmp(1114).t["F+x38C"]).toUpperCase();
-      obj6.children = tmp9(tmp(4603).Text, obj8);
+      obj6.children = tmp9(tmp(4602).Text, obj8);
       tmp9Result = tmp9(tmp11, obj6);
       const str2 = intl.string(tmp(1114).t["F+x38C"]);
     }
@@ -74,6 +74,6 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     items1[1] = obj5;
     obj3.children = items1;
     React5(tmp3(4343).View, obj3);
-    const tmp3Result = tmp3(5017);
+    const tmp3Result = tmp3(5016);
   }
 });

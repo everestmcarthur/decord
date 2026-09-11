@@ -1,19 +1,19 @@
-// Module ID: 13917
-// Function ID: 13918
+// Module ID: 13915
+// Function ID: 13916
 // Name: OneTimeLoginModal
-// Dependencies: [5, 19, 17, 502, 1371, 1074, 1230, 21, 4607, 576, 1611, 1477, 1116, 1242, 4810, 4464, 1100, 4953, 4957, 6682, 1114, 4957, 6665, 5177, 4425, 13918, 4603, 7014, 2]
+// Dependencies: [5, 19, 17, 502, 1371, 1074, 1230, 21, 4606, 576, 1611, 1477, 1116, 1242, 4809, 4464, 1100, 4952, 4956, 6681, 1114, 4956, 6664, 5176, 4425, 13916, 4602, 7013, 2]
 // Exports: default
 
-// Module 13917 (OneTimeLoginModal)
+// Module 13915 (OneTimeLoginModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useAlertStore from "useAlertStore" /* 4953 */;
-import AlertModal from "AlertModal" /* 4957 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5177 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6682 */;
+import useAlertStore from "useAlertStore" /* 4952 */;
+import AlertModal from "AlertModal" /* 4956 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6681 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 let closure_12 = fn(1230).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { padding: 24, paddingTop: 128, paddingBottom: 96, borderRadius: nativeDefault.radii.md, alignItems: "center", flex: 1, justifyContent: "space-between" }, centerContent: { flex: 1, justifyContent: "center", alignItems: "center" }, bottomContent: null, logo: null, loadingContainer: null, link: null, raisedIcon: null };
 let obj3 = { padding: 24, paddingTop: 128, paddingBottom: 96, borderRadius: nativeDefault.radii.md, alignItems: "center", flex: 1, justifyContent: "space-between" };
 obj2.bottomContent = { alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -172,13 +172,13 @@ export default function OneTimeLoginModal(token) {
   const items6 = [closure_13(ThemedGradientDefault, obj2), ];
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(13918), style: tmp.logo }), ];
+  const items7 = [closure_13(callback3, { source: token(13916), style: tmp.logo }), ];
   const obj7 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {}), ];
   const obj8 = { variant: "text-lg/semibold", children: null };
   let intl = token(1114).intl;
   obj8.children = intl.string(token(1114).t.W9uNdG);
-  items8[1] = closure_13(token(4603).Text, obj8);
+  items8[1] = closure_13(token(4602).Text, obj8);
   obj7.children = items8;
   items7[1] = closure_14(callback1, obj7);
   obj5.children = items7;
@@ -187,13 +187,13 @@ export default function OneTimeLoginModal(token) {
   const obj10 = { variant: "text-sm/normal", children: null };
   let intl2 = token(1114).intl;
   obj10.children = intl2.string(token(1114).t["ZXe5/Y"]);
-  const items10 = [closure_13(token(4603).Text, obj10), ];
+  const items10 = [closure_13(token(4602).Text, obj10), ];
   const obj11 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
   let intl3 = token(1114).intl;
   obj11.text = intl3.string(token(1114).t.FIEwfG);
   obj11.onPress = onPress;
   obj11.textStyle = tmp.link;
-  items10[1] = closure_13(token(7014).LinkButton, obj11);
+  items10[1] = closure_13(token(7013).LinkButton, obj11);
   obj9.children = items10;
   items9[1] = closure_14(callback1, obj9);
   obj4.children = items9;

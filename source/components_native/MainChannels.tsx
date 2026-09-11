@@ -1,13 +1,13 @@
 // Module ID: 16086
 // Function ID: 16087
 // Name: MainChannels
-// Dependencies: [32, 19, 17, 1074, 21, 16087, 5638, 4607, 576, 4467, 1611, 16088, 16089, 16090, 16174, 16352, 4343, 16091, 16433, 4470, 11628, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 16087, 5637, 4606, 576, 4467, 1611, 16088, 16089, 16090, 16174, 16352, 4343, 16091, 16433, 4470, 11626, 2]
 
 // Module 16086 (MainChannels)
 import nativeDefault from "native" /* 576 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4470 */;
-import useRefValueDefault from "useRefValue" /* 5638 */;
-import StartupProfiler from "StartupProfiler" /* 11628 */;
+import useRefValueDefault from "useRefValue" /* 5637 */;
+import StartupProfiler from "StartupProfiler" /* 11626 */;
 import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16087 */;
 import NativeFreezeScreens from "NativeFreezeScreens" /* 16089 */;
 import messages_MessagesDefault from "messages/Messages" /* 16090 */;
@@ -103,7 +103,7 @@ const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: nativeDefault.radii.xl };
 obj.sideContainer = rect;

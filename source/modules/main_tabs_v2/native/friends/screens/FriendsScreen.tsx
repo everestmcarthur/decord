@@ -1,22 +1,22 @@
 // Module ID: 16832
 // Function ID: 16833
 // Name: FriendsScreen
-// Dependencies: [19, 17, 7731, 4255, 21, 4607, 576, 1483, 7236, 7256, 1611, 504, 16833, 1874, 8265, 16834, 16837, 16515, 4552, 1114, 5657, 11089, 5744, 5027, 10952, 11992, 2]
+// Dependencies: [19, 17, 7730, 4255, 21, 4606, 576, 1483, 7235, 7255, 1611, 504, 16833, 1874, 8264, 16834, 16837, 16515, 4551, 1114, 5656, 11087, 5743, 5026, 10950, 11990, 2]
 // Exports: default
 
 // Module 16832 (FriendsScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import SendMessageIcon from "SendMessageIcon" /* 4552 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import TableRow from "TableRow" /* 5657 */;
-import native from "native" /* 5744 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import NoResultsDefault from "NoResults" /* 11089 */;
+import SendMessageIcon from "SendMessageIcon" /* 4551 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import TableRow from "TableRow" /* 5656 */;
+import native from "native" /* 5743 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import NoResultsDefault from "NoResults" /* 11087 */;
 import _modDef16515 from "module_16515" /* 16515 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7731 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7730 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, flex: 1 }, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
 obj2.requestsButtonContainer = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };

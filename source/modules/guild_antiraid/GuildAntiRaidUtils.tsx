@@ -1,14 +1,14 @@
-// Module ID: 8090
-// Function ID: 8091
+// Module ID: 8089
+// Function ID: 8090
 // Name: GuildAntiRaidUtils
-// Dependencies: [8091, 4198, 8092, 1114, 2]
+// Dependencies: [8090, 4198, 8091, 1114, 2]
 // Exports: getDisabledInterventions, getEnabledInterventions, getIncidentAlertType, getSecurityActionDetailsString, hasDMsDisabled, hasDetectedActivity, hasDetectedDMRaid, hasDetectedRaid, hasInvitesDisabled, initialLockdownDurationHours, isUnderLockdown
 
-// Module 8090 (GuildAntiRaidUtils)
+// Module 8089 (GuildAntiRaidUtils)
 import util from "util" /* 1114 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8092 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8091 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8091 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8090 */;
 import size from "module_2" /* 2 */;
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: closure_4, getTimeframes: hasOwnProperty } = GuildAntiRaidConstants);

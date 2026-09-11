@@ -1,14 +1,14 @@
-// Module ID: 4937
-// Function ID: 4938
+// Module ID: 4936
+// Function ID: 4937
 // Name: StripeUtils
-// Dependencies: [5, 32, 2025, 1074, 3, 4938, 1272, 504, 2]
+// Dependencies: [5, 32, 2025, 1074, 3, 4937, 1272, 504, 2]
 // Exports: authenticatePaymentIntentForPaymentId, getStripeClientMode, getStripeElementLocale, parseBillingAddressInfoToStripeBillingDetails, parseStripePaymentMethod, useStripeLocale, validateExpiry
 
-// Module 4937 (StripeUtils)
+// Module 4936 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import _mod4938 from "module_4938" /* 4938 */;
+import _mod4937 from "module_4937" /* 4937 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -18,7 +18,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod4938.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod4937.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;

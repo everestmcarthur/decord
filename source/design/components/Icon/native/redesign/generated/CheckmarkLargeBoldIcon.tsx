@@ -1,13 +1,13 @@
-// Module ID: 8889
-// Function ID: 8890
+// Module ID: 8887
+// Function ID: 8888
 // Name: CheckmarkLargeBoldIcon
-// Dependencies: [19, 21, 576, 4307, 8890, 2]
+// Dependencies: [19, 21, 576, 4307, 8888, 2]
 // Exports: CheckmarkLargeBoldIcon
 
-// Module 8889 (CheckmarkLargeBoldIcon)
+// Module 8887 (CheckmarkLargeBoldIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8890 from "module_8890" /* 8890 */;
+import _mod8888 from "module_8888" /* 8888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const CheckmarkLargeBoldIcon = function CheckmarkLargeBoldIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8890, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8888, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

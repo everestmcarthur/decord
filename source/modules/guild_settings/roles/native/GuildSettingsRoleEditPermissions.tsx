@@ -1,16 +1,16 @@
-// Module ID: 17719
-// Function ID: 17720
+// Module ID: 17718
+// Function ID: 17719
 // Name: GuildSettingsRoleEditPermissions
-// Dependencies: [32, 19, 17, 1975, 4245, 1371, 1074, 21, 4607, 576, 4250, 38, 4603, 1114, 4574, 17720, 1896, 16916, 17717, 7124, 1242, 1086, 16920, 7274, 5739, 1178, 9853, 2]
+// Dependencies: [32, 19, 17, 1975, 4245, 1371, 1074, 21, 4606, 576, 4250, 38, 4602, 1114, 4573, 17719, 1896, 16916, 17716, 7123, 1242, 1086, 16920, 7273, 5738, 1178, 9851, 2]
 // Exports: default
 
-// Module 17719 (GuildSettingsRoleEditPermissions)
+// Module 17718 (GuildSettingsRoleEditPermissions)
 import nativeDefault from "native" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
@@ -26,7 +26,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: { height: nativeDefault.space.PX_24 }, emptyStateText: null, subLabel: null };
 let obj3 = { height: nativeDefault.space.PX_24 };
 obj2.emptyStateText = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -82,13 +82,13 @@ export default function GuildSettingsRoleEditPermission(guild) {
       onClick() {
           React5.dismiss();
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17720, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
+          obj.openLazy(asyncRequireImpl(17719, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
         },
       accessibilityRole: "button"
     };
     obj5.onTemplateOpen = obj6;
     obj4.children = intl.format(guild(1114).t.ZhSOBy, obj5);
-    tmp18Result = tmp18(guild(4603).Text, obj4);
+    tmp18Result = tmp18(guild(4602).Text, obj4);
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
@@ -105,9 +105,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17717), { role }), , , ];
+  const children = [closure_14(role(17716), { role }), , , ];
   const obj7 = {
-    children: closure_14(guild(7124).SearchField, {
+    children: closure_14(guild(7123).SearchField, {
       size: "md",
       onChange(str) {
         closure_8(str);
@@ -195,7 +195,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     let tmp18Result4 = tmp18(closure_8, obj9);
   } else {
-    const obj10 = { Illustration: tmp27(9853).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    const obj10 = { Illustration: tmp27(9851).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
     const intl2 = tmp27(1114).intl;
     const obj12 = { query };

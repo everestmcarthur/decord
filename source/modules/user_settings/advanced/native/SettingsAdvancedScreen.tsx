@@ -1,16 +1,16 @@
 // Module ID: 15593
 // Function ID: 15594
 // Name: SettingsAdvancedScreen
-// Dependencies: [19, 8050, 1074, 21, 1114, 11564, 14744, 2]
+// Dependencies: [19, 8049, 1074, 21, 1114, 11562, 14741, 2]
 
 // Module 15593 (SettingsAdvancedScreen)
 import util from "util" /* 1114 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
-import SettingLayoutDefault from "SettingLayout" /* 14744 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingLayoutDefault from "SettingLayout" /* 14741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8050).MobileUserSettings;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsx = fn(21).jsx;
 const size = fn(2);

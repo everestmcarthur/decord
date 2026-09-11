@@ -1,17 +1,17 @@
-// Module ID: 12607
-// Function ID: 12608
+// Module ID: 12605
+// Function ID: 12606
 // Name: useGuildPowerupRollbackModalConfig
-// Dependencies: [19, 1979, 4496, 504, 12608, 4500, 12593, 12595, 1943, 1114, 2428, 2]
+// Dependencies: [19, 1979, 4495, 504, 12606, 4499, 12591, 12593, 1943, 1114, 2428, 2]
 // Exports: default
 
-// Module 12607 (useGuildPowerupRollbackModalConfig)
+// Module 12605 (useGuildPowerupRollbackModalConfig)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12595 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12593 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4496 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4495 */;
 
 const require = globalThis.__r;
 

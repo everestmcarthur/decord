@@ -1,13 +1,13 @@
 // Module ID: 15104
 // Function ID: 15105
 // Name: BountiesAutoScrollOverlayNuxGradient
-// Dependencies: [19, 17, 21, 576, 4343, 4608, 4611, 5039, 2]
+// Dependencies: [19, 17, 21, 576, 4343, 4607, 4610, 5038, 2]
 // Exports: default
 
 // Module 15104 (BountiesAutoScrollOverlayNuxGradient)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
   obj4.locations = [0, 1];
   obj4.start = { x: 0.5, y: 1 };
   obj4.end = { x: 0.5, y: 0 };
-  const items3 = [closure_5(sharedValue(5039), obj4), closure_5(sharedValue(5039), { style: StyleSheet.absoluteFillObject, colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"], locations: [0, 0.5], start: { x: 0.5, y: 1 }, end: { x: 0.5, y: 0 } })];
+  const items3 = [closure_5(sharedValue(5038), obj4), closure_5(sharedValue(5038), { style: StyleSheet.absoluteFillObject, colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"], locations: [0, 0.5], start: { x: 0.5, y: 1 }, end: { x: 0.5, y: 0 } })];
   obj3.children = items3;
   return closure_6(sharedValue(4343).View, obj3);
 };

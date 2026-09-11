@@ -1,13 +1,13 @@
 // Module ID: 16016
 // Function ID: 16017
 // Name: RegistrationStepsUtils
-// Dependencies: [5, 19, 14764, 6666, 16017, 16018, 1074, 21, 1250, 16019, 16025, 16026, 16038, 16039, 16045, 7014, 16047, 16048, 7122, 7119, 16052, 16053, 16057, 16058, 1484, 1925, 16028, 4508, 7020, 16065, 2]
+// Dependencies: [5, 19, 14761, 6665, 16017, 16018, 1074, 21, 1250, 16019, 16025, 16026, 16038, 16039, 16045, 7013, 16047, 16048, 7121, 7118, 16052, 16053, 16057, 16058, 1484, 1925, 16028, 4507, 7019, 16065, 2]
 // Exports: getAllAuthScreens, getNextRegistrationTransitionStep, getPreviousAuthState, getPreviousRegistrationTransitionStep, getRegistrationSteps, handleNextOrSubmitRegistration
 
 // Module 16016 (RegistrationStepsUtils)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import Link from "Link" /* 1484 */;
-import LoginDefault from "Login" /* 7014 */;
+import LoginDefault from "Login" /* 7013 */;
 import WelcomeDefault from "Welcome" /* 16019 */;
 import RegistrationUtils from "RegistrationUtils" /* 16025 */;
 import RegisterIdentity from "RegisterIdentity" /* 16026 */;
@@ -23,7 +23,7 @@ import AgeGateUnderageDefault from "AgeGateUnderage" /* 16057 */;
 import CompanionRemoteAuth from "CompanionRemoteAuth" /* 16058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14764 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14761 */;
 
 require = fn;
 function headerTitle() {
@@ -152,7 +152,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0, arg1) {
   }
   return arg1;
 };
-const usePromoEmailConsentStore = fn(6666).usePromoEmailConsentStore;
+const usePromoEmailConsentStore = fn(6665).usePromoEmailConsentStore;
 const RegistrationUIStore = fn(16017);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
 const RegistrationConstants = fn(16018);
@@ -309,7 +309,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7122), {
+      return closure_15(closure_1(7121), {
         onClose() {
           return closure_0.pop();
         },

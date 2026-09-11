@@ -1,14 +1,14 @@
 // Module ID: 16025
 // Function ID: 16026
 // Name: RegistrationUtils
-// Dependencies: [19, 4591, 8832, 16017, 16018, 1074, 21, 1242, 16014, 5683, 2]
+// Dependencies: [19, 4590, 8830, 16017, 16018, 1074, 21, 1242, 16014, 5682, 2]
 // Exports: BackButtonWithTracking, getCommonErrorDetails, getTrackRegTransition, hasAllRegistrationFieldsCompleted
 
 // Module 16025 (RegistrationUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 4591 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8832 */;
+import InviteStore from "InviteStore" /* 4590 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8830 */;
 
 const require = globalThis.__r;
 
@@ -158,7 +158,7 @@ export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(require("module_5683").HeaderBackButton, {});
+  return jsx(require("module_5682").HeaderBackButton, {});
 };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

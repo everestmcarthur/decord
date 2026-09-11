@@ -1,14 +1,14 @@
 // Module ID: 16795
 // Function ID: 16796
 // Name: MessageSearchResultParser
-// Dependencies: [4256, 7953, 16796, 12435, 16797, 12, 2]
+// Dependencies: [4256, 7952, 16796, 12433, 16797, 12, 2]
 
 // Module 16795 (MessageSearchResultParser)
 import _mod12 from "module_12" /* 12 */;
 import MessageRecord from "MessageRecord" /* 4256 */;
 
 require = fn;
-let closure_3 = fn(7953).EMBED_TYPES_WITHOUT_DESCRIPTION;
+let closure_3 = fn(7952).EMBED_TYPES_WITHOUT_DESCRIPTION;
 fn(16796).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);

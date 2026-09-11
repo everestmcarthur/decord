@@ -1,18 +1,18 @@
 // Module ID: 15761
 // Function ID: 15762
 // Name: OrbsFlowTestModal
-// Dependencies: [32, 19, 17, 21, 7988, 7074, 7937, 11019, 4607, 576, 5025, 4603, 15762, 4574, 11198, 1896, 1114, 6678, 5027, 11188, 11197, 7055, 7230, 15764, 2]
+// Dependencies: [32, 19, 17, 21, 7987, 7073, 7936, 11017, 4606, 576, 5024, 4602, 15762, 4573, 11196, 1896, 1114, 6677, 5026, 11186, 11195, 7054, 7229, 15764, 2]
 
 // Module 15761 (OrbsFlowTestModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Stack_Stack from "Stack/Stack" /* 5025 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7055 */;
-import LayerScope from "LayerScope" /* 7230 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11019 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import LayerScope from "LayerScope" /* 7229 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11017 */;
 import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15762 */;
 import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15764 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -88,9 +88,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, title: null, balancePillContainer: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = { padding: nativeDefault.space.PX_16 };

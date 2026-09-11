@@ -1,13 +1,13 @@
-// Module ID: 7166
-// Function ID: 7167
+// Module ID: 7165
+// Function ID: 7166
 // Name: MemberVerificationAlertIncomplete
-// Dependencies: [19, 4429, 21, 563, 5621, 5579, 1114, 5589, 7167, 5027, 2]
+// Dependencies: [19, 4429, 21, 563, 5620, 5578, 1114, 5588, 7166, 5026, 2]
 // Exports: default
 
-// Module 7166 (MemberVerificationAlertIncomplete)
+// Module 7165 (MemberVerificationAlertIncomplete)
 import util from "util" /* 1114 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5579 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5621 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5578 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5620 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
 
@@ -58,20 +58,20 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7167).ListViewIcon;
+  obj3.icon = guildId(7166).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = tmp2(1114).intl;
   obj5.text = intl3.string(guildId(1114).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(5027).Button, obj5), ];
+  const items4 = [closure_5(guildId(5026).Button, obj5), ];
   const obj6 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1114).intl;
   obj6.text = intl4.string(guildId(1114).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(5027).Button, obj6);
+  items4[1] = closure_5(guildId(5026).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(5589), obj3);
+  return closure_5(onClose(5588), obj3);
 };

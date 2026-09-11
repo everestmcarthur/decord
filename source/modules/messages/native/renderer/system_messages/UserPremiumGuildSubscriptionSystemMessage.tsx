@@ -1,14 +1,14 @@
-// Module ID: 8078
-// Function ID: 8079
+// Module ID: 8077
+// Function ID: 8078
 // Name: UserPremiumGuildSubscriptionSystemMessage
-// Dependencies: [8079, 8035, 8037, 1114, 8039, 2]
+// Dependencies: [8078, 8034, 8036, 1114, 8038, 2]
 // Exports: createUserPremiumGuildSubscriptionSystemMessage
 
-// Module 8078 (UserPremiumGuildSubscriptionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8035 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8037 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8039 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8079 */;
+// Module 8077 (UserPremiumGuildSubscriptionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8036 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8078 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");

@@ -1,12 +1,12 @@
-// Module ID: 7349
-// Function ID: 7350
+// Module ID: 7348
+// Function ID: 7349
 // Name: ForumTagHooks
-// Dependencies: [19, 1957, 4245, 1085, 504, 1369, 7350, 2]
+// Dependencies: [19, 1957, 4245, 1085, 504, 1369, 7349, 2]
 // Exports: useAppliedTags, useAvailableTags, useSomeAppliedTags, useVisibleAppliedForumTags, useVisibleForumTags
 
-// Module 7349 (ForumTagHooks)
+// Module 7348 (ForumTagHooks)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ReportToModUtils from "ReportToModUtils" /* 7350 */;
+import ReportToModUtils from "ReportToModUtils" /* 7349 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4245 */;

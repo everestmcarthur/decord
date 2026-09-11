@@ -1,7 +1,7 @@
 // Module ID: 16052
 // Function ID: 16053
 // Name: ExternalLink
-// Dependencies: [19, 17, 21, 4607, 576, 7016, 1483, 7046, 1114, 4603, 5485, 5027, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 7015, 1483, 7045, 1114, 4602, 5484, 5026, 2]
 // Exports: default
 
 // Module 16052 (ExternalLink)
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles((arg0) => {
   const container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
   let str = "center";

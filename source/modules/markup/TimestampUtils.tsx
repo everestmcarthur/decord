@@ -1,10 +1,10 @@
-// Module ID: 5074
-// Function ID: 5075
+// Module ID: 5073
+// Function ID: 5074
 // Name: TimestampUtils
 // Dependencies: [4288, 4198, 1090, 2]
 // Exports: formatTimestampMention, parseTimestamp, unparseTimestamp
 
-// Module 5074 (TimestampUtils)
+// Module 5073 (TimestampUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import _modDef4198 from "module_4198" /* 4198 */;
 import DateUtils from "DateUtils" /* 4288 */;

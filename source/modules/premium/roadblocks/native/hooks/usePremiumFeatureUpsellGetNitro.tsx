@@ -1,19 +1,19 @@
-// Module ID: 10059
-// Function ID: 10060
+// Module ID: 10057
+// Function ID: 10058
 // Name: usePremiumFeatureUpsellGetNitro
-// Dependencies: [32, 19, 4270, 7524, 1373, 1074, 7236, 7496, 4931, 8138, 4304, 1114, 4472, 2]
+// Dependencies: [32, 19, 4270, 7523, 1373, 1074, 7235, 7495, 4930, 8137, 4304, 1114, 4472, 2]
 // Exports: default
 
-// Module 10059 (usePremiumFeatureUpsellGetNitro)
+// Module 10057 (usePremiumFeatureUpsellGetNitro)
 import ChatInputUtils from "ChatInputUtils" /* 4472 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4931 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7236 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7496 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8138 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4930 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7235 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7495 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4270 */;
-import UserOfferStore from "UserOfferStore" /* 7524 */;
+import UserOfferStore from "UserOfferStore" /* 7523 */;
 
 require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;

@@ -1,7 +1,7 @@
 // Module ID: 16752
 // Function ID: 16753
 // Name: SearchListCard
-// Dependencies: [19, 17, 21, 4607, 576, 1178, 4603, 4451, 4760, 11004, 5140, 1114, 5080, 5659, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 1178, 4602, 4451, 4759, 11002, 5139, 1114, 5079, 5658, 2]
 // Exports: SearchListCardContainer, SearchListCardContent, SearchListCardFooter, SearchListCardThumbnail
 
 // Module 16752 (SearchListCard)
@@ -9,12 +9,12 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useChannelNameDefault from "useChannelName" /* 4760 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5080 */;
-import ForumIcon from "ForumIcon" /* 5140 */;
-import Card from "Card" /* 5659 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11004 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useChannelNameDefault from "useChannelName" /* 4759 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5079 */;
+import ForumIcon from "ForumIcon" /* 5139 */;
+import Card from "Card" /* 5658 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11002 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -82,7 +82,7 @@ class SearchListGuildChannel {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.container = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

@@ -1,16 +1,16 @@
-// Module ID: 9474
-// Function ID: 9475
+// Module ID: 9472
+// Function ID: 9473
 // Name: PremiumGroupWordmark
-// Dependencies: [19, 21, 4308, 576, 8544, 2]
+// Dependencies: [19, 21, 4308, 576, 8542, 2]
 // Exports: default
 
-// Module 9474 (PremiumGroupWordmark)
+// Module 9472 (PremiumGroupWordmark)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import inlineStylesDefault from "inlineStyles" /* 8544 */;
+import inlineStylesDefault from "inlineStyles" /* 8542 */;
 import noop from "module_19" /* 19 */;
 
-const inlineStyles = tmp2(8544);
+const inlineStyles = tmp2(8542);
 require = fn;
 const jsx = fn(21).jsx;
 let size = fn(2);

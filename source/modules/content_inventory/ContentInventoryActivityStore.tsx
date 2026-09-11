@@ -1,17 +1,17 @@
-// Module ID: 13096
-// Function ID: 13097
+// Module ID: 13094
+// Function ID: 13095
 // Name: ContentInventoryActivityStore
-// Dependencies: [4647, 8424, 1074, 8216, 8221, 8444, 8429, 8425, 12, 504, 573, 2]
+// Dependencies: [4646, 8422, 1074, 8215, 8220, 8442, 8427, 8423, 12, 504, 573, 2]
 
-// Module 13096 (ContentInventoryActivityStore)
+// Module 13094 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import utils from "utils" /* 8221 */;
-import matchUtils from "matchUtils" /* 8425 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8429 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8424 */;
+import utils from "utils" /* 8220 */;
+import matchUtils from "matchUtils" /* 8423 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8427 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8422 */;
 
 require = fn;
 function entryToKey(content) {
@@ -23,7 +23,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8444).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8442).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.PLAYING) {
@@ -45,7 +45,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8221);
+    tmpResult = tmp(8220);
   }
   return tmp3;
 }
@@ -112,7 +112,7 @@ function handlePresenceUpdates() {
   }
 }
 const ActivityTypes = fn(1074).ActivityTypes;
-let items = [fn(8216).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8215).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

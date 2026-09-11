@@ -1,7 +1,7 @@
 // Module ID: 16231
 // Function ID: 16232
 // Name: useGuildThemeNuxTrigger
-// Dependencies: [19, 4297, 504, 16232, 16232, 1896, 4574, 16237, 2]
+// Dependencies: [19, 4297, 504, 16232, 16232, 1896, 4573, 16237, 2]
 // Exports: default
 
 // Module 16231 (useGuildThemeNuxTrigger)

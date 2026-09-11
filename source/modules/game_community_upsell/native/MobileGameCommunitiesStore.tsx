@@ -1,12 +1,12 @@
 // Module ID: 15685
 // Function ID: 15686
 // Name: MobileGameCommunitiesStore
-// Dependencies: [7415, 504, 573, 2]
+// Dependencies: [7414, 504, 573, 2]
 
 // Module 15685 (MobileGameCommunitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7415 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7414 */;
 
 require = fn;
 let guildGameIds = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };

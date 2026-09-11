@@ -1,14 +1,14 @@
-// Module ID: 13901
-// Function ID: 13902
+// Module ID: 13899
+// Function ID: 13900
 // Name: MarkupReactGameMentionRule
-// Dependencies: [19, 21, 4607, 576, 5159, 1114, 1924, 4598, 8656, 5639, 8773, 8779, 4603, 7383, 2]
+// Dependencies: [19, 21, 4606, 576, 5158, 1114, 1924, 4597, 8654, 5638, 8771, 8777, 4602, 7382, 2]
 // Exports: createFetchingGameMentionRule
 
-// Module 13901 (MarkupReactGameMentionRule)
+// Module 13899 (MarkupReactGameMentionRule)
 import nativeDefault from "native" /* 576 */;
-import useGame from "useGame" /* 7383 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8773 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8779 */;
+import useGame from "useGame" /* 7382 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8771 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -108,7 +108,7 @@ function FetchingGameMention(state) {
 }
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { icon: null, chip: null, chipText: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs, marginRight: 2 };
 obj2.icon = size;

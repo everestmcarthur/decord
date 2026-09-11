@@ -1,10 +1,10 @@
-// Module ID: 4943
-// Function ID: 4944
+// Module ID: 4942
+// Function ID: 4943
 // Name: transformMessagPoll
 // Dependencies: [4198, 2]
 // Exports: default
 
-// Module 4943 (transformMessagPoll)
+// Module 4942 (transformMessagPoll)
 import _modDef4198 from "module_4198" /* 4198 */;
 import size from "module_2" /* 2 */;
 

@@ -1,45 +1,41 @@
 // Module ID: 6718
 // Function ID: 6719
-// Dependencies: [6700, 1636]
-// Exports: animate
+// Dependencies: [1636]
+// Exports: getKeyboardAnimationConfigs
 
 // Module 6718
-import value2 from "value2" /* 6700 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
 
-const cancelAnimation = tmp3(1636);
 require = fn;
 const dependencyMap = arg6;
-fn = function n(arg0) {
-  ({ point, configs, velocity } = arg0);
-  if (velocity === undefined) {
-    velocity = 0;
+fn = function n(arg0, duration) {
+  if ("easeIn" === arg0) {
+    const obj2 = { easing: null, duration: null };
+    const Easing3 = cancelAnimation.Easing;
+    obj2.easing = Easing3.in(cancelAnimation.Easing.ease);
+    obj2.duration = duration;
+    return obj2;
+  } else if ("easeOut" === arg0) {
+    const obj3 = { easing: null, duration: null };
+    const Easing2 = cancelAnimation.Easing;
+    obj3.easing = Easing2.out(cancelAnimation.Easing.ease);
+    obj3.duration = duration;
+    return obj3;
+  } else if ("easeInEaseOut" === arg0) {
+    const obj4 = { easing: null, duration: null };
+    const Easing = cancelAnimation.Easing;
+    obj4.easing = Easing.inOut(cancelAnimation.Easing.ease);
+    obj4.duration = duration;
+    return obj4;
+  } else if ("linear" === arg0) {
+    const obj = { easing: cancelAnimation.Easing.linear, duration };
+    return obj;
+  } else if ("keyboard" === arg0) {
+    return { damping: 500, stiffness: 1000, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 };
   }
-  ({ overrideReduceMotion, onComplete } = arg0);
-  if (!configs) {
-    configs = value2.ANIMATION_CONFIGS;
-  }
-  if (overrideReduceMotion) {
-    configs.reduceMotion = overrideReduceMotion;
-  }
-  if (!("duration" in configs)) {
-    if (!("easing" in configs)) {
-      let TIMING = value2.ANIMATION_METHOD.SPRING;
-    }
-    if (TIMING === value2.ANIMATION_METHOD.TIMING) {
-      let withTimingResult = cancelAnimation.withTiming(point, configs, onComplete);
-      const tmp3Result = cancelAnimation;
-    } else {
-      const _Object = Object;
-      const obj = { velocity };
-      withTimingResult = cancelAnimation.withSpring(point, Object.assign(obj, configs), onComplete);
-      const tmp3Result2 = cancelAnimation;
-    }
-    return withTimingResult;
-  }
-  TIMING = value2.ANIMATION_METHOD.TIMING;
 };
-fn.__closure = { ANIMATION_CONFIGS: fn(6700).ANIMATION_CONFIGS, ANIMATION_METHOD: fn(6700).ANIMATION_METHOD, withTiming: fn(1636).withTiming, withSpring: fn(1636).withSpring };
-fn.__workletHash = 17032227615993;
-fn.__initData = { code: "function pnpm_animateTs1({point:point,configs:configs,velocity=0,overrideReduceMotion:overrideReduceMotion,onComplete:onComplete}){const{ANIMATION_CONFIGS,ANIMATION_METHOD,withTiming,withSpring}=this.__closure;if(!configs){configs=ANIMATION_CONFIGS;}if(overrideReduceMotion){configs.reduceMotion=overrideReduceMotion;}const type='duration'in configs||'easing'in configs?ANIMATION_METHOD.TIMING:ANIMATION_METHOD.SPRING;if(type===ANIMATION_METHOD.TIMING){return withTiming(point,configs,onComplete);}return withSpring(point,Object.assign({velocity:velocity},configs),onComplete);}" };
+fn.__closure = { Easing: fn(1636).Easing };
+fn.__workletHash = 10639588577824;
+fn.__initData = { code: "function pnpm_getKeyboardAnimationConfigsTs1(easing,duration){const{Easing}=this.__closure;switch(easing){case'easeIn':return{easing:Easing.in(Easing.ease),duration:duration};case'easeOut':return{easing:Easing.out(Easing.ease),duration:duration};case'easeInEaseOut':return{easing:Easing.inOut(Easing.ease),duration:duration};case'linear':return{easing:Easing.linear,duration:duration};case'keyboard':return{damping:500,stiffness:1000,mass:3,overshootClamping:true,restDisplacementThreshold:10,restSpeedThreshold:10};}}" };
 
-export const animate = fn;
+export const getKeyboardAnimationConfigs = fn;

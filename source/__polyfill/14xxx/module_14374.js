@@ -1,20 +1,9 @@
 // Module ID: 14374
 // Function ID: 14375
-// Dependencies: [14359]
+// Dependencies: [14360]
 
 // Module 14374
-import _mod14359 from "module_14359" /* 14359 */;
+import _mod14360 from "module_14360" /* 14360 */;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod14359(1.toString);
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export default (arg0) => Object(_mod14360(arg0));

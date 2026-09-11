@@ -1,21 +1,21 @@
-// Module ID: 17396
-// Function ID: 17397
+// Module ID: 17395
+// Function ID: 17396
 // Name: AppAnalyticsManager
-// Dependencies: [1915, 1908, 4630, 5331, 5471, 4631, 1074, 1090, 7192, 4494, 4787, 16827, 4737, 2]
+// Dependencies: [1915, 1908, 4629, 5330, 5470, 4630, 1074, 1090, 7191, 1952, 4786, 16827, 4736, 2]
 
-// Module 17396 (AppAnalyticsManager)
+// Module 17395 (AppAnalyticsManager)
 import DurationsDefault from "Durations" /* 1090 */;
-import Timers from "Timers" /* 4494 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4737 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
+import Timers from "Timers" /* 1952 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4736 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
 import getGamePlatformDefault from "getGamePlatform" /* 16827 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
-import SpeakingStore from "SpeakingStore" /* 5471 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4631 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import SpeakingStore from "SpeakingStore" /* 5470 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4630 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 const Constants = fn(1074);

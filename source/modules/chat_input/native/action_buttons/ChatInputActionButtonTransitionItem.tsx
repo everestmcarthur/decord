@@ -1,13 +1,13 @@
-// Module ID: 12341
-// Function ID: 12342
+// Module ID: 12339
+// Function ID: 12340
 // Name: ChatInputActionButtonTransitionItem
-// Dependencies: [19, 17, 12057, 21, 4317, 4343, 4608, 12342, 2]
+// Dependencies: [19, 17, 12055, 21, 4317, 4343, 4607, 12340, 2]
 // Exports: default, interactivityProps
 
-// Module 12341 (ChatInputActionButtonTransitionItem)
+// Module 12339 (ChatInputActionButtonTransitionItem)
 import native from "native" /* 4317 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12342 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12340 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function FadeTransitionItem(state) {
   const items = [state, sharedValue, cleanup];
   const effect = noop.useEffect(() => {
     if (state === native.TransitionStates.YEETED) {
-      const tmpResult = tmp(4608);
+      const tmpResult = tmp(4607);
       const fn = function t(arg0) {
         if (true === arg0) {
           state(sharedValue[5]).runOnJS(cleanup)();
@@ -37,8 +37,8 @@ function FadeTransitionItem(state) {
       fn.__initData = __initData;
       const result = sharedValue.set(tmpResult.withTiming(0, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings", fn));
     } else {
-      const result1 = sharedValue.set(tmp(4608).withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
-      const tmpResult2 = tmp(4608);
+      const result1 = sharedValue.set(tmp(4607).withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
+      const tmpResult2 = tmp(4607);
     }
   }, items);
   let obj = state(sharedValue[5]);
@@ -92,7 +92,7 @@ function BounceTransitionItem(state) {
   return jsx(ReanimatedRexportDefault.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12057).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12055).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };

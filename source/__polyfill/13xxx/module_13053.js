@@ -1,0 +1,9 @@
+// Module ID: 13053
+// Function ID: 13054
+// Dependencies: [1122]
+
+// Module 13053
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 24, height: 24, scales: [2, 3], hash: "87391322b2483c883b3f5fd1ac4080a9", name: "ic_eye", type: "png" });

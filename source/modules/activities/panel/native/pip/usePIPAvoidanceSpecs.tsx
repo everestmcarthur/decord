@@ -1,13 +1,13 @@
-// Module ID: 17093
-// Function ID: 17094
+// Module ID: 17092
+// Function ID: 17093
 // Name: pip/usePIPAvoidanceSpecs
-// Dependencies: [4343, 16774, 17094, 9588, 16996, 17095, 11450, 2]
+// Dependencies: [4343, 16774, 17093, 9586, 16996, 17094, 11448, 2]
 // Exports: default
 
-// Module 17093 (pip/usePIPAvoidanceSpecs)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11450 */;
+// Module 17092 (pip/usePIPAvoidanceSpecs)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11448 */;
 import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16996 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17095 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17094 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
   const tmp2 = sharedValue(16774)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(17094)();
+  const tmp3 = sharedValue(17093)();
   __initData = tmp3;
   const obj = require("ReanimatedRexport");
   const fn = function n() {
@@ -40,7 +40,7 @@ export default function usePIPAvoidanceSpecs(safeArea) {
     }
   };
   let obj2 = require("ReanimatedRexport");
-  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16996), getAdjustedBottomOffsets: sharedValue(17095), updateSharedValueIfChanged: sharedValue(11450), pipAvoidanceSpecs: sharedValue };
+  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16996), getAdjustedBottomOffsets: sharedValue(17094), updateSharedValueIfChanged: sharedValue(11448), pipAvoidanceSpecs: sharedValue };
   fn2.__workletHash = 643938425459;
   fn2.__initData = __initData2;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);

@@ -1,17 +1,17 @@
-// Module ID: 7296
-// Function ID: 7297
+// Module ID: 7295
+// Function ID: 7296
 // Name: OnboardingHomeUtils
-// Dependencies: [2014, 1957, 1979, 4794, 1074, 1964, 7297, 563, 1982, 7180, 4796, 2]
+// Dependencies: [2014, 1957, 1979, 4793, 1074, 1964, 7296, 563, 1982, 7179, 4795, 2]
 // Exports: canSeeOnboardingHome, useCanSeeOnboardingHome
 
-// Module 7296 (OnboardingHomeUtils)
+// Module 7295 (OnboardingHomeUtils)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4796 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7297 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4795 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7296 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4794 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4793 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
           }
           let result = hasItem1;
         } else {
-          result = tmp23(7180).isGuildOnboardingSettingsAvailable(tmp2);
+          result = tmp23(7179).isGuildOnboardingSettingsAvailable(tmp2);
           if (!result) {
             result = guildHasOnboardingHomeDefault(has);
           }
@@ -83,7 +83,7 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
             }
             result = tmp11;
           }
-          const tmp23Result = tmp23(7180);
+          const tmp23Result = tmp23(7179);
         }
       }
       obj3 = FavoritesUtils;
@@ -118,7 +118,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(7180).isGuildOnboardingSettingsAvailable(id);
+          let result = tmp14(7179).isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);

@@ -1,16 +1,16 @@
-// Module ID: 12521
-// Function ID: 12522
+// Module ID: 12519
+// Function ID: 12520
 // Name: EmojiSuggestionBarUtils
-// Dependencies: [32, 19, 4599, 1074, 21, 1178, 4343, 5026, 4317, 4608, 504, 12486, 12522, 12523, 9406, 2]
+// Dependencies: [32, 19, 4598, 1074, 21, 1178, 4343, 5025, 4317, 4607, 504, 12484, 12520, 12521, 9404, 2]
 // Exports: EmojiEntranceAnimation, getEmojiEntranceKey, sortEmojisForDisplay, useEmojiSuggestionBarState, useSuggestionBarHeight
 
-// Module 12521 (EmojiSuggestionBarUtils)
+// Module 12519 (EmojiSuggestionBarUtils)
 import native from "native" /* 4317 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 const require = globalThis.__r;
 
@@ -108,7 +108,7 @@ export const useSuggestionBarHeight = function useSuggestionBarHeight(transition
       if (closure_3 != null) {
         tmp11(0);
       }
-      const tmpResult = tmp(4608);
+      const tmpResult = tmp(4607);
       const fn = function n(arg0) {
         if (arg0) {
           closure_0(dependencyMap[6]).runOnJS(cleanUp)();
@@ -124,8 +124,8 @@ export const useSuggestionBarHeight = function useSuggestionBarHeight(transition
       if (closure_3 != null) {
         tmp3(dependencyMap);
       }
-      const result1 = sharedValue.set(tmp(4608).withTiming(dependencyMap, __closure));
-      const tmpResult2 = tmp(4608);
+      const result1 = sharedValue.set(tmp(4607).withTiming(dependencyMap, __closure));
+      const tmpResult2 = tmp(4607);
     }
   }, items);
   return sharedValue;

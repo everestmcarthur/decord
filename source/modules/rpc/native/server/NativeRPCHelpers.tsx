@@ -1,13 +1,13 @@
-// Module ID: 9651
-// Function ID: 9652
+// Module ID: 9649
+// Function ID: 9650
 // Name: NativeRPCHelpers
-// Dependencies: [5, 4512, 1074, 9652, 9647, 2]
+// Dependencies: [5, 4511, 1074, 9650, 9645, 2]
 // Exports: getDeprecatedVoiceSettings, getVoiceSettings, validateSocketClient
 
-// Module 9651 (NativeRPCHelpers)
+// Module 9649 (NativeRPCHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const TransportTypes = fn(4512).TransportTypes;
+const TransportTypes = fn(4511).TransportTypes;
 const RPCCloseCodes = fn(1074).RPCCloseCodes;
 let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
   closure_0 = arg0;
@@ -44,20 +44,20 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
             closure_131_0 = closure_0;
             closure_131_1 = closure_1;
             closure_131_2 = dependencyMap;
-            const result = closure_0(9652).validateOriginAndUpdateSocket(closure_0, closure_1);
+            const result = closure_0(9650).validateOriginAndUpdateSocket(closure_0, closure_1);
             if (null == dependencyMap) {
               const obj5 = { closeCode: constants.INVALID_CLIENTID };
-              const tmp23 = new closure_1(9647)(obj5, "No Client ID Specified");
+              const tmp23 = new closure_1(9645)(obj5, "No Client ID Specified");
               c6 = 3;
               const obj6 = { value: Promise.reject(tmp23), done: true };
               return obj6;
             } else {
               c5 = 1;
               c6 = 1;
-              const obj7 = { value: closure_0(9652).processSocketThrottlers(tmp32, tmp30.transport !== tmp2.POST_MESSAGE, tmp30.abortController.signal), done: false };
+              const obj7 = { value: closure_0(9650).processSocketThrottlers(tmp32, tmp30.transport !== tmp2.POST_MESSAGE, tmp30.abortController.signal), done: false };
               return obj7;
             }
-            const obj10 = closure_0(9652);
+            const obj10 = closure_0(9650);
             tmp32 = dependencyMap;
           }
         } else if (arg0 === 1) {
@@ -69,7 +69,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
           return obj8;
         } else {
           c6 = 3;
-          const obj9 = { value: closure_0(9652).validateSocketApplication(closure_131_0, closure_131_2, closure_131_1), done: true };
+          const obj9 = { value: closure_0(9650).validateSocketApplication(closure_131_0, closure_131_2, closure_131_1), done: true };
           return obj9;
         }
       } catch (tmp25) {
@@ -92,5 +92,5 @@ export const validateSocketClient = function() {
   }
   return applyArgumentsResult;
 };
-export const getDeprecatedVoiceSettings = () => closure_0(9652).getDeprecatedVoiceSettingsWithShortcut(() => []);
-export const getVoiceSettings = (arg0) => closure_0(9652).getVoiceSettingsWithShortcut(arg0, () => "");
+export const getDeprecatedVoiceSettings = () => closure_0(9650).getDeprecatedVoiceSettingsWithShortcut(() => []);
+export const getVoiceSettings = (arg0) => closure_0(9650).getVoiceSettingsWithShortcut(arg0, () => "");

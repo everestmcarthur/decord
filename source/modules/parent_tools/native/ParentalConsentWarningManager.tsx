@@ -1,17 +1,17 @@
-// Module ID: 17546
-// Function ID: 17547
+// Module ID: 17545
+// Function ID: 17546
 // Name: ParentalConsentWarningManager
-// Dependencies: [4297, 7611, 14922, 7612, 1074, 14923, 4574, 17547, 1896, 7192, 17549, 2]
+// Dependencies: [4297, 7610, 14922, 7611, 1074, 14923, 4573, 17546, 1896, 7191, 17548, 2]
 
-// Module 17546 (ParentalConsentWarningManager)
+// Module 17545 (ParentalConsentWarningManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14923 */;
-import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 17549 */;
+import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 17548 */;
 import ActionSheetStore from "ActionSheetStore" /* 4297 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14922 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 function maybePresentModal(daysRemaining) {
@@ -49,10 +49,10 @@ function maybePresentModal(daysRemaining) {
   }
   if (tmp5) {
     const obj = { daysRemaining };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17547, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17546, dependencyMap.paths), "ParentalConsentWarningModal", obj);
   }
 }
-const FamilyCenterConstants = fn(7612);
+const FamilyCenterConstants = fn(7611);
 ({ UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const AppStates = fn(1074).AppStates;
 const prototype = function ParentalConsentWarningManager() {

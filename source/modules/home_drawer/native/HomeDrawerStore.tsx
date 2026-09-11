@@ -1,13 +1,13 @@
 // Module ID: 16092
 // Function ID: 16093
 // Name: HomeDrawerStore
-// Dependencies: [1074, 1244, 4343, 4608, 16093, 4229, 2]
+// Dependencies: [1074, 1244, 4343, 4607, 16093, 4229, 2]
 // Exports: computeMaxX
 
 // Module 16092 (HomeDrawerStore)
 import Constants from "Constants" /* 1074 */;
 import _mod4229 from "module_4229" /* 4229 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import identity from "module_1244" /* 1244 */;
 import size from "module_2" /* 2 */;
 

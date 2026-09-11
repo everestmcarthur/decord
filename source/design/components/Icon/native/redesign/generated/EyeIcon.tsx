@@ -1,13 +1,13 @@
-// Module ID: 7042
-// Function ID: 7043
+// Module ID: 7041
+// Function ID: 7042
 // Name: EyeIcon
-// Dependencies: [19, 21, 576, 4307, 7043, 2]
+// Dependencies: [19, 21, 576, 4307, 7042, 2]
 // Exports: EyeIcon
 
-// Module 7042 (EyeIcon)
+// Module 7041 (EyeIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod7043 from "module_7043" /* 7043 */;
+import _mod7042 from "module_7042" /* 7042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EyeIcon = function EyeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7043, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7042, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

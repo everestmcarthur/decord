@@ -1,17 +1,13 @@
 // Module ID: 14353
 // Function ID: 14354
-// Dependencies: [14352]
+// Dependencies: [14354]
 
 // Module 14353
-import _mod14352 from "module_14352" /* 14352 */;
+import _mod14354 from "module_14354" /* 14354 */;
 
 
-export default (arg0, value) => {
-  try {
-    const obj = { value, configurable: true, writable: true };
-    defineProperty(_mod14352, arg0, obj);
-    return value;
-  } catch (err) {
-    _mod14352[tmp2] = tmp;
+export default !_mod14354(() => 7 !== Object.defineProperty({}, 1, {
+  get() {
+    return 7;
   }
-};
+})[1]);

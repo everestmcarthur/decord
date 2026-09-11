@@ -1,10 +1,10 @@
-// Module ID: 17133
-// Function ID: 17134
+// Module ID: 17132
+// Function ID: 17133
 // Name: useTransitionToConnectedActivityInVoice
-// Dependencies: [5, 19, 1957, 2011, 1074, 4235, 9621, 9638, 9628, 1109, 2]
+// Dependencies: [5, 19, 1957, 2011, 1074, 4235, 9619, 9636, 9626, 1109, 2]
 // Exports: default
 
-// Module 17133 (useTransitionToConnectedActivityInVoice)
+// Module 17132 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -68,7 +68,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 closure_129_3 = undefined;
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: true };
+                return { value: "PX_16", done: null };
               }
             } else {
               if (1 === tmp5) {
@@ -82,12 +82,12 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 } else {
                   embeddedActivityLocationChannelId = handler(4235).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(9621)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(9619)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(9638)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(9636)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -111,7 +111,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(9628)(closure_1_3, _location);
+                closure_3_1(9626)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

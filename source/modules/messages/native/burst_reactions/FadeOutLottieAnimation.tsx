@@ -1,19 +1,19 @@
-// Module ID: 7900
-// Function ID: 7901
+// Module ID: 7899
+// Function ID: 7900
 // Name: FadeOutLottieAnimation
-// Dependencies: [32, 19, 4599, 21, 4607, 504, 4343, 4608, 5581, 2]
+// Dependencies: [32, 19, 4598, 21, 4606, 504, 4343, 4607, 5580, 2]
 // Exports: default
 
-// Module 7900 (FadeOutLottieAnimation)
+// Module 7899 (FadeOutLottieAnimation)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
 const __initData = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}" };
 const __initData2 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}" };
@@ -79,7 +79,7 @@ export default function FadeOutLottieAnimation(onComplete) {
     }
   }
   let obj = onComplete(504);
-  T.__closure = { isAnimationComplete, isFadeOut: first1, withTiming: onComplete(4608).withTiming, runOnJS: onComplete(4343).runOnJS, setIsFadeOut: tmp5[1] };
+  T.__closure = { isAnimationComplete, isFadeOut: first1, withTiming: onComplete(4607).withTiming, runOnJS: onComplete(4343).runOnJS, setIsFadeOut: tmp5[1] };
   T.__workletHash = 1137618554665;
   T.__initData = __initData;
   if (!isAnimationComplete) {
@@ -97,9 +97,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       closure_2(true);
     };
     const merged1 = Object.assign(merged);
-    obj3.children = jsx(isAnimationComplete(5581), { style: tmp2.content, speed: null, onAnimationFinish: null });
+    obj3.children = jsx(isAnimationComplete(5580), { style: tmp2.content, speed: null, onAnimationFinish: null });
     let tmp14Result = tmp14(isAnimationComplete(4343).View, obj3);
-    const tmp16 = isAnimationComplete(5581);
+    const tmp16 = isAnimationComplete(5580);
   } else {
     tmp14Result = null;
   }

@@ -1,18 +1,16 @@
 // Module ID: 8574
 // Function ID: 8575
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8575, 8559, 8568]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8575]
 
 // Module 8574
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8568 from "module_8568" /* 8568 */;
-import _modDef8575 from "module_8575" /* 8575 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const ClipPath = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,16 +30,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class ClipPath {
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_3(this, ClipPath);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ClipPath);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -54,19 +51,15 @@ class ClipPath {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ClipPath, _modDef8568);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const props = this.props;
-    const obj = { ref: this.refMethod };
-    const merged = Object.assign(ClipPath(8559).extract(this, props));
-    obj.children = props.children;
-    return <tmp ref={this.refMethod} />;
+    return jsx(Defs(8575), { children: this.props.children });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(ClipPath, items);
-importDefaultResultResult.displayName = "ClipPath";
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

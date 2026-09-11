@@ -1,32 +1,28 @@
 // Module ID: 8472
 // Function ID: 8473
-// Dependencies: [8473, 8474, 8475, 4717]
+// Dependencies: [521, 518, 543, 616]
 
 // Module 8472
-import baseFlatten from "baseFlatten" /* 4717 */;
-import baseRest from "baseRest" /* 8473 */;
-import _mod8474 from "module_8474" /* 8474 */;
-import baseOrderBy from "baseOrderBy" /* 8475 */;
+import _mod521 from "module_521" /* 521 */;
 
 
-export default baseRest((arg0, arg1) => {
-  if (null == arg0) {
-    return [];
-  } else {
-    if (arg1.length > 1) {
-      if (_mod8474(arg0, arg1[0], arg1[1])) {
-        let items = [];
+export default function isIterateeCall(arg0, num, arg2) {
+  if (_mod521(arg2)) {
+    if (typeof num === "number") {
+      let tmp5 = tmp(518)(arg2) && tmp(543)(num, arg2.length);
+      const tmp4 = tmp(518)(arg2) && tmp(543)(num, arg2.length);
+    } else {
+      tmp5 = typeof num === "string";
+      if (typeof num === "string") {
+        tmp5 = num in arg2;
       }
-      return baseOrderBy(arg0, baseFlatten(items, 1), []);
     }
-    let tmp3 = length > 2;
-    if (tmp3) {
-      tmp3 = _mod8474(arg1[0], arg1[1], arg1[2]);
+    let tmp6 = tmp5;
+    if (tmp6) {
+      tmp6 = tmp(616)(arg2[num], arg0);
     }
-    items = arg1;
-    if (tmp3) {
-      const items1 = [arg1[0]];
-      items = items1;
-    }
+    return tmp6;
+  } else {
+    return false;
   }
-});
+};

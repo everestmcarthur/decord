@@ -1,10 +1,10 @@
-// Module ID: 10264
-// Function ID: 10265
+// Module ID: 10262
+// Function ID: 10263
 // Name: NotificationProgress
-// Dependencies: [32, 19, 17, 21, 4607, 576, 4343, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 4343, 2]
 // Exports: default
 
-// Module 10264 (NotificationProgress)
+// Module 10262 (NotificationProgress)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -15,7 +15,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 }, progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 } };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };

@@ -1,9 +1,10 @@
 // Module ID: 9098
 // Function ID: 9099
-// Dependencies: [9027]
+// Dependencies: [9025, 9091]
 
 // Module 9098
-const require = globalThis.__r;
+import _mod9025 from "module_9025" /* 9025 */;
+import _mod9091 from "module_9091" /* 9091 */;
 
 const self = this;
 let self2 = this;
@@ -56,35 +57,23 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.ZodIssueCode = undefined;
-    exports.$brand = undefined;
-    exports.config = undefined;
-    exports.ZodFirstPartyTypeKind = undefined;
-    exports.setErrorMap = function setErrorMap(customError) {
-      closure_4.config({ customError });
+    exports.string = function string(message) {
+      return closure_2._coercedString(closure_3.ZodString, message);
     };
-    exports.getErrorMap = function getErrorMap() {
-      return closure_4.config().customError;
+    exports.number = function number(message) {
+      return closure_2._coercedNumber(closure_3.ZodNumber, message);
     };
-    let closure_4 = fn(require("module_9027"));
-    exports.ZodIssueCode = { invalid_type: "invalid_type", too_big: "too_big", too_small: "too_small", invalid_format: "invalid_format", not_multiple_of: "not_multiple_of", unrecognized_keys: "unrecognized_keys", invalid_union: "invalid_union", invalid_key: "invalid_key", invalid_element: "invalid_element", invalid_value: "invalid_value", custom: "custom" };
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-            return require("module_9027").$brand;
-          }
+    exports.boolean = function boolean(message) {
+      return closure_2._coercedBoolean(closure_3.ZodBoolean, message);
     };
-    Object.defineProperty(exports, "$brand", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-            return require("module_9027").config;
-          }
+    exports.bigint = function bigint(message) {
+      return closure_2._coercedBigint(closure_3.ZodBigInt, message);
     };
-    Object.defineProperty(exports, "config", obj2);
-    exports.ZodFirstPartyTypeKind = {};
+    exports.date = function date(message) {
+      return closure_2._coercedDate(closure_3.ZodDate, message);
+    };
+    let closure_2 = fn(_mod9025);
+    let closure_3 = fn(_mod9091);
   } else {
     const _Object2 = Object;
   }

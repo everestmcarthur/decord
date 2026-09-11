@@ -1,46 +1,22 @@
 // Module ID: 14391
 // Function ID: 14392
-// Dependencies: [14378, 14356]
+// Dependencies: [14357, 14378, 14392, 14402, 14403]
 
 // Module 14391
+import _mod14357 from "module_14357" /* 14357 */;
 import _mod14378 from "module_14378" /* 14378 */;
+import f2 from "f" /* 14392 */;
+import _mod14402 from "module_14402" /* 14402 */;
+import _mod14403 from "module_14403" /* 14403 */;
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod14378(arg1)) {
-          tmp11Result = tmp11(14356);
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-        tmp11 = require;
-      }
-    }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
+let closure_2 = _mod14357([].concat);
+
+export default _mod14378("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod14402(arg0));
+  const f = _mod14403.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
   }
-}
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
-};
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
-
-export default isForced;
+  return tmp2;
+});

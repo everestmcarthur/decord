@@ -1,18 +1,18 @@
-// Module ID: 7668
-// Function ID: 7669
+// Module ID: 7667
+// Function ID: 7668
 // Name: ReferencedMessageStore
-// Dependencies: [32, 7669, 1957, 4828, 1074, 1437, 4830, 7673, 504, 573, 2]
+// Dependencies: [32, 7668, 1957, 4827, 1074, 1437, 4829, 7672, 504, 573, 2]
 
-// Module 7668 (ReferencedMessageStore)
+// Module 7667 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4830 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7673 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4829 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7672 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConversationsStore from "ConversationsStore" /* 7669 */;
+import ConversationsStore from "ConversationsStore" /* 7668 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4828 */;
+import MessageStore from "MessageStore" /* 4827 */;
 
 require = fn;
 function processMessage(message) {

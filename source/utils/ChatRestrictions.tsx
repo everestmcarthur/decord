@@ -1,12 +1,12 @@
-// Module ID: 10348
-// Function ID: 10349
+// Module ID: 10346
+// Function ID: 10347
 // Name: ChatRestrictions
-// Dependencies: [1074, 10349, 1114, 2]
+// Dependencies: [1074, 10347, 1114, 2]
 
-// Module 10348 (ChatRestrictions)
+// Module 10346 (ChatRestrictions)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10349 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10347 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;
@@ -22,7 +22,7 @@ const items = [
             return false;
           } else {
             if (tmp9Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              const everyoneMemberCountResult = tmp9(10349).everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
+              const everyoneMemberCountResult = tmp9(10347).everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
               const _Math3 = Math;
@@ -46,7 +46,7 @@ const items = [
             } else {
               return false;
             }
-            tmp9Result = tmp9(10349);
+            tmp9Result = tmp9(10347);
           }
         }
       } else {
@@ -54,7 +54,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "HermesInternal"
+    animation: "channel_id"
   },
   {
     check(arg0) {

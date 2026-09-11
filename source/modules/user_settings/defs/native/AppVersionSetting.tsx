@@ -1,7 +1,7 @@
 // Module ID: 15621
 // Function ID: 15622
 // Name: AppVersionSetting
-// Dependencies: [1364, 1114, 15622, 11564, 10909, 1935, 2]
+// Dependencies: [1364, 1114, 15622, 11562, 10907, 1935, 2]
 
 // Module 15621 (AppVersionSetting)
 import util from "util" /* 1114 */;
@@ -10,14 +10,14 @@ import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10909).ClydeIcon,
+  IconComponent: fn(10907).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -42,7 +42,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10909).ClydeIcon,
+  IconComponent: fn(10907).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;

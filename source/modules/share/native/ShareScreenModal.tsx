@@ -1,13 +1,13 @@
-// Module ID: 13954
-// Function ID: 13955
+// Module ID: 13952
+// Function ID: 13953
 // Name: ShareScreenModal
-// Dependencies: [5, 32, 19, 1957, 13907, 21, 3, 4810, 8450, 504, 4620, 1094, 13955, 2]
+// Dependencies: [5, 32, 19, 1957, 13905, 21, 3, 4809, 8448, 504, 4619, 1094, 13953, 2]
 // Exports: default
 
-// Module 13954 (ShareScreenModal)
+// Module 13952 (ShareScreenModal)
 import LoggerDefault from "Logger" /* 3 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(13907).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13905).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const size = fn(2);

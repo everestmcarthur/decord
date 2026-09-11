@@ -1,15 +1,15 @@
 // Module ID: 15893
 // Function ID: 15894
 // Name: CollectiblesShopCardsGrid
-// Dependencies: [19, 17, 7616, 21, 4607, 8857, 8860, 15892, 12, 2]
+// Dependencies: [19, 17, 7615, 21, 4606, 8855, 8858, 15892, 12, 2]
 // Exports: default
 
 // Module 15893 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8857 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8860 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8855 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8858 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7616 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
 
 require = fn;
 function ShopCardGridItem(index) {
@@ -22,8 +22,8 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(8857).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4606);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(8855).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -44,7 +44,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
   let obj = products(15892);
-  obj2.contentContainerStyle = { gap: products(8857).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
+  obj2.contentContainerStyle = { gap: products(8855).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;
     return cardWidth(muteBundleStaticBackground, {

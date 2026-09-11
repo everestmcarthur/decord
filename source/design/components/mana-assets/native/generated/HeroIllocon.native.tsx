@@ -1,13 +1,13 @@
-// Module ID: 6273
-// Function ID: 6274
+// Module ID: 6272
+// Function ID: 6273
 // Name: HeroIllocon
-// Dependencies: [21, 5639, 6274, 2]
+// Dependencies: [21, 5638, 6273, 2]
 // Exports: HeroIllocon
 
-// Module 6273 (HeroIllocon)
+// Module 6272 (HeroIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6274 from "module_6274" /* 6274 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6273 from "module_6273" /* 6273 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const HeroIllocon = function HeroIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6274 };
+  const obj2 = { uri: _modDef6273 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

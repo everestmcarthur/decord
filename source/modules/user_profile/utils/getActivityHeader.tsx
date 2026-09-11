@@ -1,14 +1,14 @@
-// Module ID: 13109
-// Function ID: 13110
+// Module ID: 13107
+// Function ID: 13108
 // Name: getActivityHeader
-// Dependencies: [1074, 13110, 13111, 1114, 13113, 13114, 10983, 2]
+// Dependencies: [1074, 13108, 13109, 1114, 13111, 13112, 10981, 2]
 // Exports: default
 
-// Module 13109 (getActivityHeader)
+// Module 13107 (getActivityHeader)
 import util from "util" /* 1114 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10983 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13110 */;
-import getActivityPlatformDefault from "getActivityPlatform" /* 13111 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10981 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13108 */;
+import getActivityPlatformDefault from "getActivityPlatform" /* 13109 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -164,7 +164,7 @@ export default function getActivityHeader(session_id) {
       obj14.platformLabel = str;
       return obj14;
     }
-    tmp35 = tmp(13114)(tmp3, session_id);
+    tmp35 = tmp(13112)(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj16 = { text: null, platformIcon: null, platformLabel: null };

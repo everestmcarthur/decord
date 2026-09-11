@@ -1,10 +1,10 @@
-// Module ID: 8345
-// Function ID: 8346
+// Module ID: 8343
+// Function ID: 8344
 // Name: isStreaming
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 8345 (isStreaming)
+// Module 8343 (isStreaming)
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;

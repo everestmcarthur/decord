@@ -1,7 +1,7 @@
 // Module ID: 16368
 // Function ID: 16369
 // Name: useGuildsBarBottomRightBadge
-// Dependencies: [32, 19, 21, 4607, 1178, 4308, 576, 16369, 16370, 16374, 2]
+// Dependencies: [32, 19, 21, 4606, 1178, 4308, 576, 16369, 16370, 16374, 2]
 // Exports: default
 
 // Module 16368 (useGuildsBarBottomRightBadge)
@@ -14,7 +14,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
@@ -105,7 +105,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "accessible", cutouts: "__packager_asset" };
+      return { badge: null, cutout: "Array", cutouts: "isArray" };
     }
   }, items1);
 };

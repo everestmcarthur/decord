@@ -1,14 +1,14 @@
 // Module ID: 16101
 // Function ID: 16102
 // Name: MessagesItemChannel
-// Dependencies: [32, 19, 1957, 21, 10210, 576, 16102, 504, 16111, 8966, 16112, 2]
+// Dependencies: [32, 19, 1957, 21, 10208, 576, 16102, 504, 16111, 8964, 16112, 2]
 // Exports: getMessagesItemChannelSizes
 
 // Module 16101 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import _mod8966 from "module_8966" /* 8966 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10210 */;
+import _mod8964 from "module_8964" /* 8964 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10208 */;
 import MessagesItemChannelBase from "MessagesItemChannelBase" /* 16102 */;
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16111 */;
 import _mod16112 from "module_16112" /* 16112 */;
@@ -48,7 +48,7 @@ const memoResult = noop.memo((arg0) => {
 });
 const memoResult1 = noop.memo((channelId) => {
   const items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod8966.useRecyclingState(false, items), 2);
+  const tmp = _slicedToArray(_mod8964.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};

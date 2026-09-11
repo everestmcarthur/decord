@@ -1,0 +1,9 @@
+// Module ID: 12313
+// Function ID: 12314
+// Dependencies: [1122]
+
+// Module 12313
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/scheduled_messages", width: 297, height: 238, scales: [1], hash: "0ad2bf31ea242663dc2fd22966e4c43e", name: "wumpus-calendar-plus", type: "png" });

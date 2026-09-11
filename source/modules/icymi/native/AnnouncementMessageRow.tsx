@@ -1,21 +1,21 @@
 // Module ID: 16560
 // Function ID: 16561
 // Name: AnnouncementMessageRow
-// Dependencies: [19, 17, 1957, 1979, 4255, 4788, 1371, 16561, 21, 16523, 576, 504, 5572, 8439, 11007, 11752, 16562, 8438, 16564, 1114, 11, 5175, 9863, 16566, 16570, 2]
+// Dependencies: [19, 17, 1957, 1979, 4255, 4787, 1371, 16561, 21, 16523, 576, 504, 5571, 8437, 11005, 11750, 16562, 8436, 16564, 1114, 11, 5174, 9861, 16566, 16570, 2]
 // Exports: default
 
 // Module 16560 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11752 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5571 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11750 */;
 import ICYMIShared from "ICYMIShared" /* 16562 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

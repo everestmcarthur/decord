@@ -1,16 +1,16 @@
-// Module ID: 7560
-// Function ID: 7561
+// Module ID: 7559
+// Function ID: 7560
 // Name: withFallbacks
-// Dependencies: [32, 1957, 5490, 1074, 7554, 7558, 7559, 2]
+// Dependencies: [32, 1957, 5489, 1074, 7553, 7557, 7558, 2]
 // Exports: withFallbacks
 
-// Module 7560 (withFallbacks)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7554 */;
-import isReadableChannel from "isReadableChannel" /* 7558 */;
-import isLimitedChannel from "isLimitedChannel" /* 7559 */;
+// Module 7559 (withFallbacks)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7553 */;
+import isReadableChannel from "isReadableChannel" /* 7557 */;
+import isLimitedChannel from "isLimitedChannel" /* 7558 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 
 require = fn;
 function isSaveableChannel(item10025) {

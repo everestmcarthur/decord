@@ -1,7 +1,7 @@
 // Module ID: 15726
 // Function ID: 15727
 // Name: DevToolsProfilingUseStateFromStores
-// Dependencies: [32, 19, 21, 15727, 4603, 5739, 7274, 5657, 6685, 11700, 10475, 15728, 4565, 1114, 2]
+// Dependencies: [32, 19, 21, 15727, 4602, 5738, 7273, 5656, 6684, 11698, 10473, 15728, 4564, 1114, 2]
 // Exports: DevToolsProfilingUseStateFromStores
 
 // Module 15726 (DevToolsProfilingUseStateFromStores)

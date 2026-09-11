@@ -1,13 +1,13 @@
-// Module ID: 6503
-// Function ID: 6504
+// Module ID: 6502
+// Function ID: 6503
 // Name: ServerIconLilQuackSPondverseExample
-// Dependencies: [21, 5639, 6504, 2]
+// Dependencies: [21, 5638, 6503, 2]
 // Exports: ServerIconLilQuackSPondverseExample
 
-// Module 6503 (ServerIconLilQuackSPondverseExample)
+// Module 6502 (ServerIconLilQuackSPondverseExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6504 from "module_6504" /* 6504 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6503 from "module_6503" /* 6503 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconLilQuackSPondverseExample = function ServerIconLilQuackSP
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6504 };
+  const obj2 = { uri: _modDef6503 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

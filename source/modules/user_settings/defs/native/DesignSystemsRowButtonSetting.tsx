@@ -1,12 +1,12 @@
 // Module ID: 15829
 // Function ID: 15830
 // Name: DesignSystemsRowButtonSetting
-// Dependencies: [8050, 1074, 11564, 15830, 2]
+// Dependencies: [8049, 1074, 11562, 15830, 2]
 
 // Module 15829 (DesignSystemsRowButtonSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 8050 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingsConstants from "SettingsConstants" /* 8049 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

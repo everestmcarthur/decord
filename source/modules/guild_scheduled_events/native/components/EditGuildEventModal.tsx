@@ -1,18 +1,18 @@
-// Module ID: 9818
-// Function ID: 9819
+// Module ID: 9816
+// Function ID: 9817
 // Name: EditGuildEventModal
-// Dependencies: [5, 32, 19, 17, 1963, 21, 4607, 576, 1611, 9797, 9794, 1874, 9796, 4318, 1114, 9798, 9819, 9800, 9820, 9860, 9861, 7074, 2]
+// Dependencies: [5, 32, 19, 17, 1963, 21, 4606, 576, 1611, 9795, 9792, 1874, 9794, 4318, 1114, 9796, 9817, 9798, 9818, 9858, 9859, 7073, 2]
 
-// Module 9818 (EditGuildEventModal)
+// Module 9816 (EditGuildEventModal)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9796 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9797 */;
-import EntityUtils from "EntityUtils" /* 9798 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 9819 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 9820 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 9860 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 9861 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9794 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
+import EntityUtils from "EntityUtils" /* 9796 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 9817 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 9818 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 9858 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 9859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 let closure_8 = fn(1963).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

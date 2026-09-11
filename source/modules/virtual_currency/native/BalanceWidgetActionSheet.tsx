@@ -1,18 +1,18 @@
-// Module ID: 11198
-// Function ID: 11199
+// Module ID: 11196
+// Function ID: 11197
 // Name: BalanceWidgetActionSheet
-// Dependencies: [19, 17, 1074, 1954, 21, 11199, 11200, 11201, 1114, 4295, 2024, 4327, 4308, 576, 1242, 4427, 1943, 4317, 7224, 5639, 8395, 7228, 11202, 8929, 4603, 5027, 4607, 1115, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 11197, 11198, 11199, 1114, 4295, 2024, 4327, 4308, 576, 1242, 4427, 1943, 4317, 7223, 5638, 8393, 7227, 11200, 8927, 4602, 5026, 4606, 1115, 2]
 // Exports: default
 
-// Module 11198 (BalanceWidgetActionSheet)
+// Module 11196 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
+import _mod11197 from "module_11197" /* 11197 */;
+import _mod11198 from "module_11198" /* 11198 */;
 import _mod11199 from "module_11199" /* 11199 */;
-import _mod11200 from "module_11200" /* 11200 */;
-import _mod11201 from "module_11201" /* 11201 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles((color) => {
   const obj = { actions: { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
   const obj2 = { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -74,7 +74,7 @@ export default function _default(balance) {
     }
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod11199.default, backgroundImage: _mod11200.default, bannerImage: _mod11201.default, bannerText: null };
+      const obj = { backgroundVideo: _mod11197.default, backgroundImage: _mod11198.default, bannerImage: _mod11199.default, bannerText: null };
       const intl = util.intl;
       obj.bannerText = intl.string(util.t.LaMEFL);
       tmp = obj;

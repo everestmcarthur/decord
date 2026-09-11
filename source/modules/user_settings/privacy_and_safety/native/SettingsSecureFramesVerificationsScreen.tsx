@@ -1,13 +1,13 @@
 // Module ID: 15921
 // Function ID: 15922
 // Name: SettingsSecureFramesVerificationsScreen
-// Dependencies: [19, 17, 1371, 21, 4607, 9242, 5657, 1114, 5175, 5732, 4603, 7068, 1483, 504, 4451, 7937, 15918, 8966, 2]
+// Dependencies: [19, 17, 1371, 21, 4606, 9240, 5656, 1114, 5174, 5731, 4602, 7067, 1483, 504, 4451, 7936, 15918, 8964, 2]
 // Exports: default
 
 // Module 15921 (SettingsSecureFramesVerificationsScreen)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9242 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9240 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -28,8 +28,8 @@ function VerificationListItem(userId) {
   obj.subLabel = memo;
   obj.start = start;
   obj.end = end;
-  obj.trailing = jsx(userId(5175).PressableHighlight, { onPress: callback, children: jsx(userId(5732).XSmallIcon, {}) });
-  return jsx(userId(5657).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
+  obj.trailing = jsx(userId(5174).PressableHighlight, { onPress: callback, children: jsx(userId(5731).XSmallIcon, {}) });
+  return jsx(userId(5656).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
 }
 function SectionListItem(children) {
   const tmp = closure_7();
@@ -69,17 +69,17 @@ function ClearVerificationsListFooter(userId) {
   const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
   const intl = userId(1114).intl;
   obj2.children = intl.string(userId(1114).t["2xL5lu"]);
-  obj.label = jsx(userId(4603).Text, { variant: "text-md/semibold", color: "text-feedback-critical", children: null });
+  obj.label = jsx(userId(4602).Text, { variant: "text-md/semibold", color: "text-feedback-critical", children: null });
   const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
   const intl2 = userId(1114).intl;
   obj3.children = intl2.string(userId(1114).t.kgAfXN);
-  obj.subLabel = jsx(userId(4603).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
+  obj.subLabel = jsx(userId(4602).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
   obj.onPress = callback;
-  return jsx(userId(5657).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
+  return jsx(userId(5656).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ list: { flexGrow: 1 }, listContent: { paddingVertical: 32, paddingHorizontal: 16 }, listFooter: { marginTop: 32 }, section: { marginBottom: 8 } });
 const constants = { VERIFICATION: "VERIFICATION", SECTION: "SECTION" };
 const size = fn(2);
@@ -87,8 +87,8 @@ let result = size.fileFinishedImporting("modules/user_settings/privacy_and_safet
 
 export default function SettingsSecureFramesVerificationsScreen() {
   const tmp = closure_7();
-  userId = userId(7068).useSettingNavigationRoute().params.userId;
-  let obj = userId(7068);
+  userId = userId(7067).useSettingNavigationRoute().params.userId;
+  let obj = userId(7067);
   const navigation = userId(1483).useNavigation();
   const obj2 = userId(1483);
   let items = [UserStore];
@@ -132,6 +132,6 @@ export default function SettingsSecureFramesVerificationsScreen() {
   const obj7 = { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null };
   const obj5 = userId(15918);
   obj7.ListFooterComponent = <View style={tmp.listFooter}><ClearVerificationsListFooter userId={userId} /></View>;
-  obj6.children = jsx(userId(8966).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
+  obj6.children = jsx(userId(8964).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
   return <View style={tmp.list}>{null}</View>;
 };

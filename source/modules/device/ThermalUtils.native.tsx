@@ -1,10 +1,10 @@
-// Module ID: 9614
-// Function ID: 9615
+// Module ID: 9612
+// Function ID: 9613
 // Name: ThermalUtils
-// Dependencies: [17, 1115, 9615, 4586, 560, 1249, 2]
+// Dependencies: [17, 1115, 9613, 4585, 560, 1249, 2]
 
-// Module 9614 (ThermalUtils)
-import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 9615 */;
+// Module 9612 (ThermalUtils)
+import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 9613 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import module_560 from "module_560" /* 560 */;
@@ -55,7 +55,7 @@ let closure_5 = module_560.create((arg0) => {
         return tmp;
       }));
     });
-    return { rawThermalState: "r" };
+    return { rawThermalState: "Array" };
   }
 });
 const result = size.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");

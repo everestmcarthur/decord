@@ -1,7 +1,7 @@
 // Module ID: 15687
 // Function ID: 15688
 // Name: IntlTestingSettingsPage
-// Dependencies: [32, 5, 19, 17, 2026, 2025, 21, 4607, 576, 5737, 1114, 9451, 5740, 504, 4198, 5739, 5657, 1155, 5025, 4603, 15688, 15720, 2]
+// Dependencies: [32, 5, 19, 17, 2026, 2025, 21, 4606, 576, 5736, 1114, 9449, 5739, 504, 4198, 5738, 5656, 1155, 5024, 4602, 15688, 15720, 2]
 // Exports: default
 
 // Module 15687 (IntlTestingSettingsPage)
@@ -10,8 +10,8 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _mod1155 from "module_1155" /* 1155 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import TableRow from "TableRow" /* 5657 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
 import _modDef15688 from "module_15688" /* 15688 */;
 import _modDef15720 from "module_15720" /* 15720 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -131,7 +131,7 @@ get_ActivityIndicator = fn(17);
 const setAppLocale = fn(2026).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -179,7 +179,7 @@ export default function IntlTestingSettingsPage() {
   obj9.children = intl6.format(_modDef15688.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(4603).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
+      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(4602).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
       return closure_1_10(closure_1_6, obj);
     }
   });

@@ -1,13 +1,13 @@
 // Module ID: 15358
 // Function ID: 15359
 // Name: HappeningNowCard
-// Dependencies: [19, 17, 15357, 21, 4607, 7017, 4460, 5659, 4603, 2]
+// Dependencies: [19, 17, 15357, 21, 4606, 7016, 4460, 5658, 4602, 2]
 // Exports: HappeningNowCardHeader, HappeningNowCardSubtitle, default
 
 // Module 15358 (HappeningNowCard)
-import Text_Text from "Text/Text" /* 4603 */;
-import Card from "Card" /* 5659 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7017 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Card from "Card" /* 5658 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   if ("small" === arg0) {
     const obj2 = { minWidth, maxWidth };
@@ -62,7 +62,7 @@ let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj6.cardBadge = size;
   return obj6;
 });
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj3 = { cardHeaderMargin: { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 } };
 let closure_22 = createStyles.createStyles(obj3);
 let size = fn(2);

@@ -1,22 +1,22 @@
-// Module ID: 17712
-// Function ID: 17713
+// Module ID: 17711
+// Function ID: 17712
 // Name: RoleIconActionSheet
-// Dependencies: [5, 19, 17695, 1074, 1374, 21, 504, 4574, 5190, 1474, 17713, 4304, 1114, 17709, 7271, 7223, 4603, 5739, 5657, 11218, 2]
+// Dependencies: [5, 19, 17694, 1074, 1374, 21, 504, 4573, 5189, 1474, 17712, 4304, 1114, 17708, 7270, 7222, 4602, 5738, 5656, 11216, 2]
 // Exports: default
 
-// Module 17712 (RoleIconActionSheet)
+// Module 17711 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import TableRow from "TableRow" /* 5657 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7223 */;
-import ActionSheet from "ActionSheet" /* 7271 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17709 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
+import ActionSheet from "ActionSheet" /* 7270 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17708 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17695 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17694 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
@@ -182,18 +182,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = tmp38.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17709).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17709);
+                  closure_0(17708).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17708);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17709);
+                const tmp22 = closure_0(17708);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(17713).fetchCustomEmojiAsPngDataUri(tmp38.id), done: false };
+                const obj7 = { value: closure_0(17712).fetchCustomEmojiAsPngDataUri(tmp38.id), done: false };
                 return obj7;
               }
             }
@@ -236,7 +236,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(11218).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(11216).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;
@@ -248,7 +248,7 @@ export default function RoleIconActionSheet(arg0) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsRolesActionCreators.updateRoleIcon(roleId, null, null);
     };
-    tmp5Result = closure_7(tmp(5657).TableRow, obj6);
+    tmp5Result = closure_7(tmp(5656).TableRow, obj6);
   }
   let obj7 = { children: null };
   items3[2] = tmp5Result;

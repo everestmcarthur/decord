@@ -1,15 +1,15 @@
-// Module ID: 13058
-// Function ID: 13059
+// Module ID: 13056
+// Function ID: 13057
 // Name: MediaViewerThumbnails
-// Dependencies: [32, 19, 17, 8380, 21, 13059, 4308, 576, 4343, 5017, 1115, 4607, 5639, 8353, 4344, 7146, 2]
+// Dependencies: [32, 19, 17, 8378, 21, 13057, 4308, 576, 4343, 5016, 1115, 4606, 5638, 8351, 4344, 7145, 2]
 // Exports: default
 
-// Module 13058 (MediaViewerThumbnails)
+// Module 13056 (MediaViewerThumbnails)
 import useToken from "useToken" /* 4308 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4344 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13059 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function ObscuredView(source) {
       const items = [absoluteFill.absoluteFill, tmp5];
       obj2.style = items;
       const tmp11 = absoluteFill;
-      const tmp7Result = tmp7(5017);
+      const tmp7Result = tmp7(5016);
       let str = "light";
       if (tmpResult.isAndroid()) {
         str = "dark";
@@ -43,11 +43,11 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8380);
+const Constants = fn(8378);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
 let closure_12 = noop.memo((onSelect) => {
   ({ source, index } = onSelect);

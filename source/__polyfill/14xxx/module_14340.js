@@ -1,7 +1,7 @@
 // Module ID: 14340
 // Function ID: 14341
-// Dependencies: [14255, 14341]
-// Exports: getSupportedNumberingSystems
+// Dependencies: [14253, 14341]
+// Exports: getSupportedTimeZones
 
 // Module 14340
 const require = globalThis.__r;
@@ -9,25 +9,20 @@ const require = globalThis.__r;
 const require = arg1;
 const dependencyMap = arg6;
 
-export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
   _require = locale;
-  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
-  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+  const timezones = require("module_14341").timezones;
+  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
     let str = arg1;
     if (undefined === arg1) {
       str = "en";
     }
     try {
-      const concat = "".concat;
-      const combined = "".concat(str, "-u-nu-");
-      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
-      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
-        if ("123" === memoizedNumberFormat.format(123)) {
-          return false;
-        }
-      }
-      return true;
+      const obj = { timeZone };
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
     } catch (err) {
+      return false;
     }
   })(item, closure_0));
 };

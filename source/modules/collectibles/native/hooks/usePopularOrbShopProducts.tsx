@@ -1,19 +1,19 @@
 // Module ID: 15127
 // Function ID: 15128
 // Name: usePopularOrbShopProducts
-// Dependencies: [5, 32, 19, 8306, 1371, 7616, 7618, 1076, 1090, 7627, 504, 4264, 1079, 15128, 15129, 1080, 8965, 8305, 8877, 15130, 15132, 2]
+// Dependencies: [5, 32, 19, 8304, 1371, 7615, 7617, 1076, 1090, 7626, 504, 4264, 1079, 15128, 15129, 1080, 8963, 8303, 8875, 15130, 15132, 2]
 // Exports: usePopularOrbShopProducts
 
 // Module 15127 (usePopularOrbShopProducts)
 import DurationsDefault from "Durations" /* 1090 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8305 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8303 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8306 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8304 */;
 import UserStore from "UserStore" /* 1371 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7616 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7618 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7617 */;
 
 require = fn;
 let constants = fn(1076).CollectiblesMobileShopScreen;
@@ -177,7 +177,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     closure_5(false);
   }, items2);
   let obj3 = skuIds(4264);
-  let fetchCollectiblesProducts = enabled(8965).useFetchCollectiblesProducts(skuIds);
+  let fetchCollectiblesProducts = enabled(8963).useFetchCollectiblesProducts(skuIds);
   const items3 = [skuIds];
   const effect2 = obj.useEffect(() => {
     if (0 !== first.length) {
@@ -185,9 +185,9 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
       const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
     }
   }, items3);
-  const tmp5Result = enabled(8965);
-  const getOrFetchStorefrontPricesForSkuIds = enabled(8877).useGetOrFetchStorefrontPricesForSkuIds({ skuIds });
-  const tmp5Result5 = enabled(8877);
+  const tmp5Result = enabled(8963);
+  const getOrFetchStorefrontPricesForSkuIds = enabled(8875).useGetOrFetchStorefrontPricesForSkuIds({ skuIds });
+  const tmp5Result5 = enabled(8875);
   const items4 = [c6];
   stateFromStoresArray = enabled(504).useStateFromStoresArray(items4, () => first.map((item) => productsForSku.getProductsForSku(item)));
   const tmp5Result6 = enabled(504);

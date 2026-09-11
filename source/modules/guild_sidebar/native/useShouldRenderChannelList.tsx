@@ -1,7 +1,7 @@
 // Module ID: 16334
 // Function ID: 16335
 // Name: useShouldRenderChannelList
-// Dependencies: [32, 19, 7550, 5329, 1074, 4464, 4465, 1109, 2]
+// Dependencies: [32, 19, 7549, 5328, 1074, 4464, 4465, 1109, 2]
 // Exports: useShouldRenderChannelList
 
 // Module 16334 (useShouldRenderChannelList)
@@ -9,8 +9,8 @@ import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import RootNavigationRef from "RootNavigationRef" /* 4465 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7550 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import CacheStore from "CacheStore" /* 7549 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;

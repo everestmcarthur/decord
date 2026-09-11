@@ -1,20 +1,20 @@
-// Module ID: 12358
-// Function ID: 12359
+// Module ID: 12356
+// Function ID: 12357
 // Name: DMMessageStickerGreeting
-// Dependencies: [5, 32, 19, 17, 5554, 4828, 1371, 21, 4607, 576, 4425, 4308, 4456, 4305, 12359, 12360, 7530, 1114, 504, 1089, 4451, 12361, 10479, 4343, 4608, 1178, 10478, 5039, 5175, 10267, 4603, 5027, 2]
+// Dependencies: [5, 32, 19, 17, 5553, 4827, 1371, 21, 4606, 576, 4425, 4308, 4456, 4305, 12357, 12358, 7529, 1114, 504, 1089, 4451, 12359, 10477, 4343, 4607, 1178, 10476, 5038, 5174, 10265, 4602, 5026, 2]
 // Exports: default
 
-// Module 12358 (DMMessageStickerGreeting)
+// Module 12356 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import StickersActionCreators from "StickersActionCreators" /* 10479 */;
+import timing from "timing" /* 4607 */;
+import StickersActionCreators from "StickersActionCreators" /* 10477 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5554 */;
-import MessageStore from "MessageStore" /* 4828 */;
+import StickersStore from "StickersStore" /* 5553 */;
+import MessageStore from "MessageStore" /* 4827 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -131,7 +131,7 @@ export default function DMMessageStickerGreeting(channel) {
                 dependencyMap(content);
               }
               const obj = closure_1(4305);
-              obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12359) });
+              obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12357) });
             }
             closure_128_0 = showErrorToast;
             tmp7 = stateFromStores;

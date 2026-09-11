@@ -1,12 +1,12 @@
-// Module ID: 12277
-// Function ID: 12278
+// Module ID: 12275
+// Function ID: 12276
 // Name: UsernameText
-// Dependencies: [19, 21, 4759, 4603, 2]
+// Dependencies: [19, 21, 4758, 4602, 2]
 // Exports: default
 
-// Module 12277 (UsernameText)
-import Text_Text from "Text/Text" /* 4603 */;
-import NicknameUtils from "NicknameUtils" /* 4759 */;
+// Module 12275 (UsernameText)
+import Text_Text from "Text/Text" /* 4602 */;
+import NicknameUtils from "NicknameUtils" /* 4758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export default function UsernameText(color) {
     obj4.color = "text-muted";
     const items1 = ["#", user.discriminator];
     obj4.children = items1;
-    items[1] = React2(tmp(4603).Text, obj4);
+    items[1] = React2(tmp(4602).Text, obj4);
     obj3.children = items;
     str1 = React2(React3, obj3);
   }
@@ -51,7 +51,7 @@ export default function UsernameText(color) {
     obj7.color = "text-muted";
     const items3 = ["(", str1, ")"];
     obj7.children = items3;
-    items2[2] = React2(tmp(4603).Text, obj7);
+    items2[2] = React2(tmp(4602).Text, obj7);
     obj6.children = items2;
     tmp13 = React2(React3, obj6);
   }

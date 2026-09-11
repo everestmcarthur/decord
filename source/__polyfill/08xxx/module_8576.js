@@ -1,16 +1,18 @@
 // Module ID: 8576
 // Function ID: 8577
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8577]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8557, 8577, 8566]
 
 // Module 8576
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8566 from "module_8566" /* 8566 */;
+import _modDef8577 from "module_8577" /* 8577 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Defs = importDefault;
+const Ellipse = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,15 +32,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Defs {
+class Ellipse {
   constructor() {
     self = this;
-    tmp = c2(this, Defs);
-    tmp2 = closure_4;
-    obj = closure_4(Defs);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Ellipse);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Ellipse);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -51,15 +54,36 @@ class Defs {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Defs, fn(19).Component);
+_inherits(Ellipse, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
-    return jsx(Defs(8577), { children: this.props.children });
+    const self = this;
+    const props = this.props;
+    const obj = {};
+    ({ cx, cy, rx, ry } = props);
+    const merged = Object.assign(Ellipse(8557).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.rx = rx;
+    obj.ry = ry;
+    const obj2 = Ellipse(8557);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8577, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Defs, items);
-importDefaultResultResult.displayName = "Defs";
+const importDefaultResultResult = _createClass(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;

@@ -1,12 +1,12 @@
 // Module ID: 15125
 // Function ID: 15126
 // Name: openBountiesNuxPromoSheet
-// Dependencies: [4574, 15126, 1896, 2]
+// Dependencies: [4573, 15126, 1896, 2]
 // Exports: default
 
 // Module 15125 (openBountiesNuxPromoSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import size from "module_2" /* 2 */;
 
 const BountiesNuxPromoSheet = "BountiesNuxPromoSheet";

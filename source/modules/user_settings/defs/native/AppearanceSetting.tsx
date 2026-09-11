@@ -1,15 +1,15 @@
 // Module ID: 15322
 // Function ID: 15323
 // Name: AppearanceSetting
-// Dependencies: [4426, 1186, 1074, 4542, 504, 1229, 7948, 1114, 2626, 11564, 15323, 15325, 2]
+// Dependencies: [4426, 1186, 1074, 4541, 504, 1229, 7947, 1114, 2626, 11562, 15323, 15325, 2]
 // Exports: useAppearanceSettingTrailing
 
 // Module 15322 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import useActiveTheme from "useActiveTheme" /* 7948 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import useActiveTheme from "useActiveTheme" /* 7947 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4426 */;
 
 const _modDef2626 = tmp(2626);
@@ -43,7 +43,7 @@ function useAppearanceSettingTrailing() {
   }
 }
 const ActiveThemeType = fn(1186).ActiveThemeType;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

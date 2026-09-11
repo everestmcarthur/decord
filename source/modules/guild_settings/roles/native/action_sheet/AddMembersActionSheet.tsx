@@ -1,22 +1,22 @@
-// Module ID: 17700
-// Function ID: 17701
+// Module ID: 17699
+// Function ID: 17700
 // Name: action_sheet/AddMembersActionSheet
-// Dependencies: [32, 19, 17, 17694, 21, 4607, 576, 4325, 11036, 5669, 7055, 4594, 1178, 4318, 1114, 8966, 9848, 5571, 17699, 11, 9853, 7385, 7224, 7223, 5027, 9155, 4574, 4603, 2]
+// Dependencies: [32, 19, 17, 17693, 21, 4606, 576, 4325, 11034, 5668, 7054, 4593, 1178, 4318, 1114, 8964, 9846, 5570, 17698, 11, 9851, 7384, 7223, 7222, 5026, 9153, 4573, 4602, 2]
 // Exports: default
 
-// Module 17700 (action_sheet/AddMembersActionSheet)
+// Module 17699 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4325 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import RegexUtilsDefault from "RegexUtils" /* 4594 */;
-import GuildUtilsDefault from "GuildUtils" /* 5571 */;
-import FormCheckbox from "FormCheckbox" /* 5669 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11036 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17699 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import RegexUtilsDefault from "RegexUtils" /* 4593 */;
+import GuildUtilsDefault from "GuildUtils" /* 5570 */;
+import FormCheckbox from "FormCheckbox" /* 5668 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11034 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17698 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -218,10 +218,10 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(17694).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(17693).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, inputContainer: null, tagAvatar: null, emptyStateText: null, addMembersDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.inputContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };

@@ -1,7 +1,7 @@
 // Module ID: 16675
 // Function ID: 16676
 // Name: VibegrationsPublishNotesSheet
-// Dependencies: [5, 32, 19, 17, 2012, 1979, 4255, 1371, 1074, 4600, 21, 4607, 576, 7055, 504, 7318, 9396, 510, 4574, 11426, 1114, 3590, 1100, 7755, 7530, 7271, 7223, 4603, 7159, 4760, 5027, 2]
+// Dependencies: [5, 32, 19, 17, 2012, 1979, 4255, 1371, 1074, 4599, 21, 4606, 576, 7054, 504, 7317, 9394, 510, 4573, 11424, 1114, 3590, 1100, 7754, 7529, 7270, 7222, 4602, 7158, 4759, 5026, 2]
 // Exports: default
 
 // Module 16675 (VibegrationsPublishNotesSheet)
@@ -10,9 +10,9 @@ import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4574 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7318 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11426 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4573 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7317 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11424 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,13 +26,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 let closure_9 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4600).MessageSendLocation;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
 let closure_18 = "<#" + "9".repeat(20) + ">";
 const VibegrationsPatchNotesLastChannels = "VibegrationsPatchNotesLastChannels";
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -272,8 +272,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + tmp30 + tmp38;
                 }
-                const parsed = tmp3(7755).parse(found, combined);
-                const tmp35Result = tmp3(7530);
+                const parsed = tmp3(7754).parse(found, combined);
+                const tmp35Result = tmp3(7529);
                 const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;

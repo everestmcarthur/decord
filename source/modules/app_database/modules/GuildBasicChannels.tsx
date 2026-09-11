@@ -1,16 +1,16 @@
-// Module ID: 7721
-// Function ID: 7722
+// Module ID: 7720
+// Function ID: 7721
 // Name: GuildBasicChannels
-// Dependencies: [32, 5, 5329, 1961, 502, 1957, 2015, 1979, 4245, 1958, 3, 1986, 7722, 1086, 4254, 2]
+// Dependencies: [32, 5, 5328, 1961, 502, 1957, 2015, 1979, 4245, 1958, 3, 1986, 7721, 1086, 4254, 2]
 
-// Module 7721 (GuildBasicChannels)
+// Module 7720 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
 import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -299,7 +299,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "r" }, done: true };
+                            const obj5 = { value: { v: "Array" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

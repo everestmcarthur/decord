@@ -1,21 +1,28 @@
 // Module ID: 4641
 // Function ID: 4642
-// Dependencies: [4642]
+// Dependencies: [552]
 
 // Module 4641
-import _mod4642 from "module_4642" /* 4642 */;
+import _mod552 from "module_552" /* 552 */;
 
 
-export default function toInteger(arg0) {
-  const tmp = _mod4642(arg0);
-  const result = tmp % 1;
-  let num = 0;
-  if (tmp == tmp) {
-    let diff = tmp;
-    if (result) {
-      diff = tmp - result;
+export default function toFinite(arg0) {
+  if (arg0) {
+    const tmp3 = _mod552(arg0);
+    if (tmp3 !== Infinity) {
+      if (tmp3 !== -Infinity) {
+      }
     }
-    num = diff;
+    let num6 = 1;
+    if (tmp3 < 0) {
+      num6 = -1;
+    }
+    const num4 = 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 * num6;
+  } else {
+    let num = 0;
+    if (0 === arg0) {
+      num = arg0;
+    }
+    return num;
   }
-  return num;
 };

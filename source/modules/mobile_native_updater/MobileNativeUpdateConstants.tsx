@@ -1,9 +1,9 @@
-// Module ID: 4588
-// Function ID: 4589
+// Module ID: 4587
+// Function ID: 4588
 // Name: MobileNativeUpdateConstants
 // Dependencies: [4198, 1115, 1365, 1364, 2]
 
-// Module 4588 (MobileNativeUpdateConstants)
+// Module 4587 (MobileNativeUpdateConstants)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import hooks from "module_4198" /* 4198 */;
 

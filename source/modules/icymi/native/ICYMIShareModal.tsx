@@ -1,7 +1,7 @@
 // Module ID: 16573
 // Function ID: 16574
 // Name: ICYMIShareModal
-// Dependencies: [32, 5, 19, 17, 1957, 4948, 4947, 1074, 10951, 4600, 21, 4607, 576, 9868, 1114, 16574, 4305, 1477, 4460, 7946, 16575, 5177, 4425, 4317, 7055, 11787, 11796, 5027, 4810, 11076, 1369, 7755, 9399, 1256, 5180, 7530, 9402, 1611, 1115, 5683, 7937, 5676, 11079, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 4947, 4946, 1074, 10949, 4599, 21, 4606, 576, 9866, 1114, 16574, 4305, 1477, 4460, 7945, 16575, 5176, 4425, 4317, 7054, 11785, 11794, 5026, 4809, 11074, 1369, 7754, 9397, 1256, 5179, 7529, 9400, 1611, 1115, 5682, 7936, 5675, 11077, 2]
 // Exports: GameShareModal, GuildEventShareModal
 
 // Module 16573 (ICYMIShareModal)
@@ -12,19 +12,19 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
 import native from "native" /* 4317 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4425 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4460 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5177 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7055 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7946 */;
-import ShareEventUtils from "ShareEventUtils" /* 9868 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11787 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11796 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7945 */;
+import ShareEventUtils from "ShareEventUtils" /* 9866 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11785 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11794 */;
 import _modDef16575 from "module_16575" /* 16575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4947 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
 
 const require = globalThis.__r;
 
@@ -111,7 +111,7 @@ function GravityShareFooter(arg0) {
     }
     obj5.onPress = tmp17;
     obj5.loading = isSending;
-    items2[1] = map1(tmp7(5027).Button, obj5);
+    items2[1] = map1(tmp7(5026).Button, obj5);
     obj3.children = items2;
     tmp14Result = closure_1_14(View, obj3);
   }
@@ -376,13 +376,13 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const DraftType = fn(4948).DraftType;
+const DraftType = fn(4947).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(10951).UserRowModes;
-const MessageSendLocation = fn(4600).MessageSendLocation;
+const UserRowModes = fn(10949).UserRowModes;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };

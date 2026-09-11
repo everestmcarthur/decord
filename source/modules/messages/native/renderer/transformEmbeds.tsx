@@ -1,15 +1,15 @@
-// Module ID: 8192
-// Function ID: 8193
+// Module ID: 8191
+// Function ID: 8192
 // Name: transformEmbeds
-// Dependencies: [17, 1074, 8193, 8194, 4944, 8195, 1115, 8021, 4757, 8165, 4288, 7366, 7371, 4820, 1114, 2]
+// Dependencies: [17, 1074, 8192, 8193, 4943, 8194, 1115, 8020, 4756, 8164, 4288, 7365, 7370, 4819, 1114, 2]
 // Exports: default
 
-// Module 8192 (transformEmbeds)
+// Module 8191 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
-import EmbedUtils from "EmbedUtils" /* 4944 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8193 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8194 */;
+import EmbedUtils from "EmbedUtils" /* 4943 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8192 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8193 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -55,7 +55,7 @@ export default function transformEmbeds(arg0) {
                     return [];
                   }
                 }
-                tmp3Result = tmp3(8195);
+                tmp3Result = tmp3(8194);
                 if (tmp3Result13.isSocialLayerStorefrontArticleEmbed(type)) {
                   return [];
                 } else {
@@ -67,9 +67,9 @@ export default function transformEmbeds(arg0) {
                       ({ proxyURL, width, height } = thumbnail);
                       let obj2 = {};
                       let merged = Object.assign(thumbnail);
-                      obj2.width = tmp3(8193).sanitizeMediaDimension(width);
-                      const tmp3Result14 = tmp3(8193);
-                      obj2.height = tmp3(8193).sanitizeMediaDimension(height);
+                      obj2.width = tmp3(8192).sanitizeMediaDimension(width);
+                      const tmp3Result14 = tmp3(8192);
+                      obj2.height = tmp3(8192).sanitizeMediaDimension(height);
                       let imageSrc = proxyURL;
                       if (null != proxyURL) {
                         const obj6 = RowGeneratorUtilsDefault;
@@ -82,7 +82,7 @@ export default function transformEmbeds(arg0) {
                       }
                       obj2.url = obj7.getImageSrc(proxyURL, width, height, !closure_1_1);
                       tmp8 = obj2;
-                      const tmp3Result15 = tmp3(8193);
+                      const tmp3Result15 = tmp3(8192);
                     }
                   }
                   let tmp25 = null;
@@ -133,7 +133,7 @@ export default function transformEmbeds(arg0) {
                               obj4.inlinePlaybackDisabled = true;
                               tmp31 = obj4;
                             }
-                            tmp3Result16 = tmp3(4757);
+                            tmp3Result16 = tmp3(4756);
                             tmp44 = type.type !== tmp.GIFV || closure_1_1;
                           }
                           tmp34 = tmp8;
@@ -145,8 +145,8 @@ export default function transformEmbeds(arg0) {
                               if (provider2 != null) {
                                 name = provider2.name;
                               }
-                              const effectiveVideoProvider = tmp3(4944).getEffectiveVideoProvider(name, type.video.url);
-                              const tmp3Result17 = tmp3(4944);
+                              const effectiveVideoProvider = tmp3(4943).getEffectiveVideoProvider(name, type.video.url);
+                              const tmp3Result17 = tmp3(4943);
                               tmp34 = tmp8;
                               if (tmp3Result18.shouldPlayVideoInline(effectiveVideoProvider)) {
                                 const obj5 = {};
@@ -154,7 +154,7 @@ export default function transformEmbeds(arg0) {
                                 obj5.showPlayButton = true;
                                 tmp34 = obj5;
                               }
-                              tmp3Result18 = tmp3(8021);
+                              tmp3Result18 = tmp3(8020);
                             }
                           }
                         }
@@ -183,7 +183,7 @@ export default function transformEmbeds(arg0) {
                     }
                     if (null != type.url) {
                       if ("" !== type.url) {
-                        let parseEmbedTitleMarkup = tmp3(8165).parseEmbedTitleMarkupWithoutLinks;
+                        let parseEmbedTitleMarkup = tmp3(8164).parseEmbedTitleMarkupWithoutLinks;
                       }
                       if (type.type === tmp.RICH) {
                         if (null != type.rawTitle) {
@@ -196,8 +196,8 @@ export default function transformEmbeds(arg0) {
                               if (tmp.RICH === type) {
                                 if (null != type.rawDescription) {
                                   const obj9 = { description: type.rawDescription, channelId, isField: false, ignoreCache, showListsAndHeaders, showMaskedLinks };
-                                  let rawDescription = tmp3(8165).parseEmbedDescriptionMarkup(obj9);
-                                  const tmp3Result19 = tmp3(8165);
+                                  let rawDescription = tmp3(8164).parseEmbedDescriptionMarkup(obj9);
+                                  const tmp3Result19 = tmp3(8164);
                                 }
                               } else {
                                 rawDescription = type.rawDescription;
@@ -212,14 +212,14 @@ export default function transformEmbeds(arg0) {
                         const mapped1 = fields.map((rawName) => {
                           let result = null;
                           if (null != rawName.rawName) {
-                            result = channelId(8165).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                            const obj = channelId(8165);
+                            result = channelId(8164).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                            const obj = channelId(8164);
                           }
                           let result1 = null;
                           if (null != rawName.rawValue) {
                             const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                            result1 = channelId(8165).parseEmbedDescriptionMarkup(obj3);
-                            const obj2 = channelId(8165);
+                            result1 = channelId(8164).parseEmbedDescriptionMarkup(obj3);
+                            const obj2 = channelId(8164);
                           }
                           const obj4 = {};
                           const merged = Object.assign(rawName);
@@ -260,18 +260,18 @@ export default function transformEmbeds(arg0) {
                         }
                         if (null == type.author) {
                           if (type.type !== tmp.COMPONENTS) {
-                            const obj12 = { type: tmp3(7371).ObscuredMediaTypes.Embed, media: type };
+                            const obj12 = { type: tmp3(7370).ObscuredMediaTypes.Embed, media: type };
                             let isMediaScanPendingResult = !closure_1_10;
-                            const mediaObscuredReasonFromBitmask = tmp3(7366).getMediaObscuredReasonFromBitmask(obj12, closure_1_9);
+                            const mediaObscuredReasonFromBitmask = tmp3(7365).getMediaObscuredReasonFromBitmask(obj12, closure_1_9);
                             if (!closure_1_10) {
-                              const obj13 = { type: tmp3(7371).ObscuredMediaTypes.Embed, media: type };
-                              isMediaScanPendingResult = tmp3(7366).isMediaScanPending(obj13, closure_1_9);
-                              const tmp3Result22 = tmp3(7366);
+                              const obj13 = { type: tmp3(7370).ObscuredMediaTypes.Embed, media: type };
+                              isMediaScanPendingResult = tmp3(7365).isMediaScanPending(obj13, closure_1_9);
+                              const tmp3Result22 = tmp3(7365);
                             }
                             let isVerifiedTeenResult = tmp88;
                             if (mediaObscuredReasonFromBitmask.length > 0) {
-                              isVerifiedTeenResult = tmp3(4820).isVerifiedTeen();
-                              const tmp3Result23 = tmp3(4820);
+                              isVerifiedTeenResult = tmp3(4819).isVerifiedTeen();
+                              const tmp3Result23 = tmp3(4819);
                             }
                             let str10 = type.id;
                             if (str10 == null) {
@@ -363,7 +363,7 @@ export default function transformEmbeds(arg0) {
                       }
                       rawTitle = type.rawTitle;
                     }
-                    parseEmbedTitleMarkup = tmp3(8165).parseEmbedTitleMarkup;
+                    parseEmbedTitleMarkup = tmp3(8164).parseEmbedTitleMarkup;
                     tmp54 = embedBorderLeftColor;
                   }
                   let tmp27 = null == tmp25;
@@ -384,7 +384,7 @@ export default function transformEmbeds(arg0) {
                     }
                   }
                 }
-                tmp3Result13 = tmp3(4944);
+                tmp3Result13 = tmp3(4943);
               }
               obj = EmbedUtils;
             }

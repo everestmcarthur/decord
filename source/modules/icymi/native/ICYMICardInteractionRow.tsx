@@ -1,7 +1,7 @@
 // Module ID: 16570
 // Function ID: 16571
 // Name: ICYMICardInteractionRow
-// Dependencies: [32, 19, 17, 7380, 1957, 5465, 4245, 1074, 1374, 21, 4257, 7837, 4607, 576, 1115, 4456, 504, 4620, 7530, 11218, 5175, 1114, 8850, 4603, 11355, 1091, 1396, 11348, 10986, 11412, 11783, 11829, 16562, 5123, 7836, 8046, 11756, 8439, 11775, 11764, 4308, 5039, 672, 7283, 2]
+// Dependencies: [32, 19, 17, 7379, 1957, 5464, 4245, 1074, 1374, 21, 4257, 7836, 4606, 576, 1115, 4456, 504, 4619, 7529, 11216, 5174, 1114, 8848, 4602, 11353, 1091, 1396, 11346, 10984, 11410, 11781, 11827, 16562, 5122, 7835, 8045, 11754, 8437, 11773, 11762, 4308, 5038, 672, 7282, 2]
 // Exports: default, onAddReaction, useThread
 
 // Module 16570 (ICYMICardInteractionRow)
@@ -10,25 +10,25 @@ import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ReactionUtils from "ReactionUtils" /* 4257 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4620 */;
-import Pressables from "Pressables" /* 5175 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7530 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7836 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7837 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8046 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11218 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11348 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11764 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11775 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11783 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11829 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import Pressables from "Pressables" /* 5174 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7836 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8045 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11346 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11762 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11773 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11781 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11827 */;
 import ICYMIShared from "ICYMIShared" /* 16562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7380 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7379 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5465 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5464 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = globalThis.__r;
@@ -307,7 +307,7 @@ const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 let c19 = 20;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_20 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }, replyForwardButtonContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisRowContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojiContainer: { flexDirection: "row", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 }, innerEmojiContainer: { paddingVertical: 5 }, selectedInnerEmojiContainer: { paddingVertical: 4 }, addEmojiContainer: { minHeight: 30, alignItems: "center" }, disabled: { opacity: 0.4 }, defaultEmoji: null, emojiText: null, selectedInnerTextContainer: null, innerTextContainer: null, emojiImage: null, selected: null, gradient: null, overflowChevron: null, comments: null, commentCount: null, commentsIcon: null };
   const size = { width: v20, height: v20 };

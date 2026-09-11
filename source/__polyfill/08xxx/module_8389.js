@@ -1,16 +1,9 @@
 // Module ID: 8389
 // Function ID: 8390
-// Dependencies: []
+// Dependencies: [17]
 
 // Module 8389
-const re0 = /[|\\{}()[\]^$+*?.-]/g;
+import _mod17 from "module_17" /* 17 */;
 
-export default (str) => {
-  if (typeof str !== "string") {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Expected a string");
-    throw typeError;
-  } else {
-    return str.replace(re0, "\\$&");
-  }
-};
+
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

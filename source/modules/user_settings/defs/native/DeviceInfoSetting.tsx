@@ -1,15 +1,15 @@
 // Module ID: 15623
 // Function ID: 15624
 // Name: DeviceInfoSetting
-// Dependencies: [15622, 4586, 11564, 1114, 15624, 1935, 2]
+// Dependencies: [15622, 4585, 11562, 1114, 15624, 1935, 2]
 
 // Module 15623 (DeviceInfoSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import DeviceUtils from "DeviceUtils" /* 4586 */;
+import DeviceUtils from "DeviceUtils" /* 4585 */;
 import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15622 */;
 import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 15624 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

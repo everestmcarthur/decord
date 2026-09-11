@@ -1,22 +1,22 @@
 // Module ID: 15471
 // Function ID: 15472
 // Name: YouBarNameplateAccessibilitySetting
-// Dependencies: [4599, 8050, 11564, 1114, 504, 14492, 2]
+// Dependencies: [4598, 8049, 11562, 1114, 504, 14490, 2]
 
 // Module 15471 (YouBarNameplateAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14492 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14490 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.EEms8K);
   },
-  parent: fn(8050).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8049).MobileUserSettings.ACCESSIBILITY,
   useValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarNameplate);

@@ -1,10 +1,10 @@
-// Module ID: 5634
-// Function ID: 5635
+// Module ID: 5633
+// Function ID: 5634
 // Name: MemberVerificationGuildHeader
-// Dependencies: [19, 17, 5625, 21, 4607, 576, 1396, 5635, 1611, 4343, 5039, 5636, 5642, 4603, 1114, 2]
+// Dependencies: [19, 17, 5624, 21, 4606, 576, 1396, 5634, 1611, 4343, 5038, 5635, 5641, 4602, 1114, 2]
 // Exports: default
 
-// Module 5634 (MemberVerificationGuildHeader)
+// Module 5633 (MemberVerificationGuildHeader)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import noop from "module_19" /* 19 */;
@@ -13,13 +13,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5625);
+const MemberVerificationFormConstants = fn(5624);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 1.20225424859375;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 }, headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 }, linearGradient: { position: "absolute", height: 140, top: 0, right: 0, left: 0 }, avatar: null, avatarContainer: null, featureIcon: null, headerTitle: null, headerDescription: null };
 let size = { borderRadius: nativeDefault.radii.lg, borderWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE, width: AVATAR_SIZE, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.avatar = size;
@@ -49,7 +49,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
     let obj = require("AvatarUtils");
   } else {
     tmp3 = top;
-    guildBannerSource = require("module_5635");
+    guildBannerSource = require("module_5634");
     tmp5 = importDefault;
   }
   const tmp8 = useBannerHeight();

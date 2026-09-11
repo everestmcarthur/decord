@@ -1,10 +1,10 @@
-// Module ID: 14730
-// Function ID: 14731
+// Module ID: 14727
+// Function ID: 14728
 // Name: useAnnounceError
 // Dependencies: [19, 4318, 2]
 // Exports: useAnnounceError
 
-// Module 14730 (useAnnounceError)
+// Module 14727 (useAnnounceError)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
 import noop from "module_19" /* 19 */;
 

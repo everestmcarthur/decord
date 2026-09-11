@@ -1,14 +1,14 @@
 // Module ID: 15410
 // Function ID: 15411
 // Name: DisplayNameStylesGummyCustomColorSheet
-// Dependencies: [19, 17, 1389, 21, 4607, 576, 4343, 1388, 1091, 4575, 4574, 7224, 7223, 1114, 5027, 15411, 14656, 2]
+// Dependencies: [19, 17, 1389, 21, 4606, 576, 4343, 1388, 1091, 4574, 4573, 7223, 7222, 1114, 5026, 15411, 14654, 2]
 // Exports: default
 
 // Module 15410 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 576 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const DisplayNameStylesConstants = fn(1389);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: metroRequire } = DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" }, huePickerInset: null, previewWrapper: null, preview: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.huePickerInset = { paddingHorizontal: nativeDefault.space.PX_4 + 2, alignSelf: "stretch" };
@@ -36,7 +36,7 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1091).int2hslRaw(onSelect.initialColor).h));
   const items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(4575).triggerHapticFeedback(onSelect(4575).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(4574).triggerHapticFeedback(onSelect(4574).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -51,16 +51,16 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1114).intl;
   obj6.text = intl2.string(onSelect(1114).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5027).Button, obj6);
-  obj4.header = closure_7(onSelect(7223).BottomSheetTitleHeader, obj5);
+  obj5.trailing = closure_7(onSelect(5026).Button, obj6);
+  obj4.header = closure_7(onSelect(7222).BottomSheetTitleHeader, obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
   const obj3 = onSelect(1091);
   obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15411), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
-  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14656), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14654), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(7224).BottomSheet, obj4);
+  return closure_7(onSelect(7223).BottomSheet, obj4);
 };

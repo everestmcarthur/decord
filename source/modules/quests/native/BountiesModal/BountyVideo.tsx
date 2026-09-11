@@ -1,14 +1,14 @@
 // Module ID: 15080
 // Function ID: 15081
 // Name: BountyVideo
-// Dependencies: [32, 19, 17, 5496, 21, 1116, 11381, 576, 4607, 15081, 11616, 11617, 4343, 4308, 4608, 4611, 15068, 15073, 15082, 15092, 5639, 1114, 15093, 15095, 15097, 11188, 2]
+// Dependencies: [32, 19, 17, 5495, 21, 1116, 11379, 576, 4606, 15081, 11614, 11615, 4343, 4308, 4607, 4610, 15068, 15073, 15082, 15092, 5638, 1114, 15093, 15095, 15097, 11186, 2]
 // Exports: BountyVideo
 
 // Module 15080 (BountyVideo)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
-import AssetUtils from "AssetUtils" /* 11381 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
+import AssetUtils from "AssetUtils" /* 11379 */;
 import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15068 */;
 import BountiesModalProgress from "BountiesModalProgress" /* 15081 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -17,13 +17,13 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5496).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PlatformUtils = fn(1116);
 let closure_14 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_16 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null };
   const obj2 = {};

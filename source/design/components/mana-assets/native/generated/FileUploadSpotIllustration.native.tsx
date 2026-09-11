@@ -1,13 +1,13 @@
-// Module ID: 6065
-// Function ID: 6066
+// Module ID: 6064
+// Function ID: 6065
 // Name: FileUploadSpotIllustration
-// Dependencies: [21, 5639, 6066, 2]
+// Dependencies: [21, 5638, 6065, 2]
 // Exports: FileUploadSpotIllustration
 
-// Module 6065 (FileUploadSpotIllustration)
+// Module 6064 (FileUploadSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6066 from "module_6066" /* 6066 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6065 from "module_6065" /* 6065 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const FileUploadSpotIllustration = function FileUploadSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6066 };
+  const obj2 = { uri: _modDef6065 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

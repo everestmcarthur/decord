@@ -1,9 +1,9 @@
-// Module ID: 5111
-// Function ID: 5112
+// Module ID: 5110
+// Function ID: 5111
 // Name: MemberVerificationConstants
 // Dependencies: [4431, 2]
 
-// Module 5111 (MemberVerificationConstants)
+// Module 5110 (MemberVerificationConstants)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
 import size from "module_2" /* 2 */;
 

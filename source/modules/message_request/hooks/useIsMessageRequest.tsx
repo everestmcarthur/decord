@@ -1,12 +1,12 @@
-// Module ID: 11462
-// Function ID: 11463
+// Module ID: 11460
+// Function ID: 11461
 // Name: useIsMessageRequest
-// Dependencies: [7293, 7294, 504, 2]
+// Dependencies: [7292, 7293, 504, 2]
 // Exports: useIsEitherTypeOfMessageRequest, useIsMessageRequest
 
-// Module 11462 (useIsMessageRequest)
-import MessageRequestStore from "MessageRequestStore" /* 7293 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7294 */;
+// Module 11460 (useIsMessageRequest)
+import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
 
 const require = globalThis.__r;
 

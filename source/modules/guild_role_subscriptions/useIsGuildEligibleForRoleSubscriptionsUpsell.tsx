@@ -1,7 +1,7 @@
 // Module ID: 16323
 // Function ID: 16324
 // Name: useIsGuildEligibleForRoleSubscriptionsUpsell
-// Dependencies: [1975, 1979, 1371, 1074, 504, 7335, 2]
+// Dependencies: [1975, 1979, 1371, 1074, 504, 7334, 2]
 // Exports: default
 
 // Module 16323 (useIsGuildEligibleForRoleSubscriptionsUpsell)

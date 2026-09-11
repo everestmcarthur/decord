@@ -1,14 +1,14 @@
 // Module ID: 2012
 // Function ID: 2013
 // Name: GuildChannelStore
-// Dependencies: [2013, 1960, 4244, 1961, 502, 1957, 2021, 1979, 4245, 4255, 1371, 1074, 1982, 12, 4760, 1086, 4250, 504, 573, 2]
+// Dependencies: [2013, 1960, 4244, 1961, 502, 1957, 2021, 1979, 4245, 4255, 1371, 1074, 1982, 12, 4759, 1086, 4250, 504, 573, 2]
 
 // Module 2012 (GuildChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
-import useChannelName from "useChannelName" /* 4760 */;
+import useChannelName from "useChannelName" /* 4759 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

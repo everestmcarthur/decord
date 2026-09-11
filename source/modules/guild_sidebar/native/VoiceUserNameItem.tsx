@@ -1,13 +1,13 @@
 // Module ID: 16195
 // Function ID: 16196
 // Name: VoiceUserNameItem
-// Dependencies: [32, 19, 17, 21, 4607, 4841, 9268, 4603, 4451, 1114, 16196, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 4840, 9266, 4602, 4451, 1114, 16196, 2]
 // Exports: default
 
 // Module 16195 (VoiceUserNameItem)
-import Text_Text from "Text/Text" /* 4603 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4841 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9268 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4840 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9266 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
@@ -77,7 +77,7 @@ export default function VoiceUserNameItem(arg0) {
     const intl = tmp5(1114).intl;
     const items2 = ["\u00A0", intl.string(tmp5(1114).t["pFO/Ph"])];
     obj6.children = items2;
-    isGuest = tmp18(tmp5(4603).Text, obj6);
+    isGuest = tmp18(tmp5(4602).Text, obj6);
   }
   items1[1] = isGuest;
   obj4.children = items1;

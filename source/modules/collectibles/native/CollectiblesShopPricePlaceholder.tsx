@@ -1,20 +1,20 @@
-// Module ID: 8953
-// Function ID: 8954
+// Module ID: 8951
+// Function ID: 8952
 // Name: CollectiblesShopPricePlaceholder
-// Dependencies: [19, 21, 4607, 576, 4343, 4608, 2]
+// Dependencies: [19, 21, 4606, 576, 4343, 4607, 2]
 // Exports: CollectiblesShopPricePlaceholder
 
-// Module 8953 (CollectiblesShopPricePlaceholder)
+// Module 8951 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { skeletonContainer: { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollectiblesShopPricePlaceholderTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };

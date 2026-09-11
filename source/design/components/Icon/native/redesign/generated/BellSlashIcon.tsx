@@ -1,13 +1,13 @@
-// Module ID: 9151
-// Function ID: 9152
+// Module ID: 9149
+// Function ID: 9150
 // Name: BellSlashIcon
-// Dependencies: [19, 21, 576, 4307, 9152, 2]
+// Dependencies: [19, 21, 576, 4307, 9150, 2]
 // Exports: BellSlashIcon
 
-// Module 9151 (BellSlashIcon)
+// Module 9149 (BellSlashIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod9152 from "module_9152" /* 9152 */;
+import _mod9150 from "module_9150" /* 9150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const BellSlashIcon = function BellSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9152, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9150, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

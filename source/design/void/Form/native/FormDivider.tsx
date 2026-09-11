@@ -1,21 +1,21 @@
-// Module ID: 8692
-// Function ID: 8693
+// Module ID: 8690
+// Function ID: 8691
 // Name: FormDivider
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 4317, 7258, 4456, 5738, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 4317, 7257, 4456, 5737, 2]
 // Exports: default
 
-// Module 8692 (FormDivider)
+// Module 8690 (FormDivider)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4317 */;
-import RedesignCompat from "RedesignCompat" /* 5738 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7258 */;
+import RedesignCompat from "RedesignCompat" /* 5737 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { divider: {}, dividerOuter: { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth }, dividerHasIcon: { marginLeft: 56 } };
   return obj;

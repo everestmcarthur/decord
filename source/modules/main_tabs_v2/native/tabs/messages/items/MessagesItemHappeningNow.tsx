@@ -1,14 +1,14 @@
 // Module ID: 16128
 // Function ID: 16129
 // Name: MessagesItemHappeningNow
-// Dependencies: [19, 17, 15357, 21, 12282, 576, 4607, 4308, 8908, 16129, 2]
+// Dependencies: [19, 17, 15357, 21, 12280, 576, 4606, 4308, 8906, 16129, 2]
 // Exports: getMessagesItemHappeningNowHeight
 
 // Module 16128 (MessagesItemHappeningNow)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8908 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12282 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8906 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12280 */;
 import HappeningNowDefault from "HappeningNow" /* 16129 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const jsx = fn(21).jsx;
 const items = [, , , , , , ];
 ({ LIVE_GUILD_STAGE: arr[0], VOICES: arr[1], EMBEDDED_ACTIVITY: arr[2], STREAMS: arr[3], ACTIVITIES: arr[4], USER_CUSTOM_STATUS: arr[5], USER: arr[6] } = HappeningNowItem);
 const set = new Set(items);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { container: { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" } };
   return obj;

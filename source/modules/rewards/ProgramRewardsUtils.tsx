@@ -1,14 +1,14 @@
-// Module ID: 13783
-// Function ID: 13784
+// Module ID: 13781
+// Function ID: 13782
 // Name: ProgramRewardsUtils
-// Dependencies: [1371, 1373, 4039, 13784, 13787, 13788, 4264, 2]
+// Dependencies: [1371, 1373, 4039, 13782, 13785, 13786, 4264, 2]
 // Exports: canFetchAnyProgramReward, canFetchNitroProgramReward, canFetchXboxProgramReward, hasNecessaryPremiumSubscriptionStatus, isEligibleForProgramReward, isProgramRewardStale, useIsEligibleForProgramReward
 
-// Module 13783 (ProgramRewardsUtils)
+// Module 13781 (ProgramRewardsUtils)
 import _modDef4039 from "module_4039" /* 4039 */;
 import PremiumUtils from "PremiumUtils" /* 4264 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 13784 */;
-import PremiumRewardsOrbsExperiment from "PremiumRewardsOrbsExperiment" /* 13787 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 13782 */;
+import PremiumRewardsOrbsExperiment from "PremiumRewardsOrbsExperiment" /* 13785 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -22,11 +22,11 @@ function canFetchNitroProgramReward(ProgramRewardsUtils) {
     str = "ProgramRewardsUtils";
   }
   if (ProgramRewardsTypes.RewardProgram.NITRO === NITRO) {
-    let flag = tmp(13787).getPremiumRewardsOrbsExperiment(str).isInTreatment;
-    const tmpResult = tmp(13787);
+    let flag = tmp(13785).getPremiumRewardsOrbsExperiment(str).isInTreatment;
+    const tmpResult = tmp(13785);
   } else {
     flag = false;
-    if (tmp(13784).RewardProgram.XBOX === NITRO) {
+    if (tmp(13782).RewardProgram.XBOX === NITRO) {
       flag = true;
     }
   }
@@ -47,22 +47,22 @@ function canFetchXboxProgramReward(ProgramRewardsUtils) {
     str = "ProgramRewardsUtils";
   }
   if (ProgramRewardsTypes.RewardProgram.NITRO === XBOX) {
-    let flag = tmp(13787).getPremiumRewardsOrbsExperiment(str).isInTreatment;
-    const tmpResult = tmp(13787);
+    let flag = tmp(13785).getPremiumRewardsOrbsExperiment(str).isInTreatment;
+    const tmpResult = tmp(13785);
   } else {
     flag = false;
-    if (tmp(13784).RewardProgram.XBOX === XBOX) {
+    if (tmp(13782).RewardProgram.XBOX === XBOX) {
       flag = true;
     }
   }
   if (flag) {
-    flag = tmp(13788).hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
-    const tmpResult2 = tmp(13788);
+    flag = tmp(13786).hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
+    const tmpResult2 = tmp(13786);
   }
   return flag;
 }
 const PremiumTypes = fn(1373).PremiumTypes;
-const dependencyMap = { [fn(13784).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(13784).RewardProgram.XBOX]: canFetchXboxProgramReward };
+const dependencyMap = { [fn(13782).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(13782).RewardProgram.XBOX]: canFetchXboxProgramReward };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
@@ -89,8 +89,8 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
     str = "ProgramRewardsUtils";
   }
   if (ProgramRewardsTypes.RewardProgram.NITRO === arg0) {
-    return tmp(13787).getPremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (tmp(13784).RewardProgram.XBOX === arg0) {
+    return tmp(13785).getPremiumRewardsOrbsExperiment(str).isInTreatment;
+  } else if (tmp(13782).RewardProgram.XBOX === arg0) {
     return true;
   } else {
     return false;

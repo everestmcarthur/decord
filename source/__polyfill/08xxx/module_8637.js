@@ -1,18 +1,14 @@
 // Module ID: 8637
 // Function ID: 8638
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8638, 8559, 8568]
+// Dependencies: [41, 42, 93, 95, 98, 19]
 
 // Module 8637
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8568 from "module_8568" /* 8568 */;
-import _modDef8638 from "module_8638" /* 8638 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Rect = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,50 +28,45 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Rect {
+let _classCallCheck = _classCallCheck_mod;
+class Stop {
   constructor() {
     self = this;
-    tmp = closure_3(this, Rect);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Rect);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, Stop);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(Stop);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(Rect, _modDef8568);
+_classCallCheck = Stop;
+_inherits(Stop, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(Rect(8559).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    return null;
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+let items = [entry];
+const importDefaultResultResult = _createClass(Stop, items);
+importDefaultResultResult.displayName = "Stop";
 
 export default importDefaultResultResult;

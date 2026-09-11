@@ -1,11 +1,11 @@
-// Module ID: 9828
-// Function ID: 9829
+// Module ID: 9826
+// Function ID: 9827
 // Name: useCreateChannelSubmit
-// Dependencies: [5, 32, 19, 1074, 1894, 1086, 9829, 4458, 1114, 2]
+// Dependencies: [5, 32, 19, 1074, 1894, 1086, 9827, 4458, 1114, 2]
 // Exports: default
 
-// Module 9828 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9829 */;
+// Module 9826 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9827 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -64,7 +64,7 @@ export default function useCreateChannelSubmit(arg0) {
             let guild_id;
             c7 = 1;
             c8 = 1;
-            return { value: "PX_16", done: true };
+            return { value: "PX_16", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {

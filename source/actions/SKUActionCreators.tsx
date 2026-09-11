@@ -1,20 +1,20 @@
-// Module ID: 10907
-// Function ID: 10908
+// Module ID: 10905
+// Function ID: 10906
 // Name: SKUActionCreators
-// Dependencies: [5, 8879, 5562, 1074, 573, 4849, 1272, 4287, 8946, 7662, 4508, 4286, 4279, 4931, 4940, 1369, 2]
+// Dependencies: [5, 8877, 5561, 1074, 573, 4848, 1272, 4287, 8944, 7661, 4507, 4286, 4279, 4930, 4939, 1369, 2]
 // Exports: clearPurchaseError, fetchPublishedSKU, fetchSKU, fetchTestSKUsForApplication, grantChannelBranchEntitlement, orderSKU, previewPurchaseSku, purchaseSKU, resendPaymentVerificationEmail, showPurchaseConfirmationStep, updateSKUPaymentIsGift
 
-// Module 10907 (SKUActionCreators)
+// Module 10905 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import BillingUtils from "BillingUtils" /* 4279 */;
-import StoreUtils from "StoreUtils" /* 4849 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 4940 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7662 */;
-import TestModeUtils from "TestModeUtils" /* 8946 */;
+import StoreUtils from "StoreUtils" /* 4848 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 4939 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7661 */;
+import TestModeUtils from "TestModeUtils" /* 8944 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8879 */;
-import SKUStore from "SKUStore" /* 5562 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8877 */;
+import SKUStore from "SKUStore" /* 5561 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU(arg0, value) {
@@ -203,90 +203,27 @@ let closure_9 = async function _fetchPublishedSKU(arg0, value) {
     }
   }
 };
-let closure_10 = async function _fetchTestSKUsForApplication(arg0, value) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = true;
-          }
-          closure_130_1 = flag;
-          let body;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          if (!obj12.isTestModeForApplication(closure_130_0)) {
-            if (closure_130_1) {
-              const _Error = Error;
-              const error = new Error("this should only be used in test mode");
-              throw error;
-            }
-          }
-          obj12 = closure_131_0(closure_131_2[8]);
-          const obj6 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: null };
-          const obj5 = closure_131_0(closure_131_2[5]);
-          obj6.rejectWithError = closure_131_0(closure_131_2[6]).rejectWithMigratedError();
-          c4 = 2;
-          c5 = 1;
-          const obj8 = { value: obj5.httpGetWithCountryCodeQuery(obj6), done: false };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        body = value.body;
-        const obj10 = { type: "SKUS_FETCH_SUCCESS", skus: body };
-        closure_131_1(closure_131_2[4]).dispatch(obj10);
-        c5 = 3;
-        const obj11 = { value: body, done: true };
-        return obj11;
-      }
-    } catch (tmp28) {
-      c5 = tmp;
-      throw tmp28;
+let closure_10 = async function _fetchTestSKUsForApplication() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = true;
+  }
+  closure_130_1 = flag;
+  await "PX_16";
+  if (!obj12.isTestModeForApplication(closure_130_0)) {
+    if (closure_130_1) {
+      const _Error = Error;
+      const error = new Error("this should only be used in test mode");
+      throw error;
     }
   }
+  const obj6 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: closure_131_0(closure_131_2[6]).rejectWithMigratedError() };
+  await closure_131_0(closure_131_2[5]).httpGetWithCountryCodeQuery(obj6);
+  const body = arg1.body;
+  closure_131_1(closure_131_2[4]).dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body });
+  return body;
 };
 let closure_11 = async function _previewPurchaseSku(arg0, value) {
   if (c6 === 2) {
@@ -326,7 +263,7 @@ let closure_11 = async function _previewPurchaseSku(arg0, value) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

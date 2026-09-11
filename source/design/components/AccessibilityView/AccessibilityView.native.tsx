@@ -1,10 +1,10 @@
-// Module ID: 5011
-// Function ID: 5012
+// Module ID: 5010
+// Function ID: 5011
 // Name: AccessibilityView
-// Dependencies: [19, 17, 21, 5012, 4343, 2]
+// Dependencies: [19, 17, 21, 5011, 4343, 2]
 
-// Module 5011 (AccessibilityView)
-import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 5012 */;
+// Module 5010 (AccessibilityView)
+import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 5011 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 

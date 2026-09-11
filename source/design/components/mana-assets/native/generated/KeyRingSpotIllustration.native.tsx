@@ -1,13 +1,13 @@
-// Module ID: 6285
-// Function ID: 6286
+// Module ID: 6284
+// Function ID: 6285
 // Name: KeyRingSpotIllustration
-// Dependencies: [21, 5639, 6286, 2]
+// Dependencies: [21, 5638, 6285, 2]
 // Exports: KeyRingSpotIllustration
 
-// Module 6285 (KeyRingSpotIllustration)
+// Module 6284 (KeyRingSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6286 from "module_6286" /* 6286 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6285 from "module_6285" /* 6285 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const KeyRingSpotIllustration = function KeyRingSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6286 };
+  const obj2 = { uri: _modDef6285 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,14 +1,14 @@
-// Module ID: 8678
-// Function ID: 8679
+// Module ID: 8676
+// Function ID: 8677
 // Name: ManualReviewDecidedTeenAlertModal
-// Dependencies: [19, 21, 4957, 1114, 2978, 4603, 8499, 2024, 4957, 2]
+// Dependencies: [19, 21, 4956, 1114, 2978, 4602, 8497, 2024, 4956, 2]
 // Exports: default
 
-// Module 8678 (ManualReviewDecidedTeenAlertModal)
+// Module 8676 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1114 */;
 import _modDef2978 from "module_2978" /* 2978 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import AlertModal from "AlertModal" /* 4957 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import AlertModal from "AlertModal" /* 4956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function ManualReviewDecidedTeenAlertModal() {
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8499);
+          const obj = closure_1_1(8497);
           const intl = closure_1_0(1114).intl;
           return obj.openUrl(closure_1_1(2024).getArticleURL(intl.string(closure_1_1(2978).agiNYw)));
         },

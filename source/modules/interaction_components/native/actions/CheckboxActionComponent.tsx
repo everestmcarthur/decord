@@ -1,13 +1,13 @@
-// Module ID: 17484
-// Function ID: 17485
+// Module ID: 17483
+// Function ID: 17484
 // Name: CheckboxActionComponent
-// Dependencies: [19, 21, 8198, 38, 1894, 9522, 2]
+// Dependencies: [19, 21, 8197, 38, 1894, 9520, 2]
 
-// Module 17484 (CheckboxActionComponent)
+// Module 17483 (CheckboxActionComponent)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
-import ComponentStateContext from "ComponentStateContext" /* 8198 */;
-import Checkbox from "Checkbox" /* 9522 */;
+import ComponentStateContext from "ComponentStateContext" /* 8197 */;
+import Checkbox from "Checkbox" /* 9520 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

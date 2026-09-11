@@ -1,23 +1,23 @@
 // Module ID: 15964
 // Function ID: 15965
 // Name: ParentalControlsExplicitMediaFiltersFriendsDMsSetting
-// Dependencies: [7611, 8050, 14879, 7673, 14883, 1114, 14876, 1187, 11564, 2]
+// Dependencies: [7610, 8049, 14879, 7672, 14883, 1114, 14876, 1187, 11562, 2]
 
 // Module 15964 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
 import util from "util" /* 1114 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7673 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7672 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 14879 */;
 import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14883 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["+uI23H"]);
   },
-  parent: fn(8050).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8049).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const parentalControlledExplicitContentSettings = useParentalControlSettings.useParentalControlledExplicitContentSettings();
     let prop;

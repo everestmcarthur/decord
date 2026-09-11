@@ -1,23 +1,23 @@
-// Module ID: 10739
-// Function ID: 10740
+// Module ID: 10737
+// Function ID: 10738
 // Name: MediaKeyboardItem
-// Dependencies: [19, 17, 4947, 10740, 21, 4343, 4607, 576, 4456, 1178, 10488, 4603, 504, 5188, 10741, 1114, 5220, 5190, 10742, 10743, 4608, 1477, 10744, 5139, 10203, 2]
+// Dependencies: [19, 17, 4946, 10738, 21, 4343, 4606, 576, 4456, 1178, 10486, 4602, 504, 5187, 10739, 1114, 5219, 5189, 10740, 10741, 4607, 1477, 10742, 5138, 10201, 2]
 // Exports: isAttachFilesNode, isMediaCameraNode, isSpecialMediaGridNode, isViewAllPhotosNode
 
-// Module 10739 (MediaKeyboardItem)
+// Module 10737 (MediaKeyboardItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import timing from "timing" /* 4608 */;
-import ImageIcon from "ImageIcon" /* 5139 */;
-import AttachmentIcon from "AttachmentIcon" /* 10203 */;
-import _modDef10488 from "module_10488" /* 10488 */;
-import CameraIcon from "CameraIcon" /* 10744 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import timing from "timing" /* 4607 */;
+import ImageIcon from "ImageIcon" /* 5138 */;
+import AttachmentIcon from "AttachmentIcon" /* 10201 */;
+import _modDef10486 from "module_10486" /* 10486 */;
+import CameraIcon from "CameraIcon" /* 10742 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4947 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -28,7 +28,7 @@ function NewCaption(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React7(native.Icon, { source: _modDef10488, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [React7(native.Icon, { source: _modDef10486, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj.children = items1;
   return closure_1_10(React4, obj);
 }
@@ -330,12 +330,12 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10740);
+const DeviceConstants = fn(10738);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
 let obj2 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj.imageContainer = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
@@ -363,7 +363,7 @@ obj.specialButton = { flexDirection: "column", justifyContent: "center", alignIt
 obj.disabled = { opacity: 0.4 };
 obj.imageDisabled = { opacity: 0.2 };
 let closure_12 = createStyles.createStyles(obj);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_16 = createStyles.createStyleProperties({ backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE });
 const __initData = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };

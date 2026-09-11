@@ -1,13 +1,13 @@
-// Module ID: 9133
-// Function ID: 9134
+// Module ID: 9131
+// Function ID: 9132
 // Name: InAppReportsIgnoreUserElement
-// Dependencies: [19, 1957, 4255, 1074, 21, 504, 4759, 4787, 9134, 9143, 1114, 7040, 2]
+// Dependencies: [19, 1957, 4255, 1074, 21, 504, 4758, 4786, 9132, 9141, 1114, 7039, 2]
 // Exports: default
 
-// Module 9133 (InAppReportsIgnoreUserElement)
-import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4787 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9134 */;
+// Module 9131 (InAppReportsIgnoreUserElement)
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9132 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;

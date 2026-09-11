@@ -1,13 +1,10 @@
 // Module ID: 14355
 // Function ID: 14356
-// Dependencies: [14356]
+// Dependencies: [14356, 14360]
 
 // Module 14355
 import _mod14356 from "module_14356" /* 14356 */;
+import _mod14360 from "module_14360" /* 14360 */;
 
 
-export default !_mod14356(() => 7 !== Object.defineProperty({}, 1, {
-  get() {
-    return 7;
-  }
-})[1]);
+export default (arg0) => _mod14356(_mod14360(arg0));

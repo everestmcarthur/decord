@@ -1,7 +1,7 @@
 // Module ID: 16157
 // Function ID: 16158
 // Name: HappeningNowCardVoice
-// Dependencies: [19, 17, 7732, 1371, 4626, 15357, 1074, 21, 4607, 1242, 9629, 1896, 16140, 15358, 5153, 13134, 16150, 8149, 504, 12, 1369, 4759, 1114, 2]
+// Dependencies: [19, 17, 7731, 1371, 4625, 15357, 1074, 21, 4606, 1242, 9627, 1896, 16140, 15358, 5152, 13132, 16150, 8148, 504, 12, 1369, 4758, 1114, 2]
 // Exports: useVoiceChannelUsers
 
 // Module 16157 (HappeningNowCardVoice)
@@ -10,11 +10,11 @@ import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const require = globalThis.__r;
 
@@ -42,7 +42,7 @@ let closure_8 = fn(15357).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");

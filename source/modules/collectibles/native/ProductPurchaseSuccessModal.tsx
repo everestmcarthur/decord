@@ -1,25 +1,25 @@
-// Module ID: 11175
-// Function ID: 11176
+// Module ID: 11173
+// Function ID: 11174
 // Name: ProductPurchaseSuccessModal
-// Dependencies: [32, 718, 19, 17, 4599, 1074, 21, 4607, 576, 1889, 11174, 5683, 5732, 1114, 4343, 5026, 4608, 4575, 7626, 11176, 4308, 5039, 8264, 11178, 504, 11179, 11180, 8943, 8420, 11186, 8257, 7197, 11187, 8891, 8904, 11205, 11315, 11316, 4603, 7628, 5027, 2]
+// Dependencies: [32, 718, 19, 17, 4598, 1074, 21, 4606, 576, 1889, 11172, 5682, 5731, 1114, 4343, 5025, 4607, 4574, 7625, 11174, 4308, 5038, 8263, 11176, 504, 11177, 11178, 8941, 8418, 11184, 8256, 7196, 11185, 8889, 8902, 11203, 11313, 11314, 4602, 7627, 5026, 2]
 // Exports: default
 
-// Module 11175 (ProductPurchaseSuccessModal)
+// Module 11173 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import timing from "timing" /* 4608 */;
-import spring from "spring" /* 5026 */;
-import _mod5683 from "module_5683" /* 5683 */;
-import XSmallIcon from "XSmallIcon" /* 5732 */;
-import tinycolorDefault from "tinycolor" /* 7626 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11174 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import timing from "timing" /* 4607 */;
+import spring from "spring" /* 5025 */;
+import _mod5682 from "module_5682" /* 5682 */;
+import XSmallIcon from "XSmallIcon" /* 5731 */;
+import tinycolorDefault from "tinycolor" /* 7625 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11172 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ function CancelButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_12(_mod5683.HeaderBackButton, obj);
+  return closure_12(_mod5682.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -99,10 +99,10 @@ const Constants = fn(1074);
 ({ Orientation: c10, VerticalGradient: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj2 = { closeButtonIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY } };
 let closure_15 = createStyles.createStyles(obj2);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let closure_16 = createStyles.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -185,7 +185,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   let callback;
   dependencyMap = undefined;
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const backgroundColors = callback(11176)(product.styles).backgroundColors;
+  const backgroundColors = callback(11174)(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -346,7 +346,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj11 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj12 = { initialRenderedBalance: prop, balance: tmp2Result23.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp31(tmp2(11187).BalanceWidgetPill, obj12);
+      showOrbBalancePill = tmp31(tmp2(11185).BalanceWidgetPill, obj12);
     }
     obj11.children = showOrbBalancePill;
     const items5 = [tmp31(tmp28, obj11), ];
@@ -375,24 +375,24 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         ({ firstAvatarDecoration: obj35.deco, firstProfileEffect: obj35.pfx, firstNameplate: obj35.nameplate } = shopProductItems);
         obj17.previewAssets = product.previewAssets;
         obj17.targetSize = tmp25;
-        tmp30Result = tmp30(tmp4(8891), obj17);
+        tmp30Result = tmp30(tmp4(8889), obj17);
       }
       obj16.children = tmp30Result;
       let tmp30Result2 = tmp30(tmp28, obj16);
     } else if (tmp2(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj18 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
-      tmp30Result2 = tmp30(tmp4(8904), obj18);
+      tmp30Result2 = tmp30(tmp4(8902), obj18);
     } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj19 = { user: currentUser, profileEffect: product.items[0] };
-      tmp30Result2 = tmp30(tmp4(11205), obj19);
+      tmp30Result2 = tmp30(tmp4(11203), obj19);
     } else if (tmp2(1889).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj20 = { user: currentUser, profileFrame: product.items[0] };
-      tmp30Result2 = tmp30(tmp4(11315), obj20);
+      tmp30Result2 = tmp30(tmp4(11313), obj20);
     } else {
       tmp30Result2 = null;
       if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
         const obj21 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp30Result2 = tmp30(tmp2(11316).NameplatePreview, obj21);
+        tmp30Result2 = tmp30(tmp2(11314).NameplatePreview, obj21);
       }
     }
     obj15.children = tmp30Result2;
@@ -407,9 +407,9 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl3 = tmp2(1114).intl;
       const obj24 = { itemName: product.name };
       obj23.children = intl3.format(tmp2(1114).t.YNaxMp, obj24);
-      const items10 = [tmp31(tmp2(4603).Text, obj23), ];
+      const items10 = [tmp31(tmp2(4602).Text, obj23), ];
       const obj25 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-      let result = tmp2(7628).isPremiumCollectiblesProduct(product);
+      let result = tmp2(7627).isPremiumCollectiblesProduct(product);
       const intl4 = tmp2(1114).intl;
       const format = intl4.format;
       const t = tmp2(1114).t;
@@ -422,10 +422,10 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       const obj28 = { children: null };
       obj25.children = formatResult;
-      items10[1] = tmp31(tmp2(4603).Text, obj25);
+      items10[1] = tmp31(tmp2(4602).Text, obj25);
       obj28.children = items10;
       renderMessagesResult = tmp27(closure_14, obj28);
-      const tmp2Result26 = tmp2(7628);
+      const tmp2Result26 = tmp2(7627);
     }
     obj22.children = renderMessagesResult;
     items8[1] = tmp31(tmp4(4343).View, obj22);
@@ -443,11 +443,11 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl = tmp2(1114).intl;
       obj32.text = intl.string(tmp2(1114).t["2p2aYz"]);
     }
-    obj30.children = tmp31(tmp2(5027).Button, obj32);
+    obj30.children = tmp31(tmp2(5026).Button, obj32);
     obj29.children = tmp31(tmp28, obj30);
     items6[2] = tmp31(tmp28, obj29);
     rect.children = items6;
-    items3[1] = tmp27(tmp2(7197).SafeAreaPaddingView, rect);
+    items3[1] = tmp27(tmp2(7196).SafeAreaPaddingView, rect);
     const obj33 = { style: null, pointerEvents: "none" };
     const items11 = [tmp6.curtain, animatedStyle2];
     obj33.style = items11;

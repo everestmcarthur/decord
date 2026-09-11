@@ -1,23 +1,23 @@
-// Module ID: 8683
-// Function ID: 8684
+// Module ID: 8681
+// Function ID: 8682
 // Name: StageAudienceNotificationSheet
-// Dependencies: [19, 17, 1962, 5466, 1963, 21, 4607, 576, 4574, 1178, 504, 8684, 5639, 8685, 4603, 1114, 8686, 8707, 8708, 8709, 8710, 5027, 2]
+// Dependencies: [19, 17, 1962, 5465, 1963, 21, 4606, 576, 4573, 1178, 504, 8682, 5638, 8683, 4602, 1114, 8684, 8705, 8706, 8707, 8708, 5026, 2]
 // Exports: default
 
-// Module 8683 (StageAudienceNotificationSheet)
+// Module 8681 (StageAudienceNotificationSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8684 */;
-import _modDef8685 from "module_8685" /* 8685 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8682 */;
+import _modDef8683 from "module_8683" /* 8683 */;
+import _modDef8705 from "module_8705" /* 8705 */;
+import _modDef8706 from "module_8706" /* 8706 */;
 import _modDef8707 from "module_8707" /* 8707 */;
-import _modDef8708 from "module_8708" /* 8708 */;
-import _modDef8709 from "module_8709" /* 8709 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
-const _modDef8710 = tmp7(8710);
+const _modDef8708 = tmp7(8708);
 require = fn;
 function handleDismiss() {
   ActionSheetActionCreatorsDefault.hideActionSheet(closure_5);
@@ -28,11 +28,11 @@ function BulletIcon(source) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(5466).STAGE_AUDIENCE_NOTICE_SHEET_KEY;
+let closure_5 = fn(5465).STAGE_AUDIENCE_NOTICE_SHEET_KEY;
 const constants = fn(1963).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { padding: 16 }, header: { alignItems: "center", paddingVertical: 16 }, headerImage: {}, headerTitle: { marginTop: 16, marginBottom: 8 }, headerBulletIconContainer: null, headerBulletIconComponent: null, headerBulletList: null, headerBullet: null, startButton: null };
 let size = { alignItems: "center", justifyContent: "center", height: 40, width: 40, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.headerBulletIconContainer = size;
@@ -58,48 +58,48 @@ export default function StageAudienceNotificationSheet(channelId) {
   const obj = channelId(504);
   const obj4 = { source: null, style: null };
   const tmp8 = ScrollHandlingActionSheetDefault;
-  obj4.source = _modDef8685;
+  obj4.source = _modDef8683;
   obj4.style = tmp.headerImage;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
   obj5.children = intl.string(channelId(1114).t.UVuXCs);
-  items1[1] = closure_7(channelId(4603).Text, obj5);
+  items1[1] = closure_7(channelId(4602).Text, obj5);
   const obj6 = { style: tmp.headerBulletList, children: null };
   const obj7 = { leading: null, label: null };
-  obj7.leading = closure_7(BulletIcon, { source: _modDef8707 });
+  obj7.leading = closure_7(BulletIcon, { source: _modDef8705 });
   const obj9 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(1114).intl;
   obj9.children = intl2.string(channelId(1114).t.sBDfo6);
-  obj7.label = closure_7(channelId(4603).Text, obj9);
-  const items2 = [closure_7(channelId(8686).FormRow, obj7), , , ];
+  obj7.label = closure_7(channelId(4602).Text, obj9);
+  const items2 = [closure_7(channelId(8684).FormRow, obj7), , , ];
   const obj10 = { leading: null, label: null };
-  const obj8 = { source: _modDef8707 };
+  const obj8 = { source: _modDef8705 };
   const tmp12 = BulletIcon;
-  obj10.leading = closure_7(BulletIcon, { source: _modDef8708 });
+  obj10.leading = closure_7(BulletIcon, { source: _modDef8706 });
   const obj12 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl3 = tmp2(1114).intl;
   obj12.children = intl3.string(channelId(1114).t.x58YtH);
-  obj10.label = closure_7(channelId(4603).Text, obj12);
-  items2[1] = closure_7(channelId(8686).FormRow, obj10);
+  obj10.label = closure_7(channelId(4602).Text, obj12);
+  items2[1] = closure_7(channelId(8684).FormRow, obj10);
   const obj13 = { leading: null, label: null };
-  const obj11 = { source: _modDef8708 };
-  obj13.leading = closure_7(BulletIcon, { source: _modDef8709 });
+  const obj11 = { source: _modDef8706 };
+  obj13.leading = closure_7(BulletIcon, { source: _modDef8707 });
   const obj15 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl4 = tmp2(1114).intl;
   obj15.children = intl4.string(channelId(1114).t.XtVqla);
-  obj13.label = closure_7(channelId(4603).Text, obj15);
-  items2[2] = closure_7(channelId(8686).FormRow, obj13);
+  obj13.label = closure_7(channelId(4602).Text, obj15);
+  items2[2] = closure_7(channelId(8684).FormRow, obj13);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj16 = { leading: null, label: null };
-    const obj17 = { source: _modDef8710 };
+    const obj17 = { source: _modDef8708 };
     obj16.leading = tmp6(tmp12, obj17);
     const obj18 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
     const intl6 = tmp2(1114).intl;
     obj18.children = intl6.string(tmp2(1114).t.nDsbJg);
-    obj16.label = tmp6(tmp2(4603).Text, obj18);
-    tmp6Result = tmp6(tmp2(8686).FormRow, obj16);
+    obj16.label = tmp6(tmp2(4602).Text, obj18);
+    tmp6Result = tmp6(tmp2(8684).FormRow, obj16);
   }
   const obj19 = { children: null };
   items2[3] = tmp6Result;
@@ -112,7 +112,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl5 = tmp2(1114).intl;
   obj21.text = intl5.string(channelId(1114).t.obLqZ8);
   obj21.onPress = handleDismiss;
-  obj20.children = closure_7(channelId(5027).Button, obj21);
+  obj20.children = closure_7(channelId(5026).Button, obj21);
   items3[1] = closure_7(View, obj20);
   obj2.children = items3;
   obj19.children = closure_8(View, obj2);

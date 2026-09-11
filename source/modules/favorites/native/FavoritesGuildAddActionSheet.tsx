@@ -1,12 +1,12 @@
 // Module ID: 16223
 // Function ID: 16224
 // Name: FavoritesGuildAddActionSheet
-// Dependencies: [19, 21, 4574, 16224, 10315, 10318, 11071, 7271, 7223, 1114, 7273, 3236, 12848, 16225, 2]
+// Dependencies: [19, 21, 4573, 16224, 10313, 10316, 11069, 7270, 7222, 1114, 7272, 3236, 12846, 16225, 2]
 // Exports: openFavoritesGuildAddActionSheet
 
 // Module 16223 (FavoritesGuildAddActionSheet)
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4574 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11071 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4573 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11069 */;
 import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16224 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ function FavoritesGuildAddActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddActionSheet);
     if (shouldShowUpsell) {
       if (isAtLimit) {
-        tmp(10318)(favoriteLimit);
+        tmp(10316)(favoriteLimit);
       }
     }
     openFavoritesGuildAddChannelModalDefault({ source: "favorites_header_add_button_context_menu" });

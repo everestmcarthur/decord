@@ -1,10 +1,10 @@
 // Module ID: 16591
 // Function ID: 16592
 // Name: CardHeightMeasurer
-// Dependencies: [19, 17, 21, 16524, 8439, 2]
+// Dependencies: [19, 17, 21, 16524, 8437, 2]
 
 // Module 16591 (CardHeightMeasurer)
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

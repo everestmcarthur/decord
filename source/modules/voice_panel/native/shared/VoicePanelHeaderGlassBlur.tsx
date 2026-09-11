@@ -1,21 +1,21 @@
-// Module ID: 12376
-// Function ID: 12377
+// Module ID: 12374
+// Function ID: 12375
 // Name: VoicePanelHeaderGlassBlur
-// Dependencies: [19, 17, 21, 4607, 1115, 4343, 5026, 4542, 7147, 5016, 4458, 5641, 2]
+// Dependencies: [19, 17, 21, 4606, 1115, 4343, 5025, 4541, 7146, 5015, 4458, 5640, 2]
 
-// Module 12376 (VoicePanelHeaderGlassBlur)
-import useThemeDefault from "useTheme" /* 4542 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5016 */;
-import spring from "spring" /* 5026 */;
-import NativeViewDefault from "NativeView" /* 5641 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7147 */;
+// Module 12374 (VoicePanelHeaderGlassBlur)
+import useThemeDefault from "useTheme" /* 4541 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5015 */;
+import spring from "spring" /* 5025 */;
+import NativeViewDefault from "NativeView" /* 5640 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth }, stroke: { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" }, strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" }, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
 const PlatformUtils = fn(1115);
 const IS_ANDROID = PlatformUtils.isAndroid();
@@ -54,7 +54,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
     return { blurAmount: spring.withSpring(num) };
   };
   const obj3 = shown(4343);
-  fn2.__closure = { withSpring: shown(5026).withSpring, shown };
+  fn2.__closure = { withSpring: shown(5025).withSpring, shown };
   fn2.__workletHash = 5642055202507;
   fn2.__initData = __initData2;
   const animatedProps = obj3.useAnimatedProps(fn2);
@@ -62,7 +62,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   const obj5 = { style: null, children: null };
   const items = [tmp.blur, style, animatedStyle];
   obj5.style = items;
-  const obj4 = { withSpring: shown(5026).withSpring, shown };
+  const obj4 = { withSpring: shown(5025).withSpring, shown };
   const tmp9 = ReanimatedNativeViewDefault;
   const tmp11 = VisualEffectViewAnimatedDefault;
   let str = "light";

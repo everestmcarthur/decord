@@ -1,15 +1,15 @@
-// Module ID: 9774
-// Function ID: 9775
+// Module ID: 9772
+// Function ID: 9773
 // Name: VoicePanelUtils
-// Dependencies: [1957, 4630, 4815, 4816, 563, 2]
+// Dependencies: [1957, 4629, 4814, 4815, 563, 2]
 // Exports: isVoicePanelEnabled, useIsAnyVoicePanelOpen, useIsVoicePanelFullscreen, useIsVoicePanelMounted, useIsVoicePanelOpen, useIsVoicePanelShowing
 
-// Module 9774 (VoicePanelUtils)
+// Module 9772 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import StageVoicePanelExperiment from "StageVoicePanelExperiment" /* 4816 */;
+import StageVoicePanelExperiment from "StageVoicePanelExperiment" /* 4815 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
-import VoicePanelStore from "VoicePanelStore" /* 4815 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import VoicePanelStore from "VoicePanelStore" /* 4814 */;
 
 require = fn;
 const size = fn(2);

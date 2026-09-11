@@ -1,12 +1,12 @@
 // Module ID: 15913
 // Function ID: 15914
 // Name: CollectiblesProgressiveImage
-// Dependencies: [19, 17, 21, 4343, 4608, 2]
+// Dependencies: [19, 17, 21, 4343, 4607, 2]
 // Exports: CollectiblesProgressiveImage
 
 // Module 15913 (CollectiblesProgressiveImage)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;

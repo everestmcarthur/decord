@@ -1,10 +1,10 @@
-// Module ID: 7176
-// Function ID: 7177
+// Module ID: 7175
+// Function ID: 7176
 // Name: DefaultChannelUtils
 // Dependencies: [2013, 1957, 1074, 1086, 504, 4250, 2]
 // Exports: canChannelBeDefault, useCanChannelBeDefault
 
-// Module 7176 (DefaultChannelUtils)
+// Module 7175 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;

@@ -1,9 +1,9 @@
-// Module ID: 18015
-// Function ID: 18016
+// Module ID: 18014
+// Function ID: 18015
 // Name: HeadlessTaskUtils
 // Dependencies: [1074, 510, 2]
 
-// Module 18015 (HeadlessTaskUtils)
+// Module 18014 (HeadlessTaskUtils)
 import Storage2 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

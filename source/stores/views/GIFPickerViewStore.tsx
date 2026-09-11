@@ -1,9 +1,9 @@
-// Module ID: 10456
-// Function ID: 10457
+// Module ID: 10454
+// Function ID: 10455
 // Name: GIFPickerViewStore
 // Dependencies: [1074, 1222, 1114, 504, 573, 2]
 
-// Module 10456 (GIFPickerViewStore)
+// Module 10454 (GIFPickerViewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;

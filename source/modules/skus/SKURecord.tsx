@@ -1,17 +1,17 @@
-// Module ID: 5563
-// Function ID: 5564
+// Module ID: 5562
+// Function ID: 5563
 // Name: SKURecord
-// Dependencies: [1386, 1918, 5564, 1074, 4198, 5565, 5566, 1384, 2]
+// Dependencies: [1386, 1918, 5563, 1074, 4198, 5564, 5565, 1384, 2]
 
-// Module 5563 (SKURecord)
+// Module 5562 (SKURecord)
 import _modDef4198 from "module_4198" /* 4198 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 5565 */;
-import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 5566 */;
+import getPricesFromServerDefault from "getPricesFromServer" /* 5564 */;
+import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 5565 */;
 import Record from "Record" /* 1386 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
 const require = fn;
-fn(5564).THE_GAME_AWARD_WINNER_SKUS;
+fn(5563).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1074);
 ({ GIFTABLE_CURRENCIES: hasOwnProperty, OperatingSystems: metroRequire, SKUFlags: closure_7, SKUTypes: closure_8 } = Constants);
 let SKURecord;

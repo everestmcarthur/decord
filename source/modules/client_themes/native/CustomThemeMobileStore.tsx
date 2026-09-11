@@ -99,7 +99,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "guild", customTheme: "call" };
+    obj = { theme: "Array", customTheme: "PX_16" };
   }
   return obj;
 };

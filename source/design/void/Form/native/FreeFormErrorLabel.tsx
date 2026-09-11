@@ -1,10 +1,10 @@
-// Module ID: 7013
-// Function ID: 7014
+// Module ID: 7012
+// Function ID: 7013
 // Name: FreeFormErrorLabel
-// Dependencies: [19, 21, 4310, 4458, 4603, 2]
+// Dependencies: [19, 21, 4310, 4458, 4602, 2]
 // Exports: default
 
-// Module 7013 (FreeFormErrorLabel)
+// Module 7012 (FreeFormErrorLabel)
 import shared from "shared" /* 4458 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,5 +28,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
-  return jsx(nodeText(4603).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(4602).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 };

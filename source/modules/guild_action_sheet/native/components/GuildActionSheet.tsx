@@ -1,27 +1,27 @@
-// Module ID: 14027
-// Function ID: 14028
+// Module ID: 14025
+// Function ID: 14026
 // Name: GuildActionSheet
-// Dependencies: [19, 17, 21, 4607, 576, 1611, 8256, 7224, 6699, 1115, 14022, 14028, 13965, 14029, 14032, 7228, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 1611, 8255, 7223, 6698, 1115, 14020, 14026, 13963, 14027, 14030, 7227, 2]
 
-// Module 14027 (GuildActionSheet)
+// Module 14025 (GuildActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import BottomSheetModal from "BottomSheetModal" /* 6699 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7224 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7228 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8256 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 13965 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 14022 */;
-import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 14028 */;
-import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 14029 */;
-import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 14032 */;
+import BottomSheetModal from "BottomSheetModal" /* 6698 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7227 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8255 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 13963 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 14020 */;
+import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 14026 */;
+import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 14027 */;
+import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 14030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

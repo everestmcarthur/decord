@@ -1,15 +1,15 @@
-// Module ID: 8147
-// Function ID: 8148
+// Module ID: 8146
+// Function ID: 8147
 // Name: VoiceSessionUtils
-// Dependencies: [19, 7732, 1957, 1371, 8148, 504, 8055, 4840, 1114, 12, 2]
+// Dependencies: [19, 7731, 1957, 1371, 8147, 504, 8054, 4839, 1114, 12, 2]
 // Exports: getSortedVoiceSessionParticipants, getVoiceSessionMessageContent, useSortedVoiceSessionParticipants
 
-// Module 8147 (VoiceSessionUtils)
-import useMessageAuthor from "useMessageAuthor" /* 4840 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8055 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8148 */;
+// Module 8146 (VoiceSessionUtils)
+import useMessageAuthor from "useMessageAuthor" /* 4839 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8054 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8147 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 

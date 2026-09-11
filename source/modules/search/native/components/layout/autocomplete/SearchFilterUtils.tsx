@@ -1,24 +1,24 @@
 // Module ID: 16711
 // Function ID: 16712
 // Name: SearchFilterUtils
-// Dependencies: [7953, 7952, 1074, 1114, 11921, 10203, 13899, 5142, 9878, 16712, 12304, 9528, 12436, 12456, 12433, 4574, 9810, 1896, 12453, 2]
+// Dependencies: [7952, 7951, 1074, 1114, 11919, 10201, 13897, 5141, 9876, 16712, 12302, 9526, 12434, 12454, 12431, 4573, 9808, 1896, 12451, 2]
 // Exports: getSearchFilterSuggestions, getSearchTokenIcon, getSearchTokenLabel, getSearchTokenPressHandler, getSearchTokenSubLabel
 
 // Module 16711 (SearchFilterUtils)
 import util from "util" /* 1114 */;
-import AtIcon from "AtIcon" /* 5142 */;
-import TrackingConstants from "TrackingConstants" /* 7952 */;
-import RobotIcon from "RobotIcon" /* 9528 */;
-import CalendarIcon from "CalendarIcon" /* 9878 */;
-import AttachmentIcon from "AttachmentIcon" /* 10203 */;
-import UserIcon from "UserIcon" /* 11921 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12304 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12433 */;
-import SearchTokensDefault from "SearchTokens" /* 12436 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12456 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13899 */;
+import AtIcon from "AtIcon" /* 5141 */;
+import TrackingConstants from "TrackingConstants" /* 7951 */;
+import RobotIcon from "RobotIcon" /* 9526 */;
+import CalendarIcon from "CalendarIcon" /* 9876 */;
+import AttachmentIcon from "AttachmentIcon" /* 10201 */;
+import UserIcon from "UserIcon" /* 11919 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12302 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12431 */;
+import SearchTokensDefault from "SearchTokens" /* 12434 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13897 */;
 import CalendarMinusIcon from "CalendarMinusIcon" /* 16712 */;
-import SearchConstants from "SearchConstants" /* 7953 */;
+import SearchConstants from "SearchConstants" /* 7952 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -216,7 +216,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12436));
+  const keys = Object.keys(items(12434));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

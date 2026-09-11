@@ -1,12 +1,12 @@
-// Module ID: 11070
-// Function ID: 11071
+// Module ID: 11068
+// Function ID: 11069
 // Name: useFavoritesGuildCategoryAddAction
-// Dependencies: [19, 1074, 11071, 1982, 1114, 3236, 2]
+// Dependencies: [19, 1074, 11069, 1982, 1114, 3236, 2]
 // Exports: default
 
-// Module 11070 (useFavoritesGuildCategoryAddAction)
+// Module 11068 (useFavoritesGuildCategoryAddAction)
 import _modDef3236 from "module_3236" /* 3236 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11071 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11069 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

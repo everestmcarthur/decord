@@ -1,17 +1,19 @@
 // Module ID: 8623
 // Function ID: 8624
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8624, 8557, 8568]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8620, 8624, 8625, 8557, 8566]
 
 // Module 8623
-import _modDef8568 from "module_8568" /* 8568 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8566 from "module_8566" /* 8566 */;
+import unitsDefault from "units" /* 8620 */;
+import _modDef8625 from "module_8625" /* 8625 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Marker = importDefault;
+const Mask = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,15 +33,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Marker {
+class Mask {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
-    tmp2 = closure_4;
-    obj = closure_4(Marker);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Mask);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Mask);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,32 +55,55 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef8568);
+_inherits(Mask, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
+    ({ maskUnits, maskContentUnits, style } = props);
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
+    let num = 0;
+    if (undefined !== maskUnits) {
+      num = unitsDefault[maskUnits];
+    }
+    size.maskUnits = num;
+    let num2 = 1;
+    if (undefined !== maskContentUnits) {
+      num2 = unitsDefault[maskContentUnits];
+    }
+    size.maskContentUnits = num2;
+    let str;
+    if (props != null) {
+      str = props.maskType;
+    }
+    if (!str) {
+      let maskType;
+      if (style != null) {
+        maskType = style.maskType;
+      }
+      str = maskType;
+    }
+    if (!str) {
+      str = "luminance";
+    }
+    size.maskType = Mask(8624).maskType[str];
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(8557)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(8624), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(Mask(8557).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp8 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = _createClass(Mask, items);
+importDefaultResultResult.displayName = "Mask";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

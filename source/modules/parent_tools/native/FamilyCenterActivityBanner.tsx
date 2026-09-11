@@ -1,17 +1,17 @@
 // Module ID: 14930
 // Function ID: 14931
 // Name: FamilyCenterActivityBanner
-// Dependencies: [19, 17, 21, 4607, 8738, 8739, 14931, 576, 12015, 1114, 2396, 14938, 14939, 4603, 2]
+// Dependencies: [19, 17, 21, 4606, 8736, 8737, 14931, 576, 12013, 1114, 2396, 14938, 14939, 4602, 2]
 // Exports: default
 
 // Module 14930 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useUserLinks from "useUserLinks" /* 8738 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8739 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12015 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useUserLinks from "useUserLinks" /* 8736 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8737 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12013 */;
 import noop from "module_19" /* 19 */;
 
 const FamilyCenterBannerButton = tmp2(14931);
@@ -37,9 +37,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ container: { width: "100%" } });
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 }, art: null, header: null, description: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
 obj3.art = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };

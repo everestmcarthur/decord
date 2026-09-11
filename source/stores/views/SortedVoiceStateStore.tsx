@@ -1,10 +1,10 @@
-// Module ID: 4631
-// Function ID: 4632
+// Module ID: 4630
+// Function ID: 4631
 // Name: SortedVoiceStateStore
-// Dependencies: [32, 1960, 1385, 502, 1957, 2021, 1371, 4626, 1074, 4451, 4241, 11, 1187, 12, 504, 1982, 573, 2]
+// Dependencies: [32, 1960, 1385, 502, 1957, 2021, 1371, 4625, 1074, 4451, 4241, 11, 1187, 12, 504, 1982, 573, 2]
 // Exports: getComparator, makeMemberAndComparator
 
-// Module 4631 (SortedVoiceStateStore)
+// Module 4630 (SortedVoiceStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -19,7 +19,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 require = fn;
 function getVoiceStatesForGuild(guildId) {

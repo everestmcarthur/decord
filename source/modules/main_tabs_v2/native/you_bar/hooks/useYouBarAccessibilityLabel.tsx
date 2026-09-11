@@ -1,21 +1,21 @@
 // Module ID: 16437
 // Function ID: 16438
 // Name: useYouBarAccessibilityLabel
-// Dependencies: [4629, 1957, 4245, 4647, 4255, 5331, 4626, 1074, 4451, 16438, 16439, 1935, 10971, 8251, 504, 10969, 10970, 10977, 1114, 10979, 2]
+// Dependencies: [4628, 1957, 4245, 4646, 4255, 5330, 4625, 1074, 4451, 16438, 16439, 1935, 10969, 8250, 504, 10967, 10968, 10975, 1114, 10977, 2]
 // Exports: useYouBarAccessibilityLabel
 
 // Module 16437 (useYouBarAccessibilityLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10969 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10970 */;
-import isGameActivityDefault from "isGameActivity" /* 10977 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10979 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10967 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10968 */;
+import isGameActivityDefault from "isGameActivity" /* 10975 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10977 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const require = globalThis.__r;
 
@@ -53,13 +53,13 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
     }
-    const userPrimaryGuild = tmp3(8251).getUserPrimaryGuild(primaryGuild);
+    const userPrimaryGuild = tmp3(8250).getUserPrimaryGuild(primaryGuild);
     let tag;
     if (userPrimaryGuild != null) {
       tag = userPrimaryGuild.tag;
     }
     tmp8 = tag;
-    const tmp3Result3 = tmp3(8251);
+    const tmp3Result3 = tmp3(8250);
   }
   tag = tmp8;
   const tmp3Result = require("useGameMentionsAsPlainText");

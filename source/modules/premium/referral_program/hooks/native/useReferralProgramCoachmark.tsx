@@ -1,13 +1,13 @@
 // Module ID: 16871
 // Function ID: 16872
 // Name: useReferralProgramCoachmark
-// Dependencies: [32, 19, 17, 1074, 1954, 21, 4607, 5639, 16872, 4427, 1943, 8132, 7462, 1114, 576, 7456, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 21, 4606, 5638, 16872, 4427, 1943, 8131, 7461, 1114, 576, 7455, 2]
 // Exports: useReferralProgramCoachmark
 
 // Module 16871 (useReferralProgramCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import FastImageDefault from "FastImage" /* 5639 */;
+import FastImageDefault from "FastImage" /* 5638 */;
 import _modDef16872 from "module_16872" /* 16872 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");

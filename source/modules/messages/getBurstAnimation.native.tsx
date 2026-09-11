@@ -1,13 +1,18 @@
-// Module ID: 7858
-// Function ID: 7859
+// Module ID: 7857
+// Function ID: 7858
 // Name: getBurstAnimation
-// Dependencies: [5, 7859, 7860, 7861, 7862, 7863, 7864, 7865, 7866, 7867, 7868, 7869, 7870, 7871, 7872, 7873, 7874, 7875, 7876, 7877, 7878, 7879, 7880, 7881, 7882, 7883, 7884, 7885, 7886, 7887, 7888, 7889, 7890, 7891, 7892, 7893, 7894, 7895, 2]
+// Dependencies: [5, 7858, 7859, 7860, 7861, 7862, 7863, 7864, 7865, 7866, 7867, 7868, 7869, 7870, 7871, 7872, 7873, 7874, 7875, 7876, 7877, 7878, 7879, 7880, 7881, 7882, 7883, 7884, 7885, 7886, 7887, 7888, 7889, 7890, 7891, 7892, 7893, 7894, 2]
 // Exports: getBurstAnimation
 
-// Module 7858 (getBurstAnimation)
+// Module 7857 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
+  {
+    load() {
+      return closure_0(7858);
+    }
+  },
   {
     load() {
       return closure_0(7859);
@@ -92,14 +97,14 @@ const items = [
     load() {
       return closure_0(7875);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(7876);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(7877);
@@ -184,11 +189,6 @@ const items1 = [
     load() {
       return closure_0(7893);
     }
-  },
-  {
-    load() {
-      return closure_0(7894);
-    }
   }
 ];
 let closure_0 = asyncGeneratorStepDefault(function*(arg0, value, arg2) {
@@ -230,7 +230,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, value, arg2) {
           let burstAnimationHash;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (arg0 === 1) {
         c7 = 3;

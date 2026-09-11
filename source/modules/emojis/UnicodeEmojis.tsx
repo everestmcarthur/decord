@@ -1,13 +1,13 @@
 // Module ID: 4259
 // Function ID: 4260
 // Name: UnicodeEmojis
-// Dependencies: [4260, 4261, 4262, 4263, 12, 14039, 2]
+// Dependencies: [4260, 4261, 4262, 4263, 12, 14037, 2]
 // Exports: asUnicodeEmoji
 
 // Module 4259 (UnicodeEmojis)
 import _modDef12 from "module_12" /* 12 */;
 import EmojiTypes from "EmojiTypes" /* 4262 */;
-import _mod14039 from "module_14039" /* 14039 */;
+import _mod14037 from "module_14037" /* 14037 */;
 import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4260 */;
 
 const require = globalThis.__r;
@@ -477,7 +477,7 @@ export default {
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod14039[key10009];
+      str = _mod14037[key10009];
     }
     let combined = str;
     if (flag) {

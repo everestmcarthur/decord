@@ -1,16 +1,16 @@
 // Module ID: 16594
 // Function ID: 16595
 // Name: useNotificationPermissionPrompt
-// Dependencies: [19, 1950, 5329, 1951, 12504, 504, 1953, 12513, 16595, 16597, 2]
+// Dependencies: [19, 1950, 5328, 1951, 12502, 504, 1953, 12511, 16595, 16597, 2]
 // Exports: default
 
 // Module 16594 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 12513 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 12511 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12504 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12502 */;
 
 const require = fn;
 const size = fn(2);
@@ -27,9 +27,9 @@ export default function useNotificationPermissionPrompt() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         if (tmp5) {
-          const permission = tmp3(12513).requestPermission();
-          tmp3(12513).shouldRequestNotification = false;
-          const tmp3Result = tmp3(12513);
+          const permission = tmp3(12511).requestPermission();
+          tmp3(12511).shouldRequestNotification = false;
+          const tmp3Result = tmp3(12511);
         }
         tmp5 = NotificationUtilsDefault.shouldRequestNotification && !PushNotificationPermissionStore.promptSeen;
       }

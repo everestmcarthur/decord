@@ -1,11 +1,11 @@
-// Module ID: 7702
-// Function ID: 7703
+// Module ID: 7701
+// Function ID: 7702
 // Name: UserProfileClipsGalleryWidgetTypes
-// Dependencies: [7695, 1332, 2]
+// Dependencies: [7694, 1332, 2]
 
-// Module 7702 (UserProfileClipsGalleryWidgetTypes)
+// Module 7701 (UserProfileClipsGalleryWidgetTypes)
 import _modDef1332 from "module_1332" /* 1332 */;
-import WidgetType from "WidgetType" /* 7695 */;
+import WidgetType from "WidgetType" /* 7694 */;
 import size from "module_2" /* 2 */;
 
 function convertClip(gameId) {

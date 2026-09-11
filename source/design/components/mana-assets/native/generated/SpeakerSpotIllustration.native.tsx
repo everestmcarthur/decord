@@ -1,13 +1,13 @@
-// Module ID: 6551
-// Function ID: 6552
+// Module ID: 6550
+// Function ID: 6551
 // Name: SpeakerSpotIllustration
-// Dependencies: [21, 5639, 6552, 2]
+// Dependencies: [21, 5638, 6551, 2]
 // Exports: SpeakerSpotIllustration
 
-// Module 6551 (SpeakerSpotIllustration)
+// Module 6550 (SpeakerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6552 from "module_6552" /* 6552 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6551 from "module_6551" /* 6551 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SpeakerSpotIllustration = function SpeakerSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6552 };
+  const obj2 = { uri: _modDef6551 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

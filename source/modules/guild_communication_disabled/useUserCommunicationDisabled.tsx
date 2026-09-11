@@ -1,10 +1,10 @@
-// Module ID: 8052
-// Function ID: 8053
+// Module ID: 8051
+// Function ID: 8052
 // Name: useUserCommunicationDisabled
 // Dependencies: [2021, 1371, 504, 4233, 2]
 // Exports: default, useCurrentUserCommunicationDisabled, userCommunicationDisabled
 
-// Module 8052 (useUserCommunicationDisabled)
+// Module 8051 (useUserCommunicationDisabled)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4233 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;

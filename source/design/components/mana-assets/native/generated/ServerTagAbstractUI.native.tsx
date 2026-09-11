@@ -1,13 +1,13 @@
-// Module ID: 6517
-// Function ID: 6518
+// Module ID: 6516
+// Function ID: 6517
 // Name: ServerTagAbstractUI
-// Dependencies: [21, 5639, 6518, 2]
+// Dependencies: [21, 5638, 6517, 2]
 // Exports: ServerTagAbstractUI
 
-// Module 6517 (ServerTagAbstractUI)
+// Module 6516 (ServerTagAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6518 from "module_6518" /* 6518 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6517 from "module_6517" /* 6517 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerTagAbstractUI = function ServerTagAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6518 };
+  const obj2 = { uri: _modDef6517 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

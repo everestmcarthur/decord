@@ -1,18 +1,18 @@
-// Module ID: 8167
-// Function ID: 8168
+// Module ID: 8166
+// Function ID: 8167
 // Name: ChangeLogStandardTemplate
-// Dependencies: [19, 17, 2025, 1074, 21, 4607, 576, 1178, 563, 8168, 1242, 4301, 4303, 8170, 4597, 7197, 8173, 8175, 1114, 4228, 8177, 8179, 2]
+// Dependencies: [19, 17, 2025, 1074, 21, 4606, 576, 1178, 563, 8167, 1242, 4301, 4303, 8169, 4596, 7196, 8172, 8174, 1114, 4228, 8176, 8178, 2]
 // Exports: changelogRules, getRenderChangelog
 
-// Module 8167 (ChangeLogStandardTemplate)
+// Module 8166 (ChangeLogStandardTemplate)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import getLocalizedLinkDefault from "getLocalizedLink" /* 4228 */;
 import LinkingDefault from "Linking" /* 4301 */;
 import _mod4303 from "module_4303" /* 4303 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4597 */;
-import ChangeLogUtilsDefault from "ChangeLogUtils" /* 8170 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import ChangeLogUtilsDefault from "ChangeLogUtils" /* 8169 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -65,7 +65,7 @@ function LinkInner(target) {
   const items = [LocaleStore];
   const stateFromStores = target(563).useStateFromStores(items, () => locale.locale);
   let obj = target(563);
-  const changelog = target(8168).useChangelog(changelogId, stateFromStores).changelog;
+  const changelog = target(8167).useChangelog(changelogId, stateFromStores).changelog;
   return closure_10(target(1178).LegacyText, {
     accessibilityRole: "link",
     style: className,
@@ -101,9 +101,9 @@ const Constants = fn(1074);
 ({ LocalizedLinks: closure_7, SOCIAL_LINKS: closure_8, AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let closure_12 = createStyles.createStyleProperties({ added: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, fixed: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, progress: nativeDefault.colors.TEXT_FEEDBACK_WARNING, improved: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj3 = { flex: { flex: 1 }, container: null, footer: null, scrollViewContainer: null, lheading: null, lheadingText: null, lheadingLine: null, bulletPoint: null, listItem: null, listText: null };
 let obj = { added: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, fixed: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, progress: nativeDefault.colors.TEXT_FEEDBACK_WARNING, improved: nativeDefault.colors.TEXT_BRAND };
 obj3.container = { padding: 18, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -178,29 +178,29 @@ export default noop.memo((video) => {
   obj2.children = items1;
   const items2 = [closure_11(tmp4, obj2), ];
   const obj7 = { bottom: true, style: tmp.footer, children: null };
-  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8175).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8174).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl = onScroll(1114).intl;
   obj8.accessibilityLabel = intl.string(onScroll(1114).t["/lXfom"]);
   obj8.onPress = function onPress() {
     LinkingDefault.openURL(getLocalizedLinkDefault(constants.TWITTER));
   };
-  const items3 = [closure_10(onScroll(8173).IconButton, obj8), , ];
-  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8177).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const items3 = [closure_10(onScroll(8172).IconButton, obj8), , ];
+  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8176).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl2 = onScroll(1114).intl;
   obj9.accessibilityLabel = intl2.string(onScroll(1114).t["h0or/l"]);
   obj9.onPress = function onPress() {
     LinkingDefault.openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = closure_10(onScroll(8173).IconButton, obj9);
-  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8179).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  items3[1] = closure_10(onScroll(8172).IconButton, obj9);
+  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8178).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl3 = onScroll(1114).intl;
   obj10.accessibilityLabel = intl3.string(onScroll(1114).t["5uVPyf"]);
   obj10.onPress = function onPress() {
     LinkingDefault.openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = closure_10(onScroll(8173).IconButton, obj10);
+  items3[2] = closure_10(onScroll(8172).IconButton, obj10);
   obj7.children = items3;
-  items2[1] = closure_11(onScroll(7197).SafeAreaPaddingView, obj7);
+  items2[1] = closure_11(onScroll(7196).SafeAreaPaddingView, obj7);
   obj.children = items2;
   return closure_11(tmp3, obj);
 });

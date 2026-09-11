@@ -1,7 +1,7 @@
 // Module ID: 4296
 // Function ID: 4297
 // Name: handleURL
-// Dependencies: [5, 17, 4297, 1074, 3, 4298, 4300, 4301, 4302, 4303, 4304, 1114, 4572, 1115, 4574, 1367, 4587, 13906, 2]
+// Dependencies: [5, 17, 4297, 1074, 3, 4298, 4300, 4301, 4302, 4303, 4304, 1114, 4571, 1115, 4573, 1367, 4586, 13904, 2]
 // Exports: default
 
 // Module 4296 (handleURL)
@@ -71,7 +71,7 @@ let closure_9 = async function _handleURL(arg0, value) {
             if (null != obj.sanitizeUrl(closure_1_0)) {
               let SAFARI = constants.SAFARI;
               if (closure_1_0.startsWith("https:")) {
-                const browserManagerSelectedBrowser = closure_0(4572).getBrowserManagerSelectedBrowser();
+                const browserManagerSelectedBrowser = closure_0(4571).getBrowserManagerSelectedBrowser();
                 let tmp10 = closure_1_1;
                 if (closure_1_1 == null) {
                   tmp10 = browserManagerSelectedBrowser;
@@ -89,36 +89,36 @@ let closure_9 = async function _handleURL(arg0, value) {
                     const tmp8Result = tmp8(1115);
                   }
                 }
-                const obj3 = closure_0(4572);
+                const obj3 = closure_0(4571);
                 tmp8 = closure_0;
               }
               if (constants.IN_APP === SAFARI) {
-                const result = closure_0(4572).browserManagerOpenUrl(closure_1_0, tmp5.IN_APP);
+                const result = closure_0(4571).browserManagerOpenUrl(closure_1_0, tmp5.IN_APP);
                 result.catch(() => {
                   const intl = closure_2_0(1114).intl;
                   closure_2_0(4304).presentFailedToast("" + intl.string(closure_2_0(1114).t.HryVrx) + " " + closure_1_0);
                 });
-                const obj7 = closure_0(4572);
+                const obj7 = closure_0(4571);
                 let isIOSResult = closure_0(1115).isIOS();
                 if (isIOSResult) {
                   isIOSResult = open.isOpen();
                 }
                 if (isIOSResult) {
-                  closure_1(4574).hideAllActionSheets();
-                  const tmpResult = closure_1(4574);
+                  closure_1(4573).hideAllActionSheets();
+                  const tmpResult = closure_1(4573);
                 }
                 const obj8 = closure_0(1115);
               } else if (tmp5.CHROME === SAFARI) {
-                const result1 = closure_0(4572).browserManagerOpenUrl(closure_1_0, tmp5.CHROME);
+                const result1 = closure_0(4571).browserManagerOpenUrl(closure_1_0, tmp5.CHROME);
                 result1.catch(() => {
                   const intl = closure_2_0(1114).intl;
                   closure_2_0(4304).presentFailedToast("" + intl.string(closure_2_0(1114).t.HryVrx) + " " + closure_1_0);
                 });
-                const obj6 = closure_0(4572);
+                const obj6 = closure_0(4571);
               } else {
                 const SAFARI2 = tmp5.SAFARI;
-                const result2 = closure_0(4572).browserManagerOpenUrl(closure_1_0, tmp5.SAFARI);
-                const obj5 = closure_0(4572);
+                const result2 = closure_0(4571).browserManagerOpenUrl(closure_1_0, tmp5.SAFARI);
+                const obj5 = closure_0(4571);
               }
             } else {
               let intl = closure_0(1114).intl;
@@ -128,7 +128,7 @@ let closure_9 = async function _handleURL(arg0, value) {
           };
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else {
         if (1 === tmp8) {

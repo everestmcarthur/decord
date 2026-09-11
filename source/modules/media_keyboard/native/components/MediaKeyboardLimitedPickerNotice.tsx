@@ -1,20 +1,20 @@
-// Module ID: 10748
-// Function ID: 10749
+// Module ID: 10746
+// Function ID: 10747
 // Name: MediaKeyboardLimitedPickerNotice
-// Dependencies: [19, 17, 21, 4607, 4603, 1114, 5027, 2]
+// Dependencies: [19, 17, 21, 4606, 4602, 1114, 5026, 2]
 // Exports: default
 
-// Module 10748 (MediaKeyboardLimitedPickerNotice)
+// Module 10746 (MediaKeyboardLimitedPickerNotice)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" }, absoluteContainer: { position: "absolute" }, text: { flex: 1 }, button: { marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx");

@@ -1,7 +1,7 @@
 // Module ID: 15680
 // Function ID: 15681
 // Name: DevToolsDismissableContentsScreen
-// Dependencies: [32, 19, 17, 1947, 21, 4607, 576, 1943, 15681, 7274, 5739, 10328, 5657, 1940, 4565, 5664, 15682, 7124, 4603, 10408, 5569, 1611, 10024, 504, 15067, 15068, 8966, 2]
+// Dependencies: [32, 19, 17, 1947, 21, 4606, 576, 1943, 15681, 7273, 5738, 10326, 5656, 1940, 4564, 5663, 15682, 7123, 4602, 10406, 5568, 1611, 10022, 504, 15067, 15068, 8964, 2]
 // Exports: default
 
 // Module 15680 (DevToolsDismissableContentsScreen)
@@ -9,16 +9,16 @@ import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import TrashIcon from "TrashIcon" /* 4565 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5569 */;
-import TableRow from "TableRow" /* 5657 */;
-import TableRowArrow from "TableRowArrow" /* 5664 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
-import SearchField from "SearchField" /* 7124 */;
-import TableSwitchRow from "TableSwitchRow" /* 7274 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10328 */;
-import SearchEmpty from "SearchEmpty" /* 10408 */;
+import TrashIcon from "TrashIcon" /* 4564 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5568 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowArrow from "TableRowArrow" /* 5663 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import SearchField from "SearchField" /* 7123 */;
+import TableSwitchRow from "TableSwitchRow" /* 7273 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10326 */;
+import SearchEmpty from "SearchEmpty" /* 10406 */;
 import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15068 */;
 import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15681 */;
 import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15682 */;
@@ -37,7 +37,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -94,8 +94,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   let tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(10024);
-  [dependencyMap, tmp5] = ref(10024).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(10022);
+  [dependencyMap, tmp5] = ref(10022).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(initialSearchQuery.useState(() => {
     let str = dependencyMap;
@@ -133,7 +133,7 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(10024).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(10022).useLocalStorageState("devtools-dc-search", ""), 2);
   let items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
@@ -212,6 +212,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj5.renderItem = callback4;
   obj5.onScroll = callback3;
-  obj4.children = dailyCapOverridden(ref(8966).FlashList, obj5);
+  obj4.children = dailyCapOverridden(ref(8964).FlashList, obj5);
   return dailyCapOverridden(first1, obj4);
 };

@@ -1,10 +1,10 @@
-// Module ID: 17147
-// Function ID: 17148
+// Module ID: 17146
+// Function ID: 17147
 // Name: useSoundOrganizer
 // Dependencies: [11, 2]
 // Exports: useSoundOrganizer
 
-// Module 17147 (useSoundOrganizer)
+// Module 17146 (useSoundOrganizer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

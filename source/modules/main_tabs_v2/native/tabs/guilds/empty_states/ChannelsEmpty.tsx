@@ -1,12 +1,12 @@
 // Module ID: 16325
 // Function ID: 16326
 // Name: ChannelsEmpty
-// Dependencies: [19, 17, 4245, 1074, 21, 4607, 4603, 576, 563, 9155, 9830, 15158, 8688, 1178, 16326, 1114, 16327, 5028, 2]
+// Dependencies: [19, 17, 4245, 1074, 21, 4606, 4602, 576, 563, 9153, 9828, 15158, 8686, 1178, 16326, 1114, 16327, 5027, 2]
 
 // Module 16325 (ChannelsEmpty)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9830 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9828 */;
 import _modDef16326 from "module_16326" /* 16326 */;
 import _modDef16327 from "module_16327" /* 16327 */;
 import noop from "module_19" /* 19 */;
@@ -18,10 +18,10 @@ get_ActivityIndicator = fn(17);
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { wrapper: { flex: 1, paddingTop: 12 }, content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 }, headerText: null, text: null, buttonWrapper: null, buttonPill: null, personalizeButtonWrapper: null };
 let obj3 = {};
-const merged = Object.assign(fn(4603).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(4602).TextStyleSheet["heading-md/bold"]);
 obj3.fontSize = 18;
 obj3.marginTop = 16;
 obj3.marginBottom = 8;
@@ -64,7 +64,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
     const intl = tmp2(1114).intl;
     obj6.label = intl.string(tmp2(1114).t["Yhi9/N"]);
     obj6.onPress = callback;
-    obj5.children = closure_8(tmp2(8688).RowButton, obj6);
+    obj5.children = closure_8(tmp2(8686).RowButton, obj6);
     canCustomizeGuild = closure_8(tmp8, obj5);
   }
   const items5 = [canCustomizeGuild, ];
@@ -77,18 +77,18 @@ export default noop.memo(function ChannelsEmpty(guild) {
   obj10.style = items7;
   const intl2 = tmp2(1114).intl;
   obj10.children = intl2.string(guild(1114).t.o4s29v);
-  items6[1] = closure_8(guild(4603).Text, obj10);
+  items6[1] = closure_8(guild(4602).Text, obj10);
   const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
   const intl3 = tmp2(1114).intl;
   obj11.children = intl3.string(guild(1114).t.iypvFu);
-  items6[2] = closure_8(guild(4603).Text, obj11);
+  items6[2] = closure_8(guild(4602).Text, obj11);
   if (canCreateChannel) {
     const obj12 = { style: tmp.buttonWrapper, children: null };
     const obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
     const intl4 = tmp2(1114).intl;
     obj13.text = intl4.string(tmp2(1114).t["63PyJQ"]);
     obj13.onPress = callback1;
-    obj12.children = tmp11(tmp2(5028).BaseTextButton, obj13);
+    obj12.children = tmp11(tmp2(5027).BaseTextButton, obj13);
     canCreateChannel = tmp11(tmp8, obj12);
   }
   items6[3] = canCreateChannel;

@@ -1,13 +1,13 @@
-// Module ID: 7785
-// Function ID: 7786
+// Module ID: 7784
+// Function ID: 7785
 // Name: Task
-// Dependencies: [7786, 5504, 7787, 7788, 2]
+// Dependencies: [7785, 5503, 7786, 7787, 2]
 // Exports: questTaskConfigFromServer, questTaskConfigV2FromServer
 
-// Module 7785 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5504 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7786 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7788 */;
+// Module 7784 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5503 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7785 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7787 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {
@@ -49,10 +49,10 @@ const result = size.fileFinishedImporting("modules/quests/types/v2/Task.tsx");
 export const questTaskConfigFromServer = function questTaskConfigFromServer(type) {
   type = type.type;
   if (QuestTaskConfigTypes.QuestTaskConfigTypes.FIRST_PARTY === type) {
-    const obj2 = { type: tmp(7786).QuestTaskConfigTypes.FIRST_PARTY, tasks: _firstPartyTasksFromServer(type.tasks), joinOperator: type.join_operator };
+    const obj2 = { type: tmp(7785).QuestTaskConfigTypes.FIRST_PARTY, tasks: _firstPartyTasksFromServer(type.tasks), joinOperator: type.join_operator };
     return obj2;
-  } else if (tmp(7786).QuestTaskConfigTypes.THIRD_PARTY === type) {
-    const obj = { type: tmp(7786).QuestTaskConfigTypes.THIRD_PARTY, tasks: _thirdPartyTasksFromServer(type.tasks), enrollmentUrl: null, developerApplicationId: null, joinOperator: null };
+  } else if (tmp(7785).QuestTaskConfigTypes.THIRD_PARTY === type) {
+    const obj = { type: tmp(7785).QuestTaskConfigTypes.THIRD_PARTY, tasks: _thirdPartyTasksFromServer(type.tasks), enrollmentUrl: null, developerApplicationId: null, joinOperator: null };
     ({ enrollment_url: obj.enrollmentUrl, developer_application_id: obj.developerApplicationId, join_operator: obj.joinOperator } = type);
     return obj;
   }

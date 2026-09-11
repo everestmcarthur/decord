@@ -1,35 +1,21 @@
 // Module ID: 14486
 // Function ID: 14487
-// Dependencies: [14469]
-// Exports: default
+// Dependencies: []
+// Exports: getHostFromUrl
 
 // Module 14486
-import emptyPromise from "emptyPromise" /* 14469 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default () => (arg0) => {
-  const result = emptyPromise.assertHasLoggerPlugin(arg0);
-  closure_0 = arg0;
-  return {
-    onConnect() {
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
-    }
-  };
+export const getHostFromUrl = function getHostFromUrl(scriptURL) {
+  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (typeof tmp2 !== "string") {
+    const _Error = Error;
+    const error = new Error("Invalid URL - host not found");
+    throw error;
+  } else {
+    return tmp2;
+  }
 };

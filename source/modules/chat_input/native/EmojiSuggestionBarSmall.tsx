@@ -1,13 +1,13 @@
-// Module ID: 12526
-// Function ID: 12527
+// Module ID: 12524
+// Function ID: 12525
 // Name: EmojiSuggestionBarSmall
-// Dependencies: [19, 10381, 21, 576, 4607, 12521, 4343, 10401, 10419, 4317, 2]
+// Dependencies: [19, 10379, 21, 576, 4606, 12519, 4343, 10399, 10417, 4317, 2]
 
-// Module 12526 (EmojiSuggestionBarSmall)
+// Module 12524 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10401 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12521 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10399 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12519 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -18,8 +18,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12521).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
-  let obj = displayEmojis(12521);
+  const suggestionBarHeight = displayEmojis(12519).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  let obj = displayEmojis(12519);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -44,7 +44,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       if (locked) {
         let openEmojiActionSheet = noop;
       } else {
-        openEmojiActionSheet = tmp2(10419).openEmojiActionSheet;
+        openEmojiActionSheet = tmp2(10417).openEmojiActionSheet;
       }
       obj2.onLongPressEmoji = openEmojiActionSheet;
       obj2.animateEmoji = !reducedMotion;
@@ -57,10 +57,10 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10381).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10379).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = { position: "absolute", top: null, right: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: sum, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };

@@ -1,15 +1,15 @@
-// Module ID: 9511
-// Function ID: 9512
+// Module ID: 9509
+// Function ID: 9510
 // Name: ApplicationInstallUtils
-// Dependencies: [9382, 5051, 9337, 2]
+// Dependencies: [9380, 5050, 9335, 2]
 // Exports: canInstallApplication, isAppUserInstallable, shouldInstallApplicationOnDemand
 
-// Module 9511 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9337 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9382 */;
+// Module 9509 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9335 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9380 */;
 
 require = fn;
-const BuiltInSectionId = fn(5051).BuiltInSectionId;
+const BuiltInSectionId = fn(5050).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 

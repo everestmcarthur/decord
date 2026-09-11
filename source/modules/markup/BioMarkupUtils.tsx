@@ -1,22 +1,22 @@
-// Module ID: 9512
-// Function ID: 9513
+// Module ID: 9510
+// Function ID: 9511
 // Name: BioMarkupUtils
-// Dependencies: [5049, 5050, 4598, 1437, 8062, 4597, 4303, 12, 2]
+// Dependencies: [5048, 5049, 4597, 1437, 8061, 4596, 4303, 12, 2]
 // Exports: getOrParseBioAST, parseBioReact, parseBioReactWithCachedAST
 
-// Module 9512 (BioMarkupUtils)
+// Module 9510 (BioMarkupUtils)
 import privDefault from "priv" /* 1437 */;
 import _modDef4303 from "module_4303" /* 4303 */;
-import MarkupReactRulesDefault from "MarkupReactRules" /* 4598 */;
-import MarkupRulesDefault from "MarkupRules" /* 5050 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5049 */;
-import MarkupParser_mod from "MarkupParser" /* 8062 */;
-import MarkupUtils from "MarkupUtils" /* 4597 */;
+import MarkupReactRulesDefault from "MarkupReactRules" /* 4597 */;
+import MarkupRulesDefault from "MarkupRules" /* 5049 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5048 */;
+import MarkupParser_mod from "MarkupParser" /* 8061 */;
+import MarkupUtils from "MarkupUtils" /* 4596 */;
 import apply from "module_12" /* 12 */;
 
 let combineMarkupRules = combineMarkupRules_mod;
 const items = [MarkupRulesDefault.PROFILE_BIO_RULES, MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
-const MarkupReactRules = fn(4598);
+const MarkupReactRules = fn(4597);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;

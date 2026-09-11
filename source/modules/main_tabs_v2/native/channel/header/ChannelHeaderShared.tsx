@@ -1,23 +1,24 @@
-// Module ID: 13370
-// Function ID: 13371
+// Module ID: 13368
+// Function ID: 13369
 // Name: ChannelHeaderShared
-// Dependencies: [32, 19, 17, 4255, 1371, 21, 4607, 576, 5175, 1115, 10990, 4603, 1178, 13371, 11004, 4308, 5080, 13372, 1114, 4760, 2]
+// Dependencies: [32, 19, 17, 4255, 1371, 21, 4606, 576, 5174, 1115, 10988, 4602, 1178, 13369, 11002, 4308, 5079, 7053, 13370, 1114, 4759, 2]
 // Exports: renderChannelIcon, renderChannelIconRaw, renderChannelTitle, renderEmptyIcon, renderGroupDMIcon, renderMemberCountText, renderParentChannelSubTitle, renderTitleWrapper, renderUserAvatar
 
-// Module 13370 (ChannelHeaderShared)
+// Module 13368 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
 import useToken from "useToken" /* 4308 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5080 */;
-import Pressables from "Pressables" /* 5175 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10990 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11004 */;
-import _modDef13371 from "module_13371" /* 13371 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13372 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5079 */;
+import Pressables from "Pressables" /* 5174 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7053 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10988 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11002 */;
+import _modDef13369 from "module_13369" /* 13369 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
@@ -75,7 +76,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13371, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13369, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -130,19 +131,28 @@ function MemberCountText(arg0) {
       str = "total";
     }
   }
-  const obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null };
+  let str2 = "text-sm/normal";
+  if (obj.useManaTypeConsolidationExperiment("ChannelHeaderMemberCount")) {
+    str2 = "text-xs/normal";
+  }
+  const obj2 = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: null };
+  obj = ManaTypeConsolidationExperiment;
+  const tmp4 = React7;
+  const tmp5 = closure_1_10;
   if ("online" === str) {
     memberCount = presenceCount;
   }
-  obj.count = memberCount;
-  obj.dotContainerWidth = leadingAccessoryWidth;
-  const children = [React6(GuildActionSheetMemberCountDefault, obj), ];
-  let tmp4Result = null;
+  obj2.count = memberCount;
+  obj2.dotContainerWidth = leadingAccessoryWidth;
+  obj2.textVariant = str2;
+  const children = [React6(GuildActionSheetMemberCountDefault, obj2), ];
+  let tmp6Result = null;
   if (withSeparator) {
-    tmp4Result = tmp4(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
+    const obj3 = { variant: str2, color: "text-subtle", children: "\u2022" };
+    tmp6Result = tmp6(Text_Text.Text, obj3);
   }
-  children[1] = tmp4Result;
-  return React7(closure_1_10, { children });
+  children[1] = tmp6Result;
+  return tmp4(tmp5, { children });
 }
 function ParentChannelSubTitle(channel) {
   channel = channel.channel;
@@ -162,7 +172,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };

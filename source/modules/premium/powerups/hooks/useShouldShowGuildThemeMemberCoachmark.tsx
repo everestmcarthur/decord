@@ -1,15 +1,15 @@
 // Module ID: 16229
 // Function ID: 16230
 // Name: useShouldShowGuildThemeMemberCoachmark
-// Dependencies: [4497, 12608, 4536, 4535, 16230, 4516, 2]
+// Dependencies: [4496, 12606, 4535, 4534, 16230, 4515, 2]
 // Exports: default
 
 // Module 16229 (useShouldShowGuildThemeMemberCoachmark)
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4497 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4516 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4535 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 4536 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12608 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4496 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4515 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4534 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 4535 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12606 */;
 import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 16230 */;
 import size from "module_2" /* 2 */;
 

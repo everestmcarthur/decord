@@ -1,12 +1,12 @@
-// Module ID: 11106
-// Function ID: 11107
+// Module ID: 11104
+// Function ID: 11105
 // Name: useCollectiblesExternalGatewayFacet
-// Dependencies: [19, 1371, 504, 8940, 2]
+// Dependencies: [19, 1371, 504, 8938, 2]
 // Exports: default
 
-// Module 11106 (useCollectiblesExternalGatewayFacet)
+// Module 11104 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8940 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8938 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 5863
-// Function ID: 5864
+// Module ID: 5862
+// Function ID: 5863
 // Name: BeakerIllocon
-// Dependencies: [21, 5639, 5864, 2]
+// Dependencies: [21, 5638, 5863, 2]
 // Exports: BeakerIllocon
 
-// Module 5863 (BeakerIllocon)
+// Module 5862 (BeakerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5864 from "module_5864" /* 5864 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5863 from "module_5863" /* 5863 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BeakerIllocon = function BeakerIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5864 };
+  const obj2 = { uri: _modDef5863 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,15 +1,15 @@
-// Module ID: 17209
-// Function ID: 17210
+// Module ID: 17208
+// Function ID: 17209
 // Name: useCanConnect
-// Dependencies: [1957, 1979, 4245, 4626, 1085, 504, 4752, 2]
+// Dependencies: [1957, 1979, 4245, 4625, 1085, 504, 4751, 2]
 // Exports: default
 
-// Module 17209 (useCanConnect)
-import ChannelUtils from "ChannelUtils" /* 4752 */;
+// Module 17208 (useCanConnect)
+import ChannelUtils from "ChannelUtils" /* 4751 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const require = globalThis.__r;
 

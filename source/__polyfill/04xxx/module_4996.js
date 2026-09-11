@@ -1,13 +1,17 @@
 // Module ID: 4996
 // Function ID: 4997
-// Dependencies: [19, 21]
+// Dependencies: [17, 26, 106, 65]
 
 // Module 4996
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
-const context = noop.createContext((children) => framebus(React, { children: children.children }));
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { nativeContainerBackgroundColor: _mod26.colorAttribute };
 
-export const GHContext = context;
-export const RNSScreensRefContext = noop.createContext(null);
+export default module_65.get("RNSScreenStack", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,19 +1,19 @@
-// Module ID: 13772
-// Function ID: 13773
+// Module ID: 13770
+// Function ID: 13771
 // Name: LocalPushNotificationStore
-// Dependencies: [1979, 5465, 13773, 1074, 9780, 4198, 1114, 504, 573, 2]
+// Dependencies: [1979, 5464, 13771, 1074, 9778, 4198, 1114, 504, 573, 2]
 
-// Module 13772 (LocalPushNotificationStore)
+// Module 13770 (LocalPushNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import PushNotificationDefault from "PushNotification" /* 9780 */;
+import PushNotificationDefault from "PushNotification" /* 9778 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5465 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5464 */;
 
 require = fn;
-const Constants = fn(13773);
+const Constants = fn(13771);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1074).VerificationLevels;
 const set = new Set();
@@ -46,9 +46,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = closure_1_1(9780).cancelLocalNotifications(userInfo);
-        const obj = closure_1_1(9780);
-        const result1 = closure_1_1(9780).cancelLocalNotifications(userInfo);
+        const result = closure_1_1(9778).cancelLocalNotifications(userInfo);
+        const obj = closure_1_1(9778);
+        const result1 = closure_1_1(9778).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -75,8 +75,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
               const obj3 = { userInfo: obj2, fireDate: obj.format(timestampProducer), alertTitle: guild.name, alertBody: null, category: "local" };
               const intl = util.intl;
               obj3.alertBody = intl.string(util.t["hrDBa+"]);
-              const result = tmp15(9780).scheduleLocalNotification(obj3);
-              const tmp15Result = tmp15(9780);
+              const result = tmp15(9778).scheduleLocalNotification(obj3);
+              const tmp15Result = tmp15(9778);
             }
             tmp15 = importDefault;
           }

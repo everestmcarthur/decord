@@ -1,12 +1,12 @@
-// Module ID: 18019
-// Function ID: 18020
+// Module ID: 18018
+// Function ID: 18019
 // Name: ToggleSelfMute
-// Dependencies: [1957, 18015, 7419, 10095, 2]
+// Dependencies: [1957, 18014, 7418, 10093, 2]
 
-// Module 18019 (ToggleSelfMute)
-import useMuteStates from "useMuteStates" /* 7419 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 10095 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18015 */;
+// Module 18018 (ToggleSelfMute)
+import useMuteStates from "useMuteStates" /* 7418 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 10093 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18014 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

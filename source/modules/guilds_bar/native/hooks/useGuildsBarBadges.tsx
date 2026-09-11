@@ -1,7 +1,7 @@
 // Module ID: 16400
 // Function ID: 16401
 // Name: useGuildsBarBadges
-// Dependencies: [109, 19, 10172, 4429, 2021, 1979, 4245, 1371, 1074, 21, 4607, 504, 4430, 16401, 4308, 576, 1178, 16405, 16369, 16368, 2]
+// Dependencies: [109, 19, 10170, 4429, 2021, 1979, 4245, 1371, 1074, 21, 4606, 504, 4430, 16401, 4308, 576, 1178, 16405, 16369, 16368, 2]
 // Exports: default
 
 // Module 16400 (useGuildsBarBadges)
@@ -11,7 +11,7 @@ import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16369 */;
 import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16405 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10172 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10170 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -25,7 +25,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1074);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");

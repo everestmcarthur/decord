@@ -1,17 +1,17 @@
-// Module ID: 13823
-// Function ID: 13824
+// Module ID: 13821
+// Function ID: 13822
 // Name: NUFChannelsManager
-// Dependencies: [2021, 1979, 4428, 1371, 1074, 4232, 510, 4451, 7192, 4465, 4464, 1384, 4574, 13824, 1896, 2]
+// Dependencies: [2021, 1979, 4428, 1371, 1074, 4232, 510, 4451, 7191, 4465, 4464, 1384, 4573, 13822, 1896, 2]
 
-// Module 13823 (NUFChannelsManager)
+// Module 13821 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 import UserStore from "UserStore" /* 1371 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
@@ -83,7 +83,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = tmp(4451);
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(13824, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(13822, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = tmp(510).Storage;
             const result = Storage2.set(tmp12, true);
           }

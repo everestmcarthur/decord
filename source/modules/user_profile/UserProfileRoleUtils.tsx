@@ -1,10 +1,10 @@
-// Module ID: 7280
-// Function ID: 7281
+// Module ID: 7279
+// Function ID: 7280
 // Name: UserProfileRoleUtils
 // Dependencies: [2019, 2]
 // Exports: sortRolesByVerification
 
-// Module 7280 (UserProfileRoleUtils)
+// Module 7279 (UserProfileRoleUtils)
 import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
 import size from "module_2" /* 2 */;
 

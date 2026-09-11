@@ -1,7 +1,7 @@
 // Module ID: 15058
 // Function ID: 15059
 // Name: BountiesModal
-// Dependencies: [19, 21, 15059, 15060, 15119, 11878, 12024, 2]
+// Dependencies: [19, 21, 15059, 15060, 15119, 11876, 12022, 2]
 
 // Module 15058 (BountiesModal)
 import noop from "module_19" /* 19 */;

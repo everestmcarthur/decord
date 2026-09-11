@@ -1,13 +1,13 @@
-// Module ID: 7985
-// Function ID: 7986
+// Module ID: 7984
+// Function ID: 7985
 // Name: PaperIcon
-// Dependencies: [19, 21, 576, 4307, 7986, 2]
+// Dependencies: [19, 21, 576, 4307, 7985, 2]
 // Exports: PaperIcon
 
-// Module 7985 (PaperIcon)
+// Module 7984 (PaperIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod7986 from "module_7986" /* 7986 */;
+import _mod7985 from "module_7985" /* 7985 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PaperIcon = function PaperIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7986, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7985, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

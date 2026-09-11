@@ -1,8 +1,8 @@
-// Module ID: 5948
-// Function ID: 5949
+// Module ID: 5947
+// Function ID: 5948
 // Dependencies: [2]
 
-// Module 5948
+// Module 5947
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ControllerSpotIllustration-2x.png.js");

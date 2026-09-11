@@ -1,40 +1,40 @@
-// Module ID: 17306
-// Function ID: 17307
+// Module ID: 17305
+// Function ID: 17306
 // Name: MediaPlaybackPanelStateContext
-// Dependencies: [19, 14592, 12369, 7148, 2]
+// Dependencies: [19, 14590, 12367, 7147, 2]
 
-// Module 17306 (MediaPlaybackPanelStateContext)
+// Module 17305 (MediaPlaybackPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { mode: null, setMode: null, morphablePanelMode: null, wrapperDimensions: null, useReducedMotion: null, pipState: null, pipAvoidanceSpecs: null, dismissToPipGestureRef: null, dismissPanel: null, scrollPosition: null, canShowPIP: null, lockScrolling: null, wrapperOffset: null };
-let ReanimatedHelperTypes = fn(7148);
-obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(14592).MediaPlaybackPanelModes.PIP);
+let ReanimatedHelperTypes = fn(7147);
+obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(14590).MediaPlaybackPanelModes.PIP);
 obj.setMode = function setMode() {
   const error = new Error("MediaPlaybackPanelModes.Provider.setMode: not called within a context provider");
   throw error;
 };
-ReanimatedHelperTypes = fn(7148);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12369).MorphablePanelModes.PIP);
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12367).MorphablePanelModes.PIP);
+ReanimatedHelperTypes = fn(7147);
 obj.wrapperDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0 });
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.useReducedMotion = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-obj.dismissToPipGestureRef = { current: "r" };
+obj.dismissToPipGestureRef = { current: "Array" };
 obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.scrollPosition = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.canShowPIP = ReanimatedHelperTypes.createFakeSharedValue(true);
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.lockScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
 const context = noop.createContext(obj);
 const size = fn(2);

@@ -1,7 +1,7 @@
 // Module ID: 15602
 // Function ID: 15603
 // Name: UploadIntlDataSetting
-// Dependencies: [5, 17, 1074, 21, 560, 1249, 1364, 1120, 1154, 1114, 1115, 1272, 4305, 4562, 11564, 15603, 14897, 2]
+// Dependencies: [5, 17, 1074, 21, 560, 1249, 1364, 1120, 1154, 1114, 1115, 1272, 4305, 4561, 11562, 15603, 14897, 2]
 
 // Module 15602 (UploadIntlDataSetting)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -256,7 +256,7 @@ const Constants = fn(1074);
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Upload i18n data";

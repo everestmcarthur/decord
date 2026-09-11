@@ -1,7 +1,7 @@
 // Module ID: 15030
 // Function ID: 15031
 // Name: ClipsOptOutOfVoiceRecordingSetting
-// Dependencies: [5, 8050, 1935, 573, 11564, 1114, 2]
+// Dependencies: [5, 8049, 1935, 573, 11562, 1114, 2]
 
 // Module 15030 (ClipsOptOutOfVoiceRecordingSetting)
 import util from "util" /* 1114 */;
@@ -59,7 +59,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0, value) {
     }
   }
 };
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -69,7 +69,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["wW9/zQ"]);
   },
-  parent: fn(8050).MobileUserSettings.CLIPS,
+  parent: fn(8049).MobileUserSettings.CLIPS,
   useValue: fn(1935).ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;

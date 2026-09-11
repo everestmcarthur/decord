@@ -1,7 +1,7 @@
 // Module ID: 16892
 // Function ID: 16893
 // Name: UserProfileYourFriendsCard
-// Dependencies: [32, 19, 17, 7732, 4255, 1371, 1074, 21, 1178, 4607, 576, 504, 13158, 9941, 12, 1369, 5175, 1114, 4603, 7283, 2]
+// Dependencies: [32, 19, 17, 7731, 4255, 1371, 1074, 21, 1178, 4606, 576, 504, 13156, 9939, 12, 1369, 5174, 1114, 4602, 7282, 2]
 // Exports: default
 
 // Module 16892 (UserProfileYourFriendsCard)
@@ -10,7 +10,7 @@ import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -22,7 +22,7 @@ const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({ direction: fn(1178).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj3 = { pressable: null, label: null, facepile: null, avatars: null };
 let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -4 };
 obj3.pressable = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
@@ -53,7 +53,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9941).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9939).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

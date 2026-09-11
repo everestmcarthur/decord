@@ -1,13 +1,12 @@
 // Module ID: 6851
 // Function ID: 6852
-// Dependencies: [41, 42, 93, 95, 96, 98, 6748]
+// Dependencies: [41, 42, 93, 95, 98, 6747]
 
 // Module 6851
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -30,28 +29,14 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    const obj2 = { rotationChange: rotation.rotation };
-    let obj = obj2;
-  } else {
-    obj = { rotationChange: rotation.rotation - rotation2.rotation };
-  }
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11988645380499;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
-class RotationGesture {
+class FlingGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, RotationGesture);
+    tmp = closure_0(this, FlingGesture);
     tmp2 = c2;
-    obj = c2(RotationGesture);
+    obj = c2(FlingGesture);
     tmp3 = closure_1;
-    if (closure_4()) {
+    if (closure_3()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -59,25 +44,29 @@ class RotationGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "FlingGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = RotationGesture;
-_inherits(RotationGesture, fn(6748).ContinousBaseGesture);
+_classCallCheck = FlingGesture;
+_inherits(FlingGesture, fn(6747).BaseGesture);
 const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
+  key: "numberOfPointers",
+  value: function numberOfPointers(numberOfPointers) {
+    this.config.numberOfPointers = numberOfPointers;
+    return this;
   }
 };
-let items = [entry];
+const items = [
+  entry,
+  {
+    key: "direction",
+    value: function direction(dependencyMap) {
+      this.config.direction = dependencyMap;
+      return this;
+    }
+  }
+];
 
-export const RotationGesture = _createClass(RotationGesture, items);
+export const FlingGesture = _createClass(FlingGesture, items);

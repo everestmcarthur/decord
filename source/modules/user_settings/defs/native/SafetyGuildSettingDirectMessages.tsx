@@ -1,13 +1,13 @@
 // Module ID: 15942
 // Function ID: 15943
 // Name: SafetyGuildSettingDirectMessages
-// Dependencies: [1979, 15936, 8050, 11565, 14879, 15943, 1935, 4951, 1114, 5046, 7069, 15944, 11564, 2]
+// Dependencies: [1979, 15936, 8049, 11563, 14879, 15943, 1935, 4950, 1114, 5045, 7068, 15944, 11562, 2]
 
 // Module 15942 (SafetyGuildSettingDirectMessages)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
-import common_AlertDefault from "common/Alert" /* 5046 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 14879 */;
 import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15943 */;
 import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15944 */;
@@ -16,8 +16,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 require = fn;
 const UserSettingsSafetySelectedGuildStore = fn(15936);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11565).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11564);
+let closure_6 = fn(11563).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -55,7 +55,7 @@ const toggle = SettingBuilders.createToggle({
       return stringResult;
     }
   },
-  parent: fn(8050).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;

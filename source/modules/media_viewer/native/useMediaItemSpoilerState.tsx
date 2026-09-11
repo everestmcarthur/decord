@@ -1,13 +1,13 @@
-// Module ID: 13059
-// Function ID: 13060
+// Module ID: 13057
+// Function ID: 13058
 // Name: useMediaItemSpoilerState
-// Dependencies: [32, 19, 8352, 4343, 4608, 1178, 2]
+// Dependencies: [32, 19, 8350, 4343, 4607, 1178, 2]
 // Exports: useMediaItemSpoilerState
 
-// Module 13059 (useMediaItemSpoilerState)
+// Module 13057 (useMediaItemSpoilerState)
 import native from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +18,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8352).useMediaItemHasSpoiler(index);
-  let obj = mediaItemHasSpoiler(8352);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8350).useMediaItemHasSpoiler(index);
+  let obj = mediaItemHasSpoiler(8350);
   let obj2 = noop;
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);

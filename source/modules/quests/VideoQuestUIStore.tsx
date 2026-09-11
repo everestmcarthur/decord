@@ -1,9 +1,9 @@
-// Module ID: 7778
-// Function ID: 7779
+// Module ID: 7777
+// Function ID: 7778
 // Name: VideoQuestUIStore
-// Dependencies: [109, 1244, 4477, 7779, 1249, 7780, 2]
+// Dependencies: [109, 1244, 4477, 7778, 1249, 7779, 2]
 
-// Module 7778 (VideoQuestUIStore)
+// Module 7777 (VideoQuestUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 

@@ -1,7 +1,7 @@
 // Module ID: 16888
 // Function ID: 16889
 // Name: BadgeCustomizationProfileCoachmark
-// Dependencies: [19, 1371, 1954, 504, 4264, 1114, 4317, 11224, 2]
+// Dependencies: [19, 1371, 1954, 504, 4264, 1114, 4317, 11222, 2]
 // Exports: default
 
 // Module 16888 (BadgeCustomizationProfileCoachmark)

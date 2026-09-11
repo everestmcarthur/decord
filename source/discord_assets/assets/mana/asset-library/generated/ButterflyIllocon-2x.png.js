@@ -1,8 +1,8 @@
-// Module ID: 5894
-// Function ID: 5895
+// Module ID: 5893
+// Function ID: 5894
 // Dependencies: [2]
 
-// Module 5894
+// Module 5893
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js");

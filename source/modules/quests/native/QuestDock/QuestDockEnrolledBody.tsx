@@ -1,18 +1,18 @@
 // Module ID: 15256
 // Function ID: 15257
 // Name: QuestDockEnrolledBody
-// Dependencies: [5, 19, 17, 7776, 15151, 5496, 15153, 21, 4607, 576, 15157, 15154, 8355, 15149, 15182, 5499, 15179, 15178, 15180, 15160, 1611, 7797, 2]
+// Dependencies: [5, 19, 17, 7775, 15151, 5495, 15153, 21, 4606, 576, 15157, 15154, 8353, 15149, 15182, 5498, 15179, 15178, 15180, 15160, 1611, 7796, 2]
 
 // Module 15256 (QuestDockEnrolledBody)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import QuestTypes from "QuestTypes" /* 5499 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
 import QuestBottomSheet from "QuestBottomSheet" /* 15178 */;
 import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 15179 */;
 import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 15180 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7776 */;
+import QuestStore from "QuestStore" /* 7775 */;
 import QuestDockStore from "QuestDockStore" /* 15151 */;
 
 require = fn;
@@ -79,7 +79,7 @@ function EnrolledBodyWatchTask(quest) {
                 tmp12 = tmp16;
               }
               if (tmp12) {
-                const obj4 = { questId: tmp2.id, sourceQuestContent: quest(5499).QuestContent.QUEST_BAR_MOBILE };
+                const obj4 = { questId: tmp2.id, sourceQuestContent: quest(5498).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
                 const obj5 = { value: setRestingQuestDockMode(15182)(obj4), done: false };
@@ -164,14 +164,14 @@ function EnrolledBodyPlayStreamTask(quest) {
   return closure_1_14(map1, obj3);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5496);
+const QuestConstants = fn(5495);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
 const QuestDockConstants = fn(15153);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: c10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { wrapper: { flexGrow: 0, flexShrink: 0, paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM, paddingTop: QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP, paddingHorizontal: QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL }, headerWrapper: { marginBottom: nativeDefault.space.PX_16 }, contentWrapper: null, footer: null, footerWrapper: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentWrapper = { display: "flex", gap: nativeDefault.space.PX_16, flexGrow: 0, flexShrink: 0 };

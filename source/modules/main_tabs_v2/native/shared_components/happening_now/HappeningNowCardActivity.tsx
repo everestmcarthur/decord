@@ -1,7 +1,7 @@
 // Module ID: 16144
 // Function ID: 16145
 // Name: HappeningNowCardActivity
-// Dependencies: [19, 17, 1962, 1371, 15357, 1074, 1085, 21, 16145, 16146, 4607, 576, 7236, 504, 7242, 1242, 9629, 1896, 8265, 16140, 4759, 16147, 15358, 16141, 1178, 16150, 10982, 16151, 10004, 13097, 8801, 5149, 9315, 1114, 4456, 10151, 5639, 16142, 16153, 10154, 8225, 16155, 8334, 2]
+// Dependencies: [19, 17, 1962, 1371, 15357, 1074, 1085, 21, 16145, 16146, 4606, 576, 7235, 504, 7241, 1242, 9627, 1896, 8264, 16140, 4758, 16147, 15358, 16141, 1178, 16150, 10980, 16151, 10002, 13095, 8799, 5148, 9313, 1114, 4456, 10149, 5638, 16142, 16153, 10152, 8224, 16155, 8332, 2]
 
 // Module 16144 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 576 */;
@@ -9,9 +9,9 @@ import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ColorUtils from "ColorUtils" /* 4456 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8225 */;
-import VideoBackground from "VideoBackground" /* 8334 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10154 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8224 */;
+import VideoBackground from "VideoBackground" /* 8332 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10152 */;
 import useLiveStageData from "useLiveStageData" /* 16142 */;
 import _modDef16145 from "module_16145" /* 16145 */;
 import _modDef16146 from "module_16146" /* 16146 */;
@@ -119,10 +119,10 @@ function IconOrPreview(arg0) {
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1114).intl;
       obj8.ctaText = intl5.string(tmp28(1114).t["7Xq/nV"]);
-      obj3.children = closure_1_11(tmp2(10151), obj8);
+      obj3.children = closure_1_11(tmp2(10149), obj8);
       return closure_1_11(React4, obj3);
     } else {
-      if (tmp2(10982)(activity)) {
+      if (tmp2(10980)(activity)) {
         const intl4 = tmp28(1114).intl;
         let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
       } else {
@@ -133,7 +133,7 @@ function IconOrPreview(arg0) {
         if (type === constants2.LISTENING) {
           const intl3 = tmp28(1114).intl;
           stringResult = intl3.string(tmp28(1114).t.kUEnxN);
-        } else if (tmp2(13097)(activity)) {
+        } else if (tmp2(13095)(activity)) {
           const intl2 = tmp28(1114).intl;
           stringResult = intl2.string(tmp28(1114).t.T0uYK9);
         } else {
@@ -150,7 +150,7 @@ function IconOrPreview(arg0) {
       const obj10 = { style: memo, accessibilityLabel: stringResult, children: null };
       const obj11 = { style: tmp35, children: null };
       const obj12 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj11.children = closure_1_11(tmp2(5639), obj12);
+      obj11.children = closure_1_11(tmp2(5638), obj12);
       obj10.children = closure_1_11(React4, obj11);
       return closure_1_11(React4, obj10);
     }
@@ -194,7 +194,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
 let items = [_modDef16145, _modDef16146];
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 obj.cardImageAsset = { flex: 1, width: "100%", borderRadius: nativeDefault.radii.sm - 1 };
@@ -290,11 +290,11 @@ export default noop.memo((userId) => {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(9629, tmp6.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(9629, tmp6.paths);
+      asyncRequireImpl(9627, tmp6.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(9627, tmp6.paths);
     } else {
-      asyncRequireImpl(8265, tmp6.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8265, tmp6.paths);
+      asyncRequireImpl(8264, tmp6.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8264, tmp6.paths);
     }
   }, items2);
   if (null == stateFromStores) {

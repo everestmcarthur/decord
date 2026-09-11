@@ -1,11 +1,11 @@
 // Module ID: 16456
 // Function ID: 16457
 // Name: YouBarUser
-// Dependencies: [19, 17, 1371, 15156, 21, 4607, 576, 504, 4343, 5026, 4451, 16457, 16458, 16459, 2]
+// Dependencies: [19, 17, 1371, 15156, 21, 4606, 576, 504, 4343, 5025, 4451, 16457, 16458, 16459, 2]
 
 // Module 16456 (YouBarUser)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -17,7 +17,7 @@ const YouBarConstants = fn(15156);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { youButton: { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS }, userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, placeholder: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, height: 16, width: 80 };
 obj.placeholder = size;

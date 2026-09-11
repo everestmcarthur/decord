@@ -1,31 +1,31 @@
-// Module ID: 17248
-// Function ID: 17249
+// Module ID: 17247
+// Function ID: 17248
 // Name: VoicePanelPIPContent
-// Dependencies: [32, 19, 17, 1956, 4623, 9579, 4629, 502, 1957, 1371, 12368, 17171, 1074, 1920, 4628, 21, 4607, 576, 4343, 5039, 12367, 17165, 9710, 1109, 4317, 17175, 5641, 17170, 563, 1477, 9728, 8920, 8337, 9698, 9715, 1178, 9718, 12370, 7147, 17087, 9703, 9691, 9694, 2]
+// Dependencies: [32, 19, 17, 1956, 4622, 9577, 4628, 502, 1957, 1371, 12366, 17170, 1074, 1920, 4627, 21, 4606, 576, 4343, 5038, 12365, 17164, 9708, 1109, 4317, 17174, 5640, 17169, 563, 1477, 9726, 8918, 8335, 9696, 9713, 1178, 9716, 12368, 7146, 17086, 9701, 9689, 9692, 2]
 
-// Module 17248 (VoicePanelPIPContent)
+// Module 17247 (VoicePanelPIPContent)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import native from "native" /* 4317 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
-import NativeViewDefault from "NativeView" /* 5641 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7147 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8337 */;
-import ExternalPipDefault from "ExternalPip" /* 9703 */;
-import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 9710 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12367 */;
-import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 12370 */;
-import VideoActionCreators from "VideoActionCreators" /* 17087 */;
-import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 17165 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17170 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import NativeViewDefault from "NativeView" /* 5640 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7146 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8335 */;
+import ExternalPipDefault from "ExternalPip" /* 9701 */;
+import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 9708 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12365 */;
+import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 12368 */;
+import VideoActionCreators from "VideoActionCreators" /* 17086 */;
+import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 17164 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9579 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9577 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -310,9 +310,9 @@ function User(participantId) {
   if (user1 != null) {
     avatarURL = user1.getAvatarURL(guildId, 80, false);
   }
-  dominantColorFromImage = participantId(8920).useDominantColorFromImage(avatarURL);
+  dominantColorFromImage = participantId(8918).useDominantColorFromImage(avatarURL);
   let id;
-  const tmp3Result8 = participantId(8920);
+  const tmp3Result8 = participantId(8918);
   if (user1 != null) {
     id = user1.id;
   }
@@ -340,7 +340,7 @@ function User(participantId) {
     }
   }
   const items3 = [channelId];
-  const surfaceDirectRendererExperiment = participantId(9698).useSurfaceDirectRendererExperiment(id1, { location: "VoicePanelPIPContent" });
+  const surfaceDirectRendererExperiment = participantId(9696).useSurfaceDirectRendererExperiment(id1, { location: "VoicePanelPIPContent" });
   updateIsActivityFocused = obj.useCallback((arg0, arg1) => {
     let participant;
     if (null != arg0) {
@@ -355,7 +355,7 @@ function User(participantId) {
     }
     _undefined(tmp5);
   }, items3);
-  const tmp3Result9 = participantId(9698);
+  const tmp3Result9 = participantId(9696);
   class S {
     constructor() {
       value = focused.get();
@@ -422,7 +422,7 @@ function User(participantId) {
     layoutManager.setTargetDimensions(participantId, nativeEvent.width, nativeEvent.height);
   }, items5);
   const tmp3Result12 = participantId(563);
-  canRenderParticipantVideo = participantId(9715).useCanRenderParticipantVideo(stateFromStores);
+  canRenderParticipantVideo = participantId(9713).useCanRenderParticipantVideo(stateFromStores);
   if (canRenderParticipantVideo) {
     let tmp27 = tmp18;
     if (tmp18) {
@@ -439,7 +439,7 @@ function User(participantId) {
   }, items6);
   const obj4 = { style: null, children: null };
   const tmp29 = closure_23;
-  const tmp3Result13 = participantId(9715);
+  const tmp3Result13 = participantId(9713);
   if (canRenderParticipantVideo) {
     const items7 = [, ];
     ({ blackBackground: arr9[0], user: arr9[1] } = tmp);
@@ -458,14 +458,14 @@ function User(participantId) {
     obj4.style = memo;
     let tmp31 = null;
     if (null != tmp6ResultResult) {
-      const obj7 = { colors: tmp6ResultResult, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: layoutManager.absoluteFill, layout: tmp3(17170).layoutTransition, pointerEvents: "none" };
+      const obj7 = { colors: tmp6ResultResult, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: layoutManager.absoluteFill, layout: tmp3(17169).layoutTransition, pointerEvents: "none" };
       tmp31 = closure_22(LinearGradient, obj7);
     }
     const items10 = [tmp31, , , ];
     const obj8 = { style: tmp.avatarWrapper, children: null };
     let tmp35Result = null;
     if (null != user1) {
-      const obj9 = { source: tmp3(8920).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)), size: null, avatarDecoration: null };
+      const obj9 = { source: tmp3(8918).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)), size: null, avatarDecoration: null };
       const AvatarSizes = tmp3(1178).AvatarSizes;
       obj9.size = tmp18 ? AvatarSizes.LARGE : AvatarSizes.XLARGE;
       let userAvatarDecoration;
@@ -474,10 +474,10 @@ function User(participantId) {
       }
       obj9.avatarDecoration = userAvatarDecoration;
       tmp35Result = tmp35(tmp3(1178).Avatar, obj9);
-      const tmp3Result14 = tmp3(8920);
+      const tmp3Result14 = tmp3(8918);
     }
     obj8.children = tmp35Result;
-    items10[1] = closure_22(tmp6(5641), obj8);
+    items10[1] = closure_22(tmp6(5640), obj8);
     const obj10 = { style: tmp.userOpacity };
     items10[2] = closure_22(InnerStroke, obj10);
     let tmp35Result2 = null;
@@ -485,16 +485,16 @@ function User(participantId) {
       tmp35Result2 = null;
       if (consumedRequestToRespondToSeriousThermalState) {
         const obj11 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj12 = { style: tmp.thermalAlertIcon, source: tmp6(9718), color: tmp.thermalAlertIcon.color };
+        const obj12 = { style: tmp.thermalAlertIcon, source: tmp6(9716), color: tmp.thermalAlertIcon.color };
         obj11.children = tmp35(tmp3(1178).Icon, obj12);
-        tmp35Result2 = tmp35(tmp6(5641), obj11);
-        const tmp6Result6 = tmp6(5641);
+        tmp35Result2 = tmp35(tmp6(5640), obj11);
+        const tmp6Result6 = tmp6(5640);
       }
     }
     items10[3] = tmp35Result2;
     obj4.children = items10;
     tmp42 = obj4;
-    const tmp6Result5 = tmp6(5641);
+    const tmp6Result5 = tmp6(5640);
   }
   return tmp29(NativeViewDefault, tmp42);
 }
@@ -531,7 +531,7 @@ function Stream(participantId) {
   c5 = undefined;
   let callback2;
   let tmp = closure_24();
-  const mode = participantId(17175).usePIPState().mode;
+  const mode = participantId(17174).usePIPState().mode;
   closure_129_0 = transitionState;
   closure_129_1 = transitionCleanUp;
   const items = [transitionState, transitionCleanUp];
@@ -566,8 +566,8 @@ function Stream(participantId) {
     tmp = participantId;
     tmp2 = _undefined;
   }, items);
-  let obj = participantId(17175);
-  const context = obj2.useContext(mode(12367));
+  let obj = participantId(17174);
+  const context = obj2.useContext(mode(12365));
   ({ channelId: c2, layoutManager } = context);
   let tmp5 = transitionState === participantId(4317).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   const items1 = [callback2];
@@ -596,8 +596,8 @@ function Stream(participantId) {
   });
   streamId = stateFromStoresObject.streamId;
   const tmp2Result = participantId(563);
-  const surfaceDirectRendererExperiment = participantId(9698).useSurfaceDirectRendererExperiment(stateFromStoresObject.userId, { location: "VoicePanelPIPContent.Stream" });
-  const tmp2Result3 = participantId(9698);
+  const surfaceDirectRendererExperiment = participantId(9696).useSurfaceDirectRendererExperiment(stateFromStoresObject.userId, { location: "VoicePanelPIPContent.Stream" });
+  const tmp2Result3 = participantId(9696);
   const items2 = [ApplicationStreamingStore];
   const stateFromStores = participantId(563).useStateFromStores(items2, () => {
     const activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(participantId);
@@ -668,10 +668,10 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp18Result = closure_22(tmp2(9691).StreamEnded, obj3);
+    let tmp18Result = closure_22(tmp2(9689).StreamEnded, obj3);
   } else if (stateFromStores === tmp17.FAILED) {
     const obj4 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    tmp18Result = closure_22(tmp2(9694).StreamFailed, obj4);
+    tmp18Result = closure_22(tmp2(9692).StreamFailed, obj4);
   } else if (tmp15) {
     const obj5 = { style: tmp5, participantId, children: null };
     const obj6 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, style: tmp.video, onSize: callback, onLayout: callback1 };
@@ -739,17 +739,17 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(12368).VoicePanelModes;
-const VoicePanelPIPModes = fn(17171).VoicePanelPIPModes;
+const VoicePanelModes = fn(12366).VoicePanelModes;
+const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
 let Constants = fn(1074);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(1920);
 ({ ActivityLayoutMode: closure_18, OrientationLockState: closure_19 } = Constants);
-const CallConstants = fn(4628);
+const CallConstants = fn(4627);
 ({ ParticipantTypes: closure_20, isActivityParticipant: closure_21 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { contentWrapper: { position: "absolute", width: "100%", height: "100%", overflow: "hidden", alignItems: "center", justifyContent: "center" }, userOpacity: { opacity: 0.1 }, activity: { position: "absolute", width: "100%", height: "100%" }, user: { position: "absolute", width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, video: { position: "absolute", width: "100%", height: "100%" }, avatarWrapper: { position: "relative", width: "56%", height: "56%", alignItems: "center", justifyContent: "center" }, thermalAlertIconContainer: null, thermalAlertIcon: null, onTop: null, onBottom: null, streamEmptyImage: null, emptyPip: null, innerStroke: null, blackBackground: null };
 let size = { width: 22, height: 22, backgroundColor: "rgba(78, 80, 88, 0.48)", borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", position: "absolute", top: 6, left: 6 };
 obj.thermalAlertIconContainer = size;
@@ -783,7 +783,7 @@ let closure_40 = noop.memo(function EmptyPIP(transitionState) {
     }
   }, items);
   const tmp = closure_24();
-  return closure_22(transitionCleanUp(5641), { style: closure_24().emptyPip });
+  return closure_22(transitionCleanUp(5640), { style: closure_24().emptyPip });
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPContent.tsx");

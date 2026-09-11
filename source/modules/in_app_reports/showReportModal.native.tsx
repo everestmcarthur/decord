@@ -1,11 +1,11 @@
-// Module ID: 8724
-// Function ID: 8725
+// Module ID: 8722
+// Function ID: 8723
 // Name: showReportModal
-// Dependencies: [5, 8725, 8726, 4810, 8727, 1896, 2]
+// Dependencies: [5, 8723, 8724, 4809, 8725, 1896, 2]
 // Exports: hideReportModal, showReportModal
 
-// Module 8724 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+// Module 8722 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -48,7 +48,7 @@ let closure_5 = async function _showReportModal(arg0, value) {
           closure_131_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

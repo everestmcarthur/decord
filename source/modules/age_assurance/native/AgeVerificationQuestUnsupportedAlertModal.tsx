@@ -1,13 +1,13 @@
-// Module ID: 8514
-// Function ID: 8515
+// Module ID: 8512
+// Function ID: 8513
 // Name: AgeVerificationQuestUnsupportedAlertModal
-// Dependencies: [19, 21, 4957, 1114, 2946, 4957, 2]
+// Dependencies: [19, 21, 4956, 1114, 2946, 4956, 2]
 // Exports: default
 
-// Module 8514 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 8512 (AgeVerificationQuestUnsupportedAlertModal)
 import util from "util" /* 1114 */;
 import _modDef2946 from "module_2946" /* 2946 */;
-import AlertModal from "AlertModal" /* 4957 */;
+import AlertModal from "AlertModal" /* 4956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

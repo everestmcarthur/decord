@@ -1,328 +1,317 @@
 // Module ID: 10864
 // Function ID: 10865
-// Dependencies: [19, 17, 1636]
-// Exports: horizontalStackLayout, useHorizontalStackLayout, verticalStackLayout
+// Dependencies: [19, 10856, 1636, 10865, 10849, 10850, 10866, 10852]
+// Exports: useCarouselController
 
 // Module 10864
-import _mod17 from "module_17" /* 17 */;
-import _mod19 from "module_19" /* 19 */;
 import cancelAnimation from "cancelAnimation" /* 1636 */;
+import SINGLE_ITEM from "SINGLE_ITEM" /* 10849 */;
+import handlerOffsetDirection from "handlerOffsetDirection" /* 10852 */;
+import round from "round" /* 10865 */;
+import noop from "module_19" /* 19 */;
 
-const useMemo = _mod19.useMemo;
-const Dimensions = _mod17.Dimensions;
-const screen = Dimensions.get("window");
-const __initData = { code: "function pnpm_stackTs1(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,validLength*stackInterval],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[-validLength*stackInterval,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
-const __initData2 = { code: "function pnpm_stackTs2(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;let translateY;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,0],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[0,0,validLength*stackInterval],Extrapolation.CLAMP);}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[0,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[validLength*stackInterval,0,0],Extrapolation.CLAMP);}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ},{translateY:translateY}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
-function getCommonVariables(showLength) {
-  ({ value, snapDirection } = showLength);
-  let rounded = Math.floor(Math.abs(value));
-  const result = Math.abs(value) % 1;
-  if (value < 0) {
-    if (result < 0.5) {
-      let result1 = 4 * result * result * result;
-    } else {
-      result1 = 1 - (-2 * result + 2) ** 3 / 2;
-    }
-    rounded = rounded + result1;
-  } else {
-    if (result < 0.5) {
-      let result2 = 4 * result * result * result;
-    } else {
-      result2 = 1 - (-2 * result + 2) ** 3 / 2;
-    }
-    const diff = showLength.showLength - 1;
-    const sum = rounded + result2;
-    if ("left" === snapDirection) {
-      const items = [-1, 0, diff];
-      let items1 = items;
-    } else if ("right" !== snapDirection) {
-      const _Error = Error;
-      const error = new Error("snapDirection must be set to either left or right");
-      throw error;
-    } else {
-      items1 = [-diff, 0, 1];
-    }
-    const obj = { inputRange: items1, validLength: diff, value: sum };
-    return obj;
-  }
-}
-getCommonVariables.__closure = {};
-getCommonVariables.__workletHash = 9545327827217;
-getCommonVariables.__initData = { code: "function getCommonVariables_Pnpm_stackTs3(opts){const{showLength:showLength,value:_value,snapDirection:snapDirection}=opts;function easeInOutCubic(v){return v<0.5?4*v*v*v:1-(-2*v+2)**3/2;}const page=Math.floor(Math.abs(_value));const diff=Math.abs(_value)%1;const value=_value<0?-(page+easeInOutCubic(diff)):page+easeInOutCubic(diff);const validLength=showLength-1;let inputRange;if(snapDirection===\"left\")inputRange=[-1,0,validLength];else if(snapDirection===\"right\")inputRange=[-validLength,0,1];else throw new Error(\"snapDirection must be set to either left or right\");return{inputRange:inputRange,validLength:validLength,value:value};}" };
-function getCommonStyles(arg0) {
-  ({ snapDirection, validLength, value, opacityInterval } = arg0);
-  if ("left" === snapDirection) {
-    const _Math = Math;
-    const _Number = Number;
-    const items = [-1.5, -1, -1 + Number.MIN_VALUE, 0, validLength];
-    const _Number2 = Number;
-    const items1 = [Number.MIN_VALUE, validLength, validLength, validLength - 1, -1];
-    let result = Math.floor(10000 * cancelAnimation.interpolate(value, items, items1)) / 100;
-    const items2 = [-1, 0, validLength - 1, validLength];
-    const items3 = [0.25, 1, 1 - (validLength - 1) * opacityInterval, 0.25];
-    let interpolateResult = cancelAnimation.interpolate(value, items2, items3);
-  } else if ("right" !== snapDirection) {
-    const _Error = Error;
-    const error = new Error("snapDirection must be set to either left or right");
-    throw error;
-  } else {
-    const _Math2 = Math;
-    const items4 = [-validLength, 0, , , ];
-    const _Number3 = Number;
-    items4[2] = 1 - Number.MIN_VALUE;
-    items4[3] = 1;
-    items4[4] = 1.5;
-    const items5 = [1, validLength - 1, validLength, validLength];
-    const _Number4 = Number;
-    items5[4] = Number.MIN_VALUE;
-    result = Math.floor(10000 * cancelAnimation.interpolate(value, items4, items5)) / 100;
-    const items6 = [-validLength, 1 - validLength, 0, 1];
-    const items7 = [0.25, 1 - (validLength - 1) * opacityInterval, 1, 0.25];
-    interpolateResult = cancelAnimation.interpolate(value, items6, items7);
-  }
-  return { zIndex: Math.round(result), opacity: interpolateResult };
-}
-getCommonStyles.__closure = { interpolate: cancelAnimation.interpolate };
-getCommonStyles.__workletHash = 9067239849373;
-getCommonStyles.__initData = { code: "function getCommonStyles_Pnpm_stackTs4(opts){const{interpolate}=this.__closure;const{snapDirection:snapDirection,validLength:validLength,value:value,opacityInterval:opacityInterval}=opts;let zIndex;let opacity;if(snapDirection===\"left\"){zIndex=Math.floor(interpolate(value,[-1.5,-1,-1+Number.MIN_VALUE,0,validLength],[Number.MIN_VALUE,validLength,validLength,validLength-1,-1])*10000)/100;opacity=interpolate(value,[-1,0,validLength-1,validLength],[0.25,1,1-(validLength-1)*opacityInterval,0.25]);}else if(snapDirection===\"right\"){zIndex=Math.floor(interpolate(value,[-validLength,0,1-Number.MIN_VALUE,1,1.5],[1,validLength-1,validLength,validLength,Number.MIN_VALUE])*10000)/100;opacity=interpolate(value,[-validLength,1-validLength,0,1],[0.25,1-(validLength-1)*opacityInterval,1,0.25]);}else{throw new Error(\"snapDirection must be set to either left or right\");}return{zIndex:Math.round(zIndex),opacity:opacity};}" };
+const require = globalThis.__r;
 
-export const horizontalStackLayout = function horizontalStackLayout(modeConfig) {
-  if (modeConfig === undefined) {
-    modeConfig = {};
+require = fn;
+const useRef = fn(19).useRef;
+let closure_4 = { code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}" };
+let closure_5 = { code: "function pnpm_useCarouselControllerTsx2({i:i,newSharedIndexValue:newSharedIndexValue}){const{index,runOnJS,setSharedIndex}=this.__closure;index.value=i;runOnJS(setSharedIndex)(newSharedIndexValue);}" };
+let closure_6 = { code: "function pnpm_useCarouselControllerTsx3(toValue,onFinished){const{runOnJS,onScrollEnd,duration,Easing,dealWithAnimation,withAnimation}=this.__closure;var _withAnimation;const callback=function(isFinished){\"worklet\";if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}};const defaultWithAnimation={type:\"timing\",config:{duration:duration,easing:Easing.easeOutQuart}};return dealWithAnimation((_withAnimation=withAnimation)!==null&&_withAnimation!==void 0?_withAnimation:defaultWithAnimation)(toValue,callback);}" };
+let closure_7 = { code: "function pnpm_useCarouselControllerTsx4(isFinished){const{runOnJS,onScrollEnd,onFinished}=this.__closure;if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}}" };
+let closure_8 = { code: "function pnpm_useCarouselControllerTsx5(opts={}){const{canSliding,loop,index,dataInfo,size,overscrollEnabled,containerSize,onScrollStart,currentFixedPage,handlerOffset,scrollWithTiming}=this.__closure;var _onScrollStart;const{count=1,animated=true,onFinished:onFinished}=opts;if(!canSliding())return;if(!loop&&index.value>=dataInfo.length-1)return;const visibleContentWidth=(dataInfo.length-index.value)*size;if(!overscrollEnabled&&!(visibleContentWidth>containerSize.value.width)){return;}(_onScrollStart=onScrollStart)===null||_onScrollStart===void 0||_onScrollStart();const nextPage=currentFixedPage()+count;index.value=nextPage;if(animated){handlerOffset.value=scrollWithTiming(-nextPage*size,onFinished);}else{handlerOffset.value=-nextPage*size;onFinished===null||onFinished===void 0||onFinished();}}" };
+
+export const useCarouselController = function useCarouselController(size) {
+  _require = size;
+  function setSharedIndex(current) {
+    closure_13.current = current;
   }
-  const fn = function l(value) {
-    const snapDirection = obj.snapDirection;
-    let str = "left";
-    if (undefined !== snapDirection) {
-      str = snapDirection;
+  size = size.size;
+  const loop = size.loop;
+  const dataLength = size.dataLength;
+  const handlerOffset = size.handlerOffset;
+  const withAnimation = size.withAnimation;
+  const defaultIndex = size.defaultIndex;
+  let num = 0;
+  if (undefined !== defaultIndex) {
+    num = defaultIndex;
+  }
+  const duration = size.duration;
+  const autoFillData = size.autoFillData;
+  const fixedDirection = size.fixedDirection;
+  const globalState = require("module_10856").useGlobalState();
+  const overscrollEnabled = globalState.props.overscrollEnabled;
+  const containerSize = globalState.layout.containerSize;
+  const items = [dataLength];
+  const memo = loop.useMemo(() => ({ length: dataLength, disable: !dataLength, originalLength: dataLength }), items);
+  let obj = require("module_10856");
+  const sharedValue = require("cancelAnimation").useSharedValue(num);
+  const tmp3 = dataLength(num);
+  const items1 = [handlerOffset, memo, size, loop];
+  let obj2 = require("cancelAnimation");
+  const currentFixedPage = loop.useCallback(() => {
+    if (loop) {
+      const _Math2 = Math;
+      return -Math.round(handlerOffset.value / size);
+    } else {
+      const result = handlerOffset.value / size % memo.length;
+      if (handlerOffset.value <= 0) {
+        const _Math = Math;
+        let absolute = Math.abs(result);
+      } else {
+        let num2 = 0;
+        if (result > 0) {
+          num2 = arr.length - result;
+        }
+        absolute = Math.abs(num2);
+      }
+      return Math.round(absolute);
     }
-    let width = tmp.moveSize;
-    if (undefined === width) {
-      width = styles.width;
+  }, items1);
+  const tmp4 = dataLength(num);
+  let fn = function v() {
+    value = handlerOffset.value;
+    const result = round.round(value / size) % memo.length;
+    if (value <= 0) {
+      const _Math = Math;
+      let absolute = Math.abs(result);
+    } else {
+      let num = 0;
+      if (result > 0) {
+        num = arr.length - result;
+      }
+      absolute = Math.abs(num);
     }
-    const stackInterval = tmp.stackInterval;
-    let num = 18;
-    if (undefined !== stackInterval) {
-      num = stackInterval;
-    }
-    const scaleInterval = tmp.scaleInterval;
-    let num2 = 0.04;
-    if (undefined !== scaleInterval) {
-      num2 = scaleInterval;
-    }
-    const opacityInterval = tmp.opacityInterval;
-    let num3 = 0.1;
-    if (undefined !== opacityInterval) {
-      num3 = opacityInterval;
-    }
-    const rotateZDeg = tmp.rotateZDeg;
-    let num4 = 30;
-    if (undefined !== rotateZDeg) {
-      num4 = rotateZDeg;
-    }
-    obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = getCommonVariables(obj));
-    const tmp3 = getCommonVariables(obj);
-    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
-    if ("left" === str) {
-      obj2 = cancelAnimation;
-      const items = [-width, 0, validLength * num];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, cancelAnimation.Extrapolation.CLAMP);
-      const obj3 = cancelAnimation;
-      const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, cancelAnimation.Extrapolation.CLAMP);
-      const obj4 = cancelAnimation;
-      const items2 = [-num4, 0, 0];
-      const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    } else if ("right" === str) {
-      const obj6 = cancelAnimation;
-      const items3 = [-validLength * num, 0, width];
-      interpolateResult = obj6.interpolate(value, inputRange, items3, cancelAnimation.Extrapolation.CLAMP);
-      const obj7 = cancelAnimation;
-      const items4 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj7.interpolate(value, inputRange, items4, cancelAnimation.Extrapolation.CLAMP);
-      const obj8 = cancelAnimation;
-      const items5 = [0, 0, num4];
-      const _HermesInternal2 = HermesInternal;
-      combined = "" + obj8.interpolate(value, inputRange, items5, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    }
-    const obj5 = { transform: null, zIndex, opacity };
-    const items6 = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }];
-    obj5.transform = items6;
-    return obj5;
+    const obj2 = { i: absolute, newSharedIndexValue: null };
+    obj2.newSharedIndexValue = SINGLE_ITEM.convertToSharedIndex({ loop, rawDataLength: memo.originalLength, autoFillData, index: absolute });
+    return obj2;
   };
-  fn.__closure = { screen, modeConfig, getCommonVariables, getCommonStyles, interpolate: modeConfig(1636).interpolate, Extrapolation: modeConfig(1636).Extrapolation };
-  fn.__workletHash = 13118376883684;
-  fn.__initData = __initData;
-  return fn;
-};
-export const useHorizontalStackLayout = function useHorizontalStackLayout(modeConfig) {
-  if (modeConfig === undefined) {
-    modeConfig = {};
-  }
-  let obj2 = arg1;
-  if (arg1 === undefined) {
-    obj2 = {};
-  }
-  let items = [modeConfig, obj2];
-  modeConfig = undefined;
-  if (modeConfig === undefined) {
-    modeConfig = {};
-  }
-  let obj3 = { layout: null, config: null };
-  const fn = function l(value) {
-    const snapDirection = obj.snapDirection;
-    let str = "left";
-    if (undefined !== snapDirection) {
-      str = snapDirection;
-    }
-    let width = tmp.moveSize;
-    if (undefined === width) {
-      width = styles.width;
-    }
-    const stackInterval = tmp.stackInterval;
-    let num = 18;
-    if (undefined !== stackInterval) {
-      num = stackInterval;
-    }
-    const scaleInterval = tmp.scaleInterval;
-    let num2 = 0.04;
-    if (undefined !== scaleInterval) {
-      num2 = scaleInterval;
-    }
-    const opacityInterval = tmp.opacityInterval;
-    let num3 = 0.1;
-    if (undefined !== opacityInterval) {
-      num3 = opacityInterval;
-    }
-    const rotateZDeg = tmp.rotateZDeg;
-    let num4 = 30;
-    if (undefined !== rotateZDeg) {
-      num4 = rotateZDeg;
-    }
-    obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = getCommonVariables(obj));
-    const tmp3 = getCommonVariables(obj);
-    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
-    if ("left" === str) {
-      obj2 = cancelAnimation;
-      const items = [-width, 0, validLength * num];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, cancelAnimation.Extrapolation.CLAMP);
-      const obj3 = cancelAnimation;
-      const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, cancelAnimation.Extrapolation.CLAMP);
-      const obj4 = cancelAnimation;
-      const items2 = [-num4, 0, 0];
-      const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    } else if ("right" === str) {
-      const obj6 = cancelAnimation;
-      const items3 = [-validLength * num, 0, width];
-      interpolateResult = obj6.interpolate(value, inputRange, items3, cancelAnimation.Extrapolation.CLAMP);
-      const obj7 = cancelAnimation;
-      const items4 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj7.interpolate(value, inputRange, items4, cancelAnimation.Extrapolation.CLAMP);
-      const obj8 = cancelAnimation;
-      const items5 = [0, 0, num4];
-      const _HermesInternal2 = HermesInternal;
-      combined = "" + obj8.interpolate(value, inputRange, items5, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    }
-    const obj5 = { transform: null, zIndex, opacity };
-    const items6 = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }];
-    obj5.transform = items6;
-    return obj5;
+  let obj3 = require("cancelAnimation");
+  fn.__closure = { handlerOffset, round: require("round").round, size, dataInfo: memo, convertToSharedIndex: require("SINGLE_ITEM").convertToSharedIndex, loop, autoFillData };
+  fn.__workletHash = 15925793381075;
+  fn.__initData = handlerOffset;
+  const fn2 = function c(arg0) {
+    sharedValue.value = arg0.i;
+    cancelAnimation.runOnJS(setSharedIndex)(arg0.newSharedIndexValue);
   };
-  const tmp = useMemo(() => {
-    let str = "positive";
-    if ("right" === obj.snapDirection) {
-      str = "negative";
+  let obj4 = { handlerOffset, round: require("round").round, size, dataInfo: memo, convertToSharedIndex: require("SINGLE_ITEM").convertToSharedIndex, loop, autoFillData };
+  fn2.__closure = { index: sharedValue, runOnJS: require("cancelAnimation").runOnJS, setSharedIndex };
+  fn2.__workletHash = 4173925309211;
+  fn2.__initData = withAnimation;
+  const items2 = [tmp4, tmp3, size, memo, sharedValue, loop, autoFillData, handlerOffset];
+  const animatedReaction = obj3.useAnimatedReaction(fn, fn2, items2);
+  const items3 = [sharedValue, autoFillData, memo, loop];
+  const callback1 = loop.useCallback(() => SINGLE_ITEM.computedRealIndexWithAutoFillData({ index: sharedValue.value, dataLength: memo.originalLength, loop, autoFillData }), items3);
+  const items4 = [memo];
+  const callback2 = loop.useCallback(() => !memo.disable, items4);
+  const items5 = [size];
+  const callback3 = loop.useCallback(() => {
+    const onScrollEnd = size.onScrollEnd;
+    if (onScrollEnd != null) {
+      onScrollEnd();
     }
-    obj = { type: str, viewCount: obj.showLength };
-    const merged = Object.assign(obj2);
-    return obj;
-  }, items);
-  fn.__closure = { screen, modeConfig, getCommonVariables, getCommonStyles, interpolate: modeConfig(obj2[2]).interpolate, Extrapolation: modeConfig(obj2[2]).Extrapolation };
-  fn.__workletHash = 13118376883684;
-  fn.__initData = __initData;
-  obj3.layout = fn;
-  obj3.config = tmp;
-  return obj3;
-};
-export const verticalStackLayout = function verticalStackLayout(modeConfig) {
-  if (modeConfig === undefined) {
-    modeConfig = {};
-  }
-  const fn = function o(value) {
-    const snapDirection = obj.snapDirection;
-    let str = "left";
-    if (undefined !== snapDirection) {
-      str = snapDirection;
+  }, items5);
+  const items6 = [size];
+  const callback4 = loop.useCallback(() => {
+    const onScrollStart = size.onScrollStart;
+    if (onScrollStart != null) {
+      onScrollStart();
     }
-    let width = tmp.moveSize;
-    if (undefined === width) {
-      width = styles.width;
+  }, items6);
+  const fn3 = function z(arg0, onFinished) {
+    size = onFinished;
+    const fn = function i(arg0) {
+      if (arg0) {
+        cancelAnimation.runOnJS(callback3)();
+        if (closure_0) {
+          tmp(1636).runOnJS(tmp5)();
+          const tmpResult = tmp(1636);
+        }
+        tmp = require;
+      }
+    };
+    fn.__closure = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
+    fn.__workletHash = 14195210871308;
+    fn.__initData = autoFillData;
+    const obj2 = { type: "timing", config: null };
+    let obj = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
+    obj2.config = { duration, easing: size(size[5]).Easing.easeOutQuart };
+    const obj3 = { duration, easing: size(size[5]).Easing.easeOutQuart };
+    let tmp = withAnimation;
+    if (withAnimation == null) {
+      tmp = obj2;
     }
-    const stackInterval = tmp.stackInterval;
-    let num = 18;
-    if (undefined !== stackInterval) {
-      num = stackInterval;
-    }
-    const scaleInterval = tmp.scaleInterval;
-    let num2 = 0.04;
-    if (undefined !== scaleInterval) {
-      num2 = scaleInterval;
-    }
-    const opacityInterval = tmp.opacityInterval;
-    let num3 = 0.1;
-    if (undefined !== opacityInterval) {
-      num3 = opacityInterval;
-    }
-    const rotateZDeg = tmp.rotateZDeg;
-    let num4 = 30;
-    if (undefined !== rotateZDeg) {
-      num4 = rotateZDeg;
-    }
-    obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = getCommonVariables(obj));
-    const tmp3 = getCommonVariables(obj);
-    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
-    if ("left" === str) {
-      const obj2 = cancelAnimation;
-      const items = [-width, 0, 0];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, cancelAnimation.Extrapolation.CLAMP);
-      const obj3 = cancelAnimation;
-      const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, cancelAnimation.Extrapolation.CLAMP);
-      const obj4 = cancelAnimation;
-      const items2 = [-num4, 0, 0];
-      const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, cancelAnimation.Extrapolation.CLAMP) + "deg";
-      const obj5 = cancelAnimation;
-      const items3 = [0, 0, validLength * num];
-      let interpolateResult2 = obj5.interpolate(value, inputRange, items3, cancelAnimation.Extrapolation.CLAMP);
-    } else if ("right" === str) {
-      const obj7 = cancelAnimation;
-      const items4 = [0, 0, width];
-      interpolateResult = obj7.interpolate(value, inputRange, items4, cancelAnimation.Extrapolation.CLAMP);
-      const obj8 = cancelAnimation;
-      const items5 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj8.interpolate(value, inputRange, items5, cancelAnimation.Extrapolation.CLAMP);
-      const obj9 = cancelAnimation;
-      const items6 = [0, 0, num4];
-      const _HermesInternal2 = HermesInternal;
-      combined = "" + obj9.interpolate(value, inputRange, items6, cancelAnimation.Extrapolation.CLAMP) + "deg";
-      const obj10 = cancelAnimation;
-      const items7 = [validLength * num, 0, 0];
-      interpolateResult2 = obj10.interpolate(value, inputRange, items7, cancelAnimation.Extrapolation.CLAMP);
-    }
-    const obj6 = { transform: null, zIndex, opacity };
-    const items8 = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }, { translateY: interpolateResult2 }];
-    obj6.transform = items8;
-    return obj6;
+    return size(size[6]).dealWithAnimation(tmp)(arg0, fn);
   };
-  fn.__closure = { screen, modeConfig, getCommonVariables, getCommonStyles, interpolate: modeConfig(1636).interpolate, Extrapolation: modeConfig(1636).Extrapolation };
-  fn.__workletHash = 9752649608963;
-  fn.__initData = __initData2;
-  return fn;
+  const obj5 = { index: sharedValue, runOnJS: require("cancelAnimation").runOnJS, setSharedIndex };
+  fn3.__closure = { runOnJS: require("cancelAnimation").runOnJS, onScrollEnd: callback3, duration, Easing: require("DATA_LENGTH").Easing, dealWithAnimation: require("dealWithAnimation").dealWithAnimation, withAnimation };
+  fn3.__workletHash = 4740828363382;
+  fn3.__initData = duration;
+  const items7 = [duration, withAnimation, callback3];
+  const callback5 = loop.useCallback(fn3, items7);
+  class W {
+    constructor() {
+      obj = size;
+      if (size === undefined) {
+        obj = {};
+      }
+      count = obj.count;
+      num = 1;
+      if (undefined !== count) {
+        num = count;
+      }
+      animated = obj.animated;
+      tmp = undefined === animated || animated;
+      onFinished = obj.onFinished;
+      if (closure_17()) {
+        tmp2 = loop;
+        if (loop) {
+          tmp5 = closure_11;
+          tmp7 = size;
+          tmp9 = overscrollEnabled;
+          if (overscrollEnabled) {
+            tmp11 = null;
+            if (closure_19 != null) {
+              tmp12 = closure_19();
+            }
+            tmp13 = closure_14;
+            sum = closure_14() + num;
+            tmp6.value = sum;
+            tmp15 = handlerOffset;
+            tmp16 = -sum;
+            if (tmp) {
+              tmp18 = closure_20;
+              tmp15.value = closure_20(tmp16 * tmp7, onFinished);
+            } else {
+              tmp15.value = tmp16 * tmp7;
+              if (onFinished != null) {
+                onFinishedResult = onFinished();
+              }
+            }
+          } else {
+            tmp10 = containerSize;
+          }
+        } else {
+          tmp3 = closure_12;
+          tmp4 = closure_11;
+        }
+      }
+      return;
+    }
+  }
+  W.__closure = { canSliding: callback2, loop, index: sharedValue, dataInfo: memo, size, overscrollEnabled, containerSize, onScrollStart: callback4, currentFixedPage, handlerOffset, scrollWithTiming: callback5 };
+  W.__workletHash = 4352275578667;
+  W.__initData = fixedDirection;
+  const items8 = [callback2, loop, sharedValue, memo, callback4, handlerOffset, size, callback5, currentFixedPage];
+  const callback6 = loop.useCallback(W, items8);
+  const items9 = [callback2, loop, sharedValue, callback4, handlerOffset, size, callback5, currentFixedPage];
+  const callback7 = loop.useCallback(() => {
+    let obj = arg0;
+    if (arg0 === undefined) {
+      obj = {};
+    }
+    const count = obj.count;
+    let num = 1;
+    if (undefined !== count) {
+      num = count;
+    }
+    const animated = obj.animated;
+    const onFinished = obj.onFinished;
+    if (callback2()) {
+      if (loop) {
+        if (callback4 != null) {
+          callback4();
+        }
+        const diff = callback() - num;
+        sharedValue.value = diff;
+        if (tmp) {
+          tmp9.value = callback5(tmp10 * size, onFinished);
+        } else {
+          tmp9.value = tmp10 * size;
+          if (onFinished != null) {
+            onFinished();
+          }
+        }
+      }
+    }
+  }, items9);
+  const items10 = [size, loop, sharedValue, fixedDirection, handlerOffset, memo.length, callback2, callback4, callback5];
+  const callback8 = loop.useCallback((onFinished) => {
+    ({ i, animated } = onFinished);
+    onFinished = onFinished.onFinished;
+    if (i !== sharedValue.value) {
+      if (callback2()) {
+        if (callback4 != null) {
+          callback4();
+        }
+        const result = handlerOffsetDirection.handlerOffsetDirection(handlerOffset, fixedDirection);
+        const result1 = memo.length * size;
+        let flag = false;
+        const result2 = i * size * result;
+        if (loop) {
+          const _Math = Math;
+          flag = Math.abs(iter.value % result1) / result1 >= 0.5;
+        }
+        const _Math2 = Math;
+        const _Math3 = Math;
+        let num2 = 0;
+        const rounded = Math.floor(Math.abs(iter.value / result1));
+        if (flag) {
+          num2 = 1;
+        }
+        const sum = (rounded + num2) * result1 * result + result2;
+        if (tmp) {
+          tmp2.value = i;
+          iter.value = callback5(sum, onFinished);
+        } else {
+          iter.value = sum;
+          tmp2.value = i;
+          if (onFinished != null) {
+            onFinished();
+          }
+        }
+      }
+    }
+  }, items10);
+  const items11 = [callback7, callback6, callback8];
+  const callback9 = loop.useCallback(() => {
+    let obj = arg0;
+    if (arg0 === undefined) {
+      obj = {};
+    }
+    ({ index, count, animated } = obj);
+    const onFinished = obj.onFinished;
+    if (typeof index === "number") {
+      if (index > -1) {
+        const obj2 = { i: index, animated: tmp, onFinished };
+        callback8(obj2);
+      }
+    }
+    if (count) {
+      const _Math = Math;
+      const rounded = Math.round(count);
+      if (rounded < 0) {
+        const obj3 = { count: null, animated: null, onFinished: null };
+        const _Math2 = Math;
+        obj3.count = Math.abs(rounded);
+        obj3.animated = tmp;
+        obj3.onFinished = onFinished;
+        callback7(obj3);
+      } else {
+        const obj4 = { count: rounded, animated: tmp, onFinished };
+        callback6(obj4);
+      }
+    }
+  }, items11);
+  const items12 = [callback1, callback6, callback7, callback9];
+  const imperativeHandle = loop.useImperativeHandle(size.ref, () => ({ next: callback6, prev: callback7, getCurrentIndex: callback1, scrollTo: callback9 }), items12);
+  return {
+    next: callback6,
+    prev: callback7,
+    scrollTo: callback9,
+    getCurrentIndex: callback1,
+    getSharedIndex() {
+      return ref.current;
+    },
+    index: sharedValue
+  };
 };

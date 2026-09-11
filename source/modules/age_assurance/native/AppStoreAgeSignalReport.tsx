@@ -1,15 +1,15 @@
-// Module ID: 17545
-// Function ID: 17546
+// Module ID: 17544
+// Function ID: 17545
 // Name: AppStoreAgeSignalReport
-// Dependencies: [32, 5, 1371, 1074, 8662, 8527, 1232, 1115, 8659, 8661, 1242, 5475, 4636, 2]
+// Dependencies: [32, 5, 1371, 1074, 8660, 8525, 1232, 1115, 8657, 8659, 1242, 5474, 4635, 2]
 // Exports: beginAppStoreAgeSignalReport, settleAppStoreAgeSignalReport
 
-// Module 17545 (AppStoreAgeSignalReport)
-import TimeUtils from "TimeUtils" /* 4636 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5475 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8527 */;
-import AppStoreAgeSignalAttestation from "AppStoreAgeSignalAttestation" /* 8659 */;
-import AppStoreAgeAssurance from "AppStoreAgeAssurance" /* 8662 */;
+// Module 17544 (AppStoreAgeSignalReport)
+import TimeUtils from "TimeUtils" /* 4635 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5474 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8525 */;
+import AppStoreAgeSignalAttestation from "AppStoreAgeSignalAttestation" /* 8657 */;
+import AppStoreAgeAssurance from "AppStoreAgeAssurance" /* 8660 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;

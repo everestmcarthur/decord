@@ -1,11 +1,11 @@
-// Module ID: 9657
-// Function ID: 9658
+// Module ID: 9655
+// Function ID: 9656
 // Name: BaseSocket
-// Dependencies: [1074, 12, 9647, 2]
+// Dependencies: [1074, 12, 9645, 2]
 
-// Module 9657 (BaseSocket)
+// Module 9655 (BaseSocket)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 9647 */;
+import RPCErrorDefault from "RPCError" /* 9645 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
 // Module ID: 15891
 // Function ID: 15892
 // Name: FeedProductList
-// Dependencies: [19, 17, 21, 4607, 8857, 15892, 15143, 15893, 2]
+// Dependencies: [19, 17, 21, 4606, 8855, 15892, 15143, 15893, 2]
 // Exports: default
 
 // Module 15891 (FeedProductList)
@@ -29,7 +29,7 @@ function SkeletonGrid(accessibilityLabel) {
     obj3.style = items1;
     obj3.children = arr.map((item, index) => {
       const obj = { width: require, style: null };
-      const obj2 = { marginBottom: num(8857).COLLECTIBLES_SHOP_CARD_GAP };
+      const obj2 = { marginBottom: num(8855).COLLECTIBLES_SHOP_CARD_GAP };
       obj.style = obj2;
       return closure_4(closure_1(15143), obj, "" + num + "-" + index);
     });
@@ -40,8 +40,8 @@ function SkeletonGrid(accessibilityLabel) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
-let obj2 = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: { flexDirection: "row", gap: fn(8857).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(8857).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4606);
+let obj2 = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: { flexDirection: "row", gap: fn(8855).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(8855).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");

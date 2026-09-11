@@ -1,14 +1,14 @@
-// Module ID: 13330
-// Function ID: 13331
+// Module ID: 13328
+// Function ID: 13329
 // Name: getApplicationFromMessage
-// Dependencies: [1918, 13327, 8428, 2]
+// Dependencies: [1918, 13325, 8426, 2]
 // Exports: getApplicationFromMessage
 
-// Module 13330 (getApplicationFromMessage)
+// Module 13328 (getApplicationFromMessage)
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
-const SpotifyApplication = fn(13327).SpotifyApplication;
-const isSpotifyParty = fn(8428).isSpotifyParty;
+const SpotifyApplication = fn(13325).SpotifyApplication;
+const isSpotifyParty = fn(8426).isSpotifyParty;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
 

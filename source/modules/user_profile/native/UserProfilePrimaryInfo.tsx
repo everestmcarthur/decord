@@ -1,21 +1,21 @@
-// Module ID: 11249
-// Function ID: 11250
+// Module ID: 11247
+// Function ID: 11248
 // Name: UserProfilePrimaryInfo
-// Dependencies: [19, 17, 8269, 7282, 1074, 8019, 8280, 21, 4607, 576, 10990, 10991, 9531, 5175, 11250, 4603, 11252, 7802, 4465, 11284, 1114, 11286, 8270, 11287, 7456, 1925, 4305, 8328, 11288, 11289, 11293, 5499, 1242, 7801, 1115, 11294, 11295, 11296, 1477, 8251, 9276, 4451, 2]
+// Dependencies: [19, 17, 8268, 7281, 1074, 8018, 8279, 21, 4606, 576, 10988, 10989, 9529, 5174, 11248, 4602, 11250, 7801, 4465, 11282, 1114, 11284, 8269, 11285, 7455, 1925, 4305, 8326, 11286, 11287, 11291, 5498, 1242, 7800, 1115, 11292, 11293, 11294, 1477, 8250, 9274, 4451, 2]
 // Exports: default
 
-// Module 11249 (UserProfilePrimaryInfo)
+// Module 11247 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import GuildTagUtils from "GuildTagUtils" /* 8251 */;
-import BadgeId from "BadgeId" /* 8270 */;
-import GuildTagDefault from "GuildTag" /* 9276 */;
-import BotTagDefault from "BotTag" /* 9531 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10990 */;
-import BadgeUtils from "BadgeUtils" /* 11295 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import GuildTagUtils from "GuildTagUtils" /* 8250 */;
+import BadgeId from "BadgeId" /* 8269 */;
+import GuildTagDefault from "GuildTag" /* 9274 */;
+import BotTagDefault from "BotTag" /* 9529 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10988 */;
+import BadgeUtils from "BadgeUtils" /* 11293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -294,15 +294,15 @@ function ProfileBadge(source) {
               obj.content = tmp10;
               obj.icon = source;
               ToastActionCreatorsDefault.open(obj);
-              if (tmp3 === tmp5(8328).QUEST_COMPLETED_BADGE) {
-                if (tmp5Result7.shouldMigrateToAdAnalyticsInterface(tmp5(11288).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_completed_badge_toast")) {
-                  const obj2 = { type: tmp5(11293).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION, surfaceId: tmp5(5499).QuestContent.QUEST_BADGE, isTargeted: false };
-                  tmp5(11289).captureAdUserAction(obj2);
-                  const tmp5Result8 = tmp5(11289);
+              if (tmp3 === tmp5(8326).QUEST_COMPLETED_BADGE) {
+                if (tmp5Result7.shouldMigrateToAdAnalyticsInterface(tmp5(11286).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_completed_badge_toast")) {
+                  const obj2 = { type: tmp5(11291).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION, surfaceId: tmp5(5498).QuestContent.QUEST_BADGE, isTargeted: false };
+                  tmp5(11287).captureAdUserAction(obj2);
+                  const tmp5Result8 = tmp5(11287);
                 } else {
                   const obj3 = {};
                   const tmp11Result = tmp11(1242);
-                  const merged = Object.assign(tmp5(7801).getContentProperties(tmp5(5499).QuestContent.QUEST_BADGE));
+                  const merged = Object.assign(tmp5(7800).getContentProperties(tmp5(5498).QuestContent.QUEST_BADGE));
                   let advertisingId = null;
                   if (null != closure_5) {
                     advertisingId = null;
@@ -323,14 +323,14 @@ function ProfileBadge(source) {
                   obj3.android_advertising_id = advertisingId1;
                   obj3.is_targeted = false;
                   tmp11Result.track(constants.QUEST_CONTENT_VIEWED, obj3);
-                  const tmp5Result9 = tmp5(7801);
+                  const tmp5Result9 = tmp5(7800);
                 }
-                tmp5Result7 = tmp5(11288);
+                tmp5Result7 = tmp5(11286);
               }
             } else {
               const obj5 = { screen: constants2.PREMIUM_GIFTING, params: {} };
-              tmp5(7456).openUserSettings(obj5);
-              const tmp5Result12 = tmp5(7456);
+              tmp5(7455).openUserSettings(obj5);
+              const tmp5Result12 = tmp5(7455);
             }
             tmp3 = id;
           } else {
@@ -607,16 +607,16 @@ function GuildTag(style) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8269).getBadgeName;
-let Constants = fn(7282);
+const getBadgeName = fn(8268).getBadgeName;
+let Constants = fn(7281);
 ({ DIVIDER_DOT: closure_7, PROFILE_SIDE_PADDING: closure_8, UserProfileThemeTypes } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
-const GuildTagBadgeSize = fn(8019).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8280).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8018).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8279).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null };
 let obj3 = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 };
 obj2.badgeRow = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };

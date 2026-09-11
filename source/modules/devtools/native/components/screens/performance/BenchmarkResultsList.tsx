@@ -1,12 +1,12 @@
 // Module ID: 15801
 // Function ID: 15802
 // Name: BenchmarkResultsList
-// Dependencies: [19, 21, 5739, 5657, 15797, 2]
+// Dependencies: [19, 21, 5738, 5656, 15797, 2]
 // Exports: default
 
 // Module 15801 (BenchmarkResultsList)
-import TableRow from "TableRow" /* 5657 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
 import startFrameMonitor from "startFrameMonitor" /* 15797 */;
 import noop from "module_19" /* 19 */;
 

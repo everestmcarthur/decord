@@ -1,14 +1,14 @@
-// Module ID: 12474
-// Function ID: 12475
+// Module ID: 12472
+// Function ID: 12473
 // Name: BaseChannelItem
-// Dependencies: [19, 17, 10209, 4789, 21, 4607, 576, 4603, 1116, 1178, 10256, 8994, 12475, 2]
+// Dependencies: [19, 17, 10207, 4788, 21, 4606, 576, 4602, 1116, 1178, 10254, 8992, 12473, 2]
 // Exports: BaseChannelIcon, BaseChannelName, default, getChannelSubtitleTextProps, useChannelNameTextProps
 
-// Module 12474 (BaseChannelItem)
+// Module 12472 (BaseChannelItem)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,12 +52,12 @@ class BaseChannelSubtitle {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10209);
+const RedesignChannelListConstants = fn(10207);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: hasOwnProperty, CHANNEL_TITLE_LINE_HEIGHT: metroRequire } = RedesignChannelListConstants);
-const UnreadSetting = fn(4789).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -134,9 +134,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12475);
+      let AnimatedPressableHighlight = hideIcon(12473);
     } else {
-      AnimatedPressableHighlight = mode(8994).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8992).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -151,8 +151,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(10256), obj3);
-    const tmp9 = hideIcon(10256);
+    closure_8(hideIcon(10254), obj3);
+    const tmp9 = hideIcon(10254);
   }
 };
 export const ChannelModes = obj2;

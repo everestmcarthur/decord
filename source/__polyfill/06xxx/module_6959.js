@@ -1,25 +1,45 @@
 // Module ID: 6959
 // Function ID: 6960
-// Dependencies: []
+// Dependencies: [6960]
 
 // Module 6959
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod6960 from "module_6960" /* 6960 */;
 
-export default _getPrototypeOf;
+function _get() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect2 = Reflect;
+    if (Reflect.get) {
+      const _Reflect = Reflect;
+      exports = get.bind();
+    }
+    tmp.exports = exports;
+    const apply = exports.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+    } else {
+      applyArgumentsResult = apply(null, arguments);
+    }
+    return applyArgumentsResult;
+  }
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _mod6960(arg0, arg1);
+    if (tmp) {
+      const _Object = Object;
+      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
+      if (iter.get) {
+        let tmp3 = arg2;
+        const get = iter.get;
+        const call = get.call;
+        if (arguments.length < 3) {
+          tmp3 = arg0;
+        }
+        typeof call === "unknown" ? get() : call(tmp3);
+      } else {
+        return iter.value;
+      }
+    }
+  };
+}
+let exports = _get;
+
+export default _get;

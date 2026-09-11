@@ -1,12 +1,12 @@
 // Module ID: 16455
 // Function ID: 16456
 // Name: YouBarNameplate
-// Dependencies: [19, 4599, 15156, 21, 4308, 576, 15242, 504, 4343, 5026, 8912, 2]
+// Dependencies: [19, 4598, 15156, 21, 4308, 576, 15242, 504, 4343, 5025, 8910, 2]
 
 // Module 16455 (YouBarNameplate)
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const YOU_BAR_SPRING_CONFIG = fn(15156).YOU_BAR_SPRING_CONFIG;
@@ -37,7 +37,7 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
     return { borderTopRightRadius: spring.withSpring(value, YOU_BAR_SPRING_CONFIG) };
   };
   const obj3 = isQuestRendered(4343);
-  fn.__closure = { withSpring: isQuestRendered(5026).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
+  fn.__closure = { withSpring: isQuestRendered(5025).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
   fn.__workletHash = 17156260157738;
   fn.__initData = __initData;
   const animatedStyle = obj3.useAnimatedStyle(fn);
@@ -54,11 +54,11 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
   obj5.style = items1;
   const obj6 = { nameplate, isFocused: true, animate: null };
   let str = stateFromStores;
-  const obj4 = { withSpring: isQuestRendered(5026).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
+  const obj4 = { withSpring: isQuestRendered(5025).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
   if (str) {
     str = "always";
   }
   obj6.animate = str;
-  obj5.children = jsx(tmp2(8912), { nameplate, isFocused: true, animate: null });
+  obj5.children = jsx(tmp2(8910), { nameplate, isFocused: true, animate: null });
   return jsx(token(4343).View, { style: null, pointerEvents: "none", children: null });
 });

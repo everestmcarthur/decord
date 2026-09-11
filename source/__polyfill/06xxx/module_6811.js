@@ -1,30 +1,23 @@
 // Module ID: 6811
 // Function ID: 6812
-// Dependencies: [6795, 6812, 6770, 6814]
-// Exports: useGestureCallbacks
+// Dependencies: [19, 6812]
+// Exports: useGestureEventHandler
 
 // Module 6811
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6795 */;
-import _mod6812 from "module_6812" /* 6812 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+let useMemo = _mod19.useMemo;
 
-export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
-  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
-  let reanimatedEventHandler;
-  if (!disableReanimated.disableReanimated) {
-    const Reanimated = tmp(6770).Reanimated;
-    let handler;
-    if (Reanimated != null) {
-      handler = Reanimated.useHandler(memoizedGestureCallbacks);
-    }
-    const tmpResult = tmp(6814);
-    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
-  }
-  let animatedEventHandler;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    animatedEventHandler = disableReanimated.onUpdate;
-  }
-  return { jsEventHandler: _mod6812.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
+export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = handlerTag;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
+  closure_3 = tmp;
+  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
+  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(() => (arg0) => {
+    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
+  }, items);
 };

@@ -1,9 +1,12 @@
 // Module ID: 14107
 // Function ID: 14108
-// Dependencies: [14106]
+// Dependencies: [14096]
 
 // Module 14107
-import _mod14106 from "module_14106" /* 14106 */;
+import _mod14096 from "module_14096" /* 14096 */;
 
 
-export default (arg0, arg1, arg2) => _mod14106(arg0, arg1, ">", arg2);
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14096(arg0, arg2);
+  return obj.intersects(new _mod14096(arg1, arg2), arg2);
+};

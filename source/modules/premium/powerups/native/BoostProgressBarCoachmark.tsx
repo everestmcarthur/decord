@@ -1,20 +1,20 @@
 // Module ID: 16239
 // Function ID: 16240
 // Name: BoostProgressBarCoachmark
-// Dependencies: [19, 17, 1954, 21, 4607, 9155, 1114, 2428, 4317, 11224, 2]
+// Dependencies: [19, 17, 1954, 21, 4606, 9153, 1114, 2428, 4317, 11222, 2]
 // Exports: default
 
 // Module 16239 (BoostProgressBarCoachmark)
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
@@ -50,6 +50,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(11224).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(11222).useCoachmark(guild.targetRef, memo);
   return null;
 };

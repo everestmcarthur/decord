@@ -1,6 +1,6 @@
 // Module ID: 15116
 // Function ID: 15117
-// Dependencies: [41, 42, 93, 95, 98, 19, 17, 21, 8544, 9968]
+// Dependencies: [41, 42, 93, 95, 98, 19, 17, 21, 8542, 9966]
 
 // Module 15116
 import _classCallCheck from "_classCallCheck" /* 41 */;
@@ -9,7 +9,7 @@ import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
-import emptyFunction_mod from "module_9968" /* 9968 */;
+import emptyFunction_mod from "module_9966" /* 9966 */;
 
 const CircularProgress = fn;
 function _isNativeReflectConstruct() {
@@ -149,19 +149,19 @@ let items = [
         obj4.strokeWidth = backgroundWidth;
         obj4.strokeLinecap = lineCap;
         obj4.strokeDasharray = mapped1;
-        tmp23Result = tmp23(tmp24(8544).Path, obj4);
+        tmp23Result = tmp23(tmp24(8542).Path, obj4);
       }
       const items = [tmp23Result, , ];
       let tmp23Result3 = fill > 0;
       if (tmp23Result3) {
         const obj5 = { d: circlePathResult1, stroke: tintColor, strokeWidth: width, strokeLinecap: fillLineCap, strokeDasharray: mapped, fill: "transparent" };
-        tmp23Result3 = tmp23(tmp24(8544).Path, obj5);
+        tmp23Result3 = tmp23(tmp24(8542).Path, obj5);
       }
       items[1] = tmp23Result3;
       items[2] = renderCapResult;
       obj3.children = items;
-      size2.children = React5(CircularProgress(8544).G, obj3);
-      const items1 = [timestampProducer(CircularProgress(8544).Svg, size2), ];
+      size2.children = React5(CircularProgress(8542).G, obj3);
+      const items1 = [timestampProducer(CircularProgress(8542).Svg, size2), ];
       let tmp23Result4 = children;
       if (children) {
         const obj6 = { style: size1, children: children(fill) };

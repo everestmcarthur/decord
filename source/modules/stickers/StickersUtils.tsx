@@ -1,29 +1,29 @@
-// Module ID: 4946
-// Function ID: 4947
+// Module ID: 4945
+// Function ID: 4946
 // Name: StickersUtils
-// Dependencies: [1221, 1979, 4947, 5319, 1938, 1074, 5320, 1396, 1879, 1115, 1430, 5322, 2]
+// Dependencies: [1221, 1979, 4946, 5318, 1938, 1074, 5319, 1396, 1879, 1115, 1430, 5321, 2]
 // Exports: createStickerPackCategory, getFavoriteStickerIds, getFilenameForSticker, getMessageStickers, getStickerAssetUrl, getStickerFormatTypeFromFileType, getStickerPackBannerAssetUrl, getStickerPackPreviewSticker, getStickerTagForEmoji, isAvailableGuildSticker, isFavoriteSticker, isGuildSticker, isStandardSticker, isStickerAssetUrl, isStickerPackAnimated, shouldAnimateSticker, shouldAttachSticker
 
-// Module 4946 (StickersUtils)
+// Module 4945 (StickersUtils)
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
-import StickersTypes from "StickersTypes" /* 5320 */;
+import StickersTypes from "StickersTypes" /* 5319 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4947 */;
-import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5319 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
+import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5318 */;
 
 require = fn;
 function getStickerExtensionFromFormatType(format_type) {
   if (StickersTypes.StickerFormat.PNG === format_type) {
-    const StickerExtensions = tmp(5320).StickerExtensions;
+    const StickerExtensions = tmp(5319).StickerExtensions;
     return tmp(1396).SUPPORTS_WEBP ? StickerExtensions.WEBP : StickerExtensions.PNG;
-  } else if (tmp(5320).StickerFormat.APNG === format_type) {
-    return tmp(5320).StickerExtensions.APNG;
-  } else if (tmp(5320).StickerFormat.LOTTIE === format_type) {
-    return tmp(5320).StickerExtensions.LOTTIE;
-  } else if (tmp(5320).StickerFormat.GIF === format_type) {
-    return tmp(5320).StickerExtensions.GIF;
+  } else if (tmp(5319).StickerFormat.APNG === format_type) {
+    return tmp(5319).StickerExtensions.APNG;
+  } else if (tmp(5319).StickerFormat.LOTTIE === format_type) {
+    return tmp(5319).StickerExtensions.LOTTIE;
+  } else if (tmp(5319).StickerFormat.GIF === format_type) {
+    return tmp(5319).StickerExtensions.GIF;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -38,7 +38,7 @@ const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: closure_12, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(5320).StickerExtensions);
+const values = Object.values(fn(5319).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");
@@ -108,7 +108,7 @@ export const getStickerAssetUrl = (format_type) => {
   } else {
     let PNG = format_type.format_type;
     if (tmp) {
-      PNG = tmp23(5320).StickerFormat.PNG;
+      PNG = tmp23(5319).StickerFormat.PNG;
     }
     const tmp3 = getStickerExtensionFromFormatType(PNG);
     const STICKER_ASSETResult = Endpoints.STICKER_ASSET(format_type.id, tmp3);
@@ -119,17 +119,17 @@ export const getStickerAssetUrl = (format_type) => {
         str2 = "&force_sdr=true";
       }
       let str3 = "";
-      if (tmp3 === tmp23(5320).StickerExtensions.WEBP) {
+      if (tmp3 === tmp23(5319).StickerExtensions.WEBP) {
         str3 = "&quality=lossless";
       }
       if ("development" !== closure_1_12) {
-        if (format_type.format_type === tmp23(5320).StickerFormat.LOTTIE) {
+        if (format_type.format_type === tmp23(5319).StickerFormat.LOTTIE) {
           const _location3 = location;
           const _HermesInternal4 = HermesInternal;
           return "" + location.protocol + ASSET_ENDPOINT + STICKER_ASSETResult;
         } else {
           let str6 = "";
-          if (format_type.format_type === tmp23(5320).StickerFormat.APNG) {
+          if (format_type.format_type === tmp23(5319).StickerFormat.APNG) {
             str6 = "";
             if (flag) {
               str6 = "";
@@ -147,7 +147,7 @@ export const getStickerAssetUrl = (format_type) => {
           return "" + protocol + MEDIA_PROXY_ENDPOINT + STICKER_ASSETResult + "?size=" + tmp23(1430).getBestMediaProxySize(size * bound) + str6 + str3 + str2;
         }
       } else {
-        if (format_type.format_type === tmp23(5320).StickerFormat.LOTTIE) {
+        if (format_type.format_type === tmp23(5319).StickerFormat.LOTTIE) {
           if (tmp23Result6.isWeb()) {
             return STICKER_ASSETResult;
           }
@@ -235,10 +235,10 @@ export const shouldAttachSticker = function shouldAttachSticker(arg0, str, c1, C
     }
     if (StickersTypes.StickerSelectLocation.STICKER_PICKER === arg0) {
       return "" !== str.trim();
-    } else if (tmp3(5320).StickerSelectLocation.AUTOCOMPLETE === arg0) {
-      return tmp3(5322).getQueriesFromUserInput(str).length > 1;
+    } else if (tmp3(5319).StickerSelectLocation.AUTOCOMPLETE === arg0) {
+      return tmp3(5321).getQueriesFromUserInput(str).length > 1;
     } else {
-      const BUILT_IN_INTEGRATION = tmp3(5320).StickerSelectLocation.BUILT_IN_INTEGRATION;
+      const BUILT_IN_INTEGRATION = tmp3(5319).StickerSelectLocation.BUILT_IN_INTEGRATION;
       return false;
     }
   }

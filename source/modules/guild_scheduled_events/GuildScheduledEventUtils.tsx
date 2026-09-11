@@ -1,10 +1,10 @@
-// Module ID: 9757
-// Function ID: 9758
+// Module ID: 9755
+// Function ID: 9756
 // Name: GuildScheduledEventUtils
 // Dependencies: [1963, 4198, 11, 2]
 // Exports: getNextShownUpcomingEventNoticeType
 
-// Module 9757 (GuildScheduledEventUtils)
+// Module 9755 (GuildScheduledEventUtils)
 import _modDef4198 from "module_4198" /* 4198 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
 import size from "module_2" /* 2 */;

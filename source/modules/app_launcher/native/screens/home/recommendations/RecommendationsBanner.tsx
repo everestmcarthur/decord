@@ -1,29 +1,29 @@
-// Module ID: 12187
-// Function ID: 12188
+// Module ID: 12185
+// Function ID: 12186
 // Name: RecommendationsBanner
-// Dependencies: [19, 17, 1385, 1074, 21, 4607, 11311, 12179, 9745, 5639, 8272, 8332, 1396, 8218, 2]
+// Dependencies: [19, 17, 1385, 1074, 21, 4606, 11309, 12177, 9743, 5638, 8271, 8330, 1396, 8217, 2]
 
-// Module 12187 (RecommendationsBanner)
+// Module 12185 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8218 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8272 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9745 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8217 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8271 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9743 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
 
-const UserProfileBannerDefault = tmp(8332);
+const UserProfileBannerDefault = tmp(8330);
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo((applicationId) => {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11311);
-  heroMediaDimensions = heroMediaDimensions(12179).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(11309);
+  heroMediaDimensions = heroMediaDimensions(12177).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

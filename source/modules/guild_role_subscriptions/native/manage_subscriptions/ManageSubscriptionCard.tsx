@@ -1,7 +1,7 @@
 // Module ID: 15277
 // Function ID: 15278
 // Name: ManageSubscriptionCard
-// Dependencies: [5, 32, 19, 17, 1074, 1964, 21, 4607, 576, 1114, 4603, 5175, 5636, 1178, 9804, 15278, 4952, 15279, 1896, 9459, 7236, 4931, 15281, 12864, 4304, 8686, 10437, 15282, 4301, 4264, 1100, 10392, 15284, 1483, 2]
+// Dependencies: [5, 32, 19, 17, 1074, 1964, 21, 4606, 576, 1114, 4602, 5174, 5635, 1178, 9802, 15278, 4951, 15279, 1896, 9457, 7235, 4930, 15281, 12862, 4304, 8684, 10435, 15282, 4301, 4264, 1100, 10390, 15284, 1483, 2]
 // Exports: default
 
 // Module 15277 (ManageSubscriptionCard)
@@ -10,10 +10,10 @@ import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import PremiumUtils from "PremiumUtils" /* 4264 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import GuildIconDefault from "GuildIcon" /* 5636 */;
-import _modDef9804 from "module_9804" /* 9804 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import GuildIconDefault from "GuildIcon" /* 5635 */;
+import _modDef9802 from "module_9802" /* 9802 */;
 import FormSeparatorDefault from "FormSeparator" /* 15278 */;
 import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -85,7 +85,7 @@ function Header(arg0) {
     expanded = tmp.expandIconExpanded;
   }
   items3[1] = expanded;
-  items1[2] = closure_1_11(native.Icon, { style: items3, size: native.Icon.Sizes.MEDIUM, source: _modDef9804 });
+  items1[2] = closure_1_11(native.Icon, { style: items3, size: native.Icon.Sizes.MEDIUM, source: _modDef9802 });
   obj2.children = items1;
   items[1] = closure_1_12(View, obj2);
   obj.children = items;
@@ -133,9 +133,9 @@ function CardBody(isTrial) {
               obj5.body = intl.string(tmp5(1114).t.NL7DFi);
               const intl2 = tmp5(1114).intl;
               obj5.confirmText = intl2.string(tmp5(1114).t["NX+WJN"]);
-              tmp3(4952).show(obj5);
+              tmp3(4951).show(obj5);
               c5 = 3;
-              const obj6 = tmp3(4952);
+              const obj6 = tmp3(4951);
             } else {
               dependencyMap = 1;
               _slicedToArray(true);
@@ -148,7 +148,7 @@ function CardBody(isTrial) {
               } else {
                 c4 = 2;
                 c5 = 1;
-                const obj8 = { value: tmp38(4931).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
+                const obj8 = { value: tmp38(4930).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
                 return obj8;
               }
             }
@@ -210,11 +210,11 @@ function CardBody(isTrial) {
   ({ isCancelled, isPastDue, memberSince, nextRenewalDate, nextRenewalLabel, onCancelSubscription, subscriptionPrice } = isTrial);
   const tmp = closure_14();
   dependencyMap = tmp;
-  let resubscribeSubscription = subscription(9459).useResubscribeSubscription(subscription.id);
+  let resubscribeSubscription = subscription(9457).useResubscribeSubscription(subscription.id);
   resubscribeSubscription = resubscribeSubscription.resubscribeSubscription;
-  let obj = subscription(9459);
+  let obj = subscription(9457);
   [tmp6, c5] = analyticsLocations.useState(false);
-  analyticsLocations = subscription(7236)().analyticsLocations;
+  analyticsLocations = subscription(7235)().analyticsLocations;
   let obj2 = { style: tmp.cardContent, children: null };
   let tmp7Result = null;
   if (isPastDue) {
@@ -225,7 +225,7 @@ function CardBody(isTrial) {
     let obj5 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
     let intl = isTrial(1114).intl;
     obj5.children = intl.string(isTrial(1114).t.eaqlau);
-    items[2] = closure_11(isTrial(4603).Text, obj5);
+    items[2] = closure_11(isTrial(4602).Text, obj5);
     obj4.children = items;
     const items1 = [tmp7(tmp8, obj4), closure_11(isTrial(1178).Spacer, { size: 12 })];
     obj3.children = items1;
@@ -238,7 +238,7 @@ function CardBody(isTrial) {
   obj6.title = intl2.string(isTrial(1114).t.dltUMH);
   let tmp2Result7;
   if (isTrial) {
-    tmp2Result7 = tmp2(12864);
+    tmp2Result7 = tmp2(12862);
   }
   obj6.icon = tmp2Result7;
   let prop;
@@ -284,8 +284,8 @@ function CardBody(isTrial) {
         obj.body = intl.string(util.t.fmm9jo);
         const intl2 = util.intl;
         obj.confirmText = intl2.string(util.t["NX+WJN"]);
-        tmp14(4952).show(obj);
-        const tmp14Result2 = tmp14(4952);
+        tmp14(4951).show(obj);
+        const tmp14Result2 = tmp14(4951);
       }
     }
   };
@@ -314,9 +314,9 @@ function CardBody(isTrial) {
       return applyArgumentsResult;
     };
     obj15.loading = tmp6;
-    obj14.children = tmp13(tmp2(10392), obj15);
+    obj14.children = tmp13(tmp2(10390), obj15);
     let tmp13Result = tmp13(tmp8, obj14);
-    const tmp2Result11 = tmp2(10392);
+    const tmp2Result11 = tmp2(10390);
   } else {
     const obj16 = { text: null, onPress: null };
     const intl7 = tmp15(1114).intl;
@@ -327,9 +327,9 @@ function CardBody(isTrial) {
   }
   items4[2] = tmp13Result;
   obj11.children = items4;
-  obj10.children = closure_12(isTrial(10437).GappedList, obj11);
+  obj10.children = closure_12(isTrial(10435).GappedList, obj11);
   obj9.children = closure_11(closure_7, obj10);
-  items2[4] = closure_11(isTrial(8686).FormSection, obj9);
+  items2[4] = closure_11(isTrial(8684).FormSection, obj9);
   obj2.children = items2;
   return closure_12(closure_7, obj2);
 }
@@ -339,7 +339,7 @@ const Constants = fn(1074);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, cardContent: { padding: 16 }, buttonsContainer: null, buttonDivider: null, resubscribeButtonContainer: null, separator: null, header: null, headerContent: null, headerTitlesContainer: null, expandIcon: null, expandIconExpanded: null, cardRow: null, manageSection: null, paymentOverDueWarning: null, headerStatusContainer: null, headerStatusCancel: null, headerStatusTrial: null, headerStatusPastDue: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 obj2.buttonsContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };

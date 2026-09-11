@@ -1,10 +1,10 @@
-// Module ID: 7978
-// Function ID: 7979
+// Module ID: 7977
+// Function ID: 7978
 // Name: useHandleJoinThreadVoice
-// Dependencies: [5, 4247, 5109, 5621, 1896, 7838, 4814, 2]
+// Dependencies: [5, 4247, 5108, 5620, 1896, 7837, 4813, 2]
 // Exports: default
 
-// Module 7978 (useHandleJoinThreadVoice)
+// Module 7977 (useHandleJoinThreadVoice)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
 

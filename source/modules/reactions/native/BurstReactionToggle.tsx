@@ -1,19 +1,19 @@
-// Module ID: 11222
-// Function ID: 11223
+// Module ID: 11220
+// Function ID: 11221
 // Name: BurstReactionToggle
-// Dependencies: [19, 17, 4599, 1954, 21, 4343, 504, 4308, 576, 4608, 5026, 4607, 11223, 1114, 9466, 2]
+// Dependencies: [19, 17, 4598, 1954, 21, 4343, 504, 4308, 576, 4607, 5025, 4606, 11221, 1114, 9464, 2]
 // Exports: default
 
-// Module 11222 (BurstReactionToggle)
+// Module 11220 (BurstReactionToggle)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import spring from "spring" /* 5026 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9466 */;
+import timing from "timing" /* 4607 */;
+import spring from "spring" /* 5025 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9464 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ const Easing = fn(4343).Easing;
 obj.easing = Easing.out(fn(4343).Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
 const __initData = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj3 = { container: null };
 let size = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
 obj3.container = size;
@@ -48,7 +48,7 @@ export default function BurstReactionToggle(arg0) {
     tmp7 = tmp2;
   }
   const ref = noop.useRef(null);
-  importDefault = tmp7(11223)(ref);
+  importDefault = tmp7(11221)(ref);
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   closure_129_3 = undefined;

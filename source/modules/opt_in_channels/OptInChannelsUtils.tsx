@@ -1,22 +1,22 @@
-// Module ID: 11654
-// Function ID: 11655
+// Module ID: 11652
+// Function ID: 11653
 // Name: OptInChannelsUtils
-// Dependencies: [19, 1957, 7185, 4622, 4255, 1371, 1074, 1964, 7608, 4789, 7296, 5569, 4760, 7186, 7602, 11655, 7184, 1100, 4427, 1943, 504, 1114, 4198, 11, 2]
+// Dependencies: [19, 1957, 7184, 4621, 4255, 1371, 1074, 1964, 7607, 4788, 7295, 5568, 4759, 7185, 7601, 11653, 7183, 1100, 4427, 1943, 504, 1114, 4198, 11, 2]
 // Exports: clearRecentChannels, getActiveAgoTimestamp, getFirstRouteFor, useChannelBrowserChannelCount, useChannelBrowserSections, useFilterCategoriesByQuery
 
-// Module 11654 (OptInChannelsUtils)
+// Module 11652 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5569 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7184 */;
-import ChannelListState from "ChannelListState" /* 7602 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11655 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5568 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7183 */;
+import ChannelListState from "ChannelListState" /* 7601 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11653 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7185 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7184 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -31,8 +31,8 @@ const Constants = fn(1074);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(1964);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7608).ChannelListGuildActionRow;
-const ReadStateTypes = fn(4789).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7607).ChannelListGuildActionRow;
+const ReadStateTypes = fn(4788).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 

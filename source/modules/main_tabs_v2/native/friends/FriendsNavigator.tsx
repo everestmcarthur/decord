@@ -1,7 +1,7 @@
 // Module ID: 16831
 // Function ID: 16832
 // Name: FriendsNavigator
-// Dependencies: [19, 17, 21, 7988, 4607, 576, 7940, 7937, 12691, 1114, 7549, 7074, 16832, 16838, 16850, 16851, 16852, 16858, 16859, 16860, 16862, 16865, 16866, 4460, 1611, 4317, 2]
+// Dependencies: [19, 17, 21, 7987, 4606, 576, 7939, 7936, 12689, 1114, 7548, 7073, 16832, 16838, 16850, 16851, 16852, 16858, 16859, 16860, 16862, 16865, 16866, 4460, 1611, 4317, 2]
 // Exports: default
 
 // Module 16831 (FriendsNavigator)
@@ -10,15 +10,15 @@ import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import native from "native" /* 4317 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4460 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7940 */;
-import _modDef12691 from "module_12691" /* 12691 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7939 */;
+import _modDef12689 from "module_12689" /* 12689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function RequestsSettingsModalButton(onPress) {
   const obj = { isModal: true, children: null };
-  const obj2 = { source: _modDef12691, onPress: onPress.onPress, accessibilityLabel: null };
+  const obj2 = { source: _modDef12689, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = hasOwnProperty(HeaderShared.HeaderIconButton, obj2);
@@ -26,7 +26,7 @@ function RequestsSettingsModalButton(onPress) {
 }
 function FriendsNavigator() {
   _require = closure_8();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7549).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7548).trackAppUIViewed(), []);
   closure_1 = require("Navigator").useAccessibilityNativeStackOptions();
   const obj2 = {
     screenOptions(arg0) {
@@ -86,7 +86,7 @@ function FriendsNavigator() {
           obj.onPress = function onPress() {
             return navigation.navigate("add-friends", { sourcePage: "Friends Screen Header" });
           };
-          return closure_2_5(navigation(7937).HeaderTextButton, obj);
+          return closure_2_5(navigation(7936).HeaderTextButton, obj);
         };
         return obj;
       },
@@ -212,9 +212,9 @@ function FriendsNavigator() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj3 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj3.header = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, shadowColor: "transparent" };

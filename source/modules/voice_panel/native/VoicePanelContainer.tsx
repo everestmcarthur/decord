@@ -1,16 +1,16 @@
-// Module ID: 17131
-// Function ID: 17132
+// Module ID: 17130
+// Function ID: 17131
 // Name: VoicePanelContainer
-// Dependencies: [19, 1957, 4815, 21, 504, 17132, 17176, 4229, 4317, 2]
+// Dependencies: [19, 1957, 4814, 21, 504, 17131, 17175, 4229, 4317, 2]
 
-// Module 17131 (VoicePanelContainer)
+// Module 17130 (VoicePanelContainer)
 import _mod4229 from "module_4229" /* 4229 */;
 import native from "native" /* 4317 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 17132 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 17176 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 17131 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 17175 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import VoicePanelStore from "VoicePanelStore" /* 4815 */;
+import VoicePanelStore from "VoicePanelStore" /* 4814 */;
 
 require = fn;
 function VoicePanel(arg0) {

@@ -1,49 +1,31 @@
 // Module ID: 6877
 // Function ID: 6878
-// Dependencies: [19, 1636]
-// Exports: useReactiveSharedValue
+// Dependencies: [19, 6721]
+// Exports: useBoundingClientRect
 
 // Module 6877
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+const useLayoutEffect = _mod19.useLayoutEffect;
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export const useReactiveSharedValue = (current) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = current;
-  if (current) {
-    tmp3 = typeof current === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in current;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = current;
-      if (typeof current === "object") {
-        const obj2 = {};
-        const merged = Object.assign(current);
-        let mutable = require("cancelAnimation").makeMutable(obj2);
-        let obj = require("cancelAnimation");
-      } else {
-        mutable = require("cancelAnimation").makeMutable(current);
-        const obj3 = require("cancelAnimation");
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (tmp.current) {
+          if (typeof tmp.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof tmp.current.getBoundingClientRect === "function") {
+              const current2 = tmp.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = tmp.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
       }
-      tmp2.current = mutable;
-    } else if (tmp.current !== current) {
-      tmp2.current.value = current;
-    }
+    });
   }
-  closure_2(() => () => {
-    if (ref.current) {
-      ref(dependencyMap[1]).cancelAnimation(tmp.current);
-      const obj = ref(dependencyMap[1]);
-    }
-  }, []);
-  current = tmp2.current;
-  return current;
 };

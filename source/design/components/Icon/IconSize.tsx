@@ -1,9 +1,9 @@
-// Module ID: 6692
-// Function ID: 6693
+// Module ID: 6691
+// Function ID: 6692
 // Name: IconSize
 // Dependencies: [2]
 
-// Module 6692 (IconSize)
+// Module 6691 (IconSize)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Icon/IconSize.tsx");

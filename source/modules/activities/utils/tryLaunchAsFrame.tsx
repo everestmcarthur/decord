@@ -1,16 +1,16 @@
-// Module ID: 9616
-// Function ID: 9617
+// Module ID: 9614
+// Function ID: 9615
 // Name: tryLaunchAsFrame
-// Dependencies: [4835, 9604, 9599, 9600, 2]
+// Dependencies: [4834, 9602, 9597, 9598, 2]
 // Exports: tryLaunchAsFrame
 
-// Module 9616 (tryLaunchAsFrame)
-import canLaunchFrame from "canLaunchFrame" /* 9599 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9600 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+// Module 9614 (tryLaunchAsFrame)
+import canLaunchFrame from "canLaunchFrame" /* 9597 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9598 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 
 require = fn;
-const MAIN_SURFACE = fn(9604).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9602).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

@@ -1,14 +1,14 @@
-// Module ID: 8912
-// Function ID: 8913
+// Module ID: 8910
+// Function ID: 8911
 // Name: Nameplate
-// Dependencies: [19, 4599, 21, 4607, 504, 4542, 4343, 4608, 1886, 8913, 5039, 1115, 8902, 5639, 2]
+// Dependencies: [19, 4598, 21, 4606, 504, 4541, 4343, 4607, 1886, 8911, 5038, 1115, 8900, 5638, 2]
 // Exports: default
 
-// Module 8912 (Nameplate)
+// Module 8910 (Nameplate)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 function NameplateInner(isFocused) {
@@ -49,7 +49,7 @@ function NameplateInner(isFocused) {
   const stateFromStores = flag6(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
   let obj = flag6(504);
-  const tmp6 = sharedValue(4542)();
+  const tmp6 = sharedValue(4541)();
   let num = 1;
   if (flag6) {
     num = 0;
@@ -78,7 +78,7 @@ function NameplateInner(isFocused) {
   const tmpResult = flag6(4343);
   const backgroundGradientColors = flag6(1886).getBackgroundGradientColors(nameplate.palette, tmp6);
   const tmpResult4 = flag6(1886);
-  const nameplateAssets = flag6(8913).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(8911).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -109,26 +109,26 @@ function NameplateInner(isFocused) {
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj4.colors = items3;
-    tmp15Result = closure_5(tmp5(5039), obj4);
-    const tmp5Result = tmp5(5039);
+    tmp15Result = closure_5(tmp5(5038), obj4);
+    const tmp5Result = tmp5(5038);
   }
   const items4 = [tmp15Result, ];
   const tmp13 = closure_6;
-  const tmpResult5 = flag6(8913);
+  const tmpResult5 = flag6(8911);
   if (tmpResult6.isAndroid()) {
     if (tmp12) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_5(tmp(8902).APNGPlayer, obj5);
+      let tmp17 = closure_5(tmp(8900).APNGPlayer, obj5);
     }
     items4[1] = tmp17;
     obj3.children = items4;
     return tmp13(tmp5(4343).View, obj3);
   }
-  tmp17 = closure_5(tmp5(5639), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp17 = closure_5(tmp5(5638), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = { container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 }, gradient: null, img: null };
   let num = 1;

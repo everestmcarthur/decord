@@ -1,12 +1,12 @@
-// Module ID: 13946
-// Function ID: 13947
+// Module ID: 13944
+// Function ID: 13945
 // Name: RoleSubscriptionsOnboardingGuildPickerFeatureSpec
-// Dependencies: [4523, 1975, 1114, 504, 7334, 7335, 4238, 2]
+// Dependencies: [4522, 1975, 1114, 504, 7333, 7334, 4238, 2]
 
-// Module 13946 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
+// Module 13944 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ExperimentStore from "ExperimentStore" /* 4523 */;
+import ExperimentStore from "ExperimentStore" /* 4522 */;
 
 require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
@@ -29,9 +29,9 @@ export default {
       let result = closure_1_3(guild, arg1);
       if (result) {
         const obj2 = { guild, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-        const obj = closure_1_0(7334);
-        obj2.isUserInCreatorMonetizationEligibleCountry = closure_1_0(7335).isUserInCreatorMonetizationEligibleCountry();
-        const obj3 = closure_1_0(7335);
+        const obj = closure_1_0(7333);
+        obj2.isUserInCreatorMonetizationEligibleCountry = closure_1_0(7334).isUserInCreatorMonetizationEligibleCountry();
+        const obj3 = closure_1_0(7334);
         obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(4238).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
         result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
         const obj4 = closure_1_0(4238);

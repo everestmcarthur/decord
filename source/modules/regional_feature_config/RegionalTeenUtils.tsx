@@ -1,17 +1,17 @@
-// Module ID: 12514
-// Function ID: 12515
+// Module ID: 12512
+// Function ID: 12513
 // Name: RegionalTeenUtils
-// Dependencies: [19, 4822, 4825, 504, 11054, 8737, 2]
+// Dependencies: [19, 4821, 4824, 504, 11052, 8735, 2]
 // Exports: useIsTeenInCountrySet, useIsTeenInStrictCountry, useUserCountryCode
 
-// Module 12514 (RegionalTeenUtils)
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11054 */;
+// Module 12512 (RegionalTeenUtils)
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11052 */;
 import noop from "module_19" /* 19 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4822 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4821 */;
 
 require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(fn(4825).CountryCodesSets.EU_COUNTRIES, 2);
+HermesBuiltin.arraySpread(fn(4824).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalTeenUtils.tsx");
@@ -37,7 +37,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(504);
-  let userIsTeen = stateFromStores(8737).useUserIsTeen();
+  let userIsTeen = stateFromStores(8735).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -57,7 +57,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
   }, items1);
   let obj = set;
   const obj2 = stateFromStores(504);
-  let userIsTeen = stateFromStores(8737).useUserIsTeen();
+  let userIsTeen = stateFromStores(8735).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

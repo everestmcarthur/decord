@@ -1,11 +1,11 @@
-// Module ID: 11790
-// Function ID: 11791
+// Module ID: 11788
+// Function ID: 11789
 // Name: ForwardPreviewUtils
-// Dependencies: [4245, 504, 4944, 2]
+// Dependencies: [4245, 504, 4943, 2]
 // Exports: useForwardPreviewContent
 
-// Module 11790 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 4944 */;
+// Module 11788 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 4943 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;

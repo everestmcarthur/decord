@@ -1,7 +1,7 @@
 // Module ID: 15012
 // Function ID: 15013
 // Name: AddConnectionActionSheet
-// Dependencies: [1074, 1921, 21, 4607, 1178, 4542, 1611, 7577, 7242, 7224, 7223, 1114, 6699, 5657, 4574, 9344, 1396, 4458, 7239, 7236, 7256, 2]
+// Dependencies: [1074, 1921, 21, 4606, 1178, 4541, 1611, 7576, 7241, 7223, 7222, 1114, 6698, 5656, 4573, 9342, 1396, 4458, 7238, 7235, 7255, 2]
 // Exports: default
 
 // Module 15012 (AddConnectionActionSheet)
@@ -9,10 +9,10 @@ import Constants from "Constants" /* 1074 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 1921 */;
 import shared from "shared" /* 4458 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import TableRow from "TableRow" /* 5657 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import TableRow from "TableRow" /* 5656 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import native from "native" /* 1178 */;
 import size from "module_2" /* 2 */;
 
@@ -23,10 +23,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7239)(application));
-  const tmp2 = analyticsLocations(7239)(application);
-  analyticsLocations = analyticsLocations(7236)(analyticsLocations(7256).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7236);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7238)(application));
+  const tmp2 = analyticsLocations(7238)(application);
+  analyticsLocations = analyticsLocations(7235)(analyticsLocations(7255).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7235);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {

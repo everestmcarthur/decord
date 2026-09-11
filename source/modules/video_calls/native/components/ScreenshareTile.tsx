@@ -1,17 +1,17 @@
-// Module ID: 9684
-// Function ID: 9685
+// Module ID: 9682
+// Function ID: 9683
 // Name: ScreenshareTile
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 9685, 6727, 1178, 9686, 4603, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 9683, 6726, 1178, 9684, 4602, 1114, 2]
 // Exports: default
 
-// Module 9684 (ScreenshareTile)
+// Module 9682 (ScreenshareTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9685 */;
-import _modDef9686 from "module_9686" /* 9686 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9683 */;
+import _modDef9684 from "module_9684" /* 9684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK, overflow: "hidden", flex: 1 }, image: { marginBottom: 8, width: 60, height: 40 }, label: { lineHeight: 18, textAlign: "center" }, liveContainer: { position: "absolute", top: 8, right: 8, zIndex: 2 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function ScreenShareTile(onSingleTap) {
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
   const items = [timestampProducer(React3, { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) }), , ];
   const obj3 = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
-  items[1] = timestampProducer(React4, { source: _modDef9686, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef9684, style: tmp.image, resizeMode: "contain" });
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.G84gtR);

@@ -1,10 +1,10 @@
 // Module ID: 8594
 // Function ID: 8595
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8595, 8582, 8583]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8595, 8580, 8581]
 
 // Module 8594
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8583 from "module_8583" /* 8583 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _modDef8595 from "module_8595" /* 8595 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -12,7 +12,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeGaussianBlur = fn;
+const FeOffset = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,12 +34,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeGaussianBlur {
+class FeOffset {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
+    tmp = closure_3(this, FeOffset);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
+    obj = hasOwnProperty(FeOffset);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -54,33 +54,32 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeGaussianBlur, _modDef8583);
+_inherits(FeOffset, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
+    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(FeGaussianBlur(8582).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(8582);
-    const merged1 = Object.assign(FeGaussianBlur(8582).extractIn(this.props));
-    const obj3 = FeGaussianBlur(8582);
-    const merged2 = Object.assign(FeGaussianBlur(8582).extractFeGaussianBlur(this.props));
+    const merged1 = Object.assign(FeOffset(8580).extractFilter(this.props));
+    const obj2 = FeOffset(8580);
+    const merged2 = Object.assign(FeOffset(8580).extractIn(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
+const importDefaultResultResult = _createClass(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
 let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
+obj.dx = 0;
+obj.dy = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

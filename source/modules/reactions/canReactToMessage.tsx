@@ -1,15 +1,15 @@
-// Module ID: 8045
-// Function ID: 8046
+// Module ID: 8044
+// Function ID: 8045
 // Name: canReactToMessage
-// Dependencies: [2021, 5465, 4245, 1371, 1074, 8046, 1384, 4233, 504, 2]
+// Dependencies: [2021, 5464, 4245, 1371, 1074, 8045, 1384, 4233, 504, 2]
 // Exports: canReactToMessage, useCanReactToMessage
 
-// Module 8045 (canReactToMessage)
+// Module 8044 (canReactToMessage)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4233 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8046 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5465 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5464 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 import UserStore from "UserStore" /* 1371 */;
 

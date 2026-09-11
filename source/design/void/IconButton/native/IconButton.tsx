@@ -1,9 +1,9 @@
-// Module ID: 13516
-// Function ID: 13517
+// Module ID: 13514
+// Function ID: 13515
 // Name: IconButton/IconButton
-// Dependencies: [19, 21, 4607, 576, 5493, 5175, 1178, 2]
+// Dependencies: [19, 21, 4606, 576, 5492, 5174, 1178, 2]
 
-// Module 13516 (IconButton/IconButton)
+// Module 13514 (IconButton/IconButton)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -90,11 +90,11 @@ class CircularIconButton {
 }
 const jsx = fn(21).jsx;
 const Sizes = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
-const createStyles = fn(4607);
-const obj3 = { container: { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5493).DARK_PRIMARY_700_LIGHT_PRIMARY_230 }, small: { height: Sizes.SMALL_24, width: Sizes.SMALL_24 }, medium: { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 }, large: { height: Sizes.LARGE_40, width: Sizes.LARGE_40 }, smallCircular: { borderRadius: Sizes.SMALL_24 / 2 }, mediumCircular: { borderRadius: Sizes.MEDIUM_32 / 2 }, largeCircular: { borderRadius: Sizes.LARGE_40 / 2 }, icon: null };
-const obj4 = { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5493).DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
+const createStyles = fn(4606);
+const obj3 = { container: { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5492).DARK_PRIMARY_700_LIGHT_PRIMARY_230 }, small: { height: Sizes.SMALL_24, width: Sizes.SMALL_24 }, medium: { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 }, large: { height: Sizes.LARGE_40, width: Sizes.LARGE_40 }, smallCircular: { borderRadius: Sizes.SMALL_24 / 2 }, mediumCircular: { borderRadius: Sizes.MEDIUM_32 / 2 }, largeCircular: { borderRadius: Sizes.LARGE_40 / 2 }, icon: null };
+const obj4 = { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5492).DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
 const obj5 = { borderRadius: Sizes.SMALL_24 / 2 };
-obj3.icon = { tintColor: fn(5493).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj3.icon = { tintColor: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 const hasOwnProperty = createStyles.createStyles(obj3);
 SquareIconButton.Sizes = Sizes;
 CircularIconButton.Sizes = Sizes;

@@ -1,9 +1,9 @@
-// Module ID: 4835
-// Function ID: 4836
+// Module ID: 4834
+// Function ID: 4835
 // Name: ApplicationStore
 // Dependencies: [32, 1918, 504, 573, 2]
 
-// Module 4835 (ApplicationStore)
+// Module 4834 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,10 +1,10 @@
-// Module ID: 9601
-// Function ID: 9602
+// Module ID: 9599
+// Function ID: 9600
 // Name: closeVoicePanels
 // Dependencies: [1074, 1109, 2]
 // Exports: default
 
-// Module 9601 (closeVoicePanels)
+// Module 9599 (closeVoicePanels)
 import Constants from "Constants" /* 1074 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import size from "module_2" /* 2 */;

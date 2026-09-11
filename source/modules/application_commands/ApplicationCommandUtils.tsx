@@ -1,21 +1,21 @@
-// Module ID: 7595
-// Function ID: 7596
+// Module ID: 7594
+// Function ID: 7595
 // Name: ApplicationCommandUtils
-// Dependencies: [1961, 4948, 5051, 1074, 1085, 7596, 1894, 7597, 1086, 12, 38, 14, 4787, 2]
+// Dependencies: [1961, 4947, 5050, 1074, 1085, 7595, 1894, 7596, 1086, 12, 38, 14, 4786, 2]
 // Exports: allChannelsSentinel, applicationPermissionsList, buildApplicationCommands, canUseApplicationCommands, extractInteractionDataProps, getApplicationCommandOptionQueryOptions, getApplicationCommandSection, getCommandAttachmentDraftType, getCommandTriggerSection, getInitialInteractionMetadata, getMatchingGroupCommands, hasAccess, hasCommandIndexForApp, isSnowflake, trackCommandSelected
 
-// Module 7595 (ApplicationCommandUtils)
+// Module 7594 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1085 */;
 import Server from "Server" /* 1894 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
-import DraftStore from "DraftStore" /* 4948 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7596 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7597 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5051 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
+import DraftStore from "DraftStore" /* 4947 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7595 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7596 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5050 */;
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

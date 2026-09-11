@@ -1,16 +1,16 @@
-// Module ID: 9402
-// Function ID: 9403
+// Module ID: 9400
+// Function ID: 9401
 // Name: handleUploadAttachmentErrors
-// Dependencies: [1074, 5231, 5186, 9403, 4951, 1114, 9486, 2]
+// Dependencies: [1074, 5230, 5185, 9401, 4950, 1114, 9484, 2]
 // Exports: handleUploadMessageAttachmentsErrors
 
-// Module 9402 (handleUploadAttachmentErrors)
+// Module 9400 (handleUploadAttachmentErrors)
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
-import FileUtils from "FileUtils" /* 5186 */;
-import KestrelExperiment from "KestrelExperiment" /* 5231 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9403 */;
-import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9486 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import FileUtils from "FileUtils" /* 5185 */;
+import KestrelExperiment from "KestrelExperiment" /* 5230 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9401 */;
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9484 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

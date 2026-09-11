@@ -1,17 +1,17 @@
 // Module ID: 16099
 // Function ID: 16100
 // Name: MessageRequestsButton
-// Dependencies: [19, 17, 7293, 7294, 21, 4607, 504, 16100, 5027, 1114, 8173, 13352, 9976, 2]
+// Dependencies: [19, 17, 7292, 7293, 21, 4606, 504, 16100, 5026, 1114, 8172, 13350, 9974, 2]
 // Exports: default
 
 // Module 16099 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
-import _modDef9976 from "module_9976" /* 9976 */;
-import IconActionButtonDefault from "IconActionButton" /* 13352 */;
+import _modDef9974 from "module_9974" /* 9974 */;
+import IconActionButtonDefault from "IconActionButton" /* 13350 */;
 import _mod16100 from "module_16100" /* 16100 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 7293 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7294 */;
+import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
 
 require = fn;
 function MessageRequestAnimation(color) {
@@ -36,7 +36,7 @@ function MessageRequestAnimation(color) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
@@ -67,7 +67,7 @@ export default function MessageRequestsButton(alternateVariant) {
       const intl3 = tmp3(1114).intl;
       obj4.accessibilityLabel = intl3.string(tmp3(1114).t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = React5(tmp3(5027).Button, obj4);
+      let tmp21 = React5(tmp3(5026).Button, obj4);
       let tmp16 = React5;
     } else {
       tmp16 = React5;
@@ -75,13 +75,13 @@ export default function MessageRequestsButton(alternateVariant) {
       const intl2 = tmp3(1114).intl;
       obj5.accessibilityLabel = intl2.string(tmp3(1114).t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = React5(tmp3(8173).IconButton, obj5);
+      tmp21 = React5(tmp3(8172).IconButton, obj5);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13352).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(tmp3(13350).ButtonBadge, { badgePosition: "right" })];
     obj3.children = items2;
     return React6(View, obj3);
   } else {
-    const obj6 = { source: _modDef9976, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef9974, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = tmp3(1114).intl;
     obj6.accessibilityLabel = intl.string(tmp3(1114).t.e7GWjQ);
     let str2;

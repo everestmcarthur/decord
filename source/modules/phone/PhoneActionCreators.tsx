@@ -1,16 +1,16 @@
-// Module ID: 7119
-// Function ID: 7120
+// Module ID: 7118
+// Function ID: 7119
 // Name: PhoneActionCreators
-// Dependencies: [5, 502, 7117, 1074, 573, 1272, 4800, 1250, 2]
+// Dependencies: [5, 502, 7116, 1074, 573, 1272, 4799, 1250, 2]
 
-// Module 7119 (PhoneActionCreators)
+// Module 7118 (PhoneActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-let closure_5 = fn(7117).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7116).PHONE_VERIFICATION_MODAL_KEY;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
@@ -97,7 +97,7 @@ export default {
       const request = { url: constants.VERIFY_PHONE, headers: obj4, body: { phone, code }, oldFormErrors: true, trackedActionData: { event: phone(1250).NetworkActionNames.USER_VERIFY_PHONE }, rejectWithError: null };
       { event: phone(1250).NetworkActionNames.USER_VERIFY_PHONE };
       request.rejectWithError = phone(1272).rejectWithMigratedError();
-      closure_128_0 = yield code(4800).post(request);
+      closure_128_0 = yield code(4799).post(request);
       if (closure_129_2) {
         code(573).dispatch({ type: "MODAL_POP", key });
         code(573);

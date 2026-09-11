@@ -1,18 +1,18 @@
-// Module ID: 8893
-// Function ID: 8894
+// Module ID: 8891
+// Function ID: 8892
 // Name: ProfileEffectSampleV2
-// Dependencies: [17, 8892, 21, 4607, 576, 5639, 8894, 8895, 2]
+// Dependencies: [17, 8890, 21, 4606, 576, 5638, 8892, 8893, 2]
 // Exports: default
 
-// Module 8893 (ProfileEffectSampleV2)
+// Module 8891 (ProfileEffectSampleV2)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8892 */;
-import _modDef8894 from "module_8894" /* 8894 */;
-import ProfileEffectDefault from "ProfileEffect" /* 8895 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8890 */;
+import _modDef8892 from "module_8892" /* 8892 */;
+import ProfileEffectDefault from "ProfileEffect" /* 8893 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -40,7 +40,7 @@ export default function ProfileEffectSample(hideBackground) {
   const obj2 = { style: null, source: null, accessible: false, resizeMode: "cover" };
   const items1 = [tmp.sampleProfileImage];
   obj2.style = items1;
-  const obj3 = { uri: _modDef8894 };
+  const obj3 = { uri: _modDef8892 };
   obj2.source = obj3;
   const items2 = [React3(FastImageDefault, obj2), , ];
   let tmp4Result = !flag;

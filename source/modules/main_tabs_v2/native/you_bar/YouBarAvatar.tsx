@@ -1,21 +1,21 @@
 // Module ID: 16458
 // Function ID: 16459
 // Name: YouBarAvatar
-// Dependencies: [5, 32, 19, 17, 4599, 5331, 1371, 15156, 1074, 21, 4607, 576, 504, 1178, 4317, 4343, 8303, 8907, 5026, 4308, 8906, 8243, 4575, 7456, 1896, 6727, 2]
+// Dependencies: [5, 32, 19, 17, 4598, 5330, 1371, 15156, 1074, 21, 4606, 576, 504, 1178, 4317, 4343, 8301, 8905, 5025, 4308, 8904, 8242, 4574, 7455, 1896, 6726, 2]
 
 // Module 16458 (YouBarAvatar)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import native2 from "native" /* 4317 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5026 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import ClipView from "ClipView" /* 8907 */;
+import spring from "spring" /* 5025 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import ClipView from "ClipView" /* 8905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -308,7 +308,7 @@ const YouBarConstants = fn(15156);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};

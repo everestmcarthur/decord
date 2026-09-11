@@ -1,18 +1,18 @@
 // Module ID: 15607
 // Function ID: 15608
 // Name: ChangeLogModal
-// Dependencies: [19, 17, 1074, 2010, 21, 4607, 576, 4317, 1242, 8347, 15608, 5639, 8395, 1114, 5175, 9142, 10488, 1178, 8167, 1477, 8168, 1484, 5676, 4198, 8169, 4603, 4810, 7074, 2]
+// Dependencies: [19, 17, 1074, 2010, 21, 4606, 576, 4317, 1242, 8345, 15608, 5638, 8393, 1114, 5174, 9140, 10486, 1178, 8166, 1477, 8167, 1484, 5675, 4198, 8168, 4602, 4809, 7073, 2]
 // Exports: default
 
 // Module 15607 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
-import NavigatorHeader from "NavigatorHeader" /* 5676 */;
-import Navigator from "Navigator" /* 7074 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8167 */;
-import openMediaModal from "openMediaModal" /* 8347 */;
-import common_VideoDefault from "common/Video" /* 8395 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import Navigator from "Navigator" /* 7073 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8166 */;
+import openMediaModal from "openMediaModal" /* 8345 */;
+import common_VideoDefault from "common/Video" /* 8393 */;
 import _modDef15608 from "module_15608" /* 15608 */;
 import noop from "module_19" /* 19 */;
 
@@ -138,14 +138,14 @@ const CHANGELOG_MODAL_KEY = fn(2010).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj2 = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: { borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, videoOverlay: { position: "absolute", width: "100%", height: "100%" }, playButton: null, playIcon: null, empty: null };
 let size = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
 obj2.playButton = size;
 obj2.playIcon = { width: 21, height: 21 };
 obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 let size1 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj4.bulletPoint = size1;
@@ -283,8 +283,8 @@ prototype["renderVideo"] = function renderVideo() {
         const _HermesInternal = HermesInternal;
         obj6.uri = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
         obj5.source = obj6;
-        tmp6Result = tmp6(tmp7(5639), obj5);
-        const tmp7Result = tmp7(5639);
+        tmp6Result = tmp6(tmp7(5638), obj5);
+        const tmp7Result = tmp7(5638);
       }
       items[1] = tmp6Result;
       obj3.children = items;
@@ -308,10 +308,10 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: tmp15(10488), onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
-    obj9.children = tmp12(tmp15(9142), obj10);
-    tmp12Result = tmp12(tmp18(5175).PressableOpacity, obj9);
-    const tmp15Result = tmp15(9142);
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: tmp15(10486), onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    obj9.children = tmp12(tmp15(9140), obj10);
+    tmp12Result = tmp12(tmp18(5174).PressableOpacity, obj9);
+    const tmp15Result = tmp15(9140);
   }
   items1[1] = tmp12Result;
   obj8.children = items1;

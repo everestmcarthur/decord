@@ -1,13 +1,13 @@
 // Module ID: 14927
 // Function ID: 14928
 // Name: FamilyCenterActivityPage
-// Dependencies: [19, 17, 21, 4607, 576, 8738, 7197, 14928, 14930, 14940, 12014, 14944, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 8736, 7196, 14928, 14930, 14940, 12012, 14944, 2]
 // Exports: default
 
 // Module 14927 (FamilyCenterActivityPage)
 import nativeDefault from "native" /* 576 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7197 */;
-import useUserLinks from "useUserLinks" /* 8738 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import useUserLinks from "useUserLinks" /* 8736 */;
 import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14928 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ export default function FamilyCenterActivityPage() {
   if (0 === activeLinkUserIds.length) {
     const obj4 = { children: null };
     const items1 = [tmp3(tmp7(14930), {}), tmp3(tmp7(14940), {}), ];
-    const obj5 = { style: tmp.dataConfirmation, children: tmp3(tmp7(12014), {}) };
+    const obj5 = { style: tmp.dataConfirmation, children: tmp3(tmp7(12012), {}) };
     items1[2] = tmp3(tmp6, obj5);
     obj4.children = items1;
     let tmp3Result = tmp5(timestampProducer, obj4);

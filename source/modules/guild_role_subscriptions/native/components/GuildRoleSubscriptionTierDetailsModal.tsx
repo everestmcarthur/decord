@@ -1,22 +1,22 @@
-// Module ID: 17856
-// Function ID: 17857
+// Module ID: 17855
+// Function ID: 17856
 // Name: GuildRoleSubscriptionTierDetailsModal
-// Dependencies: [32, 19, 15266, 1074, 21, 13953, 17828, 15288, 15273, 17811, 9909, 1114, 17817, 8686, 1178, 17857, 17820, 2]
+// Dependencies: [32, 19, 15266, 1074, 21, 13951, 17827, 15288, 15273, 17810, 9907, 1114, 17816, 8684, 1178, 17856, 17819, 2]
 // Exports: default
 
-// Module 17856 (GuildRoleSubscriptionTierDetailsModal)
+// Module 17855 (GuildRoleSubscriptionTierDetailsModal)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Form from "Form" /* 8686 */;
-import FormHeaderDefault from "FormHeader" /* 9909 */;
-import FormStylesDefault from "FormStyles" /* 13953 */;
+import Form from "Form" /* 8684 */;
+import FormHeaderDefault from "FormHeader" /* 9907 */;
+import FormStylesDefault from "FormStyles" /* 13951 */;
 import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15273 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17811 */;
-import FormImagePicker from "FormImagePicker" /* 17817 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17820 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17828 */;
-import FormPriceTierDefault from "FormPriceTier" /* 17857 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17810 */;
+import FormImagePicker from "FormImagePicker" /* 17816 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17819 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17827 */;
+import FormPriceTierDefault from "FormPriceTier" /* 17856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,25 @@
 // Module ID: 14252
 // Function ID: 14253
-// Dependencies: [14253]
+// Dependencies: []
+// Exports: default
 
 // Module 14252
-Object.defineProperty(Intl, "Locale", { value: fn(14253).Locale, writable: true, enumerable: false, configurable: true });
+const weakMap = new WeakMap();
+
+export default function getInternalSlots(arg0, arg1) {
+  let items = arg1;
+  if (undefined === arg1) {
+    items = [];
+  }
+  value = weakMap.get(arg0);
+  if (!value) {
+    const _Object = Object;
+    const obj2 = Object.create(null, items.reduce((acc, item) => {
+      acc[item] = { enumerable: false, writable: true, configurable: true };
+      return acc;
+    }, {}));
+    const result = weakMap.set(arg0, obj2);
+    value = obj2;
+  }
+  return value;
+};

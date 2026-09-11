@@ -1,10 +1,10 @@
-// Module ID: 17736
-// Function ID: 17737
+// Module ID: 17735
+// Function ID: 17736
 // Name: GuildSettingsModalMembersWrapper
-// Dependencies: [19, 21, 7338, 16646, 16648, 2]
+// Dependencies: [19, 21, 7337, 16646, 16648, 2]
 
-// Module 17736 (GuildSettingsModalMembersWrapper)
-import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 7338 */;
+// Module 17735 (GuildSettingsModalMembersWrapper)
+import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 7337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

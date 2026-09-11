@@ -1,15 +1,15 @@
 // Module ID: 14958
 // Function ID: 14959
 // Name: FamilyCenterActivityItemPreview
-// Dependencies: [19, 17, 8308, 21, 4607, 14957, 576, 8913, 8287, 8916, 12233, 9468, 8755, 1889, 1886, 2]
+// Dependencies: [19, 17, 8306, 21, 4606, 14957, 576, 8911, 8286, 8914, 12231, 9466, 8753, 1889, 1886, 2]
 // Exports: default
 
 // Module 14958 (FamilyCenterActivityItemPreview)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8287 */;
-import NameplateUtils from "NameplateUtils" /* 8913 */;
-import ShopIcon from "ShopIcon" /* 12233 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8286 */;
+import NameplateUtils from "NameplateUtils" /* 8911 */;
+import ShopIcon from "ShopIcon" /* 12231 */;
 import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14957 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,14 +57,14 @@ function ProfileEffectPreviewImage(arg0) {
 }
 function ProfileFramePreviewImage(arg0) {
   ({ product, styles } = arg0);
-  const tmp3 = useMaybeFetchProfileFrameDefault(product.skuId, "FamilyCenterActivityItemPreview");
+  const tmp3 = useMaybeFetchProfileFrameDefault(product.skuId);
   let tmp4 = null;
   if (null != tmp3) {
     const obj = { style: styles.profileFrameContainer, children: null };
     const obj2 = { profileFrame: tmp3, previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5, previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE, profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW };
-    obj.children = jsx(tmp(8916), { profileFrame: tmp3, previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5, previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE, profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW });
+    obj.children = jsx(tmp(8914), { profileFrame: tmp3, previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5, previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE, profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW });
     tmp4 = <React3 style={styles.profileFrameContainer}>{null}</React3>;
-    const tmpResult = tmp(8916);
+    const tmpResult = tmp(8914);
   }
   return tmp4;
 }
@@ -78,9 +78,9 @@ function SubscriptionPreview(arg0) {
   } else {
     const obj5 = { style: styles.purchasePlaceholder, children: null };
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
-      let NitroWheelIcon = tmp5(9468).BoostGemIcon;
+      let NitroWheelIcon = tmp5(9466).BoostGemIcon;
     } else {
-      NitroWheelIcon = tmp5(8755).NitroWheelIcon;
+      NitroWheelIcon = tmp5(8753).NitroWheelIcon;
     }
     const obj = { size: "custom", style: { width: 20, height: 20 } };
     obj5.children = <NitroWheelIcon size="custom" style={{ width: 20, height: 20 }} />;
@@ -116,16 +116,16 @@ function CollectiblePreview(arg0) {
     } else {
       const obj = { style: styles.purchasePlaceholder, children: null };
       const obj8 = { size: "custom", style: { width: 20, height: 20 } };
-      obj.children = jsx(tmp17(12233).ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
+      obj.children = jsx(tmp17(12231).ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
       return <React3 style={styles.purchasePlaceholder}>{null}</React3>;
     }
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-let closure_5 = fn(8308).PROFILE_FRAME_ASPECT_RATIO;
+let closure_5 = fn(8306).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
 let size = { width: fn(14957).PREVIEW_SIZE, height: fn(14957).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
 obj2.purchasePlaceholder = size;

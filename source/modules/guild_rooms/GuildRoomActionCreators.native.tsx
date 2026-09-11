@@ -1,11 +1,11 @@
-// Module ID: 4763
-// Function ID: 4764
+// Module ID: 4762
+// Function ID: 4763
 // Name: GuildRoomActionCreators
-// Dependencies: [5, 4764, 2]
+// Dependencies: [5, 4763, 2]
 // Exports: guildRoomConnect, guildRoomUpdate
 
-// Module 4763 (GuildRoomActionCreators)
-import _guildRoomConnectAll from "_guildRoomConnect" /* 4764 */;
+// Module 4762 (GuildRoomActionCreators)
+import _guildRoomConnectAll from "_guildRoomConnect" /* 4763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

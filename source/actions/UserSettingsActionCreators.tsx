@@ -1,10 +1,10 @@
-// Module ID: 9451
-// Function ID: 9452
+// Module ID: 9449
+// Function ID: 9450
 // Name: UserSettingsActionCreators
 // Dependencies: [5, 4426, 1184, 1183, 1074, 1186, 1940, 1187, 1218, 573, 4455, 1935, 2]
 // Exports: saveClientTheme, saveGuildFolders
 
-// Module 9451 (UserSettingsActionCreators)
+// Module 9449 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import wrappers from "wrappers" /* 1218 */;

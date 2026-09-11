@@ -1,17 +1,17 @@
 // Module ID: 15815
 // Function ID: 15816
 // Name: CreateBugReportSetting
-// Dependencies: [1347, 1348, 10305, 504, 1115, 11564, 1114, 15627, 15804, 2]
+// Dependencies: [1347, 1348, 10303, 504, 1115, 11562, 1114, 15627, 15804, 2]
 
 // Module 15815 (CreateBugReportSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1348 */;
-import BugReportManagerDefault from "BugReportManager" /* 10305 */;
+import BugReportManagerDefault from "BugReportManager" /* 10303 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

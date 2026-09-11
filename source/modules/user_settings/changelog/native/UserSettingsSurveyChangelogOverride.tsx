@@ -1,25 +1,25 @@
 // Module ID: 15772
 // Function ID: 15773
 // Name: UserSettingsSurveyChangelogOverride
-// Dependencies: [32, 19, 17, 4621, 4798, 21, 4607, 576, 7271, 7223, 7273, 4554, 7263, 6678, 5027, 4799, 4574, 504, 8360, 5739, 5657, 4603, 8169, 5025, 2]
+// Dependencies: [32, 19, 17, 4620, 4797, 21, 4606, 576, 7270, 7222, 7272, 4553, 7262, 6677, 5026, 4798, 4573, 504, 8358, 5738, 5656, 4602, 8168, 5024, 2]
 
 // Module 15772 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import SurveyActionCreatorsAll from "SurveyActionCreators" /* 4799 */;
-import Stack_Stack from "Stack/Stack" /* 5025 */;
-import TableRow from "TableRow" /* 5657 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7223 */;
-import ActionSheet from "ActionSheet" /* 7271 */;
-import ActionSheetRow from "ActionSheetRow" /* 7273 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8169 */;
-import usePreviousDefault from "usePrevious" /* 8360 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import SurveyActionCreatorsAll from "SurveyActionCreators" /* 4798 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
+import ActionSheet from "ActionSheet" /* 7270 */;
+import ActionSheetRow from "ActionSheetRow" /* 7272 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8168 */;
+import usePreviousDefault from "usePrevious" /* 8358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChangelogStore from "ChangelogStore" /* 4621 */;
-import SurveyStore from "SurveyStore" /* 4798 */;
+import ChangelogStore from "ChangelogStore" /* 4620 */;
+import SurveyStore from "SurveyStore" /* 4797 */;
 
 require = fn;
 function SurveyOverrideInfoActionSheet(survey) {
@@ -35,7 +35,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       str = JSON.stringify(tmp2);
     }
     obj.subLabel = str;
-    obj.icon = closure_9(closure_0(4554).CopyIcon, {});
+    obj.icon = closure_9(closure_0(4553).CopyIcon, {});
     obj.onPress = function onPress() {
       let str = "null";
       if (null != closure_1_0) {
@@ -44,7 +44,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       }
       require("ClipboardUtils").copy(str);
     };
-    return closure_9(closure_0(7273).ActionSheetRow, obj, tmp);
+    return closure_9(closure_0(7272).ActionSheetRow, obj, tmp);
   });
   obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React7(ActionSheet.ActionSheet, obj);
@@ -58,8 +58,8 @@ function SurveyOverrideActionSheet() {
     return surveyOverride;
   }), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7223).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
-  const items = [closure_9(first(6678).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
+  let obj = { header: closure_9(first(7222).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  const items = [closure_9(first(6677).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -82,9 +82,9 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5027).Button, obj2);
+  items[1] = closure_9(first(5026).Button, obj2);
   obj.children = items;
-  return closure_10(first(7271).ActionSheet, obj);
+  return closure_10(first(7270).ActionSheet, obj);
 }
 function SurveyInfo() {
   const items = [SurveyStore];
@@ -126,8 +126,8 @@ function ChangelogOverrideDebuggingActionSheet() {
 function ChangelogOverrideActionSheet() {
   const tmp = _slicedToArray(noop.useState(() => ChangelogStore.overrideId()), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7223).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
-  const items = [closure_9(first(6678).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
+  let obj = { header: closure_9(first(7222).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  const items = [closure_9(first(6677).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";
@@ -150,9 +150,9 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5027).Button, obj2);
+  items[1] = closure_9(first(5026).Button, obj2);
   obj.children = items;
-  return closure_10(first(7271).ActionSheet, obj);
+  return closure_10(first(7270).ActionSheet, obj);
 }
 function ChangelogInfo() {
   const obj = { title: "Changelog", hasIcons: false, children: null };
@@ -179,7 +179,7 @@ function ChangelogInfo() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { scrollView: { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

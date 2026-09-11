@@ -1,20 +1,20 @@
-// Module ID: 8895
-// Function ID: 8896
+// Module ID: 8893
+// Function ID: 8894
 // Name: ProfileEffect
-// Dependencies: [32, 19, 17, 4599, 1895, 21, 4607, 1477, 8896, 8897, 8898, 8900, 504, 1093, 8901, 8899, 5639, 8312, 2]
+// Dependencies: [32, 19, 17, 4598, 1895, 21, 4606, 1477, 8894, 8895, 8896, 8898, 504, 1093, 8899, 8897, 5638, 8310, 2]
 // Exports: default, usePreloadProfileEffect
 
-// Module 8895 (ProfileEffect)
+// Module 8893 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8312 */;
-import utils from "utils" /* 8896 */;
-import constants from "constants" /* 8897 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8898 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8901 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8310 */;
+import utils from "utils" /* 8894 */;
+import constants from "constants" /* 8895 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8896 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8899 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
 require = fn;
@@ -71,15 +71,15 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = tmp10(tmp4(5639), size);
-    const tmp4Result = tmp4(5639);
+    obj3.children = tmp10(tmp4(5638), size);
+    const tmp4Result = tmp4(5638);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 function ProfileEffect(profileEffect) {
   profileEffect = profileEffect.profileEffect;
@@ -118,7 +118,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(8897).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(8895).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -134,7 +134,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(8900)(noop.useCallback((arg0) => {
+  const tmp9Result = memo1(8898)(noop.useCallback((arg0) => {
     if (ref.current) {
       if (!ref3.current) {
         tmp.current = true;
@@ -161,7 +161,7 @@ function ProfileEffect(profileEffect) {
   }, items4));
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  let tmp9 = memo1(8900);
+  let tmp9 = memo1(8898);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);

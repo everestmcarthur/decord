@@ -1,10 +1,10 @@
-// Module ID: 5492
-// Function ID: 5493
+// Module ID: 5491
+// Function ID: 5492
 // Name: GuildsTree
 // Dependencies: [38, 12, 2]
 // Exports: createFolderNode, createGuildNode
 
-// Module 5492 (GuildsTree)
+// Module 5491 (GuildsTree)
 import _mod12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;

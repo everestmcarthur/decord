@@ -1,9 +1,23 @@
 // Module ID: 14376
 // Function ID: 14377
-// Dependencies: [14362]
+// Dependencies: []
 
 // Module 14376
-import _mod14362 from "module_14362" /* 14362 */;
-
-
-export default (arg0) => Object(_mod14362(arg0));
+let all = typeof document === "object";
+if (typeof document === "object") {
+  const _document = document;
+  all = document.all;
+}
+if (undefined === all) {
+  if (undefined !== all) {
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
+  }
+  module.exports = fn;
+}
+fn = (fn) => typeof fn === "function";

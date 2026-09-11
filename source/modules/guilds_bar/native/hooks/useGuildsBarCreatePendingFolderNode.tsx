@@ -1,15 +1,15 @@
 // Module ID: 16429
 // Function ID: 16430
 // Name: useGuildsBarCreatePendingFolderNode
-// Dependencies: [19, 4429, 5491, 504, 9298, 16430, 5593, 5492, 1114, 2]
+// Dependencies: [19, 4429, 5490, 504, 9296, 16430, 5592, 5491, 1114, 2]
 // Exports: default
 
 // Module 16429 (useGuildsBarCreatePendingFolderNode)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5593 */;
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9298 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5592 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9296 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5491 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5490 */;
 
 const require = fn;
 const size = fn(2);
@@ -34,10 +34,10 @@ export default function useGuildsBarCreatePendingFolderNode() {
     obj3.folderName = intl.string(tmp2(1114).t["scsU+l"]);
     obj3.expanded = stateFromStores1;
     obj3.guildIds = arr2;
-    const folderNode = tmp2(5492).createFolderNode(obj3);
+    const folderNode = tmp2(5491).createFolderNode(obj3);
     for (const item10054 of arr2) {
       let children = folderNode.children;
-      let obj5 = stateFromStores(5492);
+      let obj5 = stateFromStores(5491);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
     }

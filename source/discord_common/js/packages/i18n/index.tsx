@@ -1,11 +1,11 @@
-// Module ID: 17313
-// Function ID: 17314
+// Module ID: 17312
+// Function ID: 17313
 // Name: i18n
-// Dependencies: [17314, 2, 17357]
+// Dependencies: [17313, 2, 17356]
 
-// Module 17313 (i18n)
-import i18n_i18n from "i18n/i18n" /* 17314 */;
-import parse from "parse" /* 17357 */;
+// Module 17312 (i18n)
+import i18n_i18n from "i18n/i18n" /* 17313 */;
+import parse from "parse" /* 17356 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/index.tsx");

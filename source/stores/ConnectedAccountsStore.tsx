@@ -1,14 +1,14 @@
-// Module ID: 5333
-// Function ID: 5334
+// Module ID: 5332
+// Function ID: 5333
 // Name: ConnectedAccountsStore
-// Dependencies: [5334, 1074, 5335, 1971, 5458, 504, 573, 2]
+// Dependencies: [5333, 1074, 5334, 1971, 5457, 504, 573, 2]
 
-// Module 5333 (ConnectedAccountsStore)
+// Module 5332 (ConnectedAccountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformsDefault from "Platforms" /* 5335 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5458 */;
-import ConnectedAccountRecord from "ConnectedAccountRecord" /* 5334 */;
+import PlatformsDefault from "Platforms" /* 5334 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5457 */;
+import ConnectedAccountRecord from "ConnectedAccountRecord" /* 5333 */;
 
 const require = fn;
 const items = [fn(1074).PlatformTypes.CONTACTS];

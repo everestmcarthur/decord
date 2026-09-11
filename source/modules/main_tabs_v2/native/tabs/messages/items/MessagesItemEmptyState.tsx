@@ -1,14 +1,14 @@
 // Module ID: 16166
 // Function ID: 16167
 // Name: MessagesItemEmptyState
-// Dependencies: [19, 17, 21, 4607, 576, 4465, 16125, 4603, 1114, 5027, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 4465, 16125, 4602, 1114, 5026, 2]
 
 // Module 16166 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
 import _modDef16125 from "module_16125" /* 16125 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, containerImage: null, image: null, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.containerImage = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };

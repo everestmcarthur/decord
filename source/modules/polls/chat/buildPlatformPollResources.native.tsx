@@ -1,19 +1,19 @@
-// Module ID: 11813
-// Function ID: 11814
+// Module ID: 11811
+// Function ID: 11812
 // Name: buildPlatformPollResources
-// Dependencies: [12, 11814, 4607, 576, 8021, 7218, 5670, 1399, 2]
+// Dependencies: [12, 11812, 4606, 576, 8020, 7217, 5669, 1399, 2]
 // Exports: buildPlatformPollResources, getAvatarUrl
 
-// Module 11813 (buildPlatformPollResources)
+// Module 11811 (buildPlatformPollResources)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
-import _modDef5670 from "module_5670" /* 5670 */;
-import _modDef7218 from "module_7218" /* 7218 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8021 */;
+import _modDef5669 from "module_5669" /* 5669 */;
+import _modDef7217 from "module_7217" /* 7217 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8020 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_3 = apply.mapValues(fn(11814).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(11812).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
@@ -45,8 +45,8 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
   closure_0 = theme;
   closure_1 = layoutType;
   const obj = { styles: apply.mapValues(closure_3, (fn) => fn(closure_0, closure_1)), selectedIcon: null, checkmarkIcon: null };
-  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7218);
-  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5670);
+  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7217);
+  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5669);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {

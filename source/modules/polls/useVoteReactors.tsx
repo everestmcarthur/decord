@@ -1,12 +1,12 @@
-// Module ID: 11818
-// Function ID: 11819
+// Module ID: 11816
+// Function ID: 11817
 // Name: useVoteReactors
-// Dependencies: [7835, 1074, 504, 7836, 1332, 2]
+// Dependencies: [7834, 1074, 504, 7835, 1332, 2]
 // Exports: default
 
-// Module 11818 (useVoteReactors)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7836 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7835 */;
+// Module 11816 (useVoteReactors)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7834 */;
 
 require = fn;
 let closure_4 = fn(1074).DEFAULT_NUM_REACTION_USERS;

@@ -1,178 +1,97 @@
 // Module ID: 6738
 // Function ID: 6739
-// Dependencies: [109, 19, 17, 21, 6739, 6823, 6825]
-// Exports: BorderlessButton, RectButton
+// Dependencies: [109, 19, 21, 6739, 6794, 6807, 6805, 6781]
+// Exports: default
 
 // Module 6738
-import ButtonComponentDefault from "ButtonComponent" /* 6823 */;
-import _mod6825 from "module_6825" /* 6825 */;
+import GestureDetectorType from "GestureDetectorType" /* 6739 */;
+import transformLongPressProps from "transformLongPressProps" /* 6807 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import module_6739 from "module_6739" /* 6739 */;
+
+const require = globalThis.__r;
 
 require = fn;
-let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];
-let closure_3 = ["children", "style", "activeOpacity", "underlayColor"];
-let closure_4 = ["children", "style", "ref"];
-const useRef = fn(19).useRef;
-get_ActivityIndicator = fn(17);
-const Animated = get_ActivityIndicator.Animated;
-({ Platform, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const ButtonComponent = module_6739(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
-class RawButton {
-  constructor(arg0) {
-    obj = {};
-    merged = Object.assign(global);
-    obj.needsOffscreenAlphaCompositing = true;
-    return jsx(closure_11, obj);
-  }
-}
-class BaseButton {
-  constructor(arg0) {
-    closure_0 = global;
-    closure_1 = useRef(false);
-    closure_2 = useRef(undefined);
-    num = global.delayLongPress;
-    if (num == null) {
-      num = 600;
-    }
-    c3 = num;
-    ({ onLongPress, onPress, onActiveStateChange } = global);
-    tmp = closure_5(global, closure_2);
-    wrappedLongPress = function wrappedLongPress() {
-      closure_1.current = true;
-      if (closure_1_4 != null) {
-        tmp();
-      }
-    };
-    obj = closure_0(closure_1[6]);
-    tVProps = obj.getTVProps(tmp);
-    obj1 = { style: null };
-    items = [, ];
-    items[0] = global.style;
-    items[1] = false;
-    obj1.style = items;
-    merged = Object.assign(tmp);
-    merged1 = Object.assign(tVProps);
-    obj1.onBegin = function onBegin(pointerInside) {
-      if (pointerInside.pointerInside) {
-        if (useRef != null) {
-          tmp(true);
-        }
-        closure_1.current = false;
-        if (closure_1_4) {
-          const _setTimeout = setTimeout;
-          closure_2.current = setTimeout(wrappedLongPress, num);
-        }
-        const onBegin = delayLongPress.onBegin;
-        if (onBegin != null) {
-          onBegin(pointerInside);
-        }
-      }
-    };
-    obj1.onActivate = function onActivate(pointerInside) {
-      pointerInside = pointerInside.pointerInside;
-      if (!pointerInside) {
-        pointerInside = undefined === ref2.current;
-      }
-      if (!pointerInside) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref2.current);
-        ref2.current = undefined;
-      }
-      const onActivate = delayLongPress.onActivate;
-      if (onActivate != null) {
-        onActivate(pointerInside);
-      }
-    };
-    obj1.onDeactivate = function onDeactivate(arg0) {
-      const onDeactivate = delayLongPress.onDeactivate;
-      if (onDeactivate != null) {
-        onDeactivate(arg0);
-      }
-    };
-    obj1.onFinalize = function onFinalize(canceled) {
-      if (useRef != null) {
-        tmp(false);
-      }
-      let current = canceled.canceled;
-      if (!current) {
-        current = ref.current;
-      }
-      if (!current) {
-        if (_objectWithoutProperties != null) {
-          tmp4(canceled.pointerInside);
-        }
-      }
-      if (undefined !== ref2.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(tmp6.current);
-        tmp6.current = undefined;
-      }
-      const onFinalize = delayLongPress.onFinalize;
-      if (onFinalize != null) {
-        onFinalize(canceled);
-      }
-    };
-    return jsx(RawButton, obj1);
-  }
-}
-let closure_14 = Animated.createAnimatedComponent(BaseButton);
-const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
+let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
+const useEffect = fn(19).useEffect;
+const jsx = fn(21).jsx;
 
-export { RawButton };
-export { BaseButton };
-export const RectButton = (children) => {
-  let onActiveStateChange = children;
-  ({ style, activeOpacity, underlayColor } = children);
-  let str = "black";
-  if (undefined !== underlayColor) {
-    str = underlayColor;
+export default function createNativeWrapper(displayName) {
+  _require = displayName;
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  value = new Animated.Value(0);
-  if (style == null) {
-    style = {};
+  let Native = arg2;
+  if (arg2 === undefined) {
+    Native = require("GestureDetectorType").GestureDetectorType.Native;
   }
-  const flattenResult = StyleSheet.flatten(style);
-  const obj = {};
-  const merged = Object.assign(_objectWithoutProperties(children, closure_3));
-  obj.style = flattenResult;
-  obj.onActiveStateChange = function onActiveStateChange(arg0) {
-    onActiveStateChange = onActiveStateChange.onActiveStateChange;
-    if (onActiveStateChange != null) {
-      onActiveStateChange(arg0);
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
     }
-  };
-  const obj2 = { style: null };
-  const items = [underlay.underlay, { opacity: useRef(value).current, backgroundColor: str, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
-  obj2.style = items;
-  const items1 = [React7(Animated.View, obj2), children.children];
-  obj.children = items1;
-  return closure_1_10(BaseButton, obj);
-};
-export const BorderlessButton = (ref) => {
-  let onActiveStateChange = ref;
-  value = new Animated.Value(1);
-  const current = useRef(value).current;
-  ref = ref.ref;
-  ({ children, style } = ref);
-  const obj = { borderless: true };
-  const merged = Object.assign(_objectWithoutProperties(ref, closure_4));
-  if (ref == null) {
-    ref = null;
+    str = name;
   }
-  obj.ref = ref;
-  obj.onActiveStateChange = function onActiveStateChange(arg0) {
-    onActiveStateChange = onActiveStateChange.onActiveStateChange;
-    if (onActiveStateChange != null) {
-      onActiveStateChange(arg0);
+  if (!str) {
+    let tmp4 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp4 = displayName;
     }
-  };
-  const items = [style, false];
-  obj.style = items;
-  obj.children = children;
-  return React7(closure_14, obj);
+    str = tmp4;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      keys = Object.keys(closure_3(displayName, closure_2));
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj1 = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj1;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(() => { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      if (undefined === gestureHandlerProps.disableReanimated) {
+        flag = true;
+        gestureHandlerProps.disableReanimated = true;
+      }
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      obj3 = closure_0(closure_1[5]);
+      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
+      closure_2 = nativeGesture;
+      items = [, ];
+      items[0] = nativeGesture;
+      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      tmp6 = useEffect(() => { ... }, items);
+      tmp7 = Native;
+      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
+        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
+      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
+        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
+      } else {
+        NativeDetector = tmp3(tmp4[7]).NativeDetector;
+      }
+      obj6 = { gesture: nativeGesture, children: null };
+      obj7 = {};
+      merged1 = Object.assign(childProps);
+      obj7.ref = displayName.ref;
+      obj6.children = jsx(closure_0, obj7);
+      return jsx(NativeDetector, obj6);
+    }
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
 };
-export const PureNativeButton = ButtonComponentDefault;

@@ -1,10 +1,10 @@
 // Module ID: 15264
 // Function ID: 15265
 // Name: QuestDockBountyBackground
-// Dependencies: [19, 15153, 21, 15160, 15150, 11381, 15260, 2]
+// Dependencies: [19, 15153, 21, 15160, 15150, 11379, 15260, 2]
 
 // Module 15264 (QuestDockBountyBackground)
-import AssetUtils from "AssetUtils" /* 11381 */;
+import AssetUtils from "AssetUtils" /* 11379 */;
 import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15260 */;
 import noop from "module_19" /* 19 */;
 

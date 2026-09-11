@@ -1,12 +1,12 @@
-// Module ID: 8019
-// Function ID: 8020
+// Module ID: 8018
+// Function ID: 8019
 // Name: GuildTagConstants
-// Dependencies: [1074, 4500, 2]
+// Dependencies: [1074, 4499, 2]
 // Exports: getRandomGuildTagBadgeKind, getRandomGuildTagBadgePreset
 
-// Module 8019 (GuildTagConstants)
+// Module 8018 (GuildTagConstants)
 import Constants from "Constants" /* 1074 */;
-import Powerups from "Powerups" /* 4500 */;
+import Powerups from "Powerups" /* 4499 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;

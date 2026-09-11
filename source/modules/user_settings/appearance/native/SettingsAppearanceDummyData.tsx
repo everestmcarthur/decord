@@ -1,14 +1,14 @@
 // Module ID: 15340
 // Function ID: 15341
 // Name: SettingsAppearanceDummyData
-// Dependencies: [1074, 1114, 15341, 15342, 15343, 15344, 15345, 15346, 15347, 15348, 15349, 15350, 14014, 10250, 15351, 2]
+// Dependencies: [1074, 1114, 15341, 15342, 15343, 15344, 15345, 15346, 15347, 15348, 15349, 15350, 14012, 10248, 15351, 2]
 // Exports: default
 
 // Module 15340 (SettingsAppearanceDummyData)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import _modDef10250 from "module_10250" /* 10250 */;
-import _modDef14014 from "module_14014" /* 14014 */;
+import _modDef10248 from "module_10248" /* 10248 */;
+import _modDef14012 from "module_14012" /* 14012 */;
 import _modDef15341 from "module_15341" /* 15341 */;
 import _modDef15342 from "module_15342" /* 15342 */;
 import _modDef15343 from "module_15343" /* 15343 */;
@@ -72,7 +72,7 @@ export default function _default() {
   obj6.title = intl12.string(util.t.PHbyD7);
   const intl13 = util.intl;
   obj6.preview = intl13.string(util.t.GSuP1s);
-  obj6.avatar1 = _modDef14014;
+  obj6.avatar1 = _modDef14012;
   obj6.status = StatusTypes.IDLE;
   items[4] = obj6;
   const obj7 = { id: "7", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
@@ -82,7 +82,7 @@ export default function _default() {
   obj7.title = intl15.string(util.t["0HGnUV"]);
   const intl16 = util.intl;
   obj7.preview = intl16.string(util.t["VYL+vm"]);
-  obj7.avatar1 = _modDef10250;
+  obj7.avatar1 = _modDef10248;
   obj7.avatar2 = _modDef15344;
   items[5] = obj7;
   const obj8 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -102,7 +102,7 @@ export default function _default() {
   const intl22 = util.intl;
   obj9.preview = intl22.string(util.t.OrbvPP);
   obj9.avatar1 = _modDef15345;
-  obj9.avatar2 = _modDef10250;
+  obj9.avatar2 = _modDef10248;
   items[7] = obj9;
   const obj10 = { id: "12", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl23 = util.intl;

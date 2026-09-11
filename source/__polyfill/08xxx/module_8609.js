@@ -1,16 +1,17 @@
 // Module ID: 8609
 // Function ID: 8610
-// Dependencies: [41, 42, 93, 95, 98, 8560, 8583]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8610, 8566]
 
 // Module 8609
-import _modDef8583 from "module_8583" /* 8583 */;
+import _modDef8566 from "module_8566" /* 8566 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeTile = arg1;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,14 +31,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTile {
+const jsx = fn(21).jsx;
+class Filter {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
+    tmp = c2(this, Filter);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(Filter);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,18 +52,30 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTile, _modDef8583);
+_inherits(Filter, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(8560).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(size);
+    obj.children = this.props.children;
+    return jsx(Filter(8610), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

@@ -1,10 +1,10 @@
-// Module ID: 10167
-// Function ID: 10168
+// Module ID: 10165
+// Function ID: 10166
 // Name: ThemeContextProvider/RootThemeContextProvider
 // Dependencies: [19, 1085, 21, 4317, 2]
 // Exports: DisableCustomTheme, RootThemeContextProvider
 
-// Module 10167 (ThemeContextProvider/RootThemeContextProvider)
+// Module 10165 (ThemeContextProvider/RootThemeContextProvider)
 import native from "native" /* 4317 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,19 +1,19 @@
-// Module ID: 17433
-// Function ID: 17434
+// Module ID: 17432
+// Function ID: 17433
 // Name: FeedbackManager
-// Dependencies: [4835, 1957, 4630, 4646, 11721, 17434, 4659, 17437, 1896, 7112, 4574, 4235, 17441, 17444, 17446, 2]
+// Dependencies: [4834, 1957, 4629, 4645, 11719, 17433, 4658, 17436, 1896, 7111, 4573, 4235, 17440, 17443, 17445, 2]
 
-// Module 17433 (FeedbackManager)
+// Module 17432 (FeedbackManager)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4235 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4646 */;
-import FeedbackManager from "feedback/FeedbackManager" /* 17434 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4645 */;
+import FeedbackManager from "feedback/FeedbackManager" /* 17433 */;
 
 require = fn;
-const FeedbackType = fn(11721).FeedbackType;
+const FeedbackType = fn(11719).FeedbackType;
 const prototype = function FeedbackManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

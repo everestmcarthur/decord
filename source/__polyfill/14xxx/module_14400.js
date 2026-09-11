@@ -1,16 +1,9 @@
 // Module ID: 14400
 // Function ID: 14401
-// Dependencies: [14401]
+// Dependencies: []
 
 // Module 14400
-import _mod14401 from "module_14401" /* 14401 */;
 
-
-export default (arg0) => {
-  const tmp = _mod14401(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default Math.trunc || (function trunc(arg0) {
+  return 0 < +arg0 ? floor : ceil(+arg0);
+});

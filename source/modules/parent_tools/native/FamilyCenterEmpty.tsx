@@ -1,11 +1,11 @@
 // Module ID: 14971
 // Function ID: 14972
 // Name: FamilyCenterEmpty
-// Dependencies: [19, 17, 21, 4607, 14972, 4603, 2]
+// Dependencies: [19, 17, 21, 4606, 14972, 4602, 2]
 // Exports: default
 
 // Module 14971 (FamilyCenterEmpty)
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import _modDef14972 from "module_14972" /* 14972 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ art: { marginBottom: 10, width: 243 }, empty: { display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");

@@ -1,16 +1,16 @@
-// Module ID: 14646
-// Function ID: 14647
+// Module ID: 14644
+// Function ID: 14645
 // Name: UserProfileEditBannerButton
-// Dependencies: [19, 17, 21, 4607, 576, 7236, 8276, 8265, 5175, 1114, 4603, 10341, 8316, 8332, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 7235, 8275, 8264, 5174, 1114, 4602, 10339, 8314, 8330, 2]
 // Exports: default
 
-// Module 14646 (UserProfileEditBannerButton)
+// Module 14644 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 576 */;
-import Pressables from "Pressables" /* 5175 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8316 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8332 */;
-import PencilIcon from "PencilIcon" /* 10341 */;
+import Pressables from "Pressables" /* 5174 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8314 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8330 */;
+import PencilIcon from "PencilIcon" /* 10339 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;

@@ -1,99 +1,127 @@
 // Module ID: 6798
 // Function ID: 6799
-// Dependencies: [19, 6748, 6735]
-// Exports: runCallback, touchEventTypeToCallbackType, useMemoizedGestureCallbacks
+// Dependencies: [19, 17, 21]
+// Exports: default, isKeyboardDismissingTap, updateResponderEventValue
 
 // Module 6798
-import _mod19 from "module_19" /* 19 */;
-import TouchEventType from "TouchEventType" /* 6735 */;
-import _mod6748 from "module_6748" /* 6748 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const useMemo = _mod19.useMemo;
-function getHandler(arg0, onBegin) {
-  if (_mod6748.CALLBACK_TYPE.BEGAN === arg0) {
-    return onBegin.onBegin;
-  } else if (tmp(6748).CALLBACK_TYPE.START === arg0) {
-    return onBegin.onActivate;
-  } else if (tmp(6748).CALLBACK_TYPE.UPDATE === arg0) {
-    return onBegin.onUpdate;
-  } else if (tmp(6748).CALLBACK_TYPE.END === arg0) {
-    return onBegin.onDeactivate;
-  } else if (tmp(6748).CALLBACK_TYPE.FINALIZE === arg0) {
-    return onBegin.onFinalize;
-  } else if (tmp(6748).CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
-    return onBegin.onTouchesDown;
-  } else if (tmp(6748).CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
-    return onBegin.onTouchesMove;
-  } else if (tmp(6748).CALLBACK_TYPE.TOUCHES_UP === arg0) {
-    return onBegin.onTouchesUp;
-  } else if (tmp(6748).CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
-    return onBegin.onTouchesCancel;
-  }
-}
-getHandler.__closure = { CALLBACK_TYPE: _mod6748.CALLBACK_TYPE };
-getHandler.__workletHash = 8647314057396;
-getHandler.__initData = { code: "function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return callbacks.onBegin;case CALLBACK_TYPE.START:return callbacks.onActivate;case CALLBACK_TYPE.UPDATE:return callbacks.onUpdate;case CALLBACK_TYPE.END:return callbacks.onDeactivate;case CALLBACK_TYPE.FINALIZE:return callbacks.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return callbacks.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return callbacks.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return callbacks.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}}" };
-function touchEventTypeToCallbackType(arg0) {
-  if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return tmp(6748).CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (tmp(6735).TouchEventType.TOUCHES_MOVE === arg0) {
-    return tmp(6748).CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (tmp(6735).TouchEventType.TOUCHES_UP === arg0) {
-    return tmp(6748).CALLBACK_TYPE.TOUCHES_UP;
-  } else if (tmp(6735).TouchEventType.TOUCHES_CANCEL === arg0) {
-    return tmp(6748).CALLBACK_TYPE.TOUCHES_CANCEL;
-  } else {
-    return tmp(6748).CALLBACK_TYPE.UNDEFINED;
-  }
-}
-let obj = { CALLBACK_TYPE: _mod6748.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: _mod6748.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__workletHash = 2066229974382;
-touchEventTypeToCallbackType.__initData = { code: "function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}" };
-function runCallback(arg0, arg1, arg2) {
-  const tmp = getHandler(arg0, arg1);
-  if (tmp) {
-    tmp(arg2);
-  }
-}
-runCallback.__closure = { getHandler };
-runCallback.__workletHash = 9892811129293;
-runCallback.__initData = { code: "function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){const{getHandler}=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);}" };
+let noop = noop_mod;
+({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
+let c7 = 0;
+let closure_8 = [];
+let c9 = false;
+const context = noop.createContext(null);
+const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
 
-export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(disableReanimated) {
-  const items = [, , , , , , , , ];
-  ({ onActivate: arr[0], onBegin: arr[1], onDeactivate: arr[2], onFinalize: arr[3], onTouchesCancel: arr[4], onTouchesDown: arr[5], onTouchesMove: arr[6], onTouchesUp: arr[7], onUpdate: arr[8] } = disableReanimated);
-  return useMemo(() => {
-    const obj = {};
-    if (disableReanimated.onBegin) {
-      obj.onBegin = tmp.onBegin;
+export default function _default(children) {
+  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
+  const tmp = closure_3(false);
+  const isRNGHResponderEvent = tmp;
+  let items = [tmp, keyboardShouldPersistTaps];
+  isRNGHResponderEvent(() => {
+    sum = sum + 1;
+    if (1 >= sum) {
+      let addListener;
+      if (closure_1_4 != null) {
+        addListener = obj.addListener;
+      }
+      if (null != addListener) {
+        const metrics = obj.metrics;
+        let height;
+        if (metrics != null) {
+          const metricsResult = metrics();
+          if (metricsResult != null) {
+            height = metricsResult.height;
+          }
+        }
+        let tmp5 = null != height;
+        if (tmp5) {
+          tmp5 = height > 0;
+        }
+        function setVisible(endCoordinates) {
+          endCoordinates = endCoordinates.endCoordinates;
+          let height;
+          if (endCoordinates != null) {
+            height = endCoordinates.height;
+          }
+          let tmp2 = null != height;
+          if (tmp2) {
+            tmp2 = height > 0;
+          }
+          c9 = tmp2;
+        }
+        closure_9 = tmp5;
+        items = [
+          obj.addListener("keyboardDidShow", setVisible),
+          obj.addListener("keyboardWillShow", setVisible),
+          obj.addListener("keyboardDidHide", () => {
+                c9 = false;
+              })
+        ];
+      }
     }
-    if (disableReanimated.onActivate) {
-      obj.onActivate = tmp.onActivate;
+    return () => {
+      (function unsubscribeFromKeyboardVisibility() {
+        diff = diff - 1;
+        if (0 >= diff) {
+          for (const item10008 of closure_8) {
+            let removeResult = item10008.remove();
+            continue;
+          }
+          closure_8 = [];
+          c9 = false;
+        }
+      })();
+    };
+  }, []);
+  const items1 = [keyboardShouldPersistTaps];
+  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
+  const obj = { value: tmp2, children: null };
+  const tmp4 = keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, []);
+  obj.children = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+    let current = "handled" === keyboardShouldPersistTaps;
+    if (current) {
+      current = isRNGHResponderEvent.current;
     }
-    if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = tmp.onDeactivate;
-    }
-    if (disableReanimated.onFinalize) {
-      obj.onFinalize = tmp.onFinalize;
-    }
-    if (disableReanimated.onUpdate) {
-      obj.onUpdate = tmp.onUpdate;
-    }
-    if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = tmp.onTouchesDown;
-    }
-    if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = tmp.onTouchesMove;
-    }
-    if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = tmp.onTouchesUp;
-    }
-    if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = tmp.onTouchesCancel;
-    }
-    return obj;
-  }, items);
+    isRNGHResponderEvent.current = false;
+    return current;
+  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</closure_5>;
+  return <context value={tmp2}>{null}</context>;
 };
-export { touchEventTypeToCallbackType };
-export { runCallback };
+export const JSResponderContext = context;
+export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {
+  isRNGHResponderEvent = undefined;
+  if (isRNGHResponderEvent != null) {
+    isRNGHResponderEvent = isRNGHResponderEvent.isRNGHResponderEvent;
+  }
+  if (isRNGHResponderEvent) {
+    isRNGHResponderEvent.current = current;
+  }
+};
+export const isKeyboardDismissingTap = function isKeyboardDismissingTap(keyboardShouldPersistTaps) {
+  if (null == keyboardShouldPersistTaps) {
+    return false;
+  } else {
+    keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
+    let tmp = !keyboardShouldPersistTaps;
+    if (keyboardShouldPersistTaps) {
+      tmp = "never" === keyboardShouldPersistTaps;
+    }
+    if (tmp) {
+      tmp = c9;
+    }
+    return tmp;
+  }
+};

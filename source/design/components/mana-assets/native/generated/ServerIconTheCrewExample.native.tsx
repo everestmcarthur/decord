@@ -1,13 +1,13 @@
-// Module ID: 6513
-// Function ID: 6514
+// Module ID: 6512
+// Function ID: 6513
 // Name: ServerIconTheCrewExample
-// Dependencies: [21, 5639, 6514, 2]
+// Dependencies: [21, 5638, 6513, 2]
 // Exports: ServerIconTheCrewExample
 
-// Module 6513 (ServerIconTheCrewExample)
+// Module 6512 (ServerIconTheCrewExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6514 from "module_6514" /* 6514 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6513 from "module_6513" /* 6513 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconTheCrewExample = function ServerIconTheCrewExample(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6514 };
+  const obj2 = { uri: _modDef6513 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

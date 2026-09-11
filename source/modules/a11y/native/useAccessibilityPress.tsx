@@ -1,10 +1,10 @@
-// Module ID: 9852
-// Function ID: 9853
+// Module ID: 9850
+// Function ID: 9851
 // Name: useAccessibilityPress
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 9852 (useAccessibilityPress)
+// Module 9850 (useAccessibilityPress)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

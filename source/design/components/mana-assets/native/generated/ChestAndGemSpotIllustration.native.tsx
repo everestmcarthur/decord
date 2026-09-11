@@ -1,13 +1,13 @@
-// Module ID: 5913
-// Function ID: 5914
+// Module ID: 5912
+// Function ID: 5913
 // Name: ChestAndGemSpotIllustration
-// Dependencies: [21, 5639, 5914, 2]
+// Dependencies: [21, 5638, 5913, 2]
 // Exports: ChestAndGemSpotIllustration
 
-// Module 5913 (ChestAndGemSpotIllustration)
+// Module 5912 (ChestAndGemSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5914 from "module_5914" /* 5914 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5913 from "module_5913" /* 5913 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ChestAndGemSpotIllustration = function ChestAndGemSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5914 };
+  const obj2 = { uri: _modDef5913 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

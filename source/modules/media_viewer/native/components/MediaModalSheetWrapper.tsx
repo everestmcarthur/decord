@@ -1,11 +1,11 @@
-// Module ID: 8376
-// Function ID: 8377
+// Module ID: 8374
+// Function ID: 8375
 // Name: MediaModalSheetWrapper
-// Dependencies: [19, 1074, 21, 7226, 4574, 8377, 2]
+// Dependencies: [19, 1074, 21, 7225, 4573, 8375, 2]
 // Exports: default
 
-// Module 8376 (MediaModalSheetWrapper)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+// Module 8374 (MediaModalSheetWrapper)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import noop from "module_19" /* 19 */;
 
 const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;

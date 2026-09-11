@@ -1,10 +1,10 @@
-// Module ID: 11821
-// Function ID: 11822
+// Module ID: 11819
+// Function ID: 11820
 // Name: PollsHttpApi
-// Dependencies: [5, 1074, 1272, 4508, 2]
+// Dependencies: [5, 1074, 1272, 4507, 2]
 // Exports: endPollEarly, submitPollVote
 
-// Module 11821 (PollsHttpApi)
+// Module 11819 (PollsHttpApi)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ let closure_4 = async function _submitPollVote(arg0, value) {
           ({ channelId: closure_129_0, messageId: closure_129_1, answerIds: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -123,7 +123,7 @@ let closure_5 = async function _endPollEarly(arg0, value) {
           ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

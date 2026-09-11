@@ -1,9 +1,9 @@
-// Module ID: 9850
-// Function ID: 9851
+// Module ID: 9848
+// Function ID: 9849
 // Name: TextInput/TextInput
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 4458, 1115, 4456, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 4458, 1115, 4456, 2]
 
-// Module 9850 (TextInput/TextInput)
+// Module 9848 (TextInput/TextInput)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4458 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1074);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
 let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };

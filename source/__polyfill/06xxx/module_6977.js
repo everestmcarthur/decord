@@ -1,141 +1,164 @@
 // Module ID: 6977
 // Function ID: 6978
-// Dependencies: [19, 6974]
-// Exports: useBoundDetection
+// Dependencies: [17, 19, 21, 6945, 6978, 6979, 6980]
+// Exports: useSecondaryProps
 
 // Module 6977
-import _mod6974 from "module_6974" /* 6974 */;
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import CompatView from "CompatView" /* 6978 */;
+import _mod6979 from "module_6979" /* 6979 */;
+import CompatScroller from "CompatScroller" /* 6980 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const noop = _mod19;
 
-export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  const isFirstLayoutComplete = recyclerViewManager;
-  closure_1 = arg1;
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(Date.now());
-  const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _mod6974.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  let num = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num = recyclerViewManager.getWindowSize().height;
+({ Animated: c2, RefreshControl: c3 } = get_ActivityIndicator);
+const useMemo = _mod19.useMemo;
+const jsx = jsxProd.jsx;
+
+export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent) {
+  ListHeaderComponent = ListHeaderComponent.ListHeaderComponent;
+  const ListHeaderComponentStyle = ListHeaderComponent.ListHeaderComponentStyle;
+  const ListFooterComponent = ListHeaderComponent.ListFooterComponent;
+  const ListFooterComponentStyle = ListHeaderComponent.ListFooterComponentStyle;
+  const ListEmptyComponent = ListHeaderComponent.ListEmptyComponent;
+  const ListEmptyComponentStyle = ListHeaderComponent.ListEmptyComponentStyle;
+  const renderScrollComponent = ListHeaderComponent.renderScrollComponent;
+  const refreshing = ListHeaderComponent.refreshing;
+  const progressViewOffset = ListHeaderComponent.progressViewOffset;
+  const onRefresh = ListHeaderComponent.onRefresh;
+  const data = ListHeaderComponent.data;
+  const refreshControl = ListHeaderComponent.refreshControl;
+  const stickyHeaderConfig = ListHeaderComponent.stickyHeaderConfig;
+  let invertedTransformStyle;
+  if (ListHeaderComponent.inverted) {
+    invertedTransformStyle = ListHeaderComponent(ListHeaderComponentStyle[3]).getInvertedTransformStyle(tmp);
+    let obj = ListHeaderComponent(ListHeaderComponentStyle[3]);
   }
-  let num2 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num2 = recyclerViewManager.getChildContainerDimensions().height;
-  }
-  let num3 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num3 = recyclerViewManager.getWindowSize().width;
-  }
-  let num4 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num4 = recyclerViewManager.getChildContainerDimensions().width;
-  }
-  const items = [recyclerViewManager];
-  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
-  const checkBounds = React2(() => {
-    closure_5.current = Date.now();
-    const props = isFirstLayoutComplete.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } = props);
-    let num;
-    if (maintainVisibleContentPosition != null) {
-      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
-    }
-    if (num == null) {
-      num = -1;
-    }
-    if (isFirstLayoutComplete.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = obj.getAbsoluteLastScrollOffset();
-      const size = obj.getChildContainerDimensions();
-      const size2 = obj.getWindowSize();
-      const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + obj.firstItemOffset;
-      if (tmp3 > 0) {
-        if (onEndReached) {
-          if (onEndReachedThreshold == null) {
-            onEndReachedThreshold = 0.5;
-          }
-          const _Math = Math;
-          const result = onEndReachedThreshold * tmp3;
-          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
-          let tmp7 = tmp6;
-          if (tmp6) {
-            tmp7 = !ref.current;
-          }
-          if (tmp7) {
-            ref.current = true;
-            onEndReached();
-          }
-          ref.current = tmp6;
-        }
-        if (onStartReached) {
-          if (onStartReachedThreshold == null) {
-            onStartReachedThreshold = 0.2;
-          }
-          let tmp13 = tmp12;
-          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
-            tmp13 = !ref2.current;
-          }
-          if (tmp13) {
-            ref2.current = true;
-            onStartReached();
-          }
-          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
-        }
-        if (!tmp2) {
-          if (num >= 0) {
-            const _Math2 = Math;
-            const result1 = num * tmp3;
-            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
-          }
-        }
+  let items = [onRefresh, refreshing, progressViewOffset, refreshControl];
+  const items1 = [ListHeaderComponent, ListHeaderComponentStyle, invertedTransformStyle];
+  const items2 = [ListFooterComponent, ListFooterComponentStyle, invertedTransformStyle];
+  const tmp6 = ListEmptyComponentStyle(() => {
+    let tmp = refreshControl;
+    if (!refreshControl) {
+      let tmp3;
+      if (onRefresh) {
+        const obj = { refreshing: null, progressViewOffset: null, onRefresh: null };
+        const _Boolean = Boolean;
+        obj.refreshing = Boolean(refreshing);
+        obj.progressViewOffset = progressViewOffset;
+        obj.onRefresh = tmp2;
+        tmp3 = <React3 refreshing={null} progressViewOffset={null} onRefresh={null} />;
       }
+      tmp = tmp3;
     }
+    return tmp;
   }, items);
-  const tmp2 = React2(() => {
-    let current = props.isOffsetProjectionEnabled;
-    if (current) {
-      current = ref3.current;
+  const items3 = [ListEmptyComponent, data, invertedTransformStyle, ListEmptyComponentStyle];
+  let tmp7 = ListEmptyComponentStyle(() => {
+    let tmp2 = null;
+    if (ListHeaderComponent) {
+      const obj = { style: null, children: null };
+      const items = [ListHeaderComponentStyle, invertedTransformStyle];
+      obj.style = items;
+      obj.children = _mod6979.getValidComponent(tmp);
+      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
     }
-    if (current) {
-      ref3.current = false;
-      _requestAnimationFrame(() => {
-        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
-        let flag;
-        if (maintainVisibleContentPosition != null) {
-          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
-        }
-        if (flag == null) {
-          flag = true;
-        }
-        const current = ref.current;
-        if (current != null) {
-          if (flag) {
-            flag = !props.ignoreScrollEvents;
-          }
-          const obj = { animated: flag };
-          current.scrollToEnd(obj);
-        }
-      });
-    }
+    return tmp2;
   }, items1);
-  closure_7 = tmp2;
-  const items2 = [data];
-  React4(() => {
-    closure_2.current = false;
-  }, items2);
-  const items3 = [data, tmp2, num, num3];
-  React3(() => {
-    closure_7();
-  }, items3);
-  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
-  React3(() => {
-    if (Date.now() - ref4.current >= 100) {
-      closure_7();
+  let backdropComponent;
+  const tmp8 = ListEmptyComponentStyle(() => {
+    let tmp2 = null;
+    if (ListFooterComponent) {
+      const obj = { style: null, children: null };
+      const items = [ListFooterComponentStyle, invertedTransformStyle];
+      obj.style = items;
+      obj.children = _mod6979.getValidComponent(tmp);
+      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
     }
+    return tmp2;
+  }, items2);
+  if (stickyHeaderConfig != null) {
+    backdropComponent = stickyHeaderConfig.backdropComponent;
+  }
+  const items4 = [backdropComponent, invertedTransformStyle];
+  let obj2 = {
+    refreshControl: tmp6,
+    renderHeader: tmp7,
+    renderFooter: tmp8,
+    renderEmpty: ListEmptyComponentStyle(() => {
+      if (ListEmptyComponent) {
+        const validComponent = _mod6979.getValidComponent(tmp);
+        if (invertedTransformStyle) {
+          const obj2 = { style: null, children: null };
+          const items = [ListEmptyComponentStyle, tmp5];
+          obj2.style = items;
+          obj2.children = validComponent;
+          let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
+        } else {
+          tmp7 = validComponent;
+        }
+        return tmp7;
+      }
+      return null;
+    }, items3),
+    CompatScrollView: null,
+    renderStickyHeaderBackdrop: null
+  };
+  const items5 = [renderScrollComponent];
+  const tmp9 = ListEmptyComponentStyle(() => {
+    if (ListEmptyComponent) {
+      const validComponent = _mod6979.getValidComponent(tmp);
+      if (invertedTransformStyle) {
+        const obj2 = { style: null, children: null };
+        const items = [ListEmptyComponentStyle, tmp5];
+        obj2.style = items;
+        obj2.children = validComponent;
+        let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
+      } else {
+        tmp7 = validComponent;
+      }
+      return tmp7;
+    }
+    return null;
+  }, items3);
+  obj2.CompatScrollView = ListEmptyComponentStyle(() => {
+    if (typeof renderScrollComponent === "function") {
+      if (!tmpResult.isComponentClass(tmp3)) {
+        let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.ref = ref;
+          return renderScrollComponent(obj);
+        });
+        CompatAnimatedScroller.displayName = "CustomScrollView";
+      }
+      return React2.createAnimatedComponent(CompatAnimatedScroller);
+    }
+    CompatAnimatedScroller = CompatScroller.CompatAnimatedScroller;
+    if (renderScrollComponent) {
+      CompatAnimatedScroller = tmp3;
+    }
+  }, items5);
+  obj2.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
+    let backdropComponent;
+    if (stickyHeaderConfig != null) {
+      backdropComponent = tmp.backdropComponent;
+    }
+    let tmp4Result = null;
+    if (backdropComponent) {
+      const obj = { style: null, children: null };
+      const items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
+      obj.style = items;
+      let backdropComponent1;
+      if (tmp != null) {
+        backdropComponent1 = tmp.backdropComponent;
+      }
+      obj.children = _mod6979.getValidComponent(backdropComponent1);
+      tmp4Result = jsx(CompatView.CompatView, { style: null, children: null });
+    }
+    return tmp4Result;
   }, items4);
-  return { checkBounds };
+  return obj2;
 };

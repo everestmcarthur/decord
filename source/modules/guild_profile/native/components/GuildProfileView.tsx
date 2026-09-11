@@ -1,10 +1,10 @@
-// Module ID: 9282
-// Function ID: 9283
+// Module ID: 9280
+// Function ID: 9281
 // Name: GuildProfileView
-// Dependencies: [19, 17, 1979, 1074, 21, 4315, 4317, 4607, 576, 504, 1971, 1477, 1396, 9283, 4542, 4308, 9284, 5039, 9285, 4603, 9287, 9294, 2]
+// Dependencies: [19, 17, 1979, 1074, 21, 4315, 4317, 4606, 576, 504, 1971, 1477, 1396, 9281, 4541, 4308, 9282, 5038, 9283, 4602, 9285, 9292, 2]
 // Exports: default, getBackgroundForProfile
 
-// Module 9282 (GuildProfileView)
+// Module 9280 (GuildProfileView)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
@@ -12,12 +12,12 @@ import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import useToken from "useToken" /* 4308 */;
 import themes from "themes" /* 4315 */;
 import native from "native" /* 4317 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
-import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9284 */;
-import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9285 */;
-import GuildProfileGamesDefault from "GuildProfileGames" /* 9287 */;
-import GuildProfileTraitsDefault from "GuildProfileTraits" /* 9294 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9282 */;
+import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9283 */;
+import GuildProfileGamesDefault from "GuildProfileGames" /* 9285 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 9292 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -37,7 +37,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       const obj2 = { id: null, splash: null, size: null };
       ({ id: obj3.id, customBanner: obj3.splash } = guildProfile);
-      obj2.size = tmp3(9283)() * useWindowDimensionsDefault().width;
+      obj2.size = tmp3(9281)() * useWindowDimensionsDefault().width;
       const obj4 = { style: tmp4.imageBanner, source: tmp3(1396).getGuildDiscoverySplashSource(obj2) };
       return closure_8(closure_5, obj4);
     }
@@ -68,7 +68,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, colorBanner: { height: 140, width: "100%" }, imageBanner: { height: 140, width: "100%", objectFit: "cover" }, body: { marginTop: 12, paddingHorizontal: 16, gap: 16 }, error: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, buttonContainer: { marginTop: 160 }, header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, restrictedAcronym: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;
@@ -105,7 +105,7 @@ export default function GuildProfileView(guildProfile) {
   }
   if (tmp5Result) {
     const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = tmp5(guildProfile(4603).Text, obj3);
+    tmp5Result = tmp5(guildProfile(4602).Text, obj3);
   }
   const items2 = [tmp5Result, closure_8(GuildProfileGamesDefault, { profile: guildProfile }), closure_8(GuildProfileTraitsDefault, { profile: guildProfile })];
   obj2.children = items2;

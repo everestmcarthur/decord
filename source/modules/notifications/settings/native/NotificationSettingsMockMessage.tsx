@@ -1,13 +1,13 @@
-// Module ID: 10249
-// Function ID: 10250
+// Module ID: 10247
+// Function ID: 10248
 // Name: NotificationSettingsMockMessage
-// Dependencies: [19, 17, 1371, 1074, 21, 4607, 576, 504, 4451, 4343, 4608, 4611, 4603, 1114, 1178, 10250, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4606, 576, 504, 4451, 4343, 4607, 4610, 4602, 1114, 1178, 10248, 2]
 // Exports: default
 
-// Module 10249 (NotificationSettingsMockMessage)
+// Module 10247 (NotificationSettingsMockMessage)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, padding: 16 }, cardContent: { display: "flex", flexDirection: "row" }, cardMessage: { marginLeft: 12, maxWidth: 240 }, overlay: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.overlay = rect;
@@ -60,7 +60,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl = tmp2(1114).intl;
     obj4.children = intl.string(tmp2(1114).t.WYyzI5);
-    let tmp11 = closure_7(tmp2(4603).Text, obj4);
+    let tmp11 = closure_7(tmp2(4602).Text, obj4);
     let tmp12 = closure_7;
   } else {
     const obj5 = { children: null };
@@ -68,11 +68,11 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const obj7 = { variant: "text-sm/normal", color: "text-link", children: null };
     const items1 = ["@", str, " "];
     obj7.children = items1;
-    const items2 = [closure_8(tmp2(4603).Text, obj7), ];
+    const items2 = [closure_8(tmp2(4602).Text, obj7), ];
     const intl3 = tmp2(1114).intl;
     items2[1] = intl3.string(tmp2(1114).t.WYyzI5);
     obj6.children = items2;
-    obj5.children = closure_8(tmp2(4603).Text, obj6);
+    obj5.children = closure_8(tmp2(4602).Text, obj6);
     tmp11 = closure_7(View, obj5);
     tmp12 = closure_7;
   }
@@ -88,7 +88,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj9 = { style: tmp.cardContent, children: null };
   const obj10 = { children: null };
   const obj3 = { withTiming: require("timing").withTiming, opacity: sharedValue, timingStandard: require("timingPresets").timingStandard };
-  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(10250), size: require("native").AvatarSizes.LARGE_48 });
+  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(10248), size: require("native").AvatarSizes.LARGE_48 });
   const items4 = [tmp12(View, obj10), ];
   const obj12 = { style: tmp.cardMessage, children: null };
   const obj13 = { variant: "text-sm/semibold", children: null };

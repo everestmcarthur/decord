@@ -1,13 +1,13 @@
-// Module ID: 9290
-// Function ID: 9291
+// Module ID: 9288
+// Function ID: 9289
 // Name: FireIcon
-// Dependencies: [19, 21, 576, 4307, 9291, 2]
+// Dependencies: [19, 21, 576, 4307, 9289, 2]
 // Exports: FireIcon
 
-// Module 9290 (FireIcon)
+// Module 9288 (FireIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod9291 from "module_9291" /* 9291 */;
+import _mod9289 from "module_9289" /* 9289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const FireIcon = function FireIcon(ORANGE_260) {
   }
   const merged = Object.assign(ORANGE_260, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9291, color: INTERACTIVE_ICON_DEFAULT, style: ORANGE_260.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9289, color: INTERACTIVE_ICON_DEFAULT, style: ORANGE_260.style });
 };

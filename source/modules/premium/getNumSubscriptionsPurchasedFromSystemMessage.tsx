@@ -1,10 +1,10 @@
-// Module ID: 8079
-// Function ID: 8080
+// Module ID: 8078
+// Function ID: 8079
 // Name: getNumSubscriptionsPurchasedFromSystemMessage
 // Dependencies: [2]
 // Exports: default
 
-// Module 8079 (getNumSubscriptionsPurchasedFromSystemMessage)
+// Module 8078 (getNumSubscriptionsPurchasedFromSystemMessage)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");

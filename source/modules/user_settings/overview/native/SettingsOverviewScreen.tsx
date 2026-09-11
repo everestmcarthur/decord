@@ -1,18 +1,18 @@
 // Module ID: 16992
 // Function ID: 16993
 // Name: SettingsOverviewScreen
-// Dependencies: [19, 8050, 21, 1114, 1369, 15550, 4264, 11564, 14745, 2]
+// Dependencies: [19, 8049, 21, 1114, 1369, 15550, 4264, 11562, 14742, 2]
 // Exports: default
 
 // Module 16992 (SettingsOverviewScreen)
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import MobileNotifSettings from "MobileNotifSettings" /* 15550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8050).MobileUserSettings;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
@@ -99,5 +99,5 @@ export default function SettingsOverviewScreen() {
     obj4.sections = items1;
     return SettingBuilders.createList(obj4);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14745).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14742).SearchableSettingsList, { node });
 };

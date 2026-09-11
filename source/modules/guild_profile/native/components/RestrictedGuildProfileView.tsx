@@ -1,18 +1,18 @@
-// Module ID: 9281
-// Function ID: 9282
+// Module ID: 9279
+// Function ID: 9280
 // Name: RestrictedGuildProfileView
-// Dependencies: [19, 17, 21, 9282, 4542, 4308, 576, 5039, 5636, 4603, 1114, 2]
+// Dependencies: [19, 17, 21, 9280, 4541, 4308, 576, 5038, 5635, 4602, 1114, 2]
 // Exports: default
 
-// Module 9281 (RestrictedGuildProfileView)
+// Module 9279 (RestrictedGuildProfileView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4308 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
-import GuildIcon from "GuildIcon" /* 5636 */;
-import GuildProfileView from "GuildProfileView" /* 9282 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import GuildIcon from "GuildIcon" /* 5635 */;
+import GuildProfileView from "GuildProfileView" /* 9280 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

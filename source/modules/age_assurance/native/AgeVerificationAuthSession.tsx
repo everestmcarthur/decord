@@ -1,10 +1,10 @@
-// Module ID: 8513
-// Function ID: 8514
+// Module ID: 8511
+// Function ID: 8512
 // Name: AgeVerificationAuthSession
 // Dependencies: [5, 17, 3, 560, 1115, 2]
 // Exports: closeAgeVerificationAuthSession, getIsAgeVerificationAuthSessionAwaitingResult, getIsAgeVerificationAuthSessionOpen, openAgeVerificationAuthSession, useIsAgeVerificationAuthSessionOpen
 
-// Module 8513 (AgeVerificationAuthSession)
+// Module 8511 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

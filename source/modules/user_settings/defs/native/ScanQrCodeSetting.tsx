@@ -1,18 +1,18 @@
 // Module ID: 15034
 // Function ID: 15035
 // Name: ScanQrCodeSetting
-// Dependencies: [5, 4817, 12, 1608, 5191, 4810, 13923, 1896, 11564, 1114, 14937, 2]
+// Dependencies: [5, 4816, 12, 1608, 5190, 4809, 13921, 1896, 11562, 1114, 14937, 2]
 
 // Module 15034 (ScanQrCodeSetting)
 import util from "util" /* 1114 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5191 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5190 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const NativePermissionTypes = fn(4817).NativePermissionTypes;
+const NativePermissionTypes = fn(4816).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const debounceResult = apply.debounce(asyncGeneratorStep(async (arg0, value) => {
   if (c3 === 2) {
     c3 = 3;

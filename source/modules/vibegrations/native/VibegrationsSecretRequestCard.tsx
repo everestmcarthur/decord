@@ -1,13 +1,13 @@
 // Module ID: 16686
 // Function ID: 16687
 // Name: VibegrationsSecretRequestCard
-// Dependencies: [19, 17, 21, 4607, 576, 4574, 16687, 4603, 1114, 3590, 5027, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 4573, 16687, 4602, 1114, 3590, 5026, 2]
 // Exports: default
 
 // Module 16686 (VibegrationsSecretRequestCard)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import VibegrationsSecretsSheet from "VibegrationsSecretsSheet" /* 16687 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, chips: null, chip: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.chips = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
@@ -41,7 +41,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
   let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1114).intl;
   obj2.children = intl.string(request(3590)["/e28TK"]);
-  const items1 = [closure_5(projectId(4603).Text, obj2), , , ];
+  const items1 = [closure_5(projectId(4602).Text, obj2), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -58,7 +58,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
     const obj5 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1114).intl;
     obj5.text = intl3.string(tmp8(3590)["gVV+HX"]);
-    items1[3] = tmp5(tmp6(5027).Button, obj5);
+    items1[3] = tmp5(tmp6(5026).Button, obj5);
     obj.children = items1;
     return closure_6(tmp4, obj);
   }

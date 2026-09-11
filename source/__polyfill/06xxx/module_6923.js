@@ -1,42 +1,54 @@
 // Module ID: 6923
 // Function ID: 6924
-// Dependencies: [109, 19, 21, 6924, 6921]
+// Dependencies: [6924, 6925, 6926, 6985, 6986, 6987, 6988, 6992, 6993, 6946, 6994, 6995, 6990, 6989, 6996, 6947, 6997]
 
 // Module 6923
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop_mod from "module_19" /* 19 */;
+import ErrorMessages from "ErrorMessages" /* 6925 */;
+import FlashList from "FlashList" /* 6926 */;
+import _mod6946 from "module_6946" /* 6946 */;
+import _mod6947 from "module_6947" /* 6947 */;
+import _mod6985 from "module_6985" /* 6985 */;
+import RenderTargetOptions from "RenderTargetOptions" /* 6986 */;
+import _modDef6987 from "module_6987" /* 6987 */;
+import _mod6988 from "module_6988" /* 6988 */;
+import Cancellable from "Cancellable" /* 6989 */;
+import JSFPSMonitor from "JSFPSMonitor" /* 6990 */;
+import _mod6992 from "module_6992" /* 6992 */;
+import runScrollBenchmark from "runScrollBenchmark" /* 6993 */;
+import _mod6994 from "module_6994" /* 6994 */;
+import _mod6995 from "module_6995" /* 6995 */;
+import _modDef6996 from "module_6996" /* 6996 */;
+import LayoutCommitObserver from "LayoutCommitObserver" /* 6997 */;
+import get_ActivityIndicator from "module_6924" /* 6924 */;
 
-let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
-let noop = fn(19);
-const forwardRef = noop.forwardRef;
-({ useMemo: metroRequire, memo } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-try {
-  const FlashList = fn(6924);
-  const memoResult = memo(forwardRef((focusHook, ref) => {
-    focusHook = focusHook.focusHook;
-    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
-    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
-    closure_6(() => {
-      if (!FlashList) {
-        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
-      }
-    }, []);
-    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
-    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
-    let merged = Object.assign(tmp);
-    return <FlashList.FlashList ref={arg1} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
-      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
-      const obj = { ref };
-      const merged1 = Object.assign(merged);
-      obj.focusHook = focusHook;
-      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
-      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
-      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
-    }), items)} />;
-  }));
-  exports.default = memoResult;
-  exports.BottomSheetFlashList = memoResult;
-} catch (err) {
+if (get_ActivityIndicator.isNewArch()) {
+  exports.FlashList = FlashList.FlashList;
+  exports.FlashListRef = _mod6985.FlashListRef;
+  exports.FlashListProps = RenderTargetOptions.FlashListProps;
+  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
+  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
+  exports.RenderTarget = RenderTargetOptions.RenderTarget;
+  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
+  exports.AnimatedFlashList = _modDef6987;
+  exports.useBenchmark = _mod6988.useBenchmark;
+  exports.BenchmarkParams = _mod6988.BenchmarkParams;
+  exports.BenchmarkResult = _mod6988.BenchmarkResult;
+  exports.useDataMultiplier = _mod6992.useDataMultiplier;
+  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
+  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
+  exports.useLayoutState = _mod6946.useLayoutState;
+  exports.useRecyclingState = _mod6994.useRecyclingState;
+  exports.useMappingHelper = _mod6995.useMappingHelper;
+  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
+  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
+  exports.autoScroll = Cancellable.autoScroll;
+  exports.Cancellable = Cancellable.Cancellable;
+  exports.ViewToken = _modDef6996;
+  exports.useFlashListContext = _mod6947.useFlashListContext;
+  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
+  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
+} else {
+  const _Error = Error;
+  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
+  throw error;
 }

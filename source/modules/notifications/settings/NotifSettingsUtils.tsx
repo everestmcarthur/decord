@@ -1,13 +1,13 @@
-// Module ID: 13736
-// Function ID: 13737
+// Module ID: 13734
+// Function ID: 13735
 // Name: settings/NotifSettingsUtils
-// Dependencies: [13737, 1223, 13738, 504, 2]
+// Dependencies: [13735, 1223, 13736, 504, 2]
 // Exports: b64ToDeclarativeSettingsProto, useNotifSettingRadioValue, useNotifSettingToggleValue, useNotifSettingValue
 
-// Module 13736 (settings/NotifSettingsUtils)
+// Module 13734 (settings/NotifSettingsUtils)
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
-import notification_settings from "notification_settings" /* 13738 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13737 */;
+import notification_settings from "notification_settings" /* 13736 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13735 */;
 
 const require = globalThis.__r;
 

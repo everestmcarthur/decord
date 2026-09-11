@@ -1,10 +1,10 @@
-// Module ID: 14613
-// Function ID: 14614
+// Module ID: 14611
+// Function ID: 14612
 // Name: getChannelDetailsFromRoute
 // Dependencies: [4464, 2]
 // Exports: default
 
-// Module 14613 (getChannelDetailsFromRoute)
+// Module 14611 (getChannelDetailsFromRoute)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// Module ID: 9540
-// Function ID: 9541
+// Module ID: 9538
+// Function ID: 9539
 // Name: beginConsoleTransfer
-// Dependencies: [5, 1074, 9541, 9548, 4574, 9549, 1896, 1250, 9553, 2]
+// Dependencies: [5, 1074, 9539, 9546, 4573, 9547, 1896, 1250, 9551, 2]
 // Exports: beginConsoleTransfer
 
-// Module 9540 (beginConsoleTransfer)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9541 */;
-import transferToXboxDefault from "transferToXbox" /* 9553 */;
+// Module 9538 (beginConsoleTransfer)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9539 */;
+import transferToXboxDefault from "transferToXbox" /* 9551 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

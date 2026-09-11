@@ -1,13 +1,13 @@
 // Module ID: 16369
 // Function ID: 16370
 // Name: computeGuildsBarCutout
-// Dependencies: [17, 16353, 1178, 8907, 2]
+// Dependencies: [17, 16353, 1178, 8905, 2]
 // Exports: default
 
 // Module 16369 (computeGuildsBarCutout)
 import _mod17 from "module_17" /* 17 */;
 import native from "native" /* 1178 */;
-import ClipView from "ClipView" /* 8907 */;
+import ClipView from "ClipView" /* 8905 */;
 import GuildsBarConstants from "GuildsBarConstants" /* 16353 */;
 import size from "module_2" /* 2 */;
 

@@ -1,20 +1,20 @@
 // Module ID: 17021
 // Function ID: 17022
 // Name: PremiumDiscountOfferActionSheetContent
-// Dependencies: [19, 17, 1373, 21, 4607, 576, 11921, 1114, 9514, 5126, 5182, 4264, 5744, 4603, 15756, 5027, 8755, 2]
+// Dependencies: [19, 17, 1373, 21, 4606, 576, 11919, 1114, 9512, 5125, 5181, 4264, 5743, 4602, 15756, 5026, 8753, 2]
 
 // Module 17021 (PremiumDiscountOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4264 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import FolderIcon from "FolderIcon" /* 5126 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5182 */;
-import native from "native" /* 5744 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8755 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9514 */;
-import UserIcon from "UserIcon" /* 11921 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import FolderIcon from "FolderIcon" /* 5125 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5181 */;
+import native from "native" /* 5743 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8753 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 9512 */;
+import UserIcon from "UserIcon" /* 11919 */;
 import PremiumPerksListDefault from "PremiumPerksList" /* 15756 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };

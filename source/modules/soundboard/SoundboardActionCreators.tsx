@@ -1,16 +1,16 @@
-// Module ID: 7412
-// Function ID: 7413
+// Module ID: 7411
+// Function ID: 7412
 // Name: SoundboardActionCreators
-// Dependencies: [5, 5064, 5066, 1074, 1084, 1272, 5072, 573, 7413, 4509, 7414, 1242, 1940, 12, 4951, 1114, 7415, 2]
+// Dependencies: [5, 5063, 5065, 1074, 1084, 1272, 5071, 573, 7412, 4508, 7413, 1242, 1940, 12, 4950, 1114, 7414, 2]
 // Exports: addFavoriteSound, deleteSound, fetchSoundGuildData, maybeFetchSoundboardSounds, muteCustomJoinSound, playSoundLocally, removeFavoriteSound, reportSoundFinishedPlaying, reportSoundStartedPlaying, updateSound, updateUserSoundboardVolume, uploadSound
 
-// Module 7412 (SoundboardActionCreators)
+// Module 7411 (SoundboardActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5064 */;
+import SoundboardStore from "SoundboardStore" /* 5063 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7414).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7413).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -86,7 +86,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7414);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7413);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds() {
   closure_3 = tmp3;
@@ -119,159 +119,23 @@ let closure_14 = async function _maybeFetchSoundboardSounds() {
   }
   return closure_130_2;
 };
-let closure_15 = async function _uploadSound(arg0, value) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          ({ guildId: closure_129_0, name: closure_129_1, sound: closure_129_2, volume: closure_129_3, emojiId: closure_129_4, emojiName: closure_129_5 } = closure_0);
-          closure_129_6 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const request = { url: closure_130_6.GUILD_SOUNDBOARD_SOUNDS(closure_129_0), body: null, rejectWithError: null };
-          const obj5 = { name: closure_129_1, sound: closure_129_2, volume: closure_129_3, emoji_id: closure_129_4, emoji_name: closure_129_5 };
-          request.body = obj5;
-          request.rejectWithError = closure_130_0(closure_130_2[5]).rejectWithMigratedError();
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: HTTP.post(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_6 = value;
-        c4 = 3;
-        const obj8 = { value: closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0), done: true };
-        return obj8;
-      }
-    } catch (tmp12) {
-      c4 = tmp;
-      throw tmp12;
-    }
-  }
+let closure_15 = async function _uploadSound() {
+  closure_1 = tmp2;
+  ({ guildId: closure_129_0, name: closure_129_1, sound: closure_129_2, volume: closure_129_3, emojiId: closure_129_4, emojiName: closure_129_5 } = closure_0);
+  await "PX_16";
+  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+  const request = { url: closure_130_6.GUILD_SOUNDBOARD_SOUNDS(closure_129_0), body: { name: closure_129_1, sound: closure_129_2, volume: closure_129_3, emoji_id: closure_129_4, emoji_name: closure_129_5 }, rejectWithError: closure_130_0(closure_130_2[5]).rejectWithMigratedError() };
+  closure_129_6 = await HTTP.post(request);
+  return closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0);
 };
-let closure_16 = async function _updateSound(arg0, value) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          ({ guildId: closure_129_0, soundId: closure_129_1, name: closure_129_2, volume: closure_129_3, emojiId: closure_129_4, emojiName: closure_129_5 } = closure_0);
-          closure_129_6 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const request = { url: closure_130_6.GUILD_SOUNDBOARD_SOUND(closure_129_0, closure_129_1), body: null, rejectWithError: null };
-          const obj5 = { name: closure_129_2, volume: closure_129_3, emoji_id: closure_129_4, emoji_name: closure_129_5 };
-          request.body = obj5;
-          request.rejectWithError = closure_130_0(closure_130_2[5]).rejectWithMigratedError();
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: HTTP.patch(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_6 = value;
-        c4 = 3;
-        const obj8 = { value: closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0), done: true };
-        return obj8;
-      }
-    } catch (tmp12) {
-      c4 = tmp;
-      throw tmp12;
-    }
-  }
+let closure_16 = async function _updateSound() {
+  closure_1 = tmp2;
+  ({ guildId: closure_129_0, soundId: closure_129_1, name: closure_129_2, volume: closure_129_3, emojiId: closure_129_4, emojiName: closure_129_5 } = closure_0);
+  await "PX_16";
+  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+  const request = { url: closure_130_6.GUILD_SOUNDBOARD_SOUND(closure_129_0, closure_129_1), body: { name: closure_129_2, volume: closure_129_3, emoji_id: closure_129_4, emoji_name: closure_129_5 }, rejectWithError: closure_130_0(closure_130_2[5]).rejectWithMigratedError() };
+  closure_129_6 = await HTTP.patch(request);
+  return closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0);
 };
 let closure_17 = async function _deleteSound(arg0, value) {
   if (c2 === 2) {
@@ -394,7 +258,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0, value) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5066).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5065).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const UserSettingsConstants = fn(1084);

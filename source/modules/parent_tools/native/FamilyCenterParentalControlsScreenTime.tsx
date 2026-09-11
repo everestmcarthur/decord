@@ -1,7 +1,7 @@
 // Module ID: 14987
 // Function ID: 14988
 // Name: FamilyCenterParentalControlsScreenTime
-// Dependencies: [17, 1074, 21, 4607, 576, 10175, 5657, 4603, 1114, 2396, 14948, 1483, 5739, 2]
+// Dependencies: [17, 1074, 21, 4606, 576, 10173, 5656, 4602, 1114, 2396, 14948, 1483, 5738, 2]
 // Exports: default
 
 // Module 14987 (FamilyCenterParentalControlsScreenTime)
@@ -10,7 +10,7 @@ import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -21,10 +21,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(10175).getScheduleRuleDateRange(rule);
-  let obj = rule(10175);
-  const obj2 = rule(10175);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10175).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(10173).getScheduleRuleDateRange(rule);
+  let obj = rule(10173);
+  const obj2 = rule(10173);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10173).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1114).intl;
   const string = intl.string;
   const tmp4 = _modDef2396;
@@ -33,7 +33,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(4603).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj3.trailing = closure_5(rule(4602).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj3.arrow = !readOnly;
   let fn;
   if (!readOnly) {
@@ -45,7 +45,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(5657).TableRow, obj3);
+  return closure_5(rule(5656).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

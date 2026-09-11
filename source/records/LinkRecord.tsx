@@ -1,9 +1,9 @@
-// Module ID: 9931
-// Function ID: 9932
+// Module ID: 9929
+// Function ID: 9930
 // Name: LinkRecord
 // Dependencies: [1386, 1074, 2]
 
-// Module 9931 (LinkRecord)
+// Module 9929 (LinkRecord)
 import Record from "Record" /* 1386 */;
 
 const Routes = fn(1074).Routes;

@@ -1,15 +1,15 @@
-// Module ID: 8506
-// Function ID: 8507
+// Module ID: 8504
+// Function ID: 8505
 // Name: SafetyHubUtils
-// Dependencies: [502, 8507, 1074, 4198, 4757, 1114, 8508, 504, 2]
+// Dependencies: [502, 8505, 1074, 4198, 4756, 1114, 8506, 504, 2]
 // Exports: capitalizeText, getAppealSignalDisplayText, getClassificationExpiration, getClassificationRelativeIncidentTime, getRequestReviewErrorFromCode, getSpoilerFlagsForAttachment, isCurrentUserSuspended, isFlaggedContentEmpty, isGuildClassification, mapCtaToNativeData, parseMessageForProps, useIsSuspendedUser
 
-// Module 8506 (SafetyHubUtils)
+// Module 8504 (SafetyHubUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4757 */;
-import SafetyHubModels from "SafetyHubModels" /* 8508 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4756 */;
+import SafetyHubModels from "SafetyHubModels" /* 8506 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -47,7 +47,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(8507);
+const SafetyHubConstants = fn(8505);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);

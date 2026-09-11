@@ -1,9 +1,9 @@
-// Module ID: 17946
-// Function ID: 17947
+// Module ID: 17945
+// Function ID: 17946
 // Name: IntentsBindings
 // Dependencies: [2]
 
-// Module 17946 (IntentsBindings)
+// Module 17945 (IntentsBindings)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");

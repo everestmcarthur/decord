@@ -1,7 +1,9 @@
 // Module ID: 9970
 // Function ID: 9971
-// Dependencies: []
+// Dependencies: [1122]
 
 // Module 9970
+import registerAsset from "module_1122" /* 1122 */;
 
-export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/auth", width: 100, height: 100, scales: [1], hash: "2466a8cae3eebcc6d13072f6ff1957c4", name: "img-auth-qrcode-overlay", type: "png" });

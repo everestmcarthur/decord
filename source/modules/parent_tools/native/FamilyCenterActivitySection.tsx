@@ -1,13 +1,13 @@
 // Module ID: 14954
 // Function ID: 14955
 // Name: FamilyCenterActivitySection
-// Dependencies: [32, 19, 17, 7612, 21, 4607, 576, 8739, 7666, 14949, 4603, 12012, 1114, 2396, 14955, 5175, 2]
+// Dependencies: [32, 19, 17, 7611, 21, 4606, 576, 8737, 7665, 14949, 4602, 12010, 1114, 2396, 14955, 5174, 2]
 // Exports: default
 
 // Module 14954 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 576 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7666 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8739 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7665 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8737 */;
 import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14949 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,11 +43,11 @@ function FamilyCenterActivitySectionHeader(displayType) {
       tmp10 = sectionDescriptionResult;
     }
     const obj2 = { variant: "text-sm/semibold", style: tmp.header, children: sectionHeaderResult };
-    const items = [React7(tmp3(4603).Text, obj2), ];
+    const items = [React7(tmp3(4602).Text, obj2), ];
     let tmp14Result = null;
     if (null !== tmp10) {
       const obj3 = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
-      tmp14Result = React7(tmp3(4603).Text, obj3);
+      tmp14Result = React7(tmp3(4602).Text, obj3);
     }
     const obj6 = { children: null };
     items[1] = tmp14Result;
@@ -58,16 +58,16 @@ function FamilyCenterActivitySectionHeader(displayType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7612);
+const FamilyCenterConstants = fn(7611);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: closure_7, TeenActionDisplayType: closure_8 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj2 = { header: { marginBottom: nativeDefault.space.PX_4 }, description: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_4 };
 obj2.description = { marginBottom: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj6 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
 let obj4 = { marginBottom: nativeDefault.space.PX_8 };
 obj6.loadMore = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
@@ -83,7 +83,7 @@ export default function FamilyCenterActivitySection(displayType) {
   const obj = displayType(14949);
   const actionTotalsForDisplayType = displayType(14949).useActionTotalsForDisplayType(displayType);
   const obj2 = displayType(14949);
-  const familyCenterActions = displayType(12012).useFamilyCenterActions({});
+  const familyCenterActions = displayType(12010).useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
   dependencyMap = tmp6[1];
@@ -116,8 +116,8 @@ export default function FamilyCenterActivitySection(displayType) {
       } else {
         const obj10 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp7, children: null };
         const obj11 = { style: loadMoreButton.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-        obj10.children = tmp17(tmp(4603).Text, obj11);
-        tmp17Result = tmp17(tmp(5175).PressableOpacity, obj10);
+        obj10.children = tmp17(tmp(4602).Text, obj11);
+        tmp17Result = tmp17(tmp(5174).PressableOpacity, obj10);
       }
       obj7.children = tmp17Result;
       tmp17(tmp16, obj7);

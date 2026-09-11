@@ -1,13 +1,13 @@
 // Module ID: 16379
 // Function ID: 16380
 // Name: GuildsBarMessages
-// Dependencies: [19, 4428, 1074, 21, 16380, 16365, 504, 16368, 576, 1114, 16381, 5123, 2]
+// Dependencies: [19, 4428, 1074, 21, 16380, 16365, 504, 16368, 576, 1114, 16381, 5122, 2]
 
 // Module 16379 (GuildsBarMessages)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ChatIcon from "ChatIcon" /* 5123 */;
+import ChatIcon from "ChatIcon" /* 5122 */;
 import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 16365 */;
 import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 16368 */;
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16380 */;
@@ -41,7 +41,7 @@ export default noop.memo(function GuildsBarMessages() {
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = nativeDefault.colors;
-  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "arrow", externalChildren: "button", expandedChildren: "next", children: "scene" };
+  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "heading-lg/semibold", externalChildren: "text-default", expandedChildren: null, children: 1 };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = tmp(1114).intl;
@@ -49,5 +49,5 @@ export default noop.memo(function GuildsBarMessages() {
   obj3.externalChildren = badge;
   obj3.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
   obj3.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "arrow", externalChildren: "button", expandedChildren: "next", children: "scene" });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "heading-lg/semibold", externalChildren: "text-default", expandedChildren: null, children: 1 });
 });

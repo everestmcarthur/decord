@@ -1,24 +1,24 @@
 // Module ID: 16276
 // Function ID: 16277
 // Name: GuildRoleSubscriptionsRow
-// Dependencies: [19, 1074, 1964, 10209, 21, 4607, 576, 1100, 4574, 16277, 1896, 12474, 1114, 12874, 2]
+// Dependencies: [19, 1074, 1964, 10207, 21, 4606, 576, 1100, 4573, 16277, 1896, 12472, 1114, 12872, 2]
 // Exports: default
 
 // Module 16276 (GuildRoleSubscriptionsRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12474 */;
-import _modDef12874 from "module_12874" /* 12874 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12472 */;
+import _modDef12872 from "module_12872" /* 12872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
-let obj2 = { container: { marginVertical: fn(10209).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4606);
+let obj2 = { container: { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx");
@@ -40,7 +40,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
       }
     });
   }, items1);
-  const ChannelModes = id(12474).ChannelModes;
+  const ChannelModes = id(12472).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -58,7 +58,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1114).intl;
   obj2.name = intl2.string(tmp6(1114).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(12474).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(12474).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12874 });
+  obj.name = jsx(tmp6(12472).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(12472).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12872 });
   return <tmp8 onPress={callback} onLongPress={callback1} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

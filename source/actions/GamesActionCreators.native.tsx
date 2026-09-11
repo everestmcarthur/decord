@@ -1,9 +1,9 @@
-// Module ID: 11860
-// Function ID: 11861
+// Module ID: 11858
+// Function ID: 11859
 // Name: GamesActionCreators
-// Dependencies: [5, 1074, 1920, 9604, 1093, 7387, 4301, 573, 1272, 9599, 9600, 9626, 2]
+// Dependencies: [5, 1074, 1920, 9602, 1093, 7386, 4301, 573, 1272, 9597, 9598, 9624, 2]
 
-// Module 11860 (GamesActionCreators)
+// Module 11858 (GamesActionCreators)
 import LinkingDefault from "Linking" /* 4301 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -34,7 +34,7 @@ function fetchJoinSecret(application, arg1) {
 const Constants = fn(1074);
 ({ Endpoints: closure_4, DiscordConnectDeeplinks: hasOwnProperty, WebBrowserType: metroRequire, ActivityFlags: closure_7 } = Constants);
 const ActivityIntent = fn(1920).ActivityIntent;
-const MAIN_SURFACE = fn(9604).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9602).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 

@@ -1,15 +1,15 @@
-// Module ID: 11206
-// Function ID: 11207
+// Module ID: 11204
+// Function ID: 11205
 // Name: UserProfilePreview
-// Dependencies: [32, 19, 17, 8246, 7282, 21, 4607, 576, 504, 8272, 8313, 8327, 11207, 8324, 8252, 8287, 8255, 8328, 8310, 4317, 8307, 8293, 8332, 8897, 8342, 11208, 11209, 11249, 11303, 8895, 2]
+// Dependencies: [32, 19, 17, 8245, 7281, 21, 4606, 576, 504, 8271, 8311, 8325, 11205, 8322, 8251, 8286, 8254, 8326, 8308, 4317, 8305, 8292, 8330, 8895, 8340, 11206, 11207, 11247, 11301, 8893, 2]
 // Exports: default
 
-// Module 11206 (UserProfilePreview)
+// Module 11204 (UserProfilePreview)
 import nativeDefault from "native" /* 576 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8310 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8308 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8246 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 
 const require = globalThis.__r;
 
@@ -18,11 +18,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(7282);
+const Constants = fn(7281);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {
@@ -134,7 +134,7 @@ export default function UserProfilePreview(hideFrame) {
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
   }
-  const tmp4ResultResult = require("useMaybeFetchProfileFrame")(skuId1, "UserProfilePreview");
+  const tmp4ResultResult = require("useMaybeFetchProfileFrame")(skuId1);
   importDefault = tmp4ResultResult;
   const tmp4Result = require("useMaybeFetchProfileFrame");
   const pendingAvatarSrc = guildId(set[16]).getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });

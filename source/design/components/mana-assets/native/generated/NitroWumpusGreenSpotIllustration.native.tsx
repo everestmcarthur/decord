@@ -1,13 +1,13 @@
-// Module ID: 6389
-// Function ID: 6390
+// Module ID: 6388
+// Function ID: 6389
 // Name: NitroWumpusGreenSpotIllustration
-// Dependencies: [21, 5639, 6390, 2]
+// Dependencies: [21, 5638, 6389, 2]
 // Exports: NitroWumpusGreenSpotIllustration
 
-// Module 6389 (NitroWumpusGreenSpotIllustration)
+// Module 6388 (NitroWumpusGreenSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6390 from "module_6390" /* 6390 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6389 from "module_6389" /* 6389 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroWumpusGreenSpotIllustration = function NitroWumpusGreenSpotIll
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6390 };
+  const obj2 = { uri: _modDef6389 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

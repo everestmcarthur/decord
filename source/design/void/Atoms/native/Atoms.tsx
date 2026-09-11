@@ -1,12 +1,12 @@
-// Module ID: 14180
-// Function ID: 14181
+// Module ID: 14178
+// Function ID: 14179
 // Name: Atoms
-// Dependencies: [17, 2, 8705, 14181]
+// Dependencies: [17, 2, 8703, 14179]
 
-// Module 14180 (Atoms)
+// Module 14178 (Atoms)
 import _mod17 from "module_17" /* 17 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8705 */;
-import native from "native" /* 14181 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8703 */;
+import native from "native" /* 14179 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");

@@ -1,9 +1,9 @@
-// Module ID: 4601
-// Function ID: 4602
+// Module ID: 4600
+// Function ID: 4601
 // Name: CrossPlatformNativeUtils
 // Dependencies: [2]
 
-// Module 4601 (CrossPlatformNativeUtils)
+// Module 4600 (CrossPlatformNativeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");

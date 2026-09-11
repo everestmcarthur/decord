@@ -1,14 +1,14 @@
-// Module ID: 13826
-// Function ID: 13827
+// Module ID: 13824
+// Function ID: 13825
 // Name: NUFChannelIllustration
-// Dependencies: [32, 19, 17, 21, 4607, 576, 1114, 13827, 13828, 4343, 4608, 13829, 13830, 13831, 13832, 5659, 5132, 4603, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 1114, 13825, 13826, 4343, 4607, 13827, 13828, 13829, 13830, 5658, 5131, 4602, 2]
 // Exports: default
 
-// Module 13826 (NUFChannelIllustration)
+// Module 13824 (NUFChannelIllustration)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import timing from "timing" /* 4608 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import timing from "timing" /* 4607 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { width: "100%", maxWidth: 275, position: "relative", display: "flex", justifyContent: "center", alignItems: "center", marginTop: 24, marginBottom: 24 }, card: { padding: 0, width: "100%" }, cardBackground: null, header: null, content: null, message: null, messageAvatar: null, messageContent: null, starMedium: null, starSmall: null, starGreen: null, starBlue: null, starPink: null, starPurple: null };
 let size = { width: "90%", height: 12, borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.cardBackground = size;
@@ -55,7 +55,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = closure_1_0(1114).intl;
       obj.name = intl2.string(closure_1_0(1114).t["9m/HsX"]);
-      obj.avatar = closure_1_1(13827);
+      obj.avatar = closure_1_1(13825);
       obj.message = intl.string(closure_1_0(1114).t["5alrl0"]);
       items[tmp] = obj;
       return items;
@@ -66,7 +66,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = closure_1_0(1114).intl;
       obj.name = intl2.string(closure_1_0(1114).t["AW1kM+"]);
-      obj.avatar = closure_1_1(13828);
+      obj.avatar = closure_1_1(13826);
       obj.message = intl.string(closure_1_0(1114).t["5Oo+vS"]);
       items[tmp] = obj;
       return items;
@@ -102,22 +102,22 @@ export default function NUFChannelIllustration() {
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { source: null, style: null };
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  obj6.source = first(13829);
+  obj6.source = first(13827);
   const items2 = [, ];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj6.style = items2;
   const items3 = [closure_7(closure_6, obj6), , , , , ];
-  const obj7 = { source: first(13830), style: null };
+  const obj7 = { source: first(13828), style: null };
   const items4 = [, ];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   obj7.style = items4;
   items3[1] = closure_7(closure_6, obj7);
-  const obj8 = { source: first(13831), style: null };
+  const obj8 = { source: first(13829), style: null };
   const items5 = [, ];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
   obj8.style = items5;
   items3[2] = closure_7(closure_6, obj8);
-  const obj9 = { source: first(13832), style: null };
+  const obj9 = { source: first(13830), style: null };
   const items6 = [, ];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
   obj9.style = items6;

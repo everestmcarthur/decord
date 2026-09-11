@@ -1,7 +1,7 @@
 // Module ID: 15121
 // Function ID: 15122
 // Name: QuestHomeEmptyState
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 1114, 4308, 4467, 7197, 1115, 4603, 15122, 5039, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 1114, 4308, 4467, 7196, 1115, 4602, 15122, 5038, 2]
 // Exports: default
 
 // Module 15121 (QuestHomeEmptyState)
@@ -10,8 +10,8 @@ import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useToken from "useToken" /* 4308 */;
 import useChatLayoutDefault from "useChatLayout" /* 4467 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7197 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContentContainer: { top: -55, paddingHorizontal: nativeDefault.space.PX_32 }, emptyStateContentTitle: { textAlign: "center" }, emptyStateContentDescription: { textAlign: "center", marginTop: 4 }, emptyImage: { flex: 1, width: "100%", aspectRatio: 1.6375545851528384, minWidth: "100%", position: "absolute", bottom: 0, zIndex: -1 }, gradient: { height: 22, width: "100%", position: "absolute", bottom: 0 }, actionWrapper: { marginTop: 16, alignSelf: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -63,7 +63,7 @@ export default function QuestHomeEmptyState(subtitle) {
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);
     const items3 = ["rgba(0, 0, 0, 0)", token];
     obj22.colors = items3;
-    items2[1] = tmp9(tmp7(5039), obj22);
+    items2[1] = tmp9(tmp7(5038), obj22);
     obj10.children = items2;
     tmp11Result = tmp11(React6, obj10);
   }

@@ -1,13 +1,13 @@
-// Module ID: 8051
-// Function ID: 8052
+// Module ID: 8050
+// Function ID: 8051
 // Name: canReplyToMessage
-// Dependencies: [32, 4245, 1371, 1074, 1085, 1089, 7343, 8052, 504, 2]
+// Dependencies: [32, 4245, 1371, 1074, 1085, 1089, 7342, 8051, 504, 2]
 // Exports: canReplyToMessage, useCanReplyToMessage
 
-// Module 8051 (canReplyToMessage)
+// Module 8050 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1089 */;
-import ThreadHooks from "ThreadHooks" /* 7343 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8052 */;
+import ThreadHooks from "ThreadHooks" /* 7342 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 import UserStore from "UserStore" /* 1371 */;

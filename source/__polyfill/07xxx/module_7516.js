@@ -1,24 +1,27 @@
 // Module ID: 7516
 // Function ID: 7517
-// Dependencies: [19, 7517]
+// Dependencies: []
 // Exports: default
 
 // Module 7516
-import _mod19 from "module_19" /* 19 */;
-import _modDef7517 from "module_7517" /* 7517 */;
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
-
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef7517(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
+export default function areHookInputsEqual(arg0, arg1) {
+  if (arg0.length !== arg1.length) {
+    return false;
+  } else {
+    if (0 < arg1.length) {
+      let num3 = 0;
+      if (0 < arg0.length) {
+        const _Object = Object;
+        while (Object.is(arg0[num3], arg1[num3])) {
+          let sum = num3 + 1;
+          if (sum < arg1.length) {
+            num3 = sum;
+          }
+        }
+        return false;
+      }
+    }
+    return true;
   }
-  return tmp.current;
 };

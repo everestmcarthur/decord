@@ -1,22 +1,22 @@
-// Module ID: 13850
-// Function ID: 13851
+// Module ID: 13848
+// Function ID: 13849
 // Name: VoiceChannelHeader
-// Dependencies: [19, 17, 1956, 1979, 4245, 1074, 21, 4607, 576, 13851, 13852, 4603, 13853, 504, 10030, 4760, 9913, 1114, 11685, 1178, 5114, 13855, 10103, 10123, 5175, 2]
+// Dependencies: [19, 17, 1956, 1979, 4245, 1074, 21, 4606, 576, 13849, 13850, 4602, 13851, 504, 10028, 4759, 9911, 1114, 11683, 1178, 5113, 13853, 10101, 10121, 5174, 2]
 
-// Module 13850 (VoiceChannelHeader)
+// Module 13848 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import useChannelNameDefault from "useChannelName" /* 4760 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5114 */;
-import Pressables from "Pressables" /* 5175 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9913 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10030 */;
-import _modDef10123 from "module_10123" /* 10123 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11685 */;
-import CallStateHooks from "CallStateHooks" /* 13851 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13852 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13853 */;
+import useChannelNameDefault from "useChannelName" /* 4759 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5113 */;
+import Pressables from "Pressables" /* 5174 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9911 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10028 */;
+import _modDef10121 from "module_10121" /* 10121 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11683 */;
+import CallStateHooks from "CallStateHooks" /* 13849 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13850 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13851 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -34,10 +34,10 @@ function PrivateChannelSubtitle(channel) {
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     const obj3 = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
-    tmp6Result = tmp6(tmp7(4603).Text, obj3);
+    tmp6Result = tmp6(tmp7(4602).Text, obj3);
   }
   items[1] = tmp6Result;
-  let tmp6Result2 = state === tmp7(13851).CallStates.CONNECTED;
+  let tmp6Result2 = state === tmp7(13849).CallStates.CONNECTED;
   if (tmp6Result2) {
     const obj4 = { channelId: channel.id, style: tmp.subtitle };
     tmp6Result2 = tmp6(OngoingCallTimerDefault, obj4);
@@ -150,7 +150,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10123, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10121, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);
@@ -167,7 +167,7 @@ const Constants = fn(1074);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: { flexDirection: "row", tintColor: nativeDefault.colors.WHITE }, subtitle: null, subtitleWrapper: null };
 let obj3 = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
 obj2.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };

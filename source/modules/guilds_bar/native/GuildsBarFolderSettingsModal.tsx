@@ -1,19 +1,19 @@
 // Module ID: 16360
 // Function ID: 16361
 // Name: GuildsBarFolderSettingsModal
-// Dependencies: [32, 19, 17, 5490, 16361, 21, 4607, 9451, 7055, 4574, 16362, 1896, 576, 5025, 6678, 1114, 5739, 5657, 1091, 14652, 5676, 504, 16359, 7074, 2]
+// Dependencies: [32, 19, 17, 5489, 16361, 21, 4606, 9449, 7054, 4573, 16362, 1896, 576, 5024, 6677, 1114, 5738, 5656, 1091, 14650, 5675, 504, 16359, 7073, 2]
 // Exports: default
 
 // Module 16360 (GuildsBarFolderSettingsModal)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import NavigatorHeader from "NavigatorHeader" /* 5676 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9451 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9449 */;
 import GuildsBarFolderSettingsModalActionCreators from "GuildsBarFolderSettingsModalActionCreators" /* 16359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 
 require = fn;
 function GuildFolderSettingsScene(color) {
@@ -34,7 +34,7 @@ function GuildFolderSettingsScene(color) {
     obj.openLazy(asyncRequireImpl(16362, dependencyMap.paths), "RoleColorPicker", { color: tmp3, defaultColor, onSelect: onColorChange });
   }, items);
   obj2.padding = onColorChange(576).space.PX_16;
-  obj2.paddingBottom = 38 + onColorChange(7055)().insets.bottom;
+  obj2.paddingBottom = 38 + onColorChange(7054)().insets.bottom;
   obj.contentContainerStyle = obj2;
   const obj3 = { spacing: onColorChange(576).space.PX_16, children: null };
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: 32, autoFocus: true, isClearable: true };
@@ -44,7 +44,7 @@ function GuildFolderSettingsScene(color) {
   obj4.placeholder = intl2.string(color(1114).t.xV9hVh);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  const items1 = [closure_10(color(6678).TextInput, obj4), ];
+  const items1 = [closure_10(color(6677).TextInput, obj4), ];
   const obj5 = { label: null, subLabel: null, onPress: null, arrow: true, trailing: null };
   const intl3 = color(1114).intl;
   obj5.label = intl3.string(color(1114).t.xpurRF);
@@ -62,11 +62,11 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj6 = { hasIcons: false, children: null };
-  obj5.trailing = closure_10(onColorChange(14652), { color: tmp11, style: tmp.colorBlock });
-  obj6.children = closure_10(color(5657).TableRow, obj5);
-  items1[1] = closure_10(color(5739).TableRowGroup, obj6);
+  obj5.trailing = closure_10(onColorChange(14650), { color: tmp11, style: tmp.colorBlock });
+  obj6.children = closure_10(color(5656).TableRow, obj5);
+  items1[1] = closure_10(color(5738).TableRowGroup, obj6);
   obj3.children = items1;
-  obj.children = closure_11(color(5025).Stack, obj3);
+  obj.children = closure_11(color(5024).Stack, obj3);
   return closure_10(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -75,7 +75,7 @@ const GuildsBarConstants = fn(16361);
 ({ DEFAULT_FOLDER_COLOR: closure_8, normalizeFolderColor: closure_9 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ scrollView: { flex: 1 }, colorBlock: { marginHorizontal: 0, marginVertical: 0, minWidth: 24, height: 24, borderRadius: 3 } });
 let c14 = "Folder Settings";
 const size = fn(2);
@@ -163,13 +163,13 @@ export default function GuildFolderSettingsModal(folderId) {
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(callback1);
     if (closure_5) {
       const intl2 = tmp3(1114).intl;
-      let fn = tmp3(5676).getHeaderTextButton(intl2.string(tmp3(1114).t["R3BPH+"]), callback);
-      const tmp3Result = tmp3(5676);
+      let fn = tmp3(5675).getHeaderTextButton(intl2.string(tmp3(1114).t["R3BPH+"]), callback);
+      const tmp3Result = tmp3(5675);
     } else {
       fn = () => null;
     }
     obj2.headerRight = fn;
     return { [c14]: obj2 };
   }, items3);
-  return closure_10(folderId(7074).Navigator, { screens: memo, initialRouteName });
+  return closure_10(folderId(7073).Navigator, { screens: memo, initialRouteName });
 };

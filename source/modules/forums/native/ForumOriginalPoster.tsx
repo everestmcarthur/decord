@@ -1,13 +1,13 @@
-// Module ID: 11968
-// Function ID: 11969
+// Module ID: 11966
+// Function ID: 11967
 // Name: ForumOriginalPoster
-// Dependencies: [19, 17, 21, 4607, 576, 5493, 4603, 1114, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 5492, 4602, 1114, 2]
 // Exports: getForumOriginalPoster
 
-// Module 11968 (ForumOriginalPoster)
+// Module 11966 (ForumOriginalPoster)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,10 +36,10 @@ class ForumOriginalPoster {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, opIcon: { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 }, opIconBackground: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
-obj2.opIconBackground = { backgroundColor: fn(5493).DARK_BRAND_260_LIGHT_BRAND_200 };
+obj2.opIconBackground = { backgroundColor: fn(5492).DARK_BRAND_260_LIGHT_BRAND_200 };
 const hasOwnProperty = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");

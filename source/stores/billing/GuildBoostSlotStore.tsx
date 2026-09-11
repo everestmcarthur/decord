@@ -1,9 +1,9 @@
-// Module ID: 4502
-// Function ID: 4503
+// Module ID: 4501
+// Function ID: 4502
 // Name: GuildBoostSlotStore
 // Dependencies: [4270, 504, 573, 2]
 
-// Module 4502 (GuildBoostSlotStore)
+// Module 4501 (GuildBoostSlotStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SubscriptionStore from "SubscriptionStore" /* 4270 */;

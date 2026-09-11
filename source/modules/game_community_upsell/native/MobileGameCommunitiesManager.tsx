@@ -1,16 +1,16 @@
-// Module ID: 17587
-// Function ID: 17588
+// Module ID: 17586
+// Function ID: 17587
 // Name: MobileGameCommunitiesManager
-// Dependencies: [13768, 15685, 16336, 7192, 15686, 16337, 13771, 13769, 2]
+// Dependencies: [13766, 15685, 16336, 7191, 15686, 16337, 13769, 13767, 2]
 
-// Module 17587 (MobileGameCommunitiesManager)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13769 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13771 */;
+// Module 17586 (MobileGameCommunitiesManager)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13767 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13769 */;
 import GameCommunityConfig from "GameCommunityConfig" /* 15686 */;
 import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16337 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13768 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13766 */;
 import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15685 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 let closure_5 = fn(16336).MAX_DISPLAYED_UPSELL_GUILDS;

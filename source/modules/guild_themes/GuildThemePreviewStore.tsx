@@ -1,7 +1,7 @@
 // Module ID: 4492
 // Function ID: 4493
 // Name: GuildThemePreviewStore
-// Dependencies: [502, 4493, 4494, 573, 1978, 12, 504, 2]
+// Dependencies: [502, 4493, 1952, 573, 1978, 12, 504, 2]
 
 // Module 4492 (GuildThemePreviewStore)
 import _mod12 from "module_12" /* 12 */;
@@ -26,7 +26,7 @@ function handleEnd() {
 }
 const GuildThemePreviewConstants = fn(4493);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
-const timeout = new fn(4494).Timeout();
+const timeout = new fn(1952).Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
 const Store = initializeDefault.Store;
 class GuildThemePreviewStore extends Store {

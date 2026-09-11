@@ -1,10 +1,10 @@
 // Module ID: 15326
 // Function ID: 15327
 // Name: FontScaleStore
-// Dependencies: [1115, 10211, 1244, 2]
+// Dependencies: [1115, 10209, 1244, 2]
 
 // Module 15326 (FontScaleStore)
-import NativeFontModuleDefault from "NativeFontModule" /* 10211 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 10209 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import identity from "module_1244" /* 1244 */;
 import size from "module_2" /* 2 */;

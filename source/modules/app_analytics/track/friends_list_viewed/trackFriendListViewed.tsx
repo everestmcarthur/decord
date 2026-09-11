@@ -1,13 +1,13 @@
 // Module ID: 16834
 // Function ID: 16835
 // Name: trackFriendListViewed
-// Dependencies: [1074, 16835, 1242, 7539, 2]
+// Dependencies: [1074, 16835, 1242, 7538, 2]
 // Exports: default
 
 // Module 16834 (trackFriendListViewed)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Clickstream from "Clickstream" /* 7539 */;
+import Clickstream from "Clickstream" /* 7538 */;
 import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 16835 */;
 import size from "module_2" /* 2 */;
 

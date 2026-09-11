@@ -1,10 +1,10 @@
-// Module ID: 4840
-// Function ID: 4841
+// Module ID: 4839
+// Function ID: 4840
 // Name: useMessageAuthor
-// Dependencies: [1957, 2021, 2015, 1979, 4255, 1371, 38, 504, 4451, 4841, 2]
+// Dependencies: [1957, 2021, 2015, 1979, 4255, 1371, 38, 504, 4451, 4840, 2]
 // Exports: default, getMessageAuthor, useUserNickAndColor
 
-// Module 4840 (useMessageAuthor)
+// Module 4839 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

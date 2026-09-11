@@ -1,7 +1,7 @@
 // Module ID: 15536
 // Function ID: 15537
 // Name: TimestampHourCycleSetting
-// Dependencies: [19, 8050, 1935, 1114, 1187, 11564, 4291, 2]
+// Dependencies: [19, 8049, 1935, 1114, 1187, 11562, 4291, 2]
 
 // Module 15536 (TimestampHourCycleSetting)
 import util from "util" /* 1114 */;
@@ -10,13 +10,13 @@ import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(8050).MobileUserSettings.APPEARANCE,
+  parent: fn(8049).MobileUserSettings.APPEARANCE,
   useValue: fn(1935).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;

@@ -1,13 +1,13 @@
-// Module ID: 9468
-// Function ID: 9469
+// Module ID: 9466
+// Function ID: 9467
 // Name: BoostGemIcon
-// Dependencies: [19, 21, 576, 4307, 9469, 2]
+// Dependencies: [19, 21, 576, 4307, 9467, 2]
 // Exports: BoostGemIcon
 
-// Module 9468 (BoostGemIcon)
+// Module 9466 (BoostGemIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod9469 from "module_9469" /* 9469 */;
+import _mod9467 from "module_9467" /* 9467 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const BoostGemIcon = function BoostGemIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9469, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9467, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

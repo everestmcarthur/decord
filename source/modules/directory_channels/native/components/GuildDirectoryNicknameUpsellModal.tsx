@@ -1,22 +1,22 @@
-// Module ID: 12757
-// Function ID: 12758
+// Module ID: 12755
+// Function ID: 12756
 // Name: GuildDirectoryNicknameUpsellModal
-// Dependencies: [5, 32, 19, 17, 1979, 12746, 21, 4607, 5734, 576, 504, 7055, 7194, 4508, 5636, 4603, 1114, 6677, 1178, 5027, 12747, 12756, 5676, 7074, 5650, 2]
+// Dependencies: [5, 32, 19, 17, 1979, 12744, 21, 4606, 5733, 576, 504, 7054, 7193, 4507, 5635, 4602, 1114, 6676, 1178, 5026, 12745, 12754, 5675, 7073, 5649, 2]
 // Exports: default
 
-// Module 12757 (GuildDirectoryNicknameUpsellModal)
+// Module 12755 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import GuildIcon from "GuildIcon" /* 5636 */;
-import useInitialValueDefault from "useInitialValue" /* 5650 */;
-import NavigatorHeader from "NavigatorHeader" /* 5676 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7055 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12747 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12756 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import GuildIcon from "GuildIcon" /* 5635 */;
+import useInitialValueDefault from "useInitialValue" /* 5649 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12745 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12754 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
-const FreeFormInputGroupDefault = tmp5(6677);
+const FreeFormInputGroupDefault = tmp5(6676);
 require = fn;
 function GuildDirectoryNicknameUpsell(arg0) {
   ({ guildId: require, handleClose: importDefault } = arg0);
@@ -136,12 +136,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12746).GuildPrompts;
+const GuildPrompts = fn(12744).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
-let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5734).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5734).NAV_BAR_HEIGHT };
+const createStyles = fn(4606);
+let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5733).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5733).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

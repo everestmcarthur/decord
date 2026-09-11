@@ -1,12 +1,12 @@
-// Module ID: 8907
-// Function ID: 8908
+// Module ID: 8905
+// Function ID: 8906
 // Name: ClipView
-// Dependencies: [19, 17, 21, 8908, 8910, 4343, 2]
+// Dependencies: [19, 17, 21, 8906, 8908, 4343, 2]
 // Exports: default
 
-// Module 8907 (ClipView)
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8908 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8910 */;
+// Module 8905 (ClipView)
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8906 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8908 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 

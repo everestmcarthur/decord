@@ -1,25 +1,36 @@
 // Module ID: 12968
 // Function ID: 12969
-// Dependencies: [12969, 12952, 12948]
+// Dependencies: [12946, 12934, 12969]
 
 // Module 12968
-import eventFromMessage from "eventFromMessage" /* 12952 */;
 import _mod12969 from "module_12969" /* 12969 */;
-import setupIntegration from "module_12948" /* 12948 */;
+import setupIntegration from "module_12946" /* 12946 */;
 
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
+          }
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
+        }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod12969.addMetadataToStackFrames(options.getOptions().stackParser, type);
+      }
+    });
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(arg0, arg1, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12969.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, arg0, arg1);
-    }
-  };
-});
+}));

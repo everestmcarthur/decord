@@ -1,18 +1,17 @@
 // Module ID: 8628
 // Function ID: 8629
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8559, 8629, 8568]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8550, 8620, 8629, 8555, 8566]
 
 // Module 8628
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8568 from "module_8568" /* 8568 */;
-import _modDef8629 from "module_8629" /* 8629 */;
+import _modDef8566 from "module_8566" /* 8566 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Path = fn;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,16 +31,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Path {
+class Pattern {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Path);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Pattern);
+    tmp2 = closure_4;
+    obj = closure_4(Pattern);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -54,23 +52,45 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Path, _modDef8568);
+_inherits(Pattern, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const obj = {};
-    const merged = Object.assign(Path(8559).extract(this, props));
-    obj.d = props.d;
-    const obj2 = Path(8559);
-    const obj3 = {
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
+    }
+    if (!patternTransform) {
+      patternTransform = props;
+    }
+    const tmp3Result = Pattern(8550)(patternTransform);
+    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = tmp(8620)[patternUnits];
+    }
+    if (!num) {
+      num = 0;
+    }
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = tmp(8620)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8629, {
+    const tmp3 = Pattern(8550);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(tmp(8555)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(8629), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -78,7 +98,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

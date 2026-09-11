@@ -1,16 +1,16 @@
 // Module ID: 16028
 // Function ID: 16029
 // Name: auth/register
-// Dependencies: [5, 16029, 502, 1074, 1098, 4198, 1242, 4800, 1250, 4509, 11373, 573, 16030, 16031, 2]
+// Dependencies: [5, 16029, 502, 1074, 1098, 4198, 1242, 4799, 1250, 4508, 11371, 573, 16030, 16031, 2]
 // Exports: default, registerPhone, scorePassword
 
 // Module 16028 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import APIErrorDefault from "APIError" /* 4509 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4800 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11373 */;
+import APIErrorDefault from "APIError" /* 4508 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4799 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11371 */;
 import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 16031 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -125,7 +125,7 @@ let closure_12 = async function _registerPhone(arg0) {
             phone2 = phone.phone;
             c5 = 1;
             c6 = 1;
-            return { value: "PX_16", done: true };
+            return { value: "PX_16", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {

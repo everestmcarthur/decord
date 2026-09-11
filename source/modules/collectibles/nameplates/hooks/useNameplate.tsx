@@ -1,10 +1,10 @@
-// Module ID: 8304
-// Function ID: 8305
+// Module ID: 8302
+// Function ID: 8303
 // Name: useNameplate
 // Dependencies: [19, 2021, 504, 1886, 2]
 // Exports: useNameplate
 
-// Module 8304 (useNameplate)
+// Module 8302 (useNameplate)
 import utils from "utils" /* 1886 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;

@@ -1,13 +1,13 @@
 // Module ID: 16746
 // Function ID: 16747
 // Name: renderChannelContent
-// Dependencies: [19, 17, 10209, 4789, 21, 4607, 1115, 16743, 5114, 16747, 4603, 5147, 8681, 16189, 2]
+// Dependencies: [19, 17, 10207, 4788, 21, 4606, 1115, 16743, 5113, 16747, 4602, 5146, 8679, 16189, 2]
 // Exports: default
 
 // Module 16746 (renderChannelContent)
-import Text_Text from "Text/Text" /* 4603 */;
-import LockIcon from "LockIcon" /* 5147 */;
-import WarningIcon from "WarningIcon" /* 8681 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LockIcon from "LockIcon" /* 5146 */;
+import WarningIcon from "WarningIcon" /* 8679 */;
 import getLayoutStylesDefault from "getLayoutStyles" /* 16743 */;
 import ChannelTitleDefault from "ChannelTitle" /* 16747 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ function ChannelContent(arg0) {
   let tmp9Result5 = null != channel;
   if (tmp9Result5) {
     if (!locked) {
-      locked = tmp2(5114)(channel);
+      locked = tmp2(5113)(channel);
     }
     tmp9Result5 = locked;
   }
@@ -152,11 +152,11 @@ function ChannelContent(arg0) {
   return React5(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(10209).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(4789).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(10207).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(4788).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let PlatformUtils = fn(1115);
 let num = -1;
 if (PlatformUtils.isIOS()) {

@@ -1,12 +1,12 @@
-// Module ID: 10323
-// Function ID: 10324
+// Module ID: 10321
+// Function ID: 10322
 // Name: Graphic
-// Dependencies: [19, 17, 21, 4607, 5639, 4317, 4424, 2]
+// Dependencies: [19, 17, 21, 4606, 5638, 4317, 4424, 2]
 // Exports: Graphic
 
-// Module 10323 (Graphic)
+// Module 10321 (Graphic)
 import GraphicTypes from "GraphicTypes" /* 4424 */;
-import FastImageDefault from "FastImage" /* 5639 */;
+import FastImageDefault from "FastImage" /* 5638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function RiveGraphic(riveProps) {
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { "21/9": 2.3333333333333335, "16/9": 1.7777777777777777, "6/4": 1.5, "2/1": 2, "1/1": 1 };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" }, image: { width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Graphic/native/Graphic.native.tsx");

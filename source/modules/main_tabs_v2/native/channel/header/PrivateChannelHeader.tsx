@@ -1,14 +1,14 @@
-// Module ID: 13366
-// Function ID: 13367
+// Module ID: 13364
+// Function ID: 13365
 // Name: PrivateChannelHeader
-// Dependencies: [19, 17, 1957, 4647, 4255, 1371, 1074, 21, 1178, 4607, 576, 504, 13363, 4760, 1114, 10967, 13367, 13368, 13370, 4451, 13373, 2]
+// Dependencies: [19, 17, 1957, 4646, 4255, 1371, 1074, 21, 1178, 4606, 576, 504, 13361, 4759, 1114, 10965, 13365, 13366, 13368, 4451, 13371, 2]
 
-// Module 13366 (PrivateChannelHeader)
+// Module 13364 (PrivateChannelHeader)
 import nativeDefault from "native" /* 576 */;
-import ChannelHeader from "ChannelHeader" /* 13363 */;
+import ChannelHeader from "ChannelHeader" /* 13361 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32];
 let closure_15 = Object.freeze({ onlineCount: null, memberCount: null });
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { activityStatusText: { color: nativeDefault.colors.TEXT_MUTED }, groupDMIconAnchor: { marginRight: 12, flexShrink: 0 } };
 let closure_16 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.TEXT_MUTED };

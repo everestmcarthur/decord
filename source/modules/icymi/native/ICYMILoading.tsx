@@ -1,13 +1,13 @@
 // Module ID: 16584
 // Function ID: 16585
 // Name: ICYMILoading
-// Dependencies: [19, 17, 21, 16523, 576, 12734, 4343, 16562, 2]
+// Dependencies: [19, 17, 21, 16523, 576, 12732, 4343, 16562, 2]
 // Exports: ICYMILoading
 
 // Module 16584 (ICYMILoading)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12734 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12732 */;
 import ICYMIShared from "ICYMIShared" /* 16562 */;
 import noop from "module_19" /* 19 */;
 

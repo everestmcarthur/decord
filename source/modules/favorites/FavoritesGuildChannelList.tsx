@@ -1,27 +1,27 @@
 // Module ID: 16343
 // Function ID: 16344
 // Name: FavoritesGuildChannelList
-// Dependencies: [32, 19, 1956, 5329, 7600, 5558, 4247, 1961, 7191, 1957, 7601, 4245, 4622, 2011, 4788, 1960, 4244, 1970, 7608, 1085, 7602, 1187, 7388, 10315, 12, 1369, 2]
+// Dependencies: [32, 19, 1956, 5328, 7599, 5557, 4247, 1961, 7190, 1957, 7600, 4245, 4621, 2011, 4787, 1960, 4244, 1970, 7607, 1085, 7601, 1187, 7387, 10313, 12, 1369, 2]
 // Exports: useFavoritesGuildChannelList
 
 // Module 16343 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7388 */;
-import ChannelListState from "ChannelListState" /* 7602 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7387 */;
+import ChannelListState from "ChannelListState" /* 7601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7600 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5558 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7599 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5557 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7191 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7190 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7601 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7600 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
 const require = globalThis.__r;
@@ -257,7 +257,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10315).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10313).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -476,7 +476,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
       }
       let tmp5 = !tmp3;
       if (!tmp3) {
-        tmp5 = 0 === found1[arg0 - tmp(undefined, 7602).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
+        tmp5 = 0 === found1[arg0 - tmp(undefined, 7601).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
       }
       return tmp5;
     },
@@ -484,7 +484,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
       if (arg0 === ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS) {
         let tmp4 = obj3;
       } else {
-        tmp4 = found1[arg0 - tmp(undefined, 7602).SECTION_INDEX_FIRST_NAMED_CATEGORY];
+        tmp4 = found1[arg0 - tmp(undefined, 7601).SECTION_INDEX_FIRST_NAMED_CATEGORY];
       }
       return tmp4;
     },
@@ -579,7 +579,7 @@ const ChannelRecord = fn(1961);
 let closure_19 = fn(4244).createFavoritesGuildChannelRecord;
 const FavoritesConstants = fn(1970);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7608).ChannelListChannelNoticeRow;
+const constants = fn(7607).ChannelListChannelNoticeRow;
 const Permissions = fn(1085).Permissions;
 let items = [EmbeddedActivitiesStore, FavoriteStore, GatewayConnectionStore, GuildScheduledEventStore, ActiveJoinedThreadsStore, JoinedThreadsStore, CategoryCollapseStore, ChannelStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore];
 const size = fn(2);

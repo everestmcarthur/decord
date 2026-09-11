@@ -1,12 +1,12 @@
 // Module ID: 15544
 // Function ID: 15545
 // Name: AndroidNotificationSettingsStore
-// Dependencies: [5, 1244, 1115, 9780, 1249, 4229, 2]
+// Dependencies: [5, 1244, 1115, 9778, 1249, 4229, 2]
 // Exports: initializeAndroidNotificationSettingsStore, setAndroidMessageNotificationsEnabled, setAndroidNotificationLightsEnabled, setAndroidNotificationSoundsEnabled, setAndroidNotificationVibrationsEnabled, useAndroidMessageNotificationsEnabled, useAndroidNotificationLightsEnabled, useAndroidNotificationSoundsEnabled, useAndroidNotificationVibrationsEnabled
 
 // Module 15544 (AndroidNotificationSettingsStore)
 import _mod4229 from "module_4229" /* 4229 */;
-import PushNotificationDefault from "PushNotification" /* 9780 */;
+import PushNotificationDefault from "PushNotification" /* 9778 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -131,7 +131,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore(arg0,
   }
 };
 const identity = fn(1244);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "unicodeVersion", isVibrationsEnabled: "children", isSoundsEnabled: "isArray", isNotifyEveryTime: "id" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "call", isSoundsEnabled: "items", isNotifyEveryTime: "httpServerLocation" }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 

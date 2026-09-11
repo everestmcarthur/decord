@@ -1,13 +1,13 @@
-// Module ID: 5819
-// Function ID: 5820
+// Module ID: 5818
+// Function ID: 5819
 // Name: AppleIllocon
-// Dependencies: [21, 5639, 5820, 2]
+// Dependencies: [21, 5638, 5819, 2]
 // Exports: AppleIllocon
 
-// Module 5819 (AppleIllocon)
+// Module 5818 (AppleIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5820 from "module_5820" /* 5820 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5819 from "module_5819" /* 5819 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const AppleIllocon = function AppleIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5820 };
+  const obj2 = { uri: _modDef5819 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

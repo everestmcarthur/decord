@@ -1,7 +1,7 @@
 // Module ID: 16365
 // Function ID: 16366
 // Name: GuildsBarAnimatedItemWrapper
-// Dependencies: [19, 5036, 16353, 21, 4607, 576, 4308, 4317, 5026, 4343, 7147, 16366, 16091, 16096, 1114, 4318, 16367, 5641, 8907, 2]
+// Dependencies: [19, 5035, 16353, 21, 4606, 576, 4308, 4317, 5025, 4343, 7146, 16366, 16091, 16096, 1114, 4318, 16367, 5640, 8905, 2]
 // Exports: default, useGuildsBarAnimatedWrapperStyles
 
 // Module 16365 (GuildsBarAnimatedItemWrapper)
@@ -9,7 +9,7 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4308 */;
 import native from "native" /* 4317 */;
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -128,14 +128,14 @@ class UnreadIndicator {
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return React6(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5036).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5035).IOS_POINTER_STYLE;
 const GuildsBarConstants = fn(16353);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -148,7 +148,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(4607);
+createStyles = fn(4606);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };

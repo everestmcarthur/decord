@@ -1,15 +1,15 @@
-// Module ID: 8861
-// Function ID: 8862
+// Module ID: 8859
+// Function ID: 8860
 // Name: useTrackImpression
-// Dependencies: [19, 1957, 2011, 4428, 1243, 1250, 1242, 573, 4787, 1332, 4811, 5044, 2]
+// Dependencies: [19, 1957, 2011, 4428, 1243, 1250, 1242, 573, 4786, 1332, 4810, 5043, 2]
 // Exports: default
 
-// Module 8861 (useTrackImpression)
+// Module 8859 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import _modDef1332 from "module_1332" /* 1332 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -84,7 +84,7 @@ export default function useTrackImpression(arg0, arg1, current) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5044)(() => {
+  obj(5043)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1332(ref.current, closure_0);
       if (!tmp6) {
@@ -97,7 +97,7 @@ export default function useTrackImpression(arg0, arg1, current) {
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4811)("impression_");
+        obj.sequenceId = tmp2(4810)("impression_");
         trackImpression(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
@@ -121,7 +121,7 @@ export default function useTrackImpression(arg0, arg1, current) {
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4811)("impression_");
+        obj.sequenceId = tmp2(4810)("impression_");
         trackImpression(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {

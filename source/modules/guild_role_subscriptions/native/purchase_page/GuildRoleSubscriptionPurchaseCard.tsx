@@ -1,7 +1,7 @@
 // Module ID: 16623
 // Function ID: 16624
 // Name: GuildRoleSubscriptionPurchaseCard
-// Dependencies: [32, 19, 17, 21, 4607, 576, 7053, 1611, 15288, 16618, 7224, 4603, 1178, 16624, 6699, 1114, 15298, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 7052, 1611, 15288, 16618, 7223, 4602, 1178, 16624, 6698, 1114, 15298, 2]
 // Exports: default
 
 // Module 16623 (GuildRoleSubscriptionPurchaseCard)
@@ -9,10 +9,10 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import BottomSheetModal from "BottomSheetModal" /* 6699 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7224 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import BottomSheetModal from "BottomSheetModal" /* 6698 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
 import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15298 */;
 import Elements from "Elements" /* 16618 */;
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

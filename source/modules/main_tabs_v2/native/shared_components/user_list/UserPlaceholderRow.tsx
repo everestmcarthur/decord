@@ -1,21 +1,21 @@
-// Module ID: 9922
-// Function ID: 9923
+// Module ID: 9920
+// Function ID: 9921
 // Name: UserPlaceholderRow
-// Dependencies: [19, 17, 4599, 21, 4607, 576, 4343, 504, 4608, 4611, 2]
+// Dependencies: [19, 17, 4598, 21, 4606, 576, 4343, 504, 4607, 4610, 2]
 
-// Module 9922 (UserPlaceholderRow)
+// Module 9920 (UserPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles((height) => {
   const obj = { row: { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height }, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
   const obj2 = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };

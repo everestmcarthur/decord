@@ -1,7 +1,7 @@
 // Module ID: 16331
 // Function ID: 16332
 // Name: useDefaultAuthorizationNotifiers
-// Dependencies: [19, 1895, 1074, 504, 4572, 8360, 4305, 1114, 3106, 2]
+// Dependencies: [19, 1895, 1074, 504, 4571, 8358, 4305, 1114, 3106, 2]
 // Exports: useDefaultAuthorizationNotifiers
 
 // Module 16331 (useDefaultAuthorizationNotifiers)

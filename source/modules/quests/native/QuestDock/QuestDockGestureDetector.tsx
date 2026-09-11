@@ -1,12 +1,12 @@
 // Module ID: 15243
 // Function ID: 15244
 // Name: QuestDockGestureDetector
-// Dependencies: [19, 5496, 15153, 21, 15160, 15150, 15154, 11449, 15157, 15240, 4343, 15158, 15155, 6727, 15152, 4575, 2]
+// Dependencies: [19, 5495, 15153, 21, 15160, 15150, 15154, 11447, 15157, 15240, 4343, 15158, 15155, 6726, 15152, 4574, 2]
 
 // Module 15243 (QuestDockGestureDetector)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
 import QuestDockUtils from "QuestDockUtils" /* 15152 */;
 import noop from "module_19" /* 19 */;
 
@@ -367,7 +367,7 @@ function useQuestDockSwipeGesture() {
   const animatedReaction = obj9.useAnimatedReaction(W, X);
   return memo;
 }
-const QuestDockMode = fn(5496).QuestDockMode;
+const QuestDockMode = fn(5495).QuestDockMode;
 const QuestDockConstants = fn(15153);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty, QUEST_DOCK_CLOSED_HEIGHT: metroRequire, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: closure_7, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_8, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: closure_9, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: c10, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_11, QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY: closure_12, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_14, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_15, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: closure_16 } = QuestDockConstants);
 const jsx = fn(21).jsx;

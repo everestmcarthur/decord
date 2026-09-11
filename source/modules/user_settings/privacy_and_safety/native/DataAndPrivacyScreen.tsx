@@ -1,18 +1,18 @@
 // Module ID: 15932
 // Function ID: 15933
 // Name: DataAndPrivacyScreen
-// Dependencies: [19, 6667, 8050, 1074, 21, 1114, 2024, 9242, 1483, 14910, 14913, 11564, 14870, 14744, 2]
+// Dependencies: [19, 6666, 8049, 1074, 21, 1114, 2024, 9240, 1483, 14910, 14913, 11562, 14869, 14741, 2]
 // Exports: default
 
 // Module 15932 (DataAndPrivacyScreen)
 import util from "util" /* 1114 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9242 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9240 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6667 */;
+import ConsentStore from "ConsentStore" /* 6666 */;
 
 require = fn;
-const MobileUserSettings = fn(8050).MobileUserSettings;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -133,8 +133,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj21.screen = stackNavigation(14870).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(14870), obj21), closure_8(items1(14744), { node: memo })];
+  obj21.screen = stackNavigation(14869).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14869), obj21), closure_8(items1(14741), { node: memo })];
   obj20.children = items9;
   return closure_10(closure_9, obj20);
 };

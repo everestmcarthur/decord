@@ -1,7 +1,7 @@
 // Module ID: 16339
 // Function ID: 16340
 // Name: GameCommunityMultiGuildUpsellCard
-// Dependencies: [5, 32, 19, 17, 4599, 4246, 1979, 1074, 21, 4607, 576, 504, 1396, 1430, 1477, 1242, 5572, 7416, 7415, 1114, 8907, 8833, 1178, 4603, 5027, 8759, 8173, 8765, 2]
+// Dependencies: [5, 32, 19, 17, 4598, 4246, 1979, 1074, 21, 4606, 576, 504, 1396, 1430, 1477, 1242, 5571, 7415, 7414, 1114, 8905, 8831, 1178, 4602, 5026, 8757, 8172, 8763, 2]
 // Exports: default
 
 // Module 16339 (GameCommunityMultiGuildUpsellCard)
@@ -9,11 +9,11 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
-import transitionToGuild from "transitionToGuild" /* 7416 */;
+import transitionToGuild from "transitionToGuild" /* 7415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 import LurkingStore from "LurkingStore" /* 4246 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -24,7 +24,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: closure_11, JoinGuildSources: closure_12, AnalyticEvents: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED, borderColor: nativeDefault.colors.BORDER_MUTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg, overflow: "hidden", flex: 1, marginBottom: nativeDefault.space.PX_16 }, bannerContainer: null, banner: null, content: null, guildIconContainer: null, guildIcon: null, guildNameRow: null, guildBadge: null, guildName: null, description: null, memberCounts: null, memberCount: null, dot: null, dotOnline: null, dismissButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED, borderColor: nativeDefault.colors.BORDER_MUTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg, overflow: "hidden", flex: 1, marginBottom: nativeDefault.space.PX_16 };
 obj2.bannerContainer = { height: 88, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };

@@ -1,9 +1,9 @@
-// Module ID: 7607
-// Function ID: 7608
+// Module ID: 7606
+// Function ID: 7607
 // Name: ChannelListVoiceCategoryStore
 // Dependencies: [504, 573, 2]
 
-// Module 7607 (ChannelListVoiceCategoryStore)
+// Module 7606 (ChannelListVoiceCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

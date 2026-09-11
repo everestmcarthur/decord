@@ -1,13 +1,13 @@
-// Module ID: 10844
-// Function ID: 10845
+// Module ID: 10842
+// Function ID: 10843
 // Name: MarketingComponentHooks
-// Dependencies: [4599, 4542, 504, 4315, 2]
+// Dependencies: [4598, 4541, 504, 4315, 2]
 // Exports: useThemeAndReducedMotionAwareAssetUrl
 
-// Module 10844 (MarketingComponentHooks)
+// Module 10842 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 const themes = tmp3(4315);
 require = fn;

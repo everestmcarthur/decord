@@ -1,12 +1,12 @@
-// Module ID: 7906
-// Function ID: 7907
+// Module ID: 7905
+// Function ID: 7906
 // Name: trackPoggermodeSettingsUpdated
-// Dependencies: [7752, 1074, 12, 1242, 2]
+// Dependencies: [7751, 1074, 12, 1242, 2]
 
-// Module 7906 (trackPoggermodeSettingsUpdated)
+// Module 7905 (trackPoggermodeSettingsUpdated)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7752 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7751 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

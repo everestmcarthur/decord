@@ -1,12 +1,12 @@
-// Module ID: 14010
-// Function ID: 14011
+// Module ID: 14008
+// Function ID: 14009
 // Name: GuildBadgeSnail
-// Dependencies: [19, 21, 13972, 8544, 2]
+// Dependencies: [19, 21, 13970, 8542, 2]
 // Exports: GuildBadgeSnail
 
-// Module 14010 (GuildBadgeSnail)
-import inlineStyles from "inlineStyles" /* 8544 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13972 */;
+// Module 14008 (GuildBadgeSnail)
+import inlineStyles from "inlineStyles" /* 8542 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

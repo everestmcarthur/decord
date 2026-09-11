@@ -1,11 +1,11 @@
-// Module ID: 7388
-// Function ID: 7389
+// Module ID: 7387
+// Function ID: 7388
 // Name: LazyLoadedThreadManager
-// Dependencies: [5329, 1961, 1957, 2011, 1074, 1964, 573, 7295, 4433, 4446, 1272, 2]
+// Dependencies: [5328, 1961, 1957, 2011, 1074, 1964, 573, 7294, 4433, 4446, 1272, 2]
 
-// Module 7388 (LazyLoadedThreadManager)
+// Module 7387 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
@@ -134,7 +134,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7295).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7294).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];

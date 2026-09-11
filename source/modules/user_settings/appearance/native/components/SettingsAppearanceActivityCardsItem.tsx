@@ -1,7 +1,7 @@
 // Module ID: 15355
 // Function ID: 15356
 // Name: SettingsAppearanceActivityCardsItem
-// Dependencies: [19, 21, 8966, 576, 15356, 2]
+// Dependencies: [19, 21, 8964, 576, 15356, 2]
 // Exports: default
 
 // Module 15355 (SettingsAppearanceActivityCardsItem)
@@ -29,7 +29,7 @@ export default function ActivityCardsItem(animatedStyles) {
     showsHorizontalScrollIndicator: false,
     horizontal: true
   };
-  return jsx(animatedStyles(8966).FlashList, {
+  return jsx(animatedStyles(8964).FlashList, {
     contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
     data: animatedStyles.cards,
     renderItem(item) {

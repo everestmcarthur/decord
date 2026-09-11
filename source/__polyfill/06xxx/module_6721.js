@@ -1,17 +1,15 @@
 // Module ID: 6721
 // Function ID: 6722
 // Dependencies: []
-// Exports: noop, workletNoop
+// Exports: isFabricInstalled
 
 // Module 6721
-const fn = function o() {
+const global = arg0;
 
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
 };
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
-
-export () => {
-
-}
-export const workletNoop = fn;

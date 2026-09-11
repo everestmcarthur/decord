@@ -1,7 +1,7 @@
 // Module ID: 16981
 // Function ID: 16982
 // Name: RestrictedMessageRequestPreview
-// Dependencies: [32, 19, 17, 1957, 4828, 1371, 21, 4607, 576, 1611, 504, 16982, 16984, 12534, 2]
+// Dependencies: [32, 19, 17, 1957, 4827, 1371, 21, 4606, 576, 1611, 504, 16982, 16984, 12532, 2]
 // Exports: default
 
 // Module 16981 (RestrictedMessageRequestPreview)
@@ -9,7 +9,7 @@ import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4828 */;
+import MessageStore from "MessageStore" /* 4827 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -116,7 +116,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       items10[1] = obj9;
       obj8.style = items10;
       const obj10 = { channel: stateFromStores };
-      obj8.children = closure_10(tmp2(12534), obj10);
+      obj8.children = closure_10(tmp2(12532), obj10);
       items9[1] = closure_10(first1, obj8);
       obj4.children = items9;
       tmp13Result = tmp13(tmp14, obj4);

@@ -1,11 +1,11 @@
-// Module ID: 11040
-// Function ID: 11041
+// Module ID: 11038
+// Function ID: 11039
 // Name: InviteRolesDisplay
-// Dependencies: [19, 17, 2015, 21, 4607, 504, 4603, 1114, 11041, 2]
+// Dependencies: [19, 17, 2015, 21, 4606, 504, 4602, 1114, 11039, 2]
 // Exports: default
 
-// Module 11040 (InviteRolesDisplay)
-import RolePillDefault from "RolePill" /* 11041 */;
+// Module 11038 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 11039 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
@@ -13,7 +13,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/InviteRolesDisplay.tsx");
@@ -34,7 +34,7 @@ export default function InviteRolesDisplay(roleIds) {
     const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1114).intl;
     obj3.children = intl.string(tmp2(1114).t.stcSfI);
-    const items2 = [closure_5(tmp2(4603).Text, obj3), ];
+    const items2 = [closure_5(tmp2(4602).Text, obj3), ];
     const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
     items2[1] = closure_5(View, obj4);
     obj2.children = items2;

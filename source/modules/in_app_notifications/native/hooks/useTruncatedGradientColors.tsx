@@ -1,14 +1,14 @@
-// Module ID: 10199
-// Function ID: 10200
+// Module ID: 10197
+// Function ID: 10198
 // Name: useTruncatedGradientColors
-// Dependencies: [19, 4607, 4308, 576, 672, 2]
+// Dependencies: [19, 4606, 4308, 576, 672, 2]
 // Exports: default
 
-// Module 10199 (useTruncatedGradientColors)
+// Module 10197 (useTruncatedGradientColors)
 import _mod19 from "module_19" /* 19 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

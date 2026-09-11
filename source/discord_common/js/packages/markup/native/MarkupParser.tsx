@@ -1,11 +1,11 @@
-// Module ID: 8063
-// Function ID: 8064
+// Module ID: 8062
+// Function ID: 8063
 // Name: markup/MarkupParser
-// Dependencies: [8064, 4303, 2]
+// Dependencies: [8063, 4303, 2]
 
-// Module 8063 (markup/MarkupParser)
+// Module 8062 (markup/MarkupParser)
 import _modDef4303 from "module_4303" /* 4303 */;
-import MarkupASTUtils from "MarkupASTUtils" /* 8064 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 8063 */;
 import size from "module_2" /* 2 */;
 
 function saferParse(fn, arg1, inline, arg3, arg4) {

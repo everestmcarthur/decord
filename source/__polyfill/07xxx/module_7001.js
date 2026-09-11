@@ -1,10 +1,9 @@
 // Module ID: 7001
 // Function ID: 7002
-// Dependencies: [17]
+// Dependencies: [7002]
 
 // Module 7001
-import _mod17 from "module_17" /* 17 */;
+import _modDef7002 from "module_7002" /* 7002 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: {} });
+export default _modDef7002;

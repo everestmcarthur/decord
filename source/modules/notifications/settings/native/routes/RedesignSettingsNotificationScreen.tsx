@@ -1,14 +1,14 @@
 // Module ID: 15983
 // Function ID: 15984
 // Name: RedesignSettingsNotificationScreen
-// Dependencies: [19, 15544, 8050, 21, 15984, 1114, 2722, 15545, 11564, 15547, 5044, 15985, 14744, 2]
+// Dependencies: [19, 15544, 8049, 21, 15984, 1114, 2722, 15545, 11562, 15547, 5043, 15985, 14741, 2]
 
 // Module 15983 (RedesignSettingsNotificationScreen)
 import util from "util" /* 1114 */;
 import _modDef2722 from "module_2722" /* 2722 */;
-import useMountEffectDefault from "useMountEffect" /* 5044 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
-import SettingLayoutDefault from "SettingLayout" /* 14744 */;
+import useMountEffectDefault from "useMountEffect" /* 5043 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingLayoutDefault from "SettingLayout" /* 14741 */;
 import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15545 */;
 import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15547 */;
 import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15984 */;
@@ -16,7 +16,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_4 = fn(15544).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8050).MobileUserSettings;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");

@@ -1,18 +1,18 @@
 // Module ID: 16255
 // Function ID: 16256
 // Name: useGuildHasLiveChannelNotice
-// Dependencies: [19, 5470, 1962, 4629, 1957, 4245, 4631, 16256, 1963, 1085, 16257, 504, 9755, 16258, 5483, 5477, 2]
+// Dependencies: [19, 5469, 1962, 4628, 1957, 4245, 4630, 16256, 1963, 1085, 16257, 504, 9753, 16258, 5482, 5476, 2]
 // Exports: useGuildHasLiveChannelNotice, useGuildLiveChannelNoticeInfo
 
 // Module 16255 (useGuildHasLiveChannelNotice)
-import StageChannelParticipants from "StageChannelParticipants" /* 5477 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5476 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5470 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5469 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4631 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4630 */;
 import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16256 */;
 
 require = fn;

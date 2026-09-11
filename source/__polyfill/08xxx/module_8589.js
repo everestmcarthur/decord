@@ -1,16 +1,16 @@
 // Module ID: 8589
 // Function ID: 8590
-// Dependencies: [41, 42, 93, 95, 98, 8560, 8583]
+// Dependencies: [41, 42, 93, 95, 98, 8558, 8581]
 
 // Module 8589
-import _modDef8583 from "module_8583" /* 8583 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeConvolveMatrix = arg1;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeConvolveMatrix {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = c2(this, FeConvolveMatrix);
+    tmp = c2(this, FeDisplacementMap);
     tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
+    obj = closure_4(FeDisplacementMap);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,17 +50,17 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeConvolveMatrix, _modDef8583);
+_inherits(FeDisplacementMap, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(8560).warnUnimplementedFilter();
+    const result = FeDisplacementMap(8558).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
+const importDefaultResultResult = _createClass(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

@@ -1,13 +1,13 @@
-// Module ID: 5907
-// Function ID: 5908
+// Module ID: 5906
+// Function ID: 5907
 // Name: ChatControllersSpotIllustration
-// Dependencies: [21, 5639, 5908, 2]
+// Dependencies: [21, 5638, 5907, 2]
 // Exports: ChatControllersSpotIllustration
 
-// Module 5907 (ChatControllersSpotIllustration)
+// Module 5906 (ChatControllersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5908 from "module_5908" /* 5908 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5907 from "module_5907" /* 5907 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ChatControllersSpotIllustration = function ChatControllersSpotIllus
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5908 };
+  const obj2 = { uri: _modDef5907 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

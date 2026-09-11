@@ -1,12 +1,12 @@
 // Module ID: 16384
 // Function ID: 16385
 // Name: HomeDrawerFavoritesRow
-// Dependencies: [19, 21, 16377, 4603, 1114, 2]
+// Dependencies: [19, 21, 16377, 4602, 1114, 2]
 // Exports: HomeDrawerFavoritesRowExpandedChildren
 
 // Module 16384 (HomeDrawerFavoritesRow)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import HomeDrawerShared from "HomeDrawerShared" /* 16377 */;
 import noop from "module_19" /* 19 */;
 

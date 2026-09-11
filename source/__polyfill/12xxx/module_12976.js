@@ -1,48 +1,39 @@
 // Module ID: 12976
 // Function ID: 12977
-// Dependencies: []
-// Exports: parseCookie
+// Dependencies: [12888, 12891, 12890, 12896]
+// Exports: addConsoleInstrumentationHandler
 
 // Module 12976
+import _mod12888 from "module_12888" /* 12888 */;
+import _mod12890 from "module_12890" /* 12890 */;
+import _mod12891 from "module_12891" /* 12891 */;
 
-export const parseCookie = function parseCookie(arr) {
-  const obj = {};
-  let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
-    while (-1 !== index) {
-      let length = arr.indexOf(";", num);
-      if (-1 === length) {
-        length = arr.length;
-      } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
-        num = sum;
-        if (sum >= arr.length) {
-          break;
-        }
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod12891.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod12890.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(12891).GLOBAL_OBJ.console) {
+        tmp(12896).fill(tmp(12891).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod12890.originalConsoleMethods[level] = arg0;
+          return () => {
+            const items = [...arguments];
+            level(12888).triggerHandlers("console", { args: items, level });
+            const obj3 = level(12890).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(12891).GLOBAL_OBJ.console, items);
+            }
+          };
+        });
+        const tmpResult = tmp(12896);
       }
-      let str = arr.slice(num, index);
-      let trimmed = str.trim();
-      if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
-        let trimmed1 = str2.trim();
-        index = trimmed1;
-        if (34 === trimmed1.charCodeAt(0)) {
-          index = trimmed1.slice(1, -1);
-        }
-        try {
-          let decodeURIComponentResult = index;
-          if (-1 !== index.indexOf("%")) {
-            let _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(index);
-          }
-          obj[trimmed] = decodeURIComponentResult;
-        } catch (err) {
-          obj[trimmed] = index;
-        }
-      }
-      let sum1 = length + 1;
-    }
+    });
   }
-  return obj;
+}
+
+export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
+  _mod12888.addHandler("console", arg0);
+  _mod12888.maybeInstrument("console", instrumentConsole);
 };

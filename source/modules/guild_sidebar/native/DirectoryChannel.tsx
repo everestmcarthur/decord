@@ -1,23 +1,23 @@
 // Module ID: 16280
 // Function ID: 16281
 // Name: DirectoryChannel
-// Dependencies: [19, 1957, 2012, 10209, 4789, 21, 4607, 576, 563, 1100, 11007, 16187, 9863, 2]
+// Dependencies: [19, 1957, 2012, 10207, 4788, 21, 4606, 576, 563, 1100, 11005, 16187, 9861, 2]
 
 // Module 16280 (DirectoryChannel)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 
 require = fn;
-const UnreadSetting = fn(4789).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
-let obj = { container: { marginVertical: fn(10209).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4606);
+let obj = { container: { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
-let obj3 = { marginVertical: fn(10209).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
 
@@ -50,7 +50,7 @@ export default noop.memo((guildId) => {
   if (null != stateFromStores) {
     const obj2 = { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
     const obj3 = { channel: stateFromStores };
-    obj2.accessibilityLabel = id(9863)(obj3);
+    obj2.accessibilityLabel = id(9861)(obj3);
     const obj4 = { selected };
     obj2.accessibilityState = obj4;
     obj2.channel = stateFromStores;

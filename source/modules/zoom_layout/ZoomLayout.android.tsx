@@ -1,10 +1,10 @@
-// Module ID: 9707
-// Function ID: 9708
+// Module ID: 9705
+// Function ID: 9706
 // Name: ZoomLayout
-// Dependencies: [19, 17, 21, 9708, 2]
+// Dependencies: [19, 17, 21, 9706, 2]
 
-// Module 9707 (ZoomLayout)
-import ZoomLayoutNativeComponentDefault from "ZoomLayoutNativeComponent" /* 9708 */;
+// Module 9705 (ZoomLayout)
+import ZoomLayoutNativeComponentDefault from "ZoomLayoutNativeComponent" /* 9706 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -30,7 +30,7 @@ export default noop.forwardRef((arg0, ref) => {
         value = PixelRatio.get();
         const result = x * value;
         const result1 = y * value;
-        const Commands = ref(9708).Commands;
+        const Commands = ref(9706).Commands;
         Commands.zoomTo(tmp.current, result / num - result, result1 / num - result1, num, flag);
       }
     },
@@ -44,7 +44,7 @@ export default noop.forwardRef((arg0, ref) => {
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = ref(9708).Commands;
+        const Commands = ref(9706).Commands;
         Commands.unzoom(tmp.current, flag);
       }
     }

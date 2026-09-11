@@ -1,19 +1,19 @@
-// Module ID: 13372
-// Function ID: 13373
+// Module ID: 13370
+// Function ID: 13371
 // Name: GuildActionSheetMemberCount
-// Dependencies: [19, 17, 21, 4607, 576, 1116, 1114, 4603, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 1116, 1114, 4602, 2]
 
-// Module 13372 (GuildActionSheetMemberCount)
+// Module 13370 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
@@ -33,7 +33,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
 
 export default noop.memo(function MemberCount(arg0) {
-  ({ type, count, color, dotContainerWidth } = arg0);
+  ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
     const intl2 = util.intl;
     if ("online" === type) {
@@ -67,10 +67,16 @@ export default noop.memo(function MemberCount(arg0) {
     obj5.style = items1;
     obj4.children = React3(View, obj5);
     const items2 = [React3(View, obj4), ];
+    if (textVariant == null) {
+      textVariant = "text-sm/normal";
+    }
+    const obj6 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
     if (color == null) {
       color = "text-default";
     }
-    const obj6 = { variant: "text-sm/normal", color, lineClamp: 1, style: tmp12.refreshText, children: intl.format(etqpUG, obj) };
+    obj6.color = color;
+    obj6.style = tmp12.refreshText;
+    obj6.children = intl.format(etqpUG, obj);
     items2[1] = React3(Text_Text.Text, obj6);
     obj2.children = items2;
     return React4(View, obj2);

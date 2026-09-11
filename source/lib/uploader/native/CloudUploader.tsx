@@ -1,21 +1,21 @@
-// Module ID: 7912
-// Function ID: 7913
+// Module ID: 7911
+// Function ID: 7912
 // Name: CloudUploader
-// Dependencies: [5, 17, 1074, 4600, 3, 7913, 7828, 1114, 5231, 5190, 5226, 7914, 1115, 7915, 5179, 5180, 12, 2]
+// Dependencies: [5, 17, 1074, 4599, 3, 7912, 7827, 1114, 5230, 5189, 5225, 7913, 1115, 7914, 5178, 5179, 12, 2]
 
-// Module 7912 (CloudUploader)
+// Module 7911 (CloudUploader)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import Upload from "Upload" /* 5180 */;
+import Upload from "Upload" /* 5179 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploaderBase from "UploaderBase" /* 7913 */;
+import UploaderBase from "UploaderBase" /* 7912 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AbortCodes: closure_4, NOOP: hasOwnProperty } = Constants);
-const MessageConstants = fn(4600);
+const MessageConstants = fn(4599);
 ({ DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE: metroRequire, FileUploadErrorTypes: closure_7 } = MessageConstants);
 let closure_8 = new LoggerDefault("CloudUploader(Native).tsx");
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaManager);
@@ -71,7 +71,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
             closure_130_5 = undefined;
             closure_130_6 = undefined;
             let uploadTarget;
-            closure_130_0 = files(7828).backgroundTaskIdentifierInvalid;
+            closure_130_0 = files(7827).backgroundTaskIdentifierInvalid;
             self.once("start", tmp4(function*(arg0, value) {
               if (c2 === 2) {
                 c2 = 3;
@@ -104,7 +104,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
                       const obj5 = { count: length.length };
                       obj4.content = intl2.formatToPlainString(closure_2_0(1114).t.D0noUt, obj5);
                       c2 = 1;
-                      const obj7 = { value: files(7828).startBackgroundTask(obj4), done: false };
+                      const obj7 = { value: files(7827).startBackgroundTask(obj4), done: false };
                       return obj7;
                     }
                   } else if (arg0 === 1) {
@@ -117,8 +117,8 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
                   } else {
                     closure_128_0 = value;
                     if (tmp2._aborted) {
-                      files(7828).endBackgroundTask(closure_128_0);
-                      const obj = files(7828);
+                      files(7827).endBackgroundTask(closure_128_0);
+                      const obj = files(7827);
                     }
                     c2 = 3;
                     return { value: "HermesInternal", done: null };
@@ -163,7 +163,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
             }
             self._file.attachmentsCount = arr.length;
             self._handleStart(undefined);
-            tmp65 = _self(5231);
+            tmp65 = _self(5230);
             getKestrelConfig = tmp65.getKestrelConfig;
             closure_130_3 = getKestrelConfig({ location: "CloudUploader.native.uploadFiles" });
             closure_130_4 = 0;
@@ -202,7 +202,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
           closure_130_4 = closure_130_4 + closure_130_6;
           closure_131_0._file.totalPreCompressionSize = closure_130_4;
           closure_131_0._file.currentSize = closure_130_4;
-          uploadTarget = _self(5226).getUploadTarget(closure_130_5.item.target);
+          uploadTarget = _self(5225).getUploadTarget(closure_130_5.item.target);
           const _Math = Math;
           if (closure_130_6 > Math.max(uploadTarget.getMaxFileSize(closure_130_5.channelId), c6)) {
             const obj6 = { code: tmp83.ENTITY_TOO_LARGE, reason: null };
@@ -229,7 +229,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
                 const obj11 = { value: closure_130_2, done: true };
                 return obj11;
               }
-              obj = _self(5231);
+              obj = _self(5230);
             }
             if (closure_130_4 > uploadTarget.getMaxTotalAttachmentSize()) {
               const obj12 = { code: tmp83.ENTITY_TOO_LARGE, reason: null };
@@ -247,7 +247,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
               if (_self === undefined) {
                 const _HermesInternal2 = HermesInternal;
                 logger.log("" + closure_131_0.id + " queued");
-                files(7914).enqueue(() => {
+                files(7913).enqueue(() => {
                   closure_1_0.startUpload();
                   return closure_1_0;
                 });
@@ -260,12 +260,12 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
                 closure_130_5 = tmp69;
                 c6 = 3;
                 constants = 1;
-                const obj18 = { value: _self(5190).getFileSize(closure_130_5.item.uri), done: false };
+                const obj18 = { value: _self(5189).getFileSize(closure_130_5.item.uri), done: false };
                 return obj18;
               }
             }
           }
-          const obj19 = _self(5226);
+          const obj19 = _self(5225);
         }
       } catch (tmp83) {
         if (tmp5 === c5) {

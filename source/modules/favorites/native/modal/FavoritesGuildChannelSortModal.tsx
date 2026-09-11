@@ -1,7 +1,7 @@
 // Module ID: 16213
 // Function ID: 16214
 // Name: FavoritesGuildChannelSortModal
-// Dependencies: [19, 16214, 1961, 1074, 21, 16215, 1611, 1114, 16216, 16212, 7074, 2]
+// Dependencies: [19, 16214, 1961, 1074, 21, 16215, 1611, 1114, 16216, 16212, 7073, 2]
 // Exports: default
 
 // Module 16213 (FavoritesGuildChannelSortModal)
@@ -44,5 +44,5 @@ export default function FavoritesGuildChannelSortModal() {
     obj.FAVORITES_GUILD_CHANNEL_SORT = obj2;
     return obj;
   }, items);
-  return jsx(bottom(7074).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+  return jsx(bottom(7073).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
 };

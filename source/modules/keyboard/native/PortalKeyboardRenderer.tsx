@@ -1,7 +1,7 @@
 // Module ID: 16841
 // Function ID: 16842
 // Name: PortalKeyboardRenderer
-// Dependencies: [19, 1479, 21, 4317, 4474, 1609, 1115, 16842, 4475, 4465, 7295, 10181, 1481, 4478, 10413, 2]
+// Dependencies: [19, 1479, 21, 4317, 4474, 1609, 1115, 16842, 4475, 4465, 7294, 10179, 1481, 4478, 10411, 2]
 // Exports: PortalKeyboardRenderer
 
 // Module 16841 (PortalKeyboardRenderer)
@@ -123,7 +123,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     let tmp10Result = tmp10(tmp5(4478).PortalKeyboard, obj3);
   } else {
     const obj4 = { value: true, children: tmp11 };
-    tmp10Result = tmp10(tmp5(10413).PortalKeyboardInModalContext.Provider, obj4);
+    tmp10Result = tmp10(tmp5(10411).PortalKeyboardInModalContext.Provider, obj4);
   }
   return tmp10Result;
 };

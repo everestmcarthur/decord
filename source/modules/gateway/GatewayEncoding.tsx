@@ -1,11 +1,11 @@
-// Module ID: 13688
-// Function ID: 13689
+// Module ID: 13686
+// Function ID: 13687
 // Name: GatewayEncoding
-// Dependencies: [13689, 5193, 2]
+// Dependencies: [13687, 5192, 2]
 
-// Module 13688 (GatewayEncoding)
-import ProcessArgs2 from "ProcessArgs" /* 5193 */;
-import GatewayEncodingErlpackEncoding_mod from "GatewayEncodingErlpackEncoding" /* 13689 */;
+// Module 13686 (GatewayEncoding)
+import ProcessArgs2 from "ProcessArgs" /* 5192 */;
+import GatewayEncodingErlpackEncoding_mod from "GatewayEncodingErlpackEncoding" /* 13687 */;
 import size from "module_2" /* 2 */;
 
 let GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding_mod;

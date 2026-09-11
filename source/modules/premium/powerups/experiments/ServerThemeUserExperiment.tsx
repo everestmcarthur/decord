@@ -1,10 +1,10 @@
-// Module ID: 4535
-// Function ID: 4536
+// Module ID: 4534
+// Function ID: 4535
 // Name: ServerThemeUserExperiment
 // Dependencies: [1433, 2]
 // Exports: getServerThemeUserEnabled, useServerThemeUserEnabled
 
-// Module 4535 (ServerThemeUserExperiment)
+// Module 4534 (ServerThemeUserExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

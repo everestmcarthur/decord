@@ -1,8 +1,8 @@
-// Module ID: 6612
-// Function ID: 6613
+// Module ID: 6611
+// Function ID: 6612
 // Dependencies: [2]
 
-// Module 6612
+// Module 6611
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TeaKettleSpotIllustration-2x.png.js");

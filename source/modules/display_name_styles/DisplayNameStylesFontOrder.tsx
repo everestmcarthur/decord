@@ -1,7 +1,7 @@
 // Module ID: 15400
 // Function ID: 15401
 // Name: DisplayNameStylesFontOrder
-// Dependencies: [19, 1389, 1391, 9269, 2]
+// Dependencies: [19, 1389, 1391, 9267, 2]
 // Exports: useVisibleFontOrder
 
 // Module 15400 (DisplayNameStylesFontOrder)
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
 
 export const useVisibleFontOrder = function useVisibleFontOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9269).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9267).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items1 : items, items);
 };

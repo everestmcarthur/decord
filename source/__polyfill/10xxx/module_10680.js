@@ -1,16 +1,16 @@
 // Module ID: 10680
 // Function ID: 10681
-// Dependencies: [41, 42, 93, 95, 98, 10523, 10677, 10524, 10679]
+// Dependencies: [41, 42, 93, 95, 98, 10675, 10523, 10524, 10677]
 
 // Module 10680
-import _mod10679 from "module_10679" /* 10679 */;
+import _mod10677 from "module_10677" /* 10677 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UkMonthNameParser = require;
+const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UkMonthNameParser {
+class UKTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UkMonthNameParser);
+    tmp = c2(this, UKTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UkMonthNameParser);
+    obj = closure_4(UKTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,40 +50,23 @@ class UkMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UkMonthNameParser, _mod10679.AbstractParserWithLeftBoundaryChecking);
+_inherits(UKTimeUnitAgoFormatParser, _mod10677.AbstractParserWithLeftBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
-    return "((?:\u0432|\u0443)\\s*)?(" + UkMonthNameParser(10523).matchAnyPattern(UkMonthNameParser(10677).MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + UkMonthNameParser(10677).YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)";
+    return "(" + UKTimeUnitAgoFormatParser(10675).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!UkMonthNameParser(10677).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = UkMonthNameParser(10677).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", tmp7(10677).parseYearPattern(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", tmp7(10524).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9));
-      }
-      return parsingResult;
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = UKTimeUnitAgoFormatParser(10675).parseDuration(arg1[1]);
+      const ParsingComponents = UKTimeUnitAgoFormatParser(10524).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitAgoFormatParser(10523).reverseDuration(UKTimeUnitAgoFormatParser(10675).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(UkMonthNameParser, items);
+export default _createClass(UKTimeUnitAgoFormatParser, items);

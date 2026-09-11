@@ -1,10 +1,10 @@
-// Module ID: 10366
-// Function ID: 10367
+// Module ID: 10364
+// Function ID: 10365
 // Name: PortalKeyboardFooterIOS
-// Dependencies: [19, 21, 4607, 576, 1611, 1625, 4474, 4343, 1609, 1093, 4479, 2]
+// Dependencies: [19, 21, 4606, 576, 1611, 1625, 4474, 4343, 1609, 1093, 4479, 2]
 // Exports: default
 
-// Module 10366 (PortalKeyboardFooterIOS)
+// Module 10364 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { keyboardStickyFooter: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, flex: 1, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.keyboardStickyFooter = rect;

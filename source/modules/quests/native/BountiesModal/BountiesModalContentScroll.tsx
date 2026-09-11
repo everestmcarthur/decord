@@ -1,7 +1,7 @@
 // Module ID: 15060
 // Function ID: 15061
 // Name: BountiesModalContentScroll
-// Dependencies: [32, 19, 17, 7775, 5496, 15061, 1074, 1954, 21, 1116, 576, 4607, 4343, 1477, 1611, 15062, 11579, 11616, 11617, 4608, 4611, 7791, 11593, 1109, 504, 15065, 15066, 1256, 7801, 15068, 15069, 11372, 5503, 5501, 11608, 15057, 15070, 15102, 15103, 15073, 15104, 11873, 15105, 8966, 15110, 5039, 15111, 15112, 4332, 15118, 2]
+// Dependencies: [32, 19, 17, 7774, 5495, 15061, 1074, 1954, 21, 1116, 576, 4606, 4343, 1477, 1611, 15062, 11577, 11614, 11615, 4607, 4610, 7790, 11591, 1109, 504, 15065, 15066, 1256, 7800, 15068, 15069, 11370, 5502, 5500, 11606, 15057, 15070, 15102, 15103, 15073, 15104, 11871, 15105, 8964, 15110, 5038, 15111, 15112, 4332, 15118, 2]
 // Exports: default
 
 // Module 15060 (BountiesModalContentScroll)
@@ -10,18 +10,18 @@ import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ThemeContextProvider from "ThemeContextProvider" /* 4332 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
-import QuestContent from "QuestContent" /* 5501 */;
-import AdCreativeType from "AdCreativeType" /* 5503 */;
-import AnalyticsActions from "AnalyticsActions" /* 7791 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
-import QuestActionCreators from "QuestActionCreators" /* 11372 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11579 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11593 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11608 */;
-import useBountiesExperience from "useBountiesExperience" /* 11616 */;
-import BountiesVerticalScrollExperiment from "BountiesVerticalScrollExperiment" /* 11617 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
+import QuestContent from "QuestContent" /* 5500 */;
+import AdCreativeType from "AdCreativeType" /* 5502 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
+import QuestActionCreators from "QuestActionCreators" /* 11370 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11577 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11591 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11606 */;
+import useBountiesExperience from "useBountiesExperience" /* 11614 */;
+import BountiesVerticalScrollExperiment from "BountiesVerticalScrollExperiment" /* 11615 */;
 import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15057 */;
 import BountiesScrollPromptFooter from "BountiesScrollPromptFooter" /* 15062 */;
 import useBountiesRecapScroll from "useBountiesRecapScroll" /* 15065 */;
@@ -33,7 +33,7 @@ import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 15105 */;
 import shared_ThemeTypes from "shared/ThemeTypes" /* 15118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7775 */;
+import BountyStore from "BountyStore" /* 7774 */;
 
 require = fn;
 function ItemSeparator(trailingItem) {
@@ -945,15 +945,15 @@ function BountiesModalContentScrollInner(arg0) {
       obj37.pointerEvents = str2;
       const obj38 = {
         adContentId: orbAmount,
-        adCreativeType: tmp5(5503).AdCreativeType.BOUNTY,
-        questContent: tmp5(5501).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(5502).AdCreativeType.BOUNTY,
+        questContent: tmp5(5500).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first3,
         sourceQuestContent,
         children() {
               return __initData(BountiesScrollRecapPage.BountiesScrollRecapPage, { orbAmount, onClose, style: { flex: 1 } });
             }
       };
-      obj37.children = tmp102(tmp5(11873).QuestContentImpressionTrackerNative, obj38);
+      obj37.children = tmp102(tmp5(11871).QuestContentImpressionTrackerNative, obj38);
       tmp102Result = tmp102(tmp2(4343).View, obj37);
     }
     items30[1] = tmp102Result;
@@ -979,7 +979,7 @@ function BountiesModalContentScrollInner(arg0) {
       scrollEnabled: !tmp19,
       contentContainerStyle: memo10
     };
-    obj39.children = c15(tmp5(8966).AnimatedFlashList, obj40);
+    obj39.children = c15(tmp5(8964).AnimatedFlashList, obj40);
     items30[2] = c15(tmp2(4343).View, obj39);
     let tmp102Result5 = null;
     if (null != tmp18) {
@@ -995,7 +995,7 @@ function BountiesModalContentScrollInner(arg0) {
         const items32 = [memo15, animatedStyle4];
         obj42.style = items32;
         const obj43 = { colors, style: memo.absoluteFill };
-        obj42.children = tmp102(tmp2(5039), obj43);
+        obj42.children = tmp102(tmp2(5038), obj43);
         tmp102Result6 = tmp102(tmp2(4343).View, obj42);
       }
     }
@@ -1044,7 +1044,7 @@ function BountiesModalContentScrollInner(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestConstants = fn(5496);
+const QuestConstants = fn(5495);
 ({ DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
 const BountiesModalConstants = fn(15061);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
@@ -1070,7 +1070,7 @@ function isScrollEventInBounds(contentOffset) {
 isScrollEventInBounds.__closure = {};
 isScrollEventInBounds.__workletHash = 14148486927190;
 isScrollEventInBounds.__initData = { code: "function isScrollEventInBounds_BountiesModalContentScrollTsx1(event){const maxOffset=Math.max(0,event.contentSize.height-event.layoutMeasurement.height);return event.contentOffset.y>=0&&event.contentOffset.y<=maxOffset;}" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_30 = createStyles.createStyles(() => {
   const obj = { root: { flex: 1 }, recapPage: { position: "absolute", zIndex }, listWrapper: { position: "absolute", zIndex: zIndex2, overflow: "hidden" }, closeButton: { position: "absolute", zIndex: zIndex4 }, peekGradient: { position: "absolute", zIndex: zIndex3 }, autoScrollIndicator: { position: "absolute", zIndex: zIndex4, alignItems: "center" } };
   return obj;

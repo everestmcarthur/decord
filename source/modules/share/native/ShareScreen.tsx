@@ -1,15 +1,15 @@
-// Module ID: 13955
-// Function ID: 13956
+// Module ID: 13953
+// Function ID: 13954
 // Name: ShareScreen
-// Dependencies: [5, 32, 19, 17, 1961, 1957, 4245, 1074, 11778, 10951, 21, 4607, 576, 1115, 1114, 13956, 11076, 1369, 13957, 4850, 1242, 10034, 4618, 8450, 11798, 1896, 4953, 13958, 13959, 5683, 7937, 1608, 5676, 11079, 13960, 2]
+// Dependencies: [5, 32, 19, 17, 1961, 1957, 4245, 1074, 11776, 10949, 21, 4606, 576, 1115, 1114, 13954, 11074, 1369, 13955, 4849, 1242, 10032, 4617, 8448, 11796, 1896, 4952, 13956, 13957, 5682, 7936, 1608, 5675, 11077, 13958, 2]
 // Exports: default
 
-// Module 13955 (ShareScreen)
+// Module 13953 (ShareScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 13958 */;
-import ShareEmbedDefault from "ShareEmbed" /* 13959 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 13956 */;
+import ShareEmbedDefault from "ShareEmbed" /* 13957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -36,11 +36,11 @@ const ChannelRecord = fn(1961);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11778).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10951).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11776).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10949).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null };
 let PlatformUtils = fn(1115);
 let num = 0;

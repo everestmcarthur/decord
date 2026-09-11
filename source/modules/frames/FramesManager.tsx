@@ -1,19 +1,19 @@
-// Module ID: 9662
-// Function ID: 9663
+// Module ID: 9660
+// Function ID: 9661
 // Name: FramesManager
-// Dependencies: [9603, 9604, 1074, 4512, 7192, 9611, 1242, 573, 2]
+// Dependencies: [9601, 9602, 1074, 4511, 7191, 9609, 1242, 573, 2]
 
-// Module 9662 (FramesManager)
+// Module 9660 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import FramesStore from "FramesStore" /* 9603 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import FramesStore from "FramesStore" /* 9601 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 let require = fn;
-const EmbeddedSurfaceType = fn(9604).EmbeddedSurfaceType;
+const EmbeddedSurfaceType = fn(9602).EmbeddedSurfaceType;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
-const TransportTypes = fn(4512).TransportTypes;
+const TransportTypes = fn(4511).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -24,14 +24,14 @@ class FramesManager extends tmp3 {
           },
       FRAME_LAUNCH(arg0) {
             ({ applicationId, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9611).trackFrameSessionStart(applicationId, analyticsContext);
+            const result = applyArgumentsResult(9609).trackFrameSessionStart(applicationId, analyticsContext);
           },
       FRAME_LAUNCH_FAIL(arg0) {
             ({ applicationId, error, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9611).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+            const result = applyArgumentsResult(9609).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9611).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(9609).trackFrameSessionEnd(applicationId.applicationId);
           },
       VOICE_CHANNEL_SELECT(arg0) {
             const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);

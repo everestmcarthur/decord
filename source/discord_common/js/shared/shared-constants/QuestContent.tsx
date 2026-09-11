@@ -1,9 +1,9 @@
-// Module ID: 5501
-// Function ID: 5502
+// Module ID: 5500
+// Function ID: 5501
 // Name: QuestContent
 // Dependencies: [2]
 
-// Module 5501 (QuestContent)
+// Module 5500 (QuestContent)
 import size from "module_2" /* 2 */;
 
 const obj = { DISMISSIBLE: new Set([0, 1, 4, 5, 10, 13]), TARGETED: null, DESKTOP_DELIVERY: null, MOBILE_DELIVERY: null };

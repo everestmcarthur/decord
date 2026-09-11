@@ -1,17 +1,17 @@
-// Module ID: 10401
-// Function ID: 10402
+// Module ID: 10399
+// Function ID: 10400
 // Name: EmojiPickerListRow
-// Dependencies: [19, 17, 1183, 10381, 1219, 21, 4607, 576, 1115, 672, 1396, 5147, 5175, 5639, 4458, 7205, 7206, 1178, 10402, 2]
+// Dependencies: [19, 17, 1183, 10379, 1219, 21, 4606, 576, 1115, 672, 1396, 5146, 5174, 5638, 4458, 7204, 7205, 1178, 10400, 2]
 
-// Module 10401 (EmojiPickerListRow)
+// Module 10399 (EmojiPickerListRow)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import PlatformUtils2 from "PlatformUtils" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import LockIcon from "LockIcon" /* 5147 */;
-import Pressables from "Pressables" /* 5175 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10402 */;
+import LockIcon from "LockIcon" /* 5146 */;
+import Pressables from "Pressables" /* 5174 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10400 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -110,12 +110,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(10381);
+const EmojiPickerListConstants = fn(10379);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1115);
 let num = 28;

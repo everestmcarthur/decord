@@ -1,11 +1,11 @@
-// Module ID: 12686
-// Function ID: 12687
+// Module ID: 12684
+// Function ID: 12685
 // Name: ProgressCircle
-// Dependencies: [19, 17, 21, 4607, 4317, 576, 8544, 2]
+// Dependencies: [19, 17, 21, 4606, 4317, 576, 8542, 2]
 
-// Module 12686 (ProgressCircle)
+// Module 12684 (ProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8544 */;
+import inlineStyles from "inlineStyles" /* 8542 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createLegacyClassComponentStyles({ progressCircle: { alignItems: "center", justifyContent: "center" }, circle: { position: "absolute", width: "100%", height: "100%" }, circleOverlay: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center" } });
 const Component = noop.Component;
 class ProgressCircle extends Component {

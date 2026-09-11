@@ -1,8 +1,8 @@
-// Module ID: 6266
-// Function ID: 6267
+// Module ID: 6265
+// Function ID: 6266
 // Dependencies: [2]
 
-// Module 6266
+// Module 6265
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeartHandsSpotIllustration-2x.png.js");

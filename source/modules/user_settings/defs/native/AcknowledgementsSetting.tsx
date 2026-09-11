@@ -1,14 +1,14 @@
 // Module ID: 15605
 // Function ID: 15606
 // Name: AcknowledgementsSetting
-// Dependencies: [1074, 4301, 11564, 1114, 4562, 2]
+// Dependencies: [1074, 4301, 11562, 1114, 4561, 2]
 
 // Module 15605 (AcknowledgementsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import LinkingDefault from "Linking" /* 4301 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4562 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4561 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

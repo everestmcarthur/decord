@@ -1,11 +1,11 @@
-// Module ID: 10985
-// Function ID: 10986
+// Module ID: 10983
+// Function ID: 10984
 // Name: UserProfileVoiceActivityIcon
-// Dependencies: [19, 4245, 1085, 21, 504, 7955, 5114, 5148, 5149, 5151, 5150, 5153, 2]
+// Dependencies: [19, 4245, 1085, 21, 504, 7954, 5113, 5147, 5148, 5150, 5149, 5152, 2]
 // Exports: default
 
-// Module 10985 (UserProfileVoiceActivityIcon)
-import isRoleRequiredDefault from "isRoleRequired" /* 5114 */;
+// Module 10983 (UserProfileVoiceActivityIcon)
+import isRoleRequiredDefault from "isRoleRequired" /* 5113 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 
@@ -37,23 +37,23 @@ export default function UserProfileVoiceActivityIcon(channel) {
         if (tmp6) {
           const obj2 = {};
           const merged1 = Object.assign(merged);
-          let tmp8Result = jsx(tmp2(5148).StageLockIcon, {});
+          let tmp8Result = jsx(tmp2(5147).StageLockIcon, {});
         }
         return tmp8Result;
       }
       if (isGuildStageVoiceResult) {
         const obj3 = {};
         const merged2 = Object.assign(merged);
-        tmp8Result = jsx(tmp2(5149).StageIcon, {});
+        tmp8Result = jsx(tmp2(5148).StageIcon, {});
       } else if (channel.isNSFW()) {
         const obj4 = {};
         const merged3 = Object.assign(merged);
-        tmp8Result = tmp8(tmp2(5151).VoiceWarningIcon, obj4);
+        tmp8Result = tmp8(tmp2(5150).VoiceWarningIcon, obj4);
       } else {
         if (tmp6) {
-          let VoiceNormalIcon = tmp2(5150).VoiceLockIcon;
+          let VoiceNormalIcon = tmp2(5149).VoiceLockIcon;
         } else {
-          VoiceNormalIcon = tmp2(5153).VoiceNormalIcon;
+          VoiceNormalIcon = tmp2(5152).VoiceNormalIcon;
         }
         const obj5 = {};
         const merged4 = Object.assign(merged);
@@ -62,5 +62,5 @@ export default function UserProfileVoiceActivityIcon(channel) {
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(7955).PhoneCallIcon, {});
+  return jsx(channel(7954).PhoneCallIcon, {});
 };

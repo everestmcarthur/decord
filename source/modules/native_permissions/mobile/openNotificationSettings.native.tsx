@@ -1,12 +1,12 @@
-// Module ID: 9783
-// Function ID: 9784
+// Module ID: 9781
+// Function ID: 9782
 // Name: openNotificationSettings
-// Dependencies: [17, 1115, 5200, 2]
+// Dependencies: [17, 1115, 5199, 2]
 // Exports: default
 
-// Module 9783 (openNotificationSettings)
+// Module 9781 (openNotificationSettings)
 import _mod17 from "module_17" /* 17 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5200 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5199 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

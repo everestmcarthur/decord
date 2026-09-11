@@ -1,12 +1,12 @@
-// Module ID: 17896
-// Function ID: 17897
+// Module ID: 17895
+// Function ID: 17896
 // Name: InappropriateConversationsManager
-// Dependencies: [9995, 4731, 7192, 2]
+// Dependencies: [9993, 4730, 7191, 2]
 
-// Module 17896 (InappropriateConversationsManager)
-import _modDef4731 from "module_4731" /* 4731 */;
-import SoundUtils from "SoundUtils" /* 9995 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+// Module 17895 (InappropriateConversationsManager)
+import _modDef4730 from "module_4730" /* 4730 */;
+import SoundUtils from "SoundUtils" /* 9993 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 import size from "module_2" /* 2 */;
 
 function fadeIn() {
@@ -23,7 +23,7 @@ function fadeIn() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = _modDef4731(closure_3, 0, 0.5);
+      closure_2.volume = _modDef4730(closure_3, 0, 0.5);
     }
     clearInterval(c5);
     if (tmp9) {
@@ -47,7 +47,7 @@ function handlePauseMusic() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = _modDef4731(closure_3, 0, 0.5);
+      closure_2.volume = _modDef4730(closure_3, 0, 0.5);
     }
     clearInterval(c5);
     let tmp10 = 0 === rounded1;
@@ -75,7 +75,7 @@ function handleStopMusic() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = _modDef4731(closure_3, 0, 0.5);
+      closure_2.volume = _modDef4730(closure_3, 0, 0.5);
     }
     clearInterval(c5);
     let tmp10 = 0 === rounded1;

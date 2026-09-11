@@ -1,13 +1,13 @@
-// Module ID: 6189
-// Function ID: 6190
+// Module ID: 6188
+// Function ID: 6189
 // Name: GemLevel3SpotIllustration
-// Dependencies: [21, 5639, 6190, 2]
+// Dependencies: [21, 5638, 6189, 2]
 // Exports: GemLevel3SpotIllustration
 
-// Module 6189 (GemLevel3SpotIllustration)
+// Module 6188 (GemLevel3SpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6190 from "module_6190" /* 6190 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6189 from "module_6189" /* 6189 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GemLevel3SpotIllustration = function GemLevel3SpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6190 };
+  const obj2 = { uri: _modDef6189 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

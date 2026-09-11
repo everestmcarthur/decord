@@ -1,16 +1,16 @@
 // Module ID: 14964
 // Function ID: 14965
 // Name: SpendingLimitDisplay
-// Dependencies: [1221, 7611, 1373, 504, 14882, 7308, 7309, 1114, 2396, 2]
+// Dependencies: [1221, 7610, 1373, 504, 14882, 7307, 7308, 1114, 2396, 2]
 // Exports: useSpendingLimitDisplayState, useSpendingLimitFromUserSettings
 
 // Module 14964 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import PriceUtils from "PriceUtils" /* 7308 */;
+import PriceUtils from "PriceUtils" /* 7307 */;
 import SpendingLimitUtils from "SpendingLimitUtils" /* 14882 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 
 require = fn;
 function getSpendingLimitDisplayState(amount, arg1) {
@@ -26,7 +26,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
       const obj2 = { kind: "spent", monthlyText: formatRateResult };
       return obj2;
     } else {
-      let num = tmp5(7309).CurrencyExponents[amount.currency];
+      let num = tmp5(7308).CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
@@ -34,10 +34,10 @@ function getSpendingLimitDisplayState(amount, arg1) {
       if (diff <= 10 * 10 ** num) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = tmp5(1114).intl;
-        const obj4 = { amount: tmp5(7308).formatPrice(diff, currency) };
+        const obj4 = { amount: tmp5(7307).formatPrice(diff, currency) };
         obj3.remainingText = intl.formatToPlainString(_modDef2396["+Q+bU1"], obj4);
         let obj = obj3;
-        const tmp5Result = tmp5(7308);
+        const tmp5Result = tmp5(7307);
       } else {
         obj = { kind: "on", monthlyText: formatRateResult };
       }

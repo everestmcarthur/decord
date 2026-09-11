@@ -1,9 +1,9 @@
-// Module ID: 10795
-// Function ID: 10796
+// Module ID: 10793
+// Function ID: 10794
 // Name: InvalidGooglePlayPurchase
 // Dependencies: [4286, 2]
 
-// Module 10795 (InvalidGooglePlayPurchase)
+// Module 10793 (InvalidGooglePlayPurchase)
 import BillingError from "BillingError" /* 4286 */;
 
 const prototype = function InvalidGooglePlayPurchase() {

@@ -1,7 +1,7 @@
 // Module ID: 16663
 // Function ID: 16664
 // Name: VibegrationsChatStore
-// Dependencies: [32, 109, 7611, 10173, 2011, 4428, 5331, 16664, 1074, 1964, 1114, 3590, 16665, 1935, 9995, 504, 573, 2]
+// Dependencies: [32, 109, 7610, 10171, 2011, 4428, 5330, 16664, 1074, 1964, 1114, 3590, 16665, 1935, 9993, 504, 573, 2]
 // Exports: getOlderHistoryCursor, turnSettled
 
 // Module 16663 (VibegrationsChatStore)
@@ -10,15 +10,15 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import SoundUtils from "SoundUtils" /* 9995 */;
+import SoundUtils from "SoundUtils" /* 9993 */;
 import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16665 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10173 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10171 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
 import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16664 */;
 
 require = fn;

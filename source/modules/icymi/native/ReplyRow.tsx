@@ -1,14 +1,14 @@
 // Module ID: 16580
 // Function ID: 16581
 // Name: ReplyRow
-// Dependencies: [19, 17, 21, 16523, 576, 5175, 4603, 8850, 2]
+// Dependencies: [19, 17, 21, 16523, 576, 5174, 4602, 8848, 2]
 // Exports: ContentInventoryReplyRow
 
 // Module 16580 (ReplyRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import ReactionIcon from "ReactionIcon" /* 8850 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import ReactionIcon from "ReactionIcon" /* 8848 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

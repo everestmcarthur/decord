@@ -1,7 +1,7 @@
 // Module ID: 16424
 // Function ID: 16425
 // Name: GuildsBarCreateJoinButton
-// Dependencies: [5, 19, 17, 4428, 1074, 1373, 21, 4607, 9787, 1896, 12803, 7286, 9406, 7256, 16365, 13771, 504, 16380, 1114, 16425, 11300, 576, 2]
+// Dependencies: [5, 19, 17, 4428, 1074, 1373, 21, 4606, 9785, 1896, 12801, 7285, 9404, 7255, 16365, 13769, 504, 16380, 1114, 16425, 11298, 576, 2]
 
 // Module 16424 (GuildsBarCreateJoinButton)
 import nativeDefault from "native" /* 576 */;
@@ -98,7 +98,7 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_7, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: closure_9, UpsellTypes: c10 } = Constants);
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
@@ -106,7 +106,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCrea
 export default noop.memo(function GuildsBarCreateJoinButton() {
   const tmp = closure_13();
   const obj = enabled(16365);
-  const GameCommunityAddServerEntryExperiment = enabled(13771).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13769).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
   const guildsBarAnimatedWrapperStyles = enabled(16365).useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
@@ -135,13 +135,13 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       })();
     }
   }), items1);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "to top left", expandedChildren: "keyword", children: "to bottom right" };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "interactive-text-default", expandedChildren: null, children: "Array" };
   obj2 = enabled(504);
   const intl = tmp2(1114).intl;
   obj4.label = intl.string(enabled(1114).t.l5WIbf);
   obj4.expandedChildren = jsx(enabled(16425).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
-  obj4.children = jsx(enabled(11300).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "to top left", expandedChildren: "keyword", children: "to bottom right" });
+  obj4.children = jsx(enabled(11298).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "interactive-text-default", expandedChildren: null, children: "Array" });
   return <tmp8 style={tmp.stretch}>{null}</tmp8>;
 });

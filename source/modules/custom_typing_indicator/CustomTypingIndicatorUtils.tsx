@@ -1,18 +1,18 @@
-// Module ID: 12066
-// Function ID: 12067
+// Module ID: 12064
+// Function ID: 12065
 // Name: CustomTypingIndicatorUtils
-// Dependencies: [5511, 8246, 1957, 5490, 1371, 1074, 1374, 1379, 3592, 4259, 4263, 1392, 1086, 4250, 504, 2]
+// Dependencies: [5510, 8245, 1957, 5489, 1371, 1074, 1374, 1379, 3592, 4259, 4263, 1392, 1086, 4250, 504, 2]
 // Exports: getCustomTypingIndicatorSuggestionMessage, getCustomTypingIndicatorSuggestionPresets, getCustomTypingIndicatorSuggestionWithNameMessage, getRandomCustomTypingIndicatorAnimation, getRandomCustomTypingIndicatorSuggestion, getSurpriseMeEmojiPool, getViewableCustomTypingIndicatorConfig, pickRandomCustomTypingIndicatorEmojis, useCurrentCustomTypingIndicatorConfig
 
-// Module 12066 (CustomTypingIndicatorUtils)
+// Module 12064 (CustomTypingIndicatorUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import _modDef3592 from "module_3592" /* 3592 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
-import EmojiStore from "EmojiStore" /* 5511 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8246 */;
+import EmojiStore from "EmojiStore" /* 5510 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;

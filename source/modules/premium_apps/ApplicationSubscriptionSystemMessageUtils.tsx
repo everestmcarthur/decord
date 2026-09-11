@@ -1,10 +1,10 @@
-// Module ID: 8070
-// Function ID: 8071
+// Module ID: 8069
+// Function ID: 8070
 // Name: ApplicationSubscriptionSystemMessageUtils
 // Dependencies: [1114, 2]
 // Exports: getApplicationSubscriptionSystemMessageASTContent
 
-// Module 8070 (ApplicationSubscriptionSystemMessageUtils)
+// Module 8069 (ApplicationSubscriptionSystemMessageUtils)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 

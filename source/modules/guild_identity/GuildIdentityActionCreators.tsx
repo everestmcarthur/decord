@@ -1,10 +1,10 @@
-// Module ID: 9302
-// Function ID: 9303
+// Module ID: 9300
+// Function ID: 9301
 // Name: GuildIdentityActionCreators
-// Dependencies: [5, 1074, 573, 1272, 5221, 7059, 2]
+// Dependencies: [5, 1074, 573, 1272, 5220, 7058, 2]
 // Exports: clearErrors, initGuildIdentitySettings, resetAllPending, resetPendingMemberChanges, resetPendingProfileChanges, saveGuildIdentityChanges, setCurrentGuild
 
-// Module 9302 (GuildIdentityActionCreators)
+// Module 9300 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -52,7 +52,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0, value) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

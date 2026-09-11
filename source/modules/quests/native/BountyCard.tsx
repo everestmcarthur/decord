@@ -1,14 +1,14 @@
 // Module ID: 15124
 // Function ID: 15125
 // Name: BountyCard
-// Dependencies: [32, 19, 17, 4599, 7775, 21, 4607, 576, 1116, 504, 11381, 4308, 5659, 8396, 5639, 9532, 4603, 1114, 5027, 4567, 2]
+// Dependencies: [32, 19, 17, 4598, 7774, 21, 4606, 576, 1116, 504, 11379, 4308, 5658, 8394, 5638, 9530, 4602, 1114, 5026, 4566, 2]
 
 // Module 15124 (BountyCard)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import BountyStore from "BountyStore" /* 7775 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import BountyStore from "BountyStore" /* 7774 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 188;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { tile: { gap: nativeDefault.space.PX_12 }, card: null, cardImage: null, previewVideo: null, badge: null, badgeContent: null, badgeText: null, startButton: null, cardFooter: null, advertiserRow: null, advertiserName: null, advertiserIcon: null };
   const size = { width: v188, height: 313, overflow: "hidden", padding: 0 };

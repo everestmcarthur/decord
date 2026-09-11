@@ -1,15 +1,15 @@
-// Module ID: 12502
-// Function ID: 12503
+// Module ID: 12500
+// Function ID: 12501
 // Name: FloatingChatInputContainer
-// Dependencies: [32, 19, 21, 4343, 4308, 576, 1625, 4474, 1609, 4608, 4611, 2]
+// Dependencies: [32, 19, 21, 4343, 4308, 576, 1625, 4474, 1609, 4607, 4610, 2]
 // Exports: default
 
-// Module 12502 (FloatingChatInputContainer)
+// Module 12500 (FloatingChatInputContainer)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4474 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

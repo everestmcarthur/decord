@@ -1,0 +1,9 @@
+// Module ID: 13316
+// Function ID: 13317
+// Dependencies: [1122]
+
+// Module 13316
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_templates/native/images", width: 32, height: 32, scales: [2, 3], hash: "10db56263423f61f9d871a4581be001b", name: "ic_guild_template", type: "png" });

@@ -1,31 +1,23 @@
 // Module ID: 5269
 // Function ID: 5270
-// Dependencies: [5270, 5268]
+// Dependencies: []
 
 // Module 5269
-import _modDef5268 from "module_5268" /* 5268 */;
-import _modDef5270 from "module_5270" /* 5270 */;
-
-importDefault = arg2;
-const dependencyMap = arg6;
+let c0 = 18761;
+let c1 = 19789;
 
 export default {
-  isTiffFile(byteLength) {
-    let tmp = byteLength;
-    if (tmp) {
-      tmp = byteLength.byteLength >= 4;
-    }
-    if (tmp) {
-      const uint16 = byteLength.getUint16(0);
-      tmp = byteLength.getUint16(2, uint16 === _modDef5270.LITTLE_ENDIAN) === 42;
-    }
-    return tmp;
-  },
-  findTiffOffsets() {
-    if (_modDef5268.USE_EXIF) {
-      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
     } else {
-      return {};
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
     }
   }
 };

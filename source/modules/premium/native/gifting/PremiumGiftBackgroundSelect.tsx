@@ -1,14 +1,14 @@
-// Module ID: 10920
-// Function ID: 10921
+// Module ID: 10918
+// Function ID: 10919
 // Name: PremiumGiftBackgroundSelect
-// Dependencies: [32, 19, 17, 21, 4343, 4607, 576, 1477, 4608, 1178, 10921, 10790, 2]
+// Dependencies: [32, 19, 17, 21, 4343, 4606, 576, 1477, 4607, 1178, 10919, 10788, 2]
 // Exports: default
 
-// Module 10920 (PremiumGiftBackgroundSelect)
+// Module 10918 (PremiumGiftBackgroundSelect)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import timing from "timing" /* 4608 */;
-import NativeGiftContext from "NativeGiftContext" /* 10790 */;
+import timing from "timing" /* 4607 */;
+import NativeGiftContext from "NativeGiftContext" /* 10788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
@@ -99,7 +99,7 @@ class GiftBackgroundSelect {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 }, contentContainer: { justifyContent: "center" } };
 const React7 = createStyles.createStyles(obj);
 const __initData = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}" };

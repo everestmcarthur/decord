@@ -1,15 +1,15 @@
-// Module ID: 5063
-// Function ID: 5064
+// Module ID: 5062
+// Function ID: 5063
 // Name: getSoundmojiASTFromString
-// Dependencies: [5064, 4828, 1074, 5069, 5070, 5071, 5073, 1396, 2]
+// Dependencies: [5063, 4827, 1074, 5068, 5069, 5070, 5072, 1396, 2]
 // Exports: default, getSoundmojiFromMessage
 
-// Module 5063 (getSoundmojiASTFromString)
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5069 */;
-import isSoundValidDefault from "isSoundValid" /* 5070 */;
-import getSoundStringDefault from "getSoundString" /* 5073 */;
-import SoundboardStore from "SoundboardStore" /* 5064 */;
-import MessageStore from "MessageStore" /* 4828 */;
+// Module 5062 (getSoundmojiASTFromString)
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5068 */;
+import isSoundValidDefault from "isSoundValid" /* 5069 */;
+import getSoundStringDefault from "getSoundString" /* 5072 */;
+import SoundboardStore from "SoundboardStore" /* 5063 */;
+import MessageStore from "MessageStore" /* 4827 */;
 
 const AvatarUtils = tmp3(1396);
 require = fn;
@@ -25,7 +25,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     const tmp9 = isSoundValidDefault(soundById, guildId.guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(5071)(channelId, messageId, tmp2, soundboardSounds);
+        const tmp16 = tmp8(5070)(channelId, messageId, tmp2, soundboardSounds);
         tmp5 = tmp16;
         if (tmp9) {
           tmp5 = tmp16;
@@ -102,7 +102,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
     const tmp9 = isSoundValidDefault(soundById, guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(5071)(channelId, messageId, soundId, arg4);
+        const tmp16 = tmp8(5070)(channelId, messageId, soundId, arg4);
         if (tmp9) {
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);

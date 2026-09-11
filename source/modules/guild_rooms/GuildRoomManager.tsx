@@ -1,14 +1,14 @@
-// Module ID: 17458
-// Function ID: 17459
+// Module ID: 17457
+// Function ID: 17458
 // Name: GuildRoomManager
-// Dependencies: [502, 4765, 7192, 4807, 4763, 2]
+// Dependencies: [502, 4764, 7191, 4806, 4762, 2]
 
-// Module 17458 (GuildRoomManager)
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 4763 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4807 */;
+// Module 17457 (GuildRoomManager)
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 4762 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4806 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 4765 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import GuildRoomStore from "GuildRoomStore" /* 4764 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 const channelId = null;

@@ -1,7 +1,7 @@
 // Module ID: 16927
 // Function ID: 16928
 // Name: IntegrationsSettingsWebhooksOverview
-// Dependencies: [5, 19, 1957, 2012, 1979, 4245, 1371, 16928, 1074, 21, 4607, 576, 1483, 1396, 5657, 1178, 1114, 11, 4451, 504, 16929, 8688, 16930, 4317, 2024, 4603, 16932, 5739, 8686, 5025, 7114, 2]
+// Dependencies: [5, 19, 1957, 2012, 1979, 4245, 1371, 16928, 1074, 21, 4606, 576, 1483, 1396, 5656, 1178, 1114, 11, 4451, 504, 16929, 8686, 16930, 4317, 2024, 4602, 16932, 5738, 8684, 5024, 7113, 2]
 // Exports: default
 
 // Module 16927 (IntegrationsSettingsWebhooksOverview)
@@ -10,9 +10,9 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Stack_Stack from "Stack/Stack" /* 5025 */;
-import NavScrim from "NavScrim" /* 7114 */;
-import Form from "Form" /* 8686 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import NavScrim from "NavScrim" /* 7113 */;
+import Form from "Form" /* 8684 */;
 import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -181,7 +181,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: map1, ChannelSettingsSections: closure_14, NON_USER_BOT_DISCRIMINATOR: closure_15, Permissions: closure_16, WebhookTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -213,7 +213,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [closure_18(webhookType(4603).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [closure_18(webhookType(4602).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
@@ -243,7 +243,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj4 = { children: null };
-    items[2] = tmp4(tmp5(5739).TableRowGroup, obj3);
+    items[2] = tmp4(tmp5(5738).TableRowGroup, obj3);
     obj4.children = items;
     return closure_20(closure_19, obj4);
   }

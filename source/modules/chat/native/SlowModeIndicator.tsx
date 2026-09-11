@@ -1,20 +1,20 @@
-// Module ID: 12078
-// Function ID: 12079
+// Module ID: 12076
+// Function ID: 12077
 // Name: SlowModeIndicator
-// Dependencies: [19, 7760, 21, 4607, 576, 504, 7761, 4305, 11700, 5175, 4603, 2]
+// Dependencies: [19, 7759, 21, 4606, 576, 504, 7760, 4305, 11698, 5174, 4602, 2]
 
-// Module 12078 (SlowModeIndicator)
+// Module 12076 (SlowModeIndicator)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7761 */;
-import TimerIcon from "TimerIcon" /* 11700 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7760 */;
+import TimerIcon from "TimerIcon" /* 11698 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 7760 */;
+import SlowmodeStore from "SlowmodeStore" /* 7759 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: nativeDefault.space.PX_4 };

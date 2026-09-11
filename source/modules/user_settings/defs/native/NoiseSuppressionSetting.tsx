@@ -1,22 +1,22 @@
 // Module ID: 15317
 // Function ID: 15318
 // Name: NoiseSuppressionSetting
-// Dependencies: [1908, 8050, 504, 10085, 11564, 1114, 2]
+// Dependencies: [1908, 8049, 504, 10083, 11562, 1114, 2]
 
 // Module 15317 (NoiseSuppressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10085 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10083 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8050).MobileUserSettings.VOICE,
+  parent: fn(8049).MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());

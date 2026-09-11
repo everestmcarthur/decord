@@ -1,10 +1,10 @@
-// Module ID: 17961
-// Function ID: 17962
+// Module ID: 17960
+// Function ID: 17961
 // Name: ResendVerificationCodeButton
-// Dependencies: [5, 32, 19, 17, 21, 17952, 4304, 4305, 1114, 2690, 14978, 4560, 4603, 2]
+// Dependencies: [5, 32, 19, 17, 21, 17951, 4304, 4305, 1114, 2690, 14978, 4559, 4602, 2]
 // Exports: default
 
-// Module 17961 (ResendVerificationCodeButton)
+// Module 17960 (ResendVerificationCodeButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

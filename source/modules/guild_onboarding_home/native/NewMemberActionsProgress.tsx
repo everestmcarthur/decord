@@ -1,16 +1,16 @@
 // Module ID: 16281
 // Function ID: 16282
 // Name: NewMemberActionsProgress
-// Dependencies: [19, 17, 2021, 4794, 4795, 1964, 4232, 21, 4607, 576, 5039, 563, 1384, 5175, 1100, 4603, 1114, 1178, 10032, 2]
+// Dependencies: [19, 17, 2021, 4793, 4794, 1964, 4232, 21, 4606, 576, 5038, 563, 1384, 5174, 1100, 4602, 1114, 1178, 10030, 2]
 // Exports: NewMemberActionsProgress
 
 // Module 16281 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4794 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4795 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4793 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4794 */;
 
 const require = fn;
 function ProgressBar(percent) {
@@ -30,7 +30,7 @@ const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const GuildMemberFlags = fn(4232).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };

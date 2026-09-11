@@ -1,13 +1,13 @@
-// Module ID: 5789
-// Function ID: 5790
+// Module ID: 5788
+// Function ID: 5789
 // Name: ActivitiesTogetherSpotIllustration
-// Dependencies: [21, 5639, 5790, 2]
+// Dependencies: [21, 5638, 5789, 2]
 // Exports: ActivitiesTogetherSpotIllustration
 
-// Module 5789 (ActivitiesTogetherSpotIllustration)
+// Module 5788 (ActivitiesTogetherSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5790 from "module_5790" /* 5790 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5789 from "module_5789" /* 5789 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ActivitiesTogetherSpotIllustration = function ActivitiesTogetherSpo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5790 };
+  const obj2 = { uri: _modDef5789 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

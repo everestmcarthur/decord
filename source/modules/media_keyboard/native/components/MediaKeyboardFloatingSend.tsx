@@ -1,15 +1,15 @@
 // Module ID: 16847
 // Function ID: 16848
 // Name: MediaKeyboardFloatingSend
-// Dependencies: [32, 19, 17, 4947, 21, 4607, 576, 504, 4343, 1611, 5026, 672, 5039, 9001, 1114, 4552, 2]
+// Dependencies: [32, 19, 17, 4946, 21, 4606, 576, 504, 4343, 1611, 5025, 672, 5038, 8999, 1114, 4551, 2]
 
 // Module 16847 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4947 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

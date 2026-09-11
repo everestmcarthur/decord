@@ -1,13 +1,13 @@
-// Module ID: 6271
-// Function ID: 6272
+// Module ID: 6270
+// Function ID: 6271
 // Name: HelloWumpusSpotIllustration
-// Dependencies: [21, 5639, 6272, 2]
+// Dependencies: [21, 5638, 6271, 2]
 // Exports: HelloWumpusSpotIllustration
 
-// Module 6271 (HelloWumpusSpotIllustration)
+// Module 6270 (HelloWumpusSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6272 from "module_6272" /* 6272 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6271 from "module_6271" /* 6271 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const HelloWumpusSpotIllustration = function HelloWumpusSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6272 };
+  const obj2 = { uri: _modDef6271 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

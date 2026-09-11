@@ -1,12 +1,12 @@
-// Module ID: 17078
-// Function ID: 17079
+// Module ID: 17077
+// Function ID: 17078
 // Name: LaunchPadMembers
-// Dependencies: [19, 17, 1957, 2011, 21, 4607, 563, 12281, 16771, 11683, 4603, 1114, 2]
+// Dependencies: [19, 17, 1957, 2011, 21, 4606, 563, 12279, 16771, 11681, 4602, 1114, 2]
 
-// Module 17078 (LaunchPadMembers)
+// Module 17077 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 11683 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12281 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11681 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12279 */;
 import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 16771 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -15,7 +15,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
@@ -43,7 +43,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: "add" };
+    return { channelId: "call", type: true };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };
@@ -69,7 +69,7 @@ export default noop.memo(function LaunchPadMembers() {
     const obj18 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
     const intl = tmp2(1114).intl;
     obj18.children = intl.string(tmp2(1114).t["+7wtJq"]);
-    obj17.children = jsx(tmp2(4603).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    obj17.children = jsx(tmp2(4602).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
     tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;

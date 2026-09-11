@@ -1,9 +1,9 @@
 // Module ID: 15117
 // Function ID: 15118
-// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 15116, 9968]
+// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 15116, 9966]
 
 // Module 15117
-import _modDef9968 from "module_9968" /* 9968 */;
+import _modDef9966 from "module_9966" /* 9966 */;
 import _modDef15116 from "module_15116" /* 15116 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
@@ -151,12 +151,12 @@ let items = [
 const importDefaultResultResult = _createClass(AnimatedCircularProgress, items);
 let obj = {};
 let merged = Object.assign(_modDef15116.propTypes);
-obj.prefill = _modDef9968.number;
-obj.duration = _modDef9968.number;
-obj.easing = _modDef9968.func;
-obj.onAnimationComplete = _modDef9968.func;
-obj.useNativeDriver = _modDef9968.bool;
-obj.delay = _modDef9968.number;
+obj.prefill = _modDef9966.number;
+obj.duration = _modDef9966.number;
+obj.easing = _modDef9966.func;
+obj.onAnimationComplete = _modDef9966.func;
+obj.useNativeDriver = _modDef9966.bool;
+obj.delay = _modDef9966.number;
 importDefaultResultResult.propTypes = obj;
 importDefaultResultResult.defaultProps = { duration: 500, easing: Easing.out(Easing.ease), prefill: 0, useNativeDriver: false, delay: 0 };
 

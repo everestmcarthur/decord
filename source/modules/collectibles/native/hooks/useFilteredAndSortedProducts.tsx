@@ -1,7 +1,7 @@
 // Module ID: 15132
 // Function ID: 15133
 // Name: useFilteredAndSortedProducts
-// Dependencies: [19, 1371, 1076, 15133, 15134, 15135, 504, 4264, 7627, 2]
+// Dependencies: [19, 1371, 1076, 15133, 15134, 15135, 504, 4264, 7626, 2]
 // Exports: useFilteredAndSortedProducts
 
 // Module 15132 (useFilteredAndSortedProducts)

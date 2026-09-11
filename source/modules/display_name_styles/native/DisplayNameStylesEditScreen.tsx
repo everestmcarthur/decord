@@ -1,7 +1,7 @@
 // Module ID: 15397
 // Function ID: 15398
 // Name: DisplayNameStylesEditScreen
-// Dependencies: [32, 19, 17, 4599, 1371, 1074, 1607, 21, 1390, 4607, 576, 1484, 504, 15398, 8252, 4841, 4542, 1391, 1388, 9269, 10993, 10994, 558, 15399, 15400, 15401, 15402, 1242, 4575, 8253, 8250, 4574, 15405, 1896, 15406, 15407, 15412, 15415, 1114, 14670, 4317, 4843, 15416, 2786, 4603, 1178, 7283, 1091, 14671, 5027, 8926, 8004, 1611, 4343, 5026, 2]
+// Dependencies: [32, 19, 17, 4598, 1371, 1074, 1607, 21, 1390, 4606, 576, 1484, 504, 15398, 8251, 4840, 4541, 1391, 1388, 9267, 10991, 10992, 558, 15399, 15400, 15401, 15402, 1242, 4574, 8252, 8249, 4573, 15405, 1896, 15406, 15407, 15412, 15415, 1114, 14668, 4317, 4842, 15416, 2786, 4602, 1178, 7282, 1091, 14669, 5026, 8924, 8003, 1611, 4343, 5025, 2]
 // Exports: default
 
 // Module 15397 (DisplayNameStylesEditScreen)
@@ -11,13 +11,13 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import spring from "spring" /* 5026 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8250 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import spring from "spring" /* 5025 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8249 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -98,7 +98,7 @@ const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [fn(1390).DisplayNameEffect.GRADIENT, fn(1390).DisplayNameEffect.GUMMY, fn(1390).DisplayNameEffect.PRISM];
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -303,11 +303,11 @@ export default function DisplayNameStylesEditScreen() {
     const callback2 = obj8.useCallback(() => {
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       if (isTryItOut) {
-        const result1 = tmp(8253).setTryItOutDisplayNameStyles(null);
-        const tmpResult = tmp(8253);
+        const result1 = tmp(8252).setTryItOutDisplayNameStyles(null);
+        const tmpResult = tmp(8252);
       } else {
-        tmp(8250).setPendingChanges({ displayNameStyles: null });
-        const tmpResult2 = tmp(8250);
+        tmp(8249).setPendingChanges({ displayNameStyles: null });
+        const tmpResult2 = tmp(8249);
       }
       AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_REMOVED);
       navigation.goBack();

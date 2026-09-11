@@ -1,19 +1,19 @@
-// Module ID: 12436
-// Function ID: 12437
+// Module ID: 12434
+// Function ID: 12435
 // Name: SearchTokens
-// Dependencies: [32, 1957, 2012, 4255, 2011, 4452, 1371, 12437, 12438, 1074, 4198, 12, 1114, 4760, 4451, 12435, 12439, 5569, 5494, 9928, 12440, 12441, 2]
+// Dependencies: [32, 1957, 2012, 4255, 2011, 4452, 1371, 12435, 12436, 1074, 4198, 12, 1114, 4759, 4451, 12433, 12437, 5568, 5493, 9926, 12438, 12439, 2]
 // Exports: buildCrossDMSearchTokensConfig, getLocalizedAuthorTypeAnswer, getLocalizedHasAnswer, getRandomDateShortcut, isMeAutcompleteAnswer, isSearchFilterTokenType, isValidFilterAnswerForSubmit, rebuildSearchTokenConfigs
 
-// Module 12436 (SearchTokens)
+// Module 12434 (SearchTokens)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import _modDef4198 from "module_4198" /* 4198 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5494 */;
-import SearchTokensUtils from "SearchTokensUtils" /* 12439 */;
-import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12440 */;
-import QueryTokenizer from "QueryTokenizer" /* 12441 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5493 */;
+import SearchTokensUtils from "SearchTokensUtils" /* 12437 */;
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12438 */;
+import QueryTokenizer from "QueryTokenizer" /* 12439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
@@ -21,8 +21,8 @@ import RelationshipStore from "RelationshipStore" /* 4255 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import StreamerModeStore from "StreamerModeStore" /* 4452 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12437 */;
-import SearchRecentMessageStore from "SearchRecentMessageStore" /* 12438 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12435 */;
+import SearchRecentMessageStore from "SearchRecentMessageStore" /* 12436 */;
 
 require = fn;
 function getShortcuts() {
@@ -288,7 +288,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(12435);
+    obj2 = replaced(12433);
   }
   return flag;
 }
@@ -558,12 +558,12 @@ function getChannelAutocompletions(arg0) {
       let obj = { query: substr1, type, guildId, limit: Infinity, allowEmptyQueries: true, allowSnowflake: true, includeAllThreads: true, boosters: null };
       const obj12 = AutocompleteUtilsDefault;
       const tmp7 = importDefault;
-      obj.boosters = tmp(5494).getBoosterMap(tmp(9928).AutocompleterResultTypes.TEXT_CHANNEL);
-      const tmpResult = tmp(5494);
+      obj.boosters = tmp(5493).getBoosterMap(tmp(9926).AutocompleterResultTypes.TEXT_CHANNEL);
+      const tmpResult = tmp(5493);
       const queryChannelsResult = obj12.queryChannels(obj);
       obj2 = { query: substr1, type: type2, guildId, limit: Infinity, allowEmptyQueries: true, allowSnowflake: true, boosters: null };
       const obj16 = AutocompleteUtilsDefault;
-      obj2.boosters = tmp(5494).getBoosterMap(tmp(9928).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj2.boosters = tmp(5493).getBoosterMap(tmp(9926).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(obj16.queryChannels(obj2));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -575,7 +575,7 @@ function getChannelAutocompletions(arg0) {
         }
       }
       importDefault = GuildChannelStore.getTextChannelNameDisambiguations(guildId);
-      const tmpResult4 = tmp(5494);
+      const tmpResult4 = tmp(5493);
       const obj19 = tmp7(12)(mapped);
       const takeResult = tmp7(12)(mapped).take(maxResults);
       let substr3 = tmp7(12)(mapped).take(maxResults).map((channel) => {
@@ -603,15 +603,15 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj5 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj5.boosters = tmp(5494).getBoosterMap(tmp(9928).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult5 = tmp(5494);
+          obj5.boosters = tmp(5493).getBoosterMap(tmp(9926).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult5 = tmp(5493);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj5);
           const obj6 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj6.boosters = tmp(5494).getBoosterMap(tmp(9928).AutocompleterResultTypes.USER);
-          const tmpResult6 = tmp(5494);
+          obj6.boosters = tmp(5493).getBoosterMap(tmp(9926).AutocompleterResultTypes.USER);
+          const tmpResult6 = tmp(5493);
           const queryDMChannelsResult = obj8.queryDMChannels(obj6);
-          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9928).sortByMatchScore);
+          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9926).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             const obj = { text: record.comparator, channel: record, key: null };
@@ -1083,7 +1083,7 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new QueryTokenizer.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      return tmp7(12439).validateForMapWithNegation("has", getHasMap(), token);
+      return tmp7(12437).validateForMapWithNegation("has", getHasMap(), token);
     } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
       const obj = {};
       const intl = tmp7(1114).intl;
@@ -1092,7 +1092,7 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
       obj[intl2.string(tmp7(1114).t.JL7sRS)] = "bot";
       const intl3 = tmp7(1114).intl;
       obj[intl3.string(tmp7(1114).t.WjkIKU)] = "webhook";
-      return tmp7(12439).validateForMapWithNegation("author_type", obj, token);
+      return tmp7(12437).validateForMapWithNegation("author_type", obj, token);
     } else if (tmp15.ANSWER_PINNED === tmp) {
       const match = token.getMatch(1);
       if ("true" === match) {

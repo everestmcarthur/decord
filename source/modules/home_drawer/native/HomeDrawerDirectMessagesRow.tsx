@@ -1,7 +1,7 @@
 // Module ID: 16381
 // Function ID: 16382
 // Name: HomeDrawerDirectMessagesRow
-// Dependencies: [19, 17, 4647, 4255, 1074, 21, 4607, 576, 504, 4603, 1114, 16377, 4470, 4467, 2]
+// Dependencies: [19, 17, 4646, 4255, 1074, 21, 4606, 576, 504, 4602, 1114, 16377, 4470, 4467, 2]
 // Exports: default
 
 // Module 16381 (HomeDrawerDirectMessagesRow)
@@ -9,10 +9,10 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4470 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import HomeDrawerShared from "HomeDrawerShared" /* 16377 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function HomeDrawerDMsRow() {
     const intl = tmp2(1114).intl;
     const obj5 = { numFriends: stateFromStores };
     obj4.children = intl.format(tmp2(1114).t.N5UIKr, obj5);
-    items1[1] = React5(tmp2(4603).Text, obj4);
+    items1[1] = React5(tmp2(4602).Text, obj4);
     obj2.children = items1;
     tmp5 = React6(View, obj2);
   }
@@ -48,7 +48,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj2.onlineDot = size;

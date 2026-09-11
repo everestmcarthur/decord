@@ -1,10 +1,10 @@
-// Module ID: 9326
-// Function ID: 9327
+// Module ID: 9324
+// Function ID: 9325
 // Name: TwoWayLinkDiscordConsent
-// Dependencies: [5, 32, 19, 17, 21, 3, 4607, 9318, 5458, 9327, 38, 5630, 7197, 5027, 1114, 2]
+// Dependencies: [5, 32, 19, 17, 21, 3, 4606, 9316, 5457, 9325, 38, 5629, 7196, 5026, 1114, 2]
 // Exports: TwoWayLinkDiscordConsent
 
-// Module 9326 (TwoWayLinkDiscordConsent)
+// Module 9324 (TwoWayLinkDiscordConsent)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");

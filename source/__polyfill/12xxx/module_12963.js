@@ -1,67 +1,45 @@
 // Module ID: 12963
 // Function ID: 12964
-// Dependencies: [12888, 12891, 12920, 12906, 12919, 12940, 12910, 12911, 12897, 12928, 12905, 12904, 12892]
-// Exports: getTraceData
+// Dependencies: [12917, 12904, 12890]
+// Exports: addBreadcrumb
 
 // Module 12963
-import errorCallback from "errorCallback" /* 12888 */;
-import _mod12919 from "module_12919" /* 12919 */;
-import "module_12891";
-import __SENTRY_DEBUG__ from "module_12920" /* 12920 */;
-import dateTimestampInSeconds from "module_12906" /* 12906 */;
+import _mod12917 from "module_12917" /* 12917 */;
 
-errorCallback;
+require = arg1;
+const dependencyMap = arg6;
 
-export const getTraceData = function getTraceData() {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  const client = _mod12919.getClient();
-  if (obj3.isEnabled()) {
-    if (client) {
-      const mainCarrier = tmp(12910).getMainCarrier();
-      const tmpResult = tmp(12910);
-      const asyncContextStrategy = tmp(12911).getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
-      } else {
-        const currentScope = tmp(12919).getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          span = tmp(12897).getActiveSpan();
-          const tmpResult10 = tmp(12897);
-        }
-        if (span) {
-          let spanToTraceHeaderResult = tmp(12897).spanToTraceHeader(span);
-          const tmpResult11 = tmp(12897);
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = tmp(12904).generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult12 = tmp(12904);
-        }
-        const tmpResult13 = tmp(12928);
-        if (span) {
-          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
-        }
-        const tmpResult9 = tmp(12919);
-        const result = tmp(12905).dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = tmp(12904).TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          let obj5 = obj4;
-        } else {
-          const logger = tmp(12892).logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj5 = {};
-        }
-        return obj5;
+export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod12917.getClient();
+  const isolationScope = _mod12917.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
+    }
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: tmp(12904).dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = tmp(12890).consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = tmp(12890);
       }
-      const tmpResult8 = tmp(12911);
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = tmp(12904);
     }
   }
-  return {};
 };

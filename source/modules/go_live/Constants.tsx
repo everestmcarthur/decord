@@ -1,10 +1,10 @@
-// Module ID: 4649
-// Function ID: 4650
+// Module ID: 4648
+// Function ID: 4649
 // Name: Constants
-// Dependencies: [4650, 2]
+// Dependencies: [4649, 2]
 
-// Module 4649 (Constants)
-import Notifications from "Notifications" /* 4650 */;
+// Module 4648 (Constants)
+import Notifications from "Notifications" /* 4649 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/go_live/Constants.tsx");

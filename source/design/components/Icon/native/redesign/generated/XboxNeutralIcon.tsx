@@ -1,13 +1,13 @@
-// Module ID: 8801
-// Function ID: 8802
+// Module ID: 8799
+// Function ID: 8800
 // Name: XboxNeutralIcon
-// Dependencies: [19, 21, 576, 4307, 8802, 2]
+// Dependencies: [19, 21, 576, 4307, 8800, 2]
 // Exports: XboxNeutralIcon
 
-// Module 8801 (XboxNeutralIcon)
+// Module 8799 (XboxNeutralIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8802 from "module_8802" /* 8802 */;
+import _mod8800 from "module_8800" /* 8800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const XboxNeutralIcon = function XboxNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8802, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8800, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

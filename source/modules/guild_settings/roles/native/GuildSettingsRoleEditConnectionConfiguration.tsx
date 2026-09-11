@@ -1,22 +1,22 @@
-// Module ID: 17723
-// Function ID: 17724
+// Module ID: 17722
+// Function ID: 17723
 // Name: GuildSettingsRoleEditConnectionConfiguration
-// Dependencies: [32, 19, 17, 1074, 5460, 21, 4607, 576, 4542, 11658, 1178, 1396, 4458, 5657, 1114, 5175, 5732, 7274, 17724, 1115, 4603, 5335, 5739, 2]
+// Dependencies: [32, 19, 17, 1074, 5459, 21, 4606, 576, 4541, 11656, 1178, 1396, 4458, 5656, 1114, 5174, 5731, 7273, 17723, 1115, 4602, 5334, 5738, 2]
 // Exports: default
 
-// Module 17723 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 17722 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import PlatformsDefault from "Platforms" /* 5335 */;
-import TableRow from "TableRow" /* 5657 */;
-import XSmallIcon from "XSmallIcon" /* 5732 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11658 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17724 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import PlatformsDefault from "Platforms" /* 5334 */;
+import TableRow from "TableRow" /* 5656 */;
+import XSmallIcon from "XSmallIcon" /* 5731 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11656 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -135,7 +135,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7274).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7273).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -178,7 +178,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(17724).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(17723).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -186,9 +186,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(17724);
-  const tmpResult = metadataField(17724);
-  str1 = metadataField(17724).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(17723);
+  const tmpResult = metadataField(17723);
+  str1 = metadataField(17723).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -264,7 +264,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj5.children = onInputValueChange(tmp(1178).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
       const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(tmp(4603).Text, obj7);
+      items1[1] = onInputValueChange(tmp(4602).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -300,7 +300,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(tmp(7274).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(tmp(7273).TableSwitchRow, obj8, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -515,11 +515,11 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1074).PlatformTypes;
-const Constants = fn(5460);
+const Constants = fn(5459);
 ({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm }, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
 let obj3 = { transform: null };
 let items = [{ translateY: 10 }];

@@ -1,13 +1,13 @@
-// Module ID: 8980
-// Function ID: 8981
+// Module ID: 8978
+// Function ID: 8979
 // Name: YoutubeNeutralIcon
-// Dependencies: [19, 21, 576, 4307, 8981, 2]
+// Dependencies: [19, 21, 576, 4307, 8979, 2]
 // Exports: YoutubeNeutralIcon
 
-// Module 8980 (YoutubeNeutralIcon)
+// Module 8978 (YoutubeNeutralIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8981 from "module_8981" /* 8981 */;
+import _mod8979 from "module_8979" /* 8979 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const YoutubeNeutralIcon = function YoutubeNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8981, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8979, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

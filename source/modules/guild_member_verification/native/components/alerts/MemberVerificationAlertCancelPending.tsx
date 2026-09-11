@@ -1,11 +1,11 @@
-// Module ID: 5592
-// Function ID: 5593
+// Module ID: 5591
+// Function ID: 5592
 // Name: MemberVerificationAlertCancelPending
-// Dependencies: [19, 21, 5593, 5589, 1114, 5027, 2]
+// Dependencies: [19, 21, 5592, 5588, 1114, 5026, 2]
 // Exports: default
 
-// Module 5592 (MemberVerificationAlertCancelPending)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5593 */;
+// Module 5591 (MemberVerificationAlertCancelPending)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5592 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -39,13 +39,13 @@ export default function MemberVerificationAlertCancelPending(guildId) {
     confirmText = intl3.string(tmp7(1114).t.OzHPde);
   }
   const obj2 = { children: null };
-  const items1 = [closure_4(guildId(5027).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_4(guildId(5026).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   const obj3 = { text: null, variant: "secondary", onPress: null };
   const intl4 = tmp7(1114).intl;
   obj3.text = intl4.string(guildId(1114).t.bANR0R);
   obj3.onPress = onClose;
-  items1[1] = closure_4(guildId(5027).Button, obj3);
+  items1[1] = closure_4(guildId(5026).Button, obj3);
   obj2.children = items1;
   obj.buttons = closure_6(closure_5, obj2);
-  return closure_4(onClose(5589), obj);
+  return closure_4(onClose(5588), obj);
 };

@@ -1,9 +1,9 @@
-// Module ID: 17560
-// Function ID: 17561
+// Module ID: 17559
+// Function ID: 17560
 // Name: FriendsActionCreators
 // Dependencies: [1074, 573, 1100, 16837, 2]
 
-// Module 17560 (FriendsActionCreators)
+// Module 17559 (FriendsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

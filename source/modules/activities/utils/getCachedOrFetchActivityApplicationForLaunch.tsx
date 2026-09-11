@@ -1,13 +1,13 @@
-// Module ID: 9630
-// Function ID: 9631
+// Module ID: 9628
+// Function ID: 9629
 // Name: getCachedOrFetchActivityApplicationForLaunch
-// Dependencies: [5, 4835, 1918, 1957, 9597, 9613, 9631, 2]
+// Dependencies: [5, 4834, 1918, 1957, 9595, 9611, 9629, 2]
 // Exports: default
 
-// Module 9630 (getCachedOrFetchActivityApplicationForLaunch)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9597 */;
+// Module 9628 (getCachedOrFetchActivityApplicationForLaunch)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9595 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

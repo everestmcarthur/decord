@@ -1,17 +1,17 @@
 // Module ID: 15244
 // Function ID: 15245
 // Name: QuestDockContentCollapsed
-// Dependencies: [19, 17, 5496, 15153, 21, 4607, 15154, 4343, 5026, 7147, 2]
+// Dependencies: [19, 17, 5495, 15153, 21, 4606, 15154, 4343, 5025, 7146, 2]
 
 // Module 15244 (QuestDockContentCollapsed)
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5496).QuestDockMode;
+const QuestDockMode = fn(5495).QuestDockMode;
 const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15153).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { questDockContentCollapsed: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -44,11 +44,11 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     return { opacity: spring.withSpring(num, closure_5) };
   };
   let obj = hideOnExpand(4343);
-  fn.__closure = { withSpring: hideOnExpand(5026).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  fn.__closure = { withSpring: hideOnExpand(5025).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn.__workletHash = 13361221764426;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj2 = { withSpring: hideOnExpand(5026).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj2 = { withSpring: hideOnExpand(5025).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   class C {
     constructor() {
       pointerEvents = "auto";
@@ -69,5 +69,5 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(7147), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7146), { style: null, animatedProps, children: children.children });
 });

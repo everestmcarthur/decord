@@ -1,13 +1,13 @@
-// Module ID: 8032
-// Function ID: 8033
+// Module ID: 8031
+// Function ID: 8032
 // Name: EmojiColorUtils
-// Dependencies: [4456, 4457, 672, 7856, 2]
+// Dependencies: [4456, 4457, 672, 7855, 2]
 // Exports: buildEmojiColorPalette
 
-// Module 8032 (EmojiColorUtils)
+// Module 8031 (EmojiColorUtils)
 import ColorUtils from "ColorUtils" /* 4456 */;
 import utils_ColorDefault from "utils/Color" /* 4457 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7856 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7855 */;
 import size from "module_2" /* 2 */;
 
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {

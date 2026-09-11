@@ -1,12 +1,12 @@
 // Module ID: 16730
 // Function ID: 16731
 // Name: SearchList
-// Dependencies: [19, 17, 7953, 21, 4607, 16731, 16733, 16734, 16749, 16727, 16751, 16753, 16748, 16735, 16754, 16758, 16759, 16762, 16763, 16764, 16765, 16766, 1611, 16718, 1114, 8966, 2]
+// Dependencies: [19, 17, 7952, 21, 4606, 16731, 16733, 16734, 16749, 16727, 16751, 16753, 16748, 16735, 16754, 16758, 16759, 16762, 16763, 16764, 16765, 16766, 1611, 16718, 1114, 8964, 2]
 
 // Module 16730 (SearchList)
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import _mod8966 from "module_8966" /* 8966 */;
+import _mod8964 from "module_8964" /* 8964 */;
 import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 16727 */;
 import DMRowDefault from "DMRow" /* 16731 */;
 import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 16733 */;
@@ -186,11 +186,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7953);
+const SearchConstants = fn(7952);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -244,7 +244,7 @@ export default noop.memo(function SearchList(arg0) {
   obj4.ListFooterComponent = ListFooterComponent;
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
-  items[1] = tmp13(_mod8966.AnimatedFlashList, obj4);
+  items[1] = tmp13(_mod8964.AnimatedFlashList, obj4);
   obj.children = items;
   return tmp6(React4, obj);
 });

@@ -1,7 +1,7 @@
 // Module ID: 15420
 // Function ID: 15421
 // Name: CustomTypingIndicatorEditScreen
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4607, 576, 1379, 1114, 3592, 1483, 1484, 504, 4264, 7236, 1242, 12066, 1392, 4726, 4574, 15421, 1896, 15422, 8253, 8250, 7058, 4508, 14660, 9485, 12075, 4759, 4603, 15423, 5739, 5657, 2024, 5025, 5027, 8926, 8004, 15468, 10062, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4606, 576, 1379, 1114, 3592, 1483, 1484, 504, 4264, 7235, 1242, 12064, 1392, 4725, 4573, 15421, 1896, 15422, 8252, 8249, 7057, 4507, 14658, 9483, 12073, 4758, 4602, 15423, 5738, 5656, 2024, 5024, 5026, 8924, 8003, 15468, 10060, 2]
 // Exports: default
 
 // Module 15420 (CustomTypingIndicatorEditScreen)
@@ -10,9 +10,9 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import user from "user" /* 1379 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9485 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12066 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9483 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { screen: { flex: 1 }, container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 }, previewContainer: null, section: null, description: null };
 let obj3 = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
 obj2.previewContainer = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_8 };

@@ -1,23 +1,23 @@
 // Module ID: 16566
 // Function ID: 16567
 // Name: ICYMIMessageRow
-// Dependencies: [19, 17, 1957, 2021, 1979, 4255, 4788, 1371, 16561, 1074, 21, 576, 16523, 1115, 16524, 8353, 8436, 504, 16567, 16568, 4603, 1114, 1178, 4759, 5572, 8438, 8439, 11007, 11752, 16562, 16564, 11, 5175, 9863, 16570, 2]
+// Dependencies: [19, 17, 1957, 2021, 1979, 4255, 4787, 1371, 16561, 1074, 21, 576, 16523, 1115, 16524, 8351, 8434, 504, 16567, 16568, 4602, 1114, 1178, 4758, 5571, 8436, 8437, 11005, 11750, 16562, 16564, 11, 5174, 9861, 16570, 2]
 // Exports: default
 
 // Module 16566 (ICYMIMessageRow)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11752 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5571 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11750 */;
 import ICYMIShared from "ICYMIShared" /* 16562 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -163,7 +163,7 @@ function ReplyMessageContent(message) {
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", style: { fontStyle: "italic" }, children: null };
     const intl = tmp2(1114).intl;
     obj5.children = intl.string(tmp2(1114).t.mPPcez);
-    const items2 = [closure_14(tmp2(4603).Text, obj5), ];
+    const items2 = [closure_14(tmp2(4602).Text, obj5), ];
     const obj6 = { style: tmp.replyInner, children: null };
     const obj7 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1178).AvatarSizes.SMALL };
     const items3 = [closure_14(tmp2(1178).Avatar, obj7), ];
@@ -173,8 +173,8 @@ function ReplyMessageContent(message) {
     const obj10 = { variant: "text-md/semibold", style: null, lineClamp: 1, children: null };
     const obj11 = { color: colorString };
     obj10.style = obj11;
-    obj10.children = tmp2(4759).getName(guild.id, channel.id, stateFromStores);
-    const items4 = [closure_14(tmp2(4603).Text, obj10), ];
+    obj10.children = tmp2(4758).getName(guild.id, channel.id, stateFromStores);
+    const items4 = [closure_14(tmp2(4602).Text, obj10), ];
     const obj12 = { value: null, children: null };
     const obj13 = { width: width - 2 * PX_12 - 30 - PX_8 - 2, margin: null, inset: null };
     ({ margin: obj14.margin, inset: obj14.inset } = context);
@@ -188,7 +188,7 @@ function ReplyMessageContent(message) {
     items2[1] = closure_15(View, obj6);
     obj4.children = items2;
     tmp8 = closure_15(View, obj4);
-    const tmp2Result = tmp2(4759);
+    const tmp2Result = tmp2(4758);
   }
   return tmp8;
 }
@@ -321,8 +321,8 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(8438).useGravityMessage(message);
-  const obj = gravityMessage(8438);
+  gravityMessage = gravityMessage(8436).useGravityMessage(message);
+  const obj = gravityMessage(8436);
   const items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () => ChannelStore.getChannel(gravityMessage.getChannelId()));
   const obj2 = gravityMessage(504);

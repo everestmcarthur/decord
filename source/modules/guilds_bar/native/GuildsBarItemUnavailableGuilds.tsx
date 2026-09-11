@@ -1,21 +1,21 @@
 // Module ID: 16421
 // Function ID: 16422
 // Name: GuildsBarItemUnavailableGuilds
-// Dependencies: [19, 17, 4949, 21, 4607, 576, 4951, 1114, 504, 16412, 2]
+// Dependencies: [19, 17, 4948, 21, 4606, 576, 4950, 1114, 504, 16412, 2]
 
 // Module 16421 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
 import _modDef16412 from "module_16412" /* 16412 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4949 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;

@@ -1,20 +1,20 @@
-// Module ID: 14032
-// Function ID: 14033
+// Module ID: 14030
+// Function ID: 14031
 // Name: GuildActionSheetEmojiSection
-// Dependencies: [32, 19, 17, 5511, 1183, 1371, 1074, 21, 4607, 576, 504, 1477, 4308, 4264, 7236, 7256, 4574, 9406, 4458, 14033, 1114, 5175, 1178, 10405, 4575, 4576, 4304, 5639, 7205, 7206, 1396, 2]
+// Dependencies: [32, 19, 17, 5510, 1183, 1371, 1074, 21, 4606, 576, 504, 1477, 4308, 4264, 7235, 7255, 4573, 9404, 4458, 14031, 1114, 5174, 1178, 10403, 4574, 4575, 4304, 5638, 7204, 7205, 1396, 2]
 // Exports: default
 
-// Module 14032 (GuildActionSheetEmojiSection)
+// Module 14030 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
 import ToastUtils from "ToastUtils" /* 4304 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4576 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9406 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9404 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5511 */;
+import EmojiStore from "EmojiStore" /* 5510 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -26,7 +26,7 @@ const Constants = fn(1074);
 ({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.dotSeparator = size;

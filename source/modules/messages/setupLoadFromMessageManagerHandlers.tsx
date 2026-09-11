@@ -1,10 +1,10 @@
-// Module ID: 17508
-// Function ID: 17509
+// Module ID: 17507
+// Function ID: 17508
 // Name: setupLoadFromMessageManagerHandlers
 // Dependencies: [2]
 // Exports: default
 
-// Module 17508 (setupLoadFromMessageManagerHandlers)
+// Module 17507 (setupLoadFromMessageManagerHandlers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");

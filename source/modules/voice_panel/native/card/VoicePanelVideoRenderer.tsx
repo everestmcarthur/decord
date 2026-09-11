@@ -1,16 +1,16 @@
-// Module ID: 17216
-// Function ID: 17217
+// Module ID: 17215
+// Function ID: 17216
 // Name: VoicePanelVideoRenderer
-// Dependencies: [32, 19, 17, 12368, 12366, 17171, 12369, 21, 4343, 9709, 4607, 12367, 5026, 9588, 4575, 6727, 9698, 17175, 9701, 9699, 17165, 11450, 17087, 9703, 4308, 576, 4608, 7147, 9706, 2]
+// Dependencies: [32, 19, 17, 12366, 12364, 17170, 12367, 21, 4343, 9707, 4606, 12365, 5025, 9586, 4574, 6726, 9696, 17174, 9699, 9697, 17164, 11448, 17086, 9701, 4308, 576, 4607, 7146, 9704, 2]
 
-// Module 17216 (VoicePanelVideoRenderer)
+// Module 17215 (VoicePanelVideoRenderer)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5026 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9588 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9709 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11450 */;
-import VideoActionCreators from "VideoActionCreators" /* 17087 */;
+import spring from "spring" /* 5025 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9707 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11448 */;
+import VideoActionCreators from "VideoActionCreators" /* 17086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,12 +18,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12368);
+const VoicePanelConstants = fn(12366);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12366).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17171).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12369).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12367).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
@@ -43,7 +43,7 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_18 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
 let closure_19 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
 let closure_20 = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
@@ -160,6 +160,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
   let tmp11 = isCamera;
   if (isCamera) {
     tmp11 = pIPState.id === id;
+  }
+  if (tmp11) {
+    tmp11 = surfaceDirectRendererExperiment;
   }
   let obj6 = id(sharedCoords[17]);
   [tmp13, c16] = isScrollVisible(isCamera.useState(true), 2);
@@ -1140,8 +1143,8 @@ export default noop.memo(function VideoRenderer(streamKey) {
           let num2 = 0.3;
           if (true === isFocused) {
             const tmpResult = tmp(4343);
-            num2 = tmpResult.withDelay(300, tmp(4608).withTiming(0.3, { duration: 0 }, "animate-never"));
-            const tmpResult2 = tmp(4608);
+            num2 = tmpResult.withDelay(300, tmp(4607).withTiming(0.3, { duration: 0 }, "animate-never"));
+            const tmpResult2 = tmp(4607);
           }
           const result = sharedValue10.set(num2);
         }

@@ -1,11 +1,11 @@
-// Module ID: 8046
-// Function ID: 8047
+// Module ID: 8045
+// Function ID: 8046
 // Name: canAddNewReactions
-// Dependencies: [5465, 4245, 1074, 2]
+// Dependencies: [5464, 4245, 1074, 2]
 // Exports: default
 
-// Module 8046 (canAddNewReactions)
-import GuildVerificationStore from "GuildVerificationStore" /* 5465 */;
+// Module 8045 (canAddNewReactions)
+import GuildVerificationStore from "GuildVerificationStore" /* 5464 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 
 const Permissions = fn(1074).Permissions;

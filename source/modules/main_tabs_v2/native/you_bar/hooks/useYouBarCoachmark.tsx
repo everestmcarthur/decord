@@ -1,7 +1,7 @@
 // Module ID: 16435
 // Function ID: 16436
 // Name: useYouBarCoachmark
-// Dependencies: [32, 19, 4428, 1954, 1114, 1943, 4343, 13177, 14772, 1484, 504, 13756, 4636, 7462, 16436, 11224, 2]
+// Dependencies: [32, 19, 4428, 1954, 1114, 1943, 4343, 13175, 14769, 1484, 504, 13754, 4635, 7461, 16436, 11222, 2]
 // Exports: useYouBarCoachmark
 
 // Module 16435 (useYouBarCoachmark)

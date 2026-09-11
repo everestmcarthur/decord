@@ -1,20 +1,20 @@
-// Module ID: 17052
-// Function ID: 17053
+// Module ID: 17051
+// Function ID: 17052
 // Name: useLaunchPadGesture
-// Dependencies: [19, 11560, 4464, 1611, 6727, 1115, 12128, 11450, 4343, 4575, 2]
+// Dependencies: [19, 11558, 4464, 1611, 6726, 1115, 12126, 11448, 4343, 4574, 2]
 // Exports: default
 
-// Module 17052 (useLaunchPadGesture)
+// Module 17051 (useLaunchPadGesture)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11450 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12128 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11448 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadConstants = fn(11560);
+const LaunchPadConstants = fn(11558);
 ({ LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: closure_4, LAUNCH_PAD_END_TRANSLATION_THRESHOLD: hasOwnProperty, LAUNCH_PAD_END_VELOCITY_THRESHOLD: metroRequire, LAUNCH_PAD_PULL_TAB_HEIGHT: closure_7, LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_WIDTH: c10, LaunchPadTypes: closure_11 } = LaunchPadConstants);
 let closure_12 = { code: "function useLaunchPadGestureTsx1(){const{updateSharedValueIfChanged,gestureState,updaters}=this.__closure;updateSharedValueIfChanged(gestureState,{active:false,initialLaunchPadPosition:0,initialPullTabPosition:0,initialTouchX:0,initialTouchY:0,positionOffsetX:0,positionOffsetY:0,startTime:-1});updaters.setLaunchPadPullTabScale(1.0);}" };
 let closure_13 = { code: "function useLaunchPadGestureTsx2(){const{gestureState,updaters,updateSharedValueIfChanged}=this.__closure;const{initialLaunchPadPosition:initialLaunchPadPosition,active:active}=gestureState.get();if(active){if(initialLaunchPadPosition===1){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}updateSharedValueIfChanged(gestureState,{active:false,initialLaunchPadPosition:0,initialPullTabPosition:0,initialTouchX:0,initialTouchY:0,positionOffsetX:0,positionOffsetY:0,startTime:-1});}" };

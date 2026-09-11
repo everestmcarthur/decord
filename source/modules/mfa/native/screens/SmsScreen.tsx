@@ -1,7 +1,7 @@
 // Module ID: 15745
 // Function ID: 15746
 // Name: SmsScreen
-// Dependencies: [5, 32, 19, 17, 1074, 21, 7016, 15738, 1114, 1272, 15742, 15737, 6678, 5027, 15740, 2]
+// Dependencies: [5, 32, 19, 17, 1074, 21, 7015, 15738, 1114, 1272, 15742, 15737, 6677, 5026, 15740, 2]
 // Exports: default
 
 // Module 15745 (SmsScreen)
@@ -208,7 +208,7 @@ export default function SmsScreen(mfaChallenge) {
       }
     }
   };
-  const tmp2 = finish(7016)();
+  const tmp2 = finish(7015)();
   const screenStyles = finish(15738).useScreenStyles(tmp2);
   const tmp4 = first(noop.useState(null), 2);
   dependencyMap = tmp4[1];
@@ -258,7 +258,7 @@ export default function SmsScreen(mfaChallenge) {
   const intl4 = mfaChallenge(1114).intl;
   obj4.placeholder = intl4.string(mfaChallenge(1114).t.tARzgo);
   obj4.errorMessage = tmp4[0];
-  const items1 = [handleChange(mfaChallenge(6678).TextInput, obj4), ];
+  const items1 = [handleChange(mfaChallenge(6677).TextInput, obj4), ];
   let obj5 = { text: null, variant: "secondary", size: "sm", onPress: null };
   const intl5 = mfaChallenge(1114).intl;
   obj5.text = intl5.string(mfaChallenge(1114).t.WbaP3r);
@@ -272,7 +272,7 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   };
-  items1[1] = handleChange(mfaChallenge(5027).Button, obj5);
+  items1[1] = handleChange(mfaChallenge(5026).Button, obj5);
   obj3.children = items1;
   obj2.input = closure_9(c6, obj3);
   let obj6 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };

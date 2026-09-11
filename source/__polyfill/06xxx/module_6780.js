@@ -1,51 +1,83 @@
 // Module ID: 6780
 // Function ID: 6781
-// Dependencies: [19, 6758, 6761]
-// Exports: useMountReactions
+// Dependencies: [41, 42, 93, 95, 98, 19, 6731, 6769]
 
 // Module 6780
-import _mod19 from "module_19" /* 19 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6758 */;
-import MountRegistry2 from "MountRegistry" /* 6761 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-function shouldUpdateDetector(arg0, handlerTag) {
-  if (undefined === arg0) {
-    return false;
-  } else {
-    const result = transformIntoHandlerTags.transformIntoHandlerTags(arg0);
-    for (const item10012 of result) {
-      if (item10012 === arg1.handlerTag) {
-        obj2.return();
-        let flag = true;
-        return true;
-      }
+const Wrap = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return false;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-const useEffect = _mod19.useEffect;
-
-export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
-  closure_0 = detectorUpdater;
-  closure_1 = current2;
-  const items = [detectorUpdater, current2];
-  useEffect(() => {
-    const MountRegistry = MountRegistry2.MountRegistry;
-    return MountRegistry.addMountListener((arg0) => {
-      if (current2.isMounted) {
-        const attachedGestures = current2.attachedGestures;
-        const iter = attachedGestures[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let requireToFail = nextResult.config.requireToFail;
-          let simultaneousWith = nextResult.config.simultaneousWith;
-          let tmp5 = shouldUpdateDetector;
-          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, arg0)) {
-          }
-          let tmp9 = detectorUpdater();
-          iter.return();
-        }
-      }
-    });
-  }, items);
+class Wrap {
+  constructor() {
+    self = this;
+    tmp = c2(this, Wrap);
+    tmp2 = closure_4;
+    obj = closure_4(Wrap);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Wrap, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    try {
+      const self = this;
+      const Children = noop.Children;
+      const onlyResult = Children.only(this.props.children);
+      return noop.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
+    } catch (err) {
+      const _Error = Error;
+      const error = new Error(Wrap(6731).tagMessage("GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
+      throw error;
+    }
+  }
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(Wrap, items);
+const Reanimated = fn(6769).Reanimated;
+let animatedComponent;
+if (Reanimated != null) {
+  if (Reanimated.default != null) {
+    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
+  }
+}
+if (animatedComponent == null) {
+  animatedComponent = importDefaultResultResult;
+}
+
+export const Wrap = importDefaultResultResult;
+export const AnimatedWrap = animatedComponent;

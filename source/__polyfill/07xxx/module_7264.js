@@ -1,12 +1,34 @@
 // Module ID: 7264
 // Function ID: 7265
-// Dependencies: [7265, 7266]
+// Dependencies: [19, 7265]
+// Exports: useClipboard
 
 // Module 7264
-import _mod7266 from "module_7266" /* 7266 */;
+import _mod7265 from "module_7265" /* 7265 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+function setString(arg0) {
+  closure_0 = arg0;
+  const Clipboard = _mod7265.Clipboard;
+  Clipboard.setString(arg0);
+  const item = set.forEach((fn) => fn(closure_0));
+}
+const set = new Set();
 
-
-export const useClipboard = require("module_7265").useClipboard;
-export default _mod7266.Clipboard;
+export const useClipboard = () => {
+  const state = noop.useState("");
+  [tmp2, require] = state;
+  const effect = noop.useEffect(() => {
+    const Clipboard = _mod7265.Clipboard;
+    const string = Clipboard.getString();
+    string.then(closure_1_0);
+  }, []);
+  const effect1 = noop.useEffect(() => {
+    set.add(require);
+    return () => {
+      set.delete(closure_1_0);
+    };
+  }, []);
+  const items = [tmp2, setString];
+  return items;
+};

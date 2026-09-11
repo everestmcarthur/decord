@@ -1,9 +1,9 @@
-// Module ID: 4955
-// Function ID: 4956
+// Module ID: 4954
+// Function ID: 4955
 // Name: NativeDeviceAccessibilityModule
 // Dependencies: [17, 2]
 
-// Module 4955 (NativeDeviceAccessibilityModule)
+// Module 4954 (NativeDeviceAccessibilityModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

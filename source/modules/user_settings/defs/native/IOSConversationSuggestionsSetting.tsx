@@ -1,7 +1,7 @@
 // Module ID: 14904
 // Function ID: 14905
 // Name: IOSConversationSuggestionsSetting
-// Dependencies: [19, 17, 8050, 1244, 1249, 4229, 1115, 3, 11564, 1114, 2]
+// Dependencies: [19, 17, 8049, 1244, 1249, 4229, 1115, 3, 11562, 1114, 2]
 
 // Module 14904 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
@@ -14,13 +14,13 @@ require = fn;
 const identity = fn(1244);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8050).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = noop.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();

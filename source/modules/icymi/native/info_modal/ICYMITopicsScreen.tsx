@@ -1,25 +1,25 @@
 // Module ID: 16547
 // Function ID: 16548
 // Name: ICYMITopicsScreen
-// Dependencies: [5, 32, 19, 17, 16541, 16548, 21, 9315, 10974, 5140, 16549, 10004, 5127, 15323, 12020, 9528, 16550, 10443, 16552, 10445, 11339, 4607, 576, 4325, 5027, 1611, 1483, 16554, 1896, 8439, 4305, 1114, 504, 8447, 4603, 2]
+// Dependencies: [5, 32, 19, 17, 16541, 16548, 21, 9313, 10972, 5139, 16549, 10002, 5126, 15323, 12018, 9526, 16550, 10441, 16552, 10443, 11337, 4606, 576, 4325, 5026, 1611, 1483, 16554, 1896, 8437, 4305, 1114, 504, 8445, 4602, 2]
 // Exports: default
 
 // Module 16547 (ICYMITopicsScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4325 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import BookCheckIcon from "BookCheckIcon" /* 5127 */;
-import ForumIcon from "ForumIcon" /* 5140 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8447 */;
-import GameControllerIcon from "GameControllerIcon" /* 9315 */;
-import RobotIcon from "RobotIcon" /* 9528 */;
-import MusicIcon from "MusicIcon" /* 10004 */;
-import FoodIcon from "FoodIcon" /* 10443 */;
-import BicycleIcon from "BicycleIcon" /* 10445 */;
-import TvIcon from "TvIcon" /* 10974 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 11339 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 12020 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import BookCheckIcon from "BookCheckIcon" /* 5126 */;
+import ForumIcon from "ForumIcon" /* 5139 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8445 */;
+import GameControllerIcon from "GameControllerIcon" /* 9313 */;
+import RobotIcon from "RobotIcon" /* 9526 */;
+import MusicIcon from "MusicIcon" /* 10002 */;
+import FoodIcon from "FoodIcon" /* 10441 */;
+import BicycleIcon from "BicycleIcon" /* 10443 */;
+import TvIcon from "TvIcon" /* 10972 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 11337 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12018 */;
 import PaintPaletteIcon from "PaintPaletteIcon" /* 15323 */;
 import ScienceIcon from "ScienceIcon" /* 16549 */;
 import MedalIcon from "MedalIcon" /* 16550 */;
@@ -85,7 +85,7 @@ get_ActivityIndicator = fn(17);
 const GuildPrimaryCategory = fn(16548).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8 };
 obj2.footer = rect;
@@ -210,11 +210,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1114).intl;
   obj3.children = intl.string(first(1114).t.Y5d99L);
-  const children = [closure_10(first(4603).Text, obj3), , , , ];
+  const children = [closure_10(first(4602).Text, obj3), , , , ];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1114).intl;
   obj4.children = intl2.string(first(1114).t.MGZsfv);
-  children[1] = closure_10(first(4603).Text, obj4);
+  children[1] = closure_10(first(4602).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
   let obj2 = first(504);
@@ -235,7 +235,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1114).intl;
     obj11.text = intl3.string(tmp7(1114).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = tmp12(tmp7(5027).Button, obj11);
+    obj9.children = tmp12(tmp7(5026).Button, obj11);
     tmp12Result = tmp12(tmp13, obj9);
   }
   children[4] = tmp12Result;

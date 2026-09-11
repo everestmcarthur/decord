@@ -1,19 +1,19 @@
-// Module ID: 8134
-// Function ID: 8135
+// Module ID: 8133
+// Function ID: 8134
 // Name: PremiumSubscriptionOfferUtil
-// Dependencies: [32, 19, 4270, 1373, 7521, 8135, 8136, 504, 4198, 8137, 8138, 1894, 8141, 2]
+// Dependencies: [32, 19, 4270, 1373, 7520, 8134, 8135, 504, 4198, 8136, 8137, 1894, 8140, 2]
 // Exports: renewalInvoiceChurnDiscountInfo, useActiveDiscountInfo, useFetchChurnUserDiscountOffer, useIsInPremiumOfferExperience, useIsNUXEligible, useShouldFetchChurnOffer
 
-// Module 8134 (PremiumSubscriptionOfferUtil)
+// Module 8133 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import Server from "Server" /* 1894 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7521 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8135 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8136 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8137 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8138 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8141 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7520 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8134 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8135 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8136 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8137 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4270 */;

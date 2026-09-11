@@ -1,9 +1,9 @@
-// Module ID: 5462
-// Function ID: 5463
+// Module ID: 5461
+// Function ID: 5462
 // Name: IdleStore
-// Dependencies: [502, 1074, 4632, 1115, 1935, 1090, 573, 4227, 5463, 551, 504, 2]
+// Dependencies: [502, 1074, 4631, 1115, 1935, 1090, 573, 4227, 5462, 551, 504, 2]
 
-// Module 5462 (IdleStore)
+// Module 5461 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -11,7 +11,7 @@ import DurationsDefault from "Durations" /* 1090 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import DiscordNativeDefault from "DiscordNative" /* 4227 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5463 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5462 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -69,7 +69,7 @@ function checkIdleAFK() {
 }
 const Constants = fn(1074);
 ({ IDLE_DURATION: hasOwnProperty, AppStates: metroRequire } = Constants);
-const SpeakingFlags = fn(4632).SpeakingFlags;
+const SpeakingFlags = fn(4631).SpeakingFlags;
 const idleSince = Date.now();
 let idle = false;
 let afk = false;

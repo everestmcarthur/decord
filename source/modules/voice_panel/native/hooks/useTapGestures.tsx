@@ -1,12 +1,12 @@
-// Module ID: 17219
-// Function ID: 17220
+// Module ID: 17218
+// Function ID: 17219
 // Name: useTapGestures
-// Dependencies: [19, 12367, 6727, 4343, 4575, 2]
+// Dependencies: [19, 12365, 6726, 4343, 4574, 2]
 // Exports: default
 
-// Module 17219 (useTapGestures)
+// Module 17218 (useTapGestures)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useT
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12367)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12365)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   __initData = tmp2;
@@ -51,8 +51,8 @@ export default function useTapGestures(onSingleTap) {
         }
       }
     }
-    const Gesture = current(6727).Gesture;
-    const Gesture2 = current(6727).Gesture;
+    const Gesture = current(6726).Gesture;
+    const Gesture2 = current(6726).Gesture;
     let tmp3 = gesturesEnabled;
     let tmp4 = gesturesEnabled;
     if (gesturesEnabled) {
@@ -83,7 +83,7 @@ export default function useTapGestures(onSingleTap) {
     fn.__workletHash = 13571114432746;
     fn.__initData = __initData;
     const obj2 = { runOnJS: current(4343).runOnJS, handleEvent };
-    const Gesture3 = tmp(6727).Gesture;
+    const Gesture3 = tmp(6726).Gesture;
     const onStartResult = onTouchesDownResult.onStart(fn);
     let tmp6 = tmp3;
     if (tmp3) {
@@ -99,7 +99,7 @@ export default function useTapGestures(onSingleTap) {
     fn2.__workletHash = 14109132753191;
     fn2.__initData = gesturesEnabled;
     const obj3 = { runOnJS: current(4343).runOnJS, handleEvent };
-    const Gesture4 = tmp(6727).Gesture;
+    const Gesture4 = tmp(6726).Gesture;
     const onStartResult1 = maxDistanceResult1.onStart(fn2);
     if (tmp3) {
       tmp3 = __initData2;
@@ -111,7 +111,7 @@ export default function useTapGestures(onSingleTap) {
       ReanimatedRexport.runOnJS(handleEvent)("long");
     };
     const enabledResult2 = Gesture4.LongPress().enabled(tmp3);
-    fn3.__closure = { runOnJS: current(4343).runOnJS, triggerHapticFeedback: current(4575).triggerHapticFeedback, HapticFeedbackTypes: current(4575).HapticFeedbackTypes, handleEvent };
+    fn3.__closure = { runOnJS: current(4343).runOnJS, triggerHapticFeedback: current(4574).triggerHapticFeedback, HapticFeedbackTypes: current(4574).HapticFeedbackTypes, handleEvent };
     fn3.__workletHash = 1947700378974;
     fn3.__initData = __initData3;
     return Gesture.Exclusive(onStartResult, onStartResult1, enabledResult2.onStart(fn3));

@@ -1,11 +1,11 @@
-// Module ID: 10231
-// Function ID: 10232
+// Module ID: 10229
+// Function ID: 10230
 // Name: useGetInitialMessagePreview
-// Dependencies: [19, 4256, 7376, 2]
+// Dependencies: [19, 4256, 7375, 2]
 // Exports: useGetInitialMessagePreview
 
-// Module 10231 (useGetInitialMessagePreview)
-import isForwardMessageDefault from "isForwardMessage" /* 7376 */;
+// Module 10229 (useGetInitialMessagePreview)
+import isForwardMessageDefault from "isForwardMessage" /* 7375 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4256 */;
 

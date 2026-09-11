@@ -1,7 +1,7 @@
 // Module ID: 16682
 // Function ID: 16683
 // Name: VibegrationsMessageAuthor
-// Dependencies: [19, 17, 1371, 21, 4607, 576, 16683, 504, 4451, 1178, 4603, 2]
+// Dependencies: [19, 17, 1371, 21, 4606, 576, 16683, 504, 4451, 1178, 4602, 2]
 // Exports: default
 
 // Module 16682 (VibegrationsMessageAuthor)
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { author: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function VibegrationsMessageAuthor(userId) {
     const obj3 = { size: tmp3(1178).AvatarSizes.SIZE_16, user: stateFromStores, guildId: "Array" };
     const items3 = [closure_5(tmp3(1178).Avatar, obj3), ];
     const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: tmp7 };
-    items3[1] = closure_5(tmp3(4603).Text, obj4);
+    items3[1] = closure_5(tmp3(4602).Text, obj4);
     obj2.children = items3;
     tmp8 = closure_6(View, obj2);
   }

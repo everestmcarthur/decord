@@ -1,9 +1,9 @@
-// Module ID: 5036
-// Function ID: 5037
+// Module ID: 5035
+// Function ID: 5036
 // Name: styleConstants
 // Dependencies: [2]
 
-// Module 5036 (styleConstants)
+// Module 5035 (styleConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Styles/native/styleConstants.tsx");

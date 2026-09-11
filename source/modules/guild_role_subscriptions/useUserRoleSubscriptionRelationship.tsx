@@ -1,12 +1,12 @@
 // Module ID: 15267
 // Function ID: 15268
 // Name: useUserRoleSubscriptionRelationship
-// Dependencies: [5512, 15266, 504, 2]
+// Dependencies: [5511, 15266, 504, 2]
 // Exports: default, getUserRoleSubscriptionRelationship
 
 // Module 15267 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 504 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5512 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5511 */;
 
 require = fn;
 const constants = fn(15266).UserGuildRoleSubscriptionRelationship;

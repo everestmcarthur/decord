@@ -1,13 +1,13 @@
-// Module ID: 12246
-// Function ID: 12247
+// Module ID: 12244
+// Function ID: 12245
 // Name: ArrowsUpDownIcon
-// Dependencies: [19, 21, 576, 4307, 12247, 2]
+// Dependencies: [19, 21, 576, 4307, 12245, 2]
 // Exports: ArrowsUpDownIcon
 
-// Module 12246 (ArrowsUpDownIcon)
+// Module 12244 (ArrowsUpDownIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod12247 from "module_12247" /* 12247 */;
+import _mod12245 from "module_12245" /* 12245 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ArrowsUpDownIcon = function ArrowsUpDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12247, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12245, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

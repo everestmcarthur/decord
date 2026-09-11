@@ -1,13 +1,13 @@
-// Module ID: 5893
-// Function ID: 5894
+// Module ID: 5892
+// Function ID: 5893
 // Name: ButterflyIllocon
-// Dependencies: [21, 5639, 5894, 2]
+// Dependencies: [21, 5638, 5893, 2]
 // Exports: ButterflyIllocon
 
-// Module 5893 (ButterflyIllocon)
+// Module 5892 (ButterflyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5894 from "module_5894" /* 5894 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5893 from "module_5893" /* 5893 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const ButterflyIllocon = function ButterflyIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5894 };
+  const obj2 = { uri: _modDef5893 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

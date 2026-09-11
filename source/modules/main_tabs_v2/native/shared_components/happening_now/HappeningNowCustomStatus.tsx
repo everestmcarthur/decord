@@ -1,16 +1,16 @@
 // Module ID: 16147
 // Function ID: 16148
 // Name: HappeningNowCustomStatus
-// Dependencies: [5, 32, 19, 17, 4647, 15357, 1085, 21, 4607, 576, 563, 4841, 9268, 16148, 16149, 10971, 9863, 15358, 1115, 10986, 1178, 4603, 2]
+// Dependencies: [5, 32, 19, 17, 4646, 15357, 1085, 21, 4606, 576, 563, 4840, 9266, 16148, 16149, 10969, 9861, 15358, 1115, 10984, 1178, 4602, 2]
 // Exports: CustomStatusActivityCard
 
 // Module 16147 (HappeningNowCustomStatus)
 import nativeDefault from "native" /* 576 */;
-import ActivityEmojiDefault from "ActivityEmoji" /* 10986 */;
+import ActivityEmojiDefault from "ActivityEmoji" /* 10984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -47,7 +47,7 @@ const rect5 = { left: -3, top: (HAPPENING_NOW_CONTENT_HEIGHT - 32 - 16) / 2, tra
 let items6 = [{ rotate: "-12deg" }];
 rect5.transform = items6;
 items1[5] = rect5;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = { customStatusContainer: { flexShrink: 1, flexDirection: "row", alignItems: "center" }, customStatusContextContainer: { flexShrink: 1, flexDirection: "column", marginLeft: 12, gap: 2 }, statusAvatar: { marginBottom: 2 }, largeEmoji: null, smallEmoji: null, cardContainer: null, emojisContainer: null };
   const size = { width: v32, height: v32, borderRadius: 2, overflow: "hidden" };
@@ -97,8 +97,8 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   let obj = user(563);
   let obj2 = { userId: user.id, guildId };
-  let tmp10 = activity(4841)({ userId: user.id, guildId });
-  const displayNameStylesFont = user(9268).useDisplayNameStylesFont({ displayNameStyles: tmp10 });
+  let tmp10 = activity(4840)({ userId: user.id, guildId });
+  const displayNameStylesFont = user(9266).useDisplayNameStylesFont({ displayNameStyles: tmp10 });
   items1 = [activity.emoji];
   const effect = noop.useEffect(() => {
     closure_0 = async function _loadEmoji(arg0, value) {
@@ -191,16 +191,16 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   if (null != activity.emoji) {
     num = 1;
   }
-  let obj3 = user(9268);
-  const gameMentionsAsPlainText = user(10971).useGameMentionsAsPlainText(activity.state);
+  let obj3 = user(9266);
+  const gameMentionsAsPlainText = user(10969).useGameMentionsAsPlainText(activity.state);
   const items2 = [userTitle, , ];
-  const tmp6Result = user(10971);
-  items2[1] = user(9863).getStatusLabel(status);
+  const tmp6Result = user(10969);
+  items2[1] = user(9861).getStatusLabel(status);
   items2[2] = gameMentionsAsPlainText;
   const joined = items2.join(", ");
   let obj4 = { onPress, width: null, style: null, accessibilityLabel: null, panelVariant: null, children: null };
   let str = "stretchy";
-  const tmp6Result3 = user(9863);
+  const tmp6Result3 = user(9861);
   if (fullwidth) {
     str = "full";
   }
@@ -224,7 +224,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       let tmp15Result3 = tmp15Result;
     } else {
       let obj9 = { emoji: activity.emoji, size: v32, style: tmp.largeEmoji, animate: false };
-      tmp15Result3 = tmp15(tmp9(10986), obj9);
+      tmp15Result3 = tmp15(tmp9(10984), obj9);
     }
     const items4 = [
       tmp15Result3,
@@ -265,7 +265,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     let tmp15Result4 = num2 > 0;
     if (tmp15Result4) {
       const obj13 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: num, maxFontSizeMultiplier: 2, children: gameMentionsAsPlainText };
-      tmp15Result4 = tmp15(tmp6(4603).Text, obj13);
+      tmp15Result4 = tmp15(tmp6(4602).Text, obj13);
     }
     const obj14 = { children: null };
     items6[2] = tmp15Result4;
@@ -282,7 +282,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     const obj18 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
     const items8 = [tmp15(tmp6(15358).HappeningNowCardHeader, obj18), ];
     const obj19 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: num, maxFontSizeMultiplier: 2, children: gameMentionsAsPlainText };
-    items8[1] = tmp15(tmp6(4603).Text, obj19);
+    items8[1] = tmp15(tmp6(4602).Text, obj19);
     obj17.children = items8;
     items7[1] = closure_13(tmp17, obj17);
     obj15.children = items7;

@@ -1,18 +1,18 @@
 // Module ID: 14953
 // Function ID: 14954
 // Name: FamilyCenterTopServersBottomSheet
-// Dependencies: [7611, 21, 4607, 576, 504, 7666, 5657, 5636, 7271, 4603, 1114, 2396, 5739, 2]
+// Dependencies: [7610, 21, 4606, 576, 504, 7665, 5656, 5635, 7270, 4602, 1114, 2396, 5738, 2]
 // Exports: default
 
 // Module 14953 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import GuildIconDefault from "GuildIcon" /* 5636 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
-import ActionSheet from "ActionSheet" /* 7271 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import GuildIconDefault from "GuildIcon" /* 5635 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import ActionSheet from "ActionSheet" /* 7270 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -23,17 +23,17 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7666).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7665).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(5657).TableRow, obj2);
+    return closure_4(tmp2(5656).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { header: { textAlign: "center" }, guildIcon: { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

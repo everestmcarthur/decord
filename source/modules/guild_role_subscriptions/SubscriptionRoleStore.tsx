@@ -1,9 +1,9 @@
-// Module ID: 5512
-// Function ID: 5513
+// Module ID: 5511
+// Function ID: 5512
 // Name: SubscriptionRoleStore
 // Dependencies: [1975, 2016, 2021, 2015, 1979, 1371, 1074, 4236, 504, 573, 2]
 
-// Module 5512 (SubscriptionRoleStore)
+// Module 5511 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildRecord from "GuildRecord" /* 1975 */;

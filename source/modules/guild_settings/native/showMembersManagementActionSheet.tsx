@@ -1,12 +1,12 @@
 // Module ID: 16649
 // Function ID: 16650
 // Name: showMembersManagementActionSheet
-// Dependencies: [1371, 1114, 4574, 16650, 1896, 7339, 16651, 7268, 2]
+// Dependencies: [1371, 1114, 4573, 16650, 1896, 7338, 16651, 7267, 2]
 // Exports: default, getMembersManagementActions
 
 // Module 16649 (showMembersManagementActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -24,8 +24,8 @@ export default function showMembersManagementActionSheet(guild) {
   };
   const items = [obj];
   if (canPrune == null) {
-    canPrune = tmp(7339).canPruneGuildMembers(guild, UserStore.getCurrentUser());
-    const tmpResult = tmp(7339);
+    canPrune = tmp(7338).canPruneGuildMembers(guild, UserStore.getCurrentUser());
+    const tmpResult = tmp(7338);
   }
   if (canPrune) {
     const obj2 = { label: null, onPress: null, isDestructive: true };
@@ -36,7 +36,7 @@ export default function showMembersManagementActionSheet(guild) {
     };
     items.push(obj2);
   }
-  const result = guild(7268).showSimpleActionSheet({ key: "GuildSettingsMembersMore", options: items, hasIcons: false });
+  const result = guild(7267).showSimpleActionSheet({ key: "GuildSettingsMembersMore", options: items, hasIcons: false });
 };
 export const getMembersManagementActions = function getMembersManagementActions(guild) {
   guild = guild.guild;
@@ -49,8 +49,8 @@ export const getMembersManagementActions = function getMembersManagementActions(
   };
   const items = [obj];
   if (canPrune == null) {
-    canPrune = tmp(7339).canPruneGuildMembers(guild, UserStore.getCurrentUser());
-    const tmpResult = tmp(7339);
+    canPrune = tmp(7338).canPruneGuildMembers(guild, UserStore.getCurrentUser());
+    const tmpResult = tmp(7338);
   }
   if (canPrune) {
     const obj2 = { label: null, action: null, variant: "destructive" };

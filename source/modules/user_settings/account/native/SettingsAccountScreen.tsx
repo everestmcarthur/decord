@@ -1,25 +1,25 @@
-// Module ID: 14711
-// Function ID: 14712
+// Module ID: 14708
+// Function ID: 14709
 // Name: SettingsAccountScreen
-// Dependencies: [32, 19, 17, 14712, 8050, 14713, 21, 4607, 576, 1483, 5659, 5639, 14714, 4603, 1114, 5027, 4810, 14715, 1896, 504, 14736, 7023, 6669, 5739, 14737, 11564, 14741, 14744, 5044, 11977, 2]
+// Dependencies: [32, 19, 17, 14709, 8049, 14710, 21, 4606, 576, 1483, 5658, 5638, 14711, 4602, 1114, 5026, 4809, 14712, 1896, 504, 14733, 7022, 6668, 5738, 14734, 11562, 14738, 14741, 5043, 11975, 2]
 
-// Module 14711 (SettingsAccountScreen)
+// Module 14708 (SettingsAccountScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
-import useMountEffectDefault from "useMountEffect" /* 5044 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import TableRowGroup from "TableRowGroup" /* 5739 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6669 */;
-import MFAUtils from "MFAUtils" /* 7023 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11977 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14737 */;
-import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14741 */;
-import SettingLayoutDefault from "SettingLayout" /* 14744 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import useMountEffectDefault from "useMountEffect" /* 5043 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6668 */;
+import MFAUtils from "MFAUtils" /* 7022 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11975 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14734 */;
+import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14738 */;
+import SettingLayoutDefault from "SettingLayout" /* 14741 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 14712 */;
+import WebAuthnStore from "WebAuthnStore" /* 14709 */;
 
 require = fn;
 function PasswordlessUpsell() {
@@ -31,7 +31,7 @@ function PasswordlessUpsell() {
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("module_14714");
+  obj6.source = require("module_14711");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
   const items = [closure_10(View, obj5), ];
@@ -50,7 +50,7 @@ function PasswordlessUpsell() {
   const intl3 = require("util").intl;
   obj12.text = intl3.string(require("util").t.piGf5c);
   obj12.onPress = function onPress() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14715, dependencyMap.paths), { navigation, initialRouteName: WebAuthnScreens.REGISTER, showNav: true });
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14712, dependencyMap.paths), { navigation, initialRouteName: WebAuthnScreens.REGISTER, showNav: true });
   };
   const items2 = [closure_10(require("components/Button/Button").Button, obj12), closure_10(View, {})];
   obj11.children = items2;
@@ -72,7 +72,7 @@ function AccountTwoFALabel() {
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(14736).useIsUserVerified();
+  const isUserVerified = first(14733).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -96,7 +96,7 @@ function AccountTwoFALabel() {
   const obj4 = { title: null };
   const intl = tmp(1114).intl;
   obj4.title = intl.string(first(1114).t.fuTmEJ);
-  items3[1] = closure_10(first(5739).TableRowGroupTitle, obj4);
+  items3[1] = closure_10(first(5738).TableRowGroupTitle, obj4);
   obj3.children = items3;
   return closure_11(closure_12, obj3);
 }
@@ -141,11 +141,11 @@ function AccountSecurityPage() {
   return closure_1_10(SettingLayoutDefault, { node });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8050).MobileUserSettings;
-const WebAuthnScreens = fn(14713).WebAuthnScreens;
+const MobileUserSettings = fn(8049).MobileUserSettings;
+const WebAuthnScreens = fn(14710).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { upsellPasswordless: { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, upsellImagePasswordless: { height: "100%", width: "100%" } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg };

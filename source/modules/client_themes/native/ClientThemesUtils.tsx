@@ -1,7 +1,7 @@
 // Module ID: 4425
 // Function ID: 4426
 // Name: client_themes/ClientThemesUtils
-// Dependencies: [32, 19, 1183, 4426, 1228, 576, 672, 4456, 4457, 1231, 4458, 4460, 4542, 4539, 2]
+// Dependencies: [32, 19, 1183, 4426, 1228, 576, 672, 4456, 4457, 1231, 4458, 4460, 4541, 4538, 2]
 // Exports: colorToHex, getClientThemesGradientColorByPercentage, getClientThemesGradientHexColors, getEmbedBackground, getEmbedScrollGradientBackground, getGradientThemeMetadata, getGradientValue, useGradientValue
 
 // Module 4425 (client_themes/ClientThemesUtils)
@@ -11,8 +11,8 @@ import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
 import utils_ColorDefault from "utils/Color" /* 4457 */;
 import shared from "shared" /* 4458 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4460 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4539 */;
-import useThemeDefault from "useTheme" /* 4542 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4538 */;
+import useThemeDefault from "useTheme" /* 4541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;

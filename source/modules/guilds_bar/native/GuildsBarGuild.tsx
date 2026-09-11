@@ -1,21 +1,21 @@
 // Module ID: 16387
 // Function ID: 16388
 // Name: GuildsBarGuild
-// Dependencies: [19, 1975, 4949, 7709, 1979, 4428, 5490, 16356, 16353, 1074, 21, 4607, 576, 4308, 16365, 16091, 16096, 16388, 504, 5636, 16399, 16400, 4951, 1114, 1242, 16380, 16409, 16357, 16410, 4343, 5026, 5639, 16412, 2]
+// Dependencies: [19, 1975, 4948, 7708, 1979, 4428, 5489, 16356, 16353, 1074, 21, 4606, 576, 4308, 16365, 16091, 16096, 16388, 504, 5635, 16399, 16400, 4950, 1114, 1242, 16380, 16409, 16357, 16410, 4343, 5025, 5638, 16412, 2]
 
 // Module 16387 (GuildsBarGuild)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import spring from "spring" /* 5026 */;
-import GuildIcon from "GuildIcon" /* 5636 */;
+import spring from "spring" /* 5025 */;
+import GuildIcon from "GuildIcon" /* 5635 */;
 import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16357 */;
 import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 16410 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4949 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7709 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7708 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 
 require = fn;
 const GuildRecord = fn(1975);
@@ -25,7 +25,7 @@ const TRANSITION_PHYSICS = fn(16353).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;

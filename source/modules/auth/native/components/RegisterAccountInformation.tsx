@@ -1,22 +1,22 @@
 // Module ID: 16039
 // Function ID: 16040
 // Name: RegisterAccountInformation
-// Dependencies: [5, 32, 19, 17, 6667, 4591, 8832, 16017, 16018, 1074, 21, 4607, 576, 4343, 7016, 16014, 504, 16040, 16042, 16025, 1114, 16033, 16016, 16032, 7044, 16043, 16044, 5027, 7013, 5630, 2]
+// Dependencies: [5, 32, 19, 17, 6666, 4590, 8830, 16017, 16018, 1074, 21, 4606, 576, 4343, 7015, 16014, 504, 16040, 16042, 16025, 1114, 16033, 16016, 16032, 7043, 16043, 16044, 5026, 7012, 5629, 2]
 // Exports: default
 
 // Module 16039 (RegisterAccountInformation)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7016 */;
-import AuthFormViewDefault from "AuthFormView" /* 7044 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7015 */;
+import AuthFormViewDefault from "AuthFormView" /* 7043 */;
 import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 16032 */;
 import useAuthFlowBackHandlerDefault from "useAuthFlowBackHandler" /* 16033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6667 */;
-import InviteStore from "InviteStore" /* 4591 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8832 */;
+import ConsentStore from "ConsentStore" /* 6666 */;
+import InviteStore from "InviteStore" /* 4590 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8830 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -28,7 +28,7 @@ const RegistrationConstants = fn(16018);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_19 = createStyles.createStyles((arg0) => {
   const obj = { container: { marginTop: nativeDefault.space.PX_24 }, password: { marginTop: 24 }, button: null, errors: null, page: null };
   let num = 50;
@@ -242,13 +242,13 @@ export default function RegisterAccountInformation() {
     preventSubmitUsername = preventSubmitPassword;
   }
   obj14.disabled = preventSubmitUsername;
-  const items5 = [closure_17(context(5027).Button, obj14), ];
+  const items5 = [closure_17(context(5026).Button, obj14), ];
   let tmp27Result = null;
   if (null != tmp11.message) {
     tmp27Result = null;
     if ("" !== tmp11.message) {
       const obj15 = { style: tmp4.errors, children: tmp11.message };
-      tmp27Result = tmp27(tmp(7013), obj15);
+      tmp27Result = tmp27(tmp(7012), obj15);
     }
   }
   items5[1] = tmp27Result;
@@ -260,7 +260,7 @@ export default function RegisterAccountInformation() {
   let tmp27Result4 = tmp27Result3;
   if (!tmp3) {
     const obj16 = { style: tmp4.page, children: tmp27Result3 };
-    tmp27Result4 = tmp27(tmp(5630), obj16);
+    tmp27Result4 = tmp27(tmp(5629), obj16);
   }
   return tmp27Result4;
 };

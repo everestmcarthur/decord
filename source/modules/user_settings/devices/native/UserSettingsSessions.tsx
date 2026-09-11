@@ -1,28 +1,28 @@
 // Module ID: 15003
 // Function ID: 15004
 // Name: UserSettingsSessions
-// Dependencies: [32, 19, 17, 1371, 1074, 21, 4607, 5576, 576, 14726, 504, 15004, 5025, 5739, 1114, 5657, 7197, 4603, 1369, 5175, 1178, 7066, 1483, 12359, 7064, 15005, 8971, 10156, 7032, 15006, 2]
+// Dependencies: [32, 19, 17, 1371, 1074, 21, 4606, 5575, 576, 14723, 504, 15004, 5024, 5738, 1114, 5656, 7196, 4602, 1369, 5174, 1178, 7065, 1483, 12357, 7063, 15005, 8969, 10154, 7031, 15006, 2]
 // Exports: default
 
 // Module 15003 (UserSettingsSessions)
 import nativeDefault from "native" /* 576 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7064 */;
-import _modDef10156 from "module_10156" /* 10156 */;
-import _modDef12359 from "module_12359" /* 12359 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7063 */;
+import _modDef10154 from "module_10154" /* 10154 */;
+import _modDef12357 from "module_12357" /* 12357 */;
 import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15004 */;
 import _modDef15005 from "module_15005" /* 15005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import TextStyles from "TextStyles" /* 5576 */;
+import TextStyles from "TextStyles" /* 5575 */;
 
-const _modDef7066 = tmp10(7066);
+const _modDef7065 = tmp10(7065);
 require = fn;
 function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(14726).useAuthSessions();
+  let authSessions = otherSessions(14723).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(14726);
+  const obj = otherSessions(14723);
   const items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -53,14 +53,14 @@ function UserSettingsSessions() {
       tmp21Result = tmp21(SessionInfo, obj6);
     }
     obj5.children = tmp21Result;
-    const items1 = [closure_10(tmp2(5739).TableRowGroup, obj5), , ];
+    const items1 = [closure_10(tmp2(5738).TableRowGroup, obj5), , ];
     if (otherSessions.length > 0) {
       const obj7 = { title: null, hasIcons: true, children: null };
       const intl = tmp2(1114).intl;
       obj7.title = intl.string(tmp2(1114).t.xx1MWc);
       const items2 = [otherSessions.map((session) => closure_1_10(SessionInfo, { session }, session.id_hash)), tmp21(UnknownLegacySessionsInfo, {})];
       obj7.children = items2;
-      let tmp20Result = tmp20(tmp2(5739).TableRowGroup, obj7);
+      let tmp20Result = tmp20(tmp2(5738).TableRowGroup, obj7);
     } else {
       let mfaEnabled;
       if (stateFromStores != null) {
@@ -79,20 +79,20 @@ function UserSettingsSessions() {
       obj8.onPress = function onPress() {
         return AuthSessionsActionCreators.logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
       };
-      tmp21Result2 = tmp21(tmp2(5657).TableRow, obj8);
+      tmp21Result2 = tmp21(tmp2(5656).TableRow, obj8);
     }
     items1[2] = tmp21Result2;
     obj4.children = items1;
-    tmp20Result2 = tmp20(tmp2(5025).Stack, obj4);
+    tmp20Result2 = tmp20(tmp2(5024).Stack, obj4);
   }
   const obj9 = { style: tmp.container, children: null };
   const obj10 = { bottom: true, children: null };
   const obj11 = { variant: "text-sm/medium", style: tmp.description, children: null };
   const intl4 = tmp2(1114).intl;
   obj11.children = intl4.string(otherSessions(1114).t.zZp618);
-  const items3 = [closure_10(otherSessions(4603).Text, obj11), tmp20Result2];
+  const items3 = [closure_10(otherSessions(4602).Text, obj11), tmp20Result2];
   obj10.children = items3;
-  obj9.children = closure_11(otherSessions(7197).SafeAreaPaddingView, obj10);
+  obj9.children = closure_11(otherSessions(7196).SafeAreaPaddingView, obj10);
   return closure_10(closure_7, obj9);
 }
 function SessionInfo(session) {
@@ -132,24 +132,24 @@ function SessionInfo(session) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text: os, iconSource: _modDef10156, IconComponent: session(15006).VrHeadsetIcon };
+              const obj2 = { text: os, iconSource: _modDef10154, IconComponent: session(15006).VrHeadsetIcon };
               let tmp9 = session;
               let obj = obj2;
             } else {
-              obj = { text: os, iconSource: _modDef15005, IconComponent: session(8971).ScreenIcon };
+              obj = { text: os, iconSource: _modDef15005, IconComponent: session(8969).ScreenIcon };
               tmp9 = session;
             }
           }
         }
-        const obj3 = { text: os, iconSource: _modDef10156, IconComponent: session(7032).MobilePhoneIcon };
+        const obj3 = { text: os, iconSource: _modDef10154, IconComponent: session(7031).MobilePhoneIcon };
         tmp9 = session;
         obj = obj3;
       }
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14726).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14726);
+        formatDateResult = tmp9(14723).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14723);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1369).isNotNullish);
@@ -162,21 +162,21 @@ function SessionInfo(session) {
           return AuthSessionsActionCreators.logOutSessions(session.id_hash);
         };
         obj4.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-        const obj5 = { style: tmp.logoutButton, source: _modDef7066 };
+        const obj5 = { style: tmp.logoutButton, source: _modDef7065 };
         obj4.children = closure_10(tmp9(1178).Icon, obj5);
-        tmp18 = closure_10(tmp9(5175).PressableOpacity, obj4);
+        tmp18 = closure_10(tmp9(5174).PressableOpacity, obj4);
       }
       const obj6 = { style: tmp.sessionInfo, accessible: true, children: null };
       const obj7 = { style: tmp.sessionInfoRow, children: null };
       const obj8 = { variant: "text-md/semibold", children: found[0] };
-      const items1 = [closure_10(tmp9(4603).Text, obj8), ];
+      const items1 = [closure_10(tmp9(4602).Text, obj8), ];
       let tmp22Result = found.length > 1;
       if (tmp22Result) {
         const obj9 = { children: null };
         const obj10 = { variant: "text-md/semibold", accessibilityLabel: ",", style: tmp.sessionInfoRowSpacing, children: "\u00B7" };
-        const items2 = [tmp20(tmp9(4603).Text, obj10), ];
+        const items2 = [tmp20(tmp9(4602).Text, obj10), ];
         const obj11 = { variant: "text-md/semibold", children: found[1] };
-        items2[1] = tmp20(tmp9(4603).Text, obj11);
+        items2[1] = tmp20(tmp9(4602).Text, obj11);
         obj9.children = items2;
         tmp22Result = tmp22(closure_12, obj9);
       }
@@ -185,13 +185,13 @@ function SessionInfo(session) {
       obj6.children = closure_11(closure_6, obj7);
       const obj12 = { icon: null, label: null, subLabel: null, trailing: null };
       const obj13 = { source: iconSource, IconComponent };
-      obj12.icon = closure_10(tmp9(5657).TableRow.Icon, obj13);
+      obj12.icon = closure_10(tmp9(5656).TableRow.Icon, obj13);
       obj12.label = closure_10(closure_6, obj6);
       let tmp20Result3 = null != _location;
       if (tmp20Result3) {
         const obj14 = { style: tmp.sessionInfoRow, children: null };
         const obj15 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.detailsText, children: _location };
-        obj14.children = tmp20(tmp9(4603).Text, obj15);
+        obj14.children = tmp20(tmp9(4602).Text, obj15);
         tmp20Result3 = tmp20(tmp21, obj14);
       }
       const items3 = [tmp20Result3, ];
@@ -199,7 +199,7 @@ function SessionInfo(session) {
       if (tmp20Result4) {
         const obj16 = { style: tmp.sessionInfoRow, children: null };
         const obj17 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.detailsText, children: formatDateResult };
-        obj16.children = tmp20(tmp9(4603).Text, obj17);
+        obj16.children = tmp20(tmp9(4602).Text, obj17);
         tmp20Result4 = tmp20(tmp21, obj16);
       }
       const obj18 = { accessible: true, children: null };
@@ -207,14 +207,14 @@ function SessionInfo(session) {
       obj18.children = items3;
       obj12.subLabel = closure_11(closure_6, obj18);
       obj12.trailing = tmp18;
-      return closure_10(tmp9(5657).TableRow, obj12);
+      return closure_10(tmp9(5656).TableRow, obj12);
     }
   }
   const obj19 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1114).intl;
   obj19.text = intl.string(session(1114).t.cDHCNY);
   obj19.iconSource = _modDef15005;
-  obj19.IconComponent = session(8971).ScreenIcon;
+  obj19.IconComponent = session(8969).ScreenIcon;
   tmp9 = session;
   obj = obj19;
 }
@@ -222,7 +222,7 @@ function UnknownLegacySessionsInfo() {
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef12359 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef12357 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;
@@ -240,7 +240,7 @@ const Constants = fn(1074);
 ({ UserSettingsSections: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { description: { paddingHorizontal: 16, paddingTop: 8, marginBottom: 8 }, detailsText: null, container: null, loading: null, sessionInfo: null, sessionInfoRow: null, sessionInfoRowSpacing: null, logoutButton: null, list: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 14));

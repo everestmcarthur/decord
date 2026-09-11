@@ -1,10 +1,10 @@
-// Module ID: 11010
-// Function ID: 11011
+// Module ID: 11008
+// Function ID: 11009
 // Name: ChannelDetailsConstants
-// Dependencies: [7953, 2]
+// Dependencies: [7952, 2]
 
-// Module 11010 (ChannelDetailsConstants)
-import SearchConstants from "SearchConstants" /* 7953 */;
+// Module 11008 (ChannelDetailsConstants)
+import SearchConstants from "SearchConstants" /* 7952 */;
 import size from "module_2" /* 2 */;
 
 const sum = SearchConstants.SEARCH_BAR_HEIGHT + 40;

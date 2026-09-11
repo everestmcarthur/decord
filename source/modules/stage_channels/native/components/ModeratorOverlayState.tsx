@@ -1,10 +1,10 @@
-// Module ID: 9753
-// Function ID: 9754
+// Module ID: 9751
+// Function ID: 9752
 // Name: ModeratorOverlayState
 // Dependencies: [1244, 1249, 4229, 2]
 // Exports: useModeratorOverlayChannelState
 
-// Module 9753 (ModeratorOverlayState)
+// Module 9751 (ModeratorOverlayState)
 import _mod4229 from "module_4229" /* 4229 */;
 import identity from "module_1244" /* 1244 */;
 import size from "module_2" /* 2 */;

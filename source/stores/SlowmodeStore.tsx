@@ -1,9 +1,9 @@
-// Module ID: 7760
-// Function ID: 7761
+// Module ID: 7759
+// Function ID: 7760
 // Name: SlowmodeStore
-// Dependencies: [1957, 4245, 7761, 4494, 573, 1090, 504, 2]
+// Dependencies: [1957, 4245, 7760, 1952, 573, 1090, 504, 2]
 
-// Module 7760 (SlowmodeStore)
+// Module 7759 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;

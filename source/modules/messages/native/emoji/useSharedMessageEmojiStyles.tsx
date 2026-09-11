@@ -1,11 +1,11 @@
-// Module ID: 10422
-// Function ID: 10423
+// Module ID: 10420
+// Function ID: 10421
 // Name: useSharedMessageEmojiStyles
-// Dependencies: [4607, 576, 2]
+// Dependencies: [4606, 576, 2]
 
-// Module 10422 (useSharedMessageEmojiStyles)
+// Module 10420 (useSharedMessageEmojiStyles)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size_mod from "module_2" /* 2 */;
 
 const obj = { emojiContainer: { flexDirection: "row", alignItems: "center" }, emojiDescriptionWrapper: { flexDirection: "column", flex: 1 }, emojiWrapper: { marginLeft: -8, marginRight: 8 }, emojiIcon: null, divider: null, ctaButton: null };

@@ -1,7 +1,7 @@
 // Module ID: 15877
 // Function ID: 15878
 // Name: useHasExpiredShopBlocks
-// Dependencies: [32, 19, 1074, 7646, 2]
+// Dependencies: [32, 19, 1074, 7645, 2]
 // Exports: useHasExpiredShopBlocks
 
 // Module 15877 (useHasExpiredShopBlocks)

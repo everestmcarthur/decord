@@ -1,18 +1,18 @@
 // Module ID: 16734
 // Function ID: 16735
 // Name: SearchHistoryRow
-// Dependencies: [5, 19, 17, 1957, 4622, 1371, 7953, 21, 4607, 576, 12456, 5175, 5732, 16722, 12453, 16732, 4603, 7125, 563, 16733, 8267, 4620, 16731, 16735, 16748, 1114, 2]
+// Dependencies: [5, 19, 17, 1957, 4621, 1371, 7952, 21, 4606, 576, 12454, 5174, 5731, 16722, 12451, 16732, 4602, 7124, 563, 16733, 8266, 4619, 16731, 16735, 16748, 1114, 2]
 
 // Module 16734 (SearchHistoryRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import UserActionCreators from "UserActionCreators" /* 8267 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12453 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12456 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import UserActionCreators from "UserActionCreators" /* 8266 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function SearchHistoryRemoveIcon(searchContext) {
   const callback = noop.useCallback(() => {
     const result = SearchPlatformActionCreatorsDefault.removeSearchHistoryItem(searchContext, searchHistoryItem);
   }, items);
-  return closure_10(searchContext(5175).PressableHighlight, { onPress: callback, accessibilityRole: "button", unstable_pressDelay: 130, style: { marginLeft: 16 }, hitSlop: { bottom: 16, left: 16, right: 16, top: 16 }, children: closure_10(searchContext(5732).XSmallIcon, { size: "sm", color: "interactive-text-default" }) });
+  return closure_10(searchContext(5174).PressableHighlight, { onPress: callback, accessibilityRole: "button", unstable_pressDelay: 130, style: { marginLeft: 16 }, hitSlop: { bottom: 16, left: 16, right: 16, top: 16 }, children: closure_10(searchContext(5731).XSmallIcon, { size: "sm", color: "interactive-text-default" }) });
 }
 function SearchHistoryTextRow(searchContext) {
   searchContext = searchContext.searchContext;
@@ -47,7 +47,7 @@ function SearchHistoryTextRow(searchContext) {
     });
   }
   const obj3 = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
-  const items1 = [mapped, closure_10(searchContext(4603).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
+  const items1 = [mapped, closure_10(searchContext(4602).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
   obj2.children = items1;
   obj3.label = closure_11(View, obj2);
   obj3.onPress = callback;
@@ -55,7 +55,7 @@ function SearchHistoryTextRow(searchContext) {
   obj3.iconContainerStyle = tmp.textIconContainer;
   let obj = searchContext(16722);
   const obj4 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text };
-  obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7125).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
+  obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7124).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
   return closure_10(searchContext(16732).SearchListRow, obj3);
 }
 function SearchHistoryGroupDMRow(searchContext) {
@@ -290,10 +290,10 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   return tmp9Result;
 }
 const View = fn(17).View;
-const SearchHistoryItemTypes = fn(7953).SearchHistoryItemTypes;
+const SearchHistoryItemTypes = fn(7952).SearchHistoryItemTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { iconContainer: null, text: null, textContainer: null, textIconContainer: null, tag: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;

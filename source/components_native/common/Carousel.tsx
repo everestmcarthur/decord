@@ -1,9 +1,9 @@
-// Module ID: 9454
-// Function ID: 9455
+// Module ID: 9452
+// Function ID: 9453
 // Name: Carousel
-// Dependencies: [19, 17, 21, 4607, 576, 4317, 1178, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 4317, 1178, 2]
 
-// Module 9454 (Carousel)
+// Module 9452 (Carousel)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: { color: nativeDefault.colors.ICON_STRONG }, inactiveIndicator: null };
 let obj3 = { color: nativeDefault.colors.ICON_STRONG };
 obj2.inactiveIndicator = { color: nativeDefault.colors.ICON_SUBTLE };

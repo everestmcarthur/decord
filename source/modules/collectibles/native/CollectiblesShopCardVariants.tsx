@@ -1,14 +1,14 @@
-// Module ID: 8957
-// Function ID: 8958
+// Module ID: 8955
+// Function ID: 8956
 // Name: CollectiblesShopCardVariants
-// Dependencies: [19, 17, 21, 4607, 576, 8934, 8958, 7207, 8959, 8858, 7627, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 8932, 8956, 7206, 8957, 8856, 7626, 2]
 
-// Module 8957 (CollectiblesShopCardVariants)
+// Module 8955 (CollectiblesShopCardVariants)
 import nativeDefault from "native" /* 576 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7207 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8934 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8958 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 8959 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7206 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8932 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8956 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 8957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,10 +51,10 @@ function VariantOverflowOption(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj = { variantsContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingStart: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = { marginStart: -nativeDefault.space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center" };
@@ -78,8 +78,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(8858).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(8858);
+  defaultVariantIndex = defaultVariantIndex(8856).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(8856);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -105,5 +105,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7627);
+  obj2 = defaultVariantIndex(7626);
 });

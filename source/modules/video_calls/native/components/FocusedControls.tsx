@@ -1,18 +1,18 @@
-// Module ID: 9770
-// Function ID: 9771
+// Module ID: 9768
+// Function ID: 9769
 // Name: FocusedControls
-// Dependencies: [19, 17, 1074, 21, 4607, 1178, 4343, 9771, 4608, 7197, 1477, 8544, 9772, 9776, 9567, 5014, 7236, 7256, 9726, 9784, 1242, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 1178, 4343, 9769, 4607, 7196, 1477, 8542, 9770, 9774, 9565, 5013, 7235, 7255, 9724, 9782, 1242, 2]
 
-// Module 9770 (FocusedControls)
+// Module 9768 (FocusedControls)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5014 */;
-import inlineStyles from "inlineStyles" /* 8544 */;
-import RevealProvider from "RevealProvider" /* 9567 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9772 */;
-import GlobalStatusIndicator from "GlobalStatusIndicator" /* 9776 */;
+import timing from "timing" /* 4607 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5013 */;
+import inlineStyles from "inlineStyles" /* 8542 */;
+import RevealProvider from "RevealProvider" /* 9565 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9770 */;
+import GlobalStatusIndicator from "GlobalStatusIndicator" /* 9774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function FocusedControlsHeader(reveal) {
   fn.__initData = __initData;
   const derivedValue = TIMING_CONFIG.useDerivedValue(fn);
   const tmp = closure_9();
-  const tmp3 = derivedValue(9771)();
+  const tmp3 = derivedValue(9769)();
   const fn2 = function c() {
     const obj = { transform: null };
     const obj2 = { translateY: timing.withTiming(derivedValue.get(), obj) };
@@ -41,13 +41,13 @@ function FocusedControlsHeader(reveal) {
     return obj;
   };
   let obj2 = reveal(4343);
-  fn2.__closure = { withTiming: reveal(4608).withTiming, offsetY: derivedValue, TIMING_CONFIG };
+  fn2.__closure = { withTiming: reveal(4607).withTiming, offsetY: derivedValue, TIMING_CONFIG };
   fn2.__workletHash = 12710345257882;
   fn2.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn2);
   const obj4 = { style: animatedStyle, children: null };
   const rect = { top: !tmp3, left: isTouchingLeftScreenEdge, right: true, children: closure_7(closure_5, { style: tmp.headerContainer, children: header }) };
-  obj4.children = closure_7(reveal(7197).SafeAreaPaddingView, rect);
+  obj4.children = closure_7(reveal(7196).SafeAreaPaddingView, rect);
   return closure_7(derivedValue(4343).View, obj4);
 }
 function FocusedControlsHeaderGradient() {
@@ -71,7 +71,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({ backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 }, headerContainer: { position: "relative", height: 54 } });
 let TIMING_CONFIG = { easing: fn(1178).STANDARD_EASING, duration: 250 };
 const __initData = { code: "function FocusedControlsTsx1(){const{reveal,FOCUSED_CONTROLS_HEADER_HEIGHT}=this.__closure;return reveal?0:-FOCUSED_CONTROLS_HEADER_HEIGHT;}" };
@@ -102,7 +102,7 @@ export default noop.memo((disableGradient) => {
   TIMING_CONFIG = useGlobalStatusIndicatorState;
   const globalStatusIndicatorState = TIMING_CONFIG.useGlobalStatusIndicatorState();
   const globalStatusIndicatorHeightSharedValue = GlobalStatusIndicator.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-  const tmp6 = globalStatusIndicatorHeightSharedValue(9771)();
+  const tmp6 = globalStatusIndicatorHeightSharedValue(9769)();
   dependencyMap = tmp6;
   reveal = reveal.useContext(RevealProvider.RevealContext).reveal;
   const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
@@ -152,8 +152,8 @@ export default noop.memo((disableGradient) => {
   fn.__initData = __initData5;
   const animatedStyle = tmpResult4.useAnimatedStyle(fn);
   const obj4 = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-  analyticsLocations = globalStatusIndicatorHeightSharedValue(7236)(tmp5(7256).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  closure_7 = tmp5(9726)();
+  analyticsLocations = globalStatusIndicatorHeightSharedValue(7235)(tmp5(7255).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  closure_7 = tmp5(9724)();
   if (containerStyle == null) {
     containerStyle = derivedValue.absoluteFill;
   }
@@ -198,7 +198,7 @@ export default noop.memo((disableGradient) => {
         reveal,
         children
       };
-      tmp17Result = closure_7(tmp5(9784), obj6);
+      tmp17Result = closure_7(tmp5(9782), obj6);
     }
   }
   items1[2] = tmp17Result;

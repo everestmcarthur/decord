@@ -1,20 +1,20 @@
-// Module ID: 7292
-// Function ID: 7293
+// Module ID: 7291
+// Function ID: 7292
 // Name: PrivateChannelSortStore
-// Dependencies: [7293, 7294, 1961, 1957, 1979, 4622, 4788, 1371, 11, 4241, 4198, 7295, 504, 573, 2]
+// Dependencies: [7292, 7293, 1961, 1957, 1979, 4621, 4787, 1371, 11, 4241, 4198, 7294, 504, 573, 2]
 
-// Module 7292 (PrivateChannelSortStore)
+// Module 7291 (PrivateChannelSortStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7295 */;
-import MessageRequestStore from "MessageRequestStore" /* 7293 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7294 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7294 */;
+import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -79,7 +79,7 @@ const secondaryIndexMap = new fn(4241).SecondaryIndexMap(function indexBy(value)
 let values = [];
 let values2 = [];
 let closure_17 = [];
-const f38777 = () => {
+const f38778 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -92,7 +92,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38777 === "function") {
+  if (typeof f38778 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

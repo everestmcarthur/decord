@@ -1,19 +1,22 @@
 // Module ID: 4923
 // Function ID: 4924
-// Dependencies: [4855]
+// Dependencies: [4906]
 
 // Module 4923
-import _mod4855 from "module_4855" /* 4855 */;
+import _mod4906 from "module_4906" /* 4906 */;
 
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod4855(arg0);
-    }
-    str = str2;
+export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
+  let tmp = _mod4906(arg1);
+  if (tmp) {
+    tmp = "[[Enumerable]]" in arg1;
   }
-  return str;
+  if (tmp) {
+    tmp = "[[Configurable]]" in arg1;
+  }
+  if (tmp) {
+    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
+    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
+  }
+  return tmp;
 };

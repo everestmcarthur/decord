@@ -1,16 +1,16 @@
 // Module ID: 15215
 // Function ID: 15216
 // Name: VideoQuestModalContentCompleted
-// Dependencies: [32, 19, 17, 21, 4607, 576, 15189, 15184, 11381, 15213, 15180, 11174, 11579, 4343, 5026, 7795, 8449, 11391, 11878, 15154, 8355, 7197, 5025, 4603, 1114, 15206, 7147, 15207, 5027, 15176, 5175, 10271, 5499, 5639, 9145, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 15189, 15184, 11379, 15213, 15180, 11172, 11577, 4343, 5025, 7794, 8447, 11389, 11876, 15154, 8353, 7196, 5024, 4602, 1114, 15206, 7146, 15207, 5026, 15176, 5174, 10269, 5498, 5638, 9143, 2]
 
 // Module 15215 (VideoQuestModalContentCompleted)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5026 */;
-import QuestTypes from "QuestTypes" /* 5499 */;
-import showShareActionSheet from "showShareActionSheet" /* 8449 */;
-import AssetUtils from "AssetUtils" /* 11381 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11391 */;
+import spring from "spring" /* 5025 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import showShareActionSheet from "showShareActionSheet" /* 8447 */;
+import AssetUtils from "AssetUtils" /* 11379 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11389 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ANIMATED_CONTENT_SPRING_CONFIG = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGrow: 1, flexShrink: 1 }, closeButton: { opacity: 0.5 }, scroll: { flexGrow: 1, flexShrink: 1 }, scrollContent: { flexGrow: 1 }, content: { padding: nativeDefault.space.PX_16 }, contentRewardsAnimatedWrapper: { flexGrow: 1, flexShrink: 0 }, contentRewardsWrapper: null, contentRewards: null, contentRewardsCopy: null, contentEndCardHeader: null, contentEndCardHeaderCopy: null, contentEndCard: null, image: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15189).COMPLETION_GLOW_CLEARANCE };

@@ -1,18 +1,18 @@
 // Module ID: 14888
 // Function ID: 14889
 // Name: GoreMediaFiltersGuildsSetting
-// Dependencies: [8050, 8737, 14879, 14875, 7673, 7375, 14876, 1114, 1187, 11564, 2]
+// Dependencies: [8049, 8735, 14879, 14875, 7672, 7374, 14876, 1114, 1187, 11562, 2]
 
 // Module 14888 (GoreMediaFiltersGuildsSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7375 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7673 */;
-import SettingsConstants from "SettingsConstants" /* 8050 */;
-import useUserIsTeen from "useUserIsTeen" /* 8737 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7374 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7672 */;
+import SettingsConstants from "SettingsConstants" /* 8049 */;
+import useUserIsTeen from "useUserIsTeen" /* 8735 */;
 import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14875 */;
 import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14876 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

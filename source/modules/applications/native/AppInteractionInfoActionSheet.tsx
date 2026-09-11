@@ -1,13 +1,13 @@
-// Module ID: 11822
-// Function ID: 11823
+// Module ID: 11820
+// Function ID: 11821
 // Name: AppInteractionInfoActionSheet
-// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4607, 1611, 11823, 9337, 504, 8267, 5636, 4603, 1114, 5175, 8265, 1178, 7224, 2]
+// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4606, 1611, 11821, 9335, 504, 8266, 5635, 4602, 1114, 5174, 8264, 1178, 7223, 2]
 // Exports: default
 
-// Module 11822 (AppInteractionInfoActionSheet)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import UserActionCreators from "UserActionCreators" /* 8267 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11823 */;
+// Module 11820 (AppInteractionInfoActionSheet)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import UserActionCreators from "UserActionCreators" /* 8266 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11821 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
@@ -35,13 +35,13 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp5;
   const memo = noop.useMemo(() => React6(ContextMenuSubmenuActionSheetHeaderDefault, { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9337).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9335).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9337).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9335).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -83,21 +83,21 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   if (null != stateFromStores1) {
     const obj5 = { style: tmp.itemContainer, children: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(5636).GuildIconSizes.SMALL_32 };
-    const items5 = [closure_8(tmp2(5636), obj6), ];
+    const obj6 = { guild: stateFromStores1, size: tmp10(5635).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(tmp2(5635), obj6), ];
     const obj7 = { style: tmp.itemLabel, children: null };
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
-    const items6 = [closure_8(tmp10(4603).Text, obj8), ];
+    const items6 = [closure_8(tmp10(4602).Text, obj8), ];
     const obj9 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp10(1114).intl;
     const obj10 = { application: message.author.username };
     obj9.children = intl2.format(tmp10(1114).t.ShLXXB, obj10);
-    items6[1] = closure_8(tmp10(4603).Text, obj9);
+    items6[1] = closure_8(tmp10(4602).Text, obj9);
     obj7.children = items6;
     items5[1] = closure_9(id, obj7);
     obj5.children = items5;
     let tmp26 = closure_9(id, obj5);
-    const tmp2Result = tmp2(5636);
+    const tmp2Result = tmp2(5635);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -112,17 +112,17 @@ export default function AppInteractionInfoActionSheet(message) {
       const items7 = [closure_8(tmp10(1178).Avatar, obj13), ];
       const obj14 = { style: tmp.itemLabel, children: null };
       const obj15 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.username };
-      const items8 = [closure_8(tmp10(4603).Text, obj15), ];
+      const items8 = [closure_8(tmp10(4602).Text, obj15), ];
       const obj16 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl = tmp10(1114).intl;
       const obj17 = { application: message.author.username };
       obj16.children = intl.format(tmp10(1114).t.ShLXXB, obj17);
-      items8[1] = closure_8(tmp10(4603).Text, obj16);
+      items8[1] = closure_8(tmp10(4602).Text, obj16);
       obj14.children = items8;
       items7[1] = closure_9(id, obj14);
       obj12.children = items7;
       obj11.children = closure_9(id, obj12);
-      tmp26 = closure_8(tmp10(5175).PressableOpacity, obj11);
+      tmp26 = closure_8(tmp10(5174).PressableOpacity, obj11);
     }
   }
   const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1611)().bottom }, children: null };
@@ -140,18 +140,18 @@ export default function AppInteractionInfoActionSheet(message) {
     const items10 = [closure_8(tmp10(1178).Avatar, obj21), ];
     const obj22 = { style: tmp.itemLabel, children: null };
     const obj23 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp15.username };
-    const items11 = [closure_8(tmp10(4603).Text, obj23), ];
+    const items11 = [closure_8(tmp10(4602).Text, obj23), ];
     const obj24 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl3 = tmp10(1114).intl;
     obj24.children = intl3.string(tmp10(1114).t["04gxNg"]);
-    items11[1] = closure_8(tmp10(4603).Text, obj24);
+    items11[1] = closure_8(tmp10(4602).Text, obj24);
     obj22.children = items11;
     items10[1] = tmp31(id, obj22);
     obj20.children = items10;
     obj19.children = tmp31(id, obj20);
-    tmp32 = closure_8(tmp10(5175).PressableOpacity, obj19);
+    tmp32 = closure_8(tmp10(5174).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
   obj18.children = items9;
-  return closure_9(message(7224).BottomSheet, obj18);
+  return closure_9(message(7223).BottomSheet, obj18);
 };

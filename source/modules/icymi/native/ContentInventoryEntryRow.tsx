@@ -1,7 +1,7 @@
 // Module ID: 16571
 // Function ID: 16572
 // Name: ContentInventoryEntryRow
-// Dependencies: [19, 4255, 21, 504, 8216, 16572, 16581, 2]
+// Dependencies: [19, 4255, 21, 504, 8215, 16572, 16581, 2]
 // Exports: default
 
 // Module 16571 (ContentInventoryEntryRow)
@@ -27,9 +27,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8216).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8216).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8216).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8215).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8215).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8215).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

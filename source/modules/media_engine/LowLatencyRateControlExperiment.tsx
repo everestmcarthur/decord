@@ -1,10 +1,10 @@
-// Module ID: 14066
-// Function ID: 14067
+// Module ID: 14064
+// Function ID: 14065
 // Name: LowLatencyRateControlExperiment
 // Dependencies: [1434, 2]
 // Exports: getLowLatencyRateControlExperimentConfig
 
-// Module 14066 (LowLatencyRateControlExperiment)
+// Module 14064 (LowLatencyRateControlExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 const obj = { kind: "user", name: "2025-10-low-latency-rate-control", defaultConfig: { enabled: false }, variations: null };

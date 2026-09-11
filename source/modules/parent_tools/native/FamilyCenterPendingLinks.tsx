@@ -1,7 +1,7 @@
 // Module ID: 14979
 // Function ID: 14980
 // Name: FamilyCenterPendingLinks
-// Dependencies: [19, 17, 7612, 21, 4607, 576, 8738, 12015, 1114, 2396, 4603, 8739, 5175, 4810, 14980, 1896, 1178, 9659, 14981, 14978, 14982, 14973, 2]
+// Dependencies: [19, 17, 7611, 21, 4606, 576, 8736, 12013, 1114, 2396, 4602, 8737, 5174, 4809, 14980, 1896, 1178, 9657, 14981, 14978, 14982, 14973, 2]
 // Exports: default
 
 // Module 14979 (FamilyCenterPendingLinks)
@@ -9,18 +9,18 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
-import useUserLinks from "useUserLinks" /* 8738 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8739 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12015 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import useUserLinks from "useUserLinks" /* 8736 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8737 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FamilyCenterPendingLinkRow(otherUser) {
   const str = otherUser.otherUser;
   const tmp = closure_9();
-  str(8738);
+  str(8736);
   if (undefined === str) {
     return null;
   } else {
@@ -39,7 +39,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
       obj2.style = tmp.actionButton;
       const obj4 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(14978) };
       obj2.children = closure_5(tmp5(1178).Icon, obj4);
-      let tmp8Result = tmp17(tmp5(5175).PressableOpacity, obj2);
+      let tmp8Result = tmp17(tmp5(5174).PressableOpacity, obj2);
       let tmp14 = tmp17;
     } else {
       let tmp12Result = null;
@@ -58,9 +58,9 @@ function FamilyCenterPendingLinkRow(otherUser) {
         const items = [, ];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
         obj.style = items;
-        const obj6 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(9659) };
+        const obj6 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(9657) };
         obj.children = closure_5(tmp5(1178).Icon, obj6);
-        tmp12Result = tmp12(tmp5(5175).PressableOpacity, obj);
+        tmp12Result = tmp12(tmp5(5174).PressableOpacity, obj);
       }
       const items1 = [tmp12Result, ];
       tmp14 = closure_5;
@@ -79,7 +79,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
       obj8.style = tmp.actionButton;
       const obj10 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(14978) };
       obj8.children = tmp14(tmp5(1178).Icon, obj10);
-      items1[1] = tmp14(tmp5(5175).PressableOpacity, obj8);
+      items1[1] = tmp14(tmp5(5174).PressableOpacity, obj8);
       obj7.children = items1;
       tmp8Result = closure_6(closure_7, obj7);
     }
@@ -89,13 +89,13 @@ function FamilyCenterPendingLinkRow(otherUser) {
   tmp4 = useIsInAdultAgeGroupDefault();
 }
 const View = fn(17).View;
-const UserLinkStatus = fn(7612).UserLinkStatus;
+const UserLinkStatus = fn(7611).UserLinkStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj2 = { container: { marginTop: 24 }, content: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, header: { marginBottom: 10 } };
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj5 = { actionButton: null, actionButtonFirst: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj5.actionButton = size;

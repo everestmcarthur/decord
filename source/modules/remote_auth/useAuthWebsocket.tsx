@@ -1,7 +1,7 @@
 // Module ID: 16060
 // Function ID: 16061
 // Name: useAuthWebsocket
-// Dependencies: [5, 32, 19, 1074, 3, 16059, 559, 7036, 13690, 16061, 1109, 1272, 6665, 16063, 2]
+// Dependencies: [5, 32, 19, 1074, 3, 16059, 559, 7035, 13688, 16061, 1109, 1272, 6664, 16063, 2]
 // Exports: useAuthWebsocket
 
 // Module 16060 (useAuthWebsocket)
@@ -152,7 +152,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                 let heartbeat_interval;
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: true };
+                return { value: "PX_16", done: null };
               }
             } else if (1 === tmp5) {
               if (arg0 === 1) {
@@ -193,11 +193,11 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                     request.body = obj8;
                     const postResult = HTTP.post(request);
                     HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F126389 */ function() { ... });
+                      closure_0 = closure_1_3(/* F126420 */ function() { ... });
                       return () => { ... };
                     })()).catch(() => closure_1_11());
                     const nextPromise = HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F126389 */ function() { ... });
+                      closure_0 = closure_1_3(/* F126420 */ function() { ... });
                       return () => { ... };
                     })());
                   }

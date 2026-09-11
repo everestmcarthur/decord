@@ -1,13 +1,13 @@
-// Module ID: 5561
-// Function ID: 5562
+// Module ID: 5560
+// Function ID: 5561
 // Name: FrecencyStore
-// Dependencies: [1221, 1957, 1979, 2011, 4428, 1074, 1084, 4644, 12, 504, 573, 2]
+// Dependencies: [1221, 1957, 1979, 2011, 4428, 1074, 1084, 4643, 12, 504, 573, 2]
 
-// Module 5561 (FrecencyStore)
+// Module 5560 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FrecencyDefault from "Frecency" /* 4644 */;
+import FrecencyDefault from "Frecency" /* 4643 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;

@@ -1,87 +1,87 @@
 // Module ID: 5243
 // Function ID: 5244
-// Dependencies: [5237, 5238]
-// Exports: isAVIF, isBMP, isBPG, isCR2, isEXR, isGIF, isHEIC, isICO, isJPEG, isPBM, isPGM, isPNG, isPPM, isPSD, isWEBP
+// Dependencies: [5236, 5237]
+// Exports: isBLEND, isDOC, isELF, isEXE, isINDD, isMACHO, isORC, isPARQUET, isPCAP, isPDF, isPS, isRTF, isSQLITE, isSTL, isTTF
 
 // Module 5243
+import _mod5236 from "module_5236" /* 5236 */;
 import _mod5237 from "module_5237" /* 5237 */;
-import _mod5238 from "module_5238" /* 5238 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const isAVIF = function isAVIF(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5237.isAvifStringIncluded(fileChunk);
+export const isBLEND = function isBLEND(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "blend");
 };
-export const isBMP = function isBMP(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bmp");
+export const isELF = function isELF(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "elf");
 };
-export const isBPG = function isBPG(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bpg");
+export const isEXE = function isEXE(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exe");
 };
-export const isCR2 = function isCR2(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "cr2");
+export const isMACHO = function isMACHO(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "macho");
 };
-export const isEXR = function isEXR(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exr");
+export const isINDD = function isINDD(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "indd");
 };
-export const isGIF = function isGIF(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "gif");
+export const isORC = function isORC(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "orc");
 };
-export const isHEIC = function isHEIC(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5237.isHeicSignatureIncluded(fileChunk);
+export const isPARQUET = function isPARQUET(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "parquet");
 };
-export const isICO = function isICO(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ico");
+export const isPDF = function isPDF(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pdf");
 };
-export const isJPEG = function isJPEG(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "jpeg");
+export const isPS = function isPS(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ps");
 };
-export const isPBM = function isPBM(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pbm");
+export const isRTF = function isRTF(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "rtf");
 };
-export const isPGM = function isPGM(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pgm");
+export const isSQLITE = function isSQLITE(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "sqlite");
 };
-export const isPNG = function isPNG(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "png");
+export const isSTL = function isSTL(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "stl");
 };
-export const isPPM = function isPPM(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ppm");
+export const isTTF = function isTTF(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ttf");
 };
-export const isPSD = function isPSD(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "psd");
+export const isDOC = function isDOC(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "doc");
 };
-export const isWEBP = function isWEBP(fileChunk) {
-  fileChunk = _mod5237.getFileChunk(fileChunk);
-  const FileTypes = _mod5238.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webp");
+export const isPCAP = function isPCAP(fileChunk) {
+  fileChunk = _mod5236.getFileChunk(fileChunk);
+  const FileTypes = _mod5237.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pcap");
 };

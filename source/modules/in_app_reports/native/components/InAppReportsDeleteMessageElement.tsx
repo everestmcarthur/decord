@@ -1,15 +1,15 @@
-// Module ID: 9153
-// Function ID: 9154
+// Module ID: 9151
+// Function ID: 9152
 // Name: InAppReportsDeleteMessageElement
-// Dependencies: [32, 19, 4828, 1074, 21, 504, 4787, 7530, 9143, 1114, 4565, 2]
+// Dependencies: [32, 19, 4827, 1074, 21, 504, 4786, 7529, 9141, 1114, 4564, 2]
 // Exports: default
 
-// Module 9153 (InAppReportsDeleteMessageElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4787 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7530 */;
+// Module 9151 (InAppReportsDeleteMessageElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 4828 */;
+import MessageStore from "MessageStore" /* 4827 */;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -47,6 +47,6 @@ export default function DeleteMessageElement(message) {
   obj2.description = intl3.string(message(1114).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(4565).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(9143), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  obj2.icon = jsx(message(4564).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(9141), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

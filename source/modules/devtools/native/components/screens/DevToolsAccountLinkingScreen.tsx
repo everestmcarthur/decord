@@ -1,19 +1,19 @@
 // Module ID: 15791
 // Function ID: 15792
 // Name: DevToolsAccountLinkingScreen
-// Dependencies: [32, 19, 17, 4835, 7181, 1979, 4428, 21, 4607, 576, 504, 7244, 1611, 7242, 7239, 5739, 5657, 4603, 6678, 5027, 2]
+// Dependencies: [32, 19, 17, 4834, 7180, 1979, 4428, 21, 4606, 576, 504, 7243, 1611, 7241, 7238, 5738, 5656, 4602, 6677, 5026, 2]
 // Exports: default
 
 // Module 15791 (DevToolsAccountLinkingScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7239 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7242 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7244 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7238 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7241 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7243 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7181 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7180 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null, buttonRow: null, rewardImage: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -56,8 +56,8 @@ export default function DevToolsAccountLinkingScreen() {
   const obj3 = value(504);
   let found = useGetOrFetchApplicationsDefault(gameApplicationIds).filter((item) => null != item);
   const arr4 = useGetOrFetchApplicationsDefault(gameApplicationIds);
-  getOrFetchApplication = value(7242).useGetOrFetchApplication(value);
-  const tmp8Result = value(7242);
+  getOrFetchApplication = value(7241).useGetOrFetchApplication(value);
+  const tmp8Result = value(7241);
   const items2 = [ApplicationStore];
   const stateFromStoresArray = value(504).useStateFromStoresArray(items2, () => {
     let found;
@@ -140,16 +140,16 @@ export default function DevToolsAccountLinkingScreen() {
         return closure_1_12(first(dependencyMap[16]).TableRow, obj, name.id);
       });
     } else {
-      mapped1 = tmp18(tmp8(5657).TableRow, { label: "No official games" });
+      mapped1 = tmp18(tmp8(5656).TableRow, { label: "No official games" });
     }
   } else {
-    obj6.children = tmp18(tmp8(5657).TableRow, { label: "No guild selected" });
-    const items6 = [tmp18(tmp8(5739).TableRowGroup, obj6), , , ];
+    obj6.children = tmp18(tmp8(5656).TableRow, { label: "No guild selected" });
+    const items6 = [tmp18(tmp8(5738).TableRowGroup, obj6), , , ];
     const obj7 = { style: null, children: null };
     const obj8 = { padding: tmp2(576).space.PX_12 };
     obj7.style = obj8;
     const obj9 = { label: "Application ID", value, onChange: tmp7 };
-    obj7.children = tmp18(tmp8(6678).TextInput, obj9);
+    obj7.children = tmp18(tmp8(6677).TextInput, obj9);
     const items7 = [tmp18(closure_7, obj7), , ];
     if (null != getOrFetchApplication) {
       str = getOrFetchApplication.name;
@@ -158,13 +158,13 @@ export default function DevToolsAccountLinkingScreen() {
     const obj11 = { label: null };
     let _HermesInternal = HermesInternal;
     obj11.label = "Name: " + str;
-    items7[1] = tmp18(tmp8(5657).TableRow, obj11);
+    items7[1] = tmp18(tmp8(5656).TableRow, obj11);
     const obj12 = { label: null };
     const _HermesInternal2 = HermesInternal;
     obj12.label = "Linked Games: " + str2;
-    items7[2] = tmp18(tmp8(5657).TableRow, obj12);
+    items7[2] = tmp18(tmp8(5656).TableRow, obj12);
     obj10.children = items7;
-    items6[1] = tmp16(tmp8(5739).TableRowGroup, obj10);
+    items6[1] = tmp16(tmp8(5738).TableRowGroup, obj10);
     let str6 = "text-feedback-critical";
     if (debug.hasConnectionEntrypointUrl) {
       str6 = "text-feedback-positive";
@@ -176,8 +176,8 @@ export default function DevToolsAccountLinkingScreen() {
     }
     const obj14 = { label: "Connection Entrypoint URL", trailing: null };
     obj13.children = str7;
-    obj14.trailing = tmp18(tmp8(4603).Text, obj13);
-    const items8 = [tmp18(tmp8(5657).TableRow, obj14), , ];
+    obj14.trailing = tmp18(tmp8(4602).Text, obj13);
+    const items8 = [tmp18(tmp8(5656).TableRow, obj14), , ];
     let str8 = "text-muted";
     if (hasAlreadyLinked) {
       str8 = "text-feedback-positive";
@@ -190,8 +190,8 @@ export default function DevToolsAccountLinkingScreen() {
     const obj16 = { title: "Authorization", hasIcons: false, children: null };
     const obj17 = { label: "Already Linked", trailing: null };
     obj15.children = str9;
-    obj17.trailing = tmp18(tmp8(4603).Text, obj15);
-    items8[1] = tmp18(tmp8(5657).TableRow, obj17);
+    obj17.trailing = tmp18(tmp8(4602).Text, obj15);
+    items8[1] = tmp18(tmp8(5656).TableRow, obj17);
     const obj18 = { style: tmp.buttonRow, children: null };
     const obj19 = {
       disabled: !tmp11.canStartAuthorization,
@@ -201,13 +201,13 @@ export default function DevToolsAccountLinkingScreen() {
       variant: "primary",
       text: "Start Authorization"
     };
-    const items9 = [tmp18(tmp8(5027).Button, obj19), ];
+    const items9 = [tmp18(tmp8(5026).Button, obj19), ];
     const obj20 = { disabled: !tmp15, onPress: callback, variant: "critical-primary", text: "Deauthorize" };
-    items9[1] = tmp18(tmp8(5027).Button, obj20);
+    items9[1] = tmp18(tmp8(5026).Button, obj20);
     obj18.children = items9;
     items8[2] = tmp16(closure_7, obj18);
     obj16.children = items8;
-    items6[2] = tmp16(tmp8(5739).TableRowGroup, obj16);
+    items6[2] = tmp16(tmp8(5738).TableRowGroup, obj16);
     let prop;
     if (connectionApp != null) {
       prop = connectionApp.applicationAccountLinkBenefitConfig;
@@ -235,9 +235,9 @@ export default function DevToolsAccountLinkingScreen() {
       const obj26 = { label: null };
       const _HermesInternal3 = HermesInternal;
       obj26.label = "Reward: " + str10;
-      items10[1] = tmp18(tmp8(5657).TableRow, obj26);
+      items10[1] = tmp18(tmp8(5656).TableRow, obj26);
       obj25.children = items10;
-      tmp16Result = tmp16(tmp8(5739).TableRowGroup, obj25);
+      tmp16Result = tmp16(tmp8(5738).TableRowGroup, obj25);
     }
     items6[3] = tmp16Result;
     obj4.children = items6;

@@ -1,13 +1,13 @@
 // Module ID: 15872
 // Function ID: 15873
 // Name: CollectiblesShopScreen
-// Dependencies: [19, 1076, 21, 7068, 15873, 7459, 15874, 7256, 2]
+// Dependencies: [19, 1076, 21, 7067, 15873, 7458, 15874, 7255, 2]
 // Exports: default
 
 // Module 15872 (CollectiblesShopScreen)
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7068 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7459 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7067 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7458 */;
 import useShopOrientationLock from "useShopOrientationLock" /* 15873 */;
 import noop from "module_19" /* 19 */;
 

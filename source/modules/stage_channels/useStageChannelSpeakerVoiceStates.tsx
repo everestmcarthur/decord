@@ -1,7 +1,7 @@
 // Module ID: 16309
 // Function ID: 16310
 // Name: useStageChannelSpeakerVoiceStates
-// Dependencies: [32, 1960, 1957, 4631, 5470, 504, 1982, 11, 1369, 5477, 5484, 2]
+// Dependencies: [32, 1960, 1957, 4630, 5469, 504, 1982, 11, 1369, 5476, 5483, 2]
 // Exports: default
 
 // Module 16309 (useStageChannelSpeakerVoiceStates)
@@ -10,7 +10,7 @@ import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5470 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5469 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(4631).getComparator;
+const getComparator = fn(4630).getComparator;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 

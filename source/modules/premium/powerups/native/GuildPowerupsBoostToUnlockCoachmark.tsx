@@ -1,11 +1,11 @@
 // Module ID: 16242
 // Function ID: 16243
 // Name: GuildPowerupsBoostToUnlockCoachmark
-// Dependencies: [19, 12590, 16243, 2]
+// Dependencies: [19, 12588, 16243, 2]
 // Exports: default
 
 // Module 16242 (GuildPowerupsBoostToUnlockCoachmark)
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12590 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

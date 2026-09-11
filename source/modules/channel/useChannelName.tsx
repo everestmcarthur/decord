@@ -1,14 +1,14 @@
-// Module ID: 4760
-// Function ID: 4761
+// Module ID: 4759
+// Function ID: 4760
 // Name: useChannelName
-// Dependencies: [32, 4523, 4255, 1371, 1074, 1369, 4451, 1114, 504, 2]
+// Dependencies: [32, 4522, 4255, 1371, 1074, 1369, 4451, 1114, 504, 2]
 // Exports: computeDefaultGroupDmName, computeDefaultGroupDmNameFromUserIds, computeGroupDmName, default, escapeChannelName, unescapeChannelName, useComputedGroupDmName
 
-// Module 4760 (useChannelName)
+// Module 4759 (useChannelName)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4523 */;
+import ExperimentStore from "ExperimentStore" /* 4522 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 

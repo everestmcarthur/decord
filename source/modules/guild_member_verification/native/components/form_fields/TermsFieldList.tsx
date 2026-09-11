@@ -1,15 +1,15 @@
-// Module ID: 5653
-// Function ID: 5654
+// Module ID: 5652
+// Function ID: 5653
 // Name: TermsFieldList
-// Dependencies: [19, 17, 21, 4607, 576, 4603, 1114, 4597, 5654, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 4602, 1114, 4596, 5653, 2]
 // Exports: default
 
-// Module 5653 (TermsFieldList)
+// Module 5652 (TermsFieldList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4597 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import TableRowDivider from "TableRowDivider" /* 5654 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import TableRowDivider from "TableRowDivider" /* 5653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -55,7 +55,7 @@ export default function TermsFieldList(rules) {
   const intl = rules(1114).intl;
   obj2.children = intl.string(rules(1114).t.prJqwT);
   let items = [
-    closure_5(rules(4603).Text, obj2),
+    closure_5(rules(4602).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

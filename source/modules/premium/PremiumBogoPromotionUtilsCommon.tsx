@@ -1,28 +1,28 @@
-// Module ID: 13517
-// Function ID: 13518
+// Module ID: 13515
+// Function ID: 13516
 // Name: PremiumBogoPromotionUtilsCommon
-// Dependencies: [5, 1371, 4270, 7524, 7468, 10756, 1373, 1074, 4198, 4264, 1115, 4848, 7491, 13518, 13519, 563, 7521, 8136, 13520, 13521, 4931, 13474, 2]
+// Dependencies: [5, 1371, 4270, 7523, 7467, 10754, 1373, 1074, 4198, 4264, 1115, 4847, 7490, 13516, 13517, 563, 7520, 8135, 13518, 13519, 4930, 13472, 2]
 // Exports: maybeFetchActiveBogoPromotion, useIsEligibleForBogoPromotion
 
-// Module 13517 (PremiumBogoPromotionUtilsCommon)
+// Module 13515 (PremiumBogoPromotionUtilsCommon)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import _modDef4198 from "module_4198" /* 4198 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 4848 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7491 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7521 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8136 */;
-import PromotionsHooks from "PromotionsHooks" /* 13518 */;
-import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13519 */;
-import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13520 */;
-import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13521 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 4847 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7490 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7520 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8135 */;
+import PromotionsHooks from "PromotionsHooks" /* 13516 */;
+import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13517 */;
+import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13518 */;
+import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13519 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4270 */;
-import UserOfferStore from "UserOfferStore" /* 7524 */;
-import EntitlementStore from "EntitlementStore" /* 7468 */;
-import PromotionsStore from "PromotionsStore" /* 10756 */;
+import UserOfferStore from "UserOfferStore" /* 7523 */;
+import EntitlementStore from "EntitlementStore" /* 7467 */;
+import PromotionsStore from "PromotionsStore" /* 10754 */;
 
 require = fn;
 function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
@@ -136,7 +136,7 @@ let closure_15 = async function _isEligibleForBOGOPromotion(arg0, value) {
           let mostRecentPremiumTypeSubscription;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else {
         if (1 === tmp5) {
@@ -349,7 +349,7 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdateDefault({ delay: num2 });
-  const isMobile = tmp(4848).isMobile;
+  const isMobile = tmp(4847).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
     isAndroidResult = tmp(1115).isAndroid();

@@ -1,13 +1,13 @@
-// Module ID: 5869
-// Function ID: 5870
+// Module ID: 5868
+// Function ID: 5869
 // Name: BlossomIllocon
-// Dependencies: [21, 5639, 5870, 2]
+// Dependencies: [21, 5638, 5869, 2]
 // Exports: BlossomIllocon
 
-// Module 5869 (BlossomIllocon)
+// Module 5868 (BlossomIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5870 from "module_5870" /* 5870 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5869 from "module_5869" /* 5869 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BlossomIllocon = function BlossomIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5870 };
+  const obj2 = { uri: _modDef5869 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

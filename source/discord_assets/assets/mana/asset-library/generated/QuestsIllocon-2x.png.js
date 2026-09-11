@@ -1,8 +1,8 @@
-// Module ID: 6452
-// Function ID: 6453
+// Module ID: 6451
+// Function ID: 6452
 // Dependencies: [2]
 
-// Module 6452
+// Module 6451
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QuestsIllocon-2x.png.js");

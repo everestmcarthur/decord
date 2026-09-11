@@ -1,24 +1,24 @@
-// Module ID: 9555
-// Function ID: 9556
+// Module ID: 9553
+// Function ID: 9554
 // Name: XboxInstallAlert
-// Dependencies: [19, 9325, 21, 4607, 576, 5046, 1114, 1178, 9537, 1115, 4301, 2]
+// Dependencies: [19, 9323, 21, 4606, 576, 5045, 1114, 1178, 9535, 1115, 4301, 2]
 // Exports: default
 
-// Module 9555 (XboxInstallAlert)
+// Module 9553 (XboxInstallAlert)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import LinkingDefault from "Linking" /* 4301 */;
-import common_AlertDefault from "common/Alert" /* 5046 */;
-import _modDef9537 from "module_9537" /* 9537 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
+import _modDef9535 from "module_9535" /* 9535 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9325);
+const GameConsoleConstants = fn(9323);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 obj2.externalLinkIcon = size;
@@ -40,7 +40,7 @@ export default function XboxInstallAlert(arg0) {
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef9537, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef9535, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1115);

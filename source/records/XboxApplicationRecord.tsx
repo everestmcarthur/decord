@@ -1,10 +1,10 @@
-// Module ID: 13807
-// Function ID: 13808
+// Module ID: 13805
+// Function ID: 13806
 // Name: XboxApplicationRecord
-// Dependencies: [1918, 5335, 2]
+// Dependencies: [1918, 5334, 2]
 
-// Module 13807 (XboxApplicationRecord)
-import PlatformsDefault from "Platforms" /* 5335 */;
+// Module 13805 (XboxApplicationRecord)
+import PlatformsDefault from "Platforms" /* 5334 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
 let c2 = "xbox:";

@@ -1,23 +1,23 @@
 // Module ID: 16852
 // Function ID: 16853
 // Name: AddFriendsScreen
-// Dependencies: [32, 5, 19, 17, 7731, 4255, 1371, 12794, 1074, 12773, 21, 4607, 576, 12771, 8466, 4304, 1114, 7832, 12775, 1115, 7236, 7256, 5044, 1242, 8265, 563, 12, 4451, 16117, 7242, 5177, 9948, 5629, 10957, 5657, 4306, 5142, 16853, 16854, 16856, 16857, 2]
+// Dependencies: [32, 5, 19, 17, 7730, 4255, 1371, 12792, 1074, 12771, 21, 4606, 576, 12769, 8464, 4304, 1114, 7831, 12773, 1115, 7235, 7255, 5043, 1242, 8264, 563, 12, 4451, 16117, 7241, 5176, 9946, 5628, 10955, 5656, 4306, 5141, 16853, 16854, 16856, 16857, 2]
 // Exports: default
 
 // Module 16852 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8466 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12771 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12775 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8464 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12769 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12773 */;
 import IncomingRequestRow from "IncomingRequestRow" /* 16854 */;
 import ContactSuggestionRow from "ContactSuggestionRow" /* 16856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7731 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7730 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -63,14 +63,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(12794).Sections;
+const Sections = fn(12792).Sections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-const ContactPermissions = fn(12773).ContactPermissions;
+const ContactPermissions = fn(12771).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

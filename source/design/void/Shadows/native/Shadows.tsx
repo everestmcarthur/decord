@@ -1,10 +1,10 @@
-// Module ID: 14177
-// Function ID: 14178
+// Module ID: 14175
+// Function ID: 14176
 // Name: Shadows
 // Dependencies: [1115, 2]
 // Exports: generateBoxShadowStyle
 
-// Module 14177 (Shadows)
+// Module 14175 (Shadows)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");

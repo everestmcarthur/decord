@@ -1,20 +1,20 @@
 // Module ID: 15191
 // Function ID: 15192
 // Name: VideoQuestPlayer
-// Dependencies: [32, 19, 7778, 5496, 21, 15184, 11579, 11381, 4229, 15071, 15192, 7797, 15194, 1364, 11608, 11372, 15202, 15082, 2]
+// Dependencies: [32, 19, 7777, 5495, 21, 15184, 11577, 11379, 4229, 15071, 15192, 7796, 15194, 1364, 11606, 11370, 15202, 15082, 2]
 
 // Module 15191 (VideoQuestPlayer)
-import QuestActionCreators from "QuestActionCreators" /* 11372 */;
-import AssetUtils from "AssetUtils" /* 11381 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11608 */;
+import QuestActionCreators from "QuestActionCreators" /* 11370 */;
+import AssetUtils from "AssetUtils" /* 11379 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11606 */;
 import SimpleMuxWrapper from "SimpleMuxWrapper" /* 15194 */;
 import VideoQuestCaptions from "VideoQuestCaptions" /* 15202 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7778 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7777 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5496).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");

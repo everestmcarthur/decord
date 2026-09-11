@@ -1,22 +1,22 @@
 // Module ID: 16417
 // Function ID: 16418
 // Name: GuildsBarPendingGuild
-// Dependencies: [19, 4429, 1975, 4428, 5490, 21, 4607, 576, 16365, 4308, 504, 5636, 16399, 16368, 4431, 5579, 16380, 16409, 16357, 4343, 16388, 5639, 2]
+// Dependencies: [19, 4429, 1975, 4428, 5489, 21, 4606, 576, 16365, 4308, 504, 5635, 16399, 16368, 4431, 5578, 16380, 16409, 16357, 4343, 16388, 5638, 2]
 
 // Module 16417 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 576 */;
-import GuildIcon from "GuildIcon" /* 5636 */;
+import GuildIcon from "GuildIcon" /* 5635 */;
 import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16357 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 
 require = fn;
 const GuildRecord = fn(1975);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;

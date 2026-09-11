@@ -1,18 +1,18 @@
 // Module ID: 15808
 // Function ID: 15809
 // Name: InternalBuildUpdateSetting
-// Dependencies: [14449, 21, 13961, 504, 4198, 14897, 4556, 15216, 11564, 2]
+// Dependencies: [14447, 21, 13959, 504, 4198, 14897, 4555, 15216, 11562, 2]
 
 // Module 15808 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13961 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13959 */;
 import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14897 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14449 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14447 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";
@@ -21,7 +21,7 @@ const pressable = SettingBuilders.createPressable({
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [MobileNativeUpdateStore];
     if (obj.useStateFromStores(items, () => null !== MobileNativeUpdateStore.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4556).DownloadIcon;
+      let RefreshIcon = tmp(4555).DownloadIcon;
     } else {
       RefreshIcon = tmp(15216).RefreshIcon;
     }

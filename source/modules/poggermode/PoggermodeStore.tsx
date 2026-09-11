@@ -1,17 +1,17 @@
-// Module ID: 7904
-// Function ID: 7905
+// Module ID: 7903
+// Function ID: 7904
 // Name: PoggermodeStore
-// Dependencies: [502, 2011, 7751, 7752, 1074, 4241, 4494, 7905, 1109, 504, 573, 2]
+// Dependencies: [502, 2011, 7750, 7751, 1074, 4241, 1952, 7904, 1109, 504, 573, 2]
 // Exports: getComboId, isComboing, shouldTrackMessage
 
-// Module 7904 (PoggermodeStore)
+// Module 7903 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 7905 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 7904 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7751 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7750 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -49,7 +49,7 @@ function updateCombo(userId) {
     decayInterval1 = iter.decayInterval;
   }
   if (decayInterval1 == null) {
-    decayInterval1 = new obj2(4494).Interval();
+    decayInterval1 = new obj2(1952).Interval();
   }
   obj2.decayInterval = decayInterval1;
   const result = secondaryIndexMap.set("" + userId.userId + "-" + userId.channelId, obj2);
@@ -86,7 +86,7 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7752);
+const PoggermodeConstants = fn(7751);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const set = new Set();

@@ -1,14 +1,14 @@
-// Module ID: 7237
-// Function ID: 7238
+// Module ID: 7236
+// Function ID: 7237
 // Name: ApplicationActionCreators
-// Dependencies: [5, 7238, 1918, 4835, 1074, 573, 1272, 504, 2]
+// Dependencies: [5, 7237, 1918, 4834, 1074, 573, 1272, 504, 2]
 // Exports: useApplicationWithLoggedOutContext
 
-// Module 7237 (ApplicationActionCreators)
+// Module 7236 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7238 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7237 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 
 const require = globalThis.__r;
 
@@ -62,7 +62,7 @@ let closure_10 = async function _fetchApplication(arg0, value) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

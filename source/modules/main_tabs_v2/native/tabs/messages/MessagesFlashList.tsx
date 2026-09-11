@@ -1,7 +1,7 @@
 // Module ID: 16172
 // Function ID: 16173
 // Name: MessagesFlashList
-// Dependencies: [32, 19, 21, 16127, 16101, 16167, 16168, 16113, 16111, 16116, 16128, 16166, 16169, 8966, 2]
+// Dependencies: [32, 19, 21, 16127, 16101, 16167, 16168, 16113, 16111, 16116, 16128, 16166, 16169, 8964, 2]
 
 // Module 16172 (MessagesFlashList)
 import MessagesItemChannel from "MessagesItemChannel" /* 16101 */;

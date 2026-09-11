@@ -1,20 +1,20 @@
-// Module ID: 14654
-// Function ID: 14655
+// Module ID: 14652
+// Function ID: 14653
 // Name: HSVColorPicker
-// Dependencies: [19, 17, 21, 4607, 4343, 14655, 14656, 2]
+// Dependencies: [19, 17, 21, 4606, 4343, 14653, 14654, 2]
 // Exports: default
 
-// Module 14654 (HSVColorPicker)
+// Module 14652 (HSVColorPicker)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 14655 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 14653 */;
 import noop from "module_19" /* 19 */;
 
-const HuePickerDefault = tmp9(14656);
+const HuePickerDefault = tmp9(14654);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");

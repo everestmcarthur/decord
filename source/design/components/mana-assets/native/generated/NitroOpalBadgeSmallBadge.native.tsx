@@ -1,13 +1,13 @@
-// Module ID: 6351
-// Function ID: 6352
+// Module ID: 6350
+// Function ID: 6351
 // Name: NitroOpalBadgeSmallBadge
-// Dependencies: [21, 5639, 6352, 2]
+// Dependencies: [21, 5638, 6351, 2]
 // Exports: NitroOpalBadgeSmallBadge
 
-// Module 6351 (NitroOpalBadgeSmallBadge)
+// Module 6350 (NitroOpalBadgeSmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6352 from "module_6352" /* 6352 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6351 from "module_6351" /* 6351 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroOpalBadgeSmallBadge = function NitroOpalBadgeSmallBadge(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6352 };
+  const obj2 = { uri: _modDef6351 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

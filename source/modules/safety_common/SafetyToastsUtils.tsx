@@ -1,17 +1,17 @@
-// Module ID: 8493
-// Function ID: 8494
+// Module ID: 8491
+// Function ID: 8492
 // Name: SafetyToastsUtils
-// Dependencies: [1957, 1371, 8487, 4759, 4451, 1114, 2946, 2528, 2]
+// Dependencies: [1957, 1371, 8485, 4758, 4451, 1114, 2946, 2528, 2]
 // Exports: getSafetyToastTypeContent
 
-// Module 8493 (SafetyToastsUtils)
+// Module 8491 (SafetyToastsUtils)
 import util from "util" /* 1114 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const SafetyToastType = fn(8487).SafetyToastType;
+const SafetyToastType = fn(8485).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 

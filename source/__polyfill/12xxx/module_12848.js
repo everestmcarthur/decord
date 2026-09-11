@@ -1,0 +1,9 @@
+// Module ID: 12848
+// Function ID: 12849
+// Dependencies: [1122]
+
+// Module 12848
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 200, height: 139.5, scales: [2, 3], hash: "42c68794718ccb3cc57c33bf57ed6d23", name: "hub-header", type: "png" });

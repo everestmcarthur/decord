@@ -1,13 +1,13 @@
-// Module ID: 13160
-// Function ID: 13161
+// Module ID: 13158
+// Function ID: 13159
 // Name: UserProfileActivityTab
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 4603, 1114, 8458, 2024, 13161, 13164, 13093, 13165, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 4602, 1114, 8456, 2024, 13159, 13162, 13091, 13163, 2]
 // Exports: default
 
-// Module 13160 (UserProfileActivityTab)
+// Module 13158 (UserProfileActivityTab)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 13165 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 13163 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ function RecentActivityIntroText() {
         accessibilityRole: "link",
         onPress() {
           const obj2 = { href: null };
-          const obj = learnMore(8458);
+          const obj = learnMore(8456);
           obj2.href = closure_1_1(2024).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
           return obj.handleClick(obj2);
         },
@@ -65,7 +65,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, sectionHeading: null, introText: null, learnMore: null, loading: null, loadingRow: null, loadingThumbnail: null, loadingLine: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.sectionHeading = { marginBottom: -nativeDefault.space.PX_8 };
@@ -88,13 +88,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13161)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13159)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = tmp5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(13164);
+        const tmp7 = user(13162);
         if (isCurrentUser) {
           tmp10Result = tmp5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -110,7 +110,7 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1114).intl;
     obj3.heading = intl.string(user(1114).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(13093), obj4);
+    obj3.children = closure_5(cardStyle(13091), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
   const items = [hasCurrentActivity, ];

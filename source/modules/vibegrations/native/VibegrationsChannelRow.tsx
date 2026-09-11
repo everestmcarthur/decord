@@ -1,22 +1,22 @@
 // Module ID: 16287
 // Function ID: 16288
 // Name: VibegrationsChannelRow
-// Dependencies: [19, 1074, 1964, 10209, 21, 4607, 576, 1100, 12474, 1114, 3590, 10244, 2]
+// Dependencies: [19, 1074, 1964, 10207, 21, 4606, 576, 1100, 12472, 1114, 3590, 10242, 2]
 // Exports: default
 
 // Module 16287 (VibegrationsChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12474 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12472 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
-let obj2 = { container: { marginVertical: fn(10209).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4606);
+let obj2 = { container: { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsChannelRow.tsx");
@@ -29,10 +29,10 @@ export default function VibegrationsChannelRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(12474).ChannelModes.SELECTED;
+    let DEFAULT = id(12472).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(12474).ChannelModes.DEFAULT;
+    DEFAULT = id(12472).ChannelModes.DEFAULT;
     tmp5 = id;
   }
   const obj = { onPress: callback, style: closure_7().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
@@ -45,7 +45,7 @@ export default function VibegrationsChannelRow(selected) {
   const intl2 = tmp5(1114).intl;
   obj2.name = intl2.string(_modDef3590.Xmvb23);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(12474).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(12474).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10244).MagicWandIcon });
+  obj.name = jsx(tmp5(12472).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12472).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10242).MagicWandIcon });
   return <tmp8 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

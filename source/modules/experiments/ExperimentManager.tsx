@@ -1,15 +1,15 @@
-// Module ID: 4528
-// Function ID: 4529
+// Module ID: 4527
+// Function ID: 4528
 // Name: ExperimentManager
-// Dependencies: [4523, 4524, 573, 2]
+// Dependencies: [4522, 4523, 573, 2]
 // Exports: overrideBucket, registerGuildExperiment, registerUserExperiment, trackExposureToExperiment
 
-// Module 4528 (ExperimentManager)
+// Module 4527 (ExperimentManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ExperimentStore from "ExperimentStore" /* 4523 */;
+import ExperimentStore from "ExperimentStore" /* 4522 */;
 
-const registerExperiment = fn(4523).registerExperiment;
-const ExperimentConstants = fn(4524);
+const registerExperiment = fn(4522).registerExperiment;
+const ExperimentConstants = fn(4523);
 ({ ExperimentTypes: closure_4, ExposureTypes } = ExperimentConstants);
 const ExperimentSystem = { LEGACY: "legacy", APEX: "apex" };
 const size = fn(2);

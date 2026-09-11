@@ -1,12 +1,12 @@
-// Module ID: 7327
-// Function ID: 7328
+// Module ID: 7326
+// Function ID: 7327
 // Name: CreatorMonetizationRestrictionsHooks
-// Dependencies: [19, 4239, 1979, 1074, 7328, 7329, 504, 4238, 2]
+// Dependencies: [19, 4239, 1979, 1074, 7327, 7328, 504, 4238, 2]
 // Exports: useIsMonetizationReapplicationDisabled, useShouldHideGuildPurchaseEntryPoints, useShouldRestrictUpdatingCreatorMonetizationSettings
 
-// Module 7327 (CreatorMonetizationRestrictionsHooks)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7328 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7329 */;
+// Module 7326 (CreatorMonetizationRestrictionsHooks)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7327 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7328 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4239 */;
 import GuildStore from "GuildStore" /* 1979 */;

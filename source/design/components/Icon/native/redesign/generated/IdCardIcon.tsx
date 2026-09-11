@@ -1,13 +1,13 @@
-// Module ID: 8533
-// Function ID: 8534
+// Module ID: 8531
+// Function ID: 8532
 // Name: IdCardIcon
-// Dependencies: [19, 21, 576, 4307, 8534, 2]
+// Dependencies: [19, 21, 576, 4307, 8532, 2]
 // Exports: IdCardIcon
 
-// Module 8533 (IdCardIcon)
+// Module 8531 (IdCardIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8534 from "module_8534" /* 8534 */;
+import _mod8532 from "module_8532" /* 8532 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const IdCardIcon = function IdCardIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8534, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8532, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

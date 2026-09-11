@@ -1,8 +1,8 @@
-// Module ID: 8232
-// Function ID: 8233
+// Module ID: 8231
+// Function ID: 8232
 // Dependencies: [2]
 
-// Module 8232
+// Module 8231
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-capybara.png.js");

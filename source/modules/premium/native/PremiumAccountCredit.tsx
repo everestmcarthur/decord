@@ -1,16 +1,16 @@
-// Module ID: 13447
-// Function ID: 13448
+// Module ID: 13445
+// Function ID: 13446
 // Name: PremiumAccountCredit
-// Dependencies: [19, 17, 7468, 1074, 21, 4607, 576, 7246, 4264, 1114, 3074, 9468, 4603, 504, 12, 2]
+// Dependencies: [19, 17, 7467, 1074, 21, 4606, 576, 7245, 4264, 1114, 3074, 9466, 4602, 504, 12, 2]
 // Exports: default
 
-// Module 13447 (PremiumAccountCredit)
+// Module 13445 (PremiumAccountCredit)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4264 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7468 */;
+import EntitlementStore from "EntitlementStore" /* 7467 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -71,14 +71,14 @@ function AccountCreditTier(arg0) {
   if (result1) {
     const obj8 = { style: tmp.boostIcon, children: null };
     const obj9 = { size: "md", color: tmp4(576).unsafe_rawColors.GUILD_BOOSTING_PINK };
-    obj8.children = tmp24(tmp2(9468).BoostGemIcon, obj9);
+    obj8.children = tmp24(tmp2(9466).BoostGemIcon, obj9);
     let tmp24Result = tmp24(tmp22, obj8);
     let tmp27 = tmp24;
   } else {
-    const obj10 = { size: tmp2(7246).GameIconSizes.SMALL, skuId: result };
-    tmp24Result = tmp24(tmp4(7246), obj10);
+    const obj10 = { size: tmp2(7245).GameIconSizes.SMALL, skuId: result };
+    tmp24Result = tmp24(tmp4(7245), obj10);
     tmp27 = tmp24;
-    const tmp4Result = tmp4(7246);
+    const tmp4Result = tmp4(7245);
   }
   const items1 = [tmp24Result, , ];
   const obj11 = { style: tmp.textContainer, children: null };
@@ -89,7 +89,7 @@ function AccountCreditTier(arg0) {
   let tmp27Result = !tmp18;
   if (!tmp18) {
     const obj13 = { style: tmp.subText, variant: "text-xs/medium", color: "text-default", children: stringResult };
-    tmp27Result = tmp27(tmp2(4603).Text, obj13);
+    tmp27Result = tmp27(tmp2(4602).Text, obj13);
   }
   items2[1] = tmp27Result;
   obj11.children = items2;
@@ -105,9 +105,9 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, boostIcon: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-let size = { width: fn(7246).GameIconImageSize[fn(undefined, 7246).GameIconSizes.SMALL], height: fn(7246).GameIconImageSize[fn(undefined, 7246).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
+let size = { width: fn(7245).GameIconImageSize[fn(undefined, 7245).GameIconSizes.SMALL], height: fn(7245).GameIconImageSize[fn(undefined, 7245).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
 obj2.boostIcon = size;
 obj2.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
 obj2.headerText = { lineHeight: 20 };
@@ -149,7 +149,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
       const intl = tmp2(1114).intl;
       obj3.children = intl.string(tmp2(1114).t.YugZY0);
-      const items1 = [closure_6(tmp2(4603).Text, obj3), , , ];
+      const items1 = [closure_6(tmp2(4602).Text, obj3), , , ];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -163,7 +163,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1114).intl;
       obj5.children = intl2.string(tmp2(1114).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(4603).Text, obj5);
+      items1[2] = closure_6(tmp2(4602).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -171,7 +171,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1114).intl;
           obj6.children = intl3.string(tmp2(1114).t.azRP0E);
-          tmp9Result = closure_6(tmp2(4603).Text, obj6);
+          tmp9Result = closure_6(tmp2(4602).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

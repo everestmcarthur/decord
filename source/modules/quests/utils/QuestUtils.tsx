@@ -1,21 +1,21 @@
-// Module ID: 7795
-// Function ID: 7796
+// Module ID: 7794
+// Function ID: 7795
 // Name: utils/QuestUtils
-// Dependencies: [32, 4624, 1979, 4245, 4626, 7796, 5496, 7797, 7798, 7799, 7800, 7801, 2]
+// Dependencies: [32, 4623, 1979, 4245, 4625, 7795, 5495, 7796, 7797, 7798, 7799, 7800, 2]
 // Exports: canLaunchActivity, filterQuestsForSocialEntrypoints, getQuestType, isPlayAnyActivityQuest, isQuestFeaturedByHero, isShareableQuest, isStreamingAndCanWatch, setQuestHomeUtmContext, shouldShowBountiesGivenFilters
 
-// Module 7795 (utils/QuestUtils)
-import QuestTaskUtils from "QuestTaskUtils" /* 7797 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7798 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7799 */;
-import QuestType2 from "QuestType" /* 7800 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
+// Module 7794 (utils/QuestUtils)
+import QuestTaskUtils from "QuestTaskUtils" /* 7796 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7797 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7798 */;
+import QuestType2 from "QuestType" /* 7799 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 4624 */;
+import GameConsoleStore from "GameConsoleStore" /* 4623 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
-import QuestUtmStore from "QuestUtmStore" /* 7796 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import QuestUtmStore from "QuestUtmStore" /* 7795 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -33,7 +33,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, NON_GAMING_PLAY_QUEST) {
   return new Set(nextResult.config.features).has(NON_GAMING_PLAY_QUEST);
 }
-const QuestConstants = fn(5496);
+const QuestConstants = fn(5495);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");

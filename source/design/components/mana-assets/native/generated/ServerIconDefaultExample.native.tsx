@@ -1,13 +1,13 @@
-// Module ID: 6497
-// Function ID: 6498
+// Module ID: 6496
+// Function ID: 6497
 // Name: ServerIconDefaultExample
-// Dependencies: [21, 5639, 6498, 2]
+// Dependencies: [21, 5638, 6497, 2]
 // Exports: ServerIconDefaultExample
 
-// Module 6497 (ServerIconDefaultExample)
+// Module 6496 (ServerIconDefaultExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6498 from "module_6498" /* 6498 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6497 from "module_6497" /* 6497 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconDefaultExample = function ServerIconDefaultExample(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6498 };
+  const obj2 = { uri: _modDef6497 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,42 +1,14 @@
 // Module ID: 5298
 // Function ID: 5299
-// Dependencies: [5299]
+// Dependencies: []
 
 // Module 5298
-import _modDef5299 from "module_5299" /* 5299 */;
-
-importDefault = arg2;
-const dependencyMap = arg6;
 
 export default {
-  decode(arg0, buffer) {
-    value = _modDef5299.get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          const decoder = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
-          } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
-          }
-          decoder.decode(buffer);
-        } catch (err) {
-        }
-      }
+  get() {
+    if (typeof TextDecoder !== "undefined") {
+      const _TextDecoder = TextDecoder;
+      return TextDecoder;
     }
-    const mapped = buffer.map((item) => String.fromCharCode(item));
-    return (function decodeAsciiValue(arg0) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(arg0));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5
+  }
 };

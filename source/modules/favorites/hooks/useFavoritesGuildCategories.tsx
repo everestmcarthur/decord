@@ -1,12 +1,12 @@
-// Module ID: 11094
-// Function ID: 11095
+// Module ID: 11092
+// Function ID: 11093
 // Name: useFavoritesGuildCategories
-// Dependencies: [1960, 504, 10315, 2]
+// Dependencies: [1960, 504, 10313, 2]
 // Exports: default
 
-// Module 11094 (useFavoritesGuildCategories)
+// Module 11092 (useFavoritesGuildCategories)
 import initialize from "initialize" /* 504 */;
-import FavoritesHooks from "FavoritesHooks" /* 10315 */;
+import FavoritesHooks from "FavoritesHooks" /* 10313 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
 require = fn;

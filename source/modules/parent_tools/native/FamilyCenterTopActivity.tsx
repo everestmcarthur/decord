@@ -1,17 +1,17 @@
 // Module ID: 14951
 // Function ID: 14952
 // Name: FamilyCenterTopActivity
-// Dependencies: [19, 17, 1371, 7611, 21, 4607, 576, 563, 4574, 14952, 1896, 14953, 9142, 1114, 2396, 4603, 1178, 5636, 2]
+// Dependencies: [19, 17, 1371, 7610, 21, 4606, 576, 563, 4573, 14952, 1896, 14953, 9140, 1114, 2396, 4602, 1178, 5635, 2]
 // Exports: default
 
 // Module 14951 (FamilyCenterTopActivity)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import GuildIcon from "GuildIcon" /* 5636 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import GuildIcon from "GuildIcon" /* 5635 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, section: { flex: 1 }, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
 let obj3 = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj2.avatarList = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, flexWrap: "wrap", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };

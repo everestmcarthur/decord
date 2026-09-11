@@ -1,19 +1,19 @@
 // Module ID: 16077
 // Function ID: 16078
 // Name: useMainTabsPanelsGesture
-// Dependencies: [19, 11560, 1115, 16078, 11561, 1611, 1477, 4343, 4608, 4611, 5026, 16079, 6727, 2]
+// Dependencies: [19, 11558, 1115, 16078, 11559, 1611, 1477, 4343, 4607, 4610, 5025, 16079, 6726, 2]
 // Exports: default
 
 // Module 16077 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1115 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadTypes = fn(11560).LaunchPadTypes;
+const LaunchPadTypes = fn(11558).LaunchPadTypes;
 let PlatformUtils = fn(1115);
 PlatformUtils = PlatformUtils.isAndroid();
 const PanelsConfig = fn(16078);

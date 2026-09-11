@@ -1,14 +1,14 @@
 // Module ID: 17014
 // Function ID: 17015
 // Name: SlayerStorefrontTimeUtils
-// Dependencies: [32, 19, 4198, 1090, 1114, 3460, 7519, 2]
+// Dependencies: [32, 19, 4198, 1090, 1114, 3460, 7518, 2]
 // Exports: useTickingFormattedLimitedOfferTimeLeft
 
 // Module 17014 (SlayerStorefrontTimeUtils)
 import util from "util" /* 1114 */;
 import _modDef3460 from "module_3460" /* 3460 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import useIntervalDefault from "useInterval" /* 7519 */;
+import useIntervalDefault from "useInterval" /* 7518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

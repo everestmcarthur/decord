@@ -1,29 +1,31 @@
-// Module ID: 14869
-// Function ID: 14870
+// Module ID: 14868
+// Function ID: 14869
 // Name: SensitiveContentFiltersScreen
-// Dependencies: [19, 8050, 21, 1114, 11564, 14870, 14744, 2]
+// Dependencies: [19, 8049, 21, 1114, 14869, 11562, 14741, 2]
 // Exports: default
 
-// Module 14869 (SensitiveContentFiltersScreen)
+// Module 14868 (SensitiveContentFiltersScreen)
 import util from "util" /* 1114 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
-import SettingLayoutDefault from "SettingLayout" /* 14744 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 14870 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingLayoutDefault from "SettingLayout" /* 14741 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 14869 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
 
 require = fn;
-const MobileUserSettings = fn(8050).MobileUserSettings;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+function SensitiveContentFiltersNotices() {
+  const obj = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
+  return jsx(SettingsScreenNoticesDefault, { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS });
+}
+const MobileUserSettings = fn(8049).MobileUserSettings;
+const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx");
 
 export default function UserSettingsSensitiveContentFilters() {
-  const obj = { children: null };
-  const memo = noop.useMemo(() => {
-    const obj2 = { sections: null };
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.GYpoAq);
@@ -43,10 +45,8 @@ export default function UserSettingsSensitiveContentFilters() {
     obj4.subLabel = intl4.string(util.t.XgH9eh);
     items1[1] = obj4;
     obj2.sections = items1;
+    obj2.ListHeaderComponent = ListHeaderComponent;
     return SettingBuilders.createList(obj2);
   }, []);
-  let obj2 = { screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
-  let items = [hasOwnProperty(SettingsScreenNoticesDefault, obj2), hasOwnProperty(SettingLayoutDefault, { node: memo })];
-  obj.children = items;
-  return React5(timestampProducer, obj);
+  return jsx(SettingLayoutDefault, { node });
 };

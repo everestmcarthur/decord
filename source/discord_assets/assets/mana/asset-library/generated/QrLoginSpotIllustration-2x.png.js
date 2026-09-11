@@ -1,8 +1,8 @@
-// Module ID: 6448
-// Function ID: 6449
+// Module ID: 6447
+// Function ID: 6448
 // Dependencies: [2]
 
-// Module 6448
+// Module 6447
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QrLoginSpotIllustration-2x.png.js");

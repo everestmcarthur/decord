@@ -1,21 +1,21 @@
-// Module ID: 8263
-// Function ID: 8264
+// Module ID: 8262
+// Function ID: 8263
 // Name: ProductDetailsActionSheet
-// Dependencies: [32, 19, 17, 7616, 1076, 1074, 1085, 21, 3, 4607, 576, 5032, 4317, 4458, 1114, 7042, 1889, 8264, 8265, 8262, 7627, 9458, 7236, 7256, 13234, 11186, 8860, 8861, 1250, 1242, 504, 13235, 8924, 8926, 7628, 8928, 8929, 6699, 8931, 13236, 13246, 13251, 1178, 13252, 13263, 7224, 13210, 10825, 8318, 5027, 13266, 8260, 2]
+// Dependencies: [32, 19, 17, 7615, 1076, 1074, 1085, 21, 3, 4606, 576, 5031, 4317, 4458, 1114, 7041, 1889, 8263, 8264, 8261, 7626, 9456, 7235, 7255, 13232, 11184, 8858, 8859, 1250, 1242, 504, 13233, 8922, 8924, 7627, 8926, 8927, 6698, 8929, 13234, 13244, 13249, 1178, 13250, 13261, 7223, 13208, 10823, 8316, 5026, 13264, 8259, 2]
 // Exports: default
 
-// Module 8263 (ProductDetailsActionSheet)
+// Module 8262 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7224 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7627 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8860 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7626 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7616 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
 
 require = fn;
 function PreviewProfileTrigger(handlePreviewPress) {
@@ -56,7 +56,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   const intl = tmp2(1114).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1114).t["3Qcx6K"]);
   const obj2 = handlePreviewPress(4458);
-  obj3.children = closure_13(handlePreviewPress(7042).EyeIcon, { size: "md", color: onTrackPress(576).colors.INTERACTIVE_ICON_DEFAULT });
+  obj3.children = closure_13(handlePreviewPress(7041).EyeIcon, { size: "md", color: onTrackPress(576).colors.INTERACTIVE_ICON_DEFAULT });
   return closure_13(closure_7, obj3);
 }
 function ProductDetailsActionSheetInner(arg0) {
@@ -90,14 +90,14 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(13210).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
+  const collectiblesShopProduct = skuId(13208).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  const obj = skuId(13210);
-  const getOrFetchPurchases = skuId(10825).useGetOrFetchPurchases();
+  const obj = skuId(13208);
+  const getOrFetchPurchases = skuId(10823).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10825);
+  const obj2 = skuId(10823);
   const ref1 = noop.useRef(null);
   const items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
@@ -126,22 +126,22 @@ function ManagedProductDetailsActionSheetInner(skuId) {
           ref,
           children: closure_13(closure_19, obj3)
         };
-        return closure_13(tmp(7224).BottomSheet, obj4);
+        return closure_13(tmp(7223).BottomSheet, obj4);
       }
     }
   }
   if ("error" === state) {
-    const obj5 = { Illustration: tmp(8318).NoResults, body: null, children: null };
+    const obj5 = { Illustration: tmp(8316).NoResults, body: null, children: null };
     const intl = tmp(1114).intl;
     obj5.body = intl.string(tmp(1114).t.eAn6z2);
     const obj6 = { text: null, onPress: null };
     const intl2 = tmp(1114).intl;
     obj6.text = intl2.string(tmp(1114).t["+hivLW"]);
     obj6.onPress = retry;
-    obj5.children = closure_13(tmp(5027).Button, obj6);
+    obj5.children = closure_13(tmp(5026).Button, obj6);
     closure_13(tmp(1178).EmptyState, obj5);
   } else {
-    closure_13(initialVariantIndex(13266), {});
+    closure_13(initialVariantIndex(13264), {});
   }
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {
@@ -179,11 +179,11 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = {};
 const logger = new LoggerDefault("ProductDetailsActionSheet");
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { position: "relative", flex: 1 }, actionButtons: null, previewProfileButton: null, previewProfileButtonLight: null, previewProfileButtonLightPressed: null, previewProfileButtonDark: null, previewProfileButtonDarkPressed: null, previewProfileButtonMidnight: null, badgeWrapper: null };
 const rect = { position: "absolute", top: 0, right: nativeDefault.space.PX_16, zIndex: 2, flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj.actionButtons = rect;
-let size = { width: fn(5032).MEDIUM_BUTTON_HEIGHT, height: fn(5032).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+let size = { width: fn(5031).MEDIUM_BUTTON_HEIGHT, height: fn(5031).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
 obj.previewProfileButton = size;
 let obj3 = { backgroundColor: null };
 let native = fn(4317);

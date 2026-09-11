@@ -1,13 +1,13 @@
-// Module ID: 5915
-// Function ID: 5916
+// Module ID: 5914
+// Function ID: 5915
 // Name: ChestLogoSpotIllustration
-// Dependencies: [21, 5639, 5916, 2]
+// Dependencies: [21, 5638, 5915, 2]
 // Exports: ChestLogoSpotIllustration
 
-// Module 5915 (ChestLogoSpotIllustration)
+// Module 5914 (ChestLogoSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5916 from "module_5916" /* 5916 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5915 from "module_5915" /* 5915 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ChestLogoSpotIllustration = function ChestLogoSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5916 };
+  const obj2 = { uri: _modDef5915 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

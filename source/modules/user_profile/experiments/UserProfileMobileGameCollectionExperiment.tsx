@@ -1,10 +1,10 @@
-// Module ID: 9125
-// Function ID: 9126
+// Module ID: 9123
+// Function ID: 9124
 // Name: UserProfileMobileGameCollectionExperiment
 // Dependencies: [1433, 2]
 // Exports: useIsMobileGameCollectionExperimentEnabled
 
-// Module 9125 (UserProfileMobileGameCollectionExperiment)
+// Module 9123 (UserProfileMobileGameCollectionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

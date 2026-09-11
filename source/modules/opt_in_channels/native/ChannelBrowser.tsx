@@ -1,18 +1,18 @@
-// Module ID: 11651
-// Function ID: 11652
+// Module ID: 11649
+// Function ID: 11650
 // Name: ChannelBrowser
-// Dependencies: [32, 19, 17, 7606, 7185, 2012, 1979, 4788, 1074, 1954, 21, 4607, 576, 7055, 11652, 504, 11654, 4427, 1943, 11650, 7124, 8966, 5659, 5175, 1114, 6688, 5639, 11656, 4603, 4760, 4325, 5739, 5669, 4308, 5080, 5656, 5663, 1178, 4597, 2]
+// Dependencies: [32, 19, 17, 7605, 7184, 2012, 1979, 4787, 1074, 1954, 21, 4606, 576, 7054, 11650, 504, 11652, 4427, 1943, 11648, 7123, 8964, 5658, 5174, 1114, 6687, 5638, 11654, 4602, 4759, 4325, 5738, 5668, 4308, 5079, 5655, 5662, 1178, 4596, 2]
 // Exports: default
 
-// Module 11651 (ChannelBrowser)
+// Module 11649 (ChannelBrowser)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7606 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7185 */;
+import NewChannelsStore from "NewChannelsStore" /* 7605 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7184 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1 }, header: { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 }, categoryContainer: null, categoryTitle: null, channelTitle: null, selectAllContainer: null, selectAllCheckbox: null, newBadge: null, nuxCard: null, nuxCloseContainer: null, nuxHeader: null, nuxHeaderText: null, nuxBody: null };
 let obj3 = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 };
 obj.categoryContainer = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
@@ -49,7 +49,7 @@ let closure_17 = noop.memo((channel) => {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_15();
-  const tmp3 = onChannelClick(4760)(channel);
+  const tmp3 = onChannelClick(4759)(channel);
   const items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
   const obj = channel(504);
@@ -73,24 +73,24 @@ let closure_17 = noop.memo((channel) => {
     accessibilityState = checkboxA11yNative.accessibilityState;
   }
   obj3.accessibilityState = accessibilityState;
-  const items1 = [closure_12(channel(5739).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
+  const items1 = [closure_12(channel(5738).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     const obj5 = { style: tmp.selectAllContainer, children: null };
     const obj6 = { style: tmp.selectAllCheckbox, children: null };
     const obj7 = { checked: stateFromStores };
-    obj6.children = tmp8(tmp4(5669).FormCheckbox, obj7);
+    obj6.children = tmp8(tmp4(5668).FormCheckbox, obj7);
     const items2 = [tmp8(View, obj6), ];
     const obj8 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1114).intl;
     obj8.children = intl.string(tmp4(1114).t.mSQwnW);
-    items2[1] = tmp8(tmp4(4603).Text, obj8);
+    items2[1] = tmp8(tmp4(4602).Text, obj8);
     obj5.children = items2;
     tmp10Result = tmp10(View, obj5);
   }
   items1[1] = tmp10Result;
   obj3.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(5175).PressableOpacity, obj3);
+  return closure_12(channel(5174).PressableOpacity, obj3);
 });
 let closure_18 = noop.memo((channel) => {
   channel = channel.channel;

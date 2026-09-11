@@ -1,12 +1,12 @@
-// Module ID: 4636
-// Function ID: 4637
+// Module ID: 4635
+// Function ID: 4636
 // Name: TimeUtils
-// Dependencies: [5, 4637, 569, 4638, 2]
+// Dependencies: [5, 4636, 569, 4637, 2]
 // Exports: convertMinutesToGivenTimeUnit, getTimeAndUnit, getTimeUnit
 
-// Module 4636 (TimeUtils)
+// Module 4635 (TimeUtils)
 import u from "u" /* 569 */;
-import findLastIndexDefault from "findLastIndex" /* 4638 */;
+import findLastIndexDefault from "findLastIndex" /* 4637 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function sleep(asMilliseconds) {
     const timerId = setTimeout(() => closure_0(), asMillisecondsResult);
   });
 }
-const tryCatch = fn(4637);
+const tryCatch = fn(4636);
 let c4 = 3600000;
 function now() {
   const _performance = u.performance;
@@ -572,7 +572,7 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  const tmp2 = findLastIndexDefault(items, (unit) => f78773(unit.unit), items.findIndex((max) => {
+  const tmp2 = findLastIndexDefault(items, (unit) => f78785(unit.unit), items.findIndex((max) => {
     max = max.max;
     let tmp = max.unit === obj.NONE;
     if (tmp) {
@@ -586,7 +586,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = arr.find((unit) => f78773(unit.unit));
+    const found = arr.find((unit) => f78785(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -613,8 +613,8 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj2;
   } else {
     closure_0 = rounded;
-    const f78773 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f78773(4638)(items, (unit) => f78773(unit.unit), items.findIndex((max) => {
+    const f78785 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f78785(4637)(items, (unit) => f78785(unit.unit), items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
       if (tmp) {
@@ -628,7 +628,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = arr.find((unit) => f78773(unit.unit));
+      const found = arr.find((unit) => f78785(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

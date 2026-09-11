@@ -1,8 +1,8 @@
-// Module ID: 5790
-// Function ID: 5791
+// Module ID: 5789
+// Function ID: 5790
 // Dependencies: [2]
 
-// Module 5790
+// Module 5789
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ActivitiesTogetherSpotIllustration-2x.png.js");

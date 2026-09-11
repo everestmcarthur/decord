@@ -1,27 +1,27 @@
-// Module ID: 17843
-// Function ID: 17844
+// Module ID: 17842
+// Function ID: 17843
 // Name: GuildRoleSubscriptionBenefitModalHeader
-// Dependencies: [32, 19, 17, 1074, 21, 4607, 576, 5576, 15288, 7197, 9142, 4603, 1114, 1178, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4606, 576, 5575, 15288, 7196, 9140, 4602, 1114, 1178, 2]
 // Exports: default
 
-// Module 17843 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 17842 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7197 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9142 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9140 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5576 */;
+import TextStyles_mod from "TextStyles" /* 5575 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, headerButton: null, disabledButton: null, titleContainer: null, title: null, subtitle: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));

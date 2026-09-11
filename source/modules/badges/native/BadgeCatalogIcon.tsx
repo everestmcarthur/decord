@@ -1,11 +1,11 @@
-// Module ID: 11287
-// Function ID: 11288
+// Module ID: 11285
+// Function ID: 11286
 // Name: BadgeCatalogIcon
-// Dependencies: [32, 19, 17, 21, 5639, 2]
+// Dependencies: [32, 19, 17, 21, 5638, 2]
 // Exports: default
 
-// Module 11287 (BadgeCatalogIcon)
-import FastImageDefault from "FastImage" /* 5639 */;
+// Module 11285 (BadgeCatalogIcon)
+import FastImageDefault from "FastImage" /* 5638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

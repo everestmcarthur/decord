@@ -1,12 +1,12 @@
 // Module ID: 14960
 // Function ID: 14961
 // Name: FamilyCenterActivityGiftRow
-// Dependencies: [19, 17, 21, 4607, 576, 8259, 14948, 14957, 14959, 4451, 14958, 4603, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 8258, 14948, 14957, 14959, 4451, 14958, 4602, 2]
 // Exports: default
 
 // Module 14960 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 576 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8259 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8258 */;
 import useSelectedTeenUser from "useSelectedTeenUser" /* 14948 */;
 import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14957 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -65,9 +65,9 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     const items = [React4(tmp2(14958), obj5), ];
     const obj6 = { style: tmp.textContainer, children: null };
     const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
-    const items1 = [React4(tmp5(4603).Text, obj7), ];
+    const items1 = [React4(tmp5(4602).Text, obj7), ];
     const obj8 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
-    items1[1] = React4(tmp5(4603).Text, obj8);
+    items1[1] = React4(tmp5(4602).Text, obj8);
     obj6.children = items1;
     items[1] = hasOwnProperty(View, obj6);
     obj4.children = items;

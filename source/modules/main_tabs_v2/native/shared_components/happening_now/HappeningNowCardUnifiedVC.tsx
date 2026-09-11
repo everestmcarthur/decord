@@ -1,7 +1,7 @@
 // Module ID: 16143
 // Function ID: 16144
 // Name: HappeningNowCardUnifiedVC
-// Dependencies: [19, 1956, 4629, 4255, 21, 16144, 16156, 16157, 563, 16134, 2]
+// Dependencies: [19, 1956, 4628, 4255, 21, 16144, 16156, 16157, 563, 16134, 2]
 // Exports: default, useCallActivityData
 
 // Module 16143 (HappeningNowCardUnifiedVC)
@@ -11,7 +11,7 @@ import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedAct
 import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16157 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 const require = globalThis.__r;

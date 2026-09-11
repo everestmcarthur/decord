@@ -1,7 +1,7 @@
 // Module ID: 15112
 // Function ID: 15113
 // Name: BountiesAutoScrollIndicator
-// Dependencies: [19, 17, 21, 4343, 4608, 4607, 576, 4308, 15113, 4603, 1114, 15115, 2]
+// Dependencies: [19, 17, 21, 4343, 4607, 4606, 576, 4308, 15113, 4602, 1114, 15115, 2]
 // Exports: default
 
 // Module 15112 (BountiesAutoScrollIndicator)
@@ -9,8 +9,8 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4308 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import timing from "timing" /* 4608 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import timing from "timing" /* 4607 */;
 import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15113 */;
 import noop from "module_19" /* 19 */;
 
@@ -52,7 +52,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const __initData = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { root: { alignItems: "center", gap: nativeDefault.space.PX_8 }, ringContainer: { alignItems: "center", justifyContent: "center", width: 40, height: 40 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

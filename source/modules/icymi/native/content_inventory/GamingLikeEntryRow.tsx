@@ -1,17 +1,17 @@
 // Module ID: 16572
 // Function ID: 16573
 // Name: GamingLikeEntryRow
-// Dependencies: [19, 17, 1371, 21, 13103, 8221, 13108, 16523, 576, 504, 4841, 9268, 7242, 8219, 8768, 8779, 8216, 16573, 1896, 8439, 4810, 16577, 1114, 16579, 4603, 4451, 7714, 11, 672, 5175, 5639, 16580, 2]
+// Dependencies: [19, 17, 1371, 21, 13101, 8220, 13106, 16523, 576, 504, 4840, 9266, 7241, 8218, 8766, 8777, 8215, 16573, 1896, 8437, 4809, 16577, 1114, 16579, 4602, 4451, 7713, 11, 672, 5174, 5638, 16580, 2]
 // Exports: default
 
 // Module 16572 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8216 */;
-import utils from "utils" /* 8221 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
-import BadgesAll from "Badges" /* 13103 */;
-import TrendingType from "TrendingType" /* 13108 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8215 */;
+import utils from "utils" /* 8220 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
+import BadgesAll from "Badges" /* 13101 */;
+import TrendingType from "TrendingType" /* 13106 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -19,8 +19,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8221).isEntryNew }, , , , ];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8221).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8220).isEntryNew }, , , , ];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8220).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {

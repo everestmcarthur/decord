@@ -1,9 +1,7 @@
 // Module ID: 8397
 // Function ID: 8398
-// Dependencies: [8398]
+// Dependencies: []
 
 // Module 8397
-import _modDef8398 from "module_8398" /* 8398 */;
 
-
-export default _modDef8398({ contain: null, cover: null, stretch: null });
+export default { NONE: "", INVERT: "CIColorInvert", MONOCHROME: "CIColorMonochrome", POSTERIZE: "CIColorPosterize", FALSE: "CIFalseColor", MAXIMUMCOMPONENT: "CIMaximumComponent", MINIMUMCOMPONENT: "CIMinimumComponent", CHROME: "CIPhotoEffectChrome", FADE: "CIPhotoEffectFade", INSTANT: "CIPhotoEffectInstant", MONO: "CIPhotoEffectMono", NOIR: "CIPhotoEffectNoir", PROCESS: "CIPhotoEffectProcess", TONAL: "CIPhotoEffectTonal", TRANSFER: "CIPhotoEffectTransfer", SEPIA: "CISepiaTone" };

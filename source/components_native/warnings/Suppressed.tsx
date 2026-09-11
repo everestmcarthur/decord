@@ -1,7 +1,7 @@
 // Module ID: 17003
 // Function ID: 17004
 // Name: Suppressed
-// Dependencies: [19, 13808, 21, 17004, 1114, 17005, 17006, 5046, 2]
+// Dependencies: [19, 13806, 21, 17004, 1114, 17005, 17006, 5045, 2]
 
 // Module 17003 (Suppressed)
 import util from "util" /* 1114 */;
@@ -9,7 +9,7 @@ import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17004 
 import _modDef17005 from "module_17005" /* 17005 */;
 import _modDef17006 from "module_17006" /* 17006 */;
 import noop from "module_19" /* 19 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 13808 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13806 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -40,7 +40,7 @@ Suppressed.prototype["render"] = function render() {
     tmp6 = importDefault;
     tmp7 = _modDef17006;
   }
-  return jsx(tmp6(5046), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(5045), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/warnings/Suppressed.tsx");

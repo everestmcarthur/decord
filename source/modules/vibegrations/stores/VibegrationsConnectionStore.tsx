@@ -1,14 +1,14 @@
 // Module ID: 16666
 // Function ID: 16667
 // Name: VibegrationsConnectionStore
-// Dependencies: [32, 5, 1371, 16663, 16664, 573, 16667, 16668, 16665, 16670, 1114, 3590, 16671, 16672, 559, 7826, 16673, 16674, 504, 2]
+// Dependencies: [32, 5, 1371, 16663, 16664, 573, 16667, 16668, 16665, 16670, 1114, 3590, 16671, 16672, 559, 7825, 16673, 16674, 504, 2]
 // Exports: closeConnection, createDatabaseRestorePoint, deleteStagedAttachment, draftPatchNotes, ensureConnection, exportProjectArchive, fetchDatabaseRestorePoints, fetchDatabaseRestoreWindow, fetchProjectMcpConnection, fetchSourceHistory, forceCompaction, getPreviewScreenshotUrl, interruptTurn, isAttachmentAvailable, publishProject, remixProjectWorkspace, requestDebugStatus, requestExternalAuthorizeUrl, requestProjectRebuild, resetHistoryPaging, restoreDatabaseToPoint, restoreDatabaseToTimestamp, restoreSourceHistoryEntry, sendModelSettings, sendUserMessage, stageModelSettings, submitProjectSecrets, submitProjectSettings, uploadAttachment
 
 // Module 16666 (VibegrationsConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import createNonce from "createNonce" /* 7826 */;
+import createNonce from "createNonce" /* 7825 */;
 import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16665 */;
 import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16667 */;
 import vibegrationsPreviewClaims from "vibegrationsPreviewClaims" /* 16670 */;
@@ -2190,135 +2190,40 @@ let closure_59 = async function _submitProjectSettings() {
   value = { rebuildRequired: true === rebuild_required };
   return value;
 };
-let closure_60 = async function _fetchProjectMcpConnection(arg0, value) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let obj4 = closure_1;
-          if (closure_1 === undefined) {
-            obj4 = {};
-          }
-          let flag = obj4.regenerate;
-          if (flag === undefined) {
-            flag = false;
-          }
-          closure_130_1 = flag;
-          closure_130_2 = undefined;
-          let ticket;
-          let baseUrl;
-          closure_130_5 = undefined;
-          closure_130_6 = undefined;
-          closure_130_7 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          c4 = 2;
-          c5 = 1;
-          const obj6 = { value: closure_131_0(closure_131_2[7]).mintWorkerTicket(closure_130_0), done: false };
-          return obj6;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_130_2 = value;
-          ticket = closure_130_2.ticket;
-          baseUrl = closure_130_2.baseUrl;
-          const _URLSearchParams = URLSearchParams;
-          const obj9 = { ticket };
-          const uRLSearchParams = new URLSearchParams(obj9);
-          closure_130_5 = uRLSearchParams;
-          if (closure_130_1) {
-            const result = closure_130_5.set("regenerate", "1");
-          }
-          const _fetch = fetch;
-          const _HermesInternal2 = HermesInternal;
-          c4 = 3;
-          c5 = 1;
-          const obj10 = { value: fetch("" + baseUrl + "/agent/mcp-token?" + closure_130_5, { method: "POST" }), done: false };
-          return obj10;
-        }
-      } else if (3 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
-        } else {
-          closure_130_6 = value;
-          if (closure_130_6.ok) {
-            c4 = 4;
-            c5 = 1;
-            const obj12 = { value: closure_130_6.json(), done: false };
-            return obj12;
-          } else {
-            const _Error = Error;
-            const _HermesInternal = HermesInternal;
-            const error = new Error("mcp token failed (" + closure_130_6.status + ")");
-            throw error;
-          }
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
-      } else {
-        closure_130_7 = value;
-        value = { url: closure_130_7.url, token: closure_130_7.token, expiresAt: closure_130_7.expires_at };
-        c5 = 3;
-        const obj14 = { value, done: true };
-        return obj14;
-      }
-    } catch (tmp29) {
-      c5 = tmp;
-      throw tmp29;
-    }
+let closure_60 = async function _fetchProjectMcpConnection() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let obj4 = closure_1;
+  if (closure_1 === undefined) {
+    obj4 = {};
   }
+  let flag = obj4.regenerate;
+  if (flag === undefined) {
+    flag = false;
+  }
+  closure_130_1 = flag;
+  await "PX_16";
+  closure_130_2 = await closure_131_0(closure_131_2[7]).mintWorkerTicket(closure_130_0);
+  const ticket = closure_130_2.ticket;
+  const baseUrl = closure_130_2.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_130_5 = uRLSearchParams;
+  if (closure_130_1) {
+    const result = closure_130_5.set("regenerate", "1");
+  }
+  const _fetch = fetch;
+  const _HermesInternal2 = HermesInternal;
+  closure_130_6 = await fetch("" + baseUrl + "/agent/mcp-token?" + closure_130_5, { method: "POST" });
+  if (!closure_130_6.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("mcp token failed (" + closure_130_6.status + ")");
+    throw error;
+  }
+  closure_130_7 = await closure_130_6.json();
+  value = { url: closure_130_7.url, token: closure_130_7.token, expiresAt: closure_130_7.expires_at };
+  return value;
 };
 let closure_61 = async function _requestExternalAuthorizeUrl(arg0, value) {
   if (c8 === 2) {
@@ -2596,95 +2501,31 @@ function getAttachmentUrl(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-let closure_65 = async function _getAttachmentUrl(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_2 = undefined;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          let obj4 = closure_2;
-          if (closure_2 === undefined) {
-            obj4 = {};
-          }
-          let flag = obj4.download;
-          if (flag === undefined) {
-            flag = false;
-          }
-          closure_131_2 = flag;
-          closure_131_3 = undefined;
-          let ticket;
-          let baseUrl;
-          closure_131_6 = undefined;
-          c5 = 1;
-          c6 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          c5 = 2;
-          c6 = 1;
-          const obj6 = { value: closure_132_41(closure_131_0), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_131_3 = value;
-        ticket = closure_131_3.ticket;
-        baseUrl = closure_131_3.baseUrl;
-        const _URLSearchParams = URLSearchParams;
-        const obj8 = { ticket };
-        const uRLSearchParams = new URLSearchParams(obj8);
-        closure_131_6 = uRLSearchParams;
-        if (closure_131_2) {
-          const result = closure_131_6.set("download", "1");
-        }
-        const _HermesInternal = HermesInternal;
-        c6 = 3;
-        const obj = { value: "" + closure_132_51(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
-        return obj;
-      }
-    } catch (tmp21) {
-      c6 = tmp;
-      throw tmp21;
-    }
+let closure_65 = async function _getAttachmentUrl() {
+  closure_3 = tmp2;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  let obj4 = closure_2;
+  if (closure_2 === undefined) {
+    obj4 = {};
   }
+  let flag = obj4.download;
+  if (flag === undefined) {
+    flag = false;
+  }
+  closure_131_2 = flag;
+  await "PX_16";
+  closure_131_3 = await closure_132_41(closure_131_0);
+  const ticket = closure_131_3.ticket;
+  const baseUrl = closure_131_3.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_131_6 = uRLSearchParams;
+  if (closure_131_2) {
+    const result = closure_131_6.set("download", "1");
+  }
+  const _HermesInternal = HermesInternal;
+  return "" + closure_132_51(baseUrl, closure_131_1) + "?" + closure_131_6;
 };
 let closure_66 = async function _isAttachmentAvailable(arg0, value) {
   if (c5 === 2) {

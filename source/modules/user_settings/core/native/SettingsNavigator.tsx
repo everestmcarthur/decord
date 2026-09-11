@@ -1,22 +1,22 @@
 // Module ID: 16989
 // Function ID: 16990
 // Name: SettingsNavigator
-// Dependencies: [32, 19, 17, 2025, 14746, 1074, 21, 7988, 4607, 576, 15469, 1178, 4603, 1484, 13507, 16990, 7069, 563, 7236, 7256, 14748, 7549, 14749, 7074, 14227, 4308, 5175, 1114, 16474, 16991, 14637, 16992, 38, 2]
+// Dependencies: [32, 19, 17, 2025, 14743, 1074, 21, 7987, 4606, 576, 15469, 1178, 4602, 1484, 13505, 16990, 7068, 563, 7235, 7255, 14745, 7548, 14746, 7073, 14225, 4308, 5174, 1114, 16474, 16991, 14635, 16992, 38, 2]
 
 // Module 16989 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7069 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14748 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7068 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14745 */;
 import SettingRendererTypes from "SettingRendererTypes" /* 15469 */;
 import BackIconWithBadge from "BackIconWithBadge" /* 16474 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14746 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14743 */;
 
 const require = globalThis.__r;
 
@@ -51,9 +51,9 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };

@@ -1,17 +1,17 @@
 // Module ID: 16618
 // Function ID: 16619
 // Name: Elements
-// Dependencies: [32, 19, 17, 4269, 21, 4607, 576, 4603, 1114, 5175, 1178, 16619, 9459, 15288, 563, 9462, 7308, 2]
+// Dependencies: [32, 19, 17, 4269, 21, 4606, 576, 4602, 1114, 5174, 1178, 16619, 9457, 15288, 563, 9460, 7307, 2]
 // Exports: ArrowButton, TruncatedText, useFormattedSubscriptionPlan
 
 // Module 16618 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9459 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9462 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9457 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9460 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
 import _modDef16619 from "module_16619" /* 16619 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { toggleTruncateButton: { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 }, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
 let obj3 = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
 obj2.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -119,8 +119,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7308).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7308);
+    str = "" + tmp3(7307).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7307);
   }
   return str;
 };

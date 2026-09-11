@@ -1,18 +1,39 @@
 // Module ID: 6948
 // Function ID: 6949
-// Dependencies: [19]
-// Exports: useFlashListContext, useRecyclerViewContext
+// Dependencies: [6928, 19, 6949, 6969]
+// Exports: useRecyclerViewManager
 
 // Module 6948
-import noop from "module_19" /* 19 */;
+import RecyclerViewManager from "RecyclerViewManager" /* 6949 */;
+import _slicedToArray from "module_6928" /* 6928 */;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
+export const useRecyclerViewManager = (data) => {
+  let recyclerViewManager = velocityTracker(closure_5(() => {
+    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+    return recyclerViewManager;
+  }), 1)[0];
+  velocityTracker = velocityTracker(closure_5(() => {
+    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+    return velocityTracker;
+  }), 1)[0];
+  const items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
 };

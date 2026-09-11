@@ -1,20 +1,20 @@
-// Module ID: 9784
-// Function ID: 9785
+// Module ID: 9782
+// Function ID: 9783
 // Name: FocusedControlsBottomControls
-// Dependencies: [32, 19, 17, 9560, 9561, 1074, 21, 1115, 4607, 576, 5576, 1178, 1611, 4343, 9785, 1093, 1114, 7228, 4427, 1943, 4608, 6727, 9787, 1477, 9591, 1109, 4317, 5017, 4458, 9788, 2]
+// Dependencies: [32, 19, 17, 9558, 9559, 1074, 21, 1115, 4606, 576, 5575, 1178, 1611, 4343, 9783, 1093, 1114, 7227, 4427, 1943, 4607, 6726, 9785, 1477, 9589, 1109, 4317, 5016, 4458, 9786, 2]
 // Exports: default
 
-// Module 9784 (FocusedControlsBottomControls)
+// Module 9782 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9787 */;
-import CallPTTButton from "CallPTTButton" /* 9788 */;
+import timing from "timing" /* 4607 */;
+import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9785 */;
+import CallPTTButton from "CallPTTButton" /* 9786 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5576 */;
+import TextStyles from "TextStyles" /* 5575 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const CallPTTButtonDefault = CallPTTButton;
@@ -63,7 +63,7 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(9785).useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const canShowTooltip = positionY(9783).useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4343);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c15, 1) };
@@ -98,7 +98,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const obj3 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   const obj4 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = positionY(4343).useAnimatedStyle(fn);
-  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(7228).ActionSheetHeaderBar, {}), ];
+  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(7227).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     obj5 = { style: null, children: null };
@@ -634,9 +634,9 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(9560);
+const ChannelCallStore = fn(9558);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9561);
+const ChannelCallConstants = fn(9559);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -649,7 +649,7 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 obj2.bottomDrawerContainer = rect;

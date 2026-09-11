@@ -1,7 +1,7 @@
 // Module ID: 16097
 // Function ID: 16098
 // Name: useMessagesSpecs
-// Dependencies: [109, 19, 1074, 5034, 1611, 16098, 16101, 16113, 576, 2]
+// Dependencies: [109, 19, 1074, 5033, 1611, 16098, 16101, 16113, 576, 2]
 // Exports: default
 
 // Module 16097 (useMessagesSpecs)
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(5034).useFontScale();
+  fontScale = fontScale(5033).useFontScale();
   top = top(1611)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {

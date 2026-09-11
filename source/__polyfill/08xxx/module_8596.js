@@ -1,10 +1,11 @@
 // Module ID: 8596
 // Function ID: 8597
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8597, 8582, 8583]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8597, 8580, 8581]
 
 // Module 8596
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8583 from "module_8583" /* 8583 */;
+import _modDef8580 from "module_8580" /* 8580 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _modDef8597 from "module_8597" /* 8597 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -12,7 +13,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeOffset = fn;
+const FeFlood = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,12 +35,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeOffset {
+class FeFlood {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
+    tmp = closure_3(this, FeFlood);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
+    obj = hasOwnProperty(FeFlood);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -54,32 +55,30 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeOffset, _modDef8583);
+_inherits(FeFlood, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged1 = Object.assign(FeOffset(8582).extractFilter(this.props));
-    const obj2 = FeOffset(8582);
-    const merged2 = Object.assign(FeOffset(8582).extractIn(this.props));
+    const merged = Object.assign(FeFlood(8580).extractFilter(this.props));
+    const merged1 = Object.assign(_modDef8580(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
+const importDefaultResultResult = _createClass(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
 let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
+obj.floodColor = "black";
+obj.floodOpacity = 1;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

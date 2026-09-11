@@ -1,16 +1,16 @@
 // Module ID: 14968
 // Function ID: 14969
 // Name: FamilyCenterLinkingBanner
-// Dependencies: [19, 17, 21, 4607, 576, 8739, 12015, 1114, 2396, 14969, 4603, 14931, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 8737, 12013, 1114, 2396, 14969, 4602, 14931, 2]
 // Exports: default
 
 // Module 14968 (FamilyCenterLinkingBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8739 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12015 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8737 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12013 */;
 import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14931 */;
 import _modDef14969 from "module_14969" /* 14969 */;
 import noop from "module_19" /* 19 */;
@@ -65,7 +65,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_16, paddingTop: 0, paddingBottom: nativeDefault.space.PX_16, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2, overflow: "hidden" }, content: null, art: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_16, paddingTop: 0, paddingBottom: nativeDefault.space.PX_16, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2, overflow: "hidden" };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -74,17 +74,17 @@ obj2.art = size;
 let obj4 = { padding: nativeDefault.space.PX_16 };
 obj2.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4607);
+createStyles = fn(4606);
 const obj6 = { container: null };
 let obj5 = { marginBottom: nativeDefault.space.PX_8 };
 obj6.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 let closure_8 = createStyles.createStyles(obj6);
-createStyles = fn(4607);
+createStyles = fn(4606);
 const obj9 = { container: null };
 const obj8 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 obj9.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
 let closure_10 = createStyles.createStyles(obj9);
-createStyles = fn(4607);
+createStyles = fn(4606);
 const obj12 = { row: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, gap: { marginBottom: 12 }, circle: null, rowContent: null };
 const size1 = { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", overflow: "hidden", width: 32, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj12.circle = size1;

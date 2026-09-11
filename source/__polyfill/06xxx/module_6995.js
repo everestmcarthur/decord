@@ -1,44 +1,24 @@
 // Module ID: 6995
 // Function ID: 6996
-// Dependencies: [6929, 19, 6947]
-// Exports: useRecyclingState
+// Dependencies: [19, 6947]
+// Exports: useMappingHelper
 
 // Module 6995
+import _mod19 from "module_19" /* 19 */;
 import _mod6947 from "module_6947" /* 6947 */;
-import _slicedToArray from "module_6929" /* 6929 */;
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+_mod19.useCallback;
 
-export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod6947.useLayoutState(0);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
+export const useMappingHelper = () => {
+  const recyclerViewContext = _mod6947.useRecyclerViewContext();
+  const obj2 = { getMappingKey: null };
+  const items = [recyclerViewContext];
+  obj2.getMappingKey = useCallback((arg0, arg1) => {
+    let tmp = arg0;
+    if (recyclerViewContext) {
+      tmp = arg1;
     }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
-    }
-  }, arg1);
-  const items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
-      }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
-      }
-    }, items)
-  ];
-  return items1;
+    return tmp;
+  }, items);
+  return obj2;
 };

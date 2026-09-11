@@ -1,8 +1,8 @@
-// Module ID: 11385
-// Function ID: 11386
+// Module ID: 11383
+// Function ID: 11384
 // Dependencies: [2]
 
-// Module 11385
+// Module 11383
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js");

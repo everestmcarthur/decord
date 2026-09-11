@@ -1,24 +1,24 @@
-// Module ID: 13373
-// Function ID: 13374
+// Module ID: 13371
+// Function ID: 13372
 // Name: GroupDMNitroCapCoachmark
-// Dependencies: [32, 19, 17, 11688, 1954, 21, 4607, 11686, 11693, 11689, 7462, 1943, 1114, 1178, 10123, 8755, 576, 11685, 11224, 2]
+// Dependencies: [32, 19, 17, 11686, 1954, 21, 4606, 11684, 11691, 11687, 7461, 1943, 1114, 1178, 10121, 8753, 576, 11683, 11222, 2]
 // Exports: default
 
-// Module 13373 (GroupDMNitroCapCoachmark)
+// Module 13371 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8755 */;
-import _modDef10123 from "module_10123" /* 10123 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11686 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8753 */;
+import _modDef10121 from "module_10121" /* 10121 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11688).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_6 = fn(11686).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({ nitroWheelIcon: { width: 16, height: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapCoachmark.tsx");
@@ -32,16 +32,16 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11686).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11684).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11686);
-  obj3.acquisitionStrategy = channelId(11686).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11693)(obj3);
+  const obj2 = channelId(11684);
+  obj3.acquisitionStrategy = channelId(11684).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11691)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11693);
-  channelId(7462);
+  let tmp7 = _location(11691);
+  channelId(7461);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
       const items = [tmp3(1943).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
@@ -71,7 +71,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
       if (closure_4) {
-        let tmp7 = _modDef10123;
+        let tmp7 = _modDef10121;
       } else {
         const obj4 = { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE };
         tmp7 = jsx(NitroWheelIcon.NitroWheelIcon, { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE });
@@ -85,7 +85,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11685)(channelId, closure_1_1);
+          _location(11683)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -93,7 +93,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       return obj;
     }, items1);
-    const coachmark = tmp3(11224).useCoachmark(ref, memo);
+    const coachmark = tmp3(11222).useCoachmark(ref, memo);
     const obj5 = { ref, collapsable: false, children: channelId.children };
     return <closure_5 ref={ref} collapsable={false}>{arg0.children}</closure_5>;
   }

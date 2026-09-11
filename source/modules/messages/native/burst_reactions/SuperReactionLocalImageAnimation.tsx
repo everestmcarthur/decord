@@ -1,12 +1,12 @@
-// Module ID: 11241
-// Function ID: 11242
+// Module ID: 11239
+// Function ID: 11240
 // Name: SuperReactionLocalImageAnimation
-// Dependencies: [19, 21, 7857, 7900, 2]
+// Dependencies: [19, 21, 7856, 7899, 2]
 // Exports: default
 
-// Module 11241 (SuperReactionLocalImageAnimation)
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7857 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7900 */;
+// Module 11239 (SuperReactionLocalImageAnimation)
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7856 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7899 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

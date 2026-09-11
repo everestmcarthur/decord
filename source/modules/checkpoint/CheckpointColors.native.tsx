@@ -1,11 +1,11 @@
-// Module ID: 11791
-// Function ID: 11792
+// Module ID: 11789
+// Function ID: 11790
 // Name: CheckpointColors
-// Dependencies: [4833, 576, 2]
+// Dependencies: [4832, 576, 2]
 
-// Module 11791 (CheckpointColors)
+// Module 11789 (CheckpointColors)
 import nativeDefault from "native" /* 576 */;
-import CheckpointConstants from "CheckpointConstants" /* 4833 */;
+import CheckpointConstants from "CheckpointConstants" /* 4832 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointPersonas = CheckpointConstants.CheckpointPersonas;

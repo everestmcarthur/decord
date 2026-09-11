@@ -1,216 +1,122 @@
 // Module ID: 9239
 // Function ID: 9240
-// Dependencies: [41, 42, 93, 95, 98, 9233, 9234]
-// Exports: Chi, Maj
+// Dependencies: []
+// Exports: byteLength, fromByteArray, toByteArray
 
 // Module 9239
-import _asyncLoop from "_asyncLoop" /* 9233 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+const dependencyMap = [];
+const dependencyMap2 = [];
+let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
 
-const HashMD = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export const byteLength = function byteLength(arr) {
+  if (0 < arr.length % 4) {
+    const _Error = Error;
+    const error = new Error("Invalid string. Length must be a multiple of 4");
+    throw error;
+  } else {
+    let index = arr.indexOf("=");
+    if (-1 === index) {
+      index = length;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-class HashMD {
-  constructor(arg0, arg1, arg2, arg3) {
-    self = this;
-    tmp = c2(this, HashMD);
-    tmp2 = closure_4;
-    obj = closure_4(HashMD);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
+    const items = [index, ];
+    let num2 = 0;
+    if (index !== length) {
+      num2 = 4 - index % 4;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.blockLen = global;
-    tmp3Result.outputLen = require;
-    tmp3Result.padOffset = importDefault;
-    tmp3Result.isLE = importAll;
-    tmp3Result.finished = false;
-    tmp3Result.length = 0;
-    tmp3Result.pos = 0;
-    tmp3Result.destroyed = false;
-    uint8Array = new Uint8Array(global);
-    tmp3Result.buffer = uint8Array;
-    tmp3Result.view = closure_0(closure_1[5]).createView(tmp3Result.buffer);
-    return tmp3Result;
-  }
-}
-_inherits(HashMD, _asyncLoop.Hash);
-const entry = {
-  key: "update",
-  value: function update(B) {
-    let tmp8;
-    const self = this;
-    HashMD(9234).exists(this);
-    ({ buffer, blockLen, view } = this);
-    const toBytesResult = HashMD(9233).toBytes(B);
-    let num = 0;
-    if (0 < toBytesResult.length) {
-      do {
-        let _Math = Math;
-        let bound = Math.min(blockLen - self.pos, length - num);
-        if (bound !== blockLen) {
-          let result = buffer.set(toBytesResult.subarray(num, num + bound), self.pos);
-          self.pos = self.pos + bound;
-          let sum = num + bound;
-          tmp8 = sum;
-          if (self.pos === blockLen) {
-            let processResult = self.process(view, 0);
-            self.pos = 0;
-            tmp8 = sum;
-          }
-        } else {
-          let tmp7 = num;
-          tmp8 = num;
-          if (blockLen <= length - num) {
-            do {
-              let processResult1 = self.process(tmp6, tmp7);
-              let sum1 = tmp7 + blockLen;
-              tmp7 = sum1;
-              tmp8 = sum1;
-              diff = length - sum1;
-            } while (blockLen <= diff);
-          }
-        }
-        num = tmp8;
-      } while (tmp8 < length);
-    }
-    self.length = self.length + toBytesResult.length;
-    self.roundClean();
-    return self;
+    items[1] = num2;
+    return 3 * (items[0] + items[1]) / 4 - items[1];
   }
 };
-let items = [
-  entry,
-  {
-    key: "digestInto",
-    value: function digestInto(content) {
-      const self = this;
-      HashMD(9234).exists(this);
-      HashMD(9234).output(content, this);
-      this.finished = true;
-      ({ buffer, view, blockLen, isLE } = this);
-      let num = tmp3 + 1;
-      buffer[+this.pos] = 128;
-      const buffer2 = this.buffer;
-      buffer2.subarray(num).fill(0);
-      if (this.padOffset > blockLen - num) {
-        self.process(view, 0);
-        num = 0;
-      }
-      if (num < blockLen) {
-        do {
-          buffer[num] = 0;
-          num = num + 1;
-        } while (num < blockLen);
-      }
-      const diff = blockLen - 8;
-      const BigIntResult = BigInt(8 * self.length);
-      if (typeof view.setBigUint64 === "function") {
-        view.setBigUint64(diff, BigIntResult, isLE);
-      } else {
-        const _BigInt = BigInt;
-        const _BigInt2 = BigInt;
-        const BigIntResult2 = BigInt(4294967295);
-        const _Number = Number;
-        const _Number2 = Number;
-        const BigIntResult1 = BigInt(32);
-        let num2 = 0;
-        const NumberResult = Number(BigIntResult >> BigInt(32) & BigIntResult2);
-        if (isLE) {
-          num2 = 4;
-        }
-        let num3 = 4;
-        if (isLE) {
-          num3 = 0;
-        }
-        view.setUint32(diff + num2, NumberResult, isLE);
-        view.setUint32(diff + num3, Number(BigIntResult & BigIntResult2), isLE);
-        const NumberResult1 = Number(BigIntResult & BigIntResult2);
-      }
-      self.process(view, 0);
-      const view1 = HashMD(9233).createView(content);
-      const outputLen = self.outputLen;
-      if (outputLen % 4) {
-        const _Error2 = Error;
-        const error = new Error("_sha2: outputLen should be aligned to 32bit");
-        throw error;
-      } else {
-        const result = outputLen / 4;
-        value = self.get();
-        if (result > value.length) {
-          const _Error = Error;
-          const error1 = new Error("_sha2: outputLen bigger than state");
-          throw error1;
-        } else {
-          let num5 = 0;
-          if (0 < result) {
-            do {
-              let setUint32Result2 = view1.setUint32(4 * num5, value[num5], isLE);
-              num5 = num5 + 1;
-            } while (num5 < result);
-          }
-        }
-      }
-      const subarrayResult = buffer2.subarray(num);
+export const toByteArray = function toByteArray(arr) {
+  if (0 < arr.length % 4) {
+    const _Error = Error;
+    const error = new Error("Invalid string. Length must be a multiple of 4");
+    throw error;
+  } else {
+    let index = arr.indexOf("=");
+    if (-1 === index) {
+      index = length;
     }
-  },
-  {
-    key: "digest",
-    value: function digest() {
-      ({ buffer, outputLen } = this);
-      this.digestInto(buffer);
-      const substr = buffer.slice(0, outputLen);
-      this.destroy();
-      return substr;
+    const items = [index, ];
+    let num = 0;
+    if (index !== length) {
+      num = 4 - index % 4;
     }
-  },
-  {
-    key: "_cloneInto",
-    value: function _cloneInto(arg0) {
-      const self = this;
-      let constructor = arg0;
-      if (!arg0) {
-        constructor = new self.constructor();
-      }
-      const items = [...self.get()];
-      constructor.set.apply(items);
-      constructor.length = self.length;
-      ({ pos: tmp.pos, finished: tmp.finished, destroyed: tmp.destroyed } = self);
-      if (self.length % self.blockLen) {
-        const buffer = constructor.buffer;
-        const result = buffer.set(tmp5);
-      }
-      return constructor;
+    items[1] = num;
+    [tmp2, tmp3] = items;
+    const tmp7 = new closure_2(3 * (tmp2 + tmp3) / 4 - tmp3);
+    let diff = tmp2;
+    if (tmp3 > 0) {
+      diff = tmp2 - 4;
     }
+    let num11 = 0;
+    let num12 = 0;
+    let num13 = 0;
+    let num14 = 0;
+    if (0 < diff) {
+      do {
+        let tmp11 = dependencyMap2[arr.charCodeAt(arr, num12)] << 18;
+        let tmp12 = dependencyMap2[arr.charCodeAt(arr, num12 + 1)] << 12;
+        let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
+        let tmp14 = tmp11 | tmp12 | tmp13 | dependencyMap2[arr.charCodeAt(arr, num12 + 3)];
+        let sum = num11 + 1;
+        tmp7[num11] = tmp14 >> 16 & 255;
+        let sum1 = sum + 1;
+        tmp7[sum] = tmp14 >> 8 & 255;
+        num11 = sum1 + 1;
+        tmp7[sum1] = 255 & tmp14;
+        num12 = num12 + 4;
+        num13 = num11;
+        num14 = num12;
+      } while (num12 < diff);
+    }
+    let sum2 = num13;
+    if (2 === tmp3) {
+      sum2 = num13 + 1;
+      tmp7[num13] = 255 & (dependencyMap2[arr.charCodeAt(arr, num14)] << 2 | dependencyMap2[arr.charCodeAt(arr, num14 + 1)] >> 4);
+      const tmp19 = dependencyMap2[arr.charCodeAt(arr, num14)] << 2;
+    }
+    if (1 === tmp3) {
+      const tmp21 = dependencyMap2[arr.charCodeAt(arr, num14)] << 10;
+      const tmp23 = tmp21 | dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4 | dependencyMap2[arr.charCodeAt(arr, num14 + 2)] >> 2;
+      tmp7[sum2] = tmp23 >> 8 & 255;
+      tmp7[sum2 + 1] = 255 & tmp23;
+      const tmp22 = dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4;
+    }
+    return tmp7;
   }
-];
-
-export const Chi = (arg0, arg1, arg2) => arg0 & arg1 ^ ~arg0 & arg2;
-export const Maj = (arg0, arg1, arg2) => arg0 & arg1 ^ arg0 & arg2 ^ arg1 & arg2;
-export const HashMD = _createClass(HashMD, items);
+};
+export const fromByteArray = function fromByteArray(arg0) {
+  let sum;
+  const result = length % 3;
+  const items = [];
+  const diff = length - result;
+  let num = 0;
+  if (0 < diff) {
+    do {
+      sum = num + 16383;
+      let sum2 = num;
+      let tmp5 = sum;
+      if (diff < sum) {
+        tmp5 = diff;
+      }
+      let items1 = [];
+      if (sum2 < tmp5) {
+        do {
+          let sum1 = (arg0[sum2] << 16 & 16711680) + (arg0[sum2 + 1] << 8 & 65280) + (255 & arg0[sum2 + 2]);
+          let arr = items1.push(dependencyMap[sum1 >> 18 & 63] + dependencyMap[sum1 >> 12 & 63] + dependencyMap[sum1 >> 6 & 63] + dependencyMap[63 & sum1]);
+          sum2 = sum2 + 3;
+        } while (sum2 < tmp5);
+      }
+      let arr2 = items.push(items1.join(""));
+      num = sum;
+    } while (sum < diff);
+  }
+  if (1 === result) {
+    items.push(`${closure_0[arg0[length - 1] >> 2]}${closure_0[arg0[length - 1] << 4 & 63]}==`);
+  } else if (2 === result) {
+    const sum3 = (arg0[length - 2] << 8) + arg0[length - 1];
+    items.push(`${closure_0[tmp13 >> 10]}${closure_0[tmp13 >> 4 & 63]}${closure_0[tmp13 << 2 & 63]}=`);
+  }
+  return items.join("");
+};

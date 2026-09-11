@@ -1,15 +1,15 @@
-// Module ID: 11602
-// Function ID: 11603
+// Module ID: 11600
+// Function ID: 11601
 // Name: AppStoreOverlayMediaCarousel
-// Dependencies: [19, 17, 4599, 1085, 21, 4607, 576, 11603, 11604, 1114, 5639, 504, 8395, 10223, 6727, 2]
+// Dependencies: [19, 17, 4598, 1085, 21, 4606, 576, 11601, 11602, 1114, 5638, 504, 8393, 10221, 6726, 2]
 // Exports: default
 
-// Module 11602 (AppStoreOverlayMediaCarousel)
+// Module 11600 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 576 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11603 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11604 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11601 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11602 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 function getMeasurableUrl(type) {
@@ -120,7 +120,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };

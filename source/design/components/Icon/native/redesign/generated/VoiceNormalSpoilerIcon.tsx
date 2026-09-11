@@ -1,13 +1,13 @@
-// Module ID: 5152
-// Function ID: 5153
+// Module ID: 5151
+// Function ID: 5152
 // Name: VoiceNormalSpoilerIcon
-// Dependencies: [19, 21, 576, 4307, 5094, 2]
+// Dependencies: [19, 21, 576, 4307, 5093, 2]
 // Exports: VoiceNormalSpoilerIcon
 
-// Module 5152 (VoiceNormalSpoilerIcon)
+// Module 5151 (VoiceNormalSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod5094 from "module_5094" /* 5094 */;
+import _mod5093 from "module_5093" /* 5093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const VoiceNormalSpoilerIcon = function VoiceNormalSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5094, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5093, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

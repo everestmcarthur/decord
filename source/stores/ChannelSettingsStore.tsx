@@ -1,9 +1,9 @@
-// Module ID: 8719
-// Function ID: 8720
+// Module ID: 8717
+// Function ID: 8718
 // Name: ChannelSettingsStore
-// Dependencies: [1961, 8468, 1385, 1957, 1074, 1113, 4257, 4259, 1966, 1967, 1272, 573, 12, 1971, 4198, 504, 2]
+// Dependencies: [1961, 8466, 1385, 1957, 1074, 1113, 4257, 4259, 1966, 1967, 1272, 573, 12, 1971, 4198, 504, 2]
 
-// Module 8719 (ChannelSettingsStore)
+// Module 8717 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
@@ -15,7 +15,7 @@ import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import _modDef4198 from "module_4198" /* 4198 */;
 import ReactionUtils from "ReactionUtils" /* 4257 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
-import InviteRecord from "InviteRecord" /* 8468 */;
+import InviteRecord from "InviteRecord" /* 8466 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import Constants from "Constants" /* 1074 */;

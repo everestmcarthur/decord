@@ -1,11 +1,11 @@
 // Module ID: 16109
 // Function ID: 16110
 // Name: usePrivateChannelWaveEligible
-// Dependencies: [4828, 4255, 1964, 1074, 504, 11, 4288, 4198, 11460, 2]
+// Dependencies: [4827, 4255, 1964, 1074, 504, 11, 4288, 4198, 11458, 2]
 // Exports: usePrivateChannelWaveEligible
 
 // Module 16109 (usePrivateChannelWaveEligible)
-import MessageStore from "MessageStore" /* 4828 */;
+import MessageStore from "MessageStore" /* 4827 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 const require = globalThis.__r;

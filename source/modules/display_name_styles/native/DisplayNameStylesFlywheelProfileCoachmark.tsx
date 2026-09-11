@@ -1,11 +1,11 @@
 // Module ID: 16887
 // Function ID: 16888
 // Name: DisplayNameStylesFlywheelProfileCoachmark
-// Dependencies: [19, 17, 1371, 1954, 21, 4607, 504, 4264, 1114, 2786, 11224, 5744, 2]
+// Dependencies: [19, 17, 1371, 1954, 21, 4606, 504, 4264, 1114, 2786, 11222, 5743, 2]
 // Exports: default
 
 // Module 16887 (DisplayNameStylesFlywheelProfileCoachmark)
-import native from "native" /* 5744 */;
+import native from "native" /* 5743 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -16,7 +16,7 @@ function CoachmarkImage() {
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
@@ -66,6 +66,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }
   }), items2);
   const obj2 = markAsDismissed(4264);
-  const coachmark = visible(11224).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(11222).useCoachmark(visible.targetRef, memo);
   return null;
 };

@@ -1,15 +1,15 @@
 // Module ID: 16203
 // Function ID: 16204
 // Name: useChannelListSpecs
-// Dependencies: [19, 10209, 16204, 1477, 16088, 5034, 1611, 11088, 2]
+// Dependencies: [19, 10207, 16204, 1477, 16088, 5033, 1611, 11086, 2]
 // Exports: default
 
 // Module 16203 (useChannelListSpecs)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11088 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11086 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const RedesignChannelListConstants = fn(10209);
+const RedesignChannelListConstants = fn(10207);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } = RedesignChannelListConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
@@ -20,7 +20,7 @@ export default function useChannelListSpecs(banner) {
   const tmp2 = height(16088)();
   dependencyMap = tmp2;
   const obj = redesignGuildHeaderHeight(16204);
-  const fontScale = redesignGuildHeaderHeight(5034).useFontScale();
+  const fontScale = redesignGuildHeaderHeight(5033).useFontScale();
   closure_4 = tmp4;
   const top = height(1611)().top;
   const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];

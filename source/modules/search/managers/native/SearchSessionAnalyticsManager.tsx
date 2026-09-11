@@ -1,12 +1,12 @@
-// Module ID: 12454
-// Function ID: 12455
+// Module ID: 12452
+// Function ID: 12453
 // Name: SearchSessionAnalyticsManager
-// Dependencies: [7952, 12455, 12435, 2]
+// Dependencies: [7951, 12453, 12433, 2]
 
-// Module 12454 (SearchSessionAnalyticsManager)
-import TrackingConstants from "TrackingConstants" /* 7952 */;
-import SearchUtils from "SearchUtils" /* 12435 */;
-import AbstractSearchSessionAnalyticsManager from "AbstractSearchSessionAnalyticsManager" /* 12455 */;
+// Module 12452 (SearchSessionAnalyticsManager)
+import TrackingConstants from "TrackingConstants" /* 7951 */;
+import SearchUtils from "SearchUtils" /* 12433 */;
+import AbstractSearchSessionAnalyticsManager from "AbstractSearchSessionAnalyticsManager" /* 12453 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = TrackingConstants.SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB;

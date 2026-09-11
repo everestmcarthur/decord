@@ -1,15 +1,15 @@
-// Module ID: 4944
-// Function ID: 4945
+// Module ID: 4943
+// Function ID: 4944
 // Name: EmbedUtils
-// Dependencies: [1074, 4945, 11, 1384, 12, 4198, 1091, 4832, 2]
+// Dependencies: [1074, 4944, 11, 1384, 12, 4198, 1091, 4831, 2]
 // Exports: canEmbedLinks, getMaxEmbedMediaSize, isCollectiblesShopArticleEmbed, isEmbedInline, isGameProfileArticleEmbed, isServerShopArticleEmbed, isSocialLayerStorefrontArticleEmbed, isUserProfileArticleEmbed, mergeEmbedsOnURL, sanitizeEmbed, shouldStripEmbeds
 
-// Module 4944 (EmbedUtils)
+// Module 4943 (EmbedUtils)
 import _modDef12 from "module_12" /* 12 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4832 */;
-import EmbedConstants from "EmbedConstants" /* 4945 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4831 */;
+import EmbedConstants from "EmbedConstants" /* 4944 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

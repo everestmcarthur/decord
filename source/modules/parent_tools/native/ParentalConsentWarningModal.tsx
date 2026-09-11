@@ -1,25 +1,25 @@
-// Module ID: 17547
-// Function ID: 17548
+// Module ID: 17546
+// Function ID: 17547
 // Name: ParentalConsentWarningModal
-// Dependencies: [19, 17, 7611, 7612, 1074, 1954, 21, 1943, 7613, 4465, 7456, 4813, 4607, 576, 1611, 1114, 2396, 1242, 573, 1945, 4574, 4810, 17548, 1896, 7224, 5025, 5744, 4603, 5027, 2]
+// Dependencies: [19, 17, 7610, 7611, 1074, 1954, 21, 1943, 7612, 4465, 7455, 4812, 4606, 576, 1611, 1114, 2396, 1242, 573, 1945, 4573, 4809, 17547, 1896, 7223, 5024, 5743, 4602, 5026, 2]
 // Exports: default
 
-// Module 17547 (ParentalConsentWarningModal)
+// Module 17546 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7612);
+const FamilyCenterConstants = fn(7611);
 ({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
 let closure_15 = fn(1943).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, illustration: null, title: null, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
@@ -85,22 +85,22 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       }
       return tmp;
     })) {
-      const tab = tmp2(7613).selectTab(constants.REQUESTS);
-      const tmp2Result = tmp2(7613);
+      const tab = tmp2(7612).selectTab(constants.REQUESTS);
+      const tmp2Result = tmp2(7612);
       const tmp9 = require;
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
           const obj2 = { screen: constants3.FAMILY_CENTER };
-          tmp9(7456).openUserSettings(obj2);
-          const tmp9Result = tmp9(7456);
+          tmp9(7455).openUserSettings(obj2);
+          const tmp9Result = tmp9(7455);
         }
       }
-      tmp2(4813).enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
-      const tmp2Result3 = tmp2(4813);
+      tmp2(4812).enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
+      const tmp2Result3 = tmp2(4812);
     } else {
-      tmp2(4810).pushLazy(asyncRequireImpl(17548, dependencyMap.paths));
-      const tmp2Result4 = tmp2(4810);
+      tmp2(4809).pushLazy(asyncRequireImpl(17547, dependencyMap.paths));
+      const tmp2Result4 = tmp2(4809);
     }
   }, items2);
   const intl = daysRemaining(callback[15]).intl;

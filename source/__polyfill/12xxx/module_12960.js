@@ -1,34 +1,32 @@
 // Module ID: 12960
 // Function ID: 12961
-// Dependencies: []
-// Exports: isSentryRequestUrl
+// Dependencies: [12892]
+// Exports: applySdkMetadata
 
 // Module 12960
+import _mod12892 from "module_12892" /* 12892 */;
 
-export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
+require = arg1;
+const dependencyMap = arg6;
+
+export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
+  let arr = arg2;
+  if (arg2 === undefined) {
+    const items = [arg1];
+    arr = items;
   }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "npm";
   }
-  let tmp2 = dsn && arr.includes(dsn.host);
-  if (!tmp2) {
-    let flag = false;
-    if (tunnel) {
-      let substr = arr;
-      if ("/" === arr[arr.length - 1]) {
-        substr = arr.slice(0, -1);
-      }
-      let substr1 = tunnel;
-      if ("/" === tunnel[tunnel.length - 1]) {
-        substr1 = tunnel.slice(0, -1);
-      }
-      flag = substr === substr1;
-    }
-    tmp2 = flag;
+  const tmp = _metadata._metadata || {};
+  if (!tmp.sdk) {
+    const obj = { name: null, packages: null, version: null };
+    const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12892.SDK_VERSION }));
+    obj.version = str(12892).SDK_VERSION;
+    tmp.sdk = obj;
   }
-  return tmp2;
+  _metadata._metadata = tmp;
 };

@@ -1,19 +1,19 @@
 // Module ID: 16414
 // Function ID: 16415
 // Name: HomeDrawerDM
-// Dependencies: [19, 17, 1961, 4255, 4788, 1371, 1085, 21, 4607, 504, 4760, 16415, 15380, 13388, 9151, 4603, 10200, 7954, 16377, 4470, 4467, 2]
+// Dependencies: [19, 17, 1961, 4255, 4787, 1371, 1085, 21, 4606, 504, 4759, 16415, 15380, 13386, 9149, 4602, 10198, 7953, 16377, 4470, 4467, 2]
 // Exports: default
 
 // Module 16414 (HomeDrawerDM)
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4470 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7954 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10200 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7953 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10198 */;
 import useMessagePreviewsDefault from "useMessagePreviews" /* 15380 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -76,10 +76,10 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(13388);
+        tmp5Result = tmp5(13386);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(9151).BellSlashIcon;
+        BellSlashIcon = tmp5(9149).BellSlashIcon;
       }
     } else {
       const obj = { style: closure_1.title, children: null };
@@ -104,7 +104,7 @@ const isMultiUserDM = fn(1961).isMultiUserDM;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");

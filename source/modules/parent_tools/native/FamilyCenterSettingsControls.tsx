@@ -1,18 +1,18 @@
 // Module ID: 14961
 // Function ID: 14962
 // Name: FamilyCenterSettingsControls
-// Dependencies: [19, 17, 7612, 1074, 21, 4607, 576, 4603, 1114, 2396, 4810, 14962, 1896, 14964, 5657, 8738, 14948, 7667, 1483, 14965, 5025, 5739, 5027, 7660, 4620, 14880, 7613, 14966, 2]
+// Dependencies: [19, 17, 7611, 1074, 21, 4606, 576, 4602, 1114, 2396, 4809, 14962, 1896, 14964, 5656, 8736, 14948, 7666, 1483, 14965, 5024, 5738, 5026, 7659, 4619, 14880, 7612, 14966, 2]
 // Exports: default
 
 // Module 14961 (FamilyCenterSettingsControls)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4620 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7613 */;
-import LayerActionCreators from "LayerActionCreators" /* 7660 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7612 */;
+import LayerActionCreators from "LayerActionCreators" /* 7659 */;
 import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14966 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,39 +26,39 @@ function SpendingLimitRow(teenId) {
     const obj2 = { trailing: null };
     const intl2 = tmp2(1114).intl;
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: intl2.string(_modDef2396.YEnpaj) };
-    obj2.trailing = closure_7(tmp2(4603).Text, obj3);
+    obj2.trailing = closure_7(tmp2(4602).Text, obj3);
     let tmp8 = obj2;
     const stringResult = intl2.string(_modDef2396.YEnpaj);
   } else if ("on" === kind) {
     const obj4 = { trailing: null };
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
-    obj4.trailing = closure_7(tmp2(4603).Text, obj5);
+    obj4.trailing = closure_7(tmp2(4602).Text, obj5);
     tmp8 = obj4;
   } else if ("close-to-limit" === kind) {
     const obj6 = { trailing: null, subLabel: null };
     const obj7 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
-    obj6.trailing = closure_7(tmp2(4603).Text, obj7);
+    obj6.trailing = closure_7(tmp2(4602).Text, obj7);
     const obj8 = { variant: "text-sm/normal", style: tmp.subLabelWarning, children: spendingLimitDisplayState.remainingText };
-    obj6.subLabel = closure_7(tmp2(4603).Text, obj8);
+    obj6.subLabel = closure_7(tmp2(4602).Text, obj8);
     tmp8 = obj6;
   } else if ("spent" === kind) {
     const obj9 = { trailing: null, subLabel: null };
     const obj10 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
-    obj9.trailing = closure_7(tmp2(4603).Text, obj10);
+    obj9.trailing = closure_7(tmp2(4602).Text, obj10);
     const intl = tmp2(1114).intl;
     const obj11 = { variant: "text-sm/normal", style: tmp.subLabelCritical, children: intl.string(_modDef2396.Q2msVQ) };
-    obj9.subLabel = closure_7(tmp2(4603).Text, obj11);
+    obj9.subLabel = closure_7(tmp2(4602).Text, obj11);
     tmp8 = obj9;
     const stringResult1 = intl.string(_modDef2396.Q2msVQ);
   } else if ("blocked" === kind) {
     const obj12 = { trailing: null, subLabel: null };
     const intl4 = tmp2(1114).intl;
     const obj13 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(_modDef2396.kGFuGn) };
-    obj12.trailing = closure_7(tmp2(4603).Text, obj13);
+    obj12.trailing = closure_7(tmp2(4602).Text, obj13);
     const intl5 = tmp2(1114).intl;
     const stringResult2 = intl4.string(_modDef2396.kGFuGn);
     const obj14 = { variant: "text-sm/normal", style: tmp.subLabelCritical, children: intl5.string(_modDef2396.FUu2b0) };
-    obj12.subLabel = closure_7(tmp2(4603).Text, obj14);
+    obj12.subLabel = closure_7(tmp2(4602).Text, obj14);
     tmp8 = obj12;
     const stringResult3 = intl5.string(_modDef2396.FUu2b0);
   }
@@ -77,7 +77,7 @@ function SpendingLimitRow(teenId) {
   obj15.onPress = fn;
   obj15.arrow = null != teenId;
   obj15.disabled = null == teenId;
-  return closure_7(teenId(5657).TableRow, obj15);
+  return closure_7(teenId(5656).TableRow, obj15);
 }
 function FamilyCenterSettingsTeenControls() {
   function handleOpenSettings() {
@@ -162,8 +162,8 @@ function FamilyCenterSettingsParentalControls() {
   let obj = selectedTeenUser(14948);
   const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(14948).useShouldLoadSettingsForSelectedTeenUser();
   const obj2 = selectedTeenUser(14948);
-  const isFamilyCenterV3Enabled = selectedTeenUser(7667).useIsFamilyCenterV3Enabled({ location: "FamilyCenterSettingsControls" });
-  const obj3 = selectedTeenUser(7667);
+  const isFamilyCenterV3Enabled = selectedTeenUser(7666).useIsFamilyCenterV3Enabled({ location: "FamilyCenterSettingsControls" });
+  const obj3 = selectedTeenUser(7666);
   dependencyMap = selectedTeenUser(1483).useNavigation();
   let rules;
   if (selectedTeenUser != null) {
@@ -202,11 +202,11 @@ function FamilyCenterSettingsParentalControls() {
   const obj6 = { variant: "text-sm/semibold", children: null };
   const intl = tmp2(1114).intl;
   obj6.children = intl.string(shouldLoadSettingsForSelectedTeenUser(2396).ahKIJO);
-  const items1 = [closure_7(selectedTeenUser(4603).Text, obj6), , ];
+  const items1 = [closure_7(selectedTeenUser(4602).Text, obj6), , ];
   const obj7 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1114).intl;
   obj7.children = intl2.string(shouldLoadSettingsForSelectedTeenUser(2396).Sv236e);
-  items1[1] = closure_7(selectedTeenUser(4603).Text, obj7);
+  items1[1] = closure_7(selectedTeenUser(4602).Text, obj7);
   const obj8 = { style: tmp.controlsGroup, children: null };
   const obj9 = { label: null, onPress: null, arrow: true };
   const intl3 = tmp2(1114).intl;
@@ -214,14 +214,14 @@ function FamilyCenterSettingsParentalControls() {
   obj9.onPress = function onPress() {
     navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: FamilyCenterSubPages.CONTENT_AND_SOCIAL });
   };
-  const items2 = [closure_7(selectedTeenUser(5657).TableRow, obj9), , , ];
+  const items2 = [closure_7(selectedTeenUser(5656).TableRow, obj9), , , ];
   const obj10 = { label: null, onPress: null, arrow: true };
   const intl4 = tmp2(1114).intl;
   obj10.label = intl4.string(selectedTeenUser(1114).t.OAuOHD);
   obj10.onPress = function onPress() {
     navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: FamilyCenterSubPages.DATA_AND_PRIVACY });
   };
-  items2[1] = closure_7(selectedTeenUser(5657).TableRow, obj10);
+  items2[1] = closure_7(selectedTeenUser(5656).TableRow, obj10);
   let tmp15Result = isFamilyCenterV3Enabled;
   if (isFamilyCenterV3Enabled) {
     let id2;
@@ -262,20 +262,20 @@ function FamilyCenterSettingsParentalControls() {
       obj.autoOpenCreate = tmp2;
       navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
     };
-    tmp15Result2 = tmp15(tmp2(5657).TableRow, obj12);
+    tmp15Result2 = tmp15(tmp2(5656).TableRow, obj12);
   }
   items2[3] = tmp15Result2;
-  obj8.children = closure_8(selectedTeenUser(5739).TableRowGroup, { hasIcons: false, children: items2 });
+  obj8.children = closure_8(selectedTeenUser(5738).TableRowGroup, { hasIcons: false, children: items2 });
   items1[2] = closure_7(View, obj8);
   obj5.children = items1;
-  return closure_8(selectedTeenUser(5025).Stack, obj5);
+  return closure_8(selectedTeenUser(5024).Stack, obj5);
 }
 const View = fn(17).View;
-const FamilyCenterSubPages = fn(7612).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7611).FamilyCenterSubPages;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { teenControlsContainer: { gap: nativeDefault.space.PX_16 }, controlledSettingsHeader: null, parentalControlsContainer: null, controlsGroup: null, subLabelWarning: null, subLabelCritical: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.controlledSettingsHeader = { gap: nativeDefault.space.PX_4 };

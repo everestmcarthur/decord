@@ -1,20 +1,20 @@
-// Module ID: 8803
-// Function ID: 8804
+// Module ID: 8801
+// Function ID: 8802
 // Name: GameProfileStoreLinksActionSheet
-// Dependencies: [19, 17, 21, 4607, 576, 8776, 4301, 1611, 7271, 6699, 4603, 1114, 5027, 4574, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 8774, 4301, 1611, 7270, 6698, 4602, 1114, 5026, 4573, 2]
 // Exports: default
 
-// Module 8803 (GameProfileStoreLinksActionSheet)
+// Module 8801 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import LinkingDefault from "Linking" /* 4301 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import BottomSheetModal from "BottomSheetModal" /* 6699 */;
-import ActionSheet from "ActionSheet" /* 7271 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8776 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import BottomSheetModal from "BottomSheetModal" /* 6698 */;
+import ActionSheet from "ActionSheet" /* 7270 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8774 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { header: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 }, headerText: { textAlign: "center" }, buttons: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.buttons = { gap: nativeDefault.space.PX_12 };

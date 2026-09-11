@@ -1,15 +1,15 @@
-// Module ID: 17763
-// Function ID: 17764
+// Module ID: 17762
+// Function ID: 17763
 // Name: ChannelSetupScreen
-// Dependencies: [19, 17, 9156, 1957, 2012, 4255, 1371, 8111, 1074, 21, 4308, 576, 17752, 504, 4760, 1114, 17753, 4574, 9519, 1896, 9155, 17750, 4603, 5025, 5739, 5657, 2]
+// Dependencies: [19, 17, 9154, 1957, 2012, 4255, 1371, 8110, 1074, 21, 4308, 576, 17751, 504, 4759, 1114, 17752, 4573, 9517, 1896, 9153, 17749, 4602, 5024, 5738, 5656, 2]
 // Exports: default
 
-// Module 17763 (ChannelSetupScreen)
+// Module 17762 (ChannelSetupScreen)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9156 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
@@ -19,7 +19,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 let closure_9 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8111).CREATE_NEW_CHANNEL_VALUE;
+const CREATE_NEW_CHANNEL_VALUE = fn(8110).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -97,10 +97,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.Yr6nGx);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      rulesChannel(9155).updateGuild({ rulesChannelId });
-      const obj = rulesChannel(9155);
+      rulesChannel(9153).updateGuild({ rulesChannelId });
+      const obj = rulesChannel(9153);
       const obj2 = { rulesChannelId };
-      rulesChannel(4574).hideActionSheet();
+      rulesChannel(4573).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -110,7 +110,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(9519, dependencyMap.paths), "SelectRulesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(9517, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items3);
   const callback2 = obj.useCallback(() => {
     let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -119,10 +119,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.VqhxxN);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      rulesChannel(9155).updateGuild({ publicUpdatesChannelId });
-      const obj = rulesChannel(9155);
+      rulesChannel(9153).updateGuild({ publicUpdatesChannelId });
+      const obj = rulesChannel(9153);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(4574).hideActionSheet();
+      rulesChannel(4573).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -132,7 +132,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(9519, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(9517, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items4);
   const obj6 = { headerRef: ref, disableNextStep: false, currentStep: guild(publicUpdatesChannel[21]).EnableCommunityModalSteps.STEP_2, children: null };
   const obj7 = { style: enableCommunitySharedStyles.content, children: null };

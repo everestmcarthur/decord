@@ -1,10 +1,10 @@
-// Module ID: 4759
-// Function ID: 4760
+// Module ID: 4758
+// Function ID: 4759
 // Name: NicknameUtils
 // Dependencies: [1957, 2021, 4255, 1114, 4451, 504, 2]
 // Exports: getNickname, useName
 
-// Module 4759 (NicknameUtils)
+// Module 4758 (NicknameUtils)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

@@ -1,13 +1,13 @@
-// Module ID: 17059
-// Function ID: 17060
+// Module ID: 17058
+// Function ID: 17059
 // Name: SimpleGuild
-// Dependencies: [19, 17, 1975, 7709, 1979, 1074, 21, 4607, 5636, 17060, 504, 17061, 17063, 1114, 16405, 5123, 576, 17062, 2]
+// Dependencies: [19, 17, 1975, 7708, 1979, 1074, 21, 4606, 5635, 17059, 504, 17060, 17062, 1114, 16405, 5122, 576, 17061, 2]
 // Exports: default
 
-// Module 17059 (SimpleGuild)
+// Module 17058 (SimpleGuild)
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7709 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7708 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const getGuildIconSource = fn(1975).getGuildIconSource;
 const ME = fn(1074).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");

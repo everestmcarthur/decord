@@ -1,10 +1,10 @@
-// Module ID: 7317
-// Function ID: 7318
+// Module ID: 7316
+// Function ID: 7317
 // Name: OrderActionCreators
 // Dependencies: [5, 1074, 3, 4286, 1272, 4279, 2]
 // Exports: fetchOrderEntitlementsWithRetry, getOrder, signOrder
 
-// Module 7317 (OrderActionCreators)
+// Module 7316 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -46,7 +46,7 @@ let closure_6 = async function _signOrder(arg0, value) {
           closure_129_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,37 +1,37 @@
-// Module ID: 14639
-// Function ID: 14640
+// Module ID: 14637
+// Function ID: 14638
 // Name: SettingsRendererConfig
-// Dependencies: [8050, 14640, 14710, 14759, 14767, 14768, 14769, 14770, 14810, 14811, 14813, 14814, 14815, 14817, 14818, 14830, 14834, 14835, 14848, 14850, 14853, 14854, 14855, 14862, 14865, 14867, 14868, 14874, 14884, 14885, 14886, 14887, 14888, 14889, 14891, 14895, 14896, 14898, 14901, 14902, 14903, 14904, 14905, 14909, 14912, 14913, 14919, 14983, 14988, 14992, 14994, 14997, 15000, 15008, 15026, 15030, 15031, 15032, 15033, 15034, 15035, 15039, 15041, 15044, 15046, 15047, 15048, 15228, 15265, 15285, 15304, 15307, 15309, 15310, 15311, 15312, 15313, 15314, 15315, 15316, 15317, 15318, 15319, 15320, 15321, 15322, 15328, 15365, 15366, 15369, 15371, 15373, 15374, 15378, 15379, 15384, 15385, 15386, 15387, 15389, 15394, 15395, 15396, 15417, 15470, 15471, 15472, 15473, 15474, 15475, 15476, 15477, 15478, 15479, 15480, 15481, 15482, 15483, 15519, 15523, 15524, 15525, 15527, 15528, 15529, 15530, 15531, 15532, 15533, 15534, 15535, 15536, 15537, 11563, 15539, 15540, 15542, 15549, 15551, 15552, 15553, 15554, 15556, 15557, 15558, 15559, 15560, 15561, 15563, 15565, 15566, 15568, 15570, 15572, 15574, 15577, 15579, 15581, 15582, 15584, 15586, 15592, 15594, 15595, 15596, 15597, 15599, 15601, 15602, 15605, 15606, 15620, 15621, 15623, 15626, 15622, 15634, 15638, 15642, 15804, 15807, 15808, 15809, 15814, 15815, 15816, 15818, 15820, 15825, 15827, 15829, 15831, 15833, 15835, 15837, 15838, 15839, 15841, 15843, 15847, 15849, 15851, 15853, 15855, 15857, 15859, 15861, 15863, 15865, 15867, 15869, 15871, 15910, 15915, 15919, 15920, 15922, 15925, 15926, 15928, 15930, 15931, 15933, 15940, 15941, 15935, 15942, 15945, 15947, 15948, 15949, 15950, 15951, 15952, 15954, 15955, 15956, 15957, 15959, 15960, 15961, 15962, 15963, 15964, 15965, 15966, 15967, 15968, 15969, 15970, 15971, 15972, 15973, 15976, 15977, 15978, 15980, 2]
+// Dependencies: [8049, 14638, 14707, 14756, 14764, 14765, 14766, 14767, 14807, 14808, 14810, 14811, 14812, 14814, 14815, 14829, 14833, 14834, 14847, 14849, 14852, 14853, 14854, 14861, 14864, 14866, 14867, 14874, 14884, 14885, 14886, 14887, 14888, 14889, 14891, 14895, 14896, 14898, 14901, 14902, 14903, 14904, 14905, 14909, 14912, 14913, 14919, 14983, 14988, 14992, 14994, 14997, 15000, 15008, 15026, 15030, 15031, 15032, 15033, 15034, 15035, 15039, 15041, 15044, 15046, 15047, 15048, 15228, 15265, 15285, 15304, 15307, 15309, 15310, 15311, 15312, 15313, 15314, 15315, 15316, 15317, 15318, 15319, 15320, 15321, 15322, 15328, 15365, 15366, 15369, 15371, 15373, 15374, 15378, 15379, 15384, 15385, 15386, 15387, 15389, 15394, 15395, 15396, 15417, 15470, 15471, 15472, 15473, 15474, 15475, 15476, 15477, 15478, 15479, 15480, 15481, 15482, 15483, 15519, 15523, 15524, 15525, 15527, 15528, 15529, 15530, 15531, 15532, 15533, 15534, 15535, 15536, 15537, 11561, 15539, 15540, 15542, 15549, 15551, 15552, 15553, 15554, 15556, 15557, 15558, 15559, 15560, 15561, 15563, 15565, 15566, 15568, 15570, 15572, 15574, 15577, 15579, 15581, 15582, 15584, 15586, 15592, 15594, 15595, 15596, 15597, 15599, 15601, 15602, 15605, 15606, 15620, 15621, 15623, 15626, 15622, 15634, 15638, 15642, 15804, 15807, 15808, 15809, 15814, 15815, 15816, 15818, 15820, 15825, 15827, 15829, 15831, 15833, 15835, 15837, 15838, 15839, 15841, 15843, 15847, 15849, 15851, 15853, 15855, 15857, 15859, 15861, 15863, 15865, 15867, 15869, 15871, 15910, 15915, 15919, 15920, 15922, 15925, 15926, 15928, 15930, 15931, 15933, 15940, 15941, 15935, 15942, 15945, 15947, 15948, 15949, 15950, 15951, 15952, 15954, 15955, 15956, 15957, 15959, 15960, 15961, 15962, 15963, 15964, 15965, 15966, 15967, 15968, 15969, 15970, 15971, 15972, 15973, 15976, 15977, 15978, 15980, 2]
 
-// Module 14639 (SettingsRendererConfig)
-import SettingsConstants from "SettingsConstants" /* 8050 */;
-import ChatGestureSettingsDefault from "ChatGestureSettings" /* 11563 */;
-import ProfileCustomizationSettingDefault from "ProfileCustomizationSetting" /* 14640 */;
-import AccountSettingDefault from "AccountSetting" /* 14710 */;
-import AccountUsernameSettingDefault from "AccountUsernameSetting" /* 14759 */;
-import AccountDisplayNameSettingDefault from "AccountDisplayNameSetting" /* 14767 */;
-import AccountEmailSettingDefault from "AccountEmailSetting" /* 14768 */;
-import AccountPhoneSettingDefault from "AccountPhoneSetting" /* 14769 */;
-import AccountAgeGroupSettingDefault from "AccountAgeGroupSetting" /* 14770 */;
-import AccountAgeGroupAdultSettingDefault from "AccountAgeGroupAdultSetting" /* 14810 */;
-import AccountAgeGroupAssignedAdultSettingDefault from "AccountAgeGroupAssignedAdultSetting" /* 14811 */;
-import AccountAgeGroupNonAdultSettingDefault from "AccountAgeGroupNonAdultSetting" /* 14813 */;
-import AgeGroupConfirmSettingDefault from "AgeGroupConfirmSetting" /* 14814 */;
-import AgeGroupResetSettingDefault from "AgeGroupResetSetting" /* 14815 */;
-import AgeGroupConfirmAccountStatusSettingDefault from "AgeGroupConfirmAccountStatusSetting" /* 14817 */;
-import AccountStandingSettingDefault from "AccountStandingSetting" /* 14818 */;
-import AccountChangePasswordSettingDefault from "AccountChangePasswordSetting" /* 14830 */;
-import AccountConfirmPasswordSettingDefault from "AccountConfirmPasswordSetting" /* 14834 */;
-import AccountEnable2faSettingDefault from "AccountEnable2faSetting" /* 14835 */;
-import AccountRemove2faSettingDefault from "AccountRemove2faSetting" /* 14848 */;
-import AccountViewBackupCodesSettingDefault from "AccountViewBackupCodesSetting" /* 14850 */;
-import AccountSmsBackupSettingDefault from "AccountSmsBackupSetting" /* 14853 */;
-import AccountWebAuthnViewSettingDefault from "AccountWebAuthnViewSetting" /* 14854 */;
-import AccountBlockedUsersSettingDefault from "AccountBlockedUsersSetting" /* 14855 */;
-import AccountIgnoredUsersSettingDefault from "AccountIgnoredUsersSetting" /* 14862 */;
-import AccountDeleteSettingDefault from "AccountDeleteSetting" /* 14865 */;
-import AccountDisableSettingDefault from "AccountDisableSetting" /* 14867 */;
-import SensitiveContentFilterSettingDefault from "SensitiveContentFilterSetting" /* 14868 */;
+// Module 14637 (SettingsRendererConfig)
+import SettingsConstants from "SettingsConstants" /* 8049 */;
+import ChatGestureSettingsDefault from "ChatGestureSettings" /* 11561 */;
+import ProfileCustomizationSettingDefault from "ProfileCustomizationSetting" /* 14638 */;
+import AccountSettingDefault from "AccountSetting" /* 14707 */;
+import AccountUsernameSettingDefault from "AccountUsernameSetting" /* 14756 */;
+import AccountDisplayNameSettingDefault from "AccountDisplayNameSetting" /* 14764 */;
+import AccountEmailSettingDefault from "AccountEmailSetting" /* 14765 */;
+import AccountPhoneSettingDefault from "AccountPhoneSetting" /* 14766 */;
+import AccountAgeGroupSettingDefault from "AccountAgeGroupSetting" /* 14767 */;
+import AccountAgeGroupAdultSettingDefault from "AccountAgeGroupAdultSetting" /* 14807 */;
+import AccountAgeGroupAssignedAdultSettingDefault from "AccountAgeGroupAssignedAdultSetting" /* 14808 */;
+import AccountAgeGroupNonAdultSettingDefault from "AccountAgeGroupNonAdultSetting" /* 14810 */;
+import AgeGroupConfirmSettingDefault from "AgeGroupConfirmSetting" /* 14811 */;
+import AgeGroupResetSettingDefault from "AgeGroupResetSetting" /* 14812 */;
+import AgeGroupConfirmAccountStatusSettingDefault from "AgeGroupConfirmAccountStatusSetting" /* 14814 */;
+import AccountStandingSettingDefault from "AccountStandingSetting" /* 14815 */;
+import AccountChangePasswordSettingDefault from "AccountChangePasswordSetting" /* 14829 */;
+import AccountConfirmPasswordSettingDefault from "AccountConfirmPasswordSetting" /* 14833 */;
+import AccountEnable2faSettingDefault from "AccountEnable2faSetting" /* 14834 */;
+import AccountRemove2faSettingDefault from "AccountRemove2faSetting" /* 14847 */;
+import AccountViewBackupCodesSettingDefault from "AccountViewBackupCodesSetting" /* 14849 */;
+import AccountSmsBackupSettingDefault from "AccountSmsBackupSetting" /* 14852 */;
+import AccountWebAuthnViewSettingDefault from "AccountWebAuthnViewSetting" /* 14853 */;
+import AccountBlockedUsersSettingDefault from "AccountBlockedUsersSetting" /* 14854 */;
+import AccountIgnoredUsersSettingDefault from "AccountIgnoredUsersSetting" /* 14861 */;
+import AccountDeleteSettingDefault from "AccountDeleteSetting" /* 14864 */;
+import AccountDisableSettingDefault from "AccountDisableSetting" /* 14866 */;
+import SensitiveContentFilterSettingDefault from "SensitiveContentFilterSetting" /* 14867 */;
 import ExplicitMediaFiltersFriendsDMsSettingDefault from "ExplicitMediaFiltersFriendsDMsSetting" /* 14874 */;
 import ExplicitMediaFiltersNonFriendsDMsSettingDefault from "ExplicitMediaFiltersNonFriendsDMsSetting" /* 14884 */;
 import ExplicitMediaFiltersGuildsSettingDefault from "ExplicitMediaFiltersGuildsSetting" /* 14885 */;

@@ -1,9 +1,9 @@
-// Module ID: 7631
-// Function ID: 7632
+// Module ID: 7630
+// Function ID: 7631
 // Name: CollectiblesPurchaseStore
 // Dependencies: [12, 504, 573, 2]
 
-// Module 7631 (CollectiblesPurchaseStore)
+// Module 7630 (CollectiblesPurchaseStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

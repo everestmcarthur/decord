@@ -1,13 +1,13 @@
-// Module ID: 8325
-// Function ID: 8326
+// Module ID: 8323
+// Function ID: 8324
 // Name: useUserProfileGradientColors
-// Dependencies: [19, 4599, 504, 4317, 7258, 8315, 2]
+// Dependencies: [19, 4598, 504, 4317, 7257, 8313, 2]
 // Exports: useUserProfileGradientColors
 
-// Module 8325 (useUserProfileGradientColors)
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8315 */;
+// Module 8323 (useUserProfileGradientColors)
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8313 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 const require = globalThis.__r;
 

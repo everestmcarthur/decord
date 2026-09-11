@@ -1,9 +1,12 @@
 // Module ID: 14085
 // Function ID: 14086
-// Dependencies: [14083]
+// Dependencies: [14084]
 
 // Module 14085
-import _mod14083 from "module_14083" /* 14083 */;
+import _mod14084 from "module_14084" /* 14084 */;
 
 
-export default (arg0, arg1) => _mod14083(arg0, arg1, true);
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod14084(arg0, arg1, closure_0));
+};

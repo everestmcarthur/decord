@@ -1,20 +1,20 @@
-// Module ID: 13042
-// Function ID: 13043
+// Module ID: 13040
+// Function ID: 13041
 // Name: SuspiciousDownloadActionSheet
-// Dependencies: [19, 21, 4607, 576, 1611, 7224, 5025, 5744, 4603, 1114, 5027, 4574, 4295, 2]
+// Dependencies: [19, 21, 4606, 576, 1611, 7223, 5024, 5743, 4602, 1114, 5026, 4573, 4295, 2]
 // Exports: default
 
-// Module 13042 (SuspiciousDownloadActionSheet)
+// Module 13040 (SuspiciousDownloadActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import openURLDefault from "openURL" /* 4295 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { padding: nativeDefault.space.PX_12 }, title: { textAlign: "center" }, body: { textAlign: "center" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,17 +28,17 @@ export default function SuspiciousDownloadActionSheet(href) {
   const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items;
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(5744).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [closure_3(href(5743).TrafficConeSpotIllustration, {}), , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1114).intl;
   obj4.children = intl.string(href(1114).t.XtDo9Z);
-  items1[1] = closure_3(href(4603).Text, obj4);
+  items1[1] = closure_3(href(4602).Text, obj4);
   const obj5 = { style: tmp.body, variant: "text-md/medium", children: null };
   const intl2 = href(1114).intl;
   obj5.children = intl2.string(href(1114).t.L9yFko);
-  items1[2] = closure_3(href(4603).Text, obj5);
+  items1[2] = closure_3(href(4602).Text, obj5);
   obj3.children = items1;
-  const items2 = [closure_4(href(5025).Stack, obj3), ];
+  const items2 = [closure_4(href(5024).Stack, obj3), ];
   const obj6 = { spacing: 8, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = href(1114).intl;
@@ -46,7 +46,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj7.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  const items3 = [closure_3(href(5027).Button, obj7), ];
+  const items3 = [closure_3(href(5026).Button, obj7), ];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = href(1114).intl;
   obj8.text = intl4.string(href(1114).t["/bHu89"]);
@@ -54,10 +54,10 @@ export default function SuspiciousDownloadActionSheet(href) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openURLDefault(href, true);
   };
-  items3[1] = closure_3(href(5027).Button, obj8);
+  items3[1] = closure_3(href(5026).Button, obj8);
   obj6.children = items3;
-  items2[1] = closure_4(href(5025).Stack, obj6);
+  items2[1] = closure_4(href(5024).Stack, obj6);
   obj2.children = items2;
-  obj.children = closure_4(href(5025).Stack, obj2);
-  return closure_3(href(7224).BottomSheet, obj);
+  obj.children = closure_4(href(5024).Stack, obj2);
+  return closure_3(href(7223).BottomSheet, obj);
 };

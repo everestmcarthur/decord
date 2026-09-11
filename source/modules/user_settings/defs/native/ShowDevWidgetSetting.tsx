@@ -1,15 +1,15 @@
 // Module ID: 15638
 // Function ID: 15639
 // Name: ShowDevWidgetSetting
-// Dependencies: [7792, 15639, 504, 11564, 15640, 14897, 2]
+// Dependencies: [7791, 15639, 504, 11562, 15640, 14897, 2]
 
 // Module 15638 (ShowDevWidgetSetting)
 import initialize from "initialize" /* 504 */;
 import DevToolsActionCreators from "DevToolsActionCreators" /* 15639 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7792 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7791 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     return "Show Dev Tools Widget";

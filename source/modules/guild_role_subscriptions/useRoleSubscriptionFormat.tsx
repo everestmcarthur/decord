@@ -1,10 +1,10 @@
-// Module ID: 17807
-// Function ID: 17808
+// Module ID: 17806
+// Function ID: 17807
 // Name: useRoleSubscriptionFormat
 // Dependencies: [19, 2016, 2015, 1979, 15266, 1074, 504, 2]
 // Exports: default
 
-// Module 17807 (useRoleSubscriptionFormat)
+// Module 17806 (useRoleSubscriptionFormat)
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;

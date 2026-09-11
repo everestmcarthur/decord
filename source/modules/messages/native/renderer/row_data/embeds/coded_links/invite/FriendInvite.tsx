@@ -1,14 +1,14 @@
-// Module ID: 13311
-// Function ID: 13312
+// Module ID: 13309
+// Function ID: 13310
 // Name: FriendInvite
-// Dependencies: [17, 4255, 7809, 8020, 1114, 4451, 1396, 2]
+// Dependencies: [17, 4255, 7808, 8019, 1114, 4451, 1396, 2]
 // Exports: createFriendInvite
 
-// Module 13311 (FriendInvite)
+// Module 13309 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import Constants from "Constants" /* 7809 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8020 */;
+import Constants from "Constants" /* 7808 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8019 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import size from "module_2" /* 2 */;
 

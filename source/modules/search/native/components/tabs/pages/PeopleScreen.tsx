@@ -1,21 +1,21 @@
 // Module ID: 16767
 // Function ID: 16768
 // Name: PeopleScreen
-// Dependencies: [5, 19, 12460, 12434, 7953, 7952, 21, 12435, 504, 16726, 16722, 4620, 12453, 16768, 16718, 16730, 2]
+// Dependencies: [5, 19, 12458, 12432, 7952, 7951, 21, 12433, 504, 16726, 16722, 4619, 12451, 16768, 16718, 16730, 2]
 
 // Module 16767 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12453 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12460 */;
-import SearchQueryStore from "SearchQueryStore" /* 12434 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12458 */;
+import SearchQueryStore from "SearchQueryStore" /* 12432 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(7953);
+const SearchConstants = fn(7952);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-let closure_9 = fn(7952).SearchResultContentEntityTypes;
+let closure_9 = fn(7951).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");

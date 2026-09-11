@@ -1,17 +1,17 @@
 // Module ID: 16457
 // Function ID: 16458
 // Name: YouBarAvatarDefault
-// Dependencies: [19, 17, 15156, 1074, 21, 4607, 576, 4308, 1178, 8907, 8850, 2]
+// Dependencies: [19, 17, 15156, 1074, 21, 4606, 576, 4308, 1178, 8905, 8848, 2]
 
 // Module 16457 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import useToken from "useToken" /* 4308 */;
-import ReactionIcon from "ReactionIcon" /* 8850 */;
-import ClipView from "ClipView" /* 8907 */;
+import ReactionIcon from "ReactionIcon" /* 8848 */;
+import ClipView from "ClipView" /* 8905 */;
 import noop from "module_19" /* 19 */;
 
-const ClipViewDefault = tmp4(8907);
+const ClipViewDefault = tmp4(8905);
 require = fn;
 function AvatarDefault() {
   const tmp = closure_14();
@@ -24,7 +24,7 @@ function AvatarDefault() {
   const result = num / 2;
   const sum = result + tmp2(1178).STATUS_PADDING;
   const diff = tmp7 - sum - num / 4 * 2;
-  const point = { shape: tmp2(8907).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
+  const point = { shape: tmp2(8905).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   const obj3 = { style: null, children: null };
   size = { height: tmp2(1178).AVATAR_SIZE_MAP[tmp6], width: tmp2(1178).AVATAR_SIZE_MAP[tmp6], position: "relative" };
   obj3.style = size;
@@ -92,7 +92,7 @@ const YouBarConstants = fn(15156);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { placeholderAvatar: { borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, justifyContent: "center", alignItems: "center" }, placeholderAvatarBackground: null, avatarShadow: null };
 let rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round };
 obj.placeholderAvatarBackground = rect;

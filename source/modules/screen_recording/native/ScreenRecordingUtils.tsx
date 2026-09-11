@@ -1,12 +1,12 @@
 // Module ID: 16004
 // Function ID: 16005
 // Name: ScreenRecordingUtils
-// Dependencies: [5, 17, 16003, 4951, 16005, 16006, 4574, 16007, 1896, 10278, 5180, 8291, 10277, 1477, 2]
+// Dependencies: [5, 17, 16003, 4950, 16005, 16006, 4573, 16007, 1896, 10276, 5179, 8290, 10275, 1477, 2]
 // Exports: handleRecordingPhase, handleStopAndSend
 
 // Module 16004 (ScreenRecordingUtils)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
-import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10278 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10276 */;
 import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16005 */;
 import StudyConfig from "StudyConfig" /* 16006 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

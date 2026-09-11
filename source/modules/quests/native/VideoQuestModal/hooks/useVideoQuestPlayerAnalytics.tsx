@@ -1,18 +1,18 @@
 // Module ID: 15192
 // Function ID: 15193
 // Name: useVideoQuestPlayerAnalytics
-// Dependencies: [19, 17, 4656, 1074, 11582, 7791, 11608, 15193, 15071, 7779, 5499, 15078, 7675, 7680, 2]
+// Dependencies: [19, 17, 4655, 1074, 11580, 7790, 11606, 15193, 15071, 7778, 5498, 15078, 7674, 7679, 2]
 // Exports: default
 
 // Module 15192 (useVideoQuestPlayerAnalytics)
-import QuestTypes from "QuestTypes" /* 5499 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7675 */;
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7779 */;
-import AnalyticsActions from "AnalyticsActions" /* 7791 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11608 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7674 */;
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7778 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11606 */;
 import AdsVideoTypes from "AdsVideoTypes" /* 15071 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 4656 */;
+import NetworkStore from "NetworkStore" /* 4655 */;
 
 require = fn;
 const AppState = fn(17).AppState;
@@ -98,13 +98,13 @@ export default function useVideoQuestPlayerAnalytics(duration) {
   const items2 = [playerState, handlePlayerStateChange];
   const effect2 = questId.useEffect(() => {
     if (AdsVideoTypes.PlayerState.PLAYING === playerState) {
-      handlePlayerStateChange(tmp2(7779).VideoPlayerState.PLAYING, null);
+      handlePlayerStateChange(tmp2(7778).VideoPlayerState.PLAYING, null);
     } else if (tmp2(15071).PlayerState.PAUSED === tmp) {
-      handlePlayerStateChange(tmp2(7779).VideoPlayerState.PAUSED, null);
+      handlePlayerStateChange(tmp2(7778).VideoPlayerState.PAUSED, null);
     } else if (tmp2(15071).PlayerState.ENDED === tmp) {
-      handlePlayerStateChange(tmp2(7779).VideoPlayerState.ENDED, null);
+      handlePlayerStateChange(tmp2(7778).VideoPlayerState.ENDED, null);
     } else if (tmp2(15071).PlayerState.ERRORED === tmp) {
-      handlePlayerStateChange(tmp2(7779).VideoPlayerState.PAUSED, null);
+      handlePlayerStateChange(tmp2(7778).VideoPlayerState.PAUSED, null);
     }
   }, items2);
   questId.useRef(null);
@@ -269,7 +269,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
     obj.trackQuestEvent(obj2);
     obj5 = questImpression;
     if (tmpResult.isSourceError(error)) {
-      const obj6 = { name: tmp(7680).MetricEvents.QUEST_VIDEO_ERROR, tags: null };
+      const obj6 = { name: tmp(7679).MetricEvents.QUEST_VIDEO_ERROR, tags: null };
       const _HermesInternal = HermesInternal;
       const items = ["quest_id:" + tmp3, "error_type:SOURCE_ERROR"];
       obj6.tags = items;

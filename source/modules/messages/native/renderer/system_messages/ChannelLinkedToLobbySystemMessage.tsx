@@ -1,14 +1,14 @@
-// Module ID: 8119
-// Function ID: 8120
+// Module ID: 8118
+// Function ID: 8119
 // Name: ChannelLinkedToLobbySystemMessage
-// Dependencies: [4835, 1074, 8028, 8035, 8037, 2024, 1114, 8039, 2]
+// Dependencies: [4834, 1074, 8027, 8034, 8036, 2024, 1114, 8038, 2]
 // Exports: createChannelLinkedToLobbySystemMessage
 
-// Module 8119 (ChannelLinkedToLobbySystemMessage)
+// Module 8118 (ChannelLinkedToLobbySystemMessage)
 import util from "util" /* 1114 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8028 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8035 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8027 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 
 require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -30,7 +30,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
     const obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj2.usernameOnClick = tmp(8037)(obj3);
+    obj2.usernameOnClick = tmp(8036)(obj3);
     obj2.applicationName = application.name;
     const obj4 = { linkColor: tmp3.defaultUsernameColor, medium: true };
     obj2.applicationNameOnClick = obj4;
@@ -41,7 +41,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const obj6 = { content: null };
     const intl = util.intl;
     obj6.content = intl.formatToParts(util.t.gZfhOw, obj2);
-    const merged = Object.assign(tmp(8039)(message));
+    const merged = Object.assign(tmp(8038)(message));
     return obj6;
   }
 };

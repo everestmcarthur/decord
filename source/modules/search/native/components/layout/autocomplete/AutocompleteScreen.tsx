@@ -1,25 +1,25 @@
 // Module ID: 16809
 // Function ID: 16810
 // Name: AutocompleteScreen
-// Dependencies: [32, 19, 1957, 4255, 1371, 12437, 12434, 7953, 1074, 21, 504, 16726, 12433, 12456, 12453, 4451, 4760, 12435, 16810, 12441, 12436, 16768, 16718, 1114, 16730, 2]
+// Dependencies: [32, 19, 1957, 4255, 1371, 12435, 12432, 7952, 1074, 21, 504, 16726, 12431, 12454, 12451, 4451, 4759, 12433, 16810, 12439, 12434, 16768, 16718, 1114, 16730, 2]
 
 // Module 16809 (AutocompleteScreen)
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12433 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12453 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12456 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12431 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
 import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12437 */;
-import SearchQueryStore from "SearchQueryStore" /* 12434 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12435 */;
+import SearchQueryStore from "SearchQueryStore" /* 12432 */;
 
 require = fn;
-const SearchConstants = fn(7953);
+const SearchConstants = fn(7952);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1074);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);

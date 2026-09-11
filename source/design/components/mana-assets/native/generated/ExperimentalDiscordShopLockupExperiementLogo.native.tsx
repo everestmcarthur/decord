@@ -1,15 +1,15 @@
-// Module ID: 6045
-// Function ID: 6046
+// Module ID: 6044
+// Function ID: 6045
 // Name: ExperimentalDiscordShopLockupExperiementLogo
-// Dependencies: [17, 21, 576, 4308, 6046, 2]
+// Dependencies: [17, 21, 576, 4308, 6045, 2]
 // Exports: ExperimentalDiscordShopLockupExperiementLogo
 
-// Module 6045 (ExperimentalDiscordShopLockupExperiementLogo)
+// Module 6044 (ExperimentalDiscordShopLockupExperiementLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import _modDef6046 from "module_6046" /* 6046 */;
+import _modDef6045 from "module_6045" /* 6045 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -46,7 +46,7 @@ export const ExperimentalDiscordShopLockupExperiementLogo = function Experimenta
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6046 };
+  obj4.source = { uri: _modDef6045 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

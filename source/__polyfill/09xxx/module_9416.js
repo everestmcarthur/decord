@@ -1,0 +1,9 @@
+// Module ID: 9416
+// Function ID: 9417
+// Dependencies: [1122]
+
+// Module 9416
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/AppIcon", width: 60, height: 60, scales: [2, 3], hash: "2a589a040df4c6bcca56de9fa304d36a", name: "AppIcon", type: "png" });

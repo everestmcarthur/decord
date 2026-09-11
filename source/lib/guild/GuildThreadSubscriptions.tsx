@@ -1,9 +1,9 @@
-// Module ID: 7361
-// Function ID: 7362
+// Module ID: 7360
+// Function ID: 7361
 // Name: GuildThreadSubscriptions
 // Dependencies: [1437, 2]
 
-// Module 7361 (GuildThreadSubscriptions)
+// Module 7360 (GuildThreadSubscriptions)
 import privDefault from "priv" /* 1437 */;
 import size from "module_2" /* 2 */;
 

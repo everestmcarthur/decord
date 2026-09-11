@@ -1,24 +1,24 @@
-// Module ID: 12350
-// Function ID: 12351
+// Module ID: 12348
+// Function ID: 12349
 // Name: VoiceMessageButton
-// Dependencies: [5, 32, 19, 17, 4297, 7753, 1957, 4948, 12055, 12056, 1074, 4600, 4817, 21, 4607, 576, 8048, 4464, 4814, 12351, 4343, 11622, 1477, 11969, 5179, 5180, 7530, 9402, 11764, 1109, 4305, 1114, 10181, 4465, 5191, 4304, 9852, 6727, 12353, 12334, 10097, 2]
+// Dependencies: [5, 32, 19, 17, 4297, 7752, 1957, 4947, 12053, 12054, 1074, 4599, 4816, 21, 4606, 576, 8047, 4464, 4813, 12349, 4343, 11620, 1477, 11967, 5178, 5179, 7529, 9400, 11762, 1109, 4305, 1114, 10179, 4465, 5190, 4304, 9850, 6726, 12351, 12332, 10095, 2]
 
-// Module 12350 (VoiceMessageButton)
+// Module 12348 (VoiceMessageButton)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 8048 */;
-import isChannelFocused from "isChannelFocused" /* 10181 */;
-import VoiceMessageUtils from "VoiceMessageUtils" /* 12351 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import XSmallBoldIcon from "XSmallBoldIcon" /* 8047 */;
+import isChannelFocused from "isChannelFocused" /* 10179 */;
+import VoiceMessageUtils from "VoiceMessageUtils" /* 12349 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4297 */;
-import PendingReplyStore from "PendingReplyStore" /* 7753 */;
+import PendingReplyStore from "PendingReplyStore" /* 7752 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import DraftStore from "DraftStore" /* 4948 */;
+import DraftStore from "DraftStore" /* 4947 */;
 
 const require = globalThis.__r;
 
@@ -34,16 +34,16 @@ function triggerHapticGuarded() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
-const VoiceMessagesUIStore = fn(12055);
+const VoiceMessagesUIStore = fn(12053);
 ({ setIsVoiceMessageButtonMounted: closure_12, setIsUsingHoldGesture: map1, setVoiceMessageAnimationState: closure_14, showVoiceMessagesTooltip: closure_15, useVoiceMessagesUIStore: closure_16, setShowRecordingOverlay: closure_17, hideVoiceMessagesTooltip: closure_18 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12056);
+const VoiceMessageConstants = fn(12054);
 ({ VoiceMessageAnimationState: closure_19, VOICE_RECORDING_MIN_DURATION_MILLIS: closure_20 } = VoiceMessageConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_21, ComponentActionsKeyed: closure_22, MessageFlags: closure_23 } = Constants);
-const MessageSendLocation = fn(4600).MessageSendLocation;
-const NativePermissionTypes = fn(4817).NativePermissionTypes;
+const MessageSendLocation = fn(4599).MessageSendLocation;
+const NativePermissionTypes = fn(4816).NativePermissionTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { icon: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 } };
 let closure_27 = createStyles.createStyles(obj);
 const __initData = { code: "function VoiceMessageButtonTsx1(newValue){const{voiceMessageAnimationState,runOnJS,triggerHapticGuarded}=this.__closure;if(voiceMessageAnimationState.get()[1]===newValue)return;const prevValue=voiceMessageAnimationState.get()[1];voiceMessageAnimationState.set([prevValue,newValue]);runOnJS(triggerHapticGuarded)();}" };
@@ -86,56 +86,129 @@ export default noop.memo((disabled) => {
   currentState = noop.useRef(true);
   closure_8 = noop.useRef(currentState.currentState);
   closure_9 = noop.useRef(null);
-  const tmp9 = sharedValue1(11622)();
-  _require = sharedValue(function*(arg0) {
-    closure_129_2 = yield closure_0(12351).endAudioRecording();
-    const data = closure_129_2.data;
-    const startTimeMillis = closure_129_2.startTimeMillis;
-    closure_1_6(false);
-    if (closure_129_0) {
-      closure_1_9.current = closure_129_1;
-      let result = closure_0(12351).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
-    }
-    if (data.durationSecs < closure_2_20 / 1000) {
-      const result1 = closure_0(12351).emitVoiceMessageRecorded(closure_0(11969).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
-      __initData();
-    }
-    const result2 = closure_0(12351).emitVoiceMessageRecorded(closure_0(11969).VoiceMessageRecordingResult.SENT, data.durationSecs, startTimeMillis);
-    const channel = callback.getChannel(closure_1);
-    if (null != channel) {
-      const cloudUpload = new closure_0(5179).CloudUpload({ uri: data.filename, originalUri: data.filename, mimeType: "audio/ogg", filename: "voice-message.ogg", platform: closure_0(5180).UploadPlatform.REACT_NATIVE, durationSecs: data.durationSecs, waveform: data.waveform }, channel.id);
-      const items = [cloudUpload];
-      closure_129_6 = items;
-      const pendingReply2 = pendingReply.getPendingReply(closure_1);
-      const sendMessageOptionsForReply = sharedValue1(7530).getSendMessageOptionsForReply(pendingReply2);
-      { uri: data.filename, originalUri: data.filename, mimeType: "audio/ogg", filename: "voice-message.ogg", platform: closure_0(5180).UploadPlatform.REACT_NATIVE, durationSecs: data.durationSecs, waveform: data.waveform };
-      const id = channel.id;
-      const obj17 = { flags: constants3.IS_VOICE_MESSAGE, location: constants4.VOICE_MESSAGE, attachmentsToUpload: closure_129_6, scheduledTimestamp: null, onAttachmentUploadError: null };
-      const scheduledMessage = callback1.getScheduledMessage(closure_1);
-      let scheduledTimestamp;
-      if (scheduledMessage != null) {
-        scheduledTimestamp = scheduledMessage.scheduledTimestamp;
+  const tmp9 = sharedValue1(11620)();
+  _require = sharedValue(function*(arg0, value) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
       }
-      obj17.scheduledTimestamp = scheduledTimestamp;
-      obj17.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
-        const obj = closure_0(closure_2[27]);
-        const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
-      };
-      const merged = Object.assign(sendMessageOptionsForReply);
-      sharedValue1(7530).sendMessage(id, { content: "", tts: false, invalidEmojis: [], validNonShortcutEmojis: [] }, undefined, obj17);
-      sharedValue1(7530);
-      closure_0(11764).deletePendingReply(closure_1);
-      closure_0(11764);
-      sharedValue1(7530);
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            dependencyMap = tmp5;
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            ({ isCancelling: closure_129_0, cancelReason } = closure_0);
+            if (cancelReason === undefined) {
+              cancelReason = closure_0(11967).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
+            }
+            closure_129_1 = cancelReason;
+            closure_129_2 = undefined;
+            let data;
+            let startTimeMillis;
+            let channel;
+            closure_129_6 = undefined;
+            let pendingReply2;
+            let sendMessageOptionsForReply;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            c3 = 2;
+            c4 = 1;
+            const obj8 = { value: closure_0(12349).endAudioRecording(), done: false };
+            return obj8;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_129_2 = value;
+          data = closure_129_2.data;
+          startTimeMillis = closure_129_2.startTimeMillis;
+          closure_1_6(false);
+          if (closure_129_0) {
+            closure_1_9.current = closure_129_1;
+            let result = closure_0(12349).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
+            c4 = 3;
+            const obj10 = { value: undefined, done: true };
+            return obj10;
+          } else if (data.durationSecs < closure_2_20 / 1000) {
+            const result1 = closure_0(12349).emitVoiceMessageRecorded(closure_0(11967).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
+            __initData();
+            c4 = 3;
+            const obj11 = { value: undefined, done: true };
+            return obj11;
+          } else {
+            const result2 = closure_0(12349).emitVoiceMessageRecorded(closure_0(11967).VoiceMessageRecordingResult.SENT, data.durationSecs, startTimeMillis);
+            channel = callback.getChannel(closure_1);
+            if (null != channel) {
+              const obj13 = { uri: data.filename, originalUri: data.filename, mimeType: "audio/ogg", filename: "voice-message.ogg", platform: closure_0(5179).UploadPlatform.REACT_NATIVE, durationSecs: data.durationSecs, waveform: data.waveform };
+              const cloudUpload = new closure_0(5178).CloudUpload(obj13, channel.id);
+              const items = [cloudUpload];
+              closure_129_6 = items;
+              pendingReply2 = pendingReply.getPendingReply(closure_1);
+              sendMessageOptionsForReply = sharedValue1(7529).getSendMessageOptionsForReply(pendingReply2);
+              const obj15 = sharedValue1(7529);
+              const id = channel.id;
+              const obj16 = { content: "", tts: false, invalidEmojis: [], validNonShortcutEmojis: [] };
+              const obj17 = { flags: constants3.IS_VOICE_MESSAGE, location: constants4.VOICE_MESSAGE, attachmentsToUpload: closure_129_6, scheduledTimestamp: null, onAttachmentUploadError: null };
+              const scheduledMessage = callback1.getScheduledMessage(closure_1);
+              let scheduledTimestamp;
+              if (scheduledMessage != null) {
+                scheduledTimestamp = scheduledMessage.scheduledTimestamp;
+              }
+              obj17.scheduledTimestamp = scheduledTimestamp;
+              obj17.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
+                const obj = closure_0(closure_2[27]);
+                const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
+              };
+              const merged = Object.assign(sendMessageOptionsForReply);
+              obj15.sendMessage(id, obj16, undefined, obj17);
+              const obj14 = sharedValue1(7529);
+              closure_0(11762).deletePendingReply(closure_1);
+              let obj = closure_0(11762);
+            }
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        }
+      } catch (tmp47) {
+        c4 = tmp;
+        throw tmp47;
+      }
     }
-    yield "HermesInternal";
-    closure_1 = tmp2;
-    ({ isCancelling: closure_129_0, cancelReason } = closure_0);
-    if (cancelReason === undefined) {
-      cancelReason = closure_0(11969).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
-    }
-    closure_129_1 = cancelReason;
-    return "PX_16";
   });
   const items2 = [channelId, tmp5[2]];
   const callback = noop.useCallback(function() {
@@ -267,7 +340,7 @@ export default noop.memo((disabled) => {
               closure_1_6(false);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: cancel(12351).endAudioRecording(), done: false };
+              const obj5 = { value: cancel(12349).endAudioRecording(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -275,8 +348,8 @@ export default noop.memo((disabled) => {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_0 = value;
-            const result = cancel(12351).emitVoiceMessageRecorded(cancel(11969).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_128_0.data.durationSecs, closure_128_0.startTimeMillis);
-            const obj = cancel(12351);
+            const result = cancel(12349).emitVoiceMessageRecorded(cancel(11967).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_128_0.data.durationSecs, closure_128_0.startTimeMillis);
+            const obj = cancel(12349);
           }
           c3 = 3;
           const obj6 = { value, done: true };
@@ -491,7 +564,7 @@ export default noop.memo((disabled) => {
     }
   }, items9);
   let obj4 = { voiceMessageAnimationState: tmp, runOnJS: require("ReanimatedRexport").runOnJS, triggerHapticGuarded };
-  const tmp21 = sharedValue1(9852);
+  const tmp21 = sharedValue1(9850);
   let intl = require("util").intl;
   const tmp22 = sharedValue(function*(arg0, value) {
     if (c2 === 2) {
@@ -653,7 +726,7 @@ export default noop.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   let obj5 = { gesture: memo, children: null };
-  let obj6 = { ref: sharedValue1(12353)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null };
+  let obj6 = { ref: sharedValue1(12351)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null };
   const tmp21Result = tmp21(sharedValue(function*(arg0, value) {
     if (c2 === 2) {
       c2 = 3;
@@ -712,6 +785,6 @@ export default noop.memo((disabled) => {
   obj6.accessibilityActions = accessibilityActions;
   obj6.onAccessibilityAction = onAccessibilityAction;
   obj6.disabled = disabled;
-  obj5.children = jsx(sharedValue1(12334), { ref: sharedValue1(12353)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null });
+  obj5.children = jsx(sharedValue1(12332), { ref: sharedValue1(12351)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null });
   return jsx(require("LegacyBaseButton").GestureDetector, { gesture: memo, children: null });
 });

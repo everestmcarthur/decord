@@ -1,13 +1,13 @@
-// Module ID: 10367
-// Function ID: 10368
+// Module ID: 10365
+// Function ID: 10366
 // Name: ExpressionPicker
-// Dependencies: [19, 17, 1219, 1074, 1374, 21, 4607, 576, 10368, 10369, 9885, 1481, 1609, 4787, 10371, 10374, 5014, 9886, 10375, 10455, 10477, 2]
+// Dependencies: [19, 17, 1219, 1074, 1374, 21, 4606, 576, 10366, 10367, 9883, 1481, 1609, 4786, 10369, 10372, 5013, 9884, 10373, 10453, 10475, 2]
 
-// Module 10367 (ExpressionPicker)
+// Module 10365 (ExpressionPicker)
 import nativeDefault from "native" /* 576 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4787 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10369 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10371 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10367 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10369 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { expressionPickerContainer: { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, position: "relative", paddingHorizontal: PADDING_HORIZONTAL }, expressionPickerContent: { flex: 1 }, segmentedControl: { paddingTop: 2 * PADDING_HORIZONTAL, paddingHorizontal: 0 }, segmentedControlUnpadded: { paddingHorizontal: 0 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, position: "relative", paddingHorizontal: PADDING_HORIZONTAL };

@@ -1,10 +1,10 @@
-// Module ID: 4788
-// Function ID: 4789
+// Module ID: 4787
+// Function ID: 4788
 // Name: UserGuildSettingsStore
-// Dependencies: [2014, 4247, 1961, 1957, 1979, 1371, 1074, 4258, 4789, 1084, 4248, 12, 1384, 573, 11, 504, 2]
+// Dependencies: [2014, 4247, 1961, 1957, 1979, 1371, 1074, 4258, 4788, 1084, 4248, 12, 1384, 573, 11, 504, 2]
 // Exports: convertChannelOverridesToMap, getGuildDefaults
 
-// Module 4788 (UserGuildSettingsStore)
+// Module 4787 (UserGuildSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -211,7 +211,7 @@ const ChannelRecord = fn(1961);
 const Constants = fn(1074);
 const UserNotificationSettings = Constants.UserNotificationSettings;
 const AccountNotificationFlags = fn(4258).AccountNotificationFlags;
-const UnreadSetting = fn(4789).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};

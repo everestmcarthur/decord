@@ -1,24 +1,24 @@
-// Module ID: 17151
-// Function ID: 17152
+// Module ID: 17150
+// Function ID: 17151
 // Name: SoundboardSoundPickerList
-// Dependencies: [19, 17, 1371, 17145, 21, 4607, 576, 5072, 1114, 10435, 504, 4264, 10058, 10398, 17152, 5034, 12, 5636, 1178, 17160, 10482, 4570, 8810, 10397, 7146, 4603, 2]
+// Dependencies: [19, 17, 1371, 17144, 21, 4606, 576, 5071, 1114, 10433, 504, 4264, 10056, 10396, 17151, 5033, 12, 5635, 1178, 17159, 10480, 4569, 8808, 10395, 7145, 4602, 2]
 
-// Module 17151 (SoundboardSoundPickerList)
+// Module 17150 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
-import ClockIcon from "ClockIcon" /* 4570 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import SoundboardTypes from "SoundboardTypes" /* 5072 */;
-import GuildIcon from "GuildIcon" /* 5636 */;
-import FastListDefault from "FastList" /* 7146 */;
-import TrophyIcon from "TrophyIcon" /* 8810 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10058 */;
-import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10397 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10398 */;
-import chunkDefault from "chunk" /* 10435 */;
-import _modDef10482 from "module_10482" /* 10482 */;
-import _modDef17160 from "module_17160" /* 17160 */;
+import ClockIcon from "ClockIcon" /* 4569 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import SoundboardTypes from "SoundboardTypes" /* 5071 */;
+import GuildIcon from "GuildIcon" /* 5635 */;
+import FastListDefault from "FastList" /* 7145 */;
+import TrophyIcon from "TrophyIcon" /* 8808 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10056 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10395 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10396 */;
+import chunkDefault from "chunk" /* 10433 */;
+import _modDef10480 from "module_10480" /* 10480 */;
+import _modDef17159 from "module_17159" /* 17159 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -30,18 +30,18 @@ function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
   if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
-  } else if (tmp(5072).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp(5071).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl4 = tmp(1114).intl;
     return intl4.string(tmp(1114).t.Rtvk9X);
-  } else if (tmp(5072).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp(5071).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp(1114).intl;
     return intl3.string(tmp(1114).t.y3LQCG);
-  } else if (tmp(5072).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp(5071).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl2 = tmp(1114).intl;
     return intl2.string(tmp(1114).t["+cGVV6"]);
-  } else if (tmp(5072).SoundboardSoundGridSectionType.SEARCH === type) {
+  } else if (tmp(5071).SoundboardSoundGridSectionType.SEARCH === type) {
     return null;
-  } else if (tmp(5072).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+  } else if (tmp(5071).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
     const intl = tmp(1114).intl;
     const obj = { guildName: category.category.categoryInfo.guild.name };
     return intl.formatToPlainString(tmp(1114).t.GXs41w, obj);
@@ -87,8 +87,8 @@ function SoundPickerButtonRow(row) {
             obj.style = soundButtonNotFirst;
             obj.isSectionLocked = isSectionLocked;
             const _HermesInternal = HermesInternal;
-            return React5(tmp(17152).SoundButton, obj, "" + section.category.key + "-" + sound.soundId);
-          } else if (tmp(5072).SoundboardSoundItemType.ADD_SOUND === type) {
+            return React5(tmp(17151).SoundButton, obj, "" + section.category.key + "-" + sound.soundId);
+          } else if (tmp(5071).SoundboardSoundItemType.ADD_SOUND === type) {
             const _Error = Error;
             const error = new Error("ADD_SOUND Not implemented");
             throw error;
@@ -101,12 +101,12 @@ function SoundPickerButtonRow(row) {
   let obj = row(section[10]);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17145);
+const SoundboardStyleConstants = fn(17144);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let sum = SOUND_BUTTON_HEIGHT + 8;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { row: { height: sum, display: "flex", flexDirection: "row", paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionHeader: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionIcon: { height: 16, width: 16, borderRadius: 8, marginRight: 4 }, soundButtonNotFirst: { marginLeft: SOUND_ROW_SPACING } };
 let closure_10 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING };
@@ -164,8 +164,8 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
     START = END;
   }
   const currentUser = closure_10();
-  const fontScale = channel(5034).useFontScale();
-  let obj = channel(5034);
+  const fontScale = channel(5033).useFontScale();
+  let obj = channel(5033);
   let tmp3 = (function getFastListSectionsFromCategories(categories, arg1, fontScale) {
     const items = [];
     const iter = categories[Symbol.iterator]();
@@ -307,10 +307,10 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: tmp11.sectionIcon };
         let tmp8Result = tmp8(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef17160, style: tmp11.sectionIcon };
+        const obj4 = { source: _modDef17159, style: tmp11.sectionIcon };
         tmp8Result = tmp8(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-        const obj5 = { source: _modDef10482, style: tmp11.sectionIcon };
+        const obj5 = { source: _modDef10480, style: tmp11.sectionIcon };
         tmp8Result = tmp8(native.Icon, obj5);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
         const obj6 = { style: tmp11.sectionIcon };

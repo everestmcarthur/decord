@@ -87,7 +87,7 @@ let closure_8 = async function _loadJsonAsset(arg0, value) {
           closure_130_5 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

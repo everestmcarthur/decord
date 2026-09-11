@@ -1,16 +1,15 @@
 // Module ID: 8604
 // Function ID: 8605
-// Dependencies: [41, 42, 93, 95, 98, 8560, 8583]
+// Dependencies: [41, 42, 93, 95, 98, 19, 8558]
 
 // Module 8604
-import _modDef8583 from "module_8583" /* 8583 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeImage = arg1;
+const FePointLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +29,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+class FePointLight {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
+    tmp = c2(this, FePointLight);
     tmp2 = closure_4;
-    obj = closure_4(FeImage);
+    obj = closure_4(FePointLight);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,18 +49,17 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef8583);
+_inherits(FePointLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(8560).warnUnimplementedFilter();
+    const result = FePointLight(8558).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FePointLight, items);
+importDefaultResultResult.displayName = "FePointLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -1,27 +1,27 @@
-// Module ID: 13068
-// Function ID: 13069
+// Module ID: 13066
+// Function ID: 13067
 // Name: MediaMessagePreview
-// Dependencies: [32, 19, 17, 7351, 7355, 1957, 4828, 8448, 1074, 21, 8007, 8212, 4607, 8381, 8745, 576, 504, 11410, 1114, 11, 13069, 11642, 11348, 7837, 11679, 6727, 11990, 11711, 4618, 2]
+// Dependencies: [32, 19, 17, 7350, 7354, 1957, 4827, 8446, 1074, 21, 8006, 8211, 4606, 8379, 8743, 576, 504, 11408, 1114, 11, 13067, 11640, 11346, 7836, 11677, 6726, 11988, 11709, 4617, 2]
 // Exports: default
 
-// Module 13068 (MediaMessagePreview)
+// Module 13066 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7837 */;
-import RowGeneratorDefault from "RowGenerator" /* 8007 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8212 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11348 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11642 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11711 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13069 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7836 */;
+import RowGeneratorDefault from "RowGenerator" /* 8006 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8211 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11346 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11640 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11709 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13067 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7351 */;
-import SearchMessageStore from "SearchMessageStore" /* 7355 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7350 */;
+import SearchMessageStore from "SearchMessageStore" /* 7354 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4828 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8448 */;
+import MessageStore from "MessageStore" /* 4827 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8446 */;
 
 require = fn;
 function MeasureMessage(message) {
@@ -105,11 +105,11 @@ const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = new RowGeneratorDefault();
 obj.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderEmbeds: false, ignoreMentioned: true, inlineAttachmentMedia: false, inlineEmbedMedia: false, renderReactions: true, renderAttachments: false, renderReplies: false, renderThreadEmbeds: false, renderPolls: false, renderForumPostActions: false, forcedTheme: ThemeTypes.DARK, forceHideSimpleEmbedContent: true });
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let closure_17 = createStyles.createStyles({ dummyLayout: { position: "absolute", top: 0, left: -9999, bottom: 0, width: "100%", opacity: 0 } });
-createStyles = fn(4607);
+createStyles = fn(4606);
 let closure_19 = createStyles.createNativeStyleProperties({ reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, reactionTextColor: nativeDefault.colors.REACTION_TEXT_DEFAULT, activeReactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT, activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT, activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT });
-createStyles = fn(4607);
+createStyles = fn(4606);
 let obj2 = { renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderEmbeds: false, ignoreMentioned: true, inlineAttachmentMedia: false, inlineEmbedMedia: false, renderReactions: true, renderAttachments: false, renderReplies: false, renderThreadEmbeds: false, renderPolls: false, renderForumPostActions: false, forcedTheme: ThemeTypes.DARK, forceHideSimpleEmbedContent: true };
 let obj5 = { reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, reactionTextColor: nativeDefault.colors.REACTION_TEXT_DEFAULT, activeReactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT, activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT, activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT };
 let closure_20 = createStyles.createNativeStyleProperties({ editedColor: nativeDefault.colors.TEXT_MUTED, seeMoreLabelColor: nativeDefault.colors.TEXT_DEFAULT });

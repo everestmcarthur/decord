@@ -1,8 +1,8 @@
-// Module ID: 9194
-// Function ID: 9195
+// Module ID: 9192
+// Function ID: 9193
 // Dependencies: [2]
 
-// Module 9194
+// Module 9192
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/cybercity.png.js");

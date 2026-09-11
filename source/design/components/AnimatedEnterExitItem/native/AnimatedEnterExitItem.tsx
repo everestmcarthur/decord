@@ -1,10 +1,10 @@
-// Module ID: 10061
-// Function ID: 10062
+// Module ID: 10059
+// Function ID: 10060
 // Name: AnimatedEnterExitItem
 // Dependencies: [19, 21, 4343, 4317, 2]
 // Exports: default
 
-// Module 10061 (AnimatedEnterExitItem)
+// Module 10059 (AnimatedEnterExitItem)
 import native from "native" /* 4317 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import noop from "module_19" /* 19 */;

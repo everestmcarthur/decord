@@ -1,12 +1,12 @@
-// Module ID: 7857
-// Function ID: 7858
+// Module ID: 7856
+// Function ID: 7857
 // Name: burst_reactions/BurstReactionEffectUtils
-// Dependencies: [5, 32, 19, 17, 4263, 7858, 1396, 1115, 7895, 2]
+// Dependencies: [5, 32, 19, 17, 4263, 7857, 1396, 1115, 7894, 2]
 // Exports: useBurstReactionAnimationSource, useSuperReactionAnimationSourceFromLocalImage
 
-// Module 7857 (burst_reactions/BurstReactionEffectUtils)
+// Module 7856 (burst_reactions/BurstReactionEffectUtils)
 import EmojiUtils from "EmojiUtils" /* 4263 */;
-import getBurstAnimation from "getBurstAnimation" /* 7858 */;
+import getBurstAnimation from "getBurstAnimation" /* 7857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -217,7 +217,7 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0, valu
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

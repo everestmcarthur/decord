@@ -1,19 +1,19 @@
-// Module ID: 9915
-// Function ID: 9916
+// Module ID: 9913
+// Function ID: 9914
 // Name: InstantInviteUtils
-// Dependencies: [1956, 1957, 2021, 4622, 4255, 1371, 7292, 1074, 7809, 5494, 9916, 1114, 2]
+// Dependencies: [1956, 1957, 2021, 4621, 4255, 1371, 7291, 1074, 7808, 5493, 9914, 1114, 2]
 // Exports: generateRowsForQuery, getMostRecentDMedUser, getUsersAlreadyJoined, groupInviteSuggestions, maxAgeString, urgentShareMessageString
 
-// Module 9915 (InstantInviteUtils)
+// Module 9913 (InstantInviteUtils)
 import util from "util" /* 1114 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5494 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5493 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7292 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7291 */;
 
 const require = globalThis.__r;
 
@@ -96,14 +96,14 @@ function addDmUsers(arg0) {
   }
 }
 const ChannelTypes = fn(1074).ChannelTypes;
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
+const InviteTargetTypes = fn(7808).InviteTargetTypes;
 const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-const dependencyMap = { [fn(9916).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9916).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9916).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9916).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9916).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9916).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9916).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9916).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9916).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9916).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
-let items = [fn(9916).INVITE_OPTIONS_14_DAYS, fn(9916).INVITE_OPTIONS_30_DAYS, fn(9916).INVITE_OPTIONS_60_DAYS];
+const dependencyMap = { [fn(9914).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9914).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9914).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9914).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9914).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9914).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9914).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9914).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9914).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9914).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let items = [fn(9914).INVITE_OPTIONS_14_DAYS, fn(9914).INVITE_OPTIONS_30_DAYS, fn(9914).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -135,25 +135,25 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(9916).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(9916).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(9916).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(9916).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(9916).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(9916).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(9916).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(9916).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(9916).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(9916).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(9916).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(9916).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(9916).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(9916).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(9916).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(9916).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(9916).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(9916).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(9916).INVITE_OPTIONS_100_TIMES
+  getMaxUsesOptions: fn(9914).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(9914).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(9914).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(9914).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(9914).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(9914).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(9914).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(9914).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(9914).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(9914).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(9914).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(9914).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(9914).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(9914).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(9914).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(9914).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(9914).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(9914).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(9914).INVITE_OPTIONS_100_TIMES
 };
 export { RowTypes };
 export const generateRowsForQuery = function generateRowsForQuery(arg0) {

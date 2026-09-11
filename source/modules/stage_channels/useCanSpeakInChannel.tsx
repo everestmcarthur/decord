@@ -1,12 +1,12 @@
-// Module ID: 9676
-// Function ID: 9677
+// Module ID: 9674
+// Function ID: 9675
 // Name: useCanSpeakInChannel
-// Dependencies: [502, 504, 4754, 2]
+// Dependencies: [502, 504, 4753, 2]
 // Exports: default
 
-// Module 9676 (useCanSpeakInChannel)
+// Module 9674 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4754 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4753 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;

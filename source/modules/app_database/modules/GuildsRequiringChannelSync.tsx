@@ -1,9 +1,9 @@
-// Module ID: 7725
-// Function ID: 7726
+// Module ID: 7724
+// Function ID: 7725
 // Name: GuildsRequiringChannelSync
 // Dependencies: [1961, 502, 1957, 2021, 2015, 1979, 4245, 1074, 1964, 1085, 1086, 3, 1986, 4236, 1256, 1242, 1384, 2]
 
-// Module 7725 (GuildsRequiringChannelSync)
+// Module 7724 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;

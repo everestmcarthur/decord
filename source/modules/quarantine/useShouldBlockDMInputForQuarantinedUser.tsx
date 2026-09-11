@@ -1,11 +1,11 @@
-// Module ID: 12529
-// Function ID: 12530
+// Module ID: 12527
+// Function ID: 12528
 // Name: useShouldBlockDMInputForQuarantinedUser
-// Dependencies: [4828, 1074, 12361, 504, 2]
+// Dependencies: [4827, 1074, 12359, 504, 2]
 // Exports: default
 
-// Module 12529 (useShouldBlockDMInputForQuarantinedUser)
-import MessageStore from "MessageStore" /* 4828 */;
+// Module 12527 (useShouldBlockDMInputForQuarantinedUser)
+import MessageStore from "MessageStore" /* 4827 */;
 
 const require = globalThis.__r;
 

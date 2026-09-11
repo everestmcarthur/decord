@@ -1,25 +1,25 @@
-// Module ID: 17452
-// Function ID: 17453
+// Module ID: 17451
+// Function ID: 17452
 // Name: GameConsoleManager
-// Dependencies: [5, 502, 1908, 4630, 4625, 4626, 4624, 9325, 4632, 3, 38, 9181, 10101, 7192, 4494, 9541, 1369, 4951, 1114, 17453, 9544, 2]
+// Dependencies: [5, 502, 1908, 4629, 4624, 4625, 4623, 9323, 4631, 3, 38, 9179, 10099, 7191, 1952, 9539, 1369, 4950, 1114, 17452, 9542, 2]
 
-// Module 17452 (GameConsoleManager)
+// Module 17451 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import Timers from "Timers" /* 4494 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9181 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9541 */;
-import _modDef17453 from "module_17453" /* 17453 */;
+import Timers from "Timers" /* 1952 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9179 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9539 */;
+import _modDef17452 from "module_17452" /* 17452 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
-import SessionsStore from "SessionsStore" /* 4625 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
-import GameConsoleStore from "GameConsoleStore" /* 4624 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import SessionsStore from "SessionsStore" /* 4624 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import GameConsoleStore from "GameConsoleStore" /* 4623 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 function syncLocalState() {
@@ -94,9 +94,9 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(9325);
+const GameConsoleConstants = fn(9323);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
-const MediaEngineContextTypes = fn(4632).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
 const prototype = function GameConsoleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -227,14 +227,14 @@ const prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      closure_1_0(9541).disconnectRemote();
-      const obj = closure_1_0(9541);
+      closure_1_0(9539).disconnectRemote();
+      const obj = closure_1_0(9539);
       const obj3 = { title: null, body: null };
       const intl = closure_1_0(1114).intl;
       obj3.title = intl.string(closure_1_0(1114).t.wGMxr3);
       const intl2 = closure_1_0(1114).intl;
       obj3.body = intl2.string(closure_1_0(1114).t.i5k8b5);
-      closure_1_1(4951).show(obj3);
+      closure_1_1(4950).show(obj3);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {
@@ -261,7 +261,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17453(device, result, error);
+          const tmp8Result = _modDef17452(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);
@@ -270,8 +270,8 @@ const prototype = function GameConsoleManager() {
               type = awaitingRemoteSessionInfo.type;
             }
             obj2.reconnectPlatformType = type;
-            const result1 = tmp6(9544).showSelfDismissableAlert(obj2);
-            const tmp6Result = tmp6(9544);
+            const result1 = tmp6(9542).showSelfDismissableAlert(obj2);
+            const tmp6Result = tmp6(9542);
           }
           if (set.has(error.code)) {
             const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;

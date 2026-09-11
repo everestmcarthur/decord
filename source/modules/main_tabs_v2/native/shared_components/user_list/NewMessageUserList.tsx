@@ -1,16 +1,16 @@
-// Module ID: 12461
-// Function ID: 12462
+// Module ID: 12459
+// Function ID: 12460
 // Name: NewMessageUserList
-// Dependencies: [32, 19, 17, 1957, 4255, 1371, 10951, 21, 4607, 576, 5569, 4451, 4760, 12, 10953, 1114, 4603, 10955, 10957, 11089, 12462, 2]
+// Dependencies: [32, 19, 17, 1957, 4255, 1371, 10949, 21, 4606, 576, 5568, 4451, 4759, 12, 10951, 1114, 4602, 10953, 10955, 11087, 12460, 2]
 // Exports: default, useSearchGDMNames
 
-// Module 12461 (NewMessageUserList)
+// Module 12459 (NewMessageUserList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5569 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -38,7 +38,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
           toLocaleLowerCaseResult1 = globalName.toLocaleLowerCase();
         }
         if (null != toLocaleLowerCaseResult1) {
-          if (tmp19(5569)(trimmed1, tmp7)) {
+          if (tmp19(5568)(trimmed1, tmp7)) {
             obj.return();
             return 1;
           }
@@ -49,7 +49,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
           toLocaleLowerCaseResult2 = nickname.toLocaleLowerCase();
         }
         if (null != toLocaleLowerCaseResult2) {
-          if (tmp19(5569)(trimmed1, tmp12)) {
+          if (tmp19(5568)(trimmed1, tmp12)) {
             obj.return();
             return 1;
           }
@@ -100,11 +100,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10951).UserRowModes;
+const UserRowModes = fn(10949).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

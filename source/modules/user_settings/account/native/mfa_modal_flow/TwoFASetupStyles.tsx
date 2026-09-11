@@ -1,13 +1,13 @@
-// Module ID: 14841
-// Function ID: 14842
+// Module ID: 14840
+// Function ID: 14841
 // Name: TwoFASetupStyles
-// Dependencies: [1074, 4607, 5576, 576, 2]
+// Dependencies: [1074, 4606, 5575, 576, 2]
 
-// Module 14841 (TwoFASetupStyles)
+// Module 14840 (TwoFASetupStyles)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import createStyles from "createStyles" /* 4607 */;
-import TextStyles from "TextStyles" /* 5576 */;
+import createStyles from "createStyles" /* 4606 */;
+import TextStyles from "TextStyles" /* 5575 */;
 import size from "module_2" /* 2 */;
 
 const obj = { text: { textAlign: "center", marginLeft: 20, marginRight: 20 }, modalHeader: null, modalBody: null };

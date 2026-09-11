@@ -1,16 +1,16 @@
-// Module ID: 14238
-// Function ID: 14239
+// Module ID: 14236
+// Function ID: 14237
 // Name: RefreshEmptyState
-// Dependencies: [19, 17, 1074, 21, 4607, 5576, 576, 8705, 5027, 4458, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 5575, 576, 8703, 5026, 4458, 2]
 // Exports: ThemedEmptyState
 
-// Module 14238 (RefreshEmptyState)
+// Module 14236 (RefreshEmptyState)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4458 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8705 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8703 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5576 */;
+import TextStyles_mod from "TextStyles" /* 5575 */;
 
 require = fn;
 class EmptyState {
@@ -81,7 +81,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

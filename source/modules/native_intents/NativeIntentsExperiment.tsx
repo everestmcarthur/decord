@@ -1,10 +1,10 @@
-// Module ID: 17945
-// Function ID: 17946
+// Module ID: 17944
+// Function ID: 17945
 // Name: NativeIntentsExperiment
-// Dependencies: [4521, 2]
+// Dependencies: [4520, 2]
 
-// Module 17945 (NativeIntentsExperiment)
-import createExperiment from "module_4521" /* 4521 */;
+// Module 17944 (NativeIntentsExperiment)
+import createExperiment from "module_4520" /* 4520 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", id: "2025-06_native_intents", label: "Native Intents", defaultConfig: { searchEnabled: false, clearEnabled: false, activityEnabled: false }, treatments: null };

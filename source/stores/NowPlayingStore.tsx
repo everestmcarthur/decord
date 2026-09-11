@@ -1,14 +1,14 @@
-// Module ID: 13804
-// Function ID: 13805
+// Module ID: 13802
+// Function ID: 13803
 // Name: NowPlayingStore
-// Dependencies: [7732, 4647, 1371, 1074, 13805, 504, 573, 2]
+// Dependencies: [7731, 4646, 1371, 1074, 13803, 504, 573, 2]
 
-// Module 13804 (NowPlayingStore)
+// Module 13802 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13805 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13803 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 import UserStore from "UserStore" /* 1371 */;
 
 function _handlePresenceUpdate(user) {

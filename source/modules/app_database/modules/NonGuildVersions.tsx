@@ -1,9 +1,9 @@
-// Module ID: 7729
-// Function ID: 7730
+// Module ID: 7728
+// Function ID: 7729
 // Name: NonGuildVersions
-// Dependencies: [5, 4428, 3, 7722, 12, 1986, 1090, 2]
+// Dependencies: [5, 4428, 3, 7721, 12, 1986, 1090, 2]
 
-// Module 7729 (NonGuildVersions)
+// Module 7728 (NonGuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -161,7 +161,7 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   }
 };
-const isCacheEnabled = fn(7722);
+const isCacheEnabled = fn(7721);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(_modDef12.throttle(() => {
     const databaseResult = DatabaseDaosDefault.database();

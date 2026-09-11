@@ -1,14 +1,14 @@
-// Module ID: 14636
-// Function ID: 14637
+// Module ID: 14634
+// Function ID: 14635
 // Name: DevToolsNavigator
-// Dependencies: [19, 17, 21, 7988, 7074, 14637, 7937, 15810, 9526, 4603, 576, 15643, 14748, 4574, 4810, 2]
+// Dependencies: [19, 17, 21, 7987, 7073, 14635, 7936, 15810, 9524, 4602, 576, 15643, 14745, 4573, 4809, 2]
 // Exports: navigateToDevTools
 
-// Module 14636 (DevToolsNavigator)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 14637 */;
+// Module 14634 (DevToolsNavigator)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 14635 */;
 import DevToolsContentDefault from "DevToolsContent" /* 15810 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo((screenKey) => {
   let str = screenKey.screenKey;
@@ -56,9 +56,9 @@ let closure_8 = noop.memo((screenKey) => {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(9526).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_4(closure_1_0(9524).HammerIcon, { size: "sm" }), ];
             const obj2 = { style: { marginLeft: closure_1_1(576).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-            items[1] = closure_1_4(closure_1_0(4603).Text, obj2);
+            items[1] = closure_1_4(closure_1_0(4602).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -89,9 +89,9 @@ let closure_8 = noop.memo((screenKey) => {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(9526).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_4(closure_1_0(9524).HammerIcon, { size: "sm" }), ];
           const obj2 = { style: { marginLeft: closure_1_1(576).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-          items[1] = closure_1_4(closure_1_0(4603).Text, obj2);
+          items[1] = closure_1_4(closure_1_0(4602).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },

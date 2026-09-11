@@ -1,13 +1,13 @@
-// Module ID: 13266
-// Function ID: 13267
+// Module ID: 13264
+// Function ID: 13265
 // Name: ProductDetailsActionSheetSkeleton
-// Dependencies: [19, 17, 21, 4607, 576, 5032, 4343, 4608, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 5031, 4343, 4607, 2]
 // Exports: default
 
-// Module 13266 (ProductDetailsActionSheetSkeleton)
+// Module 13264 (ProductDetailsActionSheetSkeleton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
+import timing from "timing" /* 4607 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { container: { flex: 1 }, scrollArea: { flex: 1 }, block: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, preview: null, info: null, title: null, description: null, price: null, purchaseSection: null, purchaseButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.preview = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, height: 280, borderRadius: nativeDefault.radii.md };
@@ -31,7 +31,7 @@ obj2.price = size2;
 let obj5 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.purchaseSection = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
-obj2.purchaseButton = { height: fn(5032).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5031).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 size = fn(2);

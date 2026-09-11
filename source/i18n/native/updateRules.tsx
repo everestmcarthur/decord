@@ -1,10 +1,10 @@
-// Module ID: 17361
-// Function ID: 17362
+// Module ID: 17360
+// Function ID: 17361
 // Name: updateRules
 // Dependencies: [19, 1074, 21, 4327, 4308, 576, 4301, 4303, 1178, 2]
 // Exports: default
 
-// Module 17361 (updateRules)
+// Module 17360 (updateRules)
 import native from "native" /* 1178 */;
 import LinkingDefault from "Linking" /* 4301 */;
 import _modDef4303 from "module_4303" /* 4303 */;

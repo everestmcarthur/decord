@@ -1,10 +1,10 @@
-// Module ID: 12402
-// Function ID: 12403
+// Module ID: 12400
+// Function ID: 12401
 // Name: useCanManageGuildDirectoryEntry
 // Dependencies: [1957, 1979, 4245, 1074, 504, 2]
 // Exports: default, useCanCreateOrAddGuildInDirectory
 
-// Module 12402 (useCanManageGuildDirectoryEntry)
+// Module 12400 (useCanManageGuildDirectoryEntry)
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4245 */;

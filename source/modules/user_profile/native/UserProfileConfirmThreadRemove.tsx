@@ -1,13 +1,13 @@
-// Module ID: 12721
-// Function ID: 12722
+// Module ID: 12719
+// Function ID: 12720
 // Name: UserProfileConfirmThreadRemove
-// Dependencies: [19, 21, 4451, 4957, 1114, 4957, 2]
+// Dependencies: [19, 21, 4451, 4956, 1114, 4956, 2]
 // Exports: default
 
-// Module 12721 (UserProfileConfirmThreadRemove)
+// Module 12719 (UserProfileConfirmThreadRemove)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import AlertModal from "AlertModal" /* 4957 */;
+import AlertModal from "AlertModal" /* 4956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

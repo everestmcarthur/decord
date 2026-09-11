@@ -1,19 +1,19 @@
-// Module ID: 11867
-// Function ID: 11868
+// Module ID: 11865
+// Function ID: 11866
 // Name: QuestRewardCodeClaimBottomSheet
-// Dependencies: [19, 17, 7776, 5496, 21, 4607, 576, 1611, 504, 11868, 4305, 1114, 5649, 4574, 11386, 7263, 4554, 11870, 7224, 7223, 4603, 4597, 5739, 5657, 5027, 11873, 2]
+// Dependencies: [19, 17, 7775, 5495, 21, 4606, 576, 1611, 504, 11866, 4305, 1114, 5648, 4573, 11384, 7262, 4553, 11868, 7223, 7222, 4602, 4596, 5738, 5656, 5026, 11871, 2]
 // Exports: default
 
-// Module 11867 (QuestRewardCodeClaimBottomSheet)
+// Module 11865 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import _modDef5649 from "module_5649" /* 5649 */;
-import ClipboardUtils from "ClipboardUtils" /* 7263 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11386 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import _modDef5648 from "module_5648" /* 5648 */;
+import ClipboardUtils from "ClipboardUtils" /* 7262 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11384 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7776 */;
+import QuestStore from "QuestStore" /* 7775 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
       const intl = util.intl;
       obj2.content = intl.string(util.t.CKsXk3);
-      obj2.icon = _modDef5649;
+      obj2.icon = _modDef5648;
       ToastActionCreatorsDefault.open(obj2);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
@@ -202,10 +202,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5496).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5495).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = { wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, footer: { paddingBottom }, claimingIndicator: { position: "absolute", left: "50%", top: "50%", marginLeft: -12, marginTop: -12 }, codeCopyWrapperLoading: { opacity: 0.5 }, redemptionInstructions: { marginBottom: 24 } };
   return obj;

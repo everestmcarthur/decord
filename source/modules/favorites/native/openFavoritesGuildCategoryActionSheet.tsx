@@ -1,11 +1,11 @@
 // Module ID: 16180
 // Function ID: 16181
 // Name: openFavoritesGuildCategoryActionSheet
-// Dependencies: [4574, 16181, 1896, 2]
+// Dependencies: [4573, 16181, 1896, 2]
 // Exports: default
 
 // Module 16180 (openFavoritesGuildCategoryActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx");

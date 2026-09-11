@@ -1,7 +1,7 @@
 // Module ID: 16058
 // Function ID: 16059
 // Name: CompanionRemoteAuth
-// Dependencies: [19, 17, 1074, 21, 4607, 16059, 5629, 4603, 1114, 5027, 1178, 4451, 1483, 4844, 1242, 16060, 16064, 7044, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 16059, 5628, 4602, 1114, 5026, 1178, 4451, 1483, 4843, 1242, 16060, 16064, 7043, 2]
 // Exports: CompanionRemoteAuth
 
 // Module 16058 (CompanionRemoteAuth)
@@ -14,7 +14,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, LoginSuccessfulSources: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ statusContainer: { alignItems: "center", marginTop: 32 }, avatar: { marginBottom: 16 }, statusText: { textAlign: "center", marginTop: 16, marginBottom: 24, paddingHorizontal: 32 }, buttonContainer: { width: "100%", paddingHorizontal: 16, marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/remote_auth/components/native/CompanionRemoteAuth.tsx");
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/remote_auth/components/native
 export const CompanionRemoteAuth = function CompanionRemoteAuth() {
   let tmp = closure_10();
   navigation = navigation(1483).useNavigation();
-  const context = noop.useContext(fingerprint(4844));
+  const context = noop.useContext(fingerprint(4843));
   const callback = noop.useCallback((arg0) => {
     let tmp = arg0;
     const obj2 = { source: constants2.QR_CODE, login_source: "companion_remote_auth", is_new_user: false, login_method: "quest_remote_auth", login_instance_id: null };
@@ -70,24 +70,24 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
         const obj8 = { variant: "heading-lg/bold", children: null };
         const intl2 = tmp2(1114).intl;
         obj8.children = intl2.string(tmp2(1114).t.apGCUT);
-        items2[1] = tmp11(tmp2(4603).Text, obj8);
+        items2[1] = tmp11(tmp2(4602).Text, obj8);
         const obj9 = { style: tmp.statusText, variant: "text-md/medium", color: "text-muted", children: null };
         const intl3 = tmp2(1114).intl;
         const obj10 = { username: tmp5(4451).getUserTag(user) };
         obj9.children = intl3.format(tmp2(1114).t.Cbl5JK, obj10);
-        items2[2] = tmp11(tmp2(4603).Text, obj9);
+        items2[2] = tmp11(tmp2(4602).Text, obj9);
         const obj11 = { style: tmp.buttonContainer, children: null };
         const obj12 = { size: "lg", variant: "tertiary", text: null, onPress: null };
         const intl4 = tmp2(1114).intl;
         obj12.text = intl4.string(tmp2(1114).t["ETE/oC"]);
         obj12.onPress = callback1;
-        obj11.children = tmp11(tmp2(5027).Button, obj12);
+        obj11.children = tmp11(tmp2(5026).Button, obj12);
         items2[3] = tmp11(tmp13, obj11);
         obj6.children = items2;
         let tmp11Result = closure_9(closure_8, obj6);
         const tmp5Result2 = tmp5(4451);
       } else if (tmp2(16059).RemoteAuthStep.PENDING_LOGIN === step) {
-        tmp11Result = tmp11(tmp2(5629).ActivityIndicator, {});
+        tmp11Result = tmp11(tmp2(5628).ActivityIndicator, {});
       }
     }
     obj5.children = tmp11Result;
@@ -95,17 +95,17 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     return tmp11(tmp5Result, obj4);
   }
   const obj13 = { children: null };
-  const items3 = [closure_7(navigation(5629).ActivityIndicator, {}), , ];
+  const items3 = [closure_7(navigation(5628).ActivityIndicator, {}), , ];
   const obj14 = { style: tmp.statusText, variant: "text-md/medium", color: "text-muted", children: null };
   const intl5 = tmp2(1114).intl;
   obj14.children = intl5.string(navigation(1114).t["7LkwqE"]);
-  items3[1] = closure_7(navigation(4603).Text, obj14);
+  items3[1] = closure_7(navigation(4602).Text, obj14);
   const obj15 = { style: tmp.buttonContainer, children: null };
   const obj16 = { size: "lg", variant: "tertiary", text: null, onPress: null };
   const intl6 = tmp2(1114).intl;
   obj16.text = intl6.string(navigation(1114).t["ETE/oC"]);
   obj16.onPress = callback1;
-  obj15.children = closure_7(navigation(5027).Button, obj16);
+  obj15.children = closure_7(navigation(5026).Button, obj16);
   items3[2] = closure_7(View, obj15);
   obj13.children = items3;
   tmp11Result = closure_9(closure_8, obj13);

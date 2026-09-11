@@ -1,35 +1,35 @@
-// Module ID: 12101
-// Function ID: 12102
+// Module ID: 12099
+// Function ID: 12100
 // Name: ForumPostGridBody
-// Dependencies: [32, 19, 17, 21, 4607, 576, 1178, 12102, 12103, 11341, 4603, 1477, 1369, 12104, 7349, 7972, 12108, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 1178, 12100, 12101, 11339, 4602, 1477, 1369, 12102, 7348, 7971, 12106, 2]
 // Exports: default
 
-// Module 12101 (ForumPostGridBody)
+// Module 12099 (ForumPostGridBody)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7972 */;
-import _modDef11341 from "module_11341" /* 11341 */;
-import _modDef12102 from "module_12102" /* 12102 */;
-import _modDef12103 from "module_12103" /* 12103 */;
-import ForumPostMedia from "ForumPostMedia" /* 12104 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7971 */;
+import _modDef11339 from "module_11339" /* 11339 */;
+import _modDef12100 from "module_12100" /* 12100 */;
+import _modDef12101 from "module_12101" /* 12101 */;
+import ForumPostMedia from "ForumPostMedia" /* 12102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GIFIcon() {
   const tmp = closure_8();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12102, disableColor: true, style: closure_8().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12100, disableColor: true, style: closure_8().gifIcon });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12103, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12101, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef11341, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef11341, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef11339, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef11339, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
@@ -57,7 +57,7 @@ function MediaGridColumn(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
 let size = { height: 20, width: 33, backgroundColor: "black", borderRadius: nativeDefault.radii.xs, resizeMode: "cover" };
 obj2.gifIcon = size;
@@ -88,7 +88,7 @@ export default function ForumPostGridBody(thread) {
   const media = thread.media;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(7349).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(7348).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp13Result = first.length > 0;
   items = [media];
@@ -143,7 +143,7 @@ export default function ForumPostGridBody(thread) {
   if (isMediaPostResult) {
     wideAspectRatioGrid = tmp.wideAspectRatioGrid;
   }
-  let obj = thread(7349);
+  let obj = thread(7348);
   let tmp2 = thread;
   items5[1] = wideAspectRatioGrid;
   const items6 = [
@@ -168,7 +168,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp13Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = tmp13(tmp2(12108).ForumPostAppliedTagPills, obj5);
+    obj4.children = tmp13(tmp2(12106).ForumPostAppliedTagPills, obj5);
     tmp13Result = tmp13(tmp12, obj4);
   }
   items6[1] = tmp13Result;

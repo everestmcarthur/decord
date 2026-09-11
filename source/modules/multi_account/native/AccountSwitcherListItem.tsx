@@ -1,7 +1,7 @@
 // Module ID: 16023
 // Function ID: 16024
 // Name: AccountSwitcherListItem
-// Dependencies: [19, 17, 1385, 4452, 1371, 12508, 21, 4607, 504, 4567, 576, 4562, 4603, 1114, 5175, 4325, 1178, 4451, 2]
+// Dependencies: [19, 17, 1385, 4452, 1371, 12506, 21, 4606, 504, 4566, 576, 4561, 4602, 1114, 5174, 4325, 1178, 4451, 2]
 // Exports: default
 
 // Module 16023 (AccountSwitcherListItem)
@@ -49,10 +49,10 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12508).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12506).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
@@ -79,12 +79,12 @@ export default function AccountSwitcherListItem(arg0) {
       const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: null };
       const intl = tmp2(1114).intl;
       obj4.children = intl.string(tmp2(1114).t.seV8yt);
-      let tmp8 = React7(tmp2(4603).Text, obj4);
+      let tmp8 = React7(tmp2(4602).Text, obj4);
     }
     if (null == onPressUser) {
       let PressableOpacity = React3;
     } else {
-      PressableOpacity = tmp2(5175).PressableOpacity;
+      PressableOpacity = tmp2(5174).PressableOpacity;
     }
     const obj5 = { selected: tmp7 };
     const radioA11yNative = tmp2(4325).useRadioA11yNative(obj5);
@@ -114,7 +114,7 @@ export default function AccountSwitcherListItem(arg0) {
     }
     const obj14 = { mode: "username", identifiable: str };
     obj12.children = UserUtilsDefault.getUserTag(obj3, obj14);
-    const items4 = [React7(tmp2(4603).Text, obj12), ];
+    const items4 = [React7(tmp2(4602).Text, obj12), ];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {
       tmp18Result = !obj3.hasUniqueUsername();
@@ -123,7 +123,7 @@ export default function AccountSwitcherListItem(arg0) {
       const obj15 = { variant: "text-md/normal", color: "text-muted", children: null };
       const _HermesInternal = HermesInternal;
       obj15.children = "#" + obj3.discriminator;
-      tmp18Result = tmp18(tmp2(4603).Text, obj15);
+      tmp18Result = tmp18(tmp2(4602).Text, obj15);
     }
     items4[1] = tmp18Result;
     obj11.children = items4;
@@ -145,7 +145,7 @@ export default function AccountSwitcherListItem(arg0) {
     const obj17 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1114).intl;
     obj17.children = intl3.string(tmp2(1114).t.tYX2ps);
-    tmp8 = React7(tmp2(4603).Text, obj17);
+    tmp8 = React7(tmp2(4602).Text, obj17);
   }
 };
 export { AccountStatusIcon };

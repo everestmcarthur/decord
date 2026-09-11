@@ -1,9 +1,7 @@
 // Module ID: 9968
 // Function ID: 9969
-// Dependencies: [9969]
+// Dependencies: []
 
 // Module 9968
-import _mod9969 from "module_9969" /* 9969 */;
 
-
-export default _mod9969();
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

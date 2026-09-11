@@ -1,16 +1,16 @@
 // Module ID: 16318
 // Function ID: 16319
 // Name: CreatorMonetizationOnboardingV2UpsellActionSheet
-// Dependencies: [19, 17, 1074, 1954, 21, 4607, 7224, 4603, 1114, 5639, 16319, 5027, 9155, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4606, 7223, 4602, 1114, 5638, 16319, 5026, 9153, 2]
 // Exports: default
 
 // Module 16318 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7224 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
 import _modDef16319 from "module_16319" /* 16319 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");

@@ -1,13 +1,13 @@
-// Module ID: 5667
-// Function ID: 5668
+// Module ID: 5666
+// Function ID: 5667
 // Name: DragIcon
-// Dependencies: [19, 21, 576, 4307, 5668, 2]
+// Dependencies: [19, 21, 576, 4307, 5667, 2]
 // Exports: DragIcon
 
-// Module 5667 (DragIcon)
+// Module 5666 (DragIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod5668 from "module_5668" /* 5668 */;
+import _mod5667 from "module_5667" /* 5667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const DragIcon = function DragIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5668, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5667, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

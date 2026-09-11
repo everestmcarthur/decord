@@ -1,38 +1,38 @@
-// Module ID: 9652
-// Function ID: 9653
+// Module ID: 9650
+// Function ID: 9651
 // Name: RPCHelpers
-// Dependencies: [5, 4835, 1918, 1961, 1385, 1957, 1979, 1908, 4828, 4647, 1371, 4626, 4512, 1074, 1365, 4594, 1090, 12, 7530, 4597, 4840, 9653, 4759, 1367, 8427, 1272, 9647, 9605, 9654, 2]
+// Dependencies: [5, 4834, 1918, 1961, 1385, 1957, 1979, 1908, 4827, 4646, 1371, 4625, 4511, 1074, 1365, 4593, 1090, 12, 7529, 4596, 4839, 9651, 4758, 1367, 8425, 1272, 9645, 9603, 9652, 2]
 // Exports: containsSameValues, getDeprecatedVoiceSettingsWithShortcut, getRemoteIconURL, getVoiceConnectionState, getVoiceSettingsWithShortcut, hasMessageReadPermission, isMatchingOrigin, processSocketThrottlers, transformApplicationRelationship, transformBaseRelationship, transformChannel, transformVoiceState, validateActivityInvite, validateApplication, validateOriginAndUpdateSocket, validatePostMessageTransport, validateSocketApplication
 
-// Module 9652 (RPCHelpers)
+// Module 9650 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import UrlDefault from "Url" /* 1367 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4597 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
-import useMessageAuthor from "useMessageAuthor" /* 4840 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7530 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8427 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9605 */;
-import RPCErrorDefault from "RPCError" /* 9647 */;
-import LeakyBucketDefault from "LeakyBucket" /* 9654 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import useMessageAuthor from "useMessageAuthor" /* 4839 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8425 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9603 */;
+import RPCErrorDefault from "RPCError" /* 9645 */;
+import LeakyBucketDefault from "LeakyBucket" /* 9652 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import MessageStore from "MessageStore" /* 4828 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import MessageStore from "MessageStore" /* 4827 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 import URLUtils from "URLUtils" /* 1365 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 4594 */;
+import RegexUtils from "RegexUtils" /* 4593 */;
 
-const transformUserDefault = tmp(9653);
+const transformUserDefault = tmp(9651);
 require = fn;
 function recurseReplaceContentTree(type) {
   if ("customEmoji" === type.type) {
@@ -295,7 +295,7 @@ let closure_32 = async function _processSocketThrottlers(arg0, value) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(1961).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(4512);
+let Constants = fn(4511);
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
 Constants = fn(1074);
 ({ ActivityActionTypes: closure_17, ChannelTypes: closure_18, Endpoints: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, RPCCloseCodes: closure_21, RPCErrors: closure_22, RTCConnectionStates: closure_23 } = Constants);
@@ -403,10 +403,10 @@ export const transformChannel = function transformChannel(channel, arg1) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(4759).getName(tmp, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(4758).getName(tmp, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9653)(user);
+          obj.user = closure_1(9651)(user);
           return obj;
         }
         tmp = dependencyMap;

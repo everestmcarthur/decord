@@ -1,13 +1,13 @@
 // Module ID: 16953
 // Function ID: 16954
 // Name: ContextMenuCommandNavigator
-// Dependencies: [19, 17, 21, 7988, 4607, 576, 7549, 7074, 1611, 7937, 1114, 16954, 16956, 2]
+// Dependencies: [19, 17, 21, 7987, 4606, 576, 7548, 7073, 1611, 7936, 1114, 16954, 16956, 2]
 // Exports: default
 
 // Module 16953 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,9 +16,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj3 = { container: { flex: 1 }, content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_8 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/application_commands/native/C
 export default function ContextMenuCommandNavigator() {
   const tmp = closure_8();
   _require = tmp;
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7549).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7548).trackAppUIViewed(), []);
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
   let obj2 = { style: null, children: null };

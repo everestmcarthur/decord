@@ -1,12 +1,12 @@
 // Module ID: 16894
 // Function ID: 16895
 // Name: ChannelSettingsModal
-// Dependencies: [19, 17, 1074, 7953, 21, 4607, 576, 16895, 1114, 10234, 16801, 16904, 16905, 16907, 16914, 16915, 16924, 16927, 16936, 16938, 16939, 16940, 16941, 16942, 2]
+// Dependencies: [19, 17, 1074, 7952, 21, 4606, 576, 16895, 1114, 10232, 16801, 16904, 16905, 16907, 16914, 16915, 16924, 16927, 16936, 16938, 16939, 16940, 16941, 16942, 2]
 // Exports: getChannelSettingsScreens
 
 // Module 16894 (ChannelSettingsModal)
 import nativeDefault from "native" /* 576 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10234 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10232 */;
 import messages_PinsScreenDefault from "messages/PinsScreen" /* 16801 */;
 import ChannelSettingsOverviewDefault from "ChannelSettingsOverview" /* 16895 */;
 import MessagePreviewDefault from "MessagePreview" /* 16904 */;
@@ -27,9 +27,9 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ ChannelSettingsSections: closure_4, SearchTypes: hasOwnProperty, WebhookTypes: metroRequire } = Constants);
-const SearchTabs = fn(7953).SearchTabs;
+const SearchTabs = fn(7952).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, pinsScreen: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.pinsScreen = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

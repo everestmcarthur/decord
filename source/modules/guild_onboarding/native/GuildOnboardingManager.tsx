@@ -1,14 +1,14 @@
-// Module ID: 17456
-// Function ID: 17457
+// Module ID: 17455
+// Function ID: 17456
 // Name: GuildOnboardingManager
-// Dependencies: [2021, 1979, 4428, 1074, 4232, 7192, 7169, 1384, 2]
+// Dependencies: [2021, 1979, 4428, 1074, 4232, 7191, 7168, 1384, 2]
 
-// Module 17456 (GuildOnboardingManager)
-import doGuildOnboardingDefault from "doGuildOnboarding" /* 7169 */;
+// Module 17455 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 7168 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 let require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
@@ -59,7 +59,7 @@ const prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7169).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(7168).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);

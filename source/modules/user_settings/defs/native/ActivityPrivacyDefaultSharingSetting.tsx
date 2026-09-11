@@ -1,24 +1,24 @@
 // Module ID: 15973
 // Function ID: 15974
 // Name: ActivityPrivacyDefaultSharingSetting
-// Dependencies: [19, 8050, 1187, 1114, 1935, 15974, 14906, 4574, 15975, 1896, 11564, 2]
+// Dependencies: [19, 8049, 1187, 1114, 1935, 15974, 14906, 4573, 15975, 1896, 11562, 2]
 
 // Module 15973 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8050).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },

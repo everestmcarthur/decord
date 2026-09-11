@@ -1,30 +1,30 @@
-// Module ID: 8714
-// Function ID: 8715
+// Module ID: 8712
+// Function ID: 8713
 // Name: StageSettingsActionSheet
-// Dependencies: [19, 17, 4623, 1957, 4245, 1962, 5466, 1074, 21, 4607, 576, 4574, 504, 1965, 5474, 7271, 8686, 1114, 1178, 8715, 8482, 8716, 7456, 8717, 8718, 8720, 8721, 8722, 2]
+// Dependencies: [19, 17, 4622, 1957, 4245, 1962, 5465, 1074, 21, 4606, 576, 4573, 504, 1965, 5473, 7270, 8684, 1114, 1178, 8713, 8480, 8714, 7455, 8715, 8716, 8718, 8719, 8720, 2]
 // Exports: default
 
-// Module 8714 (StageSettingsActionSheet)
+// Module 8712 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8482 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8718 */;
-import ReportModals from "ReportModals" /* 8722 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8480 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8716 */;
+import ReportModals from "ReportModals" /* 8720 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5466).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(5465).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1074);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { marginTop: 8 }, icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, warning: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };

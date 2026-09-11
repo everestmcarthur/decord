@@ -1,10 +1,10 @@
-// Module ID: 5015
-// Function ID: 5016
+// Module ID: 5014
+// Function ID: 5015
 // Name: Backdrop
-// Dependencies: [19, 17, 21, 4607, 576, 1114, 4317, 1611, 4343, 5016, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 1114, 4317, 1611, 4343, 5015, 2]
 // Exports: Backdrop
 
-// Module 5015 (Backdrop)
+// Module 5014 (Backdrop)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };

@@ -1,19 +1,19 @@
-// Module ID: 5671
-// Function ID: 5672
+// Module ID: 5670
+// Function ID: 5671
 // Name: UserVerification
-// Dependencies: [19, 21, 4607, 4431, 5672, 4603, 1114, 2]
+// Dependencies: [19, 21, 4606, 4431, 5671, 4602, 1114, 2]
 // Exports: default
 
-// Module 5671 (UserVerification)
+// Module 5670 (UserVerification)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5672 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5671 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");

@@ -1,13 +1,13 @@
-// Module ID: 10791
-// Function ID: 10792
+// Module ID: 10789
+// Function ID: 10790
 // Name: GiftCodeRecord
-// Dependencies: [1386, 7529, 10757, 4265, 1373, 4198, 1384, 2]
+// Dependencies: [1386, 7528, 10755, 4265, 1373, 4198, 1384, 2]
 
-// Module 10791 (GiftCodeRecord)
+// Module 10789 (GiftCodeRecord)
 import _modDef4198 from "module_4198" /* 4198 */;
 import Record from "Record" /* 1386 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7529 */;
-import PromotionRecord from "PromotionRecord" /* 10757 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7528 */;
+import PromotionRecord from "PromotionRecord" /* 10755 */;
 import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4265 */;
 
 const require = fn;

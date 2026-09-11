@@ -1,13 +1,13 @@
-// Module ID: 6601
-// Function ID: 6602
+// Module ID: 6600
+// Function ID: 6601
 // Name: SunIllocon
-// Dependencies: [21, 5639, 6602, 2]
+// Dependencies: [21, 5638, 6601, 2]
 // Exports: SunIllocon
 
-// Module 6601 (SunIllocon)
+// Module 6600 (SunIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6602 from "module_6602" /* 6602 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6601 from "module_6601" /* 6601 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const SunIllocon = function SunIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6602 };
+  const obj2 = { uri: _modDef6601 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,9 +1,9 @@
-// Module ID: 17359
-// Function ID: 17360
+// Module ID: 17358
+// Function ID: 17359
 // Name: markdownRules
 // Dependencies: [4303, 2]
 
-// Module 17359 (markdownRules)
+// Module 17358 (markdownRules)
 import t_mod from "module_4303" /* 4303 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,17 @@
 // Module ID: 6836
 // Function ID: 6837
-// Dependencies: [6835, 6786]
-// Exports: useExclusiveGestures
+// Dependencies: [6834, 6785]
+// Exports: useSimultaneousGestures
 
 // Module 6836
-import ComposedGestureName from "ComposedGestureName" /* 6786 */;
-import _mod6835 from "module_6835" /* 6835 */;
+import ComposedGestureName from "ComposedGestureName" /* 6785 */;
+import _mod6834 from "module_6834" /* 6834 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const useExclusiveGestures = function useExclusiveGestures() {
+export const useSimultaneousGestures = function useSimultaneousGestures() {
   const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod6835.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
+  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
+  return _mod6834.useComposedGesture.apply(items1);
 };

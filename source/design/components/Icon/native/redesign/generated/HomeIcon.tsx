@@ -1,13 +1,13 @@
-// Module ID: 17635
-// Function ID: 17636
+// Module ID: 17634
+// Function ID: 17635
 // Name: HomeIcon
-// Dependencies: [19, 21, 576, 4307, 17636, 2]
+// Dependencies: [19, 21, 576, 4307, 17635, 2]
 // Exports: HomeIcon
 
-// Module 17635 (HomeIcon)
+// Module 17634 (HomeIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod17636 from "module_17636" /* 17636 */;
+import _mod17635 from "module_17635" /* 17635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const HomeIcon = function HomeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17636, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17635, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,15 +1,15 @@
 // Module ID: 16129
 // Function ID: 16130
 // Name: HappeningNow
-// Dependencies: [32, 19, 17, 15357, 1074, 21, 7148, 4607, 576, 6727, 7036, 16130, 1242, 5044, 1484, 16131, 7236, 7256, 16138, 16139, 4343, 11450, 12, 8966, 1114, 16140, 16141, 16158, 16160, 16161, 16144, 16157, 16162, 16156, 16143, 1369, 2]
+// Dependencies: [32, 19, 17, 15357, 1074, 21, 7147, 4606, 576, 6726, 7035, 16130, 1242, 5043, 1484, 16131, 7235, 7255, 16138, 16139, 4343, 11448, 12, 8964, 1114, 16140, 16141, 16158, 16160, 16161, 16144, 16157, 16162, 16156, 16143, 1369, 2]
 
 // Module 16129 (HappeningNow)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11450 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11448 */;
 import HappeningNowAnalytics from "HappeningNowAnalytics" /* 16130 */;
 import happeningNowRankingUtils from "happeningNowRankingUtils" /* 16138 */;
 import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 16140 */;
@@ -170,12 +170,12 @@ const HappeningNowConstants = fn(15357);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(7148);
+const ReanimatedHelperTypes = fn(7147);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 } };
 let closure_13 = createStyles.createStyles(obj);
-const Gesture = fn(6727).Gesture;
+const Gesture = fn(6726).Gesture;
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
@@ -198,7 +198,7 @@ export default noop.memo((listRef) => {
   let callback2;
   let tmp = closure_13();
   const isFocused1 = listRef(children[14]).useIsFocused();
-  const obj2 = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "2026-01-image-optimized-encoding-ladder", isFocused: isFocused1 };
+  const obj2 = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "HermesInternal", isFocused: isFocused1 };
   const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;

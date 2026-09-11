@@ -1,30 +1,30 @@
 // Module ID: 15157
 // Function ID: 15158
 // Name: QuestDockExternalCoordinationContext
-// Dependencies: [19, 15151, 5496, 15153, 21, 1090, 7148, 4343, 15152, 11372, 1115, 2]
+// Dependencies: [19, 15151, 5495, 15153, 21, 1090, 7147, 4343, 15152, 11370, 1115, 2]
 // Exports: useExternalScrollEventHandler
 
 // Module 15157 (QuestDockExternalCoordinationContext)
 import DurationsDefault from "Durations" /* 1090 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import QuestActionCreators from "QuestActionCreators" /* 11372 */;
+import QuestActionCreators from "QuestActionCreators" /* 11370 */;
 import noop from "module_19" /* 19 */;
 import QuestDockStore from "QuestDockStore" /* 15151 */;
 
 require = fn;
-let QuestDockMode = fn(5496).QuestDockMode;
+let QuestDockMode = fn(5495).QuestDockMode;
 let closure_5 = fn(15153).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };
-let ReanimatedHelperTypes = fn(7148);
+let ReanimatedHelperTypes = fn(7147);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {
 
 };
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7148);
+ReanimatedHelperTypes = fn(7147);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
 const PlatformUtils = fn(1115);

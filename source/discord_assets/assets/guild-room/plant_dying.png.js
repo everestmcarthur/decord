@@ -1,8 +1,8 @@
-// Module ID: 4775
-// Function ID: 4776
+// Module ID: 4774
+// Function ID: 4775
 // Dependencies: [2]
 
-// Module 4775
+// Module 4774
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/plant_dying.png.js");

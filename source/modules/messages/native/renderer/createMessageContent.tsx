@@ -1,38 +1,38 @@
-// Module ID: 8015
-// Function ID: 8016
+// Module ID: 8014
+// Function ID: 8015
 // Name: createMessageContent
-// Dependencies: [17, 4599, 4835, 4426, 5511, 8013, 8016, 4246, 8017, 7668, 4247, 7380, 1183, 502, 1957, 2021, 1979, 4255, 7911, 1371, 4600, 8008, 1074, 8019, 4760, 8020, 11, 7962, 7403, 1114, 8021, 8022, 8023, 4946, 1384, 7834, 8028, 5056, 8029, 8031, 7344, 8033, 8164, 8165, 8191, 7366, 7673, 1935, 8192, 8196, 8109, 8240, 4840, 1399, 1396, 8243, 1178, 11000, 8095, 13276, 1369, 13277, 4233, 5459, 13278, 13279, 4288, 11812, 13280, 8251, 7341, 576, 13281, 8036, 13283, 13284, 8161, 13287, 13288, 13305, 13324, 13326, 13340, 8040, 8041, 13341, 13344, 13345, 13346, 8042, 8038, 2]
+// Dependencies: [17, 4598, 4834, 4426, 5510, 8012, 8015, 4246, 8016, 7667, 4247, 7379, 1183, 502, 1957, 2021, 1979, 4255, 7910, 1371, 4599, 8007, 1074, 8018, 4759, 8019, 11, 7961, 7402, 1114, 8020, 8021, 8022, 4945, 1384, 7833, 8027, 5055, 8028, 8030, 7343, 8032, 8163, 8164, 8190, 7365, 7672, 1935, 8191, 8195, 8108, 8239, 4839, 1399, 1396, 8242, 1178, 10998, 8094, 13274, 1369, 13275, 4233, 5458, 13276, 13277, 4288, 11810, 13278, 8250, 7340, 576, 13279, 8035, 13281, 13282, 8160, 13285, 13286, 13303, 13322, 13324, 13338, 8039, 8040, 13339, 13342, 13343, 13344, 8041, 8037, 2]
 
-// Module 8015 (createMessageContent)
+// Module 8014 (createMessageContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7668 */;
-import MessageCountUtils from "MessageCountUtils" /* 7962 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8008 */;
-import GuildTagConstants from "GuildTagConstants" /* 8019 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8020 */;
-import transformMessageComponentsDefault from "transformMessageComponents" /* 8196 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7667 */;
+import MessageCountUtils from "MessageCountUtils" /* 7961 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8007 */;
+import GuildTagConstants from "GuildTagConstants" /* 8018 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8019 */;
+import transformMessageComponentsDefault from "transformMessageComponents" /* 8195 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4426 */;
-import EmojiStore from "EmojiStore" /* 5511 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8013 */;
-import InteractionStore from "InteractionStore" /* 8016 */;
+import EmojiStore from "EmojiStore" /* 5510 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8012 */;
+import InteractionStore from "InteractionStore" /* 8015 */;
 import LurkingStore from "LurkingStore" /* 4246 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8017 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8016 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7380 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7379 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import UploadStore from "UploadStore" /* 7911 */;
+import UploadStore from "UploadStore" /* 7910 */;
 import UserStore from "UserStore" /* 1371 */;
-import MessageConstants from "MessageConstants" /* 4600 */;
+import MessageConstants from "MessageConstants" /* 4599 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -70,10 +70,10 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 const obj3 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: true, archivedIconUrl: null, backgroundColor: null };
                 const intl4 = tmp15(1114).intl;
                 obj3.messagePreviewString = intl4.string(tmp15(1114).t.ZTo4HS);
-                obj3.archivedIconUrl = tmp15(8021).getAssetUriForEmbed(tmp19(8022));
+                obj3.archivedIconUrl = tmp15(8020).getAssetUriForEmbed(tmp19(8021));
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
-                const tmp15Result2 = tmp15(8021);
+                const tmp15Result2 = tmp15(8020);
               } else {
                 if (null != mostRecentMessage) {
                   if (mostRecentMessage.type !== constants.CHANNEL_NAME_CHANGE) {
@@ -110,7 +110,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj4 = obj8;
               }
             }
-            tmp15Result = tmp15(7403);
+            tmp15Result = tmp15(7402);
           }
         }
         const obj = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: false, backgroundColor: null };
@@ -1103,7 +1103,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result69 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "BACKGROUND_SYNC", hasBailedAst: "CONNECTION_OPEN" };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "151", hasBailedAst: "BG" };
     const tmp13Result63 = tmp13(tmp3[42]);
   }
 }

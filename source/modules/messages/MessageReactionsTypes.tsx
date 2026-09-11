@@ -1,9 +1,9 @@
-// Module ID: 7836
-// Function ID: 7837
+// Module ID: 7835
+// Function ID: 7836
 // Name: MessageReactionsTypes
 // Dependencies: [2]
 
-// Module 7836 (MessageReactionsTypes)
+// Module 7835 (MessageReactionsTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { NORMAL: 0, [0]: "NORMAL", BURST: 1, [1]: "BURST", VOTE: 2, [2]: "VOTE" };

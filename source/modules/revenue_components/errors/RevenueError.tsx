@@ -1,9 +1,9 @@
-// Module ID: 11539
-// Function ID: 11540
+// Module ID: 11537
+// Function ID: 11538
 // Name: RevenueError
 // Dependencies: [2]
 
-// Module 11539 (RevenueError)
+// Module 11537 (RevenueError)
 import size from "module_2" /* 2 */;
 
 const prototype = function RevenueError(errorHandlingBehavior) {

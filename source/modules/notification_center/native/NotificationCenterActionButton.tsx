@@ -1,13 +1,13 @@
 // Module ID: 16477
 // Function ID: 16478
 // Name: NotificationCenterActionButton
-// Dependencies: [19, 21, 8173, 8766, 4574, 16478, 1896, 1114, 2]
+// Dependencies: [19, 21, 8172, 8764, 4573, 16478, 1896, 1114, 2]
 // Exports: default
 
 // Module 16477 (NotificationCenterActionButton)
 import util from "util" /* 1114 */;
-import IconButton from "IconButton" /* 8173 */;
-import _modDef8766 from "module_8766" /* 8766 */;
+import IconButton from "IconButton" /* 8172 */;
+import _modDef8764 from "module_8764" /* 8764 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export default function NotificationCenterActionButton() {
   const obj = {
     variant: "tertiary",
     size: "sm",
-    icon: _modDef8766,
+    icon: _modDef8764,
     onPress() {
       return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
     },
@@ -33,7 +33,7 @@ export default function NotificationCenterActionButton() {
   return jsx(IconButton.IconButton, {
     variant: "tertiary",
     size: "sm",
-    icon: _modDef8766,
+    icon: _modDef8764,
     onPress() {
       return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
     },

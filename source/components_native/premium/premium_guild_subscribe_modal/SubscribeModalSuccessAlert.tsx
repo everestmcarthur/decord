@@ -1,21 +1,21 @@
-// Module ID: 13678
-// Function ID: 13679
+// Module ID: 13676
+// Function ID: 13677
 // Name: SubscribeModalSuccessAlert
-// Dependencies: [32, 19, 17, 1979, 7506, 21, 4607, 576, 13679, 13680, 504, 4542, 5046, 1114, 4952, 5486, 5039, 1093, 4458, 13681, 13682, 4603, 2]
+// Dependencies: [32, 19, 17, 1979, 7505, 21, 4606, 576, 13677, 13678, 504, 4541, 5045, 1114, 4951, 5485, 5038, 1093, 4458, 13679, 13680, 4602, 2]
 // Exports: default
 
-// Module 13678 (SubscribeModalSuccessAlert)
+// Module 13676 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
-import common_AlertDefault from "common/Alert" /* 5046 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5486 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13679 */;
-import _mod13680 from "module_13680" /* 13680 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5485 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13677 */;
+import _mod13678 from "module_13678" /* 13678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -33,10 +33,10 @@ class PremiumPaymentGuildAnimation {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(7506).Gradients;
+const Gradients = fn(7505).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" }, animation: { width: "auto", height: 112, alignSelf: "center" }, text: { lineHeight: 18, textAlign: "center" }, activated: { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 }, activatedBackground: null, activatedImage: null, successInfo: null };
 let obj3 = { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 };
 obj2.activatedBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
@@ -76,8 +76,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = tmp2(1114).intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(4952).close();
-    const obj = closure_1(4952);
+    closure_1(4951).close();
+    const obj = closure_1(4951);
     actions_BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -115,9 +115,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13681);
+    let tmp8Result = tmp8(13679);
   } else {
-    tmp8Result = tmp8(13682);
+    tmp8Result = tmp8(13680);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_9(tmp15, obj6);

@@ -1,27 +1,27 @@
-// Module ID: 11691
-// Function ID: 11692
+// Module ID: 11689
+// Function ID: 11690
 // Name: GroupDMNitroCapLimitSheet
-// Dependencies: [19, 17, 4599, 11688, 1074, 21, 4607, 576, 504, 11686, 1242, 4574, 11692, 10059, 11693, 7224, 4603, 1114, 5027, 8755, 2]
+// Dependencies: [19, 17, 4598, 11686, 1074, 21, 4606, 576, 504, 11684, 1242, 4573, 11690, 10057, 11691, 7223, 4602, 1114, 5026, 8753, 2]
 // Exports: default
 
-// Module 11691 (GroupDMNitroCapLimitSheet)
+// Module 11689 (GroupDMNitroCapLimitSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10059 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11692 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11693 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10057 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11690 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11691 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11688).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11686).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, AnalyticsObjects: closure_8, AnalyticsPages: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, title: null, body: null, buttons: null, nitroWheelIcon: null };
 let obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.title = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -41,7 +41,7 @@ export default function GroupDMNitroCapLimitSheet(location) {
   const items = [AccessibilityStore];
   const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = _location(504);
-  const groupDMNitroAudience = _location(11686).useGroupDMNitroAudience();
+  const groupDMNitroAudience = _location(11684).useGroupDMNitroAudience();
   importDefault = tmp6;
   const items1 = [_location];
   const callback = noop.useCallback(() => {
@@ -56,9 +56,9 @@ export default function GroupDMNitroCapLimitSheet(location) {
     loading = tmp9.loading;
   }
   const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null, onCheckout: null };
-  let obj2 = _location(11686);
+  let obj2 = _location(11684);
   let obj3 = noop;
-  obj4.acquisitionStrategy = _location(11686).GroupDMNitroAcquisitionStrategy.CHECKOUT;
+  obj4.acquisitionStrategy = _location(11684).GroupDMNitroAcquisitionStrategy.CHECKOUT;
   obj4.onCheckout = tmp9.onPress;
   const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj4);
   dependencyMap = tmp8ResultResult;
@@ -73,20 +73,20 @@ export default function GroupDMNitroCapLimitSheet(location) {
   const obj6 = { style: tmp.title, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
   obj6.children = intl.formatToPlainString(_location(1114).t.IyBYPN, { number: number2 });
-  const items3 = [closure_11(_location(4603).Text, obj6), , ];
+  const items3 = [closure_11(_location(4602).Text, obj6), , ];
   const obj8 = { style: tmp.body, variant: "text-md/medium", color: "text-subtle", children: null };
   const intl2 = tmp2(1114).intl;
   obj8.children = intl2.formatToPlainString(_location(1114).t["Ae97n/"], { number });
-  items3[1] = closure_11(_location(4603).Text, obj8);
+  items3[1] = closure_11(_location(4602).Text, obj8);
   const obj10 = { style: tmp.buttons, children: null };
   const obj11 = { text: null, size: "lg", variant: "experimental_premium-primary", icon: null, iconPosition: "start", shiny: null, loading: null, onPress: null, grow: true };
   const intl3 = tmp2(1114).intl;
   const obj7 = { number: number2 };
   const obj9 = { number };
   const tmp8Result = useGroupDMNitroUpsellActionDefault;
-  obj11.text = intl3.string(_location(11686).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-  const tmp2Result = _location(11686);
-  obj11.icon = closure_11(_location(8755).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
+  obj11.text = intl3.string(_location(11684).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+  const tmp2Result = _location(11684);
+  obj11.icon = closure_11(_location(8753).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
   obj11.shiny = !stateFromStores;
   obj11.loading = loading;
   let tmp16 = null;
@@ -95,15 +95,15 @@ export default function GroupDMNitroCapLimitSheet(location) {
   }
   const obj13 = { children: null };
   obj11.onPress = tmp16;
-  const items4 = [closure_11(_location(5027).Button, obj11), ];
+  const items4 = [closure_11(_location(5026).Button, obj11), ];
   const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, grow: true };
   const intl4 = tmp2(1114).intl;
   obj14.text = intl4.string(_location(1114).t.PUZmk4);
   obj14.onPress = callback;
-  items4[1] = closure_11(_location(5027).Button, obj14);
+  items4[1] = closure_11(_location(5026).Button, obj14);
   obj10.children = items4;
   items3[2] = closure_12(View, obj10);
   obj5.children = items3;
   obj13.children = closure_12(View, obj5);
-  return closure_11(_location(7224).BottomSheet, obj13);
+  return closure_11(_location(7223).BottomSheet, obj13);
 };

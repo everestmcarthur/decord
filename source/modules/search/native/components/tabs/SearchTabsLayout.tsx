@@ -1,26 +1,26 @@
 // Module ID: 16717
 // Function ID: 16718
 // Name: SearchTabsLayout
-// Dependencies: [19, 17, 7355, 12434, 12457, 7953, 1074, 21, 4607, 12, 12453, 16718, 1114, 12435, 16719, 12454, 12433, 16802, 16701, 6727, 4343, 12456, 12442, 12443, 1109, 16803, 16804, 12711, 504, 16805, 16806, 16807, 16808, 2]
+// Dependencies: [19, 17, 7354, 12432, 12455, 7952, 1074, 21, 4606, 12, 12451, 16718, 1114, 12433, 16719, 12452, 12431, 16802, 16701, 6726, 4343, 12454, 12440, 12441, 1109, 16803, 16804, 12709, 504, 16805, 16806, 16807, 16808, 2]
 // Exports: default
 
 // Module 16717 (SearchTabsLayout)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import SearchUtils from "SearchUtils" /* 12435 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12442 */;
-import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12443 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12453 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12454 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12456 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import SearchUtils from "SearchUtils" /* 12433 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12440 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12441 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12452 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
 import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16718 */;
 import SearchTabsPageDefault from "SearchTabsPage" /* 16719 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 7355 */;
-import SearchQueryStore from "SearchQueryStore" /* 12434 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12457 */;
+import SearchMessageStore from "SearchMessageStore" /* 7354 */;
+import SearchQueryStore from "SearchQueryStore" /* 12432 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12455 */;
 
-const SearchPlatformUtilsDefault = tmp(12433);
+const SearchPlatformUtilsDefault = tmp(12431);
 require = fn;
 function NoSearchResultsScreen(searchContext) {
   searchContext = searchContext.searchContext;
@@ -34,12 +34,12 @@ function NoSearchResultsScreen(searchContext) {
   return closure_12(pages_ErrorScreenDefault, obj);
 }
 const View = fn(17).View;
-const SearchConstants = fn(7953);
+const SearchConstants = fn(7952);
 ({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: closure_9, SearchTabs: c10 } = SearchConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
 const apply = fn(12);
 let closure_16 = apply.debounce((searchContext) => search_tracking_TrackingDefault.trackSearchTabSelected({ searchContext }), 500);

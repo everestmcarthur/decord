@@ -1,14 +1,14 @@
-// Module ID: 7274
-// Function ID: 7275
+// Module ID: 7273
+// Function ID: 7274
 // Name: TableSwitchRow
-// Dependencies: [32, 19, 17, 21, 4607, 1115, 4310, 5657, 4603, 7275, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 1115, 4310, 5656, 4602, 7274, 2]
 // Exports: TableSwitchRow
 
-// Module 7274 (TableSwitchRow)
+// Module 7273 (TableSwitchRow)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 4310 */;
-import TableRow from "TableRow" /* 5657 */;
-import FormSwitch from "FormSwitch" /* 7275 */;
+import TableRow from "TableRow" /* 5656 */;
+import FormSwitch from "FormSwitch" /* 7274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
@@ -54,7 +54,7 @@ export const TableSwitchRow = function TableSwitchRow(value) {
         str = "text-feedback-critical";
       }
       const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = tmp10(tmp3(4603).Text, obj7);
+      tmp10Result = tmp10(tmp3(4602).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
     obj6.children = items1;

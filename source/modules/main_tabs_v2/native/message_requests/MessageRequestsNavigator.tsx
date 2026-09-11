@@ -1,14 +1,14 @@
 // Module ID: 16959
 // Function ID: 16960
 // Name: MessageRequestsNavigator
-// Dependencies: [19, 17, 21, 7988, 4607, 576, 7074, 7549, 1611, 7937, 1114, 11019, 16960, 16979, 16980, 2]
+// Dependencies: [19, 17, 21, 7987, 4606, 576, 7073, 7548, 1611, 7936, 1114, 11017, 16960, 16979, 16980, 2]
 // Exports: default
 
 // Module 16959 (MessageRequestsNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11019 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11017 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,9 +17,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj3 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj3.header = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
@@ -31,7 +31,7 @@ export default function MessageRequestsNavigator() {
   const tmp = closure_8();
   _require = tmp;
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7549).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7548).trackAppUIViewed(), []);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
   const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];

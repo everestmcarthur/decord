@@ -1,17 +1,17 @@
 // Module ID: 16854
 // Function ID: 16855
 // Name: IncomingRequestRow
-// Dependencies: [19, 4599, 4835, 10951, 1074, 21, 4343, 563, 1114, 4451, 16115, 12723, 10959, 16513, 16855, 2]
+// Dependencies: [19, 4598, 4834, 10949, 1074, 21, 4343, 563, 1114, 4451, 16115, 12721, 10957, 16513, 16855, 2]
 // Exports: ConnectedIncomingGameFriendRequestRow, IncomingFriendRequestRow
 
 // Module 16854 (IncomingRequestRow)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12723 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12721 */;
 import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16115 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import ApplicationStore from "ApplicationStore" /* 4835 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 
 require = fn;
 function IncomingRequestRow(user) {
@@ -120,7 +120,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(10951).UserRowModes;
+const UserRowModes = fn(10949).UserRowModes;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

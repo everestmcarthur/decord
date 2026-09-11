@@ -1,9 +1,9 @@
-// Module ID: 8944
-// Function ID: 8945
+// Module ID: 8942
+// Function ID: 8943
 // Name: VirtualCurrencyStore
 // Dependencies: [504, 573, 2]
 
-// Module 8944 (VirtualCurrencyStore)
+// Module 8942 (VirtualCurrencyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

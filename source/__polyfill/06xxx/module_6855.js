@@ -1,12 +1,13 @@
 // Module ID: 6855
 // Function ID: 6856
-// Dependencies: [41, 42, 93, 95, 98, 6748]
+// Dependencies: [41, 42, 93, 95, 96, 98, 6747]
 
 // Module 6855
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -29,14 +30,20 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-class NativeGesture {
+function changeEventCalculator(arg0, arg1) {
+  return arg0;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 12945462865583;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}" };
+class ManualGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, NativeGesture);
+    tmp = closure_0(this, ManualGesture);
     tmp2 = c2;
-    obj = c2(NativeGesture);
+    obj = c2(ManualGesture);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -44,29 +51,25 @@ class NativeGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
+    tmp3Result.handlerName = "ManualGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6748).BaseGesture);
+_classCallCheck = ManualGesture;
+_inherits(ManualGesture, fn(6747).ContinousBaseGesture);
 const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
-    return this;
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
   }
 };
-const items = [
-  entry,
-  {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
-      return this;
-    }
-  }
-];
+let items = [entry];
 
-export const NativeGesture = _createClass(NativeGesture, items);
+export const ManualGesture = _createClass(ManualGesture, items);

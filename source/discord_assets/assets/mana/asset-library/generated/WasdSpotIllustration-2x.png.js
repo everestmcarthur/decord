@@ -1,8 +1,8 @@
-// Module ID: 6636
-// Function ID: 6637
+// Module ID: 6635
+// Function ID: 6636
 // Dependencies: [2]
 
-// Module 6636
+// Module 6635
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WasdSpotIllustration-2x.png.js");

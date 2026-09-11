@@ -1,10 +1,10 @@
-// Module ID: 14709
-// Function ID: 14710
+// Module ID: 14706
+// Function ID: 14707
 // Name: EditGuildIdentityAvatar
-// Dependencies: [19, 2021, 1371, 1074, 1373, 21, 4607, 504, 7236, 7256, 8245, 14664, 8255, 4264, 8252, 9406, 4574, 14665, 1896, 14666, 14666, 8243, 5175, 1114, 8343, 14667, 2]
+// Dependencies: [19, 2021, 1371, 1074, 1373, 21, 4606, 504, 7235, 7255, 8244, 14662, 8254, 4264, 8251, 9404, 4573, 14663, 1896, 14664, 14664, 8242, 5174, 1114, 8341, 14665, 2]
 // Exports: default
 
-// Module 14709 (EditGuildIdentityAvatar)
+// Module 14706 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");

@@ -1,15 +1,15 @@
 // Module ID: 16291
 // Function ID: 16292
 // Name: GuildPowerupsProgressBar
-// Dependencies: [19, 17, 16292, 1979, 21, 576, 4343, 5039, 4607, 563, 16293, 16294, 4608, 12574, 7256, 1114, 2428, 8994, 4603, 7283, 2]
+// Dependencies: [19, 17, 16292, 1979, 21, 576, 4343, 5038, 4606, 563, 16293, 16294, 4607, 12572, 7255, 1114, 2428, 8992, 4602, 7282, 2]
 // Exports: default
 
 // Module 16291 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4608 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12574 */;
+import timing from "timing" /* 4607 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12572 */;
 import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16294 */;
 import noop from "module_19" /* 19 */;
 import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16292 */;
@@ -24,7 +24,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };

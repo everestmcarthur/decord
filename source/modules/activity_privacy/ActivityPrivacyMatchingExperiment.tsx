@@ -1,11 +1,11 @@
 // Module ID: 15974
 // Function ID: 15975
 // Name: ActivityPrivacyMatchingExperiment
-// Dependencies: [1433, 13177, 2]
+// Dependencies: [1433, 13175, 2]
 // Exports: getIsInActivityPrivacyUpsellExperiment, useIsInActivityPrivacyCopyExperiment
 
 // Module 15974 (ActivityPrivacyMatchingExperiment)
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13177 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13175 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

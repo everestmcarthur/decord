@@ -1,8 +1,8 @@
-// Module ID: 5932
-// Function ID: 5933
+// Module ID: 5931
+// Function ID: 5932
 // Dependencies: [2]
 
-// Module 5932
+// Module 5931
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeHologramSpotIllustration-2x.png.js");

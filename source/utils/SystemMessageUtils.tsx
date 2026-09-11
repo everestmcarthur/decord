@@ -1,21 +1,21 @@
-// Module ID: 8061
-// Function ID: 8062
+// Module ID: 8060
+// Function ID: 8061
 // Name: SystemMessageUtils
-// Dependencies: [32, 4256, 502, 1957, 1979, 4255, 1371, 1074, 1114, 11, 8062, 8066, 4759, 4760, 8067, 8069, 4840, 4830, 8070, 8071, 7590, 2]
+// Dependencies: [32, 4256, 502, 1957, 1979, 4255, 1371, 1074, 1114, 11, 8061, 8065, 4758, 4759, 8066, 8068, 4839, 4829, 8069, 8070, 7589, 2]
 
-// Module 8061 (SystemMessageUtils)
+// Module 8060 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
-import useChannelName from "useChannelName" /* 4760 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4830 */;
-import useMessageAuthor from "useMessageAuthor" /* 4840 */;
-import MarkupParser from "MarkupParser" /* 8062 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8066 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8067 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8069 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8070 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8071 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4829 */;
+import useMessageAuthor from "useMessageAuthor" /* 4839 */;
+import MarkupParser from "MarkupParser" /* 8061 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8065 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8066 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8068 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8069 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8070 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 4256 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -54,7 +54,7 @@ export default {
           const intl18 = util.intl;
           const obj2 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
           const obj61 = MarkupParser;
-          obj2.otherUsername = tmp6(4759).getName(null, channel_id, null);
+          obj2.otherUsername = tmp6(4758).getName(null, channel_id, null);
           obj2.otherUsernameOnClick = usernameOnClick;
           return obj61.astToString(intl18.formatToParts(util.t["7/Xl0S"], obj2));
         }
@@ -66,10 +66,10 @@ export default {
               const intl17 = util.intl;
               const obj4 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
               const obj58 = MarkupParser;
-              obj4.otherUsername = tmp6(4759).getName(null, channel_id, null);
+              obj4.otherUsername = tmp6(4758).getName(null, channel_id, null);
               obj4.otherUsernameOnClick = usernameOnClick;
               let astToStringResult = obj58.astToString(intl17.formatToParts(util.t.QtZ0RD, obj4));
-              const tmp6Result2 = tmp6(4759);
+              const tmp6Result2 = tmp6(4758);
             }
             return astToStringResult;
           }
@@ -217,18 +217,18 @@ export default {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
                         const intl5 = tmp34(1114).intl;
                         const obj33 = { guildName: guild.name };
-                        astToStringResult6 = tmp34(8062).astToString(intl5.formatToParts(tmp34(1114).t.wt3ZUM, obj33));
-                        const tmp34Result = tmp34(8062);
-                      } else if (tmp34(8066).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        astToStringResult6 = tmp34(8061).astToString(intl5.formatToParts(tmp34(1114).t.wt3ZUM, obj33));
+                        const tmp34Result = tmp34(8061);
+                      } else if (tmp34(8065).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
                         const intl4 = tmp34(1114).intl;
                         const obj36 = { guildName: guild.name };
-                        astToStringResult6 = tmp34(8062).astToString(intl4.formatToParts(tmp34(1114).t.AkqI0g, obj36));
-                        const tmp34Result3 = tmp34(8062);
+                        astToStringResult6 = tmp34(8061).astToString(intl4.formatToParts(tmp34(1114).t.AkqI0g, obj36));
+                        const tmp34Result3 = tmp34(8061);
                       } else {
                         const intl3 = tmp34(1114).intl;
                         const obj37 = { guildName: guild.name };
-                        astToStringResult6 = tmp34(8062).astToString(intl3.formatToParts(tmp34(1114).t["a+lJKl"], obj37));
-                        const tmp34Result4 = tmp34(8062);
+                        astToStringResult6 = tmp34(8061).astToString(intl3.formatToParts(tmp34(1114).t["a+lJKl"], obj37));
+                        const tmp34Result4 = tmp34(8061);
                       }
                     }
                   }

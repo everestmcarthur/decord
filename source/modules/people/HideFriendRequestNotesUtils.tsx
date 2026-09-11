@@ -1,12 +1,12 @@
-// Module ID: 13223
-// Function ID: 13224
+// Module ID: 13221
+// Function ID: 13222
 // Name: HideFriendRequestNotesUtils
-// Dependencies: [1935, 8737, 2]
+// Dependencies: [1935, 8735, 2]
 // Exports: useHideFriendRequestNotes
 
-// Module 13223 (HideFriendRequestNotesUtils)
+// Module 13221 (HideFriendRequestNotesUtils)
 import UserSettings from "UserSettings" /* 1935 */;
-import useUserIsTeen from "useUserIsTeen" /* 8737 */;
+import useUserIsTeen from "useUserIsTeen" /* 8735 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");

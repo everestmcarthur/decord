@@ -1,13 +1,13 @@
-// Module ID: 17278
-// Function ID: 17279
+// Module ID: 17277
+// Function ID: 17278
 // Name: ScreenXIcon
-// Dependencies: [19, 21, 576, 4307, 10063, 2]
+// Dependencies: [19, 21, 576, 4307, 10061, 2]
 // Exports: ScreenXIcon
 
-// Module 17278 (ScreenXIcon)
+// Module 17277 (ScreenXIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod10063 from "module_10063" /* 10063 */;
+import _mod10061 from "module_10061" /* 10061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ScreenXIcon = function ScreenXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10063, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10061, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

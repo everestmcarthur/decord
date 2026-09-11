@@ -1,13 +1,13 @@
-// Module ID: 6047
-// Function ID: 6048
+// Module ID: 6046
+// Function ID: 6047
 // Name: ExperimentalDuckTypingBubbleAbstractUI
-// Dependencies: [21, 5639, 6048, 2]
+// Dependencies: [21, 5638, 6047, 2]
 // Exports: ExperimentalDuckTypingBubbleAbstractUI
 
-// Module 6047 (ExperimentalDuckTypingBubbleAbstractUI)
+// Module 6046 (ExperimentalDuckTypingBubbleAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6048 from "module_6048" /* 6048 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6047 from "module_6047" /* 6047 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ExperimentalDuckTypingBubbleAbstractUI = function ExperimentalDuckT
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6048 };
+  const obj2 = { uri: _modDef6047 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,13 +1,13 @@
 // Module ID: 16817
 // Function ID: 16818
 // Name: ChannelDetailsTopic
-// Dependencies: [32, 19, 17, 1371, 11010, 1074, 21, 1115, 4607, 16818, 4343, 5026, 4597, 5175, 4603, 5039, 504, 4451, 4752, 2]
+// Dependencies: [32, 19, 17, 1371, 11008, 1074, 21, 1115, 4606, 16818, 4343, 5025, 4596, 5174, 4602, 5038, 504, 4451, 4751, 2]
 
 // Module 16817 (ChannelDetailsTopic)
 import UserUtilsDefault from "UserUtils" /* 4451 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4597 */;
-import ChannelUtils from "ChannelUtils" /* 4752 */;
-import spring from "spring" /* 5026 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import ChannelUtils from "ChannelUtils" /* 4751 */;
+import spring from "spring" /* 5025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -187,7 +187,7 @@ function PrivateChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(4603).Text, obj2);
+    tmp4 = closure_11(channel(4602).Text, obj2);
   }
   return tmp4;
 }
@@ -201,19 +201,19 @@ function GroupDMChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(4603).Text, obj2);
+    tmp4 = closure_11(channel(4602).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(11010);
+const ChannelDetailsConstants = fn(11008);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1115);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 const EMPTY_STYLE = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };

@@ -1,0 +1,16 @@
+// Module ID: 14288
+// Function ID: 14289
+// Name: FormatNumericRangeToParts
+// Dependencies: [14287]
+// Exports: FormatNumericRangeToParts
+
+// Module 14288 (FormatNumericRangeToParts)
+import PartitionNumberRangePattern from "PartitionNumberRangePattern" /* 14287 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export const FormatNumericRangeToParts = function FormatNumericRangeToParts(arg0, isNaN, isNaN2, getInternalSlots) {
+  const result = PartitionNumberRangePattern.PartitionNumberRangePattern(arg0, isNaN, isNaN2, { getInternalSlots: getInternalSlots.getInternalSlots });
+  return result.map((type, index) => ({ type: type.type, value: type.value, source: type.source, result: index.toString() }));
+};

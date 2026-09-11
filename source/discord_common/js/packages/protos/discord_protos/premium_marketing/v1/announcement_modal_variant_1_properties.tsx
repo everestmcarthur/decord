@@ -1,13 +1,13 @@
-// Module ID: 10760
-// Function ID: 10761
+// Module ID: 10758
+// Function ID: 10759
 // Name: announcement_modal_variant_1_properties
-// Dependencies: [32, 1188, 10761, 10762, 10763, 2]
+// Dependencies: [32, 1188, 10759, 10760, 10761, 2]
 
-// Module 10760 (announcement_modal_variant_1_properties)
+// Module 10758 (announcement_modal_variant_1_properties)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10761 */;
-import help_article from "help_article" /* 10762 */;
-import cta_button from "cta_button" /* 10763 */;
+import localized_string from "localized_string" /* 10759 */;
+import help_article from "help_article" /* 10760 */;
+import cta_button from "cta_button" /* 10761 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

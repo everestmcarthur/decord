@@ -1,12 +1,12 @@
-// Module ID: 11354
-// Function ID: 11355
+// Module ID: 11352
+// Function ID: 11353
 // Name: SlideoutButton
-// Dependencies: [19, 17, 1074, 21, 4607, 4456, 576, 5175, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 4456, 576, 5174, 1178, 2]
 
-// Module 11354 (SlideoutButton)
+// Module 11352 (SlideoutButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5175 */;
+import Pressables from "Pressables" /* 5174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ class SlideoutButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { button: { alignSelf: "flex-end", justifyContent: "center", alignItems: "center" }, buttonText: null };
 let obj3 = { color: null, fontSize: 12, fontFamily: null, marginTop: 2, marginHorizontal: 2, textAlign: "center" };
 const ColorUtils = fn(4456);

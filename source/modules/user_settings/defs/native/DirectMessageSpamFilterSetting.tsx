@@ -1,7 +1,7 @@
 // Module ID: 14891
 // Function ID: 14892
 // Name: DirectMessageSpamFilterSetting
-// Dependencies: [19, 8050, 14892, 1935, 11564, 1114, 14894, 2]
+// Dependencies: [19, 8049, 14892, 1935, 11562, 1114, 14894, 2]
 
 // Module 14891 (DirectMessageSpamFilterSetting)
 import util from "util" /* 1114 */;
@@ -10,13 +10,13 @@ import ModerationUtils from "ModerationUtils" /* 14892 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(8050).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: function useDmSpamFilterSettingOptions() {
     return noop.useMemo(() => {
       const dmSpamOptions = ModerationUtils.generateDmSpamOptions();

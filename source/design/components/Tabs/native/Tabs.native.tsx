@@ -1,15 +1,15 @@
-// Module ID: 12709
-// Function ID: 12710
+// Module ID: 12707
+// Function ID: 12708
 // Name: Tabs/Tabs
-// Dependencies: [19, 17, 2025, 21, 4343, 4607, 576, 5026, 9588, 12710, 6727, 1115, 2]
+// Dependencies: [19, 17, 2025, 21, 4343, 4606, 576, 5025, 9586, 12708, 6726, 1115, 2]
 // Exports: Tabs
 
-// Module 12709 (Tabs/Tabs)
+// Module 12707 (Tabs/Tabs)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5026 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9588 */;
+import spring from "spring" /* 5025 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -26,7 +26,7 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -322,7 +322,7 @@ export const Tabs = function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12710).TabItem, obj, id);
+      return variant(state(12708).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

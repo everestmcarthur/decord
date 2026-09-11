@@ -1,26 +1,26 @@
-// Module ID: 9860
-// Function ID: 9861
+// Module ID: 9858
+// Function ID: 9859
 // Name: EditGuildEventDetails
-// Dependencies: [32, 19, 7600, 1963, 21, 4607, 1114, 4198, 9758, 1483, 4603, 5027, 1874, 9797, 4318, 9801, 9858, 9803, 2]
+// Dependencies: [32, 19, 7599, 1963, 21, 4606, 1114, 4198, 9756, 1483, 4602, 5026, 1874, 9795, 4318, 9799, 9856, 9801, 2]
 // Exports: default
 
-// Module 9860 (EditGuildEventDetails)
+// Module 9858 (EditGuildEventDetails)
 import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import ScheduleUtils from "ScheduleUtils" /* 9758 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9797 */;
+import ScheduleUtils from "ScheduleUtils" /* 9756 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(7600).isGuildScheduledEventActive;
+let closure_6 = fn(7599).isGuildScheduledEventActive;
 let constants = fn(1963).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");

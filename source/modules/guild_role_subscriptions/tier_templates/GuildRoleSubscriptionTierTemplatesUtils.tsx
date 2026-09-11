@@ -1,19 +1,19 @@
 // Module ID: 15294
 // Function ID: 15295
 // Name: GuildRoleSubscriptionTierTemplatesUtils
-// Dependencies: [5, 19, 1957, 4239, 15289, 15295, 1074, 1964, 4850, 563, 1384, 573, 9829, 7334, 13948, 2]
+// Dependencies: [5, 19, 1957, 4239, 15289, 15295, 1074, 1964, 4849, 563, 1384, 573, 9827, 7333, 13946, 2]
 // Exports: announceCreateTemplateChannels, announceDeleteTemplateChannels, createChannelsFromTemplateTierBenefits, getTemplateTierCreationAnalyticsContext, isEligibleForNewBadge, useChannelWithTemplateFallback, useSuggestedUnusedPrices
 
 // Module 15294 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7334 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 13948 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7333 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 13946 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4239 */;
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 15295 */;
-import allSettled_mod from "allSettled" /* 4850 */;
+import allSettled_mod from "allSettled" /* 4849 */;
 
 const require = globalThis.__r;
 

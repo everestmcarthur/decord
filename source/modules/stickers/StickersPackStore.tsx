@@ -1,11 +1,11 @@
-// Module ID: 5556
-// Function ID: 5557
+// Module ID: 5555
+// Function ID: 5556
 // Name: StickersPackStore
-// Dependencies: [32, 1973, 1980, 1090, 5320, 2]
+// Dependencies: [32, 1973, 1980, 1090, 5319, 2]
 
-// Module 5556 (StickersPackStore)
+// Module 5555 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1090 */;
-import StickersTypes from "StickersTypes" /* 5320 */;
+import StickersTypes from "StickersTypes" /* 5319 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

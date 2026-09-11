@@ -1,18 +1,18 @@
 // Module ID: 16162
 // Function ID: 16163
 // Name: HappeningNowActions
-// Dependencies: [19, 17, 2012, 1979, 2011, 15357, 1074, 21, 4607, 576, 1242, 9830, 16163, 1114, 9155, 16164, 9913, 16165, 12403, 12868, 15358, 4603, 2]
+// Dependencies: [19, 17, 2012, 1979, 2011, 15357, 1074, 21, 4606, 576, 1242, 9828, 16163, 1114, 9153, 16164, 9911, 16165, 12401, 12866, 15358, 4602, 2]
 // Exports: HappeningNowCardCreateChannel, HappeningNowCardCustomizeGuild, HappeningNowCardInvite, HappeningNowStudentHubAddServer
 
 // Module 16162 (HappeningNowActions)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9830 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9913 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12403 */;
-import _modDef12868 from "module_12868" /* 12868 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9828 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9911 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12401 */;
+import _modDef12866 from "module_12866" /* 12866 */;
 import HappeningNowCardDefault from "HappeningNowCard" /* 15358 */;
 import _modDef16163 from "module_16163" /* 16163 */;
 import _modDef16164 from "module_16164" /* 16164 */;
@@ -31,7 +31,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { actionCard: { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 8, borderWidth: 1, borderRadius: nativeDefault.radii.lg, height: HAPPENING_NOW_CARD_HEIGHT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_SUBTLE }, actionCardImage: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: 44, width: "100%", alignItems: "center", justifyContent: "center", marginBottom: 4, borderRadius: nativeDefault.radii.sm };
 obj.actionCardImage = size;
@@ -136,7 +136,7 @@ export const HappeningNowStudentHubAddServer = function HappeningNowStudentHubAd
       GuildDirectoryAddModalActionCreatorsDefault.open(obj6);
     }
   }, items);
-  obj.imageSource = _modDef12868;
+  obj.imageSource = _modDef12866;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t.emRpdS);

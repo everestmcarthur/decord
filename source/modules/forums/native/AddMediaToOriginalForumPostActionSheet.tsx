@@ -1,21 +1,21 @@
-// Module ID: 12093
-// Function ID: 12094
+// Module ID: 12091
+// Function ID: 12092
 // Name: AddMediaToOriginalForumPostActionSheet
-// Dependencies: [32, 5, 19, 17, 1957, 4948, 1979, 4828, 1074, 21, 4607, 576, 7912, 5231, 5186, 4574, 9403, 9399, 11, 5181, 9402, 7838, 1272, 12094, 7530, 7673, 4952, 1114, 504, 7236, 7840, 5190, 7224, 12095, 4603, 5028, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 4947, 1979, 4827, 1074, 21, 4606, 576, 7911, 5230, 5185, 4573, 9401, 9397, 11, 5180, 9400, 7837, 1272, 12092, 7529, 7672, 4951, 1114, 504, 7235, 7839, 5189, 7223, 12093, 4602, 5027, 2]
 // Exports: default
 
-// Module 12093 (AddMediaToOriginalForumPostActionSheet)
+// Module 12091 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5190 */;
-import tracking_Tracking from "tracking/Tracking" /* 7840 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5189 */;
+import tracking_Tracking from "tracking/Tracking" /* 7839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import MessageStore from "MessageStore" /* 4828 */;
+import MessageStore from "MessageStore" /* 4827 */;
 
 require = fn;
 let closure_16 = async function _upload2(arg0, value) {
@@ -59,7 +59,7 @@ let closure_16 = async function _upload2(arg0, value) {
           closure_132_10 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -76,30 +76,30 @@ let closure_16 = async function _upload2(arg0, value) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const kestrelConfig = closure_0(5231).getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
-            const obj = closure_0(5231);
-            const maxFileSizeResult = closure_0(5186).maxFileSize(id.id);
-            const obj2 = closure_0(5186);
+            const kestrelConfig = closure_0(5230).getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
+            const obj = closure_0(5230);
+            const maxFileSizeResult = closure_0(5185).maxFileSize(id.id);
+            const obj2 = closure_0(5185);
             const tmp3 = id;
-            const effectiveKestrelLimit = closure_0(5231).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+            const effectiveKestrelLimit = closure_0(5230).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
             if (currentSize.currentSize > effectiveKestrelLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4574).hideActionSheet();
+              closure_1(4573).hideActionSheet();
               const obj5 = { file: currentSize, maxSize: effectiveKestrelLimit, baseMaxSize: maxFileSizeResult, guildId: tmp3.id, analyticsLocations };
-              closure_1(9403)(obj5);
-              const obj4 = closure_1(4574);
+              closure_1(9401)(obj5);
+              const obj4 = closure_1(4573);
             }
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4574).hideActionSheet();
+            closure_1(4573).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9399).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9399);
-            closure_1(4574).hideActionSheet();
+            closure_1(9397).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9397);
+            closure_1(4573).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -147,7 +147,7 @@ let closure_16 = async function _upload2(arg0, value) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5181).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(5180).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -233,12 +233,12 @@ let closure_16 = async function _upload2(arg0, value) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(4948).DraftType;
+const DraftType = fn(4947).DraftType;
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 obj2.button = { borderRadius: nativeDefault.radii.sm };

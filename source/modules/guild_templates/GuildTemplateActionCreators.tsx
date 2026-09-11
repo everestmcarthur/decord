@@ -1,9 +1,9 @@
-// Module ID: 7398
-// Function ID: 7399
+// Module ID: 7397
+// Function ID: 7398
 // Name: GuildTemplateActionCreators
-// Dependencies: [1074, 573, 1272, 1242, 7399, 2]
+// Dependencies: [1074, 573, 1272, 1242, 7398, 2]
 
-// Module 7398 (GuildTemplateActionCreators)
+// Module 7397 (GuildTemplateActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

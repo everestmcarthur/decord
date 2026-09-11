@@ -1,9 +1,9 @@
-// Module ID: 4615
-// Function ID: 4616
+// Module ID: 4614
+// Function ID: 4615
 // Name: TypographyVariantRemap
 // Dependencies: [2]
 
-// Module 4615 (TypographyVariantRemap)
+// Module 4614 (TypographyVariantRemap)
 import size from "module_2" /* 2 */;
 
 const obj = { text: null, heading: null };

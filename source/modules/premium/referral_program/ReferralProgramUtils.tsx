@@ -1,10 +1,10 @@
-// Module ID: 8131
-// Function ID: 8132
+// Module ID: 8130
+// Function ID: 8131
 // Name: ReferralProgramUtils
-// Dependencies: [7526, 1954, 1090, 1114, 4427, 1943, 11, 1945, 8132, 504, 8142, 2]
+// Dependencies: [7525, 1954, 1090, 1114, 4427, 1943, 11, 1945, 8131, 504, 8141, 2]
 // Exports: getReferralTrialOfferExpirationCopy, isReferralProgramBadgeAcknowledged, isReferralProgramPopoverSeen, markReferralProgramBadgeAcknowledged, markReferralProgramEntrypointBadgeAcknowledged, markReferralProgramPopoverSeen, useIsReferralProgramBadgeShowable, useIsReferralProgramEntrypointBadgeAcknowledged, useIsReferralProgramPopoverShowable
 
-// Module 8131 (ReferralProgramUtils)
+// Module 8130 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -12,8 +12,8 @@ import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8132 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7526 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8131 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7525 */;
 
 require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;

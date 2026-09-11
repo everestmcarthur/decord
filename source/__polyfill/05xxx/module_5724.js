@@ -1,21 +1,18 @@
 // Module ID: 5724
 // Function ID: 5725
-// Dependencies: [19, 5723]
-// Exports: useHeaderHeight
+// Dependencies: []
+// Exports: getLabel
 
 // Module 5724
-import HeaderHeightContext from "HeaderHeightContext" /* 5723 */;
-import noop from "module_19" /* 19 */;
 
-require = arg1;
-
-export const useHeaderHeight = function useHeaderHeight() {
-  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
-    throw error;
+export const getLabel = function getLabel(label, arg1) {
+  if (undefined !== label.label) {
+    let title = label.label;
   } else {
-    return context;
+    title = arg1;
+    if (undefined !== label.title) {
+      title = label.title;
+    }
   }
+  return title;
 };

@@ -1,22 +1,22 @@
-// Module ID: 17082
-// Function ID: 17083
+// Module ID: 17081
+// Function ID: 17082
 // Name: AppComponents
-// Dependencies: [21, 16841, 1115, 4464, 16593, 16994, 4478, 17010, 10170, 14222, 4957, 4319, 17083, 17089, 17122, 17131, 17304, 2]
+// Dependencies: [21, 16841, 1115, 4464, 16593, 16994, 4478, 17010, 10168, 14220, 4956, 4319, 17082, 17088, 17121, 17130, 17303, 2]
 
-// Module 17082 (AppComponents)
+// Module 17081 (AppComponents)
 import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4319 */;
 import PortalKeyboard from "PortalKeyboard" /* 4478 */;
-import AlertModal from "AlertModal" /* 4957 */;
-import common_NotificationsDefault from "common/Notifications" /* 10170 */;
-import ContextMenuContainer from "ContextMenuContainer" /* 14222 */;
+import AlertModal from "AlertModal" /* 4956 */;
+import common_NotificationsDefault from "common/Notifications" /* 10168 */;
+import ContextMenuContainer from "ContextMenuContainer" /* 14220 */;
 import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 16841 */;
 import MainShared from "MainShared" /* 16994 */;
 import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17010 */;
-import ExternalPipViewDefault from "ExternalPipView" /* 17083 */;
-import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17089 */;
-import FramePanelContainerDefault from "FramePanelContainer" /* 17122 */;
-import VoicePanelContainerDefault from "VoicePanelContainer" /* 17131 */;
-import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17304 */;
+import ExternalPipViewDefault from "ExternalPipView" /* 17082 */;
+import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17088 */;
+import FramePanelContainerDefault from "FramePanelContainer" /* 17121 */;
+import VoicePanelContainerDefault from "VoicePanelContainer" /* 17130 */;
+import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17303 */;
 import jsxProd from "jsxProd" /* 21 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
 import AppFreezer_mod from "AppFreezer" /* 16593 */;

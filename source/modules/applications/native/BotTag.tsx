@@ -1,12 +1,12 @@
-// Module ID: 9531
-// Function ID: 9532
+// Module ID: 9529
+// Function ID: 9530
 // Name: BotTag
-// Dependencies: [19, 17, 1350, 21, 4607, 576, 1114, 9532, 4603, 2]
+// Dependencies: [19, 17, 1350, 21, 4606, 576, 1114, 9530, 4602, 2]
 
-// Module 9531 (BotTag)
+// Module 9529 (BotTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9532 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -118,7 +118,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { tag: { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 }, verifiedTagLeftPadding: { paddingLeft: 1 }, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
 let obj3 = { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
 obj2.tagNormal = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };

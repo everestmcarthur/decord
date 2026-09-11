@@ -1,18 +1,18 @@
-// Module ID: 9645
-// Function ID: 9646
+// Module ID: 9643
+// Function ID: 9644
 // Name: PostMessageTransport
-// Dependencies: [5, 32, 1956, 4512, 1074, 1090, 9646, 568, 1109, 1242, 4235, 9647, 9649, 1896, 9650, 2]
+// Dependencies: [5, 32, 1956, 4511, 1074, 1090, 9644, 568, 1109, 1242, 4235, 9645, 9647, 1896, 9648, 2]
 
-// Module 9645 (PostMessageTransport)
+// Module 9643 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1090 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 9646 */;
-import RPCErrorDefault from "RPCError" /* 9647 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 9644 */;
+import RPCErrorDefault from "RPCError" /* 9645 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(4512).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(4511).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
@@ -440,30 +440,30 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
     if (RPCOpcodesDefault.HANDSHAKE === tmp5) {
       if (null != value) {
         const obj2 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp35 = new tmp7(9647)(obj2, "Already connected");
+        const tmp35 = new tmp7(9645)(obj2, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
-    } else if (tmp7(9646).FRAME === tmp5) {
+    } else if (tmp7(9644).FRAME === tmp5) {
       if (null == value) {
         const obj3 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp27 = new tmp7(9647)(obj3, "Not connected");
+        const tmp27 = new tmp7(9645)(obj3, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
-    } else if (tmp7(9646).CLOSE === tmp5) {
+    } else if (tmp7(9644).CLOSE === tmp5) {
       if (null == value) {
         const obj4 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp20 = new tmp7(9647)(obj4, "Not connected");
+        const tmp20 = new tmp7(9645)(obj4, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
       }
     } else {
       const obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-      const tmp13 = new tmp7(9647)(obj, "Invalid opcode");
+      const tmp13 = new tmp7(9645)(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = _slicedToArray(arg2, 2);

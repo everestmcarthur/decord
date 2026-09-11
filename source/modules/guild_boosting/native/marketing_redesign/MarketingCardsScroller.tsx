@@ -1,14 +1,14 @@
-// Module ID: 12659
-// Function ID: 12660
+// Module ID: 12657
+// Function ID: 12658
 // Name: MarketingCardsScroller
-// Dependencies: [32, 19, 17, 4599, 21, 4607, 4456, 576, 504, 5014, 1114, 1116, 5175, 10466, 12463, 2]
+// Dependencies: [32, 19, 17, 4598, 21, 4606, 4456, 576, 504, 5013, 1114, 1116, 5174, 10464, 12461, 2]
 
-// Module 12659 (MarketingCardsScroller)
+// Module 12657 (MarketingCardsScroller)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
 let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
 const ColorUtils = fn(4456);

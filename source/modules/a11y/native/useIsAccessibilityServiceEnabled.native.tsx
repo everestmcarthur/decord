@@ -1,12 +1,12 @@
-// Module ID: 8027
-// Function ID: 8028
+// Module ID: 8026
+// Function ID: 8027
 // Name: useIsAccessibilityServiceEnabled
-// Dependencies: [560, 4955, 5014, 2]
+// Dependencies: [560, 4954, 5013, 2]
 // Exports: getIsAccessibilityServiceEnabled, useIsAccessibilityServiceEnabled
 
-// Module 8027 (useIsAccessibilityServiceEnabled)
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4955 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5014 */;
+// Module 8026 (useIsAccessibilityServiceEnabled)
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4954 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5013 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

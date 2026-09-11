@@ -1,32 +1,16 @@
 // Module ID: 14412
 // Function ID: 14413
-// Dependencies: [14355, 14375]
+// Dependencies: [14376, 14350]
 
 // Module 14412
-import _mod14375 from "module_14375" /* 14375 */;
-import getOwnPropertyDescriptor_mod from "module_14355" /* 14355 */;
+import _mod14350 from "module_14350" /* 14350 */;
+import all from "module_14376" /* 14376 */;
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod14375(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
-
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
+let _moduleResult = all(_mod14350.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14350.WeakMap));
+  const obj = /native code/;
 }
 
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default _moduleResult;

@@ -1,19 +1,19 @@
-// Module ID: 8313
-// Function ID: 8314
+// Module ID: 8311
+// Function ID: 8312
 // Name: useProfileTheme
-// Dependencies: [32, 4599, 8314, 1074, 4542, 504, 575, 8218, 1091, 8315, 4458, 2]
+// Dependencies: [32, 4598, 8312, 1074, 4541, 504, 575, 8217, 1091, 8313, 4458, 2]
 // Exports: default
 
-// Module 8313 (useProfileTheme)
+// Module 8311 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 575 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import useAvatarColor from "useAvatarColor" /* 8218 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import useAvatarColor from "useAvatarColor" /* 8217 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(8314).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8312).useEffectiveThemeOverride;
 const ThemeTypes = fn(1074).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
@@ -76,12 +76,12 @@ export default function useProfileTheme(arg0) {
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8315).getProfileTheme(first);
+        let profileTheme = tmp4(8313).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result10 = tmp4(8315);
+        const tmp4Result10 = tmp4(8313);
       }
     }
     if (tmp16 !== ThemeTypes.ASH) {

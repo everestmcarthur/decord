@@ -1,8 +1,8 @@
-// Module ID: 6224
-// Function ID: 6225
+// Module ID: 6223
+// Function ID: 6224
 // Dependencies: [2]
 
-// Module 6224
+// Module 6223
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftTrollIllocon-2x.png.js");

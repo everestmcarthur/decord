@@ -1,24 +1,26 @@
 // Module ID: 5279
 // Function ID: 5280
-// Dependencies: [5265]
+// Dependencies: [5264]
 
 // Module 5279
-import _mod5265 from "module_5265" /* 5265 */;
+import _mod5264 from "module_5264" /* 5264 */;
 
 require = arg1;
 const dependencyMap = arg6;
-let c2 = 6;
-let closure_3 = ["GIF87a", "GIF89a"];
+let c2 = 0;
+let c3 = "<?xpacket begin";
 
 export default {
-  isGifFile(dataView) {
-    let hasItem = dataView;
-    if (hasItem) {
-      hasItem = closure_3.includes(_mod5265.getStringFromDataView(dataView, 0, c2));
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5264.getStringFromDataView(dataView, c2, length.length) === length;
     }
-    return hasItem;
+    return tmp;
   },
-  findOffsets() {
-    return { gifHeaderOffset: 0 };
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
   }
 };

@@ -1,7 +1,7 @@
 // Module ID: 15336
 // Function ID: 15337
 // Name: SettingsAppearanceThemeSelectorItem
-// Dependencies: [19, 17, 1183, 15335, 1085, 21, 4607, 576, 4457, 4315, 5177, 1178, 15337, 563, 4308, 15338, 1231, 4325, 5175, 1114, 2]
+// Dependencies: [19, 17, 1183, 15335, 1085, 21, 4606, 576, 4457, 4315, 5176, 1178, 15337, 563, 4308, 15338, 1231, 4325, 5174, 1114, 2]
 // Exports: default
 
 // Module 15336 (SettingsAppearanceThemeSelectorItem)
@@ -12,8 +12,8 @@ import useToken from "useToken" /* 4308 */;
 import themes from "themes" /* 4315 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4325 */;
 import utils_ColorDefault from "utils/Color" /* 4457 */;
-import Pressables from "Pressables" /* 5175 */;
-import ThemedGradient from "ThemedGradient" /* 5177 */;
+import Pressables from "Pressables" /* 5174 */;
+import ThemedGradient from "ThemedGradient" /* 5176 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15335 */;
@@ -111,14 +111,14 @@ const View = fn(17).View;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4607);
+let createStyles = fn(4606);
 let obj2 = { rippleColor: { color: nativeDefault.unsafe_rawColors.TRANSPARENT }, themeSelectorItemContainer: { width: SettingsAppearanceConstants.THEME_ITEM_WIDTH, height: SettingsAppearanceConstants.THEME_ITEM_HEIGHT }, themeSelectorItem: null, newRedCircle: null };
 let obj3 = { color: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.themeSelectorItem = { borderRadius: nativeDefault.radii.sm, padding: SettingsAppearanceConstants.THEME_ITEM_PADDING };
 let size = { backgroundColor: nativeDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: nativeDefault.radii.sm, position: "absolute", top: 0, right: 0 };
 obj2.newRedCircle = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(4607);
+createStyles = fn(4606);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" }, lock: null };
   const internal = nativeDefault.internal;

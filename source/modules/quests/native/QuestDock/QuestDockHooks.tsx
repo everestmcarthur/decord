@@ -1,7 +1,7 @@
 // Module ID: 15150
 // Function ID: 15151
 // Name: QuestDockHooks
-// Dependencies: [32, 19, 15151, 5496, 15153, 1085, 504, 15154, 15157, 11449, 15155, 15158, 4343, 9588, 15152, 1090, 11582, 15160, 11288, 11289, 11293, 7801, 5499, 5503, 7791, 4574, 15161, 1896, 1477, 11381, 7946, 4308, 576, 2]
+// Dependencies: [32, 19, 15151, 5495, 15153, 1085, 504, 15154, 15157, 11447, 15155, 15158, 4343, 9586, 15152, 1090, 11580, 15160, 11286, 11287, 11291, 7800, 5498, 5502, 7790, 4573, 15161, 1896, 1477, 11379, 7945, 4308, 576, 2]
 // Exports: useActionSheetPressHandler, useBountyPreviewImageUrl, useIsQuestDockExpanded, useQuestDockAppThemedBackgroundColor, useQuestDockBountyBackgroundColor, useQuestDockDismissalReset, useQuestDockExpandHandler, useQuestDockExternalOffset, useQuestDockModeAnimatedReaction
 
 // Module 15150 (QuestDockHooks)
@@ -10,14 +10,14 @@ import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import useToken from "useToken" /* 4308 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import QuestTypes from "QuestTypes" /* 5499 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7946 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11288 */;
-import captureAdUserAction from "captureAdUserAction" /* 11289 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11293 */;
-import AssetUtils from "AssetUtils" /* 11381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7945 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11286 */;
+import captureAdUserAction from "captureAdUserAction" /* 11287 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11291 */;
+import AssetUtils from "AssetUtils" /* 11379 */;
 import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ import QuestDockStore from "QuestDockStore" /* 15151 */;
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(5496);
+const QuestConstants = fn(5495);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: metroRequire, QuestDockMode: closure_7 } = QuestConstants);
 const QuestDockConstants = fn(15153);
 ({ QUEST_DOCK_CLOSED_HEIGHT: closure_8, QUEST_DOCK_COLLAPSED_HEIGHT: closure_9, QUEST_DOCK_EXTERNAL_OFFSET_CLOSED: c10, QUEST_DOCK_EXTERNAL_OFFSET_COLLAPSED_WITH_YOU_BAR: closure_11, QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR: closure_12, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: map1 } = QuestDockConstants);
@@ -204,30 +204,30 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
     const tmp2 = dependencyMap;
     const tmp3 = closure_0;
     if (obj2.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_dock_action_sheet")) {
-      const obj3 = { type: tmp(11293).AdUserActionType.CLICK_INTERNAL };
+      const obj3 = { type: tmp(11291).AdUserActionType.CLICK_INTERNAL };
       const merged = Object.assign(creativeAnalyticsParams);
-      obj3.questContentCTA = tmp(7801).QuestContentCTA.OPEN_CONTEXT_MENU;
-      obj3.surfaceId = tmp(5499).QuestContent.QUEST_BAR_MOBILE;
-      obj3.sourceQuestContent = tmp(5499).QuestContent.QUEST_BAR_MOBILE;
+      obj3.questContentCTA = tmp(7800).QuestContentCTA.OPEN_CONTEXT_MENU;
+      obj3.surfaceId = tmp(5498).QuestContent.QUEST_BAR_MOBILE;
+      obj3.sourceQuestContent = tmp(5498).QuestContent.QUEST_BAR_MOBILE;
       obj3.impressionId = questImpressionId;
-      tmp(11289).captureAdUserAction(obj3);
+      tmp(11287).captureAdUserAction(obj3);
       let tmp7 = questImpressionId;
-      const tmpResult = tmp(11289);
-    } else if (creativeAnalyticsParams.adCreativeType === tmp(5503).AdCreativeType.QUEST) {
-      const obj4 = { questId: creativeAnalyticsParams.adCreativeId, questContent: tmp(5499).QuestContent.QUEST_BAR_MOBILE, questContentCTA: tmp(7801).QuestContentCTA.OPEN_CONTEXT_MENU, sourceQuestContent: tmp(5499).QuestContent.QUEST_BAR_MOBILE, impressionId: questImpressionId };
-      const result = tmp(7791).trackQuestContentClicked(obj4);
+      const tmpResult = tmp(11287);
+    } else if (creativeAnalyticsParams.adCreativeType === tmp(5502).AdCreativeType.QUEST) {
+      const obj4 = { questId: creativeAnalyticsParams.adCreativeId, questContent: tmp(5498).QuestContent.QUEST_BAR_MOBILE, questContentCTA: tmp(7800).QuestContentCTA.OPEN_CONTEXT_MENU, sourceQuestContent: tmp(5498).QuestContent.QUEST_BAR_MOBILE, impressionId: questImpressionId };
+      const result = tmp(7790).trackQuestContentClicked(obj4);
       tmp7 = questImpressionId;
-      const tmpResult3 = tmp(7791);
+      const tmpResult3 = tmp(7790);
     } else {
       const obj5 = { adContentId: null, adCreativeType: null, questContent: null, questContentCTA: null, sourceQuestContent: null, impressionId: null };
       ({ adCreativeId: obj9.adContentId, adCreativeType: obj9.adCreativeType } = creativeAnalyticsParams);
-      obj5.questContent = tmp(5499).QuestContent.QUEST_BAR_MOBILE;
-      obj5.questContentCTA = tmp(7801).QuestContentCTA.OPEN_CONTEXT_MENU;
-      obj5.sourceQuestContent = tmp(5499).QuestContent.QUEST_BAR_MOBILE;
+      obj5.questContent = tmp(5498).QuestContent.QUEST_BAR_MOBILE;
+      obj5.questContentCTA = tmp(7800).QuestContentCTA.OPEN_CONTEXT_MENU;
+      obj5.sourceQuestContent = tmp(5498).QuestContent.QUEST_BAR_MOBILE;
       tmp7 = questImpressionId;
       obj5.impressionId = questImpressionId;
-      const result1 = tmp(7791).trackAdContentClicked(obj5);
-      const tmpResult4 = tmp(7791);
+      const result1 = tmp(7790).trackAdContentClicked(obj5);
+      const tmpResult4 = tmp(7790);
     }
     obj2 = AdAnalyticsInterfaceExperiment;
     ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15161, tmp2.paths), "QuestDockContextMenuActionSheet", { creative: tmp3, impressionId: tmp7 });

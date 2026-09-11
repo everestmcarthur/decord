@@ -1,15 +1,15 @@
 // Module ID: 14908
 // Function ID: 14909
 // Name: BaseUpsellActionSheet
-// Dependencies: [19, 17, 1979, 21, 4567, 576, 4607, 504, 5636, 14906, 1114, 4603, 12713, 12463, 4574, 4305, 7224, 5027, 2]
+// Dependencies: [19, 17, 1979, 21, 4566, 576, 4606, 504, 5635, 14906, 1114, 4602, 12711, 12461, 4573, 4305, 7223, 5026, 2]
 // Exports: default
 
 // Module 14908 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4567 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import GuildIconDefault from "GuildIcon" /* 5636 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4566 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import GuildIconDefault from "GuildIcon" /* 5635 */;
 import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14906 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -24,7 +24,7 @@ function StoreGuildIcon(guildId) {
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(5636).GuildIconSizes.XSMALL;
+  obj2.size = guildId(5635).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 }
 function GuildCard(guildIds) {
@@ -113,7 +113,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 }, title: null, description: null, card: null, cardInfo: null, statusRow: null, guildSummary: null, chevron: null, buttonsContainer: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 };
 obj2.title = { marginBottom: nativeDefault.space.PX_8 };
@@ -150,17 +150,17 @@ export default function BaseUpsellActionSheet(toastContent) {
   }, []);
   let obj = { startExpanded: true, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items1 = [closure_7(toastContent(4603).Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title }), closure_7(toastContent(4603).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), closure_7(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
+  const items1 = [closure_7(toastContent(4602).Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title }), closure_7(toastContent(4602).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), closure_7(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items2 = [closure_7(toastContent(5027).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
+  const items2 = [closure_7(toastContent(5026).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1114).intl;
   obj6.text = intl.string(toastContent(1114).t.X1rGEm);
   obj6.onPress = callback1;
-  items2[1] = closure_7(toastContent(5027).Button, obj6);
+  items2[1] = closure_7(toastContent(5026).Button, obj6);
   obj5.children = items2;
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(7224).BottomSheet, obj);
+  return closure_7(toastContent(7223).BottomSheet, obj);
 };

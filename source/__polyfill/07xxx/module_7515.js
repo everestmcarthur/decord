@@ -1,15 +1,24 @@
 // Module ID: 7515
 // Function ID: 7516
-// Dependencies: [32, 19]
+// Dependencies: [19, 7516]
 // Exports: default
 
 // Module 7515
-import _slicedToArray from "module_32" /* 32 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef7516 from "module_7516" /* 7516 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef7516(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
 };

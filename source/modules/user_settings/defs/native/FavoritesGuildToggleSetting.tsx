@@ -1,16 +1,16 @@
 // Module ID: 15387
 // Function ID: 15388
 // Name: FavoritesGuildToggleSetting
-// Dependencies: [8050, 11564, 1114, 3236, 10315, 15388, 10314, 2]
+// Dependencies: [8049, 11562, 1114, 3236, 10313, 15388, 10312, 2]
 
 // Module 15387 (FavoritesGuildToggleSetting)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import SettingsConstants from "SettingsConstants" /* 8050 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10314 */;
-import FavoritesHooks from "FavoritesHooks" /* 10315 */;
+import SettingsConstants from "SettingsConstants" /* 8049 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
+import FavoritesHooks from "FavoritesHooks" /* 10313 */;
 import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 15388 */;
-import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

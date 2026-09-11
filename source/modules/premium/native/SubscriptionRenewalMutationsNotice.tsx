@@ -1,10 +1,10 @@
-// Module ID: 13443
-// Function ID: 13444
+// Module ID: 13441
+// Function ID: 13442
 // Name: SubscriptionRenewalMutationsNotice
-// Dependencies: [19, 17, 4265, 21, 4607, 576, 5493, 1178, 1114, 4264, 2]
+// Dependencies: [19, 17, 4265, 21, 4606, 576, 5492, 1178, 1114, 4264, 2]
 // Exports: default
 
-// Module 13443 (SubscriptionRenewalMutationsNotice)
+// Module 13441 (SubscriptionRenewalMutationsNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -18,12 +18,12 @@ const View = fn(17).View;
 const isNoneSubscription = fn(4265).isNoneSubscription;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
-const obj2 = { container: { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5493).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: null, text: null };
-let obj3 = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5493).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5493).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5493).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5493).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+const createStyles = fn(4606);
+const obj2 = { container: { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5492).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: null, text: null };
+let obj3 = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5492).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/SubscriptionRenewalMutationsNotice.tsx");

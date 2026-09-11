@@ -1,12 +1,12 @@
 // Module ID: 15361
 // Function ID: 15362
 // Name: SettingsAppearanceGradientBackground
-// Dependencies: [19, 17, 15335, 21, 4343, 5039, 15362, 4608, 4611, 576, 15363, 2]
+// Dependencies: [19, 17, 15335, 21, 4343, 5038, 15362, 4607, 4610, 576, 15363, 2]
 
 // Module 15361 (SettingsAppearanceGradientBackground)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15362 */;
 import noop from "module_19" /* 19 */;
 import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15335 */;
@@ -22,7 +22,7 @@ if (num == null) {
   num = 0;
 }
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5039).LinearGradientNativeComponent);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5038).LinearGradientNativeComponent);
 let animatedLinearGradientLoadingProps = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 animatedLinearGradientLoadingProps.colors = items;

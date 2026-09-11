@@ -1,16 +1,18 @@
 // Module ID: 6860
 // Function ID: 6861
-// Dependencies: [41, 42, 93, 95, 98, 19, 17, 21, 6733, 6840]
+// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 6859]
 
 // Module 6860
+import _modDef6859 from "module_6859" /* 6859 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const GenericTouchable = fn;
+const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,269 +32,78 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const Animated = fn(17).Animated;
+let closure_2 = ["style"];
+const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
-class GenericTouchable {
+class TouchableNativeFeedback {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, GenericTouchable);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(GenericTouchable);
-    tmp3 = closure_3;
-    if (closure_7()) {
-      tmp5 = globalThis;
+    tmp = closure_4(this, TouchableNativeFeedback);
+    tmp2 = metroRequire;
+    obj = metroRequire(TouchableNativeFeedback);
+    tmp3 = hasOwnProperty;
+    if (closure_9()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.longPressDetected = false;
-    tmp3Result.pointerInside = true;
-    tmp3Result.STATE = closure_8.UNDETERMINED;
-    tmp3Result.onGestureEvent = (nativeEvent) => {
-      const pointerInside = nativeEvent.nativeEvent.pointerInside;
-      if (closure_0.pointerInside !== pointerInside) {
-        if (pointerInside) {
-          obj.onMoveIn();
-        } else {
-          obj.onMoveOut();
-        }
-      }
-      closure_0.pointerInside = pointerInside;
-    };
-    tmp3Result.onHandlerStateChange = (nativeEvent) => {
-      const state = nativeEvent.nativeEvent.state;
-      if (state !== GenericTouchable(6733).State.CANCELLED) {
-        if (state !== tmp(6733).State.FAILED) {
-          if (state === tmp(6733).State.BEGAN) {
-            if (closure_0.STATE === closure_0.UNDETERMINED) {
-              obj.handlePressIn();
-            }
-          }
-          if (state === tmp(6733).State.END) {
-            const longPressDetected = closure_0.longPressDetected;
-            let tmp5 = !longPressDetected;
-            if (!longPressDetected) {
-              tmp5 = obj2.STATE !== obj.MOVED_OUTSIDE;
-            }
-            if (tmp5) {
-              tmp5 = undefined === obj2.pressOutTimeout;
-            }
-            const result = obj2.handleGoToUndetermined();
-            if (tmp5) {
-              const props = obj2.props;
-              const onPress = props.onPress;
-              if (onPress != null) {
-                onPress();
-              }
-            }
-          }
-        }
-      }
-      closure_0.moveToState(obj.UNDETERMINED);
-    };
-    tmp3Result.onLongPressDetected = () => {
-      closure_0.longPressDetected = true;
-      const props = closure_0.props;
-      const onLongPress = props.onLongPress;
-      if (onLongPress != null) {
-        onLongPress();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(GenericTouchable, fn(19).Component);
+_inherits(TouchableNativeFeedback, fn(19).Component);
 const entry = {
-  key: "handlePressIn",
-  value: function handlePressIn() {
-    const self = this;
-    if (this.props.delayPressIn) {
-      const _setTimeout = setTimeout;
-      self.pressInTimeout = setTimeout(() => {
-        self.moveToState(obj.BEGAN);
-        self.pressInTimeout = undefined;
-      }, self.props.delayPressIn);
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = {};
+    let rippleRadius = this.props.background;
+    if (!rippleRadius) {
+      obj.foreground = this.props.useForeground;
+      return obj;
     } else {
-      self.moveToState(obj.BEGAN);
-    }
-    if (self.props.onLongPress) {
-      const _setTimeout2 = setTimeout;
-      self.longPressTimeout = setTimeout(self.onLongPressDetected, (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0));
-      const tmp4 = self.props.delayPressIn || 0;
-      const tmp5 = self.props.delayLongPress || 0;
+      if ("RippleAndroid" === rippleRadius.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
+      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
+      }
+      rippleRadius = rippleRadius.rippleRadius;
+      obj.rippleRadius = rippleRadius;
     }
   }
 };
-let items = [
+const items = [
   entry,
-  {
-    key: "handleMoveOutside",
-    value: function handleMoveOutside() {
-      const self = this;
-      if (this.props.delayPressOut) {
-        let pressOutTimeout = self.pressOutTimeout;
-        if (!pressOutTimeout) {
-          const _setTimeout = setTimeout;
-          pressOutTimeout = setTimeout(() => {
-            self.moveToState(obj.MOVED_OUTSIDE);
-            self.pressOutTimeout = undefined;
-          }, self.props.delayPressOut);
-        }
-        self.pressOutTimeout = pressOutTimeout;
-      } else {
-        self.moveToState(obj.MOVED_OUTSIDE);
-      }
-    }
-  },
-  {
-    key: "handleGoToUndetermined",
-    value: function handleGoToUndetermined() {
-      const self = this;
-      clearTimeout(this.pressOutTimeout);
-      if (this.props.delayPressOut) {
-        const _setTimeout = setTimeout;
-        self.pressOutTimeout = setTimeout(() => {
-          if (self.STATE === self.UNDETERMINED) {
-            obj.moveToState(tmp.BEGAN);
-          }
-          self.moveToState(self.UNDETERMINED);
-          self.pressOutTimeout = undefined;
-        }, self.props.delayPressOut);
-      } else {
-        if (self.STATE === obj.UNDETERMINED) {
-          self.moveToState(tmp2.BEGAN);
-        }
-        self.moveToState(obj.UNDETERMINED);
-      }
-    }
-  },
-  {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.reset();
-    }
-  },
-  {
-    key: "reset",
-    value: function reset() {
-      const obj = { longPressDetected: false, pointerInside: true };
-      clearTimeout(obj.pressInTimeout);
-      clearTimeout(obj.pressOutTimeout);
-      clearTimeout(obj.longPressTimeout);
-      obj.pressOutTimeout = undefined;
-      obj.longPressTimeout = undefined;
-      obj.pressInTimeout = undefined;
-    }
-  },
-  {
-    key: "moveToState",
-    value: function moveToState(BEGAN) {
-      const self = this;
-      if (BEGAN !== this.STATE) {
-        if (BEGAN === obj.BEGAN) {
-          const props3 = self.props;
-          const onPressIn = props3.onPressIn;
-          if (onPressIn != null) {
-            onPressIn();
-          }
-        } else if (BEGAN === tmp10.MOVED_OUTSIDE) {
-          const props2 = self.props;
-          const onPressOut2 = props2.onPressOut;
-          if (onPressOut2 != null) {
-            onPressOut2();
-          }
-        } else if (BEGAN === tmp10.UNDETERMINED) {
-          self.reset();
-          if (self.STATE === tmp10.BEGAN) {
-            const props = self.props;
-            const onPressOut = props.onPressOut;
-            if (onPressOut != null) {
-              onPressOut();
-            }
-          }
-        }
-        const props4 = self.props;
-        const onStateChange = props4.onStateChange;
-        if (onStateChange != null) {
-          onStateChange(self.STATE, BEGAN);
-        }
-        self.STATE = BEGAN;
-      }
-    }
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.reset();
-    }
-  },
-  {
-    key: "onMoveIn",
-    value: function onMoveIn() {
-      const self = this;
-      if (this.STATE === obj.MOVED_OUTSIDE) {
-        self.moveToState(tmp.BEGAN);
-      }
-    }
-  },
-  {
-    key: "onMoveOut",
-    value: function onMoveOut() {
-      const self = this;
-      clearTimeout(this.longPressTimeout);
-      this.longPressTimeout = undefined;
-      if (this.STATE === obj.BEGAN) {
-        self.handleMoveOutside();
-      }
-    }
-  },
   {
     key: "render",
     value: function render() {
       const self = this;
-      if (typeof this.props.hitSlop === "number") {
-        const rect = { top: self.props.hitSlop, left: self.props.hitSlop, bottom: self.props.hitSlop, right: self.props.hitSlop };
-        let hitSlop = rect;
-      } else {
-        hitSlop = self.props.hitSlop;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
       }
-      const obj2 = { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null };
-      let onHandlerStateChange;
-      if (!self.props.disabled) {
-        onHandlerStateChange = self.onHandlerStateChange;
-      }
-      obj2.onHandlerStateChange = onHandlerStateChange;
-      obj2.onGestureEvent = self.onGestureEvent;
-      obj2.hitSlop = hitSlop;
-      obj2.userSelect = self.props.userSelect;
-      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
-      obj2.disallowInterruption = self.props.disallowInterruption;
-      obj2.testID = self.props.testID;
-      let flag = self.props.touchSoundDisabled;
-      if (flag == null) {
-        flag = false;
-      }
-      obj2.touchSoundDisabled = flag;
-      obj2.enabled = !self.props.disabled;
-      const merged = Object.assign(self.props.extraButtonProps);
-      const obj3 = {};
-      const merged1 = Object.assign({ accessible: false !== self.props.accessible, accessibilityLabel: self.props.accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityRole: self.props.accessibilityRole, accessibilityState: self.props.accessibilityState, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, nativeID: self.props.nativeID, onLayout: self.props.onLayout });
-      obj3.style = self.props.style;
-      obj3.children = self.props.children;
-      obj2.children = <Animated.View />;
-      return jsx(GenericTouchable(6840).LegacyBaseButton, { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null });
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_2);
+      const merged = Object.assign(tmp);
+      obj.style = style;
+      obj.extraButtonProps = self.getExtraButtonProps();
+      return jsx(TouchableNativeFeedback(6859), {});
     }
   }
 ];
-const importDefaultResultResult = _createClass(GenericTouchable, items);
-importDefaultResultResult.defaultProps = { delayLongPress: 600, extraButtonProps: { rippleColor: "transparent", exclusive: true } };
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = {};
+let merged = Object.assign(_modDef6859.defaultProps);
+obj.useForeground = true;
+obj.extraButtonProps = { rippleColor: null };
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
 export default importDefaultResultResult;
-export { TOUCHABLE_STATE };

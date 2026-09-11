@@ -1,18 +1,18 @@
 // Module ID: 15406
 // Function ID: 15407
 // Name: DisplayNameStylesEffectPickerSheet
-// Dependencies: [32, 19, 17, 21, 4607, 576, 8256, 15401, 15402, 4575, 4574, 7224, 7223, 1114, 2786, 5027, 5025, 10993, 10990, 10991, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 8255, 15401, 15402, 4574, 4573, 7223, 7222, 1114, 2786, 5026, 5024, 10991, 10988, 10989, 2]
 // Exports: default
 
 // Module 15406 (DisplayNameStylesEffectPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10990 */;
-import types from "types" /* 10991 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10993 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10988 */;
+import types from "types" /* 10989 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10991 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" }, gridContainer: { flexWrap: "wrap", width: 350 }, effectCard: null, effectCardSelected: null, effectName: null, tileNewDot: null };
 let size = { width: 109, height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
 obj2.effectCard = size;
@@ -77,7 +77,7 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   first = undefined;
   closure_5 = undefined;
   const tmp = closure_9();
-  let obj = userId(8256);
+  let obj = userId(8255);
   const visibleEffectOrder = userId(15401).useVisibleEffectOrder();
   const obj2 = userId(15401);
   const displayNameStylesNewEffects = userId(15402).useDisplayNameStylesNewEffects(visibleEffectOrder);
@@ -100,9 +100,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1114).intl;
     obj8.text = intl2.string(tmp2(1114).t.XqMe3N);
     obj8.onPress = tmp8;
-    obj7.children = closure_7(tmp2(5027).Button, obj8);
+    obj7.children = closure_7(tmp2(5026).Button, obj8);
     obj6.trailing = closure_7(closure_5, obj7);
-    obj5.children = closure_7(tmp2(7223).BottomSheetTitleHeader, obj6);
+    obj5.children = closure_7(tmp2(7222).BottomSheetTitleHeader, obj6);
     obj4.header = closure_7(closure_5, obj5);
     const obj9 = { style: tmp.container, children: null };
     const obj10 = { style: tmp.contentContainer, children: null };
@@ -126,10 +126,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
           }, effectId);
         })
     };
-    obj10.children = closure_7(tmp2(5025).Stack, obj11);
+    obj10.children = closure_7(tmp2(5024).Stack, obj11);
     obj9.children = closure_7(closure_5, obj10);
     obj4.children = closure_7(closure_5, obj9);
-    tmp9 = closure_7(tmp2(7224).BottomSheet, obj4);
+    tmp9 = closure_7(tmp2(7223).BottomSheet, obj4);
   }
   return tmp9;
 };

@@ -1,6 +1,6 @@
 // Module ID: 6852
 // Function ID: 6853
-// Dependencies: [41, 42, 93, 95, 98, 6748]
+// Dependencies: [41, 42, 93, 95, 98, 6747]
 
 // Module 6852
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-class FlingGesture {
+class LongPressGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, FlingGesture);
+    tmp = closure_0(this, LongPressGesture);
     tmp2 = c2;
-    obj = c2(FlingGesture);
+    obj = c2(LongPressGesture);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -45,28 +45,36 @@ class FlingGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6748).BaseGesture);
+_classCallCheck = LongPressGesture;
+_inherits(LongPressGesture, fn(6747).BaseGesture);
 const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
+  key: "minDuration",
+  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
     return this;
   }
 };
 const items = [
   entry,
   {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    }
+  },
+  {
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
       return this;
     }
   }
 ];
 
-export const FlingGesture = _createClass(FlingGesture, items);
+export const LongPressGesture = _createClass(LongPressGesture, items);

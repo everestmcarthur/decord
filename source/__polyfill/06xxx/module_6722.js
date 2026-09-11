@@ -1,15 +1,9 @@
 // Module ID: 6722
 // Function ID: 6723
-// Dependencies: []
-// Exports: isFabricInstalled
+// Dependencies: [17]
 
 // Module 6722
-const global = arg0;
+import _mod17 from "module_17" /* 17 */;
 
-export const isFabricInstalled = function isFabricInstalled() {
-  let prop;
-  if (global != null) {
-    prop = global.nativeFabricUIManager;
-  }
-  return null != prop;
-};
+
+export const findNodeHandle = _mod17.findNodeHandle;

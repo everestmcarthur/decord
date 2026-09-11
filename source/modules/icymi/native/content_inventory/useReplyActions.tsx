@@ -1,16 +1,16 @@
 // Module ID: 16577
 // Function ID: 16578
 // Name: useReplyActions
-// Dependencies: [5, 19, 1957, 4948, 1371, 1374, 4600, 21, 504, 8216, 9399, 4620, 16578, 4451, 7755, 7530, 16574, 4574, 4305, 1114, 14942, 8439, 11218, 7836, 16578, 1896, 2]
+// Dependencies: [5, 19, 1957, 4947, 1371, 1374, 4599, 21, 504, 8215, 9397, 4619, 16578, 4451, 7754, 7529, 16574, 4573, 4305, 1114, 14942, 8437, 11216, 7835, 16578, 1896, 2]
 // Exports: useReplyActions
 
 // Module 16577 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7836 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8216 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11218 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8215 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -19,9 +19,9 @@ import UserStore from "UserStore" /* 1371 */;
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(4948).DraftType;
+const DraftType = fn(4947).DraftType;
 const EmojiIntention = fn(1374).EmojiIntention;
-const MessageSendLocation = fn(4600).MessageSendLocation;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
@@ -228,7 +228,7 @@ export const useReplyActions = function useReplyActions(content) {
         const content_type = user.content_type;
         let str = "hotwheels_custom_status";
         if (ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS !== content_type) {
-          if (tmp9(8216).ContentInventoryEntryType.TOP_GAME === content_type) {
+          if (tmp9(8215).ContentInventoryEntryType.TOP_GAME === content_type) {
             str = "hotwheels_gaming_activity";
           } else {
             str = "unknown";

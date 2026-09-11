@@ -1,16 +1,16 @@
 // Module ID: 16951
 // Function ID: 16952
 // Name: SearchNavigatorScreen
-// Dependencies: [19, 17, 21, 4607, 576, 16705, 4469, 16952, 5175, 1114, 5680, 5177, 16433, 16707, 16716, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 16705, 4469, 16952, 5174, 1114, 5679, 5176, 16433, 16707, 16716, 2]
 // Exports: default
 
 // Module 16951 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4469 */;
-import Pressables from "Pressables" /* 5175 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5177 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5680 */;
+import Pressables from "Pressables" /* 5174 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5679 */;
 import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16707 */;
 import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16716 */;
 import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16952 */;
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };

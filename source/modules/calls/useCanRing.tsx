@@ -1,25 +1,25 @@
-// Module ID: 9266
-// Function ID: 9267
+// Module ID: 9264
+// Function ID: 9265
 // Name: useCanRing
-// Dependencies: [502, 5330, 1957, 2021, 5465, 4245, 4647, 4255, 4626, 1074, 504, 9267, 5468, 5059, 2]
+// Dependencies: [502, 5329, 1957, 2021, 5464, 4245, 4646, 4255, 4625, 1074, 504, 9265, 5467, 5058, 2]
 // Exports: canRingUsersInChannel, useCanRing
 
-// Module 9266 (useCanRing)
-import useChannelRoleSubscriptionStatusDefault from "useChannelRoleSubscriptionStatus" /* 5059 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5468 */;
+// Module 9264 (useCanRing)
+import useChannelRoleSubscriptionStatusDefault from "useChannelRoleSubscriptionStatus" /* 5058 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5467 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5330 */;
+import CallStore from "CallStore" /* 5329 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5465 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5464 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import PresenceStore from "PresenceStore" /* 4647 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const require = globalThis.__r;
 
-const GuildVoiceRingingExperimentDefault = tmp4(9267);
+const GuildVoiceRingingExperimentDefault = tmp4(9265);
 const require = fn;
 function useCanRingToGuildVoiceChannel(user, useCanRing, stateFromStores) {
   _require = user;

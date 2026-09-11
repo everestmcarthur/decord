@@ -1,12 +1,12 @@
-// Module ID: 17108
-// Function ID: 17109
+// Module ID: 17107
+// Function ID: 17108
 // Name: BlurVisualEffectView
-// Dependencies: [19, 17, 1074, 21, 4456, 576, 4308, 5017, 2]
+// Dependencies: [19, 17, 1074, 21, 4456, 576, 4308, 5016, 2]
 
-// Module 17108 (BlurVisualEffectView)
+// Module 17107 (BlurVisualEffectView)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5017 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,11 @@
 // Module ID: 14417
 // Function ID: 14418
-// Dependencies: [14396, 14395]
+// Dependencies: [17, 14418]
 
 // Module 14417
-import _mod14395 from "module_14395" /* 14395 */;
-import _mod14396 from "module_14396" /* 14396 */;
+import _mod17 from "module_17" /* 17 */;
+import setupURLPolyfill_mod from "setupURLPolyfill" /* 14418 */;
 
-
-export default Object.keys || (function keys(arg0) {
-  return _mod14396(arg0, _mod14395);
-});
+const Platform = _mod17.Platform;
+let setupURLPolyfill = setupURLPolyfill_mod;
+setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();

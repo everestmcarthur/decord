@@ -1,7 +1,7 @@
 // Module ID: 16598
 // Function ID: 16599
 // Name: MainTabsContentScrim
-// Dependencies: [17, 21, 4607, 576, 4343, 2]
+// Dependencies: [17, 21, 4606, 576, 4343, 2]
 // Exports: MainTabsContentScrim
 
 // Module 16598 (MainTabsContentScrim)
@@ -9,7 +9,7 @@ import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

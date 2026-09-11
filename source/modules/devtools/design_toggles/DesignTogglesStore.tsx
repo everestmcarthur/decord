@@ -1,9 +1,9 @@
-// Module ID: 5679
-// Function ID: 5680
+// Module ID: 5678
+// Function ID: 5679
 // Name: DesignTogglesStore
 // Dependencies: [504, 573, 2]
 
-// Module 5679 (DesignTogglesStore)
+// Module 5678 (DesignTogglesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

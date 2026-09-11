@@ -1,20 +1,15 @@
 // Module ID: 6957
 // Function ID: 6958
-// Dependencies: [6942, 6958]
+// Dependencies: []
 
 // Module 6957
-import _mod6958 from "module_6958" /* 6958 */;
 
-
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
   } else {
-    return _mod6958(arg0);
+    return arg0;
   }
 };

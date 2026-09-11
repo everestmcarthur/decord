@@ -1,22 +1,22 @@
-// Module ID: 17770
-// Function ID: 17771
+// Module ID: 17769
+// Function ID: 17770
 // Name: WarningNotice
-// Dependencies: [19, 17, 21, 4607, 576, 5639, 5649, 4603, 5027, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 5638, 5648, 4602, 5026, 2]
 // Exports: default
 
-// Module 17770 (WarningNotice)
+// Module 17769 (WarningNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5649 from "module_5649" /* 5649 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5648 from "module_5648" /* 5648 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 }, horizontalContainer: { flexDirection: "row", alignItems: "center" }, message: { flex: 1, marginStart: 10, textAlignVertical: "center" }, actionButtonWrapper: { marginTop: 24, alignSelf: "center", width: "100%" }, containerYellow: null, textYellow: null, alertIcon: null };
 let obj3 = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
 obj2.containerYellow = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
@@ -36,7 +36,7 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };
-  const obj3 = { style: tmp.alertIcon, source: _modDef5649 };
+  const obj3 = { style: tmp.alertIcon, source: _modDef5648 };
   const items1 = [React4(FastImageDefault, obj3), ];
   const obj4 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [, ];

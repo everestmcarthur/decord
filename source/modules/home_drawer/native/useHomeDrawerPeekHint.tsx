@@ -1,17 +1,17 @@
 // Module ID: 16095
 // Function ID: 16096
 // Name: useHomeDrawerPeekHint
-// Dependencies: [32, 19, 4599, 16092, 1074, 1954, 4343, 1943, 1484, 16096, 504, 16087, 4427, 7462, 4608, 5026, 16091, 2]
+// Dependencies: [32, 19, 4598, 16092, 1074, 1954, 4343, 1943, 1484, 16096, 504, 16087, 4427, 7461, 4607, 5025, 16091, 2]
 // Exports: useHomeDrawerPeekHint
 
 // Module 16095 (useHomeDrawerPeekHint)
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import spring from "spring" /* 5026 */;
+import timing from "timing" /* 4607 */;
+import spring from "spring" /* 5025 */;
 import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 import HomeDrawerStore from "HomeDrawerStore" /* 16092 */;
 
 const require = globalThis.__r;

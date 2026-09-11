@@ -1,7 +1,7 @@
 // Module ID: 15271
 // Function ID: 15272
 // Name: useRestorePurchases
-// Dependencies: [5, 32, 19, 3, 7493, 2]
+// Dependencies: [5, 32, 19, 3, 7492, 2]
 // Exports: default
 
 // Module 15271 (useRestorePurchases)

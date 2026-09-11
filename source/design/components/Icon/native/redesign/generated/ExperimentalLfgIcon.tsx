@@ -1,13 +1,13 @@
-// Module ID: 5122
-// Function ID: 5123
+// Module ID: 5121
+// Function ID: 5122
 // Name: ExperimentalLfgIcon
-// Dependencies: [19, 21, 576, 4307, 5112, 2]
+// Dependencies: [19, 21, 576, 4307, 5111, 2]
 // Exports: ExperimentalLfgIcon
 
-// Module 5122 (ExperimentalLfgIcon)
+// Module 5121 (ExperimentalLfgIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod5112 from "module_5112" /* 5112 */;
+import _mod5111 from "module_5111" /* 5111 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ExperimentalLfgIcon = function ExperimentalLfgIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5112, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5111, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

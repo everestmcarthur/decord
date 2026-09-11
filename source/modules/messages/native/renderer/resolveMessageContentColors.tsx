@@ -1,13 +1,13 @@
-// Module ID: 8028
-// Function ID: 8029
+// Module ID: 8027
+// Function ID: 8028
 // Name: resolveMessageContentColors
-// Dependencies: [4607, 4458, 576, 2]
+// Dependencies: [4606, 4458, 576, 2]
 // Exports: default
 
-// Module 8028 (resolveMessageContentColors)
+// Module 8027 (resolveMessageContentColors)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4458 */;
-import createStyles_mod from "createStyles" /* 4607 */;
+import createStyles_mod from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 let createStyles = createStyles_mod;

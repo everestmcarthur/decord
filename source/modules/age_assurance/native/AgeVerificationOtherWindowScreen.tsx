@@ -1,24 +1,24 @@
-// Module ID: 8542
-// Function ID: 8543
+// Module ID: 8540
+// Function ID: 8541
 // Name: AgeVerificationOtherWindowScreen
-// Dependencies: [19, 21, 4607, 1114, 2946, 8509, 8510, 5025, 7032, 576, 4603, 2]
+// Dependencies: [19, 21, 4606, 1114, 2946, 8507, 8508, 5024, 7031, 576, 4602, 2]
 // Exports: default
 
-// Module 8542 (AgeVerificationOtherWindowScreen)
+// Module 8540 (AgeVerificationOtherWindowScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2946 from "module_2946" /* 2946 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Stack_Stack from "Stack/Stack" /* 5025 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7032 */;
-import ModalScreen from "ModalScreen" /* 8509 */;
-import ModalContent from "ModalContent" /* 8510 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7031 */;
+import ModalScreen from "ModalScreen" /* 8507 */;
+import ModalContent from "ModalContent" /* 8508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");

@@ -1,21 +1,21 @@
 // Module ID: 15587
 // Function ID: 15588
 // Name: SettingsItemAppIcon
-// Dependencies: [19, 9416, 21, 4607, 576, 13505, 9417, 10909, 15588, 2]
+// Dependencies: [19, 9414, 21, 4606, 576, 13503, 9415, 10907, 15588, 2]
 // Exports: default
 
 // Module 15587 (SettingsItemAppIcon)
 import nativeDefault from "native" /* 576 */;
-import AppIconTypes from "AppIconTypes" /* 9417 */;
-import AppIconUtils from "AppIconUtils" /* 13505 */;
+import AppIconTypes from "AppIconTypes" /* 9415 */;
+import AppIconUtils from "AppIconUtils" /* 13503 */;
 import AppIconDefault from "AppIcon" /* 15588 */;
 import noop from "module_19" /* 19 */;
 
-const ClydeIcon = tmp4(10909);
+const ClydeIcon = tmp4(10907);
 require = fn;
-const getIconById = fn(9416).getIconById;
+const getIconById = fn(9414).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

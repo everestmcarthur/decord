@@ -1,16 +1,16 @@
-// Module ID: 14602
-// Function ID: 14603
+// Module ID: 14600
+// Function ID: 14601
 // Name: SessionAdManager
-// Dependencies: [502, 1074, 1898, 7536, 4494, 573, 1090, 1232, 7794, 1242, 2]
+// Dependencies: [502, 1074, 1898, 7535, 1952, 573, 1090, 1232, 7793, 1242, 2]
 
-// Module 14602 (SessionAdManager)
+// Module 14600 (SessionAdManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Timers from "Timers" /* 4494 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7536 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7794 */;
+import Timers from "Timers" /* 1952 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7535 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7793 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 

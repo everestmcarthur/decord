@@ -1,7 +1,7 @@
 // Module ID: 16196
 // Function ID: 16197
 // Name: VoiceGuildTag
-// Dependencies: [19, 17, 1371, 8019, 21, 1115, 4607, 576, 504, 8251, 9276, 4603, 2]
+// Dependencies: [19, 17, 1371, 8018, 21, 1115, 4606, 576, 504, 8250, 9274, 4602, 2]
 // Exports: default
 
 // Module 16196 (VoiceGuildTag)
@@ -11,7 +11,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8019).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8018).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let PlatformUtils = fn(1115);
@@ -19,7 +19,7 @@ let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj3 = { gapContainer: { height: num }, tagContainer: { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 }, tag: null };
 let num2 = 16;
 PlatformUtils = fn(1115);
@@ -42,20 +42,20 @@ export default function VoiceGuildTagChiplet(userId) {
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
   }
-  const userPrimaryGuild = userId(8251).getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = userId(8250).getUserPrimaryGuild(primaryGuild);
   ({ tag, guildId } = userPrimaryGuild);
   if (null != guildId) {
     if (null != tag) {
       const obj3 = { style: tmp.gapContainer, children: null };
       const obj4 = { style: tmp.tagContainer, children: null };
-      const guildTagBadgeUrl = tmp2(8251).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+      const guildTagBadgeUrl = tmp2(8250).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
       const obj5 = { source: null, size: null };
       const obj6 = { uri: guildTagBadgeUrl };
       obj5.source = obj6;
       obj5.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(9276).GuildTagBadge, obj5), ];
+      const items2 = [closure_5(tmp2(9274).GuildTagBadge, obj5), ];
       const obj7 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-      items2[1] = closure_5(tmp2(4603).Text, obj7);
+      items2[1] = closure_5(tmp2(4602).Text, obj7);
       obj4.children = items2;
       obj3.children = closure_6(View, obj4);
       return closure_5(View, obj3);

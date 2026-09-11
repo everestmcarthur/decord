@@ -1,19 +1,19 @@
-// Module ID: 9545
-// Function ID: 9546
+// Module ID: 9543
+// Function ID: 9544
 // Name: game_console/GameConsoleAlertUtils
-// Dependencies: [19, 1908, 9325, 1074, 21, 4427, 1943, 1114, 4952, 9546, 9344, 2]
+// Dependencies: [19, 1908, 9323, 1074, 21, 4427, 1943, 1114, 4951, 9544, 9342, 2]
 
-// Module 9545 (game_console/GameConsoleAlertUtils)
+// Module 9543 (game_console/GameConsoleAlertUtils)
 import util from "util" /* 1114 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9344 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9342 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9325).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9323).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1074);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -58,7 +58,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(9546).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
+    obj2.body = jsx(reconnectPlatformType(9544).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
     obj2.onConfirm = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: tmp, location: _location };

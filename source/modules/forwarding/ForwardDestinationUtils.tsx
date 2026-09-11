@@ -1,16 +1,16 @@
-// Module ID: 11779
-// Function ID: 11780
+// Module ID: 11777
+// Function ID: 11778
 // Name: ForwardDestinationUtils
-// Dependencies: [19, 5554, 1961, 1957, 4245, 4255, 1371, 1074, 11076, 1369, 504, 1094, 4946, 1894, 4818, 1114, 4944, 7761, 4451, 4760, 2]
+// Dependencies: [19, 5553, 1961, 1957, 4245, 4255, 1371, 1074, 11074, 1369, 504, 1094, 4945, 1894, 4817, 1114, 4943, 7760, 4451, 4759, 2]
 // Exports: getDestinationIsUnavailable, isRatelimitedInChannel, useDestinationNamesWithSlowmode, useSelectedDestinationChannel, useSelectedDestinationNames
 
-// Module 11779 (ForwardDestinationUtils)
+// Module 11777 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import StickersUtils from "StickersUtils" /* 4946 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7761 */;
+import StickersUtils from "StickersUtils" /* 4945 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7760 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5554 */;
+import StickersStore from "StickersStore" /* 5553 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11076).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(11074).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -67,7 +67,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
-          const tmp11Result = tmp11(4818);
+          const tmp11Result = tmp11(4817);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp11(1114).intl;
@@ -94,9 +94,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj4.label = intl3.string(tmp11(1114).t.Wr4RIX);
                 return obj4;
               }
-              tmp11Result6 = tmp11(4944);
+              tmp11Result6 = tmp11(4943);
             }
-            tmp11Result5 = tmp11(4944);
+            tmp11Result5 = tmp11(4943);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -107,12 +107,12 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj5.label = intl4.string(tmp11(1114).t.Wr4RIX);
               return obj5;
             }
-            tmp11Result7 = tmp11(4944);
+            tmp11Result7 = tmp11(4943);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp11Result8 = tmp11(4946);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp11(4946).getMessageStickers(components), 0));
+          const tmp11Result8 = tmp11(4945);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp11(4945).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -144,7 +144,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4946).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4945).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -184,7 +184,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         channel = channel.getChannel(id);
         let channelName = null;
         if (null != channel) {
-          const obj = closure_1_0(4760);
+          const obj = closure_1_0(4759);
           channelName = obj.computeChannelName(channel, user, nickname, true);
         }
         return channelName;

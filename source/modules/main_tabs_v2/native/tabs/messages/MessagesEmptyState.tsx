@@ -1,7 +1,7 @@
 // Module ID: 16124
 // Function ID: 16125
 // Name: MessagesEmptyState
-// Dependencies: [32, 19, 17, 21, 4607, 1477, 1483, 8861, 1250, 5178, 15158, 16125, 4603, 1114, 5027, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 1477, 1483, 8859, 1250, 5177, 15158, 16125, 4602, 1114, 5026, 2]
 // Exports: default
 
 // Module 16124 (MessagesEmptyState)
@@ -9,10 +9,10 @@ import util from "util" /* 1114 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5178 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8861 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5177 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8859 */;
 import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15158 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");

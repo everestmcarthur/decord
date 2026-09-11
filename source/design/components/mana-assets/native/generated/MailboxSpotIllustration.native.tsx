@@ -1,13 +1,13 @@
-// Module ID: 6305
-// Function ID: 6306
+// Module ID: 6304
+// Function ID: 6305
 // Name: MailboxSpotIllustration
-// Dependencies: [21, 5639, 6306, 2]
+// Dependencies: [21, 5638, 6305, 2]
 // Exports: MailboxSpotIllustration
 
-// Module 6305 (MailboxSpotIllustration)
+// Module 6304 (MailboxSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6306 from "module_6306" /* 6306 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6305 from "module_6305" /* 6305 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const MailboxSpotIllustration = function MailboxSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6306 };
+  const obj2 = { uri: _modDef6305 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

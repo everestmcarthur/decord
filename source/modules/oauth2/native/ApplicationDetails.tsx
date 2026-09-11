@@ -1,21 +1,21 @@
-// Module ID: 9523
-// Function ID: 9524
+// Module ID: 9521
+// Function ID: 9522
 // Name: ApplicationDetails
-// Dependencies: [19, 17, 21, 4607, 576, 9332, 8978, 9524, 11, 9330, 4550, 1114, 5147, 9334, 9526, 4570, 8427, 9528, 9495, 4603, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 9330, 8976, 9522, 11, 9328, 4549, 1114, 5146, 9332, 9524, 4569, 8425, 9526, 9493, 4602, 2]
 // Exports: default
 
-// Module 9523 (ApplicationDetails)
+// Module 9521 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ClockIcon from "ClockIcon" /* 4570 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import LockIcon from "LockIcon" /* 5147 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8427 */;
-import scopes from "scopes" /* 9330 */;
-import disclosures from "disclosures" /* 9332 */;
-import Utils from "Utils" /* 9334 */;
-import ShieldIcon from "ShieldIcon" /* 9495 */;
+import ClockIcon from "ClockIcon" /* 4569 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LockIcon from "LockIcon" /* 5146 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8425 */;
+import scopes from "scopes" /* 9328 */;
+import disclosures from "disclosures" /* 9330 */;
+import Utils from "Utils" /* 9332 */;
+import ShieldIcon from "ShieldIcon" /* 9493 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function ApplicationDetailsEntry(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;
@@ -66,7 +66,7 @@ export default function ApplicationDetails(arg0) {
   let obj3 = { style: tmp2.applicationDetails, children: null };
   let tmp15 = null;
   if (null != joined) {
-    let obj4 = { iconComponent: tmp5(4550).LinkIcon, text: null };
+    let obj4 = { iconComponent: tmp5(4549).LinkIcon, text: null };
     const intl = tmp5(1114).intl;
     const obj5 = { origin: joined };
     obj4.text = intl.format(tmp5(1114).t["5k5OKD"], obj5);
@@ -80,7 +80,7 @@ export default function ApplicationDetails(arg0) {
   items[1] = React4(ApplicationDetailsEntry, obj6);
   let tmp18Result = null;
   if (null != connectedAccount) {
-    const obj7 = { iconComponent: tmp5(9526).HammerIcon, text: null };
+    const obj7 = { iconComponent: tmp5(9524).HammerIcon, text: null };
     const intl2 = tmp5(1114).intl;
     obj7.text = intl2.string(tmp5(1114).t["8qui3M"]);
     tmp18Result = tmp18(tmp19, obj7);
@@ -94,7 +94,7 @@ export default function ApplicationDetails(arg0) {
   if (scopes.includes(OAuth2Scopes.OAuth2Scopes.BOT)) {
     tmp18Result2 = null;
     if (null != approximateGuildCount) {
-      const obj9 = { iconComponent: tmp5(9528).RobotIcon, text: null };
+      const obj9 = { iconComponent: tmp5(9526).RobotIcon, text: null };
       const intl4 = tmp5(1114).intl;
       const obj10 = { guildCount: approximateGuildCount };
       obj9.text = intl4.formatToPlainString(tmp5(1114).t.UHGHSP, obj10);
@@ -109,12 +109,12 @@ export default function ApplicationDetails(arg0) {
     mapped = disclosures.map((toFixed) => {
       const textForDisclosure = disclosures.getTextForDisclosure(toFixed);
       if (disclosures.ApplicationDisclosure.IP_LOCATION === toFixed) {
-        const obj2 = { iconComponent: tmp(8978).GlobeEarthIcon };
+        const obj2 = { iconComponent: tmp(8976).GlobeEarthIcon };
         let tmp4 = obj2;
       } else {
         tmp4 = null;
-        if (tmp(9332).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
-          const obj3 = { iconComponent: tmp(9524).EmbedIcon };
+        if (tmp(9330).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+          const obj3 = { iconComponent: tmp(9522).EmbedIcon };
           tmp4 = obj3;
         }
       }

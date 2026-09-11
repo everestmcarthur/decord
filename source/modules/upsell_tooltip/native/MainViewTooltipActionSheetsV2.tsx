@@ -1,7 +1,7 @@
 // Module ID: 17010
 // Function ID: 17011
 // Name: MainViewTooltipActionSheetsV2
-// Dependencies: [32, 19, 4297, 1221, 1074, 1954, 21, 17011, 1896, 17013, 17015, 17016, 17017, 17019, 17020, 15754, 17022, 17024, 17026, 17030, 17034, 17035, 12064, 1943, 1944, 1242, 1948, 10717, 4427, 1945, 17036, 504, 10716, 2]
+// Dependencies: [32, 19, 4297, 1221, 1074, 1954, 21, 17011, 1896, 17013, 17015, 17016, 17017, 17019, 17020, 15754, 17022, 17024, 17026, 17030, 17033, 17034, 12062, 1943, 1944, 1242, 1948, 10715, 4427, 1945, 17035, 504, 10714, 2]
 // Exports: default
 
 // Module 17010 (MainViewTooltipActionSheetsV2)
@@ -66,7 +66,7 @@ function TrackedDismissibleActionSheet(actionSheetConfig) {
     }
   }, items);
   const merged1 = Object.assign(merged);
-  return jsx(actionSheetConfig(10717).DismissibleActionSheet, {});
+  return jsx(actionSheetConfig(10715).DismissibleActionSheet, {});
 }
 let noop = fn(19);
 ({ useEffect: hasOwnProperty, useMemo: metroRequire, useRef: closure_7 } = noop);
@@ -214,39 +214,39 @@ const obj15 = {
 items1[sum10] = {
   id: fn(1943).DismissibleContent.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT,
   importer: function NitroFileUploadAnnouncementPromoSheetImporter() {
-    return asyncRequireImpl(17034, dependencyMap.paths);
+    return asyncRequireImpl(17033, dependencyMap.paths);
   }
 };
 const sum11 = sum10 + 1;
 const obj16 = {
   id: fn(1943).DismissibleContent.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT,
   importer: function NitroFileUploadAnnouncementPromoSheetImporter() {
-    return asyncRequireImpl(17034, dependencyMap.paths);
+    return asyncRequireImpl(17033, dependencyMap.paths);
   }
 };
 items1[sum11] = {
   id: fn(1943).DismissibleContent.NITRO_FILE_UPLOAD_1GB_UPSELL,
   importer: function NitroFileUploadUpsellPromoSheetImporter() {
-    return asyncRequireImpl(17035, dependencyMap.paths);
+    return asyncRequireImpl(17034, dependencyMap.paths);
   }
 };
 const obj17 = {
   id: fn(1943).DismissibleContent.NITRO_FILE_UPLOAD_1GB_UPSELL,
   importer: function NitroFileUploadUpsellPromoSheetImporter() {
-    return asyncRequireImpl(17035, dependencyMap.paths);
+    return asyncRequireImpl(17034, dependencyMap.paths);
   }
 };
 items1[sum11 + 1] = {
   id: fn(1943).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_COACHMARK,
   importer: function CustomTypingIndicatorAnnounceActionSheetImporter() {
-    return asyncRequireImpl(12064, dependencyMap.paths);
+    return asyncRequireImpl(12062, dependencyMap.paths);
   }
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx");
 
 export default function MainViewTooltipActionSheetsV2() {
-  mainViewTooltipActionSheetMap = mainViewTooltipActionSheetMap(17036).useMainViewTooltipActionSheetMap();
+  mainViewTooltipActionSheetMap = mainViewTooltipActionSheetMap(17035).useMainViewTooltipActionSheetMap();
   [first, dependencyMap] = noop.useState(null);
   _slicedToArray = ref(false);
   noop = ref(false);
@@ -254,7 +254,7 @@ export default function MainViewTooltipActionSheetsV2() {
   stateFromStores(() => {
     closure_4.current = false;
   }, items);
-  let obj = mainViewTooltipActionSheetMap(17036);
+  let obj = mainViewTooltipActionSheetMap(17035);
   items1 = [obj5];
   stateFromStores = mainViewTooltipActionSheetMap(504).useStateFromStores(items1, () => obj5.getKey() === MainViewTooltipActionSheets);
   const obj2 = mainViewTooltipActionSheetMap(504);
@@ -406,7 +406,7 @@ export default function MainViewTooltipActionSheetsV2() {
         }
         return tmp3;
       };
-      return jsx(tmp(10716).SelectedSnowflakeBoundDismissibleContent, { contentType: first.id, newSnowflakeId: null, groupName: null, children: null });
+      return jsx(tmp(10714).SelectedSnowflakeBoundDismissibleContent, { contentType: first.id, newSnowflakeId: null, groupName: null, children: null });
     } else if ("versioned" === str2) {
       let num = obj5.latestVersion;
       if (num == null) {
@@ -426,7 +426,7 @@ export default function MainViewTooltipActionSheetsV2() {
               return tmp3;
             }
       };
-      return jsx(tmp(10716).SelectedVersionedDismissibleContent, {
+      return jsx(tmp(10714).SelectedVersionedDismissibleContent, {
         latestVersion: num,
         contentType: first.id,
         groupName: constants.MAIN_VIEW_TOOLTIPS,
@@ -456,7 +456,7 @@ export default function MainViewTooltipActionSheetsV2() {
               return tmp3;
             }
       };
-      return jsx(tmp(10716).SelectedTimeRecurringDismissibleContent, {
+      return jsx(tmp(10714).SelectedTimeRecurringDismissibleContent, {
         contentType: first.id,
         timeRecurringConfig: obj5.cooldownConfig,
         groupName: constants.MAIN_VIEW_TOOLTIPS,
@@ -485,7 +485,7 @@ export default function MainViewTooltipActionSheetsV2() {
         }
         return tmp3;
       };
-      return jsx(first(10716), { contentTypes: null, groupName: null, children: null });
+      return jsx(first(10714), { contentTypes: null, groupName: null, children: null });
     } else {
       return null;
     }

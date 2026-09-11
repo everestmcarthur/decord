@@ -1,18 +1,18 @@
 // Module ID: 6861
 // Function ID: 6862
-// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 6860]
+// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 6859]
 
 // Module 6861
-import _modDef6860 from "module_6860" /* 6860 */;
+import _modDef6859 from "module_6859" /* 6859 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TouchableNativeFeedback = importDefault;
+const TouchableOpacity = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,78 +32,92 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_2 = ["style"];
-const Platform = fn(17).Platform;
+let closure_3 = ["style"];
+get_ActivityIndicator = fn(17);
+({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-class TouchableNativeFeedback {
+class TouchableOpacity {
   constructor() {
     self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, TouchableOpacity);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(TouchableOpacity);
+    tmp3 = metroRequire;
+    if (closure_13()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.getChildStyleOpacityWithDefault = () => {
+      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
+      let num = 1;
+      if (null != tmp.opacity) {
+        const opacity = tmp.opacity;
+        num = opacity.valueOf();
+      }
+      return num;
+    };
+    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
+    tmp3Result.opacity = value;
+    tmp3Result.setOpacityTo = (toValue, duration) => {
+      const obj = { toValue, duration, easing: React7.inOut(React7.quad), useNativeDriver: null };
+      let flag = closure_0.props.useNativeAnimations;
+      if (flag == null) {
+        flag = true;
+      }
+      obj.useNativeDriver = flag;
+      React6.timing(closure_0.opacity, obj).start();
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableOpacity(6859).TOUCHABLE_STATE.BEGAN) {
+        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
+      } else {
+        if (!tmp3) {
+          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
+        }
+        tmp3 = arg1 !== tmp(6859).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(6859).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(TouchableNativeFeedback, fn(19).Component);
+_inherits(TouchableOpacity, fn(19).Component);
 const entry = {
-  key: "getExtraButtonProps",
-  value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
-    } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
-      }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    let style = props.style;
+    if (undefined === style) {
+      style = {};
     }
+    const obj = {};
+    const tmp = _objectWithoutProperties(props, closure_3);
+    const merged = Object.assign(tmp);
+    const items = [style, { opacity: self.opacity }];
+    obj.style = items;
+    obj.onStateChange = self.onStateChange;
+    if (self.props.children) {
+      let children = self.props.children;
+    } else {
+      children = tmp2(closure_1_11, {});
+    }
+    obj.children = children;
+    return jsx(_modDef6859, {});
   }
 };
-const items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
-      }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_2);
-      const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(6860), {});
-    }
-  }
-];
-const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let items = [entry];
+const importDefaultResultResult = _createClass(TouchableOpacity, items);
 let obj = {};
-let merged = Object.assign(_modDef6860.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
+let merged = Object.assign(_modDef6859.defaultProps);
+obj.activeOpacity = 0.2;
 importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
-importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
 export default importDefaultResultResult;

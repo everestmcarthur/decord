@@ -1,21 +1,21 @@
-// Module ID: 12138
-// Function ID: 12139
+// Module ID: 12136
+// Function ID: 12137
 // Name: useCanShowAppLauncherOnboarding
-// Dependencies: [32, 1957, 4527, 1371, 12139, 12140, 5051, 1090, 504, 11, 1943, 7462, 4427, 2]
+// Dependencies: [32, 1957, 4526, 1371, 12137, 12138, 5050, 1090, 504, 11, 1943, 7461, 4427, 2]
 // Exports: default
 
-// Module 12138 (useCanShowAppLauncherOnboarding)
+// Module 12136 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4527 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
 import UserStore from "UserStore" /* 1371 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12139 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12140 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12137 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12138 */;
 
 const require = fn;
-const BuiltInSectionId = fn(5051).BuiltInSectionId;
+const BuiltInSectionId = fn(5050).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
@@ -68,7 +68,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }
   const tmp14 = AppLauncherOnboardingPersistedStore;
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(7462);
+  const tmp2Result11 = channelId(7461);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(), recentApplicationCommandMetadata: AppLauncherOnboardingStore.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);

@@ -1,17 +1,17 @@
-// Module ID: 9522
-// Function ID: 9523
+// Module ID: 9520
+// Function ID: 9521
 // Name: Checkbox
-// Dependencies: [17, 21, 4607, 4325, 1114, 5025, 5669, 4603, 2]
+// Dependencies: [17, 21, 4606, 4325, 1114, 5024, 5668, 4602, 2]
 // Exports: Checkbox
 
-// Module 9522 (Checkbox)
+// Module 9520 (Checkbox)
 import useA11yRolesNative from "useA11yRolesNative" /* 4325 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Stack_Stack from "Stack/Stack" /* 5025 */;
-import FormCheckbox from "FormCheckbox" /* 5669 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import FormCheckbox from "FormCheckbox" /* 5668 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 ({ Pressable: c2, View: c3 } = get_ActivityIndicator);
@@ -51,7 +51,7 @@ export const Checkbox = function Checkbox(onToggle) {
     const intl2 = tmp2(1114).intl;
     obj5["aria-label"] = intl2.string(tmp2(1114).t.EkokLy);
     obj5.children = [" ", "*"];
-    required = tmp10(tmp2(4603).Text, obj5);
+    required = tmp10(tmp2(4602).Text, obj5);
   }
   items1[1] = required;
   obj4.children = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: items1 });
@@ -59,7 +59,7 @@ export const Checkbox = function Checkbox(onToggle) {
   let tmp5Result = null != description;
   if (tmp5Result) {
     const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: description };
-    tmp5Result = tmp5(tmp2(4603).Text, obj6);
+    tmp5Result = tmp5(tmp2(4602).Text, obj6);
   }
   const obj7 = { direction: "horizontal", children: null };
   items2[1] = tmp5Result;

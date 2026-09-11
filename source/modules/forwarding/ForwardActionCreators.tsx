@@ -1,10 +1,10 @@
-// Module ID: 11782
-// Function ID: 11783
+// Module ID: 11780
+// Function ID: 11781
 // Name: ForwardActionCreators
-// Dependencies: [32, 5, 1957, 4245, 1074, 4600, 8436, 7755, 1096, 7757, 1384, 7530, 11779, 4850, 2]
+// Dependencies: [32, 5, 1957, 4245, 1074, 4599, 8434, 7754, 1096, 7756, 1384, 7529, 11777, 4849, 2]
 
-// Module 11782 (ForwardActionCreators)
-import allSettledDefault from "allSettled" /* 4850 */;
+// Module 11780 (ForwardActionCreators)
+import allSettledDefault from "allSettled" /* 4849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -12,7 +12,7 @@ import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = fn;
 const MessageFlags = fn(1074).MessageFlags;
-const MessageSendLocation = fn(4600).MessageSendLocation;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 let obj = {
   sendForward(messageRecord, alsoForwardToChannelId, arg2) {
     closure_0 = messageRecord;
@@ -54,7 +54,7 @@ let obj = {
                 prop = tmp73.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = tmp2(8436).GAME_CONTENT_GUILD_ID;
+                let guild_id = tmp2(8434).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -70,7 +70,7 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = alsoForwardToChannelId(7755).parse(channel, "");
+                const parsed = alsoForwardToChannelId(7754).parse(channel, "");
                 const obj7 = { guild_id, channel_id: null, message_id: null, type: null, forward_only: null };
                 ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp71);
                 obj7.type = tmp2(1096).MessageReferenceTypes.FORWARD;
@@ -97,7 +97,7 @@ let obj = {
                 closure_128_2 = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v3(alsoForwardToChannelId(7757)(withMessage), 2);
+                  const tmp39 = v3(alsoForwardToChannelId(7756)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     closure_128_2 = tmp39[1];
@@ -107,7 +107,7 @@ let obj = {
                     const obj9 = tmp2(1384);
                   }
                 }
-                const obj10 = alsoForwardToChannelId(7530);
+                const obj10 = alsoForwardToChannelId(7529);
                 const obj12 = { messageReference: obj7, location: constants2.FORWARDING, eagerDispatch: false, flags: num9 };
                 dependencyMap = 1;
                 v3 = 1;
@@ -131,16 +131,16 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  result = tmp2(11779).isRatelimitedInChannel(closure_128_0, PermissionStore);
-                  const obj2 = tmp2(11779);
+                  result = tmp2(11777).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(11777);
                 }
                 if (!result) {
-                  const obj3 = alsoForwardToChannelId(7530);
+                  const obj3 = alsoForwardToChannelId(7529);
                   const id = closure_128_0.id;
                   const obj25 = { location: constants2.FORWARDING, flags: closure_128_1 };
                   dependencyMap = 2;
                   v3 = 1;
-                  const obj26 = { value: obj3.sendMessage(id, alsoForwardToChannelId(7755).parse(closure_128_0, closure_128_2), false, obj25), done: false };
+                  const obj26 = { value: obj3.sendMessage(id, alsoForwardToChannelId(7754).parse(closure_128_0, closure_128_2), false, obj25), done: false };
                   return obj26;
                 }
               }

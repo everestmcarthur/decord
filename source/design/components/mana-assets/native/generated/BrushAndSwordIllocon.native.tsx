@@ -1,13 +1,13 @@
-// Module ID: 5881
-// Function ID: 5882
+// Module ID: 5880
+// Function ID: 5881
 // Name: BrushAndSwordIllocon
-// Dependencies: [21, 5639, 5882, 2]
+// Dependencies: [21, 5638, 5881, 2]
 // Exports: BrushAndSwordIllocon
 
-// Module 5881 (BrushAndSwordIllocon)
+// Module 5880 (BrushAndSwordIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5882 from "module_5882" /* 5882 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5881 from "module_5881" /* 5881 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BrushAndSwordIllocon = function BrushAndSwordIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5882 };
+  const obj2 = { uri: _modDef5881 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

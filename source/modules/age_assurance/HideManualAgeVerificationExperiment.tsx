@@ -1,10 +1,10 @@
-// Module ID: 8669
-// Function ID: 8670
+// Module ID: 8667
+// Function ID: 8668
 // Name: HideManualAgeVerificationExperiment
 // Dependencies: [1433, 2]
 // Exports: isManualAgeVerificationHidden, useIsManualAgeVerificationHidden
 
-// Module 8669 (HideManualAgeVerificationExperiment)
+// Module 8667 (HideManualAgeVerificationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

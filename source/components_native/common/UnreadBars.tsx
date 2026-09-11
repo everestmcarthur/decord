@@ -1,7 +1,7 @@
 // Module ID: 16427
 // Function ID: 16428
 // Name: UnreadBars
-// Dependencies: [19, 17, 4599, 1074, 21, 4607, 5576, 576, 4456, 4317, 4575, 4576, 1178, 1114, 504, 12518, 2]
+// Dependencies: [19, 17, 4598, 1074, 21, 4606, 5575, 576, 4456, 4317, 4574, 4575, 1178, 1114, 504, 12516, 2]
 // Exports: default
 
 // Module 16427 (UnreadBars)
@@ -9,12 +9,12 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4576 */;
-import TransitionGroup from "TransitionGroup" /* 12518 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
+import TransitionGroup from "TransitionGroup" /* 12516 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import TextStyles from "TextStyles" /* 5576 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import TextStyles from "TextStyles" /* 5575 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Animated: hasOwnProperty, TouchableWithoutFeedback: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { unreadText: null, unread: null, mention: null };
 let merged = Object.assign(TextStyles(fn(1074).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.unreadText = {};

@@ -1,14 +1,14 @@
 // Module ID: 16235
 // Function ID: 16236
 // Name: GuildThemePreviewArt
-// Dependencies: [19, 17, 21, 4607, 576, 4461, 16236, 4542, 5039, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 4461, 16236, 4541, 5038, 2]
 // Exports: default
 
 // Module 16235 (GuildThemePreviewArt)
 import nativeDefault from "native" /* 576 */;
 import GuildThemePresets from "GuildThemePresets" /* 4461 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import LinearGradientDefault from "LinearGradient" /* 5039 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16236 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ function PreviewOverlay() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { previewArt: { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, previewOverlay: { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

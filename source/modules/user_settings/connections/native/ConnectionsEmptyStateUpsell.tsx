@@ -1,7 +1,7 @@
 // Module ID: 15014
 // Function ID: 15015
 // Name: ConnectionsEmptyStateUpsell
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 4542, 9344, 15015, 15016, 1396, 4458, 5659, 1178, 4574, 15012, 1896, 4603, 7577, 1611, 5025, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 4541, 9342, 15015, 15016, 1396, 4458, 5658, 1178, 4573, 15012, 1896, 4602, 7576, 1611, 5024, 1114, 2]
 // Exports: default
 
 // Module 15014 (ConnectionsEmptyStateUpsell)
@@ -9,9 +9,9 @@ import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import shared from "shared" /* 4458 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Card from "Card" /* 5659 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9344 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Card from "Card" /* 5658 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9342 */;
 import ConnectionsTracking from "ConnectionsTracking" /* 15015 */;
 import noop from "module_19" /* 19 */;
 
@@ -65,7 +65,7 @@ const View = fn(17).View;
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 }, icon: { flex: 1, aspectRatio: 1 } };
   return obj;
@@ -75,37 +75,37 @@ let result = size.fileFinishedImporting("modules/user_settings/connections/nativ
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  emptyStatePlatforms = emptyStatePlatforms(7577).useEmptyStatePlatforms();
+  emptyStatePlatforms = emptyStatePlatforms(7576).useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
   const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.container, ];
-  const obj = emptyStatePlatforms(7577);
+  const obj = emptyStatePlatforms(7576);
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj2.style = items2;
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
   const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
-  const items3 = [closure_6(emptyStatePlatforms(5025).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)) }), ];
+  const items3 = [closure_6(emptyStatePlatforms(5024).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)) }), ];
   const obj7 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
   const items4 = [memo1.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)), closure_6(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
   obj7.children = items4;
-  items3[1] = closure_7(emptyStatePlatforms(5025).Stack, obj7);
+  items3[1] = closure_7(emptyStatePlatforms(5024).Stack, obj7);
   obj5.children = items3;
-  const items5 = [closure_7(emptyStatePlatforms(5025).Stack, obj5), ];
+  const items5 = [closure_7(emptyStatePlatforms(5024).Stack, obj5), ];
   const obj9 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
   const obj10 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = emptyStatePlatforms(1114).intl;
   obj10.children = intl.string(emptyStatePlatforms(1114).t.JlrHXb);
-  const items6 = [closure_6(emptyStatePlatforms(4603).Text, obj10), ];
+  const items6 = [closure_6(emptyStatePlatforms(4602).Text, obj10), ];
   const obj11 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = emptyStatePlatforms(1114).intl;
   obj11.children = intl2.string(emptyStatePlatforms(1114).t.XijaQP);
-  items6[1] = closure_6(emptyStatePlatforms(4603).Text, obj11);
+  items6[1] = closure_6(emptyStatePlatforms(4602).Text, obj11);
   obj9.children = items6;
-  items5[1] = closure_7(emptyStatePlatforms(5025).Stack, obj9);
+  items5[1] = closure_7(emptyStatePlatforms(5024).Stack, obj9);
   obj4.children = items5;
   obj2.children = closure_7(View, obj4);
   return closure_6(View, obj2);

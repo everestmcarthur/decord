@@ -1,12 +1,12 @@
-// Module ID: 10023
-// Function ID: 10024
+// Module ID: 10021
+// Function ID: 10022
 // Name: useToggleRequestToSpeak
-// Dependencies: [32, 19, 502, 504, 4754, 5474, 8499, 8501, 8486, 2]
+// Dependencies: [32, 19, 502, 504, 4753, 5473, 8497, 8499, 8484, 2]
 // Exports: default
 
-// Module 10023 (useToggleRequestToSpeak)
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4754 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8499 */;
+// Module 10021 (useToggleRequestToSpeak)
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4753 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8497 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -36,15 +36,15 @@ export default function useToggleRequestToSpeak(id) {
     first,
     () => {
       if (obj.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-        const obj2 = { entryPoint: tmp(8501).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+        const obj2 = { entryPoint: tmp(8499).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj2);
       } else {
-        if (closure_1 === tmp(4754).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
-          const result1 = tmp(8486).audienceAckRequestToSpeak(tmp3, true);
-          const tmpResult = tmp(8486);
+        if (closure_1 === tmp(4753).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
+          const result1 = tmp(8484).audienceAckRequestToSpeak(tmp3, true);
+          const tmpResult = tmp(8484);
         } else {
-          tmp(8486).toggleRequestToSpeak(tmp3, !first);
-          const tmpResult2 = tmp(8486);
+          tmp(8484).toggleRequestToSpeak(tmp3, !first);
+          const tmpResult2 = tmp(8484);
         }
         closure_4(!first);
       }

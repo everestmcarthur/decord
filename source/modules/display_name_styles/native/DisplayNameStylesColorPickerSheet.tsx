@@ -1,16 +1,16 @@
 // Module ID: 15415
 // Function ID: 15416
 // Name: DisplayNameStylesColorPickerSheet
-// Dependencies: [32, 19, 17, 1389, 1074, 21, 4607, 576, 8256, 10994, 4575, 4574, 14650, 1242, 7224, 7223, 1114, 2786, 5027, 12, 1091, 1390, 15413, 2]
+// Dependencies: [32, 19, 17, 1389, 1074, 21, 4606, 576, 8255, 10992, 4574, 4573, 14648, 1242, 7223, 7222, 1114, 2786, 5026, 12, 1091, 1390, 15413, 2]
 // Exports: default
 
 // Module 15415 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14650 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, presetGrid: null, presetRow: null, presetColor: null, presetColorSelected: null, buttonsContainer: null, button: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

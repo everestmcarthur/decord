@@ -1,11 +1,11 @@
-// Module ID: 9766
-// Function ID: 9767
+// Module ID: 9764
+// Function ID: 9765
 // Name: useCanCreateAnEvent
-// Dependencies: [32, 2012, 1979, 4245, 1074, 504, 9764, 2]
+// Dependencies: [32, 2012, 1979, 4245, 1074, 504, 9762, 2]
 // Exports: default
 
-// Module 9766 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9764 */;
+// Module 9764 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;

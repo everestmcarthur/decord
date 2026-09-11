@@ -1,11 +1,14 @@
 // Module ID: 12920
 // Function ID: 12921
-// Dependencies: []
+// Dependencies: [12886]
+// Exports: addTracingExtensions
 
 // Module 12920
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import errorCallback from "errorCallback" /* 12886 */;
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+require = arg1;
+const dependencyMap = arg6;
+
+export const addTracingExtensions = function addTracingExtensions() {
+  const result = errorCallback.registerSpanErrorInstrumentation();
+};

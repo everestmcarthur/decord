@@ -1,14 +1,14 @@
 // Module ID: 16590
 // Function ID: 16591
 // Name: ICYMIForumThreadRow
-// Dependencies: [19, 17, 1957, 1979, 21, 16523, 576, 504, 5572, 8439, 16562, 11007, 8438, 4760, 16564, 1114, 11, 5175, 4603, 4597, 16568, 16570, 2]
+// Dependencies: [19, 17, 1957, 1979, 21, 16523, 576, 504, 5571, 8437, 16562, 11005, 8436, 4759, 16564, 1114, 11, 5174, 4602, 4596, 16568, 16570, 2]
 // Exports: default
 
 // Module 16590 (ICYMIForumThreadRow)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5571 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
 import ICYMIShared from "ICYMIShared" /* 16562 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

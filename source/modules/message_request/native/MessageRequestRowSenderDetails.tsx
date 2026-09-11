@@ -1,7 +1,7 @@
 // Module ID: 16962
 // Function ID: 16963
 // Name: MessageRequestRowSenderDetails
-// Dependencies: [19, 17, 4255, 21, 4607, 1178, 576, 504, 4451, 16963, 1399, 4603, 1114, 16964, 16965, 2]
+// Dependencies: [19, 17, 4255, 21, 4606, 1178, 576, 504, 4451, 16963, 1399, 4602, 1114, 16964, 16965, 2]
 // Exports: default
 
 // Module 16962 (MessageRequestRowSenderDetails)
@@ -15,7 +15,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { avatar: { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
 let obj3 = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -51,7 +51,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
-    const obj4 = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
+    const obj4 = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
     let avatarDecoration;
     if (otherUser != null) {
       avatarDecoration = otherUser.avatarDecoration;
@@ -80,18 +80,18 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = intl.string(tmp2(1114).t["30mdIx"]);
   }
   obj9.children = stringResult;
-  const items2 = [closure_5(otherUser(4603).Text, obj9), ];
+  const items2 = [closure_5(otherUser(4602).Text, obj9), ];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
     const items3 = [" ", tmp2(4451).getUserTag(otherUser)];
     obj10.children = items3;
-    tmp9Result = tmp9(tmp2(4603).Text, obj10);
+    tmp9Result = tmp9(tmp2(4602).Text, obj10);
     const tmp2Result = tmp2(4451);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;
-  const items4 = [closure_6(otherUser(4603).Text, obj8), closure_5(otherUser(4603).Text, { style: tmp.timestampSeparator, variant: "text-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(4603).Text, { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
+  const items4 = [closure_6(otherUser(4602).Text, obj8), closure_5(otherUser(4602).Text, { style: tmp.timestampSeparator, variant: "text-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(4602).Text, { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
   obj7.children = items4;
   const items5 = [closure_6(View, obj7), , ];
   let tmp11Result = !flag;

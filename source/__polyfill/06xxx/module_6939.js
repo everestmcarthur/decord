@@ -1,44 +1,16 @@
 // Module ID: 6939
 // Function ID: 6940
-// Dependencies: [6940]
+// Dependencies: [6940, 6941]
 
 // Module 6939
 import _mod6940 from "module_6940" /* 6940 */;
 
 
-export default function _createClass(arg0, arg1, arg2) {
-  if (arg1) {
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp3 = arg1[num];
-      let flag2 = tmp3.enumerable;
-      if (!flag2) {
-        flag2 = false;
-      }
-      tmp3.enumerable = flag2;
-      tmp3.configurable = true;
-      if ("value" in tmp3) {
-        tmp3.writable = true;
-      }
-      let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp, _mod6940(tmp3.key), tmp3);
-    }
+export default function toPropertyKey(arg0) {
+  const tmp = _mod6940(arg0, "string");
+  let text = tmp;
+  if ("symbol" != obj.default(tmp)) {
+    text = `${tmp}`;
   }
-  if (arg2) {
-    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp9 = arg2[num3];
-      let flag4 = tmp9.enumerable;
-      if (!flag4) {
-        flag4 = false;
-      }
-      tmp9.enumerable = flag4;
-      tmp9.configurable = true;
-      if ("value" in tmp9) {
-        tmp9.writable = true;
-      }
-      let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, _mod6940(tmp9.key), tmp9);
-    }
-  }
-  Object.defineProperty(arg0, "prototype", { writable: false });
-  return arg0;
+  return text;
 };

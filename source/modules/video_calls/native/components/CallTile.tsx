@@ -1,25 +1,25 @@
-// Module ID: 10149
-// Function ID: 10150
+// Module ID: 10147
+// Function ID: 10148
 // Name: CallTile
-// Dependencies: [19, 17, 4629, 1371, 9560, 4628, 21, 4607, 4456, 576, 7236, 1611, 504, 4808, 8265, 9687, 10116, 9716, 9724, 10150, 10155, 10156, 9535, 9557, 10157, 1178, 9567, 4343, 4608, 10158, 2]
+// Dependencies: [19, 17, 4628, 1371, 9558, 4627, 21, 4606, 4456, 576, 7235, 1611, 504, 4807, 8264, 9685, 10114, 9714, 9722, 10148, 10153, 10154, 9533, 9555, 10155, 1178, 9565, 4343, 4607, 10156, 2]
 
-// Module 10149 (CallTile)
+// Module 10147 (CallTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4808 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import _modDef9535 from "module_9535" /* 9535 */;
-import _modDef9557 from "module_9557" /* 9557 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10150 */;
+import timing from "timing" /* 4607 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4807 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import _modDef9533 from "module_9533" /* 9533 */;
+import _modDef9555 from "module_9555" /* 9555 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10148 */;
+import _modDef10153 from "module_10153" /* 10153 */;
+import _modDef10154 from "module_10154" /* 10154 */;
 import _modDef10155 from "module_10155" /* 10155 */;
-import _modDef10156 from "module_10156" /* 10156 */;
-import _modDef10157 from "module_10157" /* 10157 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10158 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10156 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -47,17 +47,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10155;
+    let tmp3 = _modDef10153;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10156;
+      tmp3 = _modDef10154;
     } else if (tmp19.XBOX === voicePlatform) {
-      tmp3 = _modDef9535;
+      tmp3 = _modDef9533;
     } else if (tmp19.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef9557;
+      tmp3 = _modDef9555;
     } else if (tmp19.QUEST === voicePlatform) {
-      tmp3 = _modDef10157;
+      tmp3 = _modDef10155;
     }
   }
   let tmp14 = null;
@@ -151,13 +151,13 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9560);
+const ChannelCallStore = fn(9558);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(4628);
+const CallConstants = fn(4627);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
 const ColorUtils = fn(4456);

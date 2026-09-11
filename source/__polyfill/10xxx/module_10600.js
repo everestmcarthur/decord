@@ -1,94 +1,141 @@
 // Module ID: 10600
 // Function ID: 10601
-// Dependencies: [41, 42, 93, 95, 98, 10542]
+// Dependencies: [10517, 10524, 10526, 10550, 10601, 10603, 10604, 10605, 10606, 10607, 10608, 10557]
+// Exports: createCasualConfiguration, parse, parseDate
 
 // Module 10600
-import Filter from "Filter" /* 10542 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10550 from "module_10550" /* 10550 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10557 */;
+import _mod10601 from "module_10601" /* 10601 */;
+import _mod10603 from "module_10603" /* 10603 */;
+import _mod10604 from "module_10604" /* 10604 */;
+import _mod10605 from "module_10605" /* 10605 */;
+import _mod10606 from "module_10606" /* 10606 */;
+import _mod10607 from "module_10607" /* 10607 */;
+import _mod10608 from "module_10608" /* 10608 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const require = globalThis.__r;
+
+function createConfiguration(flag, arg1) {
+  if (flag === undefined) {
+    flag = true;
   }
-}
-let _classCallCheck = _classCallCheck_mod;
-class JPMergeWeekdayComponentRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, JPMergeWeekdayComponentRefiner);
-    tmp2 = c2;
-    obj = c2(JPMergeWeekdayComponentRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
   }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(flag2), , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default3 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default4 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-_classCallCheck = JPMergeWeekdayComponentRefiner;
-_inherits(JPMergeWeekdayComponentRefiner, Filter.MergingRefiner);
-const entry = {
-  key: "mergeResults",
-  value: function mergeResults(arg0, clone, text) {
-    const cloneResult = clone.clone();
-    cloneResult.text = clone.text + arg0 + text.text;
-    const start = cloneResult.start;
-    const start2 = text.start;
-    start.assign("weekday", start2.get("weekday"));
-    if (cloneResult.end) {
-      const end = cloneResult.end;
-      const start3 = text.start;
-      end.assign("weekday", start3.get("weekday"));
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
     }
-    return cloneResult;
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.push(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.push(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+const regExp = fn(_mod10550);
+fn(_mod10601);
+fn(_mod10603);
+fn(_mod10604);
+fn(_mod10605);
+fn(_mod10606);
+fn(_mod10607);
+const _isNativeReflectConstruct = fn(_mod10608);
+const configuration = createConfiguration(false, true);
+let parsers = configuration.parsers;
+parsers.push(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10517").Chrono;
   }
 };
-const items = [
-  entry,
-  {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, start, start2) {
-      start = start.start;
-      let isCertainResult = start.isCertain("day");
-      if (isCertainResult) {
-        start2 = start2.start;
-        isCertainResult = start2.isOnlyWeekdayComponent();
-      }
-      if (isCertainResult) {
-        const start3 = start2.start;
-        isCertainResult = !start3.isCertain("hour");
-      }
-      if (isCertainResult) {
-        isCertainResult = null !== str.match(/^[,、の]?\s*$/);
-      }
-      return isCertainResult;
-    }
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
   }
-];
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.push(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10517").Chrono(configuration);
+const chrono1 = new require("module_10517").Chrono(createConfiguration(true));
 
-export default _createClass(JPMergeWeekdayComponentRefiner, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10517").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

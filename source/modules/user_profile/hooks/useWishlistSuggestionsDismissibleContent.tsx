@@ -1,14 +1,14 @@
-// Module ID: 13193
-// Function ID: 13194
+// Module ID: 13191
+// Function ID: 13192
 // Name: useWishlistSuggestionsDismissibleContent
-// Dependencies: [32, 19, 7694, 1954, 1090, 504, 7462, 1943, 2]
+// Dependencies: [32, 19, 7693, 1954, 1090, 504, 7461, 1943, 2]
 // Exports: default
 
-// Module 13193 (useWishlistSuggestionsDismissibleContent)
+// Module 13191 (useWishlistSuggestionsDismissibleContent)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7694 */;
+import UserProfileStore from "UserProfileStore" /* 7693 */;
 
 const require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;

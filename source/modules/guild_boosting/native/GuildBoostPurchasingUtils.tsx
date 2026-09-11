@@ -1,10 +1,10 @@
-// Module ID: 7477
-// Function ID: 7478
+// Module ID: 7476
+// Function ID: 7477
 // Name: GuildBoostPurchasingUtils
-// Dependencies: [5, 4270, 1074, 1373, 4952, 1114, 1242, 4931, 7478, 7483, 7314, 7484, 7485, 4264, 2]
+// Dependencies: [5, 4270, 1074, 1373, 4951, 1114, 1242, 4930, 7477, 7482, 7313, 7483, 7484, 4264, 2]
 // Exports: launchGuildBoostFlowOrAlert
 
-// Module 7477 (GuildBoostPurchasingUtils)
+// Module 7476 (GuildBoostPurchasingUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 4270 */;
 
@@ -50,7 +50,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else {
         if (1 === tmp6) {
@@ -70,8 +70,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
                 const intl = closure_1_0(1114).intl;
                 obj2.title = intl.string(closure_1_0(1114).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(4952).show(obj2);
-                const obj = closure_1_1(4952);
+                closure_1_1(4951).show(obj2);
+                const obj = closure_1_1(4951);
                 closure_1_1(1242).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {

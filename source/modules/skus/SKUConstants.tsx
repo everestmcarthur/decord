@@ -1,9 +1,9 @@
-// Module ID: 5564
-// Function ID: 5565
+// Module ID: 5563
+// Function ID: 5564
 // Name: SKUConstants
 // Dependencies: [2]
 
-// Module 5564 (SKUConstants)
+// Module 5563 (SKUConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/skus/SKUConstants.tsx");

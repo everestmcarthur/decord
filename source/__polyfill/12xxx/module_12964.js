@@ -1,19 +1,35 @@
 // Module ID: 12964
 // Function ID: 12965
-// Dependencies: [12963]
-// Exports: getTraceMetaTags
+// Dependencies: [12896, 12917, 12946]
 
 // Module 12964
-import _mod12963 from "module_12963" /* 12963 */;
+import setupIntegration from "module_12946" /* 12946 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const weakMap = new WeakMap();
 
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod12963.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
-  });
-  return mapped.join("\n");
-};
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        const items = [...arguments];
+        const originalFunction = closure_1_0(12896).getOriginalFunction(this);
+        const obj = closure_1_0(12896);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {
+    }
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
+  }
+}));

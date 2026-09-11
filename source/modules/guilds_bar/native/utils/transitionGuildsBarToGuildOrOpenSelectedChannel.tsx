@@ -1,7 +1,7 @@
 // Module ID: 16380
 // Function ID: 16381
 // Name: transitionGuildsBarToGuildOrOpenSelectedChannel
-// Dependencies: [2011, 4428, 1074, 4465, 4464, 4618, 7416, 2]
+// Dependencies: [2011, 4428, 1074, 4465, 4464, 4617, 7415, 2]
 // Exports: default
 
 // Module 16380 (transitionGuildsBarToGuildOrOpenSelectedChannel)
@@ -49,10 +49,10 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     const tmpResult = tmp(4464);
   }
   if (null != tmp4) {
-    tmp(4618).transitionToChannel(tmp4);
-    const tmpResult3 = tmp(4618);
+    tmp(4617).transitionToChannel(tmp4);
+    const tmpResult3 = tmp(4617);
   } else {
-    tmp(7416).transitionToGuild(arg0);
-    const tmpResult4 = tmp(7416);
+    tmp(7415).transitionToGuild(arg0);
+    const tmpResult4 = tmp(7415);
   }
 };

@@ -1,7 +1,7 @@
 // Module ID: 16838
 // Function ID: 16839
 // Name: NewMessageScreen
-// Dependencies: [5, 32, 19, 17, 1961, 1957, 4255, 7292, 10951, 1074, 21, 4343, 4603, 4607, 576, 1115, 4620, 7295, 573, 504, 1242, 16839, 4608, 16840, 7937, 1114, 11436, 16841, 7236, 7256, 7055, 5044, 11689, 11687, 11686, 7949, 1100, 11690, 4304, 10123, 10124, 4545, 4544, 11089, 5027, 12461, 16773, 2]
+// Dependencies: [5, 32, 19, 17, 1961, 1957, 4255, 7291, 10949, 1074, 21, 4343, 4602, 4606, 576, 1115, 4619, 7294, 573, 504, 1242, 16839, 4607, 16840, 7936, 1114, 11434, 16841, 7235, 7255, 7054, 5043, 11687, 11685, 11684, 7948, 1100, 11688, 4304, 10121, 10122, 4544, 4543, 11087, 5026, 12459, 16773, 2]
 // Exports: default
 
 // Module 16838 (NewMessageScreen)
@@ -10,23 +10,23 @@ import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import UserPlusIcon from "UserPlusIcon" /* 4544 */;
-import _modDef4545 from "module_4545" /* 4545 */;
-import timing from "timing" /* 4608 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4620 */;
-import components_Button_Button from "components/Button/Button" /* 5027 */;
-import useMountEffectDefault from "useMountEffect" /* 5044 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7055 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7236 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7295 */;
-import _modDef10123 from "module_10123" /* 10123 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10124 */;
-import NoResultsDefault from "NoResults" /* 11089 */;
-import ChatViewDefault from "ChatView" /* 11436 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11687 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11689 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 12461 */;
+import UserPlusIcon from "UserPlusIcon" /* 4543 */;
+import _modDef4544 from "module_4544" /* 4544 */;
+import timing from "timing" /* 4607 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import useMountEffectDefault from "useMountEffect" /* 5043 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7235 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7294 */;
+import _modDef10121 from "module_10121" /* 10121 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10122 */;
+import NoResultsDefault from "NoResults" /* 11087 */;
+import ChatViewDefault from "ChatView" /* 11434 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11685 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11687 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 12459 */;
 import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16773 */;
 import useOnMessageSendDefault from "useOnMessageSend" /* 16839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -34,7 +34,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7292 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7291 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 
 const require = globalThis.__r;
@@ -178,7 +178,7 @@ function Header(recipientLimit) {
     return obj2;
   };
   const tmp = closure_20();
-  fn.__closure = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4608).withTiming };
+  fn.__closure = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4607).withTiming };
   fn.__workletHash = 12426216833792;
   fn.__initData = __initData;
   if (recipientLimit.usePersonLimitCopy) {
@@ -187,7 +187,7 @@ function Header(recipientLimit) {
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
-    const items1 = [closure_17(tmp3(7937).GenericHeaderTitle, obj4), ];
+    const items1 = [closure_17(tmp3(7936).GenericHeaderTitle, obj4), ];
     const obj5 = { style: tmp6, variant: "text-xs/medium", color: null, children: null };
     let str = "text-muted";
     if (0 === memo) {
@@ -208,7 +208,7 @@ function Header(recipientLimit) {
     obj3.children = items1;
     return closure_18(View, obj3);
   }
-  let obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4608).withTiming };
+  let obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4607).withTiming };
 }
 function ChatPreview(channelId) {
   channelId = channelId.channelId;
@@ -242,13 +242,13 @@ function ChatPreview(channelId) {
 }
 const View = fn(17).View;
 const PrivateChannelRecord = fn(1961).PrivateChannelRecord;
-const UserRowModes = fn(10951).UserRowModes;
+const UserRowModes = fn(10949).UserRowModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(4603).Text);
-const createStyles = fn(4607);
+let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(4602).Text);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1 }, background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
 const PlatformUtils = fn(1115);
 let str = "center";
@@ -308,7 +308,7 @@ export default function NewMessageScreen(navigation) {
   const effect = obj.useEffect(() => {
     function handleChannelCreate(channel) {
       channel = channel.channel;
-      if (channel.id !== handleChannelCreate(7295).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+      if (channel.id !== handleChannelCreate(7294).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (isPrivateChannelMatch(handleChannelCreate, channel)) {
             dependencyMap(findLocalMatchingPrivateChannelId(tmp2));
@@ -321,7 +321,7 @@ export default function NewMessageScreen(navigation) {
       const channel = arg0;
       dependencyMap((arg0) => {
         let tmp = arg0;
-        if (arg0 !== handleChannelCreate(7295).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (arg0 !== handleChannelCreate(7294).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp3 = null;
           if (arg0 !== channel.channel.id) {
             tmp3 = arg0;
@@ -456,7 +456,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(573);
-          obj2.channel = { id: navigation(7295).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "accessible", parent_id: "__packager_asset" };
+          obj2.channel = { id: navigation(7294).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
           obj.dispatch(obj2);
         };
       }
@@ -484,8 +484,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11686).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11686);
+    enabled = tmp13(11684).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(11684);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -623,7 +623,7 @@ export default function NewMessageScreen(navigation) {
     if (!tmp10) {
       if (selectedUserIds.length > 0) {
         if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(7295).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(7294).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         let obj3 = { channelId: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, navigateToChannel, tagListInputRef: ref };
         tmp31Result = closure_17(ChatPreview, obj3, tmp29);
@@ -640,7 +640,7 @@ export default function NewMessageScreen(navigation) {
     const items = [];
     if (constants) {
       if (stateFromStores1) {
-        const obj = { icon: _modDef10123, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
+        const obj = { icon: _modDef10121, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["3hF1W4"]);
         obj.onPress = function onPress() {
@@ -648,7 +648,7 @@ export default function NewMessageScreen(navigation) {
         };
         items.push(obj);
       }
-      const obj2 = { icon: _modDef4545, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+      const obj2 = { icon: _modDef4544, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t["9nbDJx"]);
       obj2.onPress = function onPress() {
@@ -660,7 +660,7 @@ export default function NewMessageScreen(navigation) {
   }, items11);
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
-    const obj = { icon: _modDef4545, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+    const obj = { icon: _modDef4544, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["9nbDJx"]);
     obj.onPress = function onPress() {

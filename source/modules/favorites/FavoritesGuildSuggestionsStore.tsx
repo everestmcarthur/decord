@@ -1,7 +1,7 @@
 // Module ID: 16273
 // Function ID: 16274
 // Name: FavoritesGuildSuggestionsStore
-// Dependencies: [32, 19, 1949, 1074, 1954, 560, 10315, 7462, 1943, 2]
+// Dependencies: [32, 19, 1949, 1074, 1954, 560, 10313, 7461, 1943, 2]
 // Exports: setFavoritesGuildSuggestions, useFavoritesGuildSuggestionCount, useFavoritesGuildSuggestions, useFavoritesGuildSuggestionsDismissal, useFavoritesGuildSuggestionsVisibility, useHasFavoritesGuildSuggestions
 
 // Module 16273 (FavoritesGuildSuggestionsStore)

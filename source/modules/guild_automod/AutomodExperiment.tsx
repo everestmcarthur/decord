@@ -1,10 +1,10 @@
-// Module ID: 10192
-// Function ID: 10193
+// Module ID: 10190
+// Function ID: 10191
 // Name: AutomodExperiment
-// Dependencies: [4521, 2]
+// Dependencies: [4520, 2]
 
-// Module 10192 (AutomodExperiment)
-import createExperiment from "module_4521" /* 4521 */;
+// Module 10190 (AutomodExperiment)
+import createExperiment from "module_4520" /* 4520 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2022-12_mention_raid_limit", label: "Automod Mention Raid Limit", defaultConfig: { enabled: false }, treatments: null };

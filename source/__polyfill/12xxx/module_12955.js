@@ -1,131 +1,106 @@
 // Module ID: 12955
 // Function ID: 12956
-// Dependencies: [12956, 12936, 12957, 12916, 12920, 12892, 12949]
-// Exports: createTransport
+// Dependencies: [32]
+// Exports: disabledUntil, isRateLimited, updateRateLimits
 
 // Module 12955
-import _mod12936 from "module_12936" /* 12936 */;
-import _mod12949 from "module_12949" /* 12949 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
-    }
-    promiseBuffer = require("module_12956").makePromiseBuffer(num);
-    let obj = require("module_12956");
+function parseRetryAfterHeader(arg0) {
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
   }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod12936.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-      });
-      if (0 === items.length) {
-        return tmp(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = tmp(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {
-
-        }
-        const tmpResult2 = tmp(tmp2[1]);
-        return recordEnvelopeLoss.add(() => {
-          const obj = { body: _mod12936.serializeEnvelope(dependencyMap) };
-          return dependencyMap(obj).then((statusCode) => {
-            let DEBUG_BUILD = undefined !== statusCode.statusCode;
-            if (DEBUG_BUILD) {
-              let tmp = statusCode.statusCode < 200;
-              if (!tmp) {
-                tmp = statusCode.statusCode >= 300;
-              }
-              DEBUG_BUILD = tmp;
-            }
-            if (DEBUG_BUILD) {
-              DEBUG_BUILD = items(12920).DEBUG_BUILD;
-            }
-            if (DEBUG_BUILD) {
-              const logger = items(12892).logger;
-              const _HermesInternal = HermesInternal;
-              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-            }
-            closure_3 = items(12957).updateRateLimits(closure_3, statusCode);
-            return statusCode;
-          }, (arg0) => {
-            if (typeof recordEnvelopeLoss === "function") {
-              const network_error = "network_error";
-              closure_0(12936).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              throw arg0;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-        }).then((result) => result, (arg0) => {
-          if (arg0 instanceof _mod12949.SentryError) {
-            if (tmp(12920).DEBUG_BUILD) {
-              const logger = tmp(12892).logger;
-              logger.error("Skipped sending event because buffer is full.");
-            }
-            if (typeof recordEnvelopeLoss === "function") {
-              const queue_overflow = "queue_overflow";
-              tmp(12936).forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              const tmpResult = tmp(12936);
-              return tmp(12916).resolvedSyncPromise({});
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw arg0;
-          }
-        });
-      }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
+  const parsed = parseInt("" + arg0, 10);
+  if (isNaN(parsed)) {
+    const _Date2 = Date;
+    const _HermesInternal = HermesInternal;
+    const parsed1 = Date.parse("" + arg0);
+    const _isNaN = isNaN;
+    let num2 = 60000;
+    if (!isNaN(parsed1)) {
+      num2 = parsed1 - timestamp;
     }
-  };
+    return num2;
+  } else {
+    return 1000 * parsed;
+  }
+}
+
+export const DEFAULT_RETRY_AFTER = 60000;
+export const disabledUntil = function disabledUntil(all, arg1) {
+  return all[arg1] || all.all || 0;
+};
+export const isRateLimited = function isRateLimited(all, arg1) {
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  return (all[arg1] || all.all || 0) > timestamp;
+};
+export { parseRetryAfterHeader };
+export const updateRateLimits = function updateRateLimits(arg0, headers) {
+  headers = headers.headers;
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const obj = {};
+  const merged = Object.assign(arg0);
+  let str = headers;
+  if (headers) {
+    str = headers["x-sentry-rate-limits"];
+  }
+  let prop = headers;
+  if (headers) {
+    prop = headers["retry-after"];
+  }
+  if (str) {
+    const parts = str.trim().split(",");
+    const iter = parts[Symbol.iterator]();
+    const str2 = str.trim();
+    while (iter !== undefined) {
+      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
+      let str9 = tmp12[1];
+      let str10 = tmp12[4];
+      let _parseInt = parseInt;
+      let parsed = parseInt(tmp12[0], 10);
+      let _isNaN = isNaN;
+      let num6 = 60;
+      if (!isNaN(parsed)) {
+        num6 = parsed;
+      }
+      let result = 1000 * num6;
+      if (str9) {
+        let parts1 = str9.split(";");
+        for (const item10065 of parts1) {
+          let tmp23 = "metric_bucket" === item10065;
+          let tmp22 = item10065;
+          if (tmp23) {
+            tmp23 = str10;
+          }
+          if (tmp23) {
+            let parts2 = str10.split(";");
+            tmp23 = !parts2.includes("custom");
+          }
+          if (!tmp23) {
+            obj[tmp22] = timestamp + result;
+          }
+          continue;
+        }
+      } else {
+        obj.all = timestamp + result;
+      }
+      continue;
+    }
+    str8 = iter.next();
+  } else if (prop) {
+    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
+  } else if (429 === headers.statusCode) {
+    obj.all = timestamp + 60000;
+  }
+  return obj;
 };

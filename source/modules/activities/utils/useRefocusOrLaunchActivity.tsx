@@ -1,17 +1,17 @@
-// Module ID: 11614
-// Function ID: 11615
+// Module ID: 11612
+// Function ID: 11613
 // Name: useRefocusOrLaunchActivity
-// Dependencies: [5, 19, 9603, 1956, 9604, 7237, 504, 9599, 9600, 9628, 11615, 2]
+// Dependencies: [5, 19, 9601, 1956, 9602, 7236, 504, 9597, 9598, 9626, 11613, 2]
 // Exports: default
 
-// Module 11614 (useRefocusOrLaunchActivity)
+// Module 11612 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9603 */;
+import FramesStore from "FramesStore" /* 9601 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 const require = fn;
-const FramesConstants = fn(9604);
+const FramesConstants = fn(9602);
 ({ MAIN_SURFACE: closure_7, FrameLayoutModes: closure_8 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
@@ -67,8 +67,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                 if (null != stateFromStores1) {
                   if (tmp10.applicationId === tmp41) {
                     const obj5 = { frameId: tmp10.id, layoutMode: constants.FOCUSED };
-                    const result = tmp3(9600).updateFrameLayoutMode(obj5);
-                    const obj10 = tmp3(9600);
+                    const result = tmp3(9598).updateFrameLayoutMode(obj5);
+                    const obj10 = tmp3(9598);
                   }
                 }
                 if (tmp9) {
@@ -77,8 +77,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  tmp3(9628)(guild_id, _location);
-                  const tmp26 = tmp3(9628);
+                  tmp3(9626)(guild_id, _location);
+                  const tmp26 = tmp3(9626);
                 } else {
                   if (runBeforeLaunchAttempt != null) {
                     runBeforeLaunchAttempt();
@@ -90,7 +90,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     obj7.analyticsContext = obj8;
                     dependencyMap = 2;
                     c5 = 1;
-                    const obj9 = { value: tmp3(9600).launchFrame(obj7), done: false };
+                    const obj9 = { value: tmp3(9598).launchFrame(obj7), done: false };
                     return obj9;
                   } else {
                     let id;
@@ -120,7 +120,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                 obj11.analyticsLocations = analyticsLocations;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj12 = { value: analyticsLocations(11615).launchActivityInBotDM(obj11), done: false };
+                const obj12 = { value: analyticsLocations(11613).launchActivityInBotDM(obj11), done: false };
                 return obj12;
               }
             }

@@ -1,10 +1,10 @@
 // Module ID: 16378
 // Function ID: 16379
 // Name: GuildsBarPendingGuildFolder
-// Dependencies: [19, 4428, 1074, 21, 16365, 9298, 504, 16358, 4343, 4575, 5572, 1114, 16364, 9122, 2]
+// Dependencies: [19, 4428, 1074, 21, 16365, 9296, 504, 16358, 4343, 4574, 5571, 1114, 16364, 9120, 2]
 
 // Module 16378 (GuildsBarPendingGuildFolder)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9298 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9296 */;
 import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16358 */;
 import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16365 */;
 import noop from "module_19" /* 19 */;
@@ -53,12 +53,12 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   const sharedValue = id(4343).useSharedValue("" + id);
   const memo1 = noop.useMemo(() => ({
     onPress() {
-      const result = id(4575).triggerHapticFeedback(id(4575).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = id(4575);
-      const result1 = closure_1(5572).toggleGuildFolderExpand(closure_1_0);
+      const result = id(4574).triggerHapticFeedback(id(4574).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = id(4574);
+      const result1 = closure_1(5571).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: "<string:285357189>", externalChildren: "<string:2613006849>", children: "<string:285357189>" };
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "ip", config: true, externalChildren: true, children: true };
   const obj3 = id(4343);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
@@ -75,6 +75,6 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     tmp8Result = tmp8(tmp(16364).GuildsBarGuildFolderBG, obj5);
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(9122).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: "<string:285357189>", externalChildren: "<string:2613006849>", children: "<string:285357189>" });
+  obj4.children = jsx(id(9120).HourglassIcon, {});
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "ip", config: true, externalChildren: true, children: true });
 });

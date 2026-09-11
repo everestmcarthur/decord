@@ -1,20 +1,20 @@
-// Module ID: 17174
-// Function ID: 17175
+// Module ID: 17173
+// Function ID: 17174
 // Name: usePanelOpenState
-// Dependencies: [32, 19, 4815, 12368, 1074, 4343, 1109, 12884, 4433, 4446, 12877, 9601, 2]
+// Dependencies: [32, 19, 4814, 12366, 1074, 4343, 1109, 12882, 4433, 4446, 12875, 9599, 2]
 // Exports: default
 
-// Module 17174 (usePanelOpenState)
+// Module 17173 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoicePanelStore from "VoicePanelStore" /* 4815 */;
+import VoicePanelStore from "VoicePanelStore" /* 4814 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12368).VoicePanelModes;
+const VoicePanelModes = fn(12366).VoicePanelModes;
 const Constants = fn(1074);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
@@ -91,10 +91,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  [first, closure_6] = doCloseChannel.useState(() => closure_1(12884).getHistory().location.pathname);
+  [first, closure_6] = doCloseChannel.useState(() => closure_1(12882).getHistory().location.pathname);
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(12884).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(12882).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         const obj2 = { path: null };
@@ -110,10 +110,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(9601)();
+            closure_1(9599)();
           }
         }
-        obj3 = closure_0(12877);
+        obj3 = closure_0(12875);
       }
     });
     return () => {

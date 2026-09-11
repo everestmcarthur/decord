@@ -1,9 +1,9 @@
-// Module ID: 5594
-// Function ID: 5595
+// Module ID: 5593
+// Function ID: 5594
 // Name: GuildJoinRequestStore
 // Dependencies: [1371, 4429, 4198, 4431, 4241, 4430, 1090, 504, 573, 2]
 
-// Module 5594 (GuildJoinRequestStore)
+// Module 5593 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;

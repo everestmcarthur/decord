@@ -1,15 +1,15 @@
-// Module ID: 5987
-// Function ID: 5988
+// Module ID: 5986
+// Function ID: 5987
 // Name: DiscordWordmarkLogo
-// Dependencies: [17, 21, 576, 4308, 5988, 2]
+// Dependencies: [17, 21, 576, 4308, 5987, 2]
 // Exports: DiscordWordmarkLogo
 
-// Module 5987 (DiscordWordmarkLogo)
+// Module 5986 (DiscordWordmarkLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import _modDef5988 from "module_5988" /* 5988 */;
+import _modDef5987 from "module_5987" /* 5987 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -46,7 +46,7 @@ export const DiscordWordmarkLogo = function DiscordWordmarkLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef5988 };
+  obj4.source = { uri: _modDef5987 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

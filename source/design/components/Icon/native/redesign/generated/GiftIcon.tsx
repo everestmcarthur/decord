@@ -1,13 +1,13 @@
-// Module ID: 11127
-// Function ID: 11128
+// Module ID: 11125
+// Function ID: 11126
 // Name: GiftIcon
-// Dependencies: [19, 21, 576, 4307, 8159, 2]
+// Dependencies: [19, 21, 576, 4307, 8158, 2]
 // Exports: GiftIcon
 
-// Module 11127 (GiftIcon)
+// Module 11125 (GiftIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8159 from "module_8159" /* 8159 */;
+import _mod8158 from "module_8158" /* 8158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const GiftIcon = function GiftIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8159, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8158, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

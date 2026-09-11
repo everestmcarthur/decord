@@ -1,12 +1,12 @@
-// Module ID: 17584
-// Function ID: 17585
+// Module ID: 17583
+// Function ID: 17584
 // Name: FavoriteManager
-// Dependencies: [502, 16273, 1074, 10314, 1982, 7192, 2]
+// Dependencies: [502, 16273, 1074, 10312, 1982, 7191, 2]
 
-// Module 17584 (FavoriteManager)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10314 */;
+// Module 17583 (FavoriteManager)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 function handleChannelDelete(channel) {

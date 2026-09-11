@@ -1,21 +1,21 @@
-// Module ID: 7343
-// Function ID: 7344
+// Module ID: 7342
+// Function ID: 7343
 // Name: ThreadHooks
-// Dependencies: [32, 4522, 1961, 502, 1957, 4245, 5558, 1074, 504, 1086, 7344, 11, 12, 7345, 7346, 4818, 2]
+// Dependencies: [32, 4521, 1961, 502, 1957, 4245, 5557, 1074, 504, 1086, 7343, 11, 12, 7344, 7345, 4817, 2]
 // Exports: computeCanStartPrivateThread, computeCanStartPublicThread, computeIsReadOnlyThread, getIsActiveChannelOrUnarchivableThread, isNonModInLockedThread, isThreadModerator, useCanJoinThreadVoice, useCanManageThread, useCanRemoveThreadMember, useCanStartPublicThread, useCanStartThread, useCanViewThreadForMessage, useHasActiveThreads, useHasPermissionToJoinThreadVoice, useIsActiveChannelOrUnarchivableThread, useIsNonModInLockedThread, useIsThreadModerator
 
-// Module 7343 (ThreadHooks)
+// Module 7342 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7344 */;
-import useIsRemoteDefault from "useIsRemote" /* 7345 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7343 */;
+import useIsRemoteDefault from "useIsRemote" /* 7344 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4522 */;
+import createExperiment from "createExperiment" /* 4521 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5558 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5557 */;
 
 const require = globalThis.__r;
 
@@ -523,8 +523,8 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("AgeGateUtils").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4818).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(4818);
+    shouldAgeVerifyForAgeGate = tmp3(4817).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(4817);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

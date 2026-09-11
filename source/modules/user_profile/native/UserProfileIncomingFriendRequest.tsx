@@ -1,10 +1,10 @@
-// Module ID: 13220
-// Function ID: 13221
+// Module ID: 13218
+// Function ID: 13219
 // Name: UserProfileIncomingFriendRequest
-// Dependencies: [19, 17, 21, 4607, 576, 8327, 8276, 7236, 13221, 4759, 7242, 4603, 1114, 1178, 1396, 13222, 5027, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 8325, 8275, 7235, 13219, 4758, 7241, 4602, 1114, 1178, 1396, 13220, 5026, 2]
 // Exports: default
 
-// Module 13220 (UserProfileIncomingFriendRequest)
+// Module 13218 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

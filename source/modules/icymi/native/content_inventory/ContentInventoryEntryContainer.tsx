@@ -1,14 +1,14 @@
 // Module ID: 16579
 // Function ID: 16580
 // Name: ContentInventoryEntryContainer
-// Dependencies: [19, 17, 1371, 21, 16523, 576, 1115, 8439, 8265, 504, 5175, 16562, 1178, 2]
+// Dependencies: [19, 17, 1371, 21, 16523, 576, 1115, 8437, 8264, 504, 5174, 16562, 1178, 2]
 // Exports: default
 
 // Module 16579 (ContentInventoryEntryContainer)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 

@@ -1,19 +1,19 @@
 // Module ID: 16376
 // Function ID: 16377
 // Name: HomeDrawerFolderRow
-// Dependencies: [19, 17, 7709, 1979, 5490, 4788, 4626, 1074, 21, 4607, 504, 9151, 4603, 1114, 16377, 4470, 4467, 2]
+// Dependencies: [19, 17, 7708, 1979, 5489, 4787, 4625, 1074, 21, 4606, 504, 9149, 4602, 1114, 16377, 4470, 4467, 2]
 // Exports: default
 
 // Module 16376 (HomeDrawerFolderRow)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 9151 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9149 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7709 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7708 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -209,7 +209,7 @@ const View = fn(17).View;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");

@@ -1,13 +1,13 @@
 // Module ID: 15249
 // Function ID: 15250
 // Name: QuestDockUnenrolledHeader
-// Dependencies: [19, 17, 1085, 21, 4607, 15160, 15150, 15171, 5499, 7801, 4542, 4458, 15149, 15250, 4603, 1114, 5639, 15254, 15255, 15208, 2]
+// Dependencies: [19, 17, 1085, 21, 4606, 15160, 15150, 15171, 5498, 7800, 4541, 4458, 15149, 15250, 4602, 1114, 5638, 15254, 15255, 15208, 2]
 
 // Module 15249 (QuestDockUnenrolledHeader)
-import useThemeDefault from "useTheme" /* 4542 */;
-import QuestTypes from "QuestTypes" /* 5499 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15171 */;
 import QuestGameLogotypeDefault from "QuestGameLogotype" /* 15208 */;
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 15250 */;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ primaryContent: { alignItems: "center", flexDirection: "row" }, wreathImage: { height: 35, marginRight: 4, width: 35 }, logo: { marginTop: 2 }, getRewardLabel: { opacity: 0.7 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledHeader.tsx");
@@ -54,7 +54,7 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   const obj6 = { style: tmp11.getRewardLabel, variant: "text-sm/medium", color: "interactive-text-active", children: null };
   const intl = tmp(1114).intl;
   obj6.children = intl.string(questCreative(1114).t["3mgEQf"]);
-  obj5.collapsedContent = closure_6(questCreative(4603).Text, obj6);
+  obj5.collapsedContent = closure_6(questCreative(4602).Text, obj6);
   obj5.onDisclosurePress = callback;
   obj5.onSubmenuPress = actionSheetPressHandler;
   const obj7 = { style: tmp11.primaryContent, children: null };

@@ -1,21 +1,21 @@
-// Module ID: 5064
-// Function ID: 5065
+// Module ID: 5063
+// Function ID: 5064
 // Name: SoundboardStore
-// Dependencies: [32, 1221, 1371, 5065, 5066, 1074, 1084, 4644, 4198, 12, 1242, 5067, 1935, 11, 504, 573, 2]
+// Dependencies: [32, 1221, 1371, 5064, 5065, 1074, 1084, 4643, 4198, 12, 1242, 5066, 1935, 11, 504, 573, 2]
 
-// Module 5064 (SoundboardStore)
+// Module 5063 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import FrecencyDefault from "Frecency" /* 4644 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5067 */;
+import FrecencyDefault from "Frecency" /* 4643 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5066 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import UserStore from "UserStore" /* 1371 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5065 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5064 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
     continue;
   }
 }
-const SoundboardConstants = fn(5066);
+const SoundboardConstants = fn(5065);
 ({ DEFAULT_SOUND_GUILD_ID: closure_7, EMPTY_SOUND_ID_LIST: closure_8 } = SoundboardConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;

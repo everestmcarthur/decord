@@ -1,15 +1,13 @@
 // Module ID: 14373
 // Function ID: 14374
-// Dependencies: [14352]
+// Dependencies: [14357, 14374]
 
 // Module 14373
-import _mod14352 from "module_14352" /* 14352 */;
+import _mod14357 from "module_14357" /* 14357 */;
+import _mod14374 from "module_14374" /* 14374 */;
 
-const tmp = _mod14352.navigator && _mod14352.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
+let closure_2 = _mod14357({}.hasOwnProperty);
 
-export default str;
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod14374(arg0), arg1);
+});

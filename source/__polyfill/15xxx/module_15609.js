@@ -1,13 +1,13 @@
 // Module ID: 15609
 // Function ID: 15610
-// Dependencies: [8367, 15610]
+// Dependencies: [8365, 15610]
 // Exports: getYoutubeMeta
 
 // Module 15609
 import _regeneratorRuntime2 from "_regeneratorRuntime" /* 15610 */;
-import module_8367 from "module_8367" /* 8367 */;
+import module_8365 from "module_8365" /* 8365 */;
 
-let _regeneratorRuntime = module_8367(_regeneratorRuntime2);
+let _regeneratorRuntime = module_8365(_regeneratorRuntime2);
 
 export const getYoutubeMeta = function getYoutubeMeta(arg0) {
   _regeneratorRuntime = arg0;

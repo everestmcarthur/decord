@@ -1,10 +1,10 @@
-// Module ID: 8948
-// Function ID: 8949
+// Module ID: 8946
+// Function ID: 8947
 // Name: ApplicationFlagUtils
 // Dependencies: [1918, 1086, 2]
 // Exports: hasApplicationFlag
 
-// Module 8948 (ApplicationFlagUtils)
+// Module 8946 (ApplicationFlagUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 

@@ -1,16 +1,16 @@
-// Module ID: 7275
-// Function ID: 7276
+// Module ID: 7274
+// Function ID: 7275
 // Name: FormSwitch
-// Dependencies: [32, 19, 17, 21, 4343, 4607, 576, 5029, 4327, 5026, 5030, 4308, 5670, 7276, 4575, 4576, 2]
+// Dependencies: [32, 19, 17, 21, 4343, 4606, 576, 5028, 4327, 5025, 5029, 4308, 5669, 7275, 4574, 4575, 2]
 // Exports: FormSwitch
 
-// Module 7275 (FormSwitch)
+// Module 7274 (FormSwitch)
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4575 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4576 */;
-import spring from "spring" /* 5026 */;
-import IconDefault from "Icon" /* 5029 */;
-import springPresets from "springPresets" /* 5030 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
+import spring from "spring" /* 5025 */;
+import IconDefault from "Icon" /* 5028 */;
+import springPresets from "springPresets" /* 5029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport_mod from "ReanimatedRexport" /* 4343 */;
@@ -21,7 +21,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { switch: null, unselectedBackground: null, unselectedIcon: null, selectedIcon: null, selected: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1 };
 obj.switch = size;

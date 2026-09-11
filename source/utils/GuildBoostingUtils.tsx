@@ -1,27 +1,27 @@
-// Module ID: 4501
-// Function ID: 4502
+// Module ID: 4500
+// Function ID: 4501
 // Name: GuildBoostingUtils
-// Dependencies: [1979, 1371, 4502, 4270, 1074, 1374, 1373, 4278, 4503, 1114, 1369, 4504, 2024, 12, 4198, 4505, 3074, 4264, 1232, 4516, 4532, 2]
+// Dependencies: [1979, 1371, 4501, 4270, 1074, 1374, 1373, 4278, 4502, 1114, 1369, 4503, 2024, 12, 4198, 4504, 3074, 4264, 1232, 4515, 4531, 2]
 // Exports: appliedGuildBoostsRequiredForPerks, boostedGuildTierToAnalyticsObjectType, generateBlockGuildSubscriptionPurchasesNode, getAppliedGuildBoostMonths, getAvailableGuildBoostSlots, getAvailableSoundboardSoundCount, getAvailableStickerSlotCount, getGracePeriodEndingDate, getGuildBoostingProgressBarFillFactor, getIncrementalSoundboardSoundCountForTier, getIncrementalStickerCountForTier, getMaxEmojiSlots, getMaxSoundboardSlots, getNextGuildTierFromGuild, getNextPremiumTierForSubscriberCount, getNextTier, getNumberOfAppliedBoostsNeededForTier, getShortenedTierName, getTheoreticalPremiumTierForSubscriberCount, getTierName, getTiers, getTotalSoundboardSoundCountForTier, getTotalStickerCountForTier, getUserLevel, isAppliedGuildBoostActive, isGuildBoostSlotCanceled, isGuildBoostedAtLeast, isInGracePeriod, isTierUnlocked
 
-// Module 4501 (GuildBoostingUtils)
+// Module 4500 (GuildBoostingUtils)
 import util from "util" /* 1114 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import _modDef4198 from "module_4198" /* 4198 */;
 import PremiumUtilsAll from "PremiumUtils" /* 4264 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4503 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 4505 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4516 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4502 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 4504 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4515 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4502 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4501 */;
 import SubscriptionStore from "SubscriptionStore" /* 4270 */;
 import apply from "module_12" /* 12 */;
 
 const GlobalUtils = tmp2(1369);
 const _modDef3074 = tmp7(3074);
-const FileSizeUtils = tmp2(4504);
+const FileSizeUtils = tmp2(4503);
 require = fn;
 function getGuildTierFromGuild(arg0) {
   const guild = GuildStore.getGuild(arg0);
@@ -762,7 +762,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj4;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4532).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4531).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

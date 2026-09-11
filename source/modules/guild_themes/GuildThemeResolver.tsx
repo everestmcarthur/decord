@@ -1,20 +1,20 @@
 // Module ID: 4491
 // Function ID: 4492
 // Name: GuildThemeResolver
-// Dependencies: [19, 1221, 1979, 4428, 4492, 4495, 1074, 4461, 504, 4535, 4538, 2]
+// Dependencies: [19, 1221, 1979, 4428, 4492, 4494, 1074, 4461, 504, 4534, 4537, 2]
 // Exports: getActiveGuildTheme, getActiveGuildThemeForGuildId, isRenderableGuildThemeSettings, resolveRenderableGuildThemeSettings, useActiveGuildTheme, useEnabledGuildThemeForGuildId, useIsGuildThemePreviewActive
 
 // Module 4491 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
 import GuildThemePresets from "GuildThemePresets" /* 4461 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4535 */;
-import Client from "Client" /* 4538 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4534 */;
+import Client from "Client" /* 4537 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 import GuildThemePreviewStore from "GuildThemePreviewStore" /* 4492 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 4495 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 4494 */;
 
 const require = globalThis.__r;
 
@@ -274,7 +274,7 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
         const features = guild.features;
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = UserSettingsProtoStore.resolveGuildThemeSourcePreference(guildId);
-          if (guildThemeSourcePreference === tmp8(4538).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference === tmp8(4537).GuildThemeSourcePreference.PERSONAL) {
             return null;
           } else {
             let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
@@ -306,7 +306,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = UserSettingsProtoStore.resolveGuildThemeSourcePreference(guildId);
           tmp11Result = null;
-          if (guildThemeSourcePreference !== tmp3(4538).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference !== tmp3(4537).GuildThemeSourcePreference.PERSONAL) {
             let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;

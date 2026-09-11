@@ -1,19 +1,19 @@
-// Module ID: 9752
-// Function ID: 9753
+// Module ID: 9750
+// Function ID: 9751
 // Name: StageChannelCallNavigator
-// Dependencies: [32, 19, 17, 1085, 21, 9753, 4343, 5026, 576, 9754, 10033, 9767, 9564, 9563, 10034, 9715, 4808, 10037, 10105, 4317, 9567, 10113, 10114, 9770, 10119, 10129, 10133, 10165, 10166, 4607, 10167, 9991, 2]
+// Dependencies: [32, 19, 17, 1085, 21, 9751, 4343, 5025, 576, 9752, 10031, 9765, 9562, 9561, 10032, 9713, 4807, 10035, 10103, 4317, 9565, 10111, 10112, 9768, 10117, 10127, 10131, 10163, 10164, 4606, 10165, 9989, 2]
 // Exports: default
 
-// Module 9752 (StageChannelCallNavigator)
+// Module 9750 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4808 */;
-import spring from "spring" /* 5026 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9715 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 9991 */;
-import JoinStageViewDefault from "JoinStageView" /* 10033 */;
-import MessageManagerDefault from "MessageManager" /* 10034 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 10167 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4807 */;
+import spring from "spring" /* 5025 */;
+import participantHasVideoDefault from "participantHasVideo" /* 9713 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 9989 */;
+import JoinStageViewDefault from "JoinStageView" /* 10031 */;
+import MessageManagerDefault from "MessageManager" /* 10032 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 10165 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -80,7 +80,7 @@ function JoinStageOverlay(channel) {
     return { opacity: spring.withSpring(num, closure_11) };
   };
   let obj = showOverlay(4343);
-  fn.__closure = { withSpring: showOverlay(5026).withSpring, showOverlay, viewAnimationConfig };
+  fn.__closure = { withSpring: showOverlay(5025).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 1929951426580;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -94,7 +94,7 @@ function JoinStageOverlay(channel) {
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5026).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5025).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;
@@ -117,7 +117,7 @@ const viewAnimationConfig = { mass: 0.5, stiffness: 600, damping: 30, overshootC
 const fullScreen = { fullScreen: { flex: 1 } };
 const __initData = { code: "function StageChannelCallNavigatorTsx1(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}" };
 const __initData2 = { code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { startStagePrompt: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);

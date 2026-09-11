@@ -1,18 +1,18 @@
 // Module ID: 16193
 // Function ID: 16194
 // Name: VoiceUser
-// Dependencies: [19, 1956, 4623, 4629, 502, 1908, 4625, 4626, 21, 504, 16194, 2]
+// Dependencies: [19, 1956, 4622, 4628, 502, 1908, 4624, 4625, 21, 504, 16194, 2]
 // Exports: default
 
 // Module 16193 (VoiceUser)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import SessionsStore from "SessionsStore" /* 4625 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import SessionsStore from "SessionsStore" /* 4624 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

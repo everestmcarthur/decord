@@ -1,12 +1,12 @@
 // Module ID: 16422
 // Function ID: 16423
 // Name: GuildsBarItemEmptyNUX
-// Dependencies: [19, 17, 4428, 16353, 1074, 11181, 21, 4607, 576, 7416, 4308, 504, 4343, 5026, 16091, 16366, 1114, 16423, 16365, 5641, 16377, 4603, 2]
+// Dependencies: [19, 17, 4428, 16353, 1074, 11179, 21, 4606, 576, 7415, 4308, 504, 4343, 5025, 16091, 16366, 1114, 16423, 16365, 5640, 16377, 4602, 2]
 
 // Module 16422 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5026 */;
-import transitionToGuild from "transitionToGuild" /* 7416 */;
+import spring from "spring" /* 5025 */;
+import transitionToGuild from "transitionToGuild" /* 7415 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
@@ -19,10 +19,10 @@ get_ActivityIndicator = fn(17);
 const GuildsBarConstants = fn(16353);
 ({ GUILD_ITEM_HIT_SLOP: closure_8, useGuildWrapperSize: closure_9 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1074).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11181).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11179).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_14 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = { root: { alignSelf: "stretch", paddingLeft: hitSlop.left, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING }, container: { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width }, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };

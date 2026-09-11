@@ -1,18 +1,18 @@
-// Module ID: 7532
-// Function ID: 7533
+// Module ID: 7531
+// Function ID: 7532
 // Name: MessageRoundtripTrackerStore
-// Dependencies: [1957, 4527, 4656, 1074, 3, 7533, 1242, 7750, 504, 573, 2]
+// Dependencies: [1957, 4526, 4655, 1074, 3, 7532, 1242, 7749, 504, 573, 2]
 
-// Module 7532 (MessageRoundtripTrackerStore)
+// Module 7531 (MessageRoundtripTrackerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import NetStats from "NetStats" /* 7533 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7750 */;
+import NetStats from "NetStats" /* 7532 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7749 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4527 */;
-import NetworkStore from "NetworkStore" /* 4656 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
+import NetworkStore from "NetworkStore" /* 4655 */;
 
 require = fn;
 function trackRoundtrip(channelId) {

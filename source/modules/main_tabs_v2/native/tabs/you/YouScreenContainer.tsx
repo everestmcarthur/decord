@@ -1,7 +1,7 @@
 // Module ID: 16867
 // Function ID: 16868
 // Name: YouScreenContainer
-// Dependencies: [19, 17, 11181, 21, 4607, 576, 1611, 16085, 1477, 4467, 16868, 1116, 2]
+// Dependencies: [19, 17, 11179, 21, 4606, 576, 1611, 16085, 1477, 4467, 16868, 1116, 2]
 
 // Module 16867 (YouScreenContainer)
 import nativeDefault from "native" /* 576 */;
@@ -14,9 +14,9 @@ const useChatLayoutDefault = tmp(4467);
 const YouScreenDefault = tmp(16868);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11181).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11179).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };
 let obj3 = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl };
 obj.androidContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };

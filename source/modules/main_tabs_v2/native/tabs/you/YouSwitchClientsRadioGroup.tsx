@@ -1,11 +1,11 @@
 // Module ID: 16451
 // Function ID: 16452
 // Name: YouSwitchClientsRadioGroup
-// Dependencies: [32, 19, 21, 16452, 16453, 4574, 5737, 5740, 10909, 2]
+// Dependencies: [32, 19, 21, 16452, 16453, 4573, 5736, 5739, 10907, 2]
 // Exports: default
 
 // Module 16451 (YouSwitchClientsRadioGroup)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import DiscordVariants from "DiscordVariants" /* 16452 */;
 import DiscordVariantTypes from "DiscordVariantTypes" /* 16453 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -54,18 +54,18 @@ export default function YouSwitchClientsRadioGroup() {
           onChange: tmp4,
           hasIcons: true,
           children: arr.map((value) => {
-                  const obj = { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10909).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) };
-                  return jsx(memo(5740).TableRadioRow, { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10909).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) }, value);
+                  const obj = { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10907).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) };
+                  return jsx(memo(5739).TableRadioRow, { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10907).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) }, value);
                 })
         };
-        tmp5 = jsx(memo(5737).TableRadioGroup, {
+        tmp5 = jsx(memo(5736).TableRadioGroup, {
           title: "Switch Clients",
           value: memo,
           onChange: tmp4,
           hasIcons: true,
           children: arr.map((value) => {
-                  const obj = { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10909).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) };
-                  return jsx(memo(5740).TableRadioRow, { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10909).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) }, value);
+                  const obj = { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10907).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) };
+                  return jsx(memo(5739).TableRadioRow, { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: jsx(memo(10907).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color }) }, value);
                 })
         });
       }

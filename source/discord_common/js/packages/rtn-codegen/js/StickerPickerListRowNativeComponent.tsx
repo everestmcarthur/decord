@@ -1,9 +1,9 @@
-// Module ID: 10493
-// Function ID: 10494
+// Module ID: 10491
+// Function ID: 10492
 // Name: StickerPickerListRowNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 10493 (StickerPickerListRowNativeComponent)
+// Module 10491 (StickerPickerListRowNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

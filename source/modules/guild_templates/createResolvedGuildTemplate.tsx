@@ -1,11 +1,11 @@
-// Module ID: 7399
-// Function ID: 7400
+// Module ID: 7398
+// Function ID: 7399
 // Name: createResolvedGuildTemplate
-// Dependencies: [7400, 2]
+// Dependencies: [7399, 2]
 // Exports: default
 
-// Module 7399 (createResolvedGuildTemplate)
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7400 */;
+// Module 7398 (createResolvedGuildTemplate)
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7399 */;
 import size from "module_2" /* 2 */;
 
 const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;

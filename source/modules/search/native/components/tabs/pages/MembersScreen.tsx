@@ -1,7 +1,7 @@
 // Module ID: 16769
 // Function ID: 16770
 // Name: MembersScreen
-// Dependencies: [19, 17, 7353, 1957, 2021, 1979, 2011, 1371, 12459, 12434, 7953, 7952, 1074, 21, 4607, 576, 563, 7236, 12435, 16726, 4250, 1874, 12453, 8265, 1114, 4318, 16770, 16768, 16718, 11683, 16730, 16771, 7256, 11687, 12281, 16773, 2]
+// Dependencies: [19, 17, 7352, 1957, 2021, 1979, 2011, 1371, 12457, 12432, 7952, 7951, 1074, 21, 4606, 576, 563, 7235, 12433, 16726, 4250, 1874, 12451, 8264, 1114, 4318, 16770, 16768, 16718, 11681, 16730, 16771, 7255, 11685, 12279, 16773, 2]
 
 // Module 16769 (MembersScreen)
 import nativeDefault from "native" /* 576 */;
@@ -9,17 +9,17 @@ import util from "util" /* 1114 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11687 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12453 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11685 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12459 */;
-import SearchQueryStore from "SearchQueryStore" /* 12434 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12457 */;
+import SearchQueryStore from "SearchQueryStore" /* 12432 */;
 
 require = fn;
 function SearchableMembersScreen(searchContext) {
@@ -32,10 +32,10 @@ function SearchableMembersScreen(searchContext) {
   let callback;
   let stateFromStores5;
   let stateFromStores6;
-  const analyticsLocations = guildId(7236)().analyticsLocations;
+  const analyticsLocations = guildId(7235)().analyticsLocations;
   const tmp = closure_21();
-  dependencyMap = searchContext(12435).getSearchContextId(searchContext);
-  let obj = searchContext(12435);
+  dependencyMap = searchContext(12433).getSearchContextId(searchContext);
+  let obj = searchContext(12433);
   let items = [SearchMemberTabStore];
   const stateFromStores = searchContext(563).useStateFromStores(items, () => SearchMemberTabStore.getResults(closure_3));
   closure_129_0 = searchContext;
@@ -207,7 +207,7 @@ function SearchableMembersScreen(searchContext) {
     if (stateFromStores5) {
       if (null != stateFromStores4) {
         const obj6 = { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true };
-        tmp25 = jsx(tmp2(11683), { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true });
+        tmp25 = jsx(tmp2(11681), { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true });
       }
     }
     const obj7 = { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo };
@@ -246,14 +246,14 @@ function ThreadMembersScreen(searchContext) {
   tmp7 = <SearchableMembersScreen searchContext={searchContext} guildId={guildId} />;
 }
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(7353).EVERYONE_CHANNEL_ID;
-const SearchConstants = fn(7953);
+const EVERYONE_CHANNEL_ID = fn(7352).EVERYONE_CHANNEL_ID;
+const SearchConstants = fn(7952);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_14, SearchListItemTypes: closure_15 } = SearchConstants);
-let closure_16 = fn(7952).SearchResultContentEntityTypes;
+let closure_16 = fn(7951).SearchResultContentEntityTypes;
 const Constants = fn(1074);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_17, RelationshipTypes: closure_18, SearchTypes: closure_19 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1, flexGrow: 1 }, userList: { backgroundColor: "transparent" }, promoBanner: { paddingTop: nativeDefault.space.PX_24, paddingBottom: 0, paddingHorizontal: 0 } };
 let closure_21 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_24, paddingBottom: 0, paddingHorizontal: 0 };
@@ -264,12 +264,12 @@ export default noop.memo(function MembersScreen(searchContext) {
   searchContext = searchContext.searchContext;
   let stateFromStores;
   let tmp = closure_21();
-  const analyticsLocations = stateFromStores(7236)(stateFromStores(7256).SEARCH_MEMBERS).analyticsLocations;
+  const analyticsLocations = stateFromStores(7235)(stateFromStores(7255).SEARCH_MEMBERS).analyticsLocations;
   let channelId;
   if (searchContext.type === constants3.CHANNEL) {
     channelId = searchContext.channelId;
   }
-  const tmp4 = stateFromStores(7236);
+  const tmp4 = stateFromStores(7235);
   const items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = channelId(563).useStateFromStores(items, () => {
@@ -322,9 +322,9 @@ export default noop.memo(function MembersScreen(searchContext) {
       tmp21Result = tmp21(tmp2(16773), obj7);
     }
     obj6.listHeaderContent = tmp21Result;
-    obj4.children = jsx(tmp2(12281), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp7(1874).dismissGlobalKeyboard, listHeaderContent: null });
+    obj4.children = jsx(tmp2(12279), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp7(1874).dismissGlobalKeyboard, listHeaderContent: null });
     obj3.children = <View style={tmp.container}>{null}</View>;
-    return jsx(tmp7(7236).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
+    return jsx(tmp7(7235).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   } else if (tmp5.THREAD === type) {
     const obj8 = { searchContext, channelId: null, guildId: null };
     ({ channelId: obj5.channelId, guildId: obj5.guildId } = searchContext);
@@ -341,7 +341,7 @@ export default noop.memo(function MembersScreen(searchContext) {
     const obj9 = { value: analyticsLocations, children: null };
     const obj16 = { searchContext, guildId: searchContext.guildId };
     obj9.children = <SearchableMembersScreen searchContext={searchContext} guildId={searchContext.guildId} />;
-    return jsx(tmp7(7236).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
+    return jsx(tmp7(7235).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   }
   const obj2 = channelId(563);
 });

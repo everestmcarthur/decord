@@ -1,11 +1,11 @@
-// Module ID: 17454
-// Function ID: 17455
+// Module ID: 17453
+// Function ID: 17454
 // Name: GuildOnboardingHomeManager
-// Dependencies: [32, 5, 2014, 502, 1957, 2021, 1979, 4428, 4794, 4795, 4232, 7192, 1384, 4810, 17455, 1896, 12380, 1093, 12379, 7296, 7297, 2]
+// Dependencies: [32, 5, 2014, 502, 1957, 2021, 1979, 4428, 4793, 4794, 4232, 7191, 1384, 4809, 17454, 1896, 12378, 1093, 12377, 7295, 7296, 2]
 
-// Module 17454 (GuildOnboardingHomeManager)
+// Module 17453 (GuildOnboardingHomeManager)
 import FlagUtils from "FlagUtils" /* 1384 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
@@ -14,9 +14,9 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4794 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4795 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4793 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4794 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 const GuildMemberFlags = fn(4232).GuildMemberFlags;
@@ -91,10 +91,10 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = tmp(1896)(17455, tmp2.paths);
+            const tmp9 = tmp(1896)(17454, tmp2.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: tmp(1093).ModalAnimation.FADE };
-            obj2.pushLazy(tmp9, obj3, tmp(12380).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
+            obj2.pushLazy(tmp9, obj3, tmp(12378).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
           }
         }
         obj = FlagUtils;
@@ -109,101 +109,56 @@ const prototype = function GuildOnboardingHomeManager() {
   };
   closure_129_1 = applyArgumentsResult;
   closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_1 = tmp2;
+    ({ guildId: closure_129_0, channelId: closure_129_1 } = applyArgumentsResult);
+    await "PX_16";
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c4 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            dependencyMap = tmp5;
-            closure_1 = tmp2;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            ({ guildId: closure_129_0, channelId: closure_129_1 } = applyArgumentsResult);
-            closure_129_2 = undefined;
-            let memberActions;
-            let completedActions;
-            closure_129_5 = undefined;
-            c3 = 1;
+        if (null != closure_129_0) {
+          if (null != closure_129_1) {
+            c3 = 2;
             c4 = 1;
-            return { value: "PX_16", done: true };
+            return { value: closure_130_1._getOrLoadOnboardingMemberActions(closure_129_0), done: false };
           }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              if (null != closure_129_0) {
-                if (null != closure_129_1) {
-                  c3 = 2;
-                  c4 = 1;
-                  const obj5 = { value: closure_130_1._getOrLoadOnboardingMemberActions(closure_129_0), done: false };
-                  return obj5;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_2 = value;
-            memberActions = closure_129_2.memberActions;
-            completedActions = closure_129_2.completedActions;
-            let found;
-            if (memberActions != null) {
-              found = arr.find((channelId) => channelId.channelId === closure_1_1);
-            }
-            closure_129_5 = found;
-            let tmp10;
-            if (completedActions != null) {
-              tmp10 = tmp9[closure_129_1];
-            }
-            let tmp13 = true !== tmp10;
-            if (tmp13) {
-              tmp13 = null != closure_129_5;
-            }
-            if (tmp13) {
-              tmp13 = closure_129_5.actionType === applyArgumentsResult(12380).NewMemberActionTypes.VIEW;
-            }
-            if (tmp13) {
-              const result = applyArgumentsResult(12379).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(12379);
-            }
-            arr = memberActions;
-          }
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
         }
-      } catch (tmp38) {
-        c4 = tmp;
-        throw tmp38;
+        c4 = 3;
       }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_129_2 = value;
+      const memberActions = closure_129_2.memberActions;
+      const completedActions = closure_129_2.completedActions;
+      let found;
+      if (memberActions != null) {
+        found = arr.find((channelId) => channelId.channelId === closure_1_1);
+      }
+      closure_129_5 = found;
+      let tmp10;
+      if (completedActions != null) {
+        tmp10 = tmp9[closure_129_1];
+      }
+      let tmp13 = true !== tmp10;
+      if (tmp13) {
+        tmp13 = null != closure_129_5;
+      }
+      if (tmp13) {
+        tmp13 = closure_129_5.actionType === applyArgumentsResult(12378).NewMemberActionTypes.VIEW;
+      }
+      if (tmp13) {
+        const result = applyArgumentsResult(12377).completeNewMemberAction(closure_129_0, closure_129_1);
+        applyArgumentsResult(12377);
+      }
+      arr = memberActions;
     }
+    return value;
   });
   applyArgumentsResult.handleChannelSelect = function() {
     const self = this;

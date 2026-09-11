@@ -1,13 +1,13 @@
-// Module ID: 17909
-// Function ID: 17910
+// Module ID: 17908
+// Function ID: 17909
 // Name: UserSettingsNativeBridgeManager
-// Dependencies: [17, 1221, 7192, 1115, 2]
+// Dependencies: [17, 1221, 7191, 1115, 2]
 
-// Module 17909 (UserSettingsNativeBridgeManager)
+// Module 17908 (UserSettingsNativeBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

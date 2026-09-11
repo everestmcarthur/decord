@@ -1,21 +1,21 @@
-// Module ID: 17231
-// Function ID: 17232
+// Module ID: 17230
+// Function ID: 17231
 // Name: ActivityShelfItemSummary
-// Dependencies: [32, 19, 17, 21, 4607, 576, 4456, 17232, 10146, 1178, 5037, 4603, 4343, 5043, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 576, 4456, 17231, 10144, 1178, 5036, 4602, 4343, 5042, 2]
 // Exports: default
 
-// Module 17231 (ActivityShelfItemSummary)
+// Module 17230 (ActivityShelfItemSummary)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import ButtonPill from "ButtonPill" /* 5037 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10146 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17232 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ButtonPill from "ButtonPill" /* 5036 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10144 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ButtonEllipsis = tmp2(5043);
+const ButtonEllipsis = tmp2(5042);
 require = fn;
 function ParticipantsSummary(arg0) {
   ({ applicationId, channelId } = arg0);
@@ -29,7 +29,7 @@ function ParticipantsSummary(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
 const ColorUtils = fn(4456);

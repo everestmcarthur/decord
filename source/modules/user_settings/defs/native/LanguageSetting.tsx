@@ -1,14 +1,14 @@
 // Module ID: 15483
 // Function ID: 15484
 // Name: LanguageSetting
-// Dependencies: [2025, 1074, 504, 1114, 11564, 15484, 15486, 2]
+// Dependencies: [2025, 1074, 504, 1114, 11562, 15484, 15486, 2]
 
 // Module 15483 (LanguageSetting)
 import util from "util" /* 1114 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
-const SettingBuilders = fn(11564);
+const SettingBuilders = fn(11562);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

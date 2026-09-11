@@ -1,11 +1,11 @@
 // Module ID: 16258
 // Function ID: 16259
 // Name: useActiveEventOrStageInstanceChannel
-// Dependencies: [1957, 9755, 16257, 2]
+// Dependencies: [1957, 9753, 16257, 2]
 // Exports: useActiveEventOrStageInstanceChannel
 
 // Module 16258 (useActiveEventOrStageInstanceChannel)
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9755 */;
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9753 */;
 import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16257 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

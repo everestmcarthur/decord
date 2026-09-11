@@ -1,16 +1,16 @@
-// Module ID: 8082
-// Function ID: 8083
+// Module ID: 8081
+// Function ID: 8082
 // Name: GuildStreamSystemMessage
-// Dependencies: [4649, 8055, 8035, 8037, 1114, 8039, 2]
+// Dependencies: [4648, 8054, 8034, 8036, 1114, 8038, 2]
 // Exports: createGuildStreamSystemMessage
 
-// Module 8082 (GuildStreamSystemMessage)
+// Module 8081 (GuildStreamSystemMessage)
 import util from "util" /* 1114 */;
-import Constants from "Constants" /* 4649 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8035 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8037 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8039 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8055 */;
+import Constants from "Constants" /* 4648 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8036 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8054 */;
 import size from "module_2" /* 2 */;
 
 const StreamTypes = Constants.StreamTypes;

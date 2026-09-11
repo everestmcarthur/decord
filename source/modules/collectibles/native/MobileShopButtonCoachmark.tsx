@@ -1,7 +1,7 @@
 // Module ID: 16881
 // Function ID: 16882
 // Name: MobileShopButtonCoachmark
-// Dependencies: [19, 17, 1954, 21, 4607, 576, 1114, 11224, 2]
+// Dependencies: [19, 17, 1954, 21, 4606, 576, 1114, 11222, 2]
 // Exports: default
 
 // Module 16881 (MobileShopButtonCoachmark)
@@ -13,7 +13,7 @@ require = fn;
 const Image = fn(17).Image;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { image: null };
 let size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
 obj2.image = size;

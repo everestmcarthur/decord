@@ -1,16 +1,36 @@
 // Module ID: 14100
 // Function ID: 14101
-// Dependencies: [14098]
+// Dependencies: [14096, 14067]
 
 // Module 14100
-import _mod14098 from "module_14098" /* 14098 */;
+import _mod14067 from "module_14067" /* 14067 */;
+
+const require = globalThis.__r;
 
 
-export default (arg0, arg1, arg2) => {
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
   try {
-    const tmp7 = new _mod14098(arg1, arg2);
-    return tmp7.test(arg0);
+    let tmp9 = new require("module_14096")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = -1 !== closure_2.compare(item);
+        }
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod14067(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
+      }
+    });
+    return dependencyMap;
   } catch (err) {
-    return false;
+    return tmp;
   }
 };

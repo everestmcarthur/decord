@@ -1,23 +1,23 @@
 // Module ID: 15874
 // Function ID: 15875
 // Name: CollectiblesShopV2
-// Dependencies: [32, 19, 17, 4606, 1183, 1371, 7616, 1076, 1074, 21, 4607, 7256, 13507, 15875, 504, 5650, 1256, 10825, 15876, 1115, 7627, 9459, 8264, 8869, 4458, 7236, 1483, 8940, 4277, 15878, 1242, 7663, 8273, 15879, 15881, 15904, 1232, 8860, 10913, 15907, 15908, 15884, 15909, 7676, 2]
+// Dependencies: [32, 19, 17, 4605, 1183, 1371, 7615, 1076, 1074, 21, 4606, 7255, 13505, 15875, 504, 5649, 1256, 10823, 15876, 1115, 7626, 9457, 8263, 8867, 4458, 7235, 1483, 8938, 4277, 15878, 1242, 7662, 8272, 15879, 15881, 15904, 1232, 8858, 10911, 15907, 15908, 15884, 15909, 7675, 2]
 
 // Module 15874 (CollectiblesShopV2)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7663 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8273 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8940 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9459 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7662 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8272 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8938 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9457 */;
 import ShopCategory from "ShopCategory" /* 15879 */;
 import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15881 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4606 */;
+import DevSettingsStore from "DevSettingsStore" /* 4605 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UserStore from "UserStore" /* 1371 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7616 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
 
 const SentryUtilsDefault = tmp(1232);
 require = fn;
@@ -99,7 +99,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const collapsedCategories = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 function CollectiblesShopInternal(analyticsSource) {
   analyticsSource = analyticsSource.analyticsSource;

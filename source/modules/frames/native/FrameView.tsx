@@ -1,17 +1,17 @@
 // Module ID: 16693
 // Function ID: 16694
 // Name: FrameView
-// Dependencies: [32, 19, 9603, 9604, 1920, 21, 7237, 573, 9661, 16694, 9728, 16695, 16696, 9743, 504, 2]
+// Dependencies: [32, 19, 9601, 9602, 1920, 21, 7236, 573, 9659, 16694, 9726, 16695, 16696, 9741, 504, 2]
 // Exports: InlineFrameView
 
 // Module 16693 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9661 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9659 */;
 import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16694 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9603 */;
+import FramesStore from "FramesStore" /* 9601 */;
 
 require = fn;
 function FrameViewInner(frame) {
@@ -75,7 +75,7 @@ function FrameViewInner(frame) {
   }} applicationId={frame.applicationId} frameId={frame.id} activityUrl={frame.data.url} queryParams={{ instance_id: "example-cl-instance", platform: ActivityPlatform.MOBILE, discord_proxy_ticket: frame.data.proxyTicket }} onLoadError={callback} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} webViewKey={null} safeAreasConfig={null} />;
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-const FramesConstants = fn(9604);
+const FramesConstants = fn(9602);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(1920).ActivityPlatform;
 const jsx = fn(21).jsx;

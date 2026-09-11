@@ -1,12 +1,12 @@
-// Module ID: 17034
-// Function ID: 17035
+// Module ID: 17033
+// Function ID: 17034
 // Name: NitroFileUploadAnnouncementPromoSheet
-// Dependencies: [19, 17, 1074, 1954, 21, 4607, 576, 5044, 7456, 10321, 5744, 1114, 2496, 5027, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4606, 576, 5043, 7455, 10319, 5743, 1114, 2496, 5026, 2]
 // Exports: default
 
-// Module 17034 (NitroFileUploadAnnouncementPromoSheet)
+// Module 17033 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 576 */;
-import openUserSettings from "openUserSettings" /* 7456 */;
+import openUserSettings from "openUserSettings" /* 7455 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

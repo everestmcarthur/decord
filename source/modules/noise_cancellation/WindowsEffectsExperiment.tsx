@@ -1,10 +1,10 @@
-// Module ID: 10088
-// Function ID: 10089
+// Module ID: 10086
+// Function ID: 10087
 // Name: WindowsEffectsExperiment
 // Dependencies: [1236, 1433, 504, 2]
 // Exports: getWindowsAudioEffectsExperimentConfig, useWindowsAudioEffectsExperimentConfig
 
-// Module 10088 (WindowsEffectsExperiment)
+// Module 10086 (WindowsEffectsExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
 const require = fn;

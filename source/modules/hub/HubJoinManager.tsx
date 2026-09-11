@@ -1,11 +1,11 @@
-// Module ID: 12834
-// Function ID: 12835
+// Module ID: 12832
+// Function ID: 12833
 // Name: HubJoinManager
-// Dependencies: [1979, 1074, 1898, 573, 7416, 2]
+// Dependencies: [1979, 1074, 1898, 573, 7415, 2]
 
-// Module 12834 (HubJoinManager)
+// Module 12832 (HubJoinManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import transitionToGuild from "transitionToGuild" /* 7416 */;
+import transitionToGuild from "transitionToGuild" /* 7415 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 

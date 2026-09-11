@@ -1,7 +1,7 @@
 // Module ID: 15382
 // Function ID: 15383
 // Name: MessagePreviewManager
-// Dependencies: [32, 5, 5329, 1961, 502, 1957, 13775, 1074, 3, 7192, 12, 1986, 573, 1272, 15383, 2]
+// Dependencies: [32, 5, 5328, 1961, 502, 1957, 13773, 1074, 3, 7191, 12, 1986, 573, 1272, 15383, 2]
 
 // Module 15382 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
@@ -9,11 +9,11 @@ import _modDef12 from "module_12" /* 12 */;
 import RemoteFetchData from "RemoteFetchData" /* 15383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13775 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13773 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 const isThread = fn(1961).isThread;
@@ -106,7 +106,7 @@ class MessagePreviewManager extends tmp3 {
               closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp4) {

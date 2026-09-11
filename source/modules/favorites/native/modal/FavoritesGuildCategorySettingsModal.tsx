@@ -1,15 +1,15 @@
 // Module ID: 16183
 // Function ID: 16184
 // Name: FavoritesGuildCategorySettingsModal
-// Dependencies: [32, 19, 17, 1960, 1970, 21, 4607, 576, 1483, 504, 1982, 10314, 7937, 1114, 4951, 1178, 5025, 6678, 5739, 5657, 4565, 11016, 11018, 2]
+// Dependencies: [32, 19, 17, 1960, 1970, 21, 4606, 576, 1483, 504, 1982, 10312, 7936, 1114, 4950, 1178, 5024, 6677, 5738, 5656, 4564, 11014, 11016, 2]
 // Exports: default
 
 // Module 16183 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10314 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -125,7 +125,7 @@ const ScrollView = fn(17).ScrollView;
 let maxLength = fn(1970).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -136,12 +136,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11016)().onGoBack;
+  onGoBack = onGoBack(11014)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1114).intl;
   obj.title = intl.string(categoryId(1114).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11018), obj);
+  return closure_8(onGoBack(11016), obj);
 };

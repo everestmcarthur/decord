@@ -1,14 +1,14 @@
 // Module ID: 16138
 // Function ID: 16139
 // Name: happeningNowRankingUtils
-// Dependencies: [4255, 4626, 15357, 1369, 12, 2]
+// Dependencies: [4255, 4625, 15357, 1369, 12, 2]
 // Exports: cardSize, filterHappeningNowCards, sortHappeningNowCards
 
 // Module 16138 (happeningNowRankingUtils)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const _modDef12 = _mod12;
 

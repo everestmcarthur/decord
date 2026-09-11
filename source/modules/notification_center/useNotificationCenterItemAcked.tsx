@@ -1,7 +1,7 @@
 // Module ID: 16490
 // Function ID: 16491
 // Name: useNotificationCenterItemAcked
-// Dependencies: [16483, 504, 7714, 2]
+// Dependencies: [16483, 504, 7713, 2]
 // Exports: useNotificationCenterItemAcked
 
 // Module 16490 (useNotificationCenterItemAcked)

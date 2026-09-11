@@ -1,9 +1,9 @@
-// Module ID: 7720
-// Function ID: 7721
+// Module ID: 7719
+// Function ID: 7720
 // Name: Channels
 // Dependencies: [1961, 502, 1957, 1986, 2]
 
-// Module 7720 (Channels)
+// Module 7719 (Channels)
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

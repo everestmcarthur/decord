@@ -1,21 +1,21 @@
-// Module ID: 8054
-// Function ID: 8055
+// Module ID: 8053
+// Function ID: 8054
 // Name: CallSystemMessage
-// Dependencies: [4623, 502, 4626, 1074, 4628, 8055, 8056, 1114, 1399, 4288, 8039, 2]
+// Dependencies: [4622, 502, 4625, 1074, 4627, 8054, 8055, 1114, 1399, 4288, 8038, 2]
 // Exports: createCallSystemMessage
 
-// Module 8054 (CallSystemMessage)
+// Module 8053 (CallSystemMessage)
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8039 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8055 */;
-import useIsCallActive from "useIsCallActive" /* 8056 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8054 */;
+import useIsCallActive from "useIsCallActive" /* 8055 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 require = fn;
 const ME = fn(1074).ME;
-const ParticipantTypes = fn(4628).ParticipantTypes;
+const ParticipantTypes = fn(4627).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 

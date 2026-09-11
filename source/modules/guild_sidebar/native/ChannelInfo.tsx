@@ -1,22 +1,22 @@
 // Module ID: 16298
 // Function ID: 16299
 // Name: ChannelInfo
-// Dependencies: [19, 7606, 1979, 4245, 4622, 4626, 1074, 21, 4607, 504, 12154, 7960, 16299, 16300, 4753, 1178, 16302, 16303, 16189, 5469, 12389, 16190, 16304, 13103, 2]
+// Dependencies: [19, 7605, 1979, 4245, 4621, 4625, 1074, 21, 4606, 504, 12152, 7959, 16299, 16300, 4752, 1178, 16302, 16303, 16189, 5468, 12387, 16190, 16304, 13101, 2]
 // Exports: default
 
 // Module 16298 (ChannelInfo)
-import StageMediaHooks from "StageMediaHooks" /* 5469 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12154 */;
+import StageMediaHooks from "StageMediaHooks" /* 5468 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12152 */;
 import showChannelBadgeDefault from "showChannelBadge" /* 16299 */;
 import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 16304 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7606 */;
+import NewChannelsStore from "NewChannelsStore" /* 7605 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4245 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
-import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
-const Badges = tmp2(13103);
+const Badges = tmp2(13101);
 require = fn;
 function LimitAndDurationInfo(channel) {
   channel = channel.channel;
@@ -70,7 +70,7 @@ function DurationInfo(channel) {
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Permissions: closure_9, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles({ activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
@@ -83,7 +83,7 @@ export default function ChannelInfo(channel) {
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
   const obj = channel(504);
-  const postsWithUnreadsCount = channel(7960).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
+  const postsWithUnreadsCount = channel(7959).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     const obj3 = { mentionCount: mentionsCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance, isNewChannel, postsWithUnreadsCount: null, muted: null };
     let tmp18 = null;
@@ -106,7 +106,7 @@ export default function ChannelInfo(channel) {
           if (tmpResult.hasStream(voiceStates)) {
             tmp11Result = jsx(tmp(1178).LiveTag, {});
           }
-          tmpResult = tmp(4753);
+          tmpResult = tmp(4752);
         }
       }
     }

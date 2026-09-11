@@ -1,12 +1,12 @@
-// Module ID: 12718
-// Function ID: 12719
+// Module ID: 12716
+// Function ID: 12717
 // Name: UserProfileConfirmRemoveGameFriend
-// Dependencies: [19, 21, 8277, 10961, 4957, 1114, 4957, 2]
+// Dependencies: [19, 21, 8276, 10959, 4956, 1114, 4956, 2]
 // Exports: default
 
-// Module 12718 (UserProfileConfirmRemoveGameFriend)
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8277 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10961 */;
+// Module 12716 (UserProfileConfirmRemoveGameFriend)
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8276 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10959 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,12 +33,12 @@ export default function UserProfileConfirmRemoveGameFriend(gameName) {
   const intl3 = userId(1114).intl;
   obj3.text = intl3.string(userId(1114).t.RLcE6x);
   obj3.onPress = callback;
-  const items1 = [closure_4(userId(4957).AlertActionButton, obj3, "confirm-remove"), ];
+  const items1 = [closure_4(userId(4956).AlertActionButton, obj3, "confirm-remove"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = userId(1114).intl;
   obj4.text = intl4.string(userId(1114).t["eN6+rI"]);
-  items1[1] = closure_4(userId(4957).AlertActionButton, obj4, "nevermind");
+  items1[1] = closure_4(userId(4956).AlertActionButton, obj4, "nevermind");
   obj2.children = items1;
-  obj.actions = closure_5(userId(4957).AlertActions, obj2);
-  return closure_4(userId(4957).AlertModal, obj);
+  obj.actions = closure_5(userId(4956).AlertActions, obj2);
+  return closure_4(userId(4956).AlertModal, obj);
 };

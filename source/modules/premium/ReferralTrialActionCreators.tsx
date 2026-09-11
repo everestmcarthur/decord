@@ -1,14 +1,14 @@
-// Module ID: 7527
-// Function ID: 7528
+// Module ID: 7526
+// Function ID: 7527
 // Name: ReferralTrialActionCreators
-// Dependencies: [5, 7528, 1385, 2011, 1074, 1272, 573, 1232, 7530, 2]
+// Dependencies: [5, 7527, 1385, 2011, 1074, 1272, 573, 1232, 7529, 2]
 // Exports: createReferralTrial, createReferralTrials, fetchReferralEligibleUsers, fetchReferralsRemaining, resolveReferralTrialOffer
 
-// Module 7527 (ReferralTrialActionCreators)
+// Module 7526 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7528 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7527 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 

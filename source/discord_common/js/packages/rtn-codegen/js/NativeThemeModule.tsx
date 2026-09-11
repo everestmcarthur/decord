@@ -1,9 +1,9 @@
-// Module ID: 14494
-// Function ID: 14495
+// Module ID: 14492
+// Function ID: 14493
 // Name: NativeThemeModule
 // Dependencies: [17, 2]
 
-// Module 14494 (NativeThemeModule)
+// Module 14492 (NativeThemeModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

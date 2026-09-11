@@ -1,16 +1,16 @@
-// Module ID: 12156
-// Function ID: 12157
+// Module ID: 12154
+// Function ID: 12155
 // Name: BannerBase
-// Dependencies: [32, 19, 17, 4599, 21, 576, 4607, 12145, 4343, 1477, 4456, 504, 5026, 5039, 5581, 12157, 4603, 2]
+// Dependencies: [32, 19, 17, 4598, 21, 576, 4606, 12143, 4343, 1477, 4456, 504, 5025, 5038, 5580, 12155, 4602, 2]
 // Exports: default
 
-// Module 12156 (BannerBase)
+// Module 12154 (BannerBase)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5026 */;
+import spring from "spring" /* 5025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 const require = globalThis.__r;
 
@@ -20,9 +20,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12145).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12143).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -99,13 +99,13 @@ export default function BannerBase(arg0) {
   const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
   obj8.style = items3;
-  const items4 = [closure_7(sharedValue(5039), obj8), , ];
+  const items4 = [closure_7(sharedValue(5038), obj8), , ];
   const obj9 = { style: tmp.imageContainer, children: null };
   const obj10 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   let obj6 = { bannerMeasured: sharedValue, withDelay: require("ReanimatedRexport").withDelay, withSpring: require("spring").withSpring, SPRING_CONFIG };
-  obj10.source = require("module_12157");
+  obj10.source = require("module_12155");
   obj10.autoPlay = !stateFromStores;
-  const items5 = [closure_7(sharedValue(5581), obj10), image];
+  const items5 = [closure_7(sharedValue(5580), obj10), image];
   obj9.children = items5;
   items4[1] = closure_8(View, obj9);
   const obj11 = { style: tmp.bannerTextContainer, children: closure_7(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-overlay-light", style: tmp.bannerText, children: text }) };

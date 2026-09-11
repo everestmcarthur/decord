@@ -1,17 +1,17 @@
 // Module ID: 16446
 // Function ID: 16447
 // Name: ManageAccountsModal
-// Dependencies: [32, 5, 19, 17, 502, 4452, 1371, 12508, 12509, 16447, 1074, 21, 7988, 4607, 576, 504, 1178, 4952, 1114, 12512, 5175, 15375, 16022, 4343, 4608, 8360, 1242, 7197, 16448, 16023, 12518, 16449, 5667, 8686, 11300, 7074, 7937, 11019, 16048, 6665, 7014, 16047, 2]
+// Dependencies: [32, 5, 19, 17, 502, 4452, 1371, 12506, 12507, 16447, 1074, 21, 7987, 4606, 576, 504, 1178, 4951, 1114, 12510, 5174, 15375, 16022, 4343, 4607, 8358, 1242, 7196, 16448, 16023, 12516, 16449, 5666, 8684, 11298, 7073, 7936, 11017, 16048, 6664, 7013, 16047, 2]
 
 // Module 16446 (ManageAccountsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import timing from "timing" /* 4608 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
-import HeaderShared from "HeaderShared" /* 7937 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11019 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12512 */;
+import timing from "timing" /* 4607 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11017 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12510 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -63,7 +63,7 @@ function RemoveMultiAccountUserButton(user) {
             obj4.cancelText = intl4.string(tmp2(1114).t["ETE/oC"]);
             v1 = 1;
             v3 = 1;
-            const obj7 = { value: v1(4952).confirm(obj4), done: false };
+            const obj7 = { value: v1(4951).confirm(obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -75,8 +75,8 @@ function RemoveMultiAccountUserButton(user) {
           return obj8;
         } else {
           if (value) {
-            v3(12512).removeAccount(closure_128_0.id);
-            const obj = v3(12512);
+            v3(12510).removeAccount(closure_128_0.id);
+            const obj = v3(12510);
           }
           v3 = 3;
           return { value: "HermesInternal", done: null };
@@ -123,7 +123,7 @@ function RemoveMultiAccountUserButton(user) {
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
     obj3.children = closure_18(tmp(15375).CircleMinusIcon, obj4);
-    return closure_18(tmp(5175).PressableOpacity, obj3);
+    return closure_18(tmp(5174).PressableOpacity, obj3);
   }
   let obj2 = user(504);
 }
@@ -264,17 +264,17 @@ function ManageAccounts(isEditing) {
   return closure_18(isEditing(multiAccountUsers[27]).SafeAreaPaddingView, obj6);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(12508).MultiAccountTokenStatus;
-let Constants = fn(12509);
+const MultiAccountTokenStatus = fn(12506).MultiAccountTokenStatus;
+let Constants = fn(12507);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_12, MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
 const ManageAccountsScreens = fn(16447).ManageAccountsScreens;
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const NativeStackNavigator = fn(7988);
+const NativeStackNavigator = fn(7987);
 let closure_20 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 }, sortableListView: null, addAccountLabel: null, trailingIconContainer: null, trailingIcon: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 };
 obj.sortableListView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -356,10 +356,10 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
       children() {
         return closure_1_18(isEditing(16048), {
           handleLogin(login, password, undelete) {
-            isEditing(6665).login({ login, password, undelete });
+            isEditing(6664).login({ login, password, undelete });
           },
           onReset() {
-            isEditing(6665).loginReset(true);
+            isEditing(6664).loginReset(true);
           }
         });
       }
@@ -370,7 +370,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(7014), { isMultiAccount: true });
+        return closure_1_18(isEditing(7013), { isMultiAccount: true });
       }
     }),
     closure_18(closure_20.Screen, {

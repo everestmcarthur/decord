@@ -1,23 +1,23 @@
-// Module ID: 12375
-// Function ID: 12376
+// Module ID: 12373
+// Function ID: 12374
 // Name: VoicePanelControlsDrawerTitle
-// Dependencies: [19, 17, 12366, 21, 4607, 576, 4343, 5641, 12376, 7147, 4603, 2]
+// Dependencies: [19, 17, 12364, 21, 4606, 576, 4343, 5640, 12374, 7146, 4602, 2]
 
-// Module 12375 (VoicePanelControlsDrawerTitle)
+// Module 12373 (VoicePanelControlsDrawerTitle)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import NativeViewDefault from "NativeView" /* 5641 */;
-import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 12376 */;
+import NativeViewDefault from "NativeView" /* 5640 */;
+import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 12374 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp2(4603);
-const ReanimatedNativeViewDefault = tmp7(7147);
+const Text_Text = tmp2(4602);
+const ReanimatedNativeViewDefault = tmp7(7146);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(12366).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
+const createStyles = fn(4606);
+let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(12364).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
 obj.titlePillBG = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_6 = createStyles.createStyles(obj);

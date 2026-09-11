@@ -1,29 +1,29 @@
-// Module ID: 12795
-// Function ID: 12796
+// Module ID: 12793
+// Function ID: 12794
 // Name: ContactSyncInviteFriends
-// Dependencies: [19, 17, 1371, 1074, 21, 4607, 576, 504, 5639, 12796, 4603, 1114, 5027, 1242, 4451, 8449, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4606, 576, 504, 5638, 12794, 4602, 1114, 5026, 1242, 4451, 8447, 2]
 // Exports: default
 
-// Module 12795 (ContactSyncInviteFriends)
+// Module 12793 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef12796 from "module_12796" /* 12796 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef12794 from "module_12794" /* 12794 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
 
 const UserUtilsDefault = tmp(4451);
-const showShareActionSheet = tmp5(8449);
+const showShareActionSheet = tmp5(8447);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function ContactSyncInviteFriends() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef12796;
+  obj4.source = _modDef12794;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

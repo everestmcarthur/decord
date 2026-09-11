@@ -1,9 +1,9 @@
 // Module ID: 8632
 // Function ID: 8633
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8633, 8628, 8568]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8631, 8626, 8566]
 
 // Module 8632
-import _modDef8568 from "module_8568" /* 8568 */;
+import _modDef8566 from "module_8566" /* 8566 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -11,7 +11,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Polygon = importDefault;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,15 +32,15 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class Polygon {
+class Polyline {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, Polygon);
+    tmp = c2(this, Polyline);
     items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(Polygon);
+    obj = closure_4(Polyline);
     tmp3 = closure_3;
     if (metroRequire()) {
       tmp5 = globalThis;
@@ -55,7 +55,7 @@ class Polygon {
       points = points.points;
       if (points) {
         const _HermesInternal = HermesInternal;
-        points.d = "M" + Polygon(8633)(points) + "z";
+        points.d = "M" + Polyline(8631)(points);
       }
       if (closure_0.root) {
         const root = closure_0.root;
@@ -65,7 +65,7 @@ class Polygon {
     return tmp3Result;
   }
 }
-_inherits(Polygon, _modDef8568);
+_inherits(Polyline, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
@@ -75,16 +75,16 @@ const entry = {
     let combined = points;
     if (points) {
       const _HermesInternal = HermesInternal;
-      combined = "M" + Polygon(8633)(points) + "z";
+      combined = "M" + Polyline(8631)(points);
     }
     obj.d = combined;
     const merged = Object.assign(props);
-    return jsx(Polygon(8628), { ref: this.refMethod, d: null });
+    return jsx(Polyline(8626), { ref: this.refMethod, d: null });
   }
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(Polygon, items);
-importDefaultResultResult.displayName = "Polygon";
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
 importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

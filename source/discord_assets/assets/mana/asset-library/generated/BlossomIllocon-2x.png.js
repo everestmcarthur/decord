@@ -1,8 +1,8 @@
-// Module ID: 5870
-// Function ID: 5871
+// Module ID: 5869
+// Function ID: 5870
 // Dependencies: [2]
 
-// Module 5870
+// Module 5869
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BlossomIllocon-2x.png.js");

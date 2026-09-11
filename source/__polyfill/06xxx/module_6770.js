@@ -1,57 +1,61 @@
 // Module ID: 6770
 // Function ID: 6771
-// Dependencies: [1636, 4342, 6759, 6771, 6732]
+// Dependencies: [6757, 6755]
 
 // Module 6770
-import cancelAnimation from "cancelAnimation" /* 1636 */;
-import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4342 */;
-import tagMessage from "tagMessage" /* 6732 */;
-import ghQueueMicrotask from "ghQueueMicrotask" /* 6759 */;
-import _mod6771 from "module_6771" /* 6771 */;
+import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6755 */;
 
-try {
-  const _module = cancelAnimation;
-  try {
-    const _module1 = reactNativeWorkletsCompat;
-    if (_module1 != null) {
-      const fn = function t() {
-
-      };
-      fn.__closure = {};
-      fn.__workletHash = 1792171573139;
-      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
-      _module1.scheduleOnUI(fn);
-    }
-    const _module2 = ghQueueMicrotask;
-    _module2.ghQueueMicrotask(() => {
-      const NativeProxy = _mod6771.NativeProxy;
-      if (!NativeProxy.installUIRuntimeBindings()) {
-        const _console = console;
-        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
-        const tmpResult = tagMessage;
+const require = arg1;
+importDefault = fn;
+let dependencyMap = arg6;
+let obj = {
+  createGestureHandler(Handler, handlerTag, config) {
+    _require = Handler;
+    closure_1 = handlerTag;
+    dependencyMap = config;
+    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+      let obj2 = closure_2;
+      if (!closure_2) {
+        obj2 = {};
       }
+      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
     });
-    let useSharedValue;
-    if (_module != null) {
-      useSharedValue = _module.useSharedValue;
-    }
-    let setGestureState = undefined === _module;
-    if (!setGestureState) {
-      setGestureState = _module.setGestureState;
-    }
-    if (!setGestureState) {
-      const fn2 = function o() {
-        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
-      };
-      const obj = { tagMessage: tagMessage.tagMessage };
-      fn2.__closure = obj;
-      fn2.__workletHash = 3596069664305;
-      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-      _module.setGestureState = fn2;
-      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-    }
-    exports.Reanimated = _module;
-  } catch (err) {
-  }
-} catch (err) {
-}
+  },
+  setGestureHandlerConfig(handlerTag, result) {
+    _require = handlerTag;
+    closure_1 = result;
+    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
+    });
+  },
+  updateGestureHandlerConfig: null,
+  dropGestureHandler: null,
+  configureRelations: null,
+  installUIRuntimeBindings: null
+};
+fn = function n(arg0, arg1) {
+  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
+  RNGestureHandlerModuleDefault.flushOperations();
+};
+fn.__closure = { updateGestureHandlerConfig: fn(6755).updateGestureHandlerConfig, flushOperations: fn(6755).flushOperations };
+fn.__workletHash = 12442858879797;
+fn.__initData = { code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}" };
+obj.updateGestureHandlerConfig = fn;
+obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
+  _require = handlerTag;
+  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
+  });
+};
+obj.configureRelations = function configureRelations(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
+  });
+};
+obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
+  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
+};
+
+export const NativeProxy = obj;

@@ -1,10 +1,10 @@
-// Module ID: 17968
-// Function ID: 17969
+// Module ID: 17967
+// Function ID: 17968
 // Name: PendingRequestList
-// Dependencies: [19, 17, 1371, 21, 4607, 576, 1178, 504, 17966, 17969, 1396, 4603, 1114, 2690, 5175, 2396, 8889, 14978, 14932, 4305, 5025, 5744, 9145, 14937, 2]
+// Dependencies: [19, 17, 1371, 21, 4606, 576, 1178, 504, 17965, 17968, 1396, 4602, 1114, 2690, 5174, 2396, 8887, 14978, 14932, 4305, 5024, 5743, 9143, 14937, 2]
 // Exports: default
 
-// Module 17968 (PendingRequestList)
+// Module 17967 (PendingRequestList)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import _modDef2690 from "module_2690" /* 2690 */;
@@ -161,7 +161,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };

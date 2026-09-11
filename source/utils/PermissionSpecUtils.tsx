@@ -1,17 +1,17 @@
 // Module ID: 16916
 // Function ID: 16917
 // Name: PermissionSpecUtils
-// Dependencies: [1961, 1979, 1074, 8489, 16917, 7325, 5069, 16918, 1114, 2024, 7343, 5469, 16919, 7342, 16920, 9155, 7840, 2]
+// Dependencies: [1961, 1979, 1074, 8487, 16917, 7324, 5068, 16918, 1114, 2024, 7342, 5468, 16919, 7341, 16920, 9153, 7839, 2]
 
 // Module 16916 (PermissionSpecUtils)
 import util from "util" /* 1114 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5069 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7342 */;
-import tracking_Tracking from "tracking/Tracking" /* 7840 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8489 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5068 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7341 */;
+import tracking_Tracking from "tracking/Tracking" /* 7839 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8487 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
 import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 16917 */;
 import HangoutWindowExperiment from "HangoutWindowExperiment" /* 16918 */;
 import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 16920 */;
@@ -24,8 +24,8 @@ function getPermissionOptions(id) {
   const guild = GuildStore.getGuild(id);
   let result1 = null != guild;
   if (result1) {
-    result1 = tmp(7325).isCreatorMonetizationEnabledGuild(guild);
-    const tmpResult = tmp(7325);
+    result1 = tmp(7324).isCreatorMonetizationEnabledGuild(guild);
+    const tmpResult = tmp(7324);
   }
   const soundmojiRenderingExperiment = SoundmojiRenderingExperiment.getSoundmojiRenderingExperiment({ location: "getPermissionOptions" });
   const tmpResult3 = SoundmojiRenderingExperiment;
@@ -62,14 +62,14 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(7343).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(7342).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     const obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(5469);
-    const isStageVideoEnabledResult = tmp4(5469).isStageVideoEnabled(guild_id);
+    const tmp4Result = tmp4(5468);
+    const isStageVideoEnabledResult = tmp4(5468).isStageVideoEnabled(guild_id);
     let result = tmp4(16919).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;

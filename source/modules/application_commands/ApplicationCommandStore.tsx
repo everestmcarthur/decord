@@ -1,14 +1,14 @@
-// Module ID: 7853
-// Function ID: 7854
+// Module ID: 7852
+// Function ID: 7853
 // Name: ApplicationCommandStore
-// Dependencies: [32, 7354, 2011, 7595, 504, 573, 2]
+// Dependencies: [32, 7353, 2011, 7594, 504, 573, 2]
 
-// Module 7853 (ApplicationCommandStore)
+// Module 7852 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7595 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7594 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7354 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7353 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;

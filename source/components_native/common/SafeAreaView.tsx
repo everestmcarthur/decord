@@ -1,13 +1,13 @@
-// Module ID: 7197
-// Function ID: 7198
+// Module ID: 7196
+// Function ID: 7197
 // Name: common/SafeAreaView
-// Dependencies: [19, 17, 21, 1611, 5638, 1332, 2]
+// Dependencies: [19, 17, 21, 1611, 5637, 1332, 2]
 // Exports: SafeAreaPaddingView
 
-// Module 7197 (common/SafeAreaView)
+// Module 7196 (common/SafeAreaView)
 import _modDef1332 from "module_1332" /* 1332 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useRefValueDefault from "useRefValue" /* 5638 */;
+import useRefValueDefault from "useRefValue" /* 5637 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

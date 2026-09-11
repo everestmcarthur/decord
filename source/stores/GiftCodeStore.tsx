@@ -1,15 +1,15 @@
-// Module ID: 11525
-// Function ID: 11526
+// Module ID: 11523
+// Function ID: 11524
 // Name: GiftCodeStore
-// Dependencies: [10791, 1074, 4494, 4198, 4846, 573, 11526, 504, 2]
+// Dependencies: [10789, 1074, 1952, 4198, 4845, 573, 11524, 504, 2]
 
-// Module 11525 (GiftCodeStore)
+// Module 11523 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4846 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11526 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10791 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4845 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11524 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10789 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -21,7 +21,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4494).Timeout();
+      const timeout = new code(1952).Timeout();
       closure_7[code] = timeout;
       value2 = obj.get(code);
       if (null != value2) {

@@ -1,13 +1,13 @@
-// Module ID: 12340
-// Function ID: 12341
+// Module ID: 12338
+// Function ID: 12339
 // Name: ChatInputActionButtonGiftOrThread
-// Dependencies: [19, 17, 12057, 21, 4607, 12341, 12334, 1114, 12332, 12343, 4308, 576, 4317, 2]
+// Dependencies: [19, 17, 12055, 21, 4606, 12339, 12332, 1114, 12330, 12341, 4308, 576, 4317, 2]
 
-// Module 12340 (ChatInputActionButtonGiftOrThread)
+// Module 12338 (ChatInputActionButtonGiftOrThread)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
 import native from "native" /* 4317 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12341 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12339 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,16 +21,16 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     const intl = onPress(1114).intl;
     obj2.accessibilityLabel = intl.string(onPress(1114).t["4WNcpu"]);
     obj2.disabled = !canStartThreads;
-    obj2.IconComponent = onPress(12332).ThreadPlusIcon;
+    obj2.IconComponent = onPress(12330).ThreadPlusIcon;
     obj2.onPress = function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     };
     obj2.style = styleButton;
-    let tmpResult = tmp(tmp2(12334), obj2);
-    const tmp2Result = tmp2(12334);
+    let tmpResult = tmp(tmp2(12332), obj2);
+    const tmp2Result = tmp2(12332);
   } else {
     const obj3 = { accessible, channel, onPress, style: styleButtonWrapper, styleButton };
-    tmpResult = tmp(tmp2(12343), obj3);
+    tmpResult = tmp(tmp2(12341), obj3);
   }
   obj.children = tmpResult;
   return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, arg0);
@@ -43,9 +43,9 @@ function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   return str;
 }
 const View = fn(17).View;
-const ChatInputActionType = fn(12057).ChatInputActionType;
+const ChatInputActionType = fn(12055).ChatInputActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((height, arg1) => {
   const obj = { container: null };
   const size = { width: height + 2 * arg1, height };

@@ -1,17 +1,17 @@
 // Module ID: 16474
 // Function ID: 16475
 // Name: BackIconWithBadge
-// Dependencies: [19, 17, 7709, 21, 4607, 576, 504, 16465, 1178, 8907, 1116, 5680, 5732, 4560, 2]
+// Dependencies: [19, 17, 7708, 21, 4606, 576, 504, 16465, 1178, 8905, 1116, 5679, 5731, 4559, 2]
 // Exports: CloseIconWithBadgeOnSide, LeftBackIconWithBadge, SettingsLeftIconWithBadge
 
 // Module 16474 (BackIconWithBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import XLargeIcon from "XLargeIcon" /* 4560 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5680 */;
-import ClipView from "ClipView" /* 8907 */;
+import XLargeIcon from "XLargeIcon" /* 4559 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5679 */;
+import ClipView from "ClipView" /* 8905 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7709 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7708 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -68,7 +68,7 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(8907), obj4), ];
+  const items5 = [closure_6(tmp5(8905), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
@@ -84,7 +84,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -100,10 +100,10 @@ export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navi
   const items = [navigation];
   const obj = { includeNotificationsCount: flag, Icon: null };
   if (noop.useMemo(() => navigation.getState().index > 0, items)) {
-    obj.Icon = tmp3(5680).ArrowLargeLeftIcon;
+    obj.Icon = tmp3(5679).ArrowLargeLeftIcon;
     let tmp5 = obj;
   } else {
-    obj.Icon = tmp3(5732).XSmallIcon;
+    obj.Icon = tmp3(5731).XSmallIcon;
     tmp5 = obj;
   }
   return timestampProducer(IconWithBadge, tmp5);

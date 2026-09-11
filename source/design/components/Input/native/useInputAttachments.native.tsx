@@ -1,12 +1,12 @@
-// Module ID: 6691
-// Function ID: 6692
+// Module ID: 6690
+// Function ID: 6691
 // Name: useInputAttachments
-// Dependencies: [32, 19, 17, 21, 6692, 4603, 6693, 2]
+// Dependencies: [32, 19, 17, 21, 6691, 4602, 6692, 2]
 // Exports: estimateAttachmentWidth, renderInputAttachment, useInputAttachments
 
-// Module 6691 (useInputAttachments)
-import Text_Text from "Text/Text" /* 4603 */;
-import IconSize from "IconSize" /* 6692 */;
+// Module 6690 (useInputAttachments)
+import Text_Text from "Text/Text" /* 4602 */;
+import IconSize from "IconSize" /* 6691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

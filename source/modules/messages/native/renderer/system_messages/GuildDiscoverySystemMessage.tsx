@@ -1,12 +1,12 @@
-// Module ID: 8083
-// Function ID: 8084
+// Module ID: 8082
+// Function ID: 8083
 // Name: GuildDiscoverySystemMessage
-// Dependencies: [1114, 8039, 2]
+// Dependencies: [1114, 8038, 2]
 // Exports: createGuildDiscoveryDisqualifiedSystemMessage, createGuildDiscoveryGracePeriodFinalWarningSystemMessage, createGuildDiscoveryGracePeriodInitialWarningSystemMessage, createGuildDiscoveryRequalifiedSystemMessage
 
-// Module 8083 (GuildDiscoverySystemMessage)
+// Module 8082 (GuildDiscoverySystemMessage)
 import util from "util" /* 1114 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8039 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");

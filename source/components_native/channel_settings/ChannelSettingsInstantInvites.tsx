@@ -1,31 +1,31 @@
 // Module ID: 16905
 // Function ID: 16906
 // Name: ChannelSettingsInstantInvites
-// Dependencies: [32, 19, 17, 8719, 1957, 1074, 21, 4607, 576, 1611, 504, 8718, 11026, 1178, 11043, 11044, 1114, 7113, 16906, 7129, 2]
+// Dependencies: [32, 19, 17, 8717, 1957, 1074, 21, 4606, 576, 1611, 504, 8716, 11024, 1178, 11041, 11042, 1114, 7112, 16906, 7128, 2]
 // Exports: default
 
 // Module 16905 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import InstantInvite from "InstantInvite" /* 11026 */;
+import InstantInvite from "InstantInvite" /* 11024 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 8719 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 8717 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
-const FastestListDefault = tmp2(7129);
-const _modDef11043 = tmp2(11043);
-const _modDef11044 = tmp2(11044);
+const FastestListDefault = tmp2(7128);
+const _modDef11041 = tmp2(11041);
+const _modDef11042 = tmp2(11042);
 const InstantInviteSelfMeasurerDefault = tmp2(16906);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, gap: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.gap = { height: nativeDefault.space.PX_16 };
@@ -109,7 +109,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef11043, darkSource: _modDef11044, title: null, body: null };
+      const obj5 = { lightSource: _modDef11041, darkSource: _modDef11042, title: null, body: null };
       const intl = tmpResult(1114).intl;
       obj5.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
       const intl2 = tmpResult(1114).intl;
@@ -127,7 +127,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }
   const obj8 = { style: tmp.content, children: null };
   tmp = closure_9;
-  const items8 = [closure_9(tmpResult(7113).SceneLoadingIndicator, {}), ];
+  const items8 = [closure_9(tmpResult(7112).SceneLoadingIndicator, {}), ];
   tmpResult = null;
   if (memo1.length > 0) {
     tmp2 = InstantInviteSelfMeasurerDefault;

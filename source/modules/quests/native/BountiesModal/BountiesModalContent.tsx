@@ -1,23 +1,23 @@
 // Module ID: 15119
 // Function ID: 15120
 // Name: BountiesModalContent
-// Dependencies: [32, 5, 19, 17, 7775, 5496, 1074, 1085, 21, 1477, 1611, 4607, 576, 504, 8942, 11616, 15072, 15076, 11620, 15075, 15077, 7791, 5503, 7801, 5501, 11608, 15057, 15080, 11873, 15120, 15111, 7197, 15101, 7772, 4317, 2]
+// Dependencies: [32, 5, 19, 17, 7774, 5495, 1074, 1085, 21, 1477, 1611, 4606, 576, 504, 8940, 11614, 15072, 15076, 11618, 15075, 15077, 7790, 5502, 7800, 5500, 11606, 15057, 15080, 11871, 15120, 15111, 7196, 15101, 7771, 4317, 2]
 // Exports: default
 
 // Module 15119 (BountiesModalContent)
 import nativeDefault from "native" /* 576 */;
-import QuestContent from "QuestContent" /* 5501 */;
-import AdCreativeType from "AdCreativeType" /* 5503 */;
-import QuestDataUtils from "QuestDataUtils" /* 7772 */;
-import AnalyticsActions from "AnalyticsActions" /* 7791 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11608 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11873 */;
+import QuestContent from "QuestContent" /* 5500 */;
+import AdCreativeType from "AdCreativeType" /* 5502 */;
+import QuestDataUtils from "QuestDataUtils" /* 7771 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11606 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11871 */;
 import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7775 */;
+import BountyStore from "BountyStore" /* 7774 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -93,8 +93,8 @@ function BountiesModalContentInner(bounty) {
   const items4 = [handleVideoProgressAnalytics];
   const stateFromStores = bounty(504).useStateFromStores(items4, () => BountyStore.isBountyCompleted(bounty.id));
   let obj2 = bounty(504);
-  let obj3 = bounty(8942);
-  const bountiesExperience = bounty(11616).useBountiesExperience(isEndCardVisible.VIDEO_MODAL_MOBILE);
+  let obj3 = bounty(8940);
+  const bountiesExperience = bounty(11614).useBountiesExperience(isEndCardVisible.VIDEO_MODAL_MOBILE);
   ({ loopingEnabled, ownedByVerticalScrollExperiment, stage1Enabled, rewardTimerSeconds } = bountiesExperience);
   const BountyVideoEndMode = bounty(15072).BountyVideoEndMode;
   const tmp12 = loopingEnabled ? BountyVideoEndMode.LOOP : BountyVideoEndMode.END_CARD;
@@ -241,20 +241,20 @@ function BountiesModalContentInner(bounty) {
     rect.style = memo3;
     const obj15 = { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback3 };
     rect.children = closure_11(tmp2(15101), obj15);
-    items9[2] = closure_11(tmp9(7197).SafeAreaPaddingView, rect);
+    items9[2] = closure_11(tmp9(7196).SafeAreaPaddingView, rect);
     obj9.children = items9;
     return closure_13(closure_12, obj9);
   }
   result = 1000 * rewardTimerSeconds;
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5496).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let c14 = 0.5625;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };

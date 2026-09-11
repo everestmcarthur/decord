@@ -1,17 +1,17 @@
 // Module ID: 15082
 // Function ID: 15083
 // Name: AdVideoPlayer
-// Dependencies: [32, 19, 17, 1895, 1074, 21, 576, 8396, 4607, 672, 15071, 4343, 5026, 5030, 4608, 4611, 1109, 504, 1115, 1232, 1611, 1114, 5175, 15083, 15085, 15087, 15088, 10271, 8362, 8364, 15089, 15090, 2]
+// Dependencies: [32, 19, 17, 1895, 1074, 21, 576, 8394, 4606, 672, 15071, 4343, 5025, 5029, 4607, 4610, 1109, 504, 1115, 1232, 1611, 1114, 5174, 15083, 15085, 15087, 15088, 10269, 8360, 8362, 15089, 15090, 2]
 
 // Module 15082 (AdVideoPlayer)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
-import spring from "spring" /* 5026 */;
-import springPresets from "springPresets" /* 5030 */;
-import _modDef8396 from "module_8396" /* 8396 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
+import spring from "spring" /* 5025 */;
+import springPresets from "springPresets" /* 5029 */;
+import _modDef8394 from "module_8394" /* 8394 */;
 import AdsVideoTypes from "AdsVideoTypes" /* 15071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16 };
-const _isNativeReflectConstruct = noop.memo(_modDef8396);
+const _isNativeReflectConstruct = noop.memo(_modDef8394);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }
@@ -53,7 +53,7 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = { code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}" };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, iconDisabled: null, controlButton: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = {};

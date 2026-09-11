@@ -1,24 +1,24 @@
 // Module ID: 16363
 // Function ID: 16364
 // Name: useGuildsBarProps
-// Dependencies: [19, 5329, 4246, 7293, 7294, 13802, 4949, 2021, 1979, 13810, 4428, 5490, 16356, 16353, 21, 16364, 16378, 16379, 16382, 16387, 16413, 16416, 16417, 16418, 16420, 16421, 16422, 16424, 16426, 4308, 576, 1611, 15149, 15158, 15388, 504, 13893, 16428, 16429, 5014, 1477, 16431, 7146, 2]
+// Dependencies: [19, 5328, 4246, 7292, 7293, 13800, 4948, 2021, 1979, 13808, 4428, 5489, 16356, 16353, 21, 16364, 16378, 16379, 16382, 16387, 16413, 16416, 16417, 16418, 16420, 16421, 16422, 16424, 16426, 4308, 576, 1611, 15149, 15158, 15388, 504, 13891, 16428, 16429, 5013, 1477, 16431, 7145, 2]
 // Exports: default
 
 // Module 16363 (useGuildsBarProps)
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16420 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import LurkingStore from "LurkingStore" /* 4246 */;
-import MessageRequestStore from "MessageRequestStore" /* 7293 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7294 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13802 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4949 */;
+import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13800 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13810 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13808 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import SortedGuildStore from "SortedGuildStore" /* 5490 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16356 */;
 
 const require = globalThis.__r;
@@ -82,7 +82,7 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(5490).GuildsNodeType;
+const GuildsNodeType = fn(5489).GuildsNodeType;
 const GuildsBarConstants = fn(16353);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;

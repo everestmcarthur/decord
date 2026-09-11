@@ -1,10 +1,10 @@
 // Module ID: 8615
 // Function ID: 8616
-// Dependencies: [41, 42, 93, 95, 98, 19, 17, 21, 8557, 8616, 8559, 8568]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8557, 8616, 8566]
 
 // Module 8615
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8568 from "module_8568" /* 8568 */;
+import _modDef8566 from "module_8566" /* 8566 */;
 import _modDef8616 from "module_8616" /* 8616 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -12,7 +12,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const SvgImage = fn;
+const Line = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,17 +33,15 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturnDefault;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const re9 = /\s+/;
-class SvgImage {
+class Line {
   constructor() {
     self = this;
-    tmp = closure_3(this, SvgImage);
+    tmp = closure_3(this, Line);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(SvgImage);
+    obj = hasOwnProperty(Line);
     tmp3 = closure_4;
-    if (closure_8()) {
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -56,53 +54,36 @@ class SvgImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SvgImage, _modDef8568);
+_inherits(Line, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ preserveAspectRatio, href } = props);
-    ({ x, y, width, height } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
-    }
-    if (preserveAspectRatio) {
-      let parts = preserveAspectRatio.trim().split(re9);
-      const str = preserveAspectRatio.trim();
-    } else {
-      parts = [];
-    }
-    const size = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: SvgImage(8557).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
-    [tmp2, tmp3] = parts;
-    const tmp6 = SvgImage(8557).meetOrSliceTypes[tmp3] || 0;
-    size.align = SvgImage(8557).alignEnum[tmp2] || "xMidYMid";
-    let assetSource = null;
-    if (href) {
-      let tmp10 = href;
-      if (typeof href === "string") {
-        const obj = { uri: href };
-        tmp10 = obj;
-      }
-      assetSource = Image.resolveAssetSource(tmp10);
-    }
-    size.src = assetSource;
-    const obj2 = {
+    const obj = {};
+    ({ x1, y1, x2, y2 } = props);
+    const merged = Object.assign(Line(8557).extract(this, props));
+    obj.x1 = x1;
+    obj.y1 = y1;
+    obj.x2 = x2;
+    obj.y2 = y2;
+    const obj2 = Line(8557);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const tmp7 = SvgImage(8557).alignEnum[tmp2] || "xMidYMid";
-    const merged = Object.assign(SvgImage(8559).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return <tmp11 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8616, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(SvgImage, items);
-importDefaultResultResult.displayName = "Image";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
 
 export default importDefaultResultResult;

@@ -1,17 +1,17 @@
 // Module ID: 15903
 // Function ID: 15904
 // Name: ShelfBlock
-// Dependencies: [19, 17, 7616, 1076, 1074, 21, 4607, 576, 1483, 8860, 15884, 7236, 7256, 504, 15130, 15132, 7615, 8857, 4603, 5027, 1114, 7230, 8966, 2]
+// Dependencies: [19, 17, 7615, 1076, 1074, 21, 4606, 576, 1483, 8858, 15884, 7235, 7255, 504, 15130, 15132, 7614, 8855, 4602, 5026, 1114, 7229, 8964, 2]
 // Exports: default
 
 // Module 15903 (ShelfBlock)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7615 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8857 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8860 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7614 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8855 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8858 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7616 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
 
 require = fn;
 function ListEdgeSpacer() {
@@ -26,7 +26,7 @@ let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, containerWithBackground: null, backgroundImage: null, header: null, headingWrapper: null, listEdgeSpacer: null, listItemSeparator: null };
 let obj3 = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.containerWithBackground = { marginTop: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, overflow: "hidden" };

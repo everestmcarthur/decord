@@ -4,4 +4,4 @@
 
 // Module 14395
 
-export default ["constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "toLocaleString", "toString", "valueOf"];
+export default {};

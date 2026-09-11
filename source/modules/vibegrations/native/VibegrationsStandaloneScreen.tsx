@@ -1,21 +1,21 @@
 // Module ID: 16662
 // Function ID: 16663
 // Name: VibegrationsStandaloneScreen
-// Dependencies: [5, 32, 19, 17, 2021, 1979, 4245, 16663, 16666, 16664, 1074, 9604, 21, 4607, 576, 1611, 1483, 504, 7318, 16671, 1114, 3590, 4603, 7159, 5027, 5739, 5657, 7714, 7055, 9600, 13353, 4952, 4305, 4574, 16675, 16676, 16679, 9464, 7454, 15054, 10271, 7319, 5676, 7451, 8362, 8759, 8765, 16680, 7320, 7074, 2]
+// Dependencies: [5, 32, 19, 17, 2021, 1979, 4245, 16663, 16666, 16664, 1074, 9602, 21, 4606, 576, 1611, 1483, 504, 7317, 16671, 1114, 3590, 4602, 7158, 5026, 5738, 5656, 7713, 7054, 9598, 13351, 4951, 4305, 4573, 16675, 16676, 16679, 9462, 7453, 15054, 10269, 7318, 5675, 7450, 8360, 8757, 8763, 16680, 7319, 7073, 2]
 // Exports: default
 
 // Module 16662 (VibegrationsStandaloneScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4574 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
-import NavigatorHeader from "NavigatorHeader" /* 5676 */;
-import SettingsIcon from "SettingsIcon" /* 7454 */;
-import UploadIcon from "UploadIcon" /* 9464 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9600 */;
-import RetryIcon from "RetryIcon" /* 10271 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13353 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4573 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import SettingsIcon from "SettingsIcon" /* 7453 */;
+import UploadIcon from "UploadIcon" /* 9462 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9598 */;
+import RetryIcon from "RetryIcon" /* 10269 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13351 */;
 import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15054 */;
 import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16671 */;
 import VibegrationsPublishNotesSheetDefault from "VibegrationsPublishNotesSheet" /* 16675 */;
@@ -613,12 +613,12 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: closure_1_0(8765).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: closure_1_0(8763).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = closure_1_0(1114).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
             obj.accessibilityActions = accessibilityActions;
             obj.onAccessibilityAction = onAccessibilityAction;
-            return closure_1_23(closure_1_0(7451).HeaderActionButton, obj);
+            return closure_1_23(closure_1_0(7450).HeaderActionButton, obj);
           }
         });
         obj.children = items;
@@ -643,10 +643,10 @@ let VibegrationsProjectStore = fn(16664);
 ({ canPublishProject: closure_18, isProjectOwner: closure_19 } = VibegrationsProjectStore);
 let VibegrationsProjectStore = VibegrationsProjectStore_mod;
 const Permissions = fn(1074).Permissions;
-const MAIN_SURFACE = fn(9604).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9602).MAIN_SURFACE;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_25 = createStyles.createStyles((paddingBottom) => {
   const obj = { content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom }, centered: null, listContent: null, createSection: null, sharedSection: null, sharedHeading: null, headerActions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom };

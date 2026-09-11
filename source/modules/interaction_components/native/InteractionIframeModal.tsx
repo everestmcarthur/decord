@@ -1,14 +1,14 @@
-// Module ID: 17487
-// Function ID: 17488
+// Module ID: 17486
+// Function ID: 17487
 // Name: InteractionIframeModal
-// Dependencies: [32, 19, 17, 1350, 21, 4607, 576, 17475, 7055, 8420, 17488, 5024, 4305, 1114, 9735, 9743, 5175, 4560, 4603, 9531, 2]
+// Dependencies: [32, 19, 17, 1350, 21, 4606, 576, 17474, 7054, 8418, 17487, 5023, 4305, 1114, 9733, 9741, 5174, 4559, 4602, 9529, 2]
 // Exports: default
 
-// Module 17487 (InteractionIframeModal)
+// Module 17486 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17488 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17487 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -68,7 +68,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: 1977
+      ignoreSilentHardwareSwitch: "jente"
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj3.activityUrl = iframeModalState.iframeUrl;

@@ -1,13 +1,13 @@
-// Module ID: 9387
-// Function ID: 9388
+// Module ID: 9385
+// Function ID: 9386
 // Name: CommandPermissionContext
-// Dependencies: [19, 2014, 1961, 1975, 502, 1957, 2021, 1979, 4245, 1371, 1074, 9388, 504, 1086, 1894, 2]
+// Dependencies: [19, 2014, 1961, 1975, 502, 1957, 2021, 1979, 4245, 1371, 1074, 9386, 504, 1086, 1894, 2]
 // Exports: buildPermissionContext, computeCommandContextType, getContextGuildId, usePermissionContext
 
-// Module 9387 (CommandPermissionContext)
+// Module 9385 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import Server from "Server" /* 1894 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9388 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9386 */;
 import noop from "module_19" /* 19 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

@@ -1,14 +1,14 @@
 // Module ID: 16514
 // Function ID: 16515
 // Name: ContactSuggestionActions
-// Dependencies: [19, 17, 21, 4343, 4607, 576, 16115, 4608, 5026, 1178, 16515, 5027, 1114, 2]
+// Dependencies: [19, 17, 21, 4343, 4606, 576, 16115, 4607, 5025, 1178, 16515, 5026, 1114, 2]
 // Exports: ContactSuggestionActions
 
 // Module 16514 (ContactSuggestionActions)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import spring from "spring" /* 5026 */;
+import timing from "timing" /* 4607 */;
+import spring from "spring" /* 5025 */;
 import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16115 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ let obj4 = { duration: 250, easing: null };
 const Easing4 = fn(4343).Easing;
 obj4.easing = Easing4.out(fn(4343).Easing.quad);
 const SPRING_CONFIG = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj6 = { icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
 let closure_12 = createStyles.createStyles(obj6);
 const __initData = { code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };

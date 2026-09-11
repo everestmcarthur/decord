@@ -1,7 +1,7 @@
 // Module ID: 15362
 // Function ID: 15363
 // Name: SettingsAppearancePickerUtils
-// Dependencies: [19, 1085, 4539, 1231, 4457, 4456, 576, 1220, 4308, 1114, 2]
+// Dependencies: [19, 1085, 4538, 1231, 4457, 4456, 576, 1220, 4308, 1114, 2]
 // Exports: convertThemesToAnimatedThemes, useLaunchWelcomeSystemTheme
 
 // Module 15362 (SettingsAppearancePickerUtils)
@@ -11,7 +11,7 @@ import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
 import ColorUtils from "ColorUtils" /* 4456 */;
 import utils_ColorDefault from "utils/Color" /* 4457 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4539 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,21 +1,21 @@
-// Module ID: 14031
-// Function ID: 14032
+// Module ID: 14029
+// Function ID: 14030
 // Name: GuildProgressBar
-// Dependencies: [19, 17, 21, 4607, 12569, 576, 4343, 4608, 4611, 2]
+// Dependencies: [19, 17, 21, 4606, 12567, 576, 4343, 4607, 4610, 2]
 // Exports: default
 
-// Module 14031 (GuildProgressBar)
+// Module 14029 (GuildProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4608 */;
-import timingPresets from "timingPresets" /* 4611 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
-const obj2 = { wrapper: { position: "relative", backgroundColor: fn(12569).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
-let obj3 = { position: "relative", backgroundColor: fn(12569).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
+const createStyles = fn(4606);
+const obj2 = { wrapper: { position: "relative", backgroundColor: fn(12567).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
+let obj3 = { position: "relative", backgroundColor: fn(12567).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
 obj2.progress = { position: "absolute", height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.xs };
 let closure_6 = createStyles.createStyles(obj2);
 const __initData = { code: "function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+\"%\"};}" };

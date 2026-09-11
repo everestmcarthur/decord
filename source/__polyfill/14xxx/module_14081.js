@@ -1,9 +1,12 @@
 // Module ID: 14081
 // Function ID: 14082
-// Dependencies: [14069]
+// Dependencies: [14067]
 
 // Module 14081
-import _mod14069 from "module_14069" /* 14069 */;
+import _mod14067 from "module_14067" /* 14067 */;
 
 
-export default (arg0, arg1) => new _mod14069(arg0, arg1).patch;
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14067(arg0, arg2);
+  return obj.compare(new _mod14067(arg1, arg2));
+};

@@ -1,11 +1,19 @@
 // Module ID: 6708
 // Function ID: 6709
-// Dependencies: [19]
+// Dependencies: [19, 6709]
+// Exports: useBottomSheetModal
 
 // Module 6708
 import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 6709 */;
 
-const context = _mod19.createContext(null);
+const useContext = _mod19.useContext;
 
-export const BottomSheetInternalContext = context;
-export const BottomSheetInternalProvider = context.Provider;
+export const useBottomSheetModal = () => {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  if (null === tmp) {
+    throw "'BottomSheetModalContext' cannot be null!";
+  } else {
+    return tmp;
+  }
+};

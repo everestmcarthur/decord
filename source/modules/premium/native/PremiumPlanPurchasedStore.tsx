@@ -1,13 +1,13 @@
-// Module ID: 7495
-// Function ID: 7496
+// Module ID: 7494
+// Function ID: 7495
 // Name: PremiumPlanPurchasedStore
-// Dependencies: [4297, 1373, 560, 1249, 7496, 7256, 2]
+// Dependencies: [4297, 1373, 560, 1249, 7495, 7255, 2]
 // Exports: handleMobileWebCheckoutStatus, reset, setInitiatedPurchaseFromNewFlow, setMobileWebRedirectCheckoutStatus, setPaymentSuccess, showOldPaymentFlowSuccess
 
-// Module 7495 (PremiumPlanPurchasedStore)
+// Module 7494 (PremiumPlanPurchasedStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7496 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7495 */;
 import ActionSheetStore from "ActionSheetStore" /* 4297 */;
 
 const require = globalThis.__r;
@@ -84,6 +84,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessible", onPaymentDismiss: "messageId" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessible", onPaymentDismiss: "track" });
   });
 };

@@ -1,24 +1,11 @@
 // Module ID: 12918
 // Function ID: 12919
-// Dependencies: [12893, 12913]
-// Exports: getDefaultCurrentScope, getDefaultIsolationScope
+// Dependencies: []
 
 // Module 12918
-import _mod12893 from "module_12893" /* 12893 */;
-import ScopeClass from "ScopeClass" /* 12913 */;
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getDefaultCurrentScope = function getDefaultCurrentScope() {
-  return _mod12893.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getDefaultIsolationScope = function getDefaultIsolationScope() {
-  return _mod12893.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

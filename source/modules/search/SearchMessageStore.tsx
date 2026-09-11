@@ -1,13 +1,13 @@
-// Module ID: 7355
-// Function ID: 7356
+// Module ID: 7354
+// Function ID: 7355
 // Name: SearchMessageStore
-// Dependencies: [502, 1957, 4255, 1074, 4508, 4830, 4257, 504, 573, 2]
+// Dependencies: [502, 1957, 4255, 1074, 4507, 4829, 4257, 504, 573, 2]
 
-// Module 7355 (SearchMessageStore)
+// Module 7354 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4508 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4830 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4507 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4829 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;

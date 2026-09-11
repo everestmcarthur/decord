@@ -1,21 +1,21 @@
-// Module ID: 5191
-// Function ID: 5192
+// Module ID: 5190
+// Function ID: 5191
 // Name: NativePermissionUtils
-// Dependencies: [5192, 5193, 5194, 5198, 2, 5195]
+// Dependencies: [5191, 5192, 5193, 5197, 2, 5194]
 
-// Module 5191 (NativePermissionUtils)
-import NativePermissionManager_mod from "NativePermissionManager" /* 5192 */;
+// Module 5190 (NativePermissionUtils)
+import NativePermissionManager_mod from "NativePermissionManager" /* 5191 */;
 
 let NativePermissionManager = NativePermissionManager_mod;
 NativePermissionManager = NativePermissionManager.initialize();
-const ProcessArgs = fn(5193).ProcessArgs;
+const ProcessArgs = fn(5192).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {
-  let _default = fn(5194).default;
+  let _default = fn(5193).default;
 } else {
-  _default = fn(5198).default;
+  _default = fn(5197).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
-export const NativePermissionsRequestOptions = fn(5195).NativePermissionsRequestOptions;
+export const NativePermissionsRequestOptions = fn(5194).NativePermissionsRequestOptions;

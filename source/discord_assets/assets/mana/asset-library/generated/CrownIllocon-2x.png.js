@@ -1,8 +1,8 @@
-// Module ID: 5954
-// Function ID: 5955
+// Module ID: 5953
+// Function ID: 5954
 // Dependencies: [2]
 
-// Module 5954
+// Module 5953
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CrownIllocon-2x.png.js");

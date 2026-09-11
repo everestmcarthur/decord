@@ -1,13 +1,13 @@
-// Module ID: 5853
-// Function ID: 5854
+// Module ID: 5852
+// Function ID: 5853
 // Name: AvatarWumpusExample
-// Dependencies: [21, 5639, 5854, 2]
+// Dependencies: [21, 5638, 5853, 2]
 // Exports: AvatarWumpusExample
 
-// Module 5853 (AvatarWumpusExample)
+// Module 5852 (AvatarWumpusExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5854 from "module_5854" /* 5854 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5853 from "module_5853" /* 5853 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarWumpusExample = function AvatarWumpusExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5854 };
+  const obj2 = { uri: _modDef5853 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,16 +1,16 @@
-// Module ID: 11927
-// Function ID: 11928
+// Module ID: 11925
+// Function ID: 11926
 // Name: GuildAntiRaidActionCreators
-// Dependencies: [5, 1979, 8091, 1074, 1242, 4787, 9155, 4198, 1272, 10193, 2]
+// Dependencies: [5, 1979, 8090, 1074, 1242, 4786, 9153, 4198, 1272, 10191, 2]
 // Exports: handleReportRaid, handleResolveRaid, setGuildIncidentActions, setGuildRaidAlerts, trackReportRaidViewed
 
-// Module 11927 (GuildAntiRaidActionCreators)
+// Module 11925 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9155 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10193 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10191 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -246,22 +246,22 @@ let closure_12 = async function _handleReportRaid(arg0, value) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8091).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8090).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 
-export const trackReportRaidViewed = function trackReportRaidViewed(onChange, onSubmit) {
-  let items = onSubmit;
-  if (onSubmit === undefined) {
+export const trackReportRaidViewed = function trackReportRaidViewed(guildId, arg1) {
+  let items = arg1;
+  if (arg1 === undefined) {
     items = [];
   }
   if (0 !== items.length) {
     const obj2 = {};
     const obj = AnalyticsUtilsDefault;
-    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(onChange));
-    obj2.guild_id = onChange;
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+    obj2.guild_id = guildId;
     obj2.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj2);
   }

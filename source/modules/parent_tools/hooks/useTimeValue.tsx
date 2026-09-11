@@ -1,7 +1,7 @@
 // Module ID: 14990
 // Function ID: 14991
 // Name: useTimeValue
-// Dependencies: [19, 2, 10175]
+// Dependencies: [19, 2, 10173]
 // Exports: default
 
 // Module 14990 (useTimeValue)
@@ -23,4 +23,4 @@ export default function useTimeValue(arg0) {
     return tmp2;
   });
 };
-export const timeToMinutes = fn(10175).timeToMinutes;
+export const timeToMinutes = fn(10173).timeToMinutes;

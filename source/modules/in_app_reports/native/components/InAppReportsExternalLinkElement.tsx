@@ -1,16 +1,15 @@
-// Module ID: 9169
-// Function ID: 9170
+// Module ID: 9167
+// Function ID: 9168
 // Name: InAppReportsExternalLinkElement
-// Dependencies: [17, 21, 4607, 4603, 1114, 8688, 5663, 9170, 4301, 2]
+// Dependencies: [17, 21, 4606, 7052, 4602, 1114, 8686, 5662, 9168, 4301, 2]
 // Exports: default
 
-// Module 9169 (InAppReportsExternalLinkElement)
+// Module 9167 (InAppReportsExternalLinkElement)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1114 */;
 import LinkingDefault from "Linking" /* 4301 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 function ExternalLinkItem(data) {
@@ -19,12 +18,12 @@ function ExternalLinkItem(data) {
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(9170).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(5663).TableRowIcon, obj2);
+    const obj2 = { IconComponent: url(9168).LinkExternalMediumIcon };
+    obj.trailing = closure_4(url(5662).TableRowIcon, obj2);
     obj.onPress = function onPress() {
       LinkingDefault.openURL(url);
     };
-    tmp3 = closure_4(url(8688).RowButton, obj);
+    tmp3 = closure_4(url(8686).RowButton, obj);
   }
   return tmp3;
 }
@@ -36,22 +35,37 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 export default function ExternalLinksElement(elements) {
   elements = elements.elements;
   const tmp = closure_6();
+  let hvVgAZ = dependencyMap;
+  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("InAppReportsExternalLink", "heading-deprecated-12/extrabold");
   if (null != elements) {
     if (0 !== elements.length) {
       if (null != elements.find((data) => data.data.is_localized)) {
-        const someResult = elements.some((data) => data.data.is_header_hidden);
         const obj2 = { style: tmp.linksContainer, children: null };
-        let tmp5 = !someResult;
-        if (!someResult) {
-          const obj = { style: tmp.headerText, variant: "heading-deprecated-12/extrabold", color: "text-default", accessibilityRole: "header", children: null };
-          const intl = util.intl;
-          obj.children = intl.string(util.t.hvVgAZ).toUpperCase();
-          tmp5 = React4(Text_Text.Text, obj);
-          const str = intl.string(util.t.hvVgAZ);
+        if (someResult) {
+          const items = [tmp10, elements.map((data, index) => closure_1_4(ExternalLinkItem, { data: data.data }, "external-link-" + index))];
+          obj2.children = items;
+          return tmp8(tmp9, obj2);
+        } else {
+          if (null != typeConsolidationEyebrow.style) {
+            const items1 = [tmp.headerText, typeConsolidationEyebrow.style];
+            let headerText = items1;
+          } else {
+            headerText = tmp.headerText;
+          }
+          const obj3 = { style: headerText, variant: typeConsolidationEyebrow.variant, color: "text-default", accessibilityRole: "header", children: null };
+          if (null != typeConsolidationEyebrow.style) {
+            const intl2 = tmp2(1114).intl;
+            hvVgAZ = tmp2(1114).t.hvVgAZ;
+            let stringResult = intl2.string(hvVgAZ);
+          } else {
+            const intl = tmp2(1114).intl;
+            stringResult = intl.string(tmp2(1114).t.hvVgAZ).toUpperCase();
+            const str = intl.string(tmp2(1114).t.hvVgAZ);
+          }
+          obj3.children = stringResult;
+          React4(tmp2(4602).Text, obj3);
         }
-        const items = [tmp5, elements.map((data, index) => closure_1_4(ExternalLinkItem, { data: data.data }, "external-link-" + index))];
-        obj2.children = items;
-        return hasOwnProperty(View, obj2);
+        someResult = elements.some((data) => data.data.is_header_hidden);
       }
     }
   }

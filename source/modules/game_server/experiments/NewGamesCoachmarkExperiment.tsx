@@ -1,10 +1,10 @@
-// Module ID: 12603
-// Function ID: 12604
+// Module ID: 12601
+// Function ID: 12602
 // Name: NewGamesCoachmarkExperiment
 // Dependencies: [1433, 2]
 // Exports: useIsNewGamesCoachmarkEnabled
 
-// Module 12603 (NewGamesCoachmarkExperiment)
+// Module 12601 (NewGamesCoachmarkExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

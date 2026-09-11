@@ -1,13 +1,13 @@
-// Module ID: 5835
-// Function ID: 5836
+// Module ID: 5834
+// Function ID: 5835
 // Name: AvatarGraggleExample
-// Dependencies: [21, 5639, 5836, 2]
+// Dependencies: [21, 5638, 5835, 2]
 // Exports: AvatarGraggleExample
 
-// Module 5835 (AvatarGraggleExample)
+// Module 5834 (AvatarGraggleExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5836 from "module_5836" /* 5836 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5835 from "module_5835" /* 5835 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarGraggleExample = function AvatarGraggleExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5836 };
+  const obj2 = { uri: _modDef5835 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,18 +1,18 @@
-// Module ID: 7666
-// Function ID: 7667
+// Module ID: 7665
+// Function ID: 7666
 // Name: FamilyCenterUtils
-// Dependencies: [7611, 7612, 1114, 2396, 4198, 7613, 2]
+// Dependencies: [7610, 7611, 1114, 2396, 4198, 7612, 2]
 // Exports: displayTypeFromString, formatLinkTimestamp, formatTotalTime, formatUserActivityTimestamp, getActivityTypeTextConfigs, getActivityWindowTimestampFormatter, getEmptyActivityFormatter, getFailureCodeForAPIError, getOrFetchLinkedUsers, getSortedActivityTypeConfigs, getTopUserOrGuildDescription, hasActiveParentLinks, isGift, isGuildAction, isParentallyControlled, isPurchase, isUserAction
 
-// Module 7666 (FamilyCenterUtils)
+// Module 7665 (FamilyCenterUtils)
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import _modDef4198 from "module_4198" /* 4198 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7613 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7612 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7612);
+const FamilyCenterConstants = fn(7611);
 ({ ACTION_TO_TEXT: closure_4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty, FamilyCenterFailureCode: metroRequire, TeenActionDisplayType: closure_7, UserLinkStatus: closure_8, UserLinkType: closure_9 } = FamilyCenterConstants);
 let c10 = 86400;
 let c11 = 172800;

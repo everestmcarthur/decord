@@ -1,12 +1,12 @@
-// Module ID: 9691
-// Function ID: 9692
+// Module ID: 9689
+// Function ID: 9690
 // Name: StreamEnded
-// Dependencies: [19, 17, 21, 8319, 9692, 9693, 4458, 2]
+// Dependencies: [19, 17, 21, 8317, 9690, 9691, 4458, 2]
 // Exports: StreamEnded, getStreamEndedSource, useStreamEndedSource
 
-// Module 9691 (StreamEnded)
+// Module 9689 (StreamEnded)
 import shared from "shared" /* 4458 */;
-import _mod8319 from "module_8319" /* 8319 */;
+import _mod8317 from "module_8317" /* 8317 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,35 +18,35 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
 
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
-  return _mod8319.getIllustrationSource(theme, {
+  return _mod8317.getIllustrationSource(theme, {
     dark() {
-      return require("module_9692");
+      return require("module_9690");
     },
     darker() {
-      return require("module_9693");
+      return require("module_9691");
     }
   });
 };
 export const useStreamEndedSource = function useStreamEndedSource() {
   const obj = shared;
-  return _mod8319.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9692");
+      return require("module_9690");
     },
     darker() {
-      return require("module_9693");
+      return require("module_9691");
     }
   });
 };
 export const StreamEnded = function StreamEnded(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8319.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9692");
+      return require("module_9690");
     },
     darker() {
-      return require("module_9693");
+      return require("module_9691");
     }
   });
   const merged = Object.assign(arg0);

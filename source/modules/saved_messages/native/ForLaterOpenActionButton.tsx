@@ -1,22 +1,22 @@
 // Module ID: 16475
 // Function ID: 16476
 // Name: ForLaterOpenActionButton
-// Dependencies: [19, 17, 11755, 21, 8907, 16476, 4607, 576, 4542, 4308, 5033, 7934, 4570, 11802, 504, 7928, 7923, 7926, 7256, 7933, 8173, 1114, 2]
+// Dependencies: [19, 17, 11753, 21, 8905, 16476, 4606, 576, 4541, 4308, 5032, 7933, 4569, 11800, 504, 7927, 7922, 7925, 7255, 7932, 8172, 1114, 2]
 
 // Module 16475 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4308 */;
-import useThemeDefault from "useTheme" /* 4542 */;
-import ButtonHooks from "ButtonHooks" /* 5033 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7923 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7926 */;
-import showForLaterModal from "showForLaterModal" /* 7933 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7934 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import ButtonHooks from "ButtonHooks" /* 5032 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7922 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7925 */;
+import showForLaterModal from "showForLaterModal" /* 7932 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7933 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11755 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11753 */;
 
-const ClipViewDefault = tmp(8907);
+const ClipViewDefault = tmp(8905);
 require = fn;
 function BadgedIcon(arg0) {
   ({ type, showRedDot } = arg0);
@@ -25,9 +25,9 @@ function BadgedIcon(arg0) {
   const tmp6 = closure_9();
   const iconSizeStyles = ButtonHooks.useIconSizeStyles("sm", true, 2);
   if (type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4570).ClockIcon;
+    let BookmarkIcon = tmp4(4569).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11802).BookmarkIcon;
+    BookmarkIcon = tmp4(11800).BookmarkIcon;
   }
   const obj3 = { style: null, children: null };
   const items = [tmp6.container, iconSizeStyles];
@@ -55,8 +55,8 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(8907).CutoutShape.Circle, x: fn(16476).ICON_SIZE.sm - 7, y: fn(16476).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(4607);
+const point = { shape: fn(8905).CutoutShape.Circle, x: fn(16476).ICON_SIZE.sm - 7, y: fn(16476).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(4606);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
 let size = { width: fn(16476).ICON_SIZE.sm, height: fn(16476).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;

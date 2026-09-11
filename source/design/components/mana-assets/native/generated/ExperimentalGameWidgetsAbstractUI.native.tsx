@@ -1,13 +1,13 @@
-// Module ID: 6049
-// Function ID: 6050
+// Module ID: 6048
+// Function ID: 6049
 // Name: ExperimentalGameWidgetsAbstractUI
-// Dependencies: [21, 5639, 6050, 2]
+// Dependencies: [21, 5638, 6049, 2]
 // Exports: ExperimentalGameWidgetsAbstractUI
 
-// Module 6049 (ExperimentalGameWidgetsAbstractUI)
+// Module 6048 (ExperimentalGameWidgetsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6050 from "module_6050" /* 6050 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6049 from "module_6049" /* 6049 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ExperimentalGameWidgetsAbstractUI = function ExperimentalGameWidget
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6050 };
+  const obj2 = { uri: _modDef6049 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

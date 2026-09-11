@@ -1,12 +1,12 @@
-// Module ID: 11939
-// Function ID: 11940
+// Module ID: 11937
+// Function ID: 11938
 // Name: GuildEnableCommunicationAlert
-// Dependencies: [5, 32, 19, 17, 1371, 2023, 1074, 21, 4607, 8052, 5044, 1242, 11938, 4305, 1114, 9659, 5046, 4603, 4759, 11024, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 2023, 1074, 21, 4606, 8051, 5043, 1242, 11936, 4305, 1114, 9657, 5045, 4602, 4758, 11022, 2]
 // Exports: default
 
-// Module 11939 (GuildEnableCommunicationAlert)
+// Module 11937 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CountDownDefault from "CountDown" /* 11024 */;
+import CountDownDefault from "CountDown" /* 11022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
@@ -56,7 +56,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(11938).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(11936).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -70,7 +70,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           const obj7 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
           const intl = tmp4(1114).intl;
           obj7.content = intl.string(tmp4(1114).t["/Mmbfv"]);
-          obj7.icon = v1(9659);
+          obj7.icon = v1(9657);
           v1(4305).open(obj7);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
@@ -83,8 +83,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   };
   const tmp2 = closure_12();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(8052)(userId, guildId), 1)[0];
-  userId(5044)(() => {
+  closure_3 = _slicedToArray(userId(8051)(userId, guildId), 1)[0];
+  userId(5043)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
@@ -118,8 +118,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   const user = UserStore.getUser(userId);
   const tmp11 = closure_11;
   const tmp12 = View;
-  const tmp7 = userId(5046);
-  let str = userId(4759).getName(guildId, null, user);
+  const tmp7 = userId(5045);
+  let str = userId(4758).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
@@ -134,14 +134,14 @@ export default function GuildEnableCommunicationAlert(guildId) {
       return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  const items = [closure_10(guildId(4603).Text, obj3), ];
+  const items = [closure_10(guildId(4602).Text, obj3), ];
   let obj5 = { style: null, variant: "text-sm/medium", children: null };
   const items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   obj5.style = items1;
   const intl5 = tmp9(1114).intl;
   obj5.children = intl5.format(guildId(1114).t.KtENkK, { link });
-  items[1] = closure_10(guildId(4603).Text, obj5);
+  items[1] = closure_10(guildId(4602).Text, obj5);
   obj2.children = items;
   obj.children = tmp11(tmp12, obj2);
   return closure_10(tmp7, obj);

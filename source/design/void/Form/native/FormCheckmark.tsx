@@ -1,12 +1,12 @@
-// Module ID: 7221
-// Function ID: 7222
+// Module ID: 7220
+// Function ID: 7221
 // Name: FormCheckmark
-// Dependencies: [19, 21, 7207, 576, 2]
+// Dependencies: [19, 21, 7206, 576, 2]
 // Exports: default
 
-// Module 7221 (FormCheckmark)
+// Module 7220 (FormCheckmark)
 import nativeDefault from "native" /* 576 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7207 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7206 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

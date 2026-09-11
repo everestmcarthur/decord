@@ -1,11 +1,11 @@
 // Module ID: 16190
 // Function ID: 16191
 // Name: ConnectedUserLimit
-// Dependencies: [19, 21, 9180, 16191, 2]
+// Dependencies: [19, 21, 9178, 16191, 2]
 // Exports: ConnectedUserLimit
 
 // Module 16190 (ConnectedUserLimit)
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9180 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9178 */;
 import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 16191 */;
 import noop from "module_19" /* 19 */;
 

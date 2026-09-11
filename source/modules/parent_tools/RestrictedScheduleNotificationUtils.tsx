@@ -1,14 +1,14 @@
-// Module ID: 10174
-// Function ID: 10175
+// Module ID: 10172
+// Function ID: 10173
 // Name: RestrictedScheduleNotificationUtils
-// Dependencies: [12, 2396, 1114, 10175, 2]
+// Dependencies: [12, 2396, 1114, 10173, 2]
 // Exports: diffSchedules, getRestrictedScheduleNotificationSubtitle, getRestrictedScheduleNotificationTitle, restrictedScheduleNotificationKey, toScheduleSnapshot
 
-// Module 10174 (RestrictedScheduleNotificationUtils)
+// Module 10172 (RestrictedScheduleNotificationUtils)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10175 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10173 */;
 import size from "module_2" /* 2 */;
 
 function isOnlyDayLoss(label, label2) {

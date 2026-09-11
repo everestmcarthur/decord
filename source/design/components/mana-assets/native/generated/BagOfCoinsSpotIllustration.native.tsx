@@ -1,13 +1,13 @@
-// Module ID: 5859
-// Function ID: 5860
+// Module ID: 5858
+// Function ID: 5859
 // Name: BagOfCoinsSpotIllustration
-// Dependencies: [21, 5639, 5860, 2]
+// Dependencies: [21, 5638, 5859, 2]
 // Exports: BagOfCoinsSpotIllustration
 
-// Module 5859 (BagOfCoinsSpotIllustration)
+// Module 5858 (BagOfCoinsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5860 from "module_5860" /* 5860 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5859 from "module_5859" /* 5859 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const BagOfCoinsSpotIllustration = function BagOfCoinsSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5860 };
+  const obj2 = { uri: _modDef5859 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

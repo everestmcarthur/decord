@@ -1,15 +1,15 @@
 // Module ID: 15279
 // Function ID: 15280
 // Name: ResubscribedAlert
-// Dependencies: [19, 17, 21, 4607, 576, 5046, 1114, 15280, 1178, 4603, 2]
+// Dependencies: [19, 17, 21, 4606, 576, 5045, 1114, 15280, 1178, 4602, 2]
 // Exports: default
 
 // Module 15279 (ResubscribedAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import common_AlertDefault from "common/Alert" /* 5046 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
 import _modDef15280 from "module_15280" /* 15280 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, body: { alignItems: "center", textAlign: "center" }, centerText: { textAlign: "center" }, headerImage: { width: 87, height: 87 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

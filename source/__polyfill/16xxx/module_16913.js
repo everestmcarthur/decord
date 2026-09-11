@@ -1,12 +1,12 @@
 // Module ID: 16913
 // Function ID: 16914
-// Dependencies: [8520]
+// Dependencies: [8518]
 
 // Module 16913
-import _mod8520 from "module_8520" /* 8520 */;
+import _mod8518 from "module_8518" /* 8518 */;
 
 
-export default _mod8520((arg0, arg1, arg2) => {
+export default _mod8518((arg0, arg1, arg2) => {
   let num = 1;
   if (arg2) {
     num = 0;

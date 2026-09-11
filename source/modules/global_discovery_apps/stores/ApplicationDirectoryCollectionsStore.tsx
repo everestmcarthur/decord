@@ -1,9 +1,9 @@
-// Module ID: 12168
-// Function ID: 12169
+// Module ID: 12166
+// Function ID: 12167
 // Name: ApplicationDirectoryCollectionsStore
 // Dependencies: [12, 504, 573, 2]
 
-// Module 12168 (ApplicationDirectoryCollectionsStore)
+// Module 12166 (ApplicationDirectoryCollectionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

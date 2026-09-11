@@ -1,19 +1,19 @@
-// Module ID: 10984
-// Function ID: 10985
+// Module ID: 10982
+// Function ID: 10983
 // Name: VoiceActivityStatus
-// Dependencies: [19, 21, 4607, 1114, 10985, 10976, 2]
+// Dependencies: [19, 21, 4606, 1114, 10983, 10974, 2]
 // Exports: default, getVoiceActivityStatusText
 
-// Module 10984 (VoiceActivityStatus)
+// Module 10982 (VoiceActivityStatus)
 import util from "util" /* 1114 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10976 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10985 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10974 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");

@@ -1,15 +1,15 @@
-// Module ID: 11977
-// Function ID: 11978
+// Module ID: 11975
+// Function ID: 11976
 // Name: SafetyHubActionCreators
-// Dependencies: [5, 502, 8518, 8507, 1074, 573, 1272, 4757, 8506, 2]
+// Dependencies: [5, 502, 8516, 8505, 1074, 573, 1272, 4756, 8504, 2]
 // Exports: getSafetyHubDataForClassification, requestReview, requestSuspendedUserAgeVerification, resetAgeCheckStatus
 
-// Module 11977 (SafetyHubActionCreators)
+// Module 11975 (SafetyHubActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SafetyHubStore from "SafetyHubStore" /* 8518 */;
+import SafetyHubStore from "SafetyHubStore" /* 8516 */;
 
 require = fn;
 function getSafetyHubData() {
@@ -283,7 +283,7 @@ let closure_12 = async function _getSafetyHubDataForClassification(classificatio
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(8506);
+                    obj3 = classificationId(8504);
                   }
                 }
                 const obj2 = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: found, accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible };
@@ -332,7 +332,7 @@ let closure_12 = async function _getSafetyHubDataForClassification(classificatio
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(8506);
+                    obj3 = classificationId(8504);
                   }
                 }
                 const obj2 = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: found, accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible };
@@ -721,7 +721,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV(requested_at
     }
   })();
 };
-const SafetyHubConstants = fn(8507);
+const SafetyHubConstants = fn(8505);
 ({ AGE_CHECK_POLL_INTERVAL_MS: metroRequire, AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7, SuspendedAgeCheckStatus: closure_8 } = SafetyHubConstants);
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

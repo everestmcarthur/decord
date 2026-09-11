@@ -1,13 +1,13 @@
-// Module ID: 10079
-// Function ID: 10080
+// Module ID: 10077
+// Function ID: 10078
 // Name: VoiceXIcon
-// Dependencies: [19, 21, 576, 4307, 10080, 2]
+// Dependencies: [19, 21, 576, 4307, 10078, 2]
 // Exports: VoiceXIcon
 
-// Module 10079 (VoiceXIcon)
+// Module 10077 (VoiceXIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod10080 from "module_10080" /* 10080 */;
+import _mod10078 from "module_10078" /* 10078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const VoiceXIcon = function VoiceXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10080, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10078, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,24 +1,24 @@
 // Module ID: 16995
 // Function ID: 16996
 // Name: PictureInPictureGlobal
-// Dependencies: [32, 19, 17, 1956, 4623, 9578, 502, 1908, 1074, 4628, 21, 4607, 1178, 576, 9583, 504, 9569, 9568, 4814, 9582, 5178, 9585, 8420, 9683, 9687, 9697, 9716, 9724, 9628, 9684, 9581, 10181, 4343, 4608, 5734, 16996, 1611, 2]
+// Dependencies: [32, 19, 17, 1956, 4622, 9576, 502, 1908, 1074, 4627, 21, 4606, 1178, 576, 9581, 504, 9567, 9566, 4813, 9580, 5177, 9583, 8418, 9681, 9685, 9695, 9714, 9722, 9626, 9682, 9579, 10179, 4343, 4607, 5733, 16996, 1611, 2]
 // Exports: default
 
 // Module 16995 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 576 */;
 import native2 from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4608 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4814 */;
-import NavigatorConstants from "NavigatorConstants" /* 5734 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9569 */;
-import PictureInPictureDefault from "PictureInPicture" /* 9581 */;
-import transitionToActivityDefault from "transitionToActivity" /* 9628 */;
+import timing from "timing" /* 4607 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4813 */;
+import NavigatorConstants from "NavigatorConstants" /* 5733 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9567 */;
+import PictureInPictureDefault from "PictureInPicture" /* 9579 */;
+import transitionToActivityDefault from "transitionToActivity" /* 9626 */;
 import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 16996 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
@@ -27,13 +27,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9578).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9576).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1074).PictureInPicturePositions;
-const ParticipantTypes = fn(4628).ParticipantTypes;
+const ParticipantTypes = fn(4627).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
 const native = fn(1178);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);

@@ -1,13 +1,13 @@
 // Module ID: 16074
 // Function ID: 16075
 // Name: MainTabsNavigatorPanel
-// Dependencies: [32, 19, 17, 1074, 21, 3, 4607, 576, 1484, 4467, 11623, 11622, 16075, 4472, 16076, 4465, 4618, 1109, 16077, 4620, 16080, 4343, 5678, 7948, 16081, 6727, 16082, 16083, 16598, 16599, 16600, 16819, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 3, 4606, 576, 1484, 4467, 11621, 11620, 16075, 4472, 16076, 4465, 4617, 1109, 16077, 4619, 16080, 4343, 5677, 7947, 16081, 6726, 16082, 16083, 16598, 16599, 16600, 16819, 2]
 
 // Module 16074 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4620 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
 import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16075 */;
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16076 */;
 import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 16080 */;
@@ -22,7 +22,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -151,8 +151,8 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           }
           if ("modal" !== name) {
             tmp2.current = true;
-            tmp14(4618).transitionToChannel(tmp5.current.channelId);
-            const tmp14Result = tmp14(4618);
+            tmp14(4617).transitionToChannel(tmp5.current.channelId);
+            const tmp14Result = tmp14(4617);
           }
           tmp14 = require;
         }

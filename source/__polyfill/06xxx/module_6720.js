@@ -1,15 +1,17 @@
 // Module ID: 6720
 // Function ID: 6721
 // Dependencies: []
-// Exports: enableLogging, print
+// Exports: noop, workletNoop
 
 // Module 6720
-function print() {
+const fn = function o() {
+
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
+
+export () => {
 
 }
-const frozen = Object.freeze(print);
-
-export { print };
-export const enableLogging = (arg0) => {
-  console.warn("[BottomSheet] could not enable logging on production!");
-};
+export const workletNoop = fn;

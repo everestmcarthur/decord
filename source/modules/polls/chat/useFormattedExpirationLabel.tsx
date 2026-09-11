@@ -1,10 +1,10 @@
-// Module ID: 8847
-// Function ID: 8848
+// Module ID: 8845
+// Function ID: 8846
 // Name: useFormattedExpirationLabel
 // Dependencies: [4198, 1114, 2]
 // Exports: default
 
-// Module 8847 (useFormattedExpirationLabel)
+// Module 8845 (useFormattedExpirationLabel)
 import util from "util" /* 1114 */;
 import _modDef4198 from "module_4198" /* 4198 */;
 import size from "module_2" /* 2 */;

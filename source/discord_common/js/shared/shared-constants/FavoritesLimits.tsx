@@ -1,9 +1,9 @@
-// Module ID: 10316
-// Function ID: 10317
+// Module ID: 10314
+// Function ID: 10315
 // Name: FavoritesLimits
 // Dependencies: [2]
 
-// Module 10316 (FavoritesLimits)
+// Module 10314 (FavoritesLimits)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/FavoritesLimits.tsx");

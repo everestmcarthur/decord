@@ -1,12 +1,12 @@
 // Module ID: 16174
 // Function ID: 16175
 // Name: RedesignChannelList
-// Dependencies: [32, 19, 17, 4599, 7599, 16092, 1979, 2011, 4631, 1074, 21, 1486, 4464, 11314, 16175, 16176, 16203, 16251, 15157, 16091, 16252, 16204, 16254, 7610, 504, 7609, 16255, 16259, 7602, 16260, 11088, 16079, 15158, 11628, 7230, 16122, 16312, 16325, 7146, 16328, 16330, 16334, 16335, 16340, 1982, 16342, 10385, 16350, 11992, 2]
+// Dependencies: [32, 19, 17, 4598, 7598, 16092, 1979, 2011, 4630, 1074, 21, 1486, 4464, 11312, 16175, 16176, 16203, 16251, 15157, 16091, 16252, 16204, 16254, 7609, 504, 7608, 16255, 16259, 7601, 16260, 11086, 16079, 15158, 11626, 7229, 16122, 16312, 16325, 7145, 16328, 16330, 16334, 16335, 16340, 1982, 16342, 10383, 16350, 11990, 2]
 
 // Module 16174 (RedesignChannelList)
-import ChannelListState from "ChannelListState" /* 7602 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11088 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11992 */;
+import ChannelListState from "ChannelListState" /* 7601 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11086 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11990 */;
 import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16091 */;
 import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16204 */;
 import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16251 */;
@@ -17,12 +17,12 @@ import GuildsEmptyDefault from "GuildsEmpty" /* 16340 */;
 import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16350 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import ChannelListStore from "ChannelListStore" /* 7599 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import ChannelListStore from "ChannelListStore" /* 7598 */;
 import HomeDrawerStore from "HomeDrawerStore" /* 16092 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4631 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4630 */;
 
 require = fn;
 function GuildChannels(guild) {

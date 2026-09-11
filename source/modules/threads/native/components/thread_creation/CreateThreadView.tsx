@@ -1,16 +1,16 @@
 // Module ID: 16697
 // Function ID: 16698
 // Name: CreateThreadView
-// Dependencies: [5, 32, 19, 17, 4948, 7760, 1074, 21, 4607, 576, 9397, 7850, 7236, 7256, 1611, 7055, 5177, 5125, 16698, 7274, 1114, 16700, 12078, 12053, 12737, 11454, 1484, 1242, 4787, 4489, 1100, 10346, 16699, 4472, 2]
+// Dependencies: [5, 32, 19, 17, 4947, 7759, 1074, 21, 4606, 576, 9395, 7849, 7235, 7255, 1611, 7054, 5176, 5124, 16698, 7273, 1114, 16700, 12076, 12051, 12735, 11452, 1484, 1242, 4786, 4489, 1100, 10344, 16699, 4472, 2]
 
 // Module 16697 (CreateThreadView)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import Types from "Types" /* 4489 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7850 */;
-import useCreateThreadViewPropsDefault from "useCreateThreadViewProps" /* 11454 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7849 */;
+import useCreateThreadViewPropsDefault from "useCreateThreadViewProps" /* 11452 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,9 +24,9 @@ function CreateThreadViewInner(screenIndex) {
   const privateThreadMode = require("ThreadCreationHooks").usePrivateThreadMode(parentChannel);
   const items = [parentChannel.id];
   const effect = noop.useEffect(() => () => {
-    parentChannel(7850).clearDraft(user.id, DraftType.ThreadSettings);
-    const obj = parentChannel(7850);
-    parentChannel(7850).clearDraft(user.id, DraftType.FirstThreadMessage);
+    parentChannel(7849).clearDraft(user.id, DraftType.ThreadSettings);
+    const obj = parentChannel(7849);
+    parentChannel(7849).clearDraft(user.id, DraftType.FirstThreadMessage);
   }, items);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   closure_129_0 = parentChannel;
@@ -76,7 +76,7 @@ function CreateThreadViewInner(screenIndex) {
   }
   obj4.location = str;
   obj4.onThreadCreated = callback;
-  const tmp12Result = parentChannel(10346)(obj4);
+  const tmp12Result = parentChannel(10344)(obj4);
   closure_129_6 = tmp12Result;
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     closure_0 = arg0;
@@ -179,9 +179,9 @@ function CreateThreadViewInner(screenIndex) {
               const obj11 = { value, done: true };
               return obj11;
             } else {
-              parentChannel(7850).saveDraft(closure_0.id, "", DraftType.FirstThreadMessage);
+              parentChannel(7849).saveDraft(closure_0.id, "", DraftType.FirstThreadMessage);
               c5 = 0;
-              const obj = parentChannel(7850);
+              const obj = parentChannel(7849);
             }
             current = tmp60;
             tmp60.current = false;
@@ -212,15 +212,15 @@ function CreateThreadViewInner(screenIndex) {
     }
     return applyArgumentsResult;
   }, items2);
-  const tmp12 = parentChannel(10346);
-  const tmp11Result = parentChannel(7236);
+  const tmp12 = parentChannel(10344);
+  const tmp11Result = parentChannel(7235);
   const tmp16 = parentChannel(1611)();
   const ref = noop.useRef(null);
   const ref1 = noop.useRef(null);
-  let obj5 = { value: tmp11Result(parentChannel(7256).CREATE_THREAD).analyticsLocations, children: null };
-  const items3 = [closure_13(parentChannel(5177), { absolute: true }), ];
+  let obj5 = { value: tmp11Result(parentChannel(7255).CREATE_THREAD).analyticsLocations, children: null };
+  const items3 = [closure_13(parentChannel(5176), { absolute: true }), ];
   let obj6 = { style: null, children: null };
-  const items4 = [tmp.container, { marginBottom: parentChannel(7055)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom - tmp16.bottom }];
+  const items4 = [tmp.container, { marginBottom: parentChannel(7054)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom - tmp16.bottom }];
   obj6.style = items4;
   const items5 = [closure_13(closure_6, { style: tmp.expander }), , , , ];
   let obj8 = { style: tmp.containerContent, children: null };
@@ -235,14 +235,14 @@ function CreateThreadViewInner(screenIndex) {
     tmp22Result = null;
     if (null == threadSettingsDraft.parentMessageId) {
       tmp22Result = null;
-      if (privateThreadMode !== tmp2(9397).PrivateThreadMode.Disabled) {
+      if (privateThreadMode !== tmp2(9395).PrivateThreadMode.Disabled) {
         const obj12 = { style: tmp.optionPrivateThread, children: null };
-        const obj13 = { start: true, end: true, disabled: privateThreadMode !== tmp2(9397).PrivateThreadMode.Enabled, label: null, subLabel: null, value: null, onValueChange: null };
+        const obj13 = { start: true, end: true, disabled: privateThreadMode !== tmp2(9395).PrivateThreadMode.Enabled, label: null, subLabel: null, value: null, onValueChange: null };
         const intl = tmp2(1114).intl;
         obj13.label = intl.string(tmp2(1114).t.F1zyvU);
         const intl2 = tmp2(1114).intl;
         obj13.subLabel = intl2.string(tmp2(1114).t.Wy5RIQ);
-        obj13.value = tmp2(9397).getIsPrivate(threadSettingsDraft, privateThreadMode);
+        obj13.value = tmp2(9395).getIsPrivate(threadSettingsDraft, privateThreadMode);
         obj13.onValueChange = function onValueChange(isPrivate) {
           const parentChannelId = closure_0.parentChannelId;
           if (null != parentChannelId) {
@@ -250,9 +250,9 @@ function CreateThreadViewInner(screenIndex) {
             DraftActionCreatorsDefault.changeThreadSettings(parentChannelId, obj2);
           }
         };
-        obj12.children = tmp22(tmp2(7274).TableSwitchRow, obj13);
+        obj12.children = tmp22(tmp2(7273).TableSwitchRow, obj13);
         tmp22Result = tmp22(tmp23, obj12);
-        const tmp2Result = tmp2(9397);
+        const tmp2Result = tmp2(9395);
       }
     }
   }
@@ -277,12 +277,12 @@ function CreateThreadViewInner(screenIndex) {
   if (parentChannel.rateLimitPerUser > 0) {
     const obj17 = { style: tmp.typingWrapper, children: null };
     const obj18 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj17.children = tmp22(tmp11(12078), obj18);
+    obj17.children = tmp22(tmp11(12076), obj18);
     tmp22Result2 = tmp22(tmp23, obj17);
   }
   items5[2] = tmp22Result2;
-  items5[3] = closure_13(parentChannel(12053), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
-  items5[4] = closure_13(parentChannel(12737), { channelId: parentChannel.id });
+  items5[3] = closure_13(parentChannel(12051), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
+  items5[4] = closure_13(parentChannel(12735), { channelId: parentChannel.id });
   obj6.children = items5;
   items3[1] = closure_14(closure_6, obj6);
   obj5.children = items3;
@@ -290,13 +290,13 @@ function CreateThreadViewInner(screenIndex) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const DraftType = fn(4948).DraftType;
-const SlowmodeType = fn(7760).SlowmodeType;
+const DraftType = fn(4947).DraftType;
+const SlowmodeType = fn(7759).SlowmodeType;
 const Constants = fn(1074);
 ({ AbortCodes: c10, AnalyticEvents: closure_11, NOOP: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, containerContent: { flexGrow: 0 }, expander: { flex: 1 }, border: null, options: null, optionsInner: null, optionPrivateThread: null, threadIconContainer: null, typingWrapper: null, parentMessageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignSelf: "stretch", marginBottom: 16 };

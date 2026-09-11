@@ -1,166 +1,117 @@
 // Module ID: 10675
 // Function ID: 10676
-// Dependencies: [10676, 10678, 10680, 10681, 10682, 10683, 10684, 10685, 10686, 10687, 10688, 10519, 10526, 10528, 10552, 10689, 10564, 10559]
-// Exports: createCasualConfiguration, parse, parseDate
+// Dependencies: [10521, 10522]
+// Exports: parseDuration, parseNumberPattern, parseOrdinalNumberPattern, parseYearPattern
 
 // Module 10675
-import _mod10552 from "module_10552" /* 10552 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10559 */;
-import _mod10564 from "module_10564" /* 10564 */;
-import _mod10676 from "module_10676" /* 10676 */;
-import _mod10678 from "module_10678" /* 10678 */;
-import _mod10680 from "module_10680" /* 10680 */;
-import _mod10681 from "module_10681" /* 10681 */;
-import _mod10682 from "module_10682" /* 10682 */;
-import _mod10683 from "module_10683" /* 10683 */;
-import _mod10684 from "module_10684" /* 10684 */;
-import _mod10685 from "module_10685" /* 10685 */;
-import _mod10686 from "module_10686" /* 10686 */;
-import _mod10687 from "module_10687" /* 10687 */;
-import _mod10688 from "module_10688" /* 10688 */;
-import _mod10689 from "module_10689" /* 10689 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10521 */;
+import findMostLikelyADYear from "findMostLikelyADYear" /* 10522 */;
 
-const require = globalThis.__r;
+const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,3}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")";
+const regExp = new RegExp(combined, "i");
 
-function createConfiguration(flag) {
-  const obj = { parsers: null, refiners: null };
-  const items = [new _isNativeReflectConstruct.default(), , , , , , ];
-  const _default = new _isNativeReflectConstruct.default();
-  items[1] = new regExp.default(true);
-  const _default1 = new regExp.default(true);
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  const _default4 = new _isNativeReflectConstruct.default();
-  items[5] = new _isNativeReflectConstruct.default(flag);
-  const _default5 = new _isNativeReflectConstruct.default(flag);
-  items[6] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default6 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default7 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+export const parseNumberPattern = function parseNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
+    let num4 = exports.INTEGER_WORD_DICTIONARY[str];
+  } else {
+    let num3 = 2;
+    num4 = 2;
+    if (!str.match(/декілька/)) {
+      let num = 0.5;
+      if (!str.match(/пів/)) {
+        if (!str.match(/пар/)) {
+          let num2 = 1;
+          if ("" !== str) {
+            const _parseFloat = parseFloat;
+            num2 = parseFloat(str);
+          }
+          num3 = num2;
+        }
+        num = num3;
+      }
+      num4 = num;
     }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  const parsers3 = tmp.parsers;
-  const _default2 = new _isNativeReflectConstruct.default();
-  parsers3.unshift(new _isNativeReflectConstruct.default());
-  const parsers4 = tmp.parsers;
-  const _default3 = new _isNativeReflectConstruct.default();
-  parsers4.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
-}
-fn(_mod10676);
-fn(_mod10678);
-fn(_mod10680);
-fn(_mod10681);
-fn(_mod10682);
-fn(_mod10683);
-fn(_mod10684);
-fn(_mod10685);
-fn(_mod10686);
-fn(_mod10687);
-fn(_mod10688);
-const regExp = fn(_mod10552);
-fn(_mod10689);
-const _isNativeReflectConstruct = fn(_mod10564);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("module_10519").Chrono;
+  }
+  return num4;
+};
+export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(match) {
+  const formatted = match.toLowerCase();
+  if (undefined !== exports.ORDINAL_WORD_DICTIONARY[formatted]) {
+    return exports.ORDINAL_WORD_DICTIONARY[formatted];
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(formatted);
   }
 };
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
+export const parseYearPattern = function parseYearPattern(match) {
+  let str = match;
+  if (obj.test(match)) {
+    str = match.replace(/(рік|року|р|р.)/i, "");
   }
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
+  if (obj2.test(str)) {
+    const _parseInt3 = parseInt;
+    return -parseInt(str.replace(/(до н.е.|до н. е.)/i, ""));
+  } else {
+    if (obj3.test(str)) {
+      const _parseInt2 = parseInt;
+      return parseInt(str.replace(/(н. е.|н.е.)/i, ""));
+    } else {
+      const _parseInt = parseInt;
+      const parsed = parseInt(str);
+      return findMostLikelyADYear.findMostLikelyADYear(parsed);
+    }
+    obj3 = /(н. е.|н.е.)/i;
   }
+  obj = /(рік|року|р|р.)/i;
+  obj2 = /(до н.е.|до н. е.)/i;
 };
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const parseDuration = function parseDuration(arg0) {
+  let str = arg0;
+  const obj = {};
+  let match = regExp.exec(arg0);
+  while (match) {
+    let str2 = match[1];
+    let str3 = str2.toLowerCase();
+    let tmp2 = exports;
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
+      let num = tmp2.INTEGER_WORD_DICTIONARY[str3];
+    } else {
+      num = 2;
+      if (!str3.match(/декілька/)) {
+        let num2 = 0.5;
+        if (!str3.match(/пів/)) {
+          let num3 = 2;
+          if (!str3.match(/пар/)) {
+            let num4 = 1;
+            if ("" !== str3) {
+              let _parseFloat = parseFloat;
+              num4 = parseFloat(str3);
+            }
+            num3 = num4;
+          }
+          num2 = num3;
+        }
+        num = num2;
+      }
+    }
+    let str4 = match[2];
+    obj[tmp2.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
+    let str5 = str.substring(match[0].length);
+    let trimmed = str5.trim();
+    match = regExp.exec(trimmed);
+    str = trimmed;
   }
+  return obj;
 };
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  }
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  }
-};
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-let parsers3 = configuration.parsers;
-let _default2 = new _isNativeReflectConstruct.default();
-parsers3.unshift(new _isNativeReflectConstruct.default());
-let parsers4 = configuration.parsers;
-let _default3 = new _isNativeReflectConstruct.default();
-parsers4.unshift(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10519").Chrono(configuration);
-const chrono1 = new require("module_10519").Chrono(createConfiguration(true));
-
-export { createCasualConfiguration };
-export { createConfiguration };
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export const Chrono = require("module_10519").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export const REGEX_PARTS = { leftBoundary: "([^\\p{L}\\p{N}_]|^)", rightBoundary: "(?=[^\\p{L}\\p{N}_]|$)", flags: "iu" };
+export const WEEKDAY_DICTIONARY = { "неділя": 0, "неділі": 0, "неділю": 0, "нд": 0, "нд.": 0, "понеділок": 1, "понеділка": 1, "пн": 1, "пн.": 1, "вівторок": 2, "вівторка": 2, "вт": 2, "вт.": 2, "середа": 3, "середи": 3, "середу": 3, "ср": 3, "ср.": 3, "четвер": 4, "четверга": 4, "четвергу": 4, "чт": 4, "чт.": 4, "п'ятниця": 5, "п'ятниці": 5, "п'ятницю": 5, "пт": 5, "пт.": 5, "субота": 6, "суботи": 6, "суботу": 6, "сб": 6, "сб.": 6 };
+export const FULL_MONTH_NAME_DICTIONARY = { "січень": 1, "січня": 1, "січні": 1, "лютий": 2, "лютого": 2, "лютому": 2, "березень": 3, "березня": 3, "березні": 3, "квітень": 4, "квітня": 4, "квітні": 4, "травень": 5, "травня": 5, "травні": 5, "червень": 6, "червня": 6, "червні": 6, "липень": 7, "липня": 7, "липні": 7, "серпень": 8, "серпня": 8, "серпні": 8, "вересень": 9, "вересня": 9, "вересні": 9, "жовтень": 10, "жовтня": 10, "жовтні": 10, "листопад": 11, "листопада": 11, "листопаду": 11, "грудень": 12, "грудня": 12, "грудні": 12 };
+export const MONTH_DICTIONARY = Object.assign(Object.assign({}, exports.FULL_MONTH_NAME_DICTIONARY), { "січ": 1, "січ.": 1, "лют": 2, "лют.": 2, "бер": 3, "бер.": 3, "квіт": 4, "квіт.": 4, "трав": 5, "трав.": 5, "черв": 6, "черв.": 6, "лип": 7, "лип.": 7, "серп": 8, "серп.": 8, "сер": 8, "cер.": 8, "вер": 9, "вер.": 9, "верес": 9, "верес.": 9, "жовт": 10, "жовт.": 10, "листоп": 11, "листоп.": 11, "груд": 12, "груд.": 12 });
+export const INTEGER_WORD_DICTIONARY = { "один": 1, "одна": 1, "одної": 1, "одну": 1, "дві": 2, "два": 2, "двох": 2, "три": 3, "трьох": 3, "чотири": 4, "чотирьох": 4, "п'ять": 5, "п'яти": 5, "шість": 6, "шести": 6, "сім": 7, "семи": 7, "вісім": 8, "восьми": 8, "дев'ять": 9, "дев'яти": 9, "десять": 10, "десяти": 10, "одинадцять": 11, "одинадцяти": 11, "дванадцять": 12, "дванадцяти": 12 };
+export const ORDINAL_WORD_DICTIONARY = { "перше": 1, "першого": 1, "друге": 2, "другого": 2, "третє": 3, "третього": 3, "четверте": 4, "четвертого": 4, "п'яте": 5, "п'ятого": 5, "шосте": 6, "шостого": 6, "сьоме": 7, "сьомого": 7, "восьме": 8, "восьмого": 8, "дев'яте": 9, "дев'ятого": 9, "десяте": 10, "десятого": 10, "одинадцяте": 11, "одинадцятого": 11, "дванадцяте": 12, "дванадцятого": 12, "тринадцяте": 13, "тринадцятого": 13, "чотирнадцяте": 14, "чотинрнадцятого": 14, "п'ятнадцяте": 15, "п'ятнадцятого": 15, "шістнадцяте": 16, "шістнадцятого": 16, "сімнадцяте": 17, "сімнадцятого": 17, "вісімнадцяте": 18, "вісімнадцятого": 18, "дев'ятнадцяте": 19, "дев'ятнадцятого": 19, "двадцяте": 20, "двадцятого": 20, "двадцять перше": 21, "двадцять першого": 21, "двадцять друге": 22, "двадцять другого": 22, "двадцять третє": 23, "двадцять третього": 23, "двадцять четверте": 24, "двадцять четвертого": 24, "двадцять п'яте": 25, "двадцять п'ятого": 25, "двадцять шосте": 26, "двадцять шостого": 26, "двадцять сьоме": 27, "двадцять сьомого": 27, "двадцять восьме": 28, "двадцять восьмого": 28, "двадцять дев'яте": 29, "двадцять дев'ятого": 29, "тридцяте": 30, "тридцятого": 30, "тридцять перше": 31, "тридцять першого": 31 };
+export const TIME_UNIT_DICTIONARY = { "сек": "second", "секунда": "second", "секунд": "second", "секунди": "second", "секунду": "second", "секундочок": "second", "секундочки": "second", "секундочку": "second", "хв": "minute", "хвилина": "minute", "хвилин": "minute", "хвилини": "minute", "хвилину": "minute", "хвилинок": "minute", "хвилинки": "minute", "хвилинку": "minute", "хвилиночок": "minute", "хвилиночки": "minute", "хвилиночку": "minute", "год": "hour", "година": "hour", "годин": "hour", "години": "hour", "годину": "hour", "годинка": "hour", "годинок": "hour", "годинки": "hour", "годинку": "hour", "день": "day", "дня": "day", "днів": "day", "дні": "day", "доба": "day", "добу": "day", "тиждень": "week", "тижню": "week", "тижня": "week", "тижні": "week", "тижнів": "week", "місяць": "month", "місяців": "month", "місяці": "month", "місяця": "month", "квартал": "quarter", "кварталу": "quarter", "квартала": "quarter", "кварталів": "quarter", "кварталі": "quarter", "рік": "year", "року": "year", "році": "year", "років": "year", "роки": "year" };
+export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+\\.[0-9]+|\u043F\u0456\u0432|\u0434\u0435\u043A\u0456\u043B\u044C\u043A\u0430|\u043F\u0430\u0440(?:\u0443)|\\s{0,3})";
+export const ORDINAL_NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_WORD_DICTIONARY) + "|[0-9]{1,2}(?:\u0433\u043E|\u043E\u0433\u043E|\u0435)?)";
+export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}" + "(?:\\s+(?:\u0440\u043E\u043A\u0443|\u0440\u0456\u043A|\u0440|\u0440.))?" + "\\s*(?:\u043D.\u0435.|\u0434\u043E \u043D.\u0435.|\u043D. \u0435.|\u0434\u043E \u043D. \u0435.)|[1-2][0-9]{3}" + "(?:\\s+(?:\u0440\u043E\u043A\u0443|\u0440\u0456\u043A|\u0440|\u0440.))?" + "|[5-9][0-9]" + "(?:\\s+(?:\u0440\u043E\u043A\u0443|\u0440\u0456\u043A|\u0440|\u0440.))?" + ")";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("(?:(?:\u0431\u043B\u0438\u0437\u044C\u043A\u043E|\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E)\\s{0,3})?", combined);

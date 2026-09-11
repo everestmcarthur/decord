@@ -1,48 +1,74 @@
 // Module ID: 12917
 // Function ID: 12918
-// Dependencies: []
+// Dependencies: [12908, 12909, 12891, 12911, 12896]
+// Exports: getClient, getCurrentScope, getGlobalScope, getIsolationScope, getTraceContextFromScope, withIsolationScope, withScope
 
 // Module 12917
-function merge(arg0, obj) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 2;
-  }
-  if (obj) {
-    if (typeof obj === "object") {
-      if (num > 0) {
-        if (arg0) {
-          if (obj) {
-            const _Object = Object;
-            if (0 === Object.keys(obj).length) {
-              return arg0;
-            }
-          }
-        }
-        obj = {};
-        const merged = Object.assign(arg0);
-        for (const key10016 in arg1) {
-          let _Object2 = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10016);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10016);
-          }
-          if (!hasOwnPropertyResult) {
-            continue;
-          } else {
-            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
-            continue;
-          }
-          continue;
-        }
-        return obj;
-      }
-    }
-  }
-  return obj;
-}
+import _mod12891 from "module_12891" /* 12891 */;
+import _mod12896 from "module_12896" /* 12896 */;
+import _mod12908 from "module_12908" /* 12908 */;
+import _mod12909 from "module_12909" /* 12909 */;
+import ScopeClass from "ScopeClass" /* 12911 */;
 
-export { merge };
+require = arg1;
+const dependencyMap = arg6;
+
+export const getClient = function getClient() {
+  const mainCarrier = _mod12908.getMainCarrier();
+  const asyncContextStrategy = _mod12909.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
+};
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12908.getMainCarrier();
+  const asyncContextStrategy = _mod12909.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12891.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12908.getMainCarrier();
+  const asyncContextStrategy = _mod12909.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12896.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12908.getMainCarrier();
+  const asyncContextStrategy = _mod12909.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
+    }
+    return result;
+  } else {
+    return asyncContextStrategy.withIsolationScope(items[0]);
+  }
+};
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12908.getMainCarrier();
+  const asyncContextStrategy = _mod12909.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
+  }
+};

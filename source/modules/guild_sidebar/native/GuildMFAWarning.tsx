@@ -1,16 +1,16 @@
 // Module ID: 16270
 // Function ID: 16271
 // Name: GuildMFAWarning
-// Dependencies: [5, 19, 17, 1074, 21, 4607, 576, 10210, 2024, 1896, 4301, 5175, 16271, 4603, 1114, 1178, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 4606, 576, 10208, 2024, 1896, 4301, 5174, 16271, 4602, 1114, 1178, 2]
 // Exports: default, getScaledGuildMFAWarningHeight
 
 // Module 16270 (GuildMFAWarning)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import Pressables from "Pressables" /* 5175 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10210 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10208 */;
 import _modDef16271 from "module_16271" /* 16271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -83,7 +83,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" }, MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 }, MFAWarningLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 obj2.MFAWarningLink = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };

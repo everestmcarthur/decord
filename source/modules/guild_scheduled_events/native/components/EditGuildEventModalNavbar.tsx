@@ -1,17 +1,17 @@
-// Module ID: 9800
-// Function ID: 9801
+// Module ID: 9798
+// Function ID: 9799
 // Name: EditGuildEventModalNavbar
-// Dependencies: [32, 19, 17, 21, 4607, 9797, 1369, 7053, 7197, 4603, 1114, 7451, 7066, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 9795, 1369, 7052, 7196, 4602, 1114, 7450, 7065, 2]
 // Exports: default
 
-// Module 9800 (EditGuildEventModalNavbar)
+// Module 9798 (EditGuildEventModalNavbar)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
-import _modDef7066 from "module_7066" /* 7066 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7197 */;
-import HeaderActionButton from "HeaderActionButton" /* 7451 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9797 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
+import _modDef7065 from "module_7065" /* 7065 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import HeaderActionButton from "HeaderActionButton" /* 7450 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
@@ -30,9 +30,9 @@ export default function EditGuildEventModalNavbar(screen) {
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(9797).EditGuildEventScreens.DETAILS === screen) {
+  } else if (tmp2(9795).EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(9797).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (tmp2(9795).EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
     tmp2(1369).assertNever(screen);
@@ -52,7 +52,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = tmp2(1114).intl;
   obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj6.onPress = screen.onClose;
-  obj6.source = _modDef7066;
+  obj6.source = _modDef7065;
   obj6.style = tmp.rightButton;
   obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
   items1[2] = hasOwnProperty(View, obj5);

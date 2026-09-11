@@ -1,12 +1,12 @@
-// Module ID: 10190
-// Function ID: 10191
+// Module ID: 10188
+// Function ID: 10189
 // Name: GuildAntiRaidPermissionsUtils
-// Dependencies: [4245, 10172, 1074, 504, 8090, 10191, 2]
+// Dependencies: [4245, 10170, 1074, 504, 8089, 10189, 2]
 // Exports: canEnableRaidAlerts, canReportRaid, useCanEnableRaidAlerts, useCanReportRaid, useShowMentionRaidLimitUpsell
 
-// Module 10190 (GuildAntiRaidPermissionsUtils)
+// Module 10188 (GuildAntiRaidPermissionsUtils)
 import PermissionStore from "PermissionStore" /* 4245 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10172 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10170 */;
 
 const require = globalThis.__r;
 
@@ -55,8 +55,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8090).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8090);
+    hasDetectedActivityResult = tmp(8089).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8089);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {

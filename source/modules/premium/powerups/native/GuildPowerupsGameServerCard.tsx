@@ -1,22 +1,22 @@
-// Module ID: 12669
-// Function ID: 12670
+// Module ID: 12667
+// Function ID: 12668
 // Name: GuildPowerupsGameServerCard
-// Dependencies: [19, 17, 4599, 4517, 21, 4607, 576, 504, 12670, 12671, 12662, 12666, 4317, 2]
+// Dependencies: [19, 17, 4598, 4516, 21, 4606, 576, 504, 12668, 12669, 12660, 12664, 4317, 2]
 // Exports: default
 
-// Module 12669 (GuildPowerupsGameServerCard)
+// Module 12667 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 576 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12670 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12671 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12668 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12669 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4599 */;
-import GameServerStore from "GameServerStore" /* 4517 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import GameServerStore from "GameServerStore" /* 4516 */;
 
-const GuildPowerupsPerkCardDefault = tmp5(12666);
+const GuildPowerupsPerkCardDefault = tmp5(12664);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 const obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

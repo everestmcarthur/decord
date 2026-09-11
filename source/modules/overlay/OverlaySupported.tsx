@@ -1,9 +1,9 @@
-// Module ID: 13890
-// Function ID: 13891
+// Module ID: 13888
+// Function ID: 13889
 // Name: OverlaySupported
 // Dependencies: [1115, 2]
 
-// Module 13890 (OverlaySupported)
+// Module 13888 (OverlaySupported)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;
 

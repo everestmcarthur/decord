@@ -1,17 +1,17 @@
-// Module ID: 17230
-// Function ID: 17231
+// Module ID: 17229
+// Function ID: 17230
 // Name: ActivityShelfItemBackground
-// Dependencies: [32, 19, 17, 21, 4607, 5641, 12180, 2]
+// Dependencies: [32, 19, 17, 21, 4606, 5640, 12178, 2]
 
-// Module 17230 (ActivityShelfItemBackground)
-import NativeViewDefault from "NativeView" /* 5641 */;
-import BrokenImageDefault from "BrokenImage" /* 12180 */;
+// Module 17229 (ActivityShelfItemBackground)
+import NativeViewDefault from "NativeView" /* 5640 */;
+import BrokenImageDefault from "BrokenImage" /* 12178 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles((aspectRatio) => {
   const obj = { previewImage: { alignItems: "center", justifyContent: "center", backgroundColor: "black" }, activityImage: { width: "100%", aspectRatio } };
   return obj;

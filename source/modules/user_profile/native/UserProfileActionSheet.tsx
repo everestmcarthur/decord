@@ -1,28 +1,28 @@
-// Module ID: 8286
-// Function ID: 8287
+// Module ID: 8285
+// Function ID: 8286
 // Name: UserProfileActionSheet
-// Dependencies: [32, 19, 17, 1957, 2021, 1371, 8246, 7282, 1074, 7225, 21, 4607, 6699, 4343, 1611, 504, 8272, 7236, 7256, 8256, 1935, 8276, 5178, 8287, 8300, 8301, 8302, 8307, 8293, 8312, 8313, 8316, 1477, 5734, 8310, 4542, 4308, 576, 8285, 8317, 8267, 2009, 8273, 1242, 4465, 4574, 1483, 8265, 7224, 1178, 8318, 1114, 4317, 8323, 1115, 7456, 8326, 13082, 13155, 8895, 7228, 13233, 1187, 2]
+// Dependencies: [32, 19, 17, 1957, 2021, 1371, 8245, 7281, 1074, 7224, 21, 4606, 6698, 4343, 1611, 504, 8271, 7235, 7255, 8255, 1935, 8275, 5177, 8286, 8298, 8299, 8300, 8305, 8292, 8310, 8311, 8314, 1477, 5733, 8308, 4541, 4308, 576, 8284, 8315, 8266, 2009, 8272, 1242, 4465, 4573, 1483, 8264, 7223, 1178, 8316, 1114, 4317, 8321, 1115, 7455, 8324, 13080, 13153, 8893, 7227, 13231, 1187, 2]
 
-// Module 8286 (UserProfileActionSheet)
+// Module 8285 (UserProfileActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import isChangelogUserDefault from "isChangelogUser" /* 2009 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import BottomSheetModal from "BottomSheetModal" /* 6699 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
-import openUserSettings from "openUserSettings" /* 7456 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
-import UserActionCreators from "UserActionCreators" /* 8267 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8273 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8293 */;
-import ProfileFrameDefault from "ProfileFrame" /* 8307 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8310 */;
-import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8317 */;
+import BottomSheetModal from "BottomSheetModal" /* 6698 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import openUserSettings from "openUserSettings" /* 7455 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import UserActionCreators from "UserActionCreators" /* 8266 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8272 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8292 */;
+import ProfileFrameDefault from "ProfileFrame" /* 8305 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8308 */;
+import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8315 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8246 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 
 require = fn;
 function UseAnimatedPosition(animatedPosition) {
@@ -68,13 +68,13 @@ function ActionSheetAlignedView(animatedPosition) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7282).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7281).UserProfileThemeTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(7225).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_18 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 }, profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 } });
 const __initData = { code: "function UserProfileActionSheetTsx1(){const{value}=this.__closure;return value.get();}" };
 const __initData2 = { code: "function UserProfileActionSheetTsx2(prepared){const{animatedPosition}=this.__closure;return animatedPosition.set(prepared);}" };
@@ -192,11 +192,11 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   const memo = isPreviewingChanges.useMemo(() => {
     closure_0 = sharedValue2;
     return (arg0, arg1, arg2) => {
-      const scrollEventsHandlersDefault = animatedScrollableState(6699).useScrollEventsHandlersDefault(arg0, arg1, arg2);
-      const obj = animatedScrollableState(6699);
-      animatedScrollableState = animatedScrollableState(6699).useBottomSheetInternal().animatedScrollableState;
+      const scrollEventsHandlersDefault = animatedScrollableState(6698).useScrollEventsHandlersDefault(arg0, arg1, arg2);
+      const obj = animatedScrollableState(6698);
+      animatedScrollableState = animatedScrollableState(6698).useBottomSheetInternal().animatedScrollableState;
       const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-      const obj2 = animatedScrollableState(6699);
+      const obj2 = animatedScrollableState(6698);
       const fn = function s(contentOffset, arg1) {
         if (handleOnScroll != null) {
           tmp(contentOffset, arg1);
@@ -209,12 +209,12 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         const result = animatedScrollableState.set(num);
       };
       const obj3 = animatedScrollableState(4343);
-      fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6699).SCROLLABLE_STATE };
+      fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6698).SCROLLABLE_STATE };
       fn.__workletHash = 13254130622789;
       fn.__initData = __initData;
       const items = [handleOnScroll, animatedScrollableState];
       const obj5 = {};
-      obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6699).SCROLLABLE_STATE };
+      obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6698).SCROLLABLE_STATE };
       const merged = Object.assign(scrollEventsHandlersDefault);
       obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
       return obj5;
@@ -273,7 +273,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
     if (!isScreenLandscape) {
       tmp35 = skuId;
     }
-    const tmp6Result2Result = tmp6(tmp3[23])(tmp35, "UserProfileActionSheet");
+    const tmp6Result2Result = tmp6(tmp3[23])(tmp35);
     closure_24 = tmp6Result2Result;
     let tmp38;
     const tmp6Result11 = tmp6(tmp3[23]);

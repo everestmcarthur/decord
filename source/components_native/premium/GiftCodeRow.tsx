@@ -1,14 +1,14 @@
-// Module ID: 13618
-// Function ID: 13619
+// Module ID: 13616
+// Function ID: 13617
 // Name: GiftCodeRow
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 4317, 11526, 4846, 8449, 6693, 4603, 5027, 1114, 4198, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 4317, 11524, 4845, 8447, 6692, 4602, 5026, 1114, 4198, 1178, 2]
 
-// Module 13618 (GiftCodeRow)
+// Module 13616 (GiftCodeRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4846 */;
-import showShareActionSheet from "showShareActionSheet" /* 8449 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11526 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4845 */;
+import showShareActionSheet from "showShareActionSheet" /* 8447 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11524 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.giftCodeShare = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };

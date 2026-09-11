@@ -1,7 +1,7 @@
 // Module ID: 16108
 // Function ID: 16109
 // Name: usePrivateChannelWave
-// Dependencies: [5, 32, 19, 1074, 4600, 12360, 1100, 7530, 4305, 1114, 12359, 16109, 2]
+// Dependencies: [5, 32, 19, 1074, 4599, 12358, 1100, 7529, 4305, 1114, 12357, 16109, 2]
 // Exports: default
 
 // Module 16108 (usePrivateChannelWave)
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1074);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(4600).MessageSendLocation;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 

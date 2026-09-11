@@ -1,9 +1,9 @@
-// Module ID: 4831
-// Function ID: 4832
+// Module ID: 4830
+// Function ID: 4831
 // Name: InteractionRecord
 // Dependencies: [1386, 1385, 2]
 
-// Module 4831 (InteractionRecord)
+// Module 4830 (InteractionRecord)
 import Record from "Record" /* 1386 */;
 import UserRecord from "UserRecord" /* 1385 */;
 

@@ -1,19 +1,19 @@
-// Module ID: 17939
-// Function ID: 17940
+// Module ID: 17938
+// Function ID: 17939
 // Name: ApplicationStreamingManager
-// Dependencies: [19, 4653, 4654, 4632, 21, 3, 17940, 4952, 17941, 1896, 10051, 9181, 2]
+// Dependencies: [19, 4652, 4653, 4631, 21, 3, 17939, 4951, 17940, 1896, 10049, 9179, 2]
 
-// Module 17939 (ApplicationStreamingManager)
+// Module 17938 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10051 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10049 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4653 */;
-import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17940 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4652 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17939 */;
 
 const require = fn;
-const ApplicationStreamPresets = fn(4654).ApplicationStreamPresets;
-const MediaEngineContextTypes = fn(4632).MediaEngineContextTypes;
+const ApplicationStreamPresets = fn(4653).ApplicationStreamPresets;
+const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 let obj = new LoggerDefault("ApplicationStreamingManager");
 obj.enableNativeLogger(true);
@@ -44,7 +44,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9181).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9179).setGoLiveSource;
     const obj2 = { desktopSettings: null, qualityOptions: null, context: null };
     const obj3 = { sourceId, sound: soundshareEnabled };
     obj2.desktopSettings = obj3;
@@ -52,7 +52,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj2.qualityOptions = obj4;
     obj2.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj2);
-    const setGoLiveSourceResult = setGoLiveSource(9181);
+    const setGoLiveSourceResult = setGoLiveSource(9179);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

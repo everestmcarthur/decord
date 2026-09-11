@@ -1,25 +1,25 @@
-// Module ID: 11441
-// Function ID: 11442
+// Module ID: 11439
+// Function ID: 11440
 // Name: SummaryStore
-// Dependencies: [32, 4523, 9927, 1957, 1979, 4622, 2011, 4788, 1371, 11442, 9928, 504, 11, 1090, 11443, 573, 11444, 12, 2]
+// Dependencies: [32, 4522, 9925, 1957, 1979, 4621, 2011, 4787, 1371, 11440, 9926, 504, 11, 1090, 11441, 573, 11442, 12, 2]
 
-// Module 11441 (SummaryStore)
+// Module 11439 (SummaryStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import sortByMatchScore from "sortByMatchScore" /* 9928 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11443 */;
-import Summary from "Summary" /* 11444 */;
+import sortByMatchScore from "sortByMatchScore" /* 9926 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11441 */;
+import Summary from "Summary" /* 11442 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4523 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9927 */;
+import ExperimentStore from "ExperimentStore" /* 4522 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9925 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4622 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -34,7 +34,7 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
-const SUMMARY_POLL_INTERVAL = fn(11442).SUMMARY_POLL_INTERVAL;
+const SUMMARY_POLL_INTERVAL = fn(11440).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -564,10 +564,10 @@ obj2 = {
       const tmp = closure_7(item, 2);
       const first = tmp[0];
       obj = error(12);
-      const chainResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11444).createSummaryFromServer(item, first)));
-      const sortByResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11444).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId));
-      const reversed = error(12).chain(tmp[1].map((item) => lastReceivedAt(11444).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75).reverse();
-      const takeRightResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11444).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75);
+      const chainResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11442).createSummaryFromServer(item, first)));
+      const sortByResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11442).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId));
+      const reversed = error(12).chain(tmp[1].map((item) => lastReceivedAt(11442).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75).reverse();
+      const takeRightResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11442).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75);
       acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();
       return acc;
     }, {});

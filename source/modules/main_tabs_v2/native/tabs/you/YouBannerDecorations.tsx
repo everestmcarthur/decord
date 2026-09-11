@@ -1,7 +1,7 @@
 // Module ID: 16875
 // Function ID: 16876
 // Name: YouBannerDecorations
-// Dependencies: [19, 17, 1371, 1954, 1373, 21, 4607, 1116, 576, 13518, 7523, 4427, 1943, 504, 8272, 8313, 8324, 4458, 672, 4264, 16876, 11580, 16877, 16878, 11862, 5499, 16879, 15049, 1114, 16880, 16882, 8755, 7454, 5039, 2]
+// Dependencies: [19, 17, 1371, 1954, 1373, 21, 4606, 1116, 576, 13516, 7522, 4427, 1943, 504, 8271, 8311, 8322, 4458, 672, 4264, 16876, 11578, 16877, 16878, 11860, 5498, 16879, 15049, 1114, 16880, 16882, 8753, 7453, 5038, 2]
 // Exports: useHasSettingsBadge
 
 // Module 16875 (YouBannerDecorations)
@@ -10,10 +10,10 @@ import _modDef672 from "module_672" /* 672 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
-import QuestTypes from "QuestTypes" /* 5499 */;
-import useTrialOffer from "useTrialOffer" /* 7523 */;
-import QuestUtils from "QuestUtils" /* 11862 */;
-import PromotionsHooks from "PromotionsHooks" /* 13518 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import useTrialOffer from "useTrialOffer" /* 7522 */;
+import QuestUtils from "QuestUtils" /* 11860 */;
+import PromotionsHooks from "PromotionsHooks" /* 13516 */;
 import you_tracking_Tracking from "you/tracking/Tracking" /* 16878 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -25,7 +25,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let closure_9 = fn(1373).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, buttonsFloating: null, loading: null };
   const obj2 = {};

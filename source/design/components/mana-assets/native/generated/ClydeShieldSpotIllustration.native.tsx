@@ -1,13 +1,13 @@
-// Module ID: 5933
-// Function ID: 5934
+// Module ID: 5932
+// Function ID: 5933
 // Name: ClydeShieldSpotIllustration
-// Dependencies: [21, 5639, 5934, 2]
+// Dependencies: [21, 5638, 5933, 2]
 // Exports: ClydeShieldSpotIllustration
 
-// Module 5933 (ClydeShieldSpotIllustration)
+// Module 5932 (ClydeShieldSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef5934 from "module_5934" /* 5934 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5933 from "module_5933" /* 5933 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ClydeShieldSpotIllustration = function ClydeShieldSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5934 };
+  const obj2 = { uri: _modDef5933 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

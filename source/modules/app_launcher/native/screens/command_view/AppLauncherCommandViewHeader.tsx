@@ -1,13 +1,13 @@
-// Module ID: 12249
-// Function ID: 12250
+// Module ID: 12247
+// Function ID: 12248
 // Name: AppLauncherCommandViewHeader
-// Dependencies: [19, 17, 1482, 21, 12226, 4607, 576, 12146, 4343, 4308, 8218, 5639, 4603, 1178, 2]
+// Dependencies: [19, 17, 1482, 21, 12224, 4606, 576, 12144, 4343, 4308, 8217, 5638, 4602, 1178, 2]
 // Exports: AppLauncherCommandViewHeader
 
-// Module 12249 (AppLauncherCommandViewHeader)
+// Module 12247 (AppLauncherCommandViewHeader)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12146 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,9 +16,9 @@ const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(12226).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12224).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
 const rect = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: AppLauncherNativeConstants.SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;
@@ -137,10 +137,10 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   if (str == null) {
     str = "";
   }
-  const tmp9 = section(8218);
+  const tmp9 = section(8217);
   if (null != memo) {
     const obj8 = { style: tmp.appIcon, source: memo };
-    let tmp15 = closure_6(tmp8(5639), obj8);
+    let tmp15 = closure_6(tmp8(5638), obj8);
     let tmp16 = closure_6;
   } else {
     const obj9 = { style: null };
@@ -161,7 +161,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const obj11 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj11.style = items3;
-  const items4 = [tmp16(section(4343).View, obj11), tmp16(section(12226), { onPress: onPress.onPressBack }), , , ];
+  const items4 = [tmp16(section(4343).View, obj11), tmp16(section(12224), { onPress: onPress.onPressBack }), , , ];
   const obj12 = { lineClamp: 1, animated: true, style: null, variant: "heading-lg/bold", color: "text-overlay-light", children: null };
   const items5 = [tmp.appSmallName, animatedStyle];
   obj12.style = items5;
@@ -170,7 +170,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
     displayName = command.displayName;
   }
   obj12.children = displayName;
-  items4[2] = tmp16(scrollOffsetY(4603).Text, obj12);
+  items4[2] = tmp16(scrollOffsetY(4602).Text, obj12);
   items4[3] = tmp16(scrollOffsetY(1178).Spacer, { size: 32 });
   const obj13 = { style: null, children: tmp15 };
   const items6 = [tmp.appIconMask, animatedStyle1];

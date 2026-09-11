@@ -1,20 +1,20 @@
-// Module ID: 13540
-// Function ID: 13541
+// Module ID: 13538
+// Function ID: 13539
 // Name: PremiumGroupFeaturesTableCard
-// Dependencies: [17, 7506, 21, 4607, 576, 4603, 1114, 13541, 1178, 5039, 4456, 9474, 2]
+// Dependencies: [17, 7505, 21, 4606, 576, 4602, 1114, 13539, 1178, 5038, 4456, 9472, 2]
 // Exports: default
 
-// Module 13540 (PremiumGroupFeaturesTableCard)
+// Module 13538 (PremiumGroupFeaturesTableCard)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import ColorUtils from "ColorUtils" /* 4456 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import ColorConstants from "ColorConstants" /* 7506 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ColorConstants from "ColorConstants" /* 7505 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13539 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 class BetaPill {
@@ -53,7 +53,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     ({ subheaderString, bodyString } = tmp4);
     const obj = { borderWidth: 2, direction: native.GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: tmp2(576).radii.sm, style, children: null };
     const obj2 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, locations: null, style: null, children: null };
-    const tmp2Result = tmp2(5039);
+    const tmp2Result = tmp2(5038);
     const items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), , ];
     items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
     items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
@@ -61,7 +61,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj2.locations = [0, 0.4996, 0.9593];
     obj2.style = tmp.premiumGroupCard;
     const obj6 = { style: tmp.headerContainer, children: null };
-    const items1 = [hasOwnProperty(tmp2(9474), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
+    const items1 = [hasOwnProperty(tmp2(9472), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
     obj6.children = items1;
     const items2 = [timestampProducer(View, obj6), , ];
     const obj7 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };

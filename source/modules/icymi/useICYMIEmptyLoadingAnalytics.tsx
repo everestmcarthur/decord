@@ -1,11 +1,11 @@
 // Module ID: 16559
 // Function ID: 16560
 // Name: useICYMIEmptyLoadingAnalytics
-// Dependencies: [19, 8447, 2]
+// Dependencies: [19, 8445, 2]
 // Exports: useICYMIEmptyLoadingAnalytics
 
 // Module 16559 (useICYMIEmptyLoadingAnalytics)
-import ICYMIAnalytics3 from "ICYMIAnalytics" /* 8447 */;
+import ICYMIAnalytics3 from "ICYMIAnalytics" /* 8445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

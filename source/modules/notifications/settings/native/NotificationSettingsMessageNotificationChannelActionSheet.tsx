@@ -1,21 +1,21 @@
-// Module ID: 10253
-// Function ID: 10254
+// Module ID: 10251
+// Function ID: 10252
 // Name: NotificationSettingsMessageNotificationChannelActionSheet
-// Dependencies: [19, 4788, 1074, 4789, 1084, 21, 10240, 10252, 1114, 10241, 7193, 7188, 2]
+// Dependencies: [19, 4787, 1074, 4788, 1084, 21, 10238, 10250, 1114, 10239, 7192, 7187, 2]
 // Exports: default
 
-// Module 10253 (NotificationSettingsMessageNotificationChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7188 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7193 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10241 */;
+// Module 10251 (NotificationSettingsMessageNotificationChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10239 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4789).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -49,5 +49,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.notifications(message_notifications));
   };
-  return tmp4(unread(10252), obj2);
+  return tmp4(unread(10250), obj2);
 };

@@ -1,13 +1,13 @@
-// Module ID: 7957
-// Function ID: 7958
+// Module ID: 7956
+// Function ID: 7957
 // Name: PhoneHangUpIcon
-// Dependencies: [19, 21, 576, 4307, 7958, 2]
+// Dependencies: [19, 21, 576, 4307, 7957, 2]
 // Exports: PhoneHangUpIcon
 
-// Module 7957 (PhoneHangUpIcon)
+// Module 7956 (PhoneHangUpIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod7958 from "module_7958" /* 7958 */;
+import _mod7957 from "module_7957" /* 7957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PhoneHangUpIcon = function PhoneHangUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7958, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7957, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

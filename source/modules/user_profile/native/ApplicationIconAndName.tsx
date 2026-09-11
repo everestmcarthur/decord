@@ -1,15 +1,15 @@
-// Module ID: 12723
-// Function ID: 12724
+// Module ID: 12721
+// Function ID: 12722
 // Name: ApplicationIconAndName
-// Dependencies: [21, 4607, 576, 1178, 4603, 2]
+// Dependencies: [21, 4606, 576, 1178, 4602, 2]
 // Exports: default
 
-// Module 12723 (ApplicationIconAndName)
+// Module 12721 (ApplicationIconAndName)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4603 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4607 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);

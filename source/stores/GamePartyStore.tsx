@@ -1,15 +1,15 @@
-// Module ID: 13328
-// Function ID: 13329
+// Module ID: 13326
+// Function ID: 13327
 // Name: GamePartyStore
-// Dependencies: [502, 4255, 5331, 1074, 12, 504, 573, 2]
+// Dependencies: [502, 4255, 5330, 1074, 12, 504, 573, 2]
 
-// Module 13328 (GamePartyStore)
+// Module 13326 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RelationshipStore from "RelationshipStore" /* 4255 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
 
 function updateParty(id, id2, activities, status) {
   const found = activities.find((party) => {

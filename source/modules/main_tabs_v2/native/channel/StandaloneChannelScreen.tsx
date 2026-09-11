@@ -1,14 +1,14 @@
 // Module ID: 16603
 // Function ID: 16604
 // Name: StandaloneChannelScreen
-// Dependencies: [19, 17, 7950, 1957, 7938, 1074, 1964, 21, 4607, 576, 1484, 1611, 7946, 504, 1982, 9378, 1114, 4464, 8759, 7939, 7230, 13363, 7949, 16604, 11562, 5059, 7296, 4542, 4467, 13375, 7318, 1178, 5177, 16610, 16627, 16645, 16662, 16691, 16697, 11436, 16701, 16702, 16703, 2]
+// Dependencies: [19, 17, 7949, 1957, 7937, 1074, 1964, 21, 4606, 576, 1484, 1611, 7945, 504, 1982, 9376, 1114, 4464, 8757, 7938, 7229, 13361, 7948, 16604, 11560, 5058, 7295, 4541, 4467, 13373, 7317, 1178, 5176, 16610, 16627, 16645, 16662, 16691, 16697, 11434, 16701, 16702, 16703, 2]
 
 // Module 16603 (StandaloneChannelScreen)
 import nativeDefault from "native" /* 576 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7939 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7938 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7950 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7949 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -138,14 +138,14 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(7938);
+const MainTabsV2Constants = fn(7937);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_7 } = MainTabsV2Constants);
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, ME: closure_9, ThemeTypes: c10 } = Constants);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1 }, onyxContainerBorder: { borderLeftWidth: ONYX_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: ONYX_BORDER_WIDTH, borderTopColor: "transparent" }, contentContainer: null, containerEmpty: null, headerWrapper: null, headerBottomBorder: null, headerWithFadingFrame: null, splitDivider: null, splitDividerTop: null, actions: null, spacer: null };
 let obj3 = { borderLeftWidth: ONYX_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: ONYX_BORDER_WIDTH, borderTopColor: "transparent" };
 obj.contentContainer = { flex: 1, backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
@@ -185,16 +185,16 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   dependencyMap = tmp;
   noop = channelId(1484).useNavigation();
   const obj = channelId(1484);
-  const isSwipeToMemberListEnabled = channelId(11562).useIsSwipeToMemberListEnabled();
-  const needSubscriptionToAccess = frame(5059)(channelId).needSubscriptionToAccess;
-  const obj2 = channelId(11562);
+  const isSwipeToMemberListEnabled = channelId(11560).useIsSwipeToMemberListEnabled();
+  const needSubscriptionToAccess = frame(5058)(channelId).needSubscriptionToAccess;
+  const obj2 = channelId(11560);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_8;
   }
-  const canSeeOnboardingHome = channelId(7296).useCanSeeOnboardingHome(tmp6);
-  const obj3 = channelId(7296);
-  const tmp9 = frame(4542)() === constants.ONYX;
+  const canSeeOnboardingHome = channelId(7295).useCanSeeOnboardingHome(tmp6);
+  const obj3 = channelId(7295);
+  const tmp9 = frame(4541)() === constants.ONYX;
   closure_4 = tmp9;
   const tmp10 = frame(4467)();
   isChatBesideChannelList = tmp10.isChatBesideChannelList;
@@ -227,7 +227,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   }, items1);
   const ref = noop.useRef(null);
   let tmp14 = !isChatLockedOpen;
-  const isForumChannelSearchActive = channelId(13375).useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = channelId(13373).useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
     tmp14 = isNavigationScreen;
   }
@@ -235,7 +235,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  const tmp2Result = channelId(13375);
+  const tmp2Result = channelId(13373);
   const items2 = [closure_6];
   const items3 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items2, () => {
@@ -246,7 +246,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     return channel;
   }, items3);
   const tmp2Result4 = channelId(504);
-  const isVibegrationsChannelCandidate = channelId(7318).useIsVibegrationsChannelCandidate(stateFromStores, "StandaloneChannelScreen");
+  const isVibegrationsChannelCandidate = channelId(7317).useIsVibegrationsChannelCandidate(stateFromStores, "StandaloneChannelScreen");
   channelId(504);
   [][0] = channelId;
   if (null != channelId) {
@@ -303,7 +303,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const items7 = [closure_12(Header, obj18), ];
               const obj19 = { spanComponent: "chat_container", tracking: "include", style: memo1, children: null };
               const obj20 = { guildId, channelId, chatInputRef: ref, screenIndex };
-              obj19.children = closure_12(tmp5(11436), obj20);
+              obj19.children = closure_12(tmp5(11434), obj20);
               items7[1] = closure_12(tmp2(16604).NavTTIView, obj19);
               obj17.children = items7;
               const tmp19Result = tmp19(closure_14, obj17);
@@ -334,7 +334,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
       const obj24 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14, measureNavigationTTI: false };
       const items8 = [closure_12(Header, obj24), ];
       const obj25 = { style: memo1, children: null };
-      const items9 = [closure_12(tmp5(5177), { absolute: true }), ];
+      const items9 = [closure_12(tmp5(5176), { absolute: true }), ];
       const obj26 = { guildId, gatedChannelId: null };
       let tmp40;
       if (needSubscriptionToAccess) {

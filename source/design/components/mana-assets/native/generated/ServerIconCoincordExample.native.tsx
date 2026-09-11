@@ -1,13 +1,13 @@
-// Module ID: 6495
-// Function ID: 6496
+// Module ID: 6494
+// Function ID: 6495
 // Name: ServerIconCoincordExample
-// Dependencies: [21, 5639, 6496, 2]
+// Dependencies: [21, 5638, 6495, 2]
 // Exports: ServerIconCoincordExample
 
-// Module 6495 (ServerIconCoincordExample)
+// Module 6494 (ServerIconCoincordExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6496 from "module_6496" /* 6496 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6495 from "module_6495" /* 6495 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconCoincordExample = function ServerIconCoincordExample(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6496 };
+  const obj2 = { uri: _modDef6495 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

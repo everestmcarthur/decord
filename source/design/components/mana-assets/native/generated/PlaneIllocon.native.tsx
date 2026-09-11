@@ -1,13 +1,13 @@
-// Module ID: 6419
-// Function ID: 6420
+// Module ID: 6418
+// Function ID: 6419
 // Name: PlaneIllocon
-// Dependencies: [21, 5639, 6420, 2]
+// Dependencies: [21, 5638, 6419, 2]
 // Exports: PlaneIllocon
 
-// Module 6419 (PlaneIllocon)
+// Module 6418 (PlaneIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5639 */;
-import _modDef6420 from "module_6420" /* 6420 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6419 from "module_6419" /* 6419 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const PlaneIllocon = function PlaneIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6420 };
+  const obj2 = { uri: _modDef6419 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

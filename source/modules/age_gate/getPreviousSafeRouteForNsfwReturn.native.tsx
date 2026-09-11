@@ -1,13 +1,13 @@
-// Module ID: 7401
-// Function ID: 7402
+// Module ID: 7400
+// Function ID: 7401
 // Name: getPreviousSafeRouteForNsfwReturn
-// Dependencies: [7402, 1957, 2012, 1074, 4818, 7403, 2]
+// Dependencies: [7401, 1957, 2012, 1074, 4817, 7402, 2]
 // Exports: default
 
-// Module 7401 (getPreviousSafeRouteForNsfwReturn)
+// Module 7400 (getPreviousSafeRouteForNsfwReturn)
 import Constants from "Constants" /* 1074 */;
-import AgeGateUtils from "AgeGateUtils" /* 4818 */;
-import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7402 */;
+import AgeGateUtils from "AgeGateUtils" /* 4817 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7401 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import size from "module_2" /* 2 */;
@@ -33,7 +33,7 @@ export default function getPreviousSafeRouteForNsfwReturn() {
           let tmp11 = require;
           let obj4 = AgeGateUtils;
           if (!obj4.isChannelContentGated(channel)) {
-            let tmp11Result = tmp11(7403);
+            let tmp11Result = tmp11(7402);
             if (!tmp11Result.isChannelSpoilerGated(channel)) {
               let guild_id = channel.guild_id;
               if (guild_id == null) {
@@ -50,7 +50,7 @@ export default function getPreviousSafeRouteForNsfwReturn() {
           let tmp13 = require;
           let obj7 = AgeGateUtils;
           if (!obj7.isChannelContentGated(defaultChannel)) {
-            let tmp13Result = tmp13(7403);
+            let tmp13Result = tmp13(7402);
             if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {
               break;
             }

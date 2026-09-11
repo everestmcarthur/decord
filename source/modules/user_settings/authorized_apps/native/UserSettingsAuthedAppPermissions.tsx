@@ -1,11 +1,11 @@
 // Module ID: 14999
 // Function ID: 15000
 // Name: UserSettingsAuthedAppPermissions
-// Dependencies: [19, 17, 21, 4607, 9330, 8427, 1114, 4603, 4567, 576, 9332, 14993, 2]
+// Dependencies: [19, 17, 21, 4606, 9328, 8425, 1114, 4602, 4566, 576, 9330, 14993, 2]
 // Exports: default
 
 // Module 14999 (UserSettingsAuthedAppPermissions)
-import disclosures from "disclosures" /* 9332 */;
+import disclosures from "disclosures" /* 9330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
@@ -51,8 +51,8 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(4567).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(4603).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(4566).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(4602).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });
@@ -66,7 +66,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
             const obj3 = { style: items.permissionIcon, disclosure };
             items = [hasOwnProperty(tmp(14993).DisclosureIcon, obj3), ];
             const obj4 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
-            items[1] = hasOwnProperty(tmp(4603).Text, obj4);
+            items[1] = hasOwnProperty(tmp(4602).Text, obj4);
             obj2.children = items;
             tmp4 = timestampProducer(React4, obj2, index + items.length);
           }

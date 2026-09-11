@@ -1,14 +1,14 @@
 // Module ID: 16961
 // Function ID: 16962
 // Name: MessageRequestList
-// Dependencies: [19, 17, 1074, 21, 4607, 576, 1114, 4305, 5649, 4618, 4810, 12537, 1242, 5175, 16962, 1178, 9659, 14978, 8686, 1611, 16967, 16969, 12535, 16972, 1115, 4603, 2]
+// Dependencies: [19, 17, 1074, 21, 4606, 576, 1114, 4305, 5648, 4617, 4809, 12535, 1242, 5174, 16962, 1178, 9657, 14978, 8684, 1611, 16967, 16969, 12533, 16972, 1115, 4602, 2]
 // Exports: default
 
 // Module 16961 (MessageRequestList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import transitionToChannel from "transitionToChannel" /* 4618 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import transitionToChannel from "transitionToChannel" /* 4617 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -153,7 +153,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, acceptButtonRestricted: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;

@@ -1,7 +1,7 @@
 // Module ID: 15052
 // Function ID: 15053
 // Name: useQuestHomeHeader
-// Dependencies: [19, 17, 5496, 1074, 1076, 21, 4607, 576, 15049, 4603, 1114, 8943, 4574, 11198, 1896, 1242, 7256, 7615, 11187, 15053, 8174, 15054, 1483, 13040, 2]
+// Dependencies: [19, 17, 5495, 1074, 1076, 21, 4606, 576, 15049, 4602, 1114, 8941, 4573, 11196, 1896, 1242, 7255, 7614, 11185, 15053, 8173, 15054, 1483, 13038, 2]
 // Exports: default
 
 // Module 15052 (useQuestHomeHeader)
@@ -9,9 +9,9 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4603 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
 import QuestsIcon from "QuestsIcon" /* 15049 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,12 +33,12 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_10();
   const tmp3 = balance;
-  balance = balance(8943).useFetchVirtualCurrencyBalance().balance;
+  balance = balance(8941).useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
   let obj2 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     let obj3 = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(tmp3(11187).BalanceWidgetPillButton, obj3);
+    isVirtualCurrencyEnabled = closure_8(tmp3(11185).BalanceWidgetPillButton, obj3);
   }
   let items = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -77,12 +77,12 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_8(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5496).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5495).QuestHomeSortMethods;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4607);
+const createStyles = fn(4606);
 let obj2 = { headerTitleContainer: { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, headerTitle: { flexShrink: 1 }, headerRightContainer: null };
 let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.headerRightContainer = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };

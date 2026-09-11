@@ -1,10 +1,10 @@
-// Module ID: 7463
-// Function ID: 7464
+// Module ID: 7462
+// Function ID: 7463
 // Name: useGetDismissibleContent
-// Dependencies: [32, 19, 1221, 4428, 1947, 1949, 1074, 1084, 1242, 1943, 7464, 1945, 504, 4449, 1942, 4427, 11, 2]
+// Dependencies: [32, 19, 1221, 4428, 1947, 1949, 1074, 1084, 1242, 1943, 7463, 1945, 504, 4449, 1942, 4427, 11, 2]
 // Exports: useDangerouslyPeekDismissibleContents, useGetDismissibleContent, useGetSingleUseGuildDismissibleContent_UNSAFE, useGetSnowflakeBoundDismissibleContent, useGetSnowflakeBoundGuildDismissibleContent_UNSAFE, useGetTimeRecurringDismissibleContent, useGetTimeRecurringGuildDismissibleContent_UNSAFE, useGetTimeRecurringSnowflakeBoundDismissibleContent, useGetVersionedDismissibleContent
 
-// Module 7463 (useGetDismissibleContent)
+// Module 7462 (useGetDismissibleContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;

@@ -1,12 +1,12 @@
 // Module ID: 16359
 // Function ID: 16360
 // Name: GuildsBarFolderSettingsModalActionCreators
-// Dependencies: [4810, 16360, 1896, 2]
+// Dependencies: [4809, 16360, 1896, 2]
 // Exports: hideGuildsBarFolderModal, showGuildsBarFolderModal
 
 // Module 16359 (GuildsBarFolderSettingsModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
 import size from "module_2" /* 2 */;
 
 const GUILD_FOLDER_SETTINGS_MODAL_KEY = "GUILD_FOLDER_SETTINGS_MODAL_KEY";
