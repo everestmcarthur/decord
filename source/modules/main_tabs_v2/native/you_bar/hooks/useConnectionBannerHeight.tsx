@@ -1,17 +1,17 @@
-// Module ID: 15180
-// Function ID: 15181
+// Module ID: 15159
+// Function ID: 15160
 // Name: useConnectionBannerHeight
-// Dependencies: [13762, 15177, 13763, 504, 2]
+// Dependencies: [13743, 15156, 13744, 504, 2]
 // Exports: useConnectionBannerHeight
 
-// Module 15180 (useConnectionBannerHeight)
+// Module 15159 (useConnectionBannerHeight)
 import initialize from "initialize" /* 504 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13763 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13762 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13744 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13743 */;
 
 require = fn;
-const constants = fn(13762).ConnectivityIndicatorState;
-const CONNECTION_BANNER_HEIGHT = fn(15177).CONNECTION_BANNER_HEIGHT;
+const constants = fn(13743).ConnectivityIndicatorState;
+const CONNECTION_BANNER_HEIGHT = fn(15156).CONNECTION_BANNER_HEIGHT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
 

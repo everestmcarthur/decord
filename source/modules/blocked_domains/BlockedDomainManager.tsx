@@ -1,11 +1,11 @@
-// Module ID: 17415
-// Function ID: 17416
+// Module ID: 17405
+// Function ID: 17406
 // Name: BlockedDomainManager
-// Dependencies: [7170, 1351, 2]
+// Dependencies: [7192, 1351, 2]
 
-// Module 17415 (BlockedDomainManager)
+// Module 17405 (BlockedDomainManager)
 import js_shim_shim from "js_shim/shim" /* 1351 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 require = fn;
 class BlockedDomainManager extends tmp2 {

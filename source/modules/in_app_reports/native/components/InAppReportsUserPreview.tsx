@@ -1,22 +1,22 @@
-// Module ID: 8726
-// Function ID: 8727
+// Module ID: 8749
+// Function ID: 8750
 // Name: InAppReportsUserPreview
-// Dependencies: [19, 17, 21, 4605, 576, 4454, 4601, 1114, 1178, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 4456, 4603, 1114, 1178, 2]
 // Exports: default
 
-// Module 8726 (InAppReportsUserPreview)
+// Module 8749 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import ColorUtils from "ColorUtils" /* 4454 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import ColorUtils from "ColorUtils" /* 4456 */;
+import Text_Text from "Text/Text" /* 4603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, userContainer: null, userProfileInfo: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.userContainer = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 12 };
@@ -43,7 +43,7 @@ export default function UserPreview(user) {
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
     const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
-    tmp7Result = tmp7(tmp2(4601).Text, obj7);
+    tmp7Result = tmp7(tmp2(4603).Text, obj7);
   }
   const items3 = [tmp7Result, React3(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
   obj6.children = items3;

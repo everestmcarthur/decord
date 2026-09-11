@@ -1,9 +1,9 @@
-// Module ID: 15798
-// Function ID: 15799
+// Module ID: 15783
+// Function ID: 15784
 // Name: TextDisplayComponentViewNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 15798 (TextDisplayComponentViewNativeComponent)
+// Module 15783 (TextDisplayComponentViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

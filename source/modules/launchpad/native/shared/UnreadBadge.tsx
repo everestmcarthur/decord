@@ -1,22 +1,22 @@
-// Module ID: 17077
-// Function ID: 17078
+// Module ID: 17067
+// Function ID: 17068
 // Name: UnreadBadge
-// Dependencies: [19, 17, 10188, 4787, 21, 4605, 16755, 5032, 7920, 2]
+// Dependencies: [19, 17, 10209, 4789, 21, 4607, 16743, 5034, 7943, 2]
 
-// Module 17077 (UnreadBadge)
-import useFontScale from "useFontScale" /* 5032 */;
-import Badge from "Badge" /* 7920 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16755 */;
+// Module 17067 (UnreadBadge)
+import useFontScale from "useFontScale" /* 5034 */;
+import Badge from "Badge" /* 7943 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16743 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(10188).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(4787).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(10209).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(4789).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");

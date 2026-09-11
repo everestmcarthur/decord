@@ -1,23 +1,23 @@
-// Module ID: 15140
-// Function ID: 15141
+// Module ID: 15119
+// Function ID: 15120
 // Name: BountiesModalContent
-// Dependencies: [32, 5, 19, 17, 7753, 5494, 1074, 1085, 21, 1477, 1611, 4605, 576, 504, 8919, 11592, 15095, 15099, 11596, 15098, 15100, 7769, 5501, 7779, 5499, 11584, 15080, 15103, 11849, 15141, 15133, 7175, 15124, 7750, 4315, 2]
+// Dependencies: [32, 5, 19, 17, 7775, 5496, 1074, 1085, 21, 1477, 1611, 4607, 576, 504, 8942, 11616, 15072, 15076, 11620, 15075, 15077, 7791, 5503, 7801, 5501, 11608, 15057, 15080, 11873, 15120, 15111, 7197, 15101, 7772, 4317, 2]
 // Exports: default
 
-// Module 15140 (BountiesModalContent)
+// Module 15119 (BountiesModalContent)
 import nativeDefault from "native" /* 576 */;
-import QuestContent from "QuestContent" /* 5499 */;
-import AdCreativeType from "AdCreativeType" /* 5501 */;
-import QuestDataUtils from "QuestDataUtils" /* 7750 */;
-import AnalyticsActions from "AnalyticsActions" /* 7769 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11584 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11849 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15080 */;
+import QuestContent from "QuestContent" /* 5501 */;
+import AdCreativeType from "AdCreativeType" /* 5503 */;
+import QuestDataUtils from "QuestDataUtils" /* 7772 */;
+import AnalyticsActions from "AnalyticsActions" /* 7791 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11608 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11873 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7753 */;
+import BountyStore from "BountyStore" /* 7775 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -93,10 +93,10 @@ function BountiesModalContentInner(bounty) {
   const items4 = [handleVideoProgressAnalytics];
   const stateFromStores = bounty(504).useStateFromStores(items4, () => BountyStore.isBountyCompleted(bounty.id));
   let obj2 = bounty(504);
-  let obj3 = bounty(8919);
-  const bountiesExperience = bounty(11592).useBountiesExperience(isEndCardVisible.VIDEO_MODAL_MOBILE);
+  let obj3 = bounty(8942);
+  const bountiesExperience = bounty(11616).useBountiesExperience(isEndCardVisible.VIDEO_MODAL_MOBILE);
   ({ loopingEnabled, ownedByVerticalScrollExperiment, stage1Enabled, rewardTimerSeconds } = bountiesExperience);
-  const BountyVideoEndMode = bounty(15095).BountyVideoEndMode;
+  const BountyVideoEndMode = bounty(15072).BountyVideoEndMode;
   const tmp12 = loopingEnabled ? BountyVideoEndMode.LOOP : BountyVideoEndMode.END_CARD;
   if (!stage1Enabled) {
     if (!ownedByVerticalScrollExperiment) {
@@ -104,7 +104,7 @@ function BountiesModalContentInner(bounty) {
     }
     asyncGeneratorStep = result;
     let obj5 = { bountyId: bounty.id, endMode: tmp12 };
-    const bountyVideoProgressPersistence = tmp9(15099).useBountyVideoProgressPersistence(obj5);
+    const bountyVideoProgressPersistence = tmp9(15076).useBountyVideoProgressPersistence(obj5);
     ({ initialProgress, handleProgress } = bountyVideoProgressPersistence);
     flushProgress = bountyVideoProgressPersistence.flushProgress;
     const items5 = [bounty.id, sourceQuestContent];
@@ -125,10 +125,10 @@ function BountiesModalContentInner(bounty) {
       }
       return arg1;
     }), items5);
-    const tmp9Result = tmp9(15099);
+    const tmp9Result = tmp9(15076);
     const obj6 = { bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, initialPlaybackTimeSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null, wasPreloaded: false, startupPath: "carousel", verticalScrollingPosition: null };
     ({ timestampSec: obj8.initialPlaybackTimeSec, maxTimestampSec: obj8.initialMaxVideoProgressSec, duration: obj8.initialVideoDurationSec } = initialProgress);
-    const bountiesModalVideoAnalytics = tmp9(15100).useBountiesModalVideoAnalytics(obj6);
+    const bountiesModalVideoAnalytics = tmp9(15077).useBountiesModalVideoAnalytics(obj6);
     handleVideoProgressAnalytics = bountiesModalVideoAnalytics.handleVideoProgressAnalytics;
     const items6 = [handleVideoProgressAnalytics, handleProgress];
     ({ handleVideoEndAnalytics, handleVideoLoopedAnalytics, handleVideoPausedAnalytics, handleVideoResumedAnalytics, handleVideoErrorAnalytics, handleLoadStartAnalytics, handleVideoTracksAnalytics, handleReadyForDisplayAnalytics, handleBufferAnalytics } = bountiesModalVideoAnalytics);
@@ -136,7 +136,7 @@ function BountiesModalContentInner(bounty) {
       handleVideoProgressAnalytics(arg0, arg1, arg2);
       handleProgress(arg0, arg1, arg2);
     }, items6);
-    const tmp9Result3 = tmp9(15100);
+    const tmp9Result3 = tmp9(15077);
     const obj7 = { endMode: tmp12, rewardDurationMs: result, isCompleted: stateFromStores, onRewardEarned: callback, onVideoProgress: callback1, onVideoEnd: handleVideoEndAnalytics, onVideoLooped: handleVideoLoopedAnalytics, onVideoPaused: handleVideoPausedAnalytics, onVideoResumed: handleVideoResumedAnalytics, initialProgressSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null };
     ({ timestampSec: obj10.initialProgressSec, maxTimestampSec: obj10.initialMaxVideoProgressSec } = initialProgress);
     let duration = null;
@@ -144,7 +144,7 @@ function BountiesModalContentInner(bounty) {
       duration = initialProgress.duration;
     }
     obj7.initialVideoDurationSec = duration;
-    const bountiesModalTiming = tmp9(15095).useBountiesModalTiming(obj7);
+    const bountiesModalTiming = tmp9(15072).useBountiesModalTiming(obj7);
     isEndCardVisible = bountiesModalTiming.isEndCardVisible;
     maxVideoProgressSeconds = bountiesModalTiming.maxVideoProgressSeconds;
     videoDuration = bountiesModalTiming.videoDuration;
@@ -230,31 +230,31 @@ function BountiesModalContentInner(bounty) {
       height: null
     };
     ({ width: obj13.width, height: obj13.height } = memo);
-    obj11.children = closure_11(tmp9(15103).BountyVideo, size1);
+    obj11.children = closure_11(tmp9(15080).BountyVideo, size1);
     const items9 = [closure_11(flushProgress, obj11), , ];
     const obj12 = { style: memo2, children: null };
     const obj14 = { onPress: callback2 };
-    obj12.children = closure_11(tmp2(15133), obj14);
+    obj12.children = closure_11(tmp2(15111), obj14);
     items9[1] = closure_11(flushProgress, obj12);
     let rect = { left: null, right: null, bottom: true, style: null, pointerEvents: "box-none", children: null };
     ({ isFullWidth: obj16.left, isFullWidth: obj16.right } = memo);
     rect.style = memo3;
     const obj15 = { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback3 };
-    rect.children = closure_11(tmp2(15124), obj15);
-    items9[2] = closure_11(tmp9(7175).SafeAreaPaddingView, rect);
+    rect.children = closure_11(tmp2(15101), obj15);
+    items9[2] = closure_11(tmp9(7197).SafeAreaPaddingView, rect);
     obj9.children = items9;
     return closure_13(closure_12, obj9);
   }
   result = 1000 * rewardTimerSeconds;
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5496).QuestsExperimentLocations;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let c14 = 0.5625;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_15 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
@@ -294,7 +294,7 @@ export default function BountiesModalContent(bountyId) {
     }
   }, items);
   if (null != bounty) {
-    let obj = { theme: ThemeTypes.DARKER, children: null };
+    let obj = { theme: ThemeTypes.DARK, children: null };
     let obj2 = {
       adContentId: bounty.id,
       adCreativeType: bountyId(bounty[22]).AdCreativeType.BOUNTY,

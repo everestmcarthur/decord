@@ -1,21 +1,21 @@
-// Module ID: 16053
-// Function ID: 16054
+// Module ID: 16042
+// Function ID: 16043
 // Name: useUsernameRegistrationStep
-// Dependencies: [32, 19, 14787, 16028, 16029, 16025, 1483, 7007, 14785, 14784, 16027, 1484, 1114, 2]
+// Dependencies: [32, 19, 14764, 16017, 16018, 16014, 1483, 7029, 14762, 14761, 16016, 1484, 1114, 2]
 // Exports: useUsernameRegistrationStep
 
-// Module 16053 (useUsernameRegistrationStep)
+// Module 16042 (useUsernameRegistrationStep)
 import util from "util" /* 1114 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14784 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14787 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14764 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(16028).useRegistrationUIStore;
-const RegistrationConstants = fn(16029);
+const useRegistrationUIStore = fn(16017).useRegistrationUIStore;
+const RegistrationConstants = fn(16018);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
@@ -57,16 +57,16 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       context(obj);
     }
     if (arg0) {
-      const result = tmp3(16027).handleRegistrationSubmit(closure_0, navigation, context);
-      const tmp3Result = tmp3(16027);
+      const result = tmp3(16016).handleRegistrationSubmit(closure_0, navigation, context);
+      const tmp3Result = tmp3(16016);
     } else {
-      const obj2 = { step: React5(closure_0), toStep: tmp3(16027).getNextRegistrationTransitionStep(closure_0), actionType: constants.SUCCESS };
+      const obj2 = { step: React5(closure_0), toStep: tmp3(16016).getNextRegistrationTransitionStep(closure_0), actionType: constants.SUCCESS };
       context(obj2);
-      const tmp3Result3 = tmp3(16027);
-      const nextAuthState = tmp3(16027).getNextAuthState(closure_0);
+      const tmp3Result3 = tmp3(16016);
+      const nextAuthState = tmp3(16016).getNextAuthState(closure_0);
       const StackActions = tmp3(1484).StackActions;
       navigation.dispatch(StackActions.push(nextAuthState));
-      const tmp3Result4 = tmp3(16027);
+      const tmp3Result4 = tmp3(16016);
     }
   }, items);
   const items2 = [username, , ];

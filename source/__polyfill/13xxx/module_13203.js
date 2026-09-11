@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3d5f9f8f212b24a0f18f5afb706f5f80", name: "UserClockIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2], hash: "e8874e4fc596af26bfde9d20b7f75908", name: "search_empty_state_dark", type: "png" });

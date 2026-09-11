@@ -1,91 +1,141 @@
 // Module ID: 10602
 // Function ID: 10603
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10596, 10509]
+// Dependencies: [10519, 10526, 10528, 10552, 10603, 10605, 10606, 10607, 10608, 10609, 10610, 10559]
+// Exports: createCasualConfiguration, parse, parseDate
 
 // Module 10602
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10596 from "module_10596" /* 10596 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10552 from "module_10552" /* 10552 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10559 */;
+import _mod10603 from "module_10603" /* 10603 */;
+import _mod10605 from "module_10605" /* 10605 */;
+import _mod10606 from "module_10606" /* 10606 */;
+import _mod10607 from "module_10607" /* 10607 */;
+import _mod10608 from "module_10608" /* 10608 */;
+import _mod10609 from "module_10609" /* 10609 */;
+import _mod10610 from "module_10610" /* 10610 */;
 
-const NLCasualYearMonthDayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const require = globalThis.__r;
+
+function createConfiguration(flag, arg1) {
+  if (flag === undefined) {
+    flag = true;
   }
-}
-const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10596.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
-class NLCasualYearMonthDayParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, NLCasualYearMonthDayParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLCasualYearMonthDayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
   }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(flag2), , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default3 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default4 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-_inherits(NLCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.push(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.push(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+const regExp = fn(_mod10552);
+fn(_mod10603);
+fn(_mod10605);
+fn(_mod10606);
+fn(_mod10607);
+fn(_mod10608);
+fn(_mod10609);
+const _isNativeReflectConstruct = fn(_mod10610);
+const configuration = createConfiguration(false, true);
+let parsers = configuration.parsers;
+parsers.push(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10519").Chrono;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = NLCasualYearMonthDayParser(10596).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
-        }
-      }
-      return null;
-    }
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
   }
-];
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.push(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10519").Chrono(configuration);
+const chrono1 = new require("module_10519").Chrono(createConfiguration(true));
 
-export default _createClass(NLCasualYearMonthDayParser, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10519").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

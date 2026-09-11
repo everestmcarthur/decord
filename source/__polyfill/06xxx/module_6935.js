@@ -1,20 +1,34 @@
 // Module ID: 6935
 // Function ID: 6936
-// Dependencies: [6920, 6936]
+// Dependencies: [6936]
 
 // Module 6935
 import _mod6936 from "module_6936" /* 6936 */;
 
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
+export default function _objectWithoutProperties(arg0, arr) {
+  if (null == arg0) {
+    return {};
   } else {
-    return _mod6936(arg0);
+    const tmp8 = _mod6936(arg0, arr);
+    const _Object2 = Object;
+    if (Object.getOwnPropertySymbols) {
+      const _Object = Object;
+      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
+      let num = 0;
+      if (0 < ownPropertySymbols.length) {
+        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
+        while (!tmp2) {
+          if (tmp2) {
+            tmp8[tmp] = arg0[tmp];
+          }
+          num = num + 1;
+        }
+        const propertyIsEnumerable = {}.propertyIsEnumerable;
+        const call = propertyIsEnumerable.call;
+        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
+      }
+    }
+    return tmp8;
   }
 };

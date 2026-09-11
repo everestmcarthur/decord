@@ -1,22 +1,22 @@
-// Module ID: 15651
-// Function ID: 15652
+// Module ID: 15634
+// Function ID: 15635
 // Name: CacheActionsSetting
-// Dependencies: [5, 5327, 21, 4572, 4303, 4560, 1114, 504, 1935, 7249, 7201, 7251, 15620, 15652, 15653, 11540, 2]
+// Dependencies: [5, 5329, 21, 4574, 4305, 4562, 1114, 504, 1935, 7271, 7223, 7273, 15603, 15635, 15636, 11564, 2]
 
-// Module 15651 (CacheActionsSetting)
+// Module 15634 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
-import ActionSheet from "ActionSheet" /* 7249 */;
-import ActionSheetRow from "ActionSheetRow" /* 7251 */;
-import FileUpIcon from "FileUpIcon" /* 15620 */;
-import CacheActionCreators from "CacheActionCreators" /* 15652 */;
-import FileWarningIcon from "FileWarningIcon" /* 15653 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7223 */;
+import ActionSheet from "ActionSheet" /* 7271 */;
+import ActionSheetRow from "ActionSheetRow" /* 7273 */;
+import FileUpIcon from "FileUpIcon" /* 15603 */;
+import CacheActionCreators from "CacheActionCreators" /* 15635 */;
+import FileWarningIcon from "FileWarningIcon" /* 15636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
 
 require = fn;
 function handleCacheActionPress(key) {
@@ -128,14 +128,14 @@ function CacheActionsActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11564);
 const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15653).FileWarningIcon,
+  IconComponent: fn(15636).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: CacheActionsActionSheet }), CacheActionsActionSheet);
   },

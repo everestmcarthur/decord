@@ -1,14 +1,14 @@
-// Module ID: 9548
-// Function ID: 9549
+// Module ID: 9571
+// Function ID: 9572
 // Name: useIsSpeaking
-// Dependencies: [5062, 2011, 5469, 4624, 504, 2]
+// Dependencies: [5064, 2011, 5471, 4626, 504, 2]
 // Exports: default, getIsSpeaking
 
-// Module 9548 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 5062 */;
+// Module 9571 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 5064 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SpeakingStore from "SpeakingStore" /* 5469 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+import SpeakingStore from "SpeakingStore" /* 5471 */;
+import VoiceStateStore from "VoiceStateStore" /* 4626 */;
 
 const require = globalThis.__r;
 

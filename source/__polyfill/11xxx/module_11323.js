@@ -1,9 +1,15 @@
 // Module ID: 11323
 // Function ID: 11324
-// Dependencies: [1122]
+// Dependencies: [11322]
+// Exports: keepLocalCopy
 
 // Module 11323
-import registerAsset from "module_1122" /* 1122 */;
+import _mod11322 from "module_11322" /* 11322 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15", name: "TagsIcon", type: "png" });
+export const keepLocalCopy = function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11322.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+};

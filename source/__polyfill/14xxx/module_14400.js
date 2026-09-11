@@ -1,23 +1,16 @@
 // Module ID: 14400
 // Function ID: 14401
-// Dependencies: []
+// Dependencies: [14401]
 
 // Module 14400
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+import _mod14401 from "module_14401" /* 14401 */;
+
+
+export default (arg0) => {
+  const tmp = _mod14401(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
   }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+  return num;
+};

@@ -1,13 +1,13 @@
-// Module ID: 16548
-// Function ID: 16549
+// Module ID: 16536
+// Function ID: 16537
 // Name: NativeICYMIUtils
-// Dependencies: [4808, 16549, 1896, 16550, 2]
+// Dependencies: [4810, 16537, 1896, 16538, 2]
 // Exports: pushICYMIInfoModal
 
-// Module 16548 (NativeICYMIUtils)
+// Module 16536 (NativeICYMIUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16550 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16538 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIUtils.tsx");
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIUtils
 export const pushICYMIInfoModal = function pushICYMIInfoModal(arg0) {
   ({ extendedOnboarding, skipIntro } = arg0);
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequireImpl(16549, dependencyMap.paths), { extendedOnboarding, skipIntro }, ICYMIInfoModalTypes.ICYMI_INFO_MODAL_KEY, { presentation: "fullScreenModal" });
+  obj.pushLazy(asyncRequireImpl(16537, dependencyMap.paths), { extendedOnboarding, skipIntro }, ICYMIInfoModalTypes.ICYMI_INFO_MODAL_KEY, { presentation: "fullScreenModal" });
 };

@@ -1,18 +1,18 @@
-// Module ID: 16713
-// Function ID: 16714
+// Module ID: 16701
+// Function ID: 16702
 // Name: SwipeForMemberListWrapper
-// Dependencies: [32, 19, 17, 7928, 7915, 1074, 21, 3, 4605, 576, 4785, 16092, 4465, 4341, 5042, 4540, 7090, 4470, 11598, 1109, 16088, 8332, 12859, 4463, 4462, 5022, 1484, 16614, 6705, 16714, 16715, 16610, 5175, 7208, 16716, 2]
+// Dependencies: [32, 19, 17, 7951, 7938, 1074, 21, 3, 4607, 576, 4787, 16081, 4467, 4343, 5044, 4542, 7112, 4472, 11622, 1109, 16077, 8355, 12884, 4465, 4464, 5024, 1484, 16602, 6727, 16702, 16703, 16598, 5177, 7230, 16704, 2]
 // Exports: default
 
-// Module 16713 (SwipeForMemberListWrapper)
+// Module 16701 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
-import RootNavigationRef from "RootNavigationRef" /* 4463 */;
-import useChatLayout from "useChatLayout" /* 4465 */;
-import ChatInputUtils from "ChatInputUtils" /* 4470 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
+import RootNavigationRef from "RootNavigationRef" /* 4465 */;
+import useChatLayout from "useChatLayout" /* 4467 */;
+import ChatInputUtils from "ChatInputUtils" /* 4472 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4787 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,17 +20,17 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7928);
+const ChannelDetailsStore = fn(7951);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const MIDNIGHT_BORDER_WIDTH = fn(7915).MIDNIGHT_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(7938).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let context = noop.createContext(undefined);
-const createStyles = fn(4605);
-let obj = { memberListPreview: null, content: null, memberListContainer: null, midnightBorder: null, midnightRightOverflow: null };
+const createStyles = fn(4607);
+let obj = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let obj4 = {};
@@ -40,15 +40,15 @@ obj.content = obj4;
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.memberListContainer = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
 let obj5 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
-obj.midnightBorder = { borderLeftColor: nativeDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
-obj.midnightRightOverflow = { right: -MIDNIGHT_BORDER_WIDTH };
+obj.onyxBorder = { borderLeftColor: nativeDefault.colors.BORDER_STRONG, borderLeftWidth: ONYX_BORDER_WIDTH };
+obj.onyxRightOverflow = { right: -ONYX_BORDER_WIDTH };
 let closure_17 = createStyles.createStyles(obj);
 const __initData = { code: "function SwipeForMemberListWrapperTsx1(){const{shownPixels}=this.__closure;return shownPixels.get()>0;}" };
 const __initData2 = { code: "function SwipeForMemberListWrapperTsx2(isVisible,wasVisible){const{mainDisallowGesture,stackDisallowGesture,panelDisallowGesture}=this.__closure;var _stackDisallowGesture;if(isVisible===wasVisible)return;mainDisallowGesture.set(isVisible);(_stackDisallowGesture=stackDisallowGesture)===null||_stackDisallowGesture===void 0||_stackDisallowGesture.set(isVisible);if(!isVisible){panelDisallowGesture.set(false);}}" };
 const __initData3 = { code: "function SwipeForMemberListWrapperTsx3(){const{isChatLockedOpen,mainTranslateX,stackTranslateX}=this.__closure;return!isChatLockedOpen&&mainTranslateX.get()>0||stackTranslateX!=null&&stackTranslateX.get()>0;}" };
 const __initData4 = { code: "function SwipeForMemberListWrapperTsx4(isInactive,wasInactive){const{panelDisallowGesture}=this.__closure;if(isInactive===wasInactive)return;panelDisallowGesture.set(isInactive);}" };
 const __initData5 = { code: "function SwipeForMemberListWrapperTsx5(){const{maxWidth,translateX}=this.__closure;return maxWidth-translateX.get();}" };
-const __initData6 = { code: "function SwipeForMemberListWrapperTsx6(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,MIDNIGHT_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.MIDNIGHT||isChatBesideChannelList)return translateX.get();return translateX.get()-MIDNIGHT_BORDER_WIDTH;}" };
+const __initData6 = { code: "function SwipeForMemberListWrapperTsx6(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,ONYX_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.ONYX||isChatBesideChannelList)return translateX.get();return translateX.get()-ONYX_BORDER_WIDTH;}" };
 const __initData7 = { code: "function SwipeForMemberListWrapperTsx7(){const{shownPixels,PEEK_PIXEL_THRESHOLD}=this.__closure;const exceedsPeekThreshold=shownPixels.get()>PEEK_PIXEL_THRESHOLD*2;return{display:exceedsPeekThreshold?'none':'flex',opacity:exceedsPeekThreshold?0:1-shownPixels.get()/PEEK_PIXEL_THRESHOLD};}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx");
@@ -88,8 +88,8 @@ export default function _default(channelId) {
   const items1 = [tmp4, tmp8];
   const items2 = [channelId, screenIndex];
   const memo = translateX2.useMemo(() => {
-    if (disallowGesture === constants3.MIDNIGHT) {
-      let sum = disallowGesture2 + MIDNIGHT_BORDER_WIDTH;
+    if (disallowGesture === constants3.ONYX) {
+      let sum = disallowGesture2 + ONYX_BORDER_WIDTH;
     } else {
       sum = disallowGesture2;
     }
@@ -111,15 +111,15 @@ export default function _default(channelId) {
   const movePanel = tmp11.movePanel;
   let isChatLockedOpen = movePanel;
   const maxWidth = tmp11.maxWidth;
-  class X {
+  class B {
     constructor() {
       return maxWidth - disallowGesture.get();
     }
   }
-  X.__closure = { maxWidth, translateX };
-  X.__workletHash = 10842481670591;
-  X.__initData = __initData5;
-  derivedValue = gesture(gesture2[13]).useDerivedValue(X);
+  B.__closure = { maxWidth, translateX };
+  B.__workletHash = 10842481670591;
+  B.__initData = __initData5;
+  derivedValue = gesture(gesture2[13]).useDerivedValue(B);
   let obj2 = gesture(gesture2[13]);
   derivedStateFromSharedValue = gesture(gesture2[21]).useDerivedStateFromSharedValue(derivedValue, (arg0) => arg0 > 0);
   const items3 = [derivedStateFromSharedValue, channelId, screenIndex];
@@ -132,16 +132,16 @@ export default function _default(channelId) {
   }, items3);
   let obj3 = gesture(gesture2[21]);
   function te() {
-    if (disallowGesture === constants3.MIDNIGHT) {
+    if (disallowGesture === constants3.ONYX) {
       if (!translateX2) {
-        let diff = disallowGesture3.get() - MIDNIGHT_BORDER_WIDTH;
+        let diff = disallowGesture3.get() - ONYX_BORDER_WIDTH;
       }
       return diff;
     }
     diff = disallowGesture3.get();
   }
-  te.__closure = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, MIDNIGHT_BORDER_WIDTH: isChatLockedOpen };
-  te.__workletHash = 5498466465211;
+  te.__closure = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, ONYX_BORDER_WIDTH: isChatLockedOpen };
+  te.__workletHash = 2787360249959;
   te.__initData = __initData6;
   const derivedValue1 = gesture(gesture2[13]).useDerivedValue(te);
   const items4 = [channelId, screenIndex, movePanel];
@@ -200,8 +200,8 @@ export default function _default(channelId) {
       const tmp23Result = useChatLayout;
       let coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
       if (tmp3) {
-        coerceChannelRouteResult = tmp23(4462).coerceGuildsRoute(currentRoute);
-        const tmp23Result4 = tmp23(4462);
+        coerceChannelRouteResult = tmp23(4464).coerceGuildsRoute(currentRoute);
+        const tmp23Result4 = tmp23(4464);
       }
       const obj3 = { route: coerceChannelRouteResult, channelId: gesture, currentRoute, isChatLockedOpen, routeParams: null };
       let params1;
@@ -248,7 +248,7 @@ export default function _default(channelId) {
     callback3();
   }, items9);
   let obj4 = gesture(gesture2[13]);
-  let obj5 = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, MIDNIGHT_BORDER_WIDTH: isChatLockedOpen };
+  let obj5 = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, ONYX_BORDER_WIDTH: isChatLockedOpen };
   navigation = gesture(gesture2[26]).useNavigation();
   closure_129_0 = channelId;
   closure_129_1 = screenIndex;
@@ -308,7 +308,7 @@ export default function _default(channelId) {
   fn.__closure = { shownPixels: derivedValue };
   fn.__workletHash = 15116046915956;
   fn.__initData = __initData;
-  const fn2 = function o(arg0, arg1) {
+  const fn2 = function l(arg0, arg1) {
     if (arg0 !== arg1) {
       const result = disallowGesture.set(arg0);
       if (disallowGesture2 != null) {
@@ -372,7 +372,7 @@ export default function _default(channelId) {
   const tmp12Result6 = gesture(gesture2[14]);
   const mainTabsChannelScreenStyles = gesture(gesture2[27]).useMainTabsChannelScreenStyles(isDragging, derivedValue1, maxWidth);
   const tmp12Result7 = gesture(gesture2[27]);
-  function le() {
+  function oe() {
     const tmp = derivedValue.get() > 300;
     let str = "flex";
     if (tmp) {
@@ -386,11 +386,11 @@ export default function _default(channelId) {
     obj2.opacity = num;
     return obj2;
   }
-  le.__closure = { shownPixels: derivedValue, PEEK_PIXEL_THRESHOLD: 150 };
-  le.__workletHash = 9468759128012;
-  le.__initData = __initData7;
+  oe.__closure = { shownPixels: derivedValue, PEEK_PIXEL_THRESHOLD: 150 };
+  oe.__workletHash = 9468759128012;
+  oe.__initData = __initData7;
   const obj7 = { value: memo2, children: null };
-  const animatedStyle = gesture(gesture2[13]).useAnimatedStyle(le);
+  const animatedStyle = gesture(gesture2[13]).useAnimatedStyle(oe);
   const obj8 = { gesture: memo1, children: null };
   let obj9 = {
     onAccessibilityEscape() {
@@ -412,19 +412,19 @@ export default function _default(channelId) {
   obj10.children = items14;
   const items15 = [callback3(gesture(gesture2[29]).NavTTISurfaceProvider, obj10), ];
   const items16 = [mainTabsChannelScreenStyles, tmp.memberListContainer, , ];
-  let midnightBorder;
-  if (tmp4 === derivedStateFromSharedValue.MIDNIGHT) {
-    midnightBorder = tmp.midnightBorder;
+  let onyxBorder;
+  if (tmp4 === derivedStateFromSharedValue.ONYX) {
+    onyxBorder = tmp.onyxBorder;
   }
-  items16[2] = midnightBorder;
-  let prop;
+  items16[2] = onyxBorder;
+  let onyxRightOverflow;
   if (!isChatBesideChannelList) {
-    if (tmp4 === tmp16.MIDNIGHT) {
-      prop = tmp.midnightRightOverflow;
+    if (tmp4 === tmp16.ONYX) {
+      onyxRightOverflow = tmp.onyxRightOverflow;
     }
   }
   const obj11 = { style: items16, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
-  items16[3] = prop;
+  items16[3] = onyxRightOverflow;
   const items17 = [callback2(derivedValue(gesture2[32]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
   const tmp12Result8 = gesture(gesture2[13]);
   const tmp40 = !derivedStateFromSharedValue;

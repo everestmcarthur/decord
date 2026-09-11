@@ -1,25 +1,25 @@
-// Module ID: 16091
-// Function ID: 16092
+// Module ID: 16080
+// Function ID: 16081
 // Name: ChannelScreenAnimatedFrame
-// Dependencies: [19, 17, 7915, 21, 4605, 576, 4341, 4606, 1178, 16089, 7923, 7175, 2]
+// Dependencies: [19, 17, 7938, 21, 4607, 576, 4343, 4608, 1178, 16078, 7946, 7197, 2]
 // Exports: default
 
-// Module 16091 (ChannelScreenAnimatedFrame)
+// Module 16080 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import timing from "timing" /* 4606 */;
-import PanelsConfig from "PanelsConfig" /* 16089 */;
+import timing from "timing" /* 4608 */;
+import PanelsConfig from "PanelsConfig" /* 16078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, splitDivider: null, additionalHeight: null };
 const obj3 = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.splitDivider = { borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
-obj2.additionalHeight = { height: fn(7915).HEADER_CORNER_RADIUS };
+obj2.additionalHeight = { height: fn(7938).HEADER_CORNER_RADIUS };
 let closure_6 = createStyles.createStyles(obj2);
 const __initData = { code: "function ChannelScreenAnimatedFrameTsx1(){const{translateX,maxWidth,isChatLockedOpen,withTiming,STANDARD_EASING,SIDE_PANEL_CLOSE_DURATION_MS,SIDE_PANEL_OPEN_DURATION_MS}=this.__closure;const hide=translateX.get()===maxWidth||isChatLockedOpen;return{opacity:withTiming(hide?0:1,{easing:STANDARD_EASING,duration:hide?SIDE_PANEL_CLOSE_DURATION_MS:SIDE_PANEL_OPEN_DURATION_MS})};}" };
 const size = fn(2);

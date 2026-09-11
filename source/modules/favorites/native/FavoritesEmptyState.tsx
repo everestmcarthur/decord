@@ -1,17 +1,17 @@
-// Module ID: 16832
-// Function ID: 16833
+// Module ID: 16820
+// Function ID: 16821
 // Name: FavoritesEmptyState
-// Dependencies: [19, 17, 21, 4605, 576, 10294, 11048, 4572, 10298, 1896, 10297, 5742, 5023, 4601, 1114, 3236, 5025, 12823, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 10315, 11071, 4574, 10319, 1896, 10318, 5744, 5025, 4603, 1114, 3236, 5027, 12848, 2]
 // Exports: default
 
-// Module 16832 (FavoritesEmptyState)
+// Module 16820 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import native from "native" /* 5742 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import Stack_Stack from "Stack/Stack" /* 5025 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import native from "native" /* 5744 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -52,7 +52,7 @@ export default function FavoritesEmptyState() {
     const obj6 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1114).intl;
     obj6.text = intl4.string(tmp9(3236)["6kk0gM"]);
-    obj6.icon = tmp8(tmp2(12823).PlusMediumIcon, {});
+    obj6.icon = tmp8(tmp2(12848).PlusMediumIcon, {});
     obj6.onPress = callback;
     let obj7 = obj6;
   } else {

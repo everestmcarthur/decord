@@ -1,23 +1,32 @@
 // Module ID: 14412
 // Function ID: 14413
-// Dependencies: []
+// Dependencies: [14355, 14375]
 
 // Module 14412
-let propertyIsEnumerable = {}.propertyIsEnumerable;
-if (!getOwnPropertyDescriptor) {
-  if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
-      return tmp && tmp.enumerable;
-    };
-  }
-  arg5.f = propertyIsEnumerable;
-} else {
-  const call = propertyIsEnumerable.call;
-  if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = propertyIsEnumerable(1);
-  } else {
-    propertyIsEnumerableResult = call(obj, 1);
-  }
-  obj = { 1: 2 };
+import _mod14375 from "module_14375" /* 14375 */;
+import getOwnPropertyDescriptor_mod from "module_14355" /* 14355 */;
+
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 }
+const tmp = _mod14375(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {
+
+  }.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
+}
+
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

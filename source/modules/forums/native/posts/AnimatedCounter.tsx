@@ -1,15 +1,15 @@
-// Module ID: 11388
-// Function ID: 11389
+// Module ID: 11412
+// Function ID: 11413
 // Name: AnimatedCounter
-// Dependencies: [32, 19, 17, 21, 4605, 38, 4341, 4315, 5024, 4601, 5028, 11389, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 38, 4343, 4317, 5026, 4603, 5030, 11413, 2]
 
-// Module 11388 (AnimatedCounter)
-import native from "native" /* 4315 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import spring from "spring" /* 5024 */;
-import springPresets from "springPresets" /* 5028 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11389 */;
+// Module 11412 (AnimatedCounter)
+import native from "native" /* 4317 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import spring from "spring" /* 5026 */;
+import springPresets from "springPresets" /* 5030 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -171,7 +171,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_9 = createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let obj = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
 let items = [, , ];

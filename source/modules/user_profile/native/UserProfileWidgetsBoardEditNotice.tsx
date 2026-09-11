@@ -1,14 +1,14 @@
-// Module ID: 13134
-// Function ID: 13135
+// Module ID: 13159
+// Function ID: 13160
 // Name: UserProfileWidgetsBoardEditNotice
-// Dependencies: [19, 17, 1954, 21, 4605, 576, 8304, 10695, 1943, 4560, 4601, 1114, 5173, 5730, 2]
+// Dependencies: [19, 17, 1954, 21, 4607, 576, 8327, 10716, 1943, 4562, 4603, 1114, 5175, 5732, 2]
 // Exports: default
 
-// Module 13134 (UserProfileWidgetsBoardEditNotice)
+// Module 13159 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8304 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10695 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8327 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10716 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,12 +39,12 @@ export default function UserProfileWidgetsBoardEditNotice() {
       obj.style = items;
       const obj2 = { style: closure_0.icon, children: null };
       const obj3 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-      obj2.children = hasOwnProperty(tmp(4560).CircleInformationIcon, obj3);
+      obj2.children = hasOwnProperty(tmp(4562).CircleInformationIcon, obj3);
       const items1 = [hasOwnProperty(View, obj2), , ];
       const obj4 = { style: closure_0.text, variant: "text-sm/medium", color: "text-strong", children: null };
       const intl = tmp(1114).intl;
       obj4.children = intl.string(tmp(1114).t.kv8ULD);
-      items1[1] = hasOwnProperty(tmp(4601).Text, obj4);
+      items1[1] = hasOwnProperty(tmp(4603).Text, obj4);
       const obj5 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
       const intl2 = tmp(1114).intl;
       obj5.accessibilityLabel = intl2.string(tmp(1114).t.WAI6xu);
@@ -52,8 +52,8 @@ export default function UserProfileWidgetsBoardEditNotice() {
         return markAsDismissed(constants.USER_DISMISS);
       };
       obj5.style = closure_0.closeButton;
-      obj5.children = hasOwnProperty(tmp(5730).XSmallIcon, { size: "sm" });
-      items1[2] = hasOwnProperty(tmp(5173).PressableOpacity, obj5);
+      obj5.children = hasOwnProperty(tmp(5732).XSmallIcon, { size: "sm" });
+      items1[2] = hasOwnProperty(tmp(5175).PressableOpacity, obj5);
       obj.children = items1;
       tmp3 = timestampProducer(View, obj);
     }

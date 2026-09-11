@@ -1,13 +1,13 @@
-// Module ID: 10309
-// Function ID: 10310
+// Module ID: 10330
+// Function ID: 10331
 // Name: useCanShowFavoritesGuildOnboarding
-// Dependencies: [4295, 2011, 504, 4462, 2]
+// Dependencies: [4297, 2011, 504, 4464, 2]
 // Exports: default
 
-// Module 10309 (useCanShowFavoritesGuildOnboarding)
+// Module 10330 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
-import ActionSheetStore from "ActionSheetStore" /* 4295 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
+import ActionSheetStore from "ActionSheetStore" /* 4297 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;

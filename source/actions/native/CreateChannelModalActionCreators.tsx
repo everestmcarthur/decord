@@ -1,12 +1,12 @@
-// Module ID: 9807
-// Function ID: 9808
+// Module ID: 9830
+// Function ID: 9831
 // Name: CreateChannelModalActionCreators
-// Dependencies: [1961, 1957, 4616, 4808, 9802, 1896, 2]
+// Dependencies: [1961, 1957, 4618, 4810, 9825, 1896, 2]
 
-// Module 9807 (CreateChannelModalActionCreators)
+// Module 9830 (CreateChannelModalActionCreators)
 import ChannelRecord from "ChannelRecord" /* 1961 */;
-import transitionToChannel from "transitionToChannel" /* 4616 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import transitionToChannel from "transitionToChannel" /* 4618 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import size from "module_2" /* 2 */;
 
@@ -38,8 +38,8 @@ export default {
             }
           }
       };
-      obj2.pushLazy(self(1896)(9802, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp9 = self(1896)(9802, dependencyMap.paths);
+      obj2.pushLazy(self(1896)(9825, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      const tmp9 = self(1896)(9825, dependencyMap.paths);
     }
   },
   close() {

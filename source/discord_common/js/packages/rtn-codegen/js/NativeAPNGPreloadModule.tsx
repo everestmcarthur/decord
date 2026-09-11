@@ -1,9 +1,9 @@
-// Module ID: 17051
-// Function ID: 17052
+// Module ID: 17041
+// Function ID: 17042
 // Name: NativeAPNGPreloadModule
 // Dependencies: [17, 2]
 
-// Module 17051 (NativeAPNGPreloadModule)
+// Module 17041 (NativeAPNGPreloadModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

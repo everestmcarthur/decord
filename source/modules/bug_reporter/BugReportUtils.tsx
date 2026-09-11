@@ -1,16 +1,16 @@
-// Module ID: 10257
-// Function ID: 10258
+// Module ID: 10278
+// Function ID: 10279
 // Name: bug_reporter/BugReportUtils
-// Dependencies: [5, 1183, 1074, 1272, 1114, 10258, 1115, 4798, 1250, 2]
+// Dependencies: [5, 1183, 1074, 1272, 1114, 10279, 1115, 4800, 1250, 2]
 // Exports: fetchBugReportConfig, getFeatureId, getPriorities, submitReport
 
-// Module 10257 (bug_reporter/BugReportUtils)
+// Module 10278 (bug_reporter/BugReportUtils)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4798 */;
-import DebugUploadManager from "DebugUploadManager" /* 10258 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4800 */;
+import DebugUploadManager from "DebugUploadManager" /* 10279 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 

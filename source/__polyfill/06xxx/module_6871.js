@@ -1,101 +1,16 @@
 // Module ID: 6871
 // Function ID: 6872
-// Dependencies: [19, 21, 6682, 6705, 6689, 1636]
+// Dependencies: []
+// Exports: snapPoint
 
 // Module 6871
-import jsxProd from "jsxProd" /* 21 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import noop_mod from "module_19" /* 19 */;
+const fn = function t(arg0, arg1, arr) {
+  closure_0 = arg0 + 0.2 * arg1;
+  closure_1 = min.apply(null, arr.map((item) => Math.abs(closure_0 - item)));
+  return arr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
+};
+fn.__closure = {};
+fn.__workletHash = 8913698095371;
+fn.__initData = { code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}" };
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo((nativeGestureRef) => {
-  nativeGestureRef = nativeGestureRef.nativeGestureRef;
-  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
-  ({ style, children } = nativeGestureRef);
-  const merged = Object.assign(nativeGestureRef, Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }));
-  let enableContentPanningGesture;
-  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
-  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  const waitFor = bottomSheetInternal.waitFor;
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
-  const failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  const obj = nativeGestureRef(enableContentPanningGesture[2]);
-  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers().contentPanGestureHandler;
-  let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
-  const tmp3 = simultaneousHandlers(() => {
-    const items = [];
-    if (nativeGestureRef) {
-      items.push(tmp);
-    }
-    if (refreshControlGestureRef) {
-      items.push(tmp3);
-    }
-    if (simultaneousHandlers) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(tmp5)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(tmp5, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(tmp5);
-      }
-    }
-    return items;
-  }, items);
-  closure_10 = tmp3;
-  let items1 = [activeOffsetX, activeOffsetY, enableContentPanningGesture, failOffsetX, failOffsetY, tmp3, waitFor, , , , ];
-  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = contentPanGestureHandler);
-  const tmp4 = simultaneousHandlers(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart).onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart).onChange(contentPanGestureHandler.handleOnChange).onEnd(contentPanGestureHandler.handleOnEnd).onFinalize(contentPanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
-    }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  const obj3 = { gesture: tmp4, children: null };
-  const obj4 = { value: tmp4, children: null };
-  const obj5 = { style };
-  const merged1 = Object.assign(merged);
-  obj5.children = children;
-  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
-  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
-});
-memoResult.displayName = "BottomSheetDraggableView";
-
-export default memoResult;
+export const snapPoint = fn;

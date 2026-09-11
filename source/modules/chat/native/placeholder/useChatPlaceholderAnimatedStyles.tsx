@@ -1,14 +1,14 @@
-// Module ID: 12709
-// Function ID: 12710
+// Module ID: 12734
+// Function ID: 12735
 // Name: useChatPlaceholderAnimatedStyles
-// Dependencies: [4597, 1178, 504, 4341, 4606, 4609, 2]
+// Dependencies: [4599, 1178, 504, 4343, 4608, 4611, 2]
 // Exports: default
 
-// Module 12709 (useChatPlaceholderAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+// Module 12734 (useChatPlaceholderAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
+import timingPresets from "timingPresets" /* 4611 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
 require = fn;
 let TIMING_CONFIG = { duration: 1300, easing: fn(1178).STANDARD_EASING };

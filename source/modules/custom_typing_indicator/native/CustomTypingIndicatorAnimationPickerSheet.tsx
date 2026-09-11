@@ -1,14 +1,14 @@
-// Module ID: 15440
-// Function ID: 15441
+// Module ID: 15422
+// Function ID: 15423
 // Name: CustomTypingIndicatorAnimationPickerSheet
-// Dependencies: [32, 19, 17, 21, 4605, 576, 5657, 4601, 1379, 1114, 3592, 7249, 12051, 5023, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 5659, 4603, 1379, 1114, 3592, 7271, 12076, 5025, 2]
 // Exports: default
 
-// Module 15440 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 15422 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import Card from "Card" /* 5657 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import Stack_Stack from "Stack/Stack" /* 5025 */;
+import Card from "Card" /* 5659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function MotionOptionButton(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, previewRow: null, optionCard: null, optionCardSelected: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -77,7 +77,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1379).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(12051), obj7);
+  obj6.children = closure_6(animation(12076), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -94,7 +94,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(5023).Stack, obj9);
+  items1[1] = closure_6(onChange(5025).Stack, obj9);
   obj5.children = items1;
-  return closure_7(onChange(7249).ActionSheet, obj5);
+  return closure_7(onChange(7271).ActionSheet, obj5);
 };

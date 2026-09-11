@@ -1,23 +1,23 @@
-// Module ID: 16578
-// Function ID: 16579
+// Module ID: 16566
+// Function ID: 16567
 // Name: ICYMIMessageRow
-// Dependencies: [19, 17, 1957, 2021, 1979, 4253, 4786, 1371, 16573, 1074, 21, 576, 16535, 1115, 16536, 8330, 8413, 504, 16579, 16580, 4601, 1114, 1178, 4757, 5570, 8415, 8416, 10985, 11728, 16574, 16576, 11, 5173, 9840, 16582, 2]
+// Dependencies: [19, 17, 1957, 2021, 1979, 4255, 4788, 1371, 16561, 1074, 21, 576, 16523, 1115, 16524, 8353, 8436, 504, 16567, 16568, 4603, 1114, 1178, 4759, 5572, 8438, 8439, 11007, 11752, 16562, 16564, 11, 5175, 9863, 16570, 2]
 // Exports: default
 
-// Module 16578 (ICYMIMessageRow)
+// Module 16566 (ICYMIMessageRow)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8416 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11728 */;
-import ICYMIShared from "ICYMIShared" /* 16574 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11752 */;
+import ICYMIShared from "ICYMIShared" /* 16562 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -142,7 +142,7 @@ function ReplyMessageContent(message) {
   message = message.message;
   ({ channel, guild } = message);
   const tmp = closure_18();
-  const context = noop.useContext(message(16536).ICYMIContext);
+  const context = noop.useContext(message(16524).ICYMIContext);
   const items = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items, () => UserStore.getUser(message.author.id));
   const obj = noop;
@@ -156,14 +156,14 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16536).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16524).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     const obj4 = { style: tmp.replyPreview, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", style: { fontStyle: "italic" }, children: null };
     const intl = tmp2(1114).intl;
     obj5.children = intl.string(tmp2(1114).t.mPPcez);
-    const items2 = [closure_14(tmp2(4601).Text, obj5), ];
+    const items2 = [closure_14(tmp2(4603).Text, obj5), ];
     const obj6 = { style: tmp.replyInner, children: null };
     const obj7 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1178).AvatarSizes.SMALL };
     const items3 = [closure_14(tmp2(1178).Avatar, obj7), ];
@@ -173,34 +173,34 @@ function ReplyMessageContent(message) {
     const obj10 = { variant: "text-md/semibold", style: null, lineClamp: 1, children: null };
     const obj11 = { color: colorString };
     obj10.style = obj11;
-    obj10.children = tmp2(4757).getName(guild.id, channel.id, stateFromStores);
-    const items4 = [closure_14(tmp2(4601).Text, obj10), ];
+    obj10.children = tmp2(4759).getName(guild.id, channel.id, stateFromStores);
+    const items4 = [closure_14(tmp2(4603).Text, obj10), ];
     const obj12 = { value: null, children: null };
     const obj13 = { width: width - 2 * PX_12 - 30 - PX_8 - 2, margin: null, inset: null };
     ({ margin: obj14.margin, inset: obj14.inset } = context);
     obj12.value = obj13;
     const obj15 = { message, channel, guild, nested: true };
     obj12.children = closure_14(MessageRowContent, obj15);
-    items4[1] = closure_14(tmp2(16536).ICYMIContext.Provider, obj12);
+    items4[1] = closure_14(tmp2(16524).ICYMIContext.Provider, obj12);
     obj8.children = items4;
     items3[1] = closure_15(View, obj8);
     obj6.children = items3;
     items2[1] = closure_15(View, obj6);
     obj4.children = items2;
     tmp8 = closure_15(View, obj4);
-    const tmp2Result = tmp2(4757);
+    const tmp2Result = tmp2(4759);
   }
   return tmp8;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(16573).ITEM_PADDING;
+const ITEM_PADDING = fn(16561).ITEM_PADDING;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(16535);
+const createICYMIStyles = fn(16523);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 }, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
   const obj2 = { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 };
@@ -321,8 +321,8 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(8415).useGravityMessage(message);
-  const obj = gravityMessage(8415);
+  gravityMessage = gravityMessage(8438).useGravityMessage(message);
+  const obj = gravityMessage(8438);
   const items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () => ChannelStore.getChannel(gravityMessage.getChannelId()));
   const obj2 = gravityMessage(504);

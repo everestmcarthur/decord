@@ -1,16 +1,16 @@
-// Module ID: 16960
-// Function ID: 16961
+// Module ID: 16949
+// Function ID: 16950
 // Name: MuteSettingsScreen
-// Dependencies: [19, 17, 1957, 1979, 4253, 1371, 1074, 21, 4605, 576, 7816, 7171, 7166, 9126, 5655, 1178, 10215, 4601, 1114, 4758, 10216, 1483, 11384, 10214, 1484, 563, 7914, 1611, 2]
+// Dependencies: [19, 17, 1957, 1979, 4255, 1371, 1074, 21, 4607, 576, 7838, 7193, 7188, 9149, 5657, 1178, 10236, 4603, 1114, 4760, 10237, 1483, 11408, 10235, 1484, 563, 7937, 1611, 2]
 
-// Module 16960 (MuteSettingsScreen)
+// Module 16949 (MuteSettingsScreen)
 import nativeDefault from "native" /* 576 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 9126 */;
-import threadActionSheets from "threadActionSheets" /* 11384 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 9149 */;
+import threadActionSheets from "threadActionSheets" /* 11408 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -30,20 +30,20 @@ function UnmuteOptions(channel) {
   const tmp3 = closure_11;
   const tmp4 = View;
   const tmp5 = closure_10;
-  obj2.icon = closure_10(channel(1178).Icon, { disableColor: true, source: navigation(10215) });
+  obj2.icon = closure_10(channel(1178).Icon, { disableColor: true, source: navigation(10236) });
   const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1114).intl;
   const obj5 = { name: null };
-  const obj3 = { disableColor: true, source: navigation(10215) };
-  obj5.name = channel(4758).computeChannelName(channel, UserStore, RelationshipStore, true);
+  const obj3 = { disableColor: true, source: navigation(10236) };
+  obj5.name = channel(4760).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj4.children = intl.format(channel(1114).t["eC+9rj"], obj5);
-  obj2.label = closure_10(channel(4601).Text, obj4);
+  obj2.label = closure_10(channel(4603).Text, obj4);
   obj2.onPress = callback;
-  const items1 = [closure_10(channel(5655).TableRow, obj2), ];
+  const items1 = [closure_10(channel(5657).TableRow, obj2), ];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
-  const obj6 = channel(4758);
-  const tmp6 = navigation(10216);
-  const MuteSettingType = channel(10216).MuteSettingType;
+  const obj6 = channel(4760);
+  const tmp6 = navigation(10237);
+  const MuteSettingType = channel(10237).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = tmp5(tmp6, obj7);
   obj.children = items1;
@@ -164,7 +164,7 @@ const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 }, options: { marginBottom: 16 }, trailing: { flexDirection: "row", alignItems: "center" }, hint: { marginTop: 8, paddingHorizontal: 12 } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };

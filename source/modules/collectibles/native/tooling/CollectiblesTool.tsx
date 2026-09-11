@@ -1,19 +1,19 @@
-// Module ID: 15800
-// Function ID: 15801
+// Module ID: 15785
+// Function ID: 15786
 // Name: CollectiblesTool
-// Dependencies: [32, 19, 17, 7594, 7609, 8266, 21, 4605, 576, 8834, 4601, 5026, 563, 10804, 15801, 1178, 11149, 2]
+// Dependencies: [32, 19, 17, 7616, 7631, 8289, 21, 4607, 576, 8857, 4603, 5028, 563, 10825, 15786, 1178, 11174, 2]
 // Exports: default
 
-// Module 15800 (CollectiblesTool)
+// Module 15785 (CollectiblesTool)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import BaseTextButton from "BaseTextButton" /* 5026 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8834 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11149 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import BaseTextButton from "BaseTextButton" /* 5028 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8857 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11174 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7616 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7631 */;
 
 const require = globalThis.__r;
 
@@ -77,10 +77,10 @@ function FramePreviewOverrideSection() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(8266).useFramePreviewOverrideStore;
+let closure_9 = fn(8289).useFramePreviewOverrideStore;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, section: null, sectionHeader: null, sectionTitle: null, inputContainer: null, inputWrapper: null, inputLabel: null, statusText: null, statusSuccess: null, statusError: null, statusLoading: null, previewContainer: null, previewButton: null, secondaryButton: null, description: null, placeholder: null, placeholderText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

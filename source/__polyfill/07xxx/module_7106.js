@@ -1,9 +1,17 @@
 // Module ID: 7106
 // Function ID: 7107
-// Dependencies: [1122]
+// Dependencies: []
+// Exports: findLastIndex
 
 // Module 7106
-import registerAsset from "module_1122" /* 1122 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 160, height: 160, scales: [2, 3], hash: "b7eca7761481c5ff3cc170b16fbdff57", name: "img_no_results", type: "png" });
+export const findLastIndex = function findLastIndex(arg0, fn) {
+  let diff = arg0.length - 1;
+  if (0 <= diff) {
+    while (!fn(arg0[diff])) {
+      diff = diff - 1;
+    }
+    return diff;
+  }
+  return -1;
+};

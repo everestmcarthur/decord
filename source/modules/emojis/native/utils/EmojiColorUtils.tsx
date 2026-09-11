@@ -1,10 +1,10 @@
-// Module ID: 16160
-// Function ID: 16161
+// Module ID: 16149
+// Function ID: 16150
 // Name: utils/EmojiColorUtils
 // Dependencies: [5, 17, 1437, 2]
 // Exports: getEmojiDominantColors
 
-// Module 16160 (utils/EmojiColorUtils)
+// Module 16149 (utils/EmojiColorUtils)
 import privDefault from "priv" /* 1437 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

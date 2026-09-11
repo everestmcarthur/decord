@@ -1,13 +1,13 @@
-// Module ID: 6039
-// Function ID: 6040
+// Module ID: 6061
+// Function ID: 6062
 // Name: FavoritesSpotIllustration
-// Dependencies: [21, 5637, 6040, 2]
+// Dependencies: [21, 5639, 6062, 2]
 // Exports: FavoritesSpotIllustration
 
-// Module 6039 (FavoritesSpotIllustration)
+// Module 6061 (FavoritesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6040 from "module_6040" /* 6040 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6062 from "module_6062" /* 6062 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const FavoritesSpotIllustration = function FavoritesSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6040 };
+  const obj2 = { uri: _modDef6062 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

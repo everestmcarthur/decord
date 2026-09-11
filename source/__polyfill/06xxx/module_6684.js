@@ -1,11 +1,9 @@
 // Module ID: 6684
 // Function ID: 6685
-// Dependencies: [19]
+// Dependencies: [1122]
 
 // Module 6684
-import _mod19 from "module_19" /* 19 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-const context = _mod19.createContext(null);
 
-export const BottomSheetContext = context;
-export const BottomSheetProvider = context.Provider;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db11ea9da81d79144310eac53428fbe9", name: "CircleErrorIcon-primary", type: "png" });

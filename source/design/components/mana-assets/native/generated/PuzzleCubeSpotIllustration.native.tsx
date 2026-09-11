@@ -1,13 +1,13 @@
-// Module ID: 6423
-// Function ID: 6424
+// Module ID: 6445
+// Function ID: 6446
 // Name: PuzzleCubeSpotIllustration
-// Dependencies: [21, 5637, 6424, 2]
+// Dependencies: [21, 5639, 6446, 2]
 // Exports: PuzzleCubeSpotIllustration
 
-// Module 6423 (PuzzleCubeSpotIllustration)
+// Module 6445 (PuzzleCubeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6424 from "module_6424" /* 6424 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6446 from "module_6446" /* 6446 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PuzzleCubeSpotIllustration = function PuzzleCubeSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6424 };
+  const obj2 = { uri: _modDef6446 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

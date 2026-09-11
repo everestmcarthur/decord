@@ -1,29 +1,29 @@
-// Module ID: 16594
-// Function ID: 16595
+// Module ID: 16582
+// Function ID: 16583
 // Name: ICYMICustomStatusRow
-// Dependencies: [32, 19, 17, 1371, 8400, 21, 576, 4605, 16535, 1178, 11317, 4601, 1114, 7923, 4454, 504, 4839, 9245, 10950, 10965, 1115, 5173, 4563, 10320, 11805, 8827, 11, 1090, 16591, 4449, 7692, 16595, 8884, 2]
+// Dependencies: [32, 19, 17, 1371, 8423, 21, 576, 4607, 16523, 1178, 11341, 4603, 1114, 7946, 4456, 504, 4841, 9268, 10971, 10986, 1115, 5175, 4565, 10341, 11829, 8850, 11, 1090, 16579, 4451, 7714, 16583, 8907, 2]
 // Exports: default
 
-// Module 16594 (ICYMICustomStatusRow)
+// Module 16582 (ICYMICustomStatusRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import TrashIcon from "TrashIcon" /* 4563 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Pressables from "Pressables" /* 5173 */;
-import ReactionIcon from "ReactionIcon" /* 8827 */;
-import PencilIcon from "PencilIcon" /* 10320 */;
-import _modDef11317 from "module_11317" /* 11317 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11805 */;
+import TrashIcon from "TrashIcon" /* 4565 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import Pressables from "Pressables" /* 5175 */;
+import ReactionIcon from "ReactionIcon" /* 8850 */;
+import PencilIcon from "PencilIcon" /* 10341 */;
+import _modDef11341 from "module_11341" /* 11341 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11829 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import ICYMIStore from "ICYMIStore" /* 8400 */;
+import ICYMIStore from "ICYMIStore" /* 8423 */;
 
 require = fn;
 function UploadPlaceholder() {
   const obj = { style: closure_13(false).uploadContainer, children: null };
-  const items = [React6(native.Icon, { source: _modDef11317, size: native.IconSizes.SMALL }), ];
+  const items = [React6(native.Icon, { source: _modDef11341, size: native.IconSizes.SMALL }), ];
   const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
@@ -35,12 +35,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(16535);
+const createICYMIStyles = fn(16523);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {

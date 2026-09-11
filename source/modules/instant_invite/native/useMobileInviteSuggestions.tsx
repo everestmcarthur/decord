@@ -1,22 +1,22 @@
-// Module ID: 9902
-// Function ID: 9903
+// Module ID: 9925
+// Function ID: 9926
 // Name: useMobileInviteSuggestions
-// Dependencies: [32, 19, 2021, 1979, 9903, 4629, 7787, 1074, 1085, 504, 1242, 9916, 9917, 2]
+// Dependencies: [32, 19, 2021, 1979, 9926, 4631, 7809, 1074, 1085, 504, 1242, 9939, 9940, 2]
 // Exports: default
 
-// Module 9902 (useMobileInviteSuggestions)
+// Module 9925 (useMobileInviteSuggestions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9903 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4629 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9926 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4631 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const InviteTargetTypes = fn(7787).InviteTargetTypes;
+const InviteTargetTypes = fn(7809).InviteTargetTypes;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const NOOP_NULL = fn(1085).NOOP_NULL;
 const size = fn(2);
@@ -56,8 +56,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      isGuildVoiceResult = closure_0(9916).getGuildMembersInMobileVCInvitesExperiment(obj2);
-      const obj = closure_0(9916);
+      isGuildVoiceResult = closure_0(9939).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(9939);
     }
     if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
@@ -74,8 +74,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         });
       }
       const obj4 = { omitUserIds: set, guild: isFetchingRows.getGuild(set.guild_id), channel: set, inviteTargetType: dependencyMap };
-      const inviteSuggestions = closure_0(9917).loadInviteSuggestions(obj4);
-      const obj3 = closure_0(9917);
+      const inviteSuggestions = closure_0(9940).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(9940);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

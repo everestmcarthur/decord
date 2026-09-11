@@ -1,25 +1,25 @@
-// Module ID: 4605
-// Function ID: 4606
+// Module ID: 4607
+// Function ID: 4608
 // Name: createStyles
-// Dependencies: [32, 17, 4597, 4424, 4315, 1115, 576, 4307, 4341, 4606, 4609, 4537, 2]
+// Dependencies: [32, 17, 4599, 4426, 4317, 1115, 576, 4309, 4343, 4608, 4611, 4539, 2]
 // Exports: createAnimatedThemedStyles, createLegacyClassComponentStyles, createNativeStyleProperties, createStyleProperties, createStyles, experimental_createToken, processColorOrThrow, useLegacyClassComponentStyles
 
-// Module 4605 (createStyles)
+// Module 4607 (createStyles)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import SemanticColorContext from "SemanticColorContext" /* 4307 */;
-import native from "native" /* 4315 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4537 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
+import SemanticColorContext from "SemanticColorContext" /* 4309 */;
+import native from "native" /* 4317 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4539 */;
+import timing from "timing" /* 4608 */;
+import timingPresets from "timingPresets" /* 4611 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4424 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4426 */;
 
 require = fn;
 function createCacheKey() {
-  const items = [...arguments];
+  items = [...arguments];
   return items.join("");
 }
 function parseThemedStyles(obj, enabledExperiments) {
@@ -110,7 +110,7 @@ function parseThemedStyles(obj, enabledExperiments) {
 const processColor = fn(17).processColor;
 new Set(["backgroundColor", "borderBottomColor", "borderColor", "borderEndColor", "borderLeftColor", "borderRightColor", "borderStartColor", "borderTopColor", "color", "outlineColor", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "elevation", "textDecorationColor", "textShadowColor", "tintColor"]);
 let closure_8 = Symbol.for("dynamicToken");
-let closure_10 = ["light", "darker", "midnight"];
+let items = [nativeDefault.themes.LIGHT, nativeDefault.themes.DARK, nativeDefault.themes.ONYX];
 let closure_11 = { code: "function createStylesTsx1(){const{resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard}=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Styles/native/createStyles.tsx");
@@ -124,7 +124,7 @@ export const createStyles = function createStyles(rect) {
   const map = new Map();
   dependencyMap = typeof rect === "function";
   return () => {
-    let items = [...arguments];
+    items = [...arguments];
     let obj3;
     const themeContext = closure_0(dependencyMap[4]).useThemeContext();
     const items1 = [];
@@ -191,7 +191,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
       const _Object2 = Object;
       const _Object3 = Object;
       Object.defineProperties(obj2, Object.fromEntries(keys.map((item) => {
-        const items = [
+        items = [
           item,
           {
             configurable: true,
@@ -218,7 +218,7 @@ export const createStyleProperties = function createStyleProperties(getButtonCol
   closure_0 = getButtonColorTokens;
   const map = new Map();
   return () => {
-    const items = [...arguments];
+    items = [...arguments];
     const themeContext = native.useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
@@ -265,7 +265,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
     }
     if (null == customBackgroundGradient) {
       const obj2 = {};
-      const merged = Object.assign(tmp2(4315).FALLBACK_THEME_CONTEXT_VALUE);
+      const merged = Object.assign(tmp2(4317).FALLBACK_THEME_CONTEXT_VALUE);
       obj2.flags = 0;
       obj2.saturation = AccessibilityStore.saturation;
       obj2.theme = theme;
@@ -276,7 +276,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       const json = JSON.stringify(obj2);
       const merged1 = Object.assign(obj2);
       obj3.key = json;
-      const items = [];
+      items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
       items[arraySpreadResult] = obj3.key;
       const applyResult = HermesBuiltin.apply(items, undefined);
@@ -313,19 +313,19 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       }
     } else {
       if ("light" === customBackgroundGradient.theme) {
-        let MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(4315).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
+        let MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(4317).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
       } else {
-        MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(4315).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
+        MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(4317).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
       }
-      tmp2(4315).setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
-      const tmp2Result = tmp2(4315);
+      tmp2(4317).setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
+      const tmp2Result = tmp2(4317);
     }
   };
 };
 export const createAnimatedThemedStyles = function createAnimatedThemedStyles(obj, items) {
   let arr = items;
   if (items === undefined) {
-    arr = closure_10;
+    arr = items;
   }
   let stops;
   let map;
@@ -378,7 +378,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(ob
       obj2.contrast = num4;
       obj3 = {};
       const merged = Object.assign(obj2);
-      class T {
+      class S {
         constructor() {
           obj = {};
           for (const key10005 in closure_4) {
@@ -423,7 +423,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(ob
       tmp3 = obj3;
     }
     obj3 = tmp3;
-    class T {
+    class S {
       constructor() {
         obj = {};
         for (const key10005 in closure_4) {
@@ -451,9 +451,9 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(ob
       }
     }
     const obj4 = arr(obj[8]);
-    T.__closure = { resolvedStyles: tmp3, withTiming: arr(obj[9]).withTiming, interpolateColor: arr(obj[8]).interpolateColor, themeIndex, stops, timingStandard: arr(obj[10]).timingStandard };
-    T.__workletHash = 6815805628278;
-    T.__initData = __initData;
-    return obj4.useAnimatedStyle(T);
+    S.__closure = { resolvedStyles: tmp3, withTiming: arr(obj[9]).withTiming, interpolateColor: arr(obj[8]).interpolateColor, themeIndex, stops, timingStandard: arr(obj[10]).timingStandard };
+    S.__workletHash = 6815805628278;
+    S.__initData = __initData;
+    return obj4.useAnimatedStyle(S);
   };
 };

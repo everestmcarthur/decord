@@ -1,10 +1,10 @@
-// Module ID: 14067
-// Function ID: 14068
+// Module ID: 14047
+// Function ID: 14048
 // Name: getPOVExportTarget
 // Dependencies: [2]
 // Exports: default
 
-// Module 14067 (getPOVExportTarget)
+// Module 14047 (getPOVExportTarget)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/clips/getPOVExportTarget.tsx");

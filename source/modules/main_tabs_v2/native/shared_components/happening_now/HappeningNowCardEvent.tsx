@@ -1,12 +1,12 @@
-// Module ID: 16169
-// Function ID: 16170
+// Module ID: 16158
+// Function ID: 16159
 // Name: HappeningNowCardEvent
-// Dependencies: [19, 17, 2025, 1371, 15375, 1074, 21, 4605, 576, 1178, 8884, 504, 16170, 9735, 9850, 1242, 9859, 1396, 9849, 15376, 5139, 4601, 1880, 1114, 2]
+// Dependencies: [19, 17, 2025, 1371, 15357, 1074, 21, 4607, 576, 1178, 8907, 504, 16159, 9758, 9873, 1242, 9882, 1396, 9872, 15358, 5141, 4603, 1880, 1114, 2]
 
-// Module 16169 (HappeningNowCardEvent)
+// Module 16158 (HappeningNowCardEvent)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9859 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9882 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -14,13 +14,13 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15375);
+const HappeningNowConstants = fn(15357);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({ HappeningNowCardTrackingType: closure_9, HAPPENING_NOW_CARD_HEIGHT: c10, HAPPENING_NOW_EVENT_BANNER_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 }, infoNoImage: { alignSelf: "center", justifyContent: "center", flexShrink: 1, flexGrow: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: HAPPENING_NOW_CONTENT_HEIGHT, gap: 2, marginRight: -4, paddingLeft: 8, paddingRight: 8, borderTopRightRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm }, decorationImage: null, dottedLineContainer: null, shortDottedLineSegment: null, dottedLineSegment: null, interestedUsersContainer: null, interestedUsersIcon: null, ticketContainer: null, avatarContainer: null };
 let size = { borderTopRightRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, alignSelf: "center", width: HAPPENING_NOW_EVENT_BANNER_WIDTH, height: HAPPENING_NOW_CONTENT_HEIGHT };
 obj.decorationImage = size;
@@ -37,7 +37,7 @@ obj.ticketContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUB
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm };
 obj.avatarContainer = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XSMALL_20] };
 let closure_14 = createStyles.createStyles(obj);
-const point = { shape: fn(8884).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(8907).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let closure_16 = noop.memo(() => {
   const tmp = closure_14();

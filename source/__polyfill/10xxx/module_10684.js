@@ -1,18 +1,15 @@
 // Module ID: 10684
 // Function ID: 10685
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10671, 10529, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10544]
 
 // Module 10684
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10671 from "module_10671" /* 10671 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _mod10544 from "module_10544" /* 10544 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ITWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,15 +29,30 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:il\\s*?)?(?:(questa|l'ultima|scorsa|prossima)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10671.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(questa|l'ultima|scorsa|prossima)\\s*settimana)?(?=\\W|$)", "i");
-class ITWeekdayParser {
+let _classCallCheck = _classCallCheck_mod;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class UKMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ITWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ITWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, UKMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(UKMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -53,43 +65,15 @@ class ITWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = UKMergeDateTimeRefiner;
+_inherits(UKMergeDateTimeRefiner, fn(_mod10544).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|\u0432|\u0443|\u043E|,|-)?\\s*$");
     return regExp;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "ultima";
-      if ("ultima" != formatted1) {
-        str3 = "ultima";
-        if ("scorsa" != formatted1) {
-          str3 = "prossima";
-          if ("prossima" != formatted1) {
-            str3 = null;
-            if ("questa" == formatted1) {
-              str3 = "questa";
-            }
-          }
-        }
-      }
-      return ITWeekdayParser(10529).createParsingComponentsAtWeekday(reference.reference, ITWeekdayParser(10671).WEEKDAY_DICTIONARY[formatted], str3);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(ITWeekdayParser, items);
+export default _createClass(UKMergeDateTimeRefiner, items);

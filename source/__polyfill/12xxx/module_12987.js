@@ -1,29 +1,81 @@
 // Module ID: 12987
 // Function ID: 12988
-// Dependencies: [12868]
-// Exports: vercelWaitUntil
+// Dependencies: [12948, 12936, 12971, 12895]
 
 // Module 12987
-import _mod12868 from "module_12868" /* 12868 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12895 */;
+import setupIntegration from "module_12948" /* 12948 */;
 
-require = arg1;
-const dependencyMap = arg6;
+let c2 = "_sentryBundlerPluginAppKey:";
 
-export const vercelWaitUntil = function vercelWaitUntil(arg0) {
-  const obj = _mod12868.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
+export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
+  const behaviour = arg0;
+  return {
+    name: "ThirdPartyErrorsFilter",
+    setup(on) {
+      const options = on;
+      on.on("beforeEnvelope", (arg0) => {
+        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp3;
+            if (Array.isArray(arg0)) {
+              tmp3 = arg0[1];
+            }
+            if (tmp3) {
+              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+              arg0[1] = tmp3;
+              const obj = options(dependencyMap[2]);
+            }
+          }
+        });
+      });
+      on.on("applyFrameMetadata", (type) => {
+        if (!type.type) {
+          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(dependencyMap[2]);
+        }
+      });
+    },
+    processEvent(tags) {
+      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
+      let mapped;
+      if (framesFromEvent) {
+        let found = framesFromEvent.filter((filename) => filename.filename);
+        mapped = found.map((module_metadata) => {
+          if (module_metadata.module_metadata) {
+            const _Object = Object;
+            const keys = Object.keys(module_metadata.module_metadata);
+            const found = keys.filter((item) => item.startsWith(length));
+            let mapped = found.map((arr) => arr.slice(length.length));
+          } else {
+            mapped = [];
+          }
+          return mapped;
+        });
       }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
+      if (mapped) {
+        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
+          let str2 = "some";
+        } else {
+          str2 = "every";
+        }
+        if (mapped[str2]((arr) => !arr.some((item) => {
+          filterKeys = filterKeys.filterKeys;
+          return filterKeys.includes(item);
+        }))) {
+          if ("drop-error-if-contains-third-party-frames" !== tmp2.behaviour) {
+            if ("drop-error-if-exclusively-contains-third-party-frames" !== tmp2.behaviour) {
+              const obj2 = {};
+              const merged = Object.assign(tags.tags);
+              obj2.third_party_code = true;
+              tags.tags = obj2;
+            }
+          }
+          return null;
+        }
       }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
+      return tags;
     }
-  }
-  obj1 = {};
-};
+  };
+});

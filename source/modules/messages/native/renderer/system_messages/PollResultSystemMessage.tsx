@@ -1,13 +1,13 @@
-// Module ID: 8094
-// Function ID: 8095
+// Module ID: 8117
+// Function ID: 8118
 // Name: PollResultSystemMessage
-// Dependencies: [1374, 8012, 8014, 1114, 1396, 4257, 8095, 8016, 2]
+// Dependencies: [1374, 8035, 8037, 1114, 1396, 4259, 8118, 8039, 2]
 // Exports: createPollResultSystemMessage
 
-// Module 8094 (PollResultSystemMessage)
+// Module 8117 (PollResultSystemMessage)
 import EmojiConstants from "EmojiConstants" /* 1374 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8012 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8095 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8035 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8118 */;
 import size from "module_2" /* 2 */;
 
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
@@ -24,7 +24,7 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, title: null, titleOnClick: null };
     const obj4 = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
-    obj2.usernameOnClick = tmp(8014)(obj4);
+    obj2.usernameOnClick = tmp(8037)(obj4);
     obj2.title = tmp3.questionText;
     const obj6 = { action: "bindJumpToMessage", targetChannelId: message.messageReference.channel_id, targetMessageId: message.messageReference.message_id, medium: true };
     obj2.titleOnClick = obj6;
@@ -75,16 +75,16 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
             items.push(obj12);
             const tmpResult3 = tmp(1396);
           } else {
-            const obj = { type: "emoji", content: tmp(4257).convertSurrogateToName(id.name, false), surrogate: id.name };
+            const obj = { type: "emoji", content: tmp(4259).convertSurrogateToName(id.name, false), surrogate: id.name };
             items.push(obj);
-            const tmpResult4 = tmp(4257);
+            const tmpResult4 = tmp(4259);
           }
           items.push({ type: "text", content: " " });
         }
       }
     }
     const obj16 = {};
-    const merged3 = Object.assign(tmp(8016)(message));
+    const merged3 = Object.assign(tmp(8039)(message));
     obj16.content = formatToPartsResult;
     return obj16;
   }

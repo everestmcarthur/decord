@@ -1,12 +1,9 @@
 // Module ID: 8496
 // Function ID: 8497
-// Dependencies: [8497, 668]
+// Dependencies: [1122]
 
 // Module 8496
-import baseAssignValue from "baseAssignValue" /* 668 */;
-import _mod8497 from "module_8497" /* 8497 */;
+import registerAsset from "module_1122" /* 1122 */;
 
 
-export default _mod8497((arg0, arg1, arg2) => {
-  baseAssignValue(arg0, arg2, arg1);
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 33, height: 32, scales: [1, 2, 3], hash: "981aef55993c2a089b56e9b3e929139e", name: "ic_stage_channel_32px", type: "png" });

@@ -1,13 +1,13 @@
-// Module ID: 6515
-// Function ID: 6516
+// Module ID: 6537
+// Function ID: 6538
 // Name: SmokeIllocon
-// Dependencies: [21, 5637, 6516, 2]
+// Dependencies: [21, 5639, 6538, 2]
 // Exports: SmokeIllocon
 
-// Module 6515 (SmokeIllocon)
+// Module 6537 (SmokeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6516 from "module_6516" /* 6516 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6538 from "module_6538" /* 6538 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const SmokeIllocon = function SmokeIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6516 };
+  const obj2 = { uri: _modDef6538 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

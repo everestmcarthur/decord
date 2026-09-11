@@ -1,9 +1,9 @@
-// Module ID: 16690
-// Function ID: 16691
+// Module ID: 16678
+// Function ID: 16679
 // Name: VibegrationsModelLabels
 // Dependencies: [2]
 
-// Module 16690 (VibegrationsModelLabels)
+// Module 16678 (VibegrationsModelLabels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsModelLabels.tsx");

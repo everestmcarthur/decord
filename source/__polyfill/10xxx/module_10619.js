@@ -1,9 +1,10 @@
 // Module ID: 10619
 // Function ID: 10620
-// Dependencies: [41, 42, 93, 95, 98, 10617, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10617, 10523, 10524, 10530]
 
 // Module 10619
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
 import _mod10617 from "module_10617" /* 10617 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -11,7 +12,7 @@ import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ZHHantRelationWeekdayParser = require;
+const NLMonthNameMiddleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,14 +32,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const keys = Object.keys(_mod10617.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?<prefix>\u4E0A|\u4ECA|\u4E0B|\u9019|\u5462)(?:\u500B)?(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + keys.join("|") + ")");
-class ZHHantRelationWeekdayParser {
+const combined = "(?:on\\s*?)?(" + _mod10617.ORDINAL_NUMBER_PATTERN + ")(?:\\s*(?:tot|\\-|\\\u2013|until|through|till|\\s)\\s*(" + _mod10617.ORDINAL_NUMBER_PATTERN + "))?(?:-|/|\\s*(?:of)?\\s*)(";
+const sum = combined + repeatedTimeunitPattern.matchAnyPattern(_mod10617.MONTH_DICTIONARY);
+const regExp = new RegExp(sum + ")(?:(?:-|/|,?\\s*)" + "(" + _mod10617.YEAR_PATTERN + "(?![^\\s]\\d)))?(?=\\W|$)", "i");
+class NLMonthNameMiddleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantRelationWeekdayParser);
+    tmp = c2(this, NLMonthNameMiddleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantRelationWeekdayParser);
+    obj = closure_4(NLMonthNameMiddleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,7 +55,7 @@ class ZHHantRelationWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantRelationWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -64,85 +66,34 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHantRelationWeekdayParser(10617).WEEKDAY_OFFSET[index.groups.weekday];
-      if (undefined === tmp2) {
+    value: function innerExtract(createParsingComponents, index) {
+      const tmp3 = NLMonthNameMiddleEndianParser(10617).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = NLMonthNameMiddleEndianParser(10617).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
         return null;
       } else {
-        const prefix = index.groups.prefix;
-        let str2 = "last";
-        if ("\u4E0A" != prefix) {
-          str2 = "next";
-          if ("\u4E0B" != prefix) {
-            let tmp3 = "\u4ECA" != prefix;
-            if (tmp3) {
-              tmp3 = "\u9019" != prefix;
-            }
-            if (tmp3) {
-              tmp3 = "\u5462" != prefix;
-            }
-            str2 = null;
-            if (!tmp3) {
-              str2 = "this";
-            }
-          }
+        const date = { day: result, month: tmp3 };
+        const parsingComponents = createParsingComponents.createParsingComponents(date);
+        if (index[4]) {
+          parsingComponents.assign("year", tmp(10617).parseYear(index[4]));
+        } else {
+          parsingComponents.imply("year", tmp(10524).findYearClosestToRef(createParsingComponents.refDate, result, tmp3));
         }
-        const _Date = Date;
-        const refDate = createParsingResult.refDate;
-        const date = new Date(refDate.getTime());
-        const day = date.getDay();
-        if ("last" != str2) {
-          if ("past" != str2) {
-            if ("next" == str2) {
-              date.setDate(date.getDate() + (tmp2 + 7 - day));
-              let flag = true;
-            } else if ("this" == str2) {
-              date.setDate(date.getDate() + (tmp2 - day));
-              flag = false;
-            } else {
-              const diff = tmp2 - day;
-              const _Math3 = Math;
-              const _Math4 = Math;
-              const absolute = Math.abs(diff - 7);
-              let diff1 = diff;
-              if (absolute < Math.abs(diff)) {
-                diff1 = diff - 7;
-              }
-              const _Math = Math;
-              const _Math2 = Math;
-              const absolute1 = Math.abs(diff1 + 7);
-              let sum = diff1;
-              if (absolute1 < Math.abs(diff1)) {
-                sum = diff1 + 7;
-              }
-              date.setDate(date.getDate() + sum);
-              flag = false;
-            }
-          }
-          const start = parsingResult.start;
-          start.assign("weekday", tmp2);
-          const start2 = parsingResult.start;
-          if (flag) {
-            start2.assign("day", date.getDate());
-            const start5 = parsingResult.start;
-            start5.assign("month", date.getMonth() + 1);
-            const start6 = parsingResult.start;
-            start6.assign("year", date.getFullYear());
-          } else {
-            start2.imply("day", date.getDate());
-            const start3 = parsingResult.start;
-            start3.imply("month", date.getMonth() + 1);
-            const start4 = parsingResult.start;
-            start4.imply("year", date.getFullYear());
-          }
+        if (index[2]) {
+          const result1 = tmp(10617).parseOrdinalNumberPattern(index[2]);
+          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
+          parsingResult.start = parsingComponents;
+          parsingResult.end = parsingComponents.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
           return parsingResult;
+        } else {
+          return parsingComponents;
         }
-        date.setDate(date.getDate() + (tmp2 - 7 - day));
-        flag = true;
       }
     }
   }
 ];
 
-export default _createClass(ZHHantRelationWeekdayParser, items);
+export default _createClass(NLMonthNameMiddleEndianParser, items);

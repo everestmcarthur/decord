@@ -1,12 +1,12 @@
-// Module ID: 13141
-// Function ID: 13142
+// Module ID: 13166
+// Function ID: 13167
 // Name: useIsGameFriends
-// Dependencies: [32, 7709, 1074, 504, 5482, 2]
+// Dependencies: [32, 7731, 1074, 504, 5484, 2]
 // Exports: useIsGameFriends
 
-// Module 13141 (useIsGameFriends)
+// Module 13166 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7709 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7731 */;
 
 const require = globalThis.__r;
 

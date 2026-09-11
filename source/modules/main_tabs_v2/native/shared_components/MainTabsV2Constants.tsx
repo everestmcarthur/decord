@@ -1,9 +1,9 @@
-// Module ID: 7915
-// Function ID: 7916
+// Module ID: 7938
+// Function ID: 7939
 // Name: MainTabsV2Constants
 // Dependencies: [17, 2]
 
-// Module 7915 (MainTabsV2Constants)
+// Module 7938 (MainTabsV2Constants)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -12,4 +12,4 @@ const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_c
 
 export const MIN_HEADER_HEIGHT = 56;
 export const HEADER_CORNER_RADIUS = 8;
-export const MIDNIGHT_BORDER_WIDTH = result;
+export const ONYX_BORDER_WIDTH = result;

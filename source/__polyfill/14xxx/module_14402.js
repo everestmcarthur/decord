@@ -1,26 +1,9 @@
 // Module ID: 14402
 // Function ID: 14403
-// Dependencies: [14400, 14374]
+// Dependencies: []
 
 // Module 14402
-import _mod14374 from "module_14374" /* 14374 */;
-import _mod14400 from "module_14400" /* 14400 */;
 
-
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14374[arg0];
-    let tmp8;
-    if (_mod14400(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod14374[arg0];
-    if (tmp3) {
-      tmp3 = tmp(14374)[arg0][arg1];
-    }
-    tmp = require;
-  }
-  return tmp3;
-};
+export default Math.trunc || (function trunc(arg0) {
+  return 0 < +arg0 ? floor : ceil(+arg0);
+});

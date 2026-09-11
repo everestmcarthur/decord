@@ -1,17 +1,17 @@
-// Module ID: 17198
-// Function ID: 17199
+// Module ID: 17188
+// Function ID: 17189
 // Name: VoicePanelHeaderUserState
-// Dependencies: [19, 4621, 21, 4341, 8971, 4605, 576, 17199, 17197, 9188, 5639, 12342, 504, 4606, 2]
+// Dependencies: [19, 4623, 21, 4343, 8994, 4607, 576, 17189, 17187, 9211, 5641, 12367, 504, 4608, 2]
 
-// Module 17198 (VoicePanelHeaderUserState)
+// Module 17188 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4606 */;
-import NativeViewDefault from "NativeView" /* 5639 */;
-import useStableParticipant from "useStableParticipant" /* 17197 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17199 */;
+import timing from "timing" /* 4608 */;
+import NativeViewDefault from "NativeView" /* 5641 */;
+import useStableParticipant from "useStableParticipant" /* 17187 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17189 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 
 const useVoicePanelCardUserStateIconsDefault = useVoicePanelCardUserStateIcons;
 
@@ -38,10 +38,10 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       let obj2 = { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null };
       let obj3 = { style: tmp.floatingIcon, state: null };
       obj3.state = tmp9.videoIconState;
-      obj2.children = jsx(tmp11(9188).VideoIcon, { style: tmp.floatingIcon, state: null });
-      let arr = items.push(jsx(tmp11(8971).BackgroundBlurView, { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null }, "video"));
+      obj2.children = jsx(tmp11(9211).VideoIcon, { style: tmp.floatingIcon, state: null });
+      let arr = items.push(jsx(tmp11(8994).BackgroundBlurView, { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null }, "video"));
     }
-    if (tmp9.type === tmp11(17199).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
+    if (tmp9.type === tmp11(17189).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
       let tmp35 = jsx;
       let tmp36 = jsx;
       let items1 = [tmp.floatingIconWrapper, ];
@@ -54,8 +54,8 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       obj4.style = items1;
       let obj5 = { style: tmp.floatingIcon, state: null };
       obj5.state = tmp9.muteDeafenIconState;
-      obj4.children = tmp36(tmp11(9188).MuteDeafenIcon, obj5);
-      let arr2 = items.push(tmp35(tmp11(8971).BackgroundBlurView, obj4, "mute-deafen"));
+      obj4.children = tmp36(tmp11(9211).MuteDeafenIcon, obj5);
+      let arr2 = items.push(tmp35(tmp11(8994).BackgroundBlurView, obj4, "mute-deafen"));
     }
     continue;
   }
@@ -69,9 +69,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8971).BackgroundBlurView);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8994).BackgroundBlurView);
 const OPACITY_TIMING = { duration: 100 };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;
@@ -89,7 +89,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/header/Voi
 export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
-  const context = noop.useContext(channelId(12342));
+  const context = noop.useContext(channelId(12367));
   channelId = context.channelId;
   const guildId = context.guildId;
   const tmp2 = closure_8();
@@ -102,8 +102,8 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(17197)(stateFromStores, channelId, guildId), guildId);
-  isHeaderHidden(4341);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(17187)(stateFromStores, channelId, guildId), guildId);
+  isHeaderHidden(4343);
   const fn = function h() {
     let num = 0;
     if (isHeaderHidden.get()) {
@@ -112,7 +112,7 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     return { opacity: timing.withTiming(num, closure_7) };
   };
   let obj = isHeaderHidden(504);
-  fn.__closure = { withTiming: isHeaderHidden(4606).withTiming, isHeaderHidden, OPACITY_TIMING };
+  fn.__closure = { withTiming: isHeaderHidden(4608).withTiming, isHeaderHidden, OPACITY_TIMING };
   fn.__workletHash = 7032221979181;
   fn.__initData = __initData;
   let tmp7 = null;

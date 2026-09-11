@@ -1,10 +1,10 @@
-// Module ID: 11604
-// Function ID: 11605
+// Module ID: 11628
+// Function ID: 11629
 // Name: StartupProfiler
 // Dependencies: [19, 21, 10, 2]
 // Exports: default
 
-// Module 11604 (StartupProfiler)
+// Module 11628 (StartupProfiler)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import noop from "module_19" /* 19 */;
 

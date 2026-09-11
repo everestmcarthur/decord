@@ -1,10 +1,10 @@
-// Module ID: 13310
-// Function ID: 13311
+// Module ID: 13335
+// Function ID: 13336
 // Name: useJoinFromSupportedPlatformsIconKeys
 // Dependencies: [19, 1074, 2]
 // Exports: useJoinFromSupportedPlatformsIconKeys
 
-// Module 13310 (useJoinFromSupportedPlatformsIconKeys)
+// Module 13335 (useJoinFromSupportedPlatformsIconKeys)
 import noop from "module_19" /* 19 */;
 
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {

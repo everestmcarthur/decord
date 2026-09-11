@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 20, height: 20, scales: [2, 3], hash: "6d92319c85fd42e305e389df8a64c64a", name: "badge", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 80, height: 80, scales: [1], hash: "e64e51684091ac2de27992b084fed7fd", name: "img_wumpus_nitro_tier_0", type: "png" });

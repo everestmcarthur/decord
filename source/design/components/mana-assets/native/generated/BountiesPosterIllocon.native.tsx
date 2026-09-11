@@ -1,13 +1,13 @@
-// Module ID: 5855
-// Function ID: 5856
+// Module ID: 5877
+// Function ID: 5878
 // Name: BountiesPosterIllocon
-// Dependencies: [21, 5637, 5856, 2]
+// Dependencies: [21, 5639, 5878, 2]
 // Exports: BountiesPosterIllocon
 
-// Module 5855 (BountiesPosterIllocon)
+// Module 5877 (BountiesPosterIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5856 from "module_5856" /* 5856 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5878 from "module_5878" /* 5878 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BountiesPosterIllocon = function BountiesPosterIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5856 };
+  const obj2 = { uri: _modDef5878 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

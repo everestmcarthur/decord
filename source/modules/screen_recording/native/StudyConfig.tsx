@@ -1,10 +1,10 @@
-// Module ID: 16017
-// Function ID: 16018
+// Module ID: 16006
+// Function ID: 16007
 // Name: StudyConfig
 // Dependencies: [2]
 // Exports: getAvailableSurveys, getSurveyConfig, getSurveyConfigSafe
 
-// Module 16017 (StudyConfig)
+// Module 16006 (StudyConfig)
 import size from "module_2" /* 2 */;
 
 const SURVEY_CONFIGS = {};

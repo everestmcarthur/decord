@@ -1,15 +1,15 @@
-// Module ID: 6357
-// Function ID: 6358
+// Module ID: 6379
+// Function ID: 6380
 // Name: NitroWordmarkLogo
-// Dependencies: [17, 21, 576, 4306, 6358, 2]
+// Dependencies: [17, 21, 576, 4308, 6380, 2]
 // Exports: NitroWordmarkLogo
 
-// Module 6357 (NitroWordmarkLogo)
+// Module 6379 (NitroWordmarkLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4306 */;
-import _modDef6358 from "module_6358" /* 6358 */;
+import useToken from "useToken" /* 4308 */;
+import _modDef6380 from "module_6380" /* 6380 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -46,7 +46,7 @@ export const NitroWordmarkLogo = function NitroWordmarkLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6358 };
+  obj4.source = { uri: _modDef6380 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

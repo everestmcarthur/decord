@@ -1,13 +1,13 @@
-// Module ID: 16689
-// Function ID: 16690
+// Module ID: 16677
+// Function ID: 16678
 // Name: VibegrationsEffortPresets
-// Dependencies: [1114, 3590, 16690, 2]
+// Dependencies: [1114, 3590, 16678, 2]
 // Exports: describeVibegrationsModelSettings, matchVibegrationsEffortPreset, vibegrationsPresetTier, vibegrationsSettingsForTier
 
-// Module 16689 (VibegrationsEffortPresets)
+// Module 16677 (VibegrationsEffortPresets)
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16690 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16678 */;
 import size from "module_2" /* 2 */;
 
 const items = [

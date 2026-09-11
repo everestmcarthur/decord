@@ -1,13 +1,13 @@
-// Module ID: 14142
-// Function ID: 14143
+// Module ID: 14120
+// Function ID: 14121
 // Name: KeyboardLayoutMapUtils
-// Dependencies: [32, 5, 1347, 7556, 3, 1115, 14141, 510, 2]
+// Dependencies: [32, 5, 1347, 7578, 3, 1115, 14119, 510, 2]
 // Exports: __DEV_overrideLayoutMapKey, getKeyboardEventShapeFromAny, getKeyboardEventShapeFromKey, getKeyboardEventShapeFromKeycode, getLayoutMap, initializeKeyboardMapper, resetKeyboardMapper
 
-// Module 14142 (KeyboardLayoutMapUtils)
+// Module 14120 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 14141 */;
+import keyCodeDefault from "keyCode" /* 14119 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
@@ -478,7 +478,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(7556);
+const KeyboardConstants = fn(7578);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1115);

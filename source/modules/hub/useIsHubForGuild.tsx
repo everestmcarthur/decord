@@ -1,10 +1,10 @@
-// Module ID: 12443
-// Function ID: 12444
+// Module ID: 12468
+// Function ID: 12469
 // Name: useIsHubForGuild
 // Dependencies: [1979, 1074, 504, 2]
 // Exports: default
 
-// Module 12443 (useIsHubForGuild)
+// Module 12468 (useIsHubForGuild)
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = globalThis.__r;

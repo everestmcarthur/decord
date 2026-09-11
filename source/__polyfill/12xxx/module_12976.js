@@ -1,36 +1,48 @@
 // Module ID: 12976
 // Function ID: 12977
 // Dependencies: []
-// Exports: flatten
+// Exports: parseCookie
 
 // Module 12976
 
-export const flatten = function flatten(arr) {
-  const items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(() => { ... });
-                } else {
-                  closure_1_0.push(arr);
-                }
-              });
-            } else {
-              closure_1_0.push(arr);
-            }
-          });
-        } else {
-          closure_1_0.push(arr);
+export const parseCookie = function parseCookie(arr) {
+  const obj = {};
+  let num = 0;
+  if (0 < arr.length) {
+    let index = arr.indexOf("=", num);
+    while (-1 !== index) {
+      let length = arr.indexOf(";", num);
+      if (-1 === length) {
+        length = arr.length;
+      } else if (length < index) {
+        let sum = arr.lastIndexOf(";", index - 1) + 1;
+        num = sum;
+        if (sum >= arr.length) {
+          break;
         }
-      });
-    } else {
-      closure_1_0.push(arr);
+      }
+      let str = arr.slice(num, index);
+      let trimmed = str.trim();
+      if (undefined === obj[trimmed]) {
+        let str2 = arr.slice(index + 1, length);
+        let trimmed1 = str2.trim();
+        index = trimmed1;
+        if (34 === trimmed1.charCodeAt(0)) {
+          index = trimmed1.slice(1, -1);
+        }
+        try {
+          let decodeURIComponentResult = index;
+          if (-1 !== index.indexOf("%")) {
+            let _decodeURIComponent = decodeURIComponent;
+            decodeURIComponentResult = decodeURIComponent(index);
+          }
+          obj[trimmed] = decodeURIComponentResult;
+        } catch (err) {
+          obj[trimmed] = index;
+        }
+      }
+      let sum1 = length + 1;
     }
-  });
-  return items;
+  }
+  return obj;
 };

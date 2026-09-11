@@ -1,10 +1,10 @@
-// Module ID: 15385
-// Function ID: 15386
+// Module ID: 15367
+// Function ID: 15368
 // Name: useSyncedModeThemeName
 // Dependencies: [1183, 1230, 504, 1229, 1114, 2626, 2]
 // Exports: useSyncedModeThemeName
 
-// Module 15385 (useSyncedModeThemeName)
+// Module 15367 (useSyncedModeThemeName)
 import util from "util" /* 1114 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
 import _modDef2626 from "module_2626" /* 2626 */;

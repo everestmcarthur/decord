@@ -1,109 +1,203 @@
 // Module ID: 12903
 // Function ID: 12904
-// Dependencies: [12873, 12904, 12894, 12872, 12880, 12882, 12899]
-// Exports: freezeDscOnSpan, getDynamicSamplingContextFromClient, getDynamicSamplingContextFromScope, spanToBaggageHeader
+// Dependencies: [12893, 12901, 12898]
+// Exports: addContextToFrame, addExceptionMechanism, addExceptionTypeValue, arrayify, checkOrSetAlreadyCaught, getEventDescription, parseSemver, uuid4
 
 // Module 12903
-import _mod12873 from "module_12873" /* 12873 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12880 */;
-import _mod12894 from "module_12894" /* 12894 */;
+import _mod12893 from "module_12893" /* 12893 */;
+import _mod12898 from "module_12898" /* 12898 */;
+import _mod12901 from "module_12901" /* 12901 */;
 
-const _mod12904 = tmp3(12904);
 require = arg1;
 const dependencyMap = arg6;
-function getDynamicSamplingContextFromSpan(spanContext) {
-  const client = _mod12894.getClient();
-  if (client) {
-    const rootSpan = tmp(12872).getRootSpan(spanContext);
-    if (rootSpan[_frozenDsc]) {
-      return tmp5;
-    } else {
-      const traceState = rootSpan.spanContext().traceState;
-      value = traceState;
-      if (traceState) {
-        value = traceState.get("sentry.dsc");
-      }
-      let result = value;
-      if (value) {
-        result = tmp(12880).baggageHeaderToDynamicSamplingContext(value);
-        const tmpResult6 = tmp(12880);
-      }
-      if (result) {
-        return result;
-      } else {
-        const options = client.getOptions();
-        const tmp9 = client.getDsn() || {};
-        let DEFAULT_ENVIRONMENT = options.environment;
-        if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = tmp(12904).DEFAULT_ENVIRONMENT;
-        }
-        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp9.publicKey, trace_id: spanContext.spanContext().traceId };
-        const dropUndefinedKeysResult = tmp(12873).dropUndefinedKeys(obj2);
-        client.emit("createDsc", dropUndefinedKeysResult);
-        const tmpResult7 = tmp(12873);
-        const spanToJSONResult = tmp(12872).spanToJSON(rootSpan);
-        const tmp13 = spanToJSONResult.data || {};
-        const tmp14 = tmp13[tmp(undefined, 12882).SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
-        if (null != tmp14) {
-          const _HermesInternal = HermesInternal;
-          dropUndefinedKeysResult.sample_rate = "" + tmp14;
-        }
-        const description = spanToJSONResult.description;
-        const tmpResult8 = tmp(12872);
-        if (tmp17) {
-          dropUndefinedKeysResult.transaction = description;
-        }
-        tmp17 = "url" !== tmp13[tmp(undefined, 12882).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
-        if (tmpResult9.hasTracingEnabled()) {
-          const _String = String;
-          dropUndefinedKeysResult.sampled = String(tmp(12872).spanIsSampled(rootSpan));
-          const tmpResult10 = tmp(12872);
-        }
-        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
-        return dropUndefinedKeysResult;
-      }
-    }
-    const tmpResult = tmp(12872);
-  } else {
-    return {};
-  }
-}
-const _frozenDsc = "_frozenDsc";
+const re2 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
-export const freezeDscOnSpan = function freezeDscOnSpan(arg0, arg1) {
-  const result = _mod12873.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
-};
-export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
-  const options = getOptions.getOptions();
-  const tmp2 = getOptions.getDsn() || {};
-  let DEFAULT_ENVIRONMENT = options.environment;
-  if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = _mod12904.DEFAULT_ENVIRONMENT;
+export const addContextToFrame = function addContextToFrame(arr, lineno) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 5;
   }
-  const dropUndefinedKeysResult = _mod12873.dropUndefinedKeys({ environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp2.publicKey, trace_id });
-  getOptions.emit("createDsc", dropUndefinedKeysResult);
-  return dropUndefinedKeysResult;
-};
-export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  let dsc = propagationContext.dsc;
-  if (!dsc) {
-    const options = getOptions.getOptions();
-    const tmp4 = getOptions.getDsn() || {};
-    const tmp5 = require;
-    let DEFAULT_ENVIRONMENT = options.environment;
-    if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = tmp5(12904).DEFAULT_ENVIRONMENT;
+  if (undefined !== lineno.lineno) {
+    const _Math2 = Math;
+    const _Math3 = Math;
+    const bound = Math.max(Math.min(length - 1, lineno.lineno - 1), 0);
+    const _Math4 = Math;
+    const substr = arr.slice(Math.max(0, bound - num), bound);
+    lineno.pre_context = substr.map((item) => _mod12901.snipLine(item, 0));
+    const _Math5 = Math;
+    const bound1 = Math.min(length - 1, bound);
+    let num2 = lineno.colno;
+    if (!num2) {
+      num2 = 0;
     }
-    const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp4.publicKey, trace_id: propagationContext.traceId };
-    const dropUndefinedKeysResult = _mod12873.dropUndefinedKeys(obj2);
-    getOptions.emit("createDsc", dropUndefinedKeysResult);
-    dsc = dropUndefinedKeysResult;
+    lineno.context_line = _mod12901.snipLine(arr[bound1], num2);
+    const _Math = Math;
+    const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
+    lineno.post_context = substr1.map((item) => _mod12901.snipLine(item, 0));
   }
-  return dsc;
 };
-export { getDynamicSamplingContextFromSpan };
-export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
-  const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
+export const addExceptionMechanism = function addExceptionMechanism(exception, data) {
+  let first;
+  if (exception.exception) {
+    if (exception.exception.values) {
+      first = exception.exception.values[0];
+    }
+  }
+  if (first) {
+    const mechanism = first.mechanism;
+    const obj = { type: "generic", handled: true };
+    const merged = Object.assign(mechanism);
+    const merged1 = Object.assign(data);
+    first.mechanism = obj;
+    if (data) {
+      if ("data" in data) {
+        data = mechanism;
+        if (mechanism) {
+          data = mechanism.data;
+        }
+        const obj2 = {};
+        const merged2 = Object.assign(data);
+        const merged3 = Object.assign(data.data);
+        first.mechanism.data = obj2;
+      }
+    }
+  }
+};
+export const addExceptionTypeValue = function addExceptionTypeValue(exception, arg1, arg2) {
+  const tmp = exception.exception || {};
+  exception.exception = tmp;
+  const tmp2 = tmp.values || [];
+  tmp.values = tmp2;
+  const iter = tmp2[0] || {};
+  tmp2[0] = iter;
+  if (!iter.value) {
+    let str = arg1;
+    if (!arg1) {
+      str = "";
+    }
+    iter.value = str;
+  }
+  if (!iter.type) {
+    let str2 = arg2;
+    if (!arg2) {
+      str2 = "Error";
+    }
+    iter.type = str2;
+  }
+};
+export const arrayify = function arrayify(arg0) {
+  let tmp = arg0;
+  if (!Array.isArray(arg0)) {
+    const items = [arg0];
+    tmp = items;
+  }
+  return tmp;
+};
+export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_captured__) {
+  if ((function isAlreadyCaptured(__sentry_captured__) {
+    try {
+      return __sentry_captured__.__sentry_captured__;
+    } catch (err) {
+    }
+  })(__sentry_captured__)) {
+    return true;
+  } else {
+    try {
+      const result = _mod12898.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      return false;
+    } catch (err) {
+    }
+  }
+};
+export const getEventDescription = function getEventDescription(exception) {
+  ({ message, event_id } = exception);
+  if (message) {
+    return message;
+  } else {
+    let str;
+    if (exception.exception) {
+      if (exception.exception.values) {
+        str = exception.exception.values[0];
+      }
+    }
+    if (str) {
+      if (!str.type) {
+        let combined = str.type || str.value || event_id || "<unknown>";
+      }
+      const _HermesInternal = HermesInternal;
+      ({ type, value } = str);
+      str = "";
+      combined = "" + type + ": " + value;
+    } else {
+      let str2 = event_id;
+      if (!event_id) {
+        str2 = "<unknown>";
+      }
+      return str2;
+    }
+  }
+};
+export const parseSemver = function parseSemver(str) {
+  const tmp = str.match(re2) || [];
+  str = tmp[1];
+  if (!str) {
+    str = "";
+  }
+  const parsed = parseInt(str, 10);
+  let str2 = tmp[2];
+  if (!str2) {
+    str2 = "";
+  }
+  const parsed1 = parseInt(str2, 10);
+  let str3 = tmp[3];
+  if (!str3) {
+    str3 = "";
+  }
+  const parsed2 = parseInt(str3, 10);
+  const obj = { buildmetadata: tmp[5], major: null, minor: null, patch: null, prerelease: null };
+  let tmp5;
+  if (!isNaN(parsed)) {
+    tmp5 = parsed;
+  }
+  obj.major = tmp5;
+  let tmp6;
+  if (!isNaN(parsed1)) {
+    tmp6 = parsed1;
+  }
+  obj.minor = tmp6;
+  let tmp7;
+  if (!isNaN(parsed2)) {
+    tmp7 = parsed2;
+  }
+  obj.patch = tmp7;
+  obj.prerelease = tmp[4];
+  return obj;
+};
+export const uuid4 = function uuid4() {
+  const GLOBAL_OBJ = _mod12893.GLOBAL_OBJ;
+  const obj = GLOBAL_OBJ.crypto || GLOBAL_OBJ.msCrypto;
+  function getRandomByte() {
+    return 16 * Math.random();
+  }
+  try {
+    if (obj) {
+      if (obj.randomUUID) {
+        return obj.randomUUID().replace(/-/g, "");
+      }
+    }
+    let getRandomValues = obj;
+    if (obj) {
+      getRandomValues = obj.getRandomValues;
+    }
+    if (getRandomValues) {
+      getRandomByte = function getRandomByte() {
+        const uint8Array = new Uint8Array(1);
+        const randomValues = obj.getRandomValues(uint8Array);
+        return uint8Array[0];
+      };
+    }
+    const replace = "10000000100040008000100000000000".replace;
+    return "10000000100040008000100000000000".replace(/[018]/g, (arg0) => arg0 ^ (15 & getRandomByte()) >> arg0 / 4.toString(16));
+  } catch (err) {
+  }
 };

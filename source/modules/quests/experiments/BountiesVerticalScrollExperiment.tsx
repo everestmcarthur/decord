@@ -1,10 +1,10 @@
-// Module ID: 11593
-// Function ID: 11594
+// Module ID: 11617
+// Function ID: 11618
 // Name: BountiesVerticalScrollExperiment
 // Dependencies: [1433, 2]
 // Exports: shouldUseScrollIndicatorOverlay, useIsBountiesVerticalScrollExperimentActive, useIsBountiesVerticalScrollExperimentEnabled, useIsScrollIndicatorOverlayVariant
 
-// Module 11593 (BountiesVerticalScrollExperiment)
+// Module 11617 (BountiesVerticalScrollExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

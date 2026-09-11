@@ -1,21 +1,21 @@
-// Module ID: 16654
-// Function ID: 16655
+// Module ID: 16642
+// Function ID: 16643
 // Name: GuildHomeResources
-// Dependencies: [19, 17, 1957, 2012, 4826, 4243, 1074, 21, 4605, 576, 504, 7949, 12079, 16655, 7508, 12354, 1396, 5173, 4601, 4595, 16648, 1100, 1114, 16656, 5025, 2]
+// Dependencies: [19, 17, 1957, 2012, 4828, 4245, 1074, 21, 4607, 576, 504, 7972, 12104, 16643, 7530, 12379, 1396, 5175, 4603, 4597, 16636, 1100, 1114, 16644, 5027, 2]
 // Exports: default
 
-// Module 16654 (GuildHomeResources)
+// Module 16642 (GuildHomeResources)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7508 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12354 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16648 */;
-import _modDef16656 from "module_16656" /* 16656 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7530 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12379 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16636 */;
+import _modDef16644 from "module_16644" /* 16644 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import MessageStore from "MessageStore" /* 4826 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import MessageStore from "MessageStore" /* 4828 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
 function ResourceChannelRow(channelId) {
@@ -33,10 +33,10 @@ function ResourceChannelRow(channelId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => MessageStore.getMessages(channelId));
   const firstResult = stateFromStores2.first();
   const obj3 = channelId(504);
-  const forumPostMediaProperties = channelId(7949).useForumPostMediaProperties(firstResult, false);
-  const obj5 = channelId(7949);
+  const forumPostMediaProperties = channelId(7972).useForumPostMediaProperties(firstResult, false);
+  const obj5 = channelId(7972);
   let length;
-  const firstMediaIsEmbed = channelId(7949).useFirstMediaIsEmbed(firstResult, false);
+  const firstMediaIsEmbed = channelId(7972).useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
     length = forumPostMediaProperties.length;
   }
@@ -44,9 +44,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  const obj6 = channelId(7949);
-  let flag = channelId(12079).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16655)(firstResult);
+  const obj6 = channelId(7972);
+  let flag = channelId(12104).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(16643)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -64,7 +64,7 @@ function ResourceChannelRow(channelId) {
       const obj7 = { onPress: tmp14, style: tmp.channelContainer, children: null };
       const obj8 = { style: tmp.textContent, children: null };
       const obj9 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: channelId.title };
-      const items4 = [closure_12(tmp2(4601).Text, obj9), , ];
+      const items4 = [closure_12(tmp2(4603).Text, obj9), , ];
       let tmp19Result = tmp16;
       if (null == description || 0 === description.length) {
         tmp19Result = null != tmp11;
@@ -72,20 +72,20 @@ function ResourceChannelRow(channelId) {
       if (tmp19Result) {
         const obj10 = { variant: "text-sm/normal", color: "text-default", style: tmp.messageContent, lineClamp: 3, ellipsizeMode: "tail", children: null };
         ({ guild_id: obj15.guildId, id: obj15.channelId } = stateFromStores);
-        obj10.children = tmp10(4595).parse(tmp11, true, { guildId: null, channelId: null });
-        tmp19Result = tmp19(tmp2(4601).Text, obj10);
+        obj10.children = tmp10(4597).parse(tmp11, true, { guildId: null, channelId: null });
+        tmp19Result = tmp19(tmp2(4603).Text, obj10);
         const obj11 = { guildId: null, channelId: null };
-        const tmp10Result3 = tmp10(4595);
+        const tmp10Result3 = tmp10(4597);
       }
       items4[1] = tmp19Result;
       let tmp19Result4 = !tmp16;
       if (!(null == description || 0 === description.length)) {
         const obj12 = { variant: "text-sm/normal", color: "text-default", style: tmp.messageContent, lineClamp: 3, ellipsizeMode: "tail", children: null };
         ({ guild_id: obj18.guildId, id: obj18.channelId } = stateFromStores);
-        obj12.children = tmp10(4595).parse(description, true, { guildId: null, channelId: null });
-        tmp19Result4 = tmp19(tmp2(4601).Text, obj12);
+        obj12.children = tmp10(4597).parse(description, true, { guildId: null, channelId: null });
+        tmp19Result4 = tmp19(tmp2(4603).Text, obj12);
         const obj13 = { guildId: null, channelId: null };
-        const tmp10Result4 = tmp10(4595);
+        const tmp10Result4 = tmp10(4597);
       }
       items4[2] = tmp19Result4;
       obj8.children = items4;
@@ -118,22 +118,22 @@ function ResourceChannelRow(channelId) {
               if (flag == null) {
                 flag = false;
               }
-              obj17.embedLeftBorderColor = tmp2(7949).getEmbedColor(firstResult, flag);
+              obj17.embedLeftBorderColor = tmp2(7972).getEmbedColor(firstResult, flag);
               let id;
               if (firstResult != null) {
                 id = firstResult.id;
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = tmp19(tmp2(12079).ForumPostMediaThumbnail, obj17);
-              const tmp2Result2 = tmp2(7949);
+              tmp19Result6 = tmp19(tmp2(12104).ForumPostMediaThumbnail, obj17);
+              const tmp2Result2 = tmp2(7972);
             }
           }
         }
       }
       items5[2] = tmp19Result6;
       obj7.children = items5;
-      return closure_13(tmp2(5173).PressableOpacity, obj7);
+      return closure_13(tmp2(5175).PressableOpacity, obj7);
     }
   }
   return null;
@@ -144,7 +144,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { paddingHorizontal: 12, display: "flex", flexDirection: "column", alignItems: "center" }, emptyStateContainer: { padding: 20, display: "flex", flexDirection: "column", alignItems: "center" }, channelContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "flex-start" }, messageContent: { marginTop: 8 }, textContent: { flex: 1 }, thumbnail: { marginLeft: 8 }, emptyStateImage: { marginTop: 12, marginBottom: 20 }, icon: { width: 72, height: 72 } };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -159,8 +159,8 @@ export default function GuildHomeResources(guildId) {
     const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     const intl = guildId(1114).intl;
     obj3.children = intl.string(guildId(1114).t.owvC9U);
-    const items = [closure_12(guildId(4601).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16656 };
+    const items = [closure_12(guildId(4603).Text, obj3), , ];
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16644 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {
@@ -173,7 +173,7 @@ export default function GuildHomeResources(guildId) {
     };
     const intl2 = guildId(1114).intl;
     obj5.text = intl2.string(guildId(1114).t["3iCBUn"]);
-    items[2] = closure_12(guildId(5025).Button, obj5);
+    items[2] = closure_12(guildId(5027).Button, obj5);
     obj2.children = items;
     let tmp6 = closure_13(closure_4, obj2);
   } else {

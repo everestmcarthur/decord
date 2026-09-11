@@ -1,13 +1,13 @@
-// Module ID: 11922
-// Function ID: 11923
+// Module ID: 11947
+// Function ID: 11948
 // Name: BanConfirm
-// Dependencies: [32, 19, 17, 1979, 1371, 21, 1114, 1090, 4605, 576, 7033, 11218, 504, 5570, 11923, 4601, 4449, 5735, 5738, 7137, 5025, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 21, 1114, 1090, 4607, 576, 7055, 11243, 504, 5572, 11948, 4603, 4451, 5737, 5740, 7159, 5027, 2]
 
-// Module 11922 (BanConfirm)
+// Module 11947 (BanConfirm)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -118,7 +118,7 @@ items[6] = {
     return intl.string(util.t.FA7IUk);
   }
 };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj8 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj7 = {
   value: 7 * DurationsDefault.Seconds.DAY,

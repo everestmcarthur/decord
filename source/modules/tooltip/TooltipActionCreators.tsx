@@ -1,9 +1,9 @@
-// Module ID: 9764
-// Function ID: 9765
+// Module ID: 9787
+// Function ID: 9788
 // Name: TooltipActionCreators
 // Dependencies: [573, 2]
 
-// Module 9764 (TooltipActionCreators)
+// Module 9787 (TooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// Module ID: 13113
-// Function ID: 13114
+// Module ID: 13138
+// Function ID: 13139
 // Name: UserProfileVoiceSettings
-// Dependencies: [19, 17, 5062, 1908, 4243, 1074, 1085, 21, 4605, 8253, 504, 4752, 9239, 10056, 9158, 7259, 1114, 9196, 10075, 13114, 12598, 13116, 10180, 6660, 4601, 12690, 9281, 8663, 4572, 9223, 9219, 2]
+// Dependencies: [19, 17, 5064, 1908, 4245, 1074, 1085, 21, 4607, 8276, 504, 4754, 9262, 10078, 9181, 7281, 1114, 9219, 10097, 13139, 12623, 13141, 10201, 6682, 4603, 12715, 9304, 8686, 4574, 9246, 9242, 2]
 // Exports: default
 
-// Module 13113 (UserProfileVoiceSettings)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9158 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9223 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12690 */;
+// Module 13138 (UserProfileVoiceSettings)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9181 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9246 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12715 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5062 */;
+import SoundboardStore from "SoundboardStore" /* 5064 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
 function UserVoiceSettings(user) {
@@ -172,8 +172,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_11();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8253).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8253);
+  const trackUserProfileAction = channel(8276).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8276);
   const items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -206,9 +206,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9196).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9219).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10075).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10097).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -216,11 +216,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_9(tmp2(7259).UserProfileFormRow, obj5, "mute");
-    tmp9Result = tmp9(tmp2(7259).UserProfileCardRows, obj6);
+    obj6.children = closure_9(tmp2(7281).UserProfileFormRow, obj5, "mute");
+    tmp9Result = tmp9(tmp2(7281).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_9(trackUserProfileAction(7259), obj4);
-    const tmp6Result = trackUserProfileAction(7259);
+    closure_9(trackUserProfileAction(7281), obj4);
+    const tmp6Result = trackUserProfileAction(7281);
   }
   return tmp8;
 }
@@ -229,7 +229,7 @@ const VideoToggleState = fn(1074).VideoToggleState;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_11 = createStyles.createStyles({ card: { paddingBottom: 0 }, cardTitle: { marginBottom: 0 }, volumeSlider: { paddingVertical: 20 }, disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileVoiceSettings.tsx");

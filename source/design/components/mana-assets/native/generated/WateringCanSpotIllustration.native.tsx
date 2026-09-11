@@ -1,13 +1,13 @@
-// Module ID: 6617
-// Function ID: 6618
+// Module ID: 6639
+// Function ID: 6640
 // Name: WateringCanSpotIllustration
-// Dependencies: [21, 5637, 6618, 2]
+// Dependencies: [21, 5639, 6640, 2]
 // Exports: WateringCanSpotIllustration
 
-// Module 6617 (WateringCanSpotIllustration)
+// Module 6639 (WateringCanSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6618 from "module_6618" /* 6618 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6640 from "module_6640" /* 6640 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const WateringCanSpotIllustration = function WateringCanSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6618 };
+  const obj2 = { uri: _modDef6640 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

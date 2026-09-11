@@ -1,12 +1,12 @@
-// Module ID: 9234
-// Function ID: 9235
+// Module ID: 9257
+// Function ID: 9258
 // Name: SecureFramesCode
-// Dependencies: [19, 17, 1085, 21, 4605, 576, 4601, 2]
+// Dependencies: [19, 17, 1085, 21, 4607, 576, 4603, 2]
 // Exports: default
 
-// Module 9234 (SecureFramesCode)
+// Module 9257 (SecureFramesCode)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import Text_Text from "Text/Text" /* 4603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { codeText: { fontFamily: fn(1085).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
 let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };

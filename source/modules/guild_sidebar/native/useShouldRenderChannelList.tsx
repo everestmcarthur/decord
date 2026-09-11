@@ -1,16 +1,16 @@
-// Module ID: 16345
-// Function ID: 16346
+// Module ID: 16334
+// Function ID: 16335
 // Name: useShouldRenderChannelList
-// Dependencies: [32, 19, 7528, 5327, 1074, 4462, 4463, 1109, 2]
+// Dependencies: [32, 19, 7550, 5329, 1074, 4464, 4465, 1109, 2]
 // Exports: useShouldRenderChannelList
 
-// Module 16345 (useShouldRenderChannelList)
+// Module 16334 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import RootNavigationRef from "RootNavigationRef" /* 4465 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7528 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import CacheStore from "CacheStore" /* 7550 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
@@ -55,7 +55,7 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
       let result1 = CacheStore.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1109).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(4463).getRootNavigationRef();
+      let rootNavigationRef = first(4465).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }

@@ -1,13 +1,13 @@
-// Module ID: 10118
-// Function ID: 10119
+// Module ID: 10140
+// Function ID: 10141
 // Name: getParticipantTitle
-// Dependencies: [4626, 10119, 4757, 1114, 2]
+// Dependencies: [4628, 10141, 4759, 1114, 2]
 // Exports: default
 
-// Module 10118 (getParticipantTitle)
-import CallConstants from "CallConstants" /* 4626 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
-import useIsGuestOrLurker from "useIsGuestOrLurker" /* 10119 */;
+// Module 10140 (getParticipantTitle)
+import CallConstants from "CallConstants" /* 4628 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
+import useIsGuestOrLurker from "useIsGuestOrLurker" /* 10141 */;
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = CallConstants.ParticipantTypes;

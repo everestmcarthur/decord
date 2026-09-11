@@ -1,8 +1,8 @@
-// Module ID: 5860
-// Function ID: 5861
+// Module ID: 5882
+// Function ID: 5883
 // Dependencies: [2]
 
-// Module 5860
+// Module 5882
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BrushAndSwordIllocon-2x.png.js");

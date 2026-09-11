@@ -1,9 +1,9 @@
-// Module ID: 14653
-// Function ID: 14654
+// Module ID: 14631
+// Function ID: 14632
 // Name: KeyCommandsNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 14653 (KeyCommandsNativeComponent)
+// Module 14631 (KeyCommandsNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

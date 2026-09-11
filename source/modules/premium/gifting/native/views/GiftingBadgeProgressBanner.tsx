@@ -1,23 +1,23 @@
-// Module ID: 10826
-// Function ID: 10827
+// Module ID: 10847
+// Function ID: 10848
 // Name: GiftingBadgeProgressBanner
-// Dependencies: [19, 17, 21, 4605, 576, 7214, 8838, 1250, 10819, 4601, 1114, 2492, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 7236, 8861, 1250, 10840, 4603, 1114, 2492, 2]
 // Exports: default
 
-// Module 10826 (GiftingBadgeProgressBanner)
+// Module 10847 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import _modDef2492 from "module_2492" /* 2492 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8838 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7236 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8861 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -47,7 +47,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   let tmp10Result = null != nextTierIcon;
   if (tmp10Result) {
     const obj4 = { icon: nextTierIcon, size: 24 };
-    tmp10Result = tmp10(tmp2(10819), obj4);
+    tmp10Result = tmp10(tmp2(10840), obj4);
   }
   obj3.children = tmp10Result;
   const items2 = [React4(View, obj3), ];

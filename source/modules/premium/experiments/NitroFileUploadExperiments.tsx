@@ -1,10 +1,10 @@
-// Module ID: 5180
-// Function ID: 5181
+// Module ID: 5182
+// Function ID: 5183
 // Name: NitroFileUploadExperiments
 // Dependencies: [1373, 1433, 2]
-// Exports: getNitroFileUploadLimitBytes, getNitroFileUploadRolloutConfig, getNitroFileUploadRolloutCopy, getNonNitroFileUploadMarketingConfig, useNitroFileUploadRolloutEnabled, useNonNitroFileUploadMarketingEnabled
+// Exports: getNitroFileUploadLimitBytes, getNitroFileUploadRolloutConfig, getNitroFileUploadRolloutCopy, useNitroFileUploadRolloutEnabled, useNonNitroFileUploadMarketingEnabled
 
-// Module 5180 (NitroFileUploadExperiments)
+// Module 5182 (NitroFileUploadExperiments)
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
@@ -60,9 +60,6 @@ export const useNitroFileUploadRolloutEnabled = function useNitroFileUploadRollo
     _location = NitroFileUploadRollout;
   }
   return closure_3.useConfig({ location: _location }).enabled;
-};
-export const getNonNitroFileUploadMarketingConfig = function getNonNitroFileUploadMarketingConfig(location) {
-  return closure_4.getConfig({ location: location.location });
 };
 export const useNonNitroFileUploadMarketingEnabled = function useNonNitroFileUploadMarketingEnabled(location) {
   return closure_4.useConfig({ location }).enabled;

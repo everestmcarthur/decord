@@ -1,18 +1,18 @@
-// Module ID: 12610
-// Function ID: 12611
+// Module ID: 12635
+// Function ID: 12636
 // Name: GuildPowerupsDeactivateAlert
-// Dependencies: [17, 21, 4605, 576, 12611, 12612, 12613, 4955, 6660, 1114, 2428, 4955, 4601, 2]
+// Dependencies: [17, 21, 4607, 576, 12636, 12637, 12638, 4957, 6682, 1114, 2428, 4957, 4603, 2]
 // Exports: default
 
-// Module 12610 (GuildPowerupsDeactivateAlert)
+// Module 12635 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12611 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12612 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12636 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12637 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4607 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -50,7 +50,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj7 = { style: tmp.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp7Result = tmp7(tmp5(4601).Text, obj7);
+    tmp7Result = tmp7(tmp5(4603).Text, obj7);
   }
   const obj8 = { children: null };
   const items = [tmp7Result, , ];

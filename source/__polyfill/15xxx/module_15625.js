@@ -1,15 +1,9 @@
 // Module ID: 15625
 // Function ID: 15626
-// Dependencies: [8344, 15626, 15629, 15630]
+// Dependencies: [1122]
 
 // Module 15625
-import _mod15630 from "module_15630" /* 15630 */;
-import module_8344 from "module_8344" /* 8344 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1122" /* 1122 */;
 
 
-export const getYoutubeMeta = require("module_15626").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8344(_mod15630).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e0471dd70c51b44f6fe3c89ec72a7182", name: "MobilePhoneSettingsIcon", type: "png" });

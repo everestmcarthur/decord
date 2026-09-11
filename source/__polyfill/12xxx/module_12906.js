@@ -1,68 +1,64 @@
 // Module ID: 12906
 // Function ID: 12907
-// Dependencies: [12899, 12894, 12907, 12895, 12867]
-// Exports: sampleSpan
+// Dependencies: [12893]
+// Exports: dateTimestampInSeconds, timestampInSeconds
 
 // Module 12906
-import _mod12899 from "module_12899" /* 12899 */;
+import _mod12893 from "module_12893" /* 12893 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    const isolationScope = tmp(12894).getIsolationScope();
-    const obj2 = {};
-    const merged = Object.assign(normalizedRequest);
-    obj2.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj2);
-    } else if (undefined !== obj2.parentSampled) {
-      num = obj2.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
-      }
+function dateTimestampInSeconds() {
+  return Date.now() / 1000;
+}
+let timeOrigin;
+const _performance = _mod12893.GLOBAL_OBJ.performance;
+let fn = dateTimestampInSeconds;
+if (_performance) {
+  fn = dateTimestampInSeconds;
+  if (_performance.now) {
+    const _Date = Date;
+    const timestamp = Date.now();
+    timeOrigin = timestamp - _performance.now();
+    if (null != _performance.timeOrigin) {
+      timeOrigin = _performance.timeOrigin;
     }
-    const tmpResult = tmp(12894);
-    const parseSampleRateResult = tmp(12907).parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (tmp(12895).DEBUG_BUILD) {
-        const logger3 = tmp(12867).logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      const items = [false];
-      let items3 = items;
-    } else if (parseSampleRateResult) {
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
-      } else {
-        if (tmp(12895).DEBUG_BUILD) {
-          const logger2 = tmp(12867).logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
-        }
-        items2 = [false, parseSampleRateResult];
-      }
-    } else {
-      if (tmp(12895).DEBUG_BUILD) {
-        const logger = tmp(12867).logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
-    }
-    return items3;
-  } else {
-    const items4 = [false];
-    return items4;
+    fn = () => (timeOrigin + _performance.now()) / 1000;
   }
-  obj = _mod12899;
-};
+}
+const _performance2 = _mod12893.GLOBAL_OBJ.performance;
+if (_performance2) {
+  if (_performance2.now) {
+    const nowResult = _performance2.now();
+    const _Date2 = Date;
+    const timestamp1 = Date.now();
+    let num2 = 3600000;
+    if (_performance2.timeOrigin) {
+      const _Math = Math;
+      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
+    }
+    let timeOrigin2 = _performance2.timing;
+    if (timeOrigin2) {
+      timeOrigin2 = _performance2.timing.navigationStart;
+    }
+    let num3 = 3600000;
+    if (typeof timeOrigin2 === "number") {
+      const _Math2 = Math;
+      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
+    }
+    if (!tmp6) {
+      if (num3 >= 3600000) {
+        exports._browserPerformanceTimeOriginMode = "dateNow";
+      }
+    }
+    if (num2 <= num3) {
+      exports._browserPerformanceTimeOriginMode = "timeOrigin";
+      timeOrigin2 = _performance2.timeOrigin;
+    } else {
+      exports._browserPerformanceTimeOriginMode = "navigationStart";
+    }
+    tmp6 = num2 < 3600000;
+  }
+}
+
+export const _browserPerformanceTimeOriginMode = "none";
+export { dateTimestampInSeconds };
+export const timestampInSeconds = fn;

@@ -1,9 +1,9 @@
-// Module ID: 11600
-// Function ID: 11601
+// Module ID: 11624
+// Function ID: 11625
 // Name: ChatViewWidthContext
 // Dependencies: [19, 2]
 
-// Module 11600 (ChatViewWidthContext)
+// Module 11624 (ChatViewWidthContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(null);

@@ -1,10 +1,10 @@
-// Module ID: 12033
-// Function ID: 12034
+// Module ID: 12058
+// Function ID: 12059
 // Name: MobileEmojiSuggestionsExperiment
 // Dependencies: [1433, 2]
 // Exports: getIsMobileEmojiSuggestionsConfig, useMobileEmojiSuggestionsConfig
 
-// Module 12033 (MobileEmojiSuggestionsExperiment)
+// Module 12058 (MobileEmojiSuggestionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

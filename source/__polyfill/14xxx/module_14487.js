@@ -1,53 +1,27 @@
 // Module ID: 14487
 // Function ID: 14488
-// Dependencies: []
+// Dependencies: [17]
+// Exports: default
 
 // Module 14487
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
-    const _Map = Map;
-    map = new Map();
+
+export default function getReactNativePlatformConstants() {
+  const obj = { osRelease: "", model: "", serverHost: "", uiMode: "", serial: "", forceTouch: false, interfaceIdiom: "", systemName: "" };
+  if ("android" === get_ActivityIndicator.Platform.OS) {
+    const obj5 = {};
+    const merged = Object.assign(obj);
+    ({ Release: obj3.osRelease, Model: obj3.model, ServerHost: obj3.serverHost, uiMode: obj3.uiMode, Serial: obj3.serial } = tmp.Platform.constants);
+    return obj5;
+  } else if ("ios" === tmp.Platform.OS) {
+    constants = tmp.Platform.constants;
+    const obj6 = {};
+    const merged1 = Object.assign(obj);
+    obj6.forceTouch = constants.forceTouchAvailable || false;
+    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
+    return obj6;
+  } else {
+    return obj;
   }
-  return {
-    all: map,
-    on(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        value.push(arg1);
-      } else {
-        const items = [arg1];
-        const result = map.set(arg0, items);
-      }
-    },
-    off(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        if (arg1) {
-          value.splice(value.indexOf(arg1) >>> 0, 1);
-        } else {
-          const result = map.set(arg0, []);
-        }
-      }
-    },
-    emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
-      if (value) {
-        const substr = value.slice();
-        const mapped = substr.map((fn) => {
-          fn(closure_1);
-        });
-      }
-      value2 = map.get("*");
-      if (value2) {
-        const substr1 = value2.slice();
-        const mapped1 = substr1.map((fn) => {
-          fn(closure_0, closure_1);
-        });
-      }
-    }
-  };
 };

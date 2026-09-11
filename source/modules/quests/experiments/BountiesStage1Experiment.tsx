@@ -1,9 +1,9 @@
-// Module ID: 11594
-// Function ID: 11595
+// Module ID: 11618
+// Function ID: 11619
 // Name: BountiesStage1Experiment
 // Dependencies: [1433, 2]
 
-// Module 11594 (BountiesStage1Experiment)
+// Module 11618 (BountiesStage1Experiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

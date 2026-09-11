@@ -1,13 +1,13 @@
-// Module ID: 17185
-// Function ID: 17186
+// Module ID: 17175
+// Function ID: 17176
 // Name: VoicePanelPIPStateContext
 // Dependencies: [19, 2]
 // Exports: usePIPState
 
-// Module 17185 (VoicePanelPIPStateContext)
+// Module 17175 (VoicePanelPIPStateContext)
 import noop from "module_19" /* 19 */;
 
-const context = noop.createContext({ id: "sa", mode: "isArray", width: false, height: 21, containerHeight: null, showSecondaryPIP: null });
+const context = noop.createContext({ id: "sa", mode: "isArray", width: false, height: "detectbBySignatures", containerHeight: null, showSecondaryPIP: "\u{1F7E5}" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 

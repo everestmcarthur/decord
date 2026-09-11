@@ -1,21 +1,21 @@
-// Module ID: 8131
-// Function ID: 8132
+// Module ID: 8154
+// Function ID: 8155
 // Name: PremiumGiftingIntentStore
-// Dependencies: [4521, 1236, 7710, 1221, 6645, 4253, 1074, 8132, 1935, 8133, 12, 504, 573, 2]
+// Dependencies: [4523, 1236, 7732, 1221, 6667, 4255, 1074, 8155, 1935, 8156, 12, 504, 573, 2]
 
-// Module 8131 (PremiumGiftingIntentStore)
+// Module 8154 (PremiumGiftingIntentStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8132 */;
-import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8133 */;
-import ExperimentStore from "ExperimentStore" /* 4521 */;
+import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8155 */;
+import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8156 */;
+import ExperimentStore from "ExperimentStore" /* 4523 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import ConsentStore from "ConsentStore" /* 6645 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import ConsentStore from "ConsentStore" /* 6667 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 require = fn;
 function getCurrentTime() {
@@ -126,7 +126,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8132).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8155).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -135,7 +135,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8132);
+          const highestAffinityResult = highestAffinity(8155);
         }
         sampleSizeResult = _null;
       }

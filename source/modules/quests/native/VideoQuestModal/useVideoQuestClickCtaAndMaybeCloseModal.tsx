@@ -1,14 +1,14 @@
-// Module ID: 15234
-// Function ID: 15235
+// Module ID: 15213
+// Function ID: 15214
 // Name: useVideoQuestClickCtaAndMaybeCloseModal
-// Dependencies: [19, 11558, 1365, 11367, 11568, 7779, 2]
+// Dependencies: [19, 11582, 1365, 11391, 11592, 7801, 2]
 // Exports: useVideoQuestClickCtaAndMaybeCloseModal
 
-// Module 15234 (useVideoQuestClickCtaAndMaybeCloseModal)
+// Module 15213 (useVideoQuestClickCtaAndMaybeCloseModal)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11367 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11568 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11391 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

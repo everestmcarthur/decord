@@ -1,9 +1,9 @@
-// Module ID: 4343
-// Function ID: 4344
+// Module ID: 4345
+// Function ID: 4346
 // Name: ReanimatedViewNativeComponent
 // Dependencies: [65, 2]
 
-// Module 4343 (ReanimatedViewNativeComponent)
+// Module 4345 (ReanimatedViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

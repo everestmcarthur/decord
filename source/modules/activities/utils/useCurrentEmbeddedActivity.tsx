@@ -1,10 +1,10 @@
-// Module ID: 9703
-// Function ID: 9704
+// Module ID: 9726
+// Function ID: 9727
 // Name: useCurrentEmbeddedActivity
 // Dependencies: [1956, 504, 2]
 // Exports: default
 
-// Module 9703 (useCurrentEmbeddedActivity)
+// Module 9726 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 504 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 

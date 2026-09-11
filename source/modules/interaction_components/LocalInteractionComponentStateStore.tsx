@@ -1,12 +1,12 @@
-// Module ID: 8176
-// Function ID: 8177
+// Module ID: 8199
+// Function ID: 8200
 // Name: LocalInteractionComponentStateStore
-// Dependencies: [8177, 504, 573, 2]
+// Dependencies: [8200, 504, 573, 2]
 
-// Module 8176 (LocalInteractionComponentStateStore)
+// Module 8199 (LocalInteractionComponentStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LimitedMapDefault from "LimitedMap" /* 8177 */;
+import LimitedMapDefault from "LimitedMap" /* 8200 */;
 
 let closure_0 = new LimitedMapDefault(196606);
 let closure_1 = 0;

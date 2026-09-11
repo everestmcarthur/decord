@@ -1,10 +1,10 @@
-// Module ID: 17875
-// Function ID: 17876
+// Module ID: 17867
+// Function ID: 17868
 // Name: getMaxRoleSubscriptionEmojiSlots
 // Dependencies: [2]
 // Exports: default
 
-// Module 17875 (getMaxRoleSubscriptionEmojiSlots)
+// Module 17867 (getMaxRoleSubscriptionEmojiSlots)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/getMaxRoleSubscriptionEmojiSlots.tsx");

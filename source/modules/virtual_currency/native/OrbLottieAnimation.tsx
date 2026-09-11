@@ -1,11 +1,11 @@
-// Module ID: 11165
-// Function ID: 11166
+// Module ID: 11190
+// Function ID: 11191
 // Name: OrbLottieAnimation
-// Dependencies: [19, 21, 4540, 4456, 11166, 11168, 2]
+// Dependencies: [19, 21, 4542, 4458, 11191, 11193, 2]
 
-// Module 11165 (OrbLottieAnimation)
-import shared from "shared" /* 4456 */;
-import useTheme from "useTheme" /* 4540 */;
+// Module 11190 (OrbLottieAnimation)
+import shared from "shared" /* 4458 */;
+import useTheme from "useTheme" /* 4542 */;
 import "module_19";
 
 require = fn;
@@ -36,9 +36,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     }
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(11166).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = tmp(11191).SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(11168).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = tmp(11193).SpendEarnOrbsLottie;
   }
   const size = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
   let str = "spend";

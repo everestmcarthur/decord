@@ -1,13 +1,13 @@
-// Module ID: 15948
-// Function ID: 15949
+// Module ID: 15933
+// Function ID: 15934
 // Name: ContentAndSocialSetting
-// Dependencies: [1074, 11540, 1114, 4304, 15949, 2]
+// Dependencies: [1074, 11564, 1114, 4306, 15934, 2]
 
-// Module 15948 (ContentAndSocialSetting)
+// Module 15933 (ContentAndSocialSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import FriendsIcon from "FriendsIcon" /* 4304 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import FriendsIcon from "FriendsIcon" /* 4306 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

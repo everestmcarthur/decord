@@ -1,18 +1,20 @@
-// Module ID: 15577
-// Function ID: 15578
+// Module ID: 15560
+// Function ID: 15561
 // Name: InAppMessageSoundsSetting
-// Dependencies: [10174, 8027, 11540, 1114, 1608, 2]
+// Dependencies: [10195, 8050, 1114, 11564, 14505, 1608, 15550, 2]
 
-// Module 15577 (InAppMessageSoundsSetting)
+// Module 15560 (InAppMessageSoundsSetting)
 import util from "util" /* 1114 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import InAppMessageSoundsStore from "InAppMessageSoundsStore" /* 10174 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14505 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15550 */;
+import InAppMessageSoundsStore from "InAppMessageSoundsStore" /* 10195 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 ({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = InAppMessageSoundsStore);
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.jLCRyj);
@@ -21,11 +23,28 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["wls+Ax"]);
   },
-  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
-  onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: MetaQuestUtils.isMetaQuest
-});
+  onValueChange: setInAppMessageSoundsEnabled
+};
+let SettingBuilders = SettingBuilders_mod;
+let obj2 = {};
+const merged = Object.assign(obj);
+obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj2.usePredicate = function usePredicate() {
+  const isDeclarativeSettingsUIAvailable = notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable("InAppMessageSoundsSetting");
+  return MetaQuestUtils.isMetaQuest() && !isDeclarativeSettingsUIAvailable;
+};
+const toggle = SettingBuilders.createToggle(obj2);
+let SettingBuilders = SettingBuilders_mod;
+const obj3 = {};
+const merged1 = Object.assign(obj);
+obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj3.usePredicate = function usePredicate() {
+  const isDeclarativeSettingsUIAvailable = notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable("RedesignInAppMessageSoundsSetting");
+  return MetaQuestUtils.isMetaQuest() && isDeclarativeSettingsUIAvailable;
+};
+const toggle1 = SettingBuilders.createToggle(obj3);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
 
 export default toggle;
+export const RedesignInAppMessageSoundsSetting = toggle1;

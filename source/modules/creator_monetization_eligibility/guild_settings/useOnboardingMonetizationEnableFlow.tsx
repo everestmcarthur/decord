@@ -1,10 +1,10 @@
-// Module ID: 17805
-// Function ID: 17806
+// Module ID: 17797
+// Function ID: 17798
 // Name: useOnboardingMonetizationEnableFlow
-// Dependencies: [19, 1975, 1371, 1074, 7313, 563, 17806, 17807, 17808, 7305, 1114, 2024, 17809, 2]
+// Dependencies: [19, 1975, 1371, 1074, 7335, 563, 17798, 17799, 17800, 7327, 1114, 2024, 17801, 2]
 // Exports: default
 
-// Module 17805 (useOnboardingMonetizationEnableFlow)
+// Module 17797 (useOnboardingMonetizationEnableFlow)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -42,18 +42,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(17806);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17806)(id));
+  const tmp10 = refresh(17798);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17798)(id));
   let id1;
-  const tmp10Result = refresh(17806)(id);
+  const tmp10Result = refresh(17798)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(17807)(id1);
+  const tmp9ResultResult = refresh(17799)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(17807);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(17808)(eligibility));
+  const tmp9Result = refresh(17799);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(17800)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -68,7 +68,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(17808)(eligibility);
+  const tmp16 = refresh(17800)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;

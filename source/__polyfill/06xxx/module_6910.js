@@ -1,37 +1,30 @@
 // Module ID: 6910
 // Function ID: 6911
-// Dependencies: [6911]
+// Dependencies: [19, 6700]
+// Exports: useBottomSheetTimingConfigs
 
 // Module 6910
-import _mod6911 from "module_6911" /* 6911 */;
+import _mod19 from "module_19" /* 19 */;
+import value2 from "value2" /* 6700 */;
 
+const useMemo = _mod19.useMemo;
 
-export default function _unsupportedIterableToArray(str, arg1) {
-  if (str) {
-    if (typeof str === "string") {
-      return _mod6911(str, arg1);
-    } else {
-      const toString = {}.toString;
-      const call = toString.call;
-      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
-      let name = substr;
-      if (tmp3) {
-        name = str.constructor.name;
-      }
-      if ("Map" !== name) {
-        if ("Set" !== name) {
-          if ("Arguments" === name) {
-            let arr2 = _mod6911(str, arg1);
-          } else {
-            const obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
-          }
-        }
-        return arr2;
-      }
-      const _Array = Array;
-      arr2 = Array.from(str);
-      const arr = typeof call === "unknown" ? toString() : call(str);
-      tmp3 = "Object" === substr && str.constructor;
+export const useBottomSheetTimingConfigs = (arg0) => {
+  const easing = arg0;
+  const items = [, , ];
+  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
+  return useMemo(() => {
+    let ANIMATION_EASING = easing.easing;
+    if (!ANIMATION_EASING) {
+      ANIMATION_EASING = value2.ANIMATION_EASING;
     }
-  }
+    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
+    let ANIMATION_DURATION = tmp.duration;
+    if (!ANIMATION_DURATION) {
+      ANIMATION_DURATION = value2.ANIMATION_DURATION;
+    }
+    obj.duration = ANIMATION_DURATION;
+    obj.reduceMotion = easing.reduceMotion;
+    return obj;
+  }, items);
 };

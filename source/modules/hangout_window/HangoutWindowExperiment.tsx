@@ -1,12 +1,12 @@
-// Module ID: 16929
-// Function ID: 16930
+// Module ID: 16918
+// Function ID: 16919
 // Name: HangoutWindowExperiment
-// Dependencies: [4522, 4519, 2]
+// Dependencies: [4524, 4521, 2]
 // Exports: getHangoutWindowExperiment, useHangoutWindowExperiment
 
-// Module 16929 (HangoutWindowExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4522 */;
-import createExperiment from "module_4519" /* 4519 */;
+// Module 16918 (HangoutWindowExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4524 */;
+import createExperiment from "module_4521" /* 4521 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-02_hangout_window", label: "Hangout Window", defaultConfig: { enableHangoutWindow: false }, commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, treatments: null };

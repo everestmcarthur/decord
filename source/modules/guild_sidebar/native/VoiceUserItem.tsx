@@ -1,19 +1,19 @@
-// Module ID: 16205
-// Function ID: 16206
+// Module ID: 16194
+// Function ID: 16195
 // Name: VoiceUserItem
-// Dependencies: [19, 17, 4597, 1074, 21, 1178, 10189, 4605, 576, 10191, 504, 9247, 9248, 9250, 1242, 4341, 4606, 1396, 16206, 9194, 9196, 9190, 9192, 10180, 5083, 9533, 9252, 2]
+// Dependencies: [19, 17, 4599, 1074, 21, 1178, 10210, 4607, 576, 10212, 504, 9270, 9271, 9273, 1242, 4343, 4608, 1396, 16195, 9217, 9219, 9213, 9215, 10201, 5085, 9556, 9275, 2]
 // Exports: getVoiceUserHeight
 
-// Module 16205 (VoiceUserItem)
+// Module 16194 (VoiceUserItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10189 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10210 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
 const require = globalThis.__r;
 
@@ -25,11 +25,11 @@ const jsxProd = fn(21);
 let c9 = "text-sm/medium";
 let c10 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1178).AvatarSizes.XSMALL_20;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(10191);
+const ChannelListLayout = fn(10212);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

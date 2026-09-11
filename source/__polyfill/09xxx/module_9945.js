@@ -1,9 +1,9 @@
 // Module ID: 9945
 // Function ID: 9946
-// Dependencies: [9946]
+// Dependencies: [1122]
 
 // Module 9945
-import _mod9946 from "module_9946" /* 9946 */;
+import registerAsset from "module_1122" /* 1122 */;
 
 
-export default _mod9946();
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 251, height: 147, scales: [2, 3], hash: "c013c533d835389917bf422e9978d1be", name: "img_app_crash_light", type: "png" });

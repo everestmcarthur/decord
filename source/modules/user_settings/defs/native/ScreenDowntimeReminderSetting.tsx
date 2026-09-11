@@ -1,19 +1,19 @@
-// Module ID: 15596
-// Function ID: 15597
+// Module ID: 15579
+// Function ID: 15580
 // Name: ScreenDowntimeReminderSetting
-// Dependencies: [10151, 8027, 7645, 14989, 8715, 11540, 1114, 504, 15597, 2]
+// Dependencies: [10173, 8050, 7667, 14966, 8738, 11564, 1114, 504, 15580, 2]
 
-// Module 15596 (ScreenDowntimeReminderSetting)
+// Module 15579 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7645 */;
-import useUserLinks from "useUserLinks" /* 8715 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14989 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15597 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10151 */;
+import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7667 */;
+import useUserLinks from "useUserLinks" /* 8738 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14966 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15580 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10173 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11564);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -23,7 +23,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8027).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8050).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);

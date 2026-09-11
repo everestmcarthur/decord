@@ -1,13 +1,13 @@
-// Module ID: 5783
-// Function ID: 5784
+// Module ID: 5785
+// Function ID: 5786
 // Name: ActivatedGem3dIllustration
-// Dependencies: [21, 5637, 5784, 2]
+// Dependencies: [21, 5639, 5786, 2]
 // Exports: ActivatedGem3dIllustration
 
-// Module 5783 (ActivatedGem3dIllustration)
+// Module 5785 (ActivatedGem3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5784 from "module_5784" /* 5784 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5786 from "module_5786" /* 5786 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ActivatedGem3dIllustration = function ActivatedGem3dIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5784 };
+  const obj2 = { uri: _modDef5786 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

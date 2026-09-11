@@ -1,18 +1,15 @@
 // Module ID: 10563
 // Function ID: 10564
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10564, 10529, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10542]
 
 // Module 10563
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10564 from "module_10564" /* 10564 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10542 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FRWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,57 +29,82 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(?:ce)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10564.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)", "i");
-class FRWeekdayParser {
-  constructor() {
+let _classCallCheck = _classCallCheck_mod;
+class UnlikelyFormatFilter {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, FRWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    tmp = closure_0(this, UnlikelyFormatFilter);
+    tmp2 = c2;
+    obj = c2(UnlikelyFormatFilter);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(FRWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = UnlikelyFormatFilter;
+_inherits(UnlikelyFormatFilter, Filter.Filter);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "isValid",
+  value: function isValid(debug, text) {
+    if (str2.match(/^\d*(\.\d*)?$/)) {
+      debug.debug(() => {
+        console.log("Removing unlikely result '" + text.text + "'");
+      });
+      let flag = false;
+    } else {
+      const start = text.start;
+      if (start.isValidDate()) {
+        if (text.end) {
+          const end = text.end;
+          if (!end.isValidDate()) {
+            debug.debug(() => {
+              console.log("Removing invalid result: " + text + " (" + text.end + ")");
+            });
+            let flag2 = false;
+          }
+        }
+        const self = this;
+        const strictMode = this.strictMode;
+        let isStrictModeValidResult = !strictMode;
+        if (strictMode) {
+          isStrictModeValidResult = self.isStrictModeValid(debug, text);
+        }
+        flag2 = isStrictModeValidResult;
+      } else {
+        debug.debug(() => {
+          console.log("Removing invalid result: " + text + " (" + text.start + ")");
+        });
+        flag = false;
+      }
+    }
+    return flag;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const tmp4 = FRWeekdayParser(10564).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[2] || "".toLowerCase();
-        let str4 = "last";
-        if ("dernier" != formatted1) {
-          str4 = null;
-          if ("prochain" == formatted1) {
-            str4 = "next";
-          }
-        }
-        return tmp2(10529).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
+    key: "isStrictModeValid",
+    value: function isStrictModeValid(debug, start) {
+      start = start.start;
+      const result = start.isOnlyWeekdayComponent();
+      let flag = !result;
+      if (result) {
+        debug.debug(() => {
+          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
+        });
+        flag = false;
       }
-      tmp2 = FRWeekdayParser;
+      return flag;
     }
   }
 ];
 
-export default _createClass(FRWeekdayParser, items);
+export default _createClass(UnlikelyFormatFilter, items);

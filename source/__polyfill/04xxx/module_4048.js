@@ -1,20 +1,20 @@
 // Module ID: 4048
 // Function ID: 4049
-// Dependencies: [3693, 3694]
+// Dependencies: [4049, 3696]
 // Exports: default
 
 // Module 4048
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import startOfSecond_mod from "startOfSecond" /* 4049 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfSecond = startOfSecond_mod;
+if (!startOfSecond) {
+  const obj = { default: startOfSecond };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfSecond;
 }
-_typeof = tmp3;
+startOfSecond = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -24,10 +24,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameYear(arg0, arg1) {
+export default function isSameSecond(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  return fullYear === _typeof.default(arg1).getFullYear();
+  const defaultResult1 = startOfSecond.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfSecond.default(arg1).getTime();
 };
 export default exports.default;

@@ -1,10 +1,14 @@
 // Module ID: 8392
 // Function ID: 8393
-// Dependencies: [4434]
+// Dependencies: [8393]
+// Exports: default
 
 // Module 8392
-import emptyFunction from "module_4434" /* 4434 */;
+import _modDef8393 from "module_8393" /* 8393 */;
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export default emptyFunction.shape(point);
+export default function getWebViewProxy(EMBEDDED_ACTIVITY_WEB_VIEW_KEY) {
+  return new _modDef8393(EMBEDDED_ACTIVITY_WEB_VIEW_KEY);
+};

@@ -1,8 +1,8 @@
-// Module ID: 6270
-// Function ID: 6271
+// Module ID: 6292
+// Function ID: 6293
 // Dependencies: [2]
 
-// Module 6270
+// Module 6292
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LavaIllocon-2x.png.js");

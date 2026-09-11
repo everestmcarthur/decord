@@ -1,14 +1,14 @@
-// Module ID: 5569
-// Function ID: 5570
+// Module ID: 5571
+// Function ID: 5572
 // Name: GuildUtils
-// Dependencies: [1979, 1371, 1437, 1090, 5570, 4449, 1114, 2]
+// Dependencies: [1979, 1371, 1437, 1090, 5572, 4451, 1114, 2]
 // Exports: getGuildNameSuggestion
 
-// Module 5569 (GuildUtils)
+// Module 5571 (GuildUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import UserUtilsAll from "UserUtils" /* 4449 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
+import UserUtilsAll from "UserUtils" /* 4451 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 import priv from "priv" /* 1437 */;

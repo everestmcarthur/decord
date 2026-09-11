@@ -1,42 +1,21 @@
 // Module ID: 12907
 // Function ID: 12908
-// Dependencies: [12895, 12867]
-// Exports: parseSampleRate
+// Dependencies: []
 
 // Module 12907
-import _mod12867 from "module_12867" /* 12867 */;
-import _mod12895 from "module_12895" /* 12895 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod12895.DEBUG_BUILD) {
-      const logger = _mod12867.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
-    }
-  }
-};
+export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
+export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
+export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
+export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
+export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
+export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
+export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
+export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
+export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
+export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
+export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
+export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";

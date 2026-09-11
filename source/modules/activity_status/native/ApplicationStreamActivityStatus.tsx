@@ -1,13 +1,13 @@
-// Module ID: 10951
-// Function ID: 10952
+// Module ID: 10972
+// Function ID: 10973
 // Name: ApplicationStreamActivityStatus
-// Dependencies: [19, 21, 1114, 10952, 10953, 10955, 2]
+// Dependencies: [19, 21, 1114, 10973, 10974, 10976, 2]
 // Exports: default
 
-// Module 10951 (ApplicationStreamActivityStatus)
+// Module 10972 (ApplicationStreamActivityStatus)
 import util from "util" /* 1114 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10952 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10955 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10973 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10976 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,7 +55,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    const obj2 = { icon: tmp7(10953).TvIcon, style: iconStyle };
+    const obj2 = { icon: tmp7(10974).TvIcon, style: iconStyle };
     tmp12 = React3(ActivityStatusIconDefault, obj2);
   }
   const children = [tmp12, ];

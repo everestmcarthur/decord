@@ -1,85 +1,152 @@
 // Module ID: 10690
 // Function ID: 10691
-// Dependencies: [10502, 10503]
-// Exports: parseDuration, parseNumberPattern, parseOrdinalNumberPattern, parseYear
+// Dependencies: [10691, 10693, 10694, 10695, 10696, 10697, 10698, 10699, 10700, 10701, 10702, 10703, 10704, 10705, 10706, 10552, 10707, 10708, 10519, 10559]
+// Exports: createCasualConfiguration, parse, parseDate
 
 // Module 10690
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import findMostLikelyADYear from "findMostLikelyADYear" /* 10503 */;
+import _mod10519 from "module_10519" /* 10519 */;
+import _mod10552 from "module_10552" /* 10552 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10559 */;
+import _mod10691 from "module_10691" /* 10691 */;
+import _mod10693 from "module_10693" /* 10693 */;
+import _mod10694 from "module_10694" /* 10694 */;
+import _mod10695 from "module_10695" /* 10695 */;
+import _mod10696 from "module_10696" /* 10696 */;
+import _mod10697 from "module_10697" /* 10697 */;
+import _mod10698 from "module_10698" /* 10698 */;
+import _mod10699 from "module_10699" /* 10699 */;
+import _mod10700 from "module_10700" /* 10700 */;
+import _mod10701 from "module_10701" /* 10701 */;
+import _mod10702 from "module_10702" /* 10702 */;
+import _mod10703 from "module_10703" /* 10703 */;
+import _mod10704 from "module_10704" /* 10704 */;
+import _mod10705 from "module_10705" /* 10705 */;
+import _mod10706 from "module_10706" /* 10706 */;
+import _mod10707 from "module_10707" /* 10707 */;
+import _mod10708 from "module_10708" /* 10708 */;
 
-const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
-const regExp = new RegExp(combined, "i");
-const combined1 = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_NO_ABBR_DICTIONARY) + ")\\s{0,5}";
+function createConfiguration(flag, arg1) {
+  if (flag === undefined) {
+    flag = true;
+  }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = false;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(flag2), , , , , , , , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  const _default4 = new _isNativeReflectConstruct.default();
+  items[5] = new _isNativeReflectConstruct.default();
+  const _default5 = new _isNativeReflectConstruct.default();
+  items[6] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items[7] = new _isNativeReflectConstruct.default(flag);
+  const _default7 = new _isNativeReflectConstruct.default(flag);
+  items[8] = new _isNativeReflectConstruct.default(flag);
+  const _default8 = new _isNativeReflectConstruct.default(flag);
+  items[9] = new _isNativeReflectConstruct.default(flag);
+  obj.parsers = items;
+  const _default9 = new _isNativeReflectConstruct.default(flag);
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default10 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default11 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+}
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  const parsers3 = tmp.parsers;
+  const _default2 = new _isNativeReflectConstruct.default();
+  parsers3.unshift(new _isNativeReflectConstruct.default());
+  const parsers4 = tmp.parsers;
+  const _default3 = new _isNativeReflectConstruct.default();
+  parsers4.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+fn(_mod10691);
+fn(_mod10693);
+fn(_mod10694);
+fn(_mod10695);
+fn(_mod10696);
+fn(_mod10697);
+fn(_mod10698);
+fn(_mod10699);
+fn(_mod10700);
+fn(_mod10701);
+fn(_mod10702);
+fn(_mod10703);
+fn(_mod10704);
+fn(_mod10705);
+fn(_mod10706);
+const regExp = fn(_mod10552);
+fn(_mod10707);
+const _isNativeReflectConstruct = fn(_mod10708);
+const configuration = createConfiguration(false, false);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+let parsers3 = configuration.parsers;
+let _default2 = new _isNativeReflectConstruct.default();
+parsers3.unshift(new _isNativeReflectConstruct.default());
+let parsers4 = configuration.parsers;
+let _default3 = new _isNativeReflectConstruct.default();
+parsers4.unshift(new _isNativeReflectConstruct.default());
+const chrono = new _mod10519.Chrono(configuration);
+const chrono1 = new _mod10519.Chrono(createConfiguration(true, false));
+const chrono2 = new _mod10519.Chrono(createConfiguration(false, true));
 
-export const parseDuration = function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  while (match) {
-    let str2 = match[1];
-    let formatted = str2.toLowerCase();
-    let tmp3 = exports;
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      let parsed = tmp3.INTEGER_WORD_DICTIONARY[formatted];
-    } else {
-      let _parseInt = parseInt;
-      parsed = parseInt(formatted);
-    }
-    let str3 = match[2];
-    obj[tmp3.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
-    let substr = str.substring(match[0].length);
-    match = regExp.exec(substr);
-    str = substr;
-  }
-  return obj;
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
 };
-export const parseNumberPattern = function parseNumberPattern(match) {
-  const formatted = match.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-    let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
-  } else {
-    const _parseInt = parseInt;
-    parsed = parseInt(formatted);
-  }
-  return parsed;
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
 };
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(match) {
-  const formatted = match.toLowerCase();
-  if (undefined !== exports.ORDINAL_NUMBER_DICTIONARY[formatted]) {
-    return exports.ORDINAL_NUMBER_DICTIONARY[formatted];
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(formatted);
-  }
-};
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt2 = parseInt;
-    const parsed = parseInt(match);
-    let findMostLikelyADYearResult = parsed;
-    if (parsed < 100) {
-      findMostLikelyADYearResult = findMostLikelyADYear.findMostLikelyADYear(parsed);
-    }
-    return findMostLikelyADYearResult;
-  } else {
-    const formatted = match.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      return exports.INTEGER_WORD_DICTIONARY[formatted];
-    } else {
-      const _parseInt = parseInt;
-      return parseInt(match);
-    }
-  }
-  obj = /\d+/;
-};
-export const WEEKDAY_DICTIONARY = { "söndag": 0, "sön": 0, so: 0, "måndag": 1, "mån": 1, "må": 1, tisdag: 2, tis: 2, ti: 2, onsdag: 3, ons: 3, on: 3, torsdag: 4, tors: 4, to: 4, fredag: 5, fre: 5, fr: 5, "lördag": 6, "lör": 6, "lö": 6 };
-export const MONTH_DICTIONARY = { januari: 1, jan: 1, "jan.": 1, februari: 2, feb: 2, "feb.": 2, mars: 3, mar: 3, "mar.": 3, april: 4, apr: 4, "apr.": 4, maj: 5, juni: 6, jun: 6, "jun.": 6, juli: 7, jul: 7, "jul.": 7, augusti: 8, aug: 8, "aug.": 8, september: 9, sep: 9, "sep.": 9, sept: 9, oktober: 10, okt: 10, "okt.": 10, november: 11, nov: 11, "nov.": 11, december: 12, dec: 12, "dec.": 12 };
-export const ORDINAL_NUMBER_DICTIONARY = { "första": 1, andra: 2, tredje: 3, "fjärde": 4, femte: 5, "sjätte": 6, sjunde: 7, "åttonde": 8, nionde: 9, tionde: 10, elfte: 11, tolfte: 12, trettonde: 13, fjortonde: 14, femtonde: 15, sextonde: 16, sjuttonde: 17, artonde: 18, nittonde: 19, tjugonde: 20, "tjugoförsta": 21, tjugoandra: 22, tjugotredje: 23, "tjugofjärde": 24, tjugofemte: 25, "tjugosjätte": 26, tjugosjunde: 27, "tjugoåttonde": 28, tjugonionde: 29, trettionde: 30, "trettioförsta": 31 };
-export const INTEGER_WORD_DICTIONARY = { en: 1, ett: 1, "två": 2, tre: 3, fyra: 4, fem: 5, sex: 6, sju: 7, "åtta": 8, nio: 9, tio: 10, elva: 11, tolv: 12, tretton: 13, fjorton: 14, femton: 15, sexton: 16, sjutton: 17, arton: 18, nitton: 19, tjugo: 20, "trettiо": 30, fyrtio: 40, femtio: 50, sextio: 60, sjuttio: 70, "åttio": 80, nittio: 90, hundra: 100, tusen: 1000 };
-export const TIME_UNIT_DICTIONARY = { sek: "second", sekund: "second", sekunder: "second", min: "minute", minut: "minute", minuter: "minute", tim: "hour", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", "mån": "month", "månad": "month", "månader": "month", "år": "year", "kvartаl": "quarter", kvartal: "quarter" };
-export const TIME_UNIT_NO_ABBR_DICTIONARY = { sekund: "second", sekunder: "second", minut: "minute", minuter: "minute", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", "månad": "month", "månader": "month", "år": "year", kvartal: "quarter" };
-export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|\\d+)";
-export const ORDINAL_NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_NUMBER_DICTIONARY) + "|\\d{1,2}(?:e|:e))";
-export const TIME_UNIT_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
-export const TIME_UNITS_NO_ABBR_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined1);
+export { createCasualConfiguration };
+export { createConfiguration };
+export const casual = chrono;
+export const strict = chrono1;
+export const GB = chrono2;

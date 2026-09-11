@@ -1,12 +1,11 @@
 // Module ID: 3994
 // Function ID: 3995
-// Dependencies: [3995, 3875, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 3994
-import _typeof_mod from "module_3995" /* 3995 */;
-import module_3875_mod from "module_3875" /* 3875 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -16,25 +15,17 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_3875 = module_3875_mod;
-if (!module_3875) {
-  const obj2 = { default: module_3875 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3875;
-}
-module_3875 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isMatch(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  return module_3875.default(_typeof.default(arg0, arg1, new Date(), arg2));
+export default function isFriday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 5 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

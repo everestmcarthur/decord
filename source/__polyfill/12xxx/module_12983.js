@@ -1,309 +1,159 @@
 // Module ID: 12983
 // Function ID: 12984
-// Dependencies: [12870]
-// Exports: filenameIsInApp, node, nodeStackLineParser
+// Dependencies: [12948, 12893, 12984]
+// Exports: generateIteratee
 
 // Module 12983
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12870 */;
+import _mod12984 from "module_12984" /* 12984 */;
+import setupIntegration from "module_12948" /* 12948 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const filenameIsInApp = function filenameIsInApp(str) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (!flag) {
-    let tmp = str;
-    if (str) {
-      tmp = !str.startsWith("/");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[A-Z]:/);
-    }
-    if (tmp) {
-      tmp = !str.startsWith(".");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-    }
-    flag = tmp;
-  }
-  let tmp2 = !flag;
-  if (!flag) {
-    tmp2 = undefined !== str;
-  }
-  if (tmp2) {
-    tmp2 = !str.includes("node_modules/");
-  }
-  return tmp2;
-};
-export function node(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  return (filename) => {
-    const match = filename.match(re2);
-    if (match) {
-      let tmp3;
-      let tmp4;
-      if (match[1]) {
-        const lastIndexOfResult = match[1].lastIndexOf(".");
-        let diff = lastIndexOfResult;
-        if ("." === match[1][lastIndexOfResult - 1]) {
-          diff = lastIndexOfResult - 1;
+export const generateIteratee = function generateIteratee(arg0) {
+  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
+  return (root) => {
+    if (root.filename) {
+      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+      if (!isMatch) {
+        const filename = root.filename;
+        let hasItem = filename.includes("\\");
+        if (hasItem) {
+          const filename2 = root.filename;
+          hasItem = !filename2.includes("/");
         }
-        let substr2 = arr;
-        let tmp9;
-        let substr3;
-        if (diff > 0) {
-          const substr = arr.slice(0, diff);
-          const substr1 = arr.slice(diff + 1);
-          const index = substr.indexOf(".Module");
-          substr2 = arr;
-          tmp9 = substr1;
-          substr3 = substr;
-          if (index > 0) {
-            substr2 = arr.slice(index + 1);
-            substr3 = substr.slice(0, index);
-            tmp9 = substr1;
-          }
-        }
-        tmp3 = substr2;
-        tmp4 = tmp9;
+        isMatch = hasItem;
       }
-      if (tmp4) {
-        let UNKNOWN_FUNCTION = tmp4;
+      if (fn) {
+        if (root) {
+          const filename1 = root.filename;
+          if (0 === filename1.indexOf(tmp13)) {
+            root.filename = filename1.replace(tmp13, prefix);
+          }
+        }
+      } else if (isMatch) {
+        if (isMatch) {
+          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
+          const str5 = str3.replace(/^[a-zA-Z]:/, "");
+        } else {
+          replaced = str3;
+        }
+        const obj2 = _mod12984;
+        if (root) {
+          let relativeResult = obj2.relative(tmp7, replaced);
+        } else {
+          relativeResult = obj2.basename(replaced);
+        }
+        const _HermesInternal = HermesInternal;
+        root.filename = "" + prefix + relativeResult;
+        tmp7 = root;
       }
-      if (undefined === tmp3) {
-        if (!UNKNOWN_FUNCTION) {
-          UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-        }
-        let combined = UNKNOWN_FUNCTION;
-        if (tmp13) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-        }
-        tmp3 = combined;
-      }
-      if (match[2]) {
-        if (obj2.startsWith("file://")) {
-          let str7 = match[2].slice(7);
-        }
-        let match1 = str7;
-        if (str7) {
-          match1 = str7.match(/\/[A-Z]:/);
-        }
-        let substr4 = str7;
-        if (match1) {
-          substr4 = str7.slice(1);
-        }
-        let tmp20 = substr4;
-        if (!substr4) {
-          tmp20 = !match[5];
-        }
-        let tmp21 = "native" === match[5];
-        if (!tmp20) {
-          tmp20 = tmp21;
-        }
-        if (!tmp20) {
-          substr4 = match[5];
-        }
-        let decodeURIResult;
-        if (substr4) {
-          const _decodeURI = decodeURI;
-          decodeURIResult = decodeURI(substr4);
-        }
-        const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-        let tmp24;
-        if (closure_0) {
-          tmp24 = closure_0(substr4);
-        }
-        obj3.module = tmp24;
-        obj3.function = tmp3;
-        let str9 = match[3];
-        if (!str9) {
-          str9 = "";
-        }
-        obj3.lineno = parseInt(str9, 10) || undefined;
-        let str10 = match[4];
-        if (!str10) {
-          str10 = "";
-        }
-        obj2 = match[2];
-        const tmp26 = parseInt(str9, 10) || undefined;
-        obj3.colno = parseInt(str10, 10) || undefined;
-        let str11 = substr4;
-        if (!substr4) {
-          str11 = "";
-        }
-        if (!tmp21) {
-          let tmp28 = str11;
-          if (str11) {
-            tmp28 = !str11.startsWith("/");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[A-Z]:/);
-          }
-          if (tmp28) {
-            tmp28 = !str11.startsWith(".");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          }
-          tmp21 = tmp28;
-        }
-        let tmp29 = !tmp21;
-        if (!tmp21) {
-          tmp29 = undefined !== str11;
-        }
-        if (tmp29) {
-          tmp29 = !str11.includes("node_modules/");
-        }
-        obj3.in_app = tmp29;
-        return obj3;
-      }
-      str7 = match[2];
-    } else if (filename.match(re1)) {
-      const obj = { filename };
-      return obj;
+      return root;
+    } else {
+      return root;
     }
   };
-}
-export function nodeStackLineParser(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  const items = [
-    90,
-    (filename) => {
-      const match = filename.match(re2);
-      if (match) {
-        let tmp3;
-        let tmp4;
-        if (match[1]) {
-          const lastIndexOfResult = match[1].lastIndexOf(".");
-          let diff = lastIndexOfResult;
-          if ("." === match[1][lastIndexOfResult - 1]) {
-            diff = lastIndexOfResult - 1;
+};
+export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let fn;
+  ({ prefix, root } = obj);
+  if (!prefix) {
+    prefix = "app:///";
+  }
+  fn = obj.iteratee;
+  if (!fn) {
+    fn = (root) => {
+      if (root.filename) {
+        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+        if (!isMatch) {
+          const filename = root.filename;
+          let hasItem = filename.includes("\\");
+          if (hasItem) {
+            const filename2 = root.filename;
+            hasItem = !filename2.includes("/");
           }
-          let substr2 = arr;
-          let tmp9;
-          let substr3;
-          if (diff > 0) {
-            const substr = arr.slice(0, diff);
-            const substr1 = arr.slice(diff + 1);
-            const index = substr.indexOf(".Module");
-            substr2 = arr;
-            tmp9 = substr1;
-            substr3 = substr;
-            if (index > 0) {
-              substr2 = arr.slice(index + 1);
-              substr3 = substr.slice(0, index);
-              tmp9 = substr1;
-            }
-          }
-          tmp3 = substr2;
-          tmp4 = tmp9;
+          isMatch = hasItem;
         }
-        if (tmp4) {
-          let UNKNOWN_FUNCTION = tmp4;
+        if (fn) {
+          if (root) {
+            const filename1 = root.filename;
+            if (0 === filename1.indexOf(tmp13)) {
+              root.filename = filename1.replace(tmp13, prefix);
+            }
+          }
+        } else if (isMatch) {
+          if (isMatch) {
+            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
+            const str5 = str3.replace(/^[a-zA-Z]:/, "");
+          } else {
+            replaced = str3;
+          }
+          const obj2 = _mod12984;
+          if (root) {
+            let relativeResult = obj2.relative(tmp7, replaced);
+          } else {
+            relativeResult = obj2.basename(replaced);
+          }
+          const _HermesInternal = HermesInternal;
+          root.filename = "" + prefix + relativeResult;
+          tmp7 = root;
         }
-        if (undefined === tmp3) {
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-          }
-          let combined = UNKNOWN_FUNCTION;
-          if (tmp13) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-          }
-          tmp3 = combined;
-        }
-        if (match[2]) {
-          if (obj2.startsWith("file://")) {
-            let str7 = match[2].slice(7);
-          }
-          let match1 = str7;
-          if (str7) {
-            match1 = str7.match(/\/[A-Z]:/);
-          }
-          let substr4 = str7;
-          if (match1) {
-            substr4 = str7.slice(1);
-          }
-          let tmp20 = substr4;
-          if (!substr4) {
-            tmp20 = !match[5];
-          }
-          let tmp21 = "native" === match[5];
-          if (!tmp20) {
-            tmp20 = tmp21;
-          }
-          if (!tmp20) {
-            substr4 = match[5];
-          }
-          let decodeURIResult;
-          if (substr4) {
-            const _decodeURI = decodeURI;
-            decodeURIResult = decodeURI(substr4);
-          }
-          const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-          let tmp24;
-          if (closure_0) {
-            tmp24 = closure_0(substr4);
-          }
-          obj3.module = tmp24;
-          obj3.function = tmp3;
-          let str9 = match[3];
-          if (!str9) {
-            str9 = "";
-          }
-          obj3.lineno = parseInt(str9, 10) || undefined;
-          let str10 = match[4];
-          if (!str10) {
-            str10 = "";
-          }
-          obj2 = match[2];
-          const tmp26 = parseInt(str9, 10) || undefined;
-          obj3.colno = parseInt(str10, 10) || undefined;
-          let str11 = substr4;
-          if (!substr4) {
-            str11 = "";
-          }
-          if (!tmp21) {
-            let tmp28 = str11;
-            if (str11) {
-              tmp28 = !str11.startsWith("/");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[A-Z]:/);
-            }
-            if (tmp28) {
-              tmp28 = !str11.startsWith(".");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-            }
-            tmp21 = tmp28;
-          }
-          let tmp29 = !tmp21;
-          if (!tmp21) {
-            tmp29 = undefined !== str11;
-          }
-          if (tmp29) {
-            tmp29 = !str11.includes("node_modules/");
-          }
-          obj3.in_app = tmp29;
-          return obj3;
-        }
-        str7 = match[2];
-      } else if (filename.match(re1)) {
-        const obj = { filename };
-        return obj;
+        return root;
+      } else {
+        return root;
       }
+    };
+  }
+  return {
+    name: "RewriteFrames",
+    processEvent(exception) {
+      exception = exception.exception;
+      if (exception) {
+        const _Array = Array;
+        exception = Array.isArray(exception.exception.values);
+      }
+      let tmp2 = exception;
+      if (exception) {
+        tmp2 = (function _processExceptionsEvent(exception) {
+          try {
+            const obj = {};
+            let merged = Object.assign(exception);
+            let obj2 = {};
+            let merged1 = Object.assign(exception.exception);
+            const values = exception.exception.values;
+            obj2.values = values.map((stacktrace) => {
+              const merged = Object.assign(stacktrace);
+              stacktrace = stacktrace.stacktrace;
+              if (stacktrace) {
+                const stacktrace2 = stacktrace.stacktrace;
+                const obj2 = {};
+                const merged1 = Object.assign(stacktrace2);
+                let frames = stacktrace2;
+                if (stacktrace2) {
+                  frames = stacktrace2.frames;
+                }
+                if (frames) {
+                  const frames1 = stacktrace2.frames;
+                  frames = frames1.map((item) => closure_1_0(item));
+                }
+                const obj3 = { stacktrace: null };
+                obj2.frames = frames;
+                obj3.stacktrace = obj2;
+                stacktrace = obj3;
+              }
+              const merged2 = Object.assign(stacktrace);
+              return {};
+            });
+            obj.exception = obj2;
+            return obj;
+          } catch (err) {
+            return tmp;
+          }
+        })(exception);
+      }
+      return tmp2;
     }
-  ];
-  return items;
-}
+  };
+});

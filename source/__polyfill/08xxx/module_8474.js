@@ -1,9 +1,28 @@
 // Module ID: 8474
 // Function ID: 8475
-// Dependencies: [1122]
+// Dependencies: [521, 518, 543, 616]
 
 // Module 8474
-import registerAsset from "module_1122" /* 1122 */;
+import _mod521 from "module_521" /* 521 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 88, height: 80, scales: [2, 3], hash: "cdacc9b330d74f767eb28d253e6930f0", name: "stage-sparkles", type: "png" });
+export default function isIterateeCall(arg0, num, arg2) {
+  if (_mod521(arg2)) {
+    if (typeof num === "number") {
+      let tmp5 = tmp(518)(arg2) && tmp(543)(num, arg2.length);
+      const tmp4 = tmp(518)(arg2) && tmp(543)(num, arg2.length);
+    } else {
+      tmp5 = typeof num === "string";
+      if (typeof num === "string") {
+        tmp5 = num in arg2;
+      }
+    }
+    let tmp6 = tmp5;
+    if (tmp6) {
+      tmp6 = tmp(616)(arg2[num], arg0);
+    }
+    return tmp6;
+  } else {
+    return false;
+  }
+};

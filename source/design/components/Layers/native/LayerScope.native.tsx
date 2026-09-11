@@ -1,12 +1,12 @@
-// Module ID: 7208
-// Function ID: 7209
+// Module ID: 7230
+// Function ID: 7231
 // Name: LayerScope
-// Dependencies: [32, 19, 17, 1074, 21, 5648, 7209, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 5650, 7231, 2]
 // Exports: LayerScope
 
-// Module 7208 (LayerScope)
-import useInitialValueDefault from "useInitialValue" /* 5648 */;
-import LayerContext from "LayerContext" /* 7209 */;
+// Module 7230 (LayerScope)
+import useInitialValueDefault from "useInitialValue" /* 5650 */;
+import LayerContext from "LayerContext" /* 7231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(7209).LayerContext);
+  const context = noop.useContext(zIndex(7231).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   const items = [context];

@@ -1,25 +1,9 @@
 // Module ID: 14094
 // Function ID: 14095
-// Dependencies: []
+// Dependencies: [14083]
 
 // Module 14094
-if (typeof process === "object") {
-  const _process3 = process;
-  if (process.env) {
-    const _process = process;
-    if (process.env.NODE_DEBUG) {
-      const _process2 = process;
-      if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          const items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
-          return console.error.apply(items);
-        };
-      }
-      module.exports = fn;
-    }
-  }
-}
-fn = () => {
+import _mod14083 from "module_14083" /* 14083 */;
 
-};
+
+export default (arg0, arg1, arg2) => _mod14083(arg0, arg1, arg2) <= 0;

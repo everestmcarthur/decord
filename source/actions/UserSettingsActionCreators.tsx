@@ -1,16 +1,16 @@
-// Module ID: 9428
-// Function ID: 9429
+// Module ID: 9451
+// Function ID: 9452
 // Name: UserSettingsActionCreators
-// Dependencies: [5, 4424, 1184, 1183, 1074, 1186, 1940, 1187, 1218, 573, 4453, 1935, 2]
+// Dependencies: [5, 4426, 1184, 1183, 1074, 1186, 1940, 1187, 1218, 573, 4455, 1935, 2]
 // Exports: saveClientTheme, saveGuildFolders
 
-// Module 9428 (UserSettingsActionCreators)
+// Module 9451 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import wrappers from "wrappers" /* 1218 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4424 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4426 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -88,16 +88,16 @@ export default {
               const obj5 = {
                 value: PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
                           theme = theme.theme;
-                          if (constants.DARK === theme) {
+                          if (constants.ASH === theme) {
                             let DARK = closure_1_0(1187).Theme.DARK;
                             let tmp4 = closure_1_0;
                           } else if (tmp.LIGHT === theme) {
                             DARK = closure_1_0(1187).Theme.LIGHT;
                             tmp4 = closure_1_0;
-                          } else if (tmp.DARKER === theme) {
+                          } else if (tmp.DARK === theme) {
                             DARK = closure_1_0(1187).Theme.DARKER;
                             tmp4 = closure_1_0;
-                          } else if (tmp.MIDNIGHT === theme) {
+                          } else if (tmp.ONYX === theme) {
                             DARK = closure_1_0(1187).Theme.MIDNIGHT;
                             tmp4 = closure_1_0;
                           } else {
@@ -211,13 +211,13 @@ export default {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
       const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
-        if (ThemeTypes.DARK === closure_0) {
+        if (ThemeTypes.ASH === closure_0) {
           let DARK = preloaded_user_settings.Theme.DARK;
         } else if (tmp2.LIGHT === tmp) {
           DARK = preloaded_user_settings.Theme.LIGHT;
-        } else if (tmp2.DARKER === tmp) {
+        } else if (tmp2.DARK === tmp) {
           DARK = preloaded_user_settings.Theme.DARKER;
-        } else if (tmp2.MIDNIGHT === tmp) {
+        } else if (tmp2.ONYX === tmp) {
           DARK = preloaded_user_settings.Theme.MIDNIGHT;
         } else {
           DARK = preloaded_user_settings.Theme.DARK;
@@ -293,16 +293,16 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
   if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
     const PreloadedUserSettingsActionCreators = backgroundGradientPresetId(tmp4[6]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
-      if (ThemeTypes.DARK === theme) {
+      if (ThemeTypes.ASH === theme) {
         let DARK = preloaded_user_settings.Theme.DARK;
         let tmp3 = require;
       } else if (tmp2.LIGHT === tmp) {
         DARK = preloaded_user_settings.Theme.LIGHT;
         tmp3 = require;
-      } else if (tmp2.DARKER === tmp) {
+      } else if (tmp2.DARK === tmp) {
         DARK = preloaded_user_settings.Theme.DARKER;
         tmp3 = require;
-      } else if (tmp2.MIDNIGHT === tmp) {
+      } else if (tmp2.ONYX === tmp) {
         DARK = preloaded_user_settings.Theme.MIDNIGHT;
         tmp3 = require;
       } else {

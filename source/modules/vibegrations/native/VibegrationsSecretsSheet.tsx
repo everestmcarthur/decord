@@ -1,10 +1,10 @@
-// Module ID: 16699
-// Function ID: 16700
+// Module ID: 16687
+// Function ID: 16688
 // Name: VibegrationsSecretsSheet
-// Dependencies: [5, 32, 19, 17, 16678, 21, 4605, 576, 7033, 7241, 1114, 3590, 4572, 7249, 7201, 4601, 5025, 6656, 2]
+// Dependencies: [5, 32, 19, 17, 16666, 21, 4607, 576, 7055, 7263, 1114, 3590, 4574, 7271, 7223, 4603, 5027, 6678, 2]
 // Exports: default
 
-// Module 16699 (VibegrationsSecretsSheet)
+// Module 16687 (VibegrationsSecretsSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,12 +14,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16678);
+const VibegrationsConnectionStore = fn(16666);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsSecretsSheet = "VibegrationsSecretsSheet";
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, copyRow: null, copyInfo: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };

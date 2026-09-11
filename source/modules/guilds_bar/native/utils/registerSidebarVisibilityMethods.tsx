@@ -1,12 +1,12 @@
-// Module ID: 16262
-// Function ID: 16263
+// Module ID: 16251
+// Function ID: 16252
 // Name: registerSidebarVisibilityMethods
-// Dependencies: [11267, 1979, 5488, 2]
+// Dependencies: [11291, 1979, 5490, 2]
 // Exports: registerFastListChannelVisibilityMethod, registerGuildVisibilityMethod
 
-// Module 16262 (registerSidebarVisibilityMethods)
-import SortedGuildStore2 from "SortedGuildStore" /* 5488 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 11267 */;
+// Module 16251 (registerSidebarVisibilityMethods)
+import SortedGuildStore2 from "SortedGuildStore" /* 5490 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 11291 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import size from "module_2" /* 2 */;
 

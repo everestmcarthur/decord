@@ -1,10 +1,10 @@
-// Module ID: 9366
-// Function ID: 9367
+// Module ID: 9389
+// Function ID: 9390
 // Name: useNSFWAllowed
 // Dependencies: [1371, 504, 2]
 // Exports: useNSFWAllowed
 
-// Module 9366 (useNSFWAllowed)
+// Module 9389 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1371 */;
 

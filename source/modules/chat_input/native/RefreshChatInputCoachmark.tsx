@@ -1,13 +1,13 @@
-// Module ID: 12055
-// Function ID: 12056
+// Module ID: 12080
+// Function ID: 12081
 // Name: RefreshChatInputCoachmark
-// Dependencies: [32, 19, 1954, 7440, 1943, 1114, 4315, 11199, 2]
+// Dependencies: [32, 19, 1954, 7462, 1943, 1114, 4317, 11224, 2]
 // Exports: default, useRefreshChatInputCoachmark
 
-// Module 12055 (RefreshChatInputCoachmark)
+// Module 12080 (RefreshChatInputCoachmark)
 import util from "util" /* 1114 */;
-import native from "native" /* 4315 */;
-import useCoachmark from "useCoachmark" /* 11199 */;
+import native from "native" /* 4317 */;
+import useCoachmark from "useCoachmark" /* 11224 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

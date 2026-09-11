@@ -1,12 +1,12 @@
-// Module ID: 5607
-// Function ID: 5608
+// Module ID: 5609
+// Function ID: 5610
 // Name: SpellcheckUtils
-// Dependencies: [5, 5608, 4225, 1115, 5610, 2]
+// Dependencies: [5, 5610, 4227, 1115, 5612, 2]
 // Exports: addResultListener, getCachedMisspelling, getCorrections, isMisspelled, isSupported, replaceWithCorrection, setAppLocale, setEnabled, setLearnedWords
 
-// Module 5607 (SpellcheckUtils)
+// Module 5609 (SpellcheckUtils)
 import PlatformUtils2 from "PlatformUtils" /* 1115 */;
-import DiscordNativeDefault from "DiscordNative" /* 4225 */;
+import DiscordNativeDefault from "DiscordNative" /* 4227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -413,7 +413,7 @@ let closure_12 = async function _replaceWithCorrection(arg0, value) {
     }
   }
 };
-fn(5608).addPostConnectionCallback;
+fn(5610).addPostConnectionCallback;
 let PlatformUtils = fn(1115);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {

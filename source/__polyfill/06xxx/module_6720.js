@@ -1,9 +1,15 @@
 // Module ID: 6720
 // Function ID: 6721
-// Dependencies: [6721]
+// Dependencies: []
+// Exports: enableLogging, print
 
 // Module 6720
-import _modDef6721 from "module_6721" /* 6721 */;
+function print() {
 
+}
+const frozen = Object.freeze(print);
 
-export default _modDef6721;
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+};

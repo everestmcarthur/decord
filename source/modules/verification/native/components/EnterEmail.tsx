@@ -1,10 +1,10 @@
-// Module ID: 7034
-// Function ID: 7035
+// Module ID: 7056
+// Function ID: 7057
 // Name: EnterEmail
-// Dependencies: [5, 32, 19, 17, 1371, 5673, 1074, 21, 4605, 576, 1483, 504, 1093, 7035, 1242, 4601, 1114, 6655, 5025, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 5675, 1074, 21, 4607, 576, 1483, 504, 1093, 7057, 1242, 4603, 1114, 6677, 5027, 2]
 // Exports: default
 
-// Module 7034 (EnterEmail)
+// Module 7056 (EnterEmail)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,12 +14,12 @@ import UserStore from "UserStore" /* 1371 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(5673);
+const ChangeEmailStore = fn(5675);
 ({ useChangeEmailError: c10, useChangeEmailStore: closure_11, ChangeEmailFields: closure_12 } = ChangeEmailStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24, marginBottom: 16 } };
 let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);

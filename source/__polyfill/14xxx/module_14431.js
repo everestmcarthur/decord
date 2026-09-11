@@ -1,48 +1,71 @@
 // Module ID: 14431
 // Function ID: 14432
-// Dependencies: [14400, 14432, 14375, 14428]
+// Dependencies: []
 
 // Module 14431
-import _mod14400 from "module_14400" /* 14400 */;
 
-
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14400(value)) {
-    tmp3(14432)(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      tmp3(14375)(arg1, value);
+export default {
+  isASCIIDigit(decodeResult) {
+    let tmp = decodeResult >= 48;
+    if (tmp) {
+      tmp = decodeResult <= 57;
     }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        tmp3(14428).f(arg0, arg1, obj2);
-        const tmp3Result = tmp3(14428);
-      }
-    } catch (err) {
+    return tmp;
+  },
+  isASCIIAlpha(input) {
+    let tmp = input >= 65;
+    if (tmp) {
+      tmp = input <= 90;
     }
+    if (!tmp) {
+      let tmp2 = input >= 97;
+      if (tmp2) {
+        tmp2 = input <= 122;
+      }
+      tmp = tmp2;
+    }
+    return tmp;
+  },
+  isASCIIAlphanumeric(arg0) {
+    let tmp = arg0 >= 65;
+    if (tmp) {
+      tmp = arg0 <= 90;
+    }
+    if (!tmp) {
+      let tmp2 = arg0 >= 97;
+      if (tmp2) {
+        tmp2 = arg0 <= 122;
+      }
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      let tmp3 = arg0 >= 48;
+      if (tmp3) {
+        tmp3 = arg0 <= 57;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  },
+  isASCIIHex(decodeResult) {
+    let tmp = decodeResult >= 48;
+    if (tmp) {
+      tmp = decodeResult <= 57;
+    }
+    if (!tmp) {
+      let tmp2 = decodeResult >= 65;
+      if (tmp2) {
+        tmp2 = decodeResult <= 70;
+      }
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      let tmp3 = decodeResult >= 97;
+      if (tmp3) {
+        tmp3 = decodeResult <= 102;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
   }
-  return arg0;
 };

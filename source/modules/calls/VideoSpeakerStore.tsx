@@ -1,17 +1,17 @@
-// Module ID: 9561
-// Function ID: 9562
+// Module ID: 9584
+// Function ID: 9585
 // Name: VideoSpeakerStore
-// Dependencies: [4627, 502, 1908, 5469, 4621, 4626, 4657, 12, 504, 573, 2]
+// Dependencies: [4629, 502, 1908, 5471, 4623, 4628, 4659, 12, 504, 573, 2]
 
-// Module 9561 (VideoSpeakerStore)
+// Module 9584 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4657 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4659 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import SpeakingStore from "SpeakingStore" /* 5469 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import SpeakingStore from "SpeakingStore" /* 5471 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -139,7 +139,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(4626).ParticipantTypes;
+const ParticipantTypes = fn(4628).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {

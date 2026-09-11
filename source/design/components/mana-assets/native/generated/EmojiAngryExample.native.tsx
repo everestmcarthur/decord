@@ -1,13 +1,13 @@
-// Module ID: 5991
-// Function ID: 5992
+// Module ID: 6013
+// Function ID: 6014
 // Name: EmojiAngryExample
-// Dependencies: [21, 5637, 5992, 2]
+// Dependencies: [21, 5639, 6014, 2]
 // Exports: EmojiAngryExample
 
-// Module 5991 (EmojiAngryExample)
+// Module 6013 (EmojiAngryExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5992 from "module_5992" /* 5992 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6014 from "module_6014" /* 6014 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiAngryExample = function EmojiAngryExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5992 };
+  const obj2 = { uri: _modDef6014 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,12 +1,12 @@
-// Module ID: 8803
-// Function ID: 8804
+// Module ID: 8826
+// Function ID: 8827
 // Name: GameProfileLinkAccount
-// Dependencies: [19, 17, 1371, 21, 4605, 576, 7217, 504, 8756, 4601, 1114, 5637, 1178, 5025, 8804, 2]
+// Dependencies: [19, 17, 1371, 21, 4607, 576, 7239, 504, 8779, 4603, 1114, 5639, 1178, 5027, 8827, 2]
 // Exports: default
 
-// Module 8803 (GameProfileLinkAccount)
+// Module 8826 (GameProfileLinkAccount)
 import nativeDefault from "native" /* 576 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8779 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, card: null, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, cardContent: null, cardText: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };

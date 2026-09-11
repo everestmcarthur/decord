@@ -1,10 +1,10 @@
-// Module ID: 7362
-// Function ID: 7363
+// Module ID: 7384
+// Function ID: 7385
 // Name: GameActionCreators
-// Dependencies: [5, 1916, 1074, 1272, 573, 4492, 12, 2]
+// Dependencies: [5, 1916, 1074, 1272, 573, 4494, 12, 2]
 // Exports: fetchGamesWithSupplementalData
 
-// Module 7362 (GameActionCreators)
+// Module 7384 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 1916 */;
@@ -141,7 +141,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-const batchInvocationManager = new fn(4492).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4494).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

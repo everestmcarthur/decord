@@ -1,16 +1,16 @@
-// Module ID: 12204
-// Function ID: 12205
+// Module ID: 12229
+// Function ID: 12230
 // Name: useSortedSectionCommands
-// Dependencies: [32, 19, 12205, 12141, 1090, 2]
+// Dependencies: [32, 19, 12230, 12166, 1090, 2]
 // Exports: default
 
-// Module 12204 (useSortedSectionCommands)
+// Module 12229 (useSortedSectionCommands)
 import DurationsDefault from "Durations" /* 1090 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12141 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12166 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const CommandListSortOrder = fn(12205).CommandListSortOrder;
+const CommandListSortOrder = fn(12230).CommandListSortOrder;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 

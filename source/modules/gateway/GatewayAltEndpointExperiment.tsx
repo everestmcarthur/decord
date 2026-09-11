@@ -1,11 +1,11 @@
-// Module ID: 14629
-// Function ID: 14630
+// Module ID: 14607
+// Function ID: 14608
 // Name: GatewayAltEndpointExperiment
-// Dependencies: [1433, 2, 14630]
+// Dependencies: [1433, 2, 14608]
 // Exports: useShouldUseAltGateway
 
-// Module 14629 (GatewayAltEndpointExperiment)
-import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14630 */;
+// Module 14607 (GatewayAltEndpointExperiment)
+import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14608 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

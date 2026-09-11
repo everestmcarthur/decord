@@ -1,17 +1,17 @@
-// Module ID: 17879
-// Function ID: 17880
+// Module ID: 17871
+// Function ID: 17872
 // Name: GuildRoleSubscriptionTierTemplateFullCard
-// Dependencies: [19, 17, 21, 4605, 576, 1178, 16200, 4601, 15318, 7031, 1611, 7202, 17880, 6677, 1114, 17881, 10416, 17882, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 1178, 16189, 4603, 15298, 7053, 1611, 7224, 17872, 6699, 1114, 17873, 10437, 17874, 2]
 // Exports: default
 
-// Module 17879 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 17871 (GuildRoleSubscriptionTierTemplateFullCard)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15318 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16200 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17882 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15298 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16189 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17874 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -54,7 +54,7 @@ function BenefitSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, content: null, separator: null, benefitRowContainer: null, benefitTextContainer: null, benefitDescription: null, channelTitle: null, channelIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

@@ -1,17 +1,17 @@
-// Module ID: 16971
-// Function ID: 16972
+// Module ID: 16960
+// Function ID: 16961
 // Name: MessageRequestsScreenWithTabs
-// Dependencies: [32, 19, 17, 21, 4605, 576, 9862, 1114, 16972, 16988, 9863, 12686, 11967, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 9885, 1114, 16961, 16977, 9886, 12711, 11992, 2]
 
-// Module 16971 (MessageRequestsScreenWithTabs)
+// Module 16960 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import SegmentedControlState from "SegmentedControlState" /* 9862 */;
-import SegmentedControl from "SegmentedControl" /* 9863 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11967 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 12686 */;
-import MessageRequestListDefault from "MessageRequestList" /* 16972 */;
-import SpamMessageListDefault from "SpamMessageList" /* 16988 */;
+import SegmentedControlState from "SegmentedControlState" /* 9885 */;
+import SegmentedControl from "SegmentedControl" /* 9886 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11992 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 12711 */;
+import MessageRequestListDefault from "MessageRequestList" /* 16961 */;
+import SpamMessageListDefault from "SpamMessageList" /* 16977 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };

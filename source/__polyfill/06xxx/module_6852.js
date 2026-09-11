@@ -1,30 +1,72 @@
 // Module ID: 6852
 // Function ID: 6853
-// Dependencies: [19]
-// Exports: useStableCallback
+// Dependencies: [41, 42, 93, 95, 98, 6748]
 
 // Module 6852
-import noop from "module_19" /* 19 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
-
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, tmp);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return applyResult;
-  }, []);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+class FlingGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, FlingGesture);
+    tmp2 = c2;
+    obj = c2(FlingGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "FlingGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = FlingGesture;
+_inherits(FlingGesture, fn(6748).BaseGesture);
+const entry = {
+  key: "numberOfPointers",
+  value: function numberOfPointers(numberOfPointers) {
+    this.config.numberOfPointers = numberOfPointers;
+    return this;
+  }
 };
+const items = [
+  entry,
+  {
+    key: "direction",
+    value: function direction(dependencyMap) {
+      this.config.direction = dependencyMap;
+      return this;
+    }
+  }
+];
+
+export const FlingGesture = _createClass(FlingGesture, items);

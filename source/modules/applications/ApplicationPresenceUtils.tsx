@@ -1,10 +1,10 @@
-// Module ID: 8294
-// Function ID: 8295
+// Module ID: 8317
+// Function ID: 8318
 // Name: ApplicationPresenceUtils
 // Dependencies: [1957, 2]
 // Exports: shouldDisableUserPresenceInChannel
 
-// Module 8294 (ApplicationPresenceUtils)
+// Module 8317 (ApplicationPresenceUtils)
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const size = fn(2);

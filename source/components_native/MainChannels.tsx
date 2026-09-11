@@ -1,20 +1,20 @@
-// Module ID: 16097
-// Function ID: 16098
+// Module ID: 16086
+// Function ID: 16087
 // Name: MainChannels
-// Dependencies: [32, 19, 17, 1074, 21, 16098, 5636, 4605, 576, 4465, 1611, 16099, 16100, 16101, 16185, 16363, 4341, 16102, 16444, 4468, 11604, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 16087, 5638, 4607, 576, 4467, 1611, 16088, 16089, 16090, 16174, 16352, 4343, 16091, 16433, 4470, 11628, 2]
 
-// Module 16097 (MainChannels)
+// Module 16086 (MainChannels)
 import nativeDefault from "native" /* 576 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4468 */;
-import useRefValueDefault from "useRefValue" /* 5636 */;
-import StartupProfiler from "StartupProfiler" /* 11604 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16098 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 16100 */;
-import messages_MessagesDefault from "messages/Messages" /* 16101 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16102 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 16185 */;
-import HomePanelContent from "HomePanelContent" /* 16363 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16444 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4470 */;
+import useRefValueDefault from "useRefValue" /* 5638 */;
+import StartupProfiler from "StartupProfiler" /* 11628 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16087 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 16089 */;
+import messages_MessagesDefault from "messages/Messages" /* 16090 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16091 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 16174 */;
+import HomePanelContent from "HomePanelContent" /* 16352 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ function LeftPanelContent(panelStyles) {
   if (tmp8) {
     tmp11 = current;
   }
-  isChatBesideChannelList = tmp10(4465)().isChatBesideChannelList;
+  isChatBesideChannelList = tmp10(4467)().isChatBesideChannelList;
   top = tmp10(1611)().top;
   const items1 = [tmp, top];
   const memo = obj2.useMemo(() => {
@@ -58,7 +58,7 @@ function LeftPanelContent(panelStyles) {
     items[1] = sideTablet;
     return items;
   }, items2);
-  const sum = DM_WIDTH + tmp10(16099)();
+  const sum = DM_WIDTH + tmp10(16088)();
   let num = 0;
   if (tmp8) {
     num = 1;
@@ -83,7 +83,7 @@ function LeftPanelContent(panelStyles) {
     const items6 = [memo, panelStyles];
     obj6.style = items6;
     obj6.children = tmp15Result;
-    tmp16Result = tmp16(tmp10(4341).View, obj6);
+    tmp16Result = tmp16(tmp10(4343).View, obj6);
   }
   items5[1] = tmp16Result;
   obj4.children = items5;
@@ -103,7 +103,7 @@ const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: nativeDefault.radii.xl };
 obj.sideContainer = rect;

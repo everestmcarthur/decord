@@ -1,18 +1,18 @@
-// Module ID: 16437
-// Function ID: 16438
+// Module ID: 16426
+// Function ID: 16427
 // Name: GuildsBarUnreadBars
-// Dependencies: [32, 19, 17, 7687, 4426, 5488, 16364, 15177, 21, 4605, 7124, 1611, 15170, 15179, 551, 558, 504, 4341, 16438, 2]
+// Dependencies: [32, 19, 17, 7709, 4428, 5490, 16353, 15156, 21, 4607, 7146, 1611, 15149, 15158, 551, 558, 504, 4343, 16427, 2]
 
-// Module 16437 (GuildsBarUnreadBars)
+// Module 16426 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import FastList from "FastList" /* 7124 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import FastList from "FastList" /* 7146 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7687 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7709 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SortedGuildStore from "SortedGuildStore" /* 5490 */;
 
 const require = globalThis.__r;
 
@@ -126,7 +126,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
               ({ section, item: item2 } = tmp4);
             }
             let type = tmp4.type;
-            if (tmp41(7124).FastListItemTypes.SECTION === type) {
+            if (tmp41(7146).FastListItemTypes.SECTION === type) {
               let node = guildsTree.getNode(tmp4.recyclerKey);
               let element = node;
               if (null != node) {
@@ -150,7 +150,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
               }
               continue;
             } else {
-              if (tmp41(7124).FastListItemTypes.ITEM === type) {
+              if (tmp41(7146).FastListItemTypes.ITEM === type) {
                 let node1 = guildsTree.getNode(tmp4.recyclerKey);
                 let tmp12 = node1;
                 if (null != node1) {
@@ -210,7 +210,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "Array" };
+            let obj6 = { beforeItem: null, afterItem: "a" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -222,16 +222,16 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(5488).GuildsNodeType;
-const GuildsBarConstants = fn(16364);
+const GuildsNodeType = fn(5490).GuildsNodeType;
+const GuildsBarConstants = fn(16353);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(15177);
+const YouBarConstants = fn(15156);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "call", afterItem: "accessibilityLabel" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
+let closure_17 = { beforeItem: "guild", afterItem: "call" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
 const __initData = { code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}" };
 const __initData2 = { code: "function GuildsBarUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}" };
 const size = fn(2);

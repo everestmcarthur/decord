@@ -1,12 +1,12 @@
-// Module ID: 14760
-// Function ID: 14761
+// Module ID: 14737
+// Function ID: 14738
 // Name: TinyBroncoSettingsPredicate
-// Dependencies: [14761, 14762, 2]
+// Dependencies: [14738, 14739, 2]
 // Exports: useIsTinyBroncoSettingsEnabled
 
-// Module 14760 (TinyBroncoSettingsPredicate)
-import TinyBroncoConstants from "TinyBroncoConstants" /* 14761 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14762 */;
+// Module 14737 (TinyBroncoSettingsPredicate)
+import TinyBroncoConstants from "TinyBroncoConstants" /* 14738 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14739 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = TinyBroncoConstants.TINY_BRONCO_SETTINGS_LOCATION;

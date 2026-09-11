@@ -1,12 +1,12 @@
-// Module ID: 15842
-// Function ID: 15843
+// Module ID: 15827
+// Function ID: 15828
 // Name: DesignSystemsButtonGroupSetting
-// Dependencies: [8027, 1074, 11540, 15843, 2]
+// Dependencies: [8050, 1074, 11564, 15828, 2]
 
-// Module 15842 (DesignSystemsButtonGroupSetting)
+// Module 15827 (DesignSystemsButtonGroupSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

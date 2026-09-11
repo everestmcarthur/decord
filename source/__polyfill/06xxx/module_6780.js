@@ -1,36 +1,51 @@
 // Module ID: 6780
 // Function ID: 6781
-// Dependencies: [19, 6779, 6749]
-// Exports: useGestureRelationsUpdater
+// Dependencies: [19, 6758, 6761]
+// Exports: useMountReactions
 
 // Module 6780
-import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6779 */;
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6758 */;
+import MountRegistry2 from "MountRegistry" /* 6761 */;
 
-({ useEffect: c2, useMemo: c3 } = noop);
-
-export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
-  closure_0 = gesture;
-  const items = [gesture];
-  const tmp = closure_3(() => {
-    let configureRelationsResult = null;
-    if (closure_0) {
-      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+function shouldUpdateDetector(arg0, handlerTag) {
+  if (undefined === arg0) {
+    return false;
+  } else {
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(arg0);
+    for (const item10012 of result) {
+      if (item10012 === arg1.handlerTag) {
+        obj2.return();
+        let flag = true;
+        return true;
+      }
     }
-    return configureRelationsResult;
+    return false;
+  }
+}
+const useEffect = _mod19.useEffect;
+
+export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
+  const items = [detectorUpdater, current2];
+  useEffect(() => {
+    const MountRegistry = MountRegistry2.MountRegistry;
+    return MountRegistry.addMountListener((arg0) => {
+      if (current2.isMounted) {
+        const attachedGestures = current2.attachedGestures;
+        const iter = attachedGestures[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let requireToFail = nextResult.config.requireToFail;
+          let simultaneousWith = nextResult.config.simultaneousWith;
+          let tmp5 = shouldUpdateDetector;
+          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, arg0)) {
+          }
+          let tmp9 = detectorUpdater();
+          iter.return();
+        }
+      }
+    });
   }, items);
-  closure_1 = tmp;
-  const items1 = [tmp];
-  closure_2(() => {
-    if (closure_1) {
-      const _requestAnimationFrame = requestAnimationFrame;
-      closure_0 = requestAnimationFrame(() => {
-        const item = closure_1_1.forEach((item, index) => {
-          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
-          NativeProxy.configureRelations(index, item);
-        });
-      });
-      return () => cancelAnimationFrame(closure_0);
-    }
-  }, items1);
 };

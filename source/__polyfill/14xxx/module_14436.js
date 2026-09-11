@@ -1,16 +1,9 @@
 // Module ID: 14436
 // Function ID: 14437
-// Dependencies: [14400, 14374]
+// Dependencies: [14424]
 
 // Module 14436
-import _mod14374 from "module_14374" /* 14374 */;
-import all from "module_14400" /* 14400 */;
+import replaceByteInByteSequence from "replaceByteInByteSequence" /* 14424 */;
 
-let _moduleResult = all(_mod14374.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod14374.WeakMap));
-  const obj = /native code/;
-}
 
-export default _moduleResult;
+export const URLSearchParams = replaceByteInByteSequence.URLSearchParams;

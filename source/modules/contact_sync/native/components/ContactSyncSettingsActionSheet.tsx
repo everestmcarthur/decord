@@ -1,20 +1,20 @@
-// Module ID: 12757
-// Function ID: 12758
+// Module ID: 12782
+// Function ID: 12783
 // Name: ContactSyncSettingsActionSheet
-// Dependencies: [19, 17, 12747, 1074, 21, 4605, 576, 8663, 1114, 4601, 12750, 7249, 2]
+// Dependencies: [19, 17, 12772, 1074, 21, 4607, 576, 8686, 1114, 4603, 12775, 7271, 2]
 // Exports: default
 
-// Module 12757 (ContactSyncSettingsActionSheet)
+// Module 12782 (ContactSyncSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12747);
+const ContactSyncModalStore = fn(12772);
 ({ setAllowEmail: c3, setAllowPhone: closure_4, setAllowSync: hasOwnProperty, useContactSyncModalStore: metroRequire } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 }, formRow: null, syncRow: null, formText: null, info: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
 obj2.formRow = { marginTop: 8, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

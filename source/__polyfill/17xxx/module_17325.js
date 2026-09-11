@@ -1,12 +1,32 @@
 // Module ID: 17325
 // Function ID: 17326
-// Dependencies: [1318, 17326]
+// Dependencies: []
 
 // Module 17325
-import MessageFormat from "MessageFormat" /* 17326 */;
-import module_1318 from "module_1318" /* 1318 */;
-
-const _default = MessageFormat.default;
-_default.default = _default;
-
-export default _default;
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "cs",
+  pluralRuleFunction(arg0, arg1) {
+    const parts = String(arg0).split(".");
+    [tmp2, tmp3] = parts;
+    let str2 = "other";
+    if (!arg1) {
+      if (1 != arg0) {
+        if (tmp2 >= 2) {
+          if (tmp2 <= 4) {
+            let str4 = "few";
+          }
+          let str3 = str4;
+        }
+        let str5 = "many";
+        if (!tmp3) {
+          str5 = "other";
+        }
+        str4 = str5;
+      } else {
+        str3 = "one";
+      }
+      str2 = str3;
+    }
+    return str2;
+  }
+});

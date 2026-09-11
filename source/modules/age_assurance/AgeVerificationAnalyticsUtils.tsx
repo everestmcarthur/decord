@@ -1,10 +1,10 @@
-// Module ID: 8478
-// Function ID: 8479
+// Module ID: 8501
+// Function ID: 8502
 // Name: AgeVerificationAnalyticsUtils
 // Dependencies: [1957, 1074, 1242, 2]
 // Exports: trackAgeVerificationDmClicked, trackAgeVerificationModalClicked, trackAgeVerificationModalViewed, trackAgeVerificationToastViewed, trackNsfwSpaceWarningModalClicked, trackNsfwSpaceWarningModalViewed
 
-// Module 8478 (AgeVerificationAnalyticsUtils)
+// Module 8501 (AgeVerificationAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

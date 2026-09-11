@@ -1,17 +1,17 @@
-// Module ID: 9537
-// Function ID: 9538
+// Module ID: 9560
+// Function ID: 9561
 // Name: ChannelCallStore
-// Dependencies: [19, 1956, 9538, 1920, 4626, 4492, 8397, 560, 1249, 573, 4806, 12, 9539, 9540, 9541, 504, 9542, 2]
+// Dependencies: [19, 1956, 9561, 1920, 4628, 4494, 8420, 560, 1249, 573, 4808, 12, 9562, 9563, 9564, 504, 9565, 2]
 // Exports: clearFocusTimer, resetChannelCallStore, resetFocus, resetFocusTimer, setFocus, setVoiceChatDrawerState, toggleFocus, useChannelCallOrientationHandlers, useIsVoiceChatFocused
 
-// Module 9537 (ChannelCallStore)
+// Module 9560 (ChannelCallStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4806 */;
-import DeviceOrientation from "DeviceOrientation" /* 8397 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9539 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 9540 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9542 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4808 */;
+import DeviceOrientation from "DeviceOrientation" /* 8420 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9562 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9563 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9565 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import apply from "module_12" /* 12 */;
@@ -19,16 +19,16 @@ import apply from "module_12" /* 12 */;
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9538);
+const ChannelCallConstants = fn(9561);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(1920).OrientationLockState;
-const ParticipantTypes = fn(4626).ParticipantTypes;
-const timeout = new fn(4492).Timeout();
+const ParticipantTypes = fn(4628).ParticipantTypes;
+const timeout = new fn(4494).Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 let obj2 = {};
-let size = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8397).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+let size = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8420).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8397).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+const size1 = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8420).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
 let closure_9 = Object.freeze(obj);

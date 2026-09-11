@@ -1,9 +1,9 @@
-// Module ID: 7819
-// Function ID: 7820
+// Module ID: 7841
+// Function ID: 7842
 // Name: ForumSearchStore
 // Dependencies: [1957, 504, 573, 2]
 
-// Module 7819 (ForumSearchStore)
+// Module 7841 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

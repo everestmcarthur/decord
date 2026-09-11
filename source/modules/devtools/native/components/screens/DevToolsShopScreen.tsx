@@ -1,29 +1,29 @@
-// Module ID: 15799
-// Function ID: 15800
+// Module ID: 15784
+// Function ID: 15785
 // Name: DevToolsShopScreen
-// Dependencies: [19, 17, 4604, 21, 4605, 576, 7033, 504, 15698, 1943, 5023, 5737, 5655, 7253, 15772, 7252, 2]
+// Dependencies: [19, 17, 4606, 21, 4607, 576, 7055, 504, 15681, 1943, 5025, 5739, 5657, 7275, 15757, 7274, 2]
 // Exports: default
 
-// Module 15799 (DevToolsShopScreen)
+// Module 15784 (DevToolsShopScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7033 */;
-import TableSwitchRow from "TableSwitchRow" /* 7252 */;
-import FormSwitch from "FormSwitch" /* 7253 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15698 */;
-import DevSettingsActions from "DevSettingsActions" /* 15772 */;
+import Stack_Stack from "Stack/Stack" /* 5025 */;
+import TableRow from "TableRow" /* 5657 */;
+import TableRowGroup from "TableRowGroup" /* 5739 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7055 */;
+import TableSwitchRow from "TableSwitchRow" /* 7274 */;
+import FormSwitch from "FormSwitch" /* 7275 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15681 */;
+import DevSettingsActions from "DevSettingsActions" /* 15757 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4604 */;
+import DevSettingsStore from "DevSettingsStore" /* 4606 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

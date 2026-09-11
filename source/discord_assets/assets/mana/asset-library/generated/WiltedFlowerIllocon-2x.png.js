@@ -1,8 +1,8 @@
-// Module ID: 6624
-// Function ID: 6625
+// Module ID: 6646
+// Function ID: 6647
 // Dependencies: [2]
 
-// Module 6624
+// Module 6646
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WiltedFlowerIllocon-2x.png.js");

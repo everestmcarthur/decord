@@ -1,30 +1,30 @@
-// Module ID: 5570
-// Function ID: 5571
+// Module ID: 5572
+// Function ID: 5573
 // Name: GuildActionCreators
-// Dependencies: [109, 5, 5571, 502, 5489, 2012, 1979, 2011, 4426, 1371, 1074, 1098, 4949, 1114, 573, 5572, 1272, 5575, 7147, 1896, 7263, 7264, 7269, 7299, 7373, 4798, 1250, 7374, 4248, 1086, 7375, 4285, 1242, 7379, 1100, 4816, 7381, 2]
+// Dependencies: [109, 5, 5573, 502, 5491, 2012, 1979, 2011, 4428, 1371, 1074, 1098, 4951, 1114, 573, 5574, 1272, 5577, 7169, 1896, 7285, 7286, 7291, 7321, 7395, 4800, 1250, 7396, 4250, 1086, 7397, 4287, 1242, 7401, 1100, 4818, 7403, 2]
 
-// Module 5570 (GuildActionCreators)
+// Module 5572 (GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4798 */;
-import AgeGateUtils from "AgeGateUtils" /* 4816 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import LurkerActionCreators from "LurkerActionCreators" /* 7373 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7375 */;
-import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7379 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4800 */;
+import AgeGateUtils from "AgeGateUtils" /* 4818 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
+import LurkerActionCreators from "LurkerActionCreators" /* 7395 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7397 */;
+import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7401 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BulkBanStore from "BulkBanStore" /* 5571 */;
+import BulkBanStore from "BulkBanStore" /* 5573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5489 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5491 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -718,7 +718,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4248).NONE;
+              obj5.permissions = primary_color(4250).NONE;
               c6 = 1;
               const HTTP = color(1272).HTTP;
               const request = { url: closure_1_16.GUILD_ROLES(closure_0), oldFormErrors: true, body: obj5, rejectWithError: color(1272).rejectWithMigratedError() };
@@ -730,7 +730,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4285)(closure_131_2);
+            const tmp30 = new obj6(4287)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -750,7 +750,7 @@ export default {
               obj6(573).dispatch(obj10);
               const obj = obj6(573);
             }
-            const result = obj6(7375).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7397).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -788,7 +788,7 @@ export default {
       request.body = obj4;
       request.rejectWithError = tmp5(1272).rejectWithMigratedError();
       closure_128_0 = await HTTP.patch(request);
-      const result = tmp2(7375).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7397).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -813,7 +813,7 @@ export default {
       const HTTP = tmp5(1272).HTTP;
       const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
       closure_128_0 = await HTTP.patch(request);
-      const result = body(7375).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7397).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -825,7 +825,7 @@ export default {
       const HTTP = tmp5(1272).HTTP;
       const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
       closure_128_0 = await HTTP.patch(request);
-      const result = body(7375).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7397).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -938,7 +938,7 @@ export default {
               tmp11(1100).transitionTo(__initData.CHANNEL(guildId, defaultChannel.id));
               const tmp11Result2 = tmp11(1100);
             }
-            tmp11Result = tmp11(7381);
+            tmp11Result = tmp11(7403);
           }
           obj3 = AgeGateUtils;
         }

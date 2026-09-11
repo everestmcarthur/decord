@@ -1,10 +1,10 @@
-// Module ID: 5616
-// Function ID: 5617
+// Module ID: 5618
+// Function ID: 5619
 // Name: DomainMigrationUtils
 // Dependencies: [2]
 // Exports: extractMessage, sendPostMessage
 
-// Module 5616 (DomainMigrationUtils)
+// Module 5618 (DomainMigrationUtils)
 import size from "module_2" /* 2 */;
 
 const DomainMigrationMessageFrom = { MIGRATION_SOURCE_DOMAIN: 0, [0]: "MIGRATION_SOURCE_DOMAIN", MIGRATION_DESTINATION_DOMAIN: 1, [1]: "MIGRATION_DESTINATION_DOMAIN" };

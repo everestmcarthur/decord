@@ -1,16 +1,16 @@
-// Module ID: 8843
-// Function ID: 8844
+// Module ID: 8866
+// Function ID: 8867
 // Name: WishlistItemCardBase
-// Dependencies: [19, 17, 21, 576, 4605, 4303, 8844, 4315, 8301, 4306, 8846, 1114, 1369, 8866, 5145, 2]
+// Dependencies: [19, 17, 21, 576, 4607, 4305, 8867, 4317, 8324, 4308, 8869, 1114, 1369, 8889, 5147, 2]
 // Exports: default
 
-// Module 8843 (WishlistItemCardBase)
+// Module 8866 (WishlistItemCardBase)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import useToken from "useToken" /* 4306 */;
-import native from "native" /* 4315 */;
-import useUserProfileColors from "useUserProfileColors" /* 8301 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import useToken from "useToken" /* 4308 */;
+import native from "native" /* 4317 */;
+import useUserProfileColors from "useUserProfileColors" /* 8324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(8844).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(8867).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 }
@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
 const obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -102,7 +102,7 @@ export default function WishlistItemCardBase(username) {
       stringResult = intl2.string(tmp2(1114).t.wu4gyV);
     }
   }
-  let tmp14Result4 = source === tmp2(8846).WishlistItemSource.WISHLIST;
+  let tmp14Result4 = source === tmp2(8869).WishlistItemSource.WISHLIST;
   items1[1] = stringResult;
   let tmp10 = null;
   if (tmp14Result4) {
@@ -124,7 +124,7 @@ export default function WishlistItemCardBase(username) {
   if (tmp14Result) {
     obj7 = { style: tmp.overlayContainer, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     const obj8 = { color: tmp5(576).colors.WHITE, size: "custom", style: { width: 40, height: 40 } };
-    obj7.children = tmp14(tmp2(8866).CheckmarkLargeBoldIcon, obj8);
+    obj7.children = tmp14(tmp2(8889).CheckmarkLargeBoldIcon, obj8);
     tmp14Result = tmp14(tmp15, obj7);
   }
   items3[1] = tmp14Result;
@@ -132,7 +132,7 @@ export default function WishlistItemCardBase(username) {
   if (tmp14Result3) {
     const obj9 = { style: tmp.lockBadge, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     const obj10 = { color: tmp5(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, size: "custom", style: { width: 18, height: 18 } };
-    obj9.children = tmp14(tmp2(5145).LockIcon, obj10);
+    obj9.children = tmp14(tmp2(5147).LockIcon, obj10);
     tmp14Result3 = tmp14(tmp15, obj9);
   }
   items3[2] = tmp14Result3;

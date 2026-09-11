@@ -1,13 +1,13 @@
-// Module ID: 9960
-// Function ID: 9961
+// Module ID: 9983
+// Function ID: 9984
 // Name: ImageButton
-// Dependencies: [19, 17, 21, 4605, 5030, 576, 5031, 4341, 5024, 5028, 5033, 8151, 4601, 2]
+// Dependencies: [19, 17, 21, 4607, 5032, 576, 5033, 4343, 5026, 5030, 5035, 8174, 4603, 2]
 
-// Module 9960 (ImageButton)
+// Module 9983 (ImageButton)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5024 */;
-import springPresets from "springPresets" /* 5028 */;
-import ButtonConstants from "ButtonConstants" /* 5030 */;
+import spring from "spring" /* 5026 */;
+import springPresets from "springPresets" /* 5030 */;
+import ButtonConstants from "ButtonConstants" /* 5032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,13 +15,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(5030).SMALL_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(5032).SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(5030).MEDIUM_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(5032).MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = ButtonConstants.getButtonBorderRadius(arg0);

@@ -1,15 +1,15 @@
-// Module ID: 8024
-// Function ID: 8025
+// Module ID: 8047
+// Function ID: 8048
 // Name: DoubleTapErrorToast
-// Dependencies: [19, 17, 1374, 21, 4605, 576, 8025, 4303, 4601, 1114, 2]
+// Dependencies: [19, 17, 1374, 21, 4607, 576, 8048, 4305, 4603, 1114, 2]
 // Exports: showDoubleTapErrorToast
 
-// Module 8024 (DoubleTapErrorToast)
+// Module 8047 (DoubleTapErrorToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 8025 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import XSmallBoldIcon from "XSmallBoldIcon" /* 8048 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function DoubleTapErrorToastIcon() {
 const View = fn(17).View;
 const EmojiDisabledReasons = fn(1374).EmojiDisabledReasons;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { icon: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,17 +1,17 @@
-// Module ID: 8356
-// Function ID: 8357
+// Module ID: 8379
+// Function ID: 8380
 // Name: useMediaViewerSyncer
-// Dependencies: [32, 19, 8357, 1115, 8326, 4341, 8358, 1611, 8359, 8330, 5024, 8360, 2]
+// Dependencies: [32, 19, 8380, 1115, 8349, 4343, 8381, 1611, 8382, 8353, 5026, 8383, 2]
 // Exports: useMediaViewerSyncer
 
-// Module 8356 (useMediaViewerSyncer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8330 */;
+// Module 8379 (useMediaViewerSyncer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8353 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(8357);
+const Constants = fn(8380);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1115);
 let closure_10 = PlatformUtils.isAndroid();

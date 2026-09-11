@@ -1,21 +1,9 @@
 // Module ID: 5688
 // Function ID: 5689
-// Dependencies: [19, 17, 21, 1484]
-// Exports: Background
+// Dependencies: [1122]
 
 // Module 5688
-import Link from "Link" /* 1484 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = fn;
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
 
-export const Background = function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_qbr22hmyb3tbx7536kr4boevti/node_modules/@react-navigation/elements/lib/module/assets", width: 64, height: 64, scales: [1, 1, 2, 3, 4], hash: "61378328a719f21f093de82dd89ecfb0", name: "clear-icon", type: "png" });

@@ -1,13 +1,13 @@
-// Module ID: 5985
-// Function ID: 5986
+// Module ID: 6007
+// Function ID: 6008
 // Name: DoubleWidgetAbstractUI
-// Dependencies: [21, 5637, 5986, 2]
+// Dependencies: [21, 5639, 6008, 2]
 // Exports: DoubleWidgetAbstractUI
 
-// Module 5985 (DoubleWidgetAbstractUI)
+// Module 6007 (DoubleWidgetAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5986 from "module_5986" /* 5986 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6008 from "module_6008" /* 6008 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DoubleWidgetAbstractUI = function DoubleWidgetAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5986 };
+  const obj2 = { uri: _modDef6008 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

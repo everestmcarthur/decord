@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108.5, scales: [2, 3], hash: "9b8bd10d33176958273580b349a5855d", name: "img_what_you_lose_hd_video", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 24, height: 24, scales: [2, 3, 4], hash: "61996c8880b718aa494df1b2d4a258fb", name: "arrow-right", type: "png" });

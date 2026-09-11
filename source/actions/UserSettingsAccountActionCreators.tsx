@@ -1,15 +1,15 @@
-// Module ID: 7036
-// Function ID: 7037
+// Module ID: 7058
+// Function ID: 7059
 // Name: UserSettingsAccountActionCreators
-// Dependencies: [5, 1074, 6646, 573, 1272, 6643, 1100, 1392, 510, 5219, 7037, 7040, 7042, 2]
+// Dependencies: [5, 1074, 6668, 573, 1272, 6665, 1100, 1392, 510, 5221, 7059, 7062, 7064, 2]
 // Exports: accountDetailsClose, accountDetailsInit, clearErrors, disableAccount, getHarvestStatus, requestHarvest, resetAccount, resetAllPending, resetAllTryItOut, resetAndCloseUserProfileForm, resetPendingAccountChanges, resetPendingLegacyUsernameDisabled, resetPendingPrimaryGuildChanges, saveAccountChanges, saveProfileAndAccountChanges, updateAccount
 
-// Module 7036 (UserSettingsAccountActionCreators)
+// Module 7058 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6643 */;
-import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 7040 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6665 */;
+import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 7062 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -128,7 +128,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0, value) {
 };
 const Constants = fn(1074);
 ({ Endpoints: closure_4, Routes: hasOwnProperty, DEVICE_TOKEN: metroRequire, DEVICE_VOIP_TOKEN: closure_7 } = Constants);
-const PushNotificationConstants = fn(6646);
+const PushNotificationConstants = fn(6668);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -215,8 +215,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj = avatarId(573);
   tmp13 = null != tmp12 && null != value;
   tmp15 = closure_8;
-  obj4.headers = avatarId(5219).buildHeadersForMd5({ [avatar(7037).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
-  let tmpResult = avatarId(5219);
+  obj4.headers = avatarId(5221).buildHeadersForMd5({ [avatar(7059).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  let tmpResult = avatarId(5221);
   return saveProfileAndAccountRequest(user, obj4).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;
@@ -330,8 +330,8 @@ export const saveAccountChanges = function saveAccountChanges(user, close) {
       const tmp3Result4 = tmp3(573);
     }
     if (close) {
-      tmp3(7042).close();
-      const tmp3Result5 = tmp3(7042);
+      tmp3(7064).close();
+      const tmp3Result5 = tmp3(7064);
     } else {
       tmp3(573).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
       const tmp3Result6 = tmp3(573);

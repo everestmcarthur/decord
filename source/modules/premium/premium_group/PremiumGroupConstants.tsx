@@ -1,10 +1,10 @@
-// Module ID: 4276
-// Function ID: 4277
+// Module ID: 4278
+// Function ID: 4279
 // Name: PremiumGroupConstants
 // Dependencies: [1074, 2024, 1114, 3074, 2]
 // Exports: getPremiumGroupCountryName, getPremiumGroupProductName
 
-// Module 4276 (PremiumGroupConstants)
+// Module 4278 (PremiumGroupConstants)
 import util from "util" /* 1114 */;
 import _modDef3074 from "module_3074" /* 3074 */;
 import Constants from "Constants" /* 1074 */;

@@ -1,21 +1,21 @@
-// Module ID: 14895
-// Function ID: 14896
+// Module ID: 14872
+// Function ID: 14873
 // Name: SensitiveContentFiltersNotices
-// Dependencies: [19, 8464, 21, 7353, 14765, 1114, 4299, 2024, 8476, 8478, 2]
+// Dependencies: [19, 8487, 21, 7375, 14742, 1114, 4301, 2024, 8499, 8501, 2]
 // Exports: SensitiveContentFiltersAgeVerificationNotice, SensitiveContentFiltersTeenNotice
 
-// Module 14895 (SensitiveContentFiltersNotices)
+// Module 14872 (SensitiveContentFiltersNotices)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14765 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8499 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14742 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8464).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8487).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");

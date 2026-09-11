@@ -1,13 +1,13 @@
-// Module ID: 12213
-// Function ID: 12214
+// Module ID: 12238
+// Function ID: 12239
 // Name: useIsPrimaryEntryPointDisabled
-// Dependencies: [1918, 4243, 1085, 504, 9652, 12127, 9616, 9480, 1115, 1114, 2]
+// Dependencies: [1918, 4245, 1085, 504, 9675, 12152, 9639, 9503, 1115, 1114, 2]
 // Exports: default
 
-// Module 12213 (useIsPrimaryEntryPointDisabled)
-import getPlatformDefault from "getPlatform" /* 9480 */;
+// Module 12238 (useIsPrimaryEntryPointDisabled)
+import getPlatformDefault from "getPlatform" /* 9503 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = fn;
 const Permissions = fn(1085).Permissions;
@@ -27,10 +27,10 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   if (channel != null) {
     id = channel.id;
   }
-  const embeddedActivityLaunchability = channel(9652).useEmbeddedActivityLaunchability(id);
+  const embeddedActivityLaunchability = channel(9675).useEmbeddedActivityLaunchability(id);
   let flag = false;
-  if (channel(12127).ActivityAction.LEAVE !== activityAction) {
-    if (tmp2(12127).ActivityAction.START === activityAction) {
+  if (channel(12152).ActivityAction.LEAVE !== activityAction) {
+    if (tmp2(12152).ActivityAction.START === activityAction) {
       flag = false;
       if (null != channel) {
         let isGuildVoiceResult;
@@ -39,7 +39,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         }
         if (isGuildVoiceResult) {
           flag = false;
-          if (embeddedActivityLaunchability !== tmp2(9652).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+          if (embeddedActivityLaunchability !== tmp2(9675).EmbeddedActivityLaunchability.CAN_LAUNCH) {
             flag = true;
           }
         } else {
@@ -47,12 +47,12 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
           }
-          tmp2Result = tmp2(9616);
+          tmp2Result = tmp2(9639);
         }
       }
     } else {
       flag = false;
-      if (tmp2(12127).ActivityAction.JOIN === activityAction) {
+      if (tmp2(12152).ActivityAction.JOIN === activityAction) {
         let isGuildVoiceResult1;
         if (channel != null) {
           isGuildVoiceResult1 = channel.isGuildVoice();
@@ -64,14 +64,14 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
           if (!tmp2Result3.isActivitiesInTextEnabled(channel)) {
             flag = true;
           }
-          tmp2Result3 = tmp2(9616);
+          tmp2Result3 = tmp2(9639);
         }
       }
     }
   }
   let disabled = flag;
   let reason;
-  if (activityAction !== channel(12127).ActivityAction.LEAVE) {
+  if (activityAction !== channel(12152).ActivityAction.LEAVE) {
     const tmp10 = application instanceof ApplicationRecord ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatformDefault;
     tmp2(1115);

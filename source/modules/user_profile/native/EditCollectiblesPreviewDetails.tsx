@@ -1,15 +1,15 @@
-// Module ID: 13248
-// Function ID: 13249
+// Module ID: 13273
+// Function ID: 13274
 // Name: EditCollectiblesPreviewDetails
-// Dependencies: [19, 17, 2025, 21, 4605, 504, 4262, 7606, 4286, 4601, 1114, 8236, 2]
+// Dependencies: [19, 17, 2025, 21, 4607, 504, 4264, 7628, 4288, 4603, 1114, 8259, 2]
 // Exports: default
 
-// Module 13248 (EditCollectiblesPreviewDetails)
+// Module 13273 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7606 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8236 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7628 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8259 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -23,13 +23,13 @@ function EditCollectiblesPreviewDescription(arg0) {
   const canUseCollectiblesResult = PremiumUtilsDefault.canUseCollectibles(user);
   let result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp(7606).isPremiumCollectiblesPurchase(purchase);
-    const tmpResult = tmp(7606);
+    result = tmp(7628).isPremiumCollectiblesPurchase(purchase);
+    const tmpResult = tmp(7628);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    result1 = tmp(7606).isPremiumCollectiblesPurchase(purchase);
-    const tmpResult3 = tmp(7606);
+    result1 = tmp(7628).isPremiumCollectiblesPurchase(purchase);
+    const tmpResult3 = tmp(7628);
   }
   if (null != purchase) {
     if (!result1) {
@@ -41,8 +41,8 @@ function EditCollectiblesPreviewDescription(arg0) {
       if (null != expiresAt1) {
         const _Date = Date;
         const date = new Date();
-        diffAsUnitsResult = tmp(4286).diffAsUnits(date, purchase.expiresAt);
-        const tmpResult4 = tmp(4286);
+        diffAsUnitsResult = tmp(4288).diffAsUnits(date, purchase.expiresAt);
+        const tmpResult4 = tmp(4288);
       }
       let tmp17 = null != diffAsUnitsResult;
       if (tmp17) {
@@ -50,7 +50,7 @@ function EditCollectiblesPreviewDescription(arg0) {
         const intl = tmp(1114).intl;
         const obj5 = { days: diffAsUnitsResult.days.toString() };
         obj4.children = intl.format(tmp(1114).t.Io7ozn, obj5);
-        tmp17 = hasOwnProperty(tmp(4601).Text, obj4);
+        tmp17 = hasOwnProperty(tmp(4603).Text, obj4);
       }
       const items1 = [tmp17, , ];
       const intl2 = tmp(1114).intl;
@@ -62,7 +62,7 @@ function EditCollectiblesPreviewDescription(arg0) {
       const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
       const obj7 = { date: toLocaleDateStringResult };
       obj6.children = intl2.format(tmp(1114).t.gW9R4B, obj7);
-      items1[1] = hasOwnProperty(tmp(4601).Text, obj6);
+      items1[1] = hasOwnProperty(tmp(4603).Text, obj6);
       let expiresAt2;
       if (purchase != null) {
         expiresAt2 = purchase.expiresAt;
@@ -75,7 +75,7 @@ function EditCollectiblesPreviewDescription(arg0) {
         const expiresAt = purchase.expiresAt;
         obj9.date = expiresAt.toLocaleDateString(stateFromStores, { minute: "numeric", hour: "numeric", day: "numeric", month: "long", year: "numeric" });
         obj8.children = intl3.format(tmp(1114).t.eZSTa5, obj9);
-        tmp19Result = tmp19(tmp(4601).Text, obj8);
+        tmp19Result = tmp19(tmp(4603).Text, obj8);
       }
       const obj10 = { children: null };
       items1[2] = tmp19Result;
@@ -89,10 +89,10 @@ function EditCollectiblesPreviewDescription(arg0) {
       const intl5 = tmp(1114).intl;
       stringResult = intl5.string(tmp(1114).t.hmyYK8);
       obj11.children = stringResult;
-      let tmp25Result = hasOwnProperty(tmp(4601).Text, obj11);
+      let tmp25Result = hasOwnProperty(tmp(4603).Text, obj11);
     } else {
       const tmp4Result = PremiumUtilsDefault;
-      const Text = tmp(4601).Text;
+      const Text = tmp(4603).Text;
       const obj12 = { variant: "text-sm/medium", color: "text-default", children: null };
       if (isPremiumResult) {
         obj12.children = nitroUpgradeCTA;
@@ -107,13 +107,13 @@ function EditCollectiblesPreviewDescription(arg0) {
     const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl4 = tmp(1114).intl;
     obj13.children = intl4.string(tmp(1114).t.fEGjVQ);
-    return hasOwnProperty(tmp(4601).Text, obj13);
+    return hasOwnProperty(tmp(4603).Text, obj13);
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles({ productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");

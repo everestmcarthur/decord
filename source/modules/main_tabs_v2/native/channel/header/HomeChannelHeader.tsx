@@ -1,21 +1,21 @@
-// Module ID: 13340
-// Function ID: 13341
+// Module ID: 13365
+// Function ID: 13366
 // Name: HomeChannelHeader
-// Dependencies: [19, 17, 21, 4605, 576, 1178, 12847, 4601, 1114, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 1178, 12872, 4603, 1114, 2]
 
-// Module 13340 (HomeChannelHeader)
+// Module 13365 (HomeChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import _modDef12847 from "module_12847" /* 12847 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import _modDef12872 from "module_12872" /* 12872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/h
 
 export default noop.memo(function HomeChannelHeader() {
   const obj = { style: closure_6().container, children: null };
-  const items = [React4(native.Icon, { source: _modDef12847, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
+  const items = [React4(native.Icon, { source: _modDef12872, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
   const obj3 = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.Ym2Ri6);

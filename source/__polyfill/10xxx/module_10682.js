@@ -1,18 +1,16 @@
 // Module ID: 10682
 // Function ID: 10683
-// Dependencies: [41, 42, 93, 95, 98, 10526, 10508, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10677, 10525, 10526, 10679]
 
 // Module 10682
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import now from "now" /* 10526 */;
+import _mod10679 from "module_10679" /* 10679 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-const ITCasualDateParser = require;
+const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,141 +30,43 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+class UKTimeUnitAgoFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function c(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_9 = fn(now);
-    const re10 = /(ora|oggi|stasera|questa sera|domani|dmn|ieri\s*sera)(?=\W|$)/i;
-    class ITCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, ITCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(ITCasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
-      }
-    }
-    _inherits(ITCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return re10;
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-            refDate = refDate.refDate;
-            const str2 = arg1[0].toLowerCase();
-            const parsingComponents = refDate.createParsingComponents();
-            if ("ora" === str2) {
-              return closure_9.now(refDate.reference);
-            } else if ("oggi" === str2) {
-              return closure_9.today(refDate.reference);
-            } else if ("ieri" === str2) {
-              return closure_9.yesterday(refDate.reference);
-            } else {
-              if ("domani" !== str2) {
-                if ("dmn" !== str2) {
-                  if ("stasera" !== str2) {
-                    if ("questa sera" !== str2) {
-                      if (str2.match(/ieri\s*sera/)) {
-                        let tmp = refDate;
-                        if (refDate.getHours() > 6) {
-                          const _Date = Date;
-                          const date = new Date(refDate.getTime());
-                          date.setDate(date.getDate() - 1);
-                          tmp = date;
-                        }
-                        ITCasualDateParser(10508).assignSimilarDate(parsingComponents, tmp);
-                        parsingComponents.imply("hour", 0);
-                      }
-                      return parsingComponents;
-                    }
-                  }
-                  return closure_9.tonight(refDate.reference);
-                }
-              }
-              return closure_9.tomorrow(refDate.reference);
-            }
-          }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(ITCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
 }
+_inherits(UKTimeUnitAgoFormatParser, _mod10679.AbstractParserWithLeftBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + UKTimeUnitAgoFormatParser(10677).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = UKTimeUnitAgoFormatParser(10677).parseDuration(arg1[1]);
+      const ParsingComponents = UKTimeUnitAgoFormatParser(10526).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitAgoFormatParser(10525).reverseDuration(UKTimeUnitAgoFormatParser(10677).parseDuration(arg1[1])));
+    }
+  }
+];
+
+export default _createClass(UKTimeUnitAgoFormatParser, items);

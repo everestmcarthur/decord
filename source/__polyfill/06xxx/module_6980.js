@@ -1,9 +1,32 @@
 // Module ID: 6980
 // Function ID: 6981
-// Dependencies: [6981]
+// Dependencies: [19]
+// Exports: getValidComponent, isComponentClass
 
 // Module 6980
-import _modDef6981 from "module_6981" /* 6981 */;
+import noop from "module_19" /* 19 */;
 
 
-export default _modDef6981;
+export const isComponentClass = (fn) => {
+  let BooleanResult = typeof fn === "function";
+  if (typeof fn === "function") {
+    const prototype = fn.prototype;
+    let isReactComponent;
+    if (prototype != null) {
+      isReactComponent = prototype.isReactComponent;
+    }
+    BooleanResult = Boolean(isReactComponent);
+  }
+  return BooleanResult;
+};
+export const getValidComponent = (icon) => {
+  let tmp = icon;
+  if (!noop.isValidElement(icon)) {
+    let element = null;
+    if (null != icon) {
+      element = noop.createElement(icon);
+    }
+    tmp = element;
+  }
+  return tmp;
+};

@@ -1,14 +1,14 @@
-// Module ID: 8784
-// Function ID: 8785
+// Module ID: 8807
+// Function ID: 8808
 // Name: GameProfileHeader
-// Dependencies: [32, 19, 17, 21, 4605, 576, 4341, 8785, 5037, 8786, 4601, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 4343, 8808, 5039, 8809, 4603, 2]
 // Exports: default
 
-// Module 8784 (GameProfileHeader)
+// Module 8807 (GameProfileHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import LinearGradientDefault from "LinearGradient" /* 5039 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
@@ -67,7 +67,7 @@ export default function GameProfileHeader(game) {
   let joined;
   if (game != null) {
     const genres = game.genres;
-    const mapped = genres.map(tmp3(8785).getGenreText);
+    const mapped = genres.map(tmp3(8808).getGenreText);
     joined = mapped.join(", ");
   }
   let l30Rank;
@@ -169,7 +169,7 @@ export default function GameProfileHeader(game) {
   let tmp18Result3 = null != l30Rank;
   if (tmp18Result3) {
     const obj17 = { rank: l30Rank };
-    tmp18Result3 = tmp18(tmp14(8786), obj17);
+    tmp18Result3 = tmp18(tmp14(8809), obj17);
   }
   const items9 = [tmp18Result3, React5(Text_Text.Text, { variant: "heading-xxl/semibold", color: "text-overlay-light", lineClamp: 2, style: tmp.textShadow, children: name }), ];
   let tmp18Result4 = null;
@@ -177,7 +177,7 @@ export default function GameProfileHeader(game) {
     tmp18Result4 = null;
     if ("" !== joined) {
       const obj19 = { variant: "text-md/normal", color: "text-overlay-light", lineClamp: 2, style: tmp.textShadow, children: joined };
-      tmp18Result4 = tmp18(tmp3(4601).Text, obj19);
+      tmp18Result4 = tmp18(tmp3(4603).Text, obj19);
     }
   }
   items9[2] = tmp18Result4;

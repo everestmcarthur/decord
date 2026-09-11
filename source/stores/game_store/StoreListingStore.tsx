@@ -1,14 +1,14 @@
-// Module ID: 14575
-// Function ID: 14576
+// Module ID: 14553
+// Function ID: 14554
 // Name: StoreListingStore
-// Dependencies: [2025, 14576, 504, 1369, 573, 2]
+// Dependencies: [2025, 14554, 504, 1369, 573, 2]
 
-// Module 14575 (StoreListingStore)
+// Module 14553 (StoreListingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import StoreListingRecord from "StoreListingRecord" /* 14576 */;
+import StoreListingRecord from "StoreListingRecord" /* 14554 */;
 
 require = fn;
 function addRegularStoreListing(id) {

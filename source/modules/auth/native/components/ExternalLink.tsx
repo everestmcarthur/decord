@@ -1,10 +1,10 @@
-// Module ID: 16063
-// Function ID: 16064
+// Module ID: 16052
+// Function ID: 16053
 // Name: ExternalLink
-// Dependencies: [19, 17, 21, 4605, 576, 6994, 1483, 7024, 1114, 4601, 5483, 5025, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 7016, 1483, 7046, 1114, 4603, 5485, 5027, 2]
 // Exports: default
 
-// Module 16063 (ExternalLink)
+// Module 16052 (ExternalLink)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_9 = createStyles.createStyles((arg0) => {
   const container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
   let str = "center";

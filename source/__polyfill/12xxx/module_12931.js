@@ -1,82 +1,68 @@
 // Module ID: 12931
 // Function ID: 12932
-// Dependencies: [12891, 12924]
-// Exports: makePromiseBuffer
+// Dependencies: [12924, 12919, 12932, 12920, 12892]
+// Exports: sampleSpan
 
 // Module 12931
-import _mod12891 from "module_12891" /* 12891 */;
+import _mod12924 from "module_12924" /* 12924 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function makePromiseBuffer(arg0) {
-  closure_0 = arg0;
-  const items = [];
-  return {
-    $: items,
-    add(fn) {
-      let tmp2 = undefined === promise;
-      if (!tmp2) {
-        tmp2 = items.length < tmp;
+export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = tmp(12919).getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
+    } else {
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
       }
-      if (tmp2) {
-        promise = fn();
-        if (-1 === items.indexOf(promise)) {
-          items.push(promise);
-        }
-        promise.then(() => {
-          let first = items.splice(items.indexOf(promise), 1)[0];
-          if (!first) {
-            first = Promise.resolve(undefined);
-          }
-          return first;
-        }).then(null, () => {
-          let first = items.splice(items.indexOf(promise), 1)[0];
-          if (!first) {
-            first = Promise.resolve(undefined);
-          }
-          return first.then(null, () => {
-
-          });
-        });
-        return promise;
-      } else {
-        const sentryError = new closure_0(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
-        return closure_0(items[0]).rejectedSyncPromise(sentryError);
-      }
-    },
-    drain(arg0) {
-      closure_0 = arg0;
-      return new closure_0(items[0]).SyncPromise((fn, arg1) => {
-        closure_0 = fn;
-        closure_1 = arg1;
-        length = length.length;
-        if (length) {
-          const _setTimeout = setTimeout;
-          const timeout = setTimeout(() => {
-            let tmp2 = closure_0;
-            if (closure_0) {
-              tmp2 = tmp > 0;
-            }
-            if (tmp2) {
-              closure_0(false);
-            }
-          }, closure_0);
-          const item = arr.forEach((item) => {
-            _mod12891.resolvedSyncPromise(item).then(() => {
-              diff = diff - 1;
-              if (!diff) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_1_3);
-                fn(true);
-              }
-            }, closure_1);
-          });
-        } else {
-          return fn(true);
-        }
-        arr = length;
-      });
     }
-  };
-}
+    const tmpResult = tmp(12919);
+    const parseSampleRateResult = tmp(12932).parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (tmp(12920).DEBUG_BUILD) {
+        const logger3 = tmp(12892).logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      const items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (tmp(12920).DEBUG_BUILD) {
+          const logger2 = tmp(12892).logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
+        }
+        items2 = [false, parseSampleRateResult];
+      }
+    } else {
+      if (tmp(12920).DEBUG_BUILD) {
+        const logger = tmp(12892).logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
+    }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
+  }
+  obj = _mod12924;
+};

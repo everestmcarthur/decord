@@ -1,13 +1,13 @@
-// Module ID: 13751
-// Function ID: 13752
+// Module ID: 13732
+// Function ID: 13733
 // Name: ClipsExperiment
-// Dependencies: [1908, 1371, 1373, 1433, 13752, 504, 4262, 2]
+// Dependencies: [1908, 1371, 1373, 1433, 13733, 504, 4264, 2]
 // Exports: areClipsAvailable, isScreenshotKeybindEnabled, isUserPremiumTypeForClipsEarlyAccess, useIsClipsAvailable, useScreenshotKeybindEnabled
 
-// Module 13751 (ClipsExperiment)
+// Module 13732 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13752 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13733 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import UserStore from "UserStore" /* 1371 */;
 

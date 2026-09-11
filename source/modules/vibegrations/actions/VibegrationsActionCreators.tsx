@@ -1,18 +1,18 @@
-// Module ID: 16683
-// Function ID: 16684
+// Module ID: 16671
+// Function ID: 16672
 // Name: VibegrationsActionCreators
-// Dependencies: [5, 9580, 16676, 1074, 9581, 573, 16679, 9577, 1272, 7297, 7215, 9096, 2]
+// Dependencies: [5, 9603, 16664, 1074, 9604, 573, 16667, 9600, 1272, 7319, 7237, 9119, 2]
 // Exports: createProject, deleteProject, markLogsSeen, refreshPublishedProject, reloadVibegrationsProjectFrames, renameProject, setBuilderPreviewApplicationId, setBuilderPreviewMobile, setChatSidebarWidth, setComposerDraft, setGuildHints, setProjectIcon, setSelectedProjectForGuild, trackPublishFailed, updateProjectSettings
 
-// Module 16683 (VibegrationsActionCreators)
+// Module 16671 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7297 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16679 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7319 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9600 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16667 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9580 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16676 */;
+import FramesStore from "FramesStore" /* 9603 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16664 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -61,6 +61,7 @@ let closure_12 = async function _listProjects(arg0, value) {
   } else {
     try {
       c6 = 2;
+      let tmp7 = c5;
       if (0 === c5) {
         if (arg0 === 1) {
           c6 = 3;
@@ -71,7 +72,7 @@ let closure_12 = async function _listProjects(arg0, value) {
           return obj3;
         } else {
           closure_3 = tmp3;
-          closure_2 = tmp20;
+          closure_2 = tmp7;
           closure_130_0 = undefined;
           let body;
           closure_130_2 = undefined;
@@ -86,35 +87,37 @@ let closure_12 = async function _listProjects(arg0, value) {
             type = projectsFetchState.type;
           }
           if ("loading" !== type) {
-            closure_9 = tmp30;
-            DispatcherDefault.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
+            closure_9 = tmp32;
+            const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp32 };
+            DispatcherDefault.dispatch(obj5);
             c4 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.VIBEGRATIONS_PROJECTS, query: null, rejectWithError: true };
-            let tmp41;
-            if (null != tmp48) {
-              const obj6 = { guild_id: tmp48 };
-              tmp41 = obj6;
+            let tmp43;
+            if (null != tmp51) {
+              const obj7 = { guild_id: tmp51 };
+              tmp43 = obj7;
             }
-            request.query = tmp41;
+            request.query = tmp43;
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: HTTP.get(request), done: false };
-            return obj7;
+            const obj8 = { value: HTTP.get(request), done: false };
+            return obj8;
           } else {
-            tmp20 = null != tmp30;
-            if (tmp20) {
-              tmp20 = tmp30 !== closure_9;
+            tmp7 = null != tmp32;
+            if (tmp7) {
+              tmp7 = tmp32 !== closure_9;
             }
-            if (tmp20) {
-              closure_10 = tmp30;
+            if (tmp7) {
+              closure_10 = tmp32;
             }
           }
         }
       } else {
         if (1 === tmp7) {
           c4 = 0;
-          closure_131_1(closure_131_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
+          const obj9 = { type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
+          closure_131_1(closure_131_2[5]).dispatch(obj9);
           const obj4 = closure_131_1(closure_131_2[5]);
         } else if (arg0 === 1) {
           c6 = 3;
@@ -122,34 +125,30 @@ let closure_12 = async function _listProjects(arg0, value) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           body = value.body;
-          const obj9 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-          closure_131_1(closure_131_2[5]).dispatch(obj9);
+          const obj11 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
+          closure_131_1(closure_131_2[5]).dispatch(obj11);
           c4 = 0;
           const obj = closure_131_1(closure_131_2[5]);
         }
-        tmp20 = closure_3;
         closure_130_2 = closure_131_10;
         closure_131_10 = null;
-        let tmp23 = null != closure_130_2;
-        if (tmp23) {
-          tmp20 = closure_130_0;
-          tmp23 = closure_130_2 !== closure_130_0;
+        tmp7 = null != closure_130_2;
+        if (tmp7) {
+          tmp7 = closure_130_2 !== closure_130_0;
         }
-        if (tmp23) {
-          tmp20 = closure_131_11;
-          closure_131_11(closure_130_2);
+        if (tmp7) {
+          tmp7 = closure_131_11(closure_130_2);
         }
       }
       c6 = 3;
-    } catch (tmp42) {
-      tmp20 = c4;
+    } catch (tmp44) {
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp42;
+        throw tmp44;
       } else {
         c5 = tmp;
       }
@@ -471,7 +470,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9581).isLaunched;
+const isLaunched = fn(9604).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);

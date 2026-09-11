@@ -1,12 +1,12 @@
-// Module ID: 14884
-// Function ID: 14885
+// Module ID: 14861
+// Function ID: 14862
 // Name: BlockedUserRowV2
-// Dependencies: [19, 1371, 21, 9111, 7214, 5655, 1178, 1114, 8242, 5025, 504, 2]
+// Dependencies: [19, 1371, 21, 9134, 7236, 5657, 1178, 1114, 8265, 5027, 504, 2]
 // Exports: default
 
-// Module 14884 (BlockedUserRowV2)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9111 */;
+// Module 14861 (BlockedUserRowV2)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9134 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -14,7 +14,7 @@ const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7214)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7236)().analyticsLocations;
   const obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   const obj2 = { user: userRecord, guildId: "Array", size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 };
   obj.icon = jsx(userRecord(1178).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 });
@@ -59,8 +59,8 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5025).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5655).TableRow, { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5027).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5657).TableRow, { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,13 +1,13 @@
-// Module ID: 8489
-// Function ID: 8490
+// Module ID: 8512
+// Function ID: 8513
 // Name: AgeVerificationCustomTab
-// Dependencies: [5, 3, 560, 4571, 1115, 2]
+// Dependencies: [5, 3, 560, 4573, 1115, 2]
 // Exports: getIsAgeVerificationCustomTabAwaitingResult, openAgeVerificationCustomTab, resumeAgeVerificationCustomTab, setAgeVerificationCustomTabCopy, useAgeVerificationCustomTabCopy, useIsAgeVerificationCustomTabOpen
 
-// Module 8489 (AgeVerificationCustomTab)
+// Module 8512 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4571 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

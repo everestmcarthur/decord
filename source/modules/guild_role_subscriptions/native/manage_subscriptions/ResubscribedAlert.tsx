@@ -1,16 +1,16 @@
-// Module ID: 15299
-// Function ID: 15300
+// Module ID: 15279
+// Function ID: 15280
 // Name: ResubscribedAlert
-// Dependencies: [19, 17, 21, 4605, 576, 5044, 1114, 15300, 1178, 4601, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 5046, 1114, 15280, 1178, 4603, 2]
 // Exports: default
 
-// Module 15299 (ResubscribedAlert)
+// Module 15279 (ResubscribedAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import common_AlertDefault from "common/Alert" /* 5044 */;
-import _modDef15300 from "module_15300" /* 15300 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import common_AlertDefault from "common/Alert" /* 5046 */;
+import _modDef15280 from "module_15280" /* 15280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, body: { alignItems: "center", textAlign: "center" }, centerText: { textAlign: "center" }, headerImage: { width: 87, height: 87 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -33,7 +33,7 @@ export default function ResubscribedAlert(onClose) {
   obj.style = tmp.container;
   const obj2 = { style: tmp.body, children: null };
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(React4, { source: _modDef15300, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
+  const items = [hasOwnProperty(React4, { source: _modDef15280, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
   const obj4 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.oPV2cy);

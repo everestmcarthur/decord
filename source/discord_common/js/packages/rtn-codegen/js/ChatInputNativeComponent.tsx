@@ -1,9 +1,9 @@
-// Module ID: 12059
-// Function ID: 12060
+// Module ID: 12084
+// Function ID: 12085
 // Name: ChatInputNativeComponent
 // Dependencies: [26, 106, 65, 114, 2]
 
-// Module 12059 (ChatInputNativeComponent)
+// Module 12084 (ChatInputNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;

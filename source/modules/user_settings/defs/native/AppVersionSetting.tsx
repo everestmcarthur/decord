@@ -1,23 +1,23 @@
-// Module ID: 15638
-// Function ID: 15639
+// Module ID: 15621
+// Function ID: 15622
 // Name: AppVersionSetting
-// Dependencies: [1364, 1114, 15639, 11540, 10888, 1935, 2]
+// Dependencies: [1364, 1114, 15622, 11564, 10909, 1935, 2]
 
-// Module 15638 (AppVersionSetting)
+// Module 15621 (AppVersionSetting)
 import util from "util" /* 1114 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15639 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15622 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11564);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10888).ClydeIcon,
+  IconComponent: fn(10909).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -42,7 +42,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10888).ClydeIcon,
+  IconComponent: fn(10909).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;

@@ -1,16 +1,16 @@
-// Module ID: 12345
-// Function ID: 12346
+// Module ID: 12370
+// Function ID: 12371
 // Name: VoicePanelCardLayoutManager
-// Dependencies: [32, 19, 17, 4621, 12343, 12346, 4626, 4341, 11426, 558, 9692, 12347, 12348, 1249, 2]
+// Dependencies: [32, 19, 17, 4623, 12368, 12371, 4628, 4343, 11450, 558, 9715, 12372, 12373, 1249, 2]
 // Exports: useCardLayoutCoordsSubscription, useManagerSubscription, useTargetDimensionsSubscription
 
-// Module 12345 (VoicePanelCardLayoutManager)
+// Module 12370 (VoicePanelCardLayoutManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11426 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11450 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
 
 const require = globalThis.__r;
 
@@ -25,12 +25,12 @@ function getTargetCardSize(windowWidth) {
   return Math.max(React6, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12368);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12346);
+const VoicePanelCardConstants = fn(12371);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(4626).ParticipantTypes;
+const ParticipantTypes = fn(4628).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
 let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };

@@ -1,8 +1,8 @@
-// Module ID: 5878
-// Function ID: 5879
+// Module ID: 5900
+// Function ID: 5901
 // Dependencies: [2]
 
-// Module 5878
+// Module 5900
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CandyIllocon-2x.png.js");

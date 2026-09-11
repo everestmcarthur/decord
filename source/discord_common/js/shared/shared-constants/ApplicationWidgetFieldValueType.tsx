@@ -1,9 +1,9 @@
-// Module ID: 9000
-// Function ID: 9001
+// Module ID: 9023
+// Function ID: 9024
 // Name: ApplicationWidgetFieldValueType
 // Dependencies: [2]
 
-// Module 9000 (ApplicationWidgetFieldValueType)
+// Module 9023 (ApplicationWidgetFieldValueType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetFieldValueType.tsx");

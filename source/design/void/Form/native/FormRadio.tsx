@@ -1,20 +1,20 @@
-// Module ID: 7195
-// Function ID: 7196
+// Module ID: 7217
+// Function ID: 7218
 // Name: Form/FormRadio
-// Dependencies: [19, 17, 21, 4605, 7196, 7197, 2]
+// Dependencies: [19, 17, 21, 4607, 7218, 7219, 2]
 // Exports: default
 
-// Module 7195 (Form/FormRadio)
+// Module 7217 (Form/FormRadio)
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_4 = createStyles.createStyles({ radio: { width: 22, height: 22 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 
 export default function FormRadio(selected) {
-  const obj = { style: closure_4().radio, source: importDefault(selected.selected ? 7196 : 7197) };
-  return <Image style={closure_4().radio} source={importDefault(arg0.selected ? 7196 : 7197)} />;
+  const obj = { style: closure_4().radio, source: importDefault(selected.selected ? 7218 : 7219) };
+  return <Image style={closure_4().radio} source={importDefault(arg0.selected ? 7218 : 7219)} />;
 };

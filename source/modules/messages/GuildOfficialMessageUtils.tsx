@@ -1,19 +1,19 @@
-// Module ID: 7319
-// Function ID: 7320
+// Module ID: 7341
+// Function ID: 7342
 // Name: GuildOfficialMessageUtils
-// Dependencies: [1979, 4243, 4598, 1074, 1091, 672, 4454, 4456, 7320, 504, 7321, 7322, 2]
+// Dependencies: [1979, 4245, 4600, 1074, 1091, 672, 4456, 4458, 7342, 504, 7343, 7344, 2]
 // Exports: canManageGuildOfficialMessages, canSendGuildOfficialMessages, getAccessibleGuildOfficialTextColor, isGuildOfficialMessagesEnabled, showGuildOfficialMessageGradient, showGuildOfficialMessageTextColor, useCanToggleGuildOfficialMessages, useIsGuildOfficialMessagesEnabled
 
-// Module 7319 (GuildOfficialMessageUtils)
+// Module 7341 (GuildOfficialMessageUtils)
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import ColorUtils from "ColorUtils" /* 4454 */;
-import shared from "shared" /* 4456 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7320 */;
-import ThreadHooks from "ThreadHooks" /* 7321 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7322 */;
+import ColorUtils from "ColorUtils" /* 4456 */;
+import shared from "shared" /* 4458 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7342 */;
+import ThreadHooks from "ThreadHooks" /* 7343 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7344 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = globalThis.__r;
 
@@ -49,7 +49,7 @@ function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   }
   return enabled;
 }
-let closure_5 = fn(4598).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(4600).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1074);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);

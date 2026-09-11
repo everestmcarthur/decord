@@ -1,11 +1,11 @@
-// Module ID: 17761
-// Function ID: 17762
+// Module ID: 17753
+// Function ID: 17754
 // Name: useEnableCommunityModalIcons
-// Dependencies: [32, 19, 1085, 4456, 17762, 17763, 17764, 17768, 17769, 7044, 4540, 2]
+// Dependencies: [32, 19, 1085, 4458, 17754, 17755, 17756, 17760, 17761, 7066, 4542, 2]
 // Exports: default
 
-// Module 17761 (useEnableCommunityModalIcons)
-import useThemeDefault from "useTheme" /* 4540 */;
+// Module 17753 (useEnableCommunityModalIcons)
+import useThemeDefault from "useTheme" /* 4542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,9 +23,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(17762);
+      let tmpResult = tmp(17754);
     } else {
-      tmpResult = tmp(17763);
+      tmpResult = tmp(17755);
     }
     return tmpResult;
   },
@@ -40,9 +40,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(17768);
+      let tmpResult = tmp(17760);
     } else {
-      tmpResult = tmp(17769);
+      tmpResult = tmp(17761);
     }
     return tmpResult;
   },
@@ -50,7 +50,7 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require("module_7044");
+    return require("module_7066");
   },
   set: undefined
 });

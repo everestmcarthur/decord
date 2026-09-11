@@ -1,10 +1,10 @@
-// Module ID: 9714
-// Function ID: 9715
+// Module ID: 9737
+// Function ID: 9738
 // Name: useIframeLifecycle
 // Dependencies: [19, 1074, 1109, 2]
 // Exports: default
 
-// Module 9714 (useIframeLifecycle)
+// Module 9737 (useIframeLifecycle)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,16 +1,16 @@
-// Module ID: 12284
-// Function ID: 12285
+// Module ID: 12309
+// Function ID: 12310
 // Name: ScheduledMessageCard
-// Dependencies: [19, 17, 1957, 1074, 21, 4605, 576, 504, 1100, 4808, 5657, 12285, 5627, 12286, 10182, 4601, 1114, 7896, 12287, 12279, 12288, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4607, 576, 504, 1100, 4810, 5659, 12310, 5629, 12311, 10203, 4603, 1114, 7918, 12312, 12304, 12313, 2]
 
-// Module 12284 (ScheduledMessageCard)
+// Module 12309 (ScheduledMessageCard)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7896 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12279 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12287 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12288 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7918 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12304 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12312 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12313 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -37,7 +37,7 @@ const View = fn(17).View;
 const Routes = fn(1074).Routes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, attachmentCount: { flexDirection: "row", alignItems: "center", gap: 4 }, pendingRemoval: { alignItems: "center", paddingVertical: 16 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -58,11 +58,11 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(ScheduledMessageCardStatusHeader, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(12285).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(12310).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
-      const obj6 = { style: tmp.pendingRemoval, children: tmp10(tmp2(5627).ActivityIndicator, { size: "small" }) };
+      const obj6 = { style: tmp.pendingRemoval, children: tmp10(tmp2(5629).ActivityIndicator, { size: "small" }) };
       let tmp10Result = tmp10(tmp12, obj6);
     } else {
       const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
@@ -70,21 +70,21 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
       if (length > 0) {
         const obj8 = { style: tmp.attachmentCount, children: null };
         const obj9 = { size: "xxs", color: stateFromStores(576).colors.TEXT_MUTED };
-        const items2 = [tmp10(tmp2(10182).AttachmentIcon, obj9), ];
+        const items2 = [tmp10(tmp2(10203).AttachmentIcon, obj9), ];
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1114).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1114).t.ZJ1tPW, obj11);
-        items2[1] = tmp10(tmp2(4601).Text, obj10);
+        items2[1] = tmp10(tmp2(4603).Text, obj10);
         obj8.children = items2;
         tmp9Result = tmp9(tmp12, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = tmp10(tmp2(12286).ForLaterMessageRow, obj7);
+      tmp10Result = tmp10(tmp2(12311).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
-    return closure_8(tmp2(5657).Card, obj2);
+    return closure_8(tmp2(5659).Card, obj2);
   }
   const obj = scheduledMessage(504);
 });

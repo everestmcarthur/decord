@@ -1,8 +1,8 @@
-// Module ID: 6450
-// Function ID: 6451
+// Module ID: 6472
+// Function ID: 6473
 // Dependencies: [2]
 
-// Module 6450
+// Module 6472
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyShieldCenter3dIllustration-2x.png.js");

@@ -1,26 +1,26 @@
-// Module ID: 15493
-// Function ID: 15494
+// Module ID: 15475
+// Function ID: 15476
 // Name: ContrastModeSetting
-// Dependencies: [19, 4597, 8027, 21, 14514, 15393, 11276, 11540, 1114, 1178, 2]
+// Dependencies: [19, 4599, 8050, 21, 14492, 15375, 11300, 11564, 1114, 1178, 2]
 
-// Module 15493 (ContrastModeSetting)
+// Module 15475 (ContrastModeSetting)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11276 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14514 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15393 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11300 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14492 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15375 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11564);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(8027).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8050).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

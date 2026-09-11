@@ -1,10 +1,10 @@
-// Module ID: 4814
-// Function ID: 4815
+// Module ID: 4816
+// Function ID: 4817
 // Name: StageVoicePanelExperiment
 // Dependencies: [1433, 2]
 // Exports: isStageVoicePanelEnabled, useIsStageVoicePanelEnabled
 
-// Module 4814 (StageVoicePanelExperiment)
+// Module 4816 (StageVoicePanelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

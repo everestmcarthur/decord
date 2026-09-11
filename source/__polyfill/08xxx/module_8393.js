@@ -1,82 +1,35 @@
 // Module ID: 8393
 // Function ID: 8394
-// Dependencies: [8383, 4434, 8379, 8394]
+// Dependencies: [17]
 
 // Module 8393
-import colorPropType from "colorPropType" /* 8379 */;
-import _mod8383 from "module_8383" /* 8383 */;
-import _mod8394 from "module_8394" /* 8394 */;
-import emptyFunction_mod from "module_4434" /* 4434 */;
-import "module_4434";
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
-const obj = {};
-const module_8383 = Object.assign(_mod8383);
-let emptyFunction = emptyFunction_mod;
-obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
-let emptyFunction = emptyFunction_mod;
-obj.autoCompleteType = emptyFunction.oneOf(["cc-csc", "cc-exp", "cc-exp-month", "cc-exp-year", "cc-number", "email", "name", "password", "postal-code", "street-address", "tel", "username", "off"]);
-obj.autoCorrect = emptyFunction.bool;
-obj.spellCheck = emptyFunction.bool;
-obj.autoFocus = emptyFunction.bool;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.editable = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.keyboardType = emptyFunction.oneOf(["default", "email-address", "numeric", "phone-pad", "number-pad", "ascii-capable", "numbers-and-punctuation", "url", "name-phone-pad", "decimal-pad", "twitter", "web-search", "ascii-capable-number-pad", "visible-password"]);
-let emptyFunction = emptyFunction_mod;
-obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
-let emptyFunction = emptyFunction_mod;
-obj.returnKeyType = emptyFunction.oneOf(["done", "go", "next", "search", "send", "none", "previous", "default", "emergency-call", "google", "join", "route", "yahoo"]);
-obj.returnKeyLabel = emptyFunction.string;
-obj.maxLength = emptyFunction.number;
-obj.numberOfLines = emptyFunction.number;
-obj.disableFullscreenUI = emptyFunction.bool;
-obj.enablesReturnKeyAutomatically = emptyFunction.bool;
-obj.multiline = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onBlur = emptyFunction.func;
-obj.onFocus = emptyFunction.func;
-obj.onChange = emptyFunction.func;
-obj.onChangeText = emptyFunction.func;
-obj.onContentSizeChange = emptyFunction.func;
-obj.onTextInput = emptyFunction.func;
-obj.onEndEditing = emptyFunction.func;
-obj.onSelectionChange = emptyFunction.func;
-obj.onSubmitEditing = emptyFunction.func;
-obj.onKeyPress = emptyFunction.func;
-obj.onLayout = emptyFunction.func;
-obj.onScroll = emptyFunction.func;
-obj.placeholder = emptyFunction.string;
-obj.placeholderTextColor = colorPropType;
-obj.scrollEnabled = emptyFunction.bool;
-obj.secureTextEntry = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.selection = emptyFunction.shape({ start: emptyFunction.number.isRequired, end: emptyFunction.number });
-obj.value = emptyFunction.string;
-obj.defaultValue = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.clearButtonMode = emptyFunction.oneOf(["never", "while-editing", "unless-editing", "always"]);
-obj.clearTextOnFocus = emptyFunction.bool;
-obj.selectTextOnFocus = emptyFunction.bool;
-obj.blurOnSubmit = emptyFunction.bool;
-obj.style = _mod8394.style;
-obj.underlineColorAndroid = colorPropType;
-obj.inlineImageLeft = emptyFunction.string;
-obj.inlineImagePadding = emptyFunction.number;
-obj.rejectResponderTermination = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.oneOf(items), ];
-let emptyFunction = emptyFunction_mod;
-items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
-obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
-obj.caretHidden = emptyFunction.bool;
-obj.contextMenuHidden = emptyFunction.bool;
-obj.inputAccessoryViewID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.textContentType = emptyFunction.oneOf(["none", "URL", "addressCity", "addressCityAndState", "addressState", "countryName", "creditCardNumber", "emailAddress", "familyName", "fullStreetAddress", "givenName", "jobTitle", "location", "middleName", "name", "namePrefix", "nameSuffix", "nickname", "organizationName", "postalCode", "streetAddressLine1", "streetAddressLine2", "sublocality", "telephoneNumber", "username", "password", "newPassword", "oneTimeCode"]);
-obj.showSoftInputOnFocus = emptyFunction.bool;
+const NativeModules = get_ActivityIndicator.NativeModules;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
+class WebViewProxy {
+  constructor(arg0) {
+    this.webViewKey = global;
+    return;
+  }
+  injectJavaScript(arg0) {
+    RNCWebView = NativeModules.RNCWebView;
+    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
+  }
+  addOnMessageListener(arg0) {
+    closure_0 = global;
+    self = this;
+    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
+      if (webViewKey.webViewKey === self.webViewKey) {
+        closure_0(webViewKey);
+      }
+    });
+  }
+  releaseWebView() {
+    RNCWebView = NativeModules.RNCWebView;
+    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
+    return;
+  }
+}
 
-export default obj;
+export default WebViewProxy;

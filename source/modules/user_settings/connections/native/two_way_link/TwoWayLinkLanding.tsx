@@ -1,14 +1,14 @@
-// Module ID: 9294
-// Function ID: 9295
+// Module ID: 9317
+// Function ID: 9318
 // Name: TwoWayLinkLanding
-// Dependencies: [19, 17, 5331, 21, 4605, 9295, 504, 4601, 5655, 1114, 7175, 5023, 5025, 2]
+// Dependencies: [19, 17, 5333, 21, 4607, 9318, 504, 4603, 5657, 1114, 7197, 5025, 5027, 2]
 // Exports: TwoWayLinkLanding
 
-// Module 9294 (TwoWayLinkLanding)
-import Text_Text from "Text/Text" /* 4601 */;
-import TableRow from "TableRow" /* 5655 */;
+// Module 9317 (TwoWayLinkLanding)
+import Text_Text from "Text/Text" /* 4603 */;
+import TableRow from "TableRow" /* 5657 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5333 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx");

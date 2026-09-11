@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 250, height: 120, scales: [2, 3], hash: "97335968179b868ec33c96b39450902f", name: "img_premium_canvas_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "72525f866a43ec6d6f9f30f81847a5d3", name: "ic_star_filled", type: "png" });

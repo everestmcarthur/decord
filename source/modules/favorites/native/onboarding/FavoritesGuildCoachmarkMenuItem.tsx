@@ -1,13 +1,13 @@
-// Module ID: 16316
-// Function ID: 16317
+// Module ID: 16305
+// Function ID: 16306
 // Name: FavoritesGuildCoachmarkMenuItem
-// Dependencies: [19, 1960, 1074, 1954, 21, 10310, 7208, 504, 1114, 3236, 11199, 2]
+// Dependencies: [19, 1960, 1074, 1954, 21, 10331, 7230, 504, 1114, 3236, 11224, 2]
 // Exports: default
 
-// Module 16316 (FavoritesGuildCoachmarkMenuItem)
+// Module 16305 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import LayerScope from "LayerScope" /* 7208 */;
+import LayerScope from "LayerScope" /* 7230 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 

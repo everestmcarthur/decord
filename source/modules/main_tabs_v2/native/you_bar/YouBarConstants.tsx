@@ -1,9 +1,9 @@
-// Module ID: 15177
-// Function ID: 15178
+// Module ID: 15156
+// Function ID: 15157
 // Name: YouBarConstants
 // Dependencies: [17, 576, 1178, 2]
 
-// Module 15177 (YouBarConstants)
+// Module 15156 (YouBarConstants)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;

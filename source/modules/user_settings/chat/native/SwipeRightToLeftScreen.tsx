@@ -1,16 +1,16 @@
-// Module ID: 15556
-// Function ID: 15557
+// Module ID: 15538
+// Function ID: 15539
 // Name: SwipeRightToLeftScreen
-// Dependencies: [19, 8027, 21, 11540, 14767, 2]
+// Dependencies: [19, 8050, 21, 11564, 14744, 2]
 // Exports: default
 
-// Module 15556 (SwipeRightToLeftScreen)
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 14767 */;
+// Module 15538 (SwipeRightToLeftScreen)
+import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingLayoutDefault from "SettingLayout" /* 14744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8027).MobileUserSettings;
+const MobileUserSettings = fn(8050).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");

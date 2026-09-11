@@ -1,13 +1,13 @@
-// Module ID: 15186
-// Function ID: 15187
+// Module ID: 15165
+// Function ID: 15166
 // Name: RedoIcon
-// Dependencies: [19, 21, 576, 4305, 15187, 2]
+// Dependencies: [19, 21, 576, 4307, 15166, 2]
 // Exports: RedoIcon
 
-// Module 15186 (RedoIcon)
+// Module 15165 (RedoIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod15187 from "module_15187" /* 15187 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod15166 from "module_15166" /* 15166 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const RedoIcon = function RedoIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15187, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15166, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

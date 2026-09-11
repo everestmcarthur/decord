@@ -1,13 +1,13 @@
-// Module ID: 15450
-// Function ID: 15451
+// Module ID: 15432
+// Function ID: 15433
 // Name: EmojiDisguisedFaceIcon
-// Dependencies: [19, 21, 576, 4305, 15451, 2]
+// Dependencies: [19, 21, 576, 4307, 15433, 2]
 // Exports: EmojiDisguisedFaceIcon
 
-// Module 15450 (EmojiDisguisedFaceIcon)
+// Module 15432 (EmojiDisguisedFaceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod15451 from "module_15451" /* 15451 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod15433 from "module_15433" /* 15433 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiDisguisedFaceIcon = function EmojiDisguisedFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15451, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15433, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

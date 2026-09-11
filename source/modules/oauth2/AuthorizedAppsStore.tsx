@@ -1,16 +1,16 @@
-// Module ID: 7159
-// Function ID: 7160
+// Module ID: 7181
+// Function ID: 7182
 // Name: AuthorizedAppsStore
-// Dependencies: [32, 1957, 7160, 4826, 1369, 504, 573, 2]
+// Dependencies: [32, 1957, 7182, 4828, 1369, 504, 573, 2]
 
-// Module 7159 (AuthorizedAppsStore)
+// Module 7181 (AuthorizedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 7160 */;
-import MessageStore from "MessageStore" /* 4826 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 7182 */;
+import MessageStore from "MessageStore" /* 4828 */;
 
 require = fn;
 function recomputeFromAppTokens() {

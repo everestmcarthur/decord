@@ -1,19 +1,19 @@
-// Module ID: 15091
-// Function ID: 15092
+// Module ID: 15068
+// Function ID: 15069
 // Name: useBountiesAutoScroll
-// Dependencies: [32, 19, 17, 5494, 11593, 15090, 4341, 4606, 4609, 4570, 2]
+// Dependencies: [32, 19, 17, 5496, 11617, 15067, 4343, 4608, 4611, 4572, 2]
 // Exports: clearDismissedScrollAffordanceBountyIds, useBountiesAutoScroll
 
-// Module 15091 (useBountiesAutoScroll)
-import BrowserManager from "BrowserManager" /* 4570 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
+// Module 15068 (useBountiesAutoScroll)
+import BrowserManager from "BrowserManager" /* 4572 */;
+import timing from "timing" /* 4608 */;
+import timingPresets from "timingPresets" /* 4611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const AppState = fn(17).AppState;
-const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5496).QuestsExperimentLocations;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesAutoScroll.tsx");

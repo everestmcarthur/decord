@@ -1,9 +1,9 @@
-// Module ID: 8021
-// Function ID: 8022
+// Module ID: 8044
+// Function ID: 8045
 // Name: DoubleTapToRaectConstants
 // Dependencies: [2]
 
-// Module 8021 (DoubleTapToRaectConstants)
+// Module 8044 (DoubleTapToRaectConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/double_tap_to_react/DoubleTapToRaectConstants.tsx");

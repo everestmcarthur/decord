@@ -1,11 +1,11 @@
-// Module ID: 13635
-// Function ID: 13636
+// Module ID: 13614
+// Function ID: 13615
 // Name: useResettingValue
-// Dependencies: [32, 19, 5648, 4492, 2]
+// Dependencies: [32, 19, 5650, 4494, 2]
 // Exports: default
 
-// Module 13635 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 5648 */;
+// Module 13614 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 5650 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -20,7 +20,7 @@ export default function useResettingValue(arg0, arg1) {
   const tmp = _slicedToArray(closure_4(arg0), 2);
   dependencyMap = tmp[1];
   const tmp2 = useInitialValueDefault(() => {
-    const timeout = new closure_0(4492).Timeout();
+    const timeout = new closure_0(4494).Timeout();
     return timeout;
   });
   _slicedToArray = tmp2;

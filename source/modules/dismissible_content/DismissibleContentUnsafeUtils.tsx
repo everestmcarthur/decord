@@ -1,17 +1,17 @@
-// Module ID: 4425
-// Function ID: 4426
+// Module ID: 4427
+// Function ID: 4428
 // Name: DismissibleContentUnsafeUtils
-// Dependencies: [5, 1221, 4426, 1090, 4447, 1944, 1945, 11, 1942, 504, 1940, 2]
+// Dependencies: [5, 1221, 4428, 1090, 4449, 1944, 1945, 11, 1942, 504, 1940, 2]
 // Exports: UNSAFE_isSnowflakeBoundDismissibleContentDismissed, UNSAFE_markDismissibleContentAsDismissed, UNSAFE_markSingleUseGuildDismissibleContentAsDismissed, UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed, UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed, useIsDismissibleContentDismissed_UNSAFE
 
-// Module 4425 (DismissibleContentUnsafeUtils)
+// Module 4427 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4447 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
 const require = globalThis.__r;
 
@@ -359,20 +359,20 @@ export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDism
   }
   return applyArgumentsResult;
 };
-export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId) {
-  if (obj.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE)) {
+export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(GIFTING_PROMOTION_REMINDER, id) {
+  if (obj.disableNewUserDismissibleContent(GIFTING_PROMOTION_REMINDER)) {
     return { isDismissed: true, lastDismissedSnowflakeId: null };
   } else {
     const userContent = UserSettingsProtoStore.settings.userContent;
     let prop;
     if (userContent != null) {
-      if (userContent.recurringDismissibleContentStates[PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE] != null) {
+      if (userContent.recurringDismissibleContentStates[GIFTING_PROMOTION_REMINDER] != null) {
         prop = tmp5.lastDismissedObjectId;
       }
     }
     let tmp6 = null != prop;
     if (tmp6) {
-      tmp6 = 1 !== SnowflakeUtilsDefault.compare(promotionId, prop);
+      tmp6 = 1 !== SnowflakeUtilsDefault.compare(id, prop);
     }
     const obj3 = { isDismissed: tmp6, lastDismissedSnowflakeId: prop };
     return obj3;

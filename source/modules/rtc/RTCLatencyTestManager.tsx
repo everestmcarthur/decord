@@ -1,19 +1,19 @@
-// Module ID: 17569
-// Function ID: 17570
+// Module ID: 17561
+// Function ID: 17562
 // Name: RTCLatencyTestManager
-// Dependencies: [1908, 4655, 4630, 1090, 3, 7170, 17570, 1115, 2]
+// Dependencies: [1908, 4657, 4632, 1090, 3, 7192, 17562, 1115, 2]
 
-// Module 17569 (RTCLatencyTestManager)
+// Module 17561 (RTCLatencyTestManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 17570 */;
+import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 17562 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCRegionStore from "RTCRegionStore" /* 4655 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import RTCRegionStore from "RTCRegionStore" /* 4657 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 require = fn;
-const Features = fn(4630).Features;
+const Features = fn(4632).Features;
 const SECOND = DurationsDefault.Millis.SECOND;
 let closure_7 = 30 * DurationsDefault.Millis.SECOND;
 let obj = new LoggerDefault("RTCLatencyTestManager");

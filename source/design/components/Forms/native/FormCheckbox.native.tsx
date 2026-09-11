@@ -1,20 +1,20 @@
-// Module ID: 5667
-// Function ID: 5668
+// Module ID: 5669
+// Function ID: 5670
 // Name: FormCheckbox
-// Dependencies: [19, 21, 4605, 576, 4341, 5027, 4325, 5668, 5024, 5028, 2]
+// Dependencies: [19, 21, 4607, 576, 4343, 5029, 4327, 5670, 5026, 5030, 2]
 // Exports: FormCheckbox
 
-// Module 5667 (FormCheckbox)
+// Module 5669 (FormCheckbox)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5024 */;
-import IconDefault from "Icon" /* 5027 */;
-import springPresets from "springPresets" /* 5028 */;
+import spring from "spring" /* 5026 */;
+import IconDefault from "Icon" /* 5029 */;
+import springPresets from "springPresets" /* 5030 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.checkbox = size;

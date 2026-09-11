@@ -1,18 +1,18 @@
-// Module ID: 9497
-// Function ID: 9498
+// Module ID: 9520
+// Function ID: 9521
 // Name: WebhookGuildChannelSelector
-// Dependencies: [5, 32, 19, 17, 1961, 4253, 1371, 21, 4605, 576, 4572, 9496, 1896, 1114, 4758, 9313, 4601, 1178, 8663, 2]
+// Dependencies: [5, 32, 19, 17, 1961, 4255, 1371, 21, 4607, 576, 4574, 9519, 1896, 1114, 4760, 9336, 4603, 1178, 8686, 2]
 // Exports: default
 
-// Module 9497 (WebhookGuildChannelSelector)
+// Module 9520 (WebhookGuildChannelSelector)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const createChannelRecord = fn(1961).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { selectorGroup: { flexDirection: "column", gap: 8 }, select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs }, label: null, error: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
 obj2.label = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
@@ -56,7 +56,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       obj2.title = intl.string(util.t["Re/64R"]);
       const channels = tmp.channels;
       obj2.items = channels.map((id) => {
-        const obj = { label: selectedGuildId(4758).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
+        const obj = { label: selectedGuildId(4760).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
         return obj;
       });
       obj2.onItemSelect = function onItemSelect(arg0) {
@@ -64,8 +64,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj2.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(9496, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
-      const tmp7 = asyncRequireImpl(9496, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(9519, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
+      const tmp7 = asyncRequireImpl(9519, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {

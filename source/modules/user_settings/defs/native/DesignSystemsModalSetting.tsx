@@ -1,12 +1,12 @@
-// Module ID: 15874
-// Function ID: 15875
+// Module ID: 15859
+// Function ID: 15860
 // Name: DesignSystemsModalSetting
-// Dependencies: [8027, 1074, 11540, 15875, 2]
+// Dependencies: [8050, 1074, 11564, 15860, 2]
 
-// Module 15874 (DesignSystemsModalSetting)
+// Module 15859 (DesignSystemsModalSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

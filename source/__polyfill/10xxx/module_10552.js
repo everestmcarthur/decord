@@ -1,209 +1,99 @@
 // Module ID: 10552
 // Function ID: 10553
-// Dependencies: [41, 42, 93, 95, 98, 10553, 10526, 10504, 10508, 10509]
+// Dependencies: [41, 42, 10524]
 
 // Module 10552
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import now from "now" /* 10526 */;
-import _mod10553 from "module_10553" /* 10553 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-const DECasualDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const SlashDateFormatParser = require;
+const regExp = new RegExp("([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)", "i");
+class SlashDateFormatParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, SlashDateFormatParser);
+    num = 2;
+    if (global) {
+      num = 3;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+    self.groupNumberMonth = num;
+    num2 = 3;
+    if (global) {
+      num2 = 2;
+    }
+    self.groupNumberDay = num2;
+    return;
   }
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const entry = {
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function u(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    let fn2 = self;
-    if (self) {
-      fn2 = self.__importDefault;
-    }
-    if (!fn2) {
-      fn2 = (__esModule) => {
-        if (!__esModule) {
-          const obj = { default: __esModule };
-          let tmp = obj;
-        } else {
-          tmp = __esModule;
-        }
-        return tmp;
-      };
-    }
-    const _Object3 = Object;
-    let closure_9 = fn2(_mod10553);
-    let closure_10 = fn(now);
-    const _RegExp = RegExp;
-    const regExp = new RegExp("(jetzt|heute|morgen|\u00FCbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)", "i");
-    class DECasualDateParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, DECasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(DECasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+};
+let items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(text, index) {
+      const sum = index.index + index[1].length;
+      const diff = index.index + index[0].length - index[5].length;
+      if (sum > 0) {
+        const str2 = text.text.substring(0, sum);
       }
-    }
-    _inherits(DECasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return regExp;
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-            reference = reference.reference;
-            const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-            const str2 = arg1[1] || "".toLowerCase();
-            const formatted = arg1[2] || "".toLowerCase();
-            const parsingComponents = reference.createParsingComponents();
-            if ("jetzt" === str2) {
-              let nowResult = closure_10.now(reference.reference);
-            } else if ("heute" === str2) {
-              nowResult = closure_10.today(reference.reference);
-            } else if ("morgen" === str2) {
-              const addDurationResult = DECasualDateParser(10504).addDuration(dateWithAdjustedTimezone, { day: 1 });
-              DECasualDateParser(10508).assignSimilarDate(parsingComponents, addDurationResult);
-              DECasualDateParser(10508).implySimilarTime(parsingComponents, addDurationResult);
-              nowResult = parsingComponents;
-            } else {
-              if ("\u00FCbermorgen" !== str2) {
-                if ("uebermorgen" !== str2) {
-                  if ("gestern" === str2) {
-                    const addDurationResult1 = DECasualDateParser(10504).addDuration(dateWithAdjustedTimezone, { day: -1 });
-                    DECasualDateParser(10508).assignSimilarDate(parsingComponents, addDurationResult1);
-                    DECasualDateParser(10508).implySimilarTime(parsingComponents, addDurationResult1);
-                    nowResult = parsingComponents;
-                  } else if ("vorgestern" === str2) {
-                    const addDurationResult2 = DECasualDateParser(10504).addDuration(dateWithAdjustedTimezone, { day: -2 });
-                    DECasualDateParser(10508).assignSimilarDate(parsingComponents, addDurationResult2);
-                    DECasualDateParser(10508).implySimilarTime(parsingComponents, addDurationResult2);
-                    nowResult = parsingComponents;
-                  } else {
-                    nowResult = parsingComponents;
-                    if (str2.match(/letzte\s*nacht/)) {
-                      let addDurationResult3 = dateWithAdjustedTimezone;
-                      if (dateWithAdjustedTimezone.getHours() > 6) {
-                        addDurationResult3 = DECasualDateParser(10504).addDuration(dateWithAdjustedTimezone, { day: -1 });
-                      }
-                      DECasualDateParser(10508).assignSimilarDate(parsingComponents, addDurationResult3);
-                      parsingComponents.imply("hour", 0);
-                      nowResult = parsingComponents;
-                    }
+      if (diff < text.text.length) {
+        const str5 = text.text.substring(diff);
+      }
+      const str8 = text.text.substring(sum, diff);
+      if (!str8.match(/^\d\.\d$/)) {
+        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
+          const self = this;
+          const parsingResult = text.createParsingResult(sum, str8);
+          const _parseInt = parseInt;
+          const parsed = parseInt(index[this.groupNumberMonth]);
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(index[this.groupNumberDay]);
+          if (parsed < 1) {
+            tmp6 = parsed1;
+            tmp7 = parsed;
+            if (parsed > 12) {
+              if (parsed1 >= 1) {
+                if (parsed1 <= 12) {
+                  if (parsed <= 31) {
+                    const items = [parsed, parsed1];
+                    [tmp6, tmp7] = items;
                   }
                 }
               }
-              const addDurationResult4 = DECasualDateParser(10504).addDuration(dateWithAdjustedTimezone, { day: 2 });
-              DECasualDateParser(10508).assignSimilarDate(parsingComponents, addDurationResult4);
-              DECasualDateParser(10508).implySimilarTime(parsingComponents, addDurationResult4);
-              nowResult = parsingComponents;
+              return null;
             }
-            let result = nowResult;
-            if (formatted) {
-              result = closure_9.default.extractTimeComponents(nowResult, formatted);
-              const _default = closure_9.default;
-            }
-            return result;
+          } else {
+            tmp6 = parsed1;
+            tmp7 = parsed;
           }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(DECasualDateParser, items);
-  } else {
-    const _Object2 = Object;
+          if (tmp6 >= 1) {
+            if (tmp6 <= 31) {
+              const start3 = parsingResult.start;
+              start3.assign("day", tmp6);
+              const start4 = parsingResult.start;
+              start4.assign("month", tmp7);
+              if (index[4]) {
+                const _parseInt3 = parseInt;
+                const parsed2 = parseInt(index[4]);
+                const start2 = parsingResult.start;
+                start2.assign("year", SlashDateFormatParser(10524).findMostLikelyADYear(parsed2));
+              } else {
+                const start = parsingResult.start;
+                start.imply("year", SlashDateFormatParser(10524).findYearClosestToRef(text.refDate, tmp6, tmp7));
+              }
+              return parsingResult.addTag("parser/SlashDateFormatParser");
+            }
+          }
+          return null;
+        }
+      }
+    }
   }
-} else {
-  let _Object = Object;
-}
+];
+
+export default _createClass(SlashDateFormatParser, items);

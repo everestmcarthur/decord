@@ -1,13 +1,13 @@
-// Module ID: 9505
-// Function ID: 9506
+// Module ID: 9528
+// Function ID: 9529
 // Name: RobotIcon
-// Dependencies: [19, 21, 576, 4305, 9506, 2]
+// Dependencies: [19, 21, 576, 4307, 9529, 2]
 // Exports: RobotIcon
 
-// Module 9505 (RobotIcon)
+// Module 9528 (RobotIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod9506 from "module_9506" /* 9506 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod9529 from "module_9529" /* 9529 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const RobotIcon = function RobotIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9506, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9529, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

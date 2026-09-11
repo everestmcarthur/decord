@@ -1,72 +1,54 @@
 // Module ID: 6830
 // Function ID: 6831
-// Dependencies: [41, 42, 93, 95, 98, 6726]
+// Dependencies: [5, 32, 19, 17]
+// Exports: useIsScreenReaderEnabled
 
 // Module 6830
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
+const noop = fn(19);
+({ useEffect: c2, useState: c3 } = noop);
+const AccessibilityInfo = fn(17).AccessibilityInfo;
+
+export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
+  const tmp = _slicedToArray(closure_3(false), 2);
+  closure_0 = tmp[1];
+  closure_2(() => {
+    closure_129_0 = closure_0(function*() {
+      closure_1 = tmp3;
+      yield screenReaderEnabled.isScreenReaderEnabled();
+      if (1 === tmp7) {
+        c3 = 0;
+        const _console = console;
+        console.warn("Could not read accessibility info: defaulting to false");
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        closure_128_0 = arg1;
+        closure_0(closure_128_0);
+        c3 = 0;
+      }
+      return arg1;
+    });
+    (function checkStatus() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
+    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
+      closure_0(event);
+    });
+    return () => {
+      closure_0.remove();
     };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-class FlingGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, FlingGesture);
-    tmp2 = c2;
-    obj = c2(FlingGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6726).BaseGesture);
-const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
-    return this;
-  }
+  }, []);
+  return tmp[0];
 };
-const items = [
-  entry,
-  {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
-      return this;
-    }
-  }
-];
-
-export const FlingGesture = _createClass(FlingGesture, items);

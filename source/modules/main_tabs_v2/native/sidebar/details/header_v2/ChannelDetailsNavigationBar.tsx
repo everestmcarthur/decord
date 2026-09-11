@@ -1,24 +1,24 @@
-// Module ID: 16825
-// Function ID: 16826
+// Module ID: 16813
+// Function ID: 16814
 // Name: ChannelDetailsNavigationBar
-// Dependencies: [19, 17, 4244, 4245, 1957, 4786, 7928, 10988, 1074, 7929, 21, 4605, 12440, 576, 4306, 504, 1483, 8150, 1114, 9129, 8001, 12369, 12428, 4816, 7104, 10985, 8695, 7433, 16826, 4315, 4341, 4606, 16718, 4609, 11683, 5173, 5678, 2]
+// Dependencies: [19, 17, 4246, 4247, 1957, 4788, 7951, 11010, 1074, 7952, 21, 4607, 12465, 576, 4308, 504, 1483, 8173, 1114, 9152, 8024, 12394, 12453, 4818, 7126, 11007, 8718, 7455, 16814, 4317, 4343, 4608, 16706, 4611, 11707, 5175, 5680, 2]
 
-// Module 16825 (ChannelDetailsNavigationBar)
+// Module 16813 (ChannelDetailsNavigationBar)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
-import _modDef7104 from "module_7104" /* 7104 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8695 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11683 */;
-import useSearchContext from "useSearchContext" /* 12369 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12428 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
+import timingPresets from "timingPresets" /* 4611 */;
+import _modDef7126 from "module_7126" /* 7126 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8718 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11707 */;
+import useSearchContext from "useSearchContext" /* 12394 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12453 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4244 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4245 */;
+import LurkingStore from "LurkingStore" /* 4246 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
 
 require = fn;
 function MuteButton(channelId) {
@@ -42,18 +42,18 @@ function MuteButton(channelId) {
     navigation.navigate("sidebar", { screen: constants2.MUTE, channelId, source: "channel-details-navigation-bar" });
   }, items1);
   const obj2 = channelId(1483);
-  const token = channelId(4306).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(4306);
+  const token = channelId(4308).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(4308);
   const tmp5 = navigation;
-  const token1 = channelId(4306).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token1 = channelId(4308).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   const obj5 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null };
   const intl = channelId(1114).intl;
   obj5.accessibilityLabel = intl.string(channelId(1114).t.w4m945);
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = tmp5(stateFromStores ? 9129 : 8001);
-  return closure_15(channelId(8150).IconButton, obj5, constants.MUTE);
+  obj5.icon = tmp5(stateFromStores ? 9152 : 8024);
+  return closure_15(channelId(8173).IconButton, obj5, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -74,20 +74,20 @@ function SearchButton(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   let obj = channelId(504);
-  const shouldHideChannelContent = channelId(4816).useShouldHideChannelContent(stateFromStores);
-  let obj2 = channelId(4816);
-  const token = channelId(4306).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(4306);
-  const token1 = channelId(4306).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const shouldHideChannelContent = channelId(4818).useShouldHideChannelContent(stateFromStores);
+  let obj2 = channelId(4818);
+  const token = channelId(4308).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(4308);
+  const token1 = channelId(4308).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   const obj5 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
   const intl = channelId(1114).intl;
   obj5.accessibilityLabel = intl.string(channelId(1114).t["5h0QOP"]);
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = _modDef7104;
+  obj5.icon = _modDef7126;
   obj5.disabled = shouldHideChannelContent;
-  return closure_15(channelId(8150).IconButton, obj5, constants.SEARCH);
+  return closure_15(channelId(8173).IconButton, obj5, constants.SEARCH);
 }
 function SettingsButton(channel) {
   channel = channel.channel;
@@ -106,17 +106,17 @@ function SettingsButton(channel) {
     }
   }, items);
   const obj = channel(1483);
-  const token = channel(4306).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  let obj2 = channel(4306);
-  const token1 = channel(4306).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token = channel(4308).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  let obj2 = channel(4308);
+  const token1 = channel(4308).useToken(navigation(576).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   let obj4 = { accessibilityLabel: null, onPress: null, accessibilityRole: "button", variant: null, size: null, icon: null };
   const intl = channel(1114).intl;
   obj4.accessibilityLabel = intl.string(channel(1114).t["3D5yo/"]);
   obj4.onPress = callback;
   obj4.variant = token1;
   obj4.size = token;
-  obj4.icon = navigation(7433);
-  return closure_15(channel(8150).IconButton, obj4, constants.SETTINGS);
+  obj4.icon = navigation(7455);
+  return closure_15(channel(8173).IconButton, obj4, constants.SETTINGS);
 }
 function NavigationHeader(channel) {
   channel = channel.channel;
@@ -210,19 +210,19 @@ function getItemKey(arg0) {
   return arg0;
 }
 const View = fn(17).View;
-const ChannelDetailsStore = fn(7928);
+const ChannelDetailsStore = fn(7951);
 ({ setIsChannelDetailsSearchActive: closure_9, useIsChannelDetailsSearchActive: c10 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10988);
+const ChannelDetailsConstants = fn(11010);
 ({ ChannelDetailsButtonTypes: closure_11, ChannelDetailsNavigatorScreens: closure_12 } = ChannelDetailsConstants);
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
-let closure_14 = fn(7929).SearchEntrypointAnalyticsLocations;
+let closure_14 = fn(7952).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4605);
-let obj = { container: { position: "relative", zIndex: 1, height: fn(12440).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 }, navigationHeader: null, buttonsContainer: null, searchHeader: null };
-let obj3 = { position: "relative", zIndex: 1, height: fn(12440).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 };
-obj.navigationHeader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(12440).SEARCH_BAR_HEIGHT };
-let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(12440).SEARCH_BAR_HEIGHT };
+const createStyles = fn(4607);
+let obj = { container: { position: "relative", zIndex: 1, height: fn(12465).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 }, navigationHeader: null, buttonsContainer: null, searchHeader: null };
+let obj3 = { position: "relative", zIndex: 1, height: fn(12465).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 };
+obj.navigationHeader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(12465).SEARCH_BAR_HEIGHT };
+let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(12465).SEARCH_BAR_HEIGHT };
 obj.buttonsContainer = { flex: 1, flexDirection: "row", gap: nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_BUTTONS_GAP, justifyContent: "flex-end" };
 obj.searchHeader = { position: "absolute" };
 let closure_17 = createStyles.createStyles(obj);
@@ -233,7 +233,7 @@ let closure_24 = noop.forwardRef((cleanUp, ref) => {
   ({ channel, width } = cleanUp);
   cleanUp = cleanUp.cleanUp;
   ({ onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, transitionState } = cleanUp);
-  const tmp2 = transitionState !== width(4315).TransitionStates.YEETED;
+  const tmp2 = transitionState !== width(4317).TransitionStates.YEETED;
   dependencyMap = tmp2;
   let tmp = closure_17();
   class S {
@@ -264,15 +264,15 @@ let closure_24 = noop.forwardRef((cleanUp, ref) => {
       return obj;
     }
   }
-  let obj = width(4341);
-  S.__closure = { isActive: tmp2, withTiming: width(4606).withTiming, Easing: width(4341).Easing, runOnJS: width(4341).runOnJS, cleanUp, width };
+  let obj = width(4343);
+  S.__closure = { isActive: tmp2, withTiming: width(4608).withTiming, Easing: width(4343).Easing, runOnJS: width(4343).runOnJS, cleanUp, width };
   S.__workletHash = 1270940013897;
   S.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(S);
-  let obj3 = { style: null, children: closure_15(cleanUp(16718), { ref, channelId: channel.id, guildId: channel.guild_id, onSuggestionsLayoutMesure: onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, showBackButton: true }) };
+  let obj3 = { style: null, children: closure_15(cleanUp(16706), { ref, channelId: channel.id, guildId: channel.guild_id, onSuggestionsLayoutMesure: onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, showBackButton: true }) };
   const items = [tmp.searchHeader, animatedStyle];
   obj3.style = items;
-  return closure_15(cleanUp(4341).View, obj3);
+  return closure_15(cleanUp(4343).View, obj3);
 });
 const __initData3 = { code: "function ChannelDetailsNavigationBarTsx3(){const{isActive,withTiming,timingFast,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?'auto':'none',opacity:withTiming(isActive?1:0,timingFast,'animate-always',function(finished){if(finished)runOnJS(cleanUp)();}),width:width};}" };
 const __initData4 = { code: "function ChannelDetailsNavigationBarTsx4(finished){const{runOnJS,cleanUp}=this.__closure;if(finished)runOnJS(cleanUp)();}" };

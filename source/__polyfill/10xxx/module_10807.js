@@ -1,0 +1,9 @@
+// Module ID: 10807
+// Function ID: 10808
+// Dependencies: [1122]
+
+// Module 10807
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 106, height: 80, scales: [2, 3], hash: "f9a535d371ee710b8f1909e45896c667", name: "img_wumpus_nitro_rev", type: "png" });

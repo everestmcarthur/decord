@@ -1,13 +1,13 @@
-// Module ID: 16405
-// Function ID: 16406
+// Module ID: 16394
+// Function ID: 16395
 // Name: VoiceSubtitle
-// Dependencies: [19, 21, 4601, 1114, 4757, 2]
+// Dependencies: [19, 21, 4603, 1114, 4759, 2]
 // Exports: default
 
-// Module 16405 (VoiceSubtitle)
+// Module 16394 (VoiceSubtitle)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

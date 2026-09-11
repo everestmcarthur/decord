@@ -1,15 +1,15 @@
-// Module ID: 8008
-// Function ID: 8009
+// Module ID: 8031
+// Function ID: 8032
 // Name: transformReactions
-// Dependencies: [4261, 1396, 8003, 4255, 8009, 1115, 1232, 2]
+// Dependencies: [4263, 1396, 8026, 4257, 8032, 1115, 1232, 2]
 // Exports: default
 
-// Module 8008 (transformReactions)
+// Module 8031 (transformReactions)
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ReactionUtils from "ReactionUtils" /* 4255 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4261 */;
-import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8003 */;
+import ReactionUtils from "ReactionUtils" /* 4257 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4263 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8026 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
@@ -67,7 +67,7 @@ export default function transformReactions(arg0) {
       if (Array.isArray(obj6.burst_colors)) {
         if (obj6.burst_colors.length > 0) {
           const obj8 = { colors: obj6.burst_colors, shouldProcessMobileColors: tmp8(1115).isIOS() };
-          obj6.themedBurstColors = tmp8(8009).buildPlatformedThemedEmojiColorPalette(obj8);
+          obj6.themedBurstColors = tmp8(8032).buildPlatformedThemedEmojiColorPalette(obj8);
           const tmp8Result = tmp8(1115);
         }
       }

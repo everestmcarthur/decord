@@ -3,33 +3,13 @@
 // Dependencies: [17]
 
 // Module 8370
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
-class WebViewProxy {
-  constructor(arg0) {
-    this.webViewKey = global;
-    return;
-  }
-  injectJavaScript(arg0) {
-    RNCWebView = NativeModules.RNCWebView;
-    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
-  }
-  addOnMessageListener(arg0) {
-    closure_0 = global;
-    self = this;
-    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
-      if (webViewKey.webViewKey === self.webViewKey) {
-        closure_0(webViewKey);
-      }
-    });
-  }
-  releaseWebView() {
-    RNCWebView = NativeModules.RNCWebView;
-    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
-    return;
-  }
+const obj = { SLIDER_DEFAULT_INITIAL_VALUE: 0, MARGIN_HORIZONTAL_PADDING: 0.05, THUMB_SIZE: 20, STEP_NUMBER_TEXT_FONT_SMALL: 8, STEP_NUMBER_TEXT_FONT_BIG: 12, LIMIT_MIN_VALUE: Number.MIN_SAFE_INTEGER, LIMIT_MAX_VALUE: Number.MAX_SAFE_INTEGER, DEFAULT_STEP_RESOLUTION: null };
+let num = 1000;
+if ("android" === _mod17.Platform.OS) {
+  num = 128;
 }
+obj.DEFAULT_STEP_RESOLUTION = num;
 
-export default WebViewProxy;
+export const constants = obj;

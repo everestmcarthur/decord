@@ -1,18 +1,18 @@
-// Module ID: 17560
-// Function ID: 17561
+// Module ID: 17552
+// Function ID: 17553
 // Name: MobileGiftIntentCardManager
-// Dependencies: [7710, 1957, 4826, 2011, 8131, 1373, 17561, 1094, 1935, 10814, 8838, 1250, 4492, 9918, 2]
+// Dependencies: [7732, 1957, 4828, 2011, 8154, 1373, 17553, 1094, 1935, 10835, 8861, 1250, 4494, 9941, 2]
 
-// Module 17560 (MobileGiftIntentCardManager)
+// Module 17552 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
-import Timers from "Timers" /* 4492 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9918 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
+import Timers from "Timers" /* 4494 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9941 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4826 */;
+import MessageStore from "MessageStore" /* 4828 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8131 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17561 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8154 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17553 */;
 
 require = fn;
 const PremiumConstants = fn(1373);
@@ -33,9 +33,9 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
       if (id === SelectedChannelStore.getChannelId()) {
         if (MessageStore.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)) {
-            const result = tmp(10814).logMessageGiftIntentShown(found);
+            const result = tmp(10835).logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            const tmpResult = tmp(10814);
+            const tmpResult = tmp(10835);
             const obj = { name: tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1250).ImpressionTypes.VIEW, properties: null };
             const obj2 = { gift_intent_type: tmp6.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;
@@ -45,8 +45,8 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             obj2.dm_affinity = dmProbability;
             obj2.channel_id = id;
             obj.properties = obj2;
-            tmp(8838).trackImpression(obj);
-            const tmpResult2 = tmp(8838);
+            tmp(8861).trackImpression(obj);
+            const tmpResult2 = tmp(8861);
           }
           tmp6 = constants2;
         } else {

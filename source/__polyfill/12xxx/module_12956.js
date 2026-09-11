@@ -1,196 +1,82 @@
 // Module ID: 12956
 // Function ID: 12957
-// Dependencies: [12895, 12867, 12923, 12870]
+// Dependencies: [12916, 12949]
+// Exports: makePromiseBuffer
 
 // Module 12956
-import _mod12867 from "module_12867" /* 12867 */;
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12870 */;
-import _mod12895 from "module_12895" /* 12895 */;
-import setupIntegration from "module_12923" /* 12923 */;
+import _mod12916 from "module_12916" /* 12916 */;
 
-function _shouldDropEvent(message, message2) {
-  let tmp = message2;
-  if (tmp) {
-    message = message.message;
-    message2 = message2.message;
-    if (message) {
-      if (!message) {
-        if (message) {
-          let flag = false;
-          if (message === message2) {
-            flag = false;
-            if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
-              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-              if (framesFromEvent) {
-                if (!framesFromEvent) {
-                  if (framesFromEvent) {
-                    let flag2 = false;
-                    if (framesFromEvent1.length === framesFromEvent.length) {
-                      let num = 0;
-                      flag2 = true;
-                      if (0 < framesFromEvent1.length) {
-                        flag2 = false;
-                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
-                          flag2 = false;
-                          if (tmp5.lineno !== tmp6.lineno) {
-                            break;
-                          } else {
-                            flag2 = false;
-                            if (tmp5.colno !== tmp6.colno) {
-                              break;
-                            } else {
-                              flag2 = false;
-                              if (tmp5.function !== tmp6.function) {
-                                break;
-                              } else {
-                                let sum = num + 1;
-                                num = sum;
-                                flag2 = true;
-                                if (sum >= framesFromEvent1.length) {
-                                  break;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    flag2 = false;
-                  }
-                } else {
-                  flag2 = false;
-                }
-              } else {
-                flag2 = true;
-              }
-              flag = false;
-              if (flag2) {
-                flag = true;
-              }
-            }
-          }
-        } else {
-          flag = false;
+require = arg1;
+const dependencyMap = arg6;
+
+export function makePromiseBuffer(arg0) {
+  closure_0 = arg0;
+  const items = [];
+  return {
+    $: items,
+    add(fn) {
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
+      }
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
         }
+        promise.then(() => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first;
+        }).then(null, () => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first.then(null, () => {
+
+          });
+        });
+        return promise;
       } else {
-        flag = false;
+        const sentryError = new closure_0(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return closure_0(items[0]).rejectedSyncPromise(sentryError);
       }
-    } else {
-      flag = false;
-    }
-    let tmp9 = flag;
-    if (!tmp9) {
-      let flag3 = false;
-      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
-        flag3 = false;
-        if (iter2) {
-          flag3 = false;
-          if (iter.type === iter2.type) {
-            flag3 = false;
-            if (iter.value === iter2.value) {
-              flag3 = false;
-              if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
-                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-                if (framesFromEvent2) {
-                  if (!framesFromEvent2) {
-                    if (framesFromEvent2) {
-                      let flag4 = false;
-                      if (framesFromEvent3.length === framesFromEvent2.length) {
-                        let num2 = 0;
-                        flag4 = true;
-                        if (0 < framesFromEvent3.length) {
-                          flag4 = false;
-                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
-                            flag4 = false;
-                            if (tmp12.lineno !== tmp13.lineno) {
-                              break;
-                            } else {
-                              flag4 = false;
-                              if (tmp12.colno !== tmp13.colno) {
-                                break;
-                              } else {
-                                flag4 = false;
-                                if (tmp12.function !== tmp13.function) {
-                                  break;
-                                } else {
-                                  let sum1 = num2 + 1;
-                                  num2 = sum1;
-                                  flag4 = true;
-                                  if (sum1 >= framesFromEvent3.length) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      flag4 = false;
-                    }
-                  } else {
-                    flag4 = false;
-                  }
-                } else {
-                  flag4 = true;
-                }
-                flag3 = false;
-                if (flag4) {
-                  flag3 = true;
-                }
-              }
+    },
+    drain(arg0) {
+      closure_0 = arg0;
+      return new closure_0(items[0]).SyncPromise((fn, arg1) => {
+        closure_0 = fn;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
             }
-          }
-        }
-      }
-      tmp9 = flag3;
-    }
-    tmp = tmp9;
-  }
-  return tmp;
-}
-function _isSameFingerprint(fingerprint, fingerprint2) {
-  fingerprint = fingerprint.fingerprint;
-  fingerprint2 = fingerprint2.fingerprint;
-  if (!fingerprint) {
-    if (!fingerprint2) {
-      return true;
-    }
-  }
-  if (!fingerprint) {
-    try {
-      const joined = fingerprint.join("");
-      return joined === fingerprint2.join("");
-    } catch (err) {
-      return false;
-    }
-  }
-  return false;
-}
-
-export { _shouldDropEvent };
-export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
-  name: "Dedupe",
-  processEvent(type) {
-    if (type.type) {
-      return type;
-    } else {
-      try {
-        if (_shouldDropEvent(type, closure_0)) {
-          if (_mod12895.DEBUG_BUILD) {
-            const logger = _mod12867.logger;
-            logger.warn("Event dropped due to being a duplicate of previously captured event.");
-          }
-          return null;
+            if (tmp2) {
+              closure_0(false);
+            }
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            _mod12916.resolvedSyncPromise(item).then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
         } else {
-          closure_0 = type;
-          return type;
+          return fn(true);
         }
-      } catch (err) {
-      }
+        arr = length;
+      });
     }
-  }
-}));
+  };
+}

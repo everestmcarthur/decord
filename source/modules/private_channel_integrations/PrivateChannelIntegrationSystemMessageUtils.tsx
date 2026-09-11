@@ -1,10 +1,10 @@
-// Module ID: 8048
-// Function ID: 8049
+// Module ID: 8071
+// Function ID: 8072
 // Name: PrivateChannelIntegrationSystemMessageUtils
 // Dependencies: [1074, 1114, 2024, 2]
 // Exports: getPrivateChannelIntegrationAddedSystemMessageASTContent, getPrivateChannelIntegrationAddedSystemMessageContent, getPrivateChannelIntegrationRemovedSystemMessageASTContent, getPrivateChannelIntegrationRemovedSystemMessageContent
 
-// Module 8048 (PrivateChannelIntegrationSystemMessageUtils)
+// Module 8071 (PrivateChannelIntegrationSystemMessageUtils)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import Constants from "Constants" /* 1074 */;

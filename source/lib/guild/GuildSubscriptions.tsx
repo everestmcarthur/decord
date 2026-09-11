@@ -1,16 +1,16 @@
-// Module ID: 7336
-// Function ID: 7337
+// Module ID: 7358
+// Function ID: 7359
 // Name: GuildSubscriptions
-// Dependencies: [1074, 1982, 7337, 7338, 7339, 4492, 12, 2]
+// Dependencies: [1074, 1982, 7359, 7360, 7361, 4494, 12, 2]
 
-// Module 7336 (GuildSubscriptions)
+// Module 7358 (GuildSubscriptions)
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1074 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import Timers from "Timers" /* 4492 */;
-import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 7337 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7338 */;
-import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 7339 */;
+import Timers from "Timers" /* 4494 */;
+import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 7359 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7360 */;
+import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 7361 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;

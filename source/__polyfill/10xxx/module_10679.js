@@ -1,17 +1,16 @@
 // Module ID: 10679
 // Function ID: 10680
-// Dependencies: [41, 42, 93, 95, 98, 10671, 10505, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10677, 10530]
 
 // Module 10679
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10671 from "module_10671" /* 10671 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitLaterFormatParser = require;
+let AbstractParserWithLeftRightBoundaryChecking = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,43 +30,81 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + _mod10671.TIME_UNITS_PATTERN + ")\\s{0,5}(?:dopo|pi\u00F9 tardi|da adesso|avanti|oltre|a seguire)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod10671.TIME_UNITS_PATTERN + ")(dopo|pi\u00F9 tardi)(?=(?:\\W|$))", "i");
-class ENTimeUnitLaterFormatParser {
-  constructor(arg0) {
+class AbstractParserWithLeftBoundaryChecking {
+  constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitLaterFormatParser);
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitLaterFormatParser);
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
+_inherits(AbstractParserWithLeftBoundaryChecking, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return AbstractParserWithLeftRightBoundaryChecking(10677).REGEX_PARTS.leftBoundary;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitLaterFormatParser(10505).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitLaterFormatParser(10671).parseDuration(arg1[1]));
+    key: "innerPattern",
+    value: function innerPattern(arg0) {
+      const regExp = new RegExp(this.innerPatternString(arg0), AbstractParserWithLeftRightBoundaryChecking(10677).REGEX_PARTS.flags);
+      return regExp;
+    }
+  },
+  {
+    key: "innerPatternHasChange",
+    value: function innerPatternHasChange(arg0, arg1) {
+      return false;
     }
   }
 ];
+const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
+class AbstractParserWithLeftRightBoundaryChecking {
+  constructor() {
+    self = this;
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
+const entry1 = {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    const combined = "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10677).REGEX_PARTS.rightBoundary;
+    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10677).REGEX_PARTS.flags);
+    return regExp;
+  }
+};
+const items1 = [entry1];
 
-export default _createClass(ENTimeUnitLaterFormatParser, items);
+export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
+export const AbstractParserWithLeftRightBoundaryChecking = _createClass(AbstractParserWithLeftRightBoundaryChecking, items1);

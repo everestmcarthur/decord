@@ -1,12 +1,12 @@
-// Module ID: 13897
-// Function ID: 13898
+// Module ID: 13878
+// Function ID: 13879
 // Name: dispatchAutoDisableVideo
-// Dependencies: [4630, 573, 2]
+// Dependencies: [4632, 573, 2]
 // Exports: default
 
-// Module 13897 (dispatchAutoDisableVideo)
+// Module 13878 (dispatchAutoDisableVideo)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 4630 */;
+import Constants from "Constants" /* 4632 */;
 import size from "module_2" /* 2 */;
 
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;

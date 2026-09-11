@@ -1,20 +1,20 @@
-// Module ID: 9342
-// Function ID: 9343
+// Module ID: 9365
+// Function ID: 9366
 // Name: CrunchyrollLinkLanding
-// Dependencies: [19, 9341, 1074, 21, 4605, 1114, 8339, 1483, 9294, 9343, 2024, 2]
+// Dependencies: [19, 9364, 1074, 21, 4607, 1114, 8362, 1483, 9317, 9366, 2024, 2]
 // Exports: default
 
-// Module 9342 (CrunchyrollLinkLanding)
+// Module 9365 (CrunchyrollLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef9343 from "module_9343" /* 9343 */;
+import _modDef9366 from "module_9366" /* 9366 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(9341).CrunchyrollLinkModalScenes;
+let closure_4 = fn(9364).CrunchyrollLinkModalScenes;
 const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
@@ -27,14 +27,14 @@ export default function CrunchyrollLinkLanding() {
     const obj = { label: null, icon: null };
     const intl = navigation(1114).intl;
     obj.label = intl.string(navigation(1114).t["2TXHQd"]);
-    obj.icon = navigation(8339).PlayIcon;
+    obj.icon = navigation(8362).PlayIcon;
     const items = [obj];
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef9343, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef9366, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1114).intl;
   obj2.headerConnect = intl.string(navigation(1114).t["Da+3NJ"]);
   const intl2 = navigation(1114).intl;
@@ -43,5 +43,5 @@ export default function CrunchyrollLinkLanding() {
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9294).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9343, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9317).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9366, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

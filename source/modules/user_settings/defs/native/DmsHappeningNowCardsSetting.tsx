@@ -1,13 +1,13 @@
-// Module ID: 15402
-// Function ID: 15403
+// Module ID: 15384
+// Function ID: 15385
 // Name: DmsHappeningNowCardsSetting
-// Dependencies: [8027, 11540, 1114, 1935, 2]
+// Dependencies: [8050, 11564, 1114, 1935, 2]
 
-// Module 15402 (DmsHappeningNowCardsSetting)
+// Module 15384 (DmsHappeningNowCardsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

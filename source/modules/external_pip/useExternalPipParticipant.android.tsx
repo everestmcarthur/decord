@@ -1,19 +1,19 @@
-// Module ID: 17098
-// Function ID: 17099
+// Module ID: 17088
+// Function ID: 17089
 // Name: useExternalPipParticipant
-// Dependencies: [32, 19, 4621, 502, 1908, 4628, 4626, 504, 2]
+// Dependencies: [32, 19, 4623, 502, 1908, 4630, 4628, 504, 2]
 // Exports: default
 
-// Module 17098 (useExternalPipParticipant)
+// Module 17088 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
 
 const require = fn;
-const CallConstants = fn(4626);
+const CallConstants = fn(4628);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
@@ -62,7 +62,7 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "toLowerCase", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "call", focusedParticipantType: ref2.current };
       let obj = obj2;
     } else {
       let type1;
@@ -241,7 +241,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "call" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "accessible" };
   }, items4);
   closure_129_4 = selectedParticipantSpeaking;
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];

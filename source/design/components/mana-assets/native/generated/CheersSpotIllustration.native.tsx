@@ -1,13 +1,13 @@
-// Module ID: 5889
-// Function ID: 5890
+// Module ID: 5911
+// Function ID: 5912
 // Name: CheersSpotIllustration
-// Dependencies: [21, 5637, 5890, 2]
+// Dependencies: [21, 5639, 5912, 2]
 // Exports: CheersSpotIllustration
 
-// Module 5889 (CheersSpotIllustration)
+// Module 5911 (CheersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5890 from "module_5890" /* 5890 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5912 from "module_5912" /* 5912 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const CheersSpotIllustration = function CheersSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5890 };
+  const obj2 = { uri: _modDef5912 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

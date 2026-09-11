@@ -1,9 +1,9 @@
-// Module ID: 11616
-// Function ID: 11617
+// Module ID: 11640
+// Function ID: 11641
 // Name: AlertStore
 // Dependencies: [504, 573, 2]
 
-// Module 11616 (AlertStore)
+// Module 11640 (AlertStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

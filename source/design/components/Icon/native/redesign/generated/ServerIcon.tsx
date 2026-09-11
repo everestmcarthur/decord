@@ -1,13 +1,13 @@
-// Module ID: 9355
-// Function ID: 9356
+// Module ID: 9378
+// Function ID: 9379
 // Name: ServerIcon
-// Dependencies: [19, 21, 576, 4305, 9356, 2]
+// Dependencies: [19, 21, 576, 4307, 9379, 2]
 // Exports: ServerIcon
 
-// Module 9355 (ServerIcon)
+// Module 9378 (ServerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod9356 from "module_9356" /* 9356 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod9379 from "module_9379" /* 9379 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ServerIcon = function ServerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9356, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9379, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

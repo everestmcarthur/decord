@@ -1,21 +1,21 @@
 // Module ID: 4117
 // Function ID: 4118
-// Dependencies: [3697, 3693, 3694]
+// Dependencies: [3699, 3695, 3696]
 // Exports: default
 
 // Module 4117
-import module_3697_mod from "module_3697" /* 3697 */;
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import module_3699_mod from "module_3699" /* 3699 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let module_3697 = module_3697_mod;
-if (!module_3697) {
-  const obj = { default: module_3697 };
+let module_3699 = module_3699_mod;
+if (!module_3699) {
+  const obj = { default: module_3699 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3697;
+  tmp3 = module_3699;
 }
-module_3697 = tmp3;
+module_3699 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -33,10 +33,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setSeconds(module_3697, arg1) {
+export default function setMinutes(module_3699, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_3697);
-  defaultResult1.setSeconds(module_3697.default(arg1));
+  const defaultResult1 = _typeof.default(module_3699);
+  defaultResult1.setMinutes(module_3699.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

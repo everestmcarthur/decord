@@ -1,16 +1,16 @@
-// Module ID: 13980
-// Function ID: 13981
+// Module ID: 13960
+// Function ID: 13961
 // Name: ShareScreenFooter
-// Dependencies: [19, 21, 11763, 11764, 5025, 11772, 2]
+// Dependencies: [19, 21, 11787, 11788, 5027, 11796, 2]
 // Exports: default
 
-// Module 13980 (ShareScreenFooter)
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11763 */;
-import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11764 */;
+// Module 13960 (ShareScreenFooter)
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11787 */;
+import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11788 */;
 import noop from "module_19" /* 19 */;
 
-const ShareChatInputDefault = tmp4(11772);
+const ShareChatInputDefault = tmp4(11796);
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

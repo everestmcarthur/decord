@@ -1,75 +1,60 @@
 // Module ID: 12975
 // Function ID: 12976
-// Dependencies: [12894, 12915, 12940]
-// Exports: getCurrentHub, getCurrentHubShim
+// Dependencies: []
+// Exports: getClientIPAddress
 
 // Module 12975
-import _mod12894 from "module_12894" /* 12894 */;
-import _flush from "_flush" /* 12915 */;
-import _mod12940 from "module_12940" /* 12940 */;
+const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12894.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12894.withScope,
-    getClient() {
-      return _mod12894.getClient();
-    },
-    getScope: _mod12894.getCurrentScope,
-    getIsolationScope: _mod12894.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12894.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12894.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12940.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12894.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return tmp(tmp2[1]).endSession();
-      } else {
-        const currentScope = tmp(tmp2[0]).getCurrentScope();
-        const tmpResult3 = tmp(tmp2[0]);
-        const client = tmp(tmp2[0]).getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
+export const getClientIPAddress = function getClientIPAddress(arg0) {
+  closure_0 = arg0;
+  let mapped = items.map((item) => {
+    let str = obj;
+    if (Array.isArray(closure_0[item])) {
+      str = obj.join(";");
+    }
+    if ("Forwarded" === item) {
+      let mapped = (function parseForwardedHeader(str) {
+        if (str) {
+          const parts = str.split(";");
+          const iter = parts[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let arr = nextResult;
+            if (nextResult.startsWith("for=")) {
+              let substr = arr.slice(4);
+              iter.return();
+              return substr;
+            }
+          }
+          return null;
+        } else {
+          return null;
         }
-        if (tmp4) {
-          client.captureSession(session);
-        }
+      })(str);
+    } else {
+      mapped = str;
+      if (str) {
+        let parts = str.split(",");
+        mapped = parts.map((item) => item.trim());
       }
     }
-  };
-}
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+    return mapped;
+  });
+  const reduced = mapped.reduce((arr, item) => {
+    let combined = arr;
+    if (item) {
+      combined = arr.concat(item);
+    }
+    return combined;
+  }, []);
+  return reduced.find((item) => {
+    let isMatch = null !== item;
+    if (isMatch) {
+      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
+      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
+    }
+    return isMatch;
+  }) || null;
+};
+export const ipHeaderNames = items;

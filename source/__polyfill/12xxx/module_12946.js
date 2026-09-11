@@ -1,83 +1,129 @@
 // Module ID: 12946
 // Function ID: 12947
-// Dependencies: [12868]
-// Exports: addMetadataToStackFrames, stripMetadataFromStackFrames
+// Dependencies: [12939]
+// Exports: getEnvelopeEndpointWithUrlEncodedAuth, getReportDialogEndpoint
 
 // Module 12946
-import _mod12868 from "module_12868" /* 12868 */;
+import _mod12939 from "module_12939" /* 12939 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12868.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12868.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp11 = item10026;
-        let tmp16 = _mod12868.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        let obj = set;
-        if (!set.has(item10026)) {
-          let addResult = obj.add(tmp11);
-          let obj2 = arg0(tmp11);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
+
+export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, arg1, name) {
+  let combined1 = arg1;
+  if (!arg1) {
+    let str2 = "";
+    if (protocol.protocol) {
+      const _HermesInternal = HermesInternal;
+      str2 = "" + protocol.protocol + ":";
+    }
+    let str4 = "";
+    if (protocol.port) {
+      const _HermesInternal2 = HermesInternal;
+      str4 = ":" + protocol.port;
+    }
+    const host = protocol.host;
+    let str6 = "";
+    if (protocol.path) {
+      const _HermesInternal3 = HermesInternal;
+      str6 = "/" + protocol.path;
+    }
+    const _HermesInternal4 = HermesInternal;
+    const _HermesInternal5 = HermesInternal;
+    const obj = { sentry_version: "7" };
+    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
+    if (protocol.publicKey) {
+      obj.sentry_key = protocol.publicKey;
+    }
+    if (name) {
+      const _HermesInternal6 = HermesInternal;
+      obj.sentry_client = "" + name.name + "/" + name.version;
+    }
+    const _URLSearchParams = URLSearchParams;
+    const str13 = new URLSearchParams(obj);
+    const _HermesInternal7 = HermesInternal;
+    combined1 = "" + combined + "?" + str13.toString();
+  }
+  return combined1;
+};
+export const getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
+  const url = _mod12939.makeDsn(arg0);
+  if (url) {
+    let str = "";
+    if (url.protocol) {
+      const _HermesInternal = HermesInternal;
+      str = "" + url.protocol + ":";
+    }
+    let str3 = "";
+    if (url.port) {
+      const _HermesInternal2 = HermesInternal;
+      str3 = ":" + url.port;
+    }
+    const host = url.host;
+    let str5 = "";
+    if (url.path) {
+      const _HermesInternal3 = HermesInternal;
+      str5 = "/" + url.path;
+    }
+    const _HermesInternal4 = HermesInternal;
+    const _HermesInternal5 = HermesInternal;
+    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
+    const _HermesInternal6 = HermesInternal;
+    let combined1 = "dsn=" + _mod12939.dsnToString(url);
+    let tmp16 = combined1;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      tmp16 = combined1;
+      while (keys[tmp] !== undefined) {
+        if ("dsn" === tmp19) {
+          continue;
+        } else {
+          combined1 = tmp18;
+          if ("onClose" === tmp19) {
+            continue;
+          } else {
+            if ("user" === tmp19) {
+              user = user.user;
+              combined1 = tmp18;
+              if (!user) {
+                continue;
+              } else {
+                let sum = tmp18;
+                if (user.name) {
+                  let _encodeURIComponent3 = encodeURIComponent;
+                  let _HermesInternal8 = HermesInternal;
+                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
+                }
+                combined1 = sum;
+                if (!user.email) {
+                  continue;
+                } else {
+                  let _encodeURIComponent4 = encodeURIComponent;
+                  let _HermesInternal9 = HermesInternal;
+                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
+                  continue;
+                }
+                continue;
+              }
+              continue;
+            } else {
+              let _encodeURIComponent = encodeURIComponent;
+              let _encodeURIComponent2 = encodeURIComponent;
+              let encodeURIComponentResult = encodeURIComponent(tmp19);
+              let _HermesInternal7 = HermesInternal;
+              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
+              continue;
             }
             continue;
           }
+          continue;
         }
         continue;
       }
     }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
-
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          let tmp4 = item10010;
-          if (item10010.filename) {
-            if (!tmp4.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, tmp4.filename);
-              if (tmp9) {
-                tmp4.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
-        }
-      }
-    });
-  } catch (err) {
-  }
-};
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
-        }
-      }
-    });
-  } catch (err) {
+    const _HermesInternal10 = HermesInternal;
+    return "" + combined + "?" + tmp16;
+  } else {
+    return "";
   }
 };

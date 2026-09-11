@@ -1,29 +1,9 @@
 // Module ID: 12868
 // Function ID: 12869
-// Dependencies: [12869]
-// Exports: getGlobalSingleton
+// Dependencies: [1122]
 
 // Module 12868
-import _mod12869 from "module_12869" /* 12869 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const GLOBAL_OBJ = globalThis;
-export const getGlobalSingleton = function getGlobalSingleton(arg0, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
-  }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
-  const tmp3 = tmp2[_mod12869.SDK_VERSION] || {};
-  tmp2[_mod12869.SDK_VERSION] = tmp3;
-  let tmp4 = tmp3[arg0];
-  if (!tmp4) {
-    const tmp6 = fn();
-    tmp3[arg0] = tmp6;
-    tmp4 = tmp6;
-  }
-  return tmp4;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "eec9a2ec4dcc06384027a08d15add7ac", name: "ic_add_24px", type: "png" });

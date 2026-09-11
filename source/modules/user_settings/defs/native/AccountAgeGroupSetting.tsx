@@ -1,24 +1,24 @@
-// Module ID: 14793
-// Function ID: 14794
+// Module ID: 14770
+// Function ID: 14771
 // Name: AccountAgeGroupSetting
-// Dependencies: [17, 8027, 1074, 21, 4605, 576, 14794, 14795, 14796, 1943, 5655, 11540, 1114, 14797, 14760, 14798, 2]
+// Dependencies: [17, 8050, 1074, 21, 4607, 576, 14771, 14772, 14773, 1943, 5657, 11564, 1114, 14774, 14737, 14775, 2]
 
-// Module 14793 (AccountAgeGroupSetting)
+// Module 14770 (AccountAgeGroupSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import TableRow from "TableRow" /* 5655 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14760 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14794 */;
-import TinyBroncoAccountStatusVisibility from "TinyBroncoAccountStatusVisibility" /* 14795 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14796 */;
+import TableRow from "TableRow" /* 5657 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14737 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14771 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 14772 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14773 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4605 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14797 */;
+import createStyles from "createStyles" /* 4607 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14774 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -36,10 +36,10 @@ let obj3 = {
   useTrailing: function useAccountAgeGroupTrailing() {
     const tmp = closure_6();
     const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
-    const shouldShowTinyBroncoAccountStatus = TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus();
+    const shouldShowAgeNotice = TinyBroncoLazy.useShouldShowAgeNotice();
     const obj3 = { style: tmp.trailing, children: null };
-    let tmp8 = shouldShowTinyBroncoAccountStatus;
-    if (shouldShowTinyBroncoAccountStatus) {
+    let tmp8 = shouldShowAgeNotice;
+    if (shouldShowAgeNotice) {
       const obj4 = { dismissibleContent: tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS, containerStyle: tmp.badge, noGradient: true };
       tmp8 = React4(DismissiblePremiumNewBadgeDefault, obj4);
     }
@@ -51,7 +51,7 @@ let obj3 = {
   usePredicate: null,
   screen: null
 };
-obj3.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS, TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus);
+obj3.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS, TinyBroncoLazy.useShouldShowAgeNotice);
 obj3.usePredicate = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled;
 obj3.screen = {
   route: Constants.UserSettingsSections.AGE_GROUP,

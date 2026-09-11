@@ -1,13 +1,13 @@
-// Module ID: 5805
-// Function ID: 5806
+// Module ID: 5827
+// Function ID: 5828
 // Name: AvatarClydeExample
-// Dependencies: [21, 5637, 5806, 2]
+// Dependencies: [21, 5639, 5828, 2]
 // Exports: AvatarClydeExample
 
-// Module 5805 (AvatarClydeExample)
+// Module 5827 (AvatarClydeExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5806 from "module_5806" /* 5806 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5828 from "module_5828" /* 5828 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarClydeExample = function AvatarClydeExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5806 };
+  const obj2 = { uri: _modDef5828 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

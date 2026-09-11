@@ -1,16 +1,16 @@
-// Module ID: 15278
-// Function ID: 15279
+// Module ID: 15257
+// Function ID: 15258
 // Name: QuestDockUnenrolledBody
-// Dependencies: [5, 19, 7754, 5494, 21, 15181, 15261, 15171, 563, 15170, 11555, 11364, 11365, 15178, 11845, 5497, 7779, 15197, 11348, 15203, 11846, 11838, 15279, 15244, 1114, 2]
+// Dependencies: [5, 19, 7776, 5496, 21, 15160, 15240, 15150, 563, 15149, 11579, 11388, 11389, 15157, 11869, 5499, 7801, 15176, 11372, 15182, 11870, 11862, 15258, 15223, 1114, 2]
 
-// Module 15278 (QuestDockUnenrolledBody)
-import QuestUtils from "QuestUtils" /* 11838 */;
+// Module 15257 (QuestDockUnenrolledBody)
+import QuestUtils from "QuestUtils" /* 11862 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7754 */;
+import QuestStore from "QuestStore" /* 7776 */;
 
 require = fn;
-const QuestConstants = fn(5494);
+const QuestConstants = fn(5496);
 ({ QuestDockMode: metroRequire, QuestsExperimentLocations: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -50,10 +50,10 @@ export default noop.memo(function QuestDockUnenrolledBody() {
   const callback = obj2.useCallback(launchMobileActivity(function*(arg0, value) {
     const v0 = 0;
     if (isQuestAccessSuspended) {
-      trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5497).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7779).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5497).QuestContent.QUEST_BAR_MOBILE });
-      v2(15197)();
+      trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5499).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7801).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5499).QuestContent.QUEST_BAR_MOBILE });
+      v2(15176)();
     }
-    yield v0(11348).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7779).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5497).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5497).QuestContent.QUEST_BAR_MOBILE });
+    yield v0(11372).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7801).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5499).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5499).QuestContent.QUEST_BAR_MOBILE });
     if (1 === tmp4) {
       if (arg0 === 1) {
         dependencyMap = 3;
@@ -67,10 +67,10 @@ export default noop.memo(function QuestDockUnenrolledBody() {
         return { value: closure_128_3(), done: false };
       } else {
         if (closure_128_1) {
-          v2(15203)({ questId: closure_128_0.id, sourceQuestContent: v0(5497).QuestContent.QUEST_BAR_MOBILE });
+          v2(15182)({ questId: closure_128_0.id, sourceQuestContent: v0(5499).QuestContent.QUEST_BAR_MOBILE });
           closure_128_4(constants.COLLAPSED);
-          v2(15203);
-          { questId: closure_128_0.id, sourceQuestContent: v0(5497).QuestContent.QUEST_BAR_MOBILE };
+          v2(15182);
+          { questId: closure_128_0.id, sourceQuestContent: v0(5499).QuestContent.QUEST_BAR_MOBILE };
         }
         dependencyMap = 3;
       }

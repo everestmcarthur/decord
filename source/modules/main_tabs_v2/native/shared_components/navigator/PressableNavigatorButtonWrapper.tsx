@@ -1,15 +1,15 @@
-// Module ID: 7917
-// Function ID: 7918
+// Module ID: 7940
+// Function ID: 7941
 // Name: PressableNavigatorButtonWrapper
-// Dependencies: [17, 7915, 21, 4605, 576, 2]
+// Dependencies: [17, 7938, 21, 4607, 576, 2]
 // Exports: default
 
-// Module 7917 (PressableNavigatorButtonWrapper)
+// Module 7940 (PressableNavigatorButtonWrapper)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import MainTabsV2Constants from "MainTabsV2Constants" /* 7915 */;
-import createStyles from "createStyles" /* 4605 */;
+import MainTabsV2Constants from "MainTabsV2Constants" /* 7938 */;
+import createStyles from "createStyles" /* 4607 */;
 import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;

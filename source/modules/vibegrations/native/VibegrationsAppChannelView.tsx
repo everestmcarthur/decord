@@ -1,28 +1,28 @@
-// Module ID: 16703
-// Function ID: 16704
+// Module ID: 16691
+// Function ID: 16692
 // Name: VibegrationsAppChannelView
-// Dependencies: [32, 19, 17, 9580, 7927, 9581, 21, 4605, 576, 16092, 1877, 7296, 16704, 9638, 9577, 16705, 4601, 1114, 3590, 5025, 2]
+// Dependencies: [32, 19, 17, 9603, 7950, 9604, 21, 4607, 576, 16081, 1877, 7318, 16692, 9661, 9600, 16693, 4603, 1114, 3590, 5027, 2]
 // Exports: default
 
-// Module 16703 (VibegrationsAppChannelView)
+// Module 16691 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9638 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9600 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9661 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9580 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7927 */;
+import FramesStore from "FramesStore" /* 9603 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7950 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(9581);
+const FramesConstants = fn(9604);
 ({ EmbeddedSurfaceType: closure_9, FrameLayoutModes: c10, isLaunched: closure_11 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_14 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_12 }, copy: null };
   const obj2 = { flex: 1, paddingBottom };

@@ -1,53 +1,24 @@
 // Module ID: 6863
 // Function ID: 6864
-// Dependencies: [19, 17, 21, 1636, 6682, 6864]
+// Dependencies: [19, 21, 6860]
+// Exports: default
 
 // Module 6863
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6864 from "module_6864" /* 6864 */;
-import noop_mod from "module_19" /* 19 */;
+import _modDef6860 from "module_6860" /* 6860 */;
+import noop from "module_19" /* 19 */;
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const Platform = _mod17.Platform;
-const jsx = jsxProd.jsx;
-const __initData = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
-const memoResult = memo(function BottomSheetBodyComponent(children) {
-  const style = children.style;
-  let View = children.BodyComponent;
-  if (View === undefined) {
-    View = animatedIndex(animatedPosition[3]).View;
+const jsx = fn(21).jsx;
+
+export default function _default(delayLongPress) {
+  let num = delayLongPress.delayLongPress;
+  if (num === undefined) {
+    num = 600;
   }
-  animatedPosition = undefined;
-  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
-  animatedIndex = bottomSheetInternal.animatedIndex;
-  animatedPosition = bottomSheetInternal.animatedPosition;
-  let obj = style(animatedPosition[4]);
-  const fn = function y() {
-    let num = 1;
-    if (-1 === animatedIndex.get()) {
-      num = 0;
-    }
-    const obj = { opacity: num, transform: null };
-    const items = [{ translateY: animatedPosition.get() }];
-    obj.transform = items;
-    return obj;
-  };
-  fn.__closure = { Platform, animatedIndex, animatedPosition };
-  fn.__workletHash = 5915282482182;
-  fn.__initData = __initData;
-  let items = [animatedPosition, animatedIndex];
-  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const obj2 = style(animatedPosition[3]);
-  const obj3 = { Platform, animatedIndex, animatedPosition };
-  return <View style={animatedStyle(() => {
-    const items = [style, _mod6864.styles.container, animatedStyle];
-    return items;
-  }, items1)} collapsable>{arg0.children}</View>;
-});
-memoResult.displayName = "BottomSheetBody";
-
-export const BottomSheetBody = memoResult;
+  let extraButtonProps = delayLongPress.extraButtonProps;
+  if (extraButtonProps === undefined) {
+    extraButtonProps = { rippleColor: "transparent", exclusive: true };
+  }
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(_modDef6860, { delayLongPress: num, extraButtonProps });
+};

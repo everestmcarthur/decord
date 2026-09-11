@@ -1,20 +1,20 @@
 // Module ID: 4055
 // Function ID: 4056
-// Dependencies: [4041, 3694]
+// Dependencies: [4047, 3696]
 // Exports: default
 
 // Module 4055
-import module_4041_mod from "module_4041" /* 4041 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import module_4047_mod from "module_4047" /* 4047 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let module_4041 = module_4041_mod;
-if (!module_4041) {
-  const obj = { default: module_4041 };
+let module_4047 = module_4047_mod;
+if (!module_4047) {
+  const obj = { default: module_4047 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4041;
+  tmp3 = module_4047;
 }
-module_4041 = tmp3;
+module_4047 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -24,8 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisWeek(arg0, arg1) {
+export default function isThisQuarter(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4041.default(arg0, Date.now(), arg1);
+  return module_4047.default(Date.now(), arg0);
 };
 export default exports.default;

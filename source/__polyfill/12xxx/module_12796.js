@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 192.33333333333334, height: 416, scales: [3], hash: "313fd6dabf823cbd5c0b9608bb8b54d4", name: "invite-bg", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 156.5, height: 118, scales: [2, 3], hash: "273d7cc721dbd2991c78c1e8d926e220", name: "empty-suggestions-header", type: "png" });

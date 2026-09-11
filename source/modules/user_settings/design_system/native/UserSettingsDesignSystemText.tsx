@@ -1,17 +1,17 @@
-// Module ID: 15834
-// Function ID: 15835
+// Module ID: 15819
+// Function ID: 15820
 // Name: UserSettingsDesignSystemText
-// Dependencies: [19, 17, 21, 4306, 576, 5023, 5737, 4602, 5655, 4601, 2]
+// Dependencies: [19, 17, 21, 4308, 576, 5025, 5739, 4604, 5657, 4603, 2]
 // Exports: default
 
-// Module 15834 (UserSettingsDesignSystemText)
+// Module 15819 (UserSettingsDesignSystemText)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4306 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import TextVariants from "TextVariants" /* 4602 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
+import useToken from "useToken" /* 4308 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import TextVariants from "TextVariants" /* 4604 */;
+import Stack_Stack from "Stack/Stack" /* 5025 */;
+import TableRow from "TableRow" /* 5657 */;
+import TableRowGroup from "TableRowGroup" /* 5739 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

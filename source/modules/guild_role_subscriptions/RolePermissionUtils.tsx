@@ -1,10 +1,10 @@
-// Module ID: 4235
-// Function ID: 4236
+// Module ID: 4237
+// Function ID: 4238
 // Name: RolePermissionUtils
 // Dependencies: [2016, 1074, 1086, 2]
 // Exports: hasViewChannelPermission, isChannelAccessDeniedBy, isChannelAccessGrantedBy
 
-// Module 4235 (RolePermissionUtils)
+// Module 4237 (RolePermissionUtils)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2016 */;

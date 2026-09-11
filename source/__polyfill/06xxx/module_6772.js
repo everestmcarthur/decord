@@ -1,102 +1,41 @@
 // Module ID: 6772
 // Function ID: 6773
-// Dependencies: []
-// Exports: containsDuplicates, isComposedGesture, prepareRelations
+// Dependencies: [19, 6751, 6762, 6773, 6774, 6775, 6776]
+// Exports: useDetectorUpdater
 
 // Module 6772
+import _mod19 from "module_19" /* 19 */;
+import _modDef6762 from "module_6762" /* 6762 */;
+import dropHandlers from "dropHandlers" /* 6774 */;
+import attachHandlers from "attachHandlers" /* 6775 */;
+import _mod6776 from "module_6776" /* 6776 */;
 
-export const isComposedGesture = function isComposedGesture(gesture) {
-  return "handlerTags" in gesture;
-};
-export const prepareRelations = function prepareRelations(config, handlerTag) {
-  const simultaneousWith1 = config.simultaneousWith;
-  closure_0 = handlerTag;
-  if (simultaneousWith1) {
-    const _Array = Array;
-    if (Array.isArray(simultaneousWith1)) {
-      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
-        if ("handlerTags" in externalSimultaneousHandlers) {
-          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
-        } else {
-          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
+const require = globalThis.__r;
+
+_mod19.useCallback;
+
+export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
+  _require = current;
+  const preparedGesture = current2;
+  dependencyMap = gesturesToAttach;
+  const forceRender = require("convertToHandlerTag").useForceRender();
+  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
+  return gesture((arg0) => {
+    const tmp3 = _modDef6762(current.viewRef);
+    if (tmp3 === current.previousViewTag) {
+      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
+        if (!arg0) {
+          _mod6776.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
+          const tmp5Result = _mod6776;
         }
-        if (!prop.includes(closure_0)) {
-          prop.push(closure_0);
-        }
-      });
-    } else {
-      if ("handlerTags" in simultaneousWith1) {
-        let prop = simultaneousWith1.externalSimultaneousHandlers;
-      } else {
-        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
-      }
-      if (!prop.includes(handlerTag)) {
-        prop.push(handlerTag);
       }
     }
-  }
-  const simultaneousWith = config.simultaneousWith;
-  if (simultaneousWith) {
-    const _Array2 = Array;
-    if (Array.isArray(simultaneousWith)) {
-      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
-        if ("handlerTags" in handlerTags) {
-          handlerTags = handlerTags.handlerTags;
-        } else {
-          handlerTags = [handlerTags.handlerTag];
-        }
-        return handlerTags;
-      });
-    } else if ("handlerTags" in simultaneousWith) {
-      flatMapResult = simultaneousWith.handlerTags;
-    } else {
-      flatMapResult = [simultaneousWith.handlerTag];
+    dropHandlers.dropHandlers(preparedGesture);
+    attachHandlers.attachHandlers({ preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 });
+    if (tmp3 !== current.previousViewTag) {
+      tmp2.previousViewTag = tmp3;
+      tmp2.forceRebuildReanimatedEvent = true;
+      forceRender();
     }
-  } else {
-    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
-    const requireToFail = config.requireToFail;
-    if (requireToFail) {
-      const _Array3 = Array;
-      if (Array.isArray(requireToFail)) {
-        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
-          if ("handlerTags" in handlerTags) {
-            handlerTags = handlerTags.handlerTags;
-          } else {
-            handlerTags = [handlerTags.handlerTag];
-          }
-          return handlerTags;
-        });
-      } else if ("handlerTags" in requireToFail) {
-        flatMapResult1 = requireToFail.handlerTags;
-      } else {
-        flatMapResult1 = [requireToFail.handlerTag];
-      }
-    } else {
-      obj.waitFor = [];
-      const block = config.block;
-      if (block) {
-        const _Array4 = Array;
-        if (Array.isArray(block)) {
-          let flatMapResult2 = block.flatMap((handlerTags) => {
-            if ("handlerTags" in handlerTags) {
-              handlerTags = handlerTags.handlerTags;
-            } else {
-              handlerTags = [handlerTags.handlerTag];
-            }
-            return handlerTags;
-          });
-        } else if ("handlerTags" in block) {
-          flatMapResult2 = block.handlerTags;
-        } else {
-          flatMapResult2 = [block.handlerTag];
-        }
-      } else {
-        obj.blocksHandlers = [];
-        return obj;
-      }
-    }
-  }
-};
-export const containsDuplicates = function containsDuplicates(flatMapResult) {
-  return new Set(flatMapResult).size !== flatMapResult.length;
+  }, items);
 };

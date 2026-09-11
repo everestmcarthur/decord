@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/empty_channel", width: 32, height: 32, scales: [2, 3], hash: "2a77a373d0891300f53f455e7a8b0efa", name: "personalize_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 192.33333333333334, height: 416, scales: [3], hash: "313fd6dabf823cbd5c0b9608bb8b54d4", name: "invite-bg", type: "png" });

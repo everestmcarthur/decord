@@ -1,20 +1,20 @@
-// Module ID: 5615
-// Function ID: 5616
+// Module ID: 5617
+// Function ID: 5618
 // Name: DesktopNativeUtils
-// Dependencies: [32, 5, 1074, 38, 4536, 1115, 510, 5616, 1934, 4, 5617, 5618, 1365, 1272, 4631, 2]
+// Dependencies: [32, 5, 1074, 38, 4538, 1115, 510, 5618, 1934, 4, 5619, 5620, 1365, 1272, 4633, 2]
 
-// Module 5615 (DesktopNativeUtils)
+// Module 5617 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
-import Client from "Client" /* 4536 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4631 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 5616 */;
-import IPCEvents from "IPCEvents" /* 5617 */;
+import Client from "Client" /* 4538 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4633 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 5618 */;
+import IPCEvents from "IPCEvents" /* 5619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const FileExtensionUtils = tmp2(5618);
+const FileExtensionUtils = tmp2(5620);
 require = fn;
 function sanitizeFilename(arg0) {
   try {
@@ -583,7 +583,7 @@ obj2.setBadge = function setBadge(arg0) {
   } else {
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5617).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5619).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       if ("linux" === tmpResult2.getPlatformName()) {
         const app = DiscordNative.app;
@@ -775,7 +775,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(5618).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(5620).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -811,7 +811,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(5618);
+            const obj8 = closure_0(5620);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -896,7 +896,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj2.canSaveImage = function canSaveImage(uri, contentType) {
   if (null != uri) {
     if (require("PlatformUtils").isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5618).decideFileExtension(uri, contentType);
+      const decideFileExtensionResult = tmp(5620).decideFileExtension(uri, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -971,7 +971,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_22, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(5618).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(5620).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -979,7 +979,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(5618);
+                const obj9 = unknown(5620);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
@@ -1636,7 +1636,7 @@ obj2.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5617).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5619).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }

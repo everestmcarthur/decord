@@ -1,51 +1,100 @@
 // Module ID: 10575
 // Function ID: 10576
-// Dependencies: [41, 42, 10572, 10529]
+// Dependencies: [41, 42, 93, 95, 98, 10523, 10569, 10524, 10530]
 
 // Module 10575
-import alphaNum from "alphaNum" /* 10572 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
+import _mod10569 from "module_10569" /* 10569 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const JPWeekdayParser = require;
-const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp("((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)", "i");
-class JPWeekdayParser {
-  constructor() {
-    tmp = c2(this, JPWeekdayParser);
-    return;
+const DEMonthNameLittleEndianParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+const regExp = new RegExp("(?:am\\s*?)?(?:den\\s*?)?([0-9]{1,2})\\.(?:\\s*(?:bis(?:\\s*(?:am|zum))?|\\-|\\\u2013|\\s)\\s*([0-9]{1,2})\\.?)?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10569.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s*)(" + _mod10569.YEAR_PATTERN + "(?![^\\s]\\d)))?(?=\\W|$)", "i");
+class DEMonthNameLittleEndianParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, DEMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(DEMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(DEMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(reference, groups) {
-      const tmp3 = JPWeekdayParser(10572).WEEKDAY_OFFSET[groups.groups.weekday];
-      if (undefined === tmp3) {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = DEMonthNameLittleEndianParser(10569).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const parsed = parseInt(index[1]);
+      if (parsed > 31) {
+        index.index = index.index + index[1].length;
         return null;
       } else {
-        let str2 = "last";
-        if (!groups.groups.prefix || "".match(/前の/)) {
-          str2 = "next";
-          if (!str.match(/次の/)) {
-            str2 = null;
-            if (str.match(/今週/)) {
-              str2 = "this";
-            }
-          }
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", parsed);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", tmp2(10569).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", tmp2(10524).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
         }
-        return tmp(10529).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
+        if (index[2]) {
+          const _parseInt = parseInt;
+          const start3 = parsingResult.start;
+          const parsed1 = parseInt(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", parsed1);
+        }
+        return parsingResult;
       }
-      tmp = JPWeekdayParser;
     }
   }
 ];
 
-export default _createClass(JPWeekdayParser, items);
+export default _createClass(DEMonthNameLittleEndianParser, items);

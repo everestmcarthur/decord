@@ -1,26 +1,26 @@
-// Module ID: 13243
-// Function ID: 13244
+// Module ID: 13268
+// Function ID: 13269
 // Name: EditAvatarDecorationSection
-// Dependencies: [19, 17, 7599, 1397, 21, 4605, 13244, 13242, 13245, 7234, 8883, 2]
+// Dependencies: [19, 17, 7621, 1397, 21, 4607, 13269, 13267, 13270, 7256, 8906, 2]
 
-// Module 13243 (EditAvatarDecorationSection)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8883 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 13242 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13244 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13245 */;
+// Module 13268 (EditAvatarDecorationSection)
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8906 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 13267 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13269 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7599).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7621).isAvatarDecorationRecord;
 const AVATAR_DECORATION_SIZE = fn(1397).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13244).GUTTER_SIZE }, rowSpacer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13244).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13244).GUTTER_SIZE };
+const createStyles = fn(4607);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13269).GUTTER_SIZE }, rowSpacer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13269).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13269).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedAvatarDecoration } = size);
@@ -41,10 +41,10 @@ const memoResult = noop.memo((size) => {
   obj2.children = substr.map((avatarDecoration, index) => {
     if (avatarDecoration === useAvatarDecorationSections.NONE_ITEM) {
       const obj2 = { size, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return React5(tmp(13245).EditCollectiblesListItemNone, obj2, "none");
-    } else if (avatarDecoration === tmp(13242).SHOP_ITEM) {
+      return React5(tmp(13270).EditCollectiblesListItemNone, obj2, "none");
+    } else if (avatarDecoration === tmp(13267).SHOP_ITEM) {
       const obj3 = { size, analyticsSource: AnalyticsLocationDefault.EDIT_AVATAR_DECORATION_SHEET };
-      return React5(tmp(13245).EditCollectiblesListItemShop, obj3, "shop");
+      return React5(tmp(13270).EditCollectiblesListItemShop, obj3, "shop");
     } else if (isAvatarDecorationRecord(avatarDecoration)) {
       const obj4 = { avatarDecoration, isSelected: closure_1_0 === avatarDecoration.skuId, setSelectedAvatarDecoration, isTryItOut, size };
       return React5(memoResult1, obj4, avatarDecoration.skuId);

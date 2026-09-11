@@ -1,15 +1,15 @@
-// Module ID: 16211
-// Function ID: 16212
+// Module ID: 16200
+// Function ID: 16201
 // Name: VoiceUsersItem
-// Dependencies: [19, 17, 21, 4605, 2]
+// Dependencies: [19, 17, 21, 4607, 2]
 // Exports: default
 
-// Module 16211 (VoiceUsersItem)
+// Module 16200 (VoiceUsersItem)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_2 = createStyles.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");

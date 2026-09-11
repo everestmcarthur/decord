@@ -1,13 +1,13 @@
-// Module ID: 11858
-// Function ID: 11859
+// Module ID: 11883
+// Function ID: 11884
 // Name: CloudIcon
-// Dependencies: [19, 21, 576, 4305, 11859, 2]
+// Dependencies: [19, 21, 576, 4307, 11884, 2]
 // Exports: CloudIcon
 
-// Module 11858 (CloudIcon)
+// Module 11883 (CloudIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod11859 from "module_11859" /* 11859 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod11884 from "module_11884" /* 11884 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const CloudIcon = function CloudIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11859, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11884, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

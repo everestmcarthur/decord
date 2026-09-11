@@ -1,26 +1,26 @@
-// Module ID: 7513
-// Function ID: 7514
+// Module ID: 7535
+// Function ID: 7536
 // Name: SessionHeartbeatScheduler
-// Dependencies: [5, 5327, 502, 5460, 4628, 1074, 1090, 3, 7514, 7515, 7516, 1232, 7517, 7520, 1242, 7521, 510, 7523, 1340, 573, 504, 1256, 2]
+// Dependencies: [5, 5329, 502, 5462, 4630, 1074, 1090, 3, 7536, 7537, 7538, 1232, 7539, 7542, 1242, 7543, 510, 7545, 1340, 573, 504, 1256, 2]
 // Exports: getActiveSessionUnsafe, initSessionHeartbeatScheduler
 
-// Module 7513 (SessionHeartbeatScheduler)
+// Module 7535 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7514 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 7515 */;
-import MonotonicClock from "MonotonicClock" /* 7516 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7521 */;
-import SessionUtils from "SessionUtils" /* 7523 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7536 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 7537 */;
+import MonotonicClock from "MonotonicClock" /* 7538 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7543 */;
+import SessionUtils from "SessionUtils" /* 7545 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 5460 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import IdleStore from "IdleStore" /* 5462 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
 
 const initializeDefault = tmp(504);
 require = fn;
@@ -214,7 +214,7 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== SessionUtils.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7523).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7545).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -525,9 +525,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7514);
+const SessionForegroundUtils = fn(7536);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7515);
+const SessionRouteUtils = fn(7537);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);
@@ -569,9 +569,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(7523).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== tmp2(7545).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7523).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7545).CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

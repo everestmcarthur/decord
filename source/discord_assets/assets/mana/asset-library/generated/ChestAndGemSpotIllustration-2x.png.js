@@ -1,8 +1,8 @@
-// Module ID: 5892
-// Function ID: 5893
+// Module ID: 5914
+// Function ID: 5915
 // Dependencies: [2]
 
-// Module 5892
+// Module 5914
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestAndGemSpotIllustration-2x.png.js");

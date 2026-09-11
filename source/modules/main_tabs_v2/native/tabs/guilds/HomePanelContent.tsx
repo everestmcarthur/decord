@@ -1,22 +1,22 @@
-// Module ID: 16363
-// Function ID: 16364
+// Module ID: 16352
+// Function ID: 16353
 // Name: HomePanelContent
-// Dependencies: [19, 17, 16103, 1074, 16364, 21, 4605, 16102, 16365, 4341, 11065, 5175, 4306, 576, 16107, 7925, 1116, 5021, 11967, 2]
+// Dependencies: [19, 17, 16092, 1074, 16353, 21, 4607, 16091, 16354, 4343, 11088, 5177, 4308, 576, 16096, 7948, 1116, 5023, 11992, 2]
 
-// Module 16363 (HomePanelContent)
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5021 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11065 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16102 */;
-import GuildsBarDefault from "GuildsBar" /* 16365 */;
+// Module 16352 (HomePanelContent)
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5023 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11088 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16091 */;
+import GuildsBarDefault from "GuildsBar" /* 16354 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16103 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16092 */;
 
 require = fn;
 function ContentMaskGradient(offsetX) {
   offsetX = offsetX.offsetX;
-  const guildsBarPullX = offsetX(16102).useHomeDrawerState().guildsBarPullX;
-  let obj = offsetX(16102);
+  const guildsBarPullX = offsetX(16091).useHomeDrawerState().guildsBarPullX;
+  let obj = offsetX(16091);
   const fn = function n() {
     const obj = { transform: null };
     const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
@@ -24,37 +24,37 @@ function ContentMaskGradient(offsetX) {
     obj.transform = items;
     return obj;
   };
-  let obj2 = offsetX(4341);
-  fn.__closure = { roundToNearestPixel: guildsBarPullX(11065), offsetX, guildsBarPullX };
+  let obj2 = offsetX(4343);
+  fn.__closure = { roundToNearestPixel: guildsBarPullX(11088), offsetX, guildsBarPullX };
   fn.__workletHash = 7539125302557;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj4 = { pointerEvents: "none", style: null, children: closure_9(guildsBarPullX(5175), { absolute: true, tall: true, wide: true, mix: true }) };
+  const obj4 = { pointerEvents: "none", style: null, children: closure_9(guildsBarPullX(5177), { absolute: true, tall: true, wide: true, mix: true }) };
   let items = [absoluteFill.absoluteFill, animatedStyle];
   obj4.style = items;
-  return closure_9(guildsBarPullX(4341).View, obj4);
+  return closure_9(guildsBarPullX(4343).View, obj4);
 }
 function HomeDrawerPanelContent() {
-  const sum = GUILD_ITEM_INSET_LEFT + ref(4306).useToken(panelTranslateX(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const sum = GUILD_ITEM_INSET_LEFT + ref(4308).useToken(panelTranslateX(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp5 = closure_11();
-  let obj = ref(4306);
+  let obj = ref(4308);
   const tmp = ref;
-  const drawerOpen = ref(16107).useDrawerOpen();
-  let obj2 = ref(16107);
-  const doesLandOnHomeDrawer = ref(16102).useDoesLandOnHomeDrawer();
+  const drawerOpen = ref(16096).useDrawerOpen();
+  let obj2 = ref(16096);
+  const doesLandOnHomeDrawer = ref(16091).useDoesLandOnHomeDrawer();
   ref = isClientThemeOrCustomThemeActive.useRef(null);
-  let obj3 = ref(16102);
-  const homeDrawerState = ref(16102).useHomeDrawerState();
+  let obj3 = ref(16091);
+  const homeDrawerState = ref(16091).useHomeDrawerState();
   panelTranslateX = homeDrawerState.panelTranslateX;
   const tmp10 = HomeDrawerStore((maxX) => maxX.maxX);
   dependencyMap = tmp10;
-  let obj4 = ref(16102);
-  isClientThemeOrCustomThemeActive = ref(7925).useIsClientThemeOrCustomThemeActive();
-  const obj5 = ref(7925);
-  const token = ref(4306).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
-  const obj6 = ref(4306);
-  const token1 = ref(4306).useToken(panelTranslateX(576).colors.PANEL_BG);
-  const obj7 = ref(4306);
+  let obj4 = ref(16091);
+  isClientThemeOrCustomThemeActive = ref(7948).useIsClientThemeOrCustomThemeActive();
+  const obj5 = ref(7948);
+  const token = ref(4308).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
+  const obj6 = ref(4308);
+  const token1 = ref(4308).useToken(panelTranslateX(576).colors.PANEL_BG);
+  const obj7 = ref(4308);
   const fn = function n() {
     if (!isClientThemeOrCustomThemeActive) {
       if (closure_2 > 0) {
@@ -67,8 +67,8 @@ function HomeDrawerPanelContent() {
     }
     obj = { backgroundColor: "transparent" };
   };
-  const obj8 = ref(4341);
-  fn.__closure = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp10, interpolateColor: ref(4341).interpolateColor, panelTranslateX, baseLowest: token, panelBg: token1 };
+  const obj8 = ref(4343);
+  fn.__closure = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp10, interpolateColor: ref(4343).interpolateColor, panelTranslateX, baseLowest: token, panelBg: token1 };
   fn.__workletHash = 11992338029652;
   fn.__initData = __initData2;
   const animatedStyle = obj8.useAnimatedStyle(fn);
@@ -85,7 +85,7 @@ function HomeDrawerPanelContent() {
       }
     }
   }, items);
-  const obj9 = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp10, interpolateColor: ref(4341).interpolateColor, panelTranslateX, baseLowest: token, panelBg: token1 };
+  const obj9 = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp10, interpolateColor: ref(4343).interpolateColor, panelTranslateX, baseLowest: token, panelBg: token1 };
   const fn2 = function k() {
     value = panelTranslateX.get();
     const items = [0, useHomeDrawerGesture.INITIAL_OPEN_WIDTH];
@@ -103,8 +103,8 @@ function HomeDrawerPanelContent() {
     }
     return obj4;
   };
-  const obj10 = ref(4341);
-  fn2.__closure = { interpolate: ref(4341).interpolate, panelTranslateX, INITIAL_OPEN_WIDTH: ref(16102).INITIAL_OPEN_WIDTH, Extrapolation: ref(4341).Extrapolation, isGradientTheme: isClientThemeOrCustomThemeActive, interpolateColor: ref(4341).interpolateColor, maxX: tmp10, baseLowest: token, panelBg: token1 };
+  const obj10 = ref(4343);
+  fn2.__closure = { interpolate: ref(4343).interpolate, panelTranslateX, INITIAL_OPEN_WIDTH: ref(16091).INITIAL_OPEN_WIDTH, Extrapolation: ref(4343).Extrapolation, isGradientTheme: isClientThemeOrCustomThemeActive, interpolateColor: ref(4343).interpolateColor, maxX: tmp10, baseLowest: token, panelBg: token1 };
   fn2.__workletHash = 380238951470;
   fn2.__initData = __initData3;
   const animatedStyle1 = obj10.useAnimatedStyle(fn2);
@@ -114,7 +114,7 @@ function HomeDrawerPanelContent() {
   const obj13 = { ref, style: null, children: null };
   let items2 = [drawerOpen ? tmp5.guildsListContainerGestured : tmp5.guildLisetContainerDefault, homeDrawerState.guildsBarDrawerStyle];
   obj13.style = items2;
-  const items3 = [closure_9(panelTranslateX(16365), { enableHome: true }), , ];
+  const items3 = [closure_9(panelTranslateX(16354), { enableHome: true }), , ];
   const obj14 = { style: null, pointerEvents: "none", collapsable: false, children: null };
   const items4 = [tmp5.contentMask, { left: sum }, animatedStyle1];
   obj14.style = items4;
@@ -124,23 +124,23 @@ function HomeDrawerPanelContent() {
     tmp17Result = tmp17(ContentMaskGradient, obj15);
   }
   obj14.children = tmp17Result;
-  items3[1] = closure_9(panelTranslateX(4341).View, obj14);
+  items3[1] = closure_9(panelTranslateX(4343).View, obj14);
   let tmp17Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp17Result2 = tmp17(tmp(11967).TTIFirstContentfulPaint, { label: "home_drawer", checkFocusedScreen: "guilds" });
+    tmp17Result2 = tmp17(tmp(11992).TTIFirstContentfulPaint, { label: "home_drawer", checkFocusedScreen: "guilds" });
   }
   items3[2] = tmp17Result2;
   obj13.children = items3;
-  obj12.children = closure_10(panelTranslateX(4341).View, obj13);
-  return closure_9(panelTranslateX(4341).View, obj12);
+  obj12.children = closure_10(panelTranslateX(4343).View, obj13);
+  return closure_9(panelTranslateX(4343).View, obj12);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1074).DM_WIDTH;
-const GUILD_ITEM_INSET_LEFT = fn(16364).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16353).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault: { flex: 1, width }, contentMask: { position: "absolute", top: 0, bottom: 0, right: 0, overflow: "hidden" } };
   return obj;

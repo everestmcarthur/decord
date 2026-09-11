@@ -1,17 +1,17 @@
-// Module ID: 17391
-// Function ID: 17392
+// Module ID: 17381
+// Function ID: 17382
 // Name: RestrictedHoursManager
-// Dependencies: [10151, 1371, 7589, 1114, 2396, 1394, 10153, 573, 7645, 17386, 7170, 2]
+// Dependencies: [10173, 1371, 7611, 1114, 2396, 1394, 10175, 573, 7667, 17376, 7192, 2]
 // Exports: getCurrentRestrictedHoursState
 
-// Module 17391 (RestrictedHoursManager)
+// Module 17381 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17386 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10151 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17376 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10173 */;
 import UserStore from "UserStore" /* 1371 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7589 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 require = fn;
 function scheduleUpcomingWarning() {
@@ -58,12 +58,12 @@ function scheduleUpcomingWarning() {
         const date2 = new Date(startAtMs);
         const stringResult = intl.string(_modDef2396["0JlDg0"]);
         const items = [tmp5(1394).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
-        const tmp5Result = tmp5(10153);
-        const formatDaysResult = tmp5(10153).formatDays(items);
+        const tmp5Result = tmp5(10175);
+        const formatDaysResult = tmp5(10175).formatDays(items);
         const _HermesInternal2 = HermesInternal;
-        const tmp5Result2 = tmp5(10153);
-        const trimmed = "" + formatDaysResult + " " + tmp5(10153).getScheduleRuleDateRange(rule).trim();
-        const str4 = "" + formatDaysResult + " " + tmp5(10153).getScheduleRuleDateRange(rule);
+        const tmp5Result2 = tmp5(10175);
+        const trimmed = "" + formatDaysResult + " " + tmp5(10175).getScheduleRuleDateRange(rule).trim();
+        const str4 = "" + formatDaysResult + " " + tmp5(10175).getScheduleRuleDateRange(rule);
         const obj3 = { type: "RESTRICTED_HOURS_WARNING", title: stringResult, subtitle: trimmed };
         DispatcherDefault.dispatch(obj3);
         c9 = combined;

@@ -1,32 +1,15 @@
 // Module ID: 6958
 // Function ID: 6959
-// Dependencies: [19]
-// Exports: getValidComponent, isComponentClass
+// Dependencies: []
 
 // Module 6958
-import noop from "module_19" /* 19 */;
 
-
-export const isComponentClass = (fn) => {
-  let BooleanResult = typeof fn === "function";
-  if (typeof fn === "function") {
-    const prototype = fn.prototype;
-    let isReactComponent;
-    if (prototype != null) {
-      isReactComponent = prototype.isReactComponent;
-    }
-    BooleanResult = Boolean(isReactComponent);
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
   }
-  return BooleanResult;
-};
-export const getValidComponent = (icon) => {
-  let tmp = icon;
-  if (!noop.isValidElement(icon)) {
-    let element = null;
-    if (null != icon) {
-      element = noop.createElement(icon);
-    }
-    tmp = element;
-  }
-  return tmp;
 };

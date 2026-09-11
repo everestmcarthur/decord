@@ -1,14 +1,14 @@
-// Module ID: 15006
-// Function ID: 15007
+// Module ID: 14983
+// Function ID: 14984
 // Name: FamilyCenterSettingParentalControlsSetting
-// Dependencies: [8027, 1074, 11540, 1114, 2396, 15007, 2]
+// Dependencies: [8050, 1074, 11564, 1114, 2396, 14984, 2]
 
-// Module 15006 (FamilyCenterSettingParentalControlsSetting)
+// Module 14983 (FamilyCenterSettingParentalControlsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,12 +1,12 @@
-// Module ID: 12694
-// Function ID: 12695
+// Module ID: 12719
+// Function ID: 12720
 // Name: UserProfileConfirmVideoUnstableConnection
-// Dependencies: [19, 21, 4955, 1114, 4955, 2]
+// Dependencies: [19, 21, 4957, 1114, 4957, 2]
 // Exports: default
 
-// Module 12694 (UserProfileConfirmVideoUnstableConnection)
+// Module 12719 (UserProfileConfirmVideoUnstableConnection)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4955 */;
+import AlertModal from "AlertModal" /* 4957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,14 +1,14 @@
-// Module ID: 4570
-// Function ID: 4571
+// Module ID: 4572
+// Function ID: 4573
 // Name: BrowserManager
-// Dependencies: [17, 560, 1115, 4571, 1093, 4299, 1369, 2]
+// Dependencies: [17, 560, 1115, 4573, 1093, 4301, 1369, 2]
 // Exports: browserManagerCloseBrowser, browserManagerOpenUrl, browserManagerSelectBrowser, getBrowserManagerIsChromeInstalled, getBrowserManagerSelectedBrowser, getIsInAppBrowserOpen, openPlayStoreInlineInstall, subscribeToIsInAppBrowserOpen, useBrowserManagerIsChromeInstalled, useBrowserManagerSelectedBrowser, useBrowserManagerSupportsInAppBrowser, useIsInAppBrowserOpen
 
-// Module 4570 (BrowserManager)
+// Module 4572 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4571 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4573 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
@@ -145,11 +145,11 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href, CHROME
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
   if (obj.isAndroid()) {
     if (tmp(1093).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4571).BrowserType.SAFARI);
+      const browser = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4573).BrowserType.SAFARI);
     } else if (tmp(1093).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4571).BrowserType.IN_APP);
+      const browser1 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4573).BrowserType.IN_APP);
     } else if (tmp(1093).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4571).BrowserType.CHROME);
+      const browser2 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4573).BrowserType.CHROME);
     }
   } else {
     BrowserManager = NativeModules.BrowserManager;

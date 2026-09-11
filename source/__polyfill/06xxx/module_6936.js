@@ -4,12 +4,32 @@
 
 // Module 6936
 
-export default function _assertThisInitialized(arg0) {
-  if (undefined === arg0) {
-    const _ReferenceError = ReferenceError;
-    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    throw referenceError;
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
   } else {
-    return arg0;
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
+      }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    return obj;
   }
 };

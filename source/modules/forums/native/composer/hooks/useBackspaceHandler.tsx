@@ -1,10 +1,10 @@
-// Module ID: 10334
-// Function ID: 10335
+// Module ID: 10355
+// Function ID: 10356
 // Name: useBackspaceHandler
 // Dependencies: [19, 2]
 // Exports: useBackspaceHandler
 
-// Module 10334 (useBackspaceHandler)
+// Module 10355 (useBackspaceHandler)
 import noop from "module_19" /* 19 */;
 
 const re1 = /((\ud83c[\udde6-\uddff]){2}|([#*0-9]\u20e3)|(\u00a9|\u00ae|[\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])((\ud83c[\udffb-\udfff])?(\ud83e[\uddb0-\uddb3])?(\ufe0f?\u200d([\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])\ufe0f?)?)*)/g;

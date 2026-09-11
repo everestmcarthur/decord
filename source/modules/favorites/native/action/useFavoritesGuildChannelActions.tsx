@@ -1,10 +1,10 @@
-// Module ID: 11046
-// Function ID: 11047
+// Module ID: 11069
+// Function ID: 11070
 // Name: useFavoritesGuildChannelActions
-// Dependencies: [502, 2021, 1960, 10294, 1982, 504, 10310, 2]
+// Dependencies: [502, 2021, 1960, 10315, 1982, 504, 10331, 2]
 // Exports: default
 
-// Module 11046 (useFavoritesGuildChannelActions)
+// Module 11069 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -49,6 +49,6 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10310).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10331).useFavoritesBetaTagDismissibleContent(tmp7);
   return { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
 };

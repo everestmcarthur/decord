@@ -1,19 +1,19 @@
-// Module ID: 15293
-// Function ID: 15294
+// Module ID: 15273
+// Function ID: 15274
 // Name: GuildRoleSubscriptionsHooks
-// Dependencies: [5, 32, 19, 5327, 4237, 504, 7307, 5636, 15294, 15295, 12273, 1369, 2]
+// Dependencies: [5, 32, 19, 5329, 4239, 504, 7329, 5638, 15274, 15275, 12298, 1369, 2]
 // Exports: useArchiveSubscriptionListing, useCreateSubscriptionGroupListing, useDeleteSubscriptionGroupListing, useDeleteSubscriptionListing, useFetchListingsForSubscriptions, useFetchSubscriptionsSettings, useGroupListingsForGuild, usePublishSubscriptionListing, useSubscriptionGroupListing, useSubscriptionListing, useSubscriptionListingsForGroup, useSubscriptionListingsForGuild, useSubscriptionTrial, useSubscriptionTrialsForGroup, useSubscriptionTrialsForGuild, useSubscriptionsSettings, useUpdateSubscriptionGroupListing, useUpdateSubscriptionsSettings, useUpdateSubscriptionsTrial
 
-// Module 15293 (GuildRoleSubscriptionsHooks)
+// Module 15273 (GuildRoleSubscriptionsHooks)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7307 */;
-import useRequestDefault from "useRequest" /* 12273 */;
-import subscriptionUtils from "subscriptionUtils" /* 15295 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7329 */;
+import useRequestDefault from "useRequest" /* 12298 */;
+import subscriptionUtils from "subscriptionUtils" /* 15275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4237 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4239 */;
 
 const require = globalThis.__r;
 
@@ -72,7 +72,7 @@ function useFetchListingsForGuild(guildId) {
   }
   return { listingsLoaded };
 }
-const FetchState = fn(4237).FetchState;
+const FetchState = fn(4239).FetchState;
 let closure_10 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx");

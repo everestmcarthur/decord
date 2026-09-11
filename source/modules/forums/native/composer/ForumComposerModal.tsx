@@ -1,31 +1,31 @@
-// Module ID: 10322
-// Function ID: 10323
+// Module ID: 10343
+// Function ID: 10344
 // Name: ForumComposerModal
-// Dependencies: [19, 17, 9754, 1957, 4946, 4945, 7329, 21, 4605, 576, 1874, 4950, 1114, 7828, 9376, 7214, 504, 10323, 10321, 1481, 1609, 11, 7818, 5680, 10324, 2]
+// Dependencies: [19, 17, 9777, 1957, 4948, 4947, 7351, 21, 4607, 576, 1874, 4952, 1114, 7850, 9399, 7236, 504, 10344, 10342, 1481, 1609, 11, 7840, 5682, 10345, 2]
 // Exports: default
 
-// Module 10322 (ForumComposerModal)
+// Module 10343 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7828 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9376 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10321 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7850 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9399 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10342 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9754 */;
+import NativeMenuStore from "NativeMenuStore" /* 9777 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import DraftStore from "DraftStore" /* 4946 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4945 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7329 */;
+import DraftStore from "DraftStore" /* 4948 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4947 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7351 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(4946).DraftType;
+const DraftType = fn(4948).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -41,8 +41,8 @@ export default function ForumComposerModal(parentChannelId) {
   function handleClose(arg0) {
     if (null != stateFromStores) {
       if (arg0) {
-        let result = tmp52(10321).closeCreateForumPostModal();
-        const tmp52Result = tmp52(10321);
+        let result = tmp52(10342).closeCreateForumPostModal();
+        const tmp52Result = tmp52(10342);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
         UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);

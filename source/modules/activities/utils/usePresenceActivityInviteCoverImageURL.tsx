@@ -1,15 +1,15 @@
-// Module ID: 13311
-// Function ID: 13312
+// Module ID: 13336
+// Function ID: 13337
 // Name: usePresenceActivityInviteCoverImageURL
-// Dependencies: [19, 13312, 1878, 8202, 504, 13313, 2]
+// Dependencies: [19, 13337, 1878, 8225, 504, 13338, 2]
 // Exports: getPresenceActivityInviteCoverImageURL, usePresenceActivityInviteCoverImageURL
 
-// Module 13311 (usePresenceActivityInviteCoverImageURL)
+// Module 13336 (usePresenceActivityInviteCoverImageURL)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1878 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8202 */;
-import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 13313 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8225 */;
+import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 13338 */;
 import noop from "module_19" /* 19 */;
-import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 13312 */;
+import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 13337 */;
 
 require = fn;
 function _getPresenceActivityInviteCoverImageURL(messageId) {

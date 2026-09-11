@@ -1,20 +1,20 @@
 // Module ID: 4040
 // Function ID: 4041
-// Dependencies: [4041, 3694]
+// Dependencies: [4041, 3696]
 // Exports: default
 
 // Module 4040
-import module_4041_mod from "module_4041" /* 4041 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import startOfHour_mod from "startOfHour" /* 4041 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let module_4041 = module_4041_mod;
-if (!module_4041) {
-  const obj = { default: module_4041 };
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4041;
+  tmp3 = startOfHour;
 }
-module_4041 = tmp3;
+startOfHour = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -24,8 +24,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameISOWeek(arg0, arg1) {
+export default function isSameHour(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4041.default(arg0, arg1, { weekStartsOn: 1 });
+  const defaultResult1 = startOfHour.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

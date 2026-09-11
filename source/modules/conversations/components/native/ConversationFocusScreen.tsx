@@ -1,23 +1,23 @@
-// Module ID: 13325
-// Function ID: 13326
+// Module ID: 13350
+// Function ID: 13351
 // Name: ConversationFocusScreen
-// Dependencies: [19, 17, 7647, 21, 4605, 576, 4306, 1486, 504, 7961, 7975, 1114, 4601, 5025, 13326, 2]
+// Dependencies: [19, 17, 7669, 21, 4607, 576, 4308, 1486, 504, 7984, 7998, 1114, 4603, 5027, 13351, 2]
 // Exports: default
 
-// Module 13325 (ConversationFocusScreen)
+// Module 13350 (ConversationFocusScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7961 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7975 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7984 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7998 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7647 */;
+import ConversationsStore from "ConversationsStore" /* 7669 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, pendingContent: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.pendingContent = { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

@@ -1,124 +1,99 @@
 // Module ID: 10850
 // Function ID: 10851
-// Dependencies: [19, 6705, 10851]
-// Exports: usePanGestureProxy
+// Dependencies: [19, 10851]
+// Exports: useInitProps
 
 // Module 10850
-import _mod19 from "module_19" /* 19 */;
+import SINGLE_ITEM from "SINGLE_ITEM" /* 10851 */;
+import noop from "module_19" /* 19 */;
 
-const useMemo = _mod19.useMemo;
-let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };
-let closure_4 = { code: "function pnpm_usePanGestureProxyTs2(e){const{onGestureStart,userDefinedConflictGestures}=this.__closure;onGestureStart(e);if(userDefinedConflictGestures.onStart)userDefinedConflictGestures.onStart(e);}" };
-let closure_5 = { code: "function pnpm_usePanGestureProxyTs3(e){const{onGestureUpdate,userDefinedConflictGestures}=this.__closure;onGestureUpdate(e);if(userDefinedConflictGestures.onUpdate)userDefinedConflictGestures.onUpdate(e);}" };
-let closure_6 = { code: "function pnpm_usePanGestureProxyTs4(e,success){const{onGestureEnd,userDefinedConflictGestures}=this.__closure;onGestureEnd(e,success);if(userDefinedConflictGestures.onEnd)userDefinedConflictGestures.onEnd(e,success);}" };
-let closure_7 = { code: "function pnpm_usePanGestureProxyTs5(e,success){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onFinalize)userDefinedConflictGestures.onFinalize(e,success);}" };
+require = arg1;
 
-export const usePanGestureProxy = (onConfigurePanGesture) => {
-  onConfigurePanGesture = onConfigurePanGesture.onConfigurePanGesture;
-  const onGestureStart = onConfigurePanGesture.onGestureStart;
-  const onGestureUpdate = onConfigurePanGesture.onGestureUpdate;
-  const onGestureEnd = onConfigurePanGesture.onGestureEnd;
-  let options = onConfigurePanGesture.options;
-  if (undefined === options) {
-    options = {};
+export const useInitProps = function useInitProps(defaultIndex) {
+  defaultIndex = defaultIndex.defaultIndex;
+  let num = 0;
+  if (undefined !== defaultIndex) {
+    num = defaultIndex;
   }
-  const items = [onGestureStart, onGestureUpdate, onGestureEnd, onConfigurePanGesture];
-  const tmp = onGestureUpdate(() => {
-    const Gesture = onConfigurePanGesture(onGestureStart[1]).Gesture;
-    const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
-    onConfigurePanGesture = withTestIdResult;
-    const userDefinedConflictGestures = { onBegin: "call", onStart: "__workletHash", onUpdate: "getChannel", onEnd: "fill", onFinalize: "IconComponent" };
-    withTestIdResult.onBegin = (onBegin) => {
-      obj.onBegin = onBegin;
-      return withTestIdResult;
-    };
-    withTestIdResult.onStart = (onStart) => {
-      obj.onStart = onStart;
-      return withTestIdResult;
-    };
-    withTestIdResult.onUpdate = (onUpdate) => {
-      obj.onUpdate = onUpdate;
-      return withTestIdResult;
-    };
-    withTestIdResult.onEnd = (onEnd) => {
-      obj.onEnd = onEnd;
-      return withTestIdResult;
-    };
-    withTestIdResult.onFinalize = (onFinalize) => {
-      obj.onFinalize = onFinalize;
-      return withTestIdResult;
-    };
-    ({ onBegin, onStart, onUpdate, onEnd, onFinalize } = withTestIdResult);
-    if (onConfigurePanGesture) {
-      onConfigurePanGesture(withTestIdResult);
+  let data = defaultIndex.data;
+  if (undefined === data) {
+    data = [];
+  }
+  const loop = tmp;
+  const autoPlayInterval = defaultIndex.autoPlayInterval;
+  let num2 = 1000;
+  if (undefined !== autoPlayInterval) {
+    num2 = autoPlayInterval;
+  }
+  const scrollAnimationDuration = defaultIndex.scrollAnimationDuration;
+  let num3 = 500;
+  if (undefined !== scrollAnimationDuration) {
+    num3 = scrollAnimationDuration;
+  }
+  let style = defaultIndex.style;
+  if (undefined === style) {
+    style = {};
+  }
+  const autoFillData = defaultIndex.autoFillData;
+  noop = tmp2;
+  const enabled = defaultIndex.enabled;
+  const pagingEnabled = defaultIndex.pagingEnabled;
+  const overscrollEnabled = defaultIndex.overscrollEnabled;
+  let snapEnabled = defaultIndex.snapEnabled;
+  if (undefined === snapEnabled) {
+    let flag = defaultIndex.enableSnap;
+    if (flag == null) {
+      flag = true;
     }
-    withTestIdResult.onBegin = onBegin;
-    withTestIdResult.onStart = onStart;
-    withTestIdResult.onUpdate = onUpdate;
-    withTestIdResult.onEnd = onEnd;
-    withTestIdResult.onFinalize = onFinalize;
-    class C {
-      constructor(arg0) {
-        obj = closure_1;
-        if (closure_1.onBegin) {
-          tmp = arg0;
-          onBeginResult = obj.onBegin(arg0);
-        }
-        return;
-      }
+    snapEnabled = flag;
+  }
+  ({ width, height } = defaultIndex);
+  if (!width) {
+    width = 0;
+  }
+  const rounded = Math.round(width);
+  if (!height) {
+    height = 0;
+  }
+  const rounded1 = Math.round(height);
+  const items = [data, undefined === loop || loop, undefined === autoFillData || autoFillData];
+  const bound = Math.max(num2, 0);
+  const memo = noop.useMemo(() => SINGLE_ITEM.computedFillDataWithAutoFillData({ loop, autoFillData, data, dataLength: data.length }), items);
+  let tmp10 = "vertical-stack" !== defaultIndex.mode;
+  if (tmp10) {
+    tmp10 = "horizontal-stack" !== defaultIndex.mode;
+  }
+  if (!tmp10) {
+    if (!defaultIndex.modeConfig) {
+      defaultIndex.modeConfig = {};
     }
-    C.__closure = { userDefinedConflictGestures };
-    C.__workletHash = 7286111968229;
-    C.__initData = onGestureEnd;
-    const PanResult = Gesture.Pan();
-    class D {
-      constructor(arg0) {
-        tmp = onGestureStart(arg0);
-        obj = closure_1;
-        if (closure_1.onStart) {
-          onStartResult = obj.onStart(arg0);
-        }
-        return;
-      }
+    const modeConfig = defaultIndex.modeConfig;
+    let showLength;
+    if (modeConfig != null) {
+      showLength = modeConfig.showLength;
     }
-    D.__closure = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    D.__workletHash = 2969501037173;
-    D.__initData = __initData;
-    const obj2 = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    const onBeginResult = withTestIdResult.onBegin(C);
-    const fn = function p(arg0) {
-      onGestureUpdate(arg0);
-      if (obj.onUpdate) {
-        obj.onUpdate(arg0);
-      }
-    };
-    fn.__closure = { onGestureUpdate, userDefinedConflictGestures };
-    fn.__workletHash = 14406733755860;
-    fn.__initData = __initData2;
-    const obj3 = { onGestureUpdate, userDefinedConflictGestures };
-    const onStartResult = withTestIdResult.onBegin(C).onStart(D);
-    const fn2 = function c(arg0, arg1) {
-      onGestureEnd(arg0, arg1);
-      if (obj.onEnd) {
-        obj.onEnd(arg0, arg1);
-      }
-    };
-    fn2.__closure = { onGestureEnd, userDefinedConflictGestures };
-    fn2.__workletHash = 3800149117372;
-    fn2.__initData = __initData3;
-    const obj4 = { onGestureEnd, userDefinedConflictGestures };
-    const onUpdateResult = withTestIdResult.onBegin(C).onStart(D).onUpdate(fn);
-    const fn3 = function e(arg0, arg1) {
-      if (obj.onFinalize) {
-        obj.onFinalize(arg0, arg1);
-      }
-    };
-    fn3.__closure = { userDefinedConflictGestures };
-    fn3.__workletHash = 16525776198753;
-    fn3.__initData = __initData4;
-    withTestIdResult.onBegin(C).onStart(D).onUpdate(fn).onEnd(fn2).onFinalize(fn3);
-    return withTestIdResult;
-  }, items);
-  const updateGestureConfig = onConfigurePanGesture(onGestureStart[2]).useUpdateGestureConfig(tmp, options);
-  return tmp;
+    if (showLength == null) {
+      showLength = length - 1;
+    }
+    defaultIndex.modeConfig.showLength = showLength;
+  }
+  const obj = {};
+  const merged = Object.assign(defaultIndex);
+  obj.defaultIndex = num;
+  obj.autoFillData = undefined === autoFillData || autoFillData;
+  obj.data = memo;
+  obj.dataLength = memo.length;
+  obj.rawData = data;
+  obj.rawDataLength = data.length;
+  obj.loop = undefined === loop || loop;
+  obj.enabled = undefined === enabled || enabled;
+  obj.autoPlayInterval = bound;
+  obj.scrollAnimationDuration = num3;
+  obj.style = style;
+  obj.pagingEnabled = undefined === pagingEnabled || pagingEnabled;
+  obj.snapEnabled = snapEnabled;
+  obj.overscrollEnabled = undefined === overscrollEnabled || overscrollEnabled;
+  obj.width = rounded;
+  obj.height = rounded1;
+  return obj;
 };

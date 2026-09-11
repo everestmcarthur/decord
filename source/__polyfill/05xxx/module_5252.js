@@ -1,12 +1,9 @@
 // Module ID: 5252
 // Function ID: 5253
-// Dependencies: [5253, 5254, 5255, 5256]
+// Dependencies: [5253]
 
 // Module 5252
 import _mod5253 from "module_5253" /* 5253 */;
-import _mod5254 from "module_5254" /* 5254 */;
-import _mod5255 from "module_5255" /* 5255 */;
-import _mod5256 from "module_5256" /* 5256 */;
 
 const self = this;
 let self2 = this;
@@ -45,9 +42,6 @@ if (self2) {
   }
   const _Object2 = Object;
   fn(_mod5253, exports);
-  fn(_mod5254, exports);
-  fn(_mod5255, exports);
-  fn(_mod5256, exports);
 } else {
   let _Object = Object;
 }

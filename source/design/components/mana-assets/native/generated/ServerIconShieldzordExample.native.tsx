@@ -1,13 +1,13 @@
-// Module ID: 6483
-// Function ID: 6484
+// Module ID: 6505
+// Function ID: 6506
 // Name: ServerIconShieldzordExample
-// Dependencies: [21, 5637, 6484, 2]
+// Dependencies: [21, 5639, 6506, 2]
 // Exports: ServerIconShieldzordExample
 
-// Module 6483 (ServerIconShieldzordExample)
+// Module 6505 (ServerIconShieldzordExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6484 from "module_6484" /* 6484 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6506 from "module_6506" /* 6506 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconShieldzordExample = function ServerIconShieldzordExample(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6484 };
+  const obj2 = { uri: _modDef6506 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

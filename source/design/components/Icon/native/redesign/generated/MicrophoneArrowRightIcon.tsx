@@ -1,13 +1,13 @@
-// Module ID: 9989
-// Function ID: 9990
+// Module ID: 10012
+// Function ID: 10013
 // Name: MicrophoneArrowRightIcon
-// Dependencies: [19, 21, 576, 4305, 9990, 2]
+// Dependencies: [19, 21, 576, 4307, 10013, 2]
 // Exports: MicrophoneArrowRightIcon
 
-// Module 9989 (MicrophoneArrowRightIcon)
+// Module 10012 (MicrophoneArrowRightIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod9990 from "module_9990" /* 9990 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod10013 from "module_10013" /* 10013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const MicrophoneArrowRightIcon = function MicrophoneArrowRightIcon(color)
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9990, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10013, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

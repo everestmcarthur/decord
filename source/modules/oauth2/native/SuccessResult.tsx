@@ -1,18 +1,18 @@
-// Module ID: 9646
-// Function ID: 9647
+// Module ID: 9669
+// Function ID: 9670
 // Name: SuccessResultModal
-// Dependencies: [19, 17, 1957, 4243, 2011, 1074, 1482, 21, 4605, 576, 8397, 1114, 4808, 7394, 1242, 504, 4572, 4470, 1609, 7175, 9647, 4601, 5025, 2]
+// Dependencies: [19, 17, 1957, 4245, 2011, 1074, 1482, 21, 4607, 576, 8420, 1114, 4810, 7416, 1242, 504, 4574, 4472, 1609, 7197, 9670, 4603, 5027, 2]
 // Exports: default
 
-// Module 9646 (SuccessResultModal)
+// Module 9669 (SuccessResultModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import transitionToGuild from "transitionToGuild" /* 7394 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import transitionToGuild from "transitionToGuild" /* 7416 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 const AnalyticsUtilsDefault = tmp(1242);
@@ -24,7 +24,7 @@ const Constants = fn(1074);
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollView: { flex: 1 }, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollViewContentContainer = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };

@@ -1,14 +1,14 @@
-// Module ID: 16668
-// Function ID: 16669
+// Module ID: 16656
+// Function ID: 16657
 // Name: JoinRequestActionSheet
-// Dependencies: [19, 17, 4597, 1385, 1371, 1074, 21, 4605, 504, 8249, 8233, 4341, 8290, 4540, 7236, 4306, 576, 1091, 8292, 5593, 2009, 8250, 7202, 1178, 8295, 1114, 4315, 6677, 16669, 7206, 2]
+// Dependencies: [19, 17, 4599, 1385, 1371, 1074, 21, 4607, 504, 8272, 8256, 4343, 8313, 4542, 7258, 4308, 576, 1091, 8315, 5595, 2009, 8273, 7224, 1178, 8318, 1114, 4317, 6699, 16657, 7228, 2]
 
-// Module 16668 (JoinRequestActionSheet)
+// Module 16656 (JoinRequestActionSheet)
 import isChangelogUserDefault from "isChangelogUser" /* 2009 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5593 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8250 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5595 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8273 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -181,7 +181,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");

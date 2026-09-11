@@ -1,14 +1,14 @@
-// Module ID: 16702
-// Function ID: 16703
+// Module ID: 16690
+// Function ID: 16691
 // Name: VibegrationsNativeComposer
-// Dependencies: [5, 32, 19, 17, 16678, 1074, 21, 4605, 576, 1114, 3590, 7297, 5200, 11295, 4601, 5173, 6666, 8736, 12309, 11023, 8671, 16019, 4550, 2]
+// Dependencies: [5, 32, 19, 17, 16666, 1074, 21, 4607, 576, 1114, 3590, 7319, 5202, 11319, 4603, 5175, 6688, 8759, 12334, 11045, 8694, 16008, 4552, 2]
 // Exports: default
 
-// Module 16702 (VibegrationsNativeComposer)
+// Module 16690 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7297 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7319 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,11 +25,11 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16678);
+const VibegrationsConnectionStore = fn(16666);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -244,7 +244,7 @@ export default function VibegrationsNativeComposer(projectId) {
       if (map.length > diff) {
         let intl = tmp16(1114).intl;
         let obj = { count: null };
-        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7297).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7319).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         _undefined3(intl.formatToPlainString(_modDef3590.DlX57a, obj));
         const _Math = Math;
@@ -334,10 +334,10 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj4;
           } else {
             closure_128_0 = undefined;
-            const obj5 = { mediaType: "any", selectionLimit: tmp2(7297).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            const obj5 = { mediaType: "any", selectionLimit: tmp2(7319).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5200).launchImageLibraryAsync(obj5), done: false };
+            const obj6 = { value: tmp5(5202).launchImageLibraryAsync(obj5), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

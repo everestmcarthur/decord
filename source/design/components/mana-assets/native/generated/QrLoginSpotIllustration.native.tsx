@@ -1,13 +1,13 @@
-// Module ID: 6425
-// Function ID: 6426
+// Module ID: 6447
+// Function ID: 6448
 // Name: QrLoginSpotIllustration
-// Dependencies: [21, 5637, 6426, 2]
+// Dependencies: [21, 5639, 6448, 2]
 // Exports: QrLoginSpotIllustration
 
-// Module 6425 (QrLoginSpotIllustration)
+// Module 6447 (QrLoginSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6426 from "module_6426" /* 6426 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6448 from "module_6448" /* 6448 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const QrLoginSpotIllustration = function QrLoginSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6426 };
+  const obj2 = { uri: _modDef6448 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

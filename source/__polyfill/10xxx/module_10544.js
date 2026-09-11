@@ -1,15 +1,16 @@
 // Module ID: 10544
 // Function ID: 10545
-// Dependencies: [41, 42, 93, 95, 98, 10521]
+// Dependencies: [41, 42, 93, 95, 98, 10545, 10542]
 
 // Module 10544
-import Filter from "Filter" /* 10521 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10542 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const AbstractMergeDateTimeRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +30,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-class MergeWeekdayComponentRefiner {
+class AbstractMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, MergeWeekdayComponentRefiner);
-    tmp2 = c2;
-    obj = c2(MergeWeekdayComponentRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, AbstractMergeDateTimeRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractMergeDateTimeRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,46 +50,45 @@ class MergeWeekdayComponentRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = MergeWeekdayComponentRefiner;
-_inherits(MergeWeekdayComponentRefiner, Filter.MergingRefiner);
+_inherits(AbstractMergeDateTimeRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "mergeResults",
-  value: function mergeResults(arg0, index, clone) {
-    const cloneResult = clone.clone();
-    cloneResult.index = index.index;
-    cloneResult.text = index.text + arg0 + cloneResult.text;
-    const start = cloneResult.start;
-    const start2 = index.start;
-    start.assign("weekday", start2.get("weekday"));
-    if (cloneResult.end) {
-      const end = cloneResult.end;
-      const start3 = index.start;
-      end.assign("weekday", start3.get("weekday"));
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, start, start2) {
+    start = start.start;
+    let isOnlyDateResult = start.isOnlyDate();
+    if (isOnlyDateResult) {
+      start2 = start2.start;
+      isOnlyDateResult = start2.isOnlyTime();
     }
-    return cloneResult;
+    if (!isOnlyDateResult) {
+      const start3 = start2.start;
+      let isOnlyDateResult1 = start3.isOnlyDate();
+      if (isOnlyDateResult1) {
+        const start4 = start.start;
+        isOnlyDateResult1 = start4.isOnlyTime();
+      }
+      isOnlyDateResult = isOnlyDateResult1;
+    }
+    if (isOnlyDateResult) {
+      const self = this;
+      isOnlyDateResult = null != str.match(this.patternBetween());
+    }
+    return isOnlyDateResult;
   }
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, start, start2) {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text) {
       start = start.start;
-      let result = start.isOnlyWeekdayComponent();
-      if (result) {
-        start2 = start.start;
-        result = !start2.isCertain("hour");
-      }
-      if (result) {
-        const start3 = start2.start;
-        result = start3.isCertain("day");
-      }
-      if (result) {
-        result = null != str.match(/^,?\s*$/);
-      }
-      return result;
+      const mergeDateTimeResult = AbstractMergeDateTimeRefiner(10545).mergeDateTimeResult;
+      const tmp2 = start.isOnlyDate() ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
+      tmp2.index = start.index;
+      tmp2.text = start.text + arg0 + text.text;
+      return tmp2;
     }
   }
 ];
 
-export default _createClass(MergeWeekdayComponentRefiner, items);
+export default _createClass(AbstractMergeDateTimeRefiner, items);

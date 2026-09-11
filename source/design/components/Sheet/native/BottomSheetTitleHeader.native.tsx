@@ -1,15 +1,15 @@
-// Module ID: 7201
-// Function ID: 7202
+// Module ID: 7223
+// Function ID: 7224
 // Name: BottomSheetTitleHeader
-// Dependencies: [32, 19, 17, 21, 4605, 576, 1477, 4306, 4601, 5675, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 1477, 4308, 4603, 5677, 2]
 // Exports: BottomSheetTitleHeader
 
-// Module 7201 (BottomSheetTitleHeader)
+// Module 7223 (BottomSheetTitleHeader)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import useToken from "useToken" /* 4306 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5675 */;
+import useToken from "useToken" /* 4308 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5677 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -114,14 +114,14 @@ function Subtitle(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4605);
+let createStyles = fn(4607);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" }, titles: { flexGrow: 1, flexShrink: 1, gap: 2 }, subtitle: { textAlign: "center" }, title: { textAlign: "center" } };
   return obj;
 });
-createStyles = fn(4605);
+createStyles = fn(4607);
 let closure_10 = createStyles.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
-createStyles = fn(4605);
+createStyles = fn(4607);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: { left: nativeDefault.space.PX_16, justifyContent: "flex-start" }, trailing: null };
   const obj2 = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };

@@ -1,13 +1,9 @@
 // Module ID: 6916
 // Function ID: 6917
-// Dependencies: []
+// Dependencies: [6917]
 
 // Module 6916
+import _modDef6917 from "module_6917" /* 6917 */;
 
-export default function _classCallCheck(arg0, arg1) {
-  if (!(arg0 instanceof arg1)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Cannot call a class as a function");
-    throw typeError;
-  }
-};
+
+export default _modDef6917;

@@ -1,17 +1,17 @@
-// Module ID: 13139
-// Function ID: 13140
+// Module ID: 13164
+// Function ID: 13165
 // Name: UserProfileActivityEmptyStates
-// Dependencies: [32, 19, 17, 1074, 21, 1114, 4605, 576, 4601, 4757, 12, 4618, 4572, 5025, 7434, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 1114, 4607, 576, 4603, 4759, 12, 4620, 4574, 5027, 7456, 2]
 
-// Module 13139 (UserProfileActivityEmptyStates)
+// Module 13164 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4620 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import openUserSettings from "openUserSettings" /* 7456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -97,7 +97,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -111,9 +111,9 @@ const memoResult = noop.memo((user) => {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(4757).getName(guildId, channelId, user);
+  name = name(4759).getName(guildId, channelId, user);
   const intl = user(1114).intl;
-  let obj = name(4757);
+  let obj = name(4759);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1114).t.sjSitP, { name }),
@@ -136,7 +136,7 @@ const memoResult = noop.memo((user) => {
   const intl2 = user(1114).intl;
   obj4.text = intl2.string(user(1114).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5025).Button, obj4);
+  obj3.children = closure_7(user(5027).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

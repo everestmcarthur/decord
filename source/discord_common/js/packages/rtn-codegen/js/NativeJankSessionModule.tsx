@@ -1,9 +1,9 @@
-// Module ID: 17502
-// Function ID: 17503
+// Module ID: 17494
+// Function ID: 17495
 // Name: NativeJankSessionModule
 // Dependencies: [17, 2]
 
-// Module 17502 (NativeJankSessionModule)
+// Module 17494 (NativeJankSessionModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

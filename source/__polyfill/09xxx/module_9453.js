@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 163.5, height: 20, scales: [2, 3], hash: "cd3f012d84fd9fd0e06d08e5556058d7", name: "img_logo_nitro_tier_0_horizontal_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "d6c65250c1813722d34dd286c312a88f", name: "img_nitro_classic_icon_white_80px", type: "png" });

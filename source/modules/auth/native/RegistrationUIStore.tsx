@@ -1,17 +1,17 @@
-// Module ID: 16028
-// Function ID: 16029
+// Module ID: 16017
+// Function ID: 16018
 // Name: RegistrationUIStore
 // Dependencies: [560, 1249, 2]
 // Exports: clearRegistrationErrorMessage, doesRegistrationHaveIdentityType, resetRegistration, setRegistrationErrors, setSubmitting, updateRegistrationOptions
 
-// Module 16028 (RegistrationUIStore)
+// Module 16017 (RegistrationUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessible" }));
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "padding" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };

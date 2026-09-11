@@ -1,19 +1,19 @@
-// Module ID: 9721
-// Function ID: 9722
+// Module ID: 9744
+// Function ID: 9745
 // Name: EmbeddedActivityBackgroundImageWithOverlay
-// Dependencies: [32, 19, 17, 21, 4605, 576, 9722, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 9745, 2]
 // Exports: default
 
-// Module 9721 (EmbeddedActivityBackgroundImageWithOverlay)
+// Module 9744 (EmbeddedActivityBackgroundImageWithOverlay)
 import nativeDefault from "native" /* 576 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9722 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9745 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ ImageBackground: closure_4, View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 const names = ["embedded_background"];

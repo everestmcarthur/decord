@@ -1,13 +1,13 @@
-// Module ID: 4806
-// Function ID: 4807
+// Module ID: 4808
+// Function ID: 4809
 // Name: ChannelRTCActionCreators
-// Dependencies: [1074, 573, 1242, 4785, 1109, 2]
+// Dependencies: [1074, 573, 1242, 4787, 1109, 2]
 
-// Module 4806 (ChannelRTCActionCreators)
+// Module 4808 (ChannelRTCActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4785 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

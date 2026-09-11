@@ -1,14 +1,14 @@
-// Module ID: 13634
-// Function ID: 13635
+// Module ID: 13613
+// Function ID: 13614
 // Name: OutboundPromotionClaimAlert
-// Dependencies: [32, 19, 17, 21, 4605, 576, 13635, 7214, 7234, 13431, 13636, 4601, 1114, 5025, 7241, 13637, 5044, 4299, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 13614, 7236, 7256, 13476, 13615, 4603, 1114, 5027, 7263, 13616, 5046, 4301, 2]
 // Exports: default
 
-// Module 13634 (OutboundPromotionClaimAlert)
+// Module 13613 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import ClipboardUtils from "ClipboardUtils" /* 7241 */;
-import PromotionUtils from "PromotionUtils" /* 13431 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import ClipboardUtils from "ClipboardUtils" /* 7263 */;
+import PromotionUtils from "PromotionUtils" /* 13476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { loading: { marginVertical: 80 }, body: { alignItems: "center" }, title: { marginBottom: 8 }, errorTitle: { lineHeight: 24, marginBottom: 8 }, bodyText: { textAlign: "center", lineHeight: 20 }, copyInputContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm }, copyInputLabel: { lineHeight: 20, marginBottom: 8 }, copyInput: null, copyInputCopied: null, copyButton: null, promotionArt: null, errorArt: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm };
 obj2.copyInput = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };

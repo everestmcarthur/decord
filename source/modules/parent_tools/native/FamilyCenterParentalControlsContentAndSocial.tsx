@@ -1,20 +1,20 @@
-// Module ID: 15008
-// Function ID: 15009
+// Module ID: 14985
+// Function ID: 14986
 // Name: FamilyCenterParentalControlsContentAndSocial
-// Dependencies: [19, 17, 1074, 8027, 21, 11540, 1114, 2024, 14767, 2]
+// Dependencies: [19, 17, 1074, 8050, 21, 11564, 1114, 2024, 14744, 2]
 // Exports: default
 
-// Module 15008 (FamilyCenterParentalControlsContentAndSocial)
+// Module 14985 (FamilyCenterParentalControlsContentAndSocial)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 14767 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingLayoutDefault from "SettingLayout" /* 14744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const MobileUserSettings = fn(8027).MobileUserSettings;
+const MobileUserSettings = fn(8050).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");

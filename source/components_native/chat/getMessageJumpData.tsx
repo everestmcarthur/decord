@@ -1,13 +1,13 @@
-// Module ID: 11597
-// Function ID: 11598
+// Module ID: 11621
+// Function ID: 11622
 // Name: getMessageJumpData
-// Dependencies: [32, 19, 1479, 1371, 1115, 1877, 4536, 11, 2]
+// Dependencies: [32, 19, 1479, 1371, 1115, 1877, 4538, 11, 2]
 // Exports: default, useMessageJumpAndroidKeyboardHeight
 
-// Module 11597 (getMessageJumpData)
+// Module 11621 (getMessageJumpData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import Client from "Client" /* 4536 */;
+import Client from "Client" /* 4538 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;

@@ -1,11 +1,11 @@
-// Module ID: 15255
-// Function ID: 15256
+// Module ID: 15234
+// Function ID: 15235
 // Name: QuestThemePicker
-// Dependencies: [19, 17, 1184, 1183, 1230, 1085, 21, 4605, 576, 7214, 7234, 4537, 504, 1231, 4306, 1925, 15256, 4601, 15237, 1114, 2]
+// Dependencies: [19, 17, 1184, 1183, 1230, 1085, 21, 4607, 576, 7236, 7256, 4539, 504, 1231, 4308, 1925, 15235, 4603, 15216, 1114, 2]
 
-// Module 15255 (QuestThemePicker)
+// Module 15234 (QuestThemePicker)
 import nativeDefault from "native" /* 576 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15256 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15235 */;
 import noop from "module_19" /* 19 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -41,7 +41,7 @@ class QuestThemePicker {
     items3[0] = allMobileThemes;
     memo = closure_3.useMemo(() => {
       const items = [, , ];
-      ({ LIGHT: arr[0], DARKER: arr[1], MIDNIGHT: arr[2] } = ThemeTypes);
+      ({ LIGHT: arr[0], DARK: arr[1], ONYX: arr[2] } = ThemeTypes);
       return allMobileThemes.filter((type) => {
         let hasItem = type.type === items(allMobileThemes[13]).ClientThemeType.STANDARD_BACKGROUND_THEME;
         if (hasItem) {
@@ -58,10 +58,10 @@ class QuestThemePicker {
     token = obj4.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.LIGHT);
     closure_7 = token;
     obj5 = closure_0(closure_2[14]);
-    token1 = obj5.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.DARKER);
+    token1 = obj5.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.DARK);
     closure_8 = token1;
     obj6 = closure_0(closure_2[14]);
-    token2 = obj6.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.MIDNIGHT);
+    token2 = obj6.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.ONYX);
     closure_9 = token2;
     items4 = [, , , ];
     items4[0] = memo;
@@ -69,7 +69,7 @@ class QuestThemePicker {
     items4[2] = token1;
     items4[3] = token2;
     memo1 = closure_3.useMemo(() => {
-      let obj = { [closure_2_9.LIGHT]: token, [closure_2_9.DARKER]: token1, [closure_2_9.MIDNIGHT]: token2 };
+      let obj = { [closure_2_9.LIGHT]: token, [closure_2_9.DARK]: token1, [closure_2_9.ONYX]: token2 };
       return memo.map((theme) => {
         theme = theme.theme;
         obj = closure_0(allMobileThemes[15]);
@@ -140,7 +140,7 @@ let closure_8 = fn(1230).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { themeSection: { marginBottom: nativeDefault.space.PX_8 }, themeSelector: null, themeOption: null, themeCircle: null, themeCircleSelected: null, themeLabel: null, resetButton: null, resetIcon: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.themeSelector = { flexDirection: "row", gap: nativeDefault.space.PX_12 };

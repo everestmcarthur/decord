@@ -1,13 +1,11 @@
 // Module ID: 3957
 // Function ID: 3958
-// Dependencies: [3693, 3912, 3855, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 3957
-import _typeof_mod from "module_3693" /* 3693 */;
-import startOfYear_mod from "startOfYear" /* 3912 */;
-import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 3855 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -17,34 +15,17 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfYear;
-}
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function getDayOfYear(arg0) {
+export default function getDate(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+  return _typeof.default(arg0).getDate();
 };
 export default exports.default;

@@ -1,10 +1,10 @@
-// Module ID: 5182
-// Function ID: 5183
+// Module ID: 5184
+// Function ID: 5185
 // Name: ClipsConstants
 // Dependencies: [1090, 3, 2]
 // Exports: CLIP_NAME_TEMPLATE, getClipCropAspectRatio, getClipCropBounds
 
-// Module 5182 (ClipsConstants)
+// Module 5184 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
 

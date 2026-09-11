@@ -1,9 +1,9 @@
 // Module ID: 10648
 // Function ID: 10649
-// Dependencies: [41, 42, 93, 95, 98, 10523]
+// Dependencies: [41, 42, 93, 95, 98, 10541]
 
 // Module 10648
-import _mod10523 from "module_10523" /* 10523 */;
+import _mod10541 from "module_10541" /* 10541 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
@@ -45,12 +45,12 @@ if (!fn) {
     return tmp;
   };
 }
-class ESMergeDateTimeRefiner {
+class ZHHansMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, ESMergeDateTimeRefiner);
+    tmp = closure_0(this, ZHHansMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(ESMergeDateTimeRefiner);
+    obj = c2(ZHHansMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -65,15 +65,14 @@ class ESMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ESMergeDateTimeRefiner;
-_inherits(ESMergeDateTimeRefiner, fn(_mod10523).default);
+_classCallCheck = ZHHansMergeDateRangeRefiner;
+_inherits(ZHHansMergeDateRangeRefiner, fn(_mod10541).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(?:,|de|aslas|a)?\\s*$");
-    return regExp;
+    return /^\s*(至|到|-|~|～|－|ー)\s*$/i;
   }
 };
 const items = [entry];
 
-export default _createClass(ESMergeDateTimeRefiner, items);
+export default _createClass(ZHHansMergeDateRangeRefiner, items);

@@ -1,26 +1,26 @@
-// Module ID: 12526
-// Function ID: 12527
+// Module ID: 12551
+// Function ID: 12552
 // Name: ChatInputGuardGuildMemberVerification
-// Dependencies: [19, 17, 4597, 12032, 1074, 21, 4605, 5595, 4429, 12527, 1114, 4785, 5577, 12528, 5730, 5619, 504, 12518, 5579, 12529, 2]
+// Dependencies: [19, 17, 4599, 12057, 1074, 21, 4607, 5597, 4431, 12552, 1114, 4787, 5579, 12553, 5732, 5621, 504, 12543, 5581, 12554, 2]
 
-// Module 12526 (ChatInputGuardGuildMemberVerification)
+// Module 12551 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1114 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5577 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5619 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12518 */;
-import _modDef12527 from "module_12527" /* 12527 */;
-import _modDef12528 from "module_12528" /* 12528 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4787 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5579 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5621 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12543 */;
+import _modDef12552 from "module_12552" /* 12552 */;
+import _modDef12553 from "module_12553" /* 12553 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
-const LottieAnimationViewDefault = tmp14(5579);
+const LottieAnimationViewDefault = tmp14(5581);
 require = fn;
 const Image = fn(17).Image;
-const TextAreaCta = fn(12032).TextAreaCta;
+const TextAreaCta = fn(12057).TextAreaCta;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
@@ -28,13 +28,13 @@ let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInp
 export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_8();
-  const currentUserGuildJoinRequest = guildId(5595).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(5597).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(4429).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef12527;
+  if (guildId(4431).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    let tmp8 = _modDef12552;
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.lk30cY);
     let fn = function _() {
@@ -42,8 +42,8 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED };
       const result = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert({ guildId, canWithdraw: false });
     };
-  } else if (tmp2(4429).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef12528;
+  } else if (tmp2(4431).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+    tmp8 = _modDef12553;
     const intl2 = tmp2(1114).intl;
     stringResult = intl2.string(tmp2(1114).t["5iLvSx"]);
     fn = function _() {
@@ -54,7 +54,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       obj4.subtitleText = intl.string(util.t["13tjTU"]);
       const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj4);
     };
-    const tmp7 = jsx(tmp2(5730).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(5732).XSmallIcon, {});
   } else {
     let intl = tmp2(1114).intl;
     stringResult = intl.string(tmp2(1114).t.rEBKvg);
@@ -64,7 +64,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
     };
   }
-  let obj = guildId(5595);
+  let obj = guildId(5597);
   const items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp2Result = guildId(504);
@@ -72,7 +72,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     let obj2 = { style: tmp.noticeIcon, source: tmp8 };
     let tmp13Result = tmp13(Image, obj2);
   } else {
-    const obj3 = { style: tmp.lottieAnimation, source: tmp2(12529), autoPlay: !stateFromStores };
+    const obj3 = { style: tmp.lottieAnimation, source: tmp2(12554), autoPlay: !stateFromStores };
     tmp13Result = tmp13(LottieAnimationViewDefault, obj3);
     const tmp14Result = LottieAnimationViewDefault;
   }

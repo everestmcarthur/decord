@@ -1,14 +1,14 @@
-// Module ID: 15430
-// Function ID: 15431
+// Module ID: 15412
+// Function ID: 15413
 // Name: DisplayNameStylesGradientPickerSheet
-// Dependencies: [32, 19, 17, 1074, 21, 4605, 576, 10972, 1388, 15426, 4573, 1242, 4572, 14672, 7202, 7201, 5025, 1114, 5037, 1091, 15431, 12, 5173, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4607, 576, 10993, 1388, 15408, 4575, 1242, 4574, 14650, 7224, 7223, 5027, 1114, 5039, 1091, 15413, 12, 5175, 2]
 // Exports: default
 
-// Module 15430 (DisplayNameStylesGradientPickerSheet)
+// Module 15412 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import HapticUtils from "HapticUtils" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import HapticUtils from "HapticUtils" /* 4575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { body: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 }, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, swatchWrapper: null, pressable: null, selected: null, option: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.gradientContainer = { flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };

@@ -1,79 +1,60 @@
 // Module ID: 10561
 // Function ID: 10562
-// Dependencies: [41, 42, 93, 95, 98, 10523]
+// Dependencies: [41, 42]
 
 // Module 10561
-import _mod10523 from "module_10523" /* 10523 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
 let _classCallCheck = _classCallCheck_mod;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class FRMergeDateTimeRefiner {
+const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class ExtractTimezoneOffsetRefiner {
   constructor() {
-    self = this;
-    tmp = closure_0(this, FRMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(FRMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
+    return;
   }
 }
-_classCallCheck = FRMergeDateTimeRefiner;
-_inherits(FRMergeDateTimeRefiner, fn(_mod10523).default);
+_classCallCheck = ExtractTimezoneOffsetRefiner;
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
-    return regExp;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (!start.isCertain("timezoneOffset")) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
+          });
+          const _parseInt = parseInt;
+          let str2 = match[3];
+          const result = 60 * parseInt(match[2]);
+          if (!str2) {
+            str2 = "0";
+          }
+          const sum = result + parseInt(str2);
+          if (sum <= 840) {
+            let tmp7 = sum;
+            if ("-" === match[1]) {
+              tmp7 = -sum;
+            }
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("timezoneOffset", tmp7);
+            }
+            const start2 = start.start;
+            start2.assign("timezoneOffset", tmp7);
+            start.text = start.text + match[0];
+          }
+        }
+        obj = text;
+      }
+    });
+    return arr;
   }
 };
 const items = [entry];
 
-export default _createClass(FRMergeDateTimeRefiner, items);
+export default _createClass(ExtractTimezoneOffsetRefiner, items);

@@ -1,21 +1,21 @@
-// Module ID: 17893
-// Function ID: 17894
+// Module ID: 17885
+// Function ID: 17886
 // Name: SelectInviteRolesActionSheet
-// Dependencies: [32, 19, 17, 4597, 21, 4605, 504, 10937, 7101, 4572, 12, 8663, 1178, 4601, 5173, 1114, 7201, 7249, 7107, 2]
+// Dependencies: [32, 19, 17, 4599, 21, 4607, 504, 10958, 7123, 4574, 12, 8686, 1178, 4603, 5175, 1114, 7223, 7271, 7129, 2]
 // Exports: default
 
-// Module 17893 (SelectInviteRolesActionSheet)
+// Module 17885 (SelectInviteRolesActionSheet)
 import _mod12 from "module_12" /* 12 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_10 = createStyles.createStyles({ list: { flex: 1 }, label: { flexDirection: "row", alignItems: "center" }, roleDot: { marginEnd: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx");

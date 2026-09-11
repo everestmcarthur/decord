@@ -1,9 +1,0 @@
-// Module ID: 9455
-// Function ID: 9456
-// Dependencies: [1122]
-
-// Module 9455
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 88, height: 106, scales: [2, 3], hash: "acbb98adccf298ebfe7faeca9c938eda", name: "img_tier_0_mobile", type: "png" });

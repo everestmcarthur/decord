@@ -1,13 +1,13 @@
-// Module ID: 6259
-// Function ID: 6260
+// Module ID: 6281
+// Function ID: 6282
 // Name: InkQuill3dIllustration
-// Dependencies: [21, 5637, 6260, 2]
+// Dependencies: [21, 5639, 6282, 2]
 // Exports: InkQuill3dIllustration
 
-// Module 6259 (InkQuill3dIllustration)
+// Module 6281 (InkQuill3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6260 from "module_6260" /* 6260 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6282 from "module_6282" /* 6282 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const InkQuill3dIllustration = function InkQuill3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6260 };
+  const obj2 = { uri: _modDef6282 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

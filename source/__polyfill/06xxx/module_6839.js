@@ -1,109 +1,101 @@
 // Module ID: 6839
 // Function ID: 6840
-// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 6838]
+// Dependencies: [6732, 6733]
 
 // Module 6839
-import _modDef6838 from "module_6838" /* 6838 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import tagMessage from "tagMessage" /* 6732 */;
+import _mod6733 from "module_6733" /* 6733 */;
 
-const TouchableNativeFeedback = importDefault;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let closure_2 = ["style"];
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
-class TouchableNativeFeedback {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(TouchableNativeFeedback, fn(19).Component);
-const entry = {
-  key: "getExtraButtonProps",
-  value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
-    } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
-      }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
-    }
+require = fn;
+const dependencyMap = arg6;
+const setGestureState = function t(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    throw error;
   }
 };
-const items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
-      }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_2);
-      const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(6838), {});
+setGestureState.__closure = { tagMessage: fn(6732).tagMessage };
+setGestureState.__workletHash = 727405139747;
+setGestureState.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
+const obj2 = { activate: null, fail: null, deactivate: null };
+const fn2 = function _(arg0) {
+  const ACTIVE = _mod6733.State.ACTIVE;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, ACTIVE);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
     }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-];
-const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
-let obj = {};
-let merged = Object.assign(_modDef6838.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
-importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
-importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+};
+const obj = { tagMessage: fn(6732).tagMessage };
+fn2.__closure = { setGestureState, State: fn(6733).State };
+fn2.__workletHash = 14928129771754;
+fn2.__initData = { code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}" };
+obj2.activate = fn2;
+const fn3 = function n(arg0) {
+  const FAILED = _mod6733.State.FAILED;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, FAILED);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, FAILED);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+const obj3 = { setGestureState, State: fn(6733).State };
+fn3.__closure = { setGestureState, State: fn(6733).State };
+fn3.__workletHash = 1703030189599;
+fn3.__initData = { code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}" };
+obj2.fail = fn3;
+const fn4 = function s(arg0) {
+  const END = _mod6733.State.END;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, END);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, END);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+const obj4 = { setGestureState, State: fn(6733).State };
+fn4.__closure = { setGestureState, State: fn(6733).State };
+fn4.__workletHash = 5511283927342;
+fn4.__initData = { code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}" };
+obj2.deactivate = fn4;
 
-export default importDefaultResultResult;
+export const GestureStateManager = obj2;

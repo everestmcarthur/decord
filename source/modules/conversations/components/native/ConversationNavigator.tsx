@@ -1,17 +1,17 @@
-// Module ID: 7964
-// Function ID: 7965
+// Module ID: 7987
+// Function ID: 7988
 // Name: ConversationNavigator
-// Dependencies: [19, 21, 4306, 576, 7914, 1115, 7965, 7052, 7975, 7976, 1114, 7977, 13324, 13325, 4463, 2]
+// Dependencies: [19, 21, 4308, 576, 7937, 1115, 7988, 7074, 7998, 7999, 1114, 8000, 13349, 13350, 4465, 2]
 // Exports: default, openConversationNavigator
 
-// Module 7964 (ConversationNavigator)
+// Module 7987 (ConversationNavigator)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import useToken from "useToken" /* 4306 */;
-import RootNavigationRef from "RootNavigationRef" /* 4463 */;
-import HeaderShared from "HeaderShared" /* 7914 */;
-import ConversationNavigatorHeaderDefault from "ConversationNavigatorHeader" /* 7976 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 13324 */;
+import useToken from "useToken" /* 4308 */;
+import RootNavigationRef from "RootNavigationRef" /* 4465 */;
+import HeaderShared from "HeaderShared" /* 7937 */;
+import ConversationNavigatorHeaderDefault from "ConversationNavigatorHeader" /* 7999 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 13349 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function HeaderWithBorder(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(7965);
+const NativeStackNavigator = fn(7988);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
@@ -35,13 +35,13 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 export default function ConversationNavigator(route) {
   const params = route.route.params;
   const channelId = params.channelId;
-  let obj2 = { id: "conversation-navigator", screenOptions: channelId(7052).useAccessibilityNativeStackOptions(), children: null };
-  let obj = channelId(7052);
+  let obj2 = { id: "conversation-navigator", screenOptions: channelId(7074).useAccessibilityNativeStackOptions(), children: null };
+  let obj = channelId(7074);
   ({ Navigator, Screen } = Screen);
   const items = [
     closure_3(Screen, {
       initialParams: { channelId, guildId: params.guildId },
-      name: channelId(7975).ConversationNavigatorScreens.LIST,
+      name: channelId(7998).ConversationNavigatorScreens.LIST,
       options(navigation) {
         let obj = {
           header(arg0) {
@@ -62,14 +62,14 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(7977).default;
+        return channelId(8000).default;
       }
     }),
 
   ];
   const obj3 = {
     initialParams: { channelId, guildId: params.guildId },
-    name: channelId(7975).ConversationNavigatorScreens.LIST,
+    name: channelId(7998).ConversationNavigatorScreens.LIST,
     options(navigation) {
       let obj = {
         header(arg0) {
@@ -90,11 +90,11 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(7977).default;
+      return channelId(8000).default;
     }
   };
   items[1] = closure_3(Screen.Screen, {
-    name: channelId(7975).ConversationNavigatorScreens.FOCUS,
+    name: channelId(7998).ConversationNavigatorScreens.FOCUS,
     options(route) {
       route = route.route;
       const obj = {
@@ -106,7 +106,7 @@ export default function ConversationNavigator(route) {
         headerTitle: null,
         headerRight: null
       };
-      const obj2 = route(7914);
+      const obj2 = route(7937);
       obj.headerLeft = obj2.getRenderBackImage(route.navigation, { badgeCutoutColor: closure_1(576).colors.MOBILE_ACTIONSHEET_BACKGROUND });
       obj.headerTitle = function headerTitle() {
         return closure_2_3(ConversationNavigatorHeaderDefault, { channelId: route.params.channelId, title: route.params.title, hasRightAction: true });
@@ -117,7 +117,7 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(13325).default;
+      return channelId(13350).default;
     }
   });
   obj2.children = items;

@@ -1,18 +1,15 @@
 // Module ID: 10605
 // Function ID: 10606
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10596, 10505, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10537]
 
 // Module 10605
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10596 from "module_10596" /* 10596 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10537 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLRelativeDateFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,15 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(dit|deze|(?:aan)?komend|volgend|afgelopen|vorig)e?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10596.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
-class NLRelativeDateFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+class PTTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLRelativeDateFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLRelativeDateFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, PTTimeExpressionParser);
+    tmp2 = c2;
+    obj = c2(PTTimeExpressionParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -53,62 +50,22 @@ class NLRelativeDateFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = PTTimeExpressionParser;
+_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp4 = NLRelativeDateFormatParser(10596).TIME_UNIT_DICTIONARY[str3];
-      if ("volgend" != formatted) {
-        if ("komend" != formatted) {
-          if ("aankomend" != formatted) {
-            if ("afgelopen" != formatted) {
-              if ("vorig" != formatted) {
-                const parsingComponents = createParsingComponents.createParsingComponents();
-                const _Date = Date;
-                const instant = createParsingComponents.reference.instant;
-                const date = new Date(instant.getTime());
-                if (str3.match(/week/i)) {
-                  date.setDate(date.getDate() - date.getDay());
-                  parsingComponents.imply("day", date.getDate());
-                  parsingComponents.imply("month", date.getMonth() + 1);
-                  parsingComponents.imply("year", date.getFullYear());
-                  const date1 = date.getDate();
-                } else if (str3.match(/maand/i)) {
-                  date.setDate(1);
-                  parsingComponents.imply("day", date.getDate());
-                  parsingComponents.assign("year", date.getFullYear());
-                  parsingComponents.assign("month", date.getMonth() + 1);
-                } else if (str3.match(/jaar/i)) {
-                  date.setDate(1);
-                  date.setMonth(0);
-                  parsingComponents.imply("day", date.getDate());
-                  parsingComponents.imply("month", date.getMonth() + 1);
-                  parsingComponents.assign("year", date.getFullYear());
-                }
-                return parsingComponents;
-              }
-            }
-            const obj = {};
-            obj[tmp4] = -1;
-            const ParsingComponents = tmp2(10505).ParsingComponents;
-            return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
-          }
-        }
-      }
-      const ParsingComponents2 = tmp2(10505).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp4]: 1 });
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
     }
   }
 ];
 
-export default _createClass(NLRelativeDateFormatParser, items);
+export default _createClass(PTTimeExpressionParser, items);

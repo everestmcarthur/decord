@@ -1,19 +1,9 @@
 // Module ID: 6683
 // Function ID: 6684
-// Dependencies: [19, 6684]
-// Exports: useBottomSheet
+// Dependencies: [1122]
 
 // Module 6683
-import _mod19 from "module_19" /* 19 */;
-import _mod6684 from "module_6684" /* 6684 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-const useContext = _mod19.useContext;
 
-export const useBottomSheet = () => {
-  const tmp = useContext(_mod6684.BottomSheetContext);
-  if (null === tmp) {
-    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleErrorIcon-secondary", type: "png" });

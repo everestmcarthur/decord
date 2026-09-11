@@ -1,12 +1,12 @@
-// Module ID: 15089
-// Function ID: 15090
+// Module ID: 15066
+// Function ID: 15067
 // Name: useBountySwipeUpNux
-// Dependencies: [32, 11593, 15090, 1943, 7440, 2]
+// Dependencies: [32, 11617, 15067, 1943, 7462, 2]
 // Exports: useBountySwipeUpNux
 
-// Module 15089 (useBountySwipeUpNux)
-import BountiesVerticalScrollExperiment2 from "BountiesVerticalScrollExperiment" /* 11593 */;
-import bountiesSwipeUpNuxDevTools from "bountiesSwipeUpNuxDevTools" /* 15090 */;
+// Module 15066 (useBountySwipeUpNux)
+import BountiesVerticalScrollExperiment2 from "BountiesVerticalScrollExperiment" /* 11617 */;
+import bountiesSwipeUpNuxDevTools from "bountiesSwipeUpNuxDevTools" /* 15067 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
         prop = tmp(1943).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
       }
     }
-    const tmpResult = tmp(7440);
+    const tmpResult = tmp(7462);
     if (first) {
       let tmp11 = isEligible;
       if (isEligible) {
@@ -39,8 +39,8 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
     } else {
       tmp10 = tmp9 === tmp(1943).DismissibleContent.BOUNTIES_SWIPE_UP_NUX;
     }
-    const tmp4Result = tmp4(tmp(7440).useSelectedDismissibleContent([]), 2);
-    const tmpResult2 = tmp(7440);
+    const tmp4Result = tmp4(tmp(7462).useSelectedDismissibleContent([]), 2);
+    const tmpResult2 = tmp(7462);
     const obj2 = { hasSingleUseSwipeUpNux: tmp10, dismissSingleUseSwipeUpNux: tmp4Result[1], hasRecurringSwipeUpNux: null, dismissRecurringSwipeUpNux: null };
     if (first) {
       if (isEligible) {
@@ -51,7 +51,7 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
       tmp14 = tmp13 === tmp(1943).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
     }
     obj2.hasRecurringSwipeUpNux = tmp14;
-    obj2.dismissRecurringSwipeUpNux = tmp4(tmp(7440).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 86400000 }), 2)[1];
+    obj2.dismissRecurringSwipeUpNux = tmp4(tmp(7462).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 86400000 }), 2)[1];
     return obj2;
   }
 };

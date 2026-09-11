@@ -1,9 +1,9 @@
-// Module ID: 4430
-// Function ID: 4431
+// Module ID: 4432
+// Function ID: 4433
 // Name: DefaultRouteStore
 // Dependencies: [1074, 504, 510, 573, 2]
 
-// Module 4430 (DefaultRouteStore)
+// Module 4432 (DefaultRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

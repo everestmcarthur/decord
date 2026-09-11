@@ -1,13 +1,13 @@
-// Module ID: 4651
-// Function ID: 4652
+// Module ID: 4653
+// Function ID: 4654
 // Name: ApplicationStreamingSettingsStore
-// Dependencies: [4652, 4630, 504, 573, 2]
+// Dependencies: [4654, 4632, 504, 573, 2]
 
-// Module 4651 (ApplicationStreamingSettingsStore)
+// Module 4653 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 4630 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4652 */;
+import Constants from "Constants" /* 4632 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4654 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;

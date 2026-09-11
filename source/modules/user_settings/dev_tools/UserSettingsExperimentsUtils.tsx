@@ -1,11 +1,11 @@
-// Module ID: 11884
-// Function ID: 11885
+// Module ID: 11909
+// Function ID: 11910
 // Name: UserSettingsExperimentsUtils
-// Dependencies: [4714, 2]
+// Dependencies: [4716, 2]
 // Exports: getBestMatches, getEntries, getExperimentDateFromId, sortEntries
 
-// Module 11884 (UserSettingsExperimentsUtils)
-import flattenDefault from "flatten" /* 4714 */;
+// Module 11909 (UserSettingsExperimentsUtils)
+import flattenDefault from "flatten" /* 4716 */;
 import size from "module_2" /* 2 */;
 
 function matchesDeep(item10014, item10021) {

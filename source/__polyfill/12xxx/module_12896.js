@@ -1,22 +1,35 @@
 // Module ID: 12896
 // Function ID: 12897
-// Dependencies: [12873]
-// Exports: getCapturedScopesOnSpan, setCapturedScopesOnSpan
+// Dependencies: [12890, 12893]
+// Exports: addGlobalUnhandledRejectionInstrumentationHandler
 
 // Module 12896
-import _mod12873 from "module_12873" /* 12873 */;
+import _mod12890 from "module_12890" /* 12890 */;
+import _mod12893 from "module_12893" /* 12893 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod12893.GLOBAL_OBJ.onunhandledrejection;
+  _mod12893.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+    _mod12890.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+  };
+  _mod12893.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+}
+let onunhandledrejection = null;
 
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
-};
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2) {
-  if (arg0) {
-    const result = _mod12873.addNonEnumerableProperty(arg0, _sentryIsolationScope, arg2);
-    const result1 = _mod12873.addNonEnumerableProperty(arg0, _sentryScope, arg1);
-  }
+export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
+  _mod12890.addHandler("unhandledrejection", arg0);
+  _mod12890.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

@@ -1,10 +1,10 @@
-// Module ID: 9718
-// Function ID: 9719
+// Module ID: 9741
+// Function ID: 9742
 // Name: createWebviewHtmlFile
 // Dependencies: [5, 17, 1115, 1152, 1232, 2]
 // Exports: createInjectedJavascriptForIOS, default
 
-// Module 9718 (createWebviewHtmlFile)
+// Module 9741 (createWebviewHtmlFile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

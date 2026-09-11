@@ -1,9 +1,9 @@
-// Module ID: 13764
-// Function ID: 13765
+// Module ID: 13745
+// Function ID: 13746
 // Name: CreatorMonetizationStore
 // Dependencies: [504, 573, 2]
 
-// Module 13764 (CreatorMonetizationStore)
+// Module 13745 (CreatorMonetizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,19 +1,19 @@
-// Module ID: 13614
-// Function ID: 13615
+// Module ID: 13593
+// Function ID: 13594
 // Name: GuildBoostingGuildList
-// Dependencies: [19, 17, 1979, 5488, 1074, 21, 4605, 576, 4540, 504, 4514, 9119, 7394, 7042, 5634, 4601, 10480, 1114, 13583, 2]
+// Dependencies: [19, 17, 1979, 5490, 1074, 21, 4607, 576, 4542, 504, 4516, 9142, 7416, 7064, 5636, 4603, 10501, 1114, 13562, 2]
 // Exports: default
 
-// Module 13614 (GuildBoostingGuildList)
+// Module 13593 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4514 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7042 */;
-import transitionToGuild from "transitionToGuild" /* 7394 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4516 */;
+import useThemeDefault from "useTheme" /* 4542 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7064 */;
+import transitionToGuild from "transitionToGuild" /* 7416 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import SortedGuildStore from "SortedGuildStore" /* 5490 */;
 
 require = fn;
 function GuildBoostingGuildListItem(guildId) {
@@ -39,30 +39,30 @@ function GuildBoostingGuildListItem(guildId) {
       children: null
     };
     const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
-    const tmp2Result = tmp2(9119);
-    obj3.size = tmp5(5634).GuildIconSizes.LARGE;
+    const tmp2Result = tmp2(9142);
+    obj3.size = tmp5(5636).GuildIconSizes.LARGE;
     obj3.style = tmp.guildIcon;
-    const items1 = [closure_8(tmp2(5634), obj3), , ];
+    const items1 = [closure_8(tmp2(5636), obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
-    const items2 = [closure_8(tmp5(4601).Text, obj5), ];
+    const items2 = [closure_8(tmp5(4603).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
-    const obj7 = { source: tmp2(10480), style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const obj7 = { source: tmp2(10501), style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
     const items3 = [closure_8(closure_4, obj7), ];
     const obj8 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1114).intl;
     const obj9 = { subscriberCount: tmp8 };
     obj8.children = intl.format(tmp5(1114).t.If4iTS, obj9);
-    items3[1] = closure_8(tmp5(4601).Text, obj8);
+    items3[1] = closure_8(tmp5(4603).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_9(closure_3, obj6);
     obj4.children = items2;
     items1[1] = closure_9(closure_3, obj4);
     const obj10 = { guild: stateFromStores, theme: tmp4 };
-    items1[2] = closure_8(tmp2(13583), obj10);
+    items1[2] = closure_8(tmp2(13562), obj10);
     obj2.children = items1;
     tmp9 = closure_9(tmp2Result, obj2);
-    const tmp2Result2 = tmp2(5634);
+    const tmp2Result2 = tmp2(5636);
   }
   return tmp9;
 }
@@ -71,7 +71,7 @@ get_ActivityIndicator = fn(17);
 let closure_7 = fn(1074).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { guildCard: { padding: 12, paddingLeft: 16, borderRadius: nativeDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, guildIcon: { marginRight: 16 }, guildCardDescription: { flex: 1 }, subscriptionInfo: { flexDirection: "row", alignItems: "center" }, premiumGuildImage: { width: 18, height: 12, marginLeft: -5 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

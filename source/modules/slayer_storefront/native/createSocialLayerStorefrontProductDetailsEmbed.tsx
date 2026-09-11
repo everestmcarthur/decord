@@ -1,27 +1,27 @@
-// Module ID: 11602
-// Function ID: 11603
+// Module ID: 11626
+// Function ID: 11627
 // Name: createSocialLayerStorefrontProductDetailsEmbed
-// Dependencies: [32, 19, 4833, 5560, 1074, 7787, 7997, 1114, 11603, 7283, 7278, 3460, 9436, 4593, 10868, 1116, 504, 1369, 7220, 2]
+// Dependencies: [32, 19, 4835, 5562, 1074, 7809, 8020, 1114, 11627, 7305, 7300, 3460, 9459, 4595, 10889, 1116, 504, 1369, 7242, 2]
 // Exports: createSocialLayerStorefrontProductDetailsEmbed, useFetchSocialLayerStorefrontProductDetailsEmbedData
 
-// Module 11602 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11626 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1114 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7278 */;
-import StorefrontUtils from "StorefrontUtils" /* 7283 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7997 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10868 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7300 */;
+import StorefrontUtils from "StorefrontUtils" /* 7305 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8020 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10889 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
-import SKUStore from "SKUStore" /* 5560 */;
+import ApplicationStore from "ApplicationStore" /* 4835 */;
+import SKUStore from "SKUStore" /* 5562 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7787).InviteTypes;
+const InviteTypes = fn(7809).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -55,7 +55,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11603)(application)) {
+        if (tmp(11627)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(value);
             const str4 = SlayerStorefrontUtils.getCardImageURL(value);
@@ -110,13 +110,13 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
 };
 export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores) {
   _require = stateFromStores;
-  const storeFront = country(first[12]).useNativeIAPPayments().storeFront;
+  const mobileStoreFront = country(first[12]).useMobileStoreFront();
   country = undefined;
-  if (storeFront != null) {
-    country = storeFront.country;
+  if (mobileStoreFront != null) {
+    country = mobileStoreFront.country;
   }
   let items = [stateFromStores];
-  let tmp4 = _slicedToArray(noop.useMemo(() => {
+  let tmp5 = _slicedToArray(noop.useMemo(() => {
     let items = [[], []];
     return stateFromStores.reduce((acc, item) => {
       [arr, arr2] = acc;
@@ -137,9 +137,9 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
       return items;
     }, items);
   }, items), 2);
-  first = tmp4[0];
-  _slicedToArray = tmp6;
-  let items1 = [first, tmp4[1], country];
+  first = tmp5[0];
+  _slicedToArray = tmp7;
+  let items1 = [first, tmp5[1], country];
   const effect = noop.useEffect(() => {
     while (tmp2 !== undefined) {
       [first, tmp8] = tmp3;
@@ -197,7 +197,7 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
   let obj = country(first[12]);
   const tmp = country;
   const items2 = [SKUStore];
-  const items3 = [tmp4[1], first];
+  const items3 = [tmp5[1], first];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () => {
     const items = [
       ...first.map((item) => {

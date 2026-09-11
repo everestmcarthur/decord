@@ -1,9 +1,9 @@
-// Module ID: 4841
-// Function ID: 4842
+// Module ID: 4843
+// Function ID: 4844
 // Name: DisplayNameStylesContext
 // Dependencies: [19, 2]
 
-// Module 4841 (DisplayNameStylesContext)
+// Module 4843 (DisplayNameStylesContext)
 import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

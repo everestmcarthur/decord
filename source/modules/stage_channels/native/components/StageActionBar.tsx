@@ -1,19 +1,19 @@
-// Module ID: 10014
-// Function ID: 10015
+// Module ID: 10037
+// Function ID: 10038
 // Name: StageActionBar
-// Dependencies: [19, 17, 21, 4605, 5465, 10015, 9746, 9653, 9971, 5467, 9968, 10072, 2]
+// Dependencies: [19, 17, 21, 4607, 5467, 10038, 9769, 9676, 9994, 5469, 9991, 10094, 2]
 
-// Module 10014 (StageActionBar)
-import StageActionBarButtons from "StageActionBarButtons" /* 9968 */;
-import ChannelCallActionBar from "ChannelCallActionBar" /* 10015 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 10072 */;
+// Module 10037 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 9991 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 10038 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");
@@ -41,12 +41,12 @@ export default noop.memo((channel) => {
   const callback = noop.useCallback((isSmallSize) => {
     if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_STREAM) {
       const obj2 = { channel, isSmallSize };
-      let tmp4 = hasOwnProperty(tmp2(10015).DisconnectStreamButton, obj2);
+      let tmp4 = hasOwnProperty(tmp2(10038).DisconnectStreamButton, obj2);
     } else {
       tmp4 = null;
-      if (actionBarPrimaryButton === tmp2(10015).ActionBarPrimaryButton.END_CALL) {
+      if (actionBarPrimaryButton === tmp2(10038).ActionBarPrimaryButton.END_CALL) {
         const obj = { channel, isSmallSize };
-        tmp4 = hasOwnProperty(tmp2(9968).DisconnectStageButton, obj);
+        tmp4 = hasOwnProperty(tmp2(9991).DisconnectStageButton, obj);
       }
     }
     return tmp4;

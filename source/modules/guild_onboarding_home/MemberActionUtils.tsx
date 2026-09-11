@@ -1,19 +1,19 @@
-// Module ID: 12358
-// Function ID: 12359
+// Module ID: 12383
+// Function ID: 12384
 // Name: MemberActionUtils
-// Dependencies: [2021, 4792, 4793, 4230, 7275, 563, 1384, 2]
+// Dependencies: [2021, 4794, 4795, 4232, 7297, 563, 1384, 2]
 // Exports: useAllActionsCompleted, useMemberActionsForChannel, useNextMemberAction
 
-// Module 12358 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 7275 */;
+// Module 12383 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 7297 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4792 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4793 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4794 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4795 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4230).GuildMemberFlags;
+const GuildMemberFlags = fn(4232).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 

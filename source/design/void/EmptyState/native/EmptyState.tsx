@@ -1,12 +1,12 @@
-// Module ID: 14201
-// Function ID: 14202
+// Module ID: 14179
+// Function ID: 14180
 // Name: EmptyState
-// Dependencies: [19, 17, 21, 4605, 576, 4456, 4601, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 4458, 4603, 2]
 // Exports: default
 
-// Module 14201 (EmptyState)
+// Module 14179 (EmptyState)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4456 */;
+import shared from "shared" /* 4458 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = { textTransform: "none" };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, emptyImage: { flex: 1, maxWidth: 300, maxHeight: 200 }, emptyTitle: { marginTop: 20, textTransform: "uppercase" }, emptyBody: { textAlign: "center", marginTop: 8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -43,11 +43,11 @@ export default function EmptyState(Illustration) {
   } else {
     tmp11Result = null;
     if (tmp9) {
-      const obj3 = { resizeMode: "contain", source: tmp2(4456).isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource, style: null };
+      const obj3 = { resizeMode: "contain", source: tmp2(4458).isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource, style: null };
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
       obj3.style = items1;
       tmp11Result = React4(React3, obj3);
-      const tmp2Result2 = tmp2(4456);
+      const tmp2Result2 = tmp2(4458);
     }
     tmp9 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
@@ -63,7 +63,7 @@ export default function EmptyState(Illustration) {
     const items4 = [tmp.emptyTitle, tmp14, tmp6];
     obj5.style = items4;
     obj5.children = title;
-    tmp17 = React4(tmp2(4601).Text, obj5);
+    tmp17 = React4(tmp2(4603).Text, obj5);
   }
   items3[1] = tmp17;
   let tmp19 = null;
@@ -72,7 +72,7 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp.emptyBody, bodyStyle];
     obj6.style = items5;
     obj6.children = body;
-    tmp19 = React4(tmp2(4601).Text, obj6);
+    tmp19 = React4(tmp2(4603).Text, obj6);
   }
   items3[2] = tmp19;
   items3[3] = children;

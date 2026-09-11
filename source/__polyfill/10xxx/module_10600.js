@@ -1,9 +1,9 @@
 // Module ID: 10600
 // Function ID: 10601
-// Dependencies: [41, 42, 93, 95, 98, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10542]
 
 // Module 10600
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
+import Filter from "Filter" /* 10542 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
@@ -30,13 +30,12 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
-class NLSlashMonthFormatParser {
+class JPMergeWeekdayComponentRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, NLSlashMonthFormatParser);
+    tmp = closure_0(this, JPMergeWeekdayComponentRefiner);
     tmp2 = c2;
-    obj = c2(NLSlashMonthFormatParser);
+    obj = c2(JPMergeWeekdayComponentRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -51,26 +50,45 @@ class NLSlashMonthFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = NLSlashMonthFormatParser;
-_inherits(NLSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = JPMergeWeekdayComponentRefiner;
+_inherits(JPMergeWeekdayComponentRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "mergeResults",
+  value: function mergeResults(arg0, clone, text) {
+    const cloneResult = clone.clone();
+    cloneResult.text = clone.text + arg0 + text.text;
+    const start = cloneResult.start;
+    const start2 = text.start;
+    start.assign("weekday", start2.get("weekday"));
+    if (cloneResult.end) {
+      const end = cloneResult.end;
+      const start3 = text.start;
+      end.assign("weekday", start3.get("weekday"));
+    }
+    return cloneResult;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsed = parseInt(arg1[2]);
-      const parsed1 = parseInt(arg1[1]);
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const implyResult = parsingComponents.imply("day", 1);
-      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let isCertainResult = start.isCertain("day");
+      if (isCertainResult) {
+        start2 = start2.start;
+        isCertainResult = start2.isOnlyWeekdayComponent();
+      }
+      if (isCertainResult) {
+        const start3 = start2.start;
+        isCertainResult = !start3.isCertain("hour");
+      }
+      if (isCertainResult) {
+        isCertainResult = null !== str.match(/^[,、の]?\s*$/);
+      }
+      return isCertainResult;
     }
   }
 ];
 
-export default _createClass(NLSlashMonthFormatParser, items);
+export default _createClass(JPMergeWeekdayComponentRefiner, items);

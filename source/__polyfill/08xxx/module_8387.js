@@ -1,135 +1,269 @@
 // Module ID: 8387
 // Function ID: 8388
-// Dependencies: [4434]
+// Dependencies: [19, 17, 21, 113, 8388, 39, 38, 8390, 8391]
 
 // Module 8387
-import emptyFunction_mod from "module_4434" /* 4434 */;
+import _modDef39 from "module_39" /* 39 */;
+import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
+import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-const size = { display: null, width: null, height: null, start: null, end: null, top: null, left: null, right: null, bottom: null, minWidth: null, maxWidth: null, minHeight: null, maxHeight: null, margin: null, marginVertical: null, marginHorizontal: null, marginTop: null, marginBottom: null, marginLeft: null, marginRight: null, marginStart: null, marginEnd: null, padding: null, paddingVertical: null, paddingHorizontal: null, paddingTop: null, paddingBottom: null, paddingLeft: null, paddingRight: null, paddingStart: null, paddingEnd: null, borderWidth: null, borderTopWidth: null, borderStartWidth: null, borderEndWidth: null, borderRightWidth: null, borderBottomWidth: null, borderLeftWidth: null, position: null, flexDirection: null, flexWrap: null, justifyContent: null, alignItems: null, alignSelf: null, alignContent: null, overflow: null, flex: null, flexGrow: null, flexShrink: null, flexBasis: null, aspectRatio: null, zIndex: null, direction: null };
-let emptyFunction = emptyFunction_mod;
-size.display = emptyFunction.oneOf(["none", "flex"]);
-let emptyFunction = emptyFunction_mod;
-const items = [emptyFunction.number, emptyFunction.string];
-size.width = emptyFunction.oneOfType(items);
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.number, emptyFunction.string];
-size.height = emptyFunction.oneOfType(items1);
-let emptyFunction = emptyFunction_mod;
-const items2 = [emptyFunction.number, emptyFunction.string];
-size.start = emptyFunction.oneOfType(items2);
-let emptyFunction = emptyFunction_mod;
-const items3 = [emptyFunction.number, emptyFunction.string];
-size.end = emptyFunction.oneOfType(items3);
-let emptyFunction = emptyFunction_mod;
-const items4 = [emptyFunction.number, emptyFunction.string];
-size.top = emptyFunction.oneOfType(items4);
-let emptyFunction = emptyFunction_mod;
-const items5 = [emptyFunction.number, emptyFunction.string];
-size.left = emptyFunction.oneOfType(items5);
-let emptyFunction = emptyFunction_mod;
-const items6 = [emptyFunction.number, emptyFunction.string];
-size.right = emptyFunction.oneOfType(items6);
-let emptyFunction = emptyFunction_mod;
-const items7 = [emptyFunction.number, emptyFunction.string];
-size.bottom = emptyFunction.oneOfType(items7);
-let emptyFunction = emptyFunction_mod;
-const items8 = [emptyFunction.number, emptyFunction.string];
-size.minWidth = emptyFunction.oneOfType(items8);
-let emptyFunction = emptyFunction_mod;
-const items9 = [emptyFunction.number, emptyFunction.string];
-size.maxWidth = emptyFunction.oneOfType(items9);
-let emptyFunction = emptyFunction_mod;
-const items10 = [emptyFunction.number, emptyFunction.string];
-size.minHeight = emptyFunction.oneOfType(items10);
-let emptyFunction = emptyFunction_mod;
-const items11 = [emptyFunction.number, emptyFunction.string];
-size.maxHeight = emptyFunction.oneOfType(items11);
-let emptyFunction = emptyFunction_mod;
-const items12 = [emptyFunction.number, emptyFunction.string];
-size.margin = emptyFunction.oneOfType(items12);
-let emptyFunction = emptyFunction_mod;
-const items13 = [emptyFunction.number, emptyFunction.string];
-size.marginVertical = emptyFunction.oneOfType(items13);
-let emptyFunction = emptyFunction_mod;
-const items14 = [emptyFunction.number, emptyFunction.string];
-size.marginHorizontal = emptyFunction.oneOfType(items14);
-let emptyFunction = emptyFunction_mod;
-const items15 = [emptyFunction.number, emptyFunction.string];
-size.marginTop = emptyFunction.oneOfType(items15);
-let emptyFunction = emptyFunction_mod;
-const items16 = [emptyFunction.number, emptyFunction.string];
-size.marginBottom = emptyFunction.oneOfType(items16);
-let emptyFunction = emptyFunction_mod;
-const items17 = [emptyFunction.number, emptyFunction.string];
-size.marginLeft = emptyFunction.oneOfType(items17);
-let emptyFunction = emptyFunction_mod;
-const items18 = [emptyFunction.number, emptyFunction.string];
-size.marginRight = emptyFunction.oneOfType(items18);
-let emptyFunction = emptyFunction_mod;
-const items19 = [emptyFunction.number, emptyFunction.string];
-size.marginStart = emptyFunction.oneOfType(items19);
-let emptyFunction = emptyFunction_mod;
-const items20 = [emptyFunction.number, emptyFunction.string];
-size.marginEnd = emptyFunction.oneOfType(items20);
-let emptyFunction = emptyFunction_mod;
-const items21 = [emptyFunction.number, emptyFunction.string];
-size.padding = emptyFunction.oneOfType(items21);
-let emptyFunction = emptyFunction_mod;
-const items22 = [emptyFunction.number, emptyFunction.string];
-size.paddingVertical = emptyFunction.oneOfType(items22);
-let emptyFunction = emptyFunction_mod;
-const items23 = [emptyFunction.number, emptyFunction.string];
-size.paddingHorizontal = emptyFunction.oneOfType(items23);
-let emptyFunction = emptyFunction_mod;
-const items24 = [emptyFunction.number, emptyFunction.string];
-size.paddingTop = emptyFunction.oneOfType(items24);
-let emptyFunction = emptyFunction_mod;
-const items25 = [emptyFunction.number, emptyFunction.string];
-size.paddingBottom = emptyFunction.oneOfType(items25);
-let emptyFunction = emptyFunction_mod;
-const items26 = [emptyFunction.number, emptyFunction.string];
-size.paddingLeft = emptyFunction.oneOfType(items26);
-let emptyFunction = emptyFunction_mod;
-const items27 = [emptyFunction.number, emptyFunction.string];
-size.paddingRight = emptyFunction.oneOfType(items27);
-let emptyFunction = emptyFunction_mod;
-const items28 = [emptyFunction.number, emptyFunction.string];
-size.paddingStart = emptyFunction.oneOfType(items28);
-let emptyFunction = emptyFunction_mod;
-const items29 = [emptyFunction.number, emptyFunction.string];
-size.paddingEnd = emptyFunction.oneOfType(items29);
-size.borderWidth = emptyFunction.number;
-size.borderTopWidth = emptyFunction.number;
-size.borderStartWidth = emptyFunction.number;
-size.borderEndWidth = emptyFunction.number;
-size.borderRightWidth = emptyFunction.number;
-size.borderBottomWidth = emptyFunction.number;
-size.borderLeftWidth = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-size.position = emptyFunction.oneOf(["absolute", "relative"]);
-let emptyFunction = emptyFunction_mod;
-size.flexDirection = emptyFunction.oneOf(["row", "row-reverse", "column", "column-reverse"]);
-let emptyFunction = emptyFunction_mod;
-size.flexWrap = emptyFunction.oneOf(["wrap", "nowrap", "wrap-reverse"]);
-let emptyFunction = emptyFunction_mod;
-size.justifyContent = emptyFunction.oneOf(["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"]);
-let emptyFunction = emptyFunction_mod;
-size.alignItems = emptyFunction.oneOf(["flex-start", "flex-end", "center", "stretch", "baseline"]);
-let emptyFunction = emptyFunction_mod;
-size.alignSelf = emptyFunction.oneOf(["auto", "flex-start", "flex-end", "center", "stretch", "baseline"]);
-let emptyFunction = emptyFunction_mod;
-size.alignContent = emptyFunction.oneOf(["flex-start", "flex-end", "center", "stretch", "space-between", "space-around"]);
-let emptyFunction = emptyFunction_mod;
-size.overflow = emptyFunction.oneOf(["visible", "hidden", "scroll"]);
-size.flex = emptyFunction.number;
-size.flexGrow = emptyFunction.number;
-size.flexShrink = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-const items30 = [emptyFunction.number, emptyFunction.string];
-size.flexBasis = emptyFunction.oneOfType(items30);
-size.aspectRatio = emptyFunction.number;
-size.zIndex = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-size.direction = emptyFunction.oneOf(["inherit", "ltr", "rtl"]);
+const require = globalThis.__r;
 
-export default size;
+let noop = noop_mod;
+({ useCallback: c3, useEffect: closure_4, useImperativeHandle: hasOwnProperty, useMemo: metroRequire, useRef: closure_7, forwardRef } = noop);
+let noop = noop_mod;
+({ View: closure_8, NativeModules } = get_ActivityIndicator);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+let fn = this;
+if (this) {
+  fn = this.__rest;
+}
+if (!fn) {
+  fn = (obj, arr) => {
+    obj = {};
+    for (const key10007 in arg0) {
+      let _Object2 = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
+      let call2 = hasOwnProperty.call;
+      if (typeof call2 === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call2(arg0, key10007);
+      }
+      if (hasOwnPropertyResult) {
+        hasOwnPropertyResult = arg1.indexOf(key10007) < 0;
+      }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        obj[key10007] = arg0[key10007];
+        continue;
+      }
+      continue;
+    }
+    if (null != obj) {
+      const _Object3 = Object;
+      if (typeof Object.getOwnPropertySymbols === "function") {
+        const _Object4 = Object;
+        const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
+        let num = 0;
+        if (0 < ownPropertySymbols.length) {
+          const tmp2 = arr.indexOf(ownPropertySymbols[num]) < 0;
+          while (!tmp2) {
+            if (tmp2) {
+              obj[ownPropertySymbols[num]] = obj[ownPropertySymbols[num]];
+            }
+            num = num + 1;
+          }
+          const _Object = Object;
+          const call = propertyIsEnumerable.call;
+          typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(obj, ownPropertySymbols[num]);
+        }
+      }
+    }
+    return obj;
+  };
+}
+let closure_13 = codegenNativeCommandsDefault({ supportedCommands: ["goBack", "goForward", "reload", "stopLoading", "injectJavaScript", "requestFocus", "postMessage", "clearFormData", "clearCache", "clearHistory", "loadUrl"] });
+const resolveAssetSource = get_ActivityIndicator.Image.resolveAssetSource;
+let c15 = 0;
+let RNCWebView = NativeModules.RNCWebView;
+const forwardRefResult = forwardRef((overScrollMode, arg1) => {
+  overScrollMode = overScrollMode.overScrollMode;
+  let str = "always";
+  if (undefined !== overScrollMode) {
+    str = overScrollMode;
+  }
+  const javaScriptEnabled = overScrollMode.javaScriptEnabled;
+  const thirdPartyCookiesEnabled = overScrollMode.thirdPartyCookiesEnabled;
+  const scalesPageToFit = overScrollMode.scalesPageToFit;
+  const allowsFullscreenVideo = overScrollMode.allowsFullscreenVideo;
+  const allowFileAccess = overScrollMode.allowFileAccess;
+  const saveFormDataDisabled = overScrollMode.saveFormDataDisabled;
+  const cacheEnabled = overScrollMode.cacheEnabled;
+  const androidHardwareAccelerationDisabled = overScrollMode.androidHardwareAccelerationDisabled;
+  const androidLayerType = overScrollMode.androidLayerType;
+  let str2 = "none";
+  if (undefined !== androidLayerType) {
+    str2 = androidLayerType;
+  }
+  let defaultOriginWhitelist = overScrollMode.originWhitelist;
+  if (undefined === defaultOriginWhitelist) {
+    defaultOriginWhitelist = current(onShouldStartLoadWithRequest2[4]).defaultOriginWhitelist;
+  }
+  const setSupportMultipleWindows = overScrollMode.setSupportMultipleWindows;
+  const setBuiltInZoomControls = overScrollMode.setBuiltInZoomControls;
+  const setDisplayZoomControls = overScrollMode.setDisplayZoomControls;
+  const nestedScrollEnabled = overScrollMode.nestedScrollEnabled;
+  ({ messagingWithWebViewKeyEnabled, onMessage, renderLoading, renderError, source, nativeConfig } = overScrollMode);
+  ({ startInLoadingState, onNavigationStateChange, onLoadStart, onError, onLoad, onLoadEnd, onLoadProgress, onHttpError, onRenderProcessGone, style, containerStyle, onShouldStartLoadWithRequest } = overScrollMode);
+  const sum = c15 + 1;
+  c15 = sum;
+  current = closure_7("WebViewMessageHandler".concat(sum)).current;
+  const tmp17 = closure_7(null);
+  importDefault = tmp17;
+  const tmp = undefined === javaScriptEnabled || javaScriptEnabled;
+  const tmp11 = undefined === setSupportMultipleWindows || setSupportMultipleWindows;
+  const tmp12 = undefined === setBuiltInZoomControls || setBuiltInZoomControls;
+  const tmp13 = undefined !== setDisplayZoomControls && setDisplayZoomControls;
+  const tmp14 = undefined !== nestedScrollEnabled && nestedScrollEnabled;
+  const tmp15 = fn(overScrollMode, ["overScrollMode", "javaScriptEnabled", "thirdPartyCookiesEnabled", "scalesPageToFit", "allowsFullscreenVideo", "allowFileAccess", "saveFormDataDisabled", "cacheEnabled", "androidHardwareAccelerationDisabled", "androidLayerType", "originWhitelist", "setSupportMultipleWindows", "setBuiltInZoomControls", "setDisplayZoomControls", "nestedScrollEnabled", "startInLoadingState", "messagingWithWebViewKeyEnabled", "onNavigationStateChange", "onLoadStart", "onError", "onLoad", "onLoadEnd", "onLoadProgress", "onHttpError", "onRenderProcessGone", "onMessage", "renderLoading", "renderError", "style", "containerStyle", "source", "nativeConfig", "onShouldStartLoadWithRequest"]);
+  const tmp2 = undefined === thirdPartyCookiesEnabled || thirdPartyCookiesEnabled;
+  const tmp3 = undefined === scalesPageToFit || scalesPageToFit;
+  const tmp4 = undefined !== allowsFullscreenVideo && allowsFullscreenVideo;
+  const tmp5 = undefined !== allowFileAccess && allowFileAccess;
+  const tmp6 = undefined !== saveFormDataDisabled && saveFormDataDisabled;
+  const tmp7 = undefined === cacheEnabled || cacheEnabled;
+  const tmp8 = undefined !== androidHardwareAccelerationDisabled && androidHardwareAccelerationDisabled;
+  const tmp18 = onMessage2((arg0, arg1, arg2) => {
+    if (arg2) {
+      const RNCWebView = NativeModules.RNCWebView;
+      const result = RNCWebView.onShouldStartLoadWithRequestCallback(arg0, arg2);
+    } else if (arg0) {
+      const url = navigation.loadUrl(ref.current, arg1);
+    }
+  }, []);
+  const webWiewLogic = current(onShouldStartLoadWithRequest2[4]).useWebWiewLogic({ onNavigationStateChange, onLoad, onError, onHttpErrorProp: onHttpError, onLoadEnd, onLoadProgress, onLoadStart, onRenderProcessGoneProp: onRenderProcessGone, onMessageProp: onMessage, startInLoadingState, originWhitelist: defaultOriginWhitelist, onShouldStartLoadWithRequestProp: onShouldStartLoadWithRequest, onShouldStartLoadWithRequestCallback: tmp18 });
+  onShouldStartLoadWithRequest2 = webWiewLogic.onShouldStartLoadWithRequest;
+  onMessage2 = webWiewLogic.onMessage;
+  ({ viewState, setViewState } = webWiewLogic);
+  const lastErrorEvent = webWiewLogic.lastErrorEvent;
+  const items = [setViewState, tmp17];
+  ({ onLoadingStart, onHttpError: onHttpError2, onLoadingError, onLoadingFinish, onLoadingProgress, onRenderProcessGone: onRenderProcessGone2 } = webWiewLogic);
+  closure_5(arg1, () => ({
+    goForward() {
+      return navigation.goForward(ref.current);
+    },
+    goBack() {
+      return navigation.goBack(ref.current);
+    },
+    reload() {
+      setViewState("LOADING");
+      navigation.reload(ref.current);
+    },
+    stopLoading() {
+      return navigation.stopLoading(ref.current);
+    },
+    postMessage(arg0) {
+      return navigation.postMessage(ref.current, arg0);
+    },
+    injectJavaScript(PLAYER_FUNCTIONS) {
+      return navigation.injectJavaScript(ref.current, PLAYER_FUNCTIONS);
+    },
+    requestFocus() {
+      return navigation.requestFocus(ref.current);
+    },
+    clearFormData() {
+      return navigation.clearFormData(ref.current);
+    },
+    clearCache(arg0) {
+      return navigation.clearCache(ref.current, arg0);
+    },
+    clearHistory() {
+      return navigation.clearHistory(ref.current);
+    }
+  }), items);
+  const items1 = [onMessage2, onShouldStartLoadWithRequest2];
+  const tmp23 = closure_6(() => ({ onShouldStartLoadWithRequest: onShouldStartLoadWithRequest2, onMessage: onMessage2 }), items1);
+  closure_5 = tmp23;
+  const items2 = [current, tmp23];
+  setViewState(() => {
+    const result = _modDef39.registerCallableModule(current, closure_5);
+  }, items2);
+  if ("LOADING" === viewState) {
+    if (!renderLoading) {
+      renderLoading = tmp19(tmp20[4]).defaultRenderLoading;
+    }
+    let renderLoadingResult = renderLoading();
+  } else if ("ERROR" === viewState) {
+    require("module_38")(null != lastErrorEvent, "lastErrorEvent expected to be non-null");
+    if (!renderError) {
+      renderError = tmp19(tmp20[4]).defaultRenderError;
+    }
+    renderLoadingResult = renderError(lastErrorEvent.domain, lastErrorEvent.code, lastErrorEvent.description);
+  } else {
+    renderLoadingResult = null;
+    if ("IDLE" !== viewState) {
+      const _console3 = console;
+      const concat = "RNCWebView invalid state encountered: ".concat;
+      console.error("RNCWebView invalid state encountered: ".concat(viewState));
+      renderLoadingResult = null;
+    }
+  }
+  const items3 = [require("module_8390").container, require("module_8390").webView, style];
+  const items4 = [require("module_8390").container, containerStyle];
+  let tmp29 = typeof source !== "number";
+  if (typeof source !== "number") {
+    tmp29 = source;
+  }
+  if (tmp29) {
+    tmp29 = "method" in source;
+  }
+  if (tmp29) {
+    if ("POST" === source.method) {
+      if (source.headers) {
+        const _console2 = console;
+        console.warn("WebView: `source.headers` is not supported when using POST.");
+      }
+    }
+    if (tmp30) {
+      const _console = console;
+      console.warn("WebView: `source.body` is not supported when using GET.");
+    }
+    tmp30 = "GET" === source.method && source.body;
+  }
+  let component;
+  if (null != nativeConfig) {
+    component = nativeConfig.component;
+  }
+  if (!component) {
+    component = require("module_8391");
+  }
+  const obj2 = {};
+  const merged = Object.assign(tmp15);
+  let tmp38 = typeof onMessage === "function";
+  if (typeof onMessage !== "function") {
+    tmp38 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
+    const tmp39 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
+  }
+  obj2.messagingEnabled = tmp38;
+  obj2.messagingModuleName = current;
+  obj2.onLoadingError = onLoadingError;
+  obj2.onLoadingFinish = onLoadingFinish;
+  obj2.onLoadingProgress = onLoadingProgress;
+  obj2.onLoadingStart = onLoadingStart;
+  obj2.onHttpError = onHttpError2;
+  obj2.onRenderProcessGone = onRenderProcessGone2;
+  obj2.onMessage = onMessage2;
+  obj2.onShouldStartLoadWithRequest = onShouldStartLoadWithRequest2;
+  obj2.ref = tmp17;
+  obj2.source = resolveAssetSource(source);
+  obj2.style = items3;
+  obj2.overScrollMode = str;
+  obj2.javaScriptEnabled = tmp;
+  obj2.thirdPartyCookiesEnabled = tmp2;
+  obj2.scalesPageToFit = tmp3;
+  obj2.allowsFullscreenVideo = tmp4;
+  obj2.allowFileAccess = tmp5;
+  obj2.saveFormDataDisabled = tmp6;
+  obj2.cacheEnabled = tmp7;
+  obj2.androidHardwareAccelerationDisabled = tmp8;
+  obj2.androidLayerType = str2;
+  obj2.setSupportMultipleWindows = tmp11;
+  obj2.setBuiltInZoomControls = tmp12;
+  obj2.setDisplayZoomControls = tmp13;
+  obj2.nestedScrollEnabled = tmp14;
+  let props;
+  if (null != nativeConfig) {
+    props = nativeConfig.props;
+  }
+  const merged1 = Object.assign(props);
+  const obj3 = { style: items4, children: null };
+  const items5 = [closure_10(component, obj2, "webViewKey"), renderLoadingResult];
+  obj3.children = items5;
+  return closure_11(closure_8, obj3);
+});
+
+export default Object.assign(forwardRefResult, { isFileUploadSupported: RNCWebView.isFileUploadSupported() });

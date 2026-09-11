@@ -1,20 +1,9 @@
 // Module ID: 14645
 // Function ID: 14646
-// Dependencies: [19, 14641]
-// Exports: default
+// Dependencies: [1122]
 
 // Module 14645
-import _modDef14641 from "module_14641" /* 14641 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1122" /* 1122 */;
 
 
-export default function useReanimatedHeaderHeight() {
-  const context = noop.useContext(_modDef14641);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height using Reanimated. Are you inside a screen in a navigator with a header and your NavigationContainer is wrapped in ReanimatedScreenProvider?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_profile/images/banner", width: 300, height: 120, scales: [2], hash: "304045e52cd925d8189a6dc7c67e76c1", name: "sample_banner", type: "png" });

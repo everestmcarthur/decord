@@ -1,22 +1,22 @@
-// Module ID: 15434
-// Function ID: 15435
+// Module ID: 15416
+// Function ID: 15417
 // Name: DisplayNameStylesEditPreview
-// Dependencies: [19, 17, 21, 4605, 576, 8229, 1886, 11181, 1114, 2786, 11292, 4286, 1178, 10969, 10970, 4601, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 8252, 1886, 11206, 1114, 2786, 11316, 4288, 1178, 10990, 10991, 4603, 2]
 // Exports: default
 
-// Module 15434 (DisplayNameStylesEditPreview)
+// Module 15416 (DisplayNameStylesEditPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import utils from "utils" /* 1886 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import DateUtils from "DateUtils" /* 4286 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8229 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10969 */;
-import types from "types" /* 10970 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11181 */;
-import NameplatePreview from "NameplatePreview" /* 11292 */;
+import DateUtils from "DateUtils" /* 4288 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8252 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10990 */;
+import types from "types" /* 10991 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11206 */;
+import NameplatePreview from "NameplatePreview" /* 11316 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ function ChatPreview(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, chatPreviewWrapper: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
 obj2.chatPreviewWrapper = { marginTop: -18, alignSelf: "flex-end", width: 260, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

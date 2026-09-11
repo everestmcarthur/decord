@@ -1,28 +1,28 @@
-// Module ID: 11548
-// Function ID: 11549
+// Module ID: 11572
+// Function ID: 11573
 // Name: MessagesHooks
-// Dependencies: [32, 19, 17, 11380, 9555, 4947, 1979, 4645, 504, 12, 558, 7215, 1369, 7786, 11549, 11324, 11550, 2]
+// Dependencies: [32, 19, 17, 11404, 9578, 4949, 1979, 4647, 504, 12, 558, 7237, 1369, 7808, 11573, 11348, 11574, 2]
 // Exports: useChatUpdatesQueue, useFetchMessageApplications, useFetchVoiceChannelInviteStartTimes, useMessageAuthorActivities, useMessagesLifecycle, useMessagesState, useScrollState
 
-// Module 11548 (MessagesHooks)
+// Module 11572 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7215 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7786 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11324 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11550 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7237 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7808 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11348 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11380 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11404 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4949 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4645 */;
+import PresenceStore from "PresenceStore" /* 4647 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9555).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9578).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
@@ -112,7 +112,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
             result = VoiceChannelStartTimeStore.hasRequestedStartTimes(tmp8);
           }
           if (!result) {
-            let tmp4Result = tmp4(11549);
+            let tmp4Result = tmp4(11573);
             let channelInfo = tmp4Result.fetchChannelInfo(tmp8);
           }
         }

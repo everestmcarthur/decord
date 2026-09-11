@@ -1,12 +1,12 @@
-// Module ID: 10742
-// Function ID: 10743
+// Module ID: 10763
+// Function ID: 10764
 // Name: cta_button
-// Dependencies: [32, 1188, 10740, 1218, 2]
+// Dependencies: [32, 1188, 10761, 1218, 2]
 
-// Module 10742 (cta_button)
+// Module 10763 (cta_button)
 import _mod1188 from "module_1188" /* 1188 */;
 import wrappers from "wrappers" /* 1218 */;
-import localized_string from "localized_string" /* 10740 */;
+import localized_string from "localized_string" /* 10761 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

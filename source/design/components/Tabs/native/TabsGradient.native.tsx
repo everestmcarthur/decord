@@ -1,14 +1,14 @@
-// Module ID: 12829
-// Function ID: 12830
+// Module ID: 12854
+// Function ID: 12855
 // Name: TabsGradient
-// Dependencies: [19, 1074, 21, 4341, 5037, 4605, 5024, 2]
+// Dependencies: [19, 1074, 21, 4343, 5039, 4607, 5026, 2]
 // Exports: default
 
-// Module 12829 (TabsGradient)
-import spring from "spring" /* 5024 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
+// Module 12854 (TabsGradient)
+import spring from "spring" /* 5026 */;
+import LinearGradientDefault from "LinearGradient" /* 5039 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 
 require = fn;
 const HorizontalGradient = fn(1074).HorizontalGradient;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 const SPRING_CONFIG = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_9 = createStyles.createStyles({ gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 }, left: { left: 0 }, right: { right: 0 } });
 const __initData = { code: "function TabsGradientNativeTsx1(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}" };
 const __initData2 = { code: "function TabsGradientNativeTsx2(){const{itemDimensions,state}=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;}" };

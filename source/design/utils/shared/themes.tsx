@@ -1,10 +1,10 @@
-// Module ID: 4313
-// Function ID: 4314
+// Module ID: 4315
+// Function ID: 4316
 // Name: themes
 // Dependencies: [1085, 2]
 // Exports: isThemeDark, isThemeLight
 
-// Module 4313 (themes)
+// Module 4315 (themes)
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -15,9 +15,9 @@ export const isThemeLight = function isThemeLight(arg0) {
   return arg0 === ThemeTypes.LIGHT;
 };
 export const isThemeDark = function isThemeDark(arg0) {
-  if (ThemeTypes.DARK !== arg0) {
-    if (tmp.MIDNIGHT !== arg0) {
-      if (tmp.DARKER !== arg0) {
+  if (ThemeTypes.ASH !== arg0) {
+    if (tmp.ONYX !== arg0) {
+      if (tmp.DARK !== arg0) {
         return false;
       }
     }

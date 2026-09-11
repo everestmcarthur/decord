@@ -1,19 +1,19 @@
-// Module ID: 5669
-// Function ID: 5670
+// Module ID: 5671
+// Function ID: 5672
 // Name: UserVerification
-// Dependencies: [19, 21, 4605, 4429, 5670, 4601, 1114, 2]
+// Dependencies: [19, 21, 4607, 4431, 5672, 4603, 1114, 2]
 // Exports: default
 
-// Module 5669 (UserVerification)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5670 */;
+// Module 5671 (UserVerification)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5672 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");
@@ -26,7 +26,7 @@ export default function UserVerification(arg0) {
     const platform = field.platform;
     let tmp5 = platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
-      const obj = { passesVerification: verification[tmp12(undefined, 4429).UserVerificationFieldPlatforms.PHONE], platform: tmp12(4429).UserVerificationFieldPlatforms.PHONE };
+      const obj = { passesVerification: verification[tmp12(undefined, 4431).UserVerificationFieldPlatforms.PHONE], platform: tmp12(4431).UserVerificationFieldPlatforms.PHONE };
       tmp5 = React3(IdentityVerificationFieldDefault, obj);
     }
     const items = [tmp5, , ];

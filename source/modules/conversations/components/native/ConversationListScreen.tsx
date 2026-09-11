@@ -1,19 +1,19 @@
-// Module ID: 7977
-// Function ID: 7978
+// Module ID: 8000
+// Function ID: 8001
 // Name: ConversationListScreen
-// Dependencies: [5, 32, 19, 17, 7647, 7649, 21, 4605, 576, 7978, 4601, 1114, 1486, 1611, 7958, 504, 11, 7959, 7961, 8943, 2]
+// Dependencies: [5, 32, 19, 17, 7669, 7671, 21, 4607, 576, 8001, 4603, 1114, 1486, 1611, 7981, 504, 11, 7982, 7984, 8966, 2]
 // Exports: default
 
-// Module 7977 (ConversationListScreen)
+// Module 8000 (ConversationListScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7961 */;
-import ConversationListItemDefault from "ConversationListItem" /* 7978 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7984 */;
+import ConversationListItemDefault from "ConversationListItem" /* 8001 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7647 */;
+import ConversationsStore from "ConversationsStore" /* 7669 */;
 
 const require = globalThis.__r;
 
@@ -27,11 +27,11 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7649);
+const ConversationConstants = fn(7671);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: c10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
-let createStyles = fn(4605);
+let createStyles = fn(4607);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, footerSpacer: null, spinner: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -42,7 +42,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
   obj.spinner = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0, alignItems: "center" };
   return obj;
 });
-createStyles = fn(4605);
+createStyles = fn(4607);
 let obj = { empty: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj);
 const ListEmptyComponent = noop.memo(() => {
@@ -244,6 +244,6 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(8943).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
+  obj7.children = jsx(tmp(8966).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
   return <memo style={tmp3.container}>{null}</memo>;
 };

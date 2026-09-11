@@ -1,31 +1,43 @@
 // Module ID: 3968
 // Function ID: 3969
-// Dependencies: [3693, 3694]
+// Dependencies: [3856, 3863, 3696]
 // Exports: default
 
 // Module 3968
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 3856 */;
+import module_3863_mod from "module_3863" /* 3863 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfISOWeekYear;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+startOfISOWeekYear = tmp3;
+let module_3863 = module_3863_mod;
+if (!module_3863) {
+  const obj2 = { default: module_3863 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_3863;
 }
-requiredArgs = tmp5;
+module_3863 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 604800000;
 
-export default function getMinutes(arg0) {
+export default function getISOWeeksInYear(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMinutes();
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const defaultResult2 = startOfISOWeekYear.default(module_3863.default(defaultResult1, 60));
+  return Math.round((startOfISOWeekYear.default(module_3863.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
 };
 export default exports.default;

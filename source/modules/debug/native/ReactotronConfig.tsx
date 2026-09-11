@@ -1,10 +1,10 @@
-// Module ID: 14478
-// Function ID: 14479
+// Module ID: 14456
+// Function ID: 14457
 // Name: ReactotronConfig
-// Dependencies: [14479, 2]
+// Dependencies: [14457, 2]
 
-// Module 14478 (ReactotronConfig)
-import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14479 */;
+// Module 14456 (ReactotronConfig)
+import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14457 */;
 
 const reactNative = reactNativeCorePlugins.configure({}).useReactNative();
 reactNative.connect();

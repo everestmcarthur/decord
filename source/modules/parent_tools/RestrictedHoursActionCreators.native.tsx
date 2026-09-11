@@ -1,11 +1,11 @@
-// Module ID: 17386
-// Function ID: 17387
+// Module ID: 17376
+// Function ID: 17377
 // Name: RestrictedHoursActionCreators
-// Dependencies: [5, 4808, 17387, 1896, 2]
+// Dependencies: [5, 4810, 17377, 1896, 2]
 // Exports: openRestrictedHoursModal
 
-// Module 17386 (RestrictedHoursActionCreators)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+// Module 17376 (RestrictedHoursActionCreators)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

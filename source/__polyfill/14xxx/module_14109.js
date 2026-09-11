@@ -1,12 +1,12 @@
 // Module ID: 14109
 // Function ID: 14110
-// Dependencies: [14108]
+// Dependencies: [14098]
 
 // Module 14109
-import _mod14108 from "module_14108" /* 14108 */;
+import _mod14098 from "module_14098" /* 14098 */;
 
 
-export default (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.sort((arg0, arg1) => _mod14108(arg0, arg1, closure_0));
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14098(arg0, arg2);
+  return obj.intersects(new _mod14098(arg1, arg2), arg2);
 };

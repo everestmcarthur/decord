@@ -1,10 +1,10 @@
-// Module ID: 15899
-// Function ID: 15900
+// Module ID: 15884
+// Function ID: 15885
 // Name: CollectiblesCoachmarkScrollDismissContext
 // Dependencies: [19, 1085, 21, 2]
 // Exports: CollectiblesCoachmarkScrollDismissProvider, useCollectiblesCoachmarkScrollDismissContext
 
-// Module 15899 (CollectiblesCoachmarkScrollDismissContext)
+// Module 15884 (CollectiblesCoachmarkScrollDismissContext)
 import noop from "module_19" /* 19 */;
 
 const NOOP = fn(1085).NOOP;
@@ -13,7 +13,7 @@ const redux = noop.createContext({
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "Array"
+  handleDismissCoachmarkOnScroll: "a"
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");

@@ -1,11 +1,11 @@
-// Module ID: 4280
-// Function ID: 4281
+// Module ID: 4282
+// Function ID: 4283
 // Name: core/CodeSplittingUtils
-// Dependencies: [4281, 1461, 2]
+// Dependencies: [4283, 1461, 2]
 
-// Module 4280 (core/CodeSplittingUtils)
+// Module 4282 (core/CodeSplittingUtils)
 import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
-import CodeSplittingUtils from "CodeSplittingUtils" /* 4281 */;
+import CodeSplittingUtils from "CodeSplittingUtils" /* 4283 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

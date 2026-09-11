@@ -1,10 +1,10 @@
-// Module ID: 11690
-// Function ID: 11691
+// Module ID: 11714
+// Function ID: 11715
 // Name: ApplicationInteractionInfoUtils
 // Dependencies: [1894, 2]
 // Exports: canViewInteractionInfo, isPrimaryEntryPointCommandMessage
 
-// Module 11690 (ApplicationInteractionInfoUtils)
+// Module 11714 (ApplicationInteractionInfoUtils)
 import Server from "Server" /* 1894 */;
 import size from "module_2" /* 2 */;
 

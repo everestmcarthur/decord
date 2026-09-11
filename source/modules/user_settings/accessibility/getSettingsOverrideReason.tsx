@@ -1,10 +1,10 @@
-// Module ID: 15411
-// Function ID: 15412
+// Module ID: 15393
+// Function ID: 15394
 // Name: getSettingsOverrideReason
 // Dependencies: [1936, 1084, 1114, 504, 2]
 // Exports: default, useSettingsOverrideReason
 
-// Module 15411 (getSettingsOverrideReason)
+// Module 15393 (getSettingsOverrideReason)
 import util from "util" /* 1114 */;
 import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 1936 */;
 

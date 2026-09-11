@@ -1,20 +1,20 @@
-// Module ID: 14892
-// Function ID: 14893
+// Module ID: 14869
+// Function ID: 14870
 // Name: SensitiveContentFiltersScreen
-// Dependencies: [19, 8027, 21, 1114, 11540, 14893, 14767, 2]
+// Dependencies: [19, 8050, 21, 1114, 11564, 14870, 14744, 2]
 // Exports: default
 
-// Module 14892 (SensitiveContentFiltersScreen)
+// Module 14869 (SensitiveContentFiltersScreen)
 import util from "util" /* 1114 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 14767 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 14893 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingLayoutDefault from "SettingLayout" /* 14744 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 14870 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
 
 require = fn;
-const MobileUserSettings = fn(8027).MobileUserSettings;
+const MobileUserSettings = fn(8050).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);

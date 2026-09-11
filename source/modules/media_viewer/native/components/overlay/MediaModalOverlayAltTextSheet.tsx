@@ -1,21 +1,21 @@
-// Module ID: 11607
-// Function ID: 11608
+// Module ID: 11631
+// Function ID: 11632
 // Name: MediaModalOverlayAltTextSheet
-// Dependencies: [19, 21, 4605, 576, 11608, 5176, 7202, 7201, 1114, 4601, 2]
+// Dependencies: [19, 21, 4607, 576, 11632, 5178, 7224, 7223, 1114, 4603, 2]
 // Exports: default
 
-// Module 11607 (MediaModalOverlayAltTextSheet)
+// Module 11631 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11608 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7223 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7224 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

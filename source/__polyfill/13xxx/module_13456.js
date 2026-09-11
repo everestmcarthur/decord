@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 254, height: 180, scales: [2, 3], hash: "e23a08d55bf782056090f3aa9709d84f", name: "img_client_themes", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300.5, height: 175, scales: [2, 3], hash: "767971903774f3e283939a2d77b5c958", name: "server_boosts", type: "png" });

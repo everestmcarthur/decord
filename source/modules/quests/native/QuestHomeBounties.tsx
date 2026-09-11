@@ -1,29 +1,30 @@
-// Module ID: 15146
-// Function ID: 15147
+// Module ID: 15123
+// Function ID: 15124
 // Name: QuestHomeBounties
-// Dependencies: [32, 19, 17, 7753, 5494, 1954, 21, 576, 15147, 4605, 11845, 1114, 5742, 4601, 15144, 1943, 7440, 573, 15148, 4573, 7769, 7779, 5497, 15080, 7090, 11264, 11265, 11269, 5501, 15082, 15157, 11849, 8943, 11555, 504, 15158, 15163, 2]
+// Dependencies: [32, 19, 17, 7775, 5496, 1954, 21, 576, 15124, 4607, 11869, 1114, 15109, 5744, 4603, 15125, 1943, 7462, 573, 15127, 4575, 7791, 7801, 5499, 15057, 7112, 11288, 11289, 11293, 5503, 15059, 15136, 11873, 8966, 11579, 504, 15137, 15142, 2]
 
-// Module 15146 (QuestHomeBounties)
+// Module 15123 (QuestHomeBounties)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import HapticUtils from "HapticUtils" /* 4573 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import QuestTypes from "QuestTypes" /* 5497 */;
-import native from "native" /* 5742 */;
-import AnalyticsActions from "AnalyticsActions" /* 7769 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11264 */;
-import AnalyticsHooks from "AnalyticsHooks" /* 11845 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15080 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 15082 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15144 */;
-import BountyCard from "BountyCard" /* 15147 */;
-import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 15158 */;
-import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 15163 */;
+import HapticUtils from "HapticUtils" /* 4575 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import QuestTypes from "QuestTypes" /* 5499 */;
+import native from "native" /* 5744 */;
+import AnalyticsActions from "AnalyticsActions" /* 7791 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11288 */;
+import AnalyticsHooks from "AnalyticsHooks" /* 11869 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15057 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 15059 */;
+import QuestProductDisplayNames from "QuestProductDisplayNames" /* 15109 */;
+import BountyCard from "BountyCard" /* 15124 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15125 */;
+import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 15137 */;
+import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 15142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7753 */;
+import BountyStore from "BountyStore" /* 7775 */;
 
 const BountyCardDefault = BountyCard;
 
@@ -34,27 +35,32 @@ function EmptyState(reason) {
   const bountyCarouselEmptyStateAnalytics = AnalyticsHooks.useBountyCarouselEmptyStateAnalytics(reason);
   if (reason === constants.COMPLETED) {
     const intl2 = tmp2(1114).intl;
-    let stringResult = intl2.string(tmp2(1114).t.O2hRaZ);
+    let formatResult = intl2.format(tmp2(1114).t.mL6Jwf, tmp2(15109).bountyProductNameIntlParams());
+    const tmp2Result = tmp2(15109);
   } else {
     const intl = tmp2(1114).intl;
-    stringResult = intl.string(tmp2(1114).t.TKuW8z);
+    formatResult = intl.format(tmp2(1114).t["r+tSgg"], tmp2(15109).bountyProductNameIntlParams());
+    const tmp2Result3 = tmp2(15109);
   }
-  if (reason === constants.COMPLETED) {
-    let ReqPds = tmp2(1114).t["D/790X"];
+  if (reason === tmp5.COMPLETED) {
+    let IPj7dL = tmp2(1114).t["D/790X"];
   } else {
-    ReqPds = tmp2(1114).t.ReqPds;
+    IPj7dL = tmp2(1114).t.IPj7dL;
   }
   const obj2 = { style: tmp.emptyState, children: null };
   const items = [React7(native.BountiesPosterIllocon, { size: 32 }), ];
   const obj3 = { style: tmp.emptyStateText, children: null };
-  const items1 = [React7(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
+  const items1 = [React7(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", children: formatResult }), ];
   const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1114).intl;
-  obj4.children = intl3.format(ReqPds, {
+  const obj5 = {
     onClickLearnMore() {
       openBountiesNuxPromoSheetDefault();
     }
-  });
+  };
+  tmp5 = constants;
+  const merged = Object.assign(QuestProductDisplayNames.bountyProductNameIntlParams());
+  obj4.children = intl3.format(IPj7dL, obj5);
   items1[1] = React7(Text_Text.Text, obj4);
   obj3.children = items1;
   items[1] = closure_1_10(View, obj3);
@@ -167,13 +173,13 @@ function QuestHomeBountiesCarousel(bounties) {
       const BountyScrollingType = AnalyticsTypes.BountyScrollingType;
       let result = { scrollingType: tmp2 ? BountyScrollingType.AUTO : BountyScrollingType.MANUAL, scrollingDirection: null, carouselPosition: null, questContent: null };
       if (rounded > tmp3) {
-        let LEFT = tmp6(7779).HorizontalScrollingDirection.RIGHT;
+        let LEFT = tmp6(7801).HorizontalScrollingDirection.RIGHT;
       } else {
-        LEFT = tmp6(7779).HorizontalScrollingDirection.LEFT;
+        LEFT = tmp6(7801).HorizontalScrollingDirection.LEFT;
       }
       result.scrollingDirection = LEFT;
       result.carouselPosition = rounded;
-      QUEST_HOME_MOBILE_CAROUSEL = tmp6(5497).QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
+      QUEST_HOME_MOBILE_CAROUSEL = tmp6(5499).QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
       result.questContent = QUEST_HOME_MOBILE_CAROUSEL;
       result = AnalyticsActions.trackBountyCarouselScroll(result);
       closure_5(rounded);
@@ -206,7 +212,7 @@ function QuestHomeBountiesCarousel(bounties) {
   const items5 = [bounties, first1, callback6];
   const effect1 = first1.useEffect(() => {
     function handleModalClose(key) {
-      if (key.key === handleModalClose(first[23]).BOUNTIES_MODAL_KEY) {
+      if (key.key === handleModalClose(first[24]).BOUNTIES_MODAL_KEY) {
         closure_7(false);
         const current = ref.current;
         ref.current = null;
@@ -236,30 +242,30 @@ function QuestHomeBountiesCarousel(bounties) {
               isBountyCompletedResult = findIndexResult1 <= closure_4 + 3;
             }
             if (isBountyCompletedResult) {
-              handleModalClose(first[24]).runAfterInteractions(() => {
+              handleModalClose(first[25]).runAfterInteractions(() => {
                 callback6(findIndexResult1);
               });
-              const tmpResult = handleModalClose(first[24]);
+              const tmpResult = handleModalClose(first[25]);
             }
           }
           obj = current;
         }
       }
     }
-    const subscription = ref(first[17]).subscribe("MODAL_POP", handleModalClose);
+    const subscription = ref(first[18]).subscribe("MODAL_POP", handleModalClose);
     return () => {
       DispatcherDefault.unsubscribe("MODAL_POP", handleModalClose);
     };
   }, items5);
   const callback7 = first1.useCallback((bountyId, questContentPosition) => {
     if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_home_bounties")) {
-      const obj2 = { type: tmp(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5501).AdCreativeType.BOUNTY, adCreativeId: bountyId.id, questContentCTA: tmp(7779).QuestContentCTA.START_BOUNTY, surfaceId: tmp(5497).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, sourceQuestContent: tmp(5497).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
-      tmp(11265).captureAdUserAction(obj2);
-      const tmpResult = tmp(11265);
+      const obj2 = { type: tmp(11293).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5503).AdCreativeType.BOUNTY, adCreativeId: bountyId.id, questContentCTA: tmp(7801).QuestContentCTA.START_BOUNTY, surfaceId: tmp(5499).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, sourceQuestContent: tmp(5499).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
+      tmp(11289).captureAdUserAction(obj2);
+      const tmpResult = tmp(11289);
     } else {
-      const obj3 = { adContentId: bountyId.id, adCreativeType: tmp(5501).AdCreativeType.BOUNTY, questContent: tmp(5497).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentCTA: tmp(7779).QuestContentCTA.START_BOUNTY, sourceQuestContent: tmp(5497).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
-      const result = tmp(7769).trackAdContentClicked(obj3);
-      const tmpResult2 = tmp(7769);
+      const obj3 = { adContentId: bountyId.id, adCreativeType: tmp(5503).AdCreativeType.BOUNTY, questContent: tmp(5499).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentCTA: tmp(7801).QuestContentCTA.START_BOUNTY, sourceQuestContent: tmp(5499).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
+      const result = tmp(7791).trackAdContentClicked(obj3);
+      const tmpResult2 = tmp(7791);
     }
     closure_8.current = bountyId.id;
     closure_9.current = BountyStore.isBountyCompleted(bountyId.id);
@@ -268,21 +274,21 @@ function QuestHomeBountiesCarousel(bounties) {
     const obj6 = BountiesModalActionCreatorsDefault;
     obj6.showModal({ bountyId: bountyId.id, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL, variant: BountiesModalTypes.BountiesModalVariant.SINGLE_VIDEO });
   }, []);
-  const tmp20 = ref(first[30])();
+  const tmp20 = ref(first[31])();
   const isInView = tmp20.isInView;
   const items6 = [first1, callback7, isInView, first2];
   const items7 = [bounties, callback];
   const callback8 = first1.useCallback((item) => {
     item = item.item;
     const index = item.index;
-    return closure_9(bounties(first[31]).BillableAdPlacementImpressionTrackerNative, {
+    return closure_9(bounties(first[32]).BillableAdPlacementImpressionTrackerNative, {
       adContentId: item.id,
-      adCreativeType: bounties(first[28]).AdCreativeType.BOUNTY,
-      questContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+      adCreativeType: bounties(first[29]).AdCreativeType.BOUNTY,
+      questContent: bounties(first[23]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
       questContentPosition: index,
       trackGuildAndChannelMetadata: false,
       visibilityRef,
-      sourceQuestContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+      sourceQuestContent: bounties(first[23]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
       overrideVisibility: isInView && undefined,
       children() {
         return React7(BountyCardDefault, { bounty: item, index, isActive: index === first1, isModalVisible: first2, onPress: callback7 });
@@ -309,18 +315,18 @@ function QuestHomeBountiesCarousel(bounties) {
   let obj = { style: tmp.container, children: null };
   let obj2 = { ref: tmp20.containerRef, onLayout: callback1, children: null };
   const memo1 = first1.useMemo(() => ({ isInView, activeIndex: first1, isModalVisible: first2 }), items8);
-  obj2.children = closure_9(bounties(first[32]).FlashList, { ref, horizontal: true, data: bounties, renderItem: callback8, keyExtractor: callback7, contentContainerStyle: tmp.listContentContainer, snapToOffsets: memo, snapToEnd: false, decelerationRate: "fast", showsHorizontalScrollIndicator: false, ItemSeparatorComponent: callback6, ListFooterComponent: callback2, onScroll: callback3, onScrollBeginDrag: callback4, onMomentumScrollEnd: callback5, scrollEventThrottle: 16, extraData: memo1, CellRendererComponent: callback9 });
+  obj2.children = closure_9(bounties(first[33]).FlashList, { ref, horizontal: true, data: bounties, renderItem: callback8, keyExtractor: callback7, contentContainerStyle: tmp.listContentContainer, snapToOffsets: memo, snapToEnd: false, decelerationRate: "fast", showsHorizontalScrollIndicator: false, ItemSeparatorComponent: callback6, ListFooterComponent: callback2, onScroll: callback3, onScrollBeginDrag: callback4, onMomentumScrollEnd: callback5, scrollEventThrottle: 16, extraData: memo1, CellRendererComponent: callback9 });
   obj.children = closure_9(closure_5, obj2);
   return closure_9(closure_5, obj);
 }
 const View = fn(17).View;
-const constants = fn(5494).BountyCarouselEmptyStateReason;
+const constants = fn(5496).BountyCarouselEmptyStateReason;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let closure_13 = fn(15147).CARD_WIDTH + PX_16;
-const createStyles = fn(4605);
+let closure_13 = fn(15124).CARD_WIDTH + PX_16;
+const createStyles = fn(4607);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { container: { marginBottom: nativeDefault.space.PX_48 }, listContentContainer: { paddingLeft: PX_16 }, emptyState: null, emptyStateText: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_48 };
@@ -337,7 +343,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  const questHomeBounties = first(11555).useQuestHomeBounties().questHomeBounties;
+  const questHomeBounties = first(11579).useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_14();
   first = undefined;
   importDefault = undefined;
@@ -348,8 +354,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   } else {
     items1 = [];
   }
-  const obj = first(11555);
-  const tmp4 = _slicedToArray(first(7440).useSelectedDismissibleContent(items1), 2);
+  const obj = first(11579);
+  const tmp4 = _slicedToArray(first(7462).useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
   dependencyMap = noop.useRef(false);
@@ -367,19 +373,19 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   const items3 = [first, tmp4[1]];
   const effect1 = noop.useEffect(() => {
     function handleHide(key) {
-      if (key.key === first(closure_2[14]).PROMO_SHEET_KEY) {
+      if (key.key === first(closure_2[15]).PROMO_SHEET_KEY) {
         closure_1_1(constants.USER_DISMISS);
       }
     }
-    if (handleHide === first(ref[15]).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET) {
-      const subscription = closure_1(tmp[17]).subscribe("HIDE_ACTION_SHEET", handleHide);
+    if (handleHide === first(ref[16]).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET) {
+      const subscription = closure_1(tmp[18]).subscribe("HIDE_ACTION_SHEET", handleHide);
       return () => {
         DispatcherDefault.unsubscribe("HIDE_ACTION_SHEET", handleHide);
       };
     }
     tmp = ref;
   }, items3);
-  const tmpResult = first(7440);
+  const tmpResult = first(7462);
   const items4 = [BountyStore];
   ({ placement, buttonVariant, clickable } = shopCarouselConfig.shopCarouselConfig);
   let tmp10 = undefined !== clickable;
@@ -392,8 +398,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       if (verticalScrollEnabled) {
         let tmp14 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp14) {
-          tmp14 = orbShopProducts.length >= tmp(15148).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp15 = orbShopProducts.length >= tmp(15148).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp14 = orbShopProducts.length >= tmp(15127).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp15 = orbShopProducts.length >= tmp(15127).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp14) {
           const obj2 = { style: tmp3.container, children: null };

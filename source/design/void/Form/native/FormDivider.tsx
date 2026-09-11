@@ -1,27 +1,27 @@
-// Module ID: 8669
-// Function ID: 8670
+// Module ID: 8692
+// Function ID: 8693
 // Name: FormDivider
-// Dependencies: [19, 17, 1074, 21, 4605, 576, 4315, 7236, 4454, 5736, 2]
+// Dependencies: [19, 17, 1074, 21, 4607, 576, 4317, 7258, 4456, 5738, 2]
 // Exports: default
 
-// Module 8669 (FormDivider)
+// Module 8692 (FormDivider)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4315 */;
-import RedesignCompat from "RedesignCompat" /* 5736 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7236 */;
+import native from "native" /* 4317 */;
+import RedesignCompat from "RedesignCompat" /* 5738 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { divider: {}, dividerOuter: { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth }, dividerHasIcon: { marginLeft: 56 } };
   return obj;
 });
-let obj2 = { [LIGHT]: nativeDefault.unsafe_rawColors.BLACK, [DARK]: nativeDefault.unsafe_rawColors.WHITE, [DARKER]: nativeDefault.unsafe_rawColors.WHITE, [MIDNIGHT]: nativeDefault.unsafe_rawColors.WHITE };
-({ LIGHT, DARK, DARKER, MIDNIGHT } = fn(1074).ThemeTypes);
+let obj2 = { [LIGHT]: nativeDefault.unsafe_rawColors.BLACK, [ASH]: nativeDefault.unsafe_rawColors.WHITE, [DARK]: nativeDefault.unsafe_rawColors.WHITE, [ONYX]: nativeDefault.unsafe_rawColors.WHITE };
+({ LIGHT, ASH, DARK, ONYX } = fn(1074).ThemeTypes);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
@@ -41,9 +41,9 @@ export default function Divider(arg0) {
   const profileThemeValues = obj2.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
-    const obj3 = { backgroundColor: tmp2(4454).hexOpacityToRgba(obj2[theme], profileThemeValues.dividerOpacity) };
+    const obj3 = { backgroundColor: tmp2(4456).hexOpacityToRgba(obj2[theme], profileThemeValues.dividerOpacity) };
     tmp7 = obj3;
-    const tmp2Result = tmp2(4454);
+    const tmp2Result = tmp2(4456);
   }
   let tmp10Result = null;
   if (!noop.useContext(RedesignCompat.RedesignCompatContext)) {

@@ -1,25 +1,25 @@
-// Module ID: 11720
-// Function ID: 11721
+// Module ID: 11744
+// Function ID: 11745
 // Name: PublicGuildAnnouncementProfile
-// Dependencies: [19, 17, 21, 4605, 576, 7202, 5637, 8087, 1178, 11721, 4601, 1114, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 7224, 5639, 8110, 1178, 11745, 4603, 1114, 2]
 // Exports: default
 
-// Module 11720 (PublicGuildAnnouncementProfile)
+// Module 11744 (PublicGuildAnnouncementProfile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8087 */;
-import _modDef11721 from "module_11721" /* 11721 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7224 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8110 */;
+import _modDef11745 from "module_11745" /* 11745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -39,7 +39,7 @@ export default function PublicGuildAnnouncementProfile() {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11721, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11745, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

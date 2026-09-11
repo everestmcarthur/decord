@@ -1,19 +1,19 @@
-// Module ID: 7919
-// Function ID: 7920
+// Module ID: 7942
+// Function ID: 7943
 // Name: MaskedBadge
-// Dependencies: [19, 21, 4605, 576, 1178, 7920, 2]
+// Dependencies: [19, 21, 4607, 576, 1178, 7943, 2]
 // Exports: default
 
-// Module 7919 (MaskedBadge)
+// Module 7942 (MaskedBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import BadgeDefault from "Badge" /* 7920 */;
+import BadgeDefault from "Badge" /* 7943 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
-let obj2 = { maskStyle: { position: "relative", right: "call" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
+const createStyles = fn(4607);
+let obj2 = { maskStyle: { position: "relative", right: "WireType" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");

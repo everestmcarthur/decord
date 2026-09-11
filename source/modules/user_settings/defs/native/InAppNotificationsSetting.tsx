@@ -1,25 +1,23 @@
-// Module ID: 15567
-// Function ID: 15568
+// Module ID: 15549
+// Function ID: 15550
 // Name: InAppNotificationsSetting
-// Dependencies: [8027, 1074, 1935, 10160, 1114, 1242, 11540, 2]
+// Dependencies: [8050, 1074, 1935, 10182, 1114, 2722, 1242, 11564, 14505, 15550, 2]
 
-// Module 15567 (InAppNotificationsSetting)
+// Module 15549 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import FocusModeUtils from "FocusModeUtils" /* 10160 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import _modDef2722 from "module_2722" /* 2722 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import FocusModeUtils from "FocusModeUtils" /* 10182 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14505 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15550 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
-const toggle = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.rqEZdu);
-  },
-  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+const obj = {
   useValue: function useInAppNotificationsSettingValue() {
     const FocusMode = UserSettings.FocusMode;
     const setting = FocusMode.useSetting();
@@ -35,16 +33,52 @@ const toggle = SettingBuilders.createToggle({
     ShowInAppNotifications.updateSetting(notifications_in_app_enabled);
     AnalyticsUtilsDefault.track(AnalyticEvents.LOCAL_SETTINGS_UPDATED, { notifications_in_app_enabled });
   },
-  useDescription: function useInAppNotificationsDescription() {
-    let stringResult;
-    if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.cIRG0s);
-    }
-    return stringResult;
-  },
   useIsDisabled: FocusModeUtils.useFocusModeEnabled
-});
+};
+let SettingBuilders = SettingBuilders_mod;
+const obj2 = {};
+const merged = Object.assign(obj);
+obj2.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(util.t.rqEZdu);
+};
+obj2.useDescription = function useInAppNotificationsDescription() {
+  let stringResult;
+  if (obj.useFocusModeEnabled()) {
+    const intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.cIRG0s);
+  }
+  return stringResult;
+};
+obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj2.usePredicate = function usePredicate() {
+  return !notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable("InAppNotificationsSetting");
+};
+const toggle = SettingBuilders.createToggle(obj2);
+let SettingBuilders = SettingBuilders_mod;
+const obj3 = {};
+const merged1 = Object.assign(obj);
+obj3.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(_modDef2722.sH5mu9);
+};
+obj3.useDescription = function useRedesignInAppNotificationsDescription() {
+  const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
+  const intl = util.intl;
+  const string = intl.string;
+  if (focusModeEnabled) {
+    let stringResult = string(util.t.cIRG0s);
+  } else {
+    stringResult = string(_modDef2722["T/zMdV"]);
+  }
+  return stringResult;
+};
+obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj3.usePredicate = function usePredicate() {
+  return notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable("RedesignInAppNotificationsSetting");
+};
+const toggle1 = SettingBuilders.createToggle(obj3);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/InAppNotificationsSetting.tsx");
 
 export default toggle;
+export const RedesignInAppNotificationsSetting = toggle1;

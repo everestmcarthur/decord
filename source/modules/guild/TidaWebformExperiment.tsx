@@ -1,10 +1,10 @@
-// Module ID: 7240
-// Function ID: 7241
+// Module ID: 7262
+// Function ID: 7263
 // Name: TidaWebformExperiment
-// Dependencies: [4519, 2]
+// Dependencies: [4521, 2]
 
-// Module 7240 (TidaWebformExperiment)
-import createExperiment from "module_4519" /* 4519 */;
+// Module 7262 (TidaWebformExperiment)
+import createExperiment from "module_4521" /* 4521 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", id: "2025-11_tida_webform", label: "Tida Webform", defaultConfig: { tidaWebformEnabled: false }, treatments: null };

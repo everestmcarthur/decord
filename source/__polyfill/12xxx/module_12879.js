@@ -1,83 +1,95 @@
 // Module ID: 12879
 // Function ID: 12880
-// Dependencies: [12880, 12877]
-// Exports: extractTraceparentData, generateSentryTraceHeader, propagationContextFromHeaders
+// Dependencies: [41, 42, 93, 95, 98, 19, 17, 21, 4439]
 
 // Module 12879
-import generatePropagationContext from "generatePropagationContext" /* 12877 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12880 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+const BackButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+fn(17).BackHandler;
+const jsx = fn(21).jsx;
+class BackButton {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, BackButton);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(BackButton);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleBack = () => {
+      let flag = 0 !== closure_0.history.index;
+      if (flag) {
+        const history = closure_0.history;
+        history.goBack();
+        flag = true;
+      }
+      return flag;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(BackButton, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      return jsx(BackButton(4439).__HistoryContext.Consumer, {
+        children(history) {
+          self.history = history;
+          return self.props.children || null;
+        }
+      });
+    }
+  }
+];
 
-export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      return obj;
-    }
-  }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  let traceId = arg0;
-  if (arg0 === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
-  }
-  let spanId = arg1;
-  if (arg1 === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== arg2) {
-    let str2 = "-0";
-    if (arg2) {
-      str2 = "-1";
-    }
-    str = str2;
-  }
-  return "" + traceId + "-" + spanId + str;
-};
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, arg1) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
-    }
-  }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(arg1);
-  if (tmp) {
-    if (tmp.traceId) {
-      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      obj3.spanId = tmp4(12877).generateSpanId();
-      obj3.sampled = parentSampled;
-      if (!result) {
-        result = {};
-      }
-      obj3.dsc = result;
-      return obj3;
-    }
-  }
-  const obj4 = { traceId: null, spanId: null };
-  obj4.traceId = generatePropagationContext.generateTraceId();
-  const tmp4Result3 = generatePropagationContext;
-  obj4.spanId = generatePropagationContext.generateSpanId();
-  return obj4;
-};
+export default _createClass(BackButton, items);

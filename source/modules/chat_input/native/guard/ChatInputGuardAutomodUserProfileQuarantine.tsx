@@ -1,18 +1,18 @@
-// Module ID: 12534
-// Function ID: 12535
+// Module ID: 12559
+// Function ID: 12560
 // Name: ChatInputGuardAutomodUserProfileQuarantine
-// Dependencies: [19, 502, 2021, 4230, 21, 504, 4249, 11932, 1114, 12518, 12535, 2]
+// Dependencies: [19, 502, 2021, 4232, 21, 504, 4251, 11957, 1114, 12543, 12560, 2]
 
-// Module 12534 (ChatInputGuardAutomodUserProfileQuarantine)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4249 */;
-import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 11932 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12518 */;
+// Module 12559 (ChatInputGuardAutomodUserProfileQuarantine)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4251 */;
+import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 11957 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12543 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
-const GuildMemberFlags = fn(4230).GuildMemberFlags;
+const GuildMemberFlags = fn(4232).GuildMemberFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx");
@@ -36,7 +36,7 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
     const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
   }, items2);
   const obj = guildId(504);
-  const automodReason = guildId(4249).getAutomodReason(stateFromStores);
+  const automodReason = guildId(4251).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
     const intl2 = tmp(1114).intl;
     let stringResult = intl2.string(tmp(1114).t.Viksoo);
@@ -52,9 +52,9 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
     stringResult1 = intl3.string(tmp(1114).t["8HW7r9"]);
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
-  const obj2 = guildId(4249);
+  const obj2 = guildId(4251);
   tmp6 = GuildMemberFlags;
-  obj3.icon = jsx(guildId(12535).ChatXIcon, {});
+  obj3.icon = jsx(guildId(12560).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

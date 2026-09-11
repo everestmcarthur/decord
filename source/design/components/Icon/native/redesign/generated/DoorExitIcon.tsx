@@ -1,13 +1,13 @@
-// Module ID: 9142
-// Function ID: 9143
+// Module ID: 9165
+// Function ID: 9166
 // Name: DoorExitIcon
-// Dependencies: [19, 21, 576, 4305, 9143, 2]
+// Dependencies: [19, 21, 576, 4307, 9166, 2]
 // Exports: DoorExitIcon
 
-// Module 9142 (DoorExitIcon)
+// Module 9165 (DoorExitIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod9143 from "module_9143" /* 9143 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod9166 from "module_9166" /* 9166 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const DoorExitIcon = function DoorExitIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9143, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9166, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

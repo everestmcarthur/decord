@@ -1,24 +1,24 @@
-// Module ID: 8841
-// Function ID: 8842
+// Module ID: 8864
+// Function ID: 8865
 // Name: WishlistNUXAddedItemActionSheet
-// Dependencies: [32, 19, 17, 1371, 8246, 21, 4605, 576, 504, 1889, 4572, 8242, 7234, 8842, 7202, 8843, 4601, 1114, 5483, 5025, 2]
+// Dependencies: [32, 19, 17, 1371, 8269, 21, 4607, 576, 504, 1889, 4574, 8265, 7256, 8865, 7224, 8866, 4603, 1114, 5485, 5027, 2]
 // Exports: default
 
-// Module 8841 (WishlistNUXAddedItemActionSheet)
+// Module 8864 (WishlistNUXAddedItemActionSheet)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import SKUPreview from "SKUPreview" /* 8842 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import SKUPreview from "SKUPreview" /* 8865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8246).UserProfileSections;
+const UserProfileSections = fn(8269).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, textContainer: null, subtitle: null };
 let obj3 = { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.textContainer = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
@@ -58,11 +58,11 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     if (null != stateFromStores) {
       const obj2 = { userId: tmp4.id, sourceAnalyticsLocations: null, initialSection: null };
-      const items = [tmp(7234).COLLECTIBLES_SHOP];
+      const items = [tmp(7256).COLLECTIBLES_SHOP];
       obj2.sourceAnalyticsLocations = items;
       obj2.initialSection = UserProfileSections.WISHLIST;
-      tmp(8242)(obj2);
-      const tmpResult = tmp(8242);
+      tmp(8265)(obj2);
+      const tmpResult = tmp(8265);
     }
   }, items2);
   const callback2 = noop.useCallback(() => {

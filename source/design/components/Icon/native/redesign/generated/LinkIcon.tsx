@@ -1,13 +1,13 @@
-// Module ID: 4548
-// Function ID: 4549
+// Module ID: 4550
+// Function ID: 4551
 // Name: LinkIcon
-// Dependencies: [19, 21, 576, 4305, 4549, 2]
+// Dependencies: [19, 21, 576, 4307, 4551, 2]
 // Exports: LinkIcon
 
-// Module 4548 (LinkIcon)
+// Module 4550 (LinkIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod4549 from "module_4549" /* 4549 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod4551 from "module_4551" /* 4551 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const LinkIcon = function LinkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4549, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4551, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

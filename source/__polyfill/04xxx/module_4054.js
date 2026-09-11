@@ -1,11 +1,11 @@
 // Module ID: 4054
 // Function ID: 4055
-// Dependencies: [4046, 3694]
+// Dependencies: [4046, 3696]
 // Exports: default
 
 // Module 4054
 import module_4046_mod from "module_4046" /* 4046 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
 let module_4046 = module_4046_mod;
 if (!module_4046) {
@@ -24,7 +24,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
+export default function isThisMonth(arg0) {
   requiredArgs.default(1, arguments);
   return module_4046.default(Date.now(), arg0);
 };

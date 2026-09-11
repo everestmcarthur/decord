@@ -1,17 +1,17 @@
 // Module ID: 10614
 // Function ID: 10615
-// Dependencies: [41, 42, 93, 95, 98, 10610, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10547, 10530]
 
 // Module 10614
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import NUMBER from "NUMBER" /* 10610 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
+import now from "now" /* 10547 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ZHHansWeekdayParser = require;
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,76 +31,126 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const keys = Object.keys(NUMBER.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\u661F\u671F|\u793C\u62DC|\u5468)(?<weekday>" + keys.join("|") + ")");
-class ZHHansWeekdayParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ZHHansWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHansWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let _classCallCheck = _classCallCheck_mod;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(ZHHansWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHansWeekdayParser(10610).WEEKDAY_OFFSET[index.groups.weekday];
-      if (undefined === tmp2) {
-        return null;
-      } else {
-        const _Date = Date;
-        const refDate = createParsingResult.refDate;
-        const date = new Date(refDate.getTime());
-        const diff = tmp2 - date.getDay();
-        const _Math3 = Math;
-        const _Math4 = Math;
-        const absolute = Math.abs(diff - 7);
-        let diff1 = diff;
-        if (absolute < Math.abs(diff)) {
-          diff1 = diff - 7;
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function o(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
         }
-        const _Math = Math;
-        const _Math2 = Math;
-        const absolute1 = Math.abs(diff1 + 7);
-        let sum = diff1;
-        if (absolute1 < Math.abs(diff1)) {
-          sum = diff1 + 7;
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
         }
-        date.setDate(date.getDate() + sum);
-        const start = parsingResult.start;
-        start.assign("weekday", tmp2);
-        const start2 = parsingResult.start;
-        start2.imply("day", date.getDate());
-        const start3 = parsingResult.start;
-        start3.imply("month", date.getMonth() + 1);
-        const start4 = parsingResult.start;
-        start4.imply("year", date.getFullYear());
-        return parsingResult;
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class NLCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, NLCasualDateParser);
+        tmp2 = c2;
+        obj = c2(NLCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
     }
+    _classCallCheck = NLCasualDateParser;
+    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+            return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[0].toLowerCase();
+            if ("nu" === formatted) {
+              return closure_7.now(reference.reference);
+            } else if ("vandaag" === formatted) {
+              return closure_7.today(reference.reference);
+            } else {
+              if ("morgen" !== formatted) {
+                if ("morgend" !== formatted) {
+                  if ("gisteren" === formatted) {
+                    return closure_7.yesterday(reference.reference);
+                  } else {
+                    return tmp2;
+                  }
+                }
+              }
+              return closure_7.tomorrow(reference.reference);
+            }
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(NLCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
   }
-];
-
-export default _createClass(ZHHansWeekdayParser, items);
+} else {
+  let _Object = Object;
+}

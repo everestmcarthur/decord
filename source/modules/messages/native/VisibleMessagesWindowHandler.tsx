@@ -1,10 +1,10 @@
-// Module ID: 11413
-// Function ID: 11414
+// Module ID: 11437
+// Function ID: 11438
 // Name: VisibleMessagesWindowHandler
-// Dependencies: [7985, 2]
+// Dependencies: [8008, 2]
 
-// Module 11413 (VisibleMessagesWindowHandler)
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7985 */;
+// Module 11437 (VisibleMessagesWindowHandler)
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8008 */;
 import size from "module_2" /* 2 */;
 
 const RowType = RowGeneratorConstants.RowType;

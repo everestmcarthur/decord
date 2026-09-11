@@ -1,12 +1,12 @@
-// Module ID: 12071
-// Function ID: 12072
+// Module ID: 12096
+// Function ID: 12097
 // Name: ForumChannelStore
-// Dependencies: [1957, 1967, 1966, 1968, 1249, 38, 7823, 560, 504, 2]
+// Dependencies: [1957, 1967, 1966, 1968, 1249, 38, 7845, 560, 504, 2]
 // Exports: useForumChannelStore, useForumChannelStoreApi
 
-// Module 12071 (ForumChannelStore)
+// Module 12096 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7823 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7845 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;

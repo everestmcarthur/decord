@@ -1,174 +1,67 @@
 // Module ID: 12963
 // Function ID: 12964
-// Dependencies: [12863, 12866, 12868, 12894, 12872, 12895, 12867, 12964, 12881, 12901, 12902]
+// Dependencies: [12888, 12891, 12920, 12906, 12919, 12940, 12910, 12911, 12897, 12928, 12905, 12904, 12892]
+// Exports: getTraceData
 
 // Module 12963
-import errorCallback from "errorCallback" /* 12863 */;
-import _mod12868 from "module_12868" /* 12868 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12872 */;
-import _mod12881 from "module_12881" /* 12881 */;
-import _mod12894 from "module_12894" /* 12894 */;
-import _mod12895 from "module_12895" /* 12895 */;
-import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 12964 */;
-import __SENTRY_DEBUG__ from "module_12866" /* 12866 */;
+import errorCallback from "errorCallback" /* 12888 */;
+import _mod12919 from "module_12919" /* 12919 */;
+import "module_12891";
+import __SENTRY_DEBUG__ from "module_12920" /* 12920 */;
+import dateTimestampInSeconds from "module_12906" /* 12906 */;
 
-const require = globalThis.__r;
-
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
-    obj = {};
-  }
-  let client = obj.client;
-  if (!client) {
-    client = _mod12894.getClient();
-  }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      rootSpan = tmp3(12872).getRootSpan(activeSpan);
-      const tmp3Result = tmp3(12872);
-    }
-    let description = rootSpan;
-    if (rootSpan) {
-      description = tmp3(12872).spanToJSON(rootSpan).description;
-      const tmp3Result3 = tmp3(12872);
-    }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    const obj4 = {};
-    if (release) {
-      obj4.release = release;
-    }
-    if (environment) {
-      obj4.environment = environment;
-    }
-    if (description) {
-      obj4.transaction = description;
-    }
-    if (_mod12895.DEBUG_BUILD) {
-      const logger = tmp3(12867).logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + arg3 + " to " + SET_METRIC_TYPE + " metric " + arg2);
-    }
-    const globalSingleton = _mod12868.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    const obj5 = {};
-    const merged = Object.assign(obj4);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, arg3, unit, obj5, timestamp);
-    const tmp3Result4 = _mod12868;
-  }
-}
 errorCallback;
 
-export const metrics = {
-  increment(arg0, arg1, match) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
-    }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, arg2, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, arg2, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let timestampInSecondsResult = require("module_12881").timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      const obj = require("module_12881");
-      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("module_12901").startSpanManual(obj3, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
-
-        }, () => {
-          const timestampInSecondsResult = _mod12881.timestampInSeconds();
-          const diff = timestampInSecondsResult - c4;
-          const obj2 = {};
-          const merged = Object.assign(closure_3);
-          obj2.unit = "second";
-          let parsed = diff;
-          if (typeof diff === "string") {
-            const _parseInt = parseInt;
-            parsed = parseInt(diff);
-          }
-          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
-          closure_0.end(timestampInSecondsResult);
-        });
-      });
-    } else {
-      const obj4 = {};
-      let merged = Object.assign(arg4);
-      obj4.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
+export const getTraceData = function getTraceData() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  const client = _mod12919.getClient();
+  if (obj3.isEnabled()) {
+    if (client) {
+      const mainCarrier = tmp(12910).getMainCarrier();
+      const tmpResult = tmp(12910);
+      const asyncContextStrategy = tmp(12911).getAsyncContextStrategy(mainCarrier);
+      if (asyncContextStrategy.getTraceData) {
+        return asyncContextStrategy.getTraceData(obj);
+      } else {
+        const currentScope = tmp(12919).getCurrentScope();
+        let span = obj.span;
+        if (!span) {
+          span = tmp(12897).getActiveSpan();
+          const tmpResult10 = tmp(12897);
+        }
+        if (span) {
+          let spanToTraceHeaderResult = tmp(12897).spanToTraceHeader(span);
+          const tmpResult11 = tmp(12897);
+        } else {
+          const propagationContext = currentScope.getPropagationContext();
+          ({ traceId, sampled, spanId } = propagationContext);
+          spanToTraceHeaderResult = tmp(12904).generateSentryTraceHeader(traceId, spanId, sampled);
+          const tmpResult12 = tmp(12904);
+        }
+        const tmpResult13 = tmp(12928);
+        if (span) {
+          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
+        } else {
+          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
+        }
+        const tmpResult9 = tmp(12919);
+        const result = tmp(12905).dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = tmp(12904).TRACEPARENT_REGEXP;
+        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
+          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
+          let obj5 = obj4;
+        } else {
+          const logger = tmp(12892).logger;
+          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
+          obj5 = {};
+        }
+        return obj5;
       }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
-    }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod12868.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
-    } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
+      const tmpResult8 = tmp(12911);
     }
   }
+  return {};
 };

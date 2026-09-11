@@ -1,25 +1,25 @@
-// Module ID: 17706
-// Function ID: 17707
+// Module ID: 17698
+// Function ID: 17699
 // Name: GuildSettingsRoleTemplate
-// Dependencies: [32, 19, 17, 4597, 1979, 17702, 1074, 21, 4605, 576, 6995, 1477, 5012, 4341, 1242, 4785, 8343, 5173, 4601, 10827, 1178, 11635, 5025, 1114, 2]
+// Dependencies: [32, 19, 17, 4599, 1979, 17694, 1074, 21, 4607, 576, 7017, 1477, 5014, 4343, 1242, 4787, 8366, 5175, 4603, 10848, 1178, 11659, 5027, 1114, 2]
 // Exports: default
 
-// Module 17706 (GuildSettingsRoleTemplate)
+// Module 17698 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4785 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5012 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6995 */;
-import _modDef8343 from "module_8343" /* 8343 */;
-import PaginationDefault from "Pagination" /* 10827 */;
-import _modDef11635 from "module_11635" /* 11635 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4787 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5014 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7017 */;
+import _modDef8366 from "module_8366" /* 8366 */;
+import PaginationDefault from "Pagination" /* 10848 */;
+import _modDef11659 from "module_11659" /* 11659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = globalThis.__r;
@@ -27,14 +27,14 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17702);
+const GuildSettingsRoleConstants = fn(17694);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, carousel: { flex: 1 }, cardWrapper: { width: 300, alignSelf: "center", paddingHorizontal: 10, flex: 1 }, card: null, templateTitle: null, templateSubtitle: null, templateContentWrapper: null, templateContent: null, templateContentText: null, templateButton: null, sliderContainer: null, slider: null, sliderLabels: null, sliderLabel: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.card = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm, borderStyle: "solid", borderWidth: 1, flex: 1, flexDirection: "column", marginVertical: 16, padding: 16, paddingTop: 20 };
@@ -142,7 +142,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   const values = Object.values(num);
   let obj4 = { ref, style: tmp.container, children: null };
   let obj5 = { style: tmp.sliderContainer, children: null };
-  let obj6 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8343, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
+  let obj6 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8366, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
   let items2 = [closure_14(ref1, obj6), ];
   let obj3 = { interpolate: ReanimatedRexport.interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: ReanimatedRexport.Extrapolation, inactiveOpacity: num };
   let obj7 = { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -199,7 +199,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
           tmp3Result = null;
           if ("" !== contentPrefaceResult) {
             const obj6 = { style: tmp7.templateSubtitle, variant: "text-sm/medium", children: item.contentPreface() };
-            tmp3Result = tmp3(tmp10(4601).Text, obj6);
+            tmp3Result = tmp3(tmp10(4603).Text, obj6);
           }
         }
         const obj7 = { children: null };
@@ -208,7 +208,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: closure_3.templateContent, children: null };
-          const items = [closure_3_14(native.Icon, { source: _modDef11635, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
+          const items = [closure_3_14(native.Icon, { source: _modDef11659, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
           obj.children = items;
           return __initData(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

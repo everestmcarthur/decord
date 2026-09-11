@@ -1,16 +1,18 @@
 // Module ID: 8587
 // Function ID: 8588
-// Dependencies: [41, 42, 93, 95, 98, 8537, 8560]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8588, 8582, 8583]
 
 // Module 8587
-import _modDef8560 from "module_8560" /* 8560 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8583 from "module_8583" /* 8583 */;
+import _modDef8588 from "module_8588" /* 8588 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeTurbulence = arg1;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,14 +32,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTurbulence {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeComposite {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
-    tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeComposite);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeComposite);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,18 +54,33 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTurbulence, _modDef8560);
+_inherits(FeComposite, _modDef8583);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(8537).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeComposite(8582).extractFilter(this.props));
+    const obj2 = FeComposite(8582);
+    const merged1 = Object.assign(FeComposite(8582).extractFeComposite(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

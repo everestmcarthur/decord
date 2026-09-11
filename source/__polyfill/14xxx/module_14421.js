@@ -1,9 +1,8 @@
 // Module ID: 14421
 // Function ID: 14422
-// Dependencies: [14422]
+// Dependencies: [17]
 
 // Module 14421
-import _mod14422 from "module_14422" /* 14422 */;
+import _mod17 from "module_17" /* 17 */;
 
-
-export default (arg0) => _mod14422(arg0.length);
+const parsed = parseInt(_mod17.Platform.Version, 10);

@@ -1,28 +1,28 @@
-// Module ID: 17741
-// Function ID: 17742
+// Module ID: 17733
+// Function ID: 17734
 // Name: GuildSettingsModalInstantInvites
-// Dependencies: [32, 19, 17, 10150, 8445, 1957, 1979, 9133, 1074, 21, 4605, 1114, 2024, 5654, 4601, 5661, 5647, 12441, 504, 12, 8069, 8067, 4572, 11900, 1896, 4303, 11004, 7091, 1178, 17742, 7092, 2]
+// Dependencies: [32, 19, 17, 10172, 8468, 1957, 1979, 9156, 1074, 21, 4607, 1114, 2024, 5656, 4603, 5663, 5649, 12466, 504, 12, 8092, 8090, 4574, 11925, 1896, 4305, 11026, 7113, 1178, 17734, 7114, 2]
 // Exports: default
 
-// Module 17741 (GuildSettingsModalInstantInvites)
+// Module 17733 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import _modDef5647 from "module_5647" /* 5647 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5654 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8067 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8069 */;
-import InstantInvite from "InstantInvite" /* 11004 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import _modDef5649 from "module_5649" /* 5649 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5656 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8090 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8092 */;
+import InstantInvite from "InstantInvite" /* 11026 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10150 */;
-import InviteRecord from "InviteRecord" /* 8445 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10172 */;
+import InviteRecord from "InviteRecord" /* 8468 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9133 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9156 */;
 
 require = fn;
 class InvitesDisabledRow {
@@ -154,7 +154,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11900, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11925, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         tmp3(false);
       } catch (tmp17) {
         tmp2(false);
@@ -198,7 +198,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_15 = createStyles.createStyles({ list: { paddingTop: 8 }, content: { padding: 16, gap: 24 }, listWithPause: { paddingTop: 0 } });
 const pause_invites = "pause_invites";
 const importDefaultResult1 = new InviteRecord({ code: "pause_invites" });
@@ -216,7 +216,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   if (null != stateFromStores) {
     const obj2 = { children: null };
     const obj3 = { guild: stateFromStores, invites: tmp5, contentContainerStyle: guildId.contentContainerStyle, showChannel: true };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(7092).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(7114).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

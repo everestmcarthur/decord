@@ -1,19 +1,19 @@
-// Module ID: 15704
-// Function ID: 15705
+// Module ID: 15687
+// Function ID: 15688
 // Name: IntlTestingSettingsPage
-// Dependencies: [32, 5, 19, 17, 2026, 2025, 21, 4605, 576, 5735, 1114, 9428, 5738, 504, 4196, 5737, 5655, 1155, 5023, 4601, 15705, 15737, 2]
+// Dependencies: [32, 5, 19, 17, 2026, 2025, 21, 4607, 576, 5737, 1114, 9451, 5740, 504, 4198, 5739, 5657, 1155, 5025, 4603, 15688, 15720, 2]
 // Exports: default
 
-// Module 15704 (IntlTestingSettingsPage)
+// Module 15687 (IntlTestingSettingsPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _mod1155 from "module_1155" /* 1155 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import _modDef15705 from "module_15705" /* 15705 */;
-import _modDef15737 from "module_15737" /* 15737 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import TableRow from "TableRow" /* 5657 */;
+import TableRowGroup from "TableRowGroup" /* 5739 */;
+import _modDef15688 from "module_15688" /* 15688 */;
+import _modDef15720 from "module_15720" /* 15720 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -95,15 +95,15 @@ function LocaleInfo() {
     return items;
   }), 2);
   const first = tmp[0];
-  [tmp4, require] = noop.useState(_modDef4196.locale);
+  [tmp4, require] = noop.useState(_modDef4198.locale);
   const items1 = [first];
   const effect = noop.useEffect(() => {
     const timerId = setTimeout(() => {
-      closure_1_0(_modDef4196.locale());
+      closure_1_0(_modDef4198.locale());
     }, 0);
   }, items1);
-  const tmp3 = _slicedToArray(noop.useState(_modDef4196.locale), 2);
-  const obj2 = _modDef4196;
+  const tmp3 = _slicedToArray(noop.useState(_modDef4198.locale), 2);
+  const obj2 = _modDef4198;
   const tmp6 = closure_11;
   const tmp7 = closure_10;
   const items2 = [closure_10(TableRow.TableRow, { label: "Active System", trailing: closure_10(TableRow.TableRow.TrailingText, { text: "@discord/intl" }) }), , , , ];
@@ -131,7 +131,7 @@ get_ActivityIndicator = fn(17);
 const setAppLocale = fn(2026).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -152,19 +152,19 @@ export default function IntlTestingSettingsPage() {
   const items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , , ];
   const obj3 = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef15705.HMvEC5, {});
+  obj3.children = intl.format(_modDef15688.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
   const obj4 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef15737.swfLzV, {});
+  obj4.children = intl2.format(_modDef15720.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef15705.rmps8y, {});
+  obj5.children = intl3.format(_modDef15688.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef15705.uczI4g, {
+  obj6.children = intl4.format(_modDef15688.uczI4g, {
     linkTarget() {
 
     }
@@ -172,14 +172,14 @@ export default function IntlTestingSettingsPage() {
   items[5] = closure_10(require("Text/Text").Text, obj6);
   const obj8 = { variant: "text-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef15705.rdfRyh, {});
+  obj8.children = intl5.format(_modDef15688.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
   const obj9 = { variant: "text-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef15705.XOdbAy, {
+  obj9.children = intl6.format(_modDef15688.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(4601).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
+      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(4603).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
       return closure_1_10(closure_1_6, obj);
     }
   });

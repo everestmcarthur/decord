@@ -1,15 +1,15 @@
-// Module ID: 15992
-// Function ID: 15993
+// Module ID: 15977
+// Function ID: 15978
 // Name: NotifyFriendsOnComeOnlineSetting
-// Dependencies: [8027, 11540, 1114, 2562, 1935, 15584, 2]
+// Dependencies: [8050, 11564, 1114, 2562, 1935, 15567, 2]
 
-// Module 15992 (NotifyFriendsOnComeOnlineSetting)
+// Module 15977 (NotifyFriendsOnComeOnlineSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef2562 from "module_2562" /* 2562 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15584 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15567 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

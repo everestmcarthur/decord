@@ -1,9 +1,9 @@
-// Module ID: 5502
-// Function ID: 5503
+// Module ID: 5504
+// Function ID: 5505
 // Name: FirstPartyQuestTaskTypes
 // Dependencies: [2]
 
-// Module 5502 (FirstPartyQuestTaskTypes)
+// Module 5504 (FirstPartyQuestTaskTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["PLAY_ACTIVITY", "PLAY_ON_DESKTOP", "PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX", "STREAM_ON_DESKTOP", "WATCH_VIDEO", "WATCH_VIDEO_ON_MOBILE"]), DESKTOP: null, CONSOLE: null, IN_GAME: null, VIDEO: null };

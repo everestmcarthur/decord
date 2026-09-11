@@ -1,10 +1,10 @@
-// Module ID: 8877
-// Function ID: 8878
+// Module ID: 8900
+// Function ID: 8901
 // Name: useClock
-// Dependencies: [19, 38, 5042, 2]
+// Dependencies: [19, 38, 5044, 2]
 // Exports: default
 
-// Module 8877 (useClock)
+// Module 8900 (useClock)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 

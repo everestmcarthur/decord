@@ -1,10 +1,10 @@
-// Module ID: 4422
-// Function ID: 4423
+// Module ID: 4424
+// Function ID: 4425
 // Name: GraphicTypes
 // Dependencies: [2]
 // Exports: isImage, isRive
 
-// Module 4422 (GraphicTypes)
+// Module 4424 (GraphicTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx");

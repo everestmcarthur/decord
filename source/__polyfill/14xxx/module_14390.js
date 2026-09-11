@@ -1,26 +1,23 @@
 // Module ID: 14390
 // Function ID: 14391
-// Dependencies: [14374, 14375, 14391]
+// Dependencies: []
 
 // Module 14390
-import _mod14374 from "module_14374" /* 14374 */;
-import _mod14375 from "module_14375" /* 14375 */;
-import _mod14391 from "module_14391" /* 14391 */;
-
-let prop = _mod14374["__core-js_shared__"];
-if (!prop) {
-  prop = _mod14375("__core-js_shared__", {});
+let propertyIsEnumerable = {}.propertyIsEnumerable;
+if (!getOwnPropertyDescriptor) {
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
+  }
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
 }
-let versions = prop.versions;
-if (!versions) {
-  const items = [];
-  prop.versions = items;
-  versions = items;
-}
-let str2 = "global";
-if (_mod14391) {
-  str2 = "pure";
-}
-versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
-
-export default prop;

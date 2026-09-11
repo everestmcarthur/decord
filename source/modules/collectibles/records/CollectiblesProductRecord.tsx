@@ -1,16 +1,16 @@
-// Module ID: 7596
-// Function ID: 7597
+// Module ID: 7618
+// Function ID: 7619
 // Name: CollectiblesProductRecord
-// Dependencies: [32, 7597, 7598, 7603, 1076, 1074, 5563, 1889, 2]
+// Dependencies: [32, 7619, 7620, 7625, 1076, 1074, 5565, 1889, 2]
 
-// Module 7596 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5563 */;
+// Module 7618 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5565 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7597 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7603 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7619 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7625 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7598);
+const CollectiblesItemRecord = fn(7620);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -177,7 +177,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "ti", items: "Array", categorySkuId: "isArray", isCategoryReward: "guild", prices: "join", previewAssets: "Array", googleSkuIds: "isArray", eligibleOffers: "userId", variants: "LengthDelimited", bundledProducts: "Array", isFirstParty: "isArray" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: null };
               let str;
               if (first != null) {
                 str = first.optionValue;

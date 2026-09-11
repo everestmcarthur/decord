@@ -1,86 +1,80 @@
 // Module ID: 6853
 // Function ID: 6854
-// Dependencies: [19, 38, 6681]
-// Exports: usePropsValidator
+// Dependencies: [41, 42, 93, 95, 98, 6748]
 
 // Module 6853
-import _mod19 from "module_19" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const useMemo = _mod19.useMemo;
-
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    if (snapPoints) {
-      value = obj;
-      if ("get" in obj) {
-        value = obj.get();
-      }
-      let items = value;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      items = [];
+      callResult = call(constructResult);
     }
-    let tmp5 = items;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+class LongPressGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, LongPressGesture);
+    tmp2 = c2;
+    obj = c2(LongPressGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
-    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
-      }
-      let tmp4 = parsed > 0;
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
-      }
-      snapPoints(enableDynamicSizing[1])(tmp4, "Snap point '" + item + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
-    });
-    let tmp9 = "value" in items;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
-    }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    _modDef38(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    const tmp2Result = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === tmp12;
-    }
-    _modDef38(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    const tmp2Result5 = _modDef38;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof tmp12 !== "number";
-    }
-    if (!tmp16) {
-      let tmp17 = tmp12 >= -1;
-      if (tmp17) {
-        tmp17 = tmp12 <= items.length - 1;
-      }
-      tmp16 = tmp17;
-    }
-    _modDef38(tmp16, `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`);
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result6 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result7 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-  }, items);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
+    return tmp3Result;
+  }
+}
+_classCallCheck = LongPressGesture;
+_inherits(LongPressGesture, fn(6748).BaseGesture);
+const entry = {
+  key: "minDuration",
+  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+    return this;
+  }
 };
+const items = [
+  entry,
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    }
+  },
+  {
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
+      return this;
+    }
+  }
+];
+
+export const LongPressGesture = _createClass(LongPressGesture, items);

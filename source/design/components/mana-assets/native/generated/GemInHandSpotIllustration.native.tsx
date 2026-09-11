@@ -1,13 +1,13 @@
-// Module ID: 6151
-// Function ID: 6152
+// Module ID: 6173
+// Function ID: 6174
 // Name: GemInHandSpotIllustration
-// Dependencies: [21, 5637, 6152, 2]
+// Dependencies: [21, 5639, 6174, 2]
 // Exports: GemInHandSpotIllustration
 
-// Module 6151 (GemInHandSpotIllustration)
+// Module 6173 (GemInHandSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6152 from "module_6152" /* 6152 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6174 from "module_6174" /* 6174 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GemInHandSpotIllustration = function GemInHandSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6152 };
+  const obj2 = { uri: _modDef6174 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

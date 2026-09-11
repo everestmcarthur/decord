@@ -1,16 +1,17 @@
 // Module ID: 10642
 // Function ID: 10643
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10631, 10505, 10633]
+// Dependencies: [41, 42, 93, 95, 98, 10638, 10530]
 
 // Module 10642
-import _mod10633 from "module_10633" /* 10633 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
+import _mod10638 from "module_10638" /* 10638 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RURelativeDateFormatParser = require;
+const ZHHantWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +31,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RURelativeDateFormatParser {
+const keys = Object.keys(_mod10638.WEEKDAY_OFFSET);
+const regExp = new RegExp("(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + keys.join("|") + ")");
+class ZHHantWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, RURelativeDateFormatParser);
+    tmp = c2(this, ZHHantWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(RURelativeDateFormatParser);
+    obj = closure_4(ZHHantWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,60 +53,54 @@ class RURelativeDateFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RURelativeDateFormatParser, _mod10633.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(ZHHantWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439|\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C|\u043D\u0430 \u044D\u0442\u043E\u0439|\u0432 \u044D\u0442\u043E\u043C)\\s*(" + RURelativeDateFormatParser(10502).matchAnyPattern(RURelativeDateFormatParser(10631).TIME_UNIT_DICTIONARY) + ")";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const str3 = RURelativeDateFormatParser(10631).TIME_UNIT_DICTIONARY[formatted1];
-      if ("\u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted) {
-        if ("\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C" != formatted) {
-          if ("\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u043C" != formatted) {
-            if ("\u043D\u0430 \u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted) {
-              const parsingComponents = createParsingComponents.createParsingComponents();
-              const _Date = Date;
-              const instant = createParsingComponents.reference.instant;
-              const date = new Date(instant.getTime());
-              if (str3.match(/week/i)) {
-                date.setDate(date.getDate() - date.getDay());
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.imply("year", date.getFullYear());
-                const date1 = date.getDate();
-              } else if (str3.match(/month/i)) {
-                date.setDate(1);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.assign("year", date.getFullYear());
-                parsingComponents.assign("month", date.getMonth() + 1);
-              } else if (str3.match(/year/i)) {
-                date.setDate(1);
-                date.setMonth(0);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.assign("year", date.getFullYear());
-              }
-              return parsingComponents;
-            }
-          }
-          const obj = {};
-          obj[str3] = -1;
-          const ParsingComponents = tmp3(10505).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp2 = ZHHantWeekdayParser(10638).WEEKDAY_OFFSET[index.groups.weekday];
+      if (undefined === tmp2) {
+        return null;
+      } else {
+        const _Date = Date;
+        const refDate = createParsingResult.refDate;
+        const date = new Date(refDate.getTime());
+        const diff = tmp2 - date.getDay();
+        const _Math3 = Math;
+        const _Math4 = Math;
+        const absolute = Math.abs(diff - 7);
+        let diff1 = diff;
+        if (absolute < Math.abs(diff)) {
+          diff1 = diff - 7;
         }
+        const _Math = Math;
+        const _Math2 = Math;
+        const absolute1 = Math.abs(diff1 + 7);
+        let sum = diff1;
+        if (absolute1 < Math.abs(diff1)) {
+          sum = diff1 + 7;
+        }
+        date.setDate(date.getDate() + sum);
+        const start = parsingResult.start;
+        start.assign("weekday", tmp2);
+        const start2 = parsingResult.start;
+        start2.imply("day", date.getDate());
+        const start3 = parsingResult.start;
+        start3.imply("month", date.getMonth() + 1);
+        const start4 = parsingResult.start;
+        start4.imply("year", date.getFullYear());
+        return parsingResult;
       }
-      const ParsingComponents2 = tmp3(10505).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
     }
   }
 ];
 
-export default _createClass(RURelativeDateFormatParser, items);
+export default _createClass(ZHHantWeekdayParser, items);

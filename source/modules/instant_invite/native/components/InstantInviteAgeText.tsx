@@ -1,21 +1,21 @@
-// Module ID: 9961
-// Function ID: 9962
+// Module ID: 9984
+// Function ID: 9985
 // Name: InstantInviteAgeText
-// Dependencies: [19, 17, 9891, 21, 4605, 7032, 504, 4601, 9892, 5173, 9890, 1114, 2]
+// Dependencies: [19, 17, 9914, 21, 4607, 7054, 504, 4603, 9915, 5175, 9913, 1114, 2]
 // Exports: default
 
-// Module 9961 (InstantInviteAgeText)
+// Module 9984 (InstantInviteAgeText)
 import initialize from "initialize" /* 504 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7032 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7054 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9913 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9891 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9914 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_6 = createStyles.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
@@ -41,9 +41,9 @@ export default function InstantInviteAgeText(style) {
       str2 = "experimental/body-md/normal";
     }
     const obj4 = { variant: str2, children: null };
-    const items2 = [tmp2(9892).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [tmp2(9915).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj4.children = items2;
-    const items3 = [closure_4(tmp2(4601).Text, obj4), ];
+    const items3 = [closure_4(tmp2(4603).Text, obj4), ];
     if (canEditInvite) {
       const obj5 = {
         onPress() {
@@ -66,13 +66,13 @@ export default function InstantInviteAgeText(style) {
       const obj6 = { variant: str, color: "text-link", children: null };
       const intl2 = tmp2(1114).intl;
       obj6.children = intl2.string(tmp2(1114).t["VNe8P/"]);
-      obj5.children = closure_5(tmp2(4601).Text, obj6);
-      canEditInvite = tmp9(tmp2(5173).PressableOpacity, obj5);
+      obj5.children = closure_5(tmp2(4603).Text, obj6);
+      canEditInvite = tmp9(tmp2(5175).PressableOpacity, obj5);
     }
     items3[1] = canEditInvite;
     obj3.children = items3;
     tmp7Result = tmp7(View, obj3);
-    const tmp2Result = tmp2(9892);
+    const tmp2Result = tmp2(9915);
   }
   return tmp7Result;
 };

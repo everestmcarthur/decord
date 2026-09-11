@@ -1,206 +1,104 @@
 // Module ID: 6725
 // Function ID: 6726
-// Dependencies: [41, 42, 93, 95, 98, 6726]
+// Dependencies: [6726, 1636, 6716]
+// Exports: useScrollHandler
 
 // Module 6725
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
 
-let ExclusiveGesture = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-class ComposedGesture {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, ExclusiveGesture);
-    tmp2 = closure_4;
-    obj = closure_4(ExclusiveGesture);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.gestures = [];
-    tmp3Result.simultaneousGestures = [];
-    tmp3Result.requireGesturesToFail = [];
-    tmp3Result.gestures = items;
-    return tmp3Result;
-  }
-}
-ExclusiveGesture = ComposedGesture;
-_inherits(ComposedGesture, fn(6726).Gesture);
-const entry = {
-  key: "prepareSingleGesture",
-  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
-    if (item10006 instanceof ExclusiveGesture(6726).BaseGesture) {
-      if (item10006.relationsSnapshot == null) {
-        const obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
-        item10006.relationsSnapshot = obj;
-      }
-      const obj2 = {};
-      const merged = Object.assign(item10006.config);
-      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
-      if (undefined === simultaneousWith) {
-        const items = [];
-        HermesBuiltin.arraySpread(simultaneousGestures, 0);
-        let items1 = items;
-      } else {
-        items1 = [];
-        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
-      }
-      obj2.simultaneousWith = items1;
-      const requireToFail = item10006.relationsSnapshot.requireToFail;
-      if (undefined === requireToFail) {
-        const items2 = [];
-        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
-        let items3 = items2;
-      } else {
-        items3 = [];
-        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
-      }
-      obj2.requireToFail = items3;
-      item10006.config = obj2;
-    } else if (item10006 instanceof ExclusiveGesture) {
-      item10006.simultaneousGestures = simultaneousGestures;
-      item10006.requireGesturesToFail = requireGesturesToFail;
-      item10006.prepare();
-    }
-  }
-};
-let items = [
-  entry,
-  {
-    key: "prepare",
-    value: function prepare() {
-      const self = this;
-      for (const item10006 of tmp) {
-        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
-        continue;
-      }
-    }
-  },
-  {
-    key: "initialize",
-    value: function initialize() {
-      for (const item10006 of tmp) {
-        let initializeResult = item10006.initialize();
-        continue;
-      }
-    }
-  },
-  {
-    key: "toGestureArray",
-    value: function toGestureArray() {
-      const gestures = this.gestures;
-      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
-    }
-  }
-];
-const importDefaultResultResult = _createClass(ComposedGesture, items);
-class SimultaneousGesture {
-  constructor() {
-    self = this;
-    tmp = c2(this, ExclusiveGesture);
-    tmp2 = closure_4;
-    obj = closure_4(ExclusiveGesture);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ExclusiveGesture = SimultaneousGesture;
-_inherits(SimultaneousGesture, importDefaultResultResult);
-const entry1 = {
-  key: "prepare",
-  value: function prepare() {
-    let length;
-    const self = this;
-    let num = 0;
-    if (0 < this.gestures.length) {
-      do {
-        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
-        num = num + 1;
-        length = self.gestures.length;
-      } while (num < length);
-    }
-  }
-};
-let items1 = [entry1];
-class ExclusiveGesture {
-  constructor() {
-    self = this;
-    tmp = c2(this, ExclusiveGesture);
-    tmp2 = closure_4;
-    obj = closure_4(ExclusiveGesture);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ExclusiveGesture, importDefaultResultResult);
-const entry2 = {
-  key: "prepare",
-  value: function prepare() {
-    let length;
-    const self = this;
-    let items = [];
-    let num = 0;
-    if (0 < this.gestures.length) {
-      do {
-        let requireGesturesToFail = self.requireGesturesToFail;
-        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
-        items = items.concat(tmp[num]);
-        num = num + 1;
-        length = self.gestures.length;
-      } while (num < length);
-    }
-  }
-};
-let items2 = [entry2];
+const require = globalThis.__r;
 
-export const ComposedGesture = importDefaultResultResult;
-export const SimultaneousGesture = _createClass(SimultaneousGesture, items1);
-export const ExclusiveGesture = _createClass(ExclusiveGesture, items2);
+require = arg1;
+let dependencyMap = arg6;
+let __initData = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };
+let closure_3 = { code: "function pnpm_useScrollHandlerTs2(event,context){const{handleOnBeginDrag,onScrollBeginDrag,runOnJS}=this.__closure;handleOnBeginDrag(event,context);if(onScrollBeginDrag){runOnJS(onScrollBeginDrag)({nativeEvent:event});}}" };
+let closure_4 = { code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}" };
+
+export const useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => {
+  let useScrollEventsHandlersDefault = arg0;
+  if (arg0 === undefined) {
+    useScrollEventsHandlersDefault = require("module_6726").useScrollEventsHandlersDefault;
+  }
+  _require = onScroll;
+  dependencyMap = onScrollBeginDrag;
+  __initData = onScrollEndDrag;
+  let workletNoop2;
+  let workletNoop3;
+  const animatedRef = require("cancelAnimation").useAnimatedRef();
+  let obj = require("cancelAnimation");
+  const sharedValue = require("cancelAnimation").useSharedValue(0);
+  const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(animatedRef, sharedValue, arg4);
+  let workletNoop = scrollEventsHandlersDefault.handleOnScroll;
+  if (undefined === workletNoop) {
+    workletNoop = tmp3(6716).workletNoop;
+  }
+  workletNoop2 = scrollEventsHandlersDefault.handleOnBeginDrag;
+  if (undefined === workletNoop2) {
+    workletNoop2 = tmp3(6716).workletNoop;
+  }
+  workletNoop3 = scrollEventsHandlersDefault.handleOnEndDrag;
+  if (undefined === workletNoop3) {
+    workletNoop3 = tmp3(6716).workletNoop;
+  }
+  let workletNoop4 = scrollEventsHandlersDefault.handleOnMomentumEnd;
+  if (undefined === workletNoop4) {
+    workletNoop4 = tmp3(6716).workletNoop;
+  }
+  let workletNoop5 = scrollEventsHandlersDefault.handleOnMomentumBegin;
+  if (undefined === workletNoop5) {
+    workletNoop5 = tmp3(6716).workletNoop;
+  }
+  const obj3 = { scrollHandler: null, scrollableRef: null, scrollableContentOffsetY: null };
+  let obj2 = require("cancelAnimation");
+  const obj4 = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumBegin: null, onMomentumEnd: null };
+  const fn = function v(nativeEvent, arg1) {
+    workletNoop(nativeEvent, arg1);
+    if (closure_0) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const tmp3Result = require("cancelAnimation");
+  fn.__closure = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn.__workletHash = 13105350120634;
+  fn.__initData = __initData;
+  obj4.onScroll = fn;
+  const fn2 = function _(nativeEvent, arg1) {
+    workletNoop2(nativeEvent, arg1);
+    if (closure_1) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const obj5 = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__closure = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__workletHash = 803385440782;
+  fn2.__initData = workletNoop;
+  obj4.onBeginDrag = fn2;
+  class O {
+    constructor(arg0, arg1) {
+      tmp = workletNoop(arg0, onScroll);
+      if (closure_2) {
+        tmp3 = closure_0;
+        tmp4 = closure_1;
+        obj = closure_0(closure_1[1]);
+        obj1 = { nativeEvent: null };
+        obj1.nativeEvent = arg0;
+        tmp5 = obj.runOnJS(tmp2)(obj1);
+      }
+      return;
+    }
+  }
+  const obj6 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__closure = { handleOnEndDrag: workletNoop3, onScrollEndDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__workletHash = 3274737678599;
+  O.__initData = workletNoop2;
+  obj4.onEndDrag = O;
+  obj4.onMomentumBegin = workletNoop5;
+  obj4.onMomentumEnd = workletNoop4;
+  const items = [workletNoop, workletNoop2, workletNoop3, workletNoop5, workletNoop4, onScroll, onScrollBeginDrag, onScrollEndDrag];
+  obj3.scrollHandler = tmp3Result.useAnimatedScrollHandler(obj4, items);
+  obj3.scrollableRef = animatedRef;
+  obj3.scrollableContentOffsetY = sharedValue;
+  return obj3;
+};

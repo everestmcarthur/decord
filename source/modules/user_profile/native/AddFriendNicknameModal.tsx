@@ -1,27 +1,27 @@
-// Module ID: 13192
-// Function ID: 13193
+// Module ID: 13217
+// Function ID: 13218
 // Name: AddFriendNicknameModal
-// Dependencies: [5, 32, 19, 17, 4253, 1371, 21, 4605, 576, 10999, 504, 1114, 4808, 9111, 5628, 5044, 4601, 6663, 4449, 2]
+// Dependencies: [5, 32, 19, 17, 4255, 1371, 21, 4607, 576, 11021, 504, 1114, 4810, 9134, 5630, 5046, 4603, 6685, 4451, 2]
 // Exports: default
 
-// Module 13192 (AddFriendNicknameModal)
+// Module 13217 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import TextField from "TextField" /* 6663 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import TextField from "TextField" /* 6685 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, description: { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -131,7 +131,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(10999)();
+  _slicedToArray = showUserProfile(11021)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   const items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));
@@ -163,7 +163,7 @@ export default function AddFriendNicknameModal(arg0) {
   const obj4 = { children: null };
   const tmp5Result = initialize;
   let obj5 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = showUserProfile(5628);
+  const tmp3Result = showUserProfile(5630);
   const intl3 = tmp5(1114).intl;
   obj5.confirmText = intl3.string(util.t["R3BPH+"]);
   obj5.onConfirm = function handleSubmit() {
@@ -188,8 +188,8 @@ export default function AddFriendNicknameModal(arg0) {
   const intl6 = tmp5(1114).intl;
   obj8.accessibilityLabel = intl6.string(util.t.pqG6GS);
   let obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp3Result3 = showUserProfile(5044);
-  obj8.placeholder = showUserProfile(4449).getName(stateFromStores1);
+  const tmp3Result3 = showUserProfile(5046);
+  obj8.placeholder = showUserProfile(4451).getName(stateFromStores1);
   obj8.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj8);
   obj5.children = items3;

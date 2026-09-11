@@ -1,16 +1,16 @@
-// Module ID: 13041
-// Function ID: 13042
+// Module ID: 13066
+// Function ID: 13067
 // Name: MediaModalOverlayFooter
-// Dependencies: [32, 19, 17, 21, 4605, 576, 4341, 11608, 4606, 1178, 13042, 6705, 4342, 7175, 7206, 13043, 13033, 2]
+// Dependencies: [32, 19, 17, 21, 4607, 576, 4343, 11632, 4608, 1178, 13067, 6727, 4344, 7197, 7228, 13068, 13058, 2]
 // Exports: MediaModalOverlayFooter
 
-// Module 13041 (MediaModalOverlayFooter)
+// Module 13066 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11608 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11632 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +18,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "Array" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(4607);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "w" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {

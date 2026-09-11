@@ -1,10 +1,10 @@
-// Module ID: 4646
-// Function ID: 4647
+// Module ID: 4648
+// Function ID: 4649
 // Name: hasRichActivity
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 4646 (hasRichActivity)
+// Module 4648 (hasRichActivity)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

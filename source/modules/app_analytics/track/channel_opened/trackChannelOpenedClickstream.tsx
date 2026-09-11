@@ -1,11 +1,11 @@
-// Module ID: 7826
-// Function ID: 7827
+// Module ID: 7848
+// Function ID: 7849
 // Name: trackChannelOpenedClickstream
-// Dependencies: [1957, 1074, 1964, 7517, 2]
+// Dependencies: [1957, 1074, 1964, 7539, 2]
 // Exports: default
 
-// Module 7826 (trackChannelOpenedClickstream)
-import Clickstream from "Clickstream" /* 7517 */;
+// Module 7848 (trackChannelOpenedClickstream)
+import Clickstream from "Clickstream" /* 7539 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

@@ -1,15 +1,15 @@
-// Module ID: 17078
-// Function ID: 17079
+// Module ID: 17068
+// Function ID: 17069
 // Name: shared/renderChannelBadge
-// Dependencies: [19, 21, 1178, 12366, 4601, 1114, 1880, 2]
+// Dependencies: [19, 21, 1178, 12391, 4603, 1114, 1880, 2]
 // Exports: default
 
-// Module 17078 (shared/renderChannelBadge)
+// Module 17068 (shared/renderChannelBadge)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import NewBadgeDefault from "NewBadge" /* 12366 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import NewBadgeDefault from "NewBadge" /* 12391 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

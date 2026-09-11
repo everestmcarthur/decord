@@ -1,16 +1,16 @@
-// Module ID: 11071
-// Function ID: 11072
+// Module ID: 11096
+// Function ID: 11097
 // Name: GuildIconWithChannelType
-// Dependencies: [19, 17, 21, 5634, 4605, 576, 5078, 11072, 8884, 1178, 2]
+// Dependencies: [19, 17, 21, 5636, 4607, 576, 5080, 11097, 8907, 1178, 2]
 // Exports: GuildIconWithChannelType
 
-// Module 11071 (GuildIconWithChannelType)
+// Module 11096 (GuildIconWithChannelType)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5078 */;
-import GuildIcon from "GuildIcon" /* 5634 */;
-import ClipView from "ClipView" /* 8884 */;
-import Pile from "Pile" /* 11072 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5080 */;
+import GuildIcon from "GuildIcon" /* 5636 */;
+import ClipView from "ClipView" /* 8907 */;
+import Pile from "Pile" /* 11097 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -21,10 +21,10 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { SMALL_32: "SMALL_32" };
 let obj2 = {};
-obj2[obj.SMALL_32] = { pileSize: 32, guildIconSize: fn(5634).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
-const createStyles = fn(4605);
+obj2[obj.SMALL_32] = { pileSize: 32, guildIconSize: fn(5636).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
+const createStyles = fn(4607);
 let obj5 = { typeIconWrapper: null };
-let obj3 = { pileSize: 32, guildIconSize: fn(5634).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
+let obj3 = { pileSize: 32, guildIconSize: fn(5636).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
 obj5.typeIconWrapper = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, width: 20 };
 let closure_8 = createStyles.createStyles(obj5);
 let size = fn(2);

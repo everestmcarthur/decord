@@ -1,15 +1,15 @@
-// Module ID: 8944
-// Function ID: 8945
+// Module ID: 8967
+// Function ID: 8968
 // Name: GameProfileSimilarGames
-// Dependencies: [19, 17, 21, 576, 4605, 8746, 8756, 8750, 1114, 4601, 8945, 1477, 8943, 8790, 2]
+// Dependencies: [19, 17, 21, 576, 4607, 8769, 8779, 8773, 1114, 4603, 8968, 1477, 8966, 8813, 2]
 // Exports: default
 
-// Module 8944 (GameProfileSimilarGames)
+// Module 8967 (GameProfileSimilarGames)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8750 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 8945 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8773 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8779 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 8968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -95,7 +95,7 @@ const jsxProd = fn(21);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
 const data = Array.from({ length: 3 }, (arg0, arg1) => arg1);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 }, header: null, card: null, coverArt: null, coverArtFallback: null, loadingArt: null };
 let obj3 = { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 };
 obj2.header = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -123,11 +123,11 @@ export default function GameProfileSimilarGames(trackAction) {
     const obj3 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = trackAction(1114).intl;
     obj3.children = intl.string(trackAction(1114).t["6rLyQB"]);
-    obj2.children = closure_7(trackAction(4601).Text, obj3);
+    obj2.children = closure_7(trackAction(4603).Text, obj3);
     const items = [closure_7(closure_6, obj2), ];
     const obj4 = {
       horizontal: true,
-      renderScrollComponent: tmp2(8790),
+      renderScrollComponent: tmp2(8813),
       data,
       renderItem() {
           return React5(LoadingCard, { cardWidth });
@@ -137,7 +137,7 @@ export default function GameProfileSimilarGames(trackAction) {
       ListHeaderComponent: ListPadding,
       ListFooterComponent: ListPadding
     };
-    items[1] = closure_7(trackAction(8943).FlashList, obj4);
+    items[1] = closure_7(trackAction(8966).FlashList, obj4);
     obj.children = items;
     let tmp7 = closure_8(closure_6, obj);
   } else {
@@ -148,11 +148,11 @@ export default function GameProfileSimilarGames(trackAction) {
       const obj7 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = trackAction(1114).intl;
       obj7.children = intl2.string(trackAction(1114).t["6rLyQB"]);
-      obj6.children = closure_7(trackAction(4601).Text, obj7);
+      obj6.children = closure_7(trackAction(4603).Text, obj7);
       const items1 = [closure_7(closure_6, obj6), ];
       const obj8 = {
         horizontal: true,
-        renderScrollComponent: tmp2(8790),
+        renderScrollComponent: tmp2(8813),
         data: similarGames,
         renderItem(game) {
               return React5(SimilarGameCard, { game: game.item, trackAction, cardWidth });
@@ -164,7 +164,7 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       };
-      items1[1] = closure_7(trackAction(8943).FlashList, obj8);
+      items1[1] = closure_7(trackAction(8966).FlashList, obj8);
       obj5.children = items1;
       tmp7 = closure_8(closure_6, obj5);
     }

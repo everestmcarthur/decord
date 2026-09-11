@@ -1,23 +1,23 @@
-// Module ID: 15777
-// Function ID: 15778
+// Module ID: 15762
+// Function ID: 15763
 // Name: BalanceWidgetMenu
-// Dependencies: [19, 17, 1074, 1076, 1954, 5494, 21, 5173, 4601, 1114, 10695, 1943, 1242, 11838, 5497, 15778, 8919, 4572, 11173, 1896, 7234, 7593, 11172, 4425, 5041, 4605, 576, 2]
+// Dependencies: [19, 17, 1074, 1076, 1954, 5496, 21, 5175, 4603, 1114, 10716, 1943, 1242, 11862, 5499, 15763, 8942, 4574, 11198, 1896, 7256, 7615, 11197, 4427, 5043, 4607, 576, 2]
 // Exports: default
 
-// Module 15777 (BalanceWidgetMenu)
+// Module 15762 (BalanceWidgetMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Pressables from "Pressables" /* 5173 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
-import _mod8919 from "module_8919" /* 8919 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10695 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11172 */;
-import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15778 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import Pressables from "Pressables" /* 5175 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
+import _mod8942 from "module_8942" /* 8942 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10716 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11197 */;
+import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,8 +49,8 @@ class OrbsOnboardingMenuDismissibleContent {
         function handleOnboardingPress() {
           markAsDismissed(constants2.TAKE_ACTION);
           AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
-          const obj2 = style(11838);
-          obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: style(5497).QuestContent.MOBILE_ORBS_ONBOARDING_DC });
+          const obj2 = style(11862);
+          obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: style(5499).QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         }
         let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
         const intl = tmp(1114).intl;
@@ -67,7 +67,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  str = str(8919).useFetchVirtualCurrencyBalance().balance;
+  str = str(8942).useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -85,7 +85,7 @@ function BalanceWidgetMenu(style) {
       obj5.analyticsLocations = items;
       obj5.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
       obj5.screen = constants2.ORBS;
-      const result = str(7593).openCollectiblesShopMobile(obj5);
+      const result = str(7615).openCollectiblesShopMobile(obj5);
     };
     obj3.primaryButtonConfig = obj4;
     let obj5 = { buttonText: null, onButtonPress: null };
@@ -96,8 +96,8 @@ function BalanceWidgetMenu(style) {
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance });
       const obj2 = { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      const obj4 = str(11838);
-      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: str(5497).QuestContent.ORBS_BALANCE_MENU });
+      const obj4 = str(11862);
+      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: str(5499).QuestContent.ORBS_BALANCE_MENU });
     };
     obj3.secondaryButtonConfig = obj5;
     obj3.source = AnalyticsLocationDefault.YOU_SCREEN;
@@ -121,10 +121,10 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const DismissibleContentConstants = fn(1954);
 ({ ContentDismissActionType: closure_7, DismissibleContentGroupName: closure_8 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(5494).RewardFilterTypes;
+const RewardFilterTypes = fn(5496).RewardFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_15 = createStyles.createStyles(() => {
   const obj = { pressable: { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md }, label: { flex: 1 }, pill: { alignItems: "center" }, loadingContainer: { height: 36, justifyContent: "center" } };
   return obj;
@@ -134,7 +134,7 @@ let result = size.fileFinishedImporting("modules/virtual_currency/native/Balance
 
 export default function BalanceWidgetMenuWrapper(style) {
   const tmp = closure_15();
-  const balance = _mod8919.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod8942.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {
     const obj2 = {
@@ -149,7 +149,7 @@ export default function BalanceWidgetMenuWrapper(style) {
     const intl = tmp2(1114).intl;
     obj2.accessibilityLabel = intl.string(tmp2(1114).t.cKwv4k);
     obj2.accessibilityState = { busy: true };
-    const obj3 = { style: tmp.loadingContainer, children: closure_1_10(tmp2(5041).Ellipsis, { variant: "primary", size: "sm" }) };
+    const obj3 = { style: tmp.loadingContainer, children: closure_1_10(tmp2(5043).Ellipsis, { variant: "primary", size: "sm" }) };
     obj2.children = closure_1_10(View, obj3);
     let tmp6Result = closure_1_10(BalanceWidget, obj2);
   } else {

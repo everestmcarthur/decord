@@ -1,10 +1,10 @@
-// Module ID: 13745
-// Function ID: 13746
+// Module ID: 13726
+// Function ID: 13727
 // Name: PrivateChannelHidingExperimentCache
 // Dependencies: [510, 2]
 // Exports: getCachedPrivateChannelObfuscation
 
-// Module 13745 (PrivateChannelHidingExperimentCache)
+// Module 13726 (PrivateChannelHidingExperimentCache)
 import Storage2 from "Storage" /* 510 */;
 import size from "module_2" /* 2 */;
 

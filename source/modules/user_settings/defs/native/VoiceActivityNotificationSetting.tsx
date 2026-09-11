@@ -1,16 +1,16 @@
-// Module ID: 15582
-// Function ID: 15583
+// Module ID: 15565
+// Function ID: 15566
 // Name: VoiceActivityNotificationSetting
-// Dependencies: [8027, 1074, 4256, 11540, 1114, 1935, 1242, 2]
+// Dependencies: [8050, 1074, 4258, 11564, 1114, 1935, 1242, 2]
 
-// Module 15582 (VoiceActivityNotificationSetting)
+// Module 15565 (VoiceActivityNotificationSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import NotificationConstants from "NotificationConstants" /* 4256 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import NotificationConstants from "NotificationConstants" /* 4258 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

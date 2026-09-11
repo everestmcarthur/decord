@@ -1,14 +1,14 @@
-// Module ID: 7925
-// Function ID: 7926
+// Module ID: 7948
+// Function ID: 7949
 // Name: useActiveTheme
-// Dependencies: [1185, 4424, 1228, 1186, 504, 4461, 2]
+// Dependencies: [1185, 4426, 1228, 1186, 504, 4463, 2]
 // Exports: useIsClientThemeOrCustomThemeActive, useIsCustomThemeActive
 
-// Module 7925 (useActiveTheme)
+// Module 7948 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4461 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4463 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4424 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4426 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 
 require = fn;

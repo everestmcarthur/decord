@@ -1,76 +1,73 @@
 // Module ID: 6895
 // Function ID: 6896
-// Dependencies: [19, 17, 21, 1636, 6689, 6682, 6678, 6705]
+// Dependencies: [19, 21, 6704, 1636, 6700, 6896]
 
 // Module 6895
-import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 6678 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import value22 from "value2" /* 6700 */;
+import _mod6896 from "module_6896" /* 6896 */;
 import noop_mod from "module_19" /* 19 */;
-import cancelAnimation from "cancelAnimation" /* 1636 */;
 
 let noop = noop_mod;
-({ useContext: c2, useMemo: c3, memo } = noop);
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
 let noop = noop_mod;
 const jsx = jsxProd.jsx;
-let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
-const __initData = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
-const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
-  ({ onRefresh, scrollableGesture } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
-  let iter;
-  const tmp4 = iter(scrollableGesture(6689).BottomSheetDraggableContext);
-  dependencyMap = tmp4;
-  const bottomSheetInternal = scrollableGesture(6682).useBottomSheetInternal();
-  iter = bottomSheetInternal.animatedScrollableState;
-  if (!tmp4) {
-    if (bottomSheetInternal.enableContentPanningGesture) {
-      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
-    }
+const __initData = { code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}" };
+const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
+  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
+  let num = animatedFooterPosition.bottomInset;
+  if (num === undefined) {
+    num = 0;
   }
-  const obj = scrollableGesture(6682);
-  const fn = function f() {
-    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
+  const style = animatedFooterPosition.style;
+  const children = animatedFooterPosition.children;
+  let animatedStyle;
+  const tmp = animatedStyle(null);
+  const bottomSheetInternal = animatedFooterPosition(style[2]).useBottomSheetInternal();
+  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  let obj = animatedFooterPosition(style[2]);
+  const tmp2 = style;
+  const fn = function c() {
+    value = animatedFooterPosition.get();
+    value2 = animatedKeyboardState.get();
+    let diff = value;
+    if (value2 !== value22.KEYBOARD_STATE.SHOWN) {
+      diff = value - num;
+    }
+    const obj = { transform: null };
+    const items = [{ translateY: Math.max(0, diff) }];
+    obj.transform = items;
+    return obj;
   };
-  const tmp2Result = scrollableGesture(1636);
-  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6678).SCROLLABLE_STATE };
-  fn.__workletHash = 8403038560398;
+  const obj2 = animatedFooterPosition(style[3]);
+  fn.__closure = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
+  fn.__workletHash = 5322275157644;
   fn.__initData = __initData;
-  let items = [iter.value];
-  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
-  const items1 = [tmp4, scrollableGesture];
-  const tmp7 = closure_3(() => {
-    let result;
-    if (closure_1) {
-      const Gesture = LegacyBaseButton.Gesture;
-      const NativeResult = Gesture.Native();
-      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
-      const items = [];
-      HermesBuiltin.arraySpread(scrollableGesture.toGestureArray(), HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0));
-      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
-      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
-      const applyResult = HermesBuiltin.apply(items, NativeResult);
-    }
-    return result;
+  let items = [num, animatedKeyboardState, animatedFooterPosition];
+  animatedStyle = obj2.useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const items2 = [animatedFooterHeight];
+  const obj3 = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
+  const items3 = [animatedFooterHeight];
+  const tmp5 = animatedKeyboardState(() => {
+    const items = [_mod6896.styles.container, style, animatedStyle];
+    return items;
   }, items1);
-  if (tmp7) {
-    const obj3 = { gesture: tmp7, children: null };
-    const obj4 = {};
-    const merged1 = Object.assign(merged);
-    obj4.onRefresh = onRefresh;
-    obj4.animatedProps = animatedProps;
-    obj3.children = tmp8(closure_5, obj4);
-    let tmp8Result = tmp8(tmp2(6705).GestureDetector, obj3);
-  } else {
-    const obj5 = {};
-    const merged2 = Object.assign(merged);
-    obj5.onRefresh = onRefresh;
-    obj5.animatedProps = animatedProps;
-    tmp8Result = tmp8(closure_5, obj5);
+  const tmp6 = animatedFooterHeight((nativeEvent) => {
+    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
+  }, items2);
+  const tmp7 = animatedFooterHeight((height) => {
+    const result = animatedFooterHeight.set(height.height);
+  }, items3);
+  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
+  let tmp9 = null;
+  if (null !== children) {
+    const obj5 = { ref: tmp, onLayout: tmp6, style: tmp5, children };
+    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
   }
-  return tmp8Result;
+  return tmp9;
 });
-memoResult.displayName = "BottomSheetRefreshControl";
+memoResult.displayName = "BottomSheetFooter";
 
-export default memoResult;
+export const BottomSheetFooter = memoResult;

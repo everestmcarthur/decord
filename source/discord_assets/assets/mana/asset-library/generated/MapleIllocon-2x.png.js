@@ -1,8 +1,8 @@
-// Module ID: 6286
-// Function ID: 6287
+// Module ID: 6308
+// Function ID: 6309
 // Dependencies: [2]
 
-// Module 6286
+// Module 6308
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MapleIllocon-2x.png.js");

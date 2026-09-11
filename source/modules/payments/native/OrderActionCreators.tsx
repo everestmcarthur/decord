@@ -1,10 +1,10 @@
-// Module ID: 7481
-// Function ID: 7482
+// Module ID: 7503
+// Function ID: 7504
 // Name: payments/OrderActionCreators
-// Dependencies: [5, 4587, 1074, 3, 1272, 4277, 573, 7295, 2]
+// Dependencies: [5, 4589, 1074, 3, 1272, 4279, 573, 7317, 2]
 // Exports: cancelSigningAndDiscardOrder, getOrCreateOrder, markOrderAsSigningInProgress, patchOrder, patchOrderLineItem, updateOrder
 
-// Module 7481 (payments/OrderActionCreators)
+// Module 7503 (payments/OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -1328,7 +1328,7 @@ let closure_22 = async function _cancelOrderSigning(arg0, value) {
     }
   }
 };
-const OrderStatus = fn(4587).OrderStatus;
+const OrderStatus = fn(4589).OrderStatus;
 const Endpoints = fn(1074).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

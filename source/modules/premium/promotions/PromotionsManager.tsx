@@ -1,17 +1,17 @@
-// Module ID: 17562
-// Function ID: 17563
+// Module ID: 17554
+// Function ID: 17555
 // Name: PromotionsManager
-// Dependencies: [5, 2025, 1371, 4268, 10735, 1373, 1074, 1085, 7170, 13429, 4262, 13543, 2]
+// Dependencies: [5, 2025, 1371, 4270, 10756, 1373, 1074, 1085, 7192, 13474, 4264, 13517, 2]
 
-// Module 17562 (PromotionsManager)
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13429 */;
+// Module 17554 (PromotionsManager)
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13474 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4268 */;
-import PromotionsStore from "PromotionsStore" /* 10735 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import SubscriptionStore from "SubscriptionStore" /* 4270 */;
+import PromotionsStore from "PromotionsStore" /* 10756 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;

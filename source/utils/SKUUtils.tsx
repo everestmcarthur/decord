@@ -1,15 +1,15 @@
-// Module ID: 8785
-// Function ID: 8786
+// Module ID: 8808
+// Function ID: 8809
 // Name: SKUUtils
-// Dependencies: [32, 1074, 4431, 1114, 4847, 1115, 4196, 2]
+// Dependencies: [32, 1074, 4433, 1114, 4849, 1115, 4198, 2]
 // Exports: canUserInstall, getGenreIdFromURLSlug, getGenreText, getGenreURLSlugFromId, getReadablePreorderReleaseDate, getSKUIdFromURL, isThirdPartySKU
 
-// Module 8785 (SKUUtils)
+// Module 8808 (SKUUtils)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import matchPathCompat from "matchPathCompat" /* 4431 */;
-import StoreUtils from "StoreUtils" /* 4847 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import matchPathCompat from "matchPathCompat" /* 4433 */;
+import StoreUtils from "StoreUtils" /* 4849 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -282,7 +282,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef4196(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef4198(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

@@ -1,29 +1,29 @@
-// Module ID: 12711
-// Function ID: 12712
+// Module ID: 12736
+// Function ID: 12737
 // Name: ChatPlaceholderRow
-// Dependencies: [19, 17, 21, 1178, 4605, 576, 12710, 12407, 2]
+// Dependencies: [19, 17, 21, 1178, 4607, 576, 12735, 12432, 2]
 
-// Module 12711 (ChatPlaceholderRow)
+// Module 12736 (ChatPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12407 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12432 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const tmp3 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL];
-const createStyles = fn(4605);
-let obj = { row: { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12710).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" }, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-let obj3 = { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12710).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
+const createStyles = fn(4607);
+let obj = { row: { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12735).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" }, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
+let obj3 = { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12735).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
 obj.rowInner = { marginHorizontal: nativeDefault.space.PX_12, flex: 1 };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: nativeDefault.radii.round };
 obj.placeholderAvatar = size;
 const obj4 = { marginHorizontal: nativeDefault.space.PX_12, flex: 1 };
-obj.placeholderText = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12710).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
-let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12710).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
-obj.placeholderBody = { marginTop: fn(12710).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+obj.placeholderText = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12735).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12735).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
+obj.placeholderBody = { marginTop: fn(12735).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 let closure_5 = createStyles.createStyles(obj);
-let obj6 = { marginTop: fn(12710).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+let obj6 = { marginTop: fn(12735).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
 

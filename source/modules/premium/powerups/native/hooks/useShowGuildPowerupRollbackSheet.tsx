@@ -1,11 +1,11 @@
-// Module ID: 12581
-// Function ID: 12582
+// Module ID: 12606
+// Function ID: 12607
 // Name: useShowGuildPowerupRollbackSheet
-// Dependencies: [32, 19, 1954, 12582, 7440, 12584, 4572, 2]
+// Dependencies: [32, 19, 1954, 12607, 7462, 12609, 4574, 2]
 // Exports: default
 
-// Module 12581 (useShowGuildPowerupRollbackSheet)
-import openGuildPowerupRollbackSheetDefault from "openGuildPowerupRollbackSheet" /* 12584 */;
+// Module 12606 (useShowGuildPowerupRollbackSheet)
+import openGuildPowerupRollbackSheetDefault from "openGuildPowerupRollbackSheet" /* 12609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let first;
   dependencyMap = undefined;
   _slicedToArray = undefined;
-  ({ shouldShow, modalConfig } = first(12582)(arg0, arg1));
+  ({ shouldShow, modalConfig } = first(12607)(arg0, arg1));
   if (shouldShow) {
     shouldShow = null != modalConfig;
   }
@@ -34,8 +34,8 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   if (shouldShow) {
     items.push(modalConfig.dismissibleContent);
   }
-  const tmp2 = first(12582)(arg0, arg1);
-  const tmp5 = _slicedToArray(modalConfig(7440).useSelectedDismissibleContent(items), 2);
+  const tmp2 = first(12607)(arg0, arg1);
+  const tmp5 = _slicedToArray(modalConfig(7462).useSelectedDismissibleContent(items), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   _slicedToArray = noop.useRef(false);
@@ -59,7 +59,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       obj.ctaText = modalConfig.primaryButtonText;
       obj.onCtaPress = function onCtaPress() {
         dependencyMap(constants.TAKE_ACTION);
-        first(4572).hideActionSheet(modalConfig(12584).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+        first(4574).hideActionSheet(modalConfig(12609).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
       };
       obj.onDismiss = function onDismiss() {
         dependencyMap(constants.USER_DISMISS);

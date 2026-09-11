@@ -1,137 +1,116 @@
 // Module ID: 10549
 // Function ID: 10550
-// Dependencies: [41, 42, 10507]
+// Dependencies: [41, 42, 93, 95, 98, 10523, 10522, 10528, 10550, 10530]
 
 // Module 10549
+import _mod10522 from "module_10522" /* 10522 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const DESpecificTimeExpressionParser = require;
-const regExp = new RegExp("(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)", "i");
-const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)", "i");
-class DESpecificTimeExpressionParser {
-  constructor() {
-    tmp = c2(this, DESpecificTimeExpressionParser);
-    return;
+const ENWeekdayParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10522.WEEKDAY_DICTIONARY) + "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)", "i");
+class ENWeekdayParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern(arg0) {
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingResult, index) {
-      const sum = index.index + index[1].length;
-      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
-      if (str2.match(/^\d{4}$/)) {
-        index.index = index.index + index[0].length;
-        return null;
-      } else {
-        const start = parsingResult.start;
-        parsingResult.start = DESpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
-        if (parsingResult.start) {
-          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
-          if (match) {
-            const start2 = parsingResult.start;
-            parsingResult.end = obj.extractTimeComponent(start2.clone(), match);
-            if (parsingResult.end) {
-              parsingResult.text = parsingResult.text + match[0];
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      let str2 = "last";
+      if ("last" != formatted) {
+        str2 = "last";
+        if ("past" != formatted) {
+          str2 = "next";
+          if ("next" != formatted) {
+            str2 = null;
+            if ("this" == formatted) {
+              str2 = "this";
             }
           }
-          return parsingResult;
-        } else {
-          index.index = index.index + index[0].length;
-          return null;
         }
-        obj = DESpecificTimeExpressionParser;
       }
-      str2 = parsingResult.text;
+      const formatted1 = arg1[2].toLowerCase();
+      if (undefined !== ENWeekdayParser(10522).WEEKDAY_DICTIONARY[formatted1]) {
+        let sum = tmp3(10522).WEEKDAY_DICTIONARY[formatted1];
+      } else if ("weekend" == formatted1) {
+        if ("last" == str2) {
+          let SATURDAY = tmp3(10528).Weekday.SUNDAY;
+        } else {
+          SATURDAY = tmp3(10528).Weekday.SATURDAY;
+        }
+        sum = SATURDAY;
+      } else if ("weekday" != formatted1) {
+        return null;
+      } else {
+        reference = reference.reference;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        const day = dateWithAdjustedTimezone.getDay();
+        if (day != tmp3(10528).Weekday.SUNDAY) {
+          if (day != tmp3(10528).Weekday.SATURDAY) {
+            const diff = day - 1;
+            sum = ("last" == str2 ? diff - 1 : diff + 1) % 5 + 1;
+          }
+        }
+        if ("last" == str2) {
+          let MONDAY = tmp3(10528).Weekday.FRIDAY;
+        } else {
+          MONDAY = tmp3(10528).Weekday.MONDAY;
+        }
+        sum = MONDAY;
+      }
+      return ENWeekdayParser(10550).createParsingComponentsAtWeekday(reference.reference, sum, str2);
     }
   }
 ];
-const entry1 = {
-  key: "extractTimeComponent",
-  value: function extractTimeComponent(assign, arg1) {
-    const parsed = parseInt(arg1[2]);
-    let num = 0;
-    if (null != arg1[3]) {
-      const _parseInt = parseInt;
-      num = parseInt(arg1[3]);
-    }
-    if (num < 60) {
-      if (parsed <= 24) {
-        let PM1 = null;
-        if (parsed >= 12) {
-          PM1 = DESpecificTimeExpressionParser(10507).Meridiem.PM;
-        }
-        let tmp5 = PM1;
-        let tmp6 = parsed;
-        if (null != arg1[5]) {
-          if (parsed > 12) {
-            return null;
-          } else {
-            const str8 = arg1[5].toLowerCase();
-            let tmp9 = parsed;
-            if (str8.match(/morgen|vormittag/)) {
-              let num2 = parsed;
-              if (12 == parsed) {
-                num2 = 0;
-              }
-              tmp9 = num2;
-              PM1 = DESpecificTimeExpressionParser(10507).Meridiem.AM;
-            }
-            let tmp10 = tmp9;
-            if (str8.match(/nachmittag|abend/)) {
-              let sum = tmp9;
-              if (12 != tmp9) {
-                sum = tmp9 + 12;
-              }
-              tmp10 = sum;
-              PM1 = DESpecificTimeExpressionParser(10507).Meridiem.PM;
-            }
-            tmp5 = PM1;
-            tmp6 = tmp10;
-            if (str8.match(/nacht/)) {
-              if (12 == tmp10) {
-                let PM = DESpecificTimeExpressionParser(10507).Meridiem.AM;
-              } else if (tmp10 < 6) {
-                PM = DESpecificTimeExpressionParser(10507).Meridiem.AM;
-              } else {
-                PM = DESpecificTimeExpressionParser(10507).Meridiem.PM;
-                const num4 = tmp10 + 12;
-              }
-            }
-          }
-        }
-        assign.assign("hour", tmp6);
-        assign.assign("minute", num);
-        if (null !== tmp5) {
-          assign.assign("meridiem", tmp5);
-        } else if (tmp6 < 12) {
-          assign.imply("meridiem", DESpecificTimeExpressionParser(10507).Meridiem.AM);
-        } else {
-          assign.imply("meridiem", DESpecificTimeExpressionParser(10507).Meridiem.PM);
-        }
-        if (null != arg1[4]) {
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(arg1[4]);
-          if (parsed1 >= 60) {
-            return null;
-          } else {
-            assign.assign("second", parsed1);
-          }
-        }
-        return assign;
-      }
-    }
-    return null;
-  }
-};
-const items1 = [entry1];
 
-export default _createClass(DESpecificTimeExpressionParser, items, items1);
+export default _createClass(ENWeekdayParser, items);

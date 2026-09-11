@@ -1,14 +1,14 @@
-// Module ID: 8291
-// Function ID: 8292
+// Module ID: 8314
+// Function ID: 8315
 // Name: useProfileThemeOverrideStore
-// Dependencies: [1074, 560, 4540, 8292, 4456, 2]
+// Dependencies: [1074, 560, 4542, 8315, 4458, 2]
 // Exports: useEffectiveThemeOverride, useHasNonNitroThemeOverride, useIsBannerDisabledByOverride
 
-// Module 8291 (useProfileThemeOverrideStore)
+// Module 8314 (useProfileThemeOverrideStore)
 import Constants from "Constants" /* 1074 */;
-import shared from "shared" /* 4456 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8292 */;
+import shared from "shared" /* 4458 */;
+import useThemeDefault from "useTheme" /* 4542 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8315 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -75,19 +75,19 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       tmp4 = null;
       tmp5 = null;
     }
-    if (themeType !== ThemeTypes.DARK) {
-      let isThemeLightResult = themeType === tmp11.DARK;
+    if (themeType !== ThemeTypes.ASH) {
+      let isThemeLightResult = themeType === tmp11.ASH;
       if (isThemeLightResult) {
         isThemeLightResult = shared.isThemeLight(tmp3);
       }
-      let DARKER = themeType;
+      let DARK = themeType;
       if (isThemeLightResult) {
-        DARKER = tmp11.DARKER;
+        DARK = tmp11.DARK;
       }
     } else {
-      DARKER = tmp3;
+      DARK = tmp3;
     }
-    const obj4 = { theme: DARKER, primaryColor: tmp5, secondaryColor: tmp4 };
+    const obj4 = { theme: DARK, primaryColor: tmp5, secondaryColor: tmp4 };
     return obj4;
   }
 };

@@ -1,21 +1,21 @@
-// Module ID: 17439
-// Function ID: 17440
+// Module ID: 17430
+// Function ID: 17431
 // Name: EntityVersionsManager
-// Dependencies: [5509, 5552, 1957, 2015, 1979, 5327, 3, 7170, 573, 504, 7702, 1241, 11, 2]
+// Dependencies: [5511, 5554, 1957, 2015, 1979, 5329, 3, 7192, 573, 504, 7724, 1241, 11, 2]
 
-// Module 17439 (EntityVersionsManager)
+// Module 17430 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7702 */;
-import EmojiStore from "EmojiStore" /* 5509 */;
-import StickersStore from "StickersStore" /* 5552 */;
+import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7724 */;
+import EmojiStore from "EmojiStore" /* 5511 */;
+import StickersStore from "StickersStore" /* 5554 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5329 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;

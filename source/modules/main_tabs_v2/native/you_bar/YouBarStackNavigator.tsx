@@ -1,13 +1,13 @@
-// Module ID: 16094
-// Function ID: 16095
+// Module ID: 16083
+// Function ID: 16084
 // Name: YouBarStackNavigator
-// Dependencies: [19, 17, 2011, 4426, 11156, 21, 7965, 16095, 16484, 16532, 504, 16606, 8417, 7052, 7208, 2]
+// Dependencies: [19, 17, 2011, 4428, 11181, 21, 7988, 16084, 16472, 16520, 504, 16594, 8440, 7074, 7230, 2]
 
-// Module 16094 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 16484 */;
+// Module 16083 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 16472 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
 require = fn;
 function getGuildsComponent() {
@@ -21,10 +21,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11156).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11181).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(7965);
+const NativeStackNavigator = fn(7988);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");

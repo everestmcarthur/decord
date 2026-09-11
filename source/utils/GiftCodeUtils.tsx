@@ -1,21 +1,21 @@
-// Module ID: 4844
-// Function ID: 4845
+// Module ID: 4846
+// Function ID: 4847
 // Name: GiftCodeUtils
-// Dependencies: [5, 32, 4845, 1371, 1074, 1373, 4592, 4846, 4847, 1242, 4285, 4940, 1114, 4790, 1369, 504, 4262, 2]
+// Dependencies: [5, 32, 4847, 1371, 1074, 1373, 4594, 4848, 4849, 1242, 4287, 4942, 1114, 4792, 1369, 504, 4264, 2]
 // Exports: cleanCode, findGiftCodes, firstLibraryApplicationForGiftCode, getBodyText, getButtonText, getErrorMessage, getGiftCodeURL, getGiftExperience, getHeaderText, getStep, getSubscriptionGiftStartHeaderText, getSubscriptionGiftSuccessText, isGiftCodeEmbed, makeComboId, parseComboId, processGiftCodeInput, resolveGiftCode, shouldShowCustomGiftExperience, trackGiftCodeCopy, trackStep, useGetGiftCode
 
-// Module 4844 (GiftCodeUtils)
+// Module 4846 (GiftCodeUtils)
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import PremiumUtils from "PremiumUtils" /* 4262 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 4846 */;
-import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 4940 */;
+import PremiumUtils from "PremiumUtils" /* 4264 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 4848 */;
+import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 4942 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 4845 */;
+import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 4847 */;
 import UserStore from "UserStore" /* 1371 */;
-import RegexUtils from "RegexUtils" /* 4592 */;
+import RegexUtils from "RegexUtils" /* 4594 */;
 
 const require = globalThis.__r;
 
@@ -430,9 +430,9 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
 };
 export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_4790").match(getOrFetchSubscriptionPlan);
+  const match = require("module_4792").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_4790");
+  const str = require("module_4792");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -490,9 +490,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   } else {
     intervalCount = getOrFetchSubscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_4790").match(getOrFetchSubscriptionPlan);
+      const match = require("module_4792").match(getOrFetchSubscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_4790");
+      const str = require("module_4792");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -516,9 +516,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
         return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
       });
     } else {
-      const match1 = require("module_4790").match(getOrFetchSubscriptionPlan);
+      const match1 = require("module_4792").match(getOrFetchSubscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_4790");
+      const str2 = require("module_4792");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -571,9 +571,9 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (tmp.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(4790).match(subscriptionPlan);
+      const match = subscriptionPlan(4792).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(4790);
+      const str = subscriptionPlan(4792);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;

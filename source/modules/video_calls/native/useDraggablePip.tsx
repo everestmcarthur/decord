@@ -1,19 +1,19 @@
-// Module ID: 9564
-// Function ID: 9565
+// Module ID: 9587
+// Function ID: 9588
 // Name: useDraggablePip
-// Dependencies: [32, 9537, 9543, 4341, 4606, 1178, 9565, 6705, 5024, 2]
+// Dependencies: [32, 9560, 9566, 4343, 4608, 1178, 9588, 6727, 5026, 2]
 // Exports: useDraggablePip
 
-// Module 9564 (useDraggablePip)
+// Module 9587 (useDraggablePip)
 import native from "native" /* 1178 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import spring from "spring" /* 5024 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
+import spring from "spring" /* 5026 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const useChannelCallStore = fn(9537).useChannelCallStore;
-const Constants = fn(9543);
+const useChannelCallStore = fn(9560).useChannelCallStore;
+const Constants = fn(9566);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };
 let __initData = { code: "function useDraggablePipTsx1(){const{withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING}=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});}" };

@@ -1,13 +1,13 @@
-// Module ID: 6601
-// Function ID: 6602
+// Module ID: 6623
+// Function ID: 6624
 // Name: TrophyIllocon
-// Dependencies: [21, 5637, 6602, 2]
+// Dependencies: [21, 5639, 6624, 2]
 // Exports: TrophyIllocon
 
-// Module 6601 (TrophyIllocon)
+// Module 6623 (TrophyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6602 from "module_6602" /* 6602 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6624 from "module_6624" /* 6624 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const TrophyIllocon = function TrophyIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6602 };
+  const obj2 = { uri: _modDef6624 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,13 +1,13 @@
-// Module ID: 9250
-// Function ID: 9251
+// Module ID: 9273
+// Function ID: 9274
 // Name: useGetGameForAppId
-// Dependencies: [19, 1916, 7220, 7361, 1369, 504, 2]
+// Dependencies: [19, 1916, 7242, 7383, 1369, 504, 2]
 // Exports: default, useGetGamesForAppIds
 
-// Module 9250 (useGetGameForAppId)
+// Module 9273 (useGetGameForAppId)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7220 */;
-import useGame from "useGame" /* 7361 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7242 */;
+import useGame from "useGame" /* 7383 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 1916 */;
 
@@ -37,7 +37,7 @@ export default function useGetGameForAppId(applicationId) {
   return obj2;
 };
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7220)(stateFromStoresArray);
+  const tmp = memo(7242)(stateFromStoresArray);
   _require = tmp;
   const items = [tmp];
   memo = noop.useMemo(() => {

@@ -1,21 +1,21 @@
-// Module ID: 7956
-// Function ID: 7957
+// Module ID: 7979
+// Function ID: 7980
 // Name: useConversationsHeaderButton
-// Dependencies: [5, 19, 7647, 7649, 7957, 1094, 7958, 7959, 504, 7962, 7961, 7964, 1114, 2]
+// Dependencies: [5, 19, 7669, 7671, 7980, 1094, 7981, 7982, 504, 7985, 7984, 7987, 1114, 2]
 // Exports: useConversationsHeaderButton
 
-// Module 7956 (useConversationsHeaderButton)
+// Module 7979 (useConversationsHeaderButton)
 import util from "util" /* 1114 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7959 */;
-import PaperIcon from "PaperIcon" /* 7962 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7982 */;
+import PaperIcon from "PaperIcon" /* 7985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7647 */;
+import ConversationsStore from "ConversationsStore" /* 7669 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(7649);
+const ConversationConstants = fn(7671);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: metroRequire, MOBILE_PREVIEW_MESSAGE_COUNT: closure_7 } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");

@@ -1,25 +1,25 @@
-// Module ID: 16675
-// Function ID: 16676
+// Module ID: 16663
+// Function ID: 16664
 // Name: VibegrationsChatStore
-// Dependencies: [32, 109, 7589, 10151, 2011, 4426, 5329, 16676, 1074, 1964, 1114, 3590, 16677, 1935, 9972, 504, 573, 2]
+// Dependencies: [32, 109, 7611, 10173, 2011, 4428, 5331, 16664, 1074, 1964, 1114, 3590, 16665, 1935, 9995, 504, 573, 2]
 // Exports: getOlderHistoryCursor, turnSettled
 
-// Module 16675 (VibegrationsChatStore)
+// Module 16663 (VibegrationsChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import SoundUtils from "SoundUtils" /* 9972 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16677 */;
+import SoundUtils from "SoundUtils" /* 9995 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16665 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7589 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10151 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7611 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10173 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16676 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16664 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -344,8 +344,8 @@ function recordThinkingTransition(projectId) {
             isWindowFocusedResult = SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
           }
           if (isWindowFocusedResult) {
-            isWindowFocusedResult = tmp68(16677).isWindowFocused();
-            const tmp68Result = tmp68(16677);
+            isWindowFocusedResult = tmp68(16665).isWindowFocused();
+            const tmp68Result = tmp68(16665);
           }
           if (guild_id == null) {
             guild_id = project.guild_id;

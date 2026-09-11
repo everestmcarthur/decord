@@ -1,12 +1,12 @@
-// Module ID: 7709
-// Function ID: 7710
+// Module ID: 7731
+// Function ID: 7732
 // Name: GameRelationshipStore
-// Dependencies: [4253, 1074, 4239, 504, 573, 2]
+// Dependencies: [4255, 1074, 4241, 504, 573, 2]
 
-// Module 7709 (GameRelationshipStore)
+// Module 7731 (GameRelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 function recountRelationshipTypes() {
   c0 = 0;
@@ -52,7 +52,7 @@ function GameRelationshipIndexes_BY_USER_ID(arg0) {
 function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {
 
 }
-const secondaryIndexMap = new fn(4239).SecondaryIndexMap(function gameRelationshipsIndex(arg0) {
+const secondaryIndexMap = new fn(4241).SecondaryIndexMap(function gameRelationshipsIndex(arg0) {
   const items = [];
   if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {
     const _HermesInternal = HermesInternal;

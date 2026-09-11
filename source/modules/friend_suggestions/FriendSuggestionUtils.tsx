@@ -1,10 +1,10 @@
-// Module ID: 16125
-// Function ID: 16126
+// Module ID: 16114
+// Function ID: 16115
 // Name: FriendSuggestionUtils
 // Dependencies: [2]
 // Exports: getSuggestedContactNameForSuggestion
 
-// Module 16125 (FriendSuggestionUtils)
+// Module 16114 (FriendSuggestionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");

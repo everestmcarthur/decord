@@ -1,9 +1,9 @@
-// Module ID: 9330
-// Function ID: 9331
+// Module ID: 9353
+// Function ID: 9354
 // Name: ConsoleOAuthApplications
 // Dependencies: [2]
 
-// Module 9330 (ConsoleOAuthApplications)
+// Module 9353 (ConsoleOAuthApplications)
 import size from "module_2" /* 2 */;
 
 const obj = { PLAYSTATION_APPLICATION_IDS: new Set(["984193235868065795", "1008890872156405890"]), IMPLICIT_IDENTIFY_PREMIUM_APPLICATION_IDS: null, ALL: null };

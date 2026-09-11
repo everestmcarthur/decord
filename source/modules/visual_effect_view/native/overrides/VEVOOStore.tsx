@@ -1,10 +1,10 @@
-// Module ID: 5016
-// Function ID: 5017
+// Module ID: 5018
+// Function ID: 5019
 // Name: VEVOOStore
 // Dependencies: [560, 1249, 2]
 // Exports: clearVisualEffectViewOverrides, getVisualEffectViewOverrides, setVisualEffectViewOverides, useVisualEffectViewOverrides
 
-// Module 5016 (VEVOOStore)
+// Module 5018 (VEVOOStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

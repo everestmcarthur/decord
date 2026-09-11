@@ -1,54 +1,113 @@
 // Module ID: 6902
 // Function ID: 6903
-// Dependencies: [6903, 6904, 6905, 6964, 6965, 6966, 6967, 6971, 6972, 6925, 6973, 6974, 6969, 6968, 6975, 6926, 6976]
+// Dependencies: [19, 21, 6703, 6704, 6727, 6899, 1636]
 
 // Module 6902
-import ErrorMessages from "ErrorMessages" /* 6904 */;
-import FlashList from "FlashList" /* 6905 */;
-import _mod6925 from "module_6925" /* 6925 */;
-import _mod6926 from "module_6926" /* 6926 */;
-import _mod6964 from "module_6964" /* 6964 */;
-import RenderTargetOptions from "RenderTargetOptions" /* 6965 */;
-import _modDef6966 from "module_6966" /* 6966 */;
-import _mod6967 from "module_6967" /* 6967 */;
-import Cancellable from "Cancellable" /* 6968 */;
-import JSFPSMonitor from "JSFPSMonitor" /* 6969 */;
-import _mod6971 from "module_6971" /* 6971 */;
-import runScrollBenchmark from "runScrollBenchmark" /* 6972 */;
-import _mod6973 from "module_6973" /* 6973 */;
-import _mod6974 from "module_6974" /* 6974 */;
-import _modDef6975 from "module_6975" /* 6975 */;
-import LayoutCommitObserver from "LayoutCommitObserver" /* 6976 */;
-import get_ActivityIndicator from "module_6903" /* 6903 */;
+import jsxProd from "jsxProd" /* 21 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
+import noop_mod from "module_19" /* 19 */;
 
-if (get_ActivityIndicator.isNewArch()) {
-  exports.FlashList = FlashList.FlashList;
-  exports.FlashListRef = _mod6964.FlashListRef;
-  exports.FlashListProps = RenderTargetOptions.FlashListProps;
-  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
-  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
-  exports.RenderTarget = RenderTargetOptions.RenderTarget;
-  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
-  exports.AnimatedFlashList = _modDef6966;
-  exports.useBenchmark = _mod6967.useBenchmark;
-  exports.BenchmarkParams = _mod6967.BenchmarkParams;
-  exports.BenchmarkResult = _mod6967.BenchmarkResult;
-  exports.useDataMultiplier = _mod6971.useDataMultiplier;
-  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
-  exports.useLayoutState = _mod6925.useLayoutState;
-  exports.useRecyclingState = _mod6973.useRecyclingState;
-  exports.useMappingHelper = _mod6974.useMappingHelper;
-  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
-  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
-  exports.autoScroll = Cancellable.autoScroll;
-  exports.Cancellable = Cancellable.Cancellable;
-  exports.ViewToken = _modDef6975;
-  exports.useFlashListContext = _mod6926.useFlashListContext;
-  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
-}
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
+  simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
+  let DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers.enableHandlePanningGesture;
+  ({ animatedIndex, animatedPosition } = simultaneousHandlers);
+  if (DEFAULT_ENABLE_HANDLE_PANNING_GESTURE === undefined) {
+    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers(handleHeight[2]).DEFAULT_ENABLE_HANDLE_PANNING_GESTURE;
+  }
+  handleHeight = simultaneousHandlers.handleHeight;
+  let handleComponent = simultaneousHandlers.handleComponent;
+  let failOffsetX;
+  ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
+  const tmp3 = failOffsetX(null);
+  const bottomSheetInternal = simultaneousHandlers(handleHeight[3]).useBottomSheetInternal();
+  const activeOffsetX = bottomSheetInternal.activeOffsetX;
+  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  failOffsetX = bottomSheetInternal.failOffsetX;
+  const failOffsetY = bottomSheetInternal.failOffsetY;
+  const waitFor = bottomSheetInternal.waitFor;
+  const simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
+  const obj = simultaneousHandlers(handleHeight[3]);
+  const tmp4 = simultaneousHandlers;
+  const handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
+  let items = [simultaneousHandlers2, simultaneousHandlers];
+  const tmp7 = activeOffsetY(() => {
+    const items = [];
+    if (simultaneousHandlers) {
+      items.push(tmp);
+    }
+    if (simultaneousHandlers2) {
+      const _Array = Array;
+      const push = items.push;
+      if (Array.isArray(tmp3)) {
+        const items1 = [];
+        HermesBuiltin.arraySpread(tmp3, 0);
+        HermesBuiltin.apply(items1, items);
+      } else {
+        push(tmp3);
+      }
+    }
+    return items;
+  }, items);
+  closure_10 = tmp7;
+  let items1 = [activeOffsetX, activeOffsetY, DEFAULT_ENABLE_HANDLE_PANNING_GESTURE, failOffsetX, failOffsetY, tmp7, waitFor, , , , ];
+  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = handlePanGestureHandler);
+  const items2 = [handleHeight];
+  const obj2 = simultaneousHandlers(handleHeight[3]);
+  const items3 = [handleHeight];
+  const tmp8 = activeOffsetY(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
+    const result = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE).shouldCancelWhenOutside(false);
+    const enabledResult = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE);
+    const runOnJSResult = result.runOnJS(false);
+    const onStartResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart);
+    const onChangeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange);
+    const onFinalizeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange).onEnd(handlePanGestureHandler.handleOnEnd).onFinalize(handlePanGestureHandler.handleOnFinalize);
+    let result1 = onFinalizeResult;
+    if (waitFor) {
+      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
+    }
+    let result2 = result1;
+    if (closure_10) {
+      result2 = result1.simultaneousWithExternalGesture(tmp2);
+    }
+    let activeOffsetXResult = result2;
+    if (activeOffsetX) {
+      activeOffsetXResult = result2.activeOffsetX(tmp3);
+    }
+    let activeOffsetYResult = activeOffsetXResult;
+    if (activeOffsetY) {
+      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
+    }
+    let failOffsetXResult = activeOffsetYResult;
+    if (failOffsetX) {
+      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
+    }
+    let failOffsetYResult = failOffsetXResult;
+    if (failOffsetY) {
+      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
+    }
+    return failOffsetYResult;
+  }, items1);
+  const tmp9 = activeOffsetX(function handleContainerLayout(nativeEvent) {
+    handleHeight.value = nativeEvent.nativeEvent.layout.height;
+  }, items2);
+  const tmp10 = activeOffsetX((height) => {
+    handleHeight.value = height.height;
+  }, items3);
+  const boundingClientRect = simultaneousHandlers(handleHeight[3]).useBoundingClientRect(tmp3, tmp10);
+  if (handleComponent == null) {
+    handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
+  }
+  const obj4 = { gesture: tmp8, children: null };
+  const obj3 = simultaneousHandlers(handleHeight[3]);
+  obj4.children = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, { ref: tmp3, onLayout: tmp9, children: failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle }) }, "BottomSheetHandleContainer");
+  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj4);
+});
+memoResult.displayName = "BottomSheetHandleContainer";
+
+export default memoResult;

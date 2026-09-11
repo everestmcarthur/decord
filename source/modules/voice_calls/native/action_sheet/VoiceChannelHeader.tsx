@@ -1,26 +1,26 @@
-// Module ID: 13869
-// Function ID: 13870
+// Module ID: 13850
+// Function ID: 13851
 // Name: VoiceChannelHeader
-// Dependencies: [19, 17, 1956, 1979, 4243, 1074, 21, 4605, 576, 13870, 13871, 4601, 13872, 504, 10007, 4758, 9890, 1114, 11661, 1178, 5112, 13874, 10081, 10101, 5173, 2]
+// Dependencies: [19, 17, 1956, 1979, 4245, 1074, 21, 4607, 576, 13851, 13852, 4603, 13853, 504, 10030, 4760, 9913, 1114, 11685, 1178, 5114, 13855, 10103, 10123, 5175, 2]
 
-// Module 13869 (VoiceChannelHeader)
+// Module 13850 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import useChannelNameDefault from "useChannelName" /* 4758 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5112 */;
-import Pressables from "Pressables" /* 5173 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10007 */;
-import _modDef10101 from "module_10101" /* 10101 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11661 */;
-import CallStateHooks from "CallStateHooks" /* 13870 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13871 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13872 */;
+import useChannelNameDefault from "useChannelName" /* 4760 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5114 */;
+import Pressables from "Pressables" /* 5175 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9913 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10030 */;
+import _modDef10123 from "module_10123" /* 10123 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11685 */;
+import CallStateHooks from "CallStateHooks" /* 13851 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13852 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13853 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const CallStateHooksDefault = CallStateHooks;
 
@@ -34,10 +34,10 @@ function PrivateChannelSubtitle(channel) {
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     const obj3 = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
-    tmp6Result = tmp6(tmp7(4601).Text, obj3);
+    tmp6Result = tmp6(tmp7(4603).Text, obj3);
   }
   items[1] = tmp6Result;
-  let tmp6Result2 = state === tmp7(13870).CallStates.CONNECTED;
+  let tmp6Result2 = state === tmp7(13851).CallStates.CONNECTED;
   if (tmp6Result2) {
     const obj4 = { channelId: channel.id, style: tmp.subtitle };
     tmp6Result2 = tmp6(OngoingCallTimerDefault, obj4);
@@ -150,7 +150,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10101, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10123, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);
@@ -167,7 +167,7 @@ const Constants = fn(1074);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: { flexDirection: "row", tintColor: nativeDefault.colors.WHITE }, subtitle: null, subtitleWrapper: null };
 let obj3 = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
 obj2.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };

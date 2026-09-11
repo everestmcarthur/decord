@@ -1,16 +1,18 @@
 // Module ID: 10533
 // Function ID: 10534
-// Dependencies: [41, 42, 93, 95, 98, 10501, 10504, 10505, 10521]
+// Dependencies: [41, 42, 93, 95, 98, 10523, 10522, 10524, 10530]
 
 // Module 10533
-import Filter from "Filter" /* 10521 */;
+import _mod10522 from "module_10522" /* 10522 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeAfterDateRefiner = require;
+const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +32,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeAfterDateRefiner {
+const regExp = new RegExp("((?:in)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10522.MONTH_DICTIONARY) + ")\\s*(?:(?:,|-|of)?\\s*(" + _mod10522.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class ENMonthNameParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
+    tmp = c2(this, ENMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeAfterDateRefiner);
+    obj = closure_4(ENMonthNameParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,40 +53,46 @@ class ENMergeRelativeAfterDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "shouldMergeResults",
-  value: function shouldMergeResults(str, arg1, text) {
-    let match = str.match(/^\s*$/i);
-    if (match) {
-      let tmp4 = null != text.text.match(/^[+-]/i);
-      if (!tmp4) {
-        tmp4 = null != text.text.match(/^-/i);
-      }
-      match = tmp4;
-      str = text.text;
-    }
-    return match;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text, arg3) {
-      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10501).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/^-/i)) {
-        reverseDurationResult = tmp(10504).reverseDuration(parseDurationResult);
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(10522).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
+        }
       }
-      const ParsingComponents = tmp(10505).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10505).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      ({ reference, index } = start);
-      return new ENMergeRelativeAfterDateRefiner(10505).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index + str2.length, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const start2 = parsingResult.start;
+      start2.addTag("parser/ENMonthNameParser");
+      const tmp10 = ENMonthNameParser(10522).MONTH_DICTIONARY[formatted];
+      const start3 = parsingResult.start;
+      start3.assign("month", tmp10);
+      if (index[3]) {
+        const start5 = parsingResult.start;
+        start5.assign("year", tmp8(10522).parseYear(index[3]));
+      } else {
+        const start4 = parsingResult.start;
+        start4.imply("year", tmp8(10524).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
+      }
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(ENMergeRelativeAfterDateRefiner, items);
+export default _createClass(ENMonthNameParser, items);

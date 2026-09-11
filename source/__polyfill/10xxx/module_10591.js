@@ -1,35 +1,50 @@
 // Module ID: 10591
 // Function ID: 10592
-// Dependencies: [41, 42, 93, 95, 98, 10520]
+// Dependencies: [10592, 10594, 10595, 10596, 10597, 10598, 10599, 10519, 10526, 10528, 10600, 10601, 10565, 10559]
+// Exports: createCasualConfiguration, parse, parseDate
 
 // Module 10591
-import _mod10520 from "module_10520" /* 10520 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10559 */;
+import _mod10565 from "module_10565" /* 10565 */;
+import JPStandardParser2 from "JPStandardParser" /* 10592 */;
+import _mod10594 from "module_10594" /* 10594 */;
+import _mod10595 from "module_10595" /* 10595 */;
+import _mod10596 from "module_10596" /* 10596 */;
+import _mod10597 from "module_10597" /* 10597 */;
+import _mod10598 from "module_10598" /* 10598 */;
+import _mod10599 from "module_10599" /* 10599 */;
+import _mod10600 from "module_10600" /* 10600 */;
+import _mod10601 from "module_10601" /* 10601 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const require = globalThis.__r;
+
+function createConfiguration(flag) {
+  if (flag === undefined) {
+    flag = true;
   }
+  const obj = { parsers: null, refiners: null };
+  const items = [new JPStandardParser.default(), , , , ];
+  const _default = new JPStandardParser.default();
+  items[1] = new regExp.default();
+  const _default1 = new regExp.default();
+  items[2] = new regExp.default();
+  const _default2 = new regExp.default();
+  items[3] = new regExp.default();
+  const _default3 = new regExp.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
+  return result;
 }
-let _classCallCheck = _classCallCheck_mod;
 let fn = this;
 if (this) {
   fn = this.__importDefault;
@@ -45,34 +60,43 @@ if (!fn) {
     return tmp;
   };
 }
-class NLMergeDateRangeRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, NLMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(NLMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  parsers.unshift(new module_10595.default());
+  return tmp;
 }
-_classCallCheck = NLMergeDateRangeRefiner;
-_inherits(NLMergeDateRangeRefiner, fn(_mod10520).default);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(tot|-)\s*$/i;
-  }
-};
-const items = [entry];
+const JPStandardParser = fn(JPStandardParser2);
+fn(_mod10594);
+const module_10595 = fn(_mod10595);
+fn(_mod10596);
+fn(_mod10597);
+fn(_mod10598);
+fn(_mod10599);
+fn(_mod10600);
+const regExp = fn(_mod10601);
+const _isNativeReflectConstruct = fn(_mod10565);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+parsers.unshift(new module_10595.default());
+const chrono = new require("module_10519").Chrono(configuration);
+const chrono1 = new require("module_10519").Chrono(createConfiguration(true));
 
-export default _createClass(NLMergeDateRangeRefiner, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10519").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

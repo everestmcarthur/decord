@@ -1,16 +1,16 @@
-// Module ID: 12751
-// Function ID: 12752
+// Module ID: 12776
+// Function ID: 12777
 // Name: ContactSyncManager
-// Dependencies: [5, 5331, 1371, 12749, 12748, 1074, 510, 12750, 7170, 7090, 2]
+// Dependencies: [5, 5333, 1371, 12774, 12773, 1074, 510, 12775, 7192, 7112, 2]
 // Exports: removeLastUserContactsUpload
 
-// Module 12751 (ContactSyncManager)
+// Module 12776 (ContactSyncManager)
 import Storage3 from "Storage" /* 510 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12750 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12775 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5333 */;
 import UserStore from "UserStore" /* 1371 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 require = fn;
 let closure_11 = async function _requestAndSyncContacts(arg0, value) {
@@ -121,9 +121,9 @@ let closure_11 = async function _requestAndSyncContacts(arg0, value) {
     }
   }
 };
-const ContactSyncPersistedStore = fn(12749);
+const ContactSyncPersistedStore = fn(12774);
 ({ setStoredContacts: hasOwnProperty, deleteStoredContacts: metroRequire, useContactSyncStore: closure_7 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(12748).ContactPermissions;
+const ContactPermissions = fn(12773).ContactPermissions;
 const PlatformTypes = fn(1074).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {

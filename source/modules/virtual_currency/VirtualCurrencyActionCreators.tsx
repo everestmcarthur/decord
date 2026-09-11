@@ -1,15 +1,15 @@
-// Module ID: 8922
-// Function ID: 8923
+// Module ID: 8945
+// Function ID: 8946
 // Name: VirtualCurrencyActionCreators
-// Dependencies: [5, 5560, 1074, 3, 573, 1272, 4506, 8923, 1232, 2]
+// Dependencies: [5, 5562, 1074, 3, 573, 1272, 4508, 8946, 1232, 2]
 // Exports: redeemVirtualCurrencyForSKU, setBalancePillOverlay
 
-// Module 8922 (VirtualCurrencyActionCreators)
+// Module 8945 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 5560 */;
+import SKUStore from "SKUStore" /* 5562 */;
 
 require = fn;
 function fetchVirtualCurrencyBalance() {

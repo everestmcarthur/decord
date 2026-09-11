@@ -1,8 +1,8 @@
-// Module ID: 9174
-// Function ID: 9175
+// Module ID: 9197
+// Function ID: 9198
 // Dependencies: [2]
 
-// Module 9174
+// Module 9197
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/vaporwave.png.js");

@@ -1,16 +1,16 @@
-// Module ID: 11660
-// Function ID: 11661
+// Module ID: 11684
+// Function ID: 11685
 // Name: useMemberListAction
-// Dependencies: [32, 19, 17, 1957, 4243, 4253, 1371, 10283, 1074, 21, 4605, 563, 9808, 7101, 11661, 11670, 11671, 1114, 10101, 10102, 4425, 1943, 11673, 11678, 7432, 11679, 1874, 9890, 8665, 2]
+// Dependencies: [32, 19, 17, 1957, 4245, 4255, 1371, 10304, 1074, 21, 4607, 563, 9831, 7123, 11685, 11694, 11695, 1114, 10123, 10124, 4427, 1943, 11697, 11702, 7454, 11703, 1874, 9913, 8688, 2]
 // Exports: default
 
-// Module 11660 (useMemberListAction)
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11661 */;
+// Module 11684 (useMemberListAction)
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -20,9 +20,9 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "call", listActionHeight: "accessibilityLabel" };
-const createStyles = fn(4605);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10283).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "guild", listActionHeight: "call" };
+const createStyles = fn(4607);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10304).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 

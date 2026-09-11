@@ -1,31 +1,31 @@
-// Module ID: 16716
-// Function ID: 16717
+// Module ID: 16704
+// Function ID: 16705
 // Name: ChannelDetails
-// Dependencies: [19, 17, 12409, 1957, 7928, 10988, 21, 576, 4605, 504, 12369, 16717, 7214, 7234, 16713, 5012, 6995, 1611, 1115, 4584, 7527, 12431, 12408, 4341, 4606, 4609, 5024, 12417, 4470, 6705, 16718, 16728, 16825, 16827, 16828, 16829, 4980, 2]
+// Dependencies: [19, 17, 12434, 1957, 7951, 11010, 21, 576, 4607, 504, 12394, 16705, 7236, 7256, 16701, 5014, 7017, 1611, 1115, 4586, 7549, 12456, 12433, 4343, 4608, 4611, 5026, 12442, 4472, 6727, 16706, 16716, 16813, 16815, 16816, 16817, 4982, 2]
 
-// Module 16716 (ChannelDetails)
+// Module 16704 (ChannelDetails)
 import nativeDefault from "native" /* 576 */;
-import ChatInputUtils from "ChatInputUtils" /* 4470 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12408 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12417 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12431 */;
+import ChatInputUtils from "ChatInputUtils" /* 4472 */;
+import timing from "timing" /* 4608 */;
+import timingPresets from "timingPresets" /* 4611 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12433 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12442 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12456 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12409 */;
+import SearchQueryStore from "SearchQueryStore" /* 12434 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(7928);
+const ChannelDetailsStore = fn(7951);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10988);
+const ChannelDetailsConstants = fn(11010);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

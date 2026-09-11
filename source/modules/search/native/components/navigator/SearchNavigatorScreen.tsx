@@ -1,26 +1,26 @@
-// Module ID: 16962
-// Function ID: 16963
+// Module ID: 16951
+// Function ID: 16952
 // Name: SearchNavigatorScreen
-// Dependencies: [19, 17, 21, 4605, 576, 16717, 4467, 16963, 5173, 1114, 5678, 5175, 16444, 16719, 16728, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 16705, 4469, 16952, 5175, 1114, 5680, 5177, 16433, 16707, 16716, 2]
 // Exports: default
 
-// Module 16962 (SearchNavigatorScreen)
+// Module 16951 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4467 */;
-import Pressables from "Pressables" /* 5173 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5175 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5678 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16719 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16728 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16963 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4469 */;
+import Pressables from "Pressables" /* 5175 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5177 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5680 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16707 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16716 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
@@ -35,10 +35,10 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(16717).useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(16705).useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  let obj = navigation(16717);
+  let obj = navigation(16705);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -60,7 +60,7 @@ export default function SearchNavigatorScreen(navigation) {
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj4.children = items3;
   obj3.children = closure_6(View, obj4);
-  items1[1] = closure_5(navigation(16444).NonCollapsableGestureDetector, obj3);
+  items1[1] = closure_5(navigation(16433).NonCollapsableGestureDetector, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 };

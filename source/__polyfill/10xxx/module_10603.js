@@ -1,16 +1,18 @@
 // Module ID: 10603
 // Function ID: 10604
-// Dependencies: [41, 42, 93, 95, 98, 10508, 10507, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10523, 10604, 10550, 10530]
 
 // Module 10603
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
+import _mod10604 from "module_10604" /* 10604 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLCasualDateTimeParser = require;
+const PTWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +32,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class NLCasualDateTimeParser {
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10604.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
+class PTWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLCasualDateTimeParser);
+    tmp = c2(this, PTWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(NLCasualDateTimeParser);
+    obj = closure_4(PTWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,52 +53,42 @@ class NLCasualDateTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLCasualDateTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern(arg0) {
-    return /(gisteren|morgen|van)(ochtend|middag|namiddag|avond|nacht)(?=\W|$)/i;
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const refDate = createParsingComponents.refDate;
-      if ("gisteren" === formatted) {
-        const _Date = Date;
-        const date = new Date(refDate.getTime());
-        date.setDate(date.getDate() - 1);
-        NLCasualDateTimeParser(10508).assignSimilarDate(parsingComponents, date);
-      } else if ("van" === formatted) {
-        NLCasualDateTimeParser(10508).assignSimilarDate(parsingComponents, refDate);
-      } else if ("morgen" === formatted) {
-        const _Date2 = Date;
-        const date1 = new Date(refDate.getTime());
-        date1.setDate(date1.getDate() + 1);
-        NLCasualDateTimeParser(10508).assignSimilarDate(parsingComponents, date1);
-        NLCasualDateTimeParser(10508).implySimilarTime(parsingComponents, date1);
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      const tmp4 = PTWeekdayParser(10604).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
+      } else {
+        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
+        let str5 = "this";
+        if ("passado" != formatted1) {
+          str5 = "next";
+          if ("pr\u00F3ximo" != formatted1) {
+            str5 = "next";
+            if ("proximo" != formatted1) {
+              str5 = null;
+              if ("este" == formatted1) {
+                str5 = "this";
+              }
+            }
+          }
+        }
+        return tmp2(10550).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
-      if ("ochtend" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(10507).Meridiem.AM);
-        parsingComponents.imply("hour", 6);
-      } else if ("middag" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(10507).Meridiem.AM);
-        parsingComponents.imply("hour", 12);
-      } else if ("namiddag" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(10507).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else if ("avond" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(10507).Meridiem.PM);
-        parsingComponents.imply("hour", 20);
-      }
-      return parsingComponents;
+      tmp2 = PTWeekdayParser;
     }
   }
 ];
 
-export default _createClass(NLCasualDateTimeParser, items);
+export default _createClass(PTWeekdayParser, items);

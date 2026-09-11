@@ -1,22 +1,22 @@
-// Module ID: 16568
-// Function ID: 16569
+// Module ID: 16556
+// Function ID: 16557
 // Name: useSharedICYMILogic
-// Dependencies: [32, 19, 8400, 16534, 16569, 504, 8424, 8422, 9868, 8416, 8415, 8413, 16570, 2]
+// Dependencies: [32, 19, 8423, 16522, 16557, 504, 8447, 8445, 9891, 8439, 8438, 8436, 16558, 2]
 // Exports: useSharedICYMILogic
 
-// Module 16568 (useSharedICYMILogic)
-import ICYMITypes from "ICYMITypes" /* 8413 */;
-import ICYMIUtils from "ICYMIUtils" /* 8415 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8416 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8424 */;
+// Module 16556 (useSharedICYMILogic)
+import ICYMITypes from "ICYMITypes" /* 8436 */;
+import ICYMIUtils from "ICYMIUtils" /* 8438 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 8400 */;
+import ICYMIStore from "ICYMIStore" /* 8423 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(16534).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(16522).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 
@@ -138,16 +138,16 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       const viewableFeedItemsArray = ICYMIUtils.getViewableFeedItemsArray(viewableItems);
       const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
       const result = ICYMIAnalytics.trackItemLongImpression(viewableItems, viewableFeedItemsArray.map((id) => {
-        const obj = { id: id.id, type: notificationItem(8413).typeToString(id) };
+        const obj = { id: id.id, type: notificationItem(8436).typeToString(id) };
         return obj;
       }), stateFromStores);
       const found = viewableItems.filter((item) => {
-        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8422).NON_ELIGIBLE_SCROLL_ITEMS;
+        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8445).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
       const result1 = ICYMIActionCreatorsDefault.triggerItemsLongImpression(found.map((item) => {
         item = item.item;
-        const obj = { itemId: item.id, itemType: notificationItem(8415).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
+        const obj = { itemId: item.id, itemType: notificationItem(8438).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
         let score = item.score;
         if (score == null) {
           score = null;
@@ -165,12 +165,12 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const found = viewableItems.filter((item) => {
-      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8422).NON_ELIGIBLE_SCROLL_ITEMS;
+      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8445).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
     closure_1(unreadItems[9]).startItemsDwell(found.map((item) => {
       item = item.item;
-      const obj = { itemId: item.id, itemType: notificationItem(8415).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
+      const obj = { itemId: item.id, itemType: notificationItem(8438).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
       let score = item.score;
       if (score == null) {
         score = null;

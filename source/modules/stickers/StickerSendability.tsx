@@ -1,15 +1,15 @@
-// Module ID: 7389
-// Function ID: 7390
+// Module ID: 7411
+// Function ID: 7412
 // Name: StickerSendability
-// Dependencies: [2021, 5554, 1074, 4262, 4944, 4248, 2]
+// Dependencies: [2021, 5556, 1074, 4264, 4946, 4250, 2]
 // Exports: isSendableSticker
 
-// Module 7389 (StickerSendability)
-import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
-import StickersUtils from "StickersUtils" /* 4944 */;
+// Module 7411 (StickerSendability)
+import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
+import StickersUtils from "StickersUtils" /* 4946 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import StickersPackStore from "StickersPackStore" /* 5554 */;
+import StickersPackStore from "StickersPackStore" /* 5556 */;
 
 require = fn;
 function getStickerSendability(stickerById, currentUser, channel) {

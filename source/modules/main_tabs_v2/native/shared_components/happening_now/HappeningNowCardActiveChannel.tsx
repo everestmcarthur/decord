@@ -1,29 +1,29 @@
-// Module ID: 16171
-// Function ID: 16172
+// Module ID: 16160
+// Function ID: 16161
 // Name: HappeningNowCardActiveChannel
-// Dependencies: [19, 17, 13781, 1957, 12035, 1371, 15375, 1074, 21, 4605, 504, 11, 1369, 12, 16170, 1242, 1100, 4758, 1114, 5078, 15376, 16164, 2]
+// Dependencies: [19, 17, 13762, 1957, 12060, 1371, 15357, 1074, 21, 4607, 504, 11, 1369, 12, 16159, 1242, 1100, 4760, 1114, 5080, 15358, 16153, 2]
 
-// Module 16171 (HappeningNowCardActiveChannel)
+// Module 16160 (HappeningNowCardActiveChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1100 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import noop from "module_19" /* 19 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13781 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13762 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import TypingStore from "TypingStore" /* 12035 */;
+import TypingStore from "TypingStore" /* 12060 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(13781).MAX_STORED_MESSAGES;
-let closure_10 = fn(15375).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(13762).MAX_STORED_MESSAGES;
+let closure_10 = fn(15357).HappeningNowCardTrackingType;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_15 = createStyles.createStyles({ content: { flexShrink: 1, marginLeft: 4, gap: 2 }, avatarsWrapper: { marginBottom: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");

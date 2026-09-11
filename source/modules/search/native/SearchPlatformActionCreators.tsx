@@ -1,14 +1,14 @@
-// Module ID: 12431
-// Function ID: 12432
+// Module ID: 12456
+// Function ID: 12457
 // Name: SearchPlatformActionCreators
-// Dependencies: [1074, 12432, 12409, 12410, 573, 2]
+// Dependencies: [1074, 12457, 12434, 12435, 573, 2]
 
-// Module 12431 (SearchPlatformActionCreators)
+// Module 12456 (SearchPlatformActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import SearchUtils from "SearchUtils" /* 12410 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12432 */;
-import SearchQueryStore from "SearchQueryStore" /* 12409 */;
+import SearchUtils from "SearchUtils" /* 12435 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12457 */;
+import SearchQueryStore from "SearchQueryStore" /* 12434 */;
 import size from "module_2" /* 2 */;
 
 const SearchTypes = Constants.SearchTypes;

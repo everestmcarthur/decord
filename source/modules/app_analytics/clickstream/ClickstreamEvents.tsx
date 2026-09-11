@@ -1,10 +1,10 @@
-// Module ID: 7519
-// Function ID: 7520
+// Module ID: 7541
+// Function ID: 7542
 // Name: ClickstreamEvents
 // Dependencies: [1074, 2]
 // Exports: getClickstreamDrainEvent
 
-// Module 7519 (ClickstreamEvents)
+// Module 7541 (ClickstreamEvents)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

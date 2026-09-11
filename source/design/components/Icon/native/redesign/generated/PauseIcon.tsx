@@ -1,13 +1,13 @@
-// Module ID: 8341
-// Function ID: 8342
+// Module ID: 8364
+// Function ID: 8365
 // Name: PauseIcon
-// Dependencies: [19, 21, 576, 4305, 8342, 2]
+// Dependencies: [19, 21, 576, 4307, 8365, 2]
 // Exports: PauseIcon
 
-// Module 8341 (PauseIcon)
+// Module 8364 (PauseIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod8342 from "module_8342" /* 8342 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod8365 from "module_8365" /* 8365 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PauseIcon = function PauseIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8342, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8365, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

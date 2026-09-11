@@ -1,19 +1,19 @@
-// Module ID: 13357
-// Function ID: 13358
+// Module ID: 13382
+// Function ID: 13383
 // Name: ForLaterScreen
-// Dependencies: [32, 19, 17, 11731, 21, 4605, 576, 4341, 5024, 13358, 7911, 7906, 504, 7214, 7234, 8838, 1250, 1090, 13360, 13366, 8943, 13370, 2]
+// Dependencies: [32, 19, 17, 11755, 21, 4607, 576, 4343, 5026, 13383, 7934, 7928, 504, 7236, 7256, 8861, 1250, 1090, 13385, 13391, 8966, 13395, 2]
 
-// Module 13357 (ForLaterScreen)
+// Module 13382 (ForLaterScreen)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8838 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13358 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13360 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5026 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7236 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8861 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13383 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11731 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11755 */;
 
 require = fn;
 function keyExtractor(saveData) {
@@ -25,10 +25,10 @@ function ForLaterPage(type) {
   importDefault = undefined;
   const tmp = closure_10();
   const arr = useSavedMessagesForPageDefault(type);
-  const tmp5 = type === throttledNow(7911).SavedMessageSortTypes.REMINDER;
-  const forLaterLimit = throttledNow(7906).useForLaterLimit(ForLaterScreen, tmp5);
-  const obj = throttledNow(7906);
-  const isForLaterLimitUpgradable = throttledNow(7906).useIsForLaterLimitUpgradable(ForLaterScreen);
+  const tmp5 = type === throttledNow(7934).SavedMessageSortTypes.REMINDER;
+  const forLaterLimit = throttledNow(7928).useForLaterLimit(ForLaterScreen, tmp5);
+  const obj = throttledNow(7928);
+  const isForLaterLimitUpgradable = throttledNow(7928).useIsForLaterLimitUpgradable(ForLaterScreen);
   let tmp8 = isForLaterLimitUpgradable;
   if (isForLaterLimitUpgradable) {
     tmp8 = forLaterLimit > 0;
@@ -40,11 +40,11 @@ function ForLaterPage(type) {
   if (isForLaterLimitUpgradable) {
     tmp9 = arr.length > 0;
   }
-  const obj2 = throttledNow(7906);
+  const obj2 = throttledNow(7928);
   const items = [SavedMessagesStore];
   const stateFromStores = throttledNow(504).useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
   const tmp4Result = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp2(7234).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp2(7256).FOR_LATER_POPOUT).analyticsLocations;
   const obj3 = { type: null, name: null, properties: null };
   const tmp2Result = useAnalyticsLocationsDefault;
   obj3.type = throttledNow(1250).ImpressionTypes.MODAL;
@@ -75,22 +75,22 @@ function ForLaterPage(type) {
   if (0 === arr.length) {
     const obj5 = { value: analyticsLocations, children: null };
     const obj6 = { type };
-    obj5.children = closure_7(tmp2(13366), obj6);
-    let tmp24Result = closure_7(tmp4(7214).AnalyticsLocationProvider, obj5);
+    obj5.children = closure_7(tmp2(13391), obj6);
+    let tmp24Result = closure_7(tmp4(7236).AnalyticsLocationProvider, obj5);
   } else {
     const obj7 = { value: analyticsLocations, children: null };
     const obj8 = { style: tmp.listContainer, children: null };
     const obj9 = { data: arr, renderItem: tmp20, contentContainerStyle: tmp.cardContainer, keyExtractor, onScroll: type.handleScroll };
-    obj8.children = closure_7(tmp4(8943).FlashList, obj9);
+    obj8.children = closure_7(tmp4(8966).FlashList, obj9);
     const items2 = [closure_7(View, obj8), ];
     let tmp25Result = null;
     if (tmp9) {
       const obj10 = { isReminder: tmp5, isAtLimit: tmp8 };
-      tmp25Result = tmp25(tmp2(13370), obj10);
+      tmp25Result = tmp25(tmp2(13395), obj10);
     }
     items2[1] = tmp25Result;
     obj7.children = items2;
-    tmp24Result = closure_8(tmp4(7214).AnalyticsLocationProvider, obj7);
+    tmp24Result = closure_8(tmp4(7236).AnalyticsLocationProvider, obj7);
     tmp25 = closure_7;
   }
   return tmp24Result;
@@ -99,7 +99,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ForLaterScreen = "ForLaterScreen";
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 }, headerBorder: null, cardContainer: null, listContainer: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.headerBorder = size;
@@ -114,7 +114,7 @@ let result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterS
 export default noop.memo((type) => {
   let sharedValue;
   const tmp = closure_10();
-  sharedValue = sharedValue(4341).useSharedValue(0);
+  sharedValue = sharedValue(4343).useSharedValue(0);
   const items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -123,7 +123,7 @@ export default noop.memo((type) => {
     }
     const result = sharedValue.set(spring.withSpring(num));
   }, items);
-  const obj = sharedValue(4341);
+  const obj = sharedValue(4343);
   const fn = function s() {
     return { opacity: sharedValue.get() };
   };
@@ -131,7 +131,7 @@ export default noop.memo((type) => {
   fn.__workletHash = 16693192032676;
   fn.__initData = __initData;
   const obj3 = { style: tmp.container, children: null };
-  const animatedStyle = sharedValue(4341).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4343).useAnimatedStyle(fn);
   const obj4 = { style: null };
   const items1 = [tmp.headerBorder, animatedStyle];
   obj4.style = items1;

@@ -1,20 +1,20 @@
-// Module ID: 16887
-// Function ID: 16888
+// Module ID: 16875
+// Function ID: 16876
 // Name: YouBannerDecorations
-// Dependencies: [19, 17, 1371, 1954, 1373, 21, 4605, 1116, 576, 13544, 7501, 4425, 1943, 504, 8249, 8290, 8301, 4456, 672, 4262, 16888, 11556, 16889, 16890, 11838, 5497, 16891, 15072, 1114, 16892, 16894, 8732, 7432, 5037, 2]
+// Dependencies: [19, 17, 1371, 1954, 1373, 21, 4607, 1116, 576, 13518, 7523, 4427, 1943, 504, 8272, 8313, 8324, 4458, 672, 4264, 16876, 11580, 16877, 16878, 11862, 5499, 16879, 15049, 1114, 16880, 16882, 8755, 7454, 5039, 2]
 // Exports: useHasSettingsBadge
 
-// Module 16887 (YouBannerDecorations)
+// Module 16875 (YouBannerDecorations)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
-import QuestTypes from "QuestTypes" /* 5497 */;
-import useTrialOffer from "useTrialOffer" /* 7501 */;
-import QuestUtils from "QuestUtils" /* 11838 */;
-import PromotionsHooks from "PromotionsHooks" /* 13544 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16890 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
+import QuestTypes from "QuestTypes" /* 5499 */;
+import useTrialOffer from "useTrialOffer" /* 7523 */;
+import QuestUtils from "QuestUtils" /* 11862 */;
+import PromotionsHooks from "PromotionsHooks" /* 13518 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16878 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -25,7 +25,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let closure_9 = fn(1373).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, buttonsFloating: null, loading: null };
   const obj2 = {};
@@ -147,12 +147,12 @@ export default noop.memo((navigateToPremium) => {
     navigateToSettings();
     let tmp5 = closure_7;
     if (closure_7) {
-      tmp5 = !tmp(4425).UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
-      const tmpResult = tmp(4425);
+      tmp5 = !tmp(4427).UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+      const tmpResult = tmp(4427);
     }
     if (tmp5) {
-      const result1 = tmp(4425).UNSAFE_markDismissibleContentAsDismissed(tmp(1943).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
-      const tmpResult2 = tmp(4425);
+      const result1 = tmp(4427).UNSAFE_markDismissibleContentAsDismissed(tmp(1943).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+      const tmpResult2 = tmp(4427);
     }
   }, items2);
   const callback1 = obj4.useCallback(() => {

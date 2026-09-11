@@ -1,13 +1,13 @@
-// Module ID: 5955
-// Function ID: 5956
+// Module ID: 5977
+// Function ID: 5978
 // Name: DiamondSpotIllustration
-// Dependencies: [21, 5637, 5956, 2]
+// Dependencies: [21, 5639, 5978, 2]
 // Exports: DiamondSpotIllustration
 
-// Module 5955 (DiamondSpotIllustration)
+// Module 5977 (DiamondSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5956 from "module_5956" /* 5956 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5978 from "module_5978" /* 5978 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DiamondSpotIllustration = function DiamondSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5956 };
+  const obj2 = { uri: _modDef5978 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

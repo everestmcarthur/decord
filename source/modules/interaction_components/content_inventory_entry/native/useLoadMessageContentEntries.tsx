@@ -1,17 +1,17 @@
-// Module ID: 11601
-// Function ID: 11602
+// Module ID: 11625
+// Function ID: 11626
 // Name: useLoadMessageContentEntries
-// Dependencies: [32, 5, 19, 4833, 1920, 9097, 8244, 7215, 8195, 38, 8202, 1894, 8192, 7354, 2]
+// Dependencies: [32, 5, 19, 4835, 1920, 9120, 8267, 7237, 8218, 38, 8225, 1894, 8215, 7376, 2]
 // Exports: default
 
-// Module 11601 (useLoadMessageContentEntries)
+// Module 11625 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
-import useAvatarColor from "useAvatarColor" /* 8195 */;
+import useAvatarColor from "useAvatarColor" /* 8218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
+import ApplicationStore from "ApplicationStore" /* 4835 */;
 
 const require = globalThis.__r;
 
@@ -675,7 +675,7 @@ function isMessageRenderable(message) {
     let tmp2 = nextResult;
     let tmp3 = require;
     if (nextResult.type === Server.ComponentType.CONTENT_INVENTORY_ENTRY) {
-      let tmp3Result = tmp3(8192);
+      let tmp3Result = tmp3(8215);
       let obj = { component: null, message: null };
       let obj2 = { contentInventoryEntry: null };
       obj2.contentInventoryEntry = tmp2.contentInventoryEntry;
@@ -692,9 +692,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(1920).ImageSizes;
-const promiseDeduper = new fn(9097).PromiseDeduper();
-const promiseDeduper3 = new fn(9097).PromiseDeduper();
-const promiseDeduper4 = new fn(9097).PromiseDeduper();
+const promiseDeduper = new fn(9120).PromiseDeduper();
+const promiseDeduper3 = new fn(9120).PromiseDeduper();
+const promiseDeduper4 = new fn(9120).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
 

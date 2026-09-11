@@ -1,9 +1,9 @@
-// Module ID: 5063
-// Function ID: 5064
+// Module ID: 5065
+// Function ID: 5066
 // Name: TopSoundboardSoundStore
 // Dependencies: [504, 573, 2]
 
-// Module 5063 (TopSoundboardSoundStore)
+// Module 5065 (TopSoundboardSoundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

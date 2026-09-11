@@ -1,14 +1,14 @@
-// Module ID: 15393
-// Function ID: 15394
+// Module ID: 15375
+// Function ID: 15376
 // Name: CircleMinusIcon
-// Dependencies: [19, 17, 21, 576, 4305, 15394, 15395, 2]
+// Dependencies: [19, 17, 21, 576, 4307, 15376, 15377, 2]
 // Exports: CircleMinusIcon
 
-// Module 15393 (CircleMinusIcon)
+// Module 15375 (CircleMinusIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod15394 from "module_15394" /* 15394 */;
-import _mod15395 from "module_15395" /* 15395 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod15376 from "module_15376" /* 15376 */;
+import _mod15377 from "module_15377" /* 15377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ export const CircleMinusIcon = function CircleMinusIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod15394, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod15395, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod15376, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod15377, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

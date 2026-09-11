@@ -1,20 +1,20 @@
-// Module ID: 4796
-// Function ID: 4797
+// Module ID: 4798
+// Function ID: 4799
 // Name: SurveyStore
-// Dependencies: [4525, 1979, 4243, 4426, 1371, 1074, 1090, 4797, 1086, 510, 4196, 504, 573, 2]
+// Dependencies: [4527, 1979, 4245, 4428, 1371, 1074, 1090, 4799, 1086, 510, 4198, 504, 573, 2]
 
-// Module 4796 (SurveyStore)
+// Module 4798 (SurveyStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 4797 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4525 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 4799 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4527 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -182,8 +182,8 @@ function setSurvey(survey) {
   value = Storage.get(closure_1_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    tmp9 = _modDef4196().diff(value, "day") < 7;
-    obj = _modDef4196();
+    tmp9 = _modDef4198().diff(value, "day") < 7;
+    obj = _modDef4198();
   }
   let tmp11 = null;
   if (tmp4) {

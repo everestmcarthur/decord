@@ -1,0 +1,9 @@
+// Module ID: 7250
+// Function ID: 7251
+// Dependencies: [1122]
+
+// Module 7250
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 38, height: 38, scales: [2, 3], hash: "396b5aebc51e5c35836ff2654ee02ebc", name: "game_icon_placeholder", type: "png" });

@@ -1,13 +1,13 @@
-// Module ID: 6231
-// Function ID: 6232
+// Module ID: 6253
+// Function ID: 6254
 // Name: GuidelinesIllocon
-// Dependencies: [21, 5637, 6232, 2]
+// Dependencies: [21, 5639, 6254, 2]
 // Exports: GuidelinesIllocon
 
-// Module 6231 (GuidelinesIllocon)
+// Module 6253 (GuidelinesIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6232 from "module_6232" /* 6232 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6254 from "module_6254" /* 6254 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const GuidelinesIllocon = function GuidelinesIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6232 };
+  const obj2 = { uri: _modDef6254 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

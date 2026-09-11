@@ -1,13 +1,13 @@
-// Module ID: 7587
-// Function ID: 7588
+// Module ID: 7609
+// Function ID: 7610
 // Name: isOptInEnabled
-// Dependencies: [1979, 4243, 4786, 1371, 1074, 504, 2]
+// Dependencies: [1979, 4245, 4788, 1371, 1074, 504, 2]
 // Exports: isOptInEnabledForGuild, useOptInEnabledForGuild, useShouldShowOnboardingAdminUpsellForGuild
 
-// Module 7587 (isOptInEnabled)
+// Module 7609 (isOptInEnabled)
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;

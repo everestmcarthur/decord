@@ -1,18 +1,18 @@
-// Module ID: 12487
-// Function ID: 12488
+// Module ID: 12512
+// Function ID: 12513
 // Name: MultiAccountActionCreators
-// Dependencies: [5, 502, 12483, 1074, 3, 1099, 573, 1272, 1242, 6643, 2]
+// Dependencies: [5, 502, 12508, 1074, 3, 1099, 573, 1272, 1242, 6665, 2]
 // Exports: invalidatePushSyncTokens, moveAccount, removeAccount, reportAccountSwitchTimeout, switchAccount, updatePushSyncToken, validateMultiAccountTokens
 
-// Module 12487 (MultiAccountActionCreators)
+// Module 12512 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6643 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6665 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 12483 */;
+import MultiAccountStore from "MultiAccountStore" /* 12508 */;
 
 const require = fn;
 const Constants = fn(1074);

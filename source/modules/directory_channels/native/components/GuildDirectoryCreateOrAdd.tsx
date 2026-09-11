@@ -1,22 +1,22 @@
-// Module ID: 12381
-// Function ID: 12382
+// Module ID: 12406
+// Function ID: 12407
 // Name: GuildDirectoryCreateOrAdd
-// Dependencies: [32, 19, 17, 12382, 12380, 21, 4605, 576, 504, 5655, 5634, 12383, 9862, 1114, 4601, 9863, 1611, 5025, 1483, 5636, 12388, 12379, 2]
+// Dependencies: [32, 19, 17, 12407, 12405, 21, 4607, 576, 504, 5657, 5636, 12408, 9885, 1114, 4603, 9886, 1611, 5027, 1483, 5638, 12413, 12404, 2]
 // Exports: default
 
-// Module 12381 (GuildDirectoryCreateOrAdd)
+// Module 12406 (GuildDirectoryCreateOrAdd)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import GuildIconDefault from "GuildIcon" /* 5634 */;
-import TableRow from "TableRow" /* 5655 */;
-import SegmentedControlState from "SegmentedControlState" /* 9862 */;
-import SegmentedControl from "SegmentedControl" /* 9863 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import GuildIconDefault from "GuildIcon" /* 5636 */;
+import TableRow from "TableRow" /* 5657 */;
+import SegmentedControlState from "SegmentedControlState" /* 9885 */;
+import SegmentedControl from "SegmentedControl" /* 9886 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12382 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12407 */;
 
 const require = globalThis.__r;
 
@@ -65,10 +65,10 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(12380).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12405).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, container: { flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm }, header: { padding: 16, alignItems: "center", justifyContent: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null, segmentedControl: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj.footerSafeAreaContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
@@ -84,8 +84,8 @@ let closure_13 = noop.memo((guild) => {
   const tmp = closure_12();
   const items = [GuildDirectoryStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
-  const obj2 = { label: guild.name, icon: closure_10(directoryChannelId(5634), { style: tmp.guildIcon, guild }), trailing: closure_10(directoryChannelId(12383), { entry: stateFromStores }), start, end };
-  return closure_10(guild(5655).TableRow, obj2);
+  const obj2 = { label: guild.name, icon: closure_10(directoryChannelId(5636), { style: tmp.guildIcon, guild }), trailing: closure_10(directoryChannelId(12408), { entry: stateFromStores }), start, end };
+  return closure_10(guild(5657).TableRow, obj2);
 });
 let closure_14 = noop.memo((guild) => {
   guild = guild.guild;

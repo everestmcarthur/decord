@@ -1,22 +1,22 @@
-// Module ID: 8151
-// Function ID: 8152
+// Module ID: 8174
+// Function ID: 8175
 // Name: BaseIconButton
-// Dependencies: [19, 21, 4605, 5030, 4341, 5027, 5031, 5033, 5035, 2]
+// Dependencies: [19, 21, 4607, 5032, 4343, 5029, 5033, 5035, 5037, 2]
 
-// Module 8151 (BaseIconButton)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
-import IconDefault from "Icon" /* 5027 */;
-import ButtonConstants from "ButtonConstants" /* 5030 */;
-import ButtonHooks from "ButtonHooks" /* 5031 */;
-import Button_BaseButton from "Button/BaseButton" /* 5033 */;
-import ButtonPill from "ButtonPill" /* 5035 */;
+// Module 8174 (BaseIconButton)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
+import IconDefault from "Icon" /* 5029 */;
+import ButtonConstants from "ButtonConstants" /* 5032 */;
+import ButtonHooks from "ButtonHooks" /* 5033 */;
+import Button_BaseButton from "Button/BaseButton" /* 5035 */;
+import ButtonPill from "ButtonPill" /* 5037 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
@@ -63,11 +63,11 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(5030).SMALL_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = tmp4(5032).SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(5030).MEDIUM_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = tmp4(5032).MEDIUM_BUTTON_HEIGHT;
   }
-  const bound = Math.max((tmp4(5030).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
+  const bound = Math.max((tmp4(5032).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
   const obj4 = {};
   const merged = Object.assign(variant);
   obj4.ref = ref;

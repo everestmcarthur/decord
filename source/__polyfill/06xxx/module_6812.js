@@ -1,17 +1,23 @@
 // Module ID: 6812
 // Function ID: 6813
-// Dependencies: [6813, 6764]
-// Exports: useCompetingGestures
+// Dependencies: [19, 6813]
+// Exports: useGestureEventHandler
 
 // Module 6812
-import ComposedGestureName from "ComposedGestureName" /* 6764 */;
-import _mod6813 from "module_6813" /* 6813 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+let useMemo = _mod19.useMemo;
 
-export const useCompetingGestures = function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod6813.useComposedGesture.apply(items1);
+export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = handlerTag;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
+  closure_3 = tmp;
+  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
+  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(() => (arg0) => {
+    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
+  }, items);
 };

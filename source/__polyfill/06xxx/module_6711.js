@@ -1,7 +1,12 @@
 // Module ID: 6711
 // Function ID: 6712
-// Dependencies: []
+// Dependencies: [19]
 
 // Module 6711
+import _mod19 from "module_19" /* 19 */;
 
-export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+const createContext = _mod19.createContext;
+const context = createContext(null);
+
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

@@ -1,13 +1,13 @@
-// Module ID: 6159
-// Function ID: 6160
+// Module ID: 6181
+// Function ID: 6182
 // Name: GemLevel1SpotIllustration
-// Dependencies: [21, 5637, 6160, 2]
+// Dependencies: [21, 5639, 6182, 2]
 // Exports: GemLevel1SpotIllustration
 
-// Module 6159 (GemLevel1SpotIllustration)
+// Module 6181 (GemLevel1SpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6160 from "module_6160" /* 6160 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6182 from "module_6182" /* 6182 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GemLevel1SpotIllustration = function GemLevel1SpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6160 };
+  const obj2 = { uri: _modDef6182 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,20 +1,20 @@
-// Module ID: 9873
-// Function ID: 9874
+// Module ID: 9896
+// Function ID: 9897
 // Name: DiscordTag
-// Dependencies: [19, 17, 21, 4605, 576, 4601, 9508, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 4603, 9531, 2]
 // Exports: default
 
-// Module 9873 (DiscordTag)
+// Module 9896 (DiscordTag)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import BotTagDefault from "BotTag" /* 9508 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import BotTagDefault from "BotTag" /* 9531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -42,7 +42,7 @@ export default function DiscordTag(arg0) {
         const obj4 = { variant: "text-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
         const items1 = ["#", user.discriminator];
         obj4.children = items1;
-        tmp2Result = tmp2(tmp4(4601).Text, obj4);
+        tmp2Result = tmp2(tmp4(4603).Text, obj4);
       }
       items[1] = tmp2Result;
       obj3.children = items;

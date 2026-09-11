@@ -1,12 +1,12 @@
-// Module ID: 6997
-// Function ID: 6998
+// Module ID: 7019
+// Function ID: 7020
 // Name: OneTimeLoginForgotPasswordConfirmAlertModal
-// Dependencies: [19, 21, 4955, 1114, 4955, 2]
+// Dependencies: [19, 21, 4957, 1114, 4957, 2]
 // Exports: default
 
-// Module 6997 (OneTimeLoginForgotPasswordConfirmAlertModal)
+// Module 7019 (OneTimeLoginForgotPasswordConfirmAlertModal)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4955 */;
+import AlertModal from "AlertModal" /* 4957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

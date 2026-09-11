@@ -1,10 +1,10 @@
-// Module ID: 13088
-// Function ID: 13089
+// Module ID: 13113
+// Function ID: 13114
 // Name: isOnMetaHorizon
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 13088 (isOnMetaHorizon)
+// Module 13113 (isOnMetaHorizon)
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;

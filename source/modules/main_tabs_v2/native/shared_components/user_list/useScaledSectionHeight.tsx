@@ -1,12 +1,12 @@
-// Module ID: 10282
-// Function ID: 10283
+// Module ID: 10303
+// Function ID: 10304
 // Name: useScaledSectionHeight
-// Dependencies: [10283, 5032, 2]
+// Dependencies: [10304, 5034, 2]
 // Exports: default
 
-// Module 10282 (useScaledSectionHeight)
-import useFontScale from "useFontScale" /* 5032 */;
-import UsersFastListConstants from "UsersFastListConstants" /* 10283 */;
+// Module 10303 (useScaledSectionHeight)
+import useFontScale from "useFontScale" /* 5034 */;
+import UsersFastListConstants from "UsersFastListConstants" /* 10304 */;
 import size from "module_2" /* 2 */;
 
 ({ USERS_LIST_SECTION_HEIGHT: c2, USERS_LIST_SECTION_TEXT_HEIGHT: c3 } = UsersFastListConstants);

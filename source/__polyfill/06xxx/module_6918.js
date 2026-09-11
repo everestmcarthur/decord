@@ -1,16 +1,10 @@
 // Module ID: 6918
 // Function ID: 6919
-// Dependencies: [6919, 6920]
+// Dependencies: [17]
 
 // Module 6918
-import _mod6919 from "module_6919" /* 6919 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod6919(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
-  }
-  return text;
-};
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

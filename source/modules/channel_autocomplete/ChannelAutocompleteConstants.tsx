@@ -1,10 +1,10 @@
-// Module ID: 5050
-// Function ID: 5051
+// Module ID: 5052
+// Function ID: 5053
 // Name: ChannelAutocompleteConstants
 // Dependencies: [2]
 // Exports: extractGameMentionIds, formatGameMentionRaw, formatGameMentionToken
 
-// Module 5050 (ChannelAutocompleteConstants)
+// Module 5052 (ChannelAutocompleteConstants)
 import size from "module_2" /* 2 */;
 
 let closure_0 = [];

@@ -1,0 +1,9 @@
+// Module ID: 14080
+// Function ID: 14081
+// Dependencies: [14069]
+
+// Module 14080
+import _mod14069 from "module_14069" /* 14069 */;
+
+
+export default (arg0, arg1) => new _mod14069(arg0, arg1).minor;

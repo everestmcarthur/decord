@@ -1,16 +1,16 @@
-// Module ID: 14835
-// Function ID: 14836
+// Module ID: 14812
+// Function ID: 14813
 // Name: AgeGroupScreenRowProps
-// Dependencies: [8476, 8478, 1114, 2946, 4818, 14760, 2]
+// Dependencies: [8499, 8501, 1114, 2946, 4820, 14737, 2]
 // Exports: useShowAccountStatusAgeGroupRow, useShowAssignedAdultAgeGroupRow
 
-// Module 14835 (AgeGroupScreenRowProps)
+// Module 14812 (AgeGroupScreenRowProps)
 import util from "util" /* 1114 */;
 import _modDef2946 from "module_2946" /* 2946 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4818 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8478 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14760 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4820 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8499 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8501 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14737 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");

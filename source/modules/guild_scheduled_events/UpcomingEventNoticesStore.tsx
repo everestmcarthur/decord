@@ -1,14 +1,14 @@
-// Module ID: 9733
-// Function ID: 9734
+// Module ID: 9756
+// Function ID: 9757
 // Name: UpcomingEventNoticesStore
-// Dependencies: [502, 7578, 1963, 9734, 504, 573, 2]
+// Dependencies: [502, 7600, 1963, 9757, 504, 573, 2]
 
-// Module 9733 (UpcomingEventNoticesStore)
+// Module 9756 (UpcomingEventNoticesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 9734 */;
+import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 9757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7578 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7600 */;
 
 require = fn;
 const GuildScheduledEventsConstants = fn(1963);

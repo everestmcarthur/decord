@@ -1,23 +1,23 @@
-// Module ID: 11568
-// Function ID: 11569
+// Module ID: 11592
+// Function ID: 11593
 // Name: QuestPlatformUtils
-// Dependencies: [5494, 1074, 7775, 5502, 11264, 11265, 11269, 5501, 7769, 9321, 1114, 1115, 11367, 4570, 11569, 1109, 11561, 4293, 11570, 11572, 1256, 11560, 11565, 7434, 573, 2]
+// Dependencies: [5496, 1074, 7797, 5504, 11288, 11289, 11293, 5503, 7791, 9344, 1114, 1115, 11391, 4572, 11593, 1109, 11585, 4295, 11594, 11596, 1256, 11584, 11589, 7456, 573, 2]
 // Exports: getExpiredCredentialsHintMessage, getPlatformTypeForHintMessage, isQuestSupportedOnWeb, openAdGameLinkDirectly, openAdGameLinkDirectlyFromBountyEntireVideoTap, openAddConsoleConnectionModal, openAuthorizationConnectionModal, openConsoleConnectionSettings, openGameLinkDirectly, openSingleConsoleConnectionModal, supportedTaskPlatforms
 
-// Module 11568 (QuestPlatformUtils)
+// Module 11592 (QuestPlatformUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import openURLDefault from "openURL" /* 4293 */;
-import QuestConstants from "QuestConstants" /* 5494 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5502 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
-import AnalyticsActions from "AnalyticsActions" /* 7769 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7775 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9321 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11264 */;
-import apexExperiment from "apexExperiment" /* 11561 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 11565 */;
+import openURLDefault from "openURL" /* 4295 */;
+import QuestConstants from "QuestConstants" /* 5496 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5504 */;
+import openUserSettings from "openUserSettings" /* 7456 */;
+import AnalyticsActions from "AnalyticsActions" /* 7791 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7797 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9344 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11288 */;
+import apexExperiment from "apexExperiment" /* 11585 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 11589 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ function supportedConsoles(quest) {
     let tmp2 = require;
     if (FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX === item10013) {
       let arr = items.push(constants2.XBOX);
-    } else if (tmp2(5502).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION === item10013) {
+    } else if (tmp2(5504).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION === item10013) {
       let arr3 = items.push(constants2.PLAYSTATION);
     }
     continue;
@@ -145,7 +145,7 @@ function openAppStoreOrUrl(link) {
               }
               result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg0);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg0);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, result);
@@ -154,21 +154,21 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7769).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7791).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                   const ComponentDispatch = closure_0(1109).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
@@ -183,7 +183,7 @@ function openAppStoreOrUrl(link) {
               }
               const result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg0);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg0);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, undefined);
@@ -192,21 +192,21 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7769).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7791).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                   const ComponentDispatch = closure_0(1109).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
@@ -222,7 +222,7 @@ function openAppStoreOrUrl(link) {
               }
               result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg0);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg0);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, result);
@@ -231,21 +231,21 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7769).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7791).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                   const ComponentDispatch = closure_0(1109).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
@@ -253,37 +253,37 @@ function openAppStoreOrUrl(link) {
             });
           } else {
             closure_0 = QuestTaskPlatform;
-            ({ clearAppStoreOverlayOpen: closure_1, setAppStoreOverlayOpen: inlineStoreParams } = tmp(11569));
+            ({ clearAppStoreOverlayOpen: closure_1, setAppStoreOverlayOpen: inlineStoreParams } = tmp(11593));
             ({ url, appId } = inlineStoreParams);
             if (appId != null) {
               let str = appId.toString();
             }
-            let result = tmp(4570).openPlayStoreInlineInstall(url, appId, (arg0) => {
+            let result = tmp(4572).openPlayStoreInlineInstall(url, appId, (arg0) => {
               closure_1_1();
-              closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg0);
+              closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg0);
               const ComponentDispatch = closure_0(1109).ComponentDispatch;
               ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
             }, undefined);
-            const tmpResult = tmp(11569);
+            const tmpResult = tmp(11593);
             catchPromise = result.then((result) => {
               if (result) {
                 const obj = {
                   trackOverlayEvent(arg0, arg1) {
-                      return closure_1_0(arg0, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7769).AppStoreOverlaySurfaces.MAIN_CTA);
+                      return closure_1_0(arg0, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7791).AppStoreOverlaySurfaces.MAIN_CTA);
                     }
                 };
                 dependencyMap(obj);
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
               } else {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }
               return result;
             }).catch(() => {
               closure_1_1();
-              closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+              closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
               const ComponentDispatch = closure_0(1109).ComponentDispatch;
               ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               return false;
@@ -292,14 +292,14 @@ function openAppStoreOrUrl(link) {
               if (result) {
                 const obj = {
                   trackOverlayEvent(arg0, arg1) {
-                      return closure_1_0(arg0, str, closure_0(7769).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7769).AppStoreOverlaySurfaces.MAIN_CTA);
+                      return closure_1_0(arg0, str, closure_0(7791).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7791).AppStoreOverlaySurfaces.MAIN_CTA);
                     }
                 };
                 dependencyMap(obj);
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
               } else {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7769).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7791).AppStoreOverlayVariant.NATIVE);
                 const ComponentDispatch = closure_0(1109).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }
@@ -346,16 +346,16 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(11264).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
-    const obj2 = { type: tmp2(11269).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(11288).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
+    const obj2 = { type: tmp2(11293).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
     ({ ctaContent: obj5.questContentCTA, content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, position: obj5.questContentPosition, impressionId: obj5.impressionId } = impressionId);
-    tmp2(11265).captureAdUserAction(obj2);
-    const tmp2Result = tmp2(11265);
+    tmp2(11289).captureAdUserAction(obj2);
+    const tmp2Result = tmp2(11289);
   } else {
     const obj4 = { adContentId, adCreativeType, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     ({ content: obj3.questContent, ctaContent: obj3.questContentCTA, position: obj3.questContentPosition, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = impressionId);
-    const result = tmp2(7769).trackAdContentClicked(obj4);
-    const tmp2Result3 = tmp2(7769);
+    const result = tmp2(7791).trackAdContentClicked(obj4);
+    const tmp2Result3 = tmp2(7791);
   }
   const ComponentDispatch = tmp2(1109).ComponentDispatch;
   ComponentDispatch.dispatch(constants.QUEST_GAME_LINK_OPENED);
@@ -367,11 +367,11 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(11560).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
-    const tmp2Result4 = tmp2(11560);
+    iosAttributionClickFramework = tmp2(11584).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
+    const tmp2Result4 = tmp2(11584);
   }
   let fn;
-  obj = adContentId(11264);
+  obj = adContentId(11288);
   if (null != iosAttributionClickFramework) {
     if (null != impressionId) {
       fn = () => IosAttributionImpressionRegistry.getStoreKitCredential({ impressionId });
@@ -379,7 +379,7 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   }
   if (preferExternalAppStore.preferExternalAppStore) {
     if (null == fn) {
-      adCreativeType(4293)(url);
+      adCreativeType(4295)(url);
     }
   }
   const tmp9 = getInlineStoreParamsFromCta(cta);
@@ -401,12 +401,12 @@ export const supportedTaskPlatforms = function supportedTaskPlatforms(quest) {
   let hasPlayOnDesktopTaskResult = QuestTaskUtils.hasPlayOnDesktopTask({ quest });
   if (!hasPlayOnDesktopTaskResult) {
     const obj3 = { quest };
-    hasPlayOnDesktopTaskResult = tmp(7775).hasStreamOnDesktopTask(obj3);
-    const tmpResult = tmp(7775);
+    hasPlayOnDesktopTaskResult = tmp(7797).hasStreamOnDesktopTask(obj3);
+    const tmpResult = tmp(7797);
   }
   if (!hasPlayOnDesktopTaskResult) {
-    hasPlayOnDesktopTaskResult = tmp(7775).hasAchievementInGameTask(quest);
-    const tmpResult3 = tmp(7775);
+    hasPlayOnDesktopTaskResult = tmp(7797).hasAchievementInGameTask(quest);
+    const tmpResult3 = tmp(7797);
   }
   const obj2 = { quest };
   const items = [];
@@ -439,15 +439,15 @@ export const getPlatformTypeForHintMessage = function getPlatformTypeForHintMess
 export const openAuthorizationConnectionModal = function openAuthorizationConnectionModal(platformType, ctaContent) {
   const quest = platformType.quest;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")) {
-    const obj2 = { type: tmp(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5501).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
+    const obj2 = { type: tmp(11293).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5503).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
     ({ ctaContent: obj5.questContentCTA, content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, impressionId: obj5.impressionId } = ctaContent);
-    tmp(11265).captureAdUserAction(obj2);
-    const tmpResult = tmp(11265);
+    tmp(11289).captureAdUserAction(obj2);
+    const tmpResult = tmp(11289);
   } else {
     const obj4 = { questId: quest.id, questContent: null, sourceQuestContent: null, questContentCTA: null, impressionId: null };
     ({ content: obj3.questContent, sourceQuestContent: obj3.sourceQuestContent, ctaContent: obj3.questContentCTA, impressionId: obj3.impressionId } = ctaContent);
-    const result = tmp(7769).trackQuestContentClicked(obj4);
-    const tmpResult2 = tmp(7769);
+    const result = tmp(7791).trackQuestContentClicked(obj4);
+    const tmpResult2 = tmp(7791);
   }
   authorizeConnectionDefault({ platformType: platformType.platformType, location: ctaContent.ctaContent });
 };
@@ -576,30 +576,30 @@ export const openAdGameLinkDirectlyFromBountyEntireVideoTap = function openAdGam
 export const openConsoleConnectionSettings = function openConsoleConnectionSettings(quest, arg1) {
   quest = quest.quest;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")) {
-    const obj2 = { type: tmp(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5501).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
+    const obj2 = { type: tmp(11293).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5503).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
     ({ ctaContent: obj5.questContentCTA, content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, impressionId: obj5.impressionId, position: obj5.questContentPosition } = arg1);
-    tmp(11265).captureAdUserAction(obj2);
-    const tmpResult = tmp(11265);
+    tmp(11289).captureAdUserAction(obj2);
+    const tmpResult = tmp(11289);
   } else {
     const obj4 = { questId: quest.id, questContent: null, questContentPosition: null, questContentCTA: null, impressionId: null, sourceQuestContent: null };
     ({ content: obj3.questContent, position: obj3.questContentPosition, ctaContent: obj3.questContentCTA, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = arg1);
-    const result = tmp(7769).trackQuestContentClicked(obj4);
-    const tmpResult2 = tmp(7769);
+    const result = tmp(7791).trackQuestContentClicked(obj4);
+    const tmpResult2 = tmp(7791);
   }
   openUserSettings.openUserSettings({ screen: constants3.CONNECTIONS });
 };
 export const openAddConsoleConnectionModal = function openAddConsoleConnectionModal(quest, arg1) {
   quest = quest.quest;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")) {
-    const obj2 = { type: tmp(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5501).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
+    const obj2 = { type: tmp(11293).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5503).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
     ({ ctaContent: obj5.questContentCTA, content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, impressionId: obj5.impressionId, position: obj5.questContentPosition, rowIndex: obj5.questContentRowIndex } = arg1);
-    tmp(11265).captureAdUserAction(obj2);
-    const tmpResult = tmp(11265);
+    tmp(11289).captureAdUserAction(obj2);
+    const tmpResult = tmp(11289);
   } else {
     const obj4 = { questId: quest.id, questContent: null, questContentPosition: null, questContentRowIndex: null, questContentCTA: null, impressionId: null, sourceQuestContent: null };
     ({ content: obj3.questContent, position: obj3.questContentPosition, rowIndex: obj3.questContentRowIndex, ctaContent: obj3.questContentCTA, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = arg1);
-    const result = tmp(7769).trackQuestContentClicked(obj4);
-    const tmpResult2 = tmp(7769);
+    const result = tmp(7791).trackQuestContentClicked(obj4);
+    const tmpResult2 = tmp(7791);
   }
   const arr = supportedConsoles(quest);
   if (1 === arr.length) {
@@ -624,15 +624,15 @@ export const openAddConsoleConnectionModal = function openAddConsoleConnectionMo
 export const openSingleConsoleConnectionModal = function openSingleConsoleConnectionModal(quest, arg1, platformType) {
   quest = quest.quest;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")) {
-    const obj2 = { type: tmp(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5501).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
+    const obj2 = { type: tmp(11293).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5503).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
     ({ ctaContent: obj5.questContentCTA, content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, impressionId: obj5.impressionId, position: obj5.questContentPosition, rowIndex: obj5.questContentRowIndex } = arg1);
-    tmp(11265).captureAdUserAction(obj2);
-    const tmpResult = tmp(11265);
+    tmp(11289).captureAdUserAction(obj2);
+    const tmpResult = tmp(11289);
   } else {
     const obj4 = { questId: quest.id, questContent: null, questContentPosition: null, questContentRowIndex: null, questContentCTA: null, impressionId: null, sourceQuestContent: null };
     ({ content: obj3.questContent, position: obj3.questContentPosition, rowIndex: obj3.questContentRowIndex, ctaContent: obj3.questContentCTA, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = arg1);
-    const result = tmp(7769).trackQuestContentClicked(obj4);
-    const tmpResult2 = tmp(7769);
+    const result = tmp(7791).trackQuestContentClicked(obj4);
+    const tmpResult2 = tmp(7791);
   }
   return authorizeConnectionDefault({ platformType });
 };

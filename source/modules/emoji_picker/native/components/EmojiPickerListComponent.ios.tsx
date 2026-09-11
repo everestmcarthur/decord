@@ -1,15 +1,15 @@
-// Module ID: 10395
-// Function ID: 10396
+// Module ID: 10416
+// Function ID: 10417
 // Name: components/EmojiPickerListComponent
-// Dependencies: [19, 10360, 21, 10373, 10383, 10396, 10392, 8943, 2]
+// Dependencies: [19, 10381, 21, 10394, 10404, 10417, 10413, 8966, 2]
 
-// Module 10395 (components/EmojiPickerListComponent)
+// Module 10416 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10360);
+const EmojiPickerListConstants = fn(10381);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: metroRequire, LABEL_BOTTOM_PADDING: closure_7 } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -86,5 +86,5 @@ export default noop.forwardRef((paddingTop, ref) => {
     }
   }));
   const preventNativeModalDismiss = require("PortalKeyboardModalContext").useIsPortalKeyboardInModal();
-  return jsx(require("module_8943").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
+  return jsx(require("module_8966").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
 });

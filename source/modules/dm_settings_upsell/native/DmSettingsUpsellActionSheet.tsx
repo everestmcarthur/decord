@@ -1,17 +1,17 @@
-// Module ID: 17436
-// Function ID: 17437
+// Module ID: 17427
+// Function ID: 17428
 // Name: DmSettingsUpsellActionSheet
-// Dependencies: [19, 17, 1979, 21, 4605, 576, 504, 17433, 17437, 7249, 11446, 4601, 1114, 5634, 5025, 7047, 1935, 4303, 9636, 4572, 13982, 2]
+// Dependencies: [19, 17, 1979, 21, 4607, 576, 504, 17424, 17428, 7271, 11470, 4603, 1114, 5636, 5027, 7069, 1935, 4305, 9659, 4574, 13962, 2]
 // Exports: default
 
-// Module 17436 (DmSettingsUpsellActionSheet)
+// Module 17427 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7047 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13982 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 17433 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17437 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7069 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13962 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 17424 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17428 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center", width: 250 }, body: { textAlign: "center" }, guildContainer: null, guildInfo: null, footer: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.guildContainer = { paddingVertical: nativeDefault.space.PX_16 };
@@ -46,27 +46,27 @@ export default function DmSettingsUpsellActionSheet(guildId) {
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(11446), style: tmp.headerImage };
+    const obj4 = { source: stateFromStores(11470), style: tmp.headerImage };
     const items2 = [closure_7(closure_5, obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1114).intl;
     obj5.children = intl.string(tmp2(1114).t.w2BvnL);
-    items2[1] = closure_7(tmp2(4601).Text, obj5);
+    items2[1] = closure_7(tmp2(4603).Text, obj5);
     const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp.body, children: null };
     const intl2 = tmp2(1114).intl;
     const obj7 = { guild_name: stateFromStores.name };
     obj6.children = intl2.format(tmp2(1114).t.Depjkv, obj7);
-    items2[2] = closure_7(tmp2(4601).Text, obj6);
+    items2[2] = closure_7(tmp2(4603).Text, obj6);
     const obj8 = { style: tmp.guildContainer, children: null };
     const obj9 = { variant: "eyebrow", color: "text-default", children: null };
     const intl3 = tmp2(1114).intl;
     obj9.children = intl3.string(tmp2(1114).t.KPB2iw);
-    const items3 = [closure_7(tmp2(4601).Text, obj9), ];
+    const items3 = [closure_7(tmp2(4603).Text, obj9), ];
     const obj10 = { style: tmp.guildInfo, children: null };
-    const obj11 = { guild: stateFromStores, size: tmp2(5634).GuildIconSizes.SMALL_32 };
-    const items4 = [closure_7(stateFromStores(5634), obj11), ];
+    const obj11 = { guild: stateFromStores, size: tmp2(5636).GuildIconSizes.SMALL_32 };
+    const items4 = [closure_7(stateFromStores(5636), obj11), ];
     const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
-    items4[1] = closure_7(tmp2(4601).Text, obj12);
+    items4[1] = closure_7(tmp2(4603).Text, obj12);
     obj10.children = items4;
     items3[1] = closure_8(closure_4, obj10);
     obj8.children = items3;
@@ -78,10 +78,10 @@ export default function DmSettingsUpsellActionSheet(guildId) {
           sanitizedRestrictedGuilds.add(guildId);
           const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
           RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds)).then(() => {
-            const obj2 = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: stateFromStores(9636), content: null };
+            const obj2 = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: stateFromStores(9659), content: null };
             const intl = guildId(1114).intl;
             obj2.content = intl.string(guildId(1114).t.rlYD1W);
-            stateFromStores(4303).open(obj2);
+            stateFromStores(4305).open(obj2);
           });
           const updateSettingResult = RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -91,7 +91,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     };
     const intl4 = tmp2(1114).intl;
     obj13.text = intl4.string(tmp2(1114).t.TD7iUx);
-    items2[4] = closure_7(tmp2(5025).Button, obj13);
+    items2[4] = closure_7(tmp2(5027).Button, obj13);
     const obj14 = {
       size: "lg",
       variant: "secondary",
@@ -103,7 +103,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     };
     const intl5 = tmp2(1114).intl;
     obj14.text = intl5.string(tmp2(1114).t.PsWbcp);
-    items2[5] = closure_7(tmp2(5025).Button, obj14);
+    items2[5] = closure_7(tmp2(5027).Button, obj14);
     const obj15 = { variant: "text-xs/normal", style: tmp.footer, children: null };
     const intl6 = tmp2(1114).intl;
     const obj16 = {
@@ -116,11 +116,11 @@ export default function DmSettingsUpsellActionSheet(guildId) {
         }
     };
     obj15.children = intl6.format(tmp2(1114).t.IzZxXW, obj16);
-    items2[6] = closure_7(tmp2(4601).Text, obj15);
+    items2[6] = closure_7(tmp2(4603).Text, obj15);
     obj3.children = items2;
     obj2.children = closure_8(closure_4, obj3);
-    tmp6 = closure_7(tmp2(7249).ActionSheet, obj2);
-    const tmp12 = stateFromStores(5634);
+    tmp6 = closure_7(tmp2(7271).ActionSheet, obj2);
+    const tmp12 = stateFromStores(5636);
   }
   return tmp6;
 };

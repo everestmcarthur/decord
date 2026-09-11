@@ -1,15 +1,15 @@
-// Module ID: 12684
-// Function ID: 12685
+// Module ID: 12709
+// Function ID: 12710
 // Name: Tabs/Tabs
-// Dependencies: [19, 17, 2025, 21, 4341, 4605, 576, 5024, 9565, 12685, 6705, 1115, 2]
+// Dependencies: [19, 17, 2025, 21, 4343, 4607, 576, 5026, 9588, 12710, 6727, 1115, 2]
 // Exports: Tabs
 
-// Module 12684 (Tabs/Tabs)
+// Module 12709 (Tabs/Tabs)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9565 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5026 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6727 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9588 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -26,14 +26,14 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
   obj.controlsContainer = { marginHorizontal: nativeDefault.space.PX_16, flexDirection: "row", gap };
   const size = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: nativeDefault.space.PX_16 };
   obj.indicatorContainer = size;
-  if ("gradient-background" === arg1) {
+  if ("overlay" === arg1) {
     let TEXT_BRAND = tmp(576).colors.TEXT_STRONG;
   } else {
     TEXT_BRAND = tmp(576).colors.TEXT_BRAND;
@@ -220,12 +220,15 @@ export const Tabs = function Tabs(state) {
     }
   }, items2);
   const animatedScrollHandler = state(formatCount[4]).useAnimatedScrollHandler(obj8);
-  const fn3 = function k() {
-    return { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
-  };
-  fn3.__closure = { scrollOffset, activeIndex, itemDimensions };
-  fn3.__workletHash = 9993285637539;
-  fn3.__initData = length;
+  class P {
+    constructor() {
+      obj = { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
+      return obj;
+    }
+  }
+  P.__closure = { scrollOffset, activeIndex, itemDimensions };
+  P.__workletHash = 9993285637539;
+  P.__initData = length;
   class X {
     constructor(arg0, arg1) {
       tmp = arg1;
@@ -290,7 +293,7 @@ export const Tabs = function Tabs(state) {
   X.__closure = { cheapWorkletShallowEqual: state(formatCount[8]).cheapWorkletShallowEqual, itemSpacing, pageWidth, runOnJS: state(formatCount[4]).runOnJS, scrollToOffset: callback1, AUTO_SCROLL_BUFFER: 16 };
   X.__workletHash = 15851319414889;
   X.__initData = ref;
-  const animatedReaction = obj9.useAnimatedReaction(fn3, X);
+  const animatedReaction = obj9.useAnimatedReaction(P, X);
   const items3 = [items, length, formatCount, state, flag, pressedIndex, activeIndex, setActiveIndex, tmp.controlsContainer, variant];
   const items4 = [simultaneousHandlers];
   const memo = simultaneousHandlers.useMemo(() => timestampProducer(React4, {
@@ -319,7 +322,7 @@ export const Tabs = function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12685).TabItem, obj, id);
+      return variant(state(12710).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

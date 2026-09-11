@@ -1,136 +1,328 @@
 // Module ID: 12923
 // Function ID: 12924
-// Dependencies: [32, 12895, 12867, 12894]
-// Exports: addIntegration, afterSetupIntegrations, defineIntegration, getIntegrationsToSetup, setupIntegrations
+// Dependencies: [718, 12919, 12924, 12925, 12897, 12906, 12914, 12907, 12892, 12909, 12920, 12926]
+// Exports: startIdleSpan
 
 // Module 12923
-import _mod12894 from "module_12894" /* 12894 */;
-import _mod12895 from "module_12895" /* 12895 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12892 from "module_12892" /* 12892 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12897 */;
+import _mod12906 from "module_12906" /* 12906 */;
+import _mod12909 from "module_12909" /* 12909 */;
+import _mod12920 from "module_12920" /* 12920 */;
+import _toArray from "_toArray" /* 718 */;
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod12895.DEBUG_BUILD) {
-      const logger2 = tmp10(12867).logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
-    }
-    tmp10 = require;
-  } else {
-    arg2[name.name] = name;
-    if (tmp) {
-      name.setupOnce();
-      arr.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod12895.DEBUG_BUILD) {
-      const logger = tmp6(12867).logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
-    }
-    arr = items;
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
-    tmp6 = require;
-  }
-}
-let items = [];
+const require = globalThis.__r;
 
-export const addIntegration = function addIntegration(name) {
-  const client = _mod12894.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (tmp(12895).DEBUG_BUILD) {
-    const logger = tmp(12867).logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
+
+export { TRACING_DEFAULTS };
+export const startIdleSpan = function startIdleSpan(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-};
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
-    }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
-    }
-    continue;
-  }
-};
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
-  const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
-  });
-  if (Array.isArray(integrations)) {
-    items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
-  } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
+  _require = undefined;
+  let finalTimeout;
+  let childSpanTimeout;
+  let beforeSpanEnd;
+  let currentScope;
+  let activeSpan;
+  c12 = undefined;
+  function onIdleSpanEnded(arg0) {
+    closure_0 = arg0;
+    c2 = true;
+    map.clear();
+    const item = items.forEach((fn) => fn());
+    closure_0(map[6])._setSpanForScope(closure_10, closure_11);
+    let obj = closure_0(map[6]);
+    let spanToJSONResult = closure_0(map[4]).spanToJSON(c12);
+    if (spanToJSONResult.start_timestamp) {
+      if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
+        const attr = obj3.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
       }
-      arr2 = tmp2;
+      let logger = tmp3(tmp4[8]).logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
+      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(obj3);
+      const found = spanDescendants.filter((item) => item !== _undefined);
+      const item1 = found.forEach((isRecording) => {
+        if (isRecording.isRecording()) {
+          const obj = { code: _mod12909.SPAN_STATUS_ERROR, message: "cancelled" };
+          isRecording.setStatus(obj);
+          isRecording.end(closure_0);
+          if (_mod12920.DEBUG_BUILD) {
+            const logger = _mod12892.logger;
+            const _JSON = JSON;
+            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
+          }
+        }
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(isRecording);
+        const timestamp = spanToJSONResult.timestamp;
+        let num2 = 0;
+        if (undefined !== timestamp) {
+          num2 = timestamp;
+        }
+        const start_timestamp = spanToJSONResult.start_timestamp;
+        let num3 = 0;
+        if (undefined !== start_timestamp) {
+          num3 = start_timestamp;
+        }
+        let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
+        if (_mod12920.DEBUG_BUILD) {
+          const _JSON2 = JSON;
+          const json = JSON.stringify(isRecording, undefined, 2);
+          if (tmp13) {
+            if (!tmp14) {
+              const logger3 = _mod12892.logger;
+              logger3.log("[Tracing] Discarding span since it finished after idle span final timeout", json);
+            }
+          } else {
+            const logger2 = _mod12892.logger;
+            logger2.log("[Tracing] Discarding span since it happened after idle span was finished", json);
+          }
+        }
+        if (tmp14) {
+          tmp14 = tmp13;
+        }
+        if (!tmp14) {
+          const result = spanTimeInputToSeconds.removeChildSpanFromSpan(c12, isRecording);
+          closure_1 = closure_1 + 1;
+        }
+      });
+      if (0 > 0) {
+        const attr1 = obj3.setAttribute("sentry.idle_span_discarded_spans", map);
+      }
+      const tmp3Result = tmp3(tmp4[4]);
+      tmp7 = spanToJSONResult.data || {};
     }
   }
-  const obj = {};
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
-    }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
-    }
-    if (!isDefaultInstance) {
-      obj[name] = name;
-    }
-  });
-  const values = Object.values(obj);
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  const map = new Map();
+  c2 = false;
+  let heartbeatFailed = "externalFinish";
+  closure_4 = !obj.disableAutoFinish;
+  let items = [];
+  let idleTimeout = obj.idleTimeout;
+  if (undefined === idleTimeout) {
+    idleTimeout = heartbeatFailed.idleTimeout;
   }
-  return values;
-};
-export const installedIntegrations = items;
-export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
+  finalTimeout = obj.finalTimeout;
+  if (undefined === finalTimeout) {
+    finalTimeout = heartbeatFailed.finalTimeout;
+  }
+  childSpanTimeout = obj.childSpanTimeout;
+  if (undefined === childSpanTimeout) {
+    childSpanTimeout = heartbeatFailed.childSpanTimeout;
+  }
+  beforeSpanEnd = obj.beforeSpanEnd;
+  const client = require("module_12919").getClient();
+  if (client) {
+    if (tmp5Result.hasTracingEnabled()) {
+      currentScope = tmp5(tmp6[1]).getCurrentScope();
+      const tmp5Result6 = tmp5(tmp6[1]);
+      activeSpan = tmp5(tmp6[4]).getActiveSpan();
+      const tmp5Result7 = tmp5(tmp6[4]);
+      const startInactiveSpanResult = tmp5(tmp6[11]).startInactiveSpan(arg0);
+      const tmp5Result8 = tmp5(tmp6[11]);
+      const tmp5Result9 = tmp5(tmp6[6]);
+      tmp5Result9._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
+      if (tmp5(tmp6[10]).DEBUG_BUILD) {
+        let logger = tmp5(tmp6[8]).logger;
+        logger.log("[Tracing] Started span is an idle span");
+      }
+      c12 = startInactiveSpanResult;
+      const _Proxy = Proxy;
+      let obj3 = {
+        apply(arg0, arg1, current) {
+              if (beforeSpanEnd) {
+                tmp(c12);
+              }
+              const arr = _toArray(current);
+              let first = arr[0];
+              const substr = arr.slice(1);
+              if (!first) {
+                first = _mod12906.timestampInSeconds();
+              }
+              const result = spanTimeInputToSeconds.spanTimeInputToSeconds(first);
+              const spanDescendants = spanTimeInputToSeconds.getSpanDescendants(c12);
+              const found = spanDescendants.filter((item) => item !== _undefined);
+              if (found.length) {
+                const mapped = found.map((item) => closure_1_0(map[4]).spanToJSON(item).timestamp);
+                const found1 = mapped.filter((item) => item);
+                let num2;
+                if (found1.length) {
+                  const _Math = Math;
+                  items = [];
+                  HermesBuiltin.arraySpread(found1, 0);
+                  const _Math2 = Math;
+                  num2 = HermesBuiltin.apply(items, Math);
+                }
+                let num4 = spanTimeInputToSeconds.spanToJSON(tmp11).start_timestamp;
+                let num6 = Infinity;
+                if (num4) {
+                  num6 = num4 + finalTimeout / 1000;
+                }
+                if (!num4) {
+                  num4 = -Infinity;
+                }
+                if (!num2) {
+                  num2 = Infinity;
+                }
+                const bound = Math.min(num6, Math.max(num4, Math.min(result, num2)));
+                onIdleSpanEnded(bound);
+                const _Reflect2 = Reflect;
+                const items1 = [bound];
+                HermesBuiltin.arraySpread(substr, 1);
+                return Reflect.apply(arg0, arg1, items1);
+              } else {
+                onIdleSpanEnded(result);
+                const _Reflect = Reflect;
+                const items2 = [result];
+                HermesBuiltin.arraySpread(substr, 1);
+                return Reflect.apply(arg0, arg1, items2);
+              }
+              tmp11 = c12;
+            }
+      };
+      const proxy = new Proxy(startInactiveSpanResult.end, obj3);
+      startInactiveSpanResult.end = proxy;
+      items.push(client.on("spanStart", (spanContext) => {
+        let timestamp = c2;
+        if (!c2) {
+          timestamp = spanContext === c12;
+        }
+        if (!timestamp) {
+          timestamp = timeout(map[4]).spanToJSON(spanContext).timestamp;
+          const obj = timeout(map[4]);
+        }
+        if (!timestamp) {
+          const spanDescendants = timeout(map[4]).getSpanDescendants(c12);
+          if (spanDescendants.includes(spanContext)) {
+            if (timeout) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+              timeout = undefined;
+            }
+            const result = map.set(spanContext.spanContext().spanId, true);
+            timeout(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
+            const _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "heartbeatFailed";
+                c12.end(closure_0);
+              }
+            }, childSpanTimeout);
+            const obj4 = timeout(map[5]);
+          }
+          const obj2 = timeout(map[4]);
+        }
+      }));
+      items.push(client.on("spanEnd", (spanContext) => {
+        if (!c2) {
+          const spanId = spanContext.spanContext().spanId;
+          if (map.has(spanId)) {
+            obj.delete(spanId);
+          }
+          if (0 === map.size) {
+            timeout = timeout(map[5]).timestampInSeconds() + idleTimeout / 1000;
+            if (timeout) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+              timeout = undefined;
+            }
+            const _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = 0 === map.size;
+              }
+              if (tmp) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "idleTimeout";
+                c12.end(closure_0);
+              }
+            }, idleTimeout);
+            const obj2 = timeout(map[5]);
+          }
+        }
+      }));
+      items.push(client.on("idleSpanEnableAutoFinish", (arg0) => {
+        if (arg0 === c12) {
+          c4 = true;
+          let timeout;
+          if (timeout) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(timeout);
+            timeout = undefined;
+          }
+          const _setTimeout = setTimeout;
+          timeout = setTimeout(() => {
+            let tmp = !c2;
+            if (!c2) {
+              tmp = 0 === map.size;
+            }
+            if (tmp) {
+              tmp = closure_4;
+            }
+            if (tmp) {
+              heartbeatFailed = "idleTimeout";
+              c12.end(closure_0);
+            }
+          }, idleTimeout);
+          if (map.size) {
+            const _setTimeout2 = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "heartbeatFailed";
+                c12.end(closure_0);
+              }
+            }, childSpanTimeout);
+          }
+        }
+      }));
+      if (!obj.disableAutoFinish) {
+        if (_require) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(_require);
+          _require = undefined;
+        }
+        let _setTimeout = setTimeout;
+        _require = setTimeout(() => {
+          let tmp = !c2;
+          if (!c2) {
+            tmp = 0 === map.size;
+          }
+          if (tmp) {
+            tmp = closure_4;
+          }
+          if (tmp) {
+            heartbeatFailed = "idleTimeout";
+            c12.end(closure_0);
+          }
+        }, idleTimeout);
+      }
+      let _setTimeout2 = setTimeout;
+      const timerId = setTimeout(() => {
+        if (!c2) {
+          const obj = { code: _mod12909.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+          _undefined.setStatus(obj);
+          heartbeatFailed = "finalTimeout";
+          _undefined.end();
+        }
+      }, finalTimeout);
+      return startInactiveSpanResult;
     }
-  });
-  return obj;
+    tmp5Result = tmp5(tmp6[2]);
+  }
+  const sentryNonRecordingSpan = new tmp5(tmp6[3]).SentryNonRecordingSpan();
+  return sentryNonRecordingSpan;
 };

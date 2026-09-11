@@ -1,11 +1,11 @@
-// Module ID: 17891
-// Function ID: 17892
+// Module ID: 17883
+// Function ID: 17884
 // Name: useInviteApplicationBypassInfo
-// Dependencies: [4243, 1074, 504, 2]
+// Dependencies: [4245, 1074, 504, 2]
 // Exports: useInviteApplicationBypassInfo
 
-// Module 17891 (useInviteApplicationBypassInfo)
-import PermissionStore from "PermissionStore" /* 4243 */;
+// Module 17883 (useInviteApplicationBypassInfo)
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = globalThis.__r;
 

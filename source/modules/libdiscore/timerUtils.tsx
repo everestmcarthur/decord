@@ -1,10 +1,10 @@
-// Module ID: 18016
-// Function ID: 18017
+// Module ID: 18008
+// Function ID: 18009
 // Name: timerUtils
 // Dependencies: [1074, 3, 1242, 551, 1356, 2]
 // Exports: setupLibdiscoreTimersMonitor
 
-// Module 18016 (timerUtils)
+// Module 18008 (timerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import Constants from "Constants" /* 1074 */;

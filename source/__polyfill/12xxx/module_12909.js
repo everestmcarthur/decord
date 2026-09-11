@@ -1,55 +1,90 @@
 // Module ID: 12909
 // Function ID: 12910
-// Dependencies: [12872, 12895, 12867, 12882]
-// Exports: setMeasurement, timedEventsToMeasurements
+// Dependencies: []
+// Exports: getSpanStatusFromHttpCode, setHttpStatus
 
 // Module 12909
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12872 */;
-import _mod12882 from "module_12882" /* 12882 */;
-import _mod12895 from "module_12895" /* 12895 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  let activeSpan = arg3;
-  if (arg3 === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod12895.DEBUG_BUILD) {
-      const logger = tmp9(12867).logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+export const SPAN_STATUS_ERROR = 2;
+export const SPAN_STATUS_OK = 1;
+export const SPAN_STATUS_UNSET = 0;
+export const getSpanStatusFromHttpCode = function getSpanStatusFromHttpCode(arg0) {
+  if (arg0 < 400) {
+    if (arg0 >= 100) {
+      return { code: 1 };
     }
-    const obj2 = {};
-    obj2[_mod12882.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[_mod12882.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
   }
+  if (arg0 >= 400) {
+    if (arg0 < 500) {
+      if (401 === arg0) {
+        return { code: 2, message: "unauthenticated" };
+      } else if (403 === arg0) {
+        return { code: 2, message: "permission_denied" };
+      } else if (404 === arg0) {
+        return { code: 2, message: "not_found" };
+      } else if (409 === arg0) {
+        return { code: 2, message: "already_exists" };
+      } else if (413 === arg0) {
+        return { code: 2, message: "failed_precondition" };
+      } else if (429 === arg0) {
+        return { code: 2, message: "resource_exhausted" };
+      } else {
+        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+      }
+    }
+  }
+  if (arg0 >= 500) {
+    if (arg0 < 600) {
+      if (501 === arg0) {
+        return { code: 2, message: "unimplemented" };
+      } else if (503 === arg0) {
+        return { code: 2, message: "unavailable" };
+      } else {
+        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
+      }
+    }
+  }
+  return { code: 2, message: "unknown_error" };
 };
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[_mod12882.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[_mod12882.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
+export const setHttpStatus = function setHttpStatus(setAttribute, arg1) {
+  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
+  if (arg1 < 400) {
+    if (arg1 >= 100) {
+      let obj = { code: 1 };
+    }
+    if ("unknown_error" !== obj.message) {
+      setAttribute.setStatus(obj);
     }
   }
+  if (arg1 >= 400) {
+    if (arg1 < 500) {
+      if (401 === arg1) {
+        obj = { code: 2, message: "unauthenticated" };
+      } else if (403 === arg1) {
+        obj = { code: 2, message: "permission_denied" };
+      } else if (404 === arg1) {
+        obj = { code: 2, message: "not_found" };
+      } else if (409 === arg1) {
+        obj = { code: 2, message: "already_exists" };
+      } else if (413 === arg1) {
+        obj = { code: 2, message: "failed_precondition" };
+      } else if (429 === arg1) {
+        obj = { code: 2, message: "resource_exhausted" };
+      } else {
+        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+      }
+    }
+  }
+  if (arg1 >= 500) {
+    if (arg1 < 600) {
+      if (501 === arg1) {
+        obj = { code: 2, message: "unimplemented" };
+      } else if (503 === arg1) {
+        obj = { code: 2, message: "unavailable" };
+      } else {
+        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
+      }
+    }
+  }
+  obj = { code: 2, message: "unknown_error" };
 };

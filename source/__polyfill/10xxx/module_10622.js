@@ -1,13 +1,14 @@
 // Module ID: 10622
 // Function ID: 10623
-// Dependencies: [41, 42, 93, 95, 98, 10520]
+// Dependencies: [41, 42, 93, 95, 96, 98, 10537]
 
 // Module 10622
-import _mod10520 from "module_10520" /* 10520 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10537 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -30,29 +31,14 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ZHHantMergeDateRangeRefiner {
+class NLTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
+    tmp = closure_0(this, NLTimeExpressionParser);
     tmp2 = c2;
-    obj = c2(ZHHantMergeDateRangeRefiner);
+    obj = c2(NLTimeExpressionParser);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -65,14 +51,44 @@ class ZHHantMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ZHHantMergeDateRangeRefiner;
-_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10520).default);
+_classCallCheck = NLTimeExpressionParser;
+_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:om)\\s*)?";
   }
 };
-const items = [entry];
+let items = [
+  entry,
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
+    }
+  }
+];
 
-export default _createClass(ZHHantMergeDateRangeRefiner, items);
+export default _createClass(NLTimeExpressionParser, items);

@@ -1,12 +1,12 @@
-// Module ID: 16001
-// Function ID: 16002
+// Module ID: 15989
+// Function ID: 15990
 // Name: RedesignSettingsRealtimeScreen
-// Dependencies: [19, 21, 11540, 16000, 14767, 2]
+// Dependencies: [19, 21, 11564, 15984, 14744, 2]
 
-// Module 16001 (RedesignSettingsRealtimeScreen)
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 14767 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16000 */;
+// Module 15989 (RedesignSettingsRealtimeScreen)
+import SettingBuilders from "SettingBuilders" /* 11564 */;
+import SettingLayoutDefault from "SettingLayout" /* 14744 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

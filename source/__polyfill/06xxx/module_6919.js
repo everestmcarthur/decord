@@ -1,34 +1,13 @@
 // Module ID: 6919
 // Function ID: 6920
-// Dependencies: [6920]
+// Dependencies: [19, 17, 1636, 6912, 6700]
 
 // Module 6919
-import _mod6920 from "module_6920" /* 6920 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
 
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_6912 = fn(6912);
+const memoResult = fn(19).memo(module_6912.createBottomSheetScrollableComponent(fn(6700).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
+memoResult.displayName = "BottomSheetSectionList";
 
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
-        }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod6920;
-      } else {
-        return "string" === str ? String : Number(arg0);
-      }
-    }
-  }
-  return arg0;
-};
+export default memoResult;

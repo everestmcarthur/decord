@@ -1,13 +1,13 @@
-// Module ID: 14906
-// Function ID: 14907
+// Module ID: 14883
+// Function ID: 14884
 // Name: FamilyCenterControlledSettingsUtils
-// Dependencies: [1187, 14903, 7353, 7350, 2]
+// Dependencies: [1187, 14880, 7375, 7372, 2]
 // Exports: isSetAndNotDefault, resolveExplicitContentSettingWithDefaultsForTeen, updateExplicitContentSetting, updateGoreContentSetting
 
-// Module 14906 (FamilyCenterControlledSettingsUtils)
+// Module 14883 (FamilyCenterControlledSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7350 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14903 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7372 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14880 */;
 import size from "module_2" /* 2 */;
 
 function getGoreContentSettingOrDefault(arg0) {
@@ -18,14 +18,14 @@ function getGoreContentSettingOrDefault(arg0) {
   }
   ({ goreContentNonFriendDm, goreContentFriendDm } = controlledSetting);
   if (!tmp3) {
-    goreContentNonFriendDm = tmp(7353).resolveGoreSettingWithDefaultsForTeen({ isDm: true });
-    const tmpResult = tmp(7353);
+    goreContentNonFriendDm = tmp(7375).resolveGoreSettingWithDefaultsForTeen({ isDm: true });
+    const tmpResult = tmp(7375);
   }
   const obj = { goreContentNonFriendDm, goreContentFriendDm: null, goreContentGuilds: null };
   tmp3 = null != goreContentNonFriendDm && goreContentNonFriendDm !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   if (!tmp4) {
-    goreContentFriendDm = tmp(7353).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
-    const tmpResult2 = tmp(7353);
+    goreContentFriendDm = tmp(7375).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
+    const tmpResult2 = tmp(7375);
   }
   obj.goreContentFriendDm = goreContentFriendDm;
   obj.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
@@ -51,17 +51,17 @@ function getExplicitContentSettingOrDefault(teenId) {
       prop1 = controlledSetting.explicitContentFriendDm;
     }
     if (!tmp10) {
-      const ParentalControlledLegacyExplicitContent2 = tmp(14903).ParentalControlledLegacyExplicitContent;
+      const ParentalControlledLegacyExplicitContent2 = tmp(14880).ParentalControlledLegacyExplicitContent;
       const controlledSetting1 = ParentalControlledLegacyExplicitContent2.getControlledSetting(teenId);
-      prop1 = tmp(7350).TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting1];
+      prop1 = tmp(7372).TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting1];
     }
     obj2.explicitContentFriendDm = prop1;
     obj2.explicitContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
     return obj2;
   } else {
-    const ParentalControlledLegacyExplicitContent = tmp(14903).ParentalControlledLegacyExplicitContent;
+    const ParentalControlledLegacyExplicitContent = tmp(14880).ParentalControlledLegacyExplicitContent;
     const controlledSetting2 = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId);
-    let TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = tmp(7350);
+    let TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = tmp(7372);
     if (isFriend) {
       TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM;
     }

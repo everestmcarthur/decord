@@ -1,38 +1,38 @@
-// Module ID: 10938
-// Function ID: 10939
+// Module ID: 10959
+// Function ID: 10960
 // Name: UserRow
-// Dependencies: [19, 17, 4597, 4833, 7713, 1957, 4645, 4253, 10930, 1074, 21, 4605, 576, 4618, 38, 10939, 10940, 4302, 10941, 9111, 7714, 504, 1178, 4601, 4449, 10946, 7214, 8280, 1114, 10966, 4558, 4556, 5025, 1926, 7932, 5121, 8242, 1896, 8281, 10967, 9445, 5054, 8013, 4839, 9245, 10969, 9508, 10977, 9253, 10978, 5654, 10980, 5655, 2]
+// Dependencies: [19, 17, 4599, 4835, 7735, 1957, 4647, 4255, 10951, 1074, 21, 4607, 576, 4620, 38, 10960, 10961, 4304, 10962, 9134, 7736, 504, 1178, 4603, 4451, 10967, 7236, 8303, 1114, 10987, 4560, 4558, 5027, 1926, 7955, 5123, 8265, 1896, 8304, 10988, 9468, 5056, 8036, 4841, 9268, 10990, 9531, 10998, 9276, 10999, 5656, 11002, 5657, 2]
 
-// Module 10938 (UserRow)
+// Module 10959 (UserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import utils_StringUtils from "utils/StringUtils" /* 1926 */;
-import ToastUtils from "ToastUtils" /* 4302 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4556 */;
-import XLargeIcon from "XLargeIcon" /* 4558 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import ChatIcon from "ChatIcon" /* 5121 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7714 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7932 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9111 */;
-import BoostGemIcon from "BoostGemIcon" /* 9445 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10940 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10941 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10946 */;
-import ActionButtonDefault from "ActionButton" /* 10966 */;
-import CrownIcon from "CrownIcon" /* 10967 */;
+import ToastUtils from "ToastUtils" /* 4304 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4558 */;
+import XLargeIcon from "XLargeIcon" /* 4560 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4620 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import ChatIcon from "ChatIcon" /* 5123 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7736 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 7955 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9134 */;
+import BoostGemIcon from "BoostGemIcon" /* 9468 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10961 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10962 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10967 */;
+import ActionButtonDefault from "ActionButton" /* 10987 */;
+import CrownIcon from "CrownIcon" /* 10988 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7713 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import ApplicationStore from "ApplicationStore" /* 4835 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7735 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PresenceStore from "PresenceStore" /* 4645 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import PresenceStore from "PresenceStore" /* 4647 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 require = fn;
 function UserRowSubLabel(arg0) {
@@ -50,9 +50,9 @@ function UserRowSubLabel(arg0) {
     }
   }
   if (!isGameRelationship) {
-    const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp(4449).getUserTag(user) };
-    closure_14(tmp(4601).Text, obj3);
-    const tmpResult = tmp(4449);
+    const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp(4451).getUserTag(user) };
+    closure_14(tmp(4603).Text, obj3);
+    const tmpResult = tmp(4451);
   }
   if (null == stateFromStores) {
     const obj4 = { style: null };
@@ -70,21 +70,21 @@ function UserRowSubLabel(arg0) {
     obj6.source = obj7;
     const items1 = [closure_14(tmp(1178).Icon, obj6, stateFromStores.id), ];
     const obj8 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: stateFromStores.name };
-    items1[1] = closure_14(tmp(4601).Text, obj8);
+    items1[1] = closure_14(tmp(4603).Text, obj8);
     obj5.children = items1;
     closure_15(View, obj5);
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10930).UserRowModes;
+const UserRowModes = fn(10951).UserRowModes;
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let closure_17 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
-let createStyles = fn(4605);
+let createStyles = fn(4607);
 let closure_18 = createStyles.createStyles({ avatar: { flexShrink: 0, flexGrow: 0 }, actions: { flexDirection: "row" }, action: { marginLeft: 12, alignSelf: "center" }, buttonWrapper: { marginLeft: 8 }, labelContainer: { flexDirection: "row", alignItems: "center" }, roleDot: { marginRight: 4, paddingTop: 0 }, usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, usernameLabel: { display: "flex", flexShrink: 1 } });
-createStyles = fn(4605);
+createStyles = fn(4607);
 let obj = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
 let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
@@ -188,7 +188,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "a" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -237,11 +237,11 @@ export default noop.memo(function UserRow(type) {
             location: roleStyle,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(4302).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(4302);
+                const result = type(4304).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(4304);
               } else {
-                const result1 = type(4302).presentFriendRequestAcceptedToast();
-                const obj = type(4302);
+                const result1 = type(4304).presentFriendRequestAcceptedToast();
+                const obj = type(4304);
               }
             }
           });
@@ -331,14 +331,14 @@ export default noop.memo(function UserRow(type) {
             channel = channel.getChannel(result);
             if (null != channel) {
               user(38)(channel.isPrivate(), "must be a DM");
-              const obj2 = user(10939)(channel, false);
+              const obj2 = user(10960)(channel, false);
               if (!obj2.inCall) {
                 obj2.onPress();
               }
               const tmp3 = user(38);
               const obj = { recipientIds: current.id };
-              user(4618).openPrivateChannel(obj);
-              const tmpResult = user(4618);
+              user(4620).openPrivateChannel(obj);
+              const tmpResult = user(4620);
             }
           });
         };
@@ -381,14 +381,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10939)(channel, false);
+          const obj2 = user(10960)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           const obj = { recipientIds: current.id };
-          user(4618).openPrivateChannel(obj);
-          const tmpResult = user(4618);
+          user(4620).openPrivateChannel(obj);
+          const tmpResult = user(4620);
         }
       });
     } else if (tmp.MESSAGE === actionName) {
@@ -405,11 +405,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
             if (null != closure_0) {
-              const result = type(4302).presentGameFriendRequestAcceptedToast();
-              const obj2 = type(4302);
+              const result = type(4304).presentGameFriendRequestAcceptedToast();
+              const obj2 = type(4304);
             } else {
-              const result1 = type(4302).presentFriendRequestAcceptedToast();
-              const obj = type(4302);
+              const result1 = type(4304).presentFriendRequestAcceptedToast();
+              const obj = type(4304);
             }
           }
       };
@@ -441,8 +441,8 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8242, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8242, dependencyMap.paths);
+      asyncRequireImpl(8265, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8265, dependencyMap.paths);
     } else {
       tmp(user);
     }

@@ -1,10 +1,10 @@
-// Module ID: 7875
-// Function ID: 7876
+// Module ID: 7897
+// Function ID: 7898
 // Name: getDeviceSpecificString
 // Dependencies: [1114, 1608, 2]
 // Exports: getDeviceSpecificString
 
-// Module 7875 (getDeviceSpecificString)
+// Module 7897 (getDeviceSpecificString)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 

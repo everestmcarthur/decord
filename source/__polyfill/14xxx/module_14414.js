@@ -1,27 +1,16 @@
 // Module ID: 14414
 // Function ID: 14415
-// Dependencies: [14415, 14428, 14376, 14397]
+// Dependencies: [14378, 14352]
 
 // Module 14414
-import _mod14397 from "module_14397" /* 14397 */;
-import _mod14415 from "module_14415" /* 14415 */;
+import _mod14352 from "module_14352" /* 14352 */;
+import all from "module_14378" /* 14378 */;
 
+let _moduleResult = all(_mod14352.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14352.WeakMap));
+  const obj = /native code/;
+}
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod14415(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp4 = require;
-    let tmp6 = _mod14397(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = tmp4(14397)(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+export default _moduleResult;

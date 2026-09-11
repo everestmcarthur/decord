@@ -1,26 +1,9 @@
 // Module ID: 8375
 // Function ID: 8376
-// Dependencies: []
+// Dependencies: [1122]
 
 // Module 8375
+import registerAsset from "module_1122" /* 1122 */;
 
-export default (obj) => {
-  if (obj instanceof Object) {
-    const _Array = Array;
-    if (!Array.isArray(obj)) {
-      obj = {};
-      for (const key10010 in arg0) {
-        if (!arg0.hasOwnProperty(key10010)) {
-          continue;
-        } else {
-          obj[key10010] = key10010;
-          continue;
-        }
-        continue;
-      }
-      return obj;
-    }
-  }
-  const error = new Error("keyMirror(...): Argument must be an object.");
-  throw error;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 16, height: 16, scales: [2, 3], hash: "4d6296c901620eb3ce6d9e0093bbc96e", name: "scrubber", type: "png" });

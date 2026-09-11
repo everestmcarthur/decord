@@ -1,8 +1,8 @@
-// Module ID: 5834
-// Function ID: 5835
+// Module ID: 5856
+// Function ID: 5857
 // Dependencies: [2]
 
-// Module 5834
+// Module 5856
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BadgeCustomizeAbstractUI-2x.png.js");

@@ -1,15 +1,15 @@
-// Module ID: 16602
-// Function ID: 16603
+// Module ID: 16590
+// Function ID: 16591
 // Name: ICYMIForumThreadRow
-// Dependencies: [19, 17, 1957, 1979, 21, 16535, 576, 504, 5570, 8416, 16574, 10985, 8415, 4758, 16576, 1114, 11, 5173, 4601, 4595, 16580, 16582, 2]
+// Dependencies: [19, 17, 1957, 1979, 21, 16523, 576, 504, 5572, 8439, 16562, 11007, 8438, 4760, 16564, 1114, 11, 5175, 4603, 4597, 16568, 16570, 2]
 // Exports: default
 
-// Module 16602 (ICYMIForumThreadRow)
+// Module 16590 (ICYMIForumThreadRow)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8416 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
-import ICYMIShared from "ICYMIShared" /* 16574 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5572 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8439 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11007 */;
+import ICYMIShared from "ICYMIShared" /* 16562 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -165,7 +165,7 @@ class ICYMIForumThreadRow {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(16535);
+const createICYMIStyles = fn(16523);
 const React7 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { pressable: { flex: 1, paddingLeft: marginHorizontal.inset }, container: { marginHorizontal: marginHorizontal.margin }, subtitle: { marginTop: nativeDefault.space.PX_8, marginBottom: marginHorizontal.margin }, footer: { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin }, threadAsComments: { marginHorizontal: marginHorizontal.margin }, ICYMICardInteractionRow: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin } };
   return obj;

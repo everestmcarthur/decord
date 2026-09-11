@@ -1,64 +1,102 @@
 // Module ID: 12881
 // Function ID: 12882
-// Dependencies: [12868]
-// Exports: dateTimestampInSeconds, timestampInSeconds
+// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 4439, 4436]
 
 // Module 12881
-import _mod12868 from "module_12868" /* 12868 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import emptyFunction from "module_4436" /* 4436 */;
 
-function dateTimestampInSeconds() {
-  return Date.now() / 1000;
-}
-let timeOrigin;
-const _performance = _mod12868.GLOBAL_OBJ.performance;
-let fn = dateTimestampInSeconds;
-if (_performance) {
-  fn = dateTimestampInSeconds;
-  if (_performance.now) {
-    const _Date = Date;
-    const timestamp = Date.now();
-    timeOrigin = timestamp - _performance.now();
-    if (null != _performance.timeOrigin) {
-      timeOrigin = _performance.timeOrigin;
-    }
-    fn = () => (timeOrigin + _performance.now()) / 1000;
-  }
-}
-const _performance2 = _mod12868.GLOBAL_OBJ.performance;
-if (_performance2) {
-  if (_performance2.now) {
-    const nowResult = _performance2.now();
-    const _Date2 = Date;
-    const timestamp1 = Date.now();
-    let num2 = 3600000;
-    if (_performance2.timeOrigin) {
-      const _Math = Math;
-      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
-    }
-    let timeOrigin2 = _performance2.timing;
-    if (timeOrigin2) {
-      timeOrigin2 = _performance2.timing.navigationStart;
-    }
-    let num3 = 3600000;
-    if (typeof timeOrigin2 === "number") {
-      const _Math2 = Math;
-      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
-    }
-    if (!tmp6) {
-      if (num3 >= 3600000) {
-        exports._browserPerformanceTimeOriginMode = "dateNow";
-      }
-    }
-    if (num2 <= num3) {
-      exports._browserPerformanceTimeOriginMode = "timeOrigin";
-      timeOrigin2 = _performance2.timeOrigin;
+let Link = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      exports._browserPerformanceTimeOriginMode = "navigationStart";
+      callResult = call(constructResult);
     }
-    tmp6 = num2 < 3600000;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+let closure_2 = ["component", "to", "replace"];
+const jsx = fn(21).jsx;
+class Link {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, Link);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(Link);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handlePress = (defaultPrevented, str) => {
+      if (props.props.onPress) {
+        props = tmp.props;
+        props.onPress(defaultPrevented);
+      }
+      if (!defaultPrevented.defaultPrevented) {
+        const to = str.to;
+        if (tmp.props.replace) {
+          const replaced = str.replace(to);
+        } else {
+          str.push(to);
+        }
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(Link, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ component: dependencyMap, to, replace } = props);
+    Link = _objectWithoutProperties(props, self);
+    return jsx(Link(4439).__HistoryContext.Consumer, {
+      children(arg0) {
+        closure_0 = arg0;
+        const obj = {};
+        const merged = Object.assign(closure_0);
+        obj.onPress = function onPress(arg0) {
+          return self.handlePress(arg0, closure_0);
+        };
+        return <closure_1 />;
+      }
+    });
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(Link, items);
+importDefaultResultResult.defaultProps = { component: fn(17).TouchableHighlight, replace: false };
+let obj = { onPress: emptyFunction.func, component: emptyFunction.elementType, replace: emptyFunction.bool, to: null };
+let items1 = [emptyFunction.string, emptyFunction.object];
+obj.to = emptyFunction.oneOfType(items1);
+importDefaultResultResult.propTypes = obj;
 
-export const _browserPerformanceTimeOriginMode = "none";
-export { dateTimestampInSeconds };
-export const timestampInSeconds = fn;
+export default importDefaultResultResult;

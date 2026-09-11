@@ -1,10 +1,10 @@
-// Module ID: 9706
-// Function ID: 9707
+// Module ID: 9729
+// Function ID: 9730
 // Name: doesOrientationMatchLockState
 // Dependencies: [1920, 2]
 // Exports: default
 
-// Module 9706 (doesOrientationMatchLockState)
+// Module 9729 (doesOrientationMatchLockState)
 import Constants from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;
 

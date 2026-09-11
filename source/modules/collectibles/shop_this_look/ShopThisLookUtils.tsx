@@ -1,12 +1,12 @@
-// Module ID: 13189
-// Function ID: 13190
+// Module ID: 13214
+// Function ID: 13215
 // Name: ShopThisLookUtils
-// Dependencies: [1232, 13190, 2]
+// Dependencies: [1232, 13215, 2]
 // Exports: isShoppableCollectibleSku
 
-// Module 13189 (ShopThisLookUtils)
+// Module 13214 (ShopThisLookUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13190 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13215 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");

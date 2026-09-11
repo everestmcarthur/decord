@@ -1,11 +1,11 @@
-// Module ID: 15990
-// Function ID: 15991
+// Module ID: 15975
+// Function ID: 15976
 // Name: ActivityPrivacyUpsellActionSheet
-// Dependencies: [19, 21, 14929, 14931, 2]
+// Dependencies: [19, 21, 14906, 14908, 2]
 // Exports: default
 
-// Module 15990 (ActivityPrivacyUpsellActionSheet)
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14929 */;
+// Module 15975 (ActivityPrivacyUpsellActionSheet)
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,11 +16,11 @@ let result = size.fileFinishedImporting("modules/activity_privacy/native/Activit
 export default function ActivityPrivacyUpsellActionSheet(direction) {
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
-  const upsellStrings = direction(14929).getUpsellStrings(direction === direction(14929).ChangeDirection.RESTRICTING, direction.settingName);
+  const upsellStrings = direction(14906).getUpsellStrings(direction === direction(14906).ChangeDirection.RESTRICTING, direction.settingName);
   const items = [direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = upsellStrings);
   const onConfirm = noop.useCallback(() => {
     const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
-  return jsx(affectedGuildIds(14931), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
+  return jsx(affectedGuildIds(14908), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
 };

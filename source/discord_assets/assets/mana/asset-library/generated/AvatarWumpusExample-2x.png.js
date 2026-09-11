@@ -1,8 +1,8 @@
-// Module ID: 5832
-// Function ID: 5833
+// Module ID: 5854
+// Function ID: 5855
 // Dependencies: [2]
 
-// Module 5832
+// Module 5854
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarWumpusExample-2x.png.js");

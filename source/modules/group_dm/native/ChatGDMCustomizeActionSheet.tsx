@@ -1,13 +1,13 @@
-// Module ID: 10992
-// Function ID: 10993
+// Module ID: 11014
+// Function ID: 11015
 // Name: ChatGDMCustomizeActionSheet
-// Dependencies: [19, 21, 10993, 10996, 1114, 10998, 2]
+// Dependencies: [19, 21, 11015, 11018, 1114, 11020, 2]
 // Exports: default
 
-// Module 10992 (ChatGDMCustomizeActionSheet)
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10993 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10996 */;
-import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10998 */;
+// Module 11014 (ChatGDMCustomizeActionSheet)
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 11015 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11018 */;
+import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 11020 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

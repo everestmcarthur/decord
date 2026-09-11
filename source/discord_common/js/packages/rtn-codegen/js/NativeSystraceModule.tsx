@@ -1,9 +1,9 @@
-// Module ID: 14469
-// Function ID: 14470
+// Module ID: 14447
+// Function ID: 14448
 // Name: NativeSystraceModule
 // Dependencies: [17, 2]
 
-// Module 14469 (NativeSystraceModule)
+// Module 14447 (NativeSystraceModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

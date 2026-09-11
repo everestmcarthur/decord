@@ -1,10 +1,10 @@
-// Module ID: 11060
-// Function ID: 11061
+// Module ID: 11083
+// Function ID: 11084
 // Name: PlaygroundAccessExperiment
 // Dependencies: [1371, 1433, 504, 2]
 // Exports: getHasPlaygroundAccess, getPlaygroundAccessExperiment, useHasPlaygroundAccess, usePlaygroundAccessExperiment
 
-// Module 11060 (PlaygroundAccessExperiment)
+// Module 11083 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1371 */;
 

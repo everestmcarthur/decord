@@ -1,19 +1,19 @@
-// Module ID: 8290
-// Function ID: 8291
+// Module ID: 8313
+// Function ID: 8314
 // Name: useProfileTheme
-// Dependencies: [32, 4597, 8291, 1074, 4540, 504, 575, 8195, 1091, 8292, 4456, 2]
+// Dependencies: [32, 4599, 8314, 1074, 4542, 504, 575, 8218, 1091, 8315, 4458, 2]
 // Exports: default
 
-// Module 8290 (useProfileTheme)
+// Module 8313 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 575 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import useAvatarColor from "useAvatarColor" /* 8195 */;
+import useThemeDefault from "useTheme" /* 4542 */;
+import useAvatarColor from "useAvatarColor" /* 8218 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(8291).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8314).useEffectiveThemeOverride;
 const ThemeTypes = fn(1074).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
@@ -76,29 +76,29 @@ export default function useProfileTheme(arg0) {
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8292).getProfileTheme(first);
+        let profileTheme = tmp4(8315).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result10 = tmp4(8292);
+        const tmp4Result10 = tmp4(8315);
       }
     }
-    if (tmp16 !== ThemeTypes.DARK) {
-      let isThemeLightResult = tmp16 === tmp18.DARK;
+    if (tmp16 !== ThemeTypes.ASH) {
+      let isThemeLightResult = tmp16 === tmp18.ASH;
       if (isThemeLightResult) {
-        isThemeLightResult = tmp4(4456).isThemeLight(tmp2);
-        const tmp4Result11 = tmp4(4456);
+        isThemeLightResult = tmp4(4458).isThemeLight(tmp2);
+        const tmp4Result11 = tmp4(4458);
       }
-      let DARKER = tmp16;
+      let DARK = tmp16;
       if (isThemeLightResult) {
-        DARKER = tmp18.DARKER;
+        DARK = tmp18.DARK;
       }
     } else {
-      DARKER = tmp2;
-      const tmp4Result12 = tmp4(4456);
+      DARK = tmp2;
+      const tmp4Result12 = tmp4(4458);
     }
-    const obj3 = { theme: DARKER, primaryColor: first, secondaryColor: hex2intResult };
+    const obj3 = { theme: DARK, primaryColor: first, secondaryColor: hex2intResult };
     return obj3;
   }
   const tmp4Result7 = useAvatarColor;

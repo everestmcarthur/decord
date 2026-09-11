@@ -1,13 +1,13 @@
-// Module ID: 5967
-// Function ID: 5968
+// Module ID: 5989
+// Function ID: 5990
 // Name: DiscountsMegaphoneSpotIllustration
-// Dependencies: [21, 5637, 5968, 2]
+// Dependencies: [21, 5639, 5990, 2]
 // Exports: DiscountsMegaphoneSpotIllustration
 
-// Module 5967 (DiscountsMegaphoneSpotIllustration)
+// Module 5989 (DiscountsMegaphoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5968 from "module_5968" /* 5968 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5990 from "module_5990" /* 5990 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DiscountsMegaphoneSpotIllustration = function DiscountsMegaphoneSpo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5968 };
+  const obj2 = { uri: _modDef5990 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

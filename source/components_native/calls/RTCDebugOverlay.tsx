@@ -1,24 +1,24 @@
-// Module ID: 10107
-// Function ID: 10108
+// Module ID: 10129
+// Function ID: 10130
 // Name: RTCDebugOverlay
-// Dependencies: [19, 17, 1957, 1979, 4628, 10108, 4644, 1371, 4630, 21, 4605, 4454, 576, 1178, 504, 4758, 10110, 10109, 573, 7175, 5025, 1114, 2]
+// Dependencies: [19, 17, 1957, 1979, 4630, 10130, 4646, 1371, 4632, 21, 4607, 4456, 576, 1178, 504, 4760, 10132, 10131, 573, 7197, 5027, 1114, 2]
 // Exports: default
 
-// Module 10107 (RTCDebugOverlay)
+// Module 10129 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10109 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10110 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7197 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10131 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10132 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
-import RTCDebugStore from "RTCDebugStore" /* 10108 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4644 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4630 */;
+import RTCDebugStore from "RTCDebugStore" /* 10130 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4646 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -100,11 +100,11 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(4758)(stateFromStores1);
+  const tmp4 = channelId(4760)(stateFromStores1);
   const tmp6 = Section;
   const tmp7 = ObjectKV;
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(4758)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(4760)(stateFromStores1) } };
   obj5.children = closure_14(tmp7, obj6);
   return closure_14(tmp6, obj5);
 }
@@ -145,17 +145,17 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4632).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {
 
 }
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4454);
+const ColorUtils = fn(4456);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -215,7 +215,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = closure_18();
   const effect = noop.useEffect(() => {
     RTCDebugActionCreatorsAll.open();
-    return () => closure_1_1(573).wait(closure_1_2(10109).close);
+    return () => closure_1_1(573).wait(closure_1_2(10131).close);
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];

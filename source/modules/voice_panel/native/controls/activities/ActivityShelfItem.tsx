@@ -1,28 +1,28 @@
-// Module ID: 17243
-// Function ID: 17244
+// Module ID: 17233
+// Function ID: 17234
 // Name: ActivityShelfItem
-// Dependencies: [19, 1182, 21, 4605, 576, 4454, 12211, 12127, 5639, 17241, 1878, 9585, 7575, 9722, 8923, 5173, 4315, 17240, 12156, 1178, 17244, 17242, 4757, 12848, 4601, 12216, 1114, 2]
+// Dependencies: [19, 1074, 1182, 21, 4607, 576, 4456, 12236, 12152, 5641, 17231, 1878, 9608, 7597, 9745, 8946, 5175, 4317, 17230, 12181, 1178, 17234, 17232, 4759, 12873, 4603, 12241, 1114, 2]
 // Exports: default
 
-// Module 17243 (ActivityShelfItem)
+// Module 17233 (ActivityShelfItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1878 */;
-import native2 from "native" /* 4315 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
-import Pressables from "Pressables" /* 5173 */;
-import NativeViewDefault from "NativeView" /* 5639 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7575 */;
-import TestModeUtils from "TestModeUtils" /* 8923 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9585 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9722 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12127 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 12211 */;
-import _modDef12848 from "module_12848" /* 12848 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17240 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17241 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17242 */;
+import native2 from "native" /* 4317 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4759 */;
+import Pressables from "Pressables" /* 5175 */;
+import NativeViewDefault from "NativeView" /* 5641 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7597 */;
+import TestModeUtils from "TestModeUtils" /* 8946 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9608 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9745 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12152 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 12236 */;
+import _modDef12873 from "module_12873" /* 12873 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17230 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17231 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17232 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -33,21 +33,21 @@ function ActivityActionOverlay(arg0) {
   ({ applicationId, activityItem, launchingComponentId } = arg0);
   ({ id, name } = activityItem.application);
   if (useActivityShelfItem.ActivityAction.JOIN !== action) {
-    if (tmp4(12127).ActivityAction.LEAVE !== action) {
+    if (tmp4(12152).ActivityAction.LEAVE !== action) {
       return null;
     }
   }
-  let tmp8 = action === tmp4(12127).ActivityAction.LEAVE;
+  let tmp8 = action === tmp4(12152).ActivityAction.LEAVE;
   if (tmp8) {
     const obj = { style: tmp3.ongoingActivityJoinedContainer };
-    tmp8 = hasOwnProperty(tmp(5639), obj);
+    tmp8 = timestampProducer(tmp(5641), obj);
   }
   const items = [tmp8, ];
   let id1;
-  const tmp10 = hasOwnProperty;
-  tmp3 = closure_8();
-  const tmp6 = React5;
-  const tmp7 = timestampProducer;
+  const tmp10 = timestampProducer;
+  tmp3 = closure_9();
+  const tmp6 = React6;
+  const tmp7 = React5;
   if ("channel" === context.type) {
     id1 = context.channel.id;
   }
@@ -59,7 +59,7 @@ function ActivityActionOverlay(arg0) {
 function ParticipantsText(arg0) {
   ({ activityItem, channelId } = arg0);
   ({ action, guildId } = arg0);
-  const tmp = closure_8();
+  const tmp = closure_9();
   const arr = useActivityUsersDefault(activityItem.application.id, channelId);
   let first;
   if (arr != null) {
@@ -70,18 +70,18 @@ function ParticipantsText(arg0) {
   const items = [, ];
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
-  const tmp6 = React5;
+  const tmp6 = React6;
   const tmp2Result = NativeViewDefault;
-  const tmp8 = hasOwnProperty;
-  const items1 = [hasOwnProperty(native.Icon, { source: _modDef12848, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
+  const tmp8 = timestampProducer;
+  const items1 = [timestampProducer(native.Icon, { source: _modDef12873, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
   const obj4 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityShelfItem.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
     if (num2 == null) {
       num2 = 0;
     }
-    let itemSubtitleForMaxPlayersShort = tmp9(12216).getItemSubtitleForMaxPlayersShort(num2);
-    const tmp9Result = tmp9(12216);
+    let itemSubtitleForMaxPlayersShort = tmp9(12241).getItemSubtitleForMaxPlayersShort(num2);
+    const tmp9Result = tmp9(12241);
   } else {
     itemSubtitleForMaxPlayersShort = name;
     if (arr.length > 1) {
@@ -95,13 +95,14 @@ function ParticipantsText(arg0) {
   obj2.children = items1;
   return tmp6(tmp2Result, obj2);
 }
+const ThemeTypes = fn(1074).ThemeTypes;
 const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4607);
 let obj2 = { container: { borderRadius: nativeDefault.radii.md, overflow: "hidden", height: 120, position: "relative", backgroundColor: "black", justifyContent: "center" }, imageOuterContainer: { justifyContent: "center", alignItems: "center" }, ongoingActivityJoinedContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(255,255,255,0.5)", zIndex: 1 }, overlayBubble: null, participantsContainer: null, participantsText: null, developerIconContainer: null, developerIconColor: null };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(4454);
+const ColorUtils = fn(4456);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -111,7 +112,7 @@ let size = { position: "absolute", top: 4, right: 4, width: 22, height: 22, bord
 obj2.developerIconContainer = size;
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", height: 120, position: "relative", backgroundColor: "black", justifyContent: "center" };
 obj2.developerIconColor = { color: nativeDefault.colors.WHITE };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx");
 
@@ -121,7 +122,7 @@ export default function ActivityShelfItem(arg0) {
   if (disableBadges === undefined) {
     disableBadges = false;
   }
-  const tmp = closure_8();
+  const tmp = closure_9();
   let channel = null;
   if ("channel" === context.type) {
     channel = context.channel;
@@ -134,7 +135,7 @@ export default function ActivityShelfItem(arg0) {
   let tmp10 = useEmbeddedActivityBackgroundDefault({ applicationId: activityItem.application.id, size: result, names: ["embedded_background"] });
   let tmp11 = !disableBadges;
   if (!disableBadges) {
-    const items = [tmp8(12127).ActivityAction.LEAVE, tmp8(12127).ActivityAction.JOIN];
+    const items = [tmp8(12152).ActivityAction.LEAVE, tmp8(12152).ActivityAction.JOIN];
     tmp11 = !items.includes(activityAction);
   }
   const obj2 = { applicationId: activityItem.application.id, size: result, names: ["embedded_background"] };
@@ -143,54 +144,56 @@ export default function ActivityShelfItem(arg0) {
   const obj3 = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === useActivityShelfItem.ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: null, children: null };
   const items1 = [tmp.container, { width, height }];
   obj3.style = items1;
-  const obj4 = { style: tmp.imageOuterContainer, children: null };
+  const obj4 = { theme: ThemeTypes.DARK, children: null };
+  const obj5 = { style: tmp.imageOuterContainer, children: null };
   const tmp8Result = TestModeUtils;
-  const obj5 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
+  const obj6 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
   const tmp3Result = NativeViewDefault;
   if (activityAction === useActivityShelfItem.ActivityAction.START) {
     tmp10 = imageBackground;
   }
-  obj5.imageBackground = tmp10;
-  obj5.aspectRatio = width / height;
-  const items2 = [hasOwnProperty(ActivityShelfItemBackgroundDefault, obj5), hasOwnProperty(ActivityActionOverlay, { action: activityAction, applicationId: activityItem.application.id, context, activityItem, launchingComponentId: id })];
-  obj4.children = items2;
-  const items3 = [React5(tmp3Result, obj4), , ];
+  obj6.imageBackground = tmp10;
+  obj6.aspectRatio = width / height;
+  const items2 = [timestampProducer(ActivityShelfItemBackgroundDefault, obj6), timestampProducer(ActivityActionOverlay, { action: activityAction, applicationId: activityItem.application.id, context, activityItem, launchingComponentId: id })];
+  obj5.children = items2;
+  const items3 = [React6(tmp3Result, obj5), , ];
   let tmp15Result = null;
   if (tmp11) {
-    const obj7 = { labelType };
-    tmp15Result = tmp15(tmp3(12156), obj7);
+    const obj8 = { labelType };
+    tmp15Result = tmp15(tmp3(12181), obj8);
   }
   items3[1] = tmp15Result;
   let tmp15Result3 = null;
   if (tmp11) {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
-      const obj8 = { style: tmp.developerIconContainer, children: null };
-      const obj9 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp3(17244), color: tmp.developerIconColor.color };
-      obj8.children = tmp15(tmp8(1178).Icon, obj9);
-      tmp15Result3 = tmp15(tmp3(5639), obj8);
-      const tmp3Result4 = tmp3(5639);
+      const obj9 = { style: tmp.developerIconContainer, children: null };
+      const obj10 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp3(17234), color: tmp.developerIconColor.color };
+      obj9.children = tmp15(tmp8(1178).Icon, obj10);
+      tmp15Result3 = tmp15(tmp3(5641), obj9);
+      const tmp3Result4 = tmp3(5641);
     }
   }
   items3[2] = tmp15Result3;
-  const items4 = [React5(native2.ThemeContextProvider, { theme: "dark", children: items3 }), ];
-  let tmp15Result4 = activityAction === tmp8(12127).ActivityAction.START;
+  obj4.children = items3;
+  const items4 = [React6(native2.ThemeContextProvider, obj4), ];
+  let tmp15Result4 = activityAction === tmp8(12152).ActivityAction.START;
   if (tmp15Result4) {
-    const obj10 = { action: activityAction, channelId: null, guildId: null, activityItem: null };
+    const obj11 = { action: activityAction, channelId: null, guildId: null, activityItem: null };
     let id1;
     if (channel != null) {
       id1 = channel.id;
     }
-    obj10.channelId = id1;
+    obj11.channelId = id1;
     let guildId1;
     if (channel != null) {
       guildId1 = channel.getGuildId();
     }
-    obj10.guildId = guildId1;
-    obj10.activityItem = activityItem;
-    tmp15Result4 = tmp15(ParticipantsText, obj10);
+    obj11.guildId = guildId1;
+    obj11.activityItem = activityItem;
+    tmp15Result4 = tmp15(ParticipantsText, obj11);
   }
   items4[1] = tmp15Result4;
   obj3.children = items4;
-  return React5(Pressables.PressableOpacity, obj3);
+  return React6(Pressables.PressableOpacity, obj3);
 };

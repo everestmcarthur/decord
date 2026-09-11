@@ -1,16 +1,16 @@
-// Module ID: 9724
-// Function ID: 9725
+// Module ID: 9747
+// Function ID: 9748
 // Name: useIsStreamFocused
-// Dependencies: [4621, 4626, 504, 2]
+// Dependencies: [4623, 4628, 504, 2]
 // Exports: useIsStreamFocused
 
-// Module 9724 (useIsStreamFocused)
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+// Module 9747 (useIsStreamFocused)
+import ChannelRTCStore from "ChannelRTCStore" /* 4623 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isStreamParticipant = fn(4626).isStreamParticipant;
+const isStreamParticipant = fn(4628).isStreamParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 

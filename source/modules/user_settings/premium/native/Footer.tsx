@@ -1,24 +1,24 @@
-// Module ID: 13569
-// Function ID: 13570
+// Module ID: 13548
+// Function ID: 13549
 // Name: Footer
-// Dependencies: [19, 17, 21, 4605, 13570, 7234, 4601, 1114, 5025, 5637, 13571, 2]
+// Dependencies: [19, 17, 21, 4607, 13549, 7256, 4603, 1114, 5027, 5639, 13550, 2]
 // Exports: default
 
-// Module 13569 (Footer)
+// Module 13548 (Footer)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13570 */;
-import _modDef13571 from "module_13571" /* 13571 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13549 */;
+import _modDef13550 from "module_13550" /* 13550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
@@ -51,7 +51,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: _modDef13571 });
+  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: _modDef13550 });
   obj.children = items2;
   return timestampProducer(View, obj);
 };

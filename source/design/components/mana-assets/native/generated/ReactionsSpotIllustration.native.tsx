@@ -1,13 +1,13 @@
-// Module ID: 6431
-// Function ID: 6432
+// Module ID: 6453
+// Function ID: 6454
 // Name: ReactionsSpotIllustration
-// Dependencies: [21, 5637, 6432, 2]
+// Dependencies: [21, 5639, 6454, 2]
 // Exports: ReactionsSpotIllustration
 
-// Module 6431 (ReactionsSpotIllustration)
+// Module 6453 (ReactionsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6432 from "module_6432" /* 6432 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6454 from "module_6454" /* 6454 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ReactionsSpotIllustration = function ReactionsSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6432 };
+  const obj2 = { uri: _modDef6454 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

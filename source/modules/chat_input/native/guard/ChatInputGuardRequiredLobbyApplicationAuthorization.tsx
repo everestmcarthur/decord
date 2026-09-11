@@ -1,18 +1,18 @@
-// Module ID: 12530
-// Function ID: 12531
+// Module ID: 12555
+// Function ID: 12556
 // Name: ChatInputGuardRequiredLobbyApplicationAuthorization
-// Dependencies: [19, 17, 21, 4605, 576, 12518, 1114, 4299, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 12543, 1114, 4301, 2]
 
-// Module 12530 (ChatInputGuardRequiredLobbyApplicationAuthorization)
+// Module 12555 (ChatInputGuardRequiredLobbyApplicationAuthorization)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12518 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12543 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { icon: null };
 let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
 obj.icon = size;

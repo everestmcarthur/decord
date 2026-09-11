@@ -1,11 +1,11 @@
-// Module ID: 14797
-// Function ID: 14798
+// Module ID: 14774
+// Function ID: 14775
 // Name: DismissibleBadgeUtils
-// Dependencies: [32, 19, 1954, 21, 7440, 14796, 2]
+// Dependencies: [32, 19, 1954, 21, 7462, 14773, 2]
 // Exports: createDismissibleBadgePreNavigationAction, createDismissibleBadgeRouteProps
 
-// Module 14797 (DismissibleBadgeUtils)
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14796 */;
+// Module 14774 (DismissibleBadgeUtils)
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14773 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,10 +19,10 @@ let closure_7 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissibleBadgeUtils.tsx");
 
-export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS, useShouldShowTinyBroncoAccountStatus) {
+export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS, useShouldShowAgeNotice) {
   closure_0 = TINY_BRONCO_SETTINGS;
-  let tmp = useShouldShowTinyBroncoAccountStatus;
-  if (useShouldShowTinyBroncoAccountStatus === undefined) {
+  let tmp = useShouldShowAgeNotice;
+  if (useShouldShowAgeNotice === undefined) {
     tmp = useAlwaysShow;
   }
   closure_1 = tmp;

@@ -1,24 +1,29 @@
 // Module ID: 12893
 // Function ID: 12894
-// Dependencies: [12868, 12888]
-// Exports: getDefaultCurrentScope, getDefaultIsolationScope
+// Dependencies: [12894]
+// Exports: getGlobalSingleton
 
 // Module 12893
-import _mod12868 from "module_12868" /* 12868 */;
-import ScopeClass from "ScopeClass" /* 12888 */;
+import _mod12894 from "module_12894" /* 12894 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getDefaultCurrentScope = function getDefaultCurrentScope() {
-  return _mod12868.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getDefaultIsolationScope = function getDefaultIsolationScope() {
-  return _mod12868.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
+export const GLOBAL_OBJ = globalThis;
+export const getGlobalSingleton = function getGlobalSingleton(arg0, fn, arg2) {
+  let tmp = arg2;
+  if (!arg2) {
+    tmp = globalThis;
+  }
+  const tmp2 = tmp.__SENTRY__ || {};
+  tmp.__SENTRY__ = tmp2;
+  const tmp3 = tmp2[_mod12894.SDK_VERSION] || {};
+  tmp2[_mod12894.SDK_VERSION] = tmp3;
+  let tmp4 = tmp3[arg0];
+  if (!tmp4) {
+    const tmp6 = fn();
+    tmp3[arg0] = tmp6;
+    tmp4 = tmp6;
+  }
+  return tmp4;
 };

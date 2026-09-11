@@ -1,13 +1,13 @@
-// Module ID: 16406
-// Function ID: 16407
+// Module ID: 16395
+// Function ID: 16396
 // Name: MentionSubtitle
-// Dependencies: [19, 17, 21, 16407, 5078, 5130, 4601, 1114, 2]
+// Dependencies: [19, 17, 21, 16396, 5080, 5132, 4603, 1114, 2]
 // Exports: default
 
-// Module 16406 (MentionSubtitle)
+// Module 16395 (MentionSubtitle)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 16407 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 16396 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,11 +23,11 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(5078).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(5078);
+    channelIconComponentWithGuild = tmp(5080).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(5080);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5130).TextIcon;
+    channelIconComponentWithGuild = tmp(5132).TextIcon;
   }
   const obj2 = { style: subtitleStyles.subtitleRow, children: null };
   const items = [React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }), ];

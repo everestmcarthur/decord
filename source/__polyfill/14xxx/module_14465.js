@@ -1,134 +1,53 @@
 // Module ID: 14465
 // Function ID: 14466
-// Dependencies: [42, 41, 93, 95, 98, 158, 17, 14466]
+// Dependencies: []
 
 // Module 14465
-import _mod17 from "module_17" /* 17 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import base64Decode from "base64Decode" /* 14466 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-let QuotaExceededError = global;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+export default (arg0) => {
+  let map = arg0;
+  if (!arg0) {
+    const _Map = Map;
+    map = new Map();
   }
-}
-_possibleConstructorReturn;
-const NativeModules = _mod17.NativeModules;
-class TypeMismatchError {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, QuotaExceededError);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(QuotaExceededError);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-QuotaExceededError = TypeMismatchError;
-_inherits(TypeMismatchError, _wrapNativeSuper(Error));
-let closure_8 = _createClass(TypeMismatchError);
-class QuotaExceededError {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, QuotaExceededError);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(QuotaExceededError);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(QuotaExceededError, _wrapNativeSuper(Error));
-let closure_9 = _createClass(QuotaExceededError);
-if (typeof global.crypto !== "object") {
-  global.crypto = {};
-}
-if (typeof global.crypto.getRandomValues !== "function") {
-  global.crypto.getRandomValues = function getRandomValues(uint8Array) {
-    if (!(uint8Array instanceof Int8Array)) {
-      const _Uint8Array = Uint8Array;
-      if (!(uint8Array instanceof Uint8Array)) {
-        const _Int16Array = Int16Array;
-        if (!(uint8Array instanceof Int16Array)) {
-          const _Uint16Array = Uint16Array;
-          if (!(uint8Array instanceof Uint16Array)) {
-            const _Int32Array = Int32Array;
-            if (!(uint8Array instanceof Int32Array)) {
-              const _Uint32Array = Uint32Array;
-              if (!(uint8Array instanceof Uint32Array)) {
-                const _Uint8ClampedArray = Uint8ClampedArray;
-                if (!(uint8Array instanceof Uint8ClampedArray)) {
-                  const tmp4 = new closure_8("Expected an integer array");
-                  throw tmp4;
-                }
-              }
-            }
-          }
+  return {
+    all: map,
+    on(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        value.push(arg1);
+      } else {
+        const items = [arg1];
+        const result = map.set(arg0, items);
+      }
+    },
+    off(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        if (arg1) {
+          value.splice(value.indexOf(arg1) >>> 0, 1);
+        } else {
+          const result = map.set(arg0, []);
         }
       }
-    }
-    if (uint8Array.byteLength > 65536) {
-      const tmp19 = new closure_9("Can only request a maximum of 65536 bytes");
-      throw tmp19;
-    } else {
-      const byteLength = uint8Array.byteLength;
-      if (NativeModules.RNGetRandomValues) {
-        const RNGetRandomValues = tmp24.RNGetRandomValues;
-        let randomBase64 = RNGetRandomValues.getRandomBase64(byteLength);
-      } else if (tmp24.ExpoRandom) {
-        const ExpoRandom2 = tmp24.ExpoRandom;
-        randomBase64 = ExpoRandom2.getRandomBase64String(byteLength);
-      } else if (QuotaExceededError.ExpoModules) {
-        const ExpoRandom = QuotaExceededError.ExpoModules.ExpoRandom;
-        randomBase64 = ExpoRandom.getRandomBase64String(byteLength);
-      } else {
-        const _Error = Error;
-        const error = new Error("Native module not found");
-        throw error;
+    },
+    emit(arg0, arg1) {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      value = map.get(arg0);
+      if (value) {
+        const substr = value.slice();
+        const mapped = substr.map((fn) => {
+          fn(closure_1);
+        });
       }
-      const _Uint8Array2 = Uint8Array;
-      uint8Array = new Uint8Array(uint8Array.buffer, uint8Array.byteOffset, uint8Array.byteLength);
-      base64Decode(randomBase64, uint8Array);
-      return uint8Array;
+      value2 = map.get("*");
+      if (value2) {
+        const substr1 = value2.slice();
+        const mapped1 = substr1.map((fn) => {
+          fn(closure_0, closure_1);
+        });
+      }
     }
   };
-}
+};

@@ -1,11 +1,11 @@
-// Module ID: 12239
-// Function ID: 12240
+// Module ID: 12264
+// Function ID: 12265
 // Name: useAnimationDelayedAutoFocus
-// Dependencies: [19, 12232, 2]
+// Dependencies: [19, 12257, 2]
 // Exports: useAnimationDelayedAutoFocus
 
-// Module 12239 (useAnimationDelayedAutoFocus)
-import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 12232 */;
+// Module 12264 (useAnimationDelayedAutoFocus)
+import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 12257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

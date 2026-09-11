@@ -1,22 +1,12 @@
 // Module ID: 14407
 // Function ID: 14408
-// Dependencies: [14382]
+// Dependencies: [14355, 14356]
 
 // Module 14407
-import _mod14382 from "module_14382" /* 14382 */;
+import _mod14355 from "module_14355" /* 14355 */;
+import _mod14356 from "module_14356" /* 14356 */;
 
-if (_mod14382) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(tmp);
-    } else {
-      applyArgumentsResult = apply(tmp, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
 
-export default fn;
+export default _mod14355 && _mod14356(() => 42 !== Object.defineProperty(() => {
+
+}, "prototype", { value: 42, writable: false }).prototype);

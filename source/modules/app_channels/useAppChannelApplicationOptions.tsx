@@ -1,10 +1,10 @@
-// Module ID: 9813
-// Function ID: 9814
+// Module ID: 9836
+// Function ID: 9837
 // Name: useAppChannelApplicationOptions
-// Dependencies: [19, 9581, 9814, 7215, 2]
+// Dependencies: [19, 9604, 9837, 7237, 2]
 // Exports: useAppChannelApplicationOptions
 
-// Module 9813 (useAppChannelApplicationOptions)
+// Module 9836 (useAppChannelApplicationOptions)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -21,7 +21,7 @@ function compareOptions(status, status2) {
   }
   return localeCompareResult;
 }
-const EmbeddedSurfaceType = fn(9581).EmbeddedSurfaceType;
+const EmbeddedSurfaceType = fn(9604).EmbeddedSurfaceType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 

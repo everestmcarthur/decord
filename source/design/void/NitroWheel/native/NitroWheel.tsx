@@ -1,12 +1,12 @@
-// Module ID: 14200
-// Function ID: 14201
+// Module ID: 14178
+// Function ID: 14179
 // Name: NitroWheel
-// Dependencies: [19, 21, 5637, 9430, 2]
+// Dependencies: [19, 21, 5639, 9453, 2]
 // Exports: default
 
-// Module 14200 (NitroWheel)
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef9430 from "module_9430" /* 9430 */;
+// Module 14178 (NitroWheel)
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef9453 from "module_9453" /* 9453 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -14,6 +14,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 
 export default function NitroWheel(style) {
-  const obj = { source: _modDef9430, style: style.style, resizeMode: "contain" };
-  return jsx(FastImageDefault, { source: _modDef9430, style: style.style, resizeMode: "contain" });
+  const obj = { source: _modDef9453, style: style.style, resizeMode: "contain" };
+  return jsx(FastImageDefault, { source: _modDef9453, style: style.style, resizeMode: "contain" });
 };

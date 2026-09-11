@@ -1,21 +1,21 @@
-// Module ID: 8807
-// Function ID: 8808
+// Module ID: 8830
+// Function ID: 8831
 // Name: resolveInvite
-// Dependencies: [502, 1979, 7787, 1074, 7786, 4590, 1242, 4798, 1250, 1969, 2]
+// Dependencies: [502, 1979, 7809, 1074, 7808, 4592, 1242, 4800, 1250, 1969, 2]
 // Exports: default
 
-// Module 8807 (resolveInvite)
+// Module 8830 (resolveInvite)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import TypeUtils from "TypeUtils" /* 1969 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7786 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7808 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(4798);
+const TrackedHTTPUtilsDefault = tmp4(4800);
 require = fn;
-let Constants = fn(7787);
+let Constants = fn(7809);
 ({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
 Constants = fn(1074);
 ({ Endpoints: closure_7, AnalyticEvents: closure_8, LoggingInviteTypes: closure_9, AbortCodes: c10 } = Constants);

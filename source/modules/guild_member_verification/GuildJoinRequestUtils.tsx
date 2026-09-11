@@ -1,11 +1,11 @@
-// Module ID: 4428
-// Function ID: 4429
+// Module ID: 4430
+// Function ID: 4431
 // Name: GuildJoinRequestUtils
-// Dependencies: [4429, 2]
+// Dependencies: [4431, 2]
 // Exports: isActionedAndNotAcked, isActionedApplicationStatus, isApprovedAndAcked, isSubmittedApplicationStatus
 
-// Module 4428 (GuildJoinRequestUtils)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
+// Module 4430 (GuildJoinRequestUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");

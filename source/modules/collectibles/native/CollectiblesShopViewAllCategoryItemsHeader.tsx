@@ -1,15 +1,15 @@
-// Module ID: 15929
-// Function ID: 15930
+// Module ID: 15914
+// Function ID: 15915
 // Name: CollectiblesShopViewAllCategoryItemsHeader
-// Dependencies: [19, 17, 21, 4605, 1483, 13426, 7914, 7918, 1114, 2]
+// Dependencies: [19, 17, 21, 4607, 1483, 13509, 7937, 7941, 1114, 2]
 // Exports: default
 
-// Module 15929 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15914 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import HeaderShared from "HeaderShared" /* 7914 */;
-import _modDef7918 from "module_7918" /* 7918 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13426 */;
+import HeaderShared from "HeaderShared" /* 7937 */;
+import _modDef7941 from "module_7941" /* 7941 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13509 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_7 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
@@ -33,7 +33,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj4.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj3.style = obj4;
   const obj5 = { style: tmp.backButton, children: null };
-  const obj6 = { source: _modDef7918, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj6 = { source: _modDef7941, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj6.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj6.onPress = function onPress() {

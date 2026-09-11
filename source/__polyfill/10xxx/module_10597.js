@@ -1,92 +1,55 @@
 // Module ID: 10597
 // Function ID: 10598
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10596, 10529, 10509]
+// Dependencies: [41, 42, 10593, 10524]
 
 // Module 10597
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10596 from "module_10596" /* 10596 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-const NLWeekdayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10596.WEEKDAY_DICTIONARY) + ")(?=\\W|$)", "i");
-class NLWeekdayParser {
+const JPSlashDateFormatParser = require;
+const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
+class JPSlashDateFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, NLWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, JPSlashDateFormatParser);
+    return;
   }
 }
-_inherits(NLWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
+  key: "pattern",
+  value: function pattern() {
     return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("vorige" != formatted1) {
-        str3 = "next";
-        if ("volgende" != formatted1) {
-          str3 = null;
-          if ("deze" == formatted1) {
-            str3 = "this";
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(10593).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(10593).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(tmp(10593).toHankaku(arg1[1]));
+                parsingComponents.assign("year", tmp(10524).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply("year", tmp(10524).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
+              }
+              return parsingComponents;
+            }
           }
+          return null;
         }
       }
-      return NLWeekdayParser(10529).createParsingComponentsAtWeekday(reference.reference, NLWeekdayParser(10596).WEEKDAY_DICTIONARY[formatted], str3);
+      return null;
     }
   }
 ];
 
-export default _createClass(NLWeekdayParser, items);
+export default _createClass(JPSlashDateFormatParser, items);

@@ -1,10 +1,10 @@
-// Module ID: 12140
-// Function ID: 12141
+// Module ID: 12165
+// Function ID: 12166
 // Name: ArraySearch
 // Dependencies: [2]
 // Exports: queryData
 
-// Module 12140 (ArraySearch)
+// Module 12165 (ArraySearch)
 import size from "module_2" /* 2 */;
 
 function sortGroup(arr, arg1) {

@@ -1,13 +1,13 @@
-// Module ID: 16455
-// Function ID: 16456
+// Module ID: 16443
+// Function ID: 16444
 // Name: ThemeGrayIcon
-// Dependencies: [19, 21, 576, 4305, 16456, 2]
+// Dependencies: [19, 21, 576, 4307, 16444, 2]
 // Exports: ThemeGrayIcon
 
-// Module 16455 (ThemeGrayIcon)
+// Module 16443 (ThemeGrayIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod16456 from "module_16456" /* 16456 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod16444 from "module_16444" /* 16444 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ThemeGrayIcon = function ThemeGrayIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16456, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16444, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,10 +1,10 @@
-// Module ID: 17581
-// Function ID: 17582
+// Module ID: 17573
+// Function ID: 17574
 // Name: StaffMemberPreloaderManager
-// Dependencies: [7170, 17582, 2]
+// Dependencies: [7192, 17574, 2]
 
-// Module 17581 (StaffMemberPreloaderManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+// Module 17573 (StaffMemberPreloaderManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 let require = fn;
 const prototype = function StaffMemberPreloaderManager() {

@@ -1,21 +1,21 @@
-// Module ID: 11892
-// Function ID: 11893
+// Module ID: 11917
+// Function ID: 11918
 // Name: StringSelectComponentActionSheet
-// Dependencies: [32, 19, 21, 4605, 576, 8182, 1894, 4572, 11893, 7182, 4601, 1114, 2]
+// Dependencies: [32, 19, 21, 4607, 576, 8205, 1894, 4574, 11918, 7204, 4603, 1114, 2]
 // Exports: default
 
-// Module 11892 (StringSelectComponentActionSheet)
+// Module 11917 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1894 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import EmojiDefault from "Emoji" /* 7182 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import EmojiDefault from "Emoji" /* 7204 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, textEmoji: { fontSize: 16, color: "#000000" }, fastImageEmoji: { width: 24, height: 24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,8 +30,8 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8182);
-  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8182).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let obj = selectionActionComponent(8205);
+  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8205).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
   let items = [selectionActionComponent];
@@ -115,7 +115,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null
   };
-  let set = new Set(selectionActionComponent(8182).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  let set = new Set(selectionActionComponent(8205).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -141,5 +141,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(11893), obj2);
+  return tmp9(onSubmit(11918), obj2);
 };

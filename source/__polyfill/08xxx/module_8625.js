@@ -1,18 +1,19 @@
 // Module ID: 8625
 // Function ID: 8626
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8537, 8626, 8536, 8545]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8622, 8626, 8627, 8559, 8568]
 
 // Module 8625
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8545 from "module_8545" /* 8545 */;
-import _modDef8626 from "module_8626" /* 8626 */;
+import _modDef8568 from "module_8568" /* 8568 */;
+import unitsDefault from "units" /* 8622 */;
+import _modDef8627 from "module_8627" /* 8627 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Use = fn;
+const Mask = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,12 +35,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Use {
+class Mask {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
+    tmp = closure_3(this, Mask);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Use);
+    obj = hasOwnProperty(Mask);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -54,46 +55,55 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Use, _modDef8545);
+_inherits(Mask, _modDef8568);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    let str = props.href;
-    ({ children, x, y, width, height } = props);
-    if (undefined === str) {
-      str = props.xlinkHref;
+    ({ maskUnits, maskContentUnits, style } = props);
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
+    let num = 0;
+    if (undefined !== maskUnits) {
+      num = unitsDefault[maskUnits];
     }
-    let match = str;
-    if (str) {
-      match = str.match(Use(8537).idPattern);
+    size.maskUnits = num;
+    let num2 = 1;
+    if (undefined !== maskContentUnits) {
+      num2 = unitsDefault[maskContentUnits];
     }
-    let tmp4 = match;
-    if (match) {
-      tmp4 = match[1];
+    size.maskContentUnits = num2;
+    let str;
+    if (props != null) {
+      str = props.maskType;
     }
-    if (!tmp4) {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
+    if (!str) {
+      let maskType;
+      if (style != null) {
+        maskType = style.maskType;
+      }
+      str = maskType;
     }
-    const size = { href: tmp4, x, y, width, height };
+    if (!str) {
+      str = "luminance";
+    }
+    size.maskType = Mask(8626).maskType[str];
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(Use(8536).withoutXY(this, props));
+    const merged = Object.assign(Mask(8559).withoutXY(this, props));
     const merged1 = Object.assign(size);
-    obj.children = children;
-    return <tmp7 ref={function ref(arg0) {
+    obj.children = props.children;
+    return <tmp8 ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(Mask, items);
+importDefaultResultResult.displayName = "Mask";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

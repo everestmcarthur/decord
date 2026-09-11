@@ -1,16 +1,16 @@
-// Module ID: 16292
-// Function ID: 16293
+// Module ID: 16281
+// Function ID: 16282
 // Name: NewMemberActionsProgress
-// Dependencies: [19, 17, 2021, 4792, 4793, 1964, 4230, 21, 4605, 576, 5037, 563, 1384, 5173, 1100, 4601, 1114, 1178, 10009, 2]
+// Dependencies: [19, 17, 2021, 4794, 4795, 1964, 4232, 21, 4607, 576, 5039, 563, 1384, 5175, 1100, 4603, 1114, 1178, 10032, 2]
 // Exports: NewMemberActionsProgress
 
-// Module 16292 (NewMemberActionsProgress)
+// Module 16281 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
+import LinearGradientDefault from "LinearGradient" /* 5039 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4792 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4793 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4794 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4795 */;
 
 const require = fn;
 function ProgressBar(percent) {
@@ -27,10 +27,10 @@ function ProgressBar(percent) {
 }
 const View = fn(17).View;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
-const GuildMemberFlags = fn(4230).GuildMemberFlags;
+const GuildMemberFlags = fn(4232).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };

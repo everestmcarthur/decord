@@ -1,53 +1,31 @@
 // Module ID: 3974
 // Function ID: 3975
-// Dependencies: [3852, 3975, 3693, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 3974
-import startOfWeek_mod from "startOfWeek" /* 3852 */;
-import startOfWeekYear_mod from "startOfWeekYear" /* 3975 */;
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
-  let tmp3 = obj;
-} else {
-  tmp3 = startOfWeek;
-}
-startOfWeek = tmp3;
-let startOfWeekYear = startOfWeekYear_mod;
-if (!startOfWeekYear) {
-  const obj2 = { default: startOfWeekYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfWeekYear;
-}
-startOfWeekYear = tmp5;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp7 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp7;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp5;
 
-export default function getWeek(arg0, arg1) {
+export default function getTime(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+  return _typeof.default(arg0).getTime();
 };
 export default exports.default;

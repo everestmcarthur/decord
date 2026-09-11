@@ -1,13 +1,13 @@
-// Module ID: 6341
-// Function ID: 6342
+// Module ID: 6363
+// Function ID: 6364
 // Name: NitroRubyBadgeSmallBadge
-// Dependencies: [21, 5637, 6342, 2]
+// Dependencies: [21, 5639, 6364, 2]
 // Exports: NitroRubyBadgeSmallBadge
 
-// Module 6341 (NitroRubyBadgeSmallBadge)
+// Module 6363 (NitroRubyBadgeSmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6342 from "module_6342" /* 6342 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6364 from "module_6364" /* 6364 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroRubyBadgeSmallBadge = function NitroRubyBadgeSmallBadge(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6342 };
+  const obj2 = { uri: _modDef6364 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

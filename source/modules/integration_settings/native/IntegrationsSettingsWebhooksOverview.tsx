@@ -1,27 +1,27 @@
-// Module ID: 16938
-// Function ID: 16939
+// Module ID: 16927
+// Function ID: 16928
 // Name: IntegrationsSettingsWebhooksOverview
-// Dependencies: [5, 19, 1957, 2012, 1979, 4243, 1371, 16939, 1074, 21, 4605, 576, 1483, 1396, 5655, 1178, 1114, 11, 4449, 504, 16940, 8665, 16941, 4315, 2024, 4601, 16943, 5737, 8663, 5023, 7092, 2]
+// Dependencies: [5, 19, 1957, 2012, 1979, 4245, 1371, 16928, 1074, 21, 4607, 576, 1483, 1396, 5657, 1178, 1114, 11, 4451, 504, 16929, 8688, 16930, 4317, 2024, 4603, 16932, 5739, 8686, 5025, 7114, 2]
 // Exports: default
 
-// Module 16938 (IntegrationsSettingsWebhooksOverview)
+// Module 16927 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import NavScrim from "NavScrim" /* 7092 */;
-import Form from "Form" /* 8663 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16940 */;
+import Stack_Stack from "Stack/Stack" /* 5025 */;
+import NavScrim from "NavScrim" /* 7114 */;
+import Form from "Form" /* 8686 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import UserStore from "UserStore" /* 1371 */;
-import WebhooksStore from "WebhooksStore" /* 16939 */;
+import WebhooksStore from "WebhooksStore" /* 16928 */;
 
 require = fn;
 function WebhookItem(avatar) {
@@ -181,7 +181,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: map1, ChannelSettingsSections: closure_14, NON_USER_BOT_DISCRIMINATOR: closure_15, Permissions: closure_16, WebhookTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -213,7 +213,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [closure_18(webhookType(4601).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [closure_18(webhookType(4603).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
@@ -221,7 +221,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: tmp5(16943).WebhookEmpty, title: null };
+    const obj2 = { Illustration: tmp5(16932).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = tmp5(1114).intl;
       dkHRkE = tmp5(1114).t.dkHRkE;
@@ -243,7 +243,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj4 = { children: null };
-    items[2] = tmp4(tmp5(5737).TableRowGroup, obj3);
+    items[2] = tmp4(tmp5(5739).TableRowGroup, obj3);
     obj4.children = items;
     return closure_20(closure_19, obj4);
   }
@@ -256,7 +256,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_20(closure_1_19, obj);
 };
-WebhooksOverview.contextType = fn(4315).ThemeContext;
+WebhooksOverview.contextType = fn(4317).ThemeContext;
 let closure_26 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx");

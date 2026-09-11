@@ -1,24 +1,24 @@
-// Module ID: 9898
-// Function ID: 9899
+// Module ID: 9921
+// Function ID: 9922
 // Name: InstantInviteActionSheet
-// Dependencies: [32, 19, 17, 1962, 9891, 1979, 4243, 7787, 1074, 21, 4605, 576, 9899, 1611, 7214, 7234, 7220, 504, 4590, 7810, 9890, 4572, 8242, 9900, 1187, 9902, 7202, 7201, 1114, 1178, 9919, 9923, 9925, 7102, 9917, 9961, 9962, 2]
+// Dependencies: [32, 19, 17, 1962, 9914, 1979, 4245, 7809, 1074, 21, 4607, 576, 9922, 1611, 7236, 7256, 7242, 504, 4592, 7832, 9913, 4574, 8265, 9923, 1187, 9925, 7224, 7223, 1114, 1178, 9942, 9946, 9948, 7124, 9940, 9984, 9985, 2]
 // Exports: default
 
-// Module 9898 (InstantInviteActionSheet)
+// Module 9921 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4590 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9899 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9900 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4592 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8265 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9913 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9922 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9891 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9914 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
 function Loading() {
@@ -39,11 +39,11 @@ function Loading() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7787).InviteTargetTypes;
+const InviteTargetTypes = fn(7809).InviteTargetTypes;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;

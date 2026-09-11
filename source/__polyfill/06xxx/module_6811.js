@@ -1,13 +1,30 @@
 // Module ID: 6811
 // Function ID: 6812
-// Dependencies: [6812, 6814, 6815]
+// Dependencies: [6795, 6812, 6770, 6814]
+// Exports: useGestureCallbacks
 
 // Module 6811
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6795 */;
 import _mod6812 from "module_6812" /* 6812 */;
-import _mod6814 from "module_6814" /* 6814 */;
-import _mod6815 from "module_6815" /* 6815 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const useCompetingGestures = _mod6812.useCompetingGestures;
-export const useExclusiveGestures = _mod6814.useExclusiveGestures;
-export const useSimultaneousGestures = _mod6815.useSimultaneousGestures;
+export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
+  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = tmp(6770).Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
+    }
+    const tmpResult = tmp(6814);
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
+  }
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return { jsEventHandler: _mod6812.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
+};

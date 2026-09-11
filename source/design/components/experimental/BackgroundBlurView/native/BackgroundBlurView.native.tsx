@@ -1,17 +1,17 @@
-// Module ID: 8666
-// Function ID: 8667
+// Module ID: 8689
+// Function ID: 8690
 // Name: BackgroundBlurView
-// Dependencies: [19, 17, 21, 4605, 8667, 2]
+// Dependencies: [19, 17, 21, 4607, 8690, 2]
 
-// Module 8666 (BackgroundBlurView)
-import BackgroundBlurFill from "BackgroundBlurFill" /* 8667 */;
+// Module 8689 (BackgroundBlurView)
+import BackgroundBlurFill from "BackgroundBlurFill" /* 8690 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx");

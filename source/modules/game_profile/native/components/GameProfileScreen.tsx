@@ -1,22 +1,22 @@
-// Module ID: 8751
-// Function ID: 8752
+// Module ID: 8774
+// Function ID: 8775
 // Name: GameProfileScreen
-// Dependencies: [32, 19, 17, 8752, 21, 4605, 576, 5025, 1114, 8233, 8753, 4299, 8756, 7361, 5161, 4341, 8757, 4606, 8758, 8763, 4572, 8780, 7202, 6677, 8781, 8783, 8970, 7206, 2]
+// Dependencies: [32, 19, 17, 8775, 21, 4607, 576, 5027, 1114, 8256, 8776, 4301, 8779, 7383, 5163, 4343, 8780, 4608, 8781, 8786, 4574, 8803, 7224, 6699, 8804, 8806, 8993, 7228, 2]
 // Exports: default
 
-// Module 8751 (GameProfileScreen)
+// Module 8774 (GameProfileScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
-import timing from "timing" /* 4606 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
-import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8763 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8780 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4574 */;
+import timing from "timing" /* 4608 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8779 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8786 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8803 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8752 */;
+import GameProfileStore from "GameProfileStore" /* 8775 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
 
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { loadingContainer: { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, scrollView: null, stickyHeader: null };
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

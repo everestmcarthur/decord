@@ -1,13 +1,13 @@
-// Module ID: 15478
-// Function ID: 15479
+// Module ID: 15460
+// Function ID: 15461
 // Name: EmojiWoozyFaceIcon
-// Dependencies: [19, 21, 576, 4305, 15479, 2]
+// Dependencies: [19, 21, 576, 4307, 15461, 2]
 // Exports: EmojiWoozyFaceIcon
 
-// Module 15478 (EmojiWoozyFaceIcon)
+// Module 15460 (EmojiWoozyFaceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod15479 from "module_15479" /* 15479 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod15461 from "module_15461" /* 15461 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiWoozyFaceIcon = function EmojiWoozyFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15479, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15461, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

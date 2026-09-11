@@ -1,21 +1,21 @@
-// Module ID: 12319
-// Function ID: 12320
+// Module ID: 12344
+// Function ID: 12345
 // Name: PremiumAnimatedGiftButton
-// Dependencies: [19, 4597, 21, 4605, 576, 4306, 504, 1115, 4341, 5173, 5579, 2]
+// Dependencies: [19, 4599, 21, 4607, 576, 4308, 504, 1115, 4343, 5175, 5581, 2]
 // Exports: PremiumAnimatedGiftButton
 
-// Module 12319 (PremiumAnimatedGiftButton)
+// Module 12344 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
@@ -64,7 +64,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(4341).FadeOut;
+    FadeOut = tmp(4343).FadeOut;
   }
   const obj5 = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style, ];
@@ -84,7 +84,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   const merged = Object.assign(accessibilityState);
   obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj6.children = jsx(tmp3(5579), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj6.children = jsx(tmp3(5581), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
   obj5.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4341).View, { exiting: FadeOut, children: null });
+  return jsx(stateFromStores(4343).View, { exiting: FadeOut, children: null });
 };

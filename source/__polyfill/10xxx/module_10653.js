@@ -1,16 +1,16 @@
 // Module ID: 10653
 // Function ID: 10654
-// Dependencies: [41, 42, 93, 95, 98, 10646, 10505, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10652, 10523, 10524, 10654]
 
 // Module 10653
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
+import _mod10654 from "module_10654" /* 10654 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ESTimeUnitWithinFormatParser = require;
+const RUMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ESTimeUnitWithinFormatParser {
+class RUMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, ESTimeUnitWithinFormatParser);
+    tmp = c2(this, RUMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(ESTimeUnitWithinFormatParser);
+    obj = closure_4(RUMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,23 +50,47 @@ class ESTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUMonthNameLittleEndianParser, _mod10654.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(10646).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(?:\u0441)?\\s*(" + RUMonthNameLittleEndianParser(10652).ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" + RUMonthNameLittleEndianParser(10652).ORDINAL_NUMBER_PATTERN + "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" + RUMonthNameLittleEndianParser(10523).matchAnyPattern(RUMonthNameLittleEndianParser(10652).MONTH_DICTIONARY) + ")(?:(?:-|\\/|,?\\s{0,3})(" + RUMonthNameLittleEndianParser(10652).YEAR_PATTERN + "(?![^\\s]\\d)))?";
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ESTimeUnitWithinFormatParser(10505).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ESTimeUnitWithinFormatParser(10646).parseDuration(arg1[1]));
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = RUMonthNameLittleEndianParser(10652).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = RUMonthNameLittleEndianParser(10652).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", tmp2(10652).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", tmp2(10524).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = tmp2(10652).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
+      }
     }
   }
 ];
 
-export default _createClass(ESTimeUnitWithinFormatParser, items);
+export default _createClass(RUMonthNameLittleEndianParser, items);

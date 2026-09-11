@@ -1,239 +1,100 @@
 // Module ID: 10608
 // Function ID: 10609
-// Dependencies: [10498, 10505, 10507, 10540, 10609, 10611, 10612, 10613, 10614, 10615, 10616, 10618, 10619, 10620, 10621, 10622, 10623, 10624, 10625, 10538]
+// Dependencies: [41, 42, 93, 95, 98, 10523, 10604, 10524, 10530]
 
 // Module 10608
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10538 */;
-import _mod10540 from "module_10540" /* 10540 */;
-import _mod10609 from "module_10609" /* 10609 */;
-import _mod10611 from "module_10611" /* 10611 */;
-import _mod10612 from "module_10612" /* 10612 */;
-import _mod10613 from "module_10613" /* 10613 */;
-import _mod10614 from "module_10614" /* 10614 */;
-import _mod10615 from "module_10615" /* 10615 */;
-import _mod10616 from "module_10616" /* 10616 */;
-import _mod10618 from "module_10618" /* 10618 */;
-import _mod10619 from "module_10619" /* 10619 */;
-import _mod10620 from "module_10620" /* 10620 */;
-import _mod10621 from "module_10621" /* 10621 */;
-import _mod10622 from "module_10622" /* 10622 */;
-import _mod10623 from "module_10623" /* 10623 */;
-import _mod10624 from "module_10624" /* 10624 */;
-import _mod10625 from "module_10625" /* 10625 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
+import _mod10604 from "module_10604" /* 10604 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-
-const self = this;
-function createConfiguration() {
-  const obj = { parsers: null, refiners: null };
-  const items = [new closure_13.default(), , , , , , , , , ];
-  const _default = new closure_13.default();
-  items[1] = new closure_7.default();
-  const _default1 = new closure_7.default();
-  items[2] = new closure_15.default();
-  const _default2 = new closure_15.default();
-  items[3] = new closure_9.default();
-  const _default3 = new closure_9.default();
-  items[4] = new closure_17.default();
-  const _default4 = new closure_17.default();
-  items[5] = new closure_11.default();
-  const _default5 = new closure_11.default();
-  items[6] = new closure_16.default();
-  const _default6 = new closure_16.default();
-  items[7] = new closure_10.default();
-  const _default7 = new closure_10.default();
-  items[8] = new closure_14.default();
-  const _default8 = new closure_14.default();
-  items[9] = new closure_8.default();
-  obj.parsers = items;
-  const _default9 = new closure_8.default();
-  const items1 = [new closure_18.default(), ];
-  const _default10 = new closure_18.default();
-  items1[1] = new closure_19.default();
-  obj.refiners = items1;
-  const result = includeCommonConfiguration.includeCommonConfiguration(obj);
-  const refiners = result.refiners;
-  result.refiners = refiners.filter((item) => !(item instanceof closure_1_6.default));
-  return result;
-}
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const PTMonthNameLittleEndianParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+}
+const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10604.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10604.YEAR_PATTERN + "))?(?=\\W|$)", "i");
+class PTMonthNameLittleEndianParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, PTMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(PTMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    if (!fn) {
-      fn = function t(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    let fn2 = self;
-    if (self) {
-      fn2 = self.__importDefault;
-    }
-    if (!fn2) {
-      fn2 = (__esModule) => {
-        if (!__esModule) {
-          const obj = { default: __esModule };
-          let tmp = obj;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(PTMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = PTMonthNameLittleEndianParser(10604).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const parsed = parseInt(index[1]);
+      if (parsed > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", parsed);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", tmp2(10604).parseYear(index[4]));
         } else {
-          tmp = __esModule;
+          const start = parsingResult.start;
+          start.imply("year", tmp2(10524).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
         }
-        return tmp;
-      };
+        if (index[2]) {
+          const _parseInt = parseInt;
+          const start3 = parsingResult.start;
+          const parsed1 = parseInt(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", parsed1);
+        }
+        return parsingResult;
+      }
     }
-    const _Object3 = Object;
-    function createCasualConfiguration() {
-      const tmp = createConfiguration();
-      const parsers = tmp.parsers;
-      parsers.unshift(new fn2Result.default());
-      return tmp;
-    }
-    exports.hant = undefined;
-    exports.hans = undefined;
-    exports.Chrono = undefined;
-    exports.ParsingResult = undefined;
-    exports.ParsingComponents = undefined;
-    exports.ReferenceWithTimezone = undefined;
-    exports.Meridiem = undefined;
-    exports.Weekday = undefined;
-    exports.casual = undefined;
-    exports.strict = undefined;
-    exports.parse = function parse(arg0, arg1, arg2) {
-      const casual = exports.casual;
-      return casual.parse(arg0, arg1, arg2);
-    };
-    exports.parseDate = function parseDate(arg0, arg1, arg2) {
-      const casual = exports.casual;
-      return casual.parseDate(arg0, arg1, arg2);
-    };
-    exports.createCasualConfiguration = createCasualConfiguration;
-    exports.createConfiguration = createConfiguration;
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-            return require("module_10498").Chrono;
-          }
-    };
-    Object.defineProperty(exports, "Chrono", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-            return require("ReferenceWithTimezone").ParsingResult;
-          }
-    };
-    Object.defineProperty(exports, "ParsingResult", obj2);
-    const _Object6 = Object;
-    const obj3 = {
-      enumerable: true,
-      get() {
-            return require("ReferenceWithTimezone").ParsingComponents;
-          }
-    };
-    Object.defineProperty(exports, "ParsingComponents", obj3);
-    const _Object7 = Object;
-    const obj4 = {
-      enumerable: true,
-      get() {
-            return require("ReferenceWithTimezone").ReferenceWithTimezone;
-          }
-    };
-    Object.defineProperty(exports, "ReferenceWithTimezone", obj4);
-    const _Object8 = Object;
-    const obj5 = {
-      enumerable: true,
-      get() {
-            return require("Meridiem").Meridiem;
-          }
-    };
-    Object.defineProperty(exports, "Meridiem", obj5);
-    const _Object9 = Object;
-    const obj6 = {
-      enumerable: true,
-      get() {
-            return require("Meridiem").Weekday;
-          }
-    };
-    Object.defineProperty(exports, "Weekday", obj6);
-    let closure_6 = fn2(_mod10540);
-    let closure_7 = fn2(_mod10609);
-    let closure_8 = fn2(_mod10611);
-    let closure_9 = fn2(_mod10612);
-    let closure_10 = fn2(_mod10613);
-    let closure_11 = fn2(_mod10614);
-    const fn2Result = fn2(_mod10615);
-    let closure_13 = fn2(_mod10616);
-    let closure_14 = fn2(_mod10618);
-    let closure_15 = fn2(_mod10619);
-    let closure_16 = fn2(_mod10620);
-    let closure_17 = fn2(_mod10621);
-    let closure_18 = fn2(_mod10622);
-    let closure_19 = fn2(_mod10623);
-    exports.hant = fn(_mod10624);
-    exports.hans = fn(_mod10625);
-    const configuration = createConfiguration();
-    let parsers = configuration.parsers;
-    let _default = new fn2Result.default();
-    parsers.unshift(_default);
-    const chrono = new require("module_10498").Chrono(configuration);
-    exports.casual = chrono;
-    const chrono1 = new require("module_10498").Chrono(createConfiguration());
-    exports.strict = chrono1;
-  } else {
-    const _Object2 = Object;
   }
-} else {
-  let _Object = Object;
-}
+];
+
+export default _createClass(PTMonthNameLittleEndianParser, items);

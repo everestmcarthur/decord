@@ -1,9 +1,9 @@
-// Module ID: 8134
-// Function ID: 8135
+// Module ID: 8157
+// Function ID: 8158
 // Name: MobileFriendAnniversaryExperiment
 // Dependencies: [1433, 2]
 
-// Module 8134 (MobileFriendAnniversaryExperiment)
+// Module 8157 (MobileFriendAnniversaryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

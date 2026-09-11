@@ -1,20 +1,20 @@
-// Module ID: 16634
-// Function ID: 16635
+// Module ID: 16622
+// Function ID: 16623
 // Name: GuildRoleSubscriptionPurchasePreviewCard
-// Dependencies: [32, 19, 17, 1957, 21, 4605, 576, 7031, 4601, 4572, 16635, 1896, 10416, 15321, 1178, 504, 4758, 1114, 5078, 15308, 16630, 5637, 16636, 2]
+// Dependencies: [32, 19, 17, 1957, 21, 4607, 576, 7053, 4603, 4574, 16623, 1896, 10437, 15301, 1178, 504, 4760, 1114, 5080, 15288, 16618, 5639, 16624, 2]
 // Exports: default
 
-// Module 16634 (GuildRoleSubscriptionPurchasePreviewCard)
+// Module 16622 (GuildRoleSubscriptionPurchasePreviewCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7031 */;
-import LayoutUtils from "LayoutUtils" /* 10416 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15308 */;
-import EmojiIconDefault from "EmojiIcon" /* 15321 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
+import LayoutUtils from "LayoutUtils" /* 10437 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
+import EmojiIconDefault from "EmojiIcon" /* 15301 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -84,13 +84,13 @@ function ChannelBenefitShowCase(description) {
   let title = intl.string(channelId(1114).t.bz1PZX);
   if (null != stateFromStores) {
     const obj2 = { style: { flexDirection: "row", alignItems: "center" }, children: null };
-    const obj3 = { size: tmp(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp(5078).getChannelIcon(stateFromStores) };
+    const obj3 = { size: tmp(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp(5080).getChannelIcon(stateFromStores) };
     const items2 = [closure_8(tmp(1178).Icon, obj3), closure_8(tmp(1178).Spacer, { size: 4 }), ];
     const obj4 = { variant: "text-md/semibold", color: "text-default", children: tmp4 };
-    items2[2] = closure_8(tmp(4601).Text, obj4);
+    items2[2] = closure_8(tmp(4603).Text, obj4);
     obj2.children = items2;
     title = closure_9(closure_6, obj2);
-    const tmpResult = tmp(5078);
+    const tmpResult = tmp(5080);
   }
   return closure_8(BenefitShowCase, { title, description: description.description });
 }
@@ -110,7 +110,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, header: { flexDirection: "row" }, image: null, separator: null, contentContainer: null, contentHeader: null, emojiGallery: null, emojiTruncatedContainer: null, showAllButton: null, showAllButtonUnderline: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.xl };
 obj2.image = size;
@@ -144,19 +144,19 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const size = first.size;
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.header, children: null };
-  const formattedSubscriptionPlan = listingId(16630).useFormattedSubscriptionPlan(listingId);
-  const obj6 = listingId(16630);
+  const formattedSubscriptionPlan = listingId(16618).useFormattedSubscriptionPlan(listingId);
+  const obj6 = listingId(16618);
   const tmp11 = guildId;
   if (str == null) {
     str = "";
   }
-  const items = [closure_8(guildId(5637), { source: { uri: str }, style: tmp.image }), closure_8(listingId(1178).Spacer, { size: 16 }), ];
+  const items = [closure_8(guildId(5639), { source: { uri: str }, style: tmp.image }), closure_8(listingId(1178).Spacer, { size: 16 }), ];
   const obj10 = { children: null };
-  const items1 = [closure_8(listingId(4601).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), closure_8(listingId(1178).Spacer, { size: 4 }), closure_8(listingId(4601).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
+  const items1 = [closure_8(listingId(4603).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), closure_8(listingId(1178).Spacer, { size: 4 }), closure_8(listingId(4603).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
   obj10.children = items1;
   items[2] = closure_9(closure_6, obj10);
   obj8.children = items;
-  const items2 = [closure_9(closure_6, obj8), closure_8(listingId(1178).Spacer, { size: 16 }), closure_8(tmp11(16636), { listingId }), ];
+  const items2 = [closure_9(closure_6, obj8), closure_8(listingId(1178).Spacer, { size: 16 }), closure_8(tmp11(16624), { listingId }), ];
   let tmp8Result6 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result6) {
     const items3 = [tmp10(tmp4(1178).Spacer, { size: 24 }), , ];
@@ -222,12 +222,12 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj44 = { children: null };
     items6[2] = tmp8Result5;
     obj12.children = items6;
-    obj11.children = tmp8(tmp4(10416).GappedList, obj12);
+    obj11.children = tmp8(tmp4(10437).GappedList, obj12);
     items3[1] = tmp10(tmp9, obj11);
     const obj45 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(16635, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
+          obj.openLazy(asyncRequireImpl(16623, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
         }
     };
     items3[2] = tmp10(ShowAllButton, obj45);

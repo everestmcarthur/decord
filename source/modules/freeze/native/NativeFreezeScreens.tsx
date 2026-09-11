@@ -1,18 +1,18 @@
-// Module ID: 16100
-// Function ID: 16101
+// Module ID: 16089
+// Function ID: 16090
 // Name: NativeFreezeScreens
-// Dependencies: [32, 19, 17, 21, 38, 4957, 4605, 2]
+// Dependencies: [32, 19, 17, 21, 38, 4959, 4607, 2]
 // Exports: NativeFreezeScreens
 
-// Module 16100 (NativeFreezeScreens)
-import enableScreens from "enableScreens" /* 4957 */;
+// Module 16089 (NativeFreezeScreens)
+import enableScreens from "enableScreens" /* 4959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_7 = createStyles.createStyles({ screens: { flex: 1, overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");

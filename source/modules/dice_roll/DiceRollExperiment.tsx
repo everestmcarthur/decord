@@ -1,9 +1,9 @@
-// Module ID: 9474
-// Function ID: 9475
+// Module ID: 9497
+// Function ID: 9498
 // Name: DiceRollExperiment
 // Dependencies: [1433, 2]
 
-// Module 9474 (DiceRollExperiment)
+// Module 9497 (DiceRollExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

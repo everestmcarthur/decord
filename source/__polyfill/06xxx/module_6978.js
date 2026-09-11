@@ -1,66 +1,164 @@
 // Module ID: 6978
 // Function ID: 6979
-// Dependencies: [19, 17, 21, 6682, 6979, 6678]
+// Dependencies: [17, 19, 21, 6946, 6979, 6980, 6981]
+// Exports: useSecondaryProps
 
 // Module 6978
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 6678 */;
-import _mod6979 from "module_6979" /* 6979 */;
-import noop_mod from "module_19" /* 19 */;
+import CompatView from "CompatView" /* 6979 */;
+import _mod6980 from "module_6980" /* 6980 */;
+import CompatScroller from "CompatScroller" /* 6981 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-let noop = noop_mod;
-({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
-let noop = noop_mod;
-const View = _mod17.View;
+const noop = _mod19;
+
+({ Animated: c2, RefreshControl: c3 } = get_ActivityIndicator);
+const useMemo = _mod19.useMemo;
 const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
-  focusHook = focusHook.focusHook;
-  if (focusHook === undefined) {
-    focusHook = animatedScrollableType;
-  }
-  let flag = focusHook.enableFooterMarginAdjustment;
-  if (flag === undefined) {
-    flag = false;
-  }
-  const onLayout = focusHook.onLayout;
-  ({ style, children } = focusHook);
-  const merged = Object.assign(focusHook, Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }));
-  let animatedScrollableContentOffsetY;
-  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
-  animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj = onLayout(animatedScrollableContentOffsetY[3]);
-  const bottomSheetContentContainerStyle = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetContentContainerStyle(flag, style);
-  let items = [bottomSheetContentContainerStyle];
-  const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
-  const obj2 = onLayout(animatedScrollableContentOffsetY[3]);
-  const items2 = [onLayout, animatedContentHeight, enableDynamicSizing];
-  const tmp4 = animatedContentHeight(() => {
-    const items = [bottomSheetContentContainerStyle, _mod6979.styles.container];
-    return items;
-  }, items);
-  const tmp5 = enableDynamicSizing(() => {
-    animatedScrollableContentOffsetY.value = 0;
-    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
-  }, items1);
-  focusHook(tmp5);
-  const obj3 = {};
-  const merged1 = Object.assign(merged);
-  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
-    }
-    if (onLayout) {
-      tmp3(nativeEvent);
-    }
-  }, items2);
-  obj3.style = tmp4;
-  obj3.children = children;
-  return <bottomSheetContentContainerStyle />;
-});
-memoResult.displayName = "BottomSheetView";
 
-export default memoResult;
+export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent) {
+  ListHeaderComponent = ListHeaderComponent.ListHeaderComponent;
+  const ListHeaderComponentStyle = ListHeaderComponent.ListHeaderComponentStyle;
+  const ListFooterComponent = ListHeaderComponent.ListFooterComponent;
+  const ListFooterComponentStyle = ListHeaderComponent.ListFooterComponentStyle;
+  const ListEmptyComponent = ListHeaderComponent.ListEmptyComponent;
+  const ListEmptyComponentStyle = ListHeaderComponent.ListEmptyComponentStyle;
+  const renderScrollComponent = ListHeaderComponent.renderScrollComponent;
+  const refreshing = ListHeaderComponent.refreshing;
+  const progressViewOffset = ListHeaderComponent.progressViewOffset;
+  const onRefresh = ListHeaderComponent.onRefresh;
+  const data = ListHeaderComponent.data;
+  const refreshControl = ListHeaderComponent.refreshControl;
+  const stickyHeaderConfig = ListHeaderComponent.stickyHeaderConfig;
+  let invertedTransformStyle;
+  if (ListHeaderComponent.inverted) {
+    invertedTransformStyle = ListHeaderComponent(ListHeaderComponentStyle[3]).getInvertedTransformStyle(tmp);
+    let obj = ListHeaderComponent(ListHeaderComponentStyle[3]);
+  }
+  let items = [onRefresh, refreshing, progressViewOffset, refreshControl];
+  const items1 = [ListHeaderComponent, ListHeaderComponentStyle, invertedTransformStyle];
+  const items2 = [ListFooterComponent, ListFooterComponentStyle, invertedTransformStyle];
+  const tmp6 = ListEmptyComponentStyle(() => {
+    let tmp = refreshControl;
+    if (!refreshControl) {
+      let tmp3;
+      if (onRefresh) {
+        const obj = { refreshing: null, progressViewOffset: null, onRefresh: null };
+        const _Boolean = Boolean;
+        obj.refreshing = Boolean(refreshing);
+        obj.progressViewOffset = progressViewOffset;
+        obj.onRefresh = tmp2;
+        tmp3 = <React3 refreshing={null} progressViewOffset={null} onRefresh={null} />;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  }, items);
+  const items3 = [ListEmptyComponent, data, invertedTransformStyle, ListEmptyComponentStyle];
+  let tmp7 = ListEmptyComponentStyle(() => {
+    let tmp2 = null;
+    if (ListHeaderComponent) {
+      const obj = { style: null, children: null };
+      const items = [ListHeaderComponentStyle, invertedTransformStyle];
+      obj.style = items;
+      obj.children = _mod6980.getValidComponent(tmp);
+      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
+    }
+    return tmp2;
+  }, items1);
+  let backdropComponent;
+  const tmp8 = ListEmptyComponentStyle(() => {
+    let tmp2 = null;
+    if (ListFooterComponent) {
+      const obj = { style: null, children: null };
+      const items = [ListFooterComponentStyle, invertedTransformStyle];
+      obj.style = items;
+      obj.children = _mod6980.getValidComponent(tmp);
+      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
+    }
+    return tmp2;
+  }, items2);
+  if (stickyHeaderConfig != null) {
+    backdropComponent = stickyHeaderConfig.backdropComponent;
+  }
+  const items4 = [backdropComponent, invertedTransformStyle];
+  let obj2 = {
+    refreshControl: tmp6,
+    renderHeader: tmp7,
+    renderFooter: tmp8,
+    renderEmpty: ListEmptyComponentStyle(() => {
+      if (ListEmptyComponent) {
+        const validComponent = _mod6980.getValidComponent(tmp);
+        if (invertedTransformStyle) {
+          const obj2 = { style: null, children: null };
+          const items = [ListEmptyComponentStyle, tmp5];
+          obj2.style = items;
+          obj2.children = validComponent;
+          let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
+        } else {
+          tmp7 = validComponent;
+        }
+        return tmp7;
+      }
+      return null;
+    }, items3),
+    CompatScrollView: null,
+    renderStickyHeaderBackdrop: null
+  };
+  const items5 = [renderScrollComponent];
+  const tmp9 = ListEmptyComponentStyle(() => {
+    if (ListEmptyComponent) {
+      const validComponent = _mod6980.getValidComponent(tmp);
+      if (invertedTransformStyle) {
+        const obj2 = { style: null, children: null };
+        const items = [ListEmptyComponentStyle, tmp5];
+        obj2.style = items;
+        obj2.children = validComponent;
+        let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
+      } else {
+        tmp7 = validComponent;
+      }
+      return tmp7;
+    }
+    return null;
+  }, items3);
+  obj2.CompatScrollView = ListEmptyComponentStyle(() => {
+    if (typeof renderScrollComponent === "function") {
+      if (!tmpResult.isComponentClass(tmp3)) {
+        let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.ref = ref;
+          return renderScrollComponent(obj);
+        });
+        CompatAnimatedScroller.displayName = "CustomScrollView";
+      }
+      return React2.createAnimatedComponent(CompatAnimatedScroller);
+    }
+    CompatAnimatedScroller = CompatScroller.CompatAnimatedScroller;
+    if (renderScrollComponent) {
+      CompatAnimatedScroller = tmp3;
+    }
+  }, items5);
+  obj2.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
+    let backdropComponent;
+    if (stickyHeaderConfig != null) {
+      backdropComponent = tmp.backdropComponent;
+    }
+    let tmp4Result = null;
+    if (backdropComponent) {
+      const obj = { style: null, children: null };
+      const items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
+      obj.style = items;
+      let backdropComponent1;
+      if (tmp != null) {
+        backdropComponent1 = tmp.backdropComponent;
+      }
+      obj.children = _mod6980.getValidComponent(backdropComponent1);
+      tmp4Result = jsx(CompatView.CompatView, { style: null, children: null });
+    }
+    return tmp4Result;
+  }, items4);
+  return obj2;
+};

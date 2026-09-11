@@ -1,25 +1,25 @@
-// Module ID: 17830
-// Function ID: 17831
+// Module ID: 17822
+// Function ID: 17823
 // Name: GuildSettingsRoleSubscriptionTiers
-// Dependencies: [32, 19, 17, 9133, 1979, 4237, 15286, 1074, 1373, 21, 4605, 576, 4572, 17831, 1896, 1114, 7286, 15312, 4601, 9119, 563, 15308, 5637, 10320, 1611, 13973, 1483, 15294, 17819, 13968, 15293, 12, 5674, 17833, 17834, 38, 9886, 17868, 17829, 2]
+// Dependencies: [32, 19, 17, 9156, 1979, 4239, 15266, 1074, 1373, 21, 4607, 576, 4574, 17823, 1896, 1114, 7308, 15292, 4603, 9142, 563, 15288, 5639, 10341, 1611, 13953, 1483, 15274, 17811, 13948, 15273, 12, 5676, 17825, 17826, 38, 9909, 17860, 17821, 2]
 // Exports: default
 
-// Module 17830 (GuildSettingsRoleSubscriptionTiers)
+// Module 17822 (GuildSettingsRoleSubscriptionTiers)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15308 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17829 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9142 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9133 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9156 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4237 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4239 */;
 
 require = fn;
 function DraftBadge() {
@@ -102,7 +102,7 @@ function EditListingButton(editStateId) {
     const obj5 = {
       onPress: editStateId.onPress,
       onLongPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17831, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17823, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
         },
       children: null
     };
@@ -116,7 +116,7 @@ function EditListingButton(editStateId) {
     const items1 = [tmp11Result, , ];
     const obj8 = { style: tmp.tierColumn, children: null };
     const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(editStateId), 1)[0] };
-    const items2 = [closure_17(tmp2(4601).Text, obj9), ];
+    const items2 = [closure_17(tmp2(4603).Text, obj9), ];
     const obj10 = { style: tmp.detailsRow, children: null };
     if (tmp11Result3) {
       tmp11Result3 = tmp11(DraftBadge, {});
@@ -133,30 +133,30 @@ function EditListingButton(editStateId) {
     const obj11 = { children: null };
     items3[2] = tmp11Result4;
     const obj12 = { style: tmp.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: "" };
-    items3[3] = closure_17(tmp2(4601).Text, obj12);
+    items3[3] = closure_17(tmp2(4603).Text, obj12);
     obj10.children = items3;
     items2[1] = closure_18(closure_7, obj10);
     obj8.children = items2;
     items1[1] = closure_18(closure_7, obj8);
-    items1[2] = closure_17(tmp2(10320).PencilIcon, {});
+    items1[2] = closure_17(tmp2(10341).PencilIcon, {});
     obj5.children = items1;
     obj11.children = closure_18(Row, obj5);
     return closure_17(closure_7, obj11);
   } else if (null != first2) {
     const intl = tmp2(1114).intl;
-    const obj13 = { price: tmp2(7286).formatPrice(first, first2.currency), interval: null };
-    const tmp2Result = tmp2(7286);
-    obj13.interval = tmp2(15312).formatPlanInterval(first2);
+    const obj13 = { price: tmp2(7308).formatPrice(first, first2.currency), interval: null };
+    const tmp2Result = tmp2(7308);
+    obj13.interval = tmp2(15292).formatPlanInterval(first2);
     let formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.CgmBaG, obj13);
-    const tmp2Result4 = tmp2(15312);
+    const tmp2Result4 = tmp2(15292);
   } else {
     const intl2 = tmp2(1114).intl;
-    const obj14 = { price: tmp2(7286).formatPrice(first, constants.USD), interval: null };
-    const tmp2Result5 = tmp2(7286);
+    const obj14 = { price: tmp2(7308).formatPrice(first, constants.USD), interval: null };
+    const tmp2Result5 = tmp2(7308);
     const obj15 = { interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 };
-    obj14.interval = tmp2(15312).formatPlanInterval(obj15);
+    obj14.interval = tmp2(15292).formatPlanInterval(obj15);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.CgmBaG, obj14);
-    const tmp2Result6 = tmp2(15312);
+    const tmp2Result6 = tmp2(15292);
   }
 }
 function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
@@ -202,7 +202,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
         obj.title = intl.string(guildId(1114).t.pXbGYc);
         const intl2 = guildId(1114).intl;
         obj.subtitle = intl2.string(guildId(1114).t["KzCF/6"]);
-        return closure_1_17(guildId(5674).NavigatorHeader, obj);
+        return closure_1_17(guildId(5676).NavigatorHeader, obj);
       }
     });
   });
@@ -220,8 +220,8 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
         id = first.id;
       }
       obj.groupListingId = id;
-      const result = tmp(17833).pushTierTemplateSelectionScene(navigation, obj);
-      const tmpResult = tmp(17833);
+      const result = tmp(17825).pushTierTemplateSelectionScene(navigation, obj);
+      const tmpResult = tmp(17825);
     } else {
       const obj2 = { guildId, groupListingId: null, onAfterTierCreation: null };
       let id1;
@@ -232,8 +232,8 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
       obj2.onAfterTierCreation = function onAfterTierCreation() {
         navigation.navigate(constants.ROLE_SUBSCRIPTIONS_TIERS);
       };
-      const result1 = tmp(17834).openTierCreationModal(obj2);
-      const tmpResult2 = tmp(17834);
+      const result1 = tmp(17826).openTierCreationModal(obj2);
+      const tmpResult2 = tmp(17826);
     }
   }, items1);
   const obj6 = guildEligibleForTierTemplates(first[21]);
@@ -262,7 +262,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
             if (first != null) {
               id = first.id;
             }
-            guildEligibleForTierTemplates(17833).pushTierEditScene(navigation, {
+            guildEligibleForTierTemplates(17825).pushTierEditScene(navigation, {
               groupListingId: id,
               initialEditStateId,
               onBeforeDispatchNewListing(id) {
@@ -316,13 +316,13 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(15286).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(15266).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1074);
 ({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = Constants);
 const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 }, tierColumn: { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 }, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierLabel: null, spinner: null, disabled: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
 obj2.tierIcon = size;

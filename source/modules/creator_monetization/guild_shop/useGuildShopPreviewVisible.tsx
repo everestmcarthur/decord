@@ -1,11 +1,11 @@
-// Module ID: 7315
-// Function ID: 7316
+// Module ID: 7337
+// Function ID: 7338
 // Name: useGuildShopPreviewVisible
-// Dependencies: [4243, 1074, 4425, 1943, 563, 7310, 2]
+// Dependencies: [4245, 1074, 4427, 1943, 563, 7332, 2]
 // Exports: useGuildShopPreviewVisible
 
-// Module 7315 (useGuildShopPreviewVisible)
-import PermissionStore from "PermissionStore" /* 4243 */;
+// Module 7337 (useGuildShopPreviewVisible)
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = globalThis.__r;
 
@@ -43,9 +43,9 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants2);
-  const guildEligibleForGuildProducts = tmp(7310).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(7332).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(7310);
+  const tmpResult = tmp(7332);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

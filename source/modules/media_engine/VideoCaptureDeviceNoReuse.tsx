@@ -1,9 +1,9 @@
-// Module ID: 14152
-// Function ID: 14153
+// Module ID: 14130
+// Function ID: 14131
 // Name: VideoCaptureDeviceNoReuse
 // Dependencies: [1433, 2]
 
-// Module 14152 (VideoCaptureDeviceNoReuse)
+// Module 14130 (VideoCaptureDeviceNoReuse)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

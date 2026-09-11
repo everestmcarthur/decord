@@ -1,12 +1,12 @@
-// Module ID: 17572
-// Function ID: 17573
+// Module ID: 17564
+// Function ID: 17565
 // Name: showOverdueRemindersToast
-// Dependencies: [11731, 7906, 7912, 4303, 4568, 1114, 2]
+// Dependencies: [11755, 7928, 7935, 4305, 4570, 1114, 2]
 // Exports: showOverdueRemindersToast
 
-// Module 17572 (showOverdueRemindersToast)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11731 */;
+// Module 17564 (showOverdueRemindersToast)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11755 */;
 
 const require = fn;
 const size = fn(2);
@@ -18,15 +18,15 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
     if (0 !== overdueMessageReminderCount) {
       const mostRecentOverdueDueAt = obj2.getMostRecentOverdueDueAt();
       if (mostRecentOverdueDueAt > tmpResult.getRemindersLastSeenAt()) {
-        tmp(7912).markRemindersSeen();
-        const tmpResult2 = tmp(7912);
-        const obj3 = { key: "overdue-message-reminders", IconComponent: tmp(4568).ClockIcon, content: null, position: "bottom", toastDurationMs: 5000 };
+        tmp(7935).markRemindersSeen();
+        const tmpResult2 = tmp(7935);
+        const obj3 = { key: "overdue-message-reminders", IconComponent: tmp(4570).ClockIcon, content: null, position: "bottom", toastDurationMs: 5000 };
         const intl = tmp(1114).intl;
         const obj4 = { count: overdueMessageReminderCount };
         obj3.content = intl.formatToPlainString(tmp(1114).t.yBmFPA, obj4);
         ToastActionCreatorsDefault.open(obj3);
       }
-      tmpResult = tmp(7912);
+      tmpResult = tmp(7935);
     }
     obj2 = SavedMessagesStore;
   }

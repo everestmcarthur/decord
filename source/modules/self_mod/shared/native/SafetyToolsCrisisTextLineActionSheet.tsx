@@ -1,23 +1,23 @@
-// Module ID: 11470
-// Function ID: 11471
+// Module ID: 11494
+// Function ID: 11495
 // Name: SafetyToolsCrisisTextLineActionSheet
-// Dependencies: [19, 17, 11435, 21, 4605, 576, 11471, 1114, 4601, 5025, 4299, 11442, 2]
+// Dependencies: [19, 17, 11459, 21, 4607, 576, 11495, 1114, 4603, 5027, 4301, 11466, 2]
 // Exports: default
 
-// Module 11470 (SafetyToolsCrisisTextLineActionSheet)
+// Module 11494 (SafetyToolsCrisisTextLineActionSheet)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11442 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11471 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11466 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11495 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11435);
+const Constants = fn(11459);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_4, CRISIS_TEXT_LINE_URL: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, paddingTop: 0 }, description: null };
 let obj3 = { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, paddingTop: 0 };
 obj2.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_8, maxWidth: 300 };
@@ -38,7 +38,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
   const obj3 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
   const intl2 = trackAnalyticsEvent(1114).intl;
   obj3.children = intl2.string(trackAnalyticsEvent(1114).t.uicS5l);
-  const items = [closure_6(trackAnalyticsEvent(4601).Text, obj3), , ];
+  const items = [closure_6(trackAnalyticsEvent(4603).Text, obj3), , ];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl3 = trackAnalyticsEvent(1114).intl;
   obj4.text = intl3.string(trackAnalyticsEvent(1114).t.lkUb4S);
@@ -46,7 +46,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(React4);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
   };
-  items[1] = closure_6(trackAnalyticsEvent(5025).Button, obj4);
+  items[1] = closure_6(trackAnalyticsEvent(5027).Button, obj4);
   const obj5 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1114).intl;
   obj5.text = intl4.string(trackAnalyticsEvent(1114).t.ogLlvy);
@@ -54,7 +54,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(hasOwnProperty);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
   };
-  items[2] = closure_6(trackAnalyticsEvent(5025).Button, obj5);
+  items[2] = closure_6(trackAnalyticsEvent(5027).Button, obj5);
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(SafetyToolsActionSheetWrapperDefault, obj);

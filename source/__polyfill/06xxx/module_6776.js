@@ -1,99 +1,79 @@
 // Module ID: 6776
 // Function ID: 6777
-// Dependencies: [19, 6726, 6713]
-// Exports: runCallback, touchEventTypeToCallbackType, useMemoizedGestureCallbacks
+// Dependencies: [6751, 6759, 6756, 6758, 6731]
+// Exports: updateHandlers
 
 // Module 6776
-import _mod19 from "module_19" /* 19 */;
-import TouchEventType from "TouchEventType" /* 6713 */;
-import _mod6726 from "module_6726" /* 6726 */;
+import handlerIDToTag from "handlerIDToTag" /* 6731 */;
+import convertToHandlerTag from "convertToHandlerTag" /* 6751 */;
+import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6756 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6758 */;
 
-const useMemo = _mod19.useMemo;
-function getHandler(arg0, onBegin) {
-  if (_mod6726.CALLBACK_TYPE.BEGAN === arg0) {
-    return onBegin.onBegin;
-  } else if (tmp(6726).CALLBACK_TYPE.START === arg0) {
-    return onBegin.onActivate;
-  } else if (tmp(6726).CALLBACK_TYPE.UPDATE === arg0) {
-    return onBegin.onUpdate;
-  } else if (tmp(6726).CALLBACK_TYPE.END === arg0) {
-    return onBegin.onDeactivate;
-  } else if (tmp(6726).CALLBACK_TYPE.FINALIZE === arg0) {
-    return onBegin.onFinalize;
-  } else if (tmp(6726).CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
-    return onBegin.onTouchesDown;
-  } else if (tmp(6726).CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
-    return onBegin.onTouchesMove;
-  } else if (tmp(6726).CALLBACK_TYPE.TOUCHES_UP === arg0) {
-    return onBegin.onTouchesUp;
-  } else if (tmp(6726).CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
-    return onBegin.onTouchesCancel;
-  }
-}
-getHandler.__closure = { CALLBACK_TYPE: _mod6726.CALLBACK_TYPE };
-getHandler.__workletHash = 8647314057396;
-getHandler.__initData = { code: "function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return callbacks.onBegin;case CALLBACK_TYPE.START:return callbacks.onActivate;case CALLBACK_TYPE.UPDATE:return callbacks.onUpdate;case CALLBACK_TYPE.END:return callbacks.onDeactivate;case CALLBACK_TYPE.FINALIZE:return callbacks.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return callbacks.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return callbacks.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return callbacks.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}}" };
-function touchEventTypeToCallbackType(arg0) {
-  if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return tmp(6726).CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (tmp(6713).TouchEventType.TOUCHES_MOVE === arg0) {
-    return tmp(6726).CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (tmp(6713).TouchEventType.TOUCHES_UP === arg0) {
-    return tmp(6726).CALLBACK_TYPE.TOUCHES_UP;
-  } else if (tmp(6713).TouchEventType.TOUCHES_CANCEL === arg0) {
-    return tmp(6726).CALLBACK_TYPE.TOUCHES_CANCEL;
-  } else {
-    return tmp(6726).CALLBACK_TYPE.UNDEFINED;
-  }
-}
-let obj = { CALLBACK_TYPE: _mod6726.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: _mod6726.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__workletHash = 2066229974382;
-touchEventTypeToCallbackType.__initData = { code: "function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}" };
-function runCallback(arg0, arg1, arg2) {
-  const tmp = getHandler(arg0, arg1);
-  if (tmp) {
-    tmp(arg2);
-  }
-}
-runCallback.__closure = { getHandler };
-runCallback.__workletHash = 9892811129293;
-runCallback.__initData = { code: "function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){const{getHandler}=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);}" };
+const require = globalThis.__r;
 
-export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(disableReanimated) {
-  const items = [, , , , , , , , ];
-  ({ onActivate: arr[0], onBegin: arr[1], onDeactivate: arr[2], onFinalize: arr[3], onTouchesCancel: arr[4], onTouchesDown: arr[5], onTouchesMove: arr[6], onTouchesUp: arr[7], onUpdate: arr[8] } = disableReanimated);
-  return useMemo(() => {
-    const obj = {};
-    if (disableReanimated.onBegin) {
-      obj.onBegin = tmp.onBegin;
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export const updateHandlers = function updateHandlers(attachedGestures, prepare, arg2) {
+  _require = attachedGestures;
+  closure_1 = arg2;
+  prepare.prepare();
+  for (let num = 0; num < arg2.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (arg2[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: arg2[num].handlerTag, handlerTag: arg2[num].handlers.handlerTag } = tmp2);
     }
-    if (disableReanimated.onActivate) {
-      obj.onActivate = tmp.onActivate;
+  }
+  attachedGestures = attachedGestures.attachedGestures;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    let arr2;
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp21 = arr.length !== closure_1.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < closure_1.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            arr2 = closure_1;
+            let tmp4 = tmp3.handlers.gestureId !== closure_1[num].handlers.gestureId;
+            let flag = tmp21;
+            let tmp2 = attachedGestures;
+            if (tmp4) {
+              let tmp6 = arr2[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
+            }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = arr2[num].config;
+            tmp3.handlers = arr2[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS));
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            arr = tmp2;
+          } while (num < arr2.length);
+        }
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+          }
+        }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+      }
     }
-    if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = tmp.onDeactivate;
-    }
-    if (disableReanimated.onFinalize) {
-      obj.onFinalize = tmp.onFinalize;
-    }
-    if (disableReanimated.onUpdate) {
-      obj.onUpdate = tmp.onUpdate;
-    }
-    if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = tmp.onTouchesDown;
-    }
-    if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = tmp.onTouchesMove;
-    }
-    if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = tmp.onTouchesUp;
-    }
-    if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = tmp.onTouchesCancel;
-    }
-    return obj;
-  }, items);
+  });
 };
-export { touchEventTypeToCallbackType };
-export { runCallback };

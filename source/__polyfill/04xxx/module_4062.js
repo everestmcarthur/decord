@@ -1,11 +1,11 @@
 // Module ID: 4062
 // Function ID: 4063
-// Dependencies: [3693, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 4062
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,20 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isWithinInterval(arg0, start) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  const time1 = _typeof.default(start.start).getTime();
-  const defaultResult2 = _typeof.default(start.start);
-  const time2 = _typeof.default(start.end).getTime();
-  if (time1 <= time2) {
-    return time >= time1 && time <= time2;
-  } else {
-    const _RangeError = RangeError;
-    const rangeError = new RangeError("Invalid interval");
-    throw rangeError;
-  }
-  const defaultResult3 = _typeof.default(start.end);
+export default function isTuesday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 2 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

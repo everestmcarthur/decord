@@ -1,23 +1,73 @@
 // Module ID: 12977
 // Function ID: 12978
-// Dependencies: []
-// Exports: getBreadcrumbLogLevelFromHttpStatusCode
+// Dependencies: [12892, 12893, 12978, 12919, 12948, 12979, 12903, 12901, 12940]
 
 // Module 12977
+import _mod12919 from "module_12919" /* 12919 */;
+import setupIntegration from "module_12948" /* 12948 */;
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
-  let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
-      let str2;
-      if (arg0 >= 500) {
-        str2 = "error";
-      }
-      let str = str2;
-    } else {
-      str = "warning";
-    }
-    tmp = str;
+
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-  return tmp;
-};
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
+  return {
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod12919.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
+          }
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: tmp(12979).severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = tmp(12979);
+            tmp(12919).withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  tmp14(12940).captureException(found, obj2);
+                  const tmp14Result = tmp14(12940);
+                } else {
+                  const tmp14Result2 = tmp14(12901);
+                  const safeJoinResult = tmp14(12901).safeJoin(tmp12, " ");
+                  args(12940).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(12940);
+                }
+                tmp12 = args;
+              } else if (!args[0]) {
+                const obj = args(12901);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(12901).safeJoin(arr.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", arr.slice(1));
+                obj2 = args(12940);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(12901).safeJoin(arr.slice(1), " ") || "console.assert";
+              }
+            });
+            const tmpResult2 = tmp(12919);
+          }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
+      }
+    }
+  };
+});

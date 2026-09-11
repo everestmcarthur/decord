@@ -1,11 +1,11 @@
-// Module ID: 9986
-// Function ID: 9987
+// Module ID: 10009
+// Function ID: 10010
 // Name: useRequestToSpeakPermission
-// Dependencies: [32, 19, 1957, 1074, 504, 4248, 8463, 2]
+// Dependencies: [32, 19, 1957, 1074, 504, 4250, 8486, 2]
 // Exports: useRequestToSpeakPermission
 
-// Module 9986 (useRequestToSpeakPermission)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8463 */;
+// Module 10009 (useRequestToSpeakPermission)
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8486 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -23,8 +23,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4248).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4248);
+  const canEveryoneRoleResult = stateFromStores(4250).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4250);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

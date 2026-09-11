@@ -1,22 +1,22 @@
-// Module ID: 10238
-// Function ID: 10239
+// Module ID: 10259
+// Function ID: 10260
 // Name: NotificationSettingsMessageUnreadChannelActionSheet
-// Dependencies: [19, 4786, 1074, 4787, 1084, 21, 10219, 10237, 1114, 7171, 10220, 7166, 2]
+// Dependencies: [19, 4788, 1074, 4789, 1084, 21, 10240, 10258, 1114, 7193, 10241, 7188, 2]
 // Exports: default
 
-// Module 10238 (NotificationSettingsMessageUnreadChannelActionSheet)
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7171 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10220 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10237 */;
+// Module 10259 (NotificationSettingsMessageUnreadChannelActionSheet)
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7193 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10241 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10258 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4788 */;
 
 const require = globalThis.__r;
 
-const NotificationSettingsUtils = tmp3(7166);
+const NotificationSettingsUtils = tmp3(7188);
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4787).UnreadSetting;
+const UnreadSetting = fn(4789).UnreadSetting;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);

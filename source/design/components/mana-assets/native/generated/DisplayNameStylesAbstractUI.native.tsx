@@ -1,13 +1,13 @@
-// Module ID: 5975
-// Function ID: 5976
+// Module ID: 5997
+// Function ID: 5998
 // Name: DisplayNameStylesAbstractUI
-// Dependencies: [21, 5637, 5976, 2]
+// Dependencies: [21, 5639, 5998, 2]
 // Exports: DisplayNameStylesAbstractUI
 
-// Module 5975 (DisplayNameStylesAbstractUI)
+// Module 5997 (DisplayNameStylesAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5976 from "module_5976" /* 5976 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5998 from "module_5998" /* 5998 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DisplayNameStylesAbstractUI = function DisplayNameStylesAbstractUI(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5976 };
+  const obj2 = { uri: _modDef5998 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

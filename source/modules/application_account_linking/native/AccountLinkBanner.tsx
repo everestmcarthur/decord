@@ -1,13 +1,13 @@
-// Module ID: 16276
-// Function ID: 16277
+// Module ID: 16265
+// Function ID: 16266
 // Name: AccountLinkBanner
-// Dependencies: [19, 17, 1371, 1954, 21, 576, 7224, 10189, 5030, 4605, 563, 7214, 7234, 5657, 5173, 5730, 1178, 4601, 1114, 5025, 8804, 2]
+// Dependencies: [19, 17, 1371, 1954, 21, 576, 7246, 10210, 5032, 4607, 563, 7236, 7256, 5659, 5175, 5732, 1178, 4603, 1114, 5027, 8827, 2]
 // Exports: getScaledAccountLinkBannerHeight
 
-// Module 16276 (AccountLinkBanner)
+// Module 16265 (AccountLinkBanner)
 import nativeDefault from "native" /* 576 */;
-import ButtonConstants from "ButtonConstants" /* 5030 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10189 */;
+import ButtonConstants from "ButtonConstants" /* 5032 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10210 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -88,12 +88,12 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7224).GameIconSizes.NORMAL;
-let closure_14 = fn(7224).GameIconImageSize[NORMAL];
+const NORMAL = fn(7246).GameIconSizes.NORMAL;
+let closure_14 = fn(7246).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;

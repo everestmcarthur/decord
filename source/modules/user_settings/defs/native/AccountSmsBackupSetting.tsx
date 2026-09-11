@@ -1,23 +1,23 @@
-// Module ID: 14876
-// Function ID: 14877
+// Module ID: 14853
+// Function ID: 14854
 // Name: AccountSmsBackupSetting
-// Dependencies: [1371, 8027, 1074, 7095, 504, 14872, 1114, 14758, 14874, 4950, 4808, 7094, 1896, 7097, 12, 11540, 14759, 2]
+// Dependencies: [1371, 8050, 1074, 7117, 504, 14849, 1114, 14735, 14851, 4952, 4810, 7116, 1896, 7119, 12, 11564, 14736, 2]
 
-// Module 14876 (AccountSmsBackupSetting)
+// Module 14853 (AccountSmsBackupSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 7097 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14758 */;
-import account_MFAUtils from "account/MFAUtils" /* 14872 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14874 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 7119 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14735 */;
+import account_MFAUtils from "account/MFAUtils" /* 14849 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14851 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const UserFlags = fn(1074).UserFlags;
-let closure_5 = fn(7095).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7117).PHONE_VERIFICATION_MODAL_KEY;
 const apply = fn(12);
 let closure_6 = apply.debounce(function toggleSMS(user) {
   user = user.user;
@@ -51,17 +51,17 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const obj5 = { reason: null };
     let obj = ModalActionCreatorsDefault;
     obj5.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(7094, dependencyMap.paths), obj5, closure_5);
-    const tmp5 = asyncRequireImpl(7094, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(7116, dependencyMap.paths), obj5, closure_5);
+    const tmp5 = asyncRequireImpl(7116, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11564);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
   },
-  parent: fn(8027).MobileUserSettings.ACCOUNT,
+  parent: fn(8050).MobileUserSettings.ACCOUNT,
   useIsDisabled: function useAccountSMSBackupSettingIsDisabled() {
     const items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -101,7 +101,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(14759).useIsTOTPEnabled
+  usePredicate: fn(14736).useIsTOTPEnabled
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

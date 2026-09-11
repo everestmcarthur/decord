@@ -1,10 +1,10 @@
-// Module ID: 8286
-// Function ID: 8287
+// Module ID: 8309
+// Function ID: 8310
 // Name: useProfileFrameLayerAsset
 // Dependencies: [32, 19, 17, 1883, 2]
 // Exports: default
 
-// Module 8286 (useProfileFrameLayerAsset)
+// Module 8309 (useProfileFrameLayerAsset)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

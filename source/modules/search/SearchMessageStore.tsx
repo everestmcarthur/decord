@@ -1,16 +1,16 @@
-// Module ID: 7333
-// Function ID: 7334
+// Module ID: 7355
+// Function ID: 7356
 // Name: SearchMessageStore
-// Dependencies: [502, 1957, 4253, 1074, 4506, 4828, 4255, 504, 573, 2]
+// Dependencies: [502, 1957, 4255, 1074, 4508, 4830, 4257, 504, 573, 2]
 
-// Module 7333 (SearchMessageStore)
+// Module 7355 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4506 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4828 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4508 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4830 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 require = fn;
 function handleReaction(optimistic) {

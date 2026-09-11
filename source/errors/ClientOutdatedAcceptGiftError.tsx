@@ -1,9 +1,9 @@
-// Module ID: 4512
-// Function ID: 4513
+// Module ID: 4514
+// Function ID: 4515
 // Name: ClientOutdatedAcceptGiftError
 // Dependencies: [1074, 2]
 
-// Module 4512 (ClientOutdatedAcceptGiftError)
+// Module 4514 (ClientOutdatedAcceptGiftError)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

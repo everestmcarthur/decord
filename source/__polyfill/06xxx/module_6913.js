@@ -1,34 +1,24 @@
 // Module ID: 6913
 // Function ID: 6914
-// Dependencies: [6914]
+// Dependencies: [19, 6704]
+// Exports: useBottomSheetContentSizeSetter
 
 // Module 6913
-import _mod6914 from "module_6914" /* 6914 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6704 from "module_6704" /* 6704 */;
 
+_mod19.useCallback;
 
-export default function _objectWithoutProperties(arg0, arr) {
-  if (null == arg0) {
-    return {};
-  } else {
-    const tmp8 = _mod6914(arg0, arr);
-    const _Object2 = Object;
-    if (Object.getOwnPropertySymbols) {
-      const _Object = Object;
-      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
-      let num = 0;
-      if (0 < ownPropertySymbols.length) {
-        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
-        while (!tmp2) {
-          if (tmp2) {
-            tmp8[tmp] = arg0[tmp];
-          }
-          num = num + 1;
-        }
-        const propertyIsEnumerable = {}.propertyIsEnumerable;
-        const call = propertyIsEnumerable.call;
-        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
-      }
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod6704.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
     }
-    return tmp8;
-  }
+  }, items);
+  return obj2;
 };

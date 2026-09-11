@@ -1,99 +1,163 @@
 // Module ID: 10548
 // Function ID: 10549
-// Dependencies: [10502, 10503]
-// Exports: parseDuration, parseYear
+// Dependencies: [41, 42, 93, 95, 98, 10547, 10530]
 
 // Module 10548
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import findMostLikelyADYear from "findMostLikelyADYear" /* 10503 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
+import now from "now" /* 10547 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-function parseNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num6 = exports.INTEGER_WORD_DICTIONARY[str];
-  } else {
-    num6 = 1;
-    if ("ein" !== str) {
-      num6 = 1;
-      if ("einer" !== str) {
-        num6 = 1;
-        if ("einem" !== str) {
-          num6 = 1;
-          if ("einen" !== str) {
-            num6 = 1;
-            if ("eine" !== str) {
-              let num5 = 2;
-              if (!str.match(/wenigen/)) {
-                let num2 = 0.5;
-                if (!str.match(/halb/)) {
-                  num2 = 0.5;
-                  if (!str.match(/halben/)) {
-                    let num3 = 3;
-                    if (!str.match(/einigen/)) {
-                      let num4 = 7;
-                      if (!str.match(/mehreren/)) {
-                        const _parseFloat = parseFloat;
-                        num4 = parseFloat(str);
-                      }
-                      num3 = num4;
-                    }
-                    num2 = num3;
-                  }
-                }
-                num5 = num2;
+let self = this;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function c(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
               }
-              num6 = num5;
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
             }
           }
         }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    const re8 = /(?:this)?\s{0,3}(morning|afternoon|evening|night|midnight|midday|noon)(?=\W|$)/i;
+    class ENCasualTimeParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, ENCasualTimeParser);
+        tmp2 = c2;
+        obj = c2(ENCasualTimeParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
     }
-  }
-  return num6;
-}
-const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
-const regExp = new RegExp(combined, "i");
-
-export { parseNumberPattern };
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt3 = parseInt;
-    return -parseInt(match.replace(/[^0-9]+/gi, ""));
+    _classCallCheck = ENCasualTimeParser;
+    _inherits(ENCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern() {
+            return re8;
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[1].toLowerCase();
+            if ("afternoon" === formatted) {
+              let afternoonResult = closure_7.afternoon(reference.reference);
+            } else {
+              if ("evening" !== formatted) {
+                if ("night" !== formatted) {
+                  if ("midnight" === formatted) {
+                    afternoonResult = closure_7.midnight(reference.reference);
+                  } else if ("morning" === formatted) {
+                    afternoonResult = closure_7.morning(reference.reference);
+                  } else if ("noon" === formatted) {
+                    afternoonResult = closure_7.noon(reference.reference);
+                  } else {
+                    afternoonResult = null;
+                  }
+                }
+              }
+              afternoonResult = closure_7.evening(reference.reference);
+            }
+            if (afternoonResult) {
+              afternoonResult.addTag("parser/ENCasualTimeParser");
+            }
+            return afternoonResult;
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(ENCasualTimeParser, items);
   } else {
-    if (obj2.test(match)) {
-      const _parseInt2 = parseInt;
-      return parseInt(match.replace(/[^0-9]+/gi, ""));
-    } else {
-      const _parseInt = parseInt;
-      if (obj3.test(match)) {
-        return _parseInt(match.replace(/[^0-9]+/gi, ""));
-      } else {
-        return findMostLikelyADYear.findMostLikelyADYear(_parseInt(match));
-      }
-      obj3 = /z/i;
-    }
-    obj2 = /n/i;
+    const _Object2 = Object;
   }
-  obj = /v/i;
-};
-export const parseDuration = function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  while (match) {
-    let str2 = match[2];
-    let tmp3 = parseNumberPattern(match[1]);
-    obj[exports.TIME_UNIT_DICTIONARY[str2.toLowerCase(str2)]] = tmp3;
-    let substr = str.substring(match[0].length);
-    match = regExp.exec(substr);
-    str = substr;
-  }
-  return obj;
-};
-export const WEEKDAY_DICTIONARY = { sonntag: 0, so: 0, montag: 1, mo: 1, dienstag: 2, di: 2, mittwoch: 3, mi: 3, donnerstag: 4, do: 4, freitag: 5, fr: 5, samstag: 6, sa: 6 };
-export const MONTH_DICTIONARY = { januar: 1, "jänner": 1, janner: 1, jan: 1, "jan.": 1, februar: 2, feber: 2, feb: 2, "feb.": 2, "märz": 3, maerz: 3, "mär": 3, "mär.": 3, mrz: 3, "mrz.": 3, april: 4, apr: 4, "apr.": 4, mai: 5, juni: 6, jun: 6, "jun.": 6, juli: 7, jul: 7, "jul.": 7, august: 8, aug: 8, "aug.": 8, september: 9, sep: 9, "sep.": 9, sept: 9, "sept.": 9, oktober: 10, okt: 10, "okt.": 10, november: 11, nov: 11, "nov.": 11, dezember: 12, dez: 12, "dez.": 12 };
-export const INTEGER_WORD_DICTIONARY = { eins: 1, eine: 1, einem: 1, einen: 1, einer: 1, zwei: 2, drei: 3, vier: 4, "fünf": 5, fuenf: 5, sechs: 6, sieben: 7, acht: 8, neun: 9, zehn: 10, elf: 11, "zwölf": 12, zwoelf: 12 };
-export const TIME_UNIT_DICTIONARY = { sek: "second", sekunde: "second", sekunden: "second", min: "minute", minute: "minute", minuten: "minute", h: "hour", std: "hour", stunde: "hour", stunden: "hour", tag: "day", tage: "day", tagen: "day", woche: "week", wochen: "week", monat: "month", monate: "month", monaten: "month", monats: "month", quartal: "quarter", quartals: "quarter", quartale: "quarter", quartalen: "quarter", a: "year", j: "year", jr: "year", jahr: "year", jahre: "year", jahren: "year", jahres: "year" };
-export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)";
-export const YEAR_PATTERN = "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
+} else {
+  let _Object = Object;
+}

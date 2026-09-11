@@ -1,24 +1,47 @@
 // Module ID: 6974
 // Function ID: 6975
-// Dependencies: [19, 6926]
-// Exports: useMappingHelper
+// Dependencies: [6929, 19]
+// Exports: useUnmountAwareAnimationFrame, useUnmountAwareTimeout
 
 // Module 6974
-import _mod19 from "module_19" /* 19 */;
-import _mod6926 from "module_6926" /* 6926 */;
+import _slicedToArray from "module_6929" /* 6929 */;
 
-_mod19.useCallback;
+const noop = fn(19);
+({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
 
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod6926.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
-    }
-    return tmp;
+export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
+  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
+  const items = [first];
+  closure_3(() => () => {
+    const item = set.forEach((item) => closure_1_0.clearTimeout(item));
+    set.clear();
   }, items);
-  return obj2;
+  const obj = { setTimeout: null };
+  const items1 = [first];
+  obj.setTimeout = closure_2((arg0, arg1) => {
+    const timerId = first.setTimeout(() => {
+      first.delete(timerId);
+      closure_0();
+    }, arg1);
+    arg0.add(timerId);
+  }, items1);
+  return obj;
+};
+export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFrame() {
+  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
+  const items = [first];
+  closure_3(() => () => {
+    const item = set.forEach((item) => cancelAnimationFrame(item));
+    set.clear();
+  }, items);
+  const obj = { requestAnimationFrame: null };
+  const items1 = [first];
+  obj.requestAnimationFrame = closure_2((arg0) => {
+    const animationFrame = first.requestAnimationFrame((arg0) => {
+      first.delete(animationFrame);
+      closure_0(arg0);
+    });
+    arg0.add(animationFrame);
+  }, items1);
+  return obj;
 };

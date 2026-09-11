@@ -1,10 +1,10 @@
-// Module ID: 16308
-// Function ID: 16309
+// Module ID: 16297
+// Function ID: 16298
 // Name: getChannelSubtitleData
 // Dependencies: [1114, 2]
 // Exports: getChannelSubtitleData
 
-// Module 16308 (getChannelSubtitleData)
+// Module 16297 (getChannelSubtitleData)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 

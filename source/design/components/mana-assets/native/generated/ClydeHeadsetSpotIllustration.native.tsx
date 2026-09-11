@@ -1,13 +1,13 @@
-// Module ID: 5907
-// Function ID: 5908
+// Module ID: 5929
+// Function ID: 5930
 // Name: ClydeHeadsetSpotIllustration
-// Dependencies: [21, 5637, 5908, 2]
+// Dependencies: [21, 5639, 5930, 2]
 // Exports: ClydeHeadsetSpotIllustration
 
-// Module 5907 (ClydeHeadsetSpotIllustration)
+// Module 5929 (ClydeHeadsetSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5908 from "module_5908" /* 5908 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5930 from "module_5930" /* 5930 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ClydeHeadsetSpotIllustration = function ClydeHeadsetSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5908 };
+  const obj2 = { uri: _modDef5930 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

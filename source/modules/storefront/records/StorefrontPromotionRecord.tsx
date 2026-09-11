@@ -1,11 +1,11 @@
-// Module ID: 8858
-// Function ID: 8859
+// Module ID: 8881
+// Function ID: 8882
 // Name: StorefrontPromotionRecord
-// Dependencies: [32, 1386, 8859, 2]
+// Dependencies: [32, 1386, 8882, 2]
 // Exports: getCollectiblesCollectAndClaim, getCollectiblesTargetedOffer
 
-// Module 8858 (StorefrontPromotionRecord)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8859 */;
+// Module 8881 (StorefrontPromotionRecord)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8882 */;
 import _slicedToArray from "module_32" /* 32 */;
 import Record from "Record" /* 1386 */;
 
@@ -86,7 +86,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       let obj32 = require;
       let tmp29 = dependencyMap;
       if (collectibles.type !== StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM) {
-        if (collectibles.type === obj32(8859).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
+        if (collectibles.type === obj32(8882).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
           const reward = collectibles.reward;
           let nagbar;
           if (reward != tmp14) {
@@ -121,11 +121,11 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           }
           if (tmp14 == nagbar) {
             if (tmp14 == offer_notice) {
-              const obj5 = { type: obj32(8859).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+              const obj5 = { type: obj32(8882).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
               let obj6 = obj5;
             }
           }
-          obj6 = { type: obj32(8859).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+          obj6 = { type: obj32(8882).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
           let tmp36;
           if (tmp14 != nagbar) {
             const header_text = nagbar.header_text;
@@ -167,7 +167,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           obj6.reward = obj10;
         }
       }
-      const obj14 = { type: obj32(8859).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: obj32(8859).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+      const obj14 = { type: obj32(8882).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: obj32(8882).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
       const obj15 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
       const reward_states = collectibles.shop_home.reward_states;
       const obj16 = { inProgress: null, earned: null, consumed: null };

@@ -1,15 +1,15 @@
-// Module ID: 7457
-// Function ID: 7458
+// Module ID: 7479
+// Function ID: 7480
 // Name: BillingStandaloneNativeUtils
-// Dependencies: [4587, 1074, 3, 7458, 7459, 1608, 1093, 4299, 2]
+// Dependencies: [4589, 1074, 3, 7480, 7481, 1608, 1093, 4301, 2]
 // Exports: goToStandaloneGuildBoostCheckoutFromMobileApp, goToStandaloneNitroManagementFromMobileApp, goToStandalonePremiumCheckoutFromMobileApp
 
-// Module 7457 (BillingStandaloneNativeUtils)
+// Module 7479 (BillingStandaloneNativeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1074 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import PaymentConstants from "PaymentConstants" /* 4587 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7458 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import PaymentConstants from "PaymentConstants" /* 4589 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7480 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -39,8 +39,8 @@ const Routes = Constants.Routes;
 const logger = new LoggerDefault("BillingStandaloneNativeUtils");
 let result = size.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
-export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_nitro_marketing_page, arg1, arg2, arg3) {
-  _require = premium_nitro_marketing_page;
+export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selection_action_sheet, arg1, arg2, arg3) {
+  _require = premium_plan_selection_action_sheet;
   const loadId = arg1;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;

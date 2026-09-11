@@ -1,67 +1,62 @@
-// Module ID: 17045
-// Function ID: 17046
+// Module ID: 17034
+// Function ID: 17035
 // Name: NitroFileUploadAnnouncementPromoSheet
-// Dependencies: [19, 17, 1074, 1954, 21, 4605, 576, 7434, 10300, 5742, 1114, 2496, 5025, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4607, 576, 5044, 7456, 10321, 5744, 1114, 2496, 5027, 2]
 // Exports: default
 
-// Module 17045 (NitroFileUploadAnnouncementPromoSheet)
+// Module 17034 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 576 */;
-import _modDef2496 from "module_2496" /* 2496 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
+import openUserSettings from "openUserSettings" /* 7456 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
-const obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
+const createStyles = fn(4607);
+let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx");
 
 export default function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let callback;
-  importDefault = callback.useRef(false);
-  dependencyMap = callback.useRef(markAsDismissed);
+  importDefault = noop.useRef(false);
   const items = [markAsDismissed];
-  const effect = callback.useEffect(() => {
-    closure_2.current = markAsDismissed;
-  }, items);
-  const effect1 = callback.useEffect(() => () => {
-    if (!ref.current) {
-      ref2.current(constants.AUTO_DISMISS);
-    }
-  }, []);
-  callback = callback.useCallback((AUTO_DISMISS) => {
+  const callback = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;
-      ref2.current(AUTO_DISMISS);
+      markAsDismissed(arg0);
     }
-  }, []);
+  }, items);
+  const tmp = closure_8();
+  const unmountEffect = markAsDismissed(callback[7]).useUnmountEffect(() => {
+    callback(ContentDismissActionType.AUTO_DISMISS);
+  });
   const items1 = [callback];
   const items2 = [callback];
-  const callback1 = callback.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     callback(ContentDismissActionType.TAKE_ACTION);
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM });
   }, items1);
-  const callback2 = callback.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
-  const obj = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
-  const tmp = closure_8();
-  obj.illustration = <View style={closure_8().illustration}>{jsx(markAsDismissed(5742).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</View>;
-  const intl = markAsDismissed(1114).intl;
-  obj.title = intl.string(_modDef2496.IyCdAU);
-  const intl2 = markAsDismissed(1114).intl;
-  obj.description = intl2.string(_modDef2496.LhfXZN);
-  obj.onDismiss = callback2;
-  const obj3 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
-  const intl3 = markAsDismissed(1114).intl;
-  obj3.text = intl3.formatToPlainString(_modDef2496.Ocbn9P, { deepLinkToNitroHome: "" });
-  obj3.onPress = callback1;
-  obj.actions = jsx(markAsDismissed(5025).Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
-  return jsx(markAsDismissed(10300).PromoSheet, { illustration: null, title: null, description: null, onDismiss: null, actions: null });
+  const obj2 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
+  const obj = markAsDismissed(callback[7]);
+  obj2.illustration = <View style={tmp.illustration}>{jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</View>;
+  const intl = markAsDismissed(callback[11]).intl;
+  obj2.title = intl.string(require("module_2496").IyCdAU);
+  const intl2 = markAsDismissed(callback[11]).intl;
+  obj2.description = intl2.string(require("module_2496").LhfXZN);
+  obj2.onDismiss = callback2;
+  const obj4 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  const intl3 = markAsDismissed(callback[11]).intl;
+  obj4.text = intl3.formatToPlainString(require("module_2496").Ocbn9P, { deepLinkToNitroHome: "" });
+  obj4.onPress = callback1;
+  obj2.actions = jsx(markAsDismissed(callback[13]).Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
+  return jsx(markAsDismissed(callback[9]).PromoSheet, { illustration: null, title: null, description: null, onDismiss: null, actions: null });
 };

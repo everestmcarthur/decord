@@ -1,9 +1,9 @@
 // Module ID: 8368
 // Function ID: 8369
-// Dependencies: [17]
+// Dependencies: [8369]
 
 // Module 8368
-import _mod17 from "module_17" /* 17 */;
+import _mod8369 from "module_8369" /* 8369 */;
 
 
-export default _mod17.requireNativeComponent("RNCWebViewContainer");
+export default _mod8369.default;

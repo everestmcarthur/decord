@@ -1,20 +1,20 @@
-// Module ID: 16302
-// Function ID: 16303
+// Module ID: 16291
+// Function ID: 16292
 // Name: GuildPowerupsProgressBar
-// Dependencies: [19, 17, 16303, 1979, 21, 576, 4341, 5037, 4605, 563, 16304, 16305, 4606, 12549, 7234, 1114, 2428, 8971, 4601, 7261, 2]
+// Dependencies: [19, 17, 16292, 1979, 21, 576, 4343, 5039, 4607, 563, 16293, 16294, 4608, 12574, 7256, 1114, 2428, 8994, 4603, 7283, 2]
 // Exports: default
 
-// Module 16302 (GuildPowerupsProgressBar)
+// Module 16291 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4606 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12549 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16305 */;
+import timing from "timing" /* 4608 */;
+import LinearGradientDefault from "LinearGradient" /* 5039 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7256 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12574 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16294 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16303 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16292 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -24,7 +24,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };

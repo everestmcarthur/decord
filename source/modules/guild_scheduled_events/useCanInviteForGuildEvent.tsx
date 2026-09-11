@@ -1,17 +1,17 @@
-// Module ID: 9843
-// Function ID: 9844
+// Module ID: 9866
+// Function ID: 9867
 // Name: useCanInviteForGuildEvent
-// Dependencies: [1962, 1957, 2012, 1979, 4243, 7578, 1963, 1074, 4248, 9844, 504, 2]
+// Dependencies: [1962, 1957, 2012, 1979, 4245, 7600, 1963, 1074, 4250, 9867, 504, 2]
 // Exports: default
 
-// Module 9843 (useCanInviteForGuildEvent)
-import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
-import canViewInviteModal from "canViewInviteModal" /* 9844 */;
+// Module 9866 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
+import canViewInviteModal from "canViewInviteModal" /* 9867 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = globalThis.__r;
 
@@ -71,7 +71,7 @@ function isGuildEventInvitable(guildEvent, items) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(7578).isGuildEventEnded;
+const isGuildEventEnded = fn(7600).isGuildEventEnded;
 const constants = fn(1963).GuildScheduledEventEntityTypes;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);

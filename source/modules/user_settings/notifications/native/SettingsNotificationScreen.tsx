@@ -1,19 +1,19 @@
-// Module ID: 15561
-// Function ID: 15562
+// Module ID: 15543
+// Function ID: 15544
 // Name: SettingsNotificationScreen
-// Dependencies: [19, 17, 15562, 8027, 21, 4605, 576, 7032, 12481, 15563, 15564, 4601, 1114, 5657, 6660, 7645, 11540, 15565, 15566, 14767, 2]
+// Dependencies: [19, 17, 15544, 8050, 21, 4607, 576, 7054, 12506, 15545, 15546, 4603, 1114, 5659, 6682, 7667, 11564, 15547, 15548, 14744, 2]
 
-// Module 15561 (SettingsNotificationScreen)
+// Module 15543 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7032 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12481 */;
-import SettingLayoutDefault from "SettingLayout" /* 14767 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15563 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15564 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15565 */;
-import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15566 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7054 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12506 */;
+import SettingLayoutDefault from "SettingLayout" /* 14744 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15545 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15546 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15547 */;
+import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function SystemNotificationsSubLabel() {
     const obj5 = { variant: str, color: "text-muted", children: null };
     const intl = tmp2(1114).intl;
     obj5.children = intl.string(tmp2(1114).t["/TZX1J"]);
-    result = React5(tmp2(4601).Text, obj5);
+    result = React5(tmp2(4603).Text, obj5);
   }
   const children = [result, ];
   if (showReactivationPrompt) {
@@ -42,27 +42,27 @@ function SystemNotificationsSubLabel() {
     const obj7 = { border: "none", shadow: "none", children: null };
     const obj8 = { style: tmp.cardContent, children: null };
     const obj9 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-    const items1 = [React5(tmp2(6660).CircleErrorIcon, obj9), ];
+    const items1 = [React5(tmp2(6682).CircleErrorIcon, obj9), ];
     const obj10 = { style: tmp.text, children: null };
     const obj11 = { color: "text-default", variant: "text-sm/medium", children: null };
     const intl2 = tmp2(1114).intl;
     obj11.children = intl2.string(tmp2(1114).t.TAuasM);
-    obj10.children = React5(tmp2(4601).Text, obj11);
+    obj10.children = React5(tmp2(4603).Text, obj11);
     items1[1] = React5(View, obj10);
     obj8.children = items1;
     obj7.children = tmp8(View, obj8);
-    obj6.children = React5(tmp2(5657).Card, obj7);
+    obj6.children = React5(tmp2(5659).Card, obj7);
     showReactivationPrompt = React5(View, obj6);
   }
   children[1] = showReactivationPrompt;
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(15562).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8027).MobileUserSettings;
+let closure_5 = fn(15544).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8050).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { card: { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, cardContent: { flexDirection: "row", alignItems: "center", gap: 8 }, text: { flex: 1 } };
 let closure_10 = createStyles.createStyles(obj);
 let obj3 = { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
@@ -70,8 +70,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 
 export default noop.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7645).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
-  const obj = isFamilyCenterV3Enabled(7645);
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7667).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  const obj = isFamilyCenterV3Enabled(7667);
   let tmp2 = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];

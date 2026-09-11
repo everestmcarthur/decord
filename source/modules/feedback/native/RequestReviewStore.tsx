@@ -1,21 +1,21 @@
-// Module ID: 13771
-// Function ID: 13772
+// Module ID: 13752
+// Function ID: 13753
 // Name: RequestReviewStore
-// Dependencies: [4521, 1236, 2011, 1074, 13772, 4634, 13773, 4463, 4462, 6675, 13775, 1093, 510, 1242, 504, 573, 2]
+// Dependencies: [4523, 1236, 2011, 1074, 13753, 4636, 13754, 4465, 4464, 6697, 13756, 1093, 510, 1242, 504, 573, 2]
 
-// Module 13771 (RequestReviewStore)
+// Module 13752 (RequestReviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import RootNavigationRef from "RootNavigationRef" /* 4463 */;
-import TimeUtils from "TimeUtils" /* 4634 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6675 */;
-import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment" /* 13772 */;
-import requestReviewModalDefault from "requestReviewModal" /* 13773 */;
-import InstallTime from "InstallTime" /* 13775 */;
-import ExperimentStore from "ExperimentStore" /* 4521 */;
+import RootNavigationRef from "RootNavigationRef" /* 4465 */;
+import TimeUtils from "TimeUtils" /* 4636 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6697 */;
+import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment" /* 13753 */;
+import requestReviewModalDefault from "requestReviewModal" /* 13754 */;
+import InstallTime from "InstallTime" /* 13756 */;
+import ExperimentStore from "ExperimentStore" /* 4523 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
@@ -25,8 +25,8 @@ function showReviewRequestModal() {
   const rootNavigationRef = obj.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    tmp3 = null != tmp(4462).coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
-    const tmpResult = tmp(4462);
+    tmp3 = null != tmp(4464).coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    const tmpResult = tmp(4464);
   }
   const keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen();
   const tmp5 = null != SelectedChannelStore.getVoiceChannelId();
@@ -49,7 +49,7 @@ function showReviewRequestModal() {
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(13772).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(13753).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = closure_10;
   if (closure_10) {
@@ -64,7 +64,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, tmp(4634).MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, tmp(4636).MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -116,7 +116,7 @@ obj = {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(13772).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(13753).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = closure_10;
     if (closure_10) {
@@ -131,7 +131,7 @@ obj = {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, tmp(4634).MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, tmp(4636).MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -192,7 +192,7 @@ obj = {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(13772).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(13753).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = closure_10;
       if (closure_10) {
@@ -207,7 +207,7 @@ obj = {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, tmp(4634).MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, tmp(4636).MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;

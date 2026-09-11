@@ -1,8 +1,8 @@
-// Module ID: 5948
-// Function ID: 5949
+// Module ID: 5970
+// Function ID: 5971
 // Dependencies: [2]
 
-// Module 5948
+// Module 5970
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevQuestsWideAbstractUI-2x.png.js");

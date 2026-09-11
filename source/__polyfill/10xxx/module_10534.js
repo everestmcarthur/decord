@@ -1,16 +1,18 @@
 // Module ID: 10534
 // Function ID: 10535
-// Dependencies: [41, 42, 93, 95, 98, 10501, 10504, 10505, 10521]
+// Dependencies: [41, 42, 93, 95, 98, 10523, 10522, 10530]
 
 // Module 10534
-import Filter from "Filter" /* 10521 */;
+import _mod10522 from "module_10522" /* 10522 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10523 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10530 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeFollowByDateRefiner = require;
+const ENYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,80 +32,77 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeFollowByDateRefiner {
-  constructor() {
+const regExp = new RegExp("([0-9]{4})[-\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10522.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[-\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
+class ENYearMonthDayParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, ENMergeRelativeFollowByDateRefiner);
+    tmp = c2(this, ENYearMonthDayParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
+    obj = closure_4(ENYearMonthDayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMonthDateOrder = global;
+    return tmp3Result;
   }
 }
-_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
+_inherits(ENYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(after|since)$/i);
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
-          }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
-        }
-        match = tmp6;
-        str = text.text;
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      const parsed = parseInt(arg1[1]);
+      const parsed1 = parseInt(arg1[4]);
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed2 = parseInt(arg1[3]);
+      } else {
+        parsed2 = ENYearMonthDayParser(10522).MONTH_DICTIONARY[str.toLowerCase(str)];
       }
-      return match;
-    }
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10501).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(before|from)$/i)) {
-        reverseDurationResult = tmp(10504).reverseDuration(parseDurationResult);
+      if (parsed2 < 1) {
+        const self = this;
+        if (this.strictMonthDateOrder) {
+          return null;
+        } else {
+          tmp6 = parsed2;
+          tmp7 = parsed1;
+          if (parsed1 >= 1) {
+            tmp6 = parsed2;
+            tmp7 = parsed1;
+            if (parsed1 <= 12) {
+              const items = [parsed1, parsed2];
+              [tmp6, tmp7] = items;
+            }
+          }
+        }
+      } else {
+        tmp6 = parsed2;
+        tmp7 = parsed1;
       }
-      const ParsingComponents = tmp(10505).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10505).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      return new ENMergeRelativeFollowByDateRefiner(10505).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
+      let tmp8 = null;
+      if (tmp7 >= 1) {
+        tmp8 = null;
+        if (tmp7 <= 31) {
+          const date = { day: tmp7, month: tmp6, year: parsed };
+          tmp8 = date;
+        }
+      }
+      return tmp8;
     }
   }
 ];
 
-export default _createClass(ENMergeRelativeFollowByDateRefiner, items);
+export default _createClass(ENYearMonthDayParser, items);

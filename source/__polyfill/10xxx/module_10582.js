@@ -1,18 +1,15 @@
 // Module ID: 10582
 // Function ID: 10583
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10583, 10529, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10544]
 
 // Module 10582
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10583 from "module_10583" /* 10583 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _mod10544 from "module_10544" /* 10544 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const PTWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,15 +29,30 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10583.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
-class PTWeekdayParser {
+let _classCallCheck = _classCallCheck_mod;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class FRMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, PTWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(PTWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, FRMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(FRMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -53,42 +65,15 @@ class PTWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = FRMergeDateTimeRefiner;
+_inherits(FRMergeDateTimeRefiner, fn(_mod10544).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
     return regExp;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = PTWeekdayParser(10583).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("passado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
-              }
-            }
-          }
-        }
-        return tmp2(10529).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
-      }
-      tmp2 = PTWeekdayParser;
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(PTWeekdayParser, items);
+export default _createClass(FRMergeDateTimeRefiner, items);

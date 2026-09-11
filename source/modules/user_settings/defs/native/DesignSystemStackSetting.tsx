@@ -1,12 +1,12 @@
-// Module ID: 15870
-// Function ID: 15871
+// Module ID: 15855
+// Function ID: 15856
 // Name: DesignSystemStackSetting
-// Dependencies: [8027, 1074, 11540, 15871, 2]
+// Dependencies: [8050, 1074, 11564, 15856, 2]
 
-// Module 15870 (DesignSystemStackSetting)
+// Module 15855 (DesignSystemStackSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

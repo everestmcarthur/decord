@@ -1,9 +1,9 @@
-// Module ID: 9742
-// Function ID: 9743
+// Module ID: 9765
+// Function ID: 9766
 // Name: PermissionsConstants
 // Dependencies: [1074, 1086, 1965, 2]
 
-// Module 9742 (PermissionsConstants)
+// Module 9765 (PermissionsConstants)
 import Constants from "Constants" /* 1074 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import "BigFlagUtils";

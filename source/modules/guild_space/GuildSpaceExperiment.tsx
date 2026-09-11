@@ -1,11 +1,11 @@
-// Module ID: 7277
-// Function ID: 7278
+// Module ID: 7299
+// Function ID: 7300
 // Name: GuildSpaceExperiment
-// Dependencies: [4519, 2]
+// Dependencies: [4521, 2]
 // Exports: getGuildSpaceExperimentEnabled, useGuildSpaceExperimentEnabled
 
-// Module 7277 (GuildSpaceExperiment)
-import createExperiment from "module_4519" /* 4519 */;
+// Module 7299 (GuildSpaceExperiment)
+import createExperiment from "module_4521" /* 4521 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-06_guild_spaces", label: "Guild Space", defaultConfig: { enabled: false }, treatments: null };

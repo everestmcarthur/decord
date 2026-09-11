@@ -1,18 +1,18 @@
-// Module ID: 15960
-// Function ID: 15961
+// Module ID: 15945
+// Function ID: 15946
 // Name: SafetyGuildSettingMessageRequests
-// Dependencies: [1979, 15951, 8027, 11541, 1935, 4949, 1114, 5044, 15961, 8476, 8478, 7047, 15958, 14902, 11540, 2]
+// Dependencies: [1979, 15936, 8050, 11565, 1935, 4951, 1114, 5046, 15946, 8499, 8501, 7069, 15943, 14879, 11564, 2]
 
-// Module 15960 (SafetyGuildSettingMessageRequests)
+// Module 15945 (SafetyGuildSettingMessageRequests)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import common_AlertDefault from "common/Alert" /* 5044 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7047 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8478 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15958 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4951 */;
+import common_AlertDefault from "common/Alert" /* 5046 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7069 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8499 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8501 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14879 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15943 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
@@ -45,10 +45,10 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15951);
+const UserSettingsSafetySelectedGuildStore = fn(15936);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11541).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11540);
+let closure_6 = fn(11565).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11564);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -58,7 +58,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(8027).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8050).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();

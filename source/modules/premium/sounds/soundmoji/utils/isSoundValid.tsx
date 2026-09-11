@@ -1,16 +1,16 @@
-// Module ID: 5068
-// Function ID: 5069
+// Module ID: 5070
+// Function ID: 5071
 // Name: isSoundValid
-// Dependencies: [1957, 4243, 1371, 5064, 1085, 4262, 2]
+// Dependencies: [1957, 4245, 1371, 5066, 1085, 4264, 2]
 // Exports: default
 
-// Module 5068 (isSoundValid)
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+// Module 5070 (isSoundValid)
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const DEFAULT_SOUND_GUILD_ID = fn(5064).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5066).DEFAULT_SOUND_GUILD_ID;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");

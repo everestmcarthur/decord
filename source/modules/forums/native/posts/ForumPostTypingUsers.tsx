@@ -1,13 +1,13 @@
-// Module ID: 12089
-// Function ID: 12090
+// Module ID: 12114
+// Function ID: 12115
 // Name: ForumPostTypingUsers
-// Dependencies: [19, 17, 21, 4605, 576, 7937, 12049, 12090, 4341, 1178, 4601, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 7960, 12074, 12115, 4343, 1178, 4603, 2]
 // Exports: default
 
-// Module 12089 (ForumPostTypingUsers)
+// Module 12114 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round }, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
 let obj3 = { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round };
 obj2.dots = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: nativeDefault.space.PX_4, paddingLeft: 4, borderRadius: nativeDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };

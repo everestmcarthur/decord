@@ -1,17 +1,19 @@
-// Module ID: 9544
-// Function ID: 9545
+// Module ID: 9567
+// Function ID: 9568
 // Name: RevealProvider
-// Dependencies: [19, 4295, 4622, 9537, 21, 504, 9539, 9545, 1115, 4540, 9551, 9553, 2]
+// Dependencies: [19, 4297, 4624, 9560, 21, 504, 9562, 9568, 1115, 4542, 4458, 9574, 9576, 2]
 // Exports: default
 
-// Module 9544 (RevealProvider)
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9539 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9545 */;
-import StatusBarDefault from "StatusBar" /* 9551 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9553 */;
+// Module 9567 (RevealProvider)
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9562 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9568 */;
+import StatusBarDefault from "StatusBar" /* 9574 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 9576 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4295 */;
-import GameConsoleStore from "GameConsoleStore" /* 4622 */;
+import ActionSheetStore from "ActionSheetStore" /* 4297 */;
+import GameConsoleStore from "GameConsoleStore" /* 4624 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 function useRevealProviderValue(arg0, channel) {
@@ -47,7 +49,7 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(9537);
+const ChannelCallStore = fn(9560);
 ({ useChannelCallStore: metroRequire, focusTimeout: closure_7, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -66,7 +68,7 @@ export default function RevealProvider(showStatus) {
     flag2 = false;
   }
   const tmp = closure_6((focus) => focus.focus);
-  closure_0 = tmp;
+  _require = tmp;
   const tmp2 = useRevealProviderValue(tmp, channel);
   ({ reveal, prefersDeferringSystemGestures } = tmp2);
   const items = [tmp];
@@ -77,28 +79,27 @@ export default function RevealProvider(showStatus) {
       React5.stop();
     }
   }, items);
-  let str = "light-content";
-  if (flag2) {
-    str = "light-content";
-    if ("dark" !== tmp6) {
-      str = "dark-content";
-    }
+  if (!flag2) {
+    let str = "light-content";
+  } else {
+    str = "dark-content";
+    const obj = require("shared");
   }
-  const obj = { value: tmp2, children: null };
-  let tmp10 = !reveal;
+  const obj2 = { value: tmp2, children: null };
+  let tmp11 = !reveal;
   if (!reveal) {
-    tmp10 = !flag;
+    tmp11 = !flag;
   }
-  const items1 = [closure_10(StatusBarDefault, { hidden: tmp10, animated: true, barStyle: str }), children, ];
-  let tmp12 = !reveal;
+  const items1 = [closure_10(StatusBarDefault, { hidden: tmp11, animated: true, barStyle: str }), children, ];
+  let tmp13 = !reveal;
   const tmp4Result = StatusBarDefault;
-  const tmp7 = closure_11;
+  const tmp8 = closure_11;
   if (!reveal) {
-    tmp12 = !prefersDeferringSystemGestures;
+    tmp13 = !prefersDeferringSystemGestures;
   }
-  items1[2] = closure_10(HomeIndicatorDefault, { prefersHidden: tmp12, prefersDeferringSystemGestures });
-  obj.children = items1;
-  return tmp7(context.Provider, obj);
+  items1[2] = closure_10(HomeIndicatorDefault, { prefersHidden: tmp13, prefersDeferringSystemGestures });
+  obj2.children = items1;
+  return tmp8(context.Provider, obj2);
 };
 export const RevealContext = context;
 export { useRevealProviderValue };

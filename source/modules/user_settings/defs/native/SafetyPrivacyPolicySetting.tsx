@@ -1,14 +1,14 @@
-// Module ID: 15956
-// Function ID: 15957
+// Module ID: 15941
+// Function ID: 15942
 // Name: SafetyPrivacyPolicySetting
-// Dependencies: [8027, 1074, 4299, 11540, 1114, 2]
+// Dependencies: [8050, 1074, 4301, 11564, 1114, 2]
 
-// Module 15956 (SafetyPrivacyPolicySetting)
+// Module 15941 (SafetyPrivacyPolicySetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

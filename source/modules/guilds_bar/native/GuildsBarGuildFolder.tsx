@@ -1,30 +1,30 @@
-// Module ID: 16375
-// Function ID: 16376
+// Module ID: 16364
+// Function ID: 16365
 // Name: GuildsBarGuildFolder
-// Dependencies: [19, 7687, 1979, 4426, 5488, 16367, 16372, 16364, 21, 4605, 576, 4306, 504, 5634, 5024, 4454, 1091, 7125, 4341, 4315, 5637, 5081, 16376, 16379, 12689, 16386, 4573, 5570, 5639, 16369, 16387, 2]
+// Dependencies: [19, 7709, 1979, 4428, 5490, 16356, 16361, 16353, 21, 4607, 576, 4308, 504, 5636, 5026, 4456, 1091, 7147, 4343, 4317, 5639, 5083, 16365, 16368, 12714, 16375, 4575, 5572, 5641, 16358, 16376, 2]
 
-// Module 16375 (GuildsBarGuildFolder)
+// Module 16364 (GuildsBarGuildFolder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import useToken from "useToken" /* 4306 */;
-import native from "native" /* 4315 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import ColorUtils from "ColorUtils" /* 4454 */;
-import spring from "spring" /* 5024 */;
-import _modDef5081 from "module_5081" /* 5081 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import NativeViewDefault from "NativeView" /* 5639 */;
-import ListUtils from "ListUtils" /* 12689 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16369 */;
+import useToken from "useToken" /* 4308 */;
+import native from "native" /* 4317 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ColorUtils from "ColorUtils" /* 4456 */;
+import spring from "spring" /* 5026 */;
+import _modDef5083 from "module_5083" /* 5083 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import NativeViewDefault from "NativeView" /* 5641 */;
+import ListUtils from "ListUtils" /* 12714 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16358 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7687 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7709 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SortedGuildStore from "SortedGuildStore" /* 5490 */;
 
-const GuildIcon = tmp(5634);
-const GuildIconDefault = tmp3(5634);
+const GuildIcon = tmp(5636);
+const GuildIconDefault = tmp3(5636);
 require = fn;
 function MiniGuildIcon(arg0) {
   ({ guildId: require, position, selected } = arg0);
@@ -131,7 +131,7 @@ function GuildFolderIcon(item) {
   item = item.item;
   let tmp = null;
   if ("icon" === item.type) {
-    const obj = { source: _modDef5081, style: item.tintStyle };
+    const obj = { source: _modDef5083, style: item.tintStyle };
     tmp = value2(FastImageDefault, obj);
   }
   return tmp;
@@ -170,16 +170,16 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_16(TransitionWrapper, obj, arg0);
   }
 }
-const GuildsNodeType = fn(5488).GuildsNodeType;
-const GuildsBarDnDStore = fn(16367);
+const GuildsNodeType = fn(5490).GuildsNodeType;
+const GuildsBarDnDStore = fn(16356);
 ({ useItemDragState: closure_9, useFolderBGHeightOffset: c10 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(16372);
+let GuildsBarConstants = fn(16361);
 ({ DEFAULT_FOLDER_COLOR: closure_11, isDefaultFolderColor: closure_12, normalizeFolderColor: map1 } = GuildsBarConstants);
-GuildsBarConstants = fn(16364);
+GuildsBarConstants = fn(16353);
 ({ TRANSITION_PHYSICS: closure_14, FOLDER_SPRING_PHYSICS: closure_15 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_18 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -208,11 +208,11 @@ const memoResult = noop.memo(function FolderBGInner(color) {
   color = color.color;
   let token2;
   ({ folderId, totalItems } = color);
-  const token = color(4306).useToken(token2(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  let obj = color(4306);
-  const token1 = color(4306).useToken(token2(576).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-  let obj2 = color(4306);
-  const obj3 = color(4306);
+  const token = color(4308).useToken(token2(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  let obj = color(4308);
+  const token1 = color(4308).useToken(token2(576).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  let obj2 = color(4308);
+  const obj3 = color(4308);
   const fn = function s(height) {
     const obj = { animations: null, initialValues: null };
     const obj2 = { height: color(dependencyMap[14]).withSpring(height.targetHeight, TRANSITION_PHYSICS, "animate-always") };
@@ -221,15 +221,15 @@ const memoResult = noop.memo(function FolderBGInner(color) {
     return obj;
   };
   const obj4 = { withSpring: null, TRANSITION_PHYSICS: null };
-  const tmp3 = closure_18(token, color(4306).useToken(token2(576).modules.mobile.GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET));
-  obj4.withSpring = color(5024).withSpring;
+  const tmp3 = closure_18(token, color(4308).useToken(token2(576).modules.mobile.GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET));
+  obj4.withSpring = color(5026).withSpring;
   obj4.TRANSITION_PHYSICS = TRANSITION_PHYSICS;
   fn.__closure = obj4;
   fn.__workletHash = 2519256682742;
   fn.__initData = __initData;
   const callback = noop.useCallback(fn, []);
   const tmp4 = closure_10(folderId);
-  token2 = color(4306).useToken(token2(576).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
+  token2 = color(4308).useToken(token2(576).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
   const items = [color, token2];
   const memo = noop.useMemo(() => {
     const tmp = map1(color);
@@ -243,7 +243,7 @@ const memoResult = noop.memo(function FolderBGInner(color) {
   const obj6 = { pointerEvents: "none", collapsable: false, layout: callback, style: null };
   const items1 = [tmp3.folderBackground, memo, { height: token + token1 + (token + 2 * token1) * totalItems + tmp4 }];
   obj6.style = items1;
-  return closure_16(token2(7125), obj6);
+  return closure_16(token2(7147), obj6);
 });
 const __initData2 = { code: "function GuildsBarGuildFolderTsx2(){const{withSpring,visible,FOLDER_SPRING_PHYSICS,state,TransitionStates,runOnJS,cleanUp,fromTop,guildItemSize}=this.__closure;return{opacity:withSpring(visible.get(),FOLDER_SPRING_PHYSICS,undefined,function(finished){if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}),transform:[{translateY:withSpring(visible.get()===1?0:fromTop?-guildItemSize:guildItemSize,FOLDER_SPRING_PHYSICS)},{scale:withSpring(visible.get()===1?1:fromTop?0.3:1.3,FOLDER_SPRING_PHYSICS)}]};}" };
 let closure_23 = { code: "function GuildsBarGuildFolderTsx3(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}" };

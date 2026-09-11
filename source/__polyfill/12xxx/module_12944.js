@@ -1,111 +1,77 @@
 // Module ID: 12944
 // Function ID: 12945
-// Dependencies: [12874, 12876]
-// Exports: applyAggregateErrorsToEvent
+// Dependencies: [12893]
+// Exports: getDebugImagesForResources
 
 // Module 12944
-import _mod12876 from "module_12876" /* 12876 */;
-
-require = arg1;
-let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
-  _require = fn;
-  dependencyMap = arg1;
-  aggregateExceptionsFromError = arg2;
-  closure_3 = source;
-  if (arg5.length >= arg2 + 1) {
-    return arg5;
-  } else {
-    let items = [];
-    HermesBuiltin.arraySpread(arg5, 0);
-    length = items;
-    const _Error = Error;
-    if (obj3.isInstanceOf(errors[source], Error)) {
-      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-      const obj = {};
-      let merged = Object.assign(mechanism.mechanism);
-      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
-      let merged1 = Object.assign(tmp3);
-      obj.exception_id = exception_id;
-      mechanism.mechanism = obj;
-      const tmp7 = fn(arg1, errors[source]);
-      length = length.length;
-      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
-      let obj2 = {};
-      let merged2 = Object.assign(tmp7.mechanism);
-      obj2.type = "chained";
-      obj2.source = source;
-      obj2.exception_id = length;
-      obj2.parent_id = exception_id;
-      tmp7.mechanism = obj2;
-      const items1 = [tmp7];
-      HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
+const require = arg1;
+const dependencyMap = arg6;
+function getFilenameToDebugIdMap(arg0) {
+  _require = arg0;
+  _sentryDebugIds = require("module_12893").GLOBAL_OBJ._sentryDebugIds;
+  if (_sentryDebugIds) {
+    const _Object = Object;
+    const keys = Object.keys(_sentryDebugIds);
+    if (reduced) {
+      return reduced;
     }
-    const _Array = Array;
-    if (Array.isArray(errors.errors)) {
-      errors = errors.errors;
-      const item = errors.forEach((item, index) => {
-        if (obj.isInstanceOf(item, Error)) {
-          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-          const obj2 = {};
-          const merged = Object.assign(tmp.mechanism);
-          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
-          const merged1 = Object.assign(tmp5);
-          obj2.exception_id = exception_id;
-          mechanism.mechanism = obj2;
-          const tmp12 = closure_0(closure_1, item);
-          length = length.length;
-          const _HermesInternal = HermesInternal;
-          mechanism = tmp12.mechanism;
-          const combined = "errors[" + index + "]";
-          if (!mechanism) {
-            mechanism = { type: "generic", handled: true };
+    reduced = keys.reduce((acc, item) => {
+      let filename;
+      let tmp = obj;
+      if (!obj) {
+        obj = {};
+        tmp = obj;
+      }
+      if (tmp[item]) {
+        acc[tmp2[0]] = tmp2[1];
+      } else {
+        const arr = closure_0(item);
+        let diff = arr.length - 1;
+        if (0 <= diff) {
+          while (true) {
+            let tmp5 = arr[diff];
+            filename = tmp5;
+            if (tmp5) {
+              filename = tmp5.filename;
+            }
+            if (filename) {
+              if (_sentryDebugIds[item]) {
+                break;
+              }
+            }
+            diff = diff - 1;
           }
-          tmp12.mechanism = mechanism;
-          const obj3 = {};
-          const merged2 = Object.assign(tmp12.mechanism);
-          obj3.type = "chained";
-          obj3.source = combined;
-          obj3.exception_id = length;
-          obj3.parent_id = exception_id;
-          tmp12.mechanism = obj3;
-          const items = [tmp12];
-          HermesBuiltin.arraySpread(length, 1);
-          length = aggregateExceptionsFromError(tmp10, tmp11, closure_2, item, closure_3, items, tmp12, length);
+          acc[filename] = tmp8;
+          const items = [filename, tmp8];
+          obj[item] = items;
         }
-      });
-    }
-    return length;
+      }
+      return acc;
+    }, {});
+  } else {
+    return {};
   }
 }
 
-export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, arg1, arg2, arg3, arg4, exception, originalException) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 250;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        const _Error = Error;
-        if (obj.isInstanceOf(originalException.originalException, Error)) {
-          let tmp5;
-          if (exception.exception.values.length > 0) {
-            tmp5 = exception.exception.values[exception.exception.values.length - 1];
-          }
-          if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
-              if (value.value) {
-                value.value = _mod12876.truncate(value.value, num);
-              }
-              return value;
-            });
-            const arr = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
-          }
-        }
-        obj = num(12874);
+export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
+  const tmp = getFilenameToDebugIdMap(arg0);
+  const items = [];
+  if (tmp) {
+    const iter = arg1[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp7 = nextResult;
+      if (nextResult) {
+        obj = { type: "sourcemap", code_file: null, debug_id: null };
+        obj.code_file = tmp7;
+        obj.debug_id = tmp[tmp7];
+        let arr = items.push(obj);
       }
+      continue;
     }
+    return items;
+  } else {
+    return items;
   }
 };
+export { getFilenameToDebugIdMap };

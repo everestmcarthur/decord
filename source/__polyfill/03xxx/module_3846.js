@@ -1,11 +1,11 @@
 // Module ID: 3846
 // Function ID: 3847
-// Dependencies: [3693, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 3846
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,8 +24,13 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSaturday(arg0) {
+export default function isWeekend(arg0) {
   requiredArgs.default(1, arguments);
-  return 6 === _typeof.default(arg0).getDay();
+  const day = _typeof.default(arg0).getDay();
+  let tmp3 = 0 === day;
+  if (!tmp3) {
+    tmp3 = 6 === day;
+  }
+  return tmp3;
 };
 export default exports.default;

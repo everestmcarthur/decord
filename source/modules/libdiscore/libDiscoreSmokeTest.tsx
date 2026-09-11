@@ -1,10 +1,10 @@
-// Module ID: 18015
-// Function ID: 18016
+// Module ID: 18007
+// Function ID: 18008
 // Name: libDiscoreSmokeTest
 // Dependencies: [5, 1074, 3, 1355, 1351, 1983, 1242, 2]
 // Exports: default, formatErrorMessage, libDiscoreSmokeTest
 
-// Module 18015 (libDiscoreSmokeTest)
+// Module 18007 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import initLibdiscore from "initLibdiscore" /* 1355 */;

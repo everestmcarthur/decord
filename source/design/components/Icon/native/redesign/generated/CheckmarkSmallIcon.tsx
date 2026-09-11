@@ -1,13 +1,13 @@
-// Module ID: 7185
-// Function ID: 7186
+// Module ID: 7207
+// Function ID: 7208
 // Name: CheckmarkSmallIcon
-// Dependencies: [19, 21, 576, 4305, 7186, 2]
+// Dependencies: [19, 21, 576, 4307, 7208, 2]
 // Exports: CheckmarkSmallIcon
 
-// Module 7185 (CheckmarkSmallIcon)
+// Module 7207 (CheckmarkSmallIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod7186 from "module_7186" /* 7186 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod7208 from "module_7208" /* 7208 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const CheckmarkSmallIcon = function CheckmarkSmallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7186, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7208, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

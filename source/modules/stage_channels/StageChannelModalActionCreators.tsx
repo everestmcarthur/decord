@@ -1,18 +1,18 @@
-// Module ID: 8458
-// Function ID: 8459
+// Module ID: 8481
+// Function ID: 8482
 // Name: StageChannelModalActionCreators
-// Dependencies: [5, 4627, 1957, 1979, 4243, 2011, 1965, 8459, 7373, 5570, 12997, 12998, 5461, 4657, 4747, 13000, 2]
+// Dependencies: [5, 4629, 1957, 1979, 4245, 2011, 1965, 8482, 7395, 5572, 13022, 13023, 5463, 4659, 4749, 13025, 2]
 // Exports: connectOrLurkStage, navigateToStage, showUserProfile
 
-// Module 8458 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5461 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8459 */;
-import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 12998 */;
+// Module 8481 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5463 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8482 */;
+import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4629 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 const require = fn;
@@ -27,11 +27,11 @@ function connectToStage(channel, flag) {
     if (canResult) {
       let num = StageChannelActionCreatorExtrasAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8459).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(8482).openStageBlockedUsersSheet(channel, () => {
           connectAndOpen(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8459);
+        const tmp7Result = tmp7(8482);
       }
       tmp6 = num;
       tmp7 = importAll;
@@ -77,15 +77,15 @@ function connectAndOpen(channel, flag, flag2, arg3) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(8459).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8482).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8459);
+    const obj2 = flag2(8482);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8459).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8459);
+      flag2(8482).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8482);
     }
   }
 }
@@ -136,7 +136,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
               const items = [closure_0];
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: closure_0(7373).stopLurkingAll(items), done: false };
+              const obj7 = { value: closure_0(7395).stopLurkingAll(items), done: false };
               return obj7;
             }
             tmp25 = closure_0;
@@ -152,7 +152,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
           } else {
             c3 = 2;
             c4 = 1;
-            const obj9 = { value: tmp2(5570).joinGuild(closure_0, { lurker: true }), done: false };
+            const obj9 = { value: tmp2(5572).joinGuild(closure_0, { lurker: true }), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -168,10 +168,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(12997).initialize();
+              closure_1(13022).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(12997);
+              const obj = closure_1(13022);
             }
             return flag;
           });

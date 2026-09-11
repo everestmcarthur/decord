@@ -1,16 +1,16 @@
-// Module ID: 14918
-// Function ID: 14919
+// Module ID: 14895
+// Function ID: 14896
 // Name: AndroidViewNsfwDmCommandsSetting
-// Dependencies: [8027, 9365, 4816, 9366, 4818, 1115, 8476, 8478, 1935, 11540, 1114, 2]
+// Dependencies: [8050, 9388, 4818, 9389, 4820, 1115, 8499, 8501, 1935, 11564, 1114, 2]
 
-// Module 14918 (AndroidViewNsfwDmCommandsSetting)
+// Module 14895 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1114 */;
-import AgeGateUtils from "AgeGateUtils" /* 4816 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9365 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 9366 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import AgeGateUtils from "AgeGateUtils" /* 4818 */;
+import SettingsConstants from "SettingsConstants" /* 8050 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8499 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9388 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 9389 */;
+import SettingBuilders from "SettingBuilders" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -29,7 +29,7 @@ const toggle = SettingBuilders.createToggle({
   onValueChange: function handleValueChange(arg0) {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
-        const obj3 = { entryPoint: tmp(8478).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
+        const obj3 = { entryPoint: tmp(8501).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       }
     }

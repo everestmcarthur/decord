@@ -1,17 +1,17 @@
-// Module ID: 9252
-// Function ID: 9253
+// Module ID: 9275
+// Function ID: 9276
 // Name: GameActivityIcon
-// Dependencies: [19, 17, 21, 4605, 576, 4315, 8633, 4456, 5637, 1396, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 4317, 8656, 4458, 5639, 1396, 2]
 
-// Module 9252 (GameActivityIcon)
+// Module 9275 (GameActivityIcon)
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5637 */;
+import FastImageDefault from "FastImage" /* 5639 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 const obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.radii.xs };
@@ -39,11 +39,11 @@ export default noop.memo(function GameActivityIcon(style) {
       const obj2 = { size: "custom", style: null, color: null };
       const items1 = [tmp.icon, size1];
       obj2.style = items1;
-      const tmp2Result = tmp2(4456);
+      const tmp2Result = tmp2(4458);
       const colors = nativeDefault.colors;
-      obj2.color = tmp2(4456).isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(8633).UnknownGameIcon, { size: "custom", style: null, color: null });
-      const isThemeDarkResult = tmp2(4456).isThemeDark(obj.useThemeContext().theme);
+      obj2.color = tmp2(4458).isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
+      jsx(tmp2(8656).UnknownGameIcon, { size: "custom", style: null, color: null });
+      const isThemeDarkResult = tmp2(4458).isThemeDark(obj.useThemeContext().theme);
     }
   } else {
     const obj3 = { source: null, style: null };

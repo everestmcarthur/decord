@@ -1,8 +1,8 @@
-// Module ID: 6152
-// Function ID: 6153
+// Module ID: 6174
+// Function ID: 6175
 // Dependencies: [2]
 
-// Module 6152
+// Module 6174
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemInHandSpotIllustration-2x.png.js");

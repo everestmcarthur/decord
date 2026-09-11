@@ -1,11 +1,11 @@
-// Module ID: 11204
-// Function ID: 11205
+// Module ID: 11229
+// Function ID: 11230
 // Name: TooltipConstants
-// Dependencies: [5024, 2]
+// Dependencies: [5026, 2]
 // Exports: tooltipEnterExitAnimation
 
-// Module 11204 (TooltipConstants)
-import spring from "spring" /* 5024 */;
+// Module 11229 (TooltipConstants)
+import spring from "spring" /* 5026 */;
 import size from "module_2" /* 2 */;
 
 const TOOLTIP_SPRING = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
@@ -26,7 +26,7 @@ export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(posi
     obj2.opacity = spring.withSpring(targetHeight, closure_2, "respect-motion-settings", fn2);
     return obj2;
   };
-  fn.__closure = { withSpring: num(5024).withSpring, translateY: num, TOOLTIP_SPRING };
+  fn.__closure = { withSpring: num(5026).withSpring, translateY: num, TOOLTIP_SPRING };
   fn.__workletHash = 7727487832145;
   fn.__initData = __initData;
   return fn;

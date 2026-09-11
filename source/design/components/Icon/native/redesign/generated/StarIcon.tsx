@@ -1,13 +1,13 @@
-// Module ID: 10305
-// Function ID: 10306
+// Module ID: 10326
+// Function ID: 10327
 // Name: StarIcon
-// Dependencies: [19, 21, 576, 4305, 10306, 2]
+// Dependencies: [19, 21, 576, 4307, 10327, 2]
 // Exports: StarIcon
 
-// Module 10305 (StarIcon)
+// Module 10326 (StarIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod10306 from "module_10306" /* 10306 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod10327 from "module_10327" /* 10327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const StarIcon = function StarIcon(YELLOW_300) {
   }
   const merged = Object.assign(YELLOW_300, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10306, color: INTERACTIVE_ICON_DEFAULT, style: YELLOW_300.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10327, color: INTERACTIVE_ICON_DEFAULT, style: YELLOW_300.style });
 };

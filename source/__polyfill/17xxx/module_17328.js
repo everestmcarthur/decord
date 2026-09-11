@@ -1,77 +1,20 @@
 // Module ID: 17328
 // Function ID: 17329
-// Dependencies: [17329]
+// Dependencies: []
 
 // Module 17328
-import extend from "extend" /* 17329 */;
-
-require = arg1;
-const dependencyMap = arg6;
-let tmp = (() => {
-  try {
-    const _Object = Object;
-    return Object.defineProperty({}, "a", {});
-  } catch (err) {
-    return false;
-  }
-})();
-if (!tmp) {
-  let _Object = Object;
-}
-if (tmp) {
-  const _Object2 = Object;
-} else {
-  defineProperty = (__defineGetter__, arg1, get) => {
-    if ("get" in get) {
-      if (__defineGetter__.__defineGetter__) {
-        __defineGetter__.__defineGetter__(arg1, get.get);
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "el",
+  pluralRuleFunction(arg0, arg1) {
+    let str = "other";
+    let str2 = "other";
+    if (!arg1) {
+      if (1 == arg0) {
+        str = "one";
       }
+      str2 = str;
     }
-    const hop = extend.hop;
-    const call = hop.call;
-    let tmp = typeof call === "unknown" ? hop(arg1) : call(__defineGetter__, arg1);
-    if (tmp) {
-      tmp = !("value" in get);
-    }
-    if (!tmp) {
-      __defineGetter__[arg1] = get.value;
-    }
-  };
-}
-
-export { defineProperty };
-export const objCreate = Object.create || ((arg0, obj) => {
-  class F {
-    constructor() {
-      return;
-    }
+    return str2;
   }
-  F.prototype = arg0;
-  obj = Object.create(F.prototype);
-  for (const key10008 in arg1) {
-    class F {
-      constructor() {
-        return;
-      }
-    }
-    let hop = extend.hop;
-    let call = hop.call;
-    if (typeof call === "unknown") {
-      let hopResult = hop(key10008);
-    } else {
-      hopResult = call(arg1, key10008);
-    }
-    if (!hopResult) {
-      continue;
-    } else {
-      let tmp4 = fn(obj, key10008, arg1[key10008]);
-      class F {
-        constructor() {
-          return;
-        }
-      }
-    }
-    continue;
-  }
-  return obj;
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "el-CY", parentLocale: "el" });

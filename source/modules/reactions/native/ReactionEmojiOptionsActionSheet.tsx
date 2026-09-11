@@ -1,26 +1,26 @@
-// Module ID: 11333
-// Function ID: 11334
+// Module ID: 11357
+// Function ID: 11358
 // Name: ReactionEmojiOptionsActionSheet
-// Dependencies: [19, 17, 4597, 5509, 4426, 21, 4605, 576, 1935, 7240, 504, 10355, 1396, 4572, 10305, 10311, 4601, 1114, 10406, 4303, 7241, 4302, 7815, 7249, 7182, 5737, 5655, 2]
+// Dependencies: [19, 17, 4599, 5511, 4428, 21, 4607, 576, 1935, 7262, 504, 10376, 1396, 4574, 10326, 10332, 4603, 1114, 10427, 4305, 7263, 4304, 7837, 7271, 7204, 5739, 5657, 2]
 // Exports: default
 
-// Module 11333 (ReactionEmojiOptionsActionSheet)
+// Module 11357 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4302 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import ClipboardUtils from "ClipboardUtils" /* 7241 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7815 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10406 */;
+import ToastUtils from "ToastUtils" /* 4304 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import ClipboardUtils from "ClipboardUtils" /* 7263 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7837 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10427 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
-import EmojiStore from "EmojiStore" /* 5509 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import AccessibilityStore from "AccessibilityStore" /* 4599 */;
+import EmojiStore from "EmojiStore" /* 5511 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 }, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 };
 obj2.reactionPill = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.xl, borderWidth: 4, borderColor: nativeDefault.colors.BORDER_STRONG, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -99,9 +99,9 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       style = obj;
     }
     if (arg0) {
-      let StarOutlineIcon = tmp9(10305).StarIcon;
+      let StarOutlineIcon = tmp9(10326).StarIcon;
     } else {
-      StarOutlineIcon = tmp9(10311).StarOutlineIcon;
+      StarOutlineIcon = tmp9(10332).StarOutlineIcon;
     }
     return React7(StarOutlineIcon, { style });
   }, items4);

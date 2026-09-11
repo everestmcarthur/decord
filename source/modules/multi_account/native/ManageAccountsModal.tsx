@@ -1,22 +1,22 @@
-// Module ID: 16458
-// Function ID: 16459
+// Module ID: 16446
+// Function ID: 16447
 // Name: ManageAccountsModal
-// Dependencies: [32, 5, 19, 17, 502, 4450, 1371, 12483, 12484, 16459, 1074, 21, 7965, 4605, 576, 504, 1178, 4950, 1114, 12487, 5173, 15393, 16033, 4341, 4606, 8337, 1242, 7175, 16460, 16034, 12493, 16461, 5665, 8663, 11276, 7052, 7914, 10997, 16059, 6643, 6992, 16058, 2]
+// Dependencies: [32, 5, 19, 17, 502, 4452, 1371, 12508, 12509, 16447, 1074, 21, 7988, 4607, 576, 504, 1178, 4952, 1114, 12512, 5175, 15375, 16022, 4343, 4608, 8360, 1242, 7197, 16448, 16023, 12518, 16449, 5667, 8686, 11300, 7074, 7937, 11019, 16048, 6665, 7014, 16047, 2]
 
-// Module 16458 (ManageAccountsModal)
+// Module 16446 (ManageAccountsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import timing from "timing" /* 4606 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
-import HeaderShared from "HeaderShared" /* 7914 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10997 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12487 */;
+import timing from "timing" /* 4608 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4952 */;
+import HeaderShared from "HeaderShared" /* 7937 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11019 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12512 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamerModeStore from "StreamerModeStore" /* 4450 */;
+import StreamerModeStore from "StreamerModeStore" /* 4452 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -63,7 +63,7 @@ function RemoveMultiAccountUserButton(user) {
             obj4.cancelText = intl4.string(tmp2(1114).t["ETE/oC"]);
             v1 = 1;
             v3 = 1;
-            const obj7 = { value: v1(4950).confirm(obj4), done: false };
+            const obj7 = { value: v1(4952).confirm(obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -75,8 +75,8 @@ function RemoveMultiAccountUserButton(user) {
           return obj8;
         } else {
           if (value) {
-            v3(12487).removeAccount(closure_128_0.id);
-            const obj = v3(12487);
+            v3(12512).removeAccount(closure_128_0.id);
+            const obj = v3(12512);
           }
           v3 = 3;
           return { value: "HermesInternal", done: null };
@@ -122,8 +122,8 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_18(tmp(15393).CircleMinusIcon, obj4);
-    return closure_18(tmp(5173).PressableOpacity, obj3);
+    obj3.children = closure_18(tmp(15375).CircleMinusIcon, obj4);
+    return closure_18(tmp(5175).PressableOpacity, obj3);
   }
   let obj2 = user(504);
 }
@@ -264,17 +264,17 @@ function ManageAccounts(isEditing) {
   return closure_18(isEditing(multiAccountUsers[27]).SafeAreaPaddingView, obj6);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(12483).MultiAccountTokenStatus;
-let Constants = fn(12484);
+const MultiAccountTokenStatus = fn(12508).MultiAccountTokenStatus;
+let Constants = fn(12509);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_12, MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
-const ManageAccountsScreens = fn(16459).ManageAccountsScreens;
+const ManageAccountsScreens = fn(16447).ManageAccountsScreens;
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const NativeStackNavigator = fn(7965);
+const NativeStackNavigator = fn(7988);
 let closure_20 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 }, sortableListView: null, addAccountLabel: null, trailingIconContainer: null, trailingIcon: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 };
 obj.sortableListView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -354,12 +354,12 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(16059), {
+        return closure_1_18(isEditing(16048), {
           handleLogin(login, password, undelete) {
-            isEditing(6643).login({ login, password, undelete });
+            isEditing(6665).login({ login, password, undelete });
           },
           onReset() {
-            isEditing(6643).loginReset(true);
+            isEditing(6665).loginReset(true);
           }
         });
       }
@@ -370,7 +370,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(6992), { isMultiAccount: true });
+        return closure_1_18(isEditing(7014), { isMultiAccount: true });
       }
     }),
     closure_18(closure_20.Screen, {
@@ -379,7 +379,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(16058), { isMultiAccount: true });
+        return closure_1_18(isEditing(16047), { isMultiAccount: true });
       }
     })
   ];

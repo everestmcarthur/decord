@@ -1,222 +1,239 @@
 // Module ID: 12912
 // Function ID: 12913
-// Dependencies: [32, 12913, 12873, 12874, 12870]
-// Exports: normalizeUrlToBase
+// Dependencies: [41, 42, 12913, 12899, 12910, 12918]
+// Exports: getStackAsyncContextStrategy
 
 // Module 12912
-import _mod12873 from "module_12873" /* 12873 */;
-import _mod12874 from "module_12874" /* 12874 */;
-import memoBuilder from "memoBuilder" /* 12913 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function normalize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 100;
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+  const obj = AsyncContextStack(12910);
+  const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12918).getDefaultCurrentScope();
+    const tmpResult = tmp(12918);
+    stack = new _moduleResult(defaultCurrentScope, tmp(12918).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12918);
   }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = Infinity;
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
+}
+function withSetScope(scope, arg1) {
+  closure_1 = arg1;
+  const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+  const obj = AsyncContextStack(12910);
+  const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12918).getDefaultCurrentScope();
+    const tmpResult = tmp(12918);
+    stack = new _moduleResult(defaultCurrentScope, tmp(12918).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12918);
   }
-  try {
-    return visit("", arg0, num, num2);
-  } catch (tmp5) {
-    const obj = { ERROR: null };
-    const _HermesInternal = HermesInternal;
-    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
-    return obj;
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
+  });
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+  const obj = AsyncContextStack(12910);
+  const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12918).getDefaultCurrentScope();
+    const tmpResult = tmp(12918);
+    stack = new closure_3(defaultCurrentScope, tmp(12918).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12918);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+    const obj = AsyncContextStack(12910);
+    const tmp = closure_0;
+    const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      const defaultCurrentScope = tmp2(12918).getDefaultCurrentScope();
+      const tmp2Result = tmp2(12918);
+      stack = new closure_2_3(defaultCurrentScope, tmp2(12918).getDefaultIsolationScope());
+      const tmp2Result2 = tmp2(12918);
+    }
+    sentryCarrier.stack = stack;
+    return tmp(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
+    }
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
+    }
+    items = [];
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
   }
 }
-function visit(arg0, __sentry_skip_normalization__) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = Infinity;
-  }
-  let num2 = arg3;
-  if (arg3 === undefined) {
-    num2 = Infinity;
-  }
-  let memoBuilderResult = arg4;
-  if (arg4 === undefined) {
-    memoBuilderResult = memoBuilder.memoBuilder();
-  }
-  _slicedToArray(memoBuilderResult, 2);
-  if (null != __sentry_skip_normalization__) {
-    const items = ["boolean", "string"];
-    if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ === "number") {
-        let _Number = Number;
-      }
-      let str = (function stringifyValue(arg0, _events) {
-        try {
-          if ("domain" === arg0) {
-            if (_events) {
-              if (typeof _events === "object") {
-                if (_events._events) {
-                  return "[Domain]";
-                }
-              }
-            }
-          }
-          if ("domainEmitter" === arg0) {
-            return "[DomainEmitter]";
-          } else {
-            if (undefined !== global) {
-              if (_events === global) {
-                return "[Global]";
-              }
-            }
-            const _window = window;
-            if (typeof window !== "undefined") {
-              const _window2 = window;
-              if (_events === window) {
-                return "[Window]";
-              }
-            }
-            const _document = document;
-            if (typeof document !== "undefined") {
-              const _document2 = document;
-              if (_events === document) {
-                return "[Document]";
-              }
-            }
-            if (obj.isVueViewModel(_events)) {
-              return "[VueViewModel]";
-            } else {
-              if (tmp4Result.isSyntheticEvent(_events)) {
-                return "[SyntheticEvent]";
-              } else {
-                if (typeof _events === "number") {
-                  const _Number = Number;
-                  if (!Number.isFinite(_events)) {
-                    const _HermesInternal = HermesInternal;
-                    return "[" + _events + "]";
-                  }
-                }
-                if (typeof _events === "function") {
-                  const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4(tmp5[4]).getFunctionName(_events) + "]";
-                } else if (typeof _events === "symbol") {
-                  const _String2 = String;
-                  const _HermesInternal3 = HermesInternal;
-                  return "[" + String(_events) + "]";
-                } else if (typeof _events === "bigint") {
-                  const _String = String;
-                  const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(_events) + "]";
-                } else {
-                  const tmp9 = (function getConstructorName(_events) {
-                    const prototypeOf = Object.getPrototypeOf(_events);
-                    let str = "null prototype";
-                    if (prototypeOf) {
-                      str = prototypeOf.constructor.name;
-                    }
-                    return str;
-                  })(_events);
-                  const _HermesInternal6 = HermesInternal;
-                  if (obj4.test(tmp9)) {
-                    let combined = concat(tmp10, "]");
-                  } else {
-                    combined = concat(tmp10, "]");
-                  }
-                  return combined;
-                }
-              }
-              tmp4Result = tmp4(tmp5[3]);
-            }
-            obj = _mod12874;
-          }
-        } catch (tmp7) {
-          const _HermesInternal5 = HermesInternal;
-          return "**non-serializable** (" + tmp7 + ")";
-        }
-      })(arg0, __sentry_skip_normalization__);
-      if (str.startsWith("[object ")) {
-        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
-          return __sentry_skip_normalization__;
-        } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
-            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
-          }
-          if (0 === num) {
-            return str.replace("object ", "");
-          } else if (tmp6(__sentry_skip_normalization__)) {
-            return "[Circular ~]";
-          } else {
-            if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON === "function") {
-                try {
-                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
-                } catch (err) {
-                }
-              }
-            }
-            const _Array = Array;
-            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
-            const convertToPlainObjectResult = _mod12873.convertToPlainObject(__sentry_skip_normalization__);
-            const keys = Object.keys();
-            if (keys !== undefined) {
-              while (keys[tmp] !== undefined) {
-                let _Object = Object;
-                hasOwnProperty = Object.prototype.hasOwnProperty;
-                let call = hasOwnProperty.call;
-                let tmp28 = tmp21;
-                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
-                  continue;
-                } else {
-                  if (tmp20 >= num2) {
-                    let str4 = "[MaxProperties ~]";
-                    tmp14[tmp21] = "[MaxProperties ~]";
-                    break;
-                  } else {
-                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
-                    let num6 = tmp20 + 1;
-                    continue;
-                  }
-                  break;
-                }
-                break;
-              }
-            }
-            tmp7(__sentry_skip_normalization__);
-            return tmp14;
-          }
-        }
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then((result) => {
+          self._popScope();
+          return result;
+        }, (arg0) => {
+          self._popScope();
+          throw arg0;
+        });
       } else {
-        return str;
+        self._popScope();
+        nextPromise = promise;
       }
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
     }
   }
-  return __sentry_skip_normalization__;
-}
-function normalizeToSize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 3;
-  }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = 102400;
-  }
-  let tmp = normalize(arg0, num);
-  if (~-str.split(/%..|./).length > num2) {
-    tmp = normalizeToSize(arg0, num - 1, num2);
-  }
-  return tmp;
-}
-
-export { normalize };
-export { normalizeToSize };
-export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
-  const replaced = str.replace(/\\/g, "/");
-  try {
-    const _decodeURI = decodeURI;
-    str = decodeURI(arg0);
-    const str2 = str.replace(/\\/g, "/");
-    const _RegExp = RegExp;
-    const _HermesInternal = HermesInternal;
-    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str.replace(/\\/g, "/").replace(/webpack:\/?/g, "").replace(regExp, "app:///");
-  } catch (err) {
-  }
 };
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
+    }
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
+    }
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
+    }
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
+    }
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
+    }
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
+      }
+      return arr;
+    }
+  }
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
+
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12910).getMainCarrier();
+      let obj = closure_0(12910);
+      let sentryCarrier = closure_0(12910).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let defaultCurrentScope = tmp(12918).getDefaultCurrentScope();
+        const tmpResult = tmp(12918);
+        stack = new closure_3(defaultCurrentScope, tmp(12918).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12918);
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+        const obj = AsyncContextStack(12910);
+        const tmp = closure_0;
+        const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          const defaultCurrentScope = tmp2(12918).getDefaultCurrentScope();
+          const tmp2Result = tmp2(12918);
+          stack = new closure_2_3(defaultCurrentScope, tmp2(12918).getDefaultIsolationScope());
+          const tmp2Result2 = tmp2(12918);
+        }
+        sentryCarrier.stack = stack;
+        return tmp(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+      const obj = AsyncContextStack(12910);
+      const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = tmp(12918).getDefaultCurrentScope();
+        const tmpResult = tmp(12918);
+        stack = new closure_1_3(defaultCurrentScope, tmp(12918).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12918);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12910).getMainCarrier();
+      const obj = AsyncContextStack(12910);
+      const sentryCarrier = AsyncContextStack(12910).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = tmp(12918).getDefaultCurrentScope();
+        const tmpResult = tmp(12918);
+        stack = new closure_1_3(defaultCurrentScope, tmp(12918).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12918);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
+    }
+  };
+}

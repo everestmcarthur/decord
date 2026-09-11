@@ -1,20 +1,20 @@
 // Module ID: 3973
 // Function ID: 3974
-// Dependencies: [3972, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 3973
-import module_3972_mod from "module_3972" /* 3972 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
-let module_3972 = module_3972_mod;
-if (!module_3972) {
-  const obj = { default: module_3972 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3972;
+  tmp3 = _typeof;
 }
-module_3972 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -24,8 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
+export default function getSeconds(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(module_3972.default(arg0) / 1000);
+  return _typeof.default(arg0).getSeconds();
 };
 export default exports.default;

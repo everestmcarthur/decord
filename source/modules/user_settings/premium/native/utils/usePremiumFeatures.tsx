@@ -1,22 +1,22 @@
-// Module ID: 9440
-// Function ID: 9441
+// Module ID: 9463
+// Function ID: 9464
 // Name: usePremiumFeatures
-// Dependencies: [19, 1373, 4276, 1379, 4304, 1114, 3074, 9441, 4262, 8827, 9443, 8732, 9290, 9445, 9447, 576, 2]
+// Dependencies: [19, 1373, 4278, 1379, 4306, 1114, 3074, 9464, 4264, 8850, 9466, 8755, 9313, 9468, 9470, 576, 2]
 // Exports: default
 
-// Module 9440 (usePremiumFeatures)
+// Module 9463 (usePremiumFeatures)
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
 import _modDef3074 from "module_3074" /* 3074 */;
-import PremiumUtils from "PremiumUtils" /* 4262 */;
-import FriendsIcon from "FriendsIcon" /* 4304 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8732 */;
-import ReactionIcon from "ReactionIcon" /* 8827 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9290 */;
-import UploadIcon from "UploadIcon" /* 9441 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9443 */;
-import BoostGemIcon from "BoostGemIcon" /* 9445 */;
-import UserSquareIcon from "UserSquareIcon" /* 9447 */;
+import PremiumUtils from "PremiumUtils" /* 4264 */;
+import FriendsIcon from "FriendsIcon" /* 4306 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8755 */;
+import ReactionIcon from "ReactionIcon" /* 8850 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9313 */;
+import UploadIcon from "UploadIcon" /* 9464 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9466 */;
+import BoostGemIcon from "BoostGemIcon" /* 9468 */;
+import UserSquareIcon from "UserSquareIcon" /* 9470 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ const require = globalThis.__r;
 require = fn;
 const PremiumConstants = fn(1373);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(4276).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(4278).TOTAL_PREMIUM_GROUP_USERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
 

@@ -1,19 +1,19 @@
-// Module ID: 12244
-// Function ID: 12245
+// Module ID: 12269
+// Function ID: 12270
 // Name: ChatInputExpressionButton
-// Dependencies: [19, 21, 4605, 576, 4306, 5173, 1114, 1178, 11319, 8828, 2]
+// Dependencies: [19, 21, 4607, 576, 4308, 5175, 1114, 1178, 11343, 8851, 2]
 
-// Module 12244 (ChatInputExpressionButton)
+// Module 12269 (ChatInputExpressionButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import useToken from "useToken" /* 4306 */;
-import Pressables from "Pressables" /* 5173 */;
+import useToken from "useToken" /* 4308 */;
+import Pressables from "Pressables" /* 5175 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_5 = createStyles.createStyles((height) => {
   const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, alignItems: "center", justifyContent: "center" };
@@ -57,6 +57,6 @@ export default noop.memo((active) => {
   obj4.accessibilityState = { expanded: flag };
   obj4.onPress = callback;
   const ref = noop.useRef(null);
-  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11319 : 8828) });
+  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11343 : 8851) });
   return jsx(Pressables.PressableOpacity, { ref: noop.useRef(null), style: null, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null });
 });

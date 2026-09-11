@@ -1,14 +1,14 @@
-// Module ID: 17591
-// Function ID: 17592
+// Module ID: 17583
+// Function ID: 17584
 // Name: navigateToSystemDM
-// Dependencies: [1957, 17590, 5461, 2]
+// Dependencies: [1957, 17582, 5463, 2]
 // Exports: default
 
-// Module 17591 (navigateToSystemDM)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5461 */;
+// Module 17583 (navigateToSystemDM)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5463 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
-const SYSTEM_USER = fn(17590).SYSTEM_USER;
+const SYSTEM_USER = fn(17582).SYSTEM_USER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 

@@ -1,12 +1,12 @@
-// Module ID: 13204
-// Function ID: 13205
+// Module ID: 13229
+// Function ID: 13230
 // Name: usePrivateChannelCall
-// Dependencies: [5, 19, 1957, 504, 1114, 10939, 4618, 2]
+// Dependencies: [5, 19, 1957, 504, 1114, 10960, 4620, 2]
 // Exports: default
 
-// Module 13204 (usePrivateChannelCall)
+// Module 13229 (usePrivateChannelCall)
 import util from "util" /* 1114 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10939 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -87,7 +87,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             if (null == channel) {
               dependencyMap = 1;
               c3 = 1;
-              const obj7 = { value: tmp3(4618).ensurePrivateChannel(tmp32), done: false };
+              const obj7 = { value: tmp3(4620).ensurePrivateChannel(tmp32), done: false };
               return obj7;
             }
             tmp32 = closure_0;
@@ -108,8 +108,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(10939)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(10939)(channel, closure_129_1);
+          tmp3(10960)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(10960)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();

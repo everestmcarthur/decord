@@ -1,15 +1,15 @@
-// Module ID: 16745
-// Function ID: 16746
+// Module ID: 16733
+// Function ID: 16734
 // Name: rows/GroupDMRow
-// Dependencies: [19, 21, 4758, 10982, 1178, 10983, 4601, 16744, 2]
+// Dependencies: [19, 21, 4760, 11004, 1178, 11005, 4603, 16732, 2]
 // Exports: default
 
-// Module 16745 (rows/GroupDMRow)
+// Module 16733 (rows/GroupDMRow)
 import native from "native" /* 1178 */;
-import useChannelNameDefault from "useChannelName" /* 4758 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10982 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10983 */;
-import SearchListRow from "SearchListRow" /* 16744 */;
+import useChannelNameDefault from "useChannelName" /* 4760 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11004 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 11005 */;
+import SearchListRow from "SearchListRow" /* 16732 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function GroupDMRow(channel) {
   let tmp3Result;
   if (null != recipientsLabel) {
     const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-    tmp3Result = tmp3(tmp5(4601).Text, obj3);
+    tmp3Result = tmp3(tmp5(4603).Text, obj3);
   }
   let str2 = str;
   if (str == null) {

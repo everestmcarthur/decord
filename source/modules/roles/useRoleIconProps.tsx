@@ -1,11 +1,11 @@
-// Module ID: 7238
-// Function ID: 7239
+// Module ID: 7260
+// Function ID: 7261
 // Name: useRoleIconProps
-// Dependencies: [19, 2015, 1979, 504, 7239, 2]
+// Dependencies: [19, 2015, 1979, 504, 7261, 2]
 // Exports: computeRoleIconRole, getRoleIconProps, useRoleIconProps, useRoleIconPropsForPreview
 
-// Module 7238 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7239 */;
+// Module 7260 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7261 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;

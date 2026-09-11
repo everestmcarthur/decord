@@ -1,81 +1,32 @@
 // Module ID: 12962
 // Function ID: 12963
-// Dependencies: [12923, 12911, 12946, 12870]
+// Dependencies: [12894]
+// Exports: applySdkMetadata
 
 // Module 12962
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12870 */;
-import setupIntegration from "module_12923" /* 12923 */;
+import _mod12894 from "module_12894" /* 12894 */;
 
-let c2 = "_sentryBundlerPluginAppKey:";
+require = arg1;
+const dependencyMap = arg6;
 
-export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  const behaviour = arg0;
-  return {
-    name: "ThirdPartyErrorsFilter",
-    setup(on) {
-      const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
-            }
-            if (tmp3) {
-              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
-              const obj = options(dependencyMap[2]);
-            }
-          }
-        });
-      });
-      on.on("applyFrameMetadata", (type) => {
-        if (!type.type) {
-          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(dependencyMap[2]);
-        }
-      });
-    },
-    processEvent(tags) {
-      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
-      let mapped;
-      if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          if (module_metadata.module_metadata) {
-            const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((item) => item.startsWith(length));
-            let mapped = found.map((arr) => arr.slice(length.length));
-          } else {
-            mapped = [];
-          }
-          return mapped;
-        });
-      }
-      if (mapped) {
-        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          let str2 = "some";
-        } else {
-          str2 = "every";
-        }
-        if (mapped[str2]((arr) => !arr.some((item) => {
-          filterKeys = filterKeys.filterKeys;
-          return filterKeys.includes(item);
-        }))) {
-          if ("drop-error-if-contains-third-party-frames" !== tmp2.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== tmp2.behaviour) {
-              const obj2 = {};
-              const merged = Object.assign(tags.tags);
-              obj2.third_party_code = true;
-              tags.tags = obj2;
-            }
-          }
-          return null;
-        }
-      }
-      return tags;
-    }
-  };
-});
+export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
+  let arr = arg2;
+  if (arg2 === undefined) {
+    const items = [arg1];
+    arr = items;
+  }
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "npm";
+  }
+  const tmp = _metadata._metadata || {};
+  if (!tmp.sdk) {
+    const obj = { name: null, packages: null, version: null };
+    const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12894.SDK_VERSION }));
+    obj.version = str(12894).SDK_VERSION;
+    tmp.sdk = obj;
+  }
+  _metadata._metadata = tmp;
+};

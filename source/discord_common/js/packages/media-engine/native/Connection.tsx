@@ -1,25 +1,25 @@
-// Module ID: 4671
-// Function ID: 4672
+// Module ID: 4673
+// Function ID: 4674
 // Name: Connection
-// Dependencies: [32, 4630, 4662, 4672, 1910, 4, 4660, 4720, 4721, 4722, 4670, 4724, 4673, 4725, 4677, 4726, 4729, 2]
+// Dependencies: [32, 4632, 4664, 4674, 1910, 4, 4662, 4722, 4723, 4724, 4672, 4726, 4675, 4727, 4679, 4728, 4731, 2]
 
-// Module 4671 (Connection)
+// Module 4673 (Connection)
 import inject from "inject" /* 1910 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4660 */;
-import VideoQualityManager from "VideoQualityManager" /* 4673 */;
-import cloneDeepDefault from "cloneDeep" /* 4677 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 4720 */;
-import transformStatsDefault from "transformStats" /* 4722 */;
-import _modDef4724 from "module_4724" /* 4724 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4725 */;
-import reduceDefault from "reduce" /* 4726 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4662 */;
+import VideoQualityManager from "VideoQualityManager" /* 4675 */;
+import cloneDeepDefault from "cloneDeep" /* 4679 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 4722 */;
+import transformStatsDefault from "transformStats" /* 4724 */;
+import _modDef4726 from "module_4726" /* 4726 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4727 */;
+import reduceDefault from "reduce" /* 4728 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseConnection from "BaseConnection" /* 4672 */;
+import BaseConnection from "BaseConnection" /* 4674 */;
 
 require = fn;
-let Constants = fn(4630);
+let Constants = fn(4632);
 ({ StatsFilter: closure_4, ExperimentFlags: hasOwnProperty, DESKTOP_BITRATE_ENHANCED: metroRequire, DESKTOP_BITRATE: closure_7, MEDIA_SINK_WANTS_PROPERTIES: closure_8, MediaTypes: closure_9, SIMULCAST_HQ_QUALITY: c10 } = Constants);
-Constants = fn(4662);
+Constants = fn(4664);
 ({ NATIVE_MODE_VALUES: closure_11, InputModes: closure_12, ConnectionStates: map1, Codecs: closure_14, MediaEngineContextTypes: closure_15, SpeakingFlags: closure_16, ResolutionTypes: closure_17, NativeFeatures: closure_18, NoiseCancellerError: closure_19, DEFAULT_VOLUME: closure_20, DEFAULT_STREAM_VOLUME: closure_21, DEFAULT_SOUNDSHARE_VOICE_BITRATE: closure_22, DEFAULT_CALL_BITRATE: closure_23, DEFAULT_CALL_MIN_BITRATE: closure_24, DEFAULT_CALL_MAX_BITRATE: closure_25, DEFAULT_PRIORITY_SPEAKER_DUCKING: closure_26, PING_INTERVAL: closure_27 } = Constants);
 let c28 = 0;
 let Connection;
@@ -65,7 +65,6 @@ class Connection extends tmp4 {
     tmp1.automaticGainControl = { enabled: true };
     tmp1.noiseCancellation = false;
     tmp1.noiseCancellationDuringProcessing = false;
-    tmp1.noiseCancellationConsecutiveFailures = 0;
     tmp1.echoReferenceMode = "mix";
     tmp1.attenuationFactor = 0.5;
     tmp1.attenuateWhileSpeakingSelf = false;
@@ -109,7 +108,7 @@ class Connection extends tmp4 {
           tmp11 = false === obj.soundshareSentSpeakingEvent;
         }
         if (tmp11) {
-          obj.emit(tmp3(4660).BaseConnectionEvent.SoundshareSpeaking);
+          obj.emit(tmp3(4662).BaseConnectionEvent.SoundshareSpeaking);
           obj.soundshareSentSpeakingEvent = true;
         }
         tmp3 = require;
@@ -367,8 +366,8 @@ class Connection extends tmp4 {
               obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * tmp24(4729)(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = tmp24(4729)(diff1 / (diff + diff1), 0, 1);
+                obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * tmp24(4731)(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = tmp24(4731)(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -395,9 +394,9 @@ class Connection extends tmp4 {
                             if (null != first1.noiseCancellerProcessTime) {
                               const diff3 = first.noiseCancellerProcessTime - first1.noiseCancellerProcessTime;
                               if (diff3 / tmp13 > 8) {
-                                obj.emit(tmp14(4660).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_CPU_OVERUSE);
+                                obj.emit(tmp14(4662).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_CPU_OVERUSE);
                               } else if (0 === diff3) {
-                                obj.emit(tmp14(4660).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_FAILED);
+                                obj.emit(tmp14(4662).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_FAILED);
                               }
                             }
                           }
@@ -410,7 +409,7 @@ class Connection extends tmp4 {
                               if (null != first.voiceActivityDetectorProcessTime) {
                                 if (null != first1.voiceActivityDetectorProcessTime) {
                                   if ((first.voiceActivityDetectorProcessTime - first1.voiceActivityDetectorProcessTime) / diff2 > 4) {
-                                    obj.emit(tmp14(4660).BaseConnectionEvent.VoiceActivityDetectorError, constants9.KRISP_VAD_CPU_OVERUSE);
+                                    obj.emit(tmp14(4662).BaseConnectionEvent.VoiceActivityDetectorError, constants9.KRISP_VAD_CPU_OVERUSE);
                                   }
                                 }
                               }
@@ -644,7 +643,7 @@ prototype["initialize"] = function initialize(address) {
               if (port.setVideoCodecErrorCallback != null) {
                 const result6 = setVideoCodecErrorCallback(obj.handleVideoCodecError);
               }
-              voiceEngine.setTransportOptions({ builtInEchoCancellation: true, echoCancellation: connectionTransportOptions.echoCancellation, noiseSuppression: connectionTransportOptions.noiseSuppression, automaticGainControl: connectionTransportOptions.automaticGainControl.enabled, automaticGainControlConfig: connectionTransportOptions.automaticGainControl, noiseCancellation: connectionTransportOptions.noiseCancellation, noiseCancellationDuringProcessing: connectionTransportOptions.noiseCancellationDuringProcessing, noiseCancellationConsecutiveFailures: connectionTransportOptions.noiseCancellationConsecutiveFailures });
+              voiceEngine.setTransportOptions({ builtInEchoCancellation: true, echoCancellation: connectionTransportOptions.echoCancellation, noiseSuppression: connectionTransportOptions.noiseSuppression, automaticGainControl: connectionTransportOptions.automaticGainControl.enabled, automaticGainControlConfig: connectionTransportOptions.automaticGainControl, noiseCancellation: connectionTransportOptions.noiseCancellation, noiseCancellationDuringProcessing: connectionTransportOptions.noiseCancellationDuringProcessing });
               voiceEngine.setNoInputThreshold(-100);
               voiceEngine.setNoInputCallback(connectionTransportOptions.handleNoInput);
               if (connectionTransportOptions.videoSupported) {
@@ -697,10 +696,10 @@ prototype["initialize"] = function initialize(address) {
               connectionTransportOptions.mergeUsers(userOptions);
               connectionTransportOptions.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.RemoteStreamsReady, userOptions.length);
               const keys = Object.keys(obj.localSpeakingFlags);
-              for (const item10173 of keys) {
-                let tmp52 = item10173;
+              for (const item10172 of keys) {
+                let tmp52 = item10172;
                 let obj5 = connectionTransportOptions;
-                if (item10173 !== connectionTransportOptions.userId) {
+                if (item10172 !== connectionTransportOptions.userId) {
                   let setSpeakingFlagsResult = obj5.setSpeakingFlags(tmp52, obj5.localSpeakingFlags[tmp52]);
                 }
                 continue;
@@ -784,13 +783,13 @@ prototype["getStats"] = function getStats() {
         const obj = self(1910);
       }
     });
-    let obj = self(4721);
-    resolved = self(4721).timeout(promise, self(4670).STATS_INTERVAL).catch((error) => {
-      if (!(error instanceof self(4721).TimeoutError)) {
+    let obj = self(4723);
+    resolved = self(4723).timeout(promise, self(4672).STATS_INTERVAL).catch((error) => {
+      if (!(error instanceof self(4723).TimeoutError)) {
         throw error;
       }
     });
-    const timeoutResult = self(4721).timeout(promise, self(4670).STATS_INTERVAL);
+    const timeoutResult = self(4723).timeout(promise, self(4672).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1128,11 +1127,6 @@ prototype["setNoiseCancellationDuringProcessing"] = function setNoiseCancellatio
   const voiceEngine = inject.getVoiceEngine();
   voiceEngine.setTransportOptions({ noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing });
 };
-prototype["setNoiseCancellationCpuDisablement"] = function setNoiseCancellationCpuDisablement(consecutiveFailures) {
-  this.noiseCancellationConsecutiveFailures = consecutiveFailures;
-  const voiceEngine = inject.getVoiceEngine();
-  voiceEngine.setTransportOptions({ noiseCancellationConsecutiveFailures: this.noiseCancellationConsecutiveFailures });
-};
 prototype["setSkipNoiseCancellationIfMuted"] = function setSkipNoiseCancellationIfMuted(enabled) {
   const voiceEngine = inject.getVoiceEngine();
   voiceEngine.setTransportOptions({ skipNoiseCancellationIfMuted: enabled });
@@ -1348,7 +1342,7 @@ prototype["setGoLiveSource"] = function setGoLiveSource(quality) {
     if (null != self.conn.setDesktopSource) {
       if (null != result3.desktopDescription) {
         const desktopDescription = result3.desktopDescription;
-        ({ id, useVideoHook, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useGraphicsCapture, useHookFramePacer, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight } = desktopDescription);
+        ({ id, useVideoHook, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useGraphicsCapture, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight } = desktopDescription);
         self.setSoundshareSource(desktopDescription.soundshareId, desktopDescription.useLoopback);
         if (null != id) {
           let parts = id.split(":");
@@ -1381,7 +1375,7 @@ prototype["setGoLiveSource"] = function setGoLiveSource(quality) {
           if (null != id) {
             const result1 = self.setDesktopEncodingOptions(result, resolution, frameRate);
             const conn3 = self.conn;
-            const obj = { type: tmp9, sourceId: tmp10, useVideoHook, useHookFramePacer, useGraphicsCapture, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight };
+            const obj = { type: tmp9, sourceId: tmp10, useVideoHook, useHookFramePacer: false, useGraphicsCapture, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight };
             const result2 = conn3.setDesktopSourceWithOptions(obj);
           } else {
             const conn2 = self.conn;
@@ -1464,7 +1458,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
         const obj = { capture: size2, encode: size2, bitrateMax: calcMaxBitrateFuncResult };
         videoQualityManager2.setGoliveQuality(obj);
         if (self.videoStreamParameters.length <= num5) {
-          const Video = tmp9(4660).BaseConnectionEvent.Video;
+          const Video = tmp9(4662).BaseConnectionEvent.Video;
           ({ userId, audioSSRC } = self);
           const ssrc = self.videoStreamParameters[num5].ssrc;
           const ssrc2 = self.videoStreamParameters[num5].ssrc;
@@ -1606,10 +1600,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "Array" };
+        return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef4724(self.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
+        if (!_modDef4726(self.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(tmp[findIndexResult]);
           tmp18.videoStreamParameters[findIndexResult] = obj;

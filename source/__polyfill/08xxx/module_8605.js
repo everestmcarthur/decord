@@ -1,18 +1,16 @@
 // Module ID: 8605
 // Function ID: 8606
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8536, 8606, 8545]
+// Dependencies: [41, 42, 93, 95, 98, 8560, 8583]
 
 // Module 8605
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8545 from "module_8545" /* 8545 */;
-import _modDef8606 from "module_8606" /* 8606 */;
+import _modDef8583 from "module_8583" /* 8583 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Path = fn;
+const FeMorphology = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,16 +30,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Path {
+class FeMorphology {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Path);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeMorphology);
+    tmp2 = closure_4;
+    obj = closure_4(FeMorphology);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -54,31 +50,18 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Path, _modDef8545);
+_inherits(FeMorphology, _modDef8583);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    const merged = Object.assign(Path(8536).extract(this, props));
-    obj.d = props.d;
-    const obj2 = Path(8536);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8606, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeMorphology(8560).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = _createClass(FeMorphology, items);
+importDefaultResultResult.displayName = "FeMorphology";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

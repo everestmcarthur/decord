@@ -1,21 +1,21 @@
-// Module ID: 16774
-// Function ID: 16775
+// Module ID: 16762
+// Function ID: 16763
 // Name: FileGridItem
-// Dependencies: [19, 17, 1957, 7930, 21, 4605, 4755, 5137, 10180, 10207, 504, 8331, 16762, 16764, 5184, 2]
+// Dependencies: [19, 17, 1957, 7953, 21, 4607, 4757, 5139, 10201, 10228, 504, 8354, 16750, 16752, 5186, 2]
 
-// Module 16774 (FileGridItem)
-import SearchMediaImage from "SearchMediaImage" /* 16762 */;
+// Module 16762 (FileGridItem)
+import SearchMediaImage from "SearchMediaImage" /* 16750 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7930);
+const SearchConstants = fn(7953);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");

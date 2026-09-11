@@ -1,71 +1,49 @@
 // Module ID: 6877
 // Function ID: 6878
-// Dependencies: [19, 17, 21, 6878, 6879]
+// Dependencies: [19, 1636]
+// Exports: useReactiveSharedValue
 
 // Module 6877
-import _mod6879 from "module_6879" /* 6879 */;
-import noop_mod from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
-  style = style.style;
-  const indicatorStyle = style.indicatorStyle;
-  let DEFAULT_ACCESSIBLE = style.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
-  }
-  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  let items = [style];
-  const items1 = [indicatorStyle];
-  const obj = {
-    style: useMemo(() => {
-      const items = [_mod6879.styles.container, React3.flatten(style)];
-      return items;
-    }, items),
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    collapsable: true,
-    children: null
-  };
-  const tmp9 = useMemo(() => {
-    const items = [_mod6879.styles.container, React3.flatten(style)];
-    return items;
-  }, items);
-  obj.accessible = DEFAULT_ACCESSIBLE;
-  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
-  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
-  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  const items2 = [
-    closure_5(closure_4, {
-      style: useMemo(() => {
-        const items = [_mod6879.styles.indicator, React3.flatten(indicatorStyle)];
-        return items;
-      }, items1)
-    }),
-    style.children
-  ];
-  obj.children = items2;
-  return closure_6(closure_4, obj);
-});
-memoResult.displayName = "BottomSheetHandle";
+const require = globalThis.__r;
 
-export default memoResult;
+({ useEffect: c2, useRef: c3 } = noop);
+
+export const useReactiveSharedValue = (current) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = current;
+  if (current) {
+    tmp3 = typeof current === "object";
+  }
+  if (tmp3) {
+    tmp3 = "value" in current;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = current;
+      if (typeof current === "object") {
+        const obj2 = {};
+        const merged = Object.assign(current);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
+      } else {
+        mutable = require("cancelAnimation").makeMutable(current);
+        const obj3 = require("cancelAnimation");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== current) {
+      tmp2.current.value = current;
+    }
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  current = tmp2.current;
+  return current;
+};

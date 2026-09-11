@@ -1,15 +1,15 @@
-// Module ID: 14656
-// Function ID: 14657
+// Module ID: 14634
+// Function ID: 14635
 // Name: DevToolsLazy
-// Dependencies: [5, 19, 17, 7771, 7770, 21, 1115, 14657, 14658, 1896, 504, 14652, 16007, 2]
+// Dependencies: [5, 19, 17, 7793, 7792, 21, 1115, 14635, 14636, 1896, 504, 14630, 15996, 2]
 // Exports: default
 
-// Module 14656 (DevToolsLazy)
-import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14657 */;
+// Module 14634 (DevToolsLazy)
+import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7771 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7770 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7793 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7792 */;
 
 const require = fn;
 const NativeModules = fn(17).NativeModules;
@@ -100,10 +100,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14652).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14630).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16007).default, {});
+      return jsx(tmp(15996).default, {});
     }
   }
   return null;

@@ -1,10 +1,10 @@
-// Module ID: 11432
-// Function ID: 11433
+// Module ID: 11456
+// Function ID: 11457
 // Name: StickyWrapper
 // Dependencies: [19, 17, 21, 1116, 2]
 // Exports: StickyWrapper
 
-// Module 11432 (StickyWrapper)
+// Module 11456 (StickyWrapper)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import noop from "module_19" /* 19 */;
 

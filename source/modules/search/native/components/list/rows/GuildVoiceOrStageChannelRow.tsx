@@ -1,17 +1,17 @@
-// Module ID: 16747
-// Function ID: 16748
+// Module ID: 16735
+// Function ID: 16736
 // Name: GuildVoiceOrStageChannelRow
-// Dependencies: [19, 17, 1962, 7930, 21, 10191, 4449, 1114, 4605, 504, 16748, 5481, 5475, 16749, 16751, 12361, 2]
+// Dependencies: [19, 17, 1962, 7953, 21, 10212, 4451, 1114, 4607, 504, 16736, 5483, 5477, 16737, 16739, 12386, 2]
 
-// Module 16747 (GuildVoiceOrStageChannelRow)
+// Module 16735 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5481 */;
-import ChannelListLayout from "ChannelListLayout" /* 10191 */;
-import renderChannelBadge from "renderChannelBadge" /* 12361 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16748 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16749 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16751 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5483 */;
+import ChannelListLayout from "ChannelListLayout" /* 10212 */;
+import renderChannelBadge from "renderChannelBadge" /* 12386 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16736 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16737 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 16739 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
@@ -159,9 +159,9 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(7930).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(7953).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_8 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");

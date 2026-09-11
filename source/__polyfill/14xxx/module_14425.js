@@ -1,17 +1,11 @@
 // Module ID: 14425
 // Function ID: 14426
-// Dependencies: [14423]
+// Dependencies: [14426, 14433]
 
 // Module 14425
-import _mod14423 from "module_14423" /* 14423 */;
+import _mod14426 from "module_14426" /* 14426 */;
+import _mod14433 from "module_14433" /* 14433 */;
 
 
-export default (arg0, arg1) => {
-  const tmp = _mod14423(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export const URL = _mod14426;
+export const URLSearchParams = _mod14433;

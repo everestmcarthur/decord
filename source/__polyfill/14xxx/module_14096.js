@@ -1,75 +1,105 @@
 // Module ID: 14096
 // Function ID: 14097
-// Dependencies: []
+// Dependencies: [14069, 14073, 14068]
 
 // Module 14096
-const re0 = /^[0-9]+$/;
+import _mod14068 from "module_14068" /* 14068 */;
+import _mod14069 from "module_14069" /* 14069 */;
 
-export default {
-  compareIdentifiers(major, major2) {
-    const isMatch = re0.test(major);
-    const isMatch1 = re0.test(major2);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
-    }
-    let tmp4 = major2;
-    let tmp5 = major;
-    if (tmp3) {
-      tmp5 = +major;
-      tmp4 = +major2;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
-          }
-          let num3 = num4;
-        } else {
-          num3 = 1;
-        }
-        let num2 = num3;
-      } else {
-        num2 = -1;
-      }
-      num = num2;
-    }
+
+export default (num, arg1) => {
+  if (num instanceof _mod14069) {
     return num;
-  },
-  rcompareIdentifiers(arg0, arg1) {
-    const isMatch = re0.test(arg1);
-    const isMatch1 = re0.test(arg0);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
+  } else {
+    let StringResult = num;
+    if (typeof num === "number") {
+      const _String = String;
+      StringResult = String(num);
     }
-    let tmp4 = arg0;
-    let tmp5 = arg1;
-    if (tmp3) {
-      tmp5 = +arg1;
-      tmp4 = +arg0;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
-          }
-          let num3 = num4;
-        } else {
-          num3 = 1;
-        }
-        let num2 = num3;
-      } else {
-        num2 = -1;
+    if (typeof StringResult !== "string") {
+      return null;
+    } else {
+      let obj = arg1;
+      if (!arg1) {
+        obj = {};
       }
-      num = num2;
+      if (obj.rtl) {
+        const safeRe2 = tmp(14073).safeRe;
+        const t2 = tmp(14073).t;
+        if (obj.includePrerelease) {
+          let obj2 = safeRe2[t2.COERCERTLFULL];
+        } else {
+          obj2 = safeRe2[t2.COERCERTL];
+        }
+        let match = obj2.exec(StringResult);
+        let tmp6 = null;
+        let tmp8 = null;
+        if (match) {
+          while (true) {
+            let tmp10 = tmp6;
+            let tmp11 = tmp6;
+            if (tmp6) {
+              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
+            }
+            if (!tmp11) {
+              tmp10 = match;
+            }
+            obj2.lastIndex = match.index + match[1].length + match[2].length;
+            let match1 = obj2.exec(StringResult);
+            tmp8 = tmp10;
+            if (!match1) {
+              break;
+            } else {
+              match = match1;
+              tmp6 = tmp10;
+              if (!tmp10) {
+                continue;
+              } else {
+                match = match1;
+                tmp6 = tmp10;
+                tmp8 = tmp10;
+                if (tmp10.index + tmp10[0].length === StringResult.length) {
+                  break;
+                }
+              }
+              continue;
+            }
+          }
+        }
+        obj2.lastIndex = -1;
+        let match2 = tmp8;
+      } else {
+        const safeRe = tmp(14073).safeRe;
+        const t = tmp(14073).t;
+        if (obj.includePrerelease) {
+          let tmp3 = safeRe[t.COERCEFULL];
+        } else {
+          tmp3 = safeRe[t.COERCE];
+        }
+        match2 = StringResult.match(tmp3);
+      }
+      if (null === match2) {
+        return null;
+      } else {
+        let str2 = "";
+        if (obj.includePrerelease) {
+          str2 = "";
+          if (match2[5]) {
+            const _HermesInternal = HermesInternal;
+            str2 = "-" + match2[5];
+          }
+        }
+        let str4 = "";
+        if (obj.includePrerelease) {
+          str4 = "";
+          if (match2[6]) {
+            const _HermesInternal2 = HermesInternal;
+            str4 = "+" + match2[6];
+          }
+        }
+        const _HermesInternal3 = HermesInternal;
+        return _mod14068("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+      }
     }
-    return num;
   }
 };

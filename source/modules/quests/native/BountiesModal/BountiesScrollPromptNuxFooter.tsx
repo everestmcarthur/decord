@@ -1,16 +1,16 @@
-// Module ID: 15125
-// Function ID: 15126
+// Module ID: 15102
+// Function ID: 15103
 // Name: BountiesScrollPromptNuxFooter
-// Dependencies: [17, 21, 4605, 7031, 4601, 1114, 2]
+// Dependencies: [17, 21, 4607, 7053, 4603, 1114, 2]
 // Exports: default
 
-// Module 15125 (BountiesScrollPromptNuxFooter)
+// Module 15102 (BountiesScrollPromptNuxFooter)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7031 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4607 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

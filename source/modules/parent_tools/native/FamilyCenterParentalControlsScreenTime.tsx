@@ -1,16 +1,16 @@
-// Module ID: 15010
-// Function ID: 15011
+// Module ID: 14987
+// Function ID: 14988
 // Name: FamilyCenterParentalControlsScreenTime
-// Dependencies: [17, 1074, 21, 4605, 576, 10153, 5655, 4601, 1114, 2396, 14971, 1483, 5737, 2]
+// Dependencies: [17, 1074, 21, 4607, 576, 10175, 5657, 4603, 1114, 2396, 14948, 1483, 5739, 2]
 // Exports: default
 
-// Module 15010 (FamilyCenterParentalControlsScreenTime)
+// Module 14987 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4607 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -21,10 +21,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(10153).getScheduleRuleDateRange(rule);
-  let obj = rule(10153);
-  const obj2 = rule(10153);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10153).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(10175).getScheduleRuleDateRange(rule);
+  let obj = rule(10175);
+  const obj2 = rule(10175);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10175).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1114).intl;
   const string = intl.string;
   const tmp4 = _modDef2396;
@@ -33,7 +33,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(4601).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj3.trailing = closure_5(rule(4603).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj3.arrow = !readOnly;
   let fn;
   if (!readOnly) {
@@ -45,7 +45,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(5655).TableRow, obj3);
+  return closure_5(rule(5657).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

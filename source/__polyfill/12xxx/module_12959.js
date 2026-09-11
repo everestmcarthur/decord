@@ -1,312 +1,203 @@
 // Module ID: 12959
 // Function ID: 12960
-// Dependencies: []
-// Exports: basename, dirname, isAbsolute, join, relative
+// Dependencies: [5, 12936, 12939, 12946]
+// Exports: makeMultiplexedTransport
 
 // Module 12959
-function resolve() {
-  let tmp17;
-  const items = [...arguments];
-  let diff = items.length - 1;
-  let flag = false;
-  let str = "";
-  let flag2 = false;
-  let str2 = "";
-  if (-1 <= diff) {
-    while (true) {
-      let tmp3 = flag;
-      let str3 = "/";
-      if (0 <= diff) {
-        str3 = items[diff];
-      }
-      let combined = str;
-      if (str3) {
-        let _HermesInternal = HermesInternal;
-        combined = "" + str3 + "/" + str;
-        tmp3 = "/" === str3.charAt(0);
-      }
-      let diff1 = diff - 1;
-      flag2 = tmp3;
-      str2 = combined;
-      if (-1 > diff1) {
-        break;
-      } else {
-        diff = diff1;
-        flag = tmp3;
-        str = combined;
-        str2 = combined;
-        flag2 = tmp3;
-        if (tmp3) {
-          break;
-        }
-      }
-    }
-  }
-  let str4 = "";
-  if (flag2) {
-    str4 = "/";
-  }
-  const parts = str2.split("/");
-  const found = parts.filter((item) => item);
-  let diff2 = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff2) {
-    do {
-      let tmp8 = found[diff2];
-      if ("." === tmp8) {
-        let spliceResult = found.splice(diff2, 1);
-        let sum = num;
-      } else if (".." === tmp8) {
-        let spliceResult1 = found.splice(diff2, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff2, 1);
-          sum = num - 1;
-        }
-      }
-      diff2 = diff2 - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff2);
-  }
-  if (!flag2) {
-    let diff3 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp17 = diff3;
-        diff3 = diff3 - 1;
-      } while (tmp17);
-    }
-  }
-  return str4 + found.join("/") || ".";
-}
-function normalizePath(str) {
-  let tmp14;
-  const substr = str.slice(-1);
-  const parts = str.split("/");
-  const found = parts.filter((item) => item);
-  let diff = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff) {
-    do {
-      let tmp4 = found[diff];
-      if ("." === tmp4) {
-        let spliceResult = found.splice(diff, 1);
-        let sum = num;
-      } else if (".." === tmp4) {
-        let spliceResult1 = found.splice(diff, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff, 1);
-          sum = num - 1;
-        }
-      }
-      diff = diff - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff);
-  }
-  const tmp11 = "/" === str.charAt(0);
-  if (!tmp11) {
-    let diff1 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp14 = diff1;
-        diff1 = diff1 - 1;
-      } while (tmp14);
-    }
-  }
-  str = found.join("/");
-  let tmp15 = str;
-  if (!str) {
-    tmp15 = tmp11;
-  }
-  if (!tmp15) {
-    str = ".";
-  }
-  let tmp16 = str;
-  if (str) {
-    tmp16 = "/" === substr;
-  }
-  let text = str;
-  if (tmp16) {
-    text = `${str}/`;
-  }
-  let str2 = "";
-  if (tmp11) {
-    str2 = "/";
-  }
-  return str2 + text;
-}
-const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+import _mod12936 from "module_12936" /* 12936 */;
+import _mod12939 from "module_12939" /* 12939 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-export const basename = function basename(arr, arg1) {
-  let combined = arr;
-  if (arr.length > 1024) {
-    const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
-  }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  let tmp3 = arg1;
-  if (arg1) {
-    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
-  }
-  let substr1 = arr3;
-  if (tmp3) {
-    substr1 = arr3.slice(0, arr3.length - arg1.length);
-  }
-  return substr1;
-};
-export const dirname = function dirname(arr) {
-  let combined = arr;
-  if (arr.length > 1024) {
-    const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
-  }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  if (substr[0] || "") {
-    let substr1 = arr3;
-    if (arr3) {
-      substr1 = arr3.slice(0, arr3.length - 1);
+function eventFromEnvelope(arg0, arg1) {
+  closure_0 = arg1;
+  _mod12936.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+    if (items.includes(arg1)) {
+      const _Array = Array;
+      let tmp3;
+      if (Array.isArray(arg0)) {
+        tmp3 = arg0[1];
+      }
+      closure_1 = tmp3;
     }
-    let str2 = tmp3 + substr1;
-  } else {
-    str2 = ".";
-  }
-  return str2;
-};
-export const isAbsolute = function isAbsolute(str) {
-  return "/" === str.charAt(0);
-};
-export const join = function join() {
-  const items = [...arguments];
-  return normalizePath(items.join("/"));
-};
-export { normalizePath };
-export const relative = function relative(arg0, arg1) {
-  let length;
-  const arr = resolve(arg0);
-  const str = resolve(arg0).slice(1);
-  const arr2 = resolve(arg1);
-  const parts = str.split("/");
-  let num = 0;
-  if (0 < parts.length) {
-    let num2 = 0;
-    num = 0;
-    if ("" === parts[0]) {
-      const sum = num2 + 1;
-      num = sum;
-      while (sum < parts.length) {
-        num2 = sum;
-        num = sum;
-        if ("" !== parts[sum]) {
-          break;
+    return closure_1;
+  });
+  return dependencyMap;
+}
+
+export { eventFromEnvelope };
+export function makeMultiplexedTransport(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return (arg0) => {
+    let tunnel = arg0;
+    function getTransport(arg0, arg1) {
+      let combined = arg0;
+      if (arg1) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + arg0 + ":" + arg1;
+      }
+      value = map.get(combined);
+      if (value) {
+        const items = [arg0, value];
+        return items;
+      } else {
+        const dsnFromStringResult = _mod12939.dsnFromString(arg0);
+        if (dsnFromStringResult) {
+          let merged = tunnel;
+          const envelopeEndpointWithUrlEncodedAuth = tmp4(12946).getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
+          let tmp9 = tunnel;
+          let obj3 = {};
+          if (arg1) {
+            merged = Object.assign(merged);
+            obj3.url = envelopeEndpointWithUrlEncodedAuth;
+            const tmp9Result = tmp9(obj3);
+            closure_1 = tmp9Result;
+            const obj4 = {};
+            const merged1 = Object.assign(tmp9Result);
+            tmp9 = asyncGeneratorStep;
+            tunnel = asyncGeneratorStep(async (release) => {
+              c1 = 0;
+              return (async (arg0, value) => {
+                if (c1 === 2) {
+                  c1 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp3 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    const obj2 = { value, done: true };
+                    return obj2;
+                  } else {
+                    return { value: "HermesInternal", done: null };
+                  }
+                } else {
+                  try {
+                    c1 = 2;
+                    if (arg0 === 1) {
+                      c1 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c1 = 3;
+                      const obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
+                      if (tmp6) {
+                        tmp6.release = release;
+                      }
+                      c1 = 3;
+                      const obj = { value: closure_1.send(release), done: true };
+                      return obj;
+                    }
+                  } catch (tmp9) {
+                    c1 = tmp;
+                    throw tmp9;
+                  }
+                }
+              })();
+            });
+            obj4.send = function send(arg0) {
+              const self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            };
+            let tmp9Result2 = obj4;
+          } else {
+            const merged2 = Object.assign(merged);
+            obj3.url = envelopeEndpointWithUrlEncodedAuth;
+            tmp9Result2 = tmp9(obj3);
+          }
+          obj3 = map.set(combined, tmp9Result2);
+          const tmp4Result = tmp4(12946);
         }
+        tmp4 = require;
       }
     }
-  }
-  const diff = parts.length - 1;
-  let tmp3 = diff;
-  if (0 <= diff) {
-    let tmp4 = diff;
-    tmp3 = diff;
-    if ("" === parts[diff]) {
-      const diff1 = tmp4 - 1;
-      tmp3 = diff1;
-      while (0 <= diff1) {
-        tmp4 = diff1;
-        tmp3 = diff1;
-        if ("" !== parts[diff1]) {
-          break;
+    closure_4 = async function _send(envelope) {
+      c2 = 0;
+      c1 = 0;
+      return (async (arg0, value) => {
+        const mapped = v3({
+          envelope,
+          getEvent(arg0) {
+            let items = arg0;
+            if (!arg0) {
+              items = ["event"];
+            }
+            dependencyMap(12936).forEachEnvelopeItem(dependencyMap, () => { ... });
+            return dependencyMap2;
+          }
+        }).map((dsn) => {
+          if (typeof dsn === "string") {
+            let tmp2 = closure_1_3(dsn, undefined);
+          } else {
+            tmp2 = closure_1_3(dsn.dsn, dsn.release);
+          }
+          return tmp2;
+        });
+        const found = mapped.filter((item) => item);
+        let arr3 = found;
+        if (!found.length) {
+          let items = ["", closure_2_1];
+          const items1 = [items];
+          arr3 = items1;
         }
-      }
-    }
-  }
-  if (tmp3 < num) {
-    let items = [];
-  } else {
-    items = parts.slice(num, tmp3 - num + 1);
-  }
-  const parts1 = resolve(arg1).slice(1).split("/");
-  let num3 = 0;
-  if (0 < parts1.length) {
-    let num4 = 0;
-    num3 = 0;
-    if ("" === parts1[0]) {
-      const sum1 = num4 + 1;
-      num3 = sum1;
-      while (sum1 < parts1.length) {
-        num4 = sum1;
-        num3 = sum1;
-        if ("" !== parts1[sum1]) {
-          break;
+        await Promise.all(arr3.map((item) => {
+          [tmp, obj] = item;
+          const first = 5;
+          if (tmp) {
+            const obj3 = {};
+            const merged = Object.assign(first);
+            obj3.dsn = tmp;
+            let tmp4 = obj3;
+          } else {
+            tmp4 = first;
+          }
+          return obj.send(dependencyMap(12936).createEnvelope(tmp4, 12936));
+        }));
+        return value[0];
+      })();
+    };
+    closure_5 = async function _flush() {
+      closure_2 = tmp2;
+      closure_130_0 = closure_0;
+      closure_1 = 0;
+      const items = [];
+      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
+      closure_1 = arraySpreadResult;
+      items[arraySpreadResult] = closure_2_1;
+      closure_1 = closure_1 + 1;
+      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
+      return arg1.every((item) => item);
+    };
+    closure_1 = tunnel(arg0);
+    const map = new Map();
+    return {
+      send(arg0) {
+        const self = this;
+        const apply = closure_4.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
         }
-      }
-    }
-  }
-  const diff2 = parts1.length - 1;
-  let tmp8 = diff2;
-  if (0 <= diff2) {
-    let tmp9 = diff2;
-    tmp8 = diff2;
-    if ("" === parts1[diff2]) {
-      const diff3 = tmp9 - 1;
-      tmp8 = diff3;
-      while (0 <= diff3) {
-        tmp9 = diff3;
-        tmp8 = diff3;
-        if ("" !== parts1[diff3]) {
-          break;
+        return applyArgumentsResult;
+      },
+      flush(arg0) {
+        const self = this;
+        const apply = closure_5.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
         }
+        return applyArgumentsResult;
       }
-    }
-  }
-  if (tmp8 < num3) {
-    let items1 = [];
-  } else {
-    items1 = parts1.slice(num3, tmp8 - num3 + 1);
-  }
-  const bound = Math.min(items.length, items1.length);
-  let num5 = 0;
-  let tmp12 = bound;
-  if (0 < bound) {
-    tmp12 = num5;
-    while (items[num5] === items1[num5]) {
-      num5 = num5 + 1;
-      tmp12 = bound;
-      if (num5 >= bound) {
-        break;
-      }
-    }
-  }
-  const items2 = [];
-  let sum2 = tmp12;
-  if (tmp12 < items.length) {
-    do {
-      let arr3 = items2.push("..");
-      sum2 = sum2 + 1;
-      length = items.length;
-    } while (sum2 < length);
-  }
-  const combined = items2.concat(items1.slice(tmp12));
-  return combined.join("/");
-};
-export { resolve };
+    };
+  };
+}

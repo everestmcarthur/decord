@@ -1,39 +1,37 @@
 // Module ID: 12953
 // Function ID: 12954
-// Dependencies: [12865, 12868, 12867, 12873]
-// Exports: addConsoleInstrumentationHandler
+// Dependencies: [12939, 12898, 12936]
+// Exports: createCheckInEnvelope
 
 // Module 12953
-import _mod12865 from "module_12865" /* 12865 */;
-import _mod12867 from "module_12867" /* 12867 */;
-import _mod12868 from "module_12868" /* 12868 */;
+import _mod12898 from "module_12898" /* 12898 */;
+import _mod12936 from "module_12936" /* 12936 */;
+import _mod12939 from "module_12939" /* 12939 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod12868.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod12867.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(12868).GLOBAL_OBJ.console) {
-        tmp(12873).fill(tmp(12868).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod12867.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(12865).triggerHandlers("console", { args: items, level });
-            const obj3 = level(12867).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(12868).GLOBAL_OBJ.console, items);
-            }
-          };
-        });
-        const tmpResult = tmp(12873);
-      }
-    });
-  }
-}
 
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
-  _mod12865.addHandler("console", arg0);
-  _mod12865.maybeInstrument("console", instrumentConsole);
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk, arg3, arg4) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = arg4;
+  }
+  if (tmp) {
+    obj.dsn = _mod12939.dsnToString(arg4);
+  }
+  if (arg1) {
+    obj.trace = _mod12898.dropUndefinedKeys(arg1);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12936.createEnvelope(obj, items1);
 };

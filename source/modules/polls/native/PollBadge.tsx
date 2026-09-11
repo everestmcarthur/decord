@@ -1,22 +1,22 @@
-// Module ID: 16768
-// Function ID: 16769
+// Module ID: 16756
+// Function ID: 16757
 // Name: PollBadge
-// Dependencies: [19, 17, 21, 4605, 576, 1178, 16769, 4601, 1114, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 1178, 16757, 4603, 1114, 2]
 // Exports: default
 
-// Module 16768 (PollBadge)
+// Module 16756 (PollBadge)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import _modDef16769 from "module_16769" /* 16769 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import _modDef16757 from "module_16757" /* 16757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 const obj2 = { container: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, color: nativeDefault.colors.TEXT_MUTED, flexDirection: "row", alignItems: "center" }, text: { marginLeft: 4, textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function PollBadge(style) {
   const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16769 }), ];
+  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16757 }), ];
   const obj3 = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RgIi2B);

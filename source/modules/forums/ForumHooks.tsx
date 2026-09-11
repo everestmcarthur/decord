@@ -1,40 +1,40 @@
-// Module ID: 7937
-// Function ID: 7938
+// Module ID: 7960
+// Function ID: 7961
 // Name: ForumHooks
-// Dependencies: [5, 19, 5509, 5556, 5557, 7358, 1957, 5476, 1979, 4243, 4620, 1371, 7357, 7329, 7938, 7819, 7325, 1074, 1964, 1113, 504, 7359, 573, 12, 1369, 5042, 11, 7832, 1966, 7939, 4838, 7940, 7949, 7950, 7162, 2]
+// Dependencies: [5, 19, 5511, 5558, 5559, 7380, 1957, 5478, 1979, 4245, 4622, 1371, 7379, 7351, 7961, 7841, 7347, 1074, 1964, 1113, 504, 7381, 573, 12, 1369, 5044, 11, 7854, 1966, 7962, 4840, 7963, 7972, 7973, 7184, 2]
 // Exports: getForumPostAuthor, useAutomaticForumSearch, useCanManageChannel, useCanSearchForumPosts, useCanViewArchivedPosts, useChannelTemplate, useDefaultReactionEmoji, useExistingPin, useFacepileUsers, useForumActiveThreadIds, useForumPostAuthor, useForumPostFirstMessageMarkup, useForumPostMessageAuthor, useForumPostReadStates, useForumSearchQuery, useForumSearchState, useForumThreadsForChannelList, useHasForumSearchQuery, useLastActiveTimestamp, useLoadForumUnreadCounts, useMaxPossibleForumPostReactions, useMessageCount, useMostUsedReaction, useSomeForumPostReactions, useUnreadThreadsCountForParent
 
-// Module 7937 (ForumHooks)
+// Module 7960 (ForumHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 1966 */;
-import useMessageAuthor from "useMessageAuthor" /* 4838 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7162 */;
-import ForumUtils from "ForumUtils" /* 7359 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 7940 */;
+import useMessageAuthor from "useMessageAuthor" /* 4840 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7184 */;
+import ForumUtils from "ForumUtils" /* 7381 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 7963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5509 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5556 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5557 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7358 */;
+import EmojiStore from "EmojiStore" /* 5511 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5558 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5559 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7380 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5476 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5478 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import ReadStateStore from "ReadStateStore" /* 4622 */;
 import UserStore from "UserStore" /* 1371 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7357 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7329 */;
-import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 7938 */;
-import ForumSearchStore from "ForumSearchStore" /* 7819 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7379 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7351 */;
+import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 7961 */;
+import ForumSearchStore from "ForumSearchStore" /* 7841 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(7325).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7347).ForumTimestampFormats;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_20, AnalyticsObjects: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(1964).ChannelFlags;
@@ -122,11 +122,11 @@ export const useLastActiveTimestamp = function useLastActiveTimestamp(thread, so
   const items2 = [lastMessageTimestamp, sortOrder, memo, memo1];
   return lastMessageTimestamp.useMemo(() => {
     if (closure_1 === ThreadSortOrder.ThreadSortOrder.CREATION_DATE) {
-      let timestampString = tmp(7832).getTimestampString(memo, memo1);
-      const tmpResult = tmp(7832);
+      let timestampString = tmp(7854).getTimestampString(memo, memo1);
+      const tmpResult = tmp(7854);
     } else {
-      timestampString = tmp(7832).getTimestampString(lastMessageTimestamp, memo1);
-      const tmpResult2 = tmp(7832);
+      timestampString = tmp(7854).getTimestampString(lastMessageTimestamp, memo1);
+      const tmpResult2 = tmp(7854);
     }
     return timestampString;
   }, items2);
@@ -420,7 +420,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   const items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(4838).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4840).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

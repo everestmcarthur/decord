@@ -1,13 +1,13 @@
-// Module ID: 14623
-// Function ID: 14624
+// Module ID: 14601
+// Function ID: 14602
 // Name: CollectiblesMarketingManager
-// Dependencies: [4604, 1898, 573, 7593, 7642, 2]
+// Dependencies: [4606, 1898, 573, 7615, 7664, 2]
 
-// Module 14623 (CollectiblesMarketingManager)
+// Module 14601 (CollectiblesMarketingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7593 */;
-import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7642 */;
-import DevSettingsStore from "DevSettingsStore" /* 4604 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7615 */;
+import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7664 */;
+import DevSettingsStore from "DevSettingsStore" /* 4606 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
 require = fn;

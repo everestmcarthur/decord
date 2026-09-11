@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 51, height: 12, scales: [2, 3], hash: "762c9356acc18a559214b01d8cc7bf33", name: "img_logo_nitro_small_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 420, height: 112, scales: [2, 3], hash: "e2e6d0edbd6c916cde4ea4f22a6f794c", name: "subscription_placeholder_pattern_darker", type: "png" });

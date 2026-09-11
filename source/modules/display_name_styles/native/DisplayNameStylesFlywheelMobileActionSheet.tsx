@@ -1,12 +1,12 @@
-// Module ID: 17033
-// Function ID: 17034
+// Module ID: 17022
+// Function ID: 17023
 // Name: DisplayNameStylesFlywheelMobileActionSheet
-// Dependencies: [19, 17, 1371, 1074, 1954, 21, 4325, 4456, 4540, 7031, 504, 4262, 1114, 2786, 7434, 7090, 4425, 1943, 7202, 7175, 7206, 5742, 1115, 5637, 17034, 8879, 4601, 5025, 4605, 576, 2]
+// Dependencies: [19, 17, 1371, 1074, 1954, 21, 4327, 4458, 4542, 7053, 504, 4264, 1114, 2786, 7456, 7112, 4427, 1943, 7224, 7197, 7228, 5744, 1115, 5639, 17023, 8902, 4603, 5027, 4607, 576, 2]
 // Exports: default
 
-// Module 17033 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 17022 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 576 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
+import openUserSettings from "openUserSettings" /* 7456 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -17,7 +17,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, imageContainer: null, image: null, title: null, subtitle: null, actions: null };
   const size = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_24 };
@@ -37,16 +37,16 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const ref = noop.useRef(null);
-  const enabled = noop.useContext(markAsDismissed(4325).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const isThemeDarkResult = markAsDismissed(4456).isThemeDark(ref(4540)());
+  const enabled = noop.useContext(markAsDismissed(4327).AccessibilityPreferencesContext).reducedMotion.enabled;
+  const isThemeDarkResult = markAsDismissed(4458).isThemeDark(ref(4542)());
   const tmp6 = closure_11();
-  const obj2 = markAsDismissed(4456);
-  const typeConsolidationTextTransform = markAsDismissed(7031).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
-  const obj3 = markAsDismissed(7031);
+  const obj2 = markAsDismissed(4458);
+  const typeConsolidationTextTransform = markAsDismissed(7053).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const obj3 = markAsDismissed(7053);
   const items = [UserStore];
   const stateFromStores = markAsDismissed(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj4 = markAsDismissed(504);
-  let result = ref(4262).canUsePremiumProfileCustomization(stateFromStores);
+  let result = ref(4264).canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   const intl = markAsDismissed(1114).intl;
   const string = intl.string;
@@ -60,10 +60,10 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const items2 = [markAsDismissed];
   const callback = obj.useCallback(() => {
     openUserSettings.openUserSettings({ screen: c2 ? timestampProducer.PROFILE_CUSTOMIZATION : timestampProducer.PROFILE_CUSTOMIZATION_TRY_IT_OUT }, () => {
-      markAsDismissed(7090).runAfterInteractions(() => {
-        markAsDismissed(7434).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
+      markAsDismissed(7112).runAfterInteractions(() => {
+        markAsDismissed(7456).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
           closure_1_0(constants.TAKE_ACTION);
-          const result = closure_2_0(4425).UNSAFE_markDismissibleContentAsDismissed(closure_2_0(1943).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, { dismissAction: constants.INDIRECT_ACTION });
+          const result = closure_2_0(4427).UNSAFE_markDismissibleContentAsDismissed(closure_2_0(1943).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, { dismissAction: constants.INDIRECT_ACTION });
         });
       });
     });
@@ -78,7 +78,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(7206).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(7228).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -95,7 +95,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = tmp15(tmp2(5742).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = tmp15(tmp2(5744).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -113,7 +113,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     obj10.color = str2;
     const intl2 = tmp2(1114).intl;
     obj10.children = intl2.string(tmp4(2786).Uzms61);
-    items4[2] = tmp15(tmp2(4601).Text, obj10);
+    items4[2] = tmp15(tmp2(4603).Text, obj10);
     const obj11 = { variant: "text-lg/medium", style: tmp6.subtitle, color: null, children: null };
     if (isThemeDarkResult) {
       str = "text-overlay-light";
@@ -121,36 +121,36 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     const obj12 = { bottom: true, children: null };
     obj11.color = str;
     obj11.children = stringResult;
-    items4[3] = tmp15(tmp2(4601).Text, obj11);
+    items4[3] = tmp15(tmp2(4603).Text, obj11);
     const obj13 = { style: tmp6.actions, children: null };
     const obj14 = { text: null, variant: "primary", size: "lg", onPress: null };
     const intl3 = tmp2(1114).intl;
     obj14.text = intl3.string(tmp2(1114).t["4P5I8V"]);
     obj14.onPress = callback;
-    const items7 = [tmp15(tmp2(5025).Button, obj14), ];
+    const items7 = [tmp15(tmp2(5027).Button, obj14), ];
     const obj15 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1114).intl;
     obj15.text = intl4.string(tmp2(1114).t.TulDPl);
     obj15.onPress = callback1;
-    items7[1] = tmp15(tmp2(5025).Button, obj15);
+    items7[1] = tmp15(tmp2(5027).Button, obj15);
     obj13.children = items7;
     items4[4] = tmp16(tmp17, obj13);
     obj7.children = items4;
     obj12.children = tmp16(tmp17, obj7);
-    obj6.children = tmp15(tmp2(7175).SafeAreaPaddingView, obj12);
-    return tmp15(tmp2(7202).BottomSheet, obj6);
+    obj6.children = tmp15(tmp2(7197).SafeAreaPaddingView, obj12);
+    return tmp15(tmp2(7224).BottomSheet, obj6);
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(17034) };
+      const obj17 = { uri: tmp4(17023) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
-      let tmp15Result2 = tmp15(tmp4(5637), obj16);
-      const tmp4Result = tmp4(5637);
+      let tmp15Result2 = tmp15(tmp4(5639), obj16);
+      const tmp4Result = tmp4(5639);
     } else {
-      const obj18 = { url: tmp4(17034), style: tmp6.image, autoplay: true };
-      tmp15Result2 = tmp15(tmp2(8879).APNGPlayer, obj18);
+      const obj18 = { url: tmp4(17023), style: tmp6.image, autoplay: true };
+      tmp15Result2 = tmp15(tmp2(8902).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1115);
   }

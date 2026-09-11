@@ -1,37 +1,36 @@
 // Module ID: 6925
 // Function ID: 6926
-// Dependencies: [6907, 19, 6926]
-// Exports: useLayoutState
+// Dependencies: [17]
+// Exports: isNewArch
 
 // Module 6925
-import _mod6926 from "module_6926" /* 6926 */;
-import _slicedToArray from "module_6907" /* 6907 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
+const Platform = _mod17.Platform;
 
-export const useLayoutState = function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod6926.useRecyclerViewContext();
-  const items = [tmp[0], ];
-  const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_0((arg0) => {
-      let tmpResult = closure_0;
-      if (typeof closure_0 === "function") {
-        tmpResult = tmp(arg0);
+export const isNewArch = function isNewArch() {
+  if (undefined !== c1) {
+    return c1;
+  } else {
+    try {
+      let prop;
+      if (global != null) {
+        prop = tmp2.nativeFabricUIManager;
       }
-      return tmpResult;
-    });
-    if (!arg1) {
-      if (recyclerViewContext != null) {
-        obj.layout();
+      let flag = Boolean(prop);
+      if (global != null) {
+        const __turboModuleProxy = tmp2.__turboModuleProxy;
       }
-      obj = recyclerViewContext;
+      if (!flag) {
+        flag = Boolean(__turboModuleProxy);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      c1 = flag;
+      return c1;
+    } catch (err) {
+      c1 = true;
     }
-  }, items1);
-  return items;
+  }
 };

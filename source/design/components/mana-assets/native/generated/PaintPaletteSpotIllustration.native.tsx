@@ -1,13 +1,13 @@
-// Module ID: 6389
-// Function ID: 6390
+// Module ID: 6411
+// Function ID: 6412
 // Name: PaintPaletteSpotIllustration
-// Dependencies: [21, 5637, 6390, 2]
+// Dependencies: [21, 5639, 6412, 2]
 // Exports: PaintPaletteSpotIllustration
 
-// Module 6389 (PaintPaletteSpotIllustration)
+// Module 6411 (PaintPaletteSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6390 from "module_6390" /* 6390 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef6412 from "module_6412" /* 6412 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PaintPaletteSpotIllustration = function PaintPaletteSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6390 };
+  const obj2 = { uri: _modDef6412 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

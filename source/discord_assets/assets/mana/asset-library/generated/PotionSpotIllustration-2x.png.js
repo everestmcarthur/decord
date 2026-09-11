@@ -1,8 +1,8 @@
-// Module ID: 6404
-// Function ID: 6405
+// Module ID: 6426
+// Function ID: 6427
 // Dependencies: [2]
 
-// Module 6404
+// Module 6426
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PotionSpotIllustration-2x.png.js");

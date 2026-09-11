@@ -1,10 +1,10 @@
-// Module ID: 10819
-// Function ID: 10820
+// Module ID: 10840
+// Function ID: 10841
 // Name: GiftingBadgeIcon
 // Dependencies: [19, 17, 21, 2]
 // Exports: default
 
-// Module 10819 (GiftingBadgeIcon)
+// Module 10840 (GiftingBadgeIcon)
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;

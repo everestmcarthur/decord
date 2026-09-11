@@ -1,27 +1,27 @@
-// Module ID: 17730
-// Function ID: 17731
+// Module ID: 17722
+// Function ID: 17723
 // Name: GuildSettingsRoleEditConnectionsControls
-// Dependencies: [19, 17, 7180, 17703, 1074, 5458, 21, 4605, 576, 5457, 12, 6660, 4601, 1114, 5023, 5173, 2024, 5735, 5738, 17731, 5025, 11276, 4572, 17733, 1896, 17734, 17736, 504, 8663, 17717, 2]
+// Dependencies: [19, 17, 7202, 17695, 1074, 5460, 21, 4607, 576, 5459, 12, 6682, 4603, 1114, 5025, 5175, 2024, 5737, 5740, 17723, 5027, 11300, 4574, 17725, 1896, 17726, 17728, 504, 8686, 17709, 2]
 // Exports: default
 
-// Module 17730 (GuildSettingsRoleEditConnectionsControls)
+// Module 17722 (GuildSettingsRoleEditConnectionsControls)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 5457 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6660 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11276 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17717 */;
-import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 17731 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4574 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import Stack_Stack from "Stack/Stack" /* 5025 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 5459 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6682 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11300 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17709 */;
+import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 17723 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7180 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17703 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7202 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17695 */;
 
 require = fn;
 function HeaderSection(arg0) {
@@ -51,8 +51,8 @@ function HeaderSection(arg0) {
     const obj7 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = tmp10(1114).intl;
     obj7.children = intl3.string(tmp10(1114).t.ntW1cc);
-    obj6.children = tmp13(tmp10(4601).Text, obj7);
-    tmp13Result = tmp13(tmp10(5173).PressableOpacity, obj6);
+    obj6.children = tmp13(tmp10(4603).Text, obj7);
+    tmp13Result = tmp13(tmp10(5175).PressableOpacity, obj6);
   }
   const obj8 = { children: null };
   const obj9 = { children: null };
@@ -90,7 +90,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
     obj2.onChange = function onChange(arg0) {
       closure_1(roleConnectionConfigurations, arg0);
     };
-    const obj3 = { value: tmp(5457).ConnectionConfigurationRuleOperator.OR, label: null, disabled: null };
+    const obj3 = { value: tmp(5459).ConnectionConfigurationRuleOperator.OR, label: null, disabled: null };
     const intl2 = tmp(1114).intl;
     obj3.label = intl2.string(tmp(1114).t.W3iY58);
     let tmp11 = locked;
@@ -98,14 +98,14 @@ function AndOrRadios(setPendingRoleConfigurations) {
       tmp11 = values.length < 2;
     }
     obj3.disabled = tmp11;
-    const items2 = [closure_1_10(tmp(5738).TableRadioRow, obj3), ];
-    const obj4 = { value: tmp(5457).ConnectionConfigurationRuleOperator.AND, label: null, disabled: null };
+    const items2 = [closure_1_10(tmp(5740).TableRadioRow, obj3), ];
+    const obj4 = { value: tmp(5459).ConnectionConfigurationRuleOperator.AND, label: null, disabled: null };
     const intl3 = tmp(1114).intl;
     obj4.label = intl3.string(tmp(1114).t.gHXS9A);
     obj4.disabled = locked;
-    items2[1] = closure_1_10(tmp(5738).TableRadioRow, obj4);
+    items2[1] = closure_1_10(tmp(5740).TableRadioRow, obj4);
     obj2.children = items2;
-    return closure_1_11(tmp(5735).TableRadioGroup, obj2);
+    return closure_1_11(tmp(5737).TableRadioGroup, obj2);
   }
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -217,17 +217,17 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(17733, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(17725, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const Constants = fn(5458);
+const Constants = fn(5460);
 ({ GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { formContent: { paddingTop: 16, paddingBottom: 0 }, warningContainer: { display: "flex", flexDirection: "row", alignItems: "center", padding: 8, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: nativeDefault.radii.xs }, warningText: { flex: 1, marginLeft: 10 }, headerTitleContainer: { display: "flex", flexDirection: "row", justifyContent: "space-between" } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -361,7 +361,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "slice", value: 1090584578 };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "color", value: 1090584578 };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

@@ -1,19 +1,19 @@
-// Module ID: 9971
-// Function ID: 9972
+// Module ID: 9994
+// Function ID: 9995
 // Name: StageMusicManager
-// Dependencies: [1957, 1908, 2011, 4624, 5468, 1962, 9969, 9972, 504, 5481, 5475, 7170, 2]
+// Dependencies: [1957, 1908, 2011, 4626, 5470, 1962, 9992, 9995, 504, 5483, 5477, 7192, 2]
 // Exports: shouldShowStageMusicMuteButton, useShowStageMusicMuteButton
 
-// Module 9971 (StageMusicManager)
-import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
+// Module 9994 (StageMusicManager)
+import StageChannelParticipants from "StageChannelParticipants" /* 5477 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
+import VoiceStateStore from "VoiceStateStore" /* 4626 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5470 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import StageMusicStore from "StageMusicStore" /* 9969 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import StageMusicStore from "StageMusicStore" /* 9992 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 const require = globalThis.__r;
 
@@ -76,7 +76,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(9972);
+const SoundUtils = fn(9995);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 class StageMusicManager extends tmp2 {
   constructor() {

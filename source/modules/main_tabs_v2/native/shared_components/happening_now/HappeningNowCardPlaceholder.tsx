@@ -1,23 +1,23 @@
-// Module ID: 16151
-// Function ID: 16152
+// Module ID: 16140
+// Function ID: 16141
 // Name: HappeningNowCardPlaceholder
-// Dependencies: [19, 17, 15375, 21, 4605, 576, 4341, 4606, 15376, 2]
+// Dependencies: [19, 17, 15357, 21, 4607, 576, 4343, 4608, 15358, 2]
 // Exports: HappeningNowCardPlaceholder
 
-// Module 16151 (HappeningNowCardPlaceholder)
+// Module 16140 (HappeningNowCardPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(15375).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(15357).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { placeholderContainer: { flexDirection: "row", alignItems: "center" }, placeholderIcon: null, placeholderContent: null, placeholderText: null, placeholderTextTop: null, placeholderTextBottom: null };
 let size = { height: HAPPENING_NOW_CONTENT_HEIGHT, width: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.placeholderIcon = size;

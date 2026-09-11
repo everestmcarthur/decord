@@ -1,11 +1,11 @@
 // Module ID: 3963
 // Function ID: 3964
-// Dependencies: [3693, 3694]
+// Dependencies: [3695, 3696]
 // Exports: default
 
 // Module 3963
-import _typeof_mod from "module_3693" /* 3693 */;
-import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import _typeof_mod from "module_3695" /* 3695 */;
+import requiredArgs_mod from "requiredArgs" /* 3696 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,8 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getHours(arg0) {
+export default function getDecade(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getHours();
+  return 10 * Math.floor(_typeof.default(arg0).getFullYear() / 10);
 };
 export default exports.default;

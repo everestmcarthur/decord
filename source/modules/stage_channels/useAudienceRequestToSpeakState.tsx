@@ -1,11 +1,11 @@
-// Module ID: 4752
-// Function ID: 4753
+// Module ID: 4754
+// Function ID: 4755
 // Name: useAudienceRequestToSpeakState
-// Dependencies: [4624, 504, 2]
+// Dependencies: [4626, 504, 2]
 // Exports: default, getAudienceRequestToSpeakState
 
-// Module 4752 (useAudienceRequestToSpeakState)
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+// Module 4754 (useAudienceRequestToSpeakState)
+import VoiceStateStore from "VoiceStateStore" /* 4626 */;
 
 const require = globalThis.__r;
 

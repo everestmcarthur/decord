@@ -1,14 +1,14 @@
-// Module ID: 12701
-// Function ID: 12702
+// Module ID: 12726
+// Function ID: 12727
 // Name: ChatBeginningRowJoinApplication
-// Dependencies: [19, 17, 4243, 1371, 1074, 21, 4605, 576, 12702, 504, 12703, 5634, 4601, 1114, 4429, 5483, 5025, 2]
+// Dependencies: [19, 17, 4245, 1371, 1074, 21, 4607, 576, 12727, 504, 12728, 5636, 4603, 1114, 4431, 5485, 5027, 2]
 // Exports: default
 
-// Module 12701 (ChatBeginningRowJoinApplication)
+// Module 12726 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 576 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, guildInfoRow: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, divider: null, formQuestion: null };
 let obj3 = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, border: "none", marginVertical: 16 };
@@ -88,9 +88,9 @@ export default function ChatBeginningRowJoinRequest(channelId) {
           const obj2 = { style: closure_0.divider };
           const items = [React5(View, obj2), , ];
           const obj3 = { style: closure_0.formQuestion, variant: "text-xs/semibold", color: "text-muted", children: field_type.label };
-          items[1] = React5(tmp(4601).Text, obj3);
+          items[1] = React5(tmp(4603).Text, obj3);
           const obj4 = { variant: "text-md/medium", color: "text-strong", children: response };
-          items[2] = React5(tmp(4601).Text, obj4);
+          items[2] = React5(tmp(4603).Text, obj4);
           obj.children = items;
           const _HermesInternal = HermesInternal;
           return React6(View, obj, "form-response-" + index);

@@ -1,48 +1,77 @@
 // Module ID: 12892
 // Function ID: 12893
-// Dependencies: []
+// Dependencies: [12893, 12891]
 
 // Module 12892
-function merge(arg0, obj) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 2;
-  }
-  if (obj) {
-    if (typeof obj === "object") {
-      if (num > 0) {
-        if (arg0) {
-          if (obj) {
-            const _Object = Object;
-            if (0 === Object.keys(obj).length) {
-              return arg0;
-            }
-          }
-        }
-        obj = {};
-        const merged = Object.assign(arg0);
-        for (const key10016 in arg1) {
-          let _Object2 = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10016);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10016);
-          }
-          if (!hasOwnPropertyResult) {
-            continue;
-          } else {
-            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
-            continue;
-          }
-          continue;
-        }
-        return obj;
-      }
+import GLOBAL_OBJ from "module_12893" /* 12893 */;
+
+const require = globalThis.__r;
+
+function consoleSandbox(fn) {
+  if ("console" in console(12893).GLOBAL_OBJ) {
+    console = console(12893).GLOBAL_OBJ.console;
+    dependencyMap = {};
+    const _Object = Object;
+    const keys = Object.keys(obj);
+    const item = keys.forEach((item) => {
+      closure_1[item] = console[item];
+      console[item] = obj[item];
+    });
+    try {
+      const item1 = keys.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      return fn();
+    } catch (tmp8) {
+      const item2 = arr.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      throw tmp8;
     }
+  } else {
+    return fn();
+  }
+}
+let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+const originalConsoleMethods = {};
+
+export const CONSOLE_LEVELS = items;
+export { consoleSandbox };
+export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
+  _require = false;
+  const obj = {
+    enable() {
+      c0 = true;
+    },
+    disable() {
+      c0 = false;
+    },
+    isEnabled() {
+      return c0;
+    }
+  };
+  const forEach = items.forEach;
+  if (require("module_12891").DEBUG_BUILD) {
+    const item = forEach((arg0) => {
+      closure_0 = arg0;
+      obj[arg0] = () => {
+        const args = [...arguments];
+        if (args) {
+          consoleSandbox(() => {
+            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
+            items = ["Sentry Logger [" + args + "]:", ...closure_0];
+            _console[args].apply(items);
+          });
+        }
+      };
+    });
+  } else {
+    const item1 = forEach((arg0) => {
+      obj[arg0] = () => {
+
+      };
+    });
   }
   return obj;
-}
-
-export { merge };
+});
+export { originalConsoleMethods };

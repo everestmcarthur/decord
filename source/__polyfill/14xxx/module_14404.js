@@ -1,16 +1,16 @@
 // Module ID: 14404
 // Function ID: 14405
-// Dependencies: [14385, 14405]
+// Dependencies: [14377]
 
 // Module 14404
-import _mod14385 from "module_14385" /* 14385 */;
-import _mod14405 from "module_14405" /* 14405 */;
+import _mod14377 from "module_14377" /* 14377 */;
 
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14385(arg0[arg1])) {
-    tmp4 = _mod14405(tmp);
+export default (arg0) => {
+  if (_mod14377(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
   }
-  return tmp4;
 };

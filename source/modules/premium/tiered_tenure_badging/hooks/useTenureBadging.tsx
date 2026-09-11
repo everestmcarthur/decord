@@ -1,20 +1,20 @@
-// Module ID: 11256
-// Function ID: 11257
+// Module ID: 11281
+// Function ID: 11282
 // Name: useTenureBadging
-// Dependencies: [7672, 1371, 4268, 1373, 504, 11257, 1885, 7685, 11258, 2]
+// Dependencies: [7694, 1371, 4270, 1373, 504, 11282, 1885, 7707, 11283, 2]
 // Exports: usePremiumSinceForUser, useTieredTenureBadge, useTieredTenureBadgeData, useTieredTenureBadgeDataForUser, useTieredTenureBadgesFromSubscriptionData, useTieredTenureEarnedOnDate
 
-// Module 11256 (useTenureBadging)
+// Module 11281 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11257 */;
-import UserProfileStore from "UserProfileStore" /* 7672 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11282 */;
+import UserProfileStore from "UserProfileStore" /* 7694 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4268 */;
+import SubscriptionStore from "SubscriptionStore" /* 4270 */;
 
 const require = globalThis.__r;
 
-const TieredTenureBadgeUtils = tmp(7685);
+const TieredTenureBadgeUtils = tmp(7707);
 require = fn;
 function usePremiumSince() {
   const items = [UserStore];
@@ -128,8 +128,8 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        earnedOnDate = tmp(7685).getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
-        const tmpResult2 = tmp(7685);
+        earnedOnDate = tmp(7707).getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
+        const tmpResult2 = tmp(7707);
       }
     }
   }
@@ -170,8 +170,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7685).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult11 = tmp(7685);
+        earnedOnDate = tmp(7707).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult11 = tmp(7707);
       }
     }
   }
@@ -190,18 +190,18 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
       result = stateFromStores.hasPaidTier2Subscription();
     }
     if (!result) {
-      const earnedTenureBadge = tmp(7685).getEarnedTenureBadge(tmp13);
+      const earnedTenureBadge = tmp(7707).getEarnedTenureBadge(tmp13);
       if (null != earnedTenureBadge) {
         if (tmpResult13.shouldShowWithheldTenureBadge("useTieredTenureBadgeData")) {
           const obj3 = {};
           const merged1 = Object.assign(dependencyMap[earnedTenureBadge]);
-          obj3.earnedOnDate = tmp(7685).getEarnedOnDate(earnedTenureBadge, tmp13);
+          obj3.earnedOnDate = tmp(7707).getEarnedOnDate(earnedTenureBadge, tmp13);
           obj3.status = obj.WITHHELD;
           return obj3;
         }
-        tmpResult13 = tmp(11258);
+        tmpResult13 = tmp(11283);
       }
-      const tmpResult12 = tmp(7685);
+      const tmpResult12 = tmp(7707);
     }
     const obj4 = {};
     const _Object = Object;

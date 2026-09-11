@@ -1,12 +1,12 @@
-// Module ID: 17576
-// Function ID: 17577
+// Module ID: 17568
+// Function ID: 17569
 // Name: SelfPresenceStoreManager
-// Dependencies: [5329, 7170, 573, 2]
+// Dependencies: [5331, 7192, 573, 2]
 
-// Module 17576 (SelfPresenceStoreManager)
+// Module 17568 (SelfPresenceStoreManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5331 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7192 */;
 
 function handleChange() {
   const obj = DispatcherDefault;

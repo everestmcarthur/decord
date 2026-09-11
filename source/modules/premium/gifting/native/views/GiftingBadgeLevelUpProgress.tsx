@@ -1,23 +1,23 @@
-// Module ID: 11104
-// Function ID: 11105
+// Module ID: 11129
+// Function ID: 11130
 // Name: GiftingBadgeLevelUpProgress
-// Dependencies: [19, 17, 8255, 21, 4605, 576, 10819, 4601, 1114, 2492, 2]
+// Dependencies: [19, 17, 8278, 21, 4607, 576, 10840, 4603, 1114, 2492, 2]
 // Exports: default
 
-// Module 11104 (GiftingBadgeLevelUpProgress)
+// Module 11129 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2492 from "module_2492" /* 2492 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10819 */;
+import Text_Text from "Text/Text" /* 4603 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10840 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8255).getSingleRequirementThreshold;
+let closure_4 = fn(8278).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
 obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

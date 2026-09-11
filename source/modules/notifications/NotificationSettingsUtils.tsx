@@ -1,12 +1,12 @@
-// Module ID: 14527
-// Function ID: 14528
+// Module ID: 14505
+// Function ID: 14506
 // Name: notifications/NotificationSettingsUtils
-// Dependencies: [32, 19, 14521, 14528, 14529, 504, 1433, 2]
+// Dependencies: [32, 19, 14499, 14506, 14507, 504, 1433, 2]
 // Exports: getAssignedNotifSettingsAndMappings, useIsDeclarativeSettingsUIAvailable, useNotifCategoryVisibility, useNotifSettingVisibility
 
-// Module 14527 (notifications/NotificationSettingsUtils)
-import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 14528 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 14529 */;
+// Module 14505 (notifications/NotificationSettingsUtils)
+import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 14506 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 14507 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,42 +24,46 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(14521);
+const NotificationSettingsConstants = fn(14499);
 ({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
+let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
 export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSettingsAndMappings() {
   const settings = [];
   const mappings = [];
+  const result = DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled("getAssignedNotifSettingsAndMappings");
   const set = new Set();
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = nextResult;
-    if (null != nextResult.experiment) {
-      let obj2 = getNamedExperiment(tmp3.experiment);
-      let variations = tmp3.variations;
-      continue;
+    let tmp4 = nextResult;
+    let redesignState = nextResult.redesignState;
+    if (null == redesignState) {
+      if (null != tmp4.experiment) {
+        let obj3 = getNamedExperiment(tmp4.experiment);
+        let variations = tmp4.variations;
+        continue;
+      }
+      let arr = settings.push(tmp4);
+      let addResult = set.add(tmp4.id);
     }
-    let arr = settings.push(tmp3);
-    let addResult = set.add(tmp3.id);
     continue;
   }
   const entries = Object.entries(React4);
-  while (tmp10 !== undefined) {
-    let tmp13 = _slicedToArray(tmp11, 2);
-    let tmp14 = tmp13[1];
+  while (tmp14 !== undefined) {
+    let tmp17 = _slicedToArray(tmp15, 2);
+    let tmp18 = tmp17[1];
     let _parseInt = parseInt;
-    let parsed = parseInt(tmp13[0]);
-    for (const item10059 of tmp14) {
-      let tmp18 = item10059;
-      if (set.has(item10059)) {
-        let obj = { notifType: null, notifSetting: null };
-        obj.notifType = parsed;
-        obj.notifSetting = tmp18;
-        let arr2 = mappings.push(obj);
-        obj3.return();
+    let parsed = parseInt(tmp17[0]);
+    for (const item10071 of tmp18) {
+      let tmp22 = item10071;
+      if (set.has(item10071)) {
+        let obj2 = { notifType: null, notifSetting: null };
+        obj2.notifType = parsed;
+        obj2.notifSetting = tmp22;
+        let arr2 = mappings.push(obj2);
+        obj4.return();
         break;
       }
       continue;
@@ -68,8 +72,8 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
   }
   return { settings, mappings };
 };
-export const useIsDeclarativeSettingsUIAvailable = function useIsDeclarativeSettingsUIAvailable(LegacyNotificationsSetting) {
-  return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + LegacyNotificationsSetting);
+export const useIsDeclarativeSettingsUIAvailable = function useIsDeclarativeSettingsUIAvailable(AndroidMessageNotificationsSetting) {
+  return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + AndroidMessageNotificationsSetting);
 };
 export const useNotifCategoryVisibility = function useNotifCategoryVisibility(CATEGORY_OTHER) {
   return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + CATEGORY_OTHER);
@@ -81,11 +85,18 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
     const iter = dependencyMap[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
+      let tmp3 = nextResult;
       if (nextResult.id === arg0) {
+        let redesignState = tmp3.redesignState;
         if (null != tmp3.experiment) {
-          let obj = { experiment: null, variations: null };
-          obj.experiment = closure_1_6(nextResult.experiment);
-          obj.variations = nextResult.variations;
+          let obj2 = { redesignState, experiment: null, variations: null };
+          obj2.experiment = closure_1_6(nextResult.experiment);
+          obj2.variations = nextResult.variations;
+          iter.return();
+          return obj2;
+        } else if (null != redesignState) {
+          let obj = { redesignState: null };
+          obj.redesignState = redesignState;
           iter.return();
           return obj;
         }
@@ -108,8 +119,12 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
   let obj = require("initialize");
   let isDeclarativeNotificationSettingsRedesignEnabled = require("DeclarativeNotificationSettingsRedesignExperiment").useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + "useNotifSettingVisibility");
   if (isDeclarativeNotificationSettingsRedesignEnabled) {
-    isDeclarativeNotificationSettingsRedesignEnabled = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
-    let tmp5 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+    let tmp4 = false !== memo.redesignState;
+    if (tmp4) {
+      tmp4 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+      let tmp6 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+    }
+    isDeclarativeNotificationSettingsRedesignEnabled = tmp4;
   }
   return isDeclarativeNotificationSettingsRedesignEnabled;
 };

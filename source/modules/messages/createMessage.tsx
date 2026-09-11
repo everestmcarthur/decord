@@ -1,18 +1,18 @@
-// Module ID: 7803
-// Function ID: 7804
+// Module ID: 7825
+// Function ID: 7826
 // Name: createMessage
-// Dependencies: [7646, 1385, 1371, 1074, 38, 7804, 2]
+// Dependencies: [7668, 1385, 1371, 1074, 38, 7826, 2]
 // Exports: createBotMessage, default, userRecordToServer
 
-// Module 7803 (createMessage)
+// Module 7825 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import createNonce from "createNonce" /* 7804 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7646 */;
+import createNonce from "createNonce" /* 7826 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7668 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const ReferencedMessageState = fn(7646).ReferencedMessageState;
+const ReferencedMessageState = fn(7668).ReferencedMessageState;
 const Constants = fn(1074);
 ({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: closure_11 } = Constants);
 const size = fn(2);

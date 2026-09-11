@@ -1,30 +1,31 @@
 // Module ID: 6888
 // Function ID: 6889
-// Dependencies: [19, 6678]
-// Exports: useBottomSheetTimingConfigs
+// Dependencies: [19, 17, 21, 6889, 6890]
 
 // Module 6888
-import _mod19 from "module_19" /* 19 */;
-import value2 from "value2" /* 6678 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import _mod6889 from "module_6889" /* 6889 */;
+import noop_mod from "module_19" /* 19 */;
 
-const useMemo = _mod19.useMemo;
-
-export const useBottomSheetTimingConfigs = (arg0) => {
-  const easing = arg0;
-  const items = [, , ];
-  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
-  return useMemo(() => {
-    let ANIMATION_EASING = easing.easing;
-    if (!ANIMATION_EASING) {
-      ANIMATION_EASING = value2.ANIMATION_EASING;
-    }
-    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = tmp.duration;
-    if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = value2.ANIMATION_DURATION;
-    }
-    obj.duration = ANIMATION_DURATION;
-    obj.reduceMotion = easing.reduceMotion;
-    return obj;
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+const StyleSheet = _mod17.StyleSheet;
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo((arg0) => {
+  ({ backgroundComponent, backgroundStyle } = arg0);
+  let items = [backgroundStyle];
+  ({ animatedIndex, animatedPosition } = arg0);
+  const style = useMemo(() => {
+    const items = [_mod6889.styles.container, backgroundStyle];
+    return StyleSheet.flatten(items);
   }, items);
-};
+  if (backgroundComponent == null) {
+    backgroundComponent = backgroundStyle(6890).BottomSheetBackground;
+  }
+  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
+});
+memoResult.displayName = "BottomSheetBackgroundContainer";
+
+export const BottomSheetBackgroundContainer = memoResult;

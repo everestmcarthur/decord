@@ -1,15 +1,15 @@
-// Module ID: 13040
-// Function ID: 13041
+// Module ID: 13065
+// Function ID: 13066
 // Name: MediaModalOverlayFooterAction
-// Dependencies: [19, 17, 21, 4605, 576, 7175, 1115, 5015, 13033, 5025, 2]
+// Dependencies: [19, 17, 21, 4607, 576, 7197, 1115, 5017, 13058, 5027, 2]
 // Exports: MediaModalOverlayFooterAction
 
-// Module 13040 (MediaModalOverlayFooterAction)
+// Module 13065 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5015 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13033 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5017 */;
+import components_Button_Button from "components/Button/Button" /* 5027 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7197 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };

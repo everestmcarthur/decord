@@ -1,19 +1,19 @@
-// Module ID: 7976
-// Function ID: 7977
+// Module ID: 7999
+// Function ID: 8000
 // Name: ConversationNavigatorHeader
-// Dependencies: [19, 17, 1957, 21, 4605, 576, 504, 4758, 7914, 2]
+// Dependencies: [19, 17, 1957, 21, 4607, 576, 504, 4760, 7937, 2]
 // Exports: default
 
-// Module 7976 (ConversationNavigatorHeader)
+// Module 7999 (ConversationNavigatorHeader)
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4758 */;
+import useChannelNameDefault from "useChannelName" /* 4760 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;
@@ -39,6 +39,6 @@ export default function ConversationNavigatorHeader(channelId) {
   const tmp3 = useChannelNameDefault(stateFromStores, true);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(7914).GenericHeaderTitle, { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(7937).GenericHeaderTitle, { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
 };

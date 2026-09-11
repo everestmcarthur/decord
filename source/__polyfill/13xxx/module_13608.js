@@ -6,4 +6,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 20, height: 20, scales: [2, 3], hash: "b8e06ae6b6de6ac4efb5803ebe56348e", name: "star", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 200, height: 90, scales: [1], hash: "d354a91b7a8b3b1cf9e4de447250911f", name: "yearly_upsell_wumpus", type: "png" });

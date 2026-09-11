@@ -1,13 +1,13 @@
-// Module ID: 5809
-// Function ID: 5810
+// Module ID: 5831
+// Function ID: 5832
 // Name: AvatarDecorationsAbstractUI
-// Dependencies: [21, 5637, 5810, 2]
+// Dependencies: [21, 5639, 5832, 2]
 // Exports: AvatarDecorationsAbstractUI
 
-// Module 5809 (AvatarDecorationsAbstractUI)
+// Module 5831 (AvatarDecorationsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5810 from "module_5810" /* 5810 */;
+import FastImageDefault from "FastImage" /* 5639 */;
+import _modDef5832 from "module_5832" /* 5832 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarDecorationsAbstractUI = function AvatarDecorationsAbstractUI(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5810 };
+  const obj2 = { uri: _modDef5832 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

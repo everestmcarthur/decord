@@ -1,18 +1,16 @@
 // Module ID: 10554
 // Function ID: 10555
-// Dependencies: [41, 42, 93, 95, 98, 10502, 10548, 10503, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10522, 10525, 10526, 10542]
 
 // Module 10554
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import _mod10548 from "module_10548" /* 10548 */;
+import Filter from "Filter" /* 10542 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const DEMonthNameLittleEndianParser = require;
+const ENMergeRelativeAfterDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,13 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:am\\s*?)?(?:den\\s*?)?([0-9]{1,2})\\.(?:\\s*(?:bis(?:\\s*(?:am|zum))?|\\-|\\\u2013|\\s)\\s*([0-9]{1,2})\\.?)?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10548.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s*)(" + _mod10548.YEAR_PATTERN + "(?![^\\s]\\d)))?(?=\\W|$)", "i");
-class DEMonthNameLittleEndianParser {
+class ENMergeRelativeAfterDateRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, DEMonthNameLittleEndianParser);
+    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
     tmp2 = closure_4;
-    obj = closure_4(DEMonthNameLittleEndianParser);
+    obj = closure_4(ENMergeRelativeAfterDateRefiner);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,48 +50,40 @@ class DEMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(DEMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, arg1, text) {
+    let match = str.match(/^\s*$/i);
+    if (match) {
+      let tmp4 = null != text.text.match(/^[+-]/i);
+      if (!tmp4) {
+        tmp4 = null != text.text.match(/^-/i);
+      }
+      match = tmp4;
+      str = text.text;
+    }
+    return match;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = DEMonthNameLittleEndianParser(10548).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", tmp2(10548).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", tmp2(10503).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
-        }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text, arg3) {
+      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10522).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/^-/i)) {
+        reverseDurationResult = tmp(10525).reverseDuration(parseDurationResult);
       }
+      const ParsingComponents = tmp(10526).ParsingComponents;
+      const ReferenceWithTimezone = tmp(10526).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      ({ reference, index } = start);
+      return new ENMergeRelativeAfterDateRefiner(10526).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
     }
   }
 ];
 
-export default _createClass(DEMonthNameLittleEndianParser, items);
+export default _createClass(ENMergeRelativeAfterDateRefiner, items);

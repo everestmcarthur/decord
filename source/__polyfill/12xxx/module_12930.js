@@ -1,131 +1,96 @@
 // Module ID: 12930
 // Function ID: 12931
-// Dependencies: [12931, 12911, 12932, 12891, 12895, 12867, 12924]
-// Exports: createTransport
+// Dependencies: [12920, 12897, 12892]
+// Exports: logSpanEnd, logSpanStart
 
 // Module 12930
-import _mod12911 from "module_12911" /* 12911 */;
-import _mod12924 from "module_12924" /* 12924 */;
-
-const require = globalThis.__r;
+import _mod12920 from "module_12920" /* 12920 */;
 
 require = arg1;
-let dependencyMap = arg6;
+const dependencyMap = arg6;
 
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
+export const logSpanEnd = function logSpanEnd(spanContext) {
+  if (_mod12920.DEBUG_BUILD) {
+    const spanToJSONResult = tmp(12897).spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
     }
-    promiseBuffer = require("module_12931").makePromiseBuffer(num);
-    let obj = require("module_12931");
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const spanId = spanContext.spanContext().spanId;
+    const tmpResult = tmp(12897);
+    let str3 = "";
+    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
+      str3 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
+    const logger = tmp(12892).logger;
+    logger.log(combined);
+    tmpResult2 = tmp(12897);
   }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod12911.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-      });
-      if (0 === items.length) {
-        return tmp(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = tmp(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {
-
-        }
-        const tmpResult2 = tmp(tmp2[1]);
-        return recordEnvelopeLoss.add(() => {
-          const obj = { body: _mod12911.serializeEnvelope(dependencyMap) };
-          return dependencyMap(obj).then((statusCode) => {
-            let DEBUG_BUILD = undefined !== statusCode.statusCode;
-            if (DEBUG_BUILD) {
-              let tmp = statusCode.statusCode < 200;
-              if (!tmp) {
-                tmp = statusCode.statusCode >= 300;
-              }
-              DEBUG_BUILD = tmp;
-            }
-            if (DEBUG_BUILD) {
-              DEBUG_BUILD = items(12895).DEBUG_BUILD;
-            }
-            if (DEBUG_BUILD) {
-              const logger = items(12867).logger;
-              const _HermesInternal = HermesInternal;
-              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-            }
-            closure_3 = items(12932).updateRateLimits(closure_3, statusCode);
-            return statusCode;
-          }, (arg0) => {
-            if (typeof recordEnvelopeLoss === "function") {
-              const network_error = "network_error";
-              closure_0(12911).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              throw arg0;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-        }).then((result) => result, (arg0) => {
-          if (arg0 instanceof _mod12924.SentryError) {
-            if (tmp(12895).DEBUG_BUILD) {
-              const logger = tmp(12867).logger;
-              logger.error("Skipped sending event because buffer is full.");
-            }
-            if (typeof recordEnvelopeLoss === "function") {
-              const queue_overflow = "queue_overflow";
-              tmp(12911).forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              const tmpResult = tmp(12911);
-              return tmp(12891).resolvedSyncPromise({});
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw arg0;
-          }
-        });
-      }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
+};
+export const logSpanStart = function logSpanStart(spanContext) {
+  if (_mod12920.DEBUG_BUILD) {
+    const spanToJSONResult = tmp(12897).spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
     }
-  };
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const parent_span_id = spanToJSONResult.parent_span_id;
+    const tmpResult = tmp(12897);
+    const tmpResult4 = tmp(12897);
+    const spanIsSampledResult = tmp(12897).spanIsSampled(spanContext);
+    const rootSpan = tmp(12897).getRootSpan(spanContext);
+    let str3 = "unsampled";
+    if (spanIsSampledResult) {
+      str3 = "sampled";
+    }
+    let str5 = "";
+    if (rootSpan === spanContext) {
+      str5 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
+    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
+    const items = ["op: " + str2, , ];
+    const _HermesInternal3 = HermesInternal;
+    items[1] = "name: " + str;
+    const _HermesInternal4 = HermesInternal;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
+    if (parent_span_id) {
+      const _HermesInternal5 = HermesInternal;
+      items.push("parent ID: " + parent_span_id);
+    }
+    if (rootSpan !== spanContext) {
+      const tmpResult6 = tmp(12897);
+      ({ op: op2, description: description2 } = tmp(12897).spanToJSON(rootSpan));
+      const _HermesInternal6 = HermesInternal;
+      items.push("root ID: " + rootSpan.spanContext().spanId);
+      if (op2) {
+        const _HermesInternal7 = HermesInternal;
+        items.push("root op: " + op2);
+      }
+      if (description2) {
+        const _HermesInternal8 = HermesInternal;
+        items.push("root description: " + description2);
+      }
+      const spanToJSONResult1 = tmp(12897).spanToJSON(rootSpan);
+    }
+    const logger = tmp(12892).logger;
+    const _HermesInternal9 = HermesInternal;
+    logger.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult5 = tmp(12897);
+  }
 };

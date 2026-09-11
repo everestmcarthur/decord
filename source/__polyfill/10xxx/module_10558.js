@@ -1,18 +1,15 @@
 // Module ID: 10558
 // Function ID: 10559
-// Dependencies: [41, 42, 93, 95, 98, 10526, 10508, 10507, 10509]
+// Dependencies: [41, 42, 93, 95, 98, 10542]
 
 // Module 10558
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import now from "now" /* 10526 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10542 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-const FRCasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,132 +29,62 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+let _classCallCheck = _classCallCheck_mod;
+class ENUnlikelyFormatFilter {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ENUnlikelyFormatFilter);
+    tmp2 = c2;
+    obj = c2(ENUnlikelyFormatFilter);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function c(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
+}
+_classCallCheck = ENUnlikelyFormatFilter;
+_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+const entry = {
+  key: "isValid",
+  value: function isValid(text, text2) {
+    closure_0 = text2;
+    const str2 = text2.text.trim();
+    if (str2 === str3.trim()) {
+      return true;
+    } else {
+      if ("may" === str2.toLowerCase()) {
+        const str5 = text.text.substring(0, text2.index);
+        if (!str6.match(/\b(in)$/i)) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          return false;
         }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_9 = fn(now);
-    class FRCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, FRCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(FRCasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+        str6 = text.text.substring(0, text2.index).trim();
       }
+      const formatted = str2.toLowerCase();
+      const endsWithResult = formatted.endsWith("the second");
+      let flag2 = !endsWithResult;
+      if (endsWithResult) {
+        flag2 = false;
+        if (str9.trim().length > 0) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          flag2 = false;
+        }
+        str9 = text.text.substring(text2.index + text2.text.length);
+      }
+      return flag2;
     }
-    _inherits(FRCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return /(maintenant|aujourd'hui|demain|hier|cette\s*nuit|la\s*veille)(?=\W|$)/i;
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-            refDate = refDate.refDate;
-            const str2 = arg1[0].toLowerCase();
-            const parsingComponents = refDate.createParsingComponents();
-            if ("maintenant" === str2) {
-              return closure_9.now(refDate.reference);
-            } else if ("aujourd'hui" === str2) {
-              return closure_9.today(refDate.reference);
-            } else if ("hier" === str2) {
-              return closure_9.yesterday(refDate.reference);
-            } else if ("demain" === str2) {
-              return closure_9.tomorrow(refDate.reference);
-            } else {
-              if (str2.match(/cette\s*nuit/)) {
-                FRCasualDateParser(10508).assignSimilarDate(parsingComponents, refDate);
-                parsingComponents.imply("hour", 22);
-                parsingComponents.imply("meridiem", FRCasualDateParser(10507).Meridiem.PM);
-              } else if (str2.match(/la\s*veille/)) {
-                const _Date = Date;
-                const date = new Date(refDate.getTime());
-                date.setDate(date.getDate() - 1);
-                FRCasualDateParser(10508).assignSimilarDate(parsingComponents, date);
-                parsingComponents.imply("hour", 0);
-              }
-              return parsingComponents;
-            }
-          }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(FRCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
+    str3 = text.text;
   }
-} else {
-  let _Object = Object;
-}
+};
+const items = [entry];
+
+export default _createClass(ENUnlikelyFormatFilter, items);

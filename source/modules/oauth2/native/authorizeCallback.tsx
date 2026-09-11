@@ -1,17 +1,17 @@
-// Module ID: 9645
-// Function ID: 9646
+// Module ID: 9668
+// Function ID: 9669
 // Name: authorizeCallback
-// Dependencies: [9644, 4808, 9318, 1896, 1365, 9646, 4570, 1093, 4299, 2]
+// Dependencies: [9667, 4810, 9341, 1896, 1365, 9669, 4572, 1093, 4301, 2]
 // Exports: default
 
-// Module 9645 (authorizeCallback)
+// Module 9668 (authorizeCallback)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import BrowserManager from "BrowserManager" /* 4570 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import Constants from "Constants" /* 9644 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import BrowserManager from "BrowserManager" /* 4572 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4810 */;
+import Constants from "Constants" /* 9667 */;
 import size from "module_2" /* 2 */;
 
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: closure_4 } = Constants);
@@ -32,11 +32,11 @@ export default function authorizeCallback(arg0) {
         if (null != pathname) {
           if (null != pathname.match(re5)) {
             const obj3 = { application: tmp, guild: tmp2 };
-            tmp8(4808).pushLazy(asyncRequireImpl(9646, tmp9.paths), obj3, React3);
+            tmp8(4810).pushLazy(asyncRequireImpl(9669, tmp9.paths), obj3, React3);
           } else if (null != pathname.match(re6)) {
             if (!canceled) {
               let str1;
-              const tmp8Result5 = tmp8(4808);
+              const tmp8Result5 = tmp8(4810);
               if (searchParams != null) {
                 const str2 = searchParams.get("error_description");
                 if (str2 != null) {
@@ -54,8 +54,8 @@ export default function authorizeCallback(arg0) {
                 str1 = str5;
               }
               const obj4 = { error: str1 };
-              tmp8Result5.pushLazy(asyncRequireImpl(9318, tmp9.paths), obj4, React4);
-              const tmp17 = asyncRequireImpl(9318, tmp9.paths);
+              tmp8Result5.pushLazy(asyncRequireImpl(9341, tmp9.paths), obj4, React4);
+              const tmp17 = asyncRequireImpl(9341, tmp9.paths);
             }
           }
         }
@@ -73,6 +73,6 @@ export default function authorizeCallback(arg0) {
     LinkingDefault.openURL(_location, SAFARI);
     const tmp8Result6 = LinkingDefault;
   } else if (!canceled) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9318, dependencyMap.paths), undefined, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9341, dependencyMap.paths), undefined, React4);
   }
 };

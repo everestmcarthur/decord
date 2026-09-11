@@ -1,20 +1,20 @@
-// Module ID: 9761
-// Function ID: 9762
+// Module ID: 9784
+// Function ID: 9785
 // Name: FocusedControlsBottomControls
-// Dependencies: [32, 19, 17, 9537, 9538, 1074, 21, 1115, 4605, 576, 5574, 1178, 1611, 4341, 9762, 1093, 1114, 7206, 4425, 1943, 4606, 6705, 9764, 1477, 9568, 1109, 4315, 5015, 4456, 9765, 2]
+// Dependencies: [32, 19, 17, 9560, 9561, 1074, 21, 1115, 4607, 576, 5576, 1178, 1611, 4343, 9785, 1093, 1114, 7228, 4427, 1943, 4608, 6727, 9787, 1477, 9591, 1109, 4317, 5017, 4458, 9788, 2]
 // Exports: default
 
-// Module 9761 (FocusedControlsBottomControls)
+// Module 9784 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9764 */;
-import CallPTTButton from "CallPTTButton" /* 9765 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4608 */;
+import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9787 */;
+import CallPTTButton from "CallPTTButton" /* 9788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5574 */;
+import TextStyles from "TextStyles" /* 5576 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const CallPTTButtonDefault = CallPTTButton;
@@ -63,8 +63,8 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(9762).useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4341);
+  const canShowTooltip = positionY(9785).useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  positionY(4343);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c15, 1) };
   };
@@ -97,15 +97,15 @@ function FocusedControlsAboveActionBarView(positionY) {
   fn.__initData = __initData3;
   const obj3 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   const obj4 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = positionY(4341).useAnimatedStyle(fn);
-  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(7206).ActionSheetHeaderBar, {}), ];
+  const animatedStyle = positionY(4343).useAnimatedStyle(fn);
+  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(7228).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     obj5 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj5.style = items1;
     obj5.children = aboveActionBar;
-    tmp4Result = tmp4(offsetY(4341).View, obj5);
+    tmp4Result = tmp4(offsetY(4343).View, obj5);
   }
   items[2] = tmp4Result;
   obj4.children = items;
@@ -634,9 +634,9 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(9537);
+const ChannelCallStore = fn(9560);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9538);
+const ChannelCallConstants = fn(9561);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -649,7 +649,7 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createStyles = fn(4605);
+const createStyles = fn(4607);
 let obj2 = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 obj2.bottomDrawerContainer = rect;
