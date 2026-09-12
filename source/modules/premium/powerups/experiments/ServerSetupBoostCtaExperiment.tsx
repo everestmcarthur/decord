@@ -1,9 +1,9 @@
-// Module ID: 12681
-// Function ID: 12682
+// Module ID: 12717
+// Function ID: 12718
 // Name: ServerSetupBoostCtaExperiment
 // Dependencies: [1433, 2]
 
-// Module 12681 (ServerSetupBoostCtaExperiment)
+// Module 12717 (ServerSetupBoostCtaExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

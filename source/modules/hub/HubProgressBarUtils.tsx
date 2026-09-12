@@ -1,17 +1,17 @@
-// Module ID: 12762
-// Function ID: 12763
+// Module ID: 12798
+// Function ID: 12799
 // Name: HubProgressBarUtils
-// Dependencies: [19, 1221, 5332, 9922, 1074, 504, 1187, 1114, 1369, 1384, 2]
+// Dependencies: [19, 1221, 5362, 9961, 1074, 504, 1187, 1114, 1369, 1384, 2]
 // Exports: getHubProgressTitleForStep, getNextHubProgressStep, useHubProgressBarCompletedSteps
 
-// Module 12762 (HubProgressBarUtils)
+// Module 12798 (HubProgressBarUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5332 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9922).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9961).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1074).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");

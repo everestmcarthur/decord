@@ -1,16 +1,16 @@
-// Module ID: 11107
-// Function ID: 11108
+// Module ID: 11146
+// Function ID: 11147
 // Name: OrbCheckoutAmountTag
-// Dependencies: [17, 21, 4606, 576, 8927, 4602, 1114, 2]
+// Dependencies: [17, 21, 4636, 576, 8962, 4632, 1114, 2]
 // Exports: default
 
-// Module 11107 (OrbCheckoutAmountTag)
+// Module 11146 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import OrbsIcon from "OrbsIcon" /* 8927 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import OrbsIcon from "OrbsIcon" /* 8962 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

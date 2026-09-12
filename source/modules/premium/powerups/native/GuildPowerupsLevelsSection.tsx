@@ -1,14 +1,14 @@
-// Module ID: 12656
-// Function ID: 12657
+// Module ID: 12692
+// Function ID: 12693
 // Name: GuildPowerupsLevelsSection
-// Dependencies: [19, 17, 21, 576, 1116, 4606, 12645, 1114, 2428, 12657, 12658, 2]
+// Dependencies: [19, 17, 21, 576, 1151, 4636, 12681, 1114, 2428, 12693, 12694, 2]
 // Exports: default
 
-// Module 12656 (GuildPowerupsLevelsSection)
+// Module 12692 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 12657 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12658 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 12693 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12694 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,12 +16,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const PlatformUtils = fn(1116);
+const PlatformUtils = fn(1151);
 let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj3 = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 }, scrollerContent: null };
 const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
 obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -49,8 +49,8 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj2.title = intl.string(listings(2428)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2428).aJv4PB);
-  const items1 = [closure_5(listings(12645), obj2), ];
-  const tmp3 = listings(12645);
+  const items1 = [closure_5(listings(12681), obj2), ];
+  const tmp3 = listings(12681);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

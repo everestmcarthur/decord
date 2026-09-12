@@ -1,8 +1,8 @@
-// Module ID: 12071
-// Function ID: 12072
+// Module ID: 12107
+// Function ID: 12108
 // Dependencies: [2]
 
-// Module 12071
+// Module 12107
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiGGsExample-1x.png.js");

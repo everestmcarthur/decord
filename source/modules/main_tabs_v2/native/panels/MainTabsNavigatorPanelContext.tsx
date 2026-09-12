@@ -1,17 +1,17 @@
-// Module ID: 16081
-// Function ID: 16082
+// Module ID: 16105
+// Function ID: 16106
 // Name: MainTabsNavigatorPanelContext
-// Dependencies: [19, 6726, 7147, 2]
+// Dependencies: [19, 6756, 7177, 2]
 
-// Module 16081 (MainTabsNavigatorPanelContext)
+// Module 16105 (MainTabsNavigatorPanelContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { gesture: null, disallowGesture: null, translateX: null };
-const Gesture = fn(6726).Gesture;
+const Gesture = fn(6756).Gesture;
 obj.gesture = Gesture.Pan();
-let ReanimatedHelperTypes = fn(7147);
+let ReanimatedHelperTypes = fn(7177);
 obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7147);
+ReanimatedHelperTypes = fn(7177);
 obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 const context1 = noop.createContext(undefined);

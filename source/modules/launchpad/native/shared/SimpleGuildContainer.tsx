@@ -1,15 +1,15 @@
-// Module ID: 17060
-// Function ID: 17061
+// Module ID: 17087
+// Function ID: 17088
 // Name: SimpleGuildContainer
-// Dependencies: [19, 17, 21, 4606, 7941, 16405, 576, 17059, 4308, 17061, 4343, 5025, 2]
+// Dependencies: [19, 17, 21, 4636, 7971, 16429, 576, 17086, 4338, 17088, 4373, 5055, 2]
 // Exports: SimpleGuildContainer, SimpleGuildContainerAnimated
 
-// Module 17060 (SimpleGuildContainer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5025 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 7941 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16405 */;
-import CutoutImageDefault from "CutoutImage" /* 17061 */;
+// Module 17087 (SimpleGuildContainer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import spring from "spring" /* 5055 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 7971 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16429 */;
+import CutoutImageDefault from "CutoutImage" /* 17088 */;
 import noop from "module_19" /* 19 */;
 
 const GuildsBarActivityIndicatorDefault = GuildsBarActivityIndicator;
@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let closure_12 = noop.memo((backgroundColor) => {
   ({ badge, unread } = backgroundColor);

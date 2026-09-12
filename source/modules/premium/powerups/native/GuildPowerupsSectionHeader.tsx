@@ -1,16 +1,16 @@
-// Module ID: 12645
-// Function ID: 12646
+// Module ID: 12681
+// Function ID: 12682
 // Name: GuildPowerupsSectionHeader
-// Dependencies: [17, 21, 4606, 576, 7053, 4602, 2]
+// Dependencies: [17, 21, 4636, 576, 7083, 4632, 2]
 // Exports: default
 
-// Module 12645 (GuildPowerupsSectionHeader)
+// Module 12681 (GuildPowerupsSectionHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7053 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

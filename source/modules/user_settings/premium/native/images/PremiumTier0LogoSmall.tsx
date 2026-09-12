@@ -1,13 +1,13 @@
-// Module ID: 13532
-// Function ID: 13533
+// Module ID: 13565
+// Function ID: 13566
 // Name: PremiumTier0LogoSmall
-// Dependencies: [19, 21, 4308, 576, 8542, 2]
+// Dependencies: [19, 21, 4338, 576, 8574, 2]
 // Exports: default
 
-// Module 13532 (PremiumTier0LogoSmall)
+// Module 13565 (PremiumTier0LogoSmall)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4308 */;
-import inlineStyles from "inlineStyles" /* 8542 */;
+import useToken from "useToken" /* 4338 */;
+import inlineStyles from "inlineStyles" /* 8574 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

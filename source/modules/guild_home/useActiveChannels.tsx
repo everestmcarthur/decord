@@ -1,18 +1,18 @@
-// Module ID: 16137
-// Function ID: 16138
+// Module ID: 16161
+// Function ID: 16162
 // Name: useActiveChannels
-// Dependencies: [1961, 1957, 4245, 4787, 13760, 1074, 1964, 1369, 2]
+// Dependencies: [1961, 1957, 4275, 4817, 13794, 1074, 1964, 1369, 2]
 // Exports: getActiveTextChannels
 
-// Module 16137 (useActiveChannels)
+// Module 16161 (useActiveChannels)
 import Constants from "Constants" /* 1074 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13760 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13794 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

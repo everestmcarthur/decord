@@ -1,25 +1,25 @@
-// Module ID: 5176
-// Function ID: 5177
+// Module ID: 5206
+// Function ID: 5207
 // Name: ThemedGradient
-// Dependencies: [19, 17, 4426, 21, 4606, 4458, 4457, 4456, 1477, 5038, 4541, 576, 4461, 4425, 672, 1232, 563, 4463, 4540, 1231, 2]
+// Dependencies: [19, 17, 4456, 21, 4636, 4488, 4487, 4486, 1477, 5068, 4571, 576, 4491, 4455, 672, 1232, 563, 4493, 4570, 1231, 2]
 // Exports: CustomThemedGradient, default, validateColors
 
-// Module 5176 (ThemedGradient)
+// Module 5206 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4425 */;
-import ColorUtils from "ColorUtils" /* 4456 */;
-import utils_ColorDefault from "utils/Color" /* 4457 */;
-import shared from "shared" /* 4458 */;
-import GuildThemePresets from "GuildThemePresets" /* 4461 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4463 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4540 */;
-import useThemeDefault from "useTheme" /* 4541 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4455 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import utils_ColorDefault from "utils/Color" /* 4487 */;
+import shared from "shared" /* 4488 */;
+import GuildThemePresets from "GuildThemePresets" /* 4491 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4493 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4570 */;
+import useThemeDefault from "useTheme" /* 4571 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4426 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -346,8 +346,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5038), obj);
-    const tmp2Result = reduced(5038);
+    tmp10Result = closure_6(reduced(5068), obj);
+    const tmp2Result = reduced(5068);
   }
   return tmp10Result;
 }
@@ -384,7 +384,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c10 = 0.5;
@@ -425,13 +425,13 @@ export default function ThemedGradient(overlayOpacity) {
           const items1 = [tmp59, ];
           const obj4 = { style: null };
           const items2 = [tmp2.softenGradient, ];
-          const obj5 = { backgroundColor: tmp6(4456).hexWithOpacity(tmp8, num) };
+          const obj5 = { backgroundColor: tmp6(4486).hexWithOpacity(tmp8, num) };
           items2[1] = obj5;
           obj4.style = items2;
           items1[1] = timestampProducer(View, obj4);
           obj3.children = items1;
           tmp60 = React5(View, obj3);
-          const tmp6Result8 = tmp6(4456);
+          const tmp6Result8 = tmp6(4486);
         }
         return tmp60;
       }
@@ -447,13 +447,13 @@ export default function ThemedGradient(overlayOpacity) {
         const items3 = [tmp48, ];
         const obj8 = { style: null };
         const items4 = [tmp2.softenGradient, ];
-        const obj9 = { backgroundColor: tmp6(4456).hexWithOpacity(tmp8, num) };
+        const obj9 = { backgroundColor: tmp6(4486).hexWithOpacity(tmp8, num) };
         items4[1] = obj9;
         obj8.style = items4;
         items3[1] = timestampProducer(View, obj8);
         obj7.children = items3;
         tmp49 = React5(View, obj7);
-        const tmp6Result9 = tmp6(4456);
+        const tmp6Result9 = tmp6(4486);
       }
       return tmp49;
     }
@@ -470,13 +470,13 @@ export default function ThemedGradient(overlayOpacity) {
       const items5 = [tmp39, ];
       const obj12 = { style: null };
       const items6 = [tmp2.softenGradient, ];
-      const obj13 = { backgroundColor: tmp6(4456).hexWithOpacity(tmp8, num) };
+      const obj13 = { backgroundColor: tmp6(4486).hexWithOpacity(tmp8, num) };
       items6[1] = obj13;
       obj12.style = items6;
       items5[1] = tmp34(View, obj12);
       obj11.children = items5;
       tmp40 = React5(View, obj11);
-      const tmp6Result10 = tmp6(4456);
+      const tmp6Result10 = tmp6(4486);
     }
     let tmp13 = tmp40;
     tmp34 = timestampProducer;
@@ -494,13 +494,13 @@ export default function ThemedGradient(overlayOpacity) {
           const items7 = [tmp30, ];
           const obj16 = { style: null };
           const items8 = [tmp2.softenGradient, ];
-          const obj17 = { backgroundColor: tmp6(4456).hexWithOpacity(tmp8, num) };
+          const obj17 = { backgroundColor: tmp6(4486).hexWithOpacity(tmp8, num) };
           items8[1] = obj17;
           obj16.style = items8;
           items7[1] = tmp23(View, obj16);
           obj15.children = items7;
           tmp31 = React5(View, obj15);
-          const tmp6Result11 = tmp6(4456);
+          const tmp6Result11 = tmp6(4486);
         }
         tmp13 = tmp31;
         tmp23 = timestampProducer;
@@ -518,13 +518,13 @@ export default function ThemedGradient(overlayOpacity) {
         const items9 = [tmp19, ];
         const obj20 = { style: null };
         const items10 = [tmp2.softenGradient, ];
-        const obj21 = { backgroundColor: tmp6(4456).hexWithOpacity(tmp8, num) };
+        const obj21 = { backgroundColor: tmp6(4486).hexWithOpacity(tmp8, num) };
         items10[1] = obj21;
         obj20.style = items10;
         items9[1] = tmp14(View, obj20);
         obj19.children = items9;
         tmp20 = React5(View, obj19);
-        const tmp6Result12 = tmp6(4456);
+        const tmp6Result12 = tmp6(4486);
       }
       tmp13 = tmp20;
       tmp14 = timestampProducer;

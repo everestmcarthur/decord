@@ -1,9 +1,9 @@
 // Module ID: 10160
 // Function ID: 10161
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 10160
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_profile/native/images", width: 24, height: 24, scales: [2, 3], hash: "0e02f6accc59d44ac3827104886762f1", name: "boost", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "97b88511d0fe85beb9ea20d66572b94a", name: "GroupPlusIcon", type: "png" });

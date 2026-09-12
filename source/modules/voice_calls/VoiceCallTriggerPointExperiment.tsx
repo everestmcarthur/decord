@@ -1,11 +1,11 @@
-// Module ID: 17419
-// Function ID: 17420
+// Module ID: 17449
+// Function ID: 17450
 // Name: VoiceCallTriggerPointExperiment
-// Dependencies: [4523, 4520, 2]
+// Dependencies: [4553, 4550, 2]
 
-// Module 17419 (VoiceCallTriggerPointExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4523 */;
-import createExperiment from "module_4520" /* 4520 */;
+// Module 17449 (VoiceCallTriggerPointExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4553 */;
+import createExperiment from "module_4550" /* 4550 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-04_voice_call_trigger_point", label: "Voice Call Trigger Point Experiment", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: null };

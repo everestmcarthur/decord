@@ -1328,8 +1328,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f108615) {
-    result.afterAllSetup(f108615);
+  obj3.afterAllSetup = function afterAllSetup(f108676) {
+    result.afterAllSetup(f108676);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1346,11 +1346,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj2[tmp2(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = tmp2(889).startBrowserTracingPageLoadSpan(f108615, obj);
+      result = tmp2(889).startBrowserTracingPageLoadSpan(f108676, obj);
       const tmp2Result = tmp2(889);
     }
     if (closure_11) {
-      weakSet.add(f108615);
+      weakSet.add(f108676);
     }
   };
   return obj3;

@@ -1,9 +1,9 @@
-// Module ID: 4492
-// Function ID: 4493
+// Module ID: 4522
+// Function ID: 4523
 // Name: GuildThemePreviewStore
-// Dependencies: [502, 4493, 1952, 573, 1978, 12, 504, 2]
+// Dependencies: [502, 4523, 1952, 573, 1978, 12, 504, 2]
 
-// Module 4492 (GuildThemePreviewStore)
+// Module 4522 (GuildThemePreviewStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -24,7 +24,7 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(4493);
+const GuildThemePreviewConstants = fn(4523);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
 const timeout = new fn(1952).Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };

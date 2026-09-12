@@ -1,22 +1,22 @@
-// Module ID: 16867
-// Function ID: 16868
+// Module ID: 16894
+// Function ID: 16895
 // Name: YouScreenContainer
-// Dependencies: [19, 17, 11179, 21, 4606, 576, 1611, 16085, 1477, 4467, 16868, 1116, 2]
+// Dependencies: [19, 17, 11218, 21, 4636, 576, 1611, 16109, 1477, 4497, 16895, 1151, 2]
 
-// Module 16867 (YouScreenContainer)
+// Module 16894 (YouScreenContainer)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16085 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16109 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = tmp(1477);
-const useChatLayoutDefault = tmp(4467);
-const YouScreenDefault = tmp(16868);
+const useChatLayoutDefault = tmp(4497);
+const YouScreenDefault = tmp(16895);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11179).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11218).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };
 let obj3 = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl };
 obj.androidContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
@@ -51,7 +51,7 @@ export default noop.memo(function YouScreenContainer(route) {
     const obj3 = { style: null, children: null };
     items[1] = tmp7;
     obj3.style = items;
-    tmp3Result = tmp3(1116);
+    tmp3Result = tmp3(1151);
     if (tmp3Result2.isAndroid()) {
       const obj4 = { style: null, children: null };
       items1 = [, ];
@@ -70,7 +70,7 @@ export default noop.memo(function YouScreenContainer(route) {
     }
     obj3.children = tmp5Result3;
     tmp5(View, obj3);
-    tmp3Result2 = tmp3(1116);
+    tmp3Result2 = tmp3(1151);
   } else {
     const obj8 = { initialTab };
     return tmp5(YouScreenDefault, obj8);

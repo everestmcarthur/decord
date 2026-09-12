@@ -1,9 +1,9 @@
 // Module ID: 3491
 // Function ID: 3492
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 3491
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
 export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/slayer_storefront/intl", scales: [1], hash: "13d999a4ca0ff842bcf12fdb922afdec", name: "SlayerStorefront.compiled.messages", type: "jsona" });

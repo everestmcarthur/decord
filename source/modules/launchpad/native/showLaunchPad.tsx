@@ -1,10 +1,10 @@
-// Module ID: 16997
-// Function ID: 16998
+// Module ID: 17024
+// Function ID: 17025
 // Name: showLaunchPad
 // Dependencies: [1074, 1109, 2]
 // Exports: default
 
-// Module 16997 (showLaunchPad)
+// Module 17024 (showLaunchPad)
 import Constants from "Constants" /* 1074 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import size from "module_2" /* 2 */;

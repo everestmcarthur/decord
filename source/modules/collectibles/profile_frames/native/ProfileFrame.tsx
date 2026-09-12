@@ -1,12 +1,12 @@
-// Module ID: 8305
-// Function ID: 8306
+// Module ID: 8337
+// Function ID: 8338
 // Name: ProfileFrame
-// Dependencies: [19, 17, 8288, 8306, 7281, 21, 4606, 8307, 5638, 8308, 8309, 2]
+// Dependencies: [19, 17, 8320, 8338, 7311, 21, 4636, 8339, 5668, 8340, 8341, 2]
 // Exports: default
 
-// Module 8305 (ProfileFrame)
-import FastImageDefault from "FastImage" /* 5638 */;
-import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8309 */;
+// Module 8337 (ProfileFrame)
+import FastImageDefault from "FastImage" /* 5668 */;
+import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8341 */;
 import noop from "module_19" /* 19 */;
 
 function ProfileFrameLayer(skuId) {
@@ -157,12 +157,12 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-let closure_4 = fn(8288).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8306);
+let closure_4 = fn(8320).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8338);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: hasOwnProperty, PROFILE_FRAME_Z_INDEX: metroRequire } = ProfileFrameConstants);
-const UserProfileThemeTypes = fn(7281).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7311).UserProfileThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: null, layer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

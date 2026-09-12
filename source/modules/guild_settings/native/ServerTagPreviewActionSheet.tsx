@@ -1,22 +1,22 @@
-// Module ID: 13965
-// Function ID: 13966
+// Module ID: 13999
+// Function ID: 14000
 // Name: ServerTagPreviewActionSheet
-// Dependencies: [19, 17, 9155, 21, 4606, 576, 9277, 9278, 13966, 4573, 4602, 1114, 5026, 7112, 7270, 7222, 2]
+// Dependencies: [19, 17, 9194, 21, 4636, 576, 9316, 9317, 14000, 4603, 4632, 1114, 5056, 7142, 7300, 7252, 2]
 // Exports: default
 
-// Module 13965 (ServerTagPreviewActionSheet)
+// Module 13999 (ServerTagPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9278 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 13966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9317 */;
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 14000 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9155).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9194).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { error: { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_8();
-  const guildProfile1 = guildId(9277).useGuildProfile(guildId);
+  const guildProfile1 = guildId(9316).useGuildProfile(guildId);
   let guildProfile = guildProfile1.guildProfile;
   const items = [guildId];
   const effect = noop.useEffect(() => {
@@ -44,26 +44,26 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1114).intl;
     obj4.children = intl.string(tmp2(1114).t.tmGHjc);
-    const items1 = [closure_6(tmp2(4602).Text, obj4), ];
+    const items1 = [closure_6(tmp2(4632).Text, obj4), ];
     const obj6 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1114).intl;
     obj6.text = intl2.string(tmp2(1114).t["5911Lb"]);
     obj6.onPress = function onPress() {
       return GuildProfileActionCreators.getGuildProfile(guildId, true);
     };
-    items1[1] = closure_6(tmp2(5026).Button, obj6);
+    items1[1] = closure_6(tmp2(5056).Button, obj6);
     obj3.children = items1;
     tmp7 = closure_7(View, obj3);
     tmp8 = closure_6;
   } else {
-    tmp7 = closure_6(tmp2(7112).SceneLoadingIndicator, {});
+    tmp7 = closure_6(tmp2(7142).SceneLoadingIndicator, {});
     tmp8 = closure_6;
   }
   const obj7 = { children: null };
   const obj13 = { title: null };
   const intl3 = tmp2(1114).intl;
   obj13.title = intl3.string(guildId(1114).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(7222).BottomSheetTitleHeader, obj13), tmp7];
+  const items2 = [tmp8(guildId(7252).BottomSheetTitleHeader, obj13), tmp7];
   obj7.children = items2;
-  return closure_7(guildId(7270).ActionSheet, obj7);
+  return closure_7(guildId(7300).ActionSheet, obj7);
 };

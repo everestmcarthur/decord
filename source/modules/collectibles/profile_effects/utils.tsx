@@ -1,10 +1,10 @@
-// Module ID: 8894
-// Function ID: 8895
+// Module ID: 8929
+// Function ID: 8930
 // Name: utils
 // Dependencies: [32, 19, 12, 2]
 // Exports: sortEffectLayers, usePotentiallyRandomizedProfileEffect
 
-// Module 8894 (utils)
+// Module 8929 (utils)
 import _mod12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

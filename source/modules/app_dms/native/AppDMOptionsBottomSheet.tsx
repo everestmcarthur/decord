@@ -1,23 +1,23 @@
-// Module ID: 13376
-// Function ID: 13377
+// Module ID: 13409
+// Function ID: 13410
 // Name: AppDMOptionsBottomSheet
-// Dependencies: [19, 17, 7180, 1074, 21, 4606, 576, 504, 8264, 4573, 7455, 7243, 7223, 5738, 5656, 1114, 2]
+// Dependencies: [19, 17, 7210, 1074, 21, 4636, 576, 504, 8296, 4603, 7485, 7273, 7253, 5768, 5686, 1114, 2]
 // Exports: default
 
-// Module 13376 (AppDMOptionsBottomSheet)
+// Module 13409 (AppDMOptionsBottomSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import openUserSettings from "openUserSettings" /* 7455 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import openUserSettings from "openUserSettings" /* 7485 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7180 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

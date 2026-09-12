@@ -1,22 +1,22 @@
-// Module ID: 8747
-// Function ID: 8748
+// Module ID: 8779
+// Function ID: 8780
 // Name: InAppReportsUserPreview
-// Dependencies: [19, 17, 21, 4606, 576, 7052, 4456, 4602, 1114, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7082, 4486, 4632, 1114, 1178, 2]
 // Exports: default
 
-// Module 8747 (InAppReportsUserPreview)
+// Module 8779 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ColorUtils from "ColorUtils" /* 4456 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, userContainer: null, userProfileInfo: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.userContainer = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 12 };
@@ -56,7 +56,7 @@ export default function UserPreview(user) {
   let tmp8Result = null != user.globalName;
   if (tmp8Result) {
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
-    tmp8Result = tmp8(tmp2(4602).Text, obj8);
+    tmp8Result = tmp8(tmp2(4632).Text, obj8);
   }
   const items4 = [tmp8Result, React3(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
   obj7.children = items4;

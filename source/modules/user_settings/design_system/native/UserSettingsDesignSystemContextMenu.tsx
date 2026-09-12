@@ -1,23 +1,23 @@
-// Module ID: 15844
-// Function ID: 15845
+// Module ID: 15868
+// Function ID: 15869
 // Name: UserSettingsDesignSystemContextMenu
-// Dependencies: [19, 17, 21, 12866, 7167, 8040, 11347, 4570, 15845, 15846, 11657, 4606, 576, 12, 8757, 5026, 5658, 4602, 2]
+// Dependencies: [19, 17, 21, 12902, 7197, 8070, 11386, 4600, 15869, 15870, 11693, 4636, 576, 12, 8789, 5056, 5688, 4632, 2]
 // Exports: default
 
-// Module 15844 (UserSettingsDesignSystemContextMenu)
+// Module 15868 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import _modDef4570 from "module_4570" /* 4570 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import Card from "Card" /* 5658 */;
-import _modDef7167 from "module_7167" /* 7167 */;
-import _modDef8040 from "module_8040" /* 8040 */;
-import _modDef11347 from "module_11347" /* 11347 */;
-import _modDef11657 from "module_11657" /* 11657 */;
-import _modDef12866 from "module_12866" /* 12866 */;
-import _modDef15845 from "module_15845" /* 15845 */;
-import _modDef15846 from "module_15846" /* 15846 */;
+import _modDef4600 from "module_4600" /* 4600 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import Card from "Card" /* 5688 */;
+import _modDef7197 from "module_7197" /* 7197 */;
+import _modDef8070 from "module_8070" /* 8070 */;
+import _modDef11386 from "module_11386" /* 11386 */;
+import _modDef11693 from "module_11693" /* 11693 */;
+import _modDef12902 from "module_12902" /* 12902 */;
+import _modDef15869 from "module_15869" /* 15869 */;
+import _modDef15870 from "module_15870" /* 15870 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ function DemoContextMenu(align) {
         const obj2 = text(num[13]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: -1354694653, action: 1090519729 };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "isArray" };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -72,7 +72,7 @@ function DemoContextMenu(align) {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: -1354694653, action: 1090519729 };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "isArray" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -107,9 +107,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let items = [_modDef12866, _modDef7167, _modDef8040, _modDef11347, _modDef4570, _modDef15845, _modDef15846, _modDef11657];
+let items = [_modDef12902, _modDef7197, _modDef8070, _modDef11386, _modDef4600, _modDef15869, _modDef15870, _modDef11693];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

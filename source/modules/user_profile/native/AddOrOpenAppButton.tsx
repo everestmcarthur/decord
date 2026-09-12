@@ -1,16 +1,16 @@
-// Module ID: 13090
-// Function ID: 13091
+// Module ID: 13127
+// Function ID: 13128
 // Name: AddOrOpenAppButton
-// Dependencies: [5, 32, 19, 9380, 1074, 1482, 21, 12238, 9664, 4573, 7262, 12225, 4304, 1365, 8669, 8957, 1114, 5026, 576, 7236, 4619, 4472, 1609, 1242, 2]
+// Dependencies: [5, 32, 19, 9419, 1074, 1482, 21, 12274, 9703, 4603, 7292, 12261, 4334, 1365, 8701, 8992, 1114, 5056, 576, 7266, 4649, 4502, 1609, 1242, 2]
 // Exports: default
 
-// Module 13090 (AddOrOpenAppButton)
-import ToastUtils from "ToastUtils" /* 4304 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ClipboardUtils from "ClipboardUtils" /* 7262 */;
-import ApplicationUtils from "ApplicationUtils" /* 9664 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12225 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12238 */;
+// Module 13127 (AddOrOpenAppButton)
+import ToastUtils from "ToastUtils" /* 4334 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ClipboardUtils from "ClipboardUtils" /* 7292 */;
+import ApplicationUtils from "ApplicationUtils" /* 9703 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12261 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12274 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8669).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8701).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -58,9 +58,9 @@ function AddAppButton(application) {
     obj3.onAccessibilityAction = callback1;
     const obj4 = { size: "sm", color: guildId(576).colors.WHITE };
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
-    return jsx(tmp6(5026).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
+    return jsx(tmp6(5056).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
   }
-  PlusSmallIcon = application(8957).PlusSmallIcon;
+  PlusSmallIcon = application(8992).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -118,18 +118,18 @@ function OpenAppButton(profileApplication) {
             if (application1 == null) {
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: tmp2(7236).fetchApplication(tmp42.id), done: false };
+              const obj7 = { value: tmp2(7266).fetchApplication(tmp42.id), done: false };
               return obj7;
             } else {
               closure_129_1 = closure_0;
               closure_130_3(false);
               if (null != closure_129_0) {
-                tmp2(4573).hideAllActionSheets();
-                const obj5 = tmp2(4573);
+                tmp2(4603).hideAllActionSheets();
+                const obj5 = tmp2(4603);
                 const obj8 = { recipientIds: closure_130_1 };
                 c3 = 2;
                 c4 = 1;
-                const obj10 = { value: tmp2(4619).openPrivateChannel(obj8), done: false };
+                const obj10 = { value: tmp2(4649).openPrivateChannel(obj8), done: false };
                 return obj10;
               } else {
                 c4 = 3;
@@ -187,7 +187,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(9380).getSection;
+const getSection = fn(9419).getSection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
 const jsx = fn(21).jsx;

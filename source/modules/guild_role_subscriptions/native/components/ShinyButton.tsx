@@ -1,18 +1,18 @@
-// Module ID: 10390
-// Function ID: 10391
+// Module ID: 10429
+// Function ID: 10430
 // Name: ShinyButton
-// Dependencies: [19, 21, 4606, 576, 5027, 1178, 10391, 2]
+// Dependencies: [19, 21, 4636, 576, 5057, 1178, 10430, 2]
 // Exports: default
 
-// Module 10390 (ShinyButton)
+// Module 10429 (ShinyButton)
 import nativeDefault from "native" /* 576 */;
-import BaseTextButton from "BaseTextButton" /* 5027 */;
-import _modDef10391 from "module_10391" /* 10391 */;
+import BaseTextButton from "BaseTextButton" /* 5057 */;
+import _modDef10430 from "module_10430" /* 10430 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT }, sparkleIcon: null, disabled: null };
 const obj3 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.sparkleIcon = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
@@ -35,7 +35,7 @@ export default function ShinyButton(style) {
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    const obj2 = { size: tmp4(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef10391, style: null };
+    const obj2 = { size: tmp4(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef10430, style: null };
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;

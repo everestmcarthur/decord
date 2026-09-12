@@ -1,16 +1,16 @@
-// Module ID: 11524
-// Function ID: 11525
+// Module ID: 11563
+// Function ID: 11564
 // Name: GiftCodeActionCreators
-// Dependencies: [5, 4834, 7615, 7623, 1074, 1373, 573, 4845, 7236, 7614, 4507, 4287, 1232, 1272, 11525, 11526, 2]
+// Dependencies: [5, 4864, 7645, 7653, 1074, 1373, 573, 4875, 7266, 7644, 4537, 4317, 1232, 1272, 11564, 11565, 2]
 // Exports: deliverGiftCodes, reportUnexpectedGiftCodeError, resolveGiftCode
 
-// Module 11524 (GiftCodeActionCreators)
+// Module 11563 (GiftCodeActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4287 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11525 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4317 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11564 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -67,7 +67,7 @@ let closure_11 = async function _resolveGiftCode(arg0, value) {
           let product;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -212,11 +212,11 @@ let closure_12 = async function _deliverGiftCodes(recipient_ids, checkout_sessio
     return value.body;
   })();
 };
-let closure_6 = fn(7623).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(7653).isUnknownCollectiblesItemRecord;
 const Constants = fn(1074);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11526).default);
+const merged = Object.assign(fn(11565).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

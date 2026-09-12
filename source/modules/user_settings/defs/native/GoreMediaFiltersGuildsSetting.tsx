@@ -1,18 +1,18 @@
-// Module ID: 14888
-// Function ID: 14889
+// Module ID: 14922
+// Function ID: 14923
 // Name: GoreMediaFiltersGuildsSetting
-// Dependencies: [8049, 8735, 14879, 14875, 7672, 7374, 14876, 1114, 1187, 11562, 2]
+// Dependencies: [8079, 8767, 14913, 14909, 7702, 7404, 14910, 1114, 1187, 11601, 2]
 
-// Module 14888 (GoreMediaFiltersGuildsSetting)
+// Module 14922 (GoreMediaFiltersGuildsSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7374 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7672 */;
-import SettingsConstants from "SettingsConstants" /* 8049 */;
-import useUserIsTeen from "useUserIsTeen" /* 8735 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14875 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14876 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7404 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import useUserIsTeen from "useUserIsTeen" /* 8767 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14909 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14910 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

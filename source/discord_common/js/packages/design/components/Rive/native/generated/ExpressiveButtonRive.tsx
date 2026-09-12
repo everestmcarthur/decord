@@ -1,11 +1,11 @@
-// Module ID: 4409
-// Function ID: 4410
+// Module ID: 4439
+// Function ID: 4440
 // Name: ExpressiveButtonRive
-// Dependencies: [109, 19, 21, 4337, 4410, 4392, 2]
+// Dependencies: [109, 19, 21, 4367, 4440, 4422, 2]
 
-// Module 4409 (ExpressiveButtonRive)
-import BaseRive from "BaseRive" /* 4337 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4392 */;
+// Module 4439 (ExpressiveButtonRive)
+import BaseRive from "BaseRive" /* 4367 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4422 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

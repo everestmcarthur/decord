@@ -1,21 +1,21 @@
-// Module ID: 4521
-// Function ID: 4522
+// Module ID: 4551
+// Function ID: 4552
 // Name: createExperiment
-// Dependencies: [32, 19, 502, 4522, 4523, 4527, 4528, 4529, 2]
+// Dependencies: [32, 19, 502, 4552, 4553, 4557, 4558, 4559, 2]
 // Exports: default
 
-// Module 4521 (createExperiment)
-import ExperimentManager from "ExperimentManager" /* 4527 */;
+// Module 4551 (createExperiment)
+import ExperimentManager from "ExperimentManager" /* 4557 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExperimentStore from "ExperimentStore" /* 4522 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(4523);
+const ExperimentConstants = fn(4553);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");

@@ -1,17 +1,17 @@
-// Module ID: 11547
-// Function ID: 11548
+// Module ID: 11586
+// Function ID: 11587
 // Name: GiftCodeRedeemError
-// Dependencies: [19, 17, 21, 4606, 576, 1484, 7196, 11548, 11549, 4602, 1114, 5026, 4809, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1484, 7226, 11587, 11588, 4632, 1114, 5056, 4839, 2]
 // Exports: default
 
-// Module 11547 (GiftCodeRedeemError)
+// Module 11586 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Link from "Link" /* 1484 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 }, header: { marginTop: 32, textAlign: "center" }, message: { marginTop: 8, textAlign: "center" }, footer: { paddingHorizontal: 24 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,9 +31,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11548);
+    let tmp9Result = tmp9(11587);
   } else {
-    tmp9Result = tmp9(11549);
+    tmp9Result = tmp9(11588);
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), , ];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

@@ -1,13 +1,13 @@
-// Module ID: 13948
-// Function ID: 13949
+// Module ID: 13982
+// Function ID: 13983
 // Name: useFilteredGuilds
-// Dependencies: [19, 1979, 5489, 1371, 504, 38, 2]
+// Dependencies: [19, 1979, 5519, 1371, 504, 38, 2]
 // Exports: default
 
-// Module 13948 (useFilteredGuilds)
+// Module 13982 (useFilteredGuilds)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5489 */;
+import SortedGuildStore from "SortedGuildStore" /* 5519 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;

@@ -1,22 +1,22 @@
-// Module ID: 9547
-// Function ID: 9548
+// Module ID: 9586
+// Function ID: 9587
 // Name: GameConsoleDeviceListActionSheet
-// Dependencies: [5, 32, 19, 17, 4623, 1074, 21, 4606, 576, 7196, 5026, 1114, 9548, 4602, 9549, 504, 9539, 38, 9546, 4573, 1109, 1178, 9550, 7223, 7222, 6698, 2]
+// Dependencies: [5, 32, 19, 17, 4653, 1074, 21, 4636, 576, 7226, 5056, 1114, 9587, 4632, 9588, 504, 9578, 38, 9585, 4603, 1109, 1178, 9589, 7253, 7252, 6728, 2]
 // Exports: default
 
-// Module 9547 (GameConsoleDeviceListActionSheet)
+// Module 9586 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9539 */;
-import _modDef9548 from "module_9548" /* 9548 */;
-import _modDef9549 from "module_9549" /* 9549 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9578 */;
+import _modDef9587 from "module_9587" /* 9587 */;
+import _modDef9588 from "module_9588" /* 9588 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4623 */;
+import GameConsoleStore from "GameConsoleStore" /* 4653 */;
 
 const require = globalThis.__r;
 
@@ -38,14 +38,14 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_15();
   const obj = { style: tmp.deviceOption, children: null };
-  const items = [closure_1_12(React6, { style: tmp.deviceIcon, source: _modDef9548 }), closure_1_12(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name })];
+  const items = [closure_1_12(React6, { style: tmp.deviceIcon, source: _modDef9587 }), closure_1_12(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name })];
   obj.children = items;
   return map1(React5, obj);
 }
 function EmptyState() {
   const tmp = closure_15();
   const obj = { style: tmp.emptyContainer, children: null };
-  const items = [closure_1_12(React6, { source: _modDef9549, style: tmp.emptyArt }), , ];
+  const items = [closure_1_12(React6, { source: _modDef9588, style: tmp.emptyArt }), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.OkJf1e);
@@ -62,7 +62,7 @@ get_ActivityIndicator = fn(17);
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { padding: 16, justifyContent: "center", paddingBottom: 90 }, loading: { minHeight: 56 }, footerContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 }, radioItem: null, deviceIcon: null, deviceOption: null, deviceText: null, emptyContainer: null, emptyArt: null, emptyHeader: null, emptyBody: null, infoBox: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
 obj2.radioItem = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xs, padding: 16 };
@@ -114,7 +114,7 @@ export default function GameConsoleListActionSheet(arg0) {
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(9546).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(9585).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -125,7 +125,7 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(4573).hideActionSheet();
+          v1(4603).hideActionSheet();
           const ComponentDispatch = tmp4(1109).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;

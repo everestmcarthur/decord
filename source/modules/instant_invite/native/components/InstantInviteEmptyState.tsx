@@ -1,21 +1,21 @@
-// Module ID: 9944
-// Function ID: 9945
+// Module ID: 9983
+// Function ID: 9984
 // Name: InstantInviteEmptyState
-// Dependencies: [19, 17, 9912, 21, 4606, 576, 504, 1178, 9945, 1114, 7010, 5174, 7453, 4602, 9913, 5026, 2]
+// Dependencies: [19, 17, 9951, 21, 4636, 576, 504, 1178, 9984, 1114, 7040, 5204, 7483, 4632, 9952, 5056, 2]
 // Exports: default
 
-// Module 9944 (InstantInviteEmptyState)
+// Module 9983 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 576 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 7010 */;
-import _modDef9945 from "module_9945" /* 9945 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 7040 */;
+import _modDef9984 from "module_9984" /* 9984 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9912 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9951 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { padding: 16 }, emptyStateContainer: { padding: 0, marginBottom: 16 }, emptyStateArt: { marginBottom: 16 }, emptyStateTitle: { marginBottom: 4 }, linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 }, inviteInput: { flexShrink: 1 }, expireCaption: { marginBottom: 16 }, settingsButton: null };
 let size = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs };
 obj2.settingsButton = size;
@@ -31,7 +31,7 @@ export default function _default(link) {
   const items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9945, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9984, title: null, body: null };
   const intl = stateFromStores(1114).intl;
   obj3.title = intl.string(stateFromStores(1114).t.tQc0l8);
   const intl2 = stateFromStores(1114).intl;
@@ -52,8 +52,8 @@ export default function _default(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1114).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(7453).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(5174).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(7483).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5204).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -64,11 +64,11 @@ export default function _default(link) {
     const intl5 = tmp2(1114).intl;
     obj8.text = intl5.string(tmp2(1114).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = tmp7(tmp2(5026).Button, obj8);
+    items1[3] = tmp7(tmp2(5056).Button, obj8);
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   } else {
-    const maxAgeOptionByValue = tmp8(9913).getMaxAgeOptionByValue(stateFromStores.maxAge);
+    const maxAgeOptionByValue = tmp8(9952).getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
     let str3 = "";
     if (null != maxAgeOptionByValue) {
@@ -78,7 +78,7 @@ export default function _default(link) {
       }
       str3 = descriptiveLabel;
     }
-    const getMaxUsesOptions = tmp8(9913).getMaxUsesOptions;
+    const getMaxUsesOptions = tmp8(9952).getMaxUsesOptions;
     const found = getMaxUsesOptions.find((value) => value.value === stateFromStores.maxUses);
     if (null != found) {
       str2 = found.descriptiveLabel;
@@ -91,6 +91,6 @@ export default function _default(link) {
     const intl4 = tmp2(1114).intl;
     const obj9 = { maxAge: str3, maxUses: str2 };
     intl4.format(dqPWMN, obj9);
-    const tmp8Result = tmp8(9913);
+    const tmp8Result = tmp8(9952);
   }
 };

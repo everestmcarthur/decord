@@ -1,23 +1,23 @@
-// Module ID: 10425
-// Function ID: 10426
+// Module ID: 10464
+// Function ID: 10465
 // Name: EmojiActionCreators
-// Dependencies: [5, 5510, 5328, 4948, 1074, 1084, 1940, 1218, 573, 1272, 5220, 4458, 1114, 4508, 4259, 1369, 5517, 12, 4950, 2]
+// Dependencies: [5, 5540, 5358, 4978, 1074, 1084, 1940, 1218, 573, 1272, 5250, 4488, 1114, 4538, 4289, 1369, 5547, 12, 4980, 2]
 // Exports: deleteEmoji, favoriteEmoji, fetchEmoji, setDiversityColor, unfavoriteEmoji, updateEmoji, uploadEmoji
 
-// Module 10425 (EmojiActionCreators)
+// Module 10464 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import wrappers from "wrappers" /* 1218 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
-import InlineUploaderDefault from "InlineUploader" /* 5220 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5517 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import InlineUploaderDefault from "InlineUploader" /* 5250 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5547 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5510 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
+import EmojiStore from "EmojiStore" /* 5540 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
 
 const require = globalThis.__r;
 
@@ -56,7 +56,7 @@ let closure_10 = async function _updateEmoji(arg0, value) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

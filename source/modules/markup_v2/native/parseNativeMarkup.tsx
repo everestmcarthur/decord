@@ -1,16 +1,16 @@
-// Module ID: 8180
-// Function ID: 8181
+// Module ID: 8212
+// Function ID: 8213
 // Name: parseNativeMarkup
-// Dependencies: [12, 8181, 8184, 2]
+// Dependencies: [12, 8213, 8216, 2]
 // Exports: default
 
-// Module 8180 (parseNativeMarkup)
-import _mod8181 from "module_8181" /* 8181 */;
-import transformNativeMarkupNode from "transformNativeMarkupNode" /* 8184 */;
+// Module 8212 (parseNativeMarkup)
+import _mod8213 from "module_8213" /* 8213 */;
+import transformNativeMarkupNode from "transformNativeMarkupNode" /* 8216 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_2 = apply.once(() => _mod8181.parse);
+let closure_2 = apply.once(() => _mod8213.parse);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/parseNativeMarkup.tsx");
 

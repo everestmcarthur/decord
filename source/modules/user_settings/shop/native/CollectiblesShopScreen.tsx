@@ -1,17 +1,17 @@
-// Module ID: 15872
-// Function ID: 15873
+// Module ID: 15896
+// Function ID: 15897
 // Name: CollectiblesShopScreen
-// Dependencies: [19, 1076, 21, 7067, 15873, 7458, 15874, 7255, 2]
+// Dependencies: [19, 1076, 21, 7097, 15897, 7488, 15898, 7285, 2]
 // Exports: default
 
-// Module 15872 (CollectiblesShopScreen)
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7067 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7458 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15873 */;
+// Module 15896 (CollectiblesShopScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7097 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7488 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15897 */;
 import noop from "module_19" /* 19 */;
 
-const CollectiblesShopV2 = tmp(15874);
+const CollectiblesShopV2 = tmp(15898);
 require = fn;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;

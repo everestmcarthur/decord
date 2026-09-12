@@ -1,23 +1,23 @@
-// Module ID: 11169
-// Function ID: 11170
+// Module ID: 11208
+// Function ID: 11209
 // Name: PremiumGiftDMPurchaseSuccess
-// Dependencies: [19, 17, 21, 4606, 576, 10788, 1483, 10832, 10751, 5026, 1114, 2460, 10919, 4602, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 10827, 1483, 10871, 10790, 5056, 1114, 2460, 10958, 4632, 2]
 // Exports: PremiumGiftDMSuccessActions, default
 
-// Module 11169 (PremiumGiftDMPurchaseSuccess)
+// Module 11208 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10751 */;
-import NativeGiftContext from "NativeGiftContext" /* 10788 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10919 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10790 */;
+import NativeGiftContext from "NativeGiftContext" /* 10827 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { title: { marginTop: nativeDefault.space.PX_24, textAlign: "center" }, description: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };

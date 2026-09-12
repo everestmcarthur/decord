@@ -1,13 +1,13 @@
-// Module ID: 6016
-// Function ID: 6017
+// Module ID: 6046
+// Function ID: 6047
 // Name: EmojiDistrustExample
-// Dependencies: [21, 5638, 6017, 2]
+// Dependencies: [21, 5668, 6047, 2]
 // Exports: EmojiDistrustExample
 
-// Module 6016 (EmojiDistrustExample)
+// Module 6046 (EmojiDistrustExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6017 from "module_6017" /* 6017 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6047 from "module_6047" /* 6047 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiDistrustExample = function EmojiDistrustExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6017 };
+  const obj2 = { uri: _modDef6047 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

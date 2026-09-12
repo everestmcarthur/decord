@@ -1,15 +1,15 @@
-// Module ID: 16090
-// Function ID: 16091
+// Module ID: 16114
+// Function ID: 16115
 // Name: messages/Messages
-// Dependencies: [19, 4598, 5328, 21, 7235, 7255, 4343, 15158, 16091, 16097, 16116, 16118, 16119, 16120, 13505, 16121, 1115, 4465, 4464, 5632, 7548, 9, 15157, 1114, 16122, 8906, 576, 16098, 16124, 16126, 16172, 16173, 11990, 2]
+// Dependencies: [19, 4628, 5358, 21, 7265, 7285, 4373, 15180, 16115, 16121, 16140, 16142, 16143, 16144, 13538, 16145, 1150, 4495, 4494, 5662, 7578, 9, 15179, 1114, 16146, 8941, 576, 16122, 16148, 16150, 16196, 16197, 12026, 2]
 
-// Module 16090 (messages/Messages)
+// Module 16114 (messages/Messages)
 import TTITrackerDefault from "TTITracker" /* 9 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7548 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7578 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -51,23 +51,23 @@ export default noop.memo(function Messages(style) {
     if (null != dataKey) {
       if (!obj7.isAndroid()) {
         if (!AccessibilityStore.useReducedMotion) {
-          const rootNavigationRef = tmp5(4465).getRootNavigationRef();
+          const rootNavigationRef = tmp5(4495).getRootNavigationRef();
           let tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
           if (tmp2) {
-            const tmp5Result4 = tmp5(4464);
-            const rootNavigationRef1 = tmp5(4465).getRootNavigationRef();
+            const tmp5Result4 = tmp5(4494);
+            const rootNavigationRef1 = tmp5(4495).getRootNavigationRef();
             let currentRoute;
             if (rootNavigationRef1 != null) {
               currentRoute = rootNavigationRef1.getCurrentRoute();
             }
             tmp2 = null != tmp5Result4.coerceGuildsRoute(currentRoute);
-            const tmp5Result5 = tmp5(4465);
+            const tmp5Result5 = tmp5(4495);
           }
           if (tmp2) {
-            const result = tmp5(5632).DeprecatedLayoutAnimation();
-            const tmp5Result6 = tmp5(5632);
+            const result = tmp5(5662).DeprecatedLayoutAnimation();
+            const tmp5Result6 = tmp5(5662);
           }
-          const tmp5Result = tmp5(4465);
+          const tmp5Result = tmp5(4495);
         }
       }
       obj7 = PlatformUtils;

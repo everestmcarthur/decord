@@ -1,13 +1,13 @@
-// Module ID: 6030
-// Function ID: 6031
+// Module ID: 6060
+// Function ID: 6061
 // Name: EmojiWumpAngyExample
-// Dependencies: [21, 5638, 6031, 2]
+// Dependencies: [21, 5668, 6061, 2]
 // Exports: EmojiWumpAngyExample
 
-// Module 6030 (EmojiWumpAngyExample)
+// Module 6060 (EmojiWumpAngyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6031 from "module_6031" /* 6031 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6061 from "module_6061" /* 6061 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiWumpAngyExample = function EmojiWumpAngyExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6031 };
+  const obj2 = { uri: _modDef6061 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

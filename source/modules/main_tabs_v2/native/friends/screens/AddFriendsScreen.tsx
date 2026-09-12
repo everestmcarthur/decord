@@ -1,24 +1,24 @@
-// Module ID: 16852
-// Function ID: 16853
+// Module ID: 16879
+// Function ID: 16880
 // Name: AddFriendsScreen
-// Dependencies: [32, 5, 19, 17, 7730, 4255, 1371, 12792, 1074, 12771, 21, 4606, 576, 12769, 8464, 4304, 1114, 7831, 12773, 1115, 7235, 7255, 5043, 1242, 8264, 563, 12, 4451, 16117, 7241, 5176, 9946, 5628, 10955, 5656, 4306, 5141, 16853, 16854, 16856, 16857, 2]
+// Dependencies: [32, 5, 19, 17, 7760, 4285, 1371, 12828, 1074, 12807, 21, 4636, 576, 12805, 8496, 4334, 1114, 7861, 12809, 1150, 7265, 7285, 5073, 1242, 8296, 563, 12, 4481, 16141, 7271, 5206, 9985, 5658, 10994, 5686, 4336, 5171, 16880, 16881, 16883, 16884, 2]
 // Exports: default
 
-// Module 16852 (AddFriendsScreen)
+// Module 16879 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8464 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12769 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12773 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 16854 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16856 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8496 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12805 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 16881 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 16883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7730 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7760 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -63,14 +63,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(12792).Sections;
+const Sections = fn(12828).Sections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-const ContactPermissions = fn(12771).ContactPermissions;
+const ContactPermissions = fn(12807).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -183,9 +183,9 @@ export default function AddFriendsScreen(navigation) {
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = source_page(4451).getName(arg0);
-      const obj = source_page(4451);
-      return name.localeCompare(source_page(4451).getName(arg1));
+      const name = source_page(4481).getName(arg0);
+      const obj = source_page(4481);
+      return name.localeCompare(source_page(4481).getName(arg1));
     });
   });
   let obj3 = navigation(analyticsLocations[25]);
@@ -220,9 +220,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = source_page(analyticsLocations[26]);
     return source_page(analyticsLocations[26]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4451).getName(user.user);
-      const obj = items1(4451);
-      return name.localeCompare(items1(4451).getName(user2.user));
+      const name = items1(4481).getName(user.user);
+      const obj = items1(4481);
+      return name.localeCompare(items1(4481).getName(user2.user));
     });
   }, items4, areHydratedGameFriendRequestRowStatesEqual);
   let obj4 = navigation(analyticsLocations[25]);

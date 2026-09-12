@@ -1,20 +1,20 @@
-// Module ID: 16527
-// Function ID: 16528
+// Module ID: 16551
+// Function ID: 16552
 // Name: ICYMICustomScoresOverviewScreen
-// Dependencies: [19, 17, 1979, 5489, 8421, 21, 4606, 576, 504, 1611, 5738, 5656, 5635, 8436, 1114, 2]
+// Dependencies: [19, 17, 1979, 5519, 8453, 21, 4636, 576, 504, 1611, 5768, 5686, 5665, 8468, 1114, 2]
 // Exports: default
 
-// Module 16527 (ICYMICustomScoresOverviewScreen)
+// Module 16551 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5489 */;
-import ICYMIStore from "ICYMIStore" /* 8421 */;
+import SortedGuildStore from "SortedGuildStore" /* 5519 */;
+import ICYMIStore from "ICYMIStore" /* 8453 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

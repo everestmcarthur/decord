@@ -1,11 +1,11 @@
-// Module ID: 8051
-// Function ID: 8052
+// Module ID: 8081
+// Function ID: 8082
 // Name: useUserCommunicationDisabled
-// Dependencies: [2021, 1371, 504, 4233, 2]
+// Dependencies: [2021, 1371, 504, 4263, 2]
 // Exports: default, useCurrentUserCommunicationDisabled, userCommunicationDisabled
 
-// Module 8051 (useUserCommunicationDisabled)
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4233 */;
+// Module 8081 (useUserCommunicationDisabled)
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4263 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -72,7 +72,7 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
   }
   const items3 = [prop, ];
   const tmpResult = id(504);
-  items3[1] = id(4233).isMemberCommunicationDisabled(stateFromStores1);
+  items3[1] = id(4263).isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };
 export const userCommunicationDisabled = function userCommunicationDisabled(id, guildId) {

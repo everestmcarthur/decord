@@ -1,13 +1,13 @@
-// Module ID: 13033
-// Function ID: 13034
+// Module ID: 13070
+// Function ID: 13071
 // Name: CustomActivityLinkUtils
-// Dependencies: [5, 13034, 1074, 13036, 1272, 573, 2]
+// Dependencies: [5, 13071, 1074, 13073, 1272, 573, 2]
 // Exports: getCustomActivityLinkParams, getOrFetchCustomActivityLink, getQuickLinkImage
 
-// Module 13033 (CustomActivityLinkUtils)
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 13036 */;
+// Module 13070 (CustomActivityLinkUtils)
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 13073 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 13034 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 13071 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -162,7 +162,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0, value) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "Array" }, done: true };
+        const obj9 = { value: { customId: "r" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;

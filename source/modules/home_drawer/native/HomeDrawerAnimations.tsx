@@ -1,10 +1,10 @@
-// Module ID: 16093
-// Function ID: 16094
+// Module ID: 16117
+// Function ID: 16118
 // Name: HomeDrawerAnimations
-// Dependencies: [4343, 2]
+// Dependencies: [4373, 2]
 
-// Module 16093 (HomeDrawerAnimations)
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+// Module 16117 (HomeDrawerAnimations)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import size from "module_2" /* 2 */;
 
 const obj = { duration: 200, easing: null };

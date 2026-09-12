@@ -1,10 +1,10 @@
-// Module ID: 16858
-// Function ID: 16859
+// Module ID: 16885
+// Function ID: 16886
 // Name: UsernameSearchScreen
-// Dependencies: [19, 17, 1074, 21, 4606, 576, 1242, 7054, 5013, 7945, 1115, 5629, 5176, 13909, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1242, 7084, 5043, 7975, 1150, 5659, 5206, 13943, 1114, 2]
 // Exports: default
 
-// Module 16858 (UsernameSearchScreen)
+// Module 16885 (UsernameSearchScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.content = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -37,14 +37,14 @@ export default function UsernameSearchScreen(navigation) {
   const effect = noop.useEffect(() => {
     ref(1242).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
-  const insets = ref(7054)().insets;
+  const insets = ref(7084)().insets;
   ref = noop.useRef(null);
   const items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(5013).getIsScreenReaderEnabled();
-      const obj = navigation(5013);
+      closing = navigation(5043).getIsScreenReaderEnabled();
+      const obj = navigation(5043);
     }
     if (!closing) {
       const current = ref.current;
@@ -53,8 +53,8 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }), items);
-  const clientThemesOverride = navigation(7945).useClientThemesOverride();
-  let obj = navigation(7945);
+  const clientThemesOverride = navigation(7975).useClientThemesOverride();
+  let obj = navigation(7975);
   let prop = null;
   if (obj2.isIOS()) {
     prop = null;
@@ -69,11 +69,11 @@ export default function UsernameSearchScreen(navigation) {
   const obj4 = { style: null, children: null };
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
-  obj2 = navigation(1115);
-  const items2 = [closure_8(ref(5176), { absolute: true }), ];
+  obj2 = navigation(1150);
+  const items2 = [closure_8(ref(5206), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
-  const tmp3Result = ref(5629);
+  const tmp3Result = ref(5659);
   items3[2] = { paddingBottom: insets.bottom + ref(576).space.PX_16 };
   obj5.contentContainerStyle = items3;
   const obj7 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
@@ -82,7 +82,7 @@ export default function UsernameSearchScreen(navigation) {
   obj7.headerText = intl.string(navigation(1114).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(13909), obj7);
+  obj5.children = closure_8(ref(13943), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

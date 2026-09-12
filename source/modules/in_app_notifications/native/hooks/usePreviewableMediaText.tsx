@@ -1,12 +1,12 @@
-// Module ID: 10228
-// Function ID: 10229
+// Module ID: 10267
+// Function ID: 10268
 // Name: usePreviewableMediaText
-// Dependencies: [19, 10220, 1114, 2]
+// Dependencies: [19, 10259, 1114, 2]
 // Exports: usePreviewableMediaText
 
-// Module 10228 (usePreviewableMediaText)
+// Module 10267 (usePreviewableMediaText)
 import util from "util" /* 1114 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10220 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

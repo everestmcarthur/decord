@@ -1,16 +1,16 @@
-// Module ID: 17912
-// Function ID: 17913
+// Module ID: 17942
+// Function ID: 17943
 // Name: GlobalDiscoveryServersFeaturedSearchManager
-// Dependencies: [5, 13759, 9156, 1074, 7191, 17913, 573, 1272, 1471, 17914, 7414, 2]
+// Dependencies: [5, 13793, 9195, 1074, 7221, 17943, 573, 1272, 1471, 17944, 7444, 2]
 
-// Module 17912 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13759 */;
+// Module 17942 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = fn(9156).DISCOVERY_ALL_CATEGORIES_ID;
+let closure_6 = fn(9195).DISCOVERY_ALL_CATEGORIES_ID;
 const Endpoints = fn(1074).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -187,7 +187,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             closure_129_5 = undefined;
             lastFetchTimestamp = 1;
             c6 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         } else {
           if (1 === tmp7) {

@@ -1,13 +1,13 @@
-// Module ID: 5884
-// Function ID: 5885
+// Module ID: 5914
+// Function ID: 5915
 // Name: BugSpotIllustration
-// Dependencies: [21, 5638, 5885, 2]
+// Dependencies: [21, 5668, 5915, 2]
 // Exports: BugSpotIllustration
 
-// Module 5884 (BugSpotIllustration)
+// Module 5914 (BugSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5885 from "module_5885" /* 5885 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5915 from "module_5915" /* 5915 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const BugSpotIllustration = function BugSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5885 };
+  const obj2 = { uri: _modDef5915 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

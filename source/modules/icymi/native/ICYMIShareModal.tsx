@@ -1,30 +1,30 @@
-// Module ID: 16573
-// Function ID: 16574
+// Module ID: 16597
+// Function ID: 16598
 // Name: ICYMIShareModal
-// Dependencies: [32, 5, 19, 17, 1957, 4947, 4946, 1074, 10949, 4599, 21, 4606, 576, 9866, 1114, 16574, 4305, 1477, 4460, 7945, 16575, 5176, 4425, 4317, 7054, 11785, 11794, 5026, 4809, 11074, 1369, 7754, 9397, 1256, 5179, 7529, 9400, 1611, 1115, 5682, 7936, 5675, 11077, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 4977, 4976, 1074, 10988, 4629, 21, 4636, 576, 9905, 1114, 16598, 4335, 1477, 4490, 7975, 16599, 5206, 4455, 4347, 7084, 11821, 11830, 5056, 4839, 11113, 1369, 7784, 9436, 1256, 5209, 7559, 9439, 1611, 1150, 5712, 7966, 5705, 11116, 2]
 // Exports: GameShareModal, GuildEventShareModal
 
-// Module 16573 (ICYMIShareModal)
+// Module 16597 (ICYMIShareModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import native from "native" /* 4317 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4425 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4460 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
-import HeaderShared from "HeaderShared" /* 7936 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7945 */;
-import ShareEventUtils from "ShareEventUtils" /* 9866 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11785 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11794 */;
-import _modDef16575 from "module_16575" /* 16575 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import native from "native" /* 4347 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4455 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4490 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
+import HeaderShared from "HeaderShared" /* 7966 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7975 */;
+import ShareEventUtils from "ShareEventUtils" /* 9905 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11821 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11830 */;
+import _modDef16599 from "module_16599" /* 16599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function Screenshot(setUri) {
   const obj5 = { style: tmp.base, children: null };
   const obj6 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj7 = { dark: null, light: null };
-  const tmp6 = _modDef16575;
+  const tmp6 = _modDef16599;
   obj7.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj7.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj6.mixAmount = obj7;
@@ -111,7 +111,7 @@ function GravityShareFooter(arg0) {
     }
     obj5.onPress = tmp17;
     obj5.loading = isSending;
-    items2[1] = map1(tmp7(5026).Button, obj5);
+    items2[1] = map1(tmp7(5056).Button, obj5);
     obj3.children = items2;
     tmp14Result = closure_1_14(View, obj3);
   }
@@ -376,13 +376,13 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(10949).UserRowModes;
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const UserRowModes = fn(10988).UserRowModes;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -450,7 +450,7 @@ export const GameShareModal = function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16574).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16598).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

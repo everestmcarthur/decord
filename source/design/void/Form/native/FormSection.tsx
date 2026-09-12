@@ -1,15 +1,15 @@
-// Module ID: 8693
-// Function ID: 8694
+// Module ID: 8725
+// Function ID: 8726
 // Name: FormSection
-// Dependencies: [19, 17, 1182, 21, 4606, 576, 5737, 7210, 8690, 5738, 8694, 1115, 2]
+// Dependencies: [19, 17, 1182, 21, 4636, 576, 5767, 7240, 8722, 5768, 8726, 1150, 2]
 // Exports: default
 
-// Module 8693 (FormSection)
+// Module 8725 (FormSection)
 import nativeDefault from "native" /* 576 */;
-import RedesignCompat from "RedesignCompat" /* 5737 */;
-import FormRowDefault from "FormRow" /* 7210 */;
-import FormDividerDefault from "FormDivider" /* 8690 */;
-import FormTitleDefault from "FormTitle" /* 8694 */;
+import RedesignCompat from "RedesignCompat" /* 5767 */;
+import FormRowDefault from "FormRow" /* 7240 */;
+import FormDividerDefault from "FormDivider" /* 8722 */;
+import FormTitleDefault from "FormTitle" /* 8726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const TitleStyleType = fn(1182).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 }, titledSectionNoBorder: { marginTop: 24 }, titledSectionNoBorderOrMargin: {}, emptySectionHeader: { marginTop: 24 }, sectionBody: {}, sectionBodyIOSBorder: {} };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -69,7 +69,7 @@ export default function FormSection(arg0) {
     }
     obj4.hasTrailingText = flag;
     obj4.children = found;
-    obj3.children = timestampProducer(tmp3(5738).TableRowGroup, obj4);
+    obj3.children = timestampProducer(tmp3(5768).TableRowGroup, obj4);
     const items = [timestampProducer(React4, obj3), ];
     let tmp20Result = null;
     if (null != hint) {
@@ -103,8 +103,8 @@ export default function FormSection(arg0) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
       } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = tmp3(1115).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = tmp3(1115);
+        titledSectionNoBorderOrMargin = tmp3(1150).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
+        const tmp3Result = tmp3(1150);
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
         if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {

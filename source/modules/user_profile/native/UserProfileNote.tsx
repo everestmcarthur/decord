@@ -1,17 +1,17 @@
-// Module ID: 13144
-// Function ID: 13145
+// Module ID: 13181
+// Function ID: 13182
 // Name: UserProfileNote
-// Dependencies: [19, 21, 4606, 8275, 13145, 7984, 13147, 5174, 1114, 4573, 13149, 7280, 4602, 2]
+// Dependencies: [19, 21, 4636, 8307, 13182, 8014, 13184, 5204, 1114, 4603, 13186, 7310, 4632, 2]
 // Exports: default
 
-// Module 13144 (UserProfileNote)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 13149 */;
+// Module 13181 (UserProfileNote)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 13186 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_4 = createStyles.createStyles({ title: { justifyContent: "space-between" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");

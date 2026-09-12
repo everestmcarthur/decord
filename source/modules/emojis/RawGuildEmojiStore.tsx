@@ -1,10 +1,10 @@
-// Module ID: 5512
-// Function ID: 5513
+// Module ID: 5542
+// Function ID: 5543
 // Name: RawGuildEmojiStore
-// Dependencies: [32, 1973, 1980, 4262, 1983, 2]
+// Dependencies: [32, 1973, 1980, 4292, 1983, 2]
 
-// Module 5512 (RawGuildEmojiStore)
-import EmojiTypes from "EmojiTypes" /* 4262 */;
+// Module 5542 (RawGuildEmojiStore)
+import EmojiTypes from "EmojiTypes" /* 4292 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,24 +1,24 @@
-// Module ID: 11696
-// Function ID: 11697
+// Module ID: 11732
+// Function ID: 11733
 // Name: ChatGDMUpsellActionSheet
-// Dependencies: [19, 17, 21, 4606, 576, 1611, 4427, 1943, 4573, 7223, 5638, 11697, 5026, 1114, 6698, 4602, 11698, 4549, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1611, 4457, 1943, 4603, 7253, 5668, 11733, 5056, 1114, 6728, 4632, 11734, 4579, 2]
 // Exports: default
 
-// Module 11696 (ChatGDMUpsellActionSheet)
+// Module 11732 (ChatGDMUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef11697 from "module_11697" /* 11697 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef11733 from "module_11733" /* 11733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { title: { marginBottom: nativeDefault.space.PX_4, textAlign: "center" }, footer: null, body: null, noticeContainer: null, innerContainer: null, secondInnerContainer: null, text: null, titleImage: null, item: null, button: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_4, textAlign: "center" };
 obj2.footer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
@@ -48,7 +48,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   }, items);
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   const obj2 = { style: tmp.titleImage, children: null };
-  const obj3 = { source: _modDef11697, resizeMode: "contain" };
+  const obj3 = { source: _modDef11733, resizeMode: "contain" };
   obj2.children = closure_5(FastImageDefault, obj3);
   obj.header = closure_5(View, obj2);
   const obj4 = { style: null, children: null };
@@ -59,7 +59,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const intl = onClick(1114).intl;
   obj6.text = intl.string(onClick(1114).t["3PatSz"]);
   obj6.onPress = callback;
-  const items2 = [closure_5(onClick(5026).Button, obj6), ];
+  const items2 = [closure_5(onClick(5056).Button, obj6), ];
   const obj7 = { style: tmp.button, children: null };
   const obj8 = { text: null, onPress: null, variant: "tertiary" };
   const intl2 = onClick(1114).intl;
@@ -67,7 +67,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj8.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj7.children = closure_5(onClick(5026).Button, obj8);
+  obj7.children = closure_5(onClick(5056).Button, obj8);
   items2[1] = closure_5(View, obj7);
   obj4.children = items2;
   obj.footer = closure_6(View, obj4);
@@ -75,33 +75,33 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj10 = { style: tmp.title, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
   const intl3 = onClick(1114).intl;
   obj10.children = intl3.string(onClick(1114).t["bkqux/"]);
-  const items3 = [closure_5(onClick(4602).Text, obj10), , ];
+  const items3 = [closure_5(onClick(4632).Text, obj10), , ];
   const obj11 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
   const intl4 = onClick(1114).intl;
   obj11.children = intl4.string(onClick(1114).t.N6TdqN);
-  items3[1] = closure_5(onClick(4602).Text, obj11);
+  items3[1] = closure_5(onClick(4632).Text, obj11);
   const obj12 = { style: tmp.noticeContainer, children: null };
   const obj13 = { style: tmp.innerContainer, children: null };
   const obj5 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11698).TimerIcon, { size: "sm" }) }), ];
+  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11734).TimerIcon, { size: "sm" }) }), ];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1114).intl;
   obj15.children = intl5.string(onClick(1114).t.Fq3DJb);
-  items4[1] = closure_5(onClick(4602).Text, obj15);
+  items4[1] = closure_5(onClick(4632).Text, obj15);
   obj13.children = items4;
   const items5 = [closure_6(View, obj13), ];
   const obj16 = { style: tmp.secondInnerContainer, children: null };
-  const obj14 = { style: tmp.item, children: closure_5(onClick(11698).TimerIcon, { size: "sm" }) };
-  const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(4549).LinkIcon, { size: "sm" }) }), ];
+  const obj14 = { style: tmp.item, children: closure_5(onClick(11734).TimerIcon, { size: "sm" }) };
+  const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(4579).LinkIcon, { size: "sm" }) }), ];
   const obj18 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1114).intl;
   obj18.children = intl6.string(onClick(1114).t.XKbf2G);
-  items6[1] = closure_5(onClick(4602).Text, obj18);
+  items6[1] = closure_5(onClick(4632).Text, obj18);
   obj16.children = items6;
   items5[1] = closure_6(View, obj16);
   obj12.children = items5;
   items3[2] = closure_6(View, obj12);
   obj9.children = items3;
-  obj.children = closure_6(onClick(6698).BottomSheetScrollView, obj9);
-  return closure_5(onClick(7223).BottomSheet, obj);
+  obj.children = closure_6(onClick(6728).BottomSheetScrollView, obj9);
+  return closure_5(onClick(7253).BottomSheet, obj);
 };

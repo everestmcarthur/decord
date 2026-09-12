@@ -1,18 +1,18 @@
-// Module ID: 16076
-// Function ID: 16077
+// Module ID: 16100
+// Function ID: 16101
 // Name: useChannelScreensFromNavigation
-// Dependencies: [32, 19, 1957, 2011, 4428, 1074, 1964, 4465, 4464, 4467, 2]
+// Dependencies: [32, 19, 1957, 2011, 4458, 1074, 1964, 4495, 4494, 4497, 2]
 // Exports: default, isActiveTabsGuilds
 
-// Module 16076 (useChannelScreensFromNavigation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import useChatLayoutDefault from "useChatLayout" /* 4467 */;
+// Module 16100 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import useChatLayoutDefault from "useChatLayout" /* 4497 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 require = fn;
 function getActiveTabsRoute(coerceTabsRouteResult) {
@@ -224,7 +224,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(4467).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(4497).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

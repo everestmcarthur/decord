@@ -1,10 +1,10 @@
-// Module ID: 17952
-// Function ID: 17953
+// Module ID: 17982
+// Function ID: 17983
 // Name: SafetyFlowsModal
-// Dependencies: [32, 19, 21, 7073, 17949, 17953, 17957, 5675, 17959, 17961, 17962, 17963, 17964, 17969, 17970, 17955, 17954, 14227, 2]
+// Dependencies: [32, 19, 21, 7103, 17979, 17983, 17987, 5705, 17989, 17991, 17992, 17993, 17994, 17999, 18000, 17985, 17984, 14262, 2]
 // Exports: default
 
-// Module 17952 (SafetyFlowsModal)
+// Module 17982 (SafetyFlowsModal)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,19 +18,19 @@ export default function SafetyFlowsModal(initialRouteName) {
   setTask = undefined;
   [task, setTask] = noop.useState(initialRouteName.task);
   const items = [task];
-  const navigatorScreens = task(7073).useNavigatorScreens(() => {
+  const navigatorScreens = task(7103).useNavigatorScreens(() => {
     const obj = { [closure_1_0(closure_1_2[4]).SafetyFlowScreens.OVERVIEW]: obj2, [closure_1_0(closure_1_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj3 };
     const obj4 = {
-      headerLeft: first(5675).getHeaderBackButton(),
+      headerLeft: first(5705).getHeaderBackButton(),
       headerTitle() {
         return null;
       },
       render() {
-        return closure_1_5(setTask(17959), {});
+        return closure_1_5(setTask(17989), {});
       }
     };
-    obj[first(17949).SafetyFlowScreens.VERIFY_EMAIL] = obj4;
-    obj[first(17949).SafetyFlowScreens.UPDATE_APP] = {
+    obj[first(17979).SafetyFlowScreens.VERIFY_EMAIL] = obj4;
+    obj[first(17979).SafetyFlowScreens.UPDATE_APP] = {
       headerLeft() {
         return null;
       },
@@ -38,10 +38,10 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return closure_1_5(setTask(17961), {});
+        return closure_1_5(setTask(17991), {});
       }
     };
-    obj[first(17949).SafetyFlowScreens.AGE_VERIFICATION] = {
+    obj[first(17979).SafetyFlowScreens.AGE_VERIFICATION] = {
       headerLeft() {
         return null;
       },
@@ -49,25 +49,25 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return closure_1_5(setTask(17962), {});
+        return closure_1_5(setTask(17992), {});
       }
     };
-    obj[first(17949).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
+    obj[first(17979).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
       headerShown: false,
       customNavbar() {
-        return closure_1_5(task(17963).ParentalConsentConnectionNavbar, {});
+        return closure_1_5(task(17993).ParentalConsentConnectionNavbar, {});
       },
       render() {
-        return closure_1_5(setTask(17964), {});
+        return closure_1_5(setTask(17994), {});
       }
     };
-    obj[first(17949).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
+    obj[first(17979).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
       headerShown: false,
       render() {
-        return closure_1_5(setTask(17969), {});
+        return closure_1_5(setTask(17999), {});
       }
     };
-    obj[first(17949).SafetyFlowScreens.ERROR] = {
+    obj[first(17979).SafetyFlowScreens.ERROR] = {
       headerLeft() {
         return null;
       },
@@ -75,7 +75,7 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return closure_1_5(setTask(17970), {});
+        return closure_1_5(setTask(18000), {});
       }
     };
     return obj;
@@ -102,6 +102,6 @@ export default function SafetyFlowsModal(initialRouteName) {
     }
   }, items);
   const memo1 = noop.useMemo(() => ({ task, setTask }), items1);
-  let obj = task(7073);
-  return jsx(task(17954).SafetyFlowTaskContext.Provider, { value: memo1, children: jsx(task(14227).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) });
+  let obj = task(7103);
+  return jsx(task(17984).SafetyFlowTaskContext.Provider, { value: memo1, children: jsx(task(14262).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) });
 };

@@ -1,9 +1,9 @@
 // Module ID: 5365
 // Function ID: 5366
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 5365
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d", name: "img_account_sync_steam_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "d9ea4c0baebc914200caf39582084fac", name: "img_account_sync_twitch_light_and_dark", type: "png" });

@@ -1,14 +1,14 @@
-// Module ID: 9155
-// Function ID: 9156
+// Module ID: 9194
+// Function ID: 9195
 // Name: GuildProfileStore
-// Dependencies: [1074, 559, 5599, 504, 573, 2]
+// Dependencies: [1074, 559, 5629, 504, 573, 2]
 
-// Module 9155 (GuildProfileStore)
+// Module 9194 (GuildProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import GuildProfileBuilders from "GuildProfileBuilders" /* 5599 */;
+import GuildProfileBuilders from "GuildProfileBuilders" /* 5629 */;
 import size from "module_2" /* 2 */;
 
 function handleUpdateStart(guildId) {

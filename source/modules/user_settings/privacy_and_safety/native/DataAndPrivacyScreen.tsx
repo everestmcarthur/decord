@@ -1,18 +1,18 @@
-// Module ID: 15932
-// Function ID: 15933
+// Module ID: 15956
+// Function ID: 15957
 // Name: DataAndPrivacyScreen
-// Dependencies: [19, 6666, 8049, 1074, 21, 1114, 2024, 9240, 1483, 14910, 14913, 11562, 14869, 14741, 2]
+// Dependencies: [19, 6696, 8079, 1074, 21, 1114, 2024, 9279, 1483, 14944, 14947, 11601, 14903, 14775, 2]
 // Exports: default
 
-// Module 15932 (DataAndPrivacyScreen)
+// Module 15956 (DataAndPrivacyScreen)
 import util from "util" /* 1114 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9240 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6666 */;
+import ConsentStore from "ConsentStore" /* 6696 */;
 
 require = fn;
-const MobileUserSettings = fn(8049).MobileUserSettings;
+const MobileUserSettings = fn(8079).MobileUserSettings;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -86,10 +86,10 @@ export default function DataAndPrivacySettings() {
   items1.push(obj19);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14910).fetchConsents();
-      const obj = stackNavigation(14910);
+      const consents = stackNavigation(14944).fetchConsents();
+      const obj = stackNavigation(14944);
     }
-    const harvestStatus = stackNavigation(14913).fetchHarvestStatus();
+    const harvestStatus = stackNavigation(14947).fetchHarvestStatus();
   }, []);
   const items8 = [stackNavigation, items1];
   const obj20 = { children: null };
@@ -133,8 +133,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj21.screen = stackNavigation(14869).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(14869), obj21), closure_8(items1(14741), { node: memo })];
+  obj21.screen = stackNavigation(14903).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14903), obj21), closure_8(items1(14775), { node: memo })];
   obj20.children = items9;
   return closure_10(closure_9, obj20);
 };

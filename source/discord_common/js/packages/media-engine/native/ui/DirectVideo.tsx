@@ -1,11 +1,11 @@
-// Module ID: 4666
-// Function ID: 4667
+// Module ID: 4696
+// Function ID: 4697
 // Name: DirectVideo
-// Dependencies: [19, 21, 4, 4667, 4668, 2]
+// Dependencies: [19, 21, 4, 4697, 4698, 2]
 // Exports: default
 
-// Module 4666 (DirectVideo)
-import DirectVideoStream from "DirectVideoStream" /* 4667 */;
+// Module 4696 (DirectVideo)
+import DirectVideoStream from "DirectVideoStream" /* 4697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,52 +1,40 @@
 // Module ID: 3894
 // Function ID: 3895
-// Dependencies: [3695, 3895, 3896, 3696]
+// Dependencies: [3729, 3874, 3726]
 // Exports: default
 
 // Module 3894
-import _typeof_mod from "module_3695" /* 3695 */;
-import endOfDay_mod from "endOfDay" /* 3895 */;
-import endOfMonth_mod from "endOfMonth" /* 3896 */;
-import requiredArgs_mod from "requiredArgs" /* 3696 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import module_3874_mod from "module_3874" /* 3874 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3729 = module_3729_mod;
+if (!module_3729) {
+  const obj = { default: module_3729 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3729;
 }
-_typeof = tmp3;
-let endOfDay = endOfDay_mod;
-if (!endOfDay) {
-  const obj2 = { default: endOfDay };
+module_3729 = tmp3;
+let module_3874 = module_3874_mod;
+if (!module_3874) {
+  const obj2 = { default: module_3874 };
   let tmp5 = obj2;
 } else {
-  tmp5 = endOfDay;
+  tmp5 = module_3874;
 }
-endOfDay = tmp5;
-let endOfMonth = endOfMonth_mod;
-if (!endOfMonth) {
-  const obj3 = { default: endOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = endOfMonth;
-}
-endOfMonth = tmp7;
+module_3874 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+export default function addYears(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_3874.default(interval, 12 * module_3729.default(arg1));
 };
 export default exports.default;

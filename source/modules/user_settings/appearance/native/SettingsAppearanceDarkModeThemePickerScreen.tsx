@@ -1,12 +1,12 @@
-// Module ID: 15370
-// Function ID: 15371
+// Module ID: 15392
+// Function ID: 15393
 // Name: SettingsAppearanceDarkModeThemePickerScreen
-// Dependencies: [19, 1186, 21, 15329, 1114, 2]
+// Dependencies: [19, 1186, 21, 15351, 1114, 2]
 // Exports: default
 
-// Module 15370 (SettingsAppearanceDarkModeThemePickerScreen)
+// Module 15392 (SettingsAppearanceDarkModeThemePickerScreen)
 import util from "util" /* 1114 */;
-import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15329 */;
+import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

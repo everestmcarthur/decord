@@ -1,24 +1,24 @@
-// Module ID: 10134
-// Function ID: 10135
+// Module ID: 10173
+// Function ID: 10174
 // Name: StageChannelCallList
-// Dependencies: [32, 19, 10135, 5465, 21, 1178, 10136, 5476, 5043, 5482, 38, 10143, 1114, 10144, 10145, 10157, 7145, 10161, 1477, 5177, 2]
+// Dependencies: [32, 19, 10174, 5495, 21, 1178, 10175, 5506, 5073, 5512, 38, 10182, 1114, 10183, 10184, 10196, 7175, 10200, 1477, 5207, 2]
 // Exports: default
 
-// Module 10134 (StageChannelCallList)
+// Module 10173 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5476 */;
-import SpeakerTile from "SpeakerTile" /* 10136 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 10143 */;
-import StageGridRowDefault from "StageGridRow" /* 10145 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 10157 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5506 */;
+import SpeakerTile from "SpeakerTile" /* 10175 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 10182 */;
+import StageGridRowDefault from "StageGridRow" /* 10184 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 10196 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(10135);
+const StageChannelListStore = fn(10174);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(5465).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5495).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let cutout = { direction: fn(1178).CutoutDirection.RIGHT, radius: 13, inset: -6 };
@@ -163,8 +163,8 @@ let closure_12 = noop.memo((channel) => {
         if (first1) {
           cutout = { users: mapped, max: 10, avatarSize: tmp25(1178).AvatarSizes.XSMALL_20, cutout: null };
           cutout.cutout = cutout;
-          tmp21Result = tmp21(tmp22(10144), cutout);
-          const tmp22Result = tmp22(10144);
+          tmp21Result = tmp21(tmp22(10183), cutout);
+          const tmp22Result = tmp22(10183);
         }
         obj3.children = tmp21Result;
         tmp21Result2 = tmp21(StageSectionHeaderDefault, obj3);
@@ -289,24 +289,24 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(10161).useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(10200).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1477)().width;
-  let obj = width(10161);
-  isScreenLandscape = width(5177).useIsScreenLandscape();
+  let obj = width(10200);
+  isScreenLandscape = width(5207).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
     if (isScreenLandscape) {
       const _Math = Math;
       const _Math2 = Math;
-      num = Math.max(3, Math.floor(width / tmp2(10136).LANDSCAPE_MAX_TILE_WIDTH));
+      num = Math.max(3, Math.floor(width / tmp2(10175).LANDSCAPE_MAX_TILE_WIDTH));
     }
     const obj = {};
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER] = num;
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(5177);
-  const tmp4 = _slicedToArray(width(10161).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const obj2 = width(5207);
+  const tmp4 = _slicedToArray(width(10200).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 };

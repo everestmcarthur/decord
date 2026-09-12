@@ -1,21 +1,21 @@
-// Module ID: 16458
-// Function ID: 16459
+// Module ID: 16482
+// Function ID: 16483
 // Name: YouBarAvatar
-// Dependencies: [5, 32, 19, 17, 4598, 5330, 1371, 15156, 1074, 21, 4606, 576, 504, 1178, 4317, 4343, 8301, 8905, 5025, 4308, 8904, 8242, 4574, 7455, 1896, 6726, 2]
+// Dependencies: [5, 32, 19, 17, 4628, 5360, 1371, 15178, 1074, 21, 4636, 576, 504, 1178, 4347, 4373, 8333, 8940, 5055, 4338, 8939, 8274, 4604, 7485, 1896, 6756, 2]
 
-// Module 16458 (YouBarAvatar)
+// Module 16482 (YouBarAvatar)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import native2 from "native" /* 4317 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5025 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
-import ClipView from "ClipView" /* 8905 */;
+import native2 from "native" /* 4347 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import spring from "spring" /* 5055 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import ClipView from "ClipView" /* 8940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -172,7 +172,7 @@ function YouBarAvatarLarge(transitionState) {
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[17]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: 0 };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "status" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -303,12 +303,12 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(15156);
+const YouBarConstants = fn(15178);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};

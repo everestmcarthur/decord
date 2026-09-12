@@ -1,8 +1,8 @@
-// Module ID: 5863
-// Function ID: 5864
+// Module ID: 5893
+// Function ID: 5894
 // Dependencies: [2]
 
-// Module 5863
+// Module 5893
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BeakerIllocon-2x.png.js");

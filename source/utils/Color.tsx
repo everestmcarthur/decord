@@ -1,9 +1,9 @@
-// Module ID: 4457
-// Function ID: 4458
+// Module ID: 4487
+// Function ID: 4488
 // Name: utils/Color
 // Dependencies: [32, 2]
 
-// Module 4457 (utils/Color)
+// Module 4487 (utils/Color)
 import _slicedToArray from "module_32" /* 32 */;
 
 function hslToRgb(alpha) {

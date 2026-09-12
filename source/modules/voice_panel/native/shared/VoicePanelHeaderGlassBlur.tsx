@@ -1,23 +1,23 @@
-// Module ID: 12374
-// Function ID: 12375
+// Module ID: 12410
+// Function ID: 12411
 // Name: VoicePanelHeaderGlassBlur
-// Dependencies: [19, 17, 21, 4606, 1115, 4343, 5025, 4541, 7146, 5015, 4458, 5640, 2]
+// Dependencies: [19, 17, 21, 4636, 1150, 4373, 5055, 4571, 7176, 5045, 4488, 5670, 2]
 
-// Module 12374 (VoicePanelHeaderGlassBlur)
-import useThemeDefault from "useTheme" /* 4541 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5015 */;
-import spring from "spring" /* 5025 */;
-import NativeViewDefault from "NativeView" /* 5640 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7146 */;
+// Module 12410 (VoicePanelHeaderGlassBlur)
+import useThemeDefault from "useTheme" /* 4571 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5045 */;
+import spring from "spring" /* 5055 */;
+import NativeViewDefault from "NativeView" /* 5670 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth }, stroke: { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" }, strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" }, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 const IS_ANDROID = PlatformUtils.isAndroid();
 const __initData = { code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}" };
 const __initData2 = { code: "function VoicePanelHeaderGlassBlurTsx2(){const{withSpring,shown}=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0)};}" };
@@ -42,8 +42,8 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   fn.__closure = { shown, IS_ANDROID };
   fn.__workletHash = 3451055086565;
   fn.__initData = __initData;
-  const animatedStyle = shown(4343).useAnimatedStyle(fn);
-  let obj = shown(4343);
+  const animatedStyle = shown(4373).useAnimatedStyle(fn);
+  let obj = shown(4373);
   const obj2 = { shown, IS_ANDROID };
   const tmp2 = shown;
   const fn2 = function p() {
@@ -53,8 +53,8 @@ export default noop.memo(function HeaderGlassBlur(shown) {
     }
     return { blurAmount: spring.withSpring(num) };
   };
-  const obj3 = shown(4343);
-  fn2.__closure = { withSpring: shown(5025).withSpring, shown };
+  const obj3 = shown(4373);
+  fn2.__closure = { withSpring: shown(5055).withSpring, shown };
   fn2.__workletHash = 5642055202507;
   fn2.__initData = __initData2;
   const animatedProps = obj3.useAnimatedProps(fn2);
@@ -62,7 +62,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   const obj5 = { style: null, children: null };
   const items = [tmp.blur, style, animatedStyle];
   obj5.style = items;
-  const obj4 = { withSpring: shown(5025).withSpring, shown };
+  const obj4 = { withSpring: shown(5055).withSpring, shown };
   const tmp9 = ReanimatedNativeViewDefault;
   const tmp11 = VisualEffectViewAnimatedDefault;
   let str = "light";
@@ -74,13 +74,13 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   obj7.style = items1;
   const items2 = [closure_4(tmp11, obj7), ];
   const obj8 = { style: tmp.strokeContainer, children: null };
-  obj6 = shown(4458);
+  obj6 = shown(4488);
   const items3 = [closure_4(NativeViewDefault, { style: tmp.stroke }), ];
   const obj9 = { style: tmp.stroke };
   const tmp6Result = NativeViewDefault;
   const tmp6Result2 = NativeViewDefault;
-  const tmp2Result = tmp2(4458);
-  items3[1] = closure_4(tmp6Result2, { style: tmp2(4458).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
+  const tmp2Result = tmp2(4488);
+  items3[1] = closure_4(tmp6Result2, { style: tmp2(4488).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
   obj8.children = items3;
   items2[1] = closure_5(tmp6Result, obj8);
   obj5.children = items2;

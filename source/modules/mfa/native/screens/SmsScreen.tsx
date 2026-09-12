@@ -1,10 +1,10 @@
-// Module ID: 15745
-// Function ID: 15746
+// Module ID: 15767
+// Function ID: 15768
 // Name: SmsScreen
-// Dependencies: [5, 32, 19, 17, 1074, 21, 7015, 15738, 1114, 1272, 15742, 15737, 6677, 5026, 15740, 2]
+// Dependencies: [5, 32, 19, 17, 1074, 21, 7045, 15760, 1114, 1272, 15764, 15759, 6707, 5056, 15762, 2]
 // Exports: default
 
-// Module 15745 (SmsScreen)
+// Module 15767 (SmsScreen)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -208,11 +208,11 @@ export default function SmsScreen(mfaChallenge) {
       }
     }
   };
-  const tmp2 = finish(7015)();
-  const screenStyles = finish(15738).useScreenStyles(tmp2);
+  const tmp2 = finish(7045)();
+  const screenStyles = finish(15760).useScreenStyles(tmp2);
   const tmp4 = first(noop.useState(null), 2);
   dependencyMap = tmp4[1];
-  let obj = finish(15738);
+  let obj = finish(15760);
   [tmp6, c3] = first(noop.useState(false), 2);
   const tmp7 = first(noop.useState(""), 2);
   first = tmp7[0];
@@ -252,13 +252,13 @@ export default function SmsScreen(mfaChallenge) {
   obj2.headerText = intl2.string(mfaChallenge(1114).t.o4JNrO);
   obj2.subtitle = tmp10;
   let obj3 = { style: screenStyles.inputContainer, children: null };
-  let obj4 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15742).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
+  let obj4 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15764).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
   const intl3 = mfaChallenge(1114).intl;
   obj4.label = intl3.string(mfaChallenge(1114).t["/sHnXc"]);
   const intl4 = mfaChallenge(1114).intl;
   obj4.placeholder = intl4.string(mfaChallenge(1114).t.tARzgo);
   obj4.errorMessage = tmp4[0];
-  const items1 = [handleChange(mfaChallenge(6677).TextInput, obj4), ];
+  const items1 = [handleChange(mfaChallenge(6707).TextInput, obj4), ];
   let obj5 = { text: null, variant: "secondary", size: "sm", onPress: null };
   const intl5 = mfaChallenge(1114).intl;
   obj5.text = intl5.string(mfaChallenge(1114).t.WbaP3r);
@@ -272,11 +272,11 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   };
-  items1[1] = handleChange(mfaChallenge(5026).Button, obj5);
+  items1[1] = handleChange(mfaChallenge(5056).Button, obj5);
   obj3.children = items1;
   obj2.input = closure_9(c6, obj3);
   let obj6 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(15737);
+  const tmp15 = finish(15759);
   const intl6 = mfaChallenge(1114).intl;
   obj6.text = intl6.string(mfaChallenge(1114).t.geKm7t);
   let tmp17 = tmp6;
@@ -291,10 +291,10 @@ export default function SmsScreen(mfaChallenge) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(15742).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(15764).SMS_CODE_LENGTH;
   }
   obj6.disabled = tmp6;
-  obj2.submit = handleChange(finish(15740), obj6);
+  obj2.submit = handleChange(finish(15762), obj6);
   obj2.screenProps = { mfaChallenge, finish };
   return handleChange(tmp15, obj2);
 };

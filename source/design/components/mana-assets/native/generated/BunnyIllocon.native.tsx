@@ -1,13 +1,13 @@
-// Module ID: 5890
-// Function ID: 5891
+// Module ID: 5920
+// Function ID: 5921
 // Name: BunnyIllocon
-// Dependencies: [21, 5638, 5891, 2]
+// Dependencies: [21, 5668, 5921, 2]
 // Exports: BunnyIllocon
 
-// Module 5890 (BunnyIllocon)
+// Module 5920 (BunnyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5891 from "module_5891" /* 5891 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5921 from "module_5921" /* 5921 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BunnyIllocon = function BunnyIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5891 };
+  const obj2 = { uri: _modDef5921 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,15 +1,15 @@
-// Module ID: 13273
-// Function ID: 13274
+// Module ID: 13306
+// Function ID: 13307
 // Name: AvatarGrid
-// Dependencies: [19, 17, 4598, 4646, 21, 4606, 576, 504, 1178, 8331, 2]
+// Dependencies: [19, 17, 4628, 4676, 21, 4636, 576, 504, 1178, 8363, 2]
 // Exports: default
 
-// Module 13273 (AvatarGrid)
+// Module 13306 (AvatarGrid)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
 
 require = fn;
 function GridAvatar(user) {
@@ -35,7 +35,7 @@ function GridAvatar(user) {
   obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
     const obj4 = { source: null };
-    const tmp2Result = tmp2(8331);
+    const tmp2Result = tmp2(8363);
     obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj3);
     let obj5 = obj4;
@@ -48,7 +48,7 @@ function GridAvatar(user) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, gridContainer: { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

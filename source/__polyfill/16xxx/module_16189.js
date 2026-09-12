@@ -1,0 +1,9 @@
+// Module ID: 16189
+// Function ID: 16190
+// Dependencies: [1120]
+
+// Module 16189
+import registerAsset from "module_1120" /* 1120 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 21, height: 18, scales: [1, 2, 3], hash: "f19353ccef9be27782bf69aac76f0908", name: "ic_invite", type: "png" });

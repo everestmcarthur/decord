@@ -1,10 +1,10 @@
-// Module ID: 4235
-// Function ID: 4236
+// Module ID: 4265
+// Function ID: 4266
 // Name: embeddedActivityLocationUtils
 // Dependencies: [2]
 // Exports: getEmbeddedActivityLocationChannelId, getEmbeddedActivityLocationGuildId
 
-// Module 4235 (embeddedActivityLocationUtils)
+// Module 4265 (embeddedActivityLocationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");

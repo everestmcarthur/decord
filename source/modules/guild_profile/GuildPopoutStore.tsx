@@ -1,12 +1,12 @@
-// Module ID: 14021
-// Function ID: 14022
+// Module ID: 14055
+// Function ID: 14056
 // Name: GuildPopoutStore
-// Dependencies: [502, 7414, 504, 573, 2]
+// Dependencies: [502, 7444, 504, 573, 2]
 
-// Module 14021 (GuildPopoutStore)
+// Module 14055 (GuildPopoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7414 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7444 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

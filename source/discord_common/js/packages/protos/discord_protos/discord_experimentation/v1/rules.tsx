@@ -1,9 +1,9 @@
-// Module ID: 7968
-// Function ID: 7969
+// Module ID: 7998
+// Function ID: 7999
 // Name: rules
 // Dependencies: [32, 1188, 1218, 2]
 
-// Module 7968 (rules)
+// Module 7998 (rules)
 import _mod1188 from "module_1188" /* 1188 */;
 import wrappers from "wrappers" /* 1218 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -544,7 +544,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(arr) {
-  obj = { filter: { oneofKind: "Array" }, negate: false };
+  obj = { filter: { oneofKind: "r" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -1569,7 +1569,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(arr) {
-  obj = { location: { oneofKind: "Array" } };
+  obj = { location: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

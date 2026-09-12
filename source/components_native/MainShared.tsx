@@ -1,33 +1,30 @@
-// Module ID: 16994
-// Function ID: 16995
+// Module ID: 17021
+// Function ID: 17022
 // Name: MainShared
-// Dependencies: [19, 17, 1957, 4629, 21, 504, 9581, 4464, 9772, 16995, 1115, 14633, 1114, 16997, 14628, 14487, 2, 16998, 16999, 17000, 17001, 17009, 17010, 17042]
+// Dependencies: [19, 1957, 4659, 21, 504, 9620, 4494, 9811, 17022, 14666, 1114, 17024, 14522, 2, 17025, 17026, 17027, 17028, 17036, 17037, 17069]
 // Exports: PictureInPictureGlobalContainer, useAppKeyCommands, useScreenReaderEnabled
 
-// Module 16994 (MainShared)
+// Module 17021 (MainShared)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import usePipVideoOrStream from "usePipVideoOrStream" /* 9581 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 9772 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 14487 */;
-import KeyCommandsView from "KeyCommandsView" /* 14628 */;
-import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 16995 */;
-import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 16998 */;
-import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 16999 */;
-import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 17000 */;
-import AlertsDefault from "Alerts" /* 17001 */;
-import SoundPlayerDefault from "SoundPlayer" /* 17009 */;
-import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17010 */;
-import ToastContainerDefault from "ToastContainer" /* 17042 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import usePipVideoOrStream from "usePipVideoOrStream" /* 9620 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 9811 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14522 */;
+import KeyCommands from "KeyCommands" /* 14666 */;
+import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 17022 */;
+import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 17025 */;
+import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 17026 */;
+import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 17027 */;
+import AlertsDefault from "Alerts" /* 17028 */;
+import SoundPlayerDefault from "SoundPlayer" /* 17036 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17037 */;
+import ToastContainerDefault from "ToastContainer" /* 17069 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
-
-const require = globalThis.__r;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 
 require = fn;
-const NativeModules = fn(17).NativeModules;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/MainShared.tsx");
@@ -63,22 +60,16 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
 };
 export const useAppKeyCommands = function useAppKeyCommands() {
   const memo = noop.useMemo(() => {
-    if (obj.isAndroid()) {
-      let keyModifierCommand = require("NativeKeyCommandsModule").getConstants().keyModifierCommand;
-      const obj2 = require("NativeKeyCommandsModule");
-    } else {
-      keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
-    }
-    const obj3 = { input: "k", modifierFlags: keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
-    const intl = tmp(tmp2[12]).intl;
-    obj3.discoverabilityTitle = intl.string(util.t.yYsRlD);
-    obj3.onKeyCommand = function onKeyCommand() {
-      closure_1_1(closure_1_2[13])();
+    const obj = { input: "k", modifierFlags: KeyCommands.KeyModifierFlags.keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
+    const intl = util.intl;
+    obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
+    obj.onKeyCommand = function onKeyCommand() {
+      closure_1_1(dependencyMap[11])();
     };
-    const items = [obj3];
+    const items = [obj];
     return items;
   }, []);
-  const keyCommands = KeyCommandsView.useKeyCommands(memo);
+  const keyCommands = KeyCommands.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = noop.useEffect(() => {

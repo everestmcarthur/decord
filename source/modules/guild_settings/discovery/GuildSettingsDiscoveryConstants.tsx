@@ -1,10 +1,10 @@
-// Module ID: 16548
-// Function ID: 16549
+// Module ID: 16572
+// Function ID: 16573
 // Name: GuildSettingsDiscoveryConstants
 // Dependencies: [1114, 2]
 // Exports: calculateLocaleOptions
 
-// Module 16548 (GuildSettingsDiscoveryConstants)
+// Module 16572 (GuildSettingsDiscoveryConstants)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 

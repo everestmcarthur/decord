@@ -1,10 +1,10 @@
-// Module ID: 4276
-// Function ID: 4277
+// Module ID: 4306
+// Function ID: 4307
 // Name: PremiumSubscription
 // Dependencies: [1373, 2]
 // Exports: getBasePlanIdForSubscriptionItems, getBaseSubscriptionItemForSubscriptionItems, getNonePlanIdForIntervalType, getNonePlanIdForSubscription
 
-// Module 4276 (PremiumSubscription)
+// Module 4306 (PremiumSubscription)
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import size from "module_2" /* 2 */;
 

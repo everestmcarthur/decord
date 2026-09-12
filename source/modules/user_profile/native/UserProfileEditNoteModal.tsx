@@ -1,12 +1,12 @@
-// Module ID: 13150
-// Function ID: 13151
+// Module ID: 13187
+// Function ID: 13188
 // Name: UserProfileEditNoteModal
-// Dependencies: [32, 19, 21, 1483, 4809, 7073, 1116, 1114, 4602, 5675, 13151, 2]
+// Dependencies: [32, 19, 21, 1483, 4839, 7103, 1151, 1114, 4632, 5705, 13188, 2]
 // Exports: default
 
-// Module 13150 (UserProfileEditNoteModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 13151 */;
+// Module 13187 (UserProfileEditNoteModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 13188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ export default function UserProfileEditNoteModal(arg0) {
   let obj = navigation(1483);
   const tmp6 = jsx;
   const obj3 = { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null };
-  const obj2 = navigation(1116);
+  const obj2 = navigation(1151);
   let obj4;
   if (!tmpResult.isAndroid()) {
     obj4 = { height: 56 };
@@ -51,14 +51,14 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = navigation(1114).intl;
     obj.children = intl.string(navigation(1114).t.sHHsOM);
-    return jsx(navigation(4602).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
+    return jsx(navigation(4632).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
-  tmpResult = navigation(1116);
-  obj6.headerLeft = navigation(5675).getHeaderCloseButton(handleClose);
+  tmpResult = navigation(1151);
+  obj6.headerLeft = navigation(5705).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return tmp6(navigation(7073).Navigator, obj3);
+  return tmp6(navigation(7103).Navigator, obj3);
 };

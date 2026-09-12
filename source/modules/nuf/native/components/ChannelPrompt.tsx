@@ -1,12 +1,12 @@
-// Module ID: 12838
-// Function ID: 12839
+// Module ID: 12874
+// Function ID: 12875
 // Name: ChannelPrompt
-// Dependencies: [5, 32, 19, 17, 2012, 1979, 21, 4606, 5733, 504, 1483, 5675, 1114, 4619, 4507, 7196, 5635, 1396, 4602, 6676, 5026, 7012, 2]
+// Dependencies: [5, 32, 19, 17, 2012, 1979, 21, 4636, 5763, 504, 1483, 5705, 1114, 4649, 4537, 7226, 5665, 1396, 4632, 6706, 5056, 7042, 2]
 // Exports: default
 
-// Module 12838 (ChannelPrompt)
+// Module 12874 (ChannelPrompt)
 import util from "util" /* 1114 */;
-import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,8 +18,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
-let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(5733).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
+const createStyles = fn(4636);
+let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(5763).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");

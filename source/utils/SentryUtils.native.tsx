@@ -1,7 +1,7 @@
 // Module ID: 1232
 // Function ID: 1233
 // Name: SentryUtils
-// Dependencies: [17, 3, 1233, 675, 14134, 674, 1364, 2]
+// Dependencies: [17, 3, 1233, 675, 14169, 674, 1364, 2]
 
 // Module 1232 (SentryUtils)
 import LoggerDefault from "Logger" /* 3 */;
@@ -209,7 +209,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "Masterpass popup failed to return all required parameters needed to continue tokenization." };
+                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: null };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

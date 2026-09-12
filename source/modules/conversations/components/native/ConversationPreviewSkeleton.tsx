@@ -1,23 +1,23 @@
-// Module ID: 8001
-// Function ID: 8002
+// Module ID: 8031
+// Function ID: 8032
 // Name: ConversationPreviewSkeleton
-// Dependencies: [19, 17, 7670, 21, 4606, 576, 4343, 4607, 2]
+// Dependencies: [19, 17, 7700, 21, 4636, 576, 4373, 4637, 2]
 // Exports: default
 
-// Module 8001 (ConversationPreviewSkeleton)
+// Module 8031 (ConversationPreviewSkeleton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7670).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_5 = fn(7700).MOBILE_PREVIEW_MESSAGE_COUNT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 }, rowSpacing: null, avatar: null, lines: null, lineName: null, lineText: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 };
 obj2.rowSpacing = { marginTop: nativeDefault.space.PX_26 };
@@ -66,5 +66,5 @@ export default function ConversationPreviewSkeleton() {
       return React5(View, obj, arg1);
     })
   };
-  return closure_6(sharedValue(4343).View, obj3);
+  return closure_6(sharedValue(4373).View, obj3);
 };

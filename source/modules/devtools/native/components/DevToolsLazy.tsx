@@ -1,30 +1,22 @@
-// Module ID: 14632
-// Function ID: 14633
+// Module ID: 14665
+// Function ID: 14666
 // Name: DevToolsLazy
-// Dependencies: [5, 19, 17, 7792, 7791, 21, 1115, 14633, 14634, 1896, 504, 14628, 15996, 2]
+// Dependencies: [5, 19, 17, 7822, 7821, 21, 14666, 14668, 1896, 504, 1150, 16020, 2]
 // Exports: default
 
-// Module 14632 (DevToolsLazy)
-import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14633 */;
+// Module 14665 (DevToolsLazy)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7792 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7791 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7822 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7821 */;
 
 const require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1115);
-if (PlatformUtils.isAndroid()) {
-  let keyModifierControl = NativeKeyCommandsModuleDefault.getConstants().keyModifierControl;
-  const importDefaultResult = NativeKeyCommandsModuleDefault;
-} else {
-  keyModifierControl = NativeModules.KeyCommandsView.keyModifierControl;
-}
 let items = [
   {
     input: "o",
-    modifierFlags: keyModifierControl,
+    modifierFlags: fn(14666).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
@@ -55,7 +47,7 @@ let items = [
               } else {
                 c1 = 1;
                 c0 = 1;
-                const obj4 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
+                const obj4 = { value: require("asyncRequireImpl")(paths[7], paths.paths), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -100,10 +92,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14628).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14666).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15996).default, {});
+      return jsx(tmp(16020).default, {});
     }
   }
   return null;

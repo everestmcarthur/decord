@@ -1,17 +1,17 @@
-// Module ID: 17554
-// Function ID: 17555
+// Module ID: 17584
+// Function ID: 17585
 // Name: ProximitySensorManager
-// Dependencies: [17, 1956, 4628, 4629, 9173, 1115, 17555, 9174, 7191, 2]
+// Dependencies: [17, 1956, 4658, 4659, 9212, 1150, 17585, 9213, 7221, 2]
 
-// Module 17554 (ProximitySensorManager)
-import PlatformUtils2 from "PlatformUtils" /* 1115 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9174 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17555 */;
+// Module 17584 (ProximitySensorManager)
+import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9213 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17585 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
-import AudioRouteStore from "AudioRouteStore" /* 9173 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import AudioRouteStore from "AudioRouteStore" /* 9212 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
 function handleChange() {
@@ -33,7 +33,7 @@ function handleChange() {
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
 }
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 if (PlatformUtils.isIOS()) {
   let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
 } else {

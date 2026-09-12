@@ -1,19 +1,19 @@
-// Module ID: 12308
-// Function ID: 12309
+// Module ID: 12344
+// Function ID: 12345
 // Name: ForLaterCardHeader
-// Dependencies: [17, 1979, 21, 4606, 576, 7282, 504, 5635, 11002, 1178, 5122, 4759, 5079, 1114, 4602, 2]
+// Dependencies: [17, 1979, 21, 4636, 576, 7312, 504, 5665, 11041, 1178, 5152, 4789, 5109, 1114, 4632, 2]
 // Exports: ForLaterCardHeader
 
-// Module 12308 (ForLaterCardHeader)
+// Module 12344 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4759 */;
-import GuildIconDefault from "GuildIcon" /* 5635 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7282 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11002 */;
+import useChannelNameDefault from "useChannelName" /* 4789 */;
+import GuildIconDefault from "GuildIcon" /* 5665 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7312 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 function HeaderIcon(channel) {
@@ -22,7 +22,7 @@ function HeaderIcon(channel) {
   const items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(5635).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(5665).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -33,7 +33,7 @@ function HeaderIcon(channel) {
       const obj3 = { channel, size: tmp2(1178).AvatarSizes.XSMALL };
       tmp6Result = tmp6(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: tmp6(tmp2(5122).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: tmp6(tmp2(5152).ChatIcon, { size: "xxs" }) };
       tmp6Result = tmp6(View, obj4);
     }
   }
@@ -46,7 +46,7 @@ function ChannelName(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
   const obj = channel(504);
-  const channelIconComponentWithGuild = channel(5079).getChannelIconComponentWithGuild(channel, stateFromStores);
+  const channelIconComponentWithGuild = channel(5109).getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     isPrivateResult = null == channelIconComponentWithGuild;
@@ -63,7 +63,7 @@ function ChannelName(channel) {
     const obj5 = { style: tmp.channelTypeIcon, size: "xxs" };
     tmp12 = closure_5(channelIconComponentWithGuild, obj5);
   }
-  const items1 = [tmp12, closure_5(channel(4602).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, closure_5(channel(4632).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj4.children = items1;
   return closure_6(View, obj4);
 }

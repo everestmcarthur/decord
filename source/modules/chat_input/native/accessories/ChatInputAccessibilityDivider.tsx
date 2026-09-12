@@ -1,9 +1,9 @@
-// Module ID: 12355
-// Function ID: 12356
+// Module ID: 12391
+// Function ID: 12392
 // Name: ChatInputAccessibilityDivider
-// Dependencies: [19, 17, 21, 5013, 1115, 1114, 2]
+// Dependencies: [19, 17, 21, 5043, 1150, 1114, 2]
 
-// Module 12355 (ChatInputAccessibilityDivider)
+// Module 12391 (ChatInputAccessibilityDivider)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,7 +25,7 @@ export const ChatInputAccessibilityDivider = noop.memo(() => {
       obj2.style = items;
       tmp3 = <React3 nativeID="chat-input-accessibility-divider" accessible accessibilityLabel={null} accessibilityRole="header" style={null} />;
     }
-    tmpResult = tmp(1115);
+    tmpResult = tmp(1150);
   }
   return tmp3;
 });

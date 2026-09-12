@@ -1,15 +1,15 @@
-// Module ID: 16795
-// Function ID: 16796
+// Module ID: 16822
+// Function ID: 16823
 // Name: MessageSearchResultParser
-// Dependencies: [4256, 7952, 16796, 12433, 16797, 12, 2]
+// Dependencies: [4286, 7982, 16823, 12469, 16824, 12, 2]
 
-// Module 16795 (MessageSearchResultParser)
+// Module 16822 (MessageSearchResultParser)
 import _mod12 from "module_12" /* 12 */;
-import MessageRecord from "MessageRecord" /* 4256 */;
+import MessageRecord from "MessageRecord" /* 4286 */;
 
 require = fn;
-let closure_3 = fn(7952).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(16796).CachedSearchResultParser;
+let closure_3 = fn(7982).EMBED_TYPES_WITHOUT_DESCRIPTION;
+fn(16823).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -24,9 +24,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(16797).analyze(tokenizedQueryContent));
+      set = new Set(set(16824).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(16797).shouldHighlight(item, set));
+      const found = parts.find((item) => set(16824).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -46,7 +46,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(16797);
+      const obj = set(16824);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {

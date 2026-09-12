@@ -1,17 +1,17 @@
-// Module ID: 10833
-// Function ID: 10834
+// Module ID: 10872
+// Function ID: 10873
 // Name: PremiumGiftingIntentActionCreators
-// Dependencies: [7731, 502, 4827, 1373, 1074, 1272, 573, 1232, 1242, 2]
+// Dependencies: [7761, 502, 4857, 1373, 1074, 1272, 573, 1232, 1242, 2]
 // Exports: fetchAndReconcileGiftIntentDismissals, logFriendsListGiftIntentsShown, logGiftIntentFlowPurchasedGift, logGiftIntentMessageDismissed, logMessageGiftIntentShown
 
-// Module 10833 (PremiumGiftingIntentActionCreators)
+// Module 10872 (PremiumGiftingIntentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 4827 */;
+import MessageStore from "MessageStore" /* 4857 */;
 
 const require = globalThis.__r;
 

@@ -1,27 +1,27 @@
-// Module ID: 11965
-// Function ID: 11966
+// Module ID: 12001
+// Function ID: 12002
 // Name: AutomodQuarantineUtils
-// Dependencies: [19, 9298, 502, 2021, 1979, 4245, 4428, 1074, 4232, 1084, 563, 4251, 1114, 9299, 9300, 7455, 2]
+// Dependencies: [19, 9337, 502, 2021, 1979, 4275, 4458, 1074, 4262, 1084, 563, 4281, 1114, 9338, 9339, 7485, 2]
 // Exports: useCurrentUserHasAutomodQuarantinedProfile, useGuildAutomodProfileQuarantineErrors, useOpenFixQuarantinedProfileModal
 
-// Module 11965 (AutomodQuarantineUtils)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4251 */;
-import openUserSettings2 from "openUserSettings" /* 7455 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9300 */;
+// Module 12001 (AutomodQuarantineUtils)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4281 */;
+import openUserSettings2 from "openUserSettings" /* 7485 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9339 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9298 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9337 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4232).GuildMemberFlags;
+const GuildMemberFlags = fn(4262).GuildMemberFlags;
 let closure_12 = fn(1084).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");

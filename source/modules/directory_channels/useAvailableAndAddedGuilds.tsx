@@ -1,17 +1,17 @@
-// Module ID: 12411
-// Function ID: 12412
+// Module ID: 12447
+// Function ID: 12448
 // Name: useAvailableAndAddedGuilds
-// Dependencies: [5, 32, 19, 1979, 4245, 5489, 12405, 1074, 504, 5043, 12409, 2]
+// Dependencies: [5, 32, 19, 1979, 4275, 5519, 12441, 1074, 504, 5073, 12445, 2]
 // Exports: default
 
-// Module 12411 (useAvailableAndAddedGuilds)
+// Module 12447 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import SortedGuildStore from "SortedGuildStore" /* 5489 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12405 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import SortedGuildStore from "SortedGuildStore" /* 5519 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12441 */;
 
 const require = globalThis.__r;
 

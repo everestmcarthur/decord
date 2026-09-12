@@ -1,14 +1,14 @@
-// Module ID: 9688
-// Function ID: 9689
+// Module ID: 9727
+// Function ID: 9728
 // Name: VideoEmptyState
-// Dependencies: [19, 17, 1957, 1074, 21, 4606, 576, 9689, 1178, 1114, 9692, 9200, 504, 5043, 4748, 4658, 4602, 5027, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 9728, 1178, 1114, 9731, 9239, 504, 5073, 4778, 4688, 4632, 5057, 2]
 // Exports: default
 
-// Module 9688 (VideoEmptyState)
+// Module 9727 (VideoEmptyState)
 import nativeDefault from "native" /* 576 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4658 */;
-import StreamActionCreators from "StreamActionCreators" /* 4748 */;
-import useMountEffectDefault from "useMountEffect" /* 5043 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
+import StreamActionCreators from "StreamActionCreators" /* 4778 */;
+import useMountEffectDefault from "useMountEffect" /* 5073 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const VideoEmptyTypes = { NONE: "NONE", STREAM_ENDED: "STREAM_ENDED", STREAM_FAILED: "STREAM_FAILED" };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj3 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, placeholderImage: { marginBottom: 8, width: "100%", resizeMode: "contain" }, placeholderText: null, buttonWrapper: null, buttonPill: null };
 let obj4 = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 };
 obj3.placeholderText = { color: nativeDefault.unsafe_rawColors.WHITE, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20, textAlign: "center" };
@@ -37,7 +37,7 @@ export default function VideoEmptyState(style) {
     let tmp16 = !removeSplashImage;
     if (!removeSplashImage) {
       let obj2 = { style: tmp2.placeholderImage };
-      tmp16 = closure_5(stream(9689).StreamEnded, obj2);
+      tmp16 = closure_5(stream(9728).StreamEnded, obj2);
     }
     let obj3 = { children: null };
     const items = [tmp16, ];
@@ -51,7 +51,7 @@ export default function VideoEmptyState(style) {
     let tmp7 = !removeSplashImage;
     if (!removeSplashImage) {
       obj = { style: tmp2.placeholderImage };
-      tmp7 = closure_5(stream(9692).StreamFailed, obj);
+      tmp7 = closure_5(stream(9731).StreamFailed, obj);
     }
     const obj5 = { children: null };
     const items1 = [tmp7, ];
@@ -65,13 +65,13 @@ export default function VideoEmptyState(style) {
     tmp5Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(9200).getErrorInfo(avError).errorCode;
-    const obj8 = stream(9200);
+    let errorCode = stream(9239).getErrorInfo(avError).errorCode;
+    const obj8 = stream(9239);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(9200).getErrorInfo(stream(9200).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj7 = stream(9200);
+      errorCode = stream(9239).getErrorInfo(stream(9239).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj7 = stream(9239);
     }
   }
   const items2 = [ChannelStore];
@@ -98,7 +98,7 @@ export default function VideoEmptyState(style) {
     const intl3 = tmp28(1114).intl;
     const obj12 = { errorCode };
     obj11.children = intl3.formatToPlainString(tmp28(1114).t.ejOT95, obj12);
-    tmp34 = closure_5(tmp28(4602).Text, obj11);
+    tmp34 = closure_5(tmp28(4632).Text, obj11);
   }
   items5[1] = tmp34;
   let tmp36 = !removeCloseButton;
@@ -111,7 +111,7 @@ export default function VideoEmptyState(style) {
       const obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj13.children = closure_5(tmp28(5027).BaseTextButton, obj14);
+    obj13.children = closure_5(tmp28(5057).BaseTextButton, obj14);
     tmp36 = closure_5(tmp32, obj13);
   }
   items5[2] = tmp36;

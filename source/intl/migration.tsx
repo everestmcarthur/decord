@@ -1,10 +1,10 @@
-// Module ID: 17447
-// Function ID: 17448
+// Module ID: 17477
+// Function ID: 17478
 // Name: intl/migration
 // Dependencies: [1114, 1155, 2]
 // Exports: improperGetEnglishIntlMessageText
 
-// Module 17447 (intl/migration)
+// Module 17477 (intl/migration)
 import util from "util" /* 1114 */;
 import _mod1155 from "module_1155" /* 1155 */;
 import size from "module_2" /* 2 */;

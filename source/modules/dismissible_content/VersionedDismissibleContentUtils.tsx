@@ -1,13 +1,13 @@
 // Module ID: 1955
 // Function ID: 1956
 // Name: VersionedDismissibleContentUtils
-// Dependencies: [1956, 7657, 1943, 14039, 14040, 1894, 14041, 1969, 2]
+// Dependencies: [1956, 7687, 1943, 14073, 14074, 1894, 14075, 1969, 2]
 // Exports: getVersionedDismissibleContentCurrentVersion
 
 // Module 1955 (VersionedDismissibleContentUtils)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7657 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7687 */;
 
 require = fn;
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/dismissible_content/Versioned
 
 export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(id) {
   if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING === id) {
-    const marketingBySurface = CollectiblesMarketingsStore.getMarketingBySurface(tmp(14039).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
+    const marketingBySurface = CollectiblesMarketingsStore.getMarketingBySurface(tmp(14073).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
     let num5;
     if (marketingBySurface != null) {
       num5 = marketingBySurface.version;
@@ -26,12 +26,12 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
     return num5;
   } else if (tmp(1943).DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE === id) {
     const obj = { storeState: EmbeddedActivitiesStore.getState(), surface: tmp(1894).EmbeddedActivitySurfaces.VOICE_LAUNCHER };
-    return tmp(14040).getNewestBadgeableVersion(obj);
+    return tmp(14074).getNewestBadgeableVersion(obj);
   } else {
     if (tmp(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== id) {
       if (tmp(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== id) {
         if (tmp(1943).DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === id) {
-          return tmp(14041).getWideBannerDismissibleContentVersion();
+          return tmp(14075).getWideBannerDismissibleContentVersion();
         } else {
           if (tmp(1943).DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (tmp(1943).DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {

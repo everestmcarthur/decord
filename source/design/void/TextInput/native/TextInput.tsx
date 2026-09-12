@@ -1,11 +1,11 @@
-// Module ID: 9848
-// Function ID: 9849
+// Module ID: 9887
+// Function ID: 9888
 // Name: TextInput/TextInput
-// Dependencies: [19, 17, 1074, 21, 4606, 576, 4458, 1115, 4456, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4488, 1150, 4486, 2]
 
-// Module 9848 (TextInput/TextInput)
+// Module 9887 (TextInput/TextInput)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4458 */;
+import shared from "shared" /* 4488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1074);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
 let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
@@ -35,8 +35,8 @@ const forwardRefResult = noop.forwardRef((style, ref) => {
   const tmp3Result = shared;
   let hexWithOpacityResult = tmp6;
   if (tmp3Result3.isAndroid()) {
-    hexWithOpacityResult = tmp3(4456).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result4 = tmp3(4456);
+    hexWithOpacityResult = tmp3(4486).hexWithOpacity(tmp6, 0.5);
+    const tmp3Result4 = tmp3(4486);
   }
   obj3.selectionColor = hexWithOpacityResult;
   const merged1 = Object.assign(merged);

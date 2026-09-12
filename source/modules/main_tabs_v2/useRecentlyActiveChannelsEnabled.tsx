@@ -1,12 +1,12 @@
-// Module ID: 7609
-// Function ID: 7610
+// Module ID: 7639
+// Function ID: 7640
 // Name: useRecentlyActiveChannelsEnabled
-// Dependencies: [5678, 5677, 2]
+// Dependencies: [5708, 5707, 2]
 // Exports: isRecentlyActiveChannelsEnabled, useRecentlyActiveChannelsEnabled
 
-// Module 7609 (useRecentlyActiveChannelsEnabled)
-import useDesignToggleDefault from "useDesignToggle" /* 5677 */;
-import DesignTogglesStore from "DesignTogglesStore" /* 5678 */;
+// Module 7639 (useRecentlyActiveChannelsEnabled)
+import useDesignToggleDefault from "useDesignToggle" /* 5707 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 5708 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");

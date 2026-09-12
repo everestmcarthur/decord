@@ -1,11 +1,11 @@
-// Module ID: 9583
-// Function ID: 9584
+// Module ID: 9622
+// Function ID: 9623
 // Name: usePipDimensions
-// Dependencies: [19, 9584, 1477, 8418, 2]
+// Dependencies: [19, 9623, 1477, 8450, 2]
 // Exports: default
 
-// Module 9583 (usePipDimensions)
-import DeviceOrientation from "DeviceOrientation" /* 8418 */;
+// Module 9622 (usePipDimensions)
+import DeviceOrientation from "DeviceOrientation" /* 8450 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

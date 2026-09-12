@@ -1,22 +1,22 @@
-// Module ID: 13347
-// Function ID: 13348
+// Module ID: 13380
+// Function ID: 13381
 // Name: ConversationNavigatorMoreMenu
-// Dependencies: [19, 17, 21, 4606, 576, 1114, 9006, 7981, 7983, 4304, 9008, 8757, 8172, 8763, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1114, 9045, 8011, 8013, 4334, 9047, 8789, 8202, 8795, 2]
 // Exports: default
 
-// Module 13347 (ConversationNavigatorMoreMenu)
+// Module 13380 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import IconButton from "IconButton" /* 8172 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8763 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 9006 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 9008 */;
+import IconButton from "IconButton" /* 8202 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8795 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 9045 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 9047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

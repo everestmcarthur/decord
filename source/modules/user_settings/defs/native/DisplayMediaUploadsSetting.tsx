@@ -1,13 +1,13 @@
-// Module ID: 15524
-// Function ID: 15525
+// Module ID: 15546
+// Function ID: 15547
 // Name: DisplayMediaUploadsSetting
-// Dependencies: [8049, 11562, 1114, 1935, 2]
+// Dependencies: [8079, 11601, 1114, 1935, 2]
 
-// Module 15524 (DisplayMediaUploadsSetting)
+// Module 15546 (DisplayMediaUploadsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8049 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

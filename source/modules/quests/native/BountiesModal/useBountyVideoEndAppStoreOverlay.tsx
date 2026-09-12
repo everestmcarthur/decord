@@ -1,19 +1,19 @@
-// Module ID: 15073
-// Function ID: 15074
+// Module ID: 15104
+// Function ID: 15105
 // Name: useBountyVideoEndAppStoreOverlay
-// Dependencies: [19, 5495, 21, 15074, 11583, 11580, 15072, 5500, 7800, 4607, 4610, 7790, 5502, 11591, 2]
+// Dependencies: [19, 5525, 21, 15105, 11622, 11619, 15106, 5530, 7830, 4637, 4640, 7820, 5532, 11630, 2]
 // Exports: BountyVideoEndAppStoreProvider, canUseBountyVideoEndAppStoreOverlay, useBountyVideoEndAppStoreContext, useBountyVideoEndAppStoreOverlay
 
-// Module 15073 (useBountyVideoEndAppStoreOverlay)
-import timing from "timing" /* 4607 */;
-import timingPresets from "timingPresets" /* 4610 */;
-import QuestContent from "QuestContent" /* 5500 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15074 */;
+// Module 15104 (useBountyVideoEndAppStoreOverlay)
+import timing from "timing" /* 4637 */;
+import timingPresets from "timingPresets" /* 4640 */;
+import QuestContent from "QuestContent" /* 5530 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15105 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(null);
 const size = fn(2);
@@ -25,17 +25,16 @@ export const BountyVideoEndAppStoreProvider = function BountyVideoEndAppStorePro
 export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppStoreContext() {
   return noop.useContext(closure_5);
 };
-export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty, scrollAffordanceVariant) {
-  if ("auto" !== scrollAffordanceVariant) {
-    if (obj2.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-      const CustomAppStoreSqueezeBackExperiment = tmp6(11583).CustomAppStoreSqueezeBackExperiment;
-      const obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
-      const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
-      return config.enabled && tmp4 === tmp6(11583).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
-    }
-    obj2 = QuestCustomAppStoreOverlayUtils;
+export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty) {
+  if (obj.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
+    const CustomAppStoreSqueezeBackExperiment = tmp(11622).CustomAppStoreSqueezeBackExperiment;
+    const obj2 = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
+    const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj2);
+    return config.enabled && tmp6 === tmp(11622).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+  } else {
+    return false;
   }
-  return false;
+  obj = QuestCustomAppStoreOverlayUtils;
 };
 export const useBountyVideoEndAppStoreOverlay = function useBountyVideoEndAppStoreOverlay(bounty) {
   bounty = bounty.bounty;

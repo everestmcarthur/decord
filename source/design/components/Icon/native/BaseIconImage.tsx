@@ -1,11 +1,11 @@
-// Module ID: 4307
-// Function ID: 4308
+// Module ID: 4337
+// Function ID: 4338
 // Name: BaseIconImage
-// Dependencies: [19, 17, 21, 4308, 2]
+// Dependencies: [19, 17, 21, 4338, 2]
 // Exports: BaseIconImage
 
-// Module 4307 (BaseIconImage)
-import useToken from "useToken" /* 4308 */;
+// Module 4337 (BaseIconImage)
+import useToken from "useToken" /* 4338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

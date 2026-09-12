@@ -1,17 +1,17 @@
-// Module ID: 8142
-// Function ID: 8143
+// Module ID: 8172
+// Function ID: 8173
 // Name: ReferralTrialEmbed
-// Dependencies: [1957, 1371, 4270, 7523, 7310, 1074, 1373, 4606, 576, 7313, 8020, 8143, 1114, 8144, 4451, 4264, 7522, 8130, 2024, 1608, 8126, 2]
+// Dependencies: [1957, 1371, 4300, 7553, 7340, 1074, 1373, 4636, 576, 7343, 8050, 8173, 1114, 8174, 4481, 4294, 7552, 8160, 2024, 1608, 8156, 2]
 // Exports: createReferralTrialEmbedRedeemable
 
-// Module 8142 (ReferralTrialEmbed)
+// Module 8172 (ReferralTrialEmbed)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4270 */;
-import UserOfferStore from "UserOfferStore" /* 7523 */;
-import IAPStore from "IAPStore" /* 7310 */;
+import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import UserOfferStore from "UserOfferStore" /* 7553 */;
+import IAPStore from "IAPStore" /* 7340 */;
 
 require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -28,13 +28,13 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
     const channel = ChannelStore.getChannel(message.getChannelId());
     if (null != channel) {
       if (channel.isDM()) {
-        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: tmp44(8020).getAssetUriForEmbed(tmp46(8143)), headerText: null, headerColor: null, thumbnailUrl: null };
+        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: tmp44(8050).getAssetUriForEmbed(tmp46(8173)), headerText: null, headerColor: null, thumbnailUrl: null };
         const intl = tmp44(1114).intl;
-        const tmp44Result = tmp44(8020);
+        const tmp44Result = tmp44(8050);
         obj.headerText = intl.string(tmp44(1114).t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(tmp44(1114).t.gtNqJQ);
-        obj.thumbnailUrl = tmp44(8020).getAssetUriForEmbed(tmp46(8144));
+        obj.thumbnailUrl = tmp44(8050).getAssetUriForEmbed(tmp46(8174));
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -47,9 +47,9 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
         const user1 = UserStore.getUser(referrerId);
         if (null != user) {
           if (null != user1) {
-            const name = tmp46(4451).getName(user1);
-            const tmp46Result = tmp46(4451);
-            const name1 = tmp46(4451).getName(user);
+            const name = tmp46(4481).getName(user1);
+            const tmp46Result = tmp46(4481);
+            const name1 = tmp46(4481).getName(user);
             const intl11 = tmp44(1114).intl;
             const obj3 = { senderUserName: name, recipientUserName: name1 };
             const formatToPlainStringResult = intl11.formatToPlainString(tmp44(1114).t.IiWKwg, obj3);
@@ -67,14 +67,14 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
               const userTrialOffer = UserOfferStore.getUserTrialOffer(closure_9);
               IAPStore.getOfferIds();
               const _Object = Object;
-              const values = Object.values(tmp44(7313).TrialIdToProductOfferId[closure_9]);
+              const values = Object.values(tmp44(7343).TrialIdToProductOfferId[closure_9]);
               id = undefined;
               if (userTrialOffer != null) {
                 id = userTrialOffer.id;
               }
               const tmp7 = relevantUserTrialOffer.id === id && values.every((item) => set.has(item));
               const everyResult = values.every((item) => set.has(item));
-              const isPremiumResult = tmp46(4264).isPremium(user);
+              const isPremiumResult = tmp46(4294).isPremium(user);
               let tmp10 = isPremiumResult;
               if (!isPremiumResult) {
                 tmp10 = isPremiumResult;
@@ -82,13 +82,13 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                   tmp10 = null != SubscriptionStore.getPremiumTypeSubscription();
                 }
               }
-              const tmp46Result7 = tmp46(4264);
-              const result = tmp44(7522).hasUserTrialOfferExpired(relevantUserTrialOffer);
+              const tmp46Result7 = tmp46(4294);
+              const result = tmp44(7552).hasUserTrialOfferExpired(relevantUserTrialOffer);
               if (!tmp14) {
                 const expiresAt = relevantUserTrialOffer.expiresAt;
-                const referralTrialOfferExpirationCopy = tmp44(8130).getReferralTrialOfferExpirationCopy(expiresAt.getTime());
+                const referralTrialOfferExpirationCopy = tmp44(8160).getReferralTrialOfferExpirationCopy(expiresAt.getTime());
                 const intl2 = tmp44(1114).intl;
-                const tmp44Result9 = tmp44(8130);
+                const tmp44Result9 = tmp44(8160);
                 const subscriptionTrial = relevantUserTrialOffer.subscriptionTrial;
                 let interval;
                 if (subscriptionTrial != null) {
@@ -102,8 +102,8 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                 }
                 const obj7 = { duration: null };
                 obj6.intervalCount = intervalCount;
-                obj7.duration = tmp44(4264).formatIntervalDuration(obj6);
-                const tmp44Result10 = tmp44(4264);
+                obj7.duration = tmp44(4294).formatIntervalDuration(obj6);
+                const tmp44Result10 = tmp44(4294);
                 const replaced = intl2.formatToPlainString(tmp44(1114).t.uj94C5, obj7).replace(/\*/g, "");
                 const str = intl2.formatToPlainString(tmp44(1114).t.uj94C5, obj7);
                 const tmp16 = referralTrialOfferExpirationCopy;
@@ -148,9 +148,9 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                     const intl8 = tmp44(1114).intl;
                     obj11.acceptLabelText = intl8.string(tmp44(1114).t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = tmp44(8020).getAssetUriForEmbed(tmp46(8126));
+                    obj11.acceptLabelIconUrl = tmp44(8050).getAssetUriForEmbed(tmp46(8156));
                     tmp33 = obj11;
-                    const tmp44Result11 = tmp44(8020);
+                    const tmp44Result11 = tmp44(8050);
                   }
                   return tmp33;
                 }
@@ -193,9 +193,9 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                 const tmp46Result10 = tmp46(2024);
               }
               tmp14 = null == relevantUserTrialOffer.expiresAt || result || tmp10 || null != relevantUserTrialOffer.redeemedAt;
-              const tmp44Result8 = tmp44(7522);
+              const tmp44Result8 = tmp44(7552);
             }
-            const tmp46Result6 = tmp46(4451);
+            const tmp46Result6 = tmp46(4481);
           }
         }
         const obj17 = {};

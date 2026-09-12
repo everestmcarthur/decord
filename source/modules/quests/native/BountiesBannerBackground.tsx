@@ -1,14 +1,14 @@
-// Module ID: 15140
-// Function ID: 15141
+// Module ID: 15162
+// Function ID: 15163
 // Name: BountiesBannerBackground
-// Dependencies: [19, 17, 4598, 21, 504, 8393, 5038, 2]
+// Dependencies: [19, 17, 4628, 21, 504, 8425, 5068, 2]
 
-// Module 15140 (BountiesBannerBackground)
+// Module 15162 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import common_Video from "common/Video" /* 8393 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import common_Video from "common/Video" /* 8425 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

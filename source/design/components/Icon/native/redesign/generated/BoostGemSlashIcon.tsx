@@ -1,13 +1,13 @@
-// Module ID: 12677
-// Function ID: 12678
+// Module ID: 12713
+// Function ID: 12714
 // Name: BoostGemSlashIcon
-// Dependencies: [19, 21, 576, 4307, 12678, 2]
+// Dependencies: [19, 21, 576, 4337, 12714, 2]
 // Exports: BoostGemSlashIcon
 
-// Module 12677 (BoostGemSlashIcon)
+// Module 12713 (BoostGemSlashIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod12678 from "module_12678" /* 12678 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod12714 from "module_12714" /* 12714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const BoostGemSlashIcon = function BoostGemSlashIcon(isTierUnlocked) {
   }
   const merged = Object.assign(isTierUnlocked, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12678, color: INTERACTIVE_ICON_DEFAULT, style: isTierUnlocked.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12714, color: INTERACTIVE_ICON_DEFAULT, style: isTierUnlocked.style });
 };

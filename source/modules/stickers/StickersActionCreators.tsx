@@ -1,20 +1,20 @@
-// Module ID: 10477
-// Function ID: 10478
+// Module ID: 10516
+// Function ID: 10517
 // Name: StickersActionCreators
-// Dependencies: [5, 5328, 2025, 4948, 1371, 5553, 1074, 1084, 4848, 1272, 573, 4945, 5220, 1940, 12, 4950, 1114, 2]
+// Dependencies: [5, 5358, 2025, 4978, 1371, 5583, 1074, 1084, 4878, 1272, 573, 4975, 5250, 1940, 12, 4980, 1114, 2]
 // Exports: addStickerPreview, clearStickerPreview, createGuildSticker, deleteGuildSticker, favoriteSticker, fetchGuildStickersWithCreator, fetchSticker, fetchStickerPack, fetchStickerPacks, unfavoriteSticker, updateGuildSticker
 
-// Module 10477 (StickersActionCreators)
+// Module 10516 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
-import InlineUploaderDefault from "InlineUploader" /* 5220 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import InlineUploaderDefault from "InlineUploader" /* 5250 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
 import UserStore from "UserStore" /* 1371 */;
-import StickersStore from "StickersStore" /* 5553 */;
+import StickersStore from "StickersStore" /* 5583 */;
 
 const require = globalThis.__r;
 
@@ -30,52 +30,94 @@ let closure_12 = async function _fetchStickerPack() {
   return body;
 };
 let closure_13 = async function _fetchStickerPacks(arg0, value) {
-  closure_2 = tmp3;
-  closure_1 = tmp2;
-  let obj5 = closure_0;
-  if (closure_0 === undefined) {
-    obj5 = {};
-  }
-  locale = obj5.locale;
-  if (locale === undefined) {
-    locale = locale.locale;
-  }
-  closure_129_0 = locale;
-  await "PX_16";
-  if (1 === tmp6) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      if (!closure_130_8.isFetchingStickerPacks) {
-        if (!closure_130_8.hasLoadedStickerPacks) {
-          closure_130_1(closure_130_2[10]).wait(() => {
-            closure_1_1(closure_1_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-          });
-          const HTTP = closure_130_0(closure_130_2[9]).HTTP;
-          const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
-          request.query = { locale: closure_129_0 };
-          closure_130_1(closure_130_2[10]);
-          request.rejectWithError = closure_130_0(closure_130_2[9]).rejectWithMigratedError();
-          c3 = 2;
-          c4 = 1;
-          return { value: HTTP.get(request), done: false };
-        }
-      }
-      c4 = 3;
+      return { value: "HermesInternal", done: null };
     }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    const sticker_packs = value.body.sticker_packs;
-    closure_130_1(closure_130_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs });
-    closure_130_1(closure_130_2[10]);
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let obj5 = closure_0;
+          if (closure_0 === undefined) {
+            obj5 = {};
+          }
+          locale = obj5.locale;
+          if (locale === undefined) {
+            locale = locale.locale;
+          }
+          closure_129_0 = locale;
+          let sticker_packs;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp6) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            if (!closure_130_8.isFetchingStickerPacks) {
+              if (!closure_130_8.hasLoadedStickerPacks) {
+                closure_130_1(closure_130_2[10]).wait(() => {
+                  closure_1_1(closure_1_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
+                });
+                const HTTP = closure_130_0(closure_130_2[9]).HTTP;
+                const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
+                const obj8 = { locale: closure_129_0 };
+                request.query = obj8;
+                const obj4 = closure_130_1(closure_130_2[10]);
+                request.rejectWithError = closure_130_0(closure_130_2[9]).rejectWithMigratedError();
+                c3 = 2;
+                c4 = 1;
+                const obj9 = { value: HTTP.get(request), done: false };
+                return obj9;
+              }
+            }
+            c4 = 3;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          sticker_packs = value.body.sticker_packs;
+          const obj10 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs };
+          closure_130_1(closure_130_2[10]).dispatch(obj10);
+          const obj = closure_130_1(closure_130_2[10]);
+        }
+        c4 = 3;
+        const obj11 = { value, done: true };
+        return obj11;
+      }
+    } catch (tmp26) {
+      c4 = tmp;
+      throw tmp26;
+    }
   }
-  return value;
 };
 let closure_14 = async function _fetchSticker(arg0, value) {
   if (c4 === 2) {

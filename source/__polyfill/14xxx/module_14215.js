@@ -1,9 +1,0 @@
-// Module ID: 14215
-// Function ID: 14216
-// Dependencies: [1122]
-
-// Module 14215
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "38f50d4a667b2b6d0060105d222e11dd", name: "MessageRequest", type: "lottie" });

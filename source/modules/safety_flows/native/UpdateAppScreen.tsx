@@ -1,18 +1,18 @@
-// Module ID: 17961
-// Function ID: 17962
+// Module ID: 17991
+// Function ID: 17992
 // Name: UpdateAppScreen
-// Dependencies: [17, 21, 4606, 576, 4602, 1114, 2690, 5026, 2]
+// Dependencies: [17, 21, 4636, 576, 4632, 1114, 2690, 5056, 2]
 // Exports: default
 
-// Module 17961 (UpdateAppScreen)
+// Module 17991 (UpdateAppScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2690 from "module_2690" /* 2690 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 ({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);

@@ -1,24 +1,24 @@
-// Module ID: 14683
-// Function ID: 14684
+// Module ID: 14717
+// Function ID: 14718
 // Name: UserProfileFrameEditButton
-// Dependencies: [32, 19, 17, 7281, 1954, 1085, 21, 576, 4606, 7461, 1943, 8251, 11137, 1889, 4573, 14684, 1896, 1114, 14671, 5628, 8914, 1178, 13269, 2]
+// Dependencies: [32, 19, 17, 7311, 1954, 1085, 21, 576, 4636, 7491, 1943, 8283, 11176, 1889, 4603, 14718, 1896, 1114, 14705, 5658, 8949, 1178, 13302, 2]
 // Exports: default
 
-// Module 14683 (UserProfileFrameEditButton)
+// Module 14717 (UserProfileFrameEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7281).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7311).COLLECTIBLES_PREVIEW_SIZE;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, paddingVertical: PX_4, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.previewContainer = size;
@@ -33,9 +33,9 @@ export default function UserProfileFrameEditButton(arg0) {
   let userProfileFrame;
   const tmp = closure_11();
   const items = [user(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
-  const tmp4 = userProfileFrame(user(7461).useSelectedDismissibleContent(items), 2);
+  const tmp4 = userProfileFrame(user(7491).useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp5;
-  const obj = user(7461);
+  const obj = user(7491);
   const obj3 = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
   let profileFrame;
   if (displayProfile != null) {
@@ -54,13 +54,13 @@ export default function UserProfileFrameEditButton(arg0) {
   }
   obj3.guildValue = profileFrame1;
   obj3.guildId = guildId;
-  const profilePreviewValue = user(8251).getProfilePreviewValue(obj3);
-  const obj2 = user(8251);
+  const profilePreviewValue = user(8283).getProfilePreviewValue(obj3);
+  const obj2 = user(8283);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchCollectiblesProduct = user(11137).useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = user(11176).useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
   if (product != null) {
@@ -72,15 +72,15 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1889).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  const tmp2Result = user(11137);
-  userProfileFrame = user(8251).useUserProfileFrame({ user, guildId });
+  const tmp2Result = user(11176);
+  userProfileFrame = user(8283).useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
   }
   const items1 = [userProfileFrame, guildId, user, tmp4[1]];
   let name;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14684, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14718, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
     closure_2(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   if (product != null) {
@@ -106,14 +106,14 @@ export default function UserProfileFrameEditButton(arg0) {
     const intl5 = tmp2(1114).intl;
     obj5.buttonText = intl5.string(tmp2(1114).t.MKDeyL);
     obj5.onPress = NOOP;
-    obj5.leading = tmp18(tmp2(5628).ActivityIndicator, { animating: true, size: "large" });
+    obj5.leading = tmp18(tmp2(5658).ActivityIndicator, { animating: true, size: "large" });
     let obj6 = obj5;
   } else {
     obj6 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
     const intl3 = tmp2(1114).intl;
     obj6.label = intl3.string(tmp2(1114).t.GWrZOd);
     const obj7 = { showNewBadge: tmp4[0] === tmp2(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-    obj6.labelTrailing = tmp18(tmp2(14671).UserProfileEditFormLabelBadges, obj7);
+    obj6.labelTrailing = tmp18(tmp2(14705).UserProfileEditFormLabelBadges, obj7);
     obj6.buttonText = formatToPlainStringResult;
     const obj8 = { text: formatToPlainStringResult };
     obj6.accessibilityValue = obj8;
@@ -121,14 +121,14 @@ export default function UserProfileFrameEditButton(arg0) {
     if (null != first1) {
       const obj9 = { style: tmp.previewContainer, children: null };
       const obj10 = { profileFrame: first1, previewWidth: COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(576).space.PX_8, previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4, profileBackgroundColor: guildId(576).colors.BACKGROUND_SURFACE_HIGH };
-      obj9.children = tmp18(guildId(8914), obj10);
+      obj9.children = tmp18(guildId(8949), obj10);
       let tmp18Result = tmp18(View, obj9);
-      const tmp23 = guildId(8914);
+      const tmp23 = guildId(8949);
     } else {
-      const obj11 = { source: guildId(13269), style: tmp.noneIcon };
+      const obj11 = { source: guildId(13302), style: tmp.noneIcon };
       tmp18Result = tmp18(tmp2(1178).Icon, obj11);
     }
     obj6.leading = tmp18Result;
   }
-  return jsx(user(14671).UserProfileEditFormButton, obj6);
+  return jsx(user(14705).UserProfileEditFormButton, obj6);
 };

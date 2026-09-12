@@ -1,14 +1,14 @@
-// Module ID: 7603
-// Function ID: 7604
+// Module ID: 7633
+// Function ID: 7634
 // Name: FavoritesSuggestionStore
-// Dependencies: [1957, 2011, 4787, 504, 573, 2]
+// Dependencies: [1957, 2011, 4817, 504, 573, 2]
 
-// Module 7603 (FavoritesSuggestionStore)
+// Module 7633 (FavoritesSuggestionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 function handleChange() {
   const channelId = SelectedChannelStore.getChannelId();

@@ -1,18 +1,18 @@
-// Module ID: 15423
-// Function ID: 15424
+// Module ID: 15445
+// Function ID: 15446
 // Name: CustomTypingIndicatorEmojiSlots
-// Dependencies: [32, 19, 1374, 21, 15424, 15426, 15428, 15430, 15432, 15434, 15436, 15438, 15440, 15442, 15444, 15446, 15448, 15450, 15452, 15454, 15456, 15458, 15460, 15462, 15464, 15466, 4606, 7203, 1396, 4343, 5025, 5029, 11216, 1114, 3592, 1392, 5658, 12, 5024, 2]
+// Dependencies: [32, 19, 1374, 21, 15446, 15448, 15450, 15452, 15454, 15456, 15458, 15460, 15462, 15464, 15466, 15468, 15470, 15472, 15474, 15476, 15478, 15480, 15482, 15484, 15486, 15488, 4636, 7233, 1396, 4373, 5055, 5059, 11255, 1114, 3592, 1392, 5688, 12, 5054, 2]
 // Exports: default
 
-// Module 15423 (CustomTypingIndicatorEmojiSlots)
+// Module 15445 (CustomTypingIndicatorEmojiSlots)
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import spring from "spring" /* 5025 */;
-import springPresets from "springPresets" /* 5029 */;
-import EmojiDefault from "Emoji" /* 7203 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import spring from "spring" /* 5055 */;
+import springPresets from "springPresets" /* 5059 */;
+import EmojiDefault from "Emoji" /* 7233 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,8 +55,8 @@ function PlaceholderEmojiGlyph(pressed) {
     obj.transform = items;
     return obj;
   };
-  let obj = pressed(4343);
-  fn.__closure = { pressed, withSpring: pressed(5025).withSpring, interpolate: pressed(4343).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(5029).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  let obj = pressed(4373);
+  fn.__closure = { pressed, withSpring: pressed(5055).withSpring, interpolate: pressed(4373).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(5059).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
   fn.__workletHash = 16574219123934;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -125,8 +125,8 @@ function CustomTypingIndicatorEmojiSlot(index) {
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
-let items = [fn(15424).EmojiAngryFaceWithHornsIcon, fn(15426).EmojiColdFaceIcon, fn(15428).EmojiCowboyHatFaceIcon, fn(15430).EmojiCryingFaceIcon, fn(15432).EmojiDisguisedFaceIcon, fn(15434).EmojiFaceVomitingIcon, fn(15436).EmojiFaceWithMonocleIcon, fn(15438).EmojiFaceWithSpiralEyesIcon, fn(15440).EmojiMeltingFaceIcon, fn(15442).EmojiMoneyMouthFaceIcon, fn(15444).EmojiNerdFaceIcon, fn(15446).EmojiPartyingFaceIcon, fn(15448).EmojiSalutingFaceIcon, fn(15450).EmojiSkullIcon, fn(15452).EmojiSmilingFaceWithHornsIcon, fn(15454).EmojiSmilingFaceWithSunglassesIcon, fn(15456).EmojiSquintingFaceWithTongueIcon, fn(15458).EmojiUpsideDownFaceIcon, fn(15460).EmojiWoozyFaceIcon, fn(15462).EmojiZanyFaceIcon, fn(15464).EmojiRollingOnTheFloorLaughingIcon, fn(15466).EmojiSmilingFaceWithHeartsIcon];
-const createStyles = fn(4606);
+let items = [fn(15446).EmojiAngryFaceWithHornsIcon, fn(15448).EmojiColdFaceIcon, fn(15450).EmojiCowboyHatFaceIcon, fn(15452).EmojiCryingFaceIcon, fn(15454).EmojiDisguisedFaceIcon, fn(15456).EmojiFaceVomitingIcon, fn(15458).EmojiFaceWithMonocleIcon, fn(15460).EmojiFaceWithSpiralEyesIcon, fn(15462).EmojiMeltingFaceIcon, fn(15464).EmojiMoneyMouthFaceIcon, fn(15466).EmojiNerdFaceIcon, fn(15468).EmojiPartyingFaceIcon, fn(15470).EmojiSalutingFaceIcon, fn(15472).EmojiSkullIcon, fn(15474).EmojiSmilingFaceWithHornsIcon, fn(15476).EmojiSmilingFaceWithSunglassesIcon, fn(15478).EmojiSquintingFaceWithTongueIcon, fn(15480).EmojiUpsideDownFaceIcon, fn(15482).EmojiWoozyFaceIcon, fn(15484).EmojiZanyFaceIcon, fn(15486).EmojiRollingOnTheFloorLaughingIcon, fn(15488).EmojiSmilingFaceWithHeartsIcon];
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}" };
 let size = fn(2);

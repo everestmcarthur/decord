@@ -1,10 +1,10 @@
-// Module ID: 7666
-// Function ID: 7667
+// Module ID: 7696
+// Function ID: 7697
 // Name: FamilyCenterV3Experiment
 // Dependencies: [1433, 2]
 // Exports: getIsFamilyCenterV3Enabled, useIsFamilyCenterV3Enabled
 
-// Module 7666 (FamilyCenterV3Experiment)
+// Module 7696 (FamilyCenterV3Experiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

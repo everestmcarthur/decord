@@ -1,9 +1,9 @@
 // Module ID: 3523
 // Function ID: 3524
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 3523
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
 export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conversations", scales: [1], hash: "8e7c46ba423edaf69778fd849d9ff2b9", name: "Conversations.compiled.messages", type: "jsona" });

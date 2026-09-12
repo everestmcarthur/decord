@@ -1,12 +1,12 @@
-// Module ID: 13672
-// Function ID: 13673
+// Module ID: 13706
+// Function ID: 13707
 // Name: GuildSubscriptionRemoval
-// Dependencies: [19, 17, 21, 8317, 13673, 13674, 13675, 4458, 2]
+// Dependencies: [19, 17, 21, 8349, 13707, 13708, 13709, 4488, 2]
 // Exports: GuildSubscriptionRemoval, getGuildSubscriptionRemovalSource, useGuildSubscriptionRemovalSource
 
-// Module 13672 (GuildSubscriptionRemoval)
-import shared from "shared" /* 4458 */;
-import _mod8317 from "module_8317" /* 8317 */;
+// Module 13706 (GuildSubscriptionRemoval)
+import shared from "shared" /* 4488 */;
+import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,44 +18,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
 
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
-  return _mod8317.getIllustrationSource(theme, {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_13673");
+      return require("module_13707");
     },
     darker() {
-      return require("module_13674");
+      return require("module_13708");
     },
     light() {
-      return require("module_13675");
+      return require("module_13709");
     }
   });
 };
 export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRemovalSource() {
   const obj = shared;
-  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13673");
+      return require("module_13707");
     },
     darker() {
-      return require("module_13674");
+      return require("module_13708");
     },
     light() {
-      return require("module_13675");
+      return require("module_13709");
     }
   });
 };
 export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13673");
+      return require("module_13707");
     },
     darker() {
-      return require("module_13674");
+      return require("module_13708");
     },
     light() {
-      return require("module_13675");
+      return require("module_13709");
     }
   });
   const merged = Object.assign(arg0);

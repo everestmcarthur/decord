@@ -1,9 +1,9 @@
-// Module ID: 13700
-// Function ID: 13701
+// Module ID: 13734
+// Function ID: 13735
 // Name: ConnectionState
 // Dependencies: [2]
 
-// Module 13700 (ConnectionState)
+// Module 13734 (ConnectionState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/ConnectionState.tsx");

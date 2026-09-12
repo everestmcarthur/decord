@@ -1,13 +1,13 @@
-// Module ID: 11798
-// Function ID: 11799
+// Module ID: 11834
+// Function ID: 11835
 // Name: SavedMessagesActions
-// Dependencies: [5, 11753, 1074, 1272, 7933, 573, 4829, 2]
+// Dependencies: [5, 11789, 1074, 1272, 7963, 573, 4859, 2]
 // Exports: deleteSavedMessage, fetchAndUpdateSavedMessages, upsertSavedMessage
 
-// Module 11798 (SavedMessagesActions)
+// Module 11834 (SavedMessagesActions)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11753 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11789 */;
 
 require = fn;
 let closure_6 = async function _upsertSavedMessage() {
@@ -37,10 +37,10 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      messageRecord = closure_1_0(4829).createMessageRecord(message.message);
-      const obj = closure_1_0(4829);
+      messageRecord = closure_1_0(4859).createMessageRecord(message.message);
+      const obj = closure_1_0(4859);
     }
-    const obj2 = { message: messageRecord, saveData: closure_1_0(7933).savedMessageDataToClient(message.save_data) };
+    const obj2 = { message: messageRecord, saveData: closure_1_0(7963).savedMessageDataToClient(message.save_data) };
     return obj2;
   });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });

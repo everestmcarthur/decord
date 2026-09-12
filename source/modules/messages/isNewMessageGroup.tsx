@@ -1,13 +1,13 @@
-// Module ID: 12045
-// Function ID: 12046
+// Module ID: 12081
+// Function ID: 12082
 // Name: isNewMessageGroup
-// Dependencies: [1074, 1090, 7343, 11, 4288, 2]
+// Dependencies: [1074, 1090, 7373, 11, 4318, 2]
 // Exports: isNewGroupItem
 
-// Module 12045 (isNewMessageGroup)
+// Module 12081 (isNewMessageGroup)
 import DurationsDefault from "Durations" /* 1090 */;
-import DateUtils from "DateUtils" /* 4288 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7343 */;
+import DateUtils from "DateUtils" /* 4318 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7373 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                     const isSameDayResult = DateUtils.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
-                      const isWithinIntervalResult = tmp18(4288).isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                      const isWithinIntervalResult = tmp18(4318).isWithinInterval(content.timestamp, type.timestamp, closure_6);
                       let tmp23 = !isWithinIntervalResult;
                       if (isWithinIntervalResult) {
                         const hasFlagResult3 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
@@ -106,7 +106,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                         tmp23 = tmp26;
                       }
                       tmp20 = tmp23;
-                      const tmp18Result = tmp18(4288);
+                      const tmp18Result = tmp18(4318);
                     }
                     tmp17 = tmp20;
                     tmp18 = require;

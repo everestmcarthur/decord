@@ -1,9 +1,9 @@
 // Module ID: 3540
 // Function ID: 3541
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 3540
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
 export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX2ludml0ZV9jaGFubmVscw==", scales: [1], hash: "70c9bc1bce2f7d1939cc45bdd3d1109b", name: "it.messages.70c9bc1bce2f7d1939cc45bdd3d1109b.compiled.messages", type: "jsona" });

@@ -1,18 +1,18 @@
-// Module ID: 8166
-// Function ID: 8167
+// Module ID: 8196
+// Function ID: 8197
 // Name: ChangeLogStandardTemplate
-// Dependencies: [19, 17, 2025, 1074, 21, 4606, 576, 1178, 563, 8167, 1242, 4301, 4303, 8169, 4596, 7196, 8172, 8174, 1114, 4228, 8176, 8178, 2]
+// Dependencies: [19, 17, 2025, 1074, 21, 4636, 576, 1178, 563, 8197, 1242, 4331, 4333, 8199, 4626, 7226, 8202, 8204, 1114, 4258, 8206, 8208, 2]
 // Exports: changelogRules, getRenderChangelog
 
-// Module 8166 (ChangeLogStandardTemplate)
+// Module 8196 (ChangeLogStandardTemplate)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import getLocalizedLinkDefault from "getLocalizedLink" /* 4228 */;
-import LinkingDefault from "Linking" /* 4301 */;
-import _mod4303 from "module_4303" /* 4303 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
-import ChangeLogUtilsDefault from "ChangeLogUtils" /* 8169 */;
+import getLocalizedLinkDefault from "getLocalizedLink" /* 4258 */;
+import LinkingDefault from "Linking" /* 4331 */;
+import _mod4333 from "module_4333" /* 4333 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
+import ChangeLogUtilsDefault from "ChangeLogUtils" /* 8199 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -65,7 +65,7 @@ function LinkInner(target) {
   const items = [LocaleStore];
   const stateFromStores = target(563).useStateFromStores(items, () => locale.locale);
   let obj = target(563);
-  const changelog = target(8167).useChangelog(changelogId, stateFromStores).changelog;
+  const changelog = target(8197).useChangelog(changelogId, stateFromStores).changelog;
   return closure_10(target(1178).LegacyText, {
     accessibilityRole: "link",
     style: className,
@@ -90,7 +90,7 @@ function LinkInner(target) {
       obj.track(constants.CHANGE_LOG_CTA_CLICKED, { change_log_id: "" + date + ":" + num, cta_type: "inline_link", target });
       const obj2 = { change_log_id: "" + date + ":" + num, cta_type: "inline_link", target };
       const tmpResult = LinkingDefault;
-      tmpResult.openURL(_mod4303.sanitizeUrl(target));
+      tmpResult.openURL(_mod4333.sanitizeUrl(target));
     },
     children
   });
@@ -101,9 +101,9 @@ const Constants = fn(1074);
 ({ LocalizedLinks: closure_7, SOCIAL_LINKS: closure_8, AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_12 = createStyles.createStyleProperties({ added: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, fixed: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, progress: nativeDefault.colors.TEXT_FEEDBACK_WARNING, improved: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj3 = { flex: { flex: 1 }, container: null, footer: null, scrollViewContainer: null, lheading: null, lheadingText: null, lheadingLine: null, bulletPoint: null, listItem: null, listText: null };
 let obj = { added: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, fixed: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, progress: nativeDefault.colors.TEXT_FEEDBACK_WARNING, improved: nativeDefault.colors.TEXT_BRAND };
 obj3.container = { padding: 18, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -178,34 +178,34 @@ export default noop.memo((video) => {
   obj2.children = items1;
   const items2 = [closure_11(tmp4, obj2), ];
   const obj7 = { bottom: true, style: tmp.footer, children: null };
-  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8174).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8204).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl = onScroll(1114).intl;
   obj8.accessibilityLabel = intl.string(onScroll(1114).t["/lXfom"]);
   obj8.onPress = function onPress() {
     LinkingDefault.openURL(getLocalizedLinkDefault(constants.TWITTER));
   };
-  const items3 = [closure_10(onScroll(8172).IconButton, obj8), , ];
-  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8176).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const items3 = [closure_10(onScroll(8202).IconButton, obj8), , ];
+  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8206).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl2 = onScroll(1114).intl;
   obj9.accessibilityLabel = intl2.string(onScroll(1114).t["h0or/l"]);
   obj9.onPress = function onPress() {
     LinkingDefault.openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = closure_10(onScroll(8172).IconButton, obj9);
-  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8178).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  items3[1] = closure_10(onScroll(8202).IconButton, obj9);
+  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8208).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl3 = onScroll(1114).intl;
   obj10.accessibilityLabel = intl3.string(onScroll(1114).t["5uVPyf"]);
   obj10.onPress = function onPress() {
     LinkingDefault.openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = closure_10(onScroll(8172).IconButton, obj10);
+  items3[2] = closure_10(onScroll(8202).IconButton, obj10);
   obj7.children = items3;
-  items2[1] = closure_11(onScroll(7196).SafeAreaPaddingView, obj7);
+  items2[1] = closure_11(onScroll(7226).SafeAreaPaddingView, obj7);
   obj.children = items2;
   return closure_11(tmp3, obj);
 });
 export const ListItem = memoResult;
-export const changelogRules = function changelogRules(astParserForResultResult, arg1) {
+export const changelogRules = function changelogRules(changelogId, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -214,7 +214,7 @@ export const changelogRules = function changelogRules(astParserForResultResult, 
   if (flag) {
     const obj2 = { components: null };
     const obj3 = { Link: null, ListItem: null, LHeading: null, Heading: null };
-    closure_129_0 = astParserForResultResult;
+    closure_129_0 = changelogId;
     obj3.Link = (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -229,7 +229,7 @@ export const changelogRules = function changelogRules(astParserForResultResult, 
   } else {
     const obj4 = { components: null };
     const obj5 = { Link: null, ListItem: null, LHeading: null, Heading: null };
-    closure_0 = astParserForResultResult;
+    closure_0 = changelogId;
     obj5.Link = (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);

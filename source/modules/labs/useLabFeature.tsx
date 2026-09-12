@@ -1,11 +1,11 @@
-// Module ID: 8441
-// Function ID: 8442
+// Module ID: 8473
+// Function ID: 8474
 // Name: useLabFeature
-// Dependencies: [8439, 504, 2]
+// Dependencies: [8471, 504, 2]
 // Exports: default
 
-// Module 8441 (useLabFeature)
-import LabFeatureStore from "LabFeatureStore" /* 8439 */;
+// Module 8473 (useLabFeature)
+import LabFeatureStore from "LabFeatureStore" /* 8471 */;
 
 const require = globalThis.__r;
 

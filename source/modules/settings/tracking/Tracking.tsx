@@ -1,13 +1,13 @@
-// Module ID: 7070
-// Function ID: 7071
+// Module ID: 7100
+// Function ID: 7101
 // Name: Tracking
-// Dependencies: [1074, 1242, 7069, 2]
+// Dependencies: [1074, 1242, 7099, 2]
 // Exports: trackSettingSearchClosed, trackSettingSearchInputFocused, trackSettingSearchQueryEntered, trackSettingSearchResultPress
 
-// Module 7070 (Tracking)
+// Module 7100 (Tracking)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7069 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7099 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

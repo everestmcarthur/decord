@@ -1,16 +1,42 @@
 // Module ID: 4149
 // Function ID: 4150
-// Dependencies: [2030]
+// Dependencies: [3729, 3725, 3726]
+// Exports: default
 
 // Module 4149
-import module_2030 from "module_2030" /* 2030 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
-if (!module_2030) {
-  const obj2 = { default: module_2030 };
-  let obj = obj2;
+let module_3729 = module_3729_mod;
+if (!module_3729) {
+  const obj = { default: module_3729 };
+  let tmp3 = obj;
 } else {
-  obj = module_2030;
+  tmp3 = module_3729;
 }
+module_3729 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function setSeconds(module_3729, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_3729);
+  defaultResult1.setSeconds(module_3729.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

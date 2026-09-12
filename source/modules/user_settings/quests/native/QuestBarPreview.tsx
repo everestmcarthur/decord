@@ -1,21 +1,21 @@
-// Module ID: 15239
-// Function ID: 15240
+// Module ID: 15261
+// Function ID: 15262
 // Name: QuestBarPreview
-// Dependencies: [19, 17, 21, 4606, 576, 15157, 15240, 15241, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 15179, 15262, 15263, 2]
 // Exports: QuestBarPreview
 
-// Module 15239 (QuestBarPreview)
+// Module 15261 (QuestBarPreview)
 import nativeDefault from "native" /* 576 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15157 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15240 */;
-import QuestDock from "QuestDock" /* 15241 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15179 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15262 */;
+import QuestDock from "QuestDock" /* 15263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const value = { isRendered: true, isVisibleToUser: true };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { overlay: { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1000, elevation: 1000, pointerEvents: "box-none" }, questDockContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, zIndex: 1001, elevation: 1001 };
 obj2.questDockContainer = rect;

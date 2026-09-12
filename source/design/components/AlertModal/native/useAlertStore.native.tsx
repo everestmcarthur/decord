@@ -1,11 +1,11 @@
-// Module ID: 4952
-// Function ID: 4953
+// Module ID: 4982
+// Function ID: 4983
 // Name: useAlertStore
-// Dependencies: [32, 560, 1249, 4953, 4955, 2]
+// Dependencies: [32, 560, 1249, 4983, 4985, 2]
 // Exports: dismissAlert, dismissAlerts, openAlert
 
-// Module 4952 (useAlertStore)
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4955 */;
+// Module 4982 (useAlertStore)
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4985 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4953)();
+    arr4(4983)();
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
@@ -70,7 +70,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4953)();
+      found(4983)();
     }
     let obj = require("ReactBatchUpdates");
   }

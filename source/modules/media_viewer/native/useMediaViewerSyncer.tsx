@@ -1,19 +1,19 @@
-// Module ID: 8377
-// Function ID: 8378
+// Module ID: 8409
+// Function ID: 8410
 // Name: useMediaViewerSyncer
-// Dependencies: [32, 19, 8378, 1115, 8347, 4343, 8379, 1611, 8380, 8351, 5025, 8381, 2]
+// Dependencies: [32, 19, 8410, 1150, 8379, 4373, 8411, 1611, 8412, 8383, 5055, 8413, 2]
 // Exports: useMediaViewerSyncer
 
-// Module 8377 (useMediaViewerSyncer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8351 */;
+// Module 8409 (useMediaViewerSyncer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(8378);
+const Constants = fn(8410);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}" };
 let closure_12 = { code: "function useMediaViewerSyncerTsx2(){const{thumbnailsScrolling,SCROLLING_DRAG}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);}" };

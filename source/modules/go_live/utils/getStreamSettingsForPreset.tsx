@@ -1,14 +1,14 @@
-// Module ID: 10044
-// Function ID: 10045
+// Module ID: 10083
+// Function ID: 10084
 // Name: getStreamSettingsForPreset
-// Dependencies: [4653, 10045, 10046, 1115, 4744, 2]
+// Dependencies: [4683, 10084, 10085, 1150, 4774, 2]
 // Exports: canStreamWithPreset, getMaxSettingsForPreset
 
-// Module 10044 (getStreamSettingsForPreset)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 10045 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10046 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4653 */;
+// Module 10083 (getStreamSettingsForPreset)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 10084 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10085 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4683 */;
 import size from "module_2" /* 2 */;
 
 function getApplicationStreamPresetValues() {
@@ -39,10 +39,10 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
         if (arg0 === constants.PRESET_VIDEO) {
           let tmp26 = require;
           if (PlatformUtils.isPlatformEmbedded) {
-            let tmp26Result = tmp26(1115);
+            let tmp26Result = tmp26(1150);
             if (tmp26Result.isDesktop()) {
               let str = "getStreamSettingsForPreset";
-              let tmp11 = tmp4(4744)("getStreamSettingsForPreset", arg1, arg3);
+              let tmp11 = tmp4(4774)("getStreamSettingsForPreset", arg1, arg3);
               let tmp12 = tmp11;
               let maxResolution;
               if (tmp11 != null) {

@@ -1,19 +1,19 @@
-// Module ID: 12144
-// Function ID: 12145
+// Module ID: 12180
+// Function ID: 12181
 // Name: AppLauncherNativeUtils
-// Dependencies: [19, 1957, 1371, 1482, 1074, 5050, 4786, 7596, 12145, 7594, 1894, 7850, 1884, 9379, 1396, 11309, 9710, 12150, 7241, 9606, 4574, 2]
+// Dependencies: [19, 1957, 1371, 1482, 1074, 5080, 4816, 7626, 12181, 7624, 1894, 7880, 1884, 9418, 1396, 11348, 9749, 12186, 7271, 9645, 4604, 2]
 // Exports: getAppLauncherIconSource, getInitialOptionValues, handleApplicationCommandSelected, handleApplicationSelected, handleViewAllSelected, useHandleActivityItemSelected, useLogAppLauncherEmptyStateView
 
-// Module 12144 (AppLauncherNativeUtils)
+// Module 12180 (AppLauncherNativeUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import _modDef1884 from "module_1884" /* 1884 */;
 import Server from "Server" /* 1894 */;
-import HapticUtils from "HapticUtils" /* 4574 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7594 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7850 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9379 */;
-import FrecencySection from "FrecencySection" /* 12145 */;
+import HapticUtils from "HapticUtils" /* 4604 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7880 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9418 */;
+import FrecencySection from "FrecencySection" /* 12181 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -24,7 +24,7 @@ require = fn;
 const AppLauncherNativeConstants = fn(1482);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const BuiltInSectionId = fn(5050).BuiltInSectionId;
+const BuiltInSectionId = fn(5080).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
@@ -37,9 +37,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
   entrypoint = entrypoint.entrypoint;
   const obj2 = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(7596).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(7626).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(7596).ApplicationCommandTriggerSections.APP;
+    APP = tmp(7626).ApplicationCommandTriggerSections.APP;
   }
   obj2.section = APP;
   let id = application.id;

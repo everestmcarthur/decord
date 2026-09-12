@@ -1,13 +1,13 @@
-// Module ID: 6170
-// Function ID: 6171
+// Module ID: 6200
+// Function ID: 6201
 // Name: GemIllocon
-// Dependencies: [21, 5638, 6171, 2]
+// Dependencies: [21, 5668, 6201, 2]
 // Exports: GemIllocon
 
-// Module 6170 (GemIllocon)
+// Module 6200 (GemIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6171 from "module_6171" /* 6171 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6201 from "module_6201" /* 6201 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const GemIllocon = function GemIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6171 };
+  const obj2 = { uri: _modDef6201 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

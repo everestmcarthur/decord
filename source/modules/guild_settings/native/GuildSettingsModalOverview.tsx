@@ -1,41 +1,41 @@
-// Module ID: 17614
-// Function ID: 17615
+// Module ID: 17644
+// Function ID: 17645
 // Name: GuildSettingsModalOverview
-// Dependencies: [19, 1975, 1957, 2012, 4526, 4245, 4255, 1371, 9154, 1074, 21, 4606, 576, 1114, 4317, 4304, 5675, 7450, 9153, 11423, 1384, 7267, 4951, 5045, 6677, 4759, 5738, 5656, 8066, 17418, 7273, 5736, 5739, 16228, 2024, 17615, 1396, 11441, 1178, 7158, 5600, 8684, 5024, 7113, 1483, 504, 2]
+// Dependencies: [19, 1975, 1957, 2012, 4556, 4275, 4285, 1371, 9193, 1074, 21, 4636, 576, 1114, 4347, 4334, 5705, 7480, 9192, 11462, 1384, 7297, 4981, 5075, 6707, 4789, 5768, 5686, 8096, 17448, 7303, 5766, 5769, 16252, 2024, 17645, 1396, 11480, 1178, 7188, 5630, 8716, 5054, 7143, 1483, 504, 2]
 // Exports: default
 
-// Module 17614 (GuildSettingsModalOverview)
+// Module 17644 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import ToastUtils from "ToastUtils" /* 4304 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import common_AlertDefault from "common/Alert" /* 5045 */;
-import GuildProfileLimits from "GuildProfileLimits" /* 5600 */;
-import TableRow from "TableRow" /* 5656 */;
-import TableRadioGroup from "TableRadioGroup" /* 5736 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import TableRadioRow from "TableRadioRow" /* 5739 */;
-import TextInput from "TextInput" /* 6677 */;
-import NavScrim from "NavScrim" /* 7113 */;
-import TextArea from "TextArea" /* 7158 */;
-import HeaderActionButton from "HeaderActionButton" /* 7450 */;
-import Form from "Form" /* 8684 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11423 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11441 */;
-import AssetChooserDefault from "AssetChooser" /* 17615 */;
+import ToastUtils from "ToastUtils" /* 4334 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import common_AlertDefault from "common/Alert" /* 5075 */;
+import GuildProfileLimits from "GuildProfileLimits" /* 5630 */;
+import TableRow from "TableRow" /* 5686 */;
+import TableRadioGroup from "TableRadioGroup" /* 5766 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import TableRadioRow from "TableRadioRow" /* 5769 */;
+import TextInput from "TextInput" /* 6707 */;
+import NavScrim from "NavScrim" /* 7143 */;
+import TextArea from "TextArea" /* 7188 */;
+import HeaderActionButton from "HeaderActionButton" /* 7480 */;
+import Form from "Form" /* 8716 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11462 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11480 */;
+import AssetChooserDefault from "AssetChooser" /* 17645 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
 
 require = fn;
 let closure_3 = fn(1975).isGuildOwnerWithRequiredMfaLevel;
@@ -45,7 +45,7 @@ const Constants = fn(1074);
 ({ UserNotificationSettings: closure_12, ChannelTypes: map1, Permissions: closure_14, GuildFeatures: closure_15, HelpdeskArticles: closure_16, SystemChannelFlags: closure_17, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { overview: { flex: 1 }, overviewContent: { paddingTop: 16 }, stackPadding: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_22 = createStyles.createLegacyClassComponentStyles(obj2);
 let items = [
@@ -167,7 +167,7 @@ class GuildSettingsModalOverview extends PureComponent {
       const result = applyArgumentsResult.handleSystemChannelFlagsChange(constants5.SUPPRESS_VOICE_SESSION_NOTIFICATIONS, !arg0);
     };
     applyArgumentsResult.handleAFKTimeoutChange = function handleAFKTimeoutChange() {
-      const obj = applyArgumentsResult(7267);
+      const obj = applyArgumentsResult(7297);
       const result = obj.showSimpleActionSheet({
         key: "AFKTimeout",
         options: closure_1_23.map((label) => ({
@@ -324,9 +324,9 @@ prototype["renderAFKSettings"] = function renderAFKSettings() {
   const intl4 = tmp4(1114).intl;
   obj4.label = intl4.string(tmp4(1114).t.KuYcnU);
   obj4.disabled = !canManage;
-  obj4.trailing = closure_1_19(tmp4(5656).TableRow.TrailingText, { text: channelName });
+  obj4.trailing = closure_1_19(tmp4(5686).TableRow.TrailingText, { text: channelName });
   obj4.onPress = self.handleAfkChannelChange;
-  const items = [closure_1_19(tmp4(5656).TableRow, obj4), ];
+  const items = [closure_1_19(tmp4(5686).TableRow, obj4), ];
   const obj5 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
   const intl5 = tmp4(1114).intl;
   obj5.label = intl5.string(tmp4(1114).t.brhYaR);
@@ -335,11 +335,11 @@ prototype["renderAFKSettings"] = function renderAFKSettings() {
     tmp15 = null == guild.afkChannelId;
   }
   obj5.disabled = tmp15;
-  obj5.trailing = closure_1_19(tmp4(5656).TableRow.TrailingText, { text: labelResult });
+  obj5.trailing = closure_1_19(tmp4(5686).TableRow.TrailingText, { text: labelResult });
   obj5.onPress = self.handleAFKTimeoutChange;
-  items[1] = closure_1_19(tmp4(5656).TableRow, obj5);
+  items[1] = closure_1_19(tmp4(5686).TableRow, obj5);
   obj3.children = items;
-  return closure_1_20(tmp4(5738).TableRowGroup, obj3);
+  return closure_1_20(tmp4(5768).TableRowGroup, obj3);
 };
 prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings() {
   const self = this;
@@ -352,7 +352,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl = util.intl;
     channelName = intl.string(util.t.ibUhoa);
   }
-  const result = tmp(8066).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
+  const result = tmp(8096).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
   let hasFlagResult = result;
   if (!result) {
     hasFlagResult = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS);
@@ -363,8 +363,8 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     hasFlagResult1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     const tmpResult13 = tmp(1384);
   }
-  const tmpResult = tmp(8066);
-  let result1 = tmp(17418).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  const tmpResult = tmp(8096);
+  let result1 = tmp(17448).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult15 = tmp(1384);
@@ -378,18 +378,18 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const intl4 = tmp(1114).intl;
   obj3.label = intl4.string(tmp(1114).t.GK18KJ);
   obj3.disabled = !canManage;
-  obj3.trailing = closure_1_19(tmp(5656).TableRow.TrailingText, { text: channelName });
+  obj3.trailing = closure_1_19(tmp(5686).TableRow.TrailingText, { text: channelName });
   obj3.onPress = self.handleSystemChannelChange;
-  const items = [closure_1_19(tmp(5656).TableRow, obj3), , , , , , , ];
+  const items = [closure_1_19(tmp(5686).TableRow, obj3), , , , , , , ];
   const obj4 = { label: null, disabled: null, value: null, onValueChange: null };
   const intl5 = tmp(1114).intl;
   obj4.label = intl5.string(tmp(1114).t["+f0bXQ"]);
   obj4.disabled = !canManage;
   const tmp15 = closure_1_20;
-  const tmpResult14 = tmp(17418);
+  const tmpResult14 = tmp(17448);
   obj4.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_JOIN_NOTIFICATIONS);
   obj4.onValueChange = self.handleSystemJoinMessages;
-  items[1] = closure_1_19(tmp(7273).TableSwitchRow, obj4);
+  items[1] = closure_1_19(tmp(7303).TableSwitchRow, obj4);
   const obj5 = { label: null, disabled: null, value: null, onValueChange: null };
   const intl6 = tmp(1114).intl;
   obj5.label = intl6.string(tmp(1114).t["72k7jf"]);
@@ -397,7 +397,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const tmpResult16 = tmp(1384);
   obj5.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_JOIN_NOTIFICATION_REPLIES);
   obj5.onValueChange = self.handleSystemJoinMessageReplies;
-  items[2] = closure_1_19(tmp(7273).TableSwitchRow, obj5);
+  items[2] = closure_1_19(tmp(7303).TableSwitchRow, obj5);
   const obj6 = { label: null, disabled: null, value: null, onValueChange: null };
   const intl7 = tmp(1114).intl;
   obj6.label = intl7.string(tmp(1114).t["2L8NCN"]);
@@ -405,7 +405,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const tmpResult17 = tmp(1384);
   obj6.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_PREMIUM_SUBSCRIPTIONS);
   obj6.onValueChange = self.handleSystemPremiumSubscribe;
-  items[3] = closure_1_19(tmp(7273).TableSwitchRow, obj6);
+  items[3] = closure_1_19(tmp(7303).TableSwitchRow, obj6);
   const obj7 = { label: null, disabled: null, value: null, onValueChange: null };
   const intl8 = tmp(1114).intl;
   obj7.label = intl8.string(tmp(1114).t["NvnW+V"]);
@@ -413,7 +413,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const tmpResult18 = tmp(1384);
   obj7.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS);
   obj7.onValueChange = self.handleSystemReminderNotifications;
-  items[4] = closure_1_19(tmp(7273).TableSwitchRow, obj7);
+  items[4] = closure_1_19(tmp(7303).TableSwitchRow, obj7);
   if (hasFlagResult) {
     const obj8 = { label: null, disabled: null, value: null, onValueChange: null };
     const intl9 = tmp(1114).intl;
@@ -421,7 +421,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     obj8.disabled = !canManage;
     obj8.value = !tmp(1384).hasFlag(guild.systemChannelFlags, tmp17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS);
     obj8.onValueChange = self.handleSystemGuildRoleSubscriptionPurchaseMessages;
-    hasFlagResult = tmp16(tmp(7273).TableSwitchRow, obj8);
+    hasFlagResult = tmp16(tmp(7303).TableSwitchRow, obj8);
     const tmpResult20 = tmp(1384);
   }
   items[5] = hasFlagResult;
@@ -432,7 +432,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     obj9.disabled = !canManage;
     obj9.value = !tmp(1384).hasFlag(guild.systemChannelFlags, tmp17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     obj9.onValueChange = self.handleSystemGuildRoleSubscriptionPurchaseMessageReplies;
-    hasFlagResult1 = tmp16(tmp(7273).TableSwitchRow, obj9);
+    hasFlagResult1 = tmp16(tmp(7303).TableSwitchRow, obj9);
     const tmpResult21 = tmp(1384);
   }
   items[6] = hasFlagResult1;
@@ -443,12 +443,12 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     obj10.disabled = !canManage;
     obj10.value = !tmp(1384).hasFlag(guild.systemChannelFlags, tmp17.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     obj10.onValueChange = self.handleSystemVoiceSessionMessages;
-    result1 = tmp16(tmp(7273).TableSwitchRow, obj10);
+    result1 = tmp16(tmp(7303).TableSwitchRow, obj10);
     const tmpResult22 = tmp(1384);
   }
   items[7] = result1;
   obj2.children = items;
-  return tmp15(tmp(5738).TableRowGroup, obj2);
+  return tmp15(tmp(5768).TableRowGroup, obj2);
 };
 prototype["renderDefaultNotificationSettings"] = function renderDefaultNotificationSettings() {
   const self = this;
@@ -499,8 +499,8 @@ prototype["renderBoostProgressBar"] = function renderBoostProgressBar() {
     obj3.disabled = !canManage;
     obj3.value = guild.premiumProgressBarEnabled;
     obj3.onValueChange = this.handleBoostProgressBarToggle;
-    obj2.children = closure_1_19(tmp(7273).TableSwitchRow, obj3);
-    tmp3 = closure_1_19(tmp(5738).TableRowGroup, obj2);
+    obj2.children = closure_1_19(tmp(7303).TableSwitchRow, obj3);
+    tmp3 = closure_1_19(tmp(5768).TableRowGroup, obj2);
   }
   return tmp3;
 };
@@ -551,8 +551,8 @@ prototype["renderSummaries"] = function renderSummaries() {
     obj5.value = features.has(constants3.SUMMARIES_ENABLED_BY_USER);
     obj5.disabled = !props.canManage;
     obj5.onValueChange = this.handleSummariesToggle;
-    obj4.children = closure_1_19(tmp(7273).TableSwitchRow, obj5);
-    return closure_1_19(tmp(5738).TableRowGroup, obj4);
+    obj4.children = closure_1_19(tmp(7303).TableSwitchRow, obj5);
+    return closure_1_19(tmp(5768).TableRowGroup, obj4);
   } else {
     return null;
   }
@@ -639,7 +639,7 @@ prototype["render"] = function render() {
   obj.children = items2;
   return closure_1_20(__initData, obj);
 };
-GuildSettingsModalOverview.contextType = fn(4317).ThemeContext;
+GuildSettingsModalOverview.contextType = fn(4347).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOverview.tsx");
 

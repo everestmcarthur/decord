@@ -1,9 +1,18 @@
 // Module ID: 17378
 // Function ID: 17379
-// Dependencies: [1122]
+// Dependencies: []
 
 // Module 17378
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 1080, height: 2400, scales: [1], hash: "98ba52ca11c0740336b7f6cfc50c1516", name: "sunbeam_gradient_mobile", type: "png" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "vi",
+  pluralRuleFunction(arg0, arg1) {
+    let str = "other";
+    if (arg1) {
+      str = "other";
+      if (1 == arg0) {
+        str = "one";
+      }
+    }
+    return str;
+  }
+});

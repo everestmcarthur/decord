@@ -1,29 +1,29 @@
-// Module ID: 10069
-// Function ID: 10070
+// Module ID: 10108
+// Function ID: 10109
 // Name: UserSettingsVoice
-// Dependencies: [19, 17, 10070, 10071, 21, 4606, 5738, 10072, 5024, 10073, 10075, 4602, 1114, 10079, 10080, 10082, 7196, 2]
+// Dependencies: [19, 17, 10109, 10110, 21, 4636, 5768, 10111, 5054, 10112, 10114, 4632, 1114, 10118, 10119, 10121, 7226, 2]
 // Exports: UserSettingsTableRowGroup, default
 
-// Module 10069 (UserSettingsVoice)
+// Module 10108 (UserSettingsVoice)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10072 */;
-import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 10073 */;
-import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 10079 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10080 */;
-import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 10082 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10111 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 10112 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 10118 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10119 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 10121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(10070).isMobileOverlaySupported;
-const guideURL = fn(10071).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(10109).isMobileOverlaySupported;
+const guideURL = fn(10110).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");
@@ -34,7 +34,7 @@ export default function UserSettingsVoice() {
   const obj2 = { style: tmp.container, children: null };
   const items = [timestampProducer(UserSettingsVoiceInputOptionsDefault, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
-    nonContextualStreamOutputPresent = tmp4(tmp2(10075), {});
+    nonContextualStreamOutputPresent = tmp4(tmp2(10114), {});
   }
   items[1] = nonContextualStreamOutputPresent;
   const obj3 = { style: tmp.tableRow, variant: "text-sm/medium", children: null };

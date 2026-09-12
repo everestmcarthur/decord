@@ -1,24 +1,24 @@
-// Module ID: 16666
-// Function ID: 16667
+// Module ID: 16690
+// Function ID: 16691
 // Name: VibegrationsConnectionStore
-// Dependencies: [32, 5, 1371, 16663, 16664, 573, 16667, 16668, 16665, 16670, 1114, 3590, 16671, 16672, 559, 7825, 16673, 16674, 504, 2]
+// Dependencies: [32, 5, 1371, 16687, 16688, 573, 16691, 16692, 16689, 16694, 1114, 3590, 16695, 16697, 559, 7855, 16698, 16699, 504, 2]
 // Exports: closeConnection, createDatabaseRestorePoint, deleteStagedAttachment, draftPatchNotes, ensureConnection, exportProjectArchive, fetchDatabaseRestorePoints, fetchDatabaseRestoreWindow, fetchProjectMcpConnection, fetchSourceHistory, forceCompaction, getPreviewScreenshotUrl, interruptTurn, isAttachmentAvailable, publishProject, remixProjectWorkspace, requestDebugStatus, requestExternalAuthorizeUrl, requestProjectRebuild, resetHistoryPaging, restoreDatabaseToPoint, restoreDatabaseToTimestamp, restoreSourceHistoryEntry, sendModelSettings, sendUserMessage, stageModelSettings, submitProjectSecrets, submitProjectSettings, uploadAttachment
 
-// Module 16666 (VibegrationsConnectionStore)
+// Module 16690 (VibegrationsConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import createNonce from "createNonce" /* 7825 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16665 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16667 */;
-import vibegrationsPreviewClaims from "vibegrationsPreviewClaims" /* 16670 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16671 */;
-import VibegrationsWebSocket from "VibegrationsWebSocket" /* 16672 */;
+import createNonce from "createNonce" /* 7855 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16689 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16691 */;
+import vibegrationsPreviewClaims from "vibegrationsPreviewClaims" /* 16694 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16695 */;
+import VibegrationsWebSocket from "VibegrationsWebSocket" /* 16697 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16663 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16664 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16687 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16688 */;
 
 require = fn;
 function rejectPendingPublish(pendingPublish, arg1) {
@@ -849,11 +849,11 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            const result3 = attachment_id(16665).beginPreviewOperation(projectId);
-            const obj18 = attachment_id(16665);
+            const result3 = attachment_id(16689).beginPreviewOperation(projectId);
+            const obj18 = attachment_id(16689);
           } else {
-            attachment_id(16665).endPreviewOperation(projectId);
-            const obj17 = attachment_id(16665);
+            attachment_id(16689).endPreviewOperation(projectId);
+            const obj17 = attachment_id(16689);
           }
         } else if ("model_settings" === type.type) {
           const obj96 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId, settings: null, choices: null };
@@ -980,9 +980,9 @@ function handleEvent(projectId, pendingEvents, type) {
                     value.add(combined);
                     ({ location: obj3.location, code: obj3.code } = tmp2);
                     ({ message: obj3.message, source: obj3.details } = historical);
-                    const result1 = pendingEvents(16667).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
+                    const result1 = pendingEvents(16691).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
                     const obj = { location: null, code: null, message: null, details: null };
-                    obj2 = pendingEvents(16667);
+                    obj2 = pendingEvents(16691);
                   }
                   obj4 = map6;
                 }
@@ -2190,40 +2190,135 @@ let closure_59 = async function _submitProjectSettings() {
   value = { rebuildRequired: true === rebuild_required };
   return value;
 };
-let closure_60 = async function _fetchProjectMcpConnection() {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let obj4 = closure_1;
-  if (closure_1 === undefined) {
-    obj4 = {};
+let closure_60 = async function _fetchProjectMcpConnection(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let obj4 = closure_1;
+          if (closure_1 === undefined) {
+            obj4 = {};
+          }
+          let flag = obj4.regenerate;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_130_1 = flag;
+          closure_130_2 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c4 = 2;
+          c5 = 1;
+          const obj6 = { value: closure_131_0(closure_131_2[7]).mintWorkerTicket(closure_130_0), done: false };
+          return obj6;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj7 = { value, done: true };
+          return obj7;
+        } else {
+          closure_130_2 = value;
+          ticket = closure_130_2.ticket;
+          baseUrl = closure_130_2.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          const obj9 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj9);
+          closure_130_5 = uRLSearchParams;
+          if (closure_130_1) {
+            const result = closure_130_5.set("regenerate", "1");
+          }
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          c4 = 3;
+          c5 = 1;
+          const obj10 = { value: fetch("" + baseUrl + "/agent/mcp-token?" + closure_130_5, { method: "POST" }), done: false };
+          return obj10;
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
+          closure_130_6 = value;
+          if (closure_130_6.ok) {
+            c4 = 4;
+            c5 = 1;
+            const obj12 = { value: closure_130_6.json(), done: false };
+            return obj12;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("mcp token failed (" + closure_130_6.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj13 = { value, done: true };
+        return obj13;
+      } else {
+        closure_130_7 = value;
+        value = { url: closure_130_7.url, token: closure_130_7.token, expiresAt: closure_130_7.expires_at };
+        c5 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
+      }
+    } catch (tmp29) {
+      c5 = tmp;
+      throw tmp29;
+    }
   }
-  let flag = obj4.regenerate;
-  if (flag === undefined) {
-    flag = false;
-  }
-  closure_130_1 = flag;
-  await "PX_16";
-  closure_130_2 = await closure_131_0(closure_131_2[7]).mintWorkerTicket(closure_130_0);
-  const ticket = closure_130_2.ticket;
-  const baseUrl = closure_130_2.baseUrl;
-  const _URLSearchParams = URLSearchParams;
-  const uRLSearchParams = new URLSearchParams({ ticket });
-  closure_130_5 = uRLSearchParams;
-  if (closure_130_1) {
-    const result = closure_130_5.set("regenerate", "1");
-  }
-  const _fetch = fetch;
-  const _HermesInternal2 = HermesInternal;
-  closure_130_6 = await fetch("" + baseUrl + "/agent/mcp-token?" + closure_130_5, { method: "POST" });
-  if (!closure_130_6.ok) {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error = new Error("mcp token failed (" + closure_130_6.status + ")");
-    throw error;
-  }
-  closure_130_7 = await closure_130_6.json();
-  value = { url: closure_130_7.url, token: closure_130_7.token, expiresAt: closure_130_7.expires_at };
-  return value;
 };
 let closure_61 = async function _requestExternalAuthorizeUrl(arg0, value) {
   if (c8 === 2) {
@@ -2501,31 +2596,95 @@ function getAttachmentUrl(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-let closure_65 = async function _getAttachmentUrl() {
-  closure_3 = tmp2;
-  closure_131_0 = closure_0;
-  closure_131_1 = closure_1;
-  let obj4 = closure_2;
-  if (closure_2 === undefined) {
-    obj4 = {};
+let closure_65 = async function _getAttachmentUrl(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let obj4 = closure_2;
+          if (closure_2 === undefined) {
+            obj4 = {};
+          }
+          let flag = obj4.download;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_131_2 = flag;
+          closure_131_3 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_131_6 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c5 = 2;
+          c6 = 1;
+          const obj6 = { value: closure_132_41(closure_131_0), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_131_3 = value;
+        ticket = closure_131_3.ticket;
+        baseUrl = closure_131_3.baseUrl;
+        const _URLSearchParams = URLSearchParams;
+        const obj8 = { ticket };
+        const uRLSearchParams = new URLSearchParams(obj8);
+        closure_131_6 = uRLSearchParams;
+        if (closure_131_2) {
+          const result = closure_131_6.set("download", "1");
+        }
+        const _HermesInternal = HermesInternal;
+        c6 = 3;
+        const obj = { value: "" + closure_132_51(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
+        return obj;
+      }
+    } catch (tmp21) {
+      c6 = tmp;
+      throw tmp21;
+    }
   }
-  let flag = obj4.download;
-  if (flag === undefined) {
-    flag = false;
-  }
-  closure_131_2 = flag;
-  await "PX_16";
-  closure_131_3 = await closure_132_41(closure_131_0);
-  const ticket = closure_131_3.ticket;
-  const baseUrl = closure_131_3.baseUrl;
-  const _URLSearchParams = URLSearchParams;
-  const uRLSearchParams = new URLSearchParams({ ticket });
-  closure_131_6 = uRLSearchParams;
-  if (closure_131_2) {
-    const result = closure_131_6.set("download", "1");
-  }
-  const _HermesInternal = HermesInternal;
-  return "" + closure_132_51(baseUrl, closure_131_1) + "?" + closure_131_6;
 };
 let closure_66 = async function _isAttachmentAvailable(arg0, value) {
   if (c5 === 2) {
@@ -2647,27 +2806,27 @@ function closeAllConnections() {
   map5.clear();
   map8.clear();
 }
-const getOlderHistoryCursor = fn(16663).getOlderHistoryCursor;
+const getOlderHistoryCursor = fn(16687).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let set = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let value = { location: "connection", code: fn(16667).VibegrationErrorCodes.SEND_FAILED };
-let obj2 = { location: "agent", code: fn(16667).VibegrationErrorCodes.AGENT_ERROR };
+let value = { location: "connection", code: fn(16691).VibegrationErrorCodes.SEND_FAILED };
+let obj2 = { location: "agent", code: fn(16691).VibegrationErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
-let obj3 = { build_error: { location: "build", code: fn(16667).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj4 = { location: "build", code: fn(16667).VibegrationErrorCodes.BUILD_FAILED };
-obj3.healthcheck_failed = { location: "healthcheck", code: fn(16667).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-let obj5 = { location: "healthcheck", code: fn(16667).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-obj3.error = { location: "agent", code: fn(16667).VibegrationErrorCodes.AGENT_ERROR };
+let obj3 = { build_error: { location: "build", code: fn(16691).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj4 = { location: "build", code: fn(16691).VibegrationErrorCodes.BUILD_FAILED };
+obj3.healthcheck_failed = { location: "healthcheck", code: fn(16691).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+let obj5 = { location: "healthcheck", code: fn(16691).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+obj3.error = { location: "agent", code: fn(16691).VibegrationErrorCodes.AGENT_ERROR };
 let obj7 = { web: null, preview: null };
-let obj6 = { location: "agent", code: fn(16667).VibegrationErrorCodes.AGENT_ERROR };
-obj7.web = { location: "runtime_frame", code: fn(16667).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-let obj8 = { location: "runtime_frame", code: fn(16667).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-obj7.preview = { location: "runtime_worker", code: fn(16667).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
+let obj6 = { location: "agent", code: fn(16691).VibegrationErrorCodes.AGENT_ERROR };
+obj7.web = { location: "runtime_frame", code: fn(16691).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+let obj8 = { location: "runtime_frame", code: fn(16691).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+obj7.preview = { location: "runtime_worker", code: fn(16691).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();

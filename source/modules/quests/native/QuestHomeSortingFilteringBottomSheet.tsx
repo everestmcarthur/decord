@@ -1,18 +1,18 @@
-// Module ID: 15053
-// Function ID: 15054
+// Module ID: 15087
+// Function ID: 15088
 // Name: QuestHomeSortingFilteringBottomSheet
-// Dependencies: [32, 19, 17, 5495, 21, 4606, 576, 7196, 5484, 5026, 1114, 5013, 4458, 4573, 11577, 7223, 7222, 6698, 5024, 5736, 5739, 5738, 5655, 11389, 2]
+// Dependencies: [32, 19, 17, 5525, 21, 4636, 576, 7226, 5514, 5056, 1114, 5043, 4488, 4603, 11616, 7253, 7252, 6728, 5054, 5766, 5769, 5768, 5685, 11428, 2]
 // Exports: default
 
-// Module 15053 (QuestHomeSortingFilteringBottomSheet)
+// Module 15087 (QuestHomeSortingFilteringBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4458 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import ButtonGroup from "ButtonGroup" /* 5484 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import shared from "shared" /* 4488 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import ButtonGroup from "ButtonGroup" /* 5514 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,10 +49,10 @@ function FilterFooter(inline) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5495).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5525).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, bodyContainer: { flex: 1, minHeight: 0 }, footerInline: null, footer: null, footerButtonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.footerInline = { paddingTop: nativeDefault.space.PX_16 };
@@ -147,13 +147,13 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(11389).getFilterTypeText(item.filter),
+          label: onSortMethodChange(11428).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
         };
-        return ref(onSortMethodChange(5655).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(5685).TableCheckboxRow, obj, index);
       });
       return React5(TableRowGroup.TableRowGroup, obj, index);
     })

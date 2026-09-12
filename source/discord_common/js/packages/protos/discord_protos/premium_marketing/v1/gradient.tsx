@@ -1,9 +1,9 @@
-// Module ID: 10767
-// Function ID: 10768
+// Module ID: 10806
+// Function ID: 10807
 // Name: gradient
 // Dependencies: [32, 1188, 2]
 
-// Module 10767 (gradient)
+// Module 10806 (gradient)
 import _mod1188 from "module_1188" /* 1188 */;
 import _slicedToArray from "module_32" /* 32 */;
 

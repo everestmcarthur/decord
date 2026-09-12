@@ -1,9 +1,9 @@
-// Module ID: 4769
-// Function ID: 4770
+// Module ID: 4799
+// Function ID: 4800
 // Name: GuildRoomBackgrounds
 // Dependencies: [2]
 
-// Module 4769 (GuildRoomBackgrounds)
+// Module 4799 (GuildRoomBackgrounds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx");

@@ -1,12 +1,12 @@
-// Module ID: 5207
-// Function ID: 5208
+// Module ID: 5237
+// Function ID: 5238
 // Name: DiscordMd5Native
-// Dependencies: [17, 5208, 1115, 1152, 2]
+// Dependencies: [17, 5238, 1150, 1152, 2]
 
-// Module 5207 (DiscordMd5Native)
+// Module 5237 (DiscordMd5Native)
 import _mod17 from "module_17" /* 17 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
-import DiscordMd5 from "DiscordMd5" /* 5208 */;
+import DiscordMd5 from "DiscordMd5" /* 5238 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

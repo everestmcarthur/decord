@@ -1,10 +1,10 @@
-// Module ID: 11073
-// Function ID: 11074
+// Module ID: 11112
+// Function ID: 11113
 // Name: useTrackFavoritesGuildAddModalOpened
 // Dependencies: [19, 1074, 1242, 2]
 // Exports: default
 
-// Module 11073 (useTrackFavoritesGuildAddModalOpened)
+// Module 11112 (useTrackFavoritesGuildAddModalOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
 

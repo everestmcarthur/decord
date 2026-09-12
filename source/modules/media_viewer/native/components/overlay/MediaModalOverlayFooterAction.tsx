@@ -1,15 +1,15 @@
-// Module ID: 13063
-// Function ID: 13064
+// Module ID: 13100
+// Function ID: 13101
 // Name: MediaModalOverlayFooterAction
-// Dependencies: [19, 17, 21, 4606, 576, 7196, 1115, 5016, 13056, 5026, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7226, 1150, 5046, 13093, 5056, 2]
 // Exports: MediaModalOverlayFooterAction
 
-// Module 13063 (MediaModalOverlayFooterAction)
+// Module 13100 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5016 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13056 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -30,7 +30,7 @@ export const MediaModalOverlayFooterAction = function MediaModalOverlayFooterAct
   const tmp = closure_8();
   const rect = { bottom: true, left: true, right: true, style: tmp.container, children: null };
   if (null != sliderElement) {
-    let isIOSResult = tmp4(1115).isIOS();
+    let isIOSResult = tmp4(1150).isIOS();
     if (isIOSResult) {
       const obj = { blurTheme: "dark", style: absoluteFill.absoluteFill };
       isIOSResult = hasOwnProperty(VisualEffectViewDefault, obj);
@@ -45,7 +45,7 @@ export const MediaModalOverlayFooterAction = function MediaModalOverlayFooterAct
     items[2] = tmp12;
     obj3.children = items;
     let tmp3Result = tmp3(timestampProducer, obj3);
-    const tmp4Result = tmp4(1115);
+    const tmp4Result = tmp4(1150);
   } else {
     tmp3Result = null;
   }

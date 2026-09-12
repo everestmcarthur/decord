@@ -1,20 +1,20 @@
-// Module ID: 12311
-// Function ID: 12312
+// Module ID: 12347
+// Function ID: 12348
 // Name: ScheduledMessageCardActionButtons
-// Dependencies: [21, 1114, 4551, 12304, 10339, 4569, 6687, 8757, 8172, 8764, 2]
+// Dependencies: [21, 1114, 4581, 12340, 10378, 4599, 6717, 8789, 8202, 8796, 2]
 // Exports: default
 
-// Module 12311 (ScheduledMessageCardActionButtons)
+// Module 12347 (ScheduledMessageCardActionButtons)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1114 */;
-import SendMessageIcon from "SendMessageIcon" /* 4551 */;
-import ClockIcon from "ClockIcon" /* 4569 */;
-import CircleXIcon from "CircleXIcon" /* 6687 */;
-import IconButton from "IconButton" /* 8172 */;
-import ContextMenu from "ContextMenu" /* 8757 */;
-import _modDef8764 from "module_8764" /* 8764 */;
-import PencilIcon from "PencilIcon" /* 10339 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12304 */;
+import SendMessageIcon from "SendMessageIcon" /* 4581 */;
+import ClockIcon from "ClockIcon" /* 4599 */;
+import CircleXIcon from "CircleXIcon" /* 6717 */;
+import IconButton from "IconButton" /* 8202 */;
+import ContextMenu from "ContextMenu" /* 8789 */;
+import _modDef8796 from "module_8796" /* 8796 */;
+import PencilIcon from "PencilIcon" /* 10378 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12340 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -67,7 +67,7 @@ export default function ScheduledMessageCardActionButtons(arg0) {
       obj.accessibilityLabel = intl.string(util.t.sHmiIC);
       obj.size = "sm";
       obj.disabled = disabled;
-      obj.icon = _modDef8764;
+      obj.icon = _modDef8796;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     }
   });

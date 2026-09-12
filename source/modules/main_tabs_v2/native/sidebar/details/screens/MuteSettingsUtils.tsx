@@ -1,20 +1,20 @@
-// Module ID: 9147
-// Function ID: 9148
+// Module ID: 9186
+// Function ID: 9187
 // Name: MuteSettingsUtils
-// Dependencies: [4247, 1957, 1979, 4255, 4787, 1371, 1074, 1084, 1114, 4759, 7837, 7192, 7187, 9148, 2]
+// Dependencies: [4277, 1957, 1979, 4285, 4817, 1371, 1074, 1084, 1114, 4789, 7867, 7222, 7217, 9187, 2]
 // Exports: getMessageNotificationsText, getMuteOptions, getMuteSettingLabel, getMuteSettingSublabel, getMuteSettings, handleMuteSettingPress, handleUnmutePress
 
-// Module 9147 (MuteSettingsUtils)
+// Module 9186 (MuteSettingsUtils)
 import util from "util" /* 1114 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
-import ChannelMuteUtilsAll from "ChannelMuteUtils" /* 9148 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
+import ChannelMuteUtilsAll from "ChannelMuteUtils" /* 9187 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -68,10 +68,10 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
-      const result = tmp7(7837).setNotificationSettings(channel, { muted: false });
-      const tmp7Result = tmp7(7837);
+      const result = tmp7(7867).setNotificationSettings(channel, { muted: false });
+      const tmp7Result = tmp7(7867);
     } else {
-      const tmp7Result2 = tmp7(7192);
+      const tmp7Result2 = tmp7(7222);
       const result1 = tmp7Result2.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, NotificationSettingsUtils.NotificationLabels.Unmuted);
     }
   }
@@ -86,10 +86,10 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
     if (channel.isThread()) {
-      const result = tmp4(7837).setNotificationSettings(channel, muteSettings);
-      const tmp4Result = tmp4(7837);
+      const result = tmp4(7867).setNotificationSettings(channel, muteSettings);
+      const tmp4Result = tmp4(7867);
     } else {
-      const tmp4Result2 = tmp4(7192);
+      const tmp4Result2 = tmp4(7222);
       const result1 = tmp4Result2.updateChannelOverrideSettings(guildId, channel.id, muteSettings, NotificationSettingsUtils.NotificationLabels.Muted);
     }
   } else if (null != guild) {

@@ -1,13 +1,13 @@
-// Module ID: 12801
-// Function ID: 12802
+// Module ID: 12837
+// Function ID: 12838
 // Name: CreateGuildModalActionCreators
-// Dependencies: [7051, 4809, 12802, 1896, 12797, 2]
+// Dependencies: [7081, 4839, 12838, 1896, 12833, 2]
 
-// Module 12801 (CreateGuildModalActionCreators)
+// Module 12837 (CreateGuildModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import NUFActionCreators from "NUFActionCreators" /* 12797 */;
-import CreateGuildConstants from "CreateGuildConstants" /* 7051 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import NUFActionCreators from "NUFActionCreators" /* 12833 */;
+import CreateGuildConstants from "CreateGuildConstants" /* 7081 */;
 import size from "module_2" /* 2 */;
 
 ({ CreateGuildModalStates: c3, IN_APP_GUILD_TEMPLATES_MODAL_KEY: closure_4 } = CreateGuildConstants);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/create_guild/native/CreateGui
 
 export default {
   openCreateGuildModal(onSuccess) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12802, dependencyMap.paths), { onSuccess }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12838, dependencyMap.paths), { onSuccess }, React4);
   },
   closeCreateGuildModal() {
     ModalActionCreatorsDefault.popWithKey(React4);
@@ -25,9 +25,9 @@ export default {
     NUFActionCreators.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12802, dependencyMap.paths), { channel }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12838, dependencyMap.paths), { channel }, React4);
   },
   openGuildJoinServerScreen() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12802, dependencyMap.paths), { initialState: constants.JOIN_SERVER }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12838, dependencyMap.paths), { initialState: constants.JOIN_SERVER }, React4);
   }
 };

@@ -1,15 +1,15 @@
-// Module ID: 13309
-// Function ID: 13310
+// Module ID: 13342
+// Function ID: 13343
 // Name: FriendInvite
-// Dependencies: [17, 4255, 7808, 8019, 1114, 4451, 1396, 2]
+// Dependencies: [17, 4285, 7838, 8049, 1114, 4481, 1396, 2]
 // Exports: createFriendInvite
 
-// Module 13309 (FriendInvite)
+// Module 13342 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import Constants from "Constants" /* 7808 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8019 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import Constants from "Constants" /* 7838 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -34,8 +34,8 @@ export const createFriendInvite = function createFriendInvite(inviter, arg1, arg
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    str3 = tmp(4451).getUserTag(inviter.inviter);
-    const tmpResult = tmp(4451);
+    str3 = tmp(4481).getUserTag(inviter.inviter);
+    const tmpResult = tmp(4481);
   }
   let isFriendResult = null != inviter.inviter;
   if (isFriendResult) {

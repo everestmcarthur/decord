@@ -1,14 +1,14 @@
-// Module ID: 13361
-// Function ID: 13362
+// Module ID: 13394
+// Function ID: 13395
 // Name: ChannelHeader
-// Dependencies: [19, 1957, 1074, 1964, 21, 1115, 4472, 11560, 1109, 4465, 563, 4817, 13362, 13363, 13364, 13372, 1114, 13374, 2]
+// Dependencies: [19, 1957, 1074, 1964, 21, 1150, 4502, 11599, 1109, 4495, 563, 4847, 13395, 13396, 13397, 13405, 1114, 13407, 2]
 // Exports: default, navigateToChannelDetails
 
-// Module 13361 (ChannelHeader)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13362 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13363 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13364 */;
+// Module 13394 (ChannelHeader)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13395 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13396 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13397 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -36,7 +36,7 @@ export default function ChannelHeader(channelId) {
   const items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(4817).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(4847).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
@@ -75,8 +75,8 @@ export default function ChannelHeader(channelId) {
           stringResult = intl.string(tmp(1114).t["L9fR+P"]);
         }
         obj4.searchPlaceholder = stringResult;
-        tmp8Result = tmp8(tmp9(13372), obj4);
-        const tmp9Result = tmp9(13372);
+        tmp8Result = tmp8(tmp9(13405), obj4);
+        const tmp9Result = tmp9(13405);
       } else {
         const obj5 = { channelId, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
         let guild_id1;
@@ -89,8 +89,8 @@ export default function ChannelHeader(channelId) {
         obj5.isNavigationScreen = isNavigationScreen;
         obj5.screenIndex = screenIndex;
         obj5.showCreateThread = flag2;
-        tmp8Result = tmp8(tmp9(13374), obj5);
-        const tmp9Result2 = tmp9(13374);
+        tmp8Result = tmp8(tmp9(13407), obj5);
+        const tmp9Result2 = tmp9(13407);
       }
     }
   }
@@ -98,11 +98,11 @@ export default function ChannelHeader(channelId) {
 };
 export const navigateToChannelDetails = function navigateToChannelDetails(channelId, screenIndex, source) {
   if (obj.isIOS()) {
-    const chatInputRef = tmp(4472).getChatInputRef(channelId, screenIndex);
+    const chatInputRef = tmp(4502).getChatInputRef(channelId, screenIndex);
     if (chatInputRef != null) {
       chatInputRef.blur();
     }
-    const tmpResult = tmp(4472);
+    const tmpResult = tmp(4502);
   }
   obj = PlatformUtils;
   if (tmpResult3.isSwipeToMemberListEnabled()) {
@@ -110,7 +110,7 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
     const obj2 = { source, channelId, screenIndex };
     ComponentDispatch.dispatch(ComponentActions.SHOW_CHANNEL_DETAILS, obj2);
   } else {
-    const rootNavigationRef = tmp(4465).getRootNavigationRef();
+    const rootNavigationRef = tmp(4495).getRootNavigationRef();
     let isReadyResult;
     if (rootNavigationRef != null) {
       isReadyResult = rootNavigationRef.isReady();
@@ -119,6 +119,6 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
       const obj3 = { channelId, source };
       rootNavigationRef.navigate("sidebar", obj3);
     }
-    const tmpResult4 = tmp(4465);
+    const tmpResult4 = tmp(4495);
   }
 };

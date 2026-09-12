@@ -1,15 +1,15 @@
-// Module ID: 8303
-// Function ID: 8304
+// Module ID: 8335
+// Function ID: 8336
 // Name: StorefrontProductActionCreators
-// Dependencies: [5, 2025, 8304, 7635, 1074, 1090, 573, 4848, 4508, 2]
+// Dependencies: [5, 2025, 8336, 7665, 1074, 1090, 573, 4878, 4538, 2]
 // Exports: maybeFetchProductsBySkuIds, maybeFetchProductsWithSkus
 
-// Module 8303 (StorefrontProductActionCreators)
+// Module 8335 (StorefrontProductActionCreators)
 import DurationsDefault from "Durations" /* 1090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8304 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7635 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8336 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7665 */;
 
 const require = fn;
 let closure_10 = async function _maybeFetchProductsWithSkus(arg0, value) {
@@ -50,7 +50,7 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0, value) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -191,7 +191,7 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0, value) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {

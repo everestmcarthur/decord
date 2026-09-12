@@ -1,10 +1,10 @@
-// Module ID: 14155
-// Function ID: 14156
+// Module ID: 14190
+// Function ID: 14191
 // Name: getStatusContainerStyle
 // Dependencies: [1179, 2]
 // Exports: default
 
-// Module 14155 (getStatusContainerStyle)
+// Module 14190 (getStatusContainerStyle)
 import StatusConstants from "StatusConstants" /* 1179 */;
 import size_mod from "module_2" /* 2 */;
 

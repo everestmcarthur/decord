@@ -1,16 +1,30 @@
 // Module ID: 6939
 // Function ID: 6940
-// Dependencies: [6940, 6941]
+// Dependencies: [19, 6729]
+// Exports: useBottomSheetTimingConfigs
 
 // Module 6939
-import _mod6940 from "module_6940" /* 6940 */;
+import _mod19 from "module_19" /* 19 */;
+import value2 from "value2" /* 6729 */;
 
+const useMemo = _mod19.useMemo;
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod6940(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
-  }
-  return text;
+export const useBottomSheetTimingConfigs = (arg0) => {
+  const easing = arg0;
+  const items = [, , ];
+  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
+  return useMemo(() => {
+    let ANIMATION_EASING = easing.easing;
+    if (!ANIMATION_EASING) {
+      ANIMATION_EASING = value2.ANIMATION_EASING;
+    }
+    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
+    let ANIMATION_DURATION = tmp.duration;
+    if (!ANIMATION_DURATION) {
+      ANIMATION_DURATION = value2.ANIMATION_DURATION;
+    }
+    obj.duration = ANIMATION_DURATION;
+    obj.reduceMotion = easing.reduceMotion;
+    return obj;
+  }, items);
 };

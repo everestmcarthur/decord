@@ -1,14 +1,14 @@
-// Module ID: 13169
-// Function ID: 13170
+// Module ID: 13206
+// Function ID: 13207
 // Name: useProfileSectionTabs
-// Dependencies: [32, 19, 8268, 2]
+// Dependencies: [32, 19, 8300, 2]
 // Exports: useProfileSectionTabs, useProfileTabIndices
 
-// Module 13169 (useProfileSectionTabs)
+// Module 13206 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileSections = fn(8268).UserProfileSections;
+const UserProfileSections = fn(8300).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 

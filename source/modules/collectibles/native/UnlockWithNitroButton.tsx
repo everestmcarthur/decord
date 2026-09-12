@@ -1,18 +1,18 @@
-// Module ID: 13260
-// Function ID: 13261
+// Module ID: 13293
+// Function ID: 13294
 // Name: UnlockWithNitroButton
-// Dependencies: [19, 7310, 7630, 1076, 21, 504, 7313, 13247, 1114, 5027, 4602, 8753, 2]
+// Dependencies: [19, 7340, 7660, 1076, 21, 504, 7343, 13280, 1114, 5057, 4632, 8785, 2]
 // Exports: UnlockWithNitroButton
 
-// Module 13260 (UnlockWithNitroButton)
+// Module 13293 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
-import BaseTextButton from "BaseTextButton" /* 5027 */;
-import ProductIds from "ProductIds" /* 7313 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8753 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13247 */;
+import BaseTextButton from "BaseTextButton" /* 5057 */;
+import ProductIds from "ProductIds" /* 7343 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13280 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7310 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7630 */;
+import IAPStore from "IAPStore" /* 7340 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 
 require = fn;
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
@@ -42,7 +42,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   let tmp4Result;
   if (flag) {
     const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
-    tmp4Result = tmp4(tmp(4602).Text, obj2);
+    tmp4Result = tmp4(tmp(4632).Text, obj2);
   }
   const obj3 = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;

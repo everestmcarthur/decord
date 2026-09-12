@@ -1,15 +1,15 @@
 // Module ID: 2026
 // Function ID: 2027
 // Name: IntlLoaderStore
-// Dependencies: [5, 1244, 2027, 1114, 2037, 1155, 3690, 4165, 4196, 4198, 1232, 2]
+// Dependencies: [5, 1244, 2027, 1114, 2037, 1155, 3720, 4195, 4226, 4228, 1232, 2]
 // Exports: setAppLocale, subscribeToIntlLoadingSuccess, useLocaleData
 
 // Module 2026 (IntlLoaderStore)
 import util from "util" /* 1114 */;
 import _modDef2027 from "module_2027" /* 2027 */;
-import bg from "bg" /* 3690 */;
-import formatjs from "formatjs" /* 4165 */;
-import moment from "moment" /* 4196 */;
+import bg from "bg" /* 3720 */;
+import formatjs from "formatjs" /* 4195 */;
+import moment from "moment" /* 4226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

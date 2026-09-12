@@ -1,18 +1,18 @@
-// Module ID: 8999
-// Function ID: 9000
+// Module ID: 9038
+// Function ID: 9039
 // Name: FloatingActionButton
-// Dependencies: [19, 21, 4606, 576, 5031, 4343, 5025, 8173, 2]
+// Dependencies: [19, 21, 4636, 576, 5061, 4373, 5055, 8203, 2]
 // Exports: FloatingActionButton
 
-// Module 8999 (FloatingActionButton)
+// Module 9038 (FloatingActionButton)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5025 */;
-import ButtonConstants from "ButtonConstants" /* 5031 */;
+import spring from "spring" /* 5055 */;
+import ButtonConstants from "ButtonConstants" /* 5061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const styles = createStyles.createStyles(() => {
   const obj = { button: null, iconButtonPill: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -52,8 +52,8 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return rect;
     }
   }
-  let obj = positionBottom(4343);
-  F.__closure = { withSpring: positionBottom(5025).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG, positionRight };
+  let obj = positionBottom(4373);
+  F.__closure = { withSpring: positionBottom(5055).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG, positionRight };
   F.__workletHash = 10762818944671;
   F.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(F);
@@ -70,6 +70,6 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   }
   obj6.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = tmp2);
-  obj3.children = jsx(positionBottom(8173).BaseIconButton, {});
-  return jsx(positionRight(4343).View, { style: animatedStyle, children: null });
+  obj3.children = jsx(positionBottom(8203).BaseIconButton, {});
+  return jsx(positionRight(4373).View, { style: animatedStyle, children: null });
 };

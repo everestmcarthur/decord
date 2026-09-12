@@ -1,9 +1,9 @@
-// Module ID: 12403
-// Function ID: 12404
+// Module ID: 12439
+// Function ID: 12440
 // Name: directory_channels/GuildDirectoryConstants
 // Dependencies: [2]
 
-// Module 12403 (directory_channels/GuildDirectoryConstants)
+// Module 12439 (directory_channels/GuildDirectoryConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");

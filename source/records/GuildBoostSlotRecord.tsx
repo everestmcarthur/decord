@@ -1,9 +1,9 @@
-// Module ID: 4506
-// Function ID: 4507
+// Module ID: 4536
+// Function ID: 4537
 // Name: GuildBoostSlotRecord
 // Dependencies: [1386, 2]
 
-// Module 4506 (GuildBoostSlotRecord)
+// Module 4536 (GuildBoostSlotRecord)
 import Record from "Record" /* 1386 */;
 
 let GuildBoostSlotRecord;

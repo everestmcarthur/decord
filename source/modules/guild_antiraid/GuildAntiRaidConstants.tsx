@@ -1,10 +1,10 @@
-// Module ID: 8090
-// Function ID: 8091
+// Module ID: 8120
+// Function ID: 8121
 // Name: GuildAntiRaidConstants
 // Dependencies: [1085, 1114, 1086, 2]
 // Exports: getTimeframes
 
-// Module 8090 (GuildAntiRaidConstants)
+// Module 8120 (GuildAntiRaidConstants)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;

@@ -1,8 +1,8 @@
-// Module ID: 11878
-// Function ID: 11879
+// Module ID: 11914
+// Function ID: 11915
 // Dependencies: [2]
 
-// Module 11878
+// Module 11914
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js");

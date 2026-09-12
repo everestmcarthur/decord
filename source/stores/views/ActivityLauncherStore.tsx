@@ -1,13 +1,13 @@
-// Module ID: 11550
-// Function ID: 11551
+// Module ID: 11589
+// Function ID: 11590
 // Name: ActivityLauncherStore
-// Dependencies: [11551, 5330, 1074, 1952, 573, 504, 2]
+// Dependencies: [11590, 5360, 1074, 1952, 573, 504, 2]
 
-// Module 11550 (ActivityLauncherStore)
+// Module 11589 (ActivityLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LocalActivityStore from "LocalActivityStore" /* 11551 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 
 const require = fn;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {

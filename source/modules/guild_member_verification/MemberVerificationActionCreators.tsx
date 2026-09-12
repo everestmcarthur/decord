@@ -1,18 +1,18 @@
-// Module ID: 5598
-// Function ID: 5599
+// Module ID: 5628
+// Function ID: 5629
 // Name: MemberVerificationActionCreators
-// Dependencies: [5, 2014, 2021, 4590, 1371, 1074, 1272, 4591, 573, 5599, 5603, 4431, 5604, 4950, 1114, 4507, 1242, 2]
+// Dependencies: [5, 2014, 2021, 4620, 1371, 1074, 1272, 4621, 573, 5629, 5633, 4461, 5634, 4980, 1114, 4537, 1242, 2]
 // Exports: showCoachmark
 
-// Module 5598 (MemberVerificationActionCreators)
+// Module 5628 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4591 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4621 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import InviteStore from "InviteStore" /* 4590 */;
+import InviteStore from "InviteStore" /* 4620 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -285,7 +285,7 @@ let closure_14 = async function _submitVerificationForm(arg0, value) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

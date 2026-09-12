@@ -1,9 +1,9 @@
-// Module ID: 12439
-// Function ID: 12440
+// Module ID: 12475
+// Function ID: 12476
 // Name: QueryTokenizer
 // Dependencies: [2]
 
-// Module 12439 (QueryTokenizer)
+// Module 12475 (QueryTokenizer)
 import size from "module_2" /* 2 */;
 
 function getMatch(str, arg1, index) {

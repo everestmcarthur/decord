@@ -1,9 +1,9 @@
 // Module ID: 5402
 // Function ID: 5403
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 5402
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "18792494d95a201efe70aee5f49c4a4a", name: "img_account_sync_github_light", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "5f8b57af5ab5fdfa6cf52708c91c3adb", name: "img_account_sync_reddit_white", type: "svg" });

@@ -1,18 +1,18 @@
-// Module ID: 15120
-// Function ID: 15121
+// Module ID: 15143
+// Function ID: 15144
 // Name: BountiesModalEndCard
-// Dependencies: [17, 21, 4606, 4343, 4607, 4610, 5038, 15099, 2]
+// Dependencies: [17, 21, 4636, 4373, 4637, 4640, 5068, 15131, 2]
 // Exports: default
 
-// Module 15120 (BountiesModalEndCard)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
-import timingPresets from "timingPresets" /* 4610 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 15099 */;
+// Module 15143 (BountiesModalEndCard)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
+import timingPresets from "timingPresets" /* 4640 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 15131 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
@@ -34,7 +34,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   let tmp = closure_7();
-  visible(4343);
+  visible(4373);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -42,7 +42,7 @@ export default function BountiesModalEndCard(visible) {
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  fn.__closure = { withTiming: visible(4607).withTiming, visible, timingStandard: visible(4610).timingStandard };
+  fn.__closure = { withTiming: visible(4637).withTiming, visible, timingStandard: visible(4640).timingStandard };
   fn.__workletHash = 15062259404736;
   fn.__initData = __initData;
   if (visible) {

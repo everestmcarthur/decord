@@ -1,12 +1,12 @@
-// Module ID: 10260
-// Function ID: 10261
+// Module ID: 10299
+// Function ID: 10300
 // Name: NotificationContent
-// Dependencies: [19, 17, 21, 4606, 576, 10261, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 10300, 2]
 // Exports: default
 
-// Module 10260 (NotificationContent)
+// Module 10299 (NotificationContent)
 import nativeDefault from "native" /* 576 */;
-import MessageNotificationHeader from "MessageNotificationHeader" /* 10261 */;
+import MessageNotificationHeader from "MessageNotificationHeader" /* 10300 */;
 import noop from "module_19" /* 19 */;
 
 const MessageNotificationHeaderDefault = MessageNotificationHeader;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { body: { flex: 1 }, iconContainer: { marginRight: nativeDefault.space.PX_8 }, contentContainer: null, headerContainer: null, labelContainer: null };
 let obj3 = { marginRight: nativeDefault.space.PX_8 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_12, flexDirection: "row" };

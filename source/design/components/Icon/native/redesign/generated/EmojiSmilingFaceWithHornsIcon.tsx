@@ -1,13 +1,13 @@
-// Module ID: 15452
-// Function ID: 15453
+// Module ID: 15474
+// Function ID: 15475
 // Name: EmojiSmilingFaceWithHornsIcon
-// Dependencies: [19, 21, 576, 4307, 15453, 2]
+// Dependencies: [19, 21, 576, 4337, 15475, 2]
 // Exports: EmojiSmilingFaceWithHornsIcon
 
-// Module 15452 (EmojiSmilingFaceWithHornsIcon)
+// Module 15474 (EmojiSmilingFaceWithHornsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod15453 from "module_15453" /* 15453 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod15475 from "module_15475" /* 15475 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiSmilingFaceWithHornsIcon = function EmojiSmilingFaceWithHornsI
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15453, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15475, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

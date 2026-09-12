@@ -1,13 +1,13 @@
-// Module ID: 6416
-// Function ID: 6417
+// Module ID: 6446
+// Function ID: 6447
 // Name: PingPongPaddleIllocon
-// Dependencies: [21, 5638, 6417, 2]
+// Dependencies: [21, 5668, 6447, 2]
 // Exports: PingPongPaddleIllocon
 
-// Module 6416 (PingPongPaddleIllocon)
+// Module 6446 (PingPongPaddleIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6417 from "module_6417" /* 6417 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6447 from "module_6447" /* 6447 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const PingPongPaddleIllocon = function PingPongPaddleIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6417 };
+  const obj2 = { uri: _modDef6447 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

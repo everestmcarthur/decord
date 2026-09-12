@@ -1,17 +1,17 @@
-// Module ID: 8137
-// Function ID: 8138
+// Module ID: 8167
+// Function ID: 8168
 // Name: UserOfferActionCreators
-// Dependencies: [5, 8138, 7527, 7523, 1373, 1074, 1115, 573, 1242, 1272, 8139, 1232, 4427, 1943, 1940, 2]
+// Dependencies: [5, 8168, 7557, 7553, 1373, 1074, 1150, 573, 1242, 1272, 8169, 1232, 4457, 1943, 1940, 2]
 // Exports: acknowledgeUserOffer, fetchChurnDiscountOffer, fetchExistingChurnDiscountOffer, fetchUserOffer, triggerUserOffer
 
-// Module 8137 (UserOfferActionCreators)
+// Module 8167 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8138 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7527 */;
-import UserOfferStore from "UserOfferStore" /* 7523 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8168 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7557 */;
+import UserOfferStore from "UserOfferStore" /* 7553 */;
 
 const require = globalThis.__r;
 
@@ -83,7 +83,7 @@ let closure_12 = async function _fetchUserOffer(arg0, value) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -383,7 +383,7 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1115);
+      postResultResult = postResult(1150);
     }
     const obj5 = { payment_gateway: GOOGLE, trigger_type: _JSON, trigger_location_stack, trigger_metadata: null, trigger_uptime_app: null };
     _JSON = JSON;

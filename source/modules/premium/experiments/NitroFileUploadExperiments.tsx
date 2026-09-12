@@ -1,10 +1,10 @@
-// Module ID: 5181
-// Function ID: 5182
+// Module ID: 5211
+// Function ID: 5212
 // Name: NitroFileUploadExperiments
 // Dependencies: [1373, 1433, 2]
 // Exports: getNitroFileUploadLimitBytes, getNitroFileUploadRolloutConfig, getNitroFileUploadRolloutCopy, useNitroFileUploadRolloutEnabled, useNonNitroFileUploadMarketingEnabled
 
-// Module 5181 (NitroFileUploadExperiments)
+// Module 5211 (NitroFileUploadExperiments)
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;

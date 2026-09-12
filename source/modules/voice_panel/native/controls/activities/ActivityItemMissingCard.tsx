@@ -1,11 +1,11 @@
-// Module ID: 17228
-// Function ID: 17229
+// Module ID: 17255
+// Function ID: 17256
 // Name: ActivityItemMissingCard
-// Dependencies: [5, 19, 17, 21, 4606, 576, 12365, 7235, 9621, 9743, 5174, 17229, 17230, 5640, 2]
+// Dependencies: [5, 19, 17, 21, 4636, 576, 12401, 7265, 9660, 9782, 5204, 17256, 17257, 5670, 2]
 
-// Module 17228 (ActivityItemMissingCard)
+// Module 17255 (ActivityItemMissingCard)
 import nativeDefault from "native" /* 576 */;
-import NativeViewDefault from "NativeView" /* 5640 */;
+import NativeViewDefault from "NativeView" /* 5670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -80,7 +80,7 @@ function ActivityItemEmptyCard(activity) {
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { loadingActivity: null, disabledActivity: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj.loadingActivity = size;

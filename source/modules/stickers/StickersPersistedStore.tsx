@@ -1,16 +1,16 @@
-// Module ID: 5552
-// Function ID: 5553
+// Module ID: 5582
+// Function ID: 5583
 // Name: StickersPersistedStore
-// Dependencies: [1221, 5553, 1084, 1090, 4643, 12, 504, 573, 2]
+// Dependencies: [1221, 5583, 1084, 1090, 4673, 12, 504, 573, 2]
 
-// Module 5552 (StickersPersistedStore)
+// Module 5582 (StickersPersistedStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import FrecencyDefault from "Frecency" /* 4643 */;
+import FrecencyDefault from "Frecency" /* 4673 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import StickersStore from "StickersStore" /* 5553 */;
+import StickersStore from "StickersStore" /* 5583 */;
 
 function handleStickersStoreUpdate() {
   if (StickersStore.isLoaded) {

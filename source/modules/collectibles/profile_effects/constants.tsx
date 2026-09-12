@@ -1,9 +1,9 @@
-// Module ID: 8895
-// Function ID: 8896
+// Module ID: 8930
+// Function ID: 8931
 // Name: constants
 // Dependencies: [2]
 
-// Module 8895 (constants)
+// Module 8930 (constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");

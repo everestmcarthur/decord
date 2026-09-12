@@ -1,36 +1,9 @@
 // Module ID: 10858
 // Function ID: 10859
-// Dependencies: [19, 10859]
-// Exports: useLayoutConfig
+// Dependencies: [1120]
 
 // Module 10858
-import Layouts5 from "Layouts" /* 10859 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1120" /* 1120 */;
 
-require = arg1;
 
-export const useLayoutConfig = function useLayoutConfig(size) {
-  size = size.size;
-  const vertical = size.vertical;
-  const items = [, , , ];
-  ({ mode: arr[0], modeConfig: arr[1] } = size);
-  items[2] = size;
-  items[3] = vertical;
-  return vertical.useMemo(() => {
-    const obj = { size, vertical };
-    const mode = size.mode;
-    if ("parallax" === mode) {
-      const Layouts4 = Layouts5.Layouts;
-      return Layouts4.parallax(obj, tmp.modeConfig);
-    } else if ("horizontal-stack" === mode) {
-      const Layouts3 = Layouts5.Layouts;
-      return Layouts3.horizontalStack(tmp.modeConfig);
-    } else if ("vertical-stack" === mode) {
-      const Layouts2 = Layouts5.Layouts;
-      return Layouts2.verticalStack(tmp.modeConfig);
-    } else {
-      const Layouts = Layouts5.Layouts;
-      return Layouts.normal(obj);
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 277, height: 44, scales: [2, 3], hash: "80b2b0d70a370a3545b5c6b85cfa62d7", name: "img_boost_activated_border", type: "png" });

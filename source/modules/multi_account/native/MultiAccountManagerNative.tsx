@@ -1,17 +1,17 @@
-// Module ID: 17510
-// Function ID: 17511
+// Module ID: 17540
+// Function ID: 17541
 // Name: MultiAccountManagerNative
-// Dependencies: [12507, 1074, 3, 1090, 4809, 17511, 1896, 4465, 1109, 17512, 15, 12510, 1100, 4470, 4464, 4305, 1114, 17513, 2]
+// Dependencies: [12543, 1074, 3, 1090, 4839, 17541, 1896, 4495, 1109, 17542, 15, 12546, 1100, 4500, 4494, 4335, 1114, 17543, 2]
 
-// Module 17510 (MultiAccountManagerNative)
+// Module 17540 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import Constants2 from "Constants" /* 12507 */;
-import _modDef17513 from "module_17513" /* 17513 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import Constants2 from "Constants" /* 12543 */;
+import _modDef17543 from "module_17543" /* 17543 */;
 import Constants from "Constants" /* 1074 */;
-import MultiAccountManager from "MultiAccountManager" /* 17512 */;
+import MultiAccountManager from "MultiAccountManager" /* 17542 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants2.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -25,7 +25,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj.cancelled = false;
   obj.push = function push() {
     obj = ModalActionCreatorsDefault;
-    obj.pushLazy(obj(1896)(17511, dependencyMap.paths), {}, c7);
+    obj.pushLazy(obj(1896)(17541, dependencyMap.paths), {}, c7);
     if (obj.cancelled) {
       ModalActionCreatorsDefault.popWithKey(c7);
       const tmpResult = ModalActionCreatorsDefault;
@@ -33,7 +33,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   };
   obj.enqueue = function enqueue() {
     obj.cancelled = false;
-    obj = obj(4465);
+    obj = obj(4495);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -57,7 +57,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(1896)(17511, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(1896)(17541, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -65,7 +65,7 @@ obj.push = function push() {
 };
 obj.enqueue = function enqueue() {
   obj.cancelled = false;
-  obj = obj(4465);
+  obj = obj(4495);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -106,10 +106,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   const user = currentUser;
   if (navigateHome) {
     user(1100).transitionTo(constants2.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = user(4470).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = user(4500).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4464).setHomeDrawerState(false);
-      const tmpResult = tmp(4464);
+      tmp(4494).setHomeDrawerState(false);
+      const tmpResult = tmp(4494);
     }
     obj = user(1100);
     tmp = user;
@@ -119,7 +119,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
     const intl = obj(1114).intl;
     obj2.content = intl.formatToPlainString(obj(1114).t.wx7O3L, { username: user.username });
-    obj2.icon = _modDef17513;
+    obj2.icon = _modDef17543;
     obj.open(obj2);
   }, 100);
 };
@@ -128,7 +128,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1114).intl;
   obj2.content = intl.string(obj(1114).t.pqvKWA);
-  obj2.icon = _modDef17513;
+  obj2.icon = _modDef17543;
   obj.open(obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

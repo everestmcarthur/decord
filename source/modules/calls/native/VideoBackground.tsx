@@ -1,18 +1,18 @@
-// Module ID: 8332
-// Function ID: 8333
+// Module ID: 8364
+// Function ID: 8365
 // Name: VideoBackground
-// Dependencies: [32, 19, 17, 1074, 21, 4606, 12, 8333, 8334, 4456, 576, 8335, 1178, 5038, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 12, 8365, 8366, 4486, 576, 8367, 1178, 5068, 2]
 // Exports: useDominantColorFromImage
 
-// Module 8332 (VideoBackground)
+// Module 8364 (VideoBackground)
 import native from "native" /* 1178 */;
-import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8334 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8335 */;
+import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8366 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8367 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import apply from "module_12" /* 12 */;
 
-const LinearGradientDefault = tmp6(5038);
+const LinearGradientDefault = tmp6(5068);
 require = fn;
 function useDominantRGBFromImage(arg0, arg1) {
   _require = arg0;
@@ -22,11 +22,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8333)();
+  const tmp5 = first(8365)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8334).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8366).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(576).unsafe_rawColors.PRIMARY_800);
@@ -54,7 +54,7 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8334).cachedDominantColors[closure_1_0] = obj;
+            first(8366).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         }).catch(NOOP);
@@ -63,12 +63,12 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8334).cachedDominantColors[closure_1_0] = obj;
+            first(8366).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });
       } else {
-        closure_3(tmp4(8334).cachedDominantColors[tmp6]);
+        closure_3(tmp4(8366).cachedDominantColors[tmp6]);
       }
       tmp4 = importDefault;
     }
@@ -176,7 +176,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
 const memoizeResult = apply.memoize((uri) => {
   let tmp = null;

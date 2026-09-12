@@ -1,11 +1,11 @@
-// Module ID: 4531
-// Function ID: 4532
+// Module ID: 4561
+// Function ID: 4562
 // Name: useGuildPowerupsBoostLevelProgress
-// Dependencies: [1979, 1074, 4515, 504, 2]
+// Dependencies: [1979, 1074, 4545, 504, 2]
 // Exports: default, getGuildPowerupBoostLevelProgress
 
-// Module 4531 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4515 */;
+// Module 4561 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4545 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = globalThis.__r;

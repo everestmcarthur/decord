@@ -1,18 +1,18 @@
-// Module ID: 9686
-// Function ID: 9687
+// Module ID: 9725
+// Function ID: 9726
 // Name: useVideoStreamError
-// Dependencies: [502, 9687, 4631, 504, 9200, 2]
+// Dependencies: [502, 9726, 4661, 504, 9239, 2]
 // Exports: default, useVideoStreamErrorContext
 
-// Module 9686 (useVideoStreamError)
-import AVError from "AVError" /* 9200 */;
+// Module 9725 (useVideoStreamError)
+import AVError from "AVError" /* 9239 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9687 */;
+import AVErrorStore from "AVErrorStore" /* 9726 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 

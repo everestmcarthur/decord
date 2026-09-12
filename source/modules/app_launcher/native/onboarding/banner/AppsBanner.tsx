@@ -1,19 +1,19 @@
-// Module ID: 12156
-// Function ID: 12157
+// Module ID: 12192
+// Function ID: 12193
 // Name: AppsBanner
-// Dependencies: [19, 17, 21, 4606, 12157, 12154, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 12193, 12190, 1114, 2]
 // Exports: default
 
-// Module 12156 (AppsBanner)
+// Module 12192 (AppsBanner)
 import util from "util" /* 1114 */;
-import BannerBaseDefault from "BannerBase" /* 12154 */;
-import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12157 */;
+import BannerBaseDefault from "BannerBase" /* 12190 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12193 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");

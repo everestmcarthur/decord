@@ -1,10 +1,10 @@
-// Module ID: 8061
-// Function ID: 8062
+// Module ID: 8091
+// Function ID: 8092
 // Name: MarkupParser
-// Dependencies: [8062, 2, 8063, 8064]
+// Dependencies: [8092, 2, 8093, 8094]
 
-// Module 8061 (MarkupParser)
-import markup_MarkupParser from "markup/MarkupParser" /* 8062 */;
+// Module 8091 (MarkupParser)
+import markup_MarkupParser from "markup/MarkupParser" /* 8092 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

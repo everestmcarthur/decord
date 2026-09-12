@@ -1,19 +1,19 @@
-// Module ID: 13370
-// Function ID: 13371
+// Module ID: 13403
+// Function ID: 13404
 // Name: GuildActionSheetMemberCount
-// Dependencies: [19, 17, 21, 4606, 576, 1116, 1114, 4602, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1151, 1114, 4632, 2]
 
-// Module 13370 (GuildActionSheetMemberCount)
+// Module 13403 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
@@ -21,7 +21,7 @@ obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight
 obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-const PlatformUtils = fn(1116);
+const PlatformUtils = fn(1151);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

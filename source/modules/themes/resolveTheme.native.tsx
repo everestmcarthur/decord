@@ -1,11 +1,11 @@
 // Module ID: 1227
 // Function ID: 1228
 // Name: resolveTheme
-// Dependencies: [1228, 1184, 1185, 1221, 1186, 7740, 1229, 1187, 2]
+// Dependencies: [1228, 1184, 1185, 1221, 1186, 7770, 1229, 1187, 2]
 // Exports: default
 
 // Module 1227 (resolveTheme)
-import AuthenticationUtils from "AuthenticationUtils" /* 7740 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7770 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;

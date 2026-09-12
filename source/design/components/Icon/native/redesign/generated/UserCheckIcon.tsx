@@ -1,13 +1,13 @@
-// Module ID: 13154
-// Function ID: 13155
+// Module ID: 13191
+// Function ID: 13192
 // Name: UserCheckIcon
-// Dependencies: [19, 21, 576, 4307, 8150, 2]
+// Dependencies: [19, 21, 576, 4337, 8180, 2]
 // Exports: UserCheckIcon
 
-// Module 13154 (UserCheckIcon)
+// Module 13191 (UserCheckIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8150 from "module_8150" /* 8150 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod8180 from "module_8180" /* 8180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const UserCheckIcon = function UserCheckIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8150, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8180, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

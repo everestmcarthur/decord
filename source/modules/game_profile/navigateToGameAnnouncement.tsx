@@ -1,10 +1,10 @@
-// Module ID: 8853
-// Function ID: 8854
+// Module ID: 8888
+// Function ID: 8889
 // Name: navigateToGameAnnouncement
-// Dependencies: [5, 1979, 1074, 38, 7414, 8464, 1100, 2]
+// Dependencies: [5, 1979, 1074, 38, 7444, 8496, 1100, 2]
 // Exports: default
 
-// Module 8853 (navigateToGameAnnouncement)
+// Module 8888 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -47,7 +47,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0, value) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp5) {

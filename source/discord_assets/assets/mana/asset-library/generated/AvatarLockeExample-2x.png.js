@@ -1,8 +1,8 @@
-// Module ID: 5837
-// Function ID: 5838
+// Module ID: 5867
+// Function ID: 5868
 // Dependencies: [2]
 
-// Module 5837
+// Module 5867
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarLockeExample-2x.png.js");

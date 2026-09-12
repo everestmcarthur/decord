@@ -1,12 +1,12 @@
-// Module ID: 12858
-// Function ID: 12859
+// Module ID: 12894
+// Function ID: 12895
 // Name: ForumPlatformHooks
-// Dependencies: [19, 4465, 4464, 7974, 2]
+// Dependencies: [19, 4495, 4494, 8004, 2]
 
-// Module 12858 (ForumPlatformHooks)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 7974 */;
+// Module 12894 (ForumPlatformHooks)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 8004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

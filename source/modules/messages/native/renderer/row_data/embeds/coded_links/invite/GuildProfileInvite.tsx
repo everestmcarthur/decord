@@ -1,47 +1,47 @@
-// Module ID: 13314
-// Function ID: 13315
+// Module ID: 13347
+// Function ID: 13348
 // Name: GuildProfileInvite
-// Dependencies: [32, 2025, 11403, 1074, 7808, 8019, 5599, 4458, 576, 1971, 9282, 9280, 1396, 1926, 1878, 1114, 9295, 8832, 7809, 11, 2019, 7260, 1091, 8010, 8020, 2]
+// Dependencies: [32, 2025, 11442, 1074, 7838, 8049, 5629, 4488, 576, 1971, 9321, 9319, 1396, 1926, 1878, 1114, 9334, 8867, 7839, 11, 2019, 7290, 1091, 8040, 8050, 2]
 // Exports: createGuildProfileInvite
 
-// Module 13314 (GuildProfileInvite)
+// Module 13347 (GuildProfileInvite)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
-import RoleIconUtils from "RoleIconUtils" /* 7260 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8010 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8019 */;
+import RoleIconUtils from "RoleIconUtils" /* 7290 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8040 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11403).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11442).CodedLinkExtendedType;
 const GuildFeatures = fn(1074).GuildFeatures;
-const InviteTypes = fn(7808).InviteTypes;
+const InviteTypes = fn(7838).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
 
 export const createGuildProfileInvite = function createGuildProfileInvite(invite, theme) {
   const tmp3 = getEmbedThemeColorsDefault(theme);
-  const guildProfileFromInvite = id(5599).buildGuildProfileFromInvite(invite);
-  let obj = id(5599);
-  let obj2 = id(4458);
+  const guildProfileFromInvite = id(5629).buildGuildProfileFromInvite(invite);
+  let obj = id(5629);
+  let obj2 = id(4488);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   let fromGuildProfileResult = null;
-  const isThemeDarkResult = id(4458).isThemeDark(theme);
+  const isThemeDarkResult = id(4488).isThemeDark(theme);
   if (null != guildProfileFromInvite) {
     fromGuildProfileResult = tmp4(1971).fromGuildProfile(guildProfileFromInvite);
     const tmp4Result = tmp4(1971);
   }
-  const tmp7 = id(4458).isThemeDark(theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_160;
-  let profilePrimaryColor = id(9282).getProfilePrimaryColor(guildProfileFromInvite);
-  const tmp4Result10 = id(9282);
+  const tmp7 = id(4488).isThemeDark(theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_160;
+  let profilePrimaryColor = id(9321).getProfilePrimaryColor(guildProfileFromInvite);
+  const tmp4Result10 = id(9321);
   if (profilePrimaryColor == null) {
     profilePrimaryColor = tmp7;
   }
-  const tmp4Result11 = id(9280);
+  const tmp4Result11 = id(9319);
   let memberCount;
-  [tmp11, tmp12] = id(9280).getBackgroundForProfile(theme, profilePrimaryColor);
+  [tmp11, tmp12] = id(9319).getBackgroundForProfile(theme, profilePrimaryColor);
   if (guildProfileFromInvite != null) {
     memberCount = guildProfileFromInvite.memberCount;
   }
@@ -126,32 +126,32 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   let guildProfileCTAType = null;
   if (null != guildProfileFromInvite) {
-    guildProfileCTAType = tmp4(9295).getGuildProfileCTAType(guildProfileFromInvite, invite.code);
-    const tmp4Result13 = tmp4(9295);
+    guildProfileCTAType = tmp4(9334).getGuildProfileCTAType(guildProfileFromInvite, invite.code);
+    const tmp4Result13 = tmp4(9334);
   }
-  if (id(9295).CTATypes.IS_MEMBER === guildProfileCTAType) {
+  if (id(9334).CTATypes.IS_MEMBER === guildProfileCTAType) {
     const intl7 = tmp4(1114).intl;
     let stringResult = intl7.string(tmp4(1114).t.IRoQXr);
-  } else if (tmp4(9295).CTATypes.HAS_APPLICATION === guildProfileCTAType) {
+  } else if (tmp4(9334).CTATypes.HAS_APPLICATION === guildProfileCTAType) {
     const intl6 = tmp4(1114).intl;
     stringResult = intl6.string(tmp4(1114).t["4yfIDk"]);
-  } else if (tmp4(9295).CTATypes.APPLY_TO_JOIN === guildProfileCTAType) {
+  } else if (tmp4(9334).CTATypes.APPLY_TO_JOIN === guildProfileCTAType) {
     const intl5 = tmp4(1114).intl;
     stringResult = intl5.string(tmp4(1114).t["7XdMW2"]);
-  } else if (tmp4(9295).CTATypes.ACCEPT_ROLES === guildProfileCTAType) {
+  } else if (tmp4(9334).CTATypes.ACCEPT_ROLES === guildProfileCTAType) {
     const intl4 = tmp4(1114).intl;
     stringResult = intl4.string(tmp4(1114).t.MMlhsr);
   } else {
-    if (tmp4(9295).CTATypes.LURK_DISCOVERABLE !== guildProfileCTAType) {
-      const JOIN_VIA_INVITE = tmp4(9295).CTATypes.JOIN_VIA_INVITE;
+    if (tmp4(9334).CTATypes.LURK_DISCOVERABLE !== guildProfileCTAType) {
+      const JOIN_VIA_INVITE = tmp4(9334).CTATypes.JOIN_VIA_INVITE;
     }
     const intl3 = tmp4(1114).intl;
     stringResult = intl3.string(tmp4(1114).t.XpeFYr);
   }
   let guildBadgeImageSource;
   if (null != fromGuildProfileResult) {
-    guildBadgeImageSource = tmp4(8832).getGuildBadgeImageSource(fromGuildProfileResult, theme);
-    const tmp4Result14 = tmp4(8832);
+    guildBadgeImageSource = tmp4(8867).getGuildBadgeImageSource(fromGuildProfileResult, theme);
+    const tmp4Result14 = tmp4(8867);
   }
   let found;
   if (guildProfileFromInvite != null) {
@@ -168,7 +168,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   let formatToPlainStringResult2;
   if (null != guildProfileFromInvite) {
-    const tmp4Result15 = tmp4(7809);
+    const tmp4Result15 = tmp4(7839);
     const establishedDate = tmp4Result15.getEstablishedDate(tmp(11).extractTimestamp(guildProfileFromInvite.id), LocaleStore.locale);
     const intl8 = tmp4(1114).intl;
     let obj7 = { createdAtDate: establishedDate };
@@ -247,10 +247,10 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   obj9.type = GUILD;
   obj9.inviteSplash = tmp20;
-  const tmp10 = _slicedToArray(id(9280).getBackgroundForProfile(theme, profilePrimaryColor), 2);
-  obj9.bannerColor = id(8010).processColorOrThrow(tmp11);
-  const tmp4Result16 = id(8010);
-  obj9.bannerColorSecondary = id(8010).processColorOrThrow(tmp12);
+  const tmp10 = _slicedToArray(id(9319).getBackgroundForProfile(theme, profilePrimaryColor), 2);
+  obj9.bannerColor = id(8040).processColorOrThrow(tmp11);
+  const tmp4Result16 = id(8040);
+  obj9.bannerColorSecondary = id(8040).processColorOrThrow(tmp12);
   if (found == null) {
     found = [];
   }
@@ -268,8 +268,8 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   obj9.hasProfileOverflow = tmp42;
   let assetUriForEmbed;
   if (null != guildBadgeImageSource) {
-    assetUriForEmbed = tmp4(8020).getAssetUriForEmbed(guildBadgeImageSource);
-    const tmp4Result18 = tmp4(8020);
+    assetUriForEmbed = tmp4(8050).getAssetUriForEmbed(guildBadgeImageSource);
+    const tmp4Result18 = tmp4(8050);
   }
   obj9.badgeIconUrl = assetUriForEmbed;
   obj9.acceptLabelBackgroundColor = tmp3.colors.acceptLabelGreenBackgroundColor;

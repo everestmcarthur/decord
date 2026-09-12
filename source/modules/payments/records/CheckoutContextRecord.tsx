@@ -1,11 +1,11 @@
-// Module ID: 7499
-// Function ID: 7500
+// Module ID: 7529
+// Function ID: 7530
 // Name: CheckoutContextRecord
-// Dependencies: [32, 1386, 7309, 7307, 2]
+// Dependencies: [32, 1386, 7339, 7337, 2]
 
-// Module 7499 (CheckoutContextRecord)
-import PriceUtils from "PriceUtils" /* 7307 */;
-import addDefault from "add" /* 7309 */;
+// Module 7529 (CheckoutContextRecord)
+import PriceUtils from "PriceUtils" /* 7337 */;
+import addDefault from "add" /* 7339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import Record from "Record" /* 1386 */;
 

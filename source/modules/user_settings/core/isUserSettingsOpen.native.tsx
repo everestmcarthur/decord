@@ -1,11 +1,11 @@
-// Module ID: 13814
-// Function ID: 13815
+// Module ID: 13848
+// Function ID: 13849
 // Name: isUserSettingsOpen
-// Dependencies: [32, 19, 4465, 2]
+// Dependencies: [32, 19, 4495, 2]
 // Exports: useIsUserSettingsOpen
 
-// Module 13814 (isUserSettingsOpen)
-import RootNavigationRef from "RootNavigationRef" /* 4465 */;
+// Module 13848 (isUserSettingsOpen)
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

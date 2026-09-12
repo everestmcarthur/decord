@@ -1,163 +1,105 @@
-// Module ID: 7168
-// Function ID: 7169
+// Module ID: 7198
+// Function ID: 7199
 // Name: doGuildOnboarding
-// Dependencies: [5, 17, 4428, 7169, 7170, 1074, 7171, 4573, 4809, 5571, 7172, 1396, 1878, 7176, 7177, 7178, 7194, 1896, 1100, 2]
+// Dependencies: [5, 17, 4458, 7199, 7200, 1074, 7201, 4603, 4839, 5601, 7202, 1396, 1878, 7206, 7207, 7208, 7224, 1896, 1100, 2]
 // Exports: default, discardOnboardingPromise, isOnboardingActiveForGuild
 
-// Module 7168 (doGuildOnboarding)
+// Module 7198 (doGuildOnboarding)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1878 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import _mod7171 from "module_7171" /* 7171 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7178 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import _mod7201 from "module_7201" /* 7201 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7208 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7169 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7199 */;
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7171));
+  return JSON.parse(JSON.stringify(_mod7201));
 }
 let closure_13 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
   c5 = 0;
   c6 = 0;
   let iter = (async (arg0, value) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_131_1(closure_131_2[7]).hideActionSheet();
+    closure_131_1(closure_131_2[7]);
+    closure_131_1(closure_131_2[8]).popAll();
+    closure_131_1(closure_131_2[8]);
+    await closure_131_0(closure_131_2[9]).waitForGuild(guildId2);
+    if (2 === tmp5) {
       if (arg0 === 1) {
+        c6 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c6 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp2;
-            closure_4 = tmp5;
-            let guildId2;
-            guildId2 = guildId.guildId;
-            closure_132_1 = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "PX_16", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_131_1(closure_131_2[7]).hideActionSheet();
-            const obj9 = closure_131_1(closure_131_2[7]);
-            closure_131_1(closure_131_2[8]).popAll();
-            const obj10 = closure_131_1(closure_131_2[8]);
-            c5 = 2;
-            c6 = 1;
-            const obj5 = { value: closure_131_0(closure_131_2[9]).waitForGuild(guildId2), done: false };
-            return obj5;
-          }
-        } else {
-          if (2 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
-            } else {
-              closure_132_1 = value;
-              const features2 = closure_132_1.features;
-              let hasItem = features2.has(closure_131_8.GUILD_ONBOARDING);
-              if (hasItem) {
-                const features = closure_132_1.features;
-                hasItem = features.has(closure_131_8.COMMUNITY);
-              }
-              if (hasItem) {
-                c5 = 3;
-                c6 = 1;
-                const obj8 = { value: closure_131_0(closure_131_2[10]).maybeFetchOnboardingPrompts(guildId2), done: false };
-                return obj8;
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj12 = { value, done: true };
-              return obj12;
-            } else if (closure_131_6.shouldShowOnboarding(guildId2)) {
-              closure_2 = closure_131_12;
-              closure_1 = guildId2;
-              c5 = 4;
-              c6 = 1;
-              const obj13 = {
-                value: (function fetchLandingAsset() {
-                            const self = this;
-                            const apply = closure_1_14.apply;
-                            if (typeof apply === "unknown") {
-                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                            } else {
-                              applyArgumentsResult = apply(self, arguments);
-                            }
-                            return applyArgumentsResult;
-                          })(closure_132_1),
-                done: false
-              };
-              return obj13;
-            }
-          } else if (4 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj14 = { value, done: true };
-              return obj14;
-            } else {
-              closure_2[closure_1] = value;
-              c5 = 5;
-              c6 = 1;
-              const obj15 = { value: closure_131_15(closure_132_1.id), done: false };
-              return obj15;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c6 = 3;
-          return { value: "HermesInternal", done: null };
+        closure_132_1 = value;
+        const features2 = closure_132_1.features;
+        let hasItem = features2.has(closure_131_8.GUILD_ONBOARDING);
+        if (hasItem) {
+          const features = closure_132_1.features;
+          hasItem = features.has(closure_131_8.COMMUNITY);
         }
-      } catch (tmp42) {
-        c6 = tmp;
-        throw tmp42;
+        if (hasItem) {
+          c5 = 3;
+          c6 = 1;
+          return { value: closure_131_0(closure_131_2[10]).maybeFetchOnboardingPrompts(guildId2), done: false };
+        }
       }
+    } else if (3 === tmp5) {
+      if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        return { value, done: true };
+      } else if (closure_131_6.shouldShowOnboarding(guildId2)) {
+        closure_2 = closure_131_12;
+        closure_1 = guildId2;
+        c5 = 4;
+        c6 = 1;
+        return {
+          value: (function fetchLandingAsset() {
+                const self = this;
+                const apply = closure_1_14.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(closure_132_1),
+          done: false
+        };
+      }
+    } else if (4 === tmp5) {
+      if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        return { value, done: true };
+      } else {
+        closure_2[closure_1] = value;
+        c5 = 5;
+        c6 = 1;
+        return { value: closure_131_15(closure_132_1.id), done: false };
+      }
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c6 = 3;
+      return { value, done: true };
     }
+    await "HermesInternal";
+    closure_3 = tmp2;
+    guildId2 = guildId.guildId;
+    return "PX_16";
   })();
   iter.next();
   return iter;
@@ -278,7 +220,7 @@ function openAndWaitForOnboarding(guildId) {
       landingAnimation: dependencyMap[guildId],
       isFirstOpen: true
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7194, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7224, dependencyMap.paths), {
       guildId,
       backShouldLeaveGuild: true,
       onFinish() {
@@ -295,7 +237,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(7170).GUILD_ONBOARDING_MODAL_KEY;
+let closure_7 = fn(7200).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Routes: closure_9 } = Constants);
 let closure_11 = {};

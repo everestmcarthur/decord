@@ -1,13 +1,13 @@
-// Module ID: 6300
-// Function ID: 6301
+// Module ID: 6330
+// Function ID: 6331
 // Name: MagnifyingGlassSpotIllustration
-// Dependencies: [21, 5638, 6301, 2]
+// Dependencies: [21, 5668, 6331, 2]
 // Exports: MagnifyingGlassSpotIllustration
 
-// Module 6300 (MagnifyingGlassSpotIllustration)
+// Module 6330 (MagnifyingGlassSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6301 from "module_6301" /* 6301 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6331 from "module_6331" /* 6331 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const MagnifyingGlassSpotIllustration = function MagnifyingGlassSpotIllus
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6301 };
+  const obj2 = { uri: _modDef6331 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

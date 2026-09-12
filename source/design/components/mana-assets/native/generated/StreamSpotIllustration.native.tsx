@@ -1,13 +1,13 @@
-// Module ID: 6558
-// Function ID: 6559
+// Module ID: 6588
+// Function ID: 6589
 // Name: StreamSpotIllustration
-// Dependencies: [21, 5638, 6559, 2]
+// Dependencies: [21, 5668, 6589, 2]
 // Exports: StreamSpotIllustration
 
-// Module 6558 (StreamSpotIllustration)
+// Module 6588 (StreamSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6559 from "module_6559" /* 6559 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6589 from "module_6589" /* 6589 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const StreamSpotIllustration = function StreamSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6559 };
+  const obj2 = { uri: _modDef6589 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

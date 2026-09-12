@@ -1,13 +1,13 @@
-// Module ID: 11043
-// Function ID: 11044
+// Module ID: 11082
+// Function ID: 11083
 // Name: PlusLargeIcon
-// Dependencies: [19, 21, 576, 4307, 11044, 2]
+// Dependencies: [19, 21, 576, 4337, 11083, 2]
 // Exports: PlusLargeIcon
 
-// Module 11043 (PlusLargeIcon)
+// Module 11082 (PlusLargeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod11044 from "module_11044" /* 11044 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod11083 from "module_11083" /* 11083 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PlusLargeIcon = function PlusLargeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11044, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11083, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

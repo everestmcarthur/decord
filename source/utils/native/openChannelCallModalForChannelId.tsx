@@ -1,12 +1,12 @@
-// Module ID: 9627
-// Function ID: 9628
+// Module ID: 9666
+// Function ID: 9667
 // Name: openChannelCallModalForChannelId
-// Dependencies: [1957, 8479, 4813, 2]
+// Dependencies: [1957, 8511, 4843, 2]
 // Exports: default
 
-// Module 9627 (openChannelCallModalForChannelId)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4813 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8479 */;
+// Module 9666 (openChannelCallModalForChannelId)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8511 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// Module ID: 6250
-// Function ID: 6251
+// Module ID: 6280
+// Function ID: 6281
 // Name: GroupGamingSpotIllustration
-// Dependencies: [21, 5638, 6251, 2]
+// Dependencies: [21, 5668, 6281, 2]
 // Exports: GroupGamingSpotIllustration
 
-// Module 6250 (GroupGamingSpotIllustration)
+// Module 6280 (GroupGamingSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6251 from "module_6251" /* 6251 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6281 from "module_6281" /* 6281 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GroupGamingSpotIllustration = function GroupGamingSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6251 };
+  const obj2 = { uri: _modDef6281 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

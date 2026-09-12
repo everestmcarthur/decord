@@ -1,24 +1,24 @@
-// Module ID: 10238
-// Function ID: 10239
+// Module ID: 10277
+// Function ID: 10278
 // Name: notficationSettingsChannelFlagUtils
-// Dependencies: [32, 1957, 4787, 1074, 4788, 1084, 563, 4790, 10236, 7192, 10239, 7187, 2]
+// Dependencies: [32, 1957, 4817, 1074, 4818, 1084, 563, 4820, 10275, 7222, 10278, 7217, 2]
 // Exports: updateChannelNotificationSetting, updateChannelPreset, updateChannelToGuildDefault, updateChannelUnreadSetting, useChannelPresetInheritance, useChannelPresetSettings
 
-// Module 10238 (notficationSettingsChannelFlagUtils)
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4790 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
-import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10236 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10239 */;
+// Module 10277 (notficationSettingsChannelFlagUtils)
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4820 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
+import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10275 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx");
@@ -67,19 +67,19 @@ export const updateChannelPreset = function updateChannelPreset(guild_id, id, ar
   const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guild_id, id);
   if (arg2 === notificationSettingsPresetUtils.Presets.ALL_MESSAGES) {
     const obj4 = NotificationSettingsModalActionCreatorsDefault;
-    const obj2 = { message_notifications: UserNotificationSettings.ALL_MESSAGES, flags: tmp2(10239).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ALL_MESSAGES) };
-    const result = obj4.updateChannelOverrideSettings(guild_id, id, obj2, tmp2(7187).NotificationLabels.PresetAll);
-    const tmp2Result = tmp2(10239);
-  } else if (arg2 === tmp2(4790).Presets.MENTIONS) {
+    const obj2 = { message_notifications: UserNotificationSettings.ALL_MESSAGES, flags: tmp2(10278).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ALL_MESSAGES) };
+    const result = obj4.updateChannelOverrideSettings(guild_id, id, obj2, tmp2(7217).NotificationLabels.PresetAll);
+    const tmp2Result = tmp2(10278);
+  } else if (arg2 === tmp2(4820).Presets.MENTIONS) {
     const obj = NotificationSettingsModalActionCreatorsDefault;
-    const obj3 = { message_notifications: UserNotificationSettings.ONLY_MENTIONS, flags: tmp2(10239).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS) };
-    const result1 = obj.updateChannelOverrideSettings(guild_id, id, obj3, tmp2(7187).NotificationLabels.PresetMentions);
-    const tmp2Result3 = tmp2(10239);
-  } else if (arg2 === tmp2(4790).Presets.NOTHING) {
+    const obj3 = { message_notifications: UserNotificationSettings.ONLY_MENTIONS, flags: tmp2(10278).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS) };
+    const result1 = obj.updateChannelOverrideSettings(guild_id, id, obj3, tmp2(7217).NotificationLabels.PresetMentions);
+    const tmp2Result3 = tmp2(10278);
+  } else if (arg2 === tmp2(4820).Presets.NOTHING) {
     const obj7 = NotificationSettingsModalActionCreatorsDefault;
-    const obj5 = { message_notifications: UserNotificationSettings.NO_MESSAGES, flags: tmp2(10239).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS) };
-    const result2 = obj7.updateChannelOverrideSettings(guild_id, id, obj5, tmp2(7187).NotificationLabels.PresetNothing);
-    const tmp2Result4 = tmp2(10239);
+    const obj5 = { message_notifications: UserNotificationSettings.NO_MESSAGES, flags: tmp2(10278).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS) };
+    const result2 = obj7.updateChannelOverrideSettings(guild_id, id, obj5, tmp2(7217).NotificationLabels.PresetNothing);
+    const tmp2Result4 = tmp2(10278);
   }
 };
 export const updateChannelToGuildDefault = function updateChannelToGuildDefault(guild_id, id) {

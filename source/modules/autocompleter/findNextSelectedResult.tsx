@@ -1,10 +1,10 @@
-// Module ID: 9934
-// Function ID: 9935
-// Dependencies: [5566, 2]
+// Module ID: 9973
+// Function ID: 9974
+// Dependencies: [5596, 2]
 // Exports: default
 
-// Module 9934
-import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5566 */;
+// Module 9973
+import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5596 */;
 import size from "module_2" /* 2 */;
 
 ({ FindResultDirections: closure_0, AutocompleterResultTypes: closure_1 } = AutocompleterConstants);

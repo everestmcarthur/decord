@@ -1,7 +1,7 @@
 // Module ID: 1481
 // Function ID: 1482
 // Name: KeyboardUIStore
-// Dependencies: [1482, 1219, 1607, 510, 1609, 1610, 1611, 1115, 1623, 558, 1249, 1624, 560, 1625, 1873, 1874, 1612, 1480, 2]
+// Dependencies: [1482, 1219, 1607, 510, 1609, 1610, 1611, 1150, 1623, 558, 1249, 1624, 560, 1625, 1873, 1874, 1612, 1480, 2]
 // Exports: addKeyboardTypeChangedListener, addKeyboardWillOpenChangedListener, setKeyboardContext, setKeyboardType
 
 // Module 1481 (KeyboardUIStore)
@@ -16,7 +16,7 @@ import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1623 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1625 */;
 import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1873 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1150 */;
 import module_560 from "module_560" /* 560 */;
 import SafeAreaStore from "SafeAreaStore" /* 1612 */;
 import size from "module_2" /* 2 */;
@@ -152,7 +152,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
             } else {
               tmp21 = keyboardContexts;
             }
-            tmp2Result11 = tmp2(1115);
+            tmp2Result11 = tmp2(1150);
           }
           tmp19 = tmp17 !== context;
           tmp2Result9 = tmp2(1610);

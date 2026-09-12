@@ -1,41 +1,46 @@
 // Module ID: 3849
 // Function ID: 3850
-// Dependencies: [3699, 3850, 3696]
-// Exports: default
+// Dependencies: [3850, 3851, 3852, 3853, 3854]
 
 // Module 3849
-import module_3699_mod from "module_3699" /* 3699 */;
-import module_3850_mod from "module_3850" /* 3850 */;
-import requiredArgs_mod from "requiredArgs" /* 3696 */;
+import module_3850 from "module_3850" /* 3850 */;
+import module_3851 from "module_3851" /* 3851 */;
+import module_3852 from "module_3852" /* 3852 */;
+import date_mod from "module_3853" /* 3853 */;
+import date_mod from "module_3854" /* 3854 */;
 
-let module_3699 = module_3699_mod;
-if (!module_3699) {
-  const obj = { default: module_3699 };
+if (!module_3850) {
+  const obj = { default: module_3850 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3699;
+  tmp3 = module_3850;
 }
-module_3699 = tmp3;
-let module_3850 = module_3850_mod;
-if (!module_3850) {
-  const obj2 = { default: module_3850 };
+if (!module_3851) {
+  const obj2 = { default: module_3851 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_3850;
+  tmp5 = module_3851;
 }
-module_3850 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+if (!module_3852) {
+  const obj3 = { default: module_3852 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3852;
 }
-requiredArgs = tmp7;
-let c3 = 3600000;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function addHours(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3850.default(interval, module_3699.default(arg1) * c3);
-};
+export default { code: "sv", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

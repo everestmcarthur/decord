@@ -1,10 +1,10 @@
-// Module ID: 10896
-// Function ID: 10897
+// Module ID: 10935
+// Function ID: 10936
 // Name: useToggleOnIAPSuccess
 // Dependencies: [32, 19, 573, 2]
 // Exports: default
 
-// Module 10896 (useToggleOnIAPSuccess)
+// Module 10935 (useToggleOnIAPSuccess)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

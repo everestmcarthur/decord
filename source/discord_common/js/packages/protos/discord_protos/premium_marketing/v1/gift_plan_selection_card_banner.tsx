@@ -1,13 +1,13 @@
-// Module ID: 10770
-// Function ID: 10771
+// Module ID: 10809
+// Function ID: 10810
 // Name: gift_plan_selection_card_banner
-// Dependencies: [32, 1188, 10769, 10767, 10759, 2]
+// Dependencies: [32, 1188, 10808, 10806, 10798, 2]
 
-// Module 10770 (gift_plan_selection_card_banner)
+// Module 10809 (gift_plan_selection_card_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10759 */;
-import gradient from "gradient" /* 10767 */;
-import theme_aware_asset from "theme_aware_asset" /* 10769 */;
+import localized_string from "localized_string" /* 10798 */;
+import gradient from "gradient" /* 10806 */;
+import theme_aware_asset from "theme_aware_asset" /* 10808 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

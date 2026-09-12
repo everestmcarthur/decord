@@ -1,15 +1,15 @@
-// Module ID: 15557
-// Function ID: 15558
+// Module ID: 15579
+// Function ID: 15580
 // Name: AndroidNotificationLightsSetting
-// Dependencies: [15544, 8049, 1115, 15546, 1114, 11562, 14503, 15550, 2]
+// Dependencies: [15566, 8079, 1150, 15568, 1114, 11601, 14538, 15572, 2]
 
-// Module 15557 (AndroidNotificationLightsSetting)
+// Module 15579 (AndroidNotificationLightsSetting)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8049 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15550 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15544 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11562 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15572 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15566 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
@@ -36,8 +36,8 @@ obj2.usePredicate = function usePredicate() {
   const isIOSResult = PlatformUtils.isIOS();
   let tmp5 = !isIOSResult;
   if (!isIOSResult) {
-    tmp5 = !tmp2(15546).hasAndroidNotificationChannels();
-    const tmp2Result = tmp2(15546);
+    tmp5 = !tmp2(15568).hasAndroidNotificationChannels();
+    const tmp2Result = tmp2(15568);
   }
   if (tmp5) {
     tmp5 = null != tmp;
@@ -57,8 +57,8 @@ obj3.usePredicate = function usePredicate() {
   const isIOSResult = PlatformUtils.isIOS();
   let isDeclarativeSettingsUIAvailable = !isIOSResult;
   if (!isIOSResult) {
-    isDeclarativeSettingsUIAvailable = !tmp2(15546).hasAndroidNotificationChannels();
-    const tmp2Result = tmp2(15546);
+    isDeclarativeSettingsUIAvailable = !tmp2(15568).hasAndroidNotificationChannels();
+    const tmp2Result = tmp2(15568);
   }
   if (isDeclarativeSettingsUIAvailable) {
     isDeclarativeSettingsUIAvailable = null != tmp;

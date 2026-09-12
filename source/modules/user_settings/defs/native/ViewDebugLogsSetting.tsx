@@ -1,33 +1,33 @@
-// Module ID: 15626
-// Function ID: 15627
+// Module ID: 15648
+// Function ID: 15649
 // Name: ViewDebugLogsSetting
-// Dependencies: [19, 17, 21, 4573, 7272, 4809, 11016, 7270, 7222, 1114, 15627, 15629, 4569, 15632, 1115, 11054, 15633, 11562, 13897, 1935, 2]
+// Dependencies: [19, 17, 21, 4603, 7302, 4839, 11055, 7300, 7252, 1114, 15649, 15651, 4599, 15654, 1150, 11093, 15655, 11601, 13931, 1935, 2]
 
-// Module 15626 (ViewDebugLogsSetting)
+// Module 15648 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ClockIcon from "ClockIcon" /* 4569 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
-import ActionSheet from "ActionSheet" /* 7270 */;
-import ActionSheetRow from "ActionSheetRow" /* 7272 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11016 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13897 */;
-import WrenchIcon from "WrenchIcon" /* 15627 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15629 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15632 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15633 */;
+import ClockIcon from "ClockIcon" /* 4599 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
+import ActionSheetRow from "ActionSheetRow" /* 7302 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11055 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13931 */;
+import WrenchIcon from "WrenchIcon" /* 15649 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15651 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15654 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15655 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(7272).ActionSheetRow, {
+  return closure_5(title(7302).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
@@ -62,7 +62,7 @@ function ViewDebugLogsActionSheet() {
   items[1] = hasOwnProperty(ViewDebugLogsActionSheetRow, obj4);
   let tmpResult = null;
   if (obj5.isAndroid()) {
-    const obj6 = { icon: tmp(tmp2(11054).ChannelNotificationIcon, {}), title: null, screenKey: "pushNotificationLogs", render: null };
+    const obj6 = { icon: tmp(tmp2(11093).ChannelNotificationIcon, {}), title: null, screenKey: "pushNotificationLogs", render: null };
     const intl4 = tmp2(1114).intl;
     obj6.title = intl4.string(tmp2(1114).t.Ljj0ps);
     obj6.render = function render() {

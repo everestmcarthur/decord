@@ -1,20 +1,20 @@
-// Module ID: 16032
-// Function ID: 16033
+// Module ID: 16056
+// Function ID: 16057
 // Name: useInitialRegistrationStep
-// Dependencies: [19, 502, 6666, 16017, 16016, 504, 6664, 2]
+// Dependencies: [19, 502, 6696, 16041, 16040, 504, 6694, 2]
 // Exports: default
 
-// Module 16032 (useInitialRegistrationStep)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6664 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16016 */;
+// Module 16056 (useInitialRegistrationStep)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16040 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConsentStore from "ConsentStore" /* 6666 */;
+import ConsentStore from "ConsentStore" /* 6696 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const resetRegistration = fn(16017).resetRegistration;
+const resetRegistration = fn(16041).resetRegistration;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 

@@ -1,8 +1,8 @@
-// Module ID: 6555
-// Function ID: 6556
+// Module ID: 6585
+// Function ID: 6586
 // Dependencies: [2]
 
-// Module 6555
+// Module 6585
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SpinningGem3dIllustration-2x.png.js");

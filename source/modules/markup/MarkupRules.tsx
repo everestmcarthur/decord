@@ -1,34 +1,34 @@
-// Module ID: 5049
-// Function ID: 5050
+// Module ID: 5079
+// Function ID: 5080
 // Name: MarkupRules
-// Dependencies: [32, 718, 1957, 2015, 1979, 1371, 1074, 5050, 5051, 5052, 1114, 5055, 2018, 4758, 4451, 4303, 5056, 5057, 5060, 4259, 5062, 5073, 5074, 5075, 5076, 5077, 5048, 5078, 12, 2]
+// Dependencies: [32, 718, 1957, 2015, 1979, 1371, 1074, 5080, 5081, 5082, 1114, 5085, 2018, 4788, 4481, 4333, 5086, 5087, 5090, 4289, 5092, 5103, 5104, 5105, 5106, 5107, 5078, 5108, 12, 2]
 // Exports: hydrateCommandMention
 
-// Module 5049 (MarkupRules)
+// Module 5079 (MarkupRules)
 import util from "util" /* 1114 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 5052 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5055 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5056 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5057 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5060 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5062 */;
-import TimestampUtils from "TimestampUtils" /* 5073 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 5074 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 5075 */;
-import MarkupListRuleDefault from "MarkupListRule" /* 5076 */;
-import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 5077 */;
-import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 5078 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 5082 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5085 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5086 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5087 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5090 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5092 */;
+import TimestampUtils from "TimestampUtils" /* 5103 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 5104 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 5105 */;
+import MarkupListRuleDefault from "MarkupListRule" /* 5106 */;
+import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 5107 */;
+import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 5108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import t_mod from "module_4303" /* 4303 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5048 */;
+import t_mod from "module_4333" /* 4333 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5078 */;
 import "module_12";
 import apply_mod from "module_12" /* 12 */;
 
@@ -42,7 +42,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "WireType" };
+    obj3 = { type: "link", content: null, target: null, title: "call" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     const items = [obj4];
     obj3.content = items;
@@ -137,8 +137,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = NicknameUtilsDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4451).getName(str);
-        const tmp4Result = tmp4(4451);
+        nickname = tmp4(4481).getName(str);
+        const tmp4Result = tmp4(4481);
       }
       str1 = nickname;
       tmp4 = importDefault;
@@ -181,8 +181,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
 }
 const Constants = fn(1074);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5050).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5051).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5080).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5081).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

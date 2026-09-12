@@ -1,8 +1,8 @@
-// Module ID: 6301
-// Function ID: 6302
+// Module ID: 6331
+// Function ID: 6332
 // Dependencies: [2]
 
-// Module 6301
+// Module 6331
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MagnifyingGlassSpotIllustration-2x.png.js");

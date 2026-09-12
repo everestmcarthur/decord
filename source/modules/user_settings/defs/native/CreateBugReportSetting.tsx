@@ -1,24 +1,24 @@
-// Module ID: 15815
-// Function ID: 15816
+// Module ID: 15839
+// Function ID: 15840
 // Name: CreateBugReportSetting
-// Dependencies: [1347, 1348, 10303, 504, 1115, 11562, 1114, 15627, 15804, 2]
+// Dependencies: [1347, 1348, 10342, 504, 1150, 11601, 1114, 15649, 15826, 2]
 
-// Module 15815 (CreateBugReportSetting)
+// Module 15839 (CreateBugReportSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1348 */;
-import BugReportManagerDefault from "BugReportManager" /* 10303 */;
+import BugReportManagerDefault from "BugReportManager" /* 10342 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 
 require = fn;
-const SettingBuilders = fn(11562);
+const SettingBuilders = fn(11601);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(15627).WrenchIcon,
+  IconComponent: fn(15649).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -36,7 +36,7 @@ const toggle = SettingBuilders.createToggle({
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(15804).useBugReporterExperimentSettingPredicate
+  usePredicate: fn(15826).useBugReporterExperimentSettingPredicate
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

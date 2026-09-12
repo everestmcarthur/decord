@@ -1,19 +1,19 @@
-// Module ID: 14452
-// Function ID: 14453
+// Module ID: 14487
+// Function ID: 14488
 // Name: ICYMISessionStore
-// Dependencies: [4522, 1236, 8439, 502, 8421, 1256, 8445, 504, 573, 2]
+// Dependencies: [4552, 1236, 8471, 502, 8453, 1256, 8477, 504, 573, 2]
 // Exports: resetGlobalState
 
-// Module 14452 (ICYMISessionStore)
+// Module 14487 (ICYMISessionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import v1 from "v1" /* 1256 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8445 */;
-import ExperimentStore from "ExperimentStore" /* 4522 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8477 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
-import LabFeatureStore from "LabFeatureStore" /* 8439 */;
+import LabFeatureStore from "LabFeatureStore" /* 8471 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ICYMIStore from "ICYMIStore" /* 8421 */;
+import ICYMIStore from "ICYMIStore" /* 8453 */;
 
 require = fn;
 let c7 = 300000;
@@ -222,7 +222,7 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     obj.isDwelling = null != tmp4;
     ({ interactionActionTypes: obj.interactionActionTypes, interactionCount: obj.interactionCount, uxVariation } = tmp7);
     if (uxVariation == null) {
-      uxVariation = tmp11(8445).DEFAULT_UX_VARIATION;
+      uxVariation = tmp11(8477).DEFAULT_UX_VARIATION;
     }
     obj.uxVariation = uxVariation;
     obj.sessionImpressionIndex = tmp7.sessionImpressionIndex;
@@ -410,7 +410,7 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     obj.itemCardHeight = itemCardHeight;
     let DEFAULT_UX_VARIATION = tmp2.uxVariation;
     if (DEFAULT_UX_VARIATION == null) {
-      DEFAULT_UX_VARIATION = tmp5(8445).DEFAULT_UX_VARIATION;
+      DEFAULT_UX_VARIATION = tmp5(8477).DEFAULT_UX_VARIATION;
     }
     obj.uxVariation = DEFAULT_UX_VARIATION;
     ({ interactionActionTypes: obj.interactionActionTypes, interactionCount: obj.interactionCount, sessionImpressionIndex: obj.sessionImpressionIndex } = tmp2);

@@ -1,13 +1,13 @@
-// Module ID: 6556
-// Function ID: 6557
+// Module ID: 6586
+// Function ID: 6587
 // Name: StickersSpotIllustration
-// Dependencies: [21, 5638, 6557, 2]
+// Dependencies: [21, 5668, 6587, 2]
 // Exports: StickersSpotIllustration
 
-// Module 6556 (StickersSpotIllustration)
+// Module 6586 (StickersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6557 from "module_6557" /* 6557 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6587 from "module_6587" /* 6587 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const StickersSpotIllustration = function StickersSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6557 };
+  const obj2 = { uri: _modDef6587 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

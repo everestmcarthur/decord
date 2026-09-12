@@ -1,23 +1,23 @@
-// Module ID: 15369
-// Function ID: 15370
+// Module ID: 15391
+// Function ID: 15392
 // Name: DarkModeThemeSetting
-// Dependencies: [1183, 1186, 8049, 1074, 504, 11562, 1114, 15367, 15370, 2]
+// Dependencies: [1183, 1186, 8079, 1074, 504, 11601, 1114, 15389, 15392, 2]
 
-// Module 15369 (DarkModeThemeSetting)
+// Module 15391 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15367 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15389 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;
 const SystemTheme = fn(1186).SystemTheme;
-const SettingBuilders = fn(11562);
+const SettingBuilders = fn(11601);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8049).MobileUserSettings.APPEARANCE,
+  parent: fn(8079).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

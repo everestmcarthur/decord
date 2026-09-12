@@ -1,24 +1,24 @@
-// Module ID: 11427
-// Function ID: 11428
+// Module ID: 11466
+// Function ID: 11467
 // Name: ChannelFollowSuccessAlert
-// Dependencies: [19, 17, 21, 11428, 11429, 11430, 11431, 11432, 11433, 1114, 4606, 4541, 4458, 7513, 12, 5045, 4602, 2]
+// Dependencies: [19, 17, 21, 11467, 11468, 11469, 11470, 11471, 11472, 1114, 4636, 4571, 4488, 7543, 12, 5075, 4632, 2]
 // Exports: default
 
-// Module 11427 (ChannelFollowSuccessAlert)
+// Module 11466 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4541 */;
+import useThemeDefault from "useTheme" /* 4571 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const common_AlertDefault = tmp2(5045);
+const common_AlertDefault = tmp2(5075);
 require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(11428), fn(11429), fn(11430)];
-let items1 = [fn(11431), fn(11432), fn(11433)];
+let items = [fn(11467), fn(11468), fn(11469)];
+let items1 = [fn(11470), fn(11471), fn(11472)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -61,7 +61,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   }
 ];
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");

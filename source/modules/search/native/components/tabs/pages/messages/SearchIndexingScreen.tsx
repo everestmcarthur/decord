@@ -1,12 +1,12 @@
-// Module ID: 16783
-// Function ID: 16784
+// Module ID: 16810
+// Function ID: 16811
 // Name: SearchIndexingScreen
-// Dependencies: [19, 21, 12451, 12433, 16718, 2]
+// Dependencies: [19, 21, 12487, 12469, 16745, 2]
 // Exports: default
 
-// Module 16783 (SearchIndexingScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16718 */;
+// Module 16810 (SearchIndexingScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16745 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -20,6 +20,6 @@ export default function SearchIndexingScreen(searchContext) {
   const effect = noop.useEffect(() => {
     search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(12433).getIndexingErrorText(searchContext);
+  const text = searchContext(12469).getIndexingErrorText(searchContext);
   return jsx(pages_ErrorScreenDefault, { text });
 };

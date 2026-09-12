@@ -1,10 +1,10 @@
-// Module ID: 16132
-// Function ID: 16133
+// Module ID: 16156
+// Function ID: 16157
 // Name: ActiveChannelsActionCreators
-// Dependencies: [5, 1074, 573, 1272, 4508, 2]
+// Dependencies: [5, 1074, 573, 1272, 4538, 2]
 // Exports: fetchActiveChannels
 
-// Module 16132 (ActiveChannelsActionCreators)
+// Module 16156 (ActiveChannelsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -46,7 +46,7 @@ let closure_5 = async function _fetchActiveChannels(arg0, value) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

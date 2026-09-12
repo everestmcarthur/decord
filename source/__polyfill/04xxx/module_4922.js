@@ -1,19 +1,19 @@
 // Module ID: 4922
 // Function ID: 4923
-// Dependencies: [4854]
+// Dependencies: [1314, 4914, 1307, 1308]
 
 // Module 4922
-import _mod4854 from "module_4854" /* 4854 */;
+import _mod1314 from "module_1314" /* 1314 */;
 
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod4854(arg0);
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1314(num)) {
+      if (tmp2(4914)(num)) {
+        const tmp = tmp2(1307)(num);
+        return tmp2(1308)(tmp) === tmp;
+      }
     }
-    str = str2;
   }
-  return str;
+  return false;
 };

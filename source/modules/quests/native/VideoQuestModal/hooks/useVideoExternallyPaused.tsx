@@ -1,17 +1,17 @@
-// Module ID: 15214
-// Function ID: 15215
+// Module ID: 15236
+// Function ID: 15237
 // Name: useVideoExternallyPaused
-// Dependencies: [4297, 8758, 4464, 11606, 504, 4952, 1115, 2]
+// Dependencies: [4327, 8790, 4494, 11645, 504, 4982, 1150, 2]
 // Exports: useVideoExternallyPaused
 
-// Module 15214 (useVideoExternallyPaused)
+// Module 15236 (useVideoExternallyPaused)
 import initialize from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import useAlertStore from "useAlertStore" /* 4952 */;
-import ContextMenuState from "ContextMenuState" /* 8758 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11606 */;
-import ActionSheetStore from "ActionSheetStore" /* 4297 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import useAlertStore from "useAlertStore" /* 4982 */;
+import ContextMenuState from "ContextMenuState" /* 8790 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11645 */;
+import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 
 require = fn;
 const size = fn(2);

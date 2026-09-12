@@ -1,14 +1,14 @@
-// Module ID: 12265
-// Function ID: 12266
+// Module ID: 12301
+// Function ID: 12302
 // Name: AppLauncherTextInputOption
-// Dependencies: [32, 19, 17, 1374, 21, 4606, 576, 11309, 1894, 10367, 12262, 9500, 1178, 12266, 1115, 12267, 1874, 11216, 2]
+// Dependencies: [32, 19, 17, 1374, 21, 4636, 576, 11348, 1894, 10406, 12298, 9539, 1178, 12302, 1150, 12303, 1874, 11255, 2]
 // Exports: default
 
-// Module 12265 (AppLauncherTextInputOption)
+// Module 12301 (AppLauncherTextInputOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10367 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10406 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { container: { width: "100%", backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 14, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" }, hasError: null, stringOptionInput: null, expressionButton: null };
 let obj3 = { width: "100%", backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 14, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" };
 obj2.hasError = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
@@ -101,17 +101,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj = onChangeText(11309);
-  const animationDelayedAutoFocus = onChangeText(12262).useAnimationDelayedAutoFocus(autoFocus, () => {
+  let obj = onChangeText(11348);
+  const animationDelayedAutoFocus = onChangeText(12298).useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(9500).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9539).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1178).TextInput;
   } else {
-    TextInput = guildId(12266);
+    TextInput = guildId(12302);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -138,7 +138,7 @@ export default function AppLauncherTextInputOption(guildId) {
       str2 = "numeric";
     }
     let str = str2;
-    tmp4Result = tmp4(1115);
+    tmp4Result = tmp4(1150);
   } else {
     str = "default";
   }
@@ -153,7 +153,7 @@ export default function AppLauncherTextInputOption(guildId) {
           const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet({ pickerIntention: EmojiIntention.CHAT, autoFocus: false, startExpanded: false, onPressEmoji, guildId, onClose });
         }
     };
-    tmp14Result = tmp14(guildId(12267), obj5);
+    tmp14Result = tmp14(guildId(12303), obj5);
   }
   items4[1] = tmp14Result;
   obj3.children = items4;

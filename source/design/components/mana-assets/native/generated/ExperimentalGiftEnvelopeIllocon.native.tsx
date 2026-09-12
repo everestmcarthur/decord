@@ -1,13 +1,13 @@
-// Module ID: 6050
-// Function ID: 6051
+// Module ID: 6080
+// Function ID: 6081
 // Name: ExperimentalGiftEnvelopeIllocon
-// Dependencies: [21, 5638, 6051, 2]
+// Dependencies: [21, 5668, 6081, 2]
 // Exports: ExperimentalGiftEnvelopeIllocon
 
-// Module 6050 (ExperimentalGiftEnvelopeIllocon)
+// Module 6080 (ExperimentalGiftEnvelopeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6051 from "module_6051" /* 6051 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6081 from "module_6081" /* 6081 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const ExperimentalGiftEnvelopeIllocon = function ExperimentalGiftEnvelope
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6051 };
+  const obj2 = { uri: _modDef6081 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

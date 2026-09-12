@@ -1,13 +1,13 @@
-// Module ID: 14118
-// Function ID: 14119
+// Module ID: 14153
+// Function ID: 14154
 // Name: KeyboardLayoutMapUtils
-// Dependencies: [32, 5, 1347, 7577, 3, 1115, 14117, 510, 2]
+// Dependencies: [32, 5, 1347, 7607, 3, 1150, 14152, 510, 2]
 // Exports: __DEV_overrideLayoutMapKey, getKeyboardEventShapeFromAny, getKeyboardEventShapeFromKey, getKeyboardEventShapeFromKeycode, getLayoutMap, initializeKeyboardMapper, resetKeyboardMapper
 
-// Module 14118 (KeyboardLayoutMapUtils)
+// Module 14153 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 14117 */;
+import keyCodeDefault from "keyCode" /* 14152 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
@@ -478,20 +478,20 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(7577);
+const KeyboardConstants = fn(7607);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 if (!PlatformUtils.isLinux()) {
   if (!obj2.isMac()) {
     if (!obj3.isWindows()) {
       WindowsKeyToCode = keyCodeDefault.codes;
     }
     MacosKeyToCode = WindowsKeyToCode;
-    obj3 = fn(1115);
+    obj3 = fn(1150);
   }
   LinuxKeyToCode = MacosKeyToCode;
-  obj2 = fn(1115);
+  obj2 = fn(1150);
 }
 function initializeKeyboardMapper() {
   if (null == promise) {

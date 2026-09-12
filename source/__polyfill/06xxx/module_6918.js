@@ -1,13 +1,10 @@
 // Module ID: 6918
 // Function ID: 6919
-// Dependencies: [19, 17, 1636, 6911, 6699]
+// Dependencies: [17]
 
 // Module 6918
-import cancelAnimation from "cancelAnimation" /* 1636 */;
+import _mod17 from "module_17" /* 17 */;
 
-const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
-const module_6911 = fn(6911);
-const memoResult = fn(19).memo(module_6911.createBottomSheetScrollableComponent(fn(6699).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
-memoResult.displayName = "BottomSheetSectionList";
+const StyleSheet = _mod17.StyleSheet;
 
-export default memoResult;
+export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });

@@ -1,11 +1,11 @@
-// Module ID: 11378
-// Function ID: 11379
+// Module ID: 11417
+// Function ID: 11418
 // Name: BountyTypes
-// Dependencies: [11379, 2]
+// Dependencies: [11418, 2]
 // Exports: bountyCtaFromServer, bountyFromServer
 
-// Module 11378 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 11379 */;
+// Module 11417 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 11418 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");

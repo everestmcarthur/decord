@@ -1,23 +1,23 @@
-// Module ID: 15126
-// Function ID: 15127
+// Module ID: 15148
+// Function ID: 15149
 // Name: BountiesNuxPromoSheet
-// Dependencies: [19, 17, 21, 4606, 576, 4573, 15125, 10319, 1114, 5878, 5026, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4603, 15147, 10358, 1114, 5908, 5056, 2]
 // Exports: default
 
-// Module 15126 (BountiesNuxPromoSheet)
+// Module 15148 (BountiesNuxPromoSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5878 */;
-import PromoSheet from "PromoSheet" /* 10319 */;
-import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 15125 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5908 */;
+import PromoSheet from "PromoSheet" /* 10358 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 15147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { illustrationContainer: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function BountiesNuxPromoSheet() {
   const intl = util.intl;
   obj.title = intl.string(util.t.DDpHZG);
   const intl2 = util.intl;
-  obj.description = intl2.string(util.t.xs7q1I);
+  obj.description = intl2.string(util.t.aC3Dwj);
   const tmp = closure_6();
   obj.illustration = <View style={closure_6().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
   const obj3 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };

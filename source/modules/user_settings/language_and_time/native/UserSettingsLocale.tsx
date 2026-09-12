@@ -1,13 +1,13 @@
-// Module ID: 15486
-// Function ID: 15487
+// Module ID: 15508
+// Function ID: 15509
 // Name: UserSettingsLocale
-// Dependencies: [5, 19, 17, 2026, 2025, 21, 4606, 576, 9449, 504, 7196, 5736, 1114, 5739, 15487, 2]
+// Dependencies: [5, 19, 17, 2026, 2025, 21, 4636, 576, 9488, 504, 7226, 5766, 1114, 5769, 15509, 2]
 
-// Module 15486 (UserSettingsLocale)
+// Module 15508 (UserSettingsLocale)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import TableRadioRow from "TableRadioRow" /* 5739 */;
-import flags from "flags" /* 15487 */;
+import TableRadioRow from "TableRadioRow" /* 5769 */;
+import flags from "flags" /* 15509 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -80,7 +80,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const setAppLocale = fn(2026).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };

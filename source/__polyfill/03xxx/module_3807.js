@@ -3,17 +3,17 @@
 // Dependencies: [3808, 3809, 3810, 3811, 3812]
 
 // Module 3807
-import module_3808 from "module_3808" /* 3808 */;
+import translateSeconds from "translateSeconds" /* 3808 */;
 import module_3809 from "module_3809" /* 3809 */;
 import module_3810 from "module_3810" /* 3810 */;
 import date_mod from "module_3811" /* 3811 */;
 import date_mod from "module_3812" /* 3812 */;
 
-if (!module_3808) {
-  const obj = { default: module_3808 };
+if (!translateSeconds) {
+  const obj = { default: translateSeconds };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3808;
+  tmp3 = translateSeconds;
 }
 if (!module_3809) {
   const obj2 = { default: module_3809 };
@@ -42,5 +42,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

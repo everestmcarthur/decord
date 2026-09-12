@@ -1,16 +1,16 @@
-// Module ID: 5329
-// Function ID: 5330
+// Module ID: 5359
+// Function ID: 5360
 // Name: CallStore
-// Dependencies: [1957, 2011, 4428, 1074, 573, 1272, 12, 504, 2]
+// Dependencies: [1957, 2011, 4458, 1074, 573, 1272, 12, 504, 2]
 
-// Module 5329 (CallStore)
+// Module 5359 (CallStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 require = fn;
 function callConnect() {

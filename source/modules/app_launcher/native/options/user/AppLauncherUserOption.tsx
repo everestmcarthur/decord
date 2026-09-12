@@ -1,23 +1,23 @@
-// Module ID: 12277
-// Function ID: 12278
+// Module ID: 12313
+// Function ID: 12314
 // Name: AppLauncherUserOption
-// Dependencies: [32, 19, 4598, 21, 4606, 576, 504, 12269, 1874, 4573, 12278, 1896, 12278, 1178, 12272, 11009, 12275, 4602, 2]
+// Dependencies: [32, 19, 4628, 21, 4636, 576, 504, 12305, 1874, 4603, 12314, 1896, 12314, 1178, 12308, 11048, 12311, 4632, 2]
 // Exports: default
 
-// Module 12277 (AppLauncherUserOption)
+// Module 12313 (AppLauncherUserOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12269 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12278 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12305 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12314 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -69,7 +69,7 @@ export default function AppLauncherUserOption(option) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(12278, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
+    obj2.openLazy(asyncRequireImpl(12314, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onUserPress(user) {
@@ -89,19 +89,19 @@ export default function AppLauncherUserOption(option) {
     const obj3 = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32 };
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj3);
   } else {
-    const obj4 = { icon: tmp9(tmp2(11009).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
-    tmp9Result = tmp9(tmp10(12272), obj4);
-    const tmp10Result = tmp10(12272);
+    const obj4 = { icon: tmp9(tmp2(11048).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    tmp9Result = tmp9(tmp10(12308), obj4);
+    const tmp10Result = tmp10(12308);
   }
   obj2.leading = tmp9Result;
   if (null != tmp8) {
     const obj5 = { guildId: guild_id, user: tmp8 };
-    let tmp9Result2 = tmp9(tmp10(12275), obj5);
+    let tmp9Result2 = tmp9(tmp10(12311), obj5);
   } else {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(4602).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(4632).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

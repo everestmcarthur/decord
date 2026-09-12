@@ -1,20 +1,20 @@
-// Module ID: 14697
-// Function ID: 14698
+// Module ID: 14731
+// Function ID: 14732
 // Name: UserProfilePremiumUpsellCard
-// Dependencies: [19, 1074, 21, 4606, 1611, 1483, 7519, 7235, 7255, 7063, 9483, 9453, 14675, 1114, 4602, 2]
+// Dependencies: [19, 1074, 21, 4636, 1611, 1483, 7549, 7265, 7285, 7093, 9522, 9492, 14709, 1114, 4632, 2]
 // Exports: UserProfilePremiumUpsellCard
 
-// Module 14697 (UserProfilePremiumUpsellCard)
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7063 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9453 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9483 */;
+// Module 14731 (UserProfilePremiumUpsellCard)
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;
@@ -30,11 +30,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   const tmp3 = closure_9(analyticsLocations(1611)().bottom);
   navigation = navigation(1483).useNavigation();
   let obj = navigation(1483);
-  let nitroTrialCtaOverride = navigation(7519).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(7519);
-  const tmp8 = analyticsLocations(7255);
+  let nitroTrialCtaOverride = navigation(7549).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7549);
+  const tmp8 = analyticsLocations(7285);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(7235)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(7265)(items).analyticsLocations;
   const items1 = [navigation];
   let callback = noop.useCallback(() => {
     UserSettingsModalActionCreatorsDefault.setSection(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -46,7 +46,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     openPremiumModalDefault(obj);
   }, items2);
   const obj3 = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(7235);
+  const tmp7 = analyticsLocations(7265);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1114).intl;
@@ -70,6 +70,6 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj3.children = jsx(navigation(4602).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14675), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  obj3.children = jsx(navigation(4632).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
+  return jsx(tmp(14709), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

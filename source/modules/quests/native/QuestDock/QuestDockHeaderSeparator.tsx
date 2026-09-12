@@ -1,15 +1,15 @@
-// Module ID: 15253
-// Function ID: 15254
+// Module ID: 15275
+// Function ID: 15276
 // Name: QuestDockHeaderSeparator
-// Dependencies: [19, 17, 21, 4606, 576, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 2]
 
-// Module 15253 (QuestDockHeaderSeparator)
+// Module 15275 (QuestDockHeaderSeparator)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj = { separator: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
 obj.separator = size;

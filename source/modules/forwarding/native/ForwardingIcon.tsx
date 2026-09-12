@@ -1,12 +1,12 @@
-// Module ID: 11781
-// Function ID: 11782
+// Module ID: 11817
+// Function ID: 11818
 // Name: ForwardingIcon
-// Dependencies: [21, 11782, 2]
+// Dependencies: [21, 11818, 2]
 // Exports: default
 
-// Module 11781 (ForwardingIcon)
+// Module 11817 (ForwardingIcon)
 import jsxProd from "jsxProd" /* 21 */;
-import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 11782 */;
+import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 11818 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

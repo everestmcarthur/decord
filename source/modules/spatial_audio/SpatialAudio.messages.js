@@ -1,9 +1,9 @@
 // Module ID: 3524
 // Function ID: 3525
-// Dependencies: [1120, 3525, 1155, 2]
+// Dependencies: [1118, 3525, 1155, 2]
 
 // Module 3524
-import AssetJsonUtils from "AssetJsonUtils" /* 1120 */;
+import AssetJsonUtils from "AssetJsonUtils" /* 1118 */;
 import _mod3525 from "module_3525" /* 3525 */;
 import module_1155_mod from "module_1155" /* 1155 */;
 import size from "module_2" /* 2 */;

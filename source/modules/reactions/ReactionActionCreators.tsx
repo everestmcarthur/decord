@@ -1,22 +1,22 @@
-// Module ID: 7836
-// Function ID: 7837
+// Module ID: 7866
+// Function ID: 7867
 // Name: ReactionActionCreators
-// Dependencies: [5, 502, 1957, 4827, 1074, 1090, 4950, 1114, 1109, 573, 7835, 1272, 7837, 1242, 4786, 4458, 7855, 4263, 2]
+// Dependencies: [5, 502, 1957, 4857, 1074, 1090, 4980, 1114, 1109, 573, 7865, 1272, 7867, 1242, 4816, 4488, 7885, 4293, 2]
 // Exports: getReactors, playBurstReaction
 
-// Module 7836 (ReactionActionCreators)
+// Module 7866 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import EmojiUtils from "EmojiUtils" /* 4263 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7837 */;
+import EmojiUtils from "EmojiUtils" /* 4293 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4827 */;
+import MessageStore from "MessageStore" /* 4857 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -140,7 +140,7 @@ let closure_15 = async function _getReactors(arg0, value) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -254,7 +254,7 @@ let closure_17 = async function _addReaction(arg0, value) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -654,7 +654,7 @@ let closure_23 = async function _removeReaction(arg0, value) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -789,7 +789,7 @@ let closure_23 = async function _removeReaction(arg0, value) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4458).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(4488).AccessibilityAnnouncer;
                   intl = channelId(1114).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

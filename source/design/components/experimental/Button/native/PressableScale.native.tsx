@@ -1,11 +1,11 @@
-// Module ID: 8997
-// Function ID: 8998
+// Module ID: 9036
+// Function ID: 9037
 // Name: PressableScale
-// Dependencies: [109, 19, 17, 21, 4343, 5032, 2]
+// Dependencies: [109, 19, 17, 21, 4373, 5062, 2]
 
-// Module 8997 (PressableScale)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import ButtonHooks from "ButtonHooks" /* 5032 */;
+// Module 9036 (PressableScale)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
+import ButtonHooks from "ButtonHooks" /* 5062 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

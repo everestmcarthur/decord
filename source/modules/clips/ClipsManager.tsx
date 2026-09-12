@@ -1,34 +1,34 @@
-// Module ID: 17889
-// Function ID: 17890
+// Module ID: 17919
+// Function ID: 17920
 // Name: clips/ClipsManager
-// Dependencies: [5, 4651, 502, 1908, 4629, 4645, 1914, 5183, 1074, 4648, 7191, 13730, 4661, 4658, 1242, 1935, 573, 13731, 4227, 1115, 13729, 2]
+// Dependencies: [5, 4681, 502, 1908, 4659, 4675, 1914, 5213, 1074, 4678, 7221, 13764, 4691, 4688, 1242, 1935, 573, 13765, 4257, 1150, 13763, 2]
 
-// Module 17889 (clips/ClipsManager)
+// Module 17919 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import DiscordNativeDefault from "DiscordNative" /* 4227 */;
-import StreamKeyUtilsAll from "StreamKeyUtils" /* 4658 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4661 */;
-import isClipsEnabled from "isClipsEnabled" /* 13729 */;
-import ClipsExperiment from "ClipsExperiment" /* 13730 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13731 */;
+import DiscordNativeDefault from "DiscordNative" /* 4257 */;
+import StreamKeyUtilsAll from "StreamKeyUtils" /* 4688 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
+import isClipsEnabled from "isClipsEnabled" /* 13763 */;
+import ClipsExperiment from "ClipsExperiment" /* 13764 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13765 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4645 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
 import ClipsStore from "ClipsStore" /* 1914 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(4651).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5183);
+const getSystemAnalyticsInfo = fn(4681).getSystemAnalyticsInfo;
+const ClipsConstants = fn(5213);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = ClipsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);
-const StreamTypes = fn(4648).StreamTypes;
+const StreamTypes = fn(4678).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -87,10 +87,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
       const id = AuthenticationStore.getId();
-      if (tmp(4661).MediaEngineContextTypes.DEFAULT === context) {
+      if (tmp(4691).MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
-      } else if (tmp(4661).MediaEngineContextTypes.STREAM === context) {
+      } else if (tmp(4691).MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
             const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
@@ -98,7 +98,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
               self.applyStreamRecording(id, rTCConnection);
             }
           }
-          tmpResult = tmp(4658);
+          tmpResult = tmp(4688);
         }
       }
     }

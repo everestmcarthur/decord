@@ -1,12 +1,12 @@
-// Module ID: 16431
-// Function ID: 16432
+// Module ID: 16455
+// Function ID: 16456
 // Name: useGuildsBarSelectedGuildScroller
-// Dependencies: [19, 4428, 2]
+// Dependencies: [19, 4458, 2]
 // Exports: default
 
-// Module 16431 (useGuildsBarSelectedGuildScroller)
+// Module 16455 (useGuildsBarSelectedGuildScroller)
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");

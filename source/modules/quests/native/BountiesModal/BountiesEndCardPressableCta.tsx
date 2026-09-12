@@ -1,24 +1,24 @@
-// Module ID: 15099
-// Function ID: 15100
+// Module ID: 15131
+// Function ID: 15132
 // Name: BountiesEndCardPressableCta
-// Dependencies: [19, 17, 15100, 21, 4606, 576, 11580, 15096, 11379, 11590, 5502, 5500, 7800, 5638, 4602, 2]
+// Dependencies: [19, 17, 15132, 21, 4636, 576, 11619, 15128, 11418, 11629, 5532, 5530, 7830, 5668, 4632, 2]
 // Exports: default
 
-// Module 15099 (BountiesEndCardPressableCta)
+// Module 15131 (BountiesEndCardPressableCta)
 import nativeDefault from "native" /* 576 */;
-import QuestContent from "QuestContent" /* 5500 */;
-import AdCreativeType from "AdCreativeType" /* 5502 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11590 */;
+import QuestContent from "QuestContent" /* 5530 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(15100).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(15132).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
   const size = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };

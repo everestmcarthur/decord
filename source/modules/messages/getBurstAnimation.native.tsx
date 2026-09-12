@@ -1,165 +1,13 @@
-// Module ID: 7857
-// Function ID: 7858
+// Module ID: 7887
+// Function ID: 7888
 // Name: getBurstAnimation
-// Dependencies: [5, 7858, 7859, 7860, 7861, 7862, 7863, 7864, 7865, 7866, 7867, 7868, 7869, 7870, 7871, 7872, 7873, 7874, 7875, 7876, 7877, 7878, 7879, 7880, 7881, 7882, 7883, 7884, 7885, 7886, 7887, 7888, 7889, 7890, 7891, 7892, 7893, 7894, 2]
+// Dependencies: [5, 7888, 7889, 7890, 7891, 7892, 7893, 7894, 7895, 7896, 7897, 7898, 7899, 7900, 7901, 7902, 7903, 7904, 7905, 7906, 7907, 7908, 7909, 7910, 7911, 7912, 7913, 7914, 7915, 7916, 7917, 7918, 7919, 7920, 7921, 7922, 7923, 7924, 2]
 // Exports: getBurstAnimation
 
-// Module 7857 (getBurstAnimation)
+// Module 7887 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(7858);
-    }
-  },
-  {
-    load() {
-      return closure_0(7859);
-    }
-  },
-  {
-    load() {
-      return closure_0(7860);
-    }
-  },
-  {
-    load() {
-      return closure_0(7861);
-    }
-  },
-  {
-    load() {
-      return closure_0(7862);
-    }
-  },
-  {
-    load() {
-      return closure_0(7863);
-    }
-  },
-  {
-    load() {
-      return closure_0(7864);
-    }
-  },
-  {
-    load() {
-      return closure_0(7865);
-    }
-  },
-  {
-    load() {
-      return closure_0(7866);
-    }
-  },
-  {
-    load() {
-      return closure_0(7867);
-    }
-  },
-  {
-    load() {
-      return closure_0(7868);
-    }
-  },
-  {
-    load() {
-      return closure_0(7869);
-    }
-  },
-  {
-    load() {
-      return closure_0(7870);
-    }
-  },
-  {
-    load() {
-      return closure_0(7871);
-    }
-  },
-  {
-    load() {
-      return closure_0(7872);
-    }
-  },
-  {
-    load() {
-      return closure_0(7873);
-    }
-  },
-  {
-    load() {
-      return closure_0(7874);
-    }
-  },
-  {
-    load() {
-      return closure_0(7875);
-    }
-  }
-];
-const items1 = [
-  {
-    load() {
-      return closure_0(7876);
-    }
-  },
-  {
-    load() {
-      return closure_0(7877);
-    }
-  },
-  {
-    load() {
-      return closure_0(7878);
-    }
-  },
-  {
-    load() {
-      return closure_0(7879);
-    }
-  },
-  {
-    load() {
-      return closure_0(7880);
-    }
-  },
-  {
-    load() {
-      return closure_0(7881);
-    }
-  },
-  {
-    load() {
-      return closure_0(7882);
-    }
-  },
-  {
-    load() {
-      return closure_0(7883);
-    }
-  },
-  {
-    load() {
-      return closure_0(7884);
-    }
-  },
-  {
-    load() {
-      return closure_0(7885);
-    }
-  },
-  {
-    load() {
-      return closure_0(7886);
-    }
-  },
-  {
-    load() {
-      return closure_0(7887);
-    }
-  },
   {
     load() {
       return closure_0(7888);
@@ -188,6 +36,158 @@ const items1 = [
   {
     load() {
       return closure_0(7893);
+    }
+  },
+  {
+    load() {
+      return closure_0(7894);
+    }
+  },
+  {
+    load() {
+      return closure_0(7895);
+    }
+  },
+  {
+    load() {
+      return closure_0(7896);
+    }
+  },
+  {
+    load() {
+      return closure_0(7897);
+    }
+  },
+  {
+    load() {
+      return closure_0(7898);
+    }
+  },
+  {
+    load() {
+      return closure_0(7899);
+    }
+  },
+  {
+    load() {
+      return closure_0(7900);
+    }
+  },
+  {
+    load() {
+      return closure_0(7901);
+    }
+  },
+  {
+    load() {
+      return closure_0(7902);
+    }
+  },
+  {
+    load() {
+      return closure_0(7903);
+    }
+  },
+  {
+    load() {
+      return closure_0(7904);
+    }
+  },
+  {
+    load() {
+      return closure_0(7905);
+    }
+  }
+];
+const items1 = [
+  {
+    load() {
+      return closure_0(7906);
+    }
+  },
+  {
+    load() {
+      return closure_0(7907);
+    }
+  },
+  {
+    load() {
+      return closure_0(7908);
+    }
+  },
+  {
+    load() {
+      return closure_0(7909);
+    }
+  },
+  {
+    load() {
+      return closure_0(7910);
+    }
+  },
+  {
+    load() {
+      return closure_0(7911);
+    }
+  },
+  {
+    load() {
+      return closure_0(7912);
+    }
+  },
+  {
+    load() {
+      return closure_0(7913);
+    }
+  },
+  {
+    load() {
+      return closure_0(7914);
+    }
+  },
+  {
+    load() {
+      return closure_0(7915);
+    }
+  },
+  {
+    load() {
+      return closure_0(7916);
+    }
+  },
+  {
+    load() {
+      return closure_0(7917);
+    }
+  },
+  {
+    load() {
+      return closure_0(7918);
+    }
+  },
+  {
+    load() {
+      return closure_0(7919);
+    }
+  },
+  {
+    load() {
+      return closure_0(7920);
+    }
+  },
+  {
+    load() {
+      return closure_0(7921);
+    }
+  },
+  {
+    load() {
+      return closure_0(7922);
+    }
+  },
+  {
+    load() {
+      return closure_0(7923);
     }
   }
 ];
@@ -230,7 +230,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, value, arg2) {
           let burstAnimationHash;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (arg0 === 1) {
         c7 = 3;

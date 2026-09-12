@@ -1,18 +1,18 @@
-// Module ID: 14237
-// Function ID: 14238
+// Module ID: 14272
+// Function ID: 14273
 // Name: migration
-// Dependencies: [19, 21, 4606, 576, 4327, 4301, 4303, 1178, 2]
+// Dependencies: [19, 21, 4636, 576, 4357, 4331, 4333, 1178, 2]
 // Exports: IntlLink
 
-// Module 14237 (migration)
+// Module 14272 (migration)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4301 */;
-import _modDef4303 from "module_4303" /* 4303 */;
+import LinkingDefault from "Linking" /* 4331 */;
+import _modDef4333 from "module_4333" /* 4333 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -30,7 +30,7 @@ export const IntlLink = function IntlLink(children) {
   if (typeof target === "string") {
     let fn = function k() {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef4303.sanitizeUrl(target));
+      return obj.openURL(_modDef4333.sanitizeUrl(target));
     };
     let str = "link";
   } else {
@@ -50,6 +50,6 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4327).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4327).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(4357).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4357).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 };

@@ -1,9 +1,11 @@
 // Module ID: 6741
 // Function ID: 6742
-// Dependencies: [6742]
+// Dependencies: [19]
 
 // Module 6741
-import _modDef6742 from "module_6742" /* 6742 */;
+import _mod19 from "module_19" /* 19 */;
 
+const context = _mod19.createContext(null);
 
-export default _modDef6742;
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

@@ -1,14 +1,14 @@
-// Module ID: 8312
-// Function ID: 8313
+// Module ID: 8344
+// Function ID: 8345
 // Name: useProfileThemeOverrideStore
-// Dependencies: [1074, 560, 4541, 8313, 4458, 2]
+// Dependencies: [1074, 560, 4571, 8345, 4488, 2]
 // Exports: useEffectiveThemeOverride, useHasNonNitroThemeOverride, useIsBannerDisabledByOverride
 
-// Module 8312 (useProfileThemeOverrideStore)
+// Module 8344 (useProfileThemeOverrideStore)
 import Constants from "Constants" /* 1074 */;
-import shared from "shared" /* 4458 */;
-import useThemeDefault from "useTheme" /* 4541 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8313 */;
+import shared from "shared" /* 4488 */;
+import useThemeDefault from "useTheme" /* 4571 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8345 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

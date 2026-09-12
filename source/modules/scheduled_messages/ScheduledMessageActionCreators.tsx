@@ -1,10 +1,10 @@
-// Module ID: 7916
-// Function ID: 7917
+// Module ID: 7946
+// Function ID: 7947
 // Name: ScheduledMessageActionCreators
-// Dependencies: [32, 5, 1074, 1954, 573, 1272, 7917, 4427, 1943, 1384, 2]
+// Dependencies: [32, 5, 1074, 1954, 573, 1272, 7947, 4457, 1943, 1384, 2]
 // Exports: createScheduledMessage, deleteScheduledMessage, fetchScheduledMessages, sendScheduledMessageNow, updateScheduledMessage
 
-// Module 7916 (ScheduledMessageActionCreators)
+// Module 7946 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -46,7 +46,7 @@ let closure_8 = async function _createScheduledMessage(arg0, value) {
           closure_131_4 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -164,7 +164,7 @@ let closure_9 = async function _updateScheduledMessage(arg0, value) {
           closure_131_9 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

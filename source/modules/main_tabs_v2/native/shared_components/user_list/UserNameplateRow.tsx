@@ -1,23 +1,23 @@
-// Module ID: 11000
-// Function ID: 11001
+// Module ID: 11039
+// Function ID: 11040
 // Name: UserNameplateRow
-// Dependencies: [32, 19, 21, 4606, 576, 5657, 4308, 5658, 8910, 5656, 5653, 2]
+// Dependencies: [32, 19, 21, 4636, 576, 5687, 4338, 5688, 8945, 5686, 5683, 2]
 // Exports: UserNameplateRow
 
-// Module 11000 (UserNameplateRow)
+// Module 11039 (UserNameplateRow)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4308 */;
-import TableRow from "TableRow" /* 5656 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 5657 */;
-import Card from "Card" /* 5658 */;
-import NameplateDefault from "Nameplate" /* 8910 */;
+import useToken from "useToken" /* 4338 */;
+import TableRow from "TableRow" /* 5686 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5687 */;
+import Card from "Card" /* 5688 */;
+import NameplateDefault from "Nameplate" /* 8945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -87,7 +87,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
       const obj3 = { children: null };
       const items3 = [tmp12Result, ];
       const obj4 = { adjustSpacingForIcon: null != icon };
-      items3[1] = tmp15(tmp3(5653).TableRowDivider, obj4);
+      items3[1] = tmp15(tmp3(5683).TableRowDivider, obj4);
       obj3.children = items3;
       tmp12Result2 = tmp12(React5, obj3);
     }

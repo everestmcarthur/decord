@@ -1,15 +1,15 @@
-// Module ID: 16760
-// Function ID: 16761
+// Module ID: 16787
+// Function ID: 16788
 // Name: SearchResultLinkPreviewMarkup
-// Dependencies: [5048, 5049, 16761, 8061, 2]
+// Dependencies: [5078, 5079, 16788, 8091, 2]
 
-// Module 16760 (SearchResultLinkPreviewMarkup)
-import MarkupRulesDefault from "MarkupRules" /* 5049 */;
-import combineMarkupRules from "combineMarkupRules" /* 5048 */;
-import MarkupParser from "MarkupParser" /* 8061 */;
+// Module 16787 (SearchResultLinkPreviewMarkup)
+import MarkupRulesDefault from "MarkupRules" /* 5079 */;
+import combineMarkupRules from "combineMarkupRules" /* 5078 */;
+import MarkupParser from "MarkupParser" /* 8091 */;
 
-const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(16761).createSearchResultLinkPreviewReactRules()];
-const MarkupSearchResultLinkPreviewReactRules = fn(16761);
+const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(16788).createSearchResultLinkPreviewReactRules()];
+const MarkupSearchResultLinkPreviewReactRules = fn(16788);
 const importDefaultResultResult = combineMarkupRules(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");

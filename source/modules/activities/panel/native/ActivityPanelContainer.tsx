@@ -1,12 +1,12 @@
-// Module ID: 17088
-// Function ID: 17089
+// Module ID: 17115
+// Function ID: 17116
 // Name: ActivityPanelContainer
-// Dependencies: [19, 1957, 2011, 1956, 21, 504, 4235, 1094, 17089, 17098, 2]
+// Dependencies: [19, 1957, 2011, 1956, 21, 504, 4265, 1094, 17116, 17125, 2]
 
-// Module 17088 (ActivityPanelContainer)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4235 */;
-import ActivityPanelControllerDefault from "ActivityPanelController" /* 17089 */;
-import ActivityPanelUIDefault from "ActivityPanelUI" /* 17098 */;
+// Module 17115 (ActivityPanelContainer)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
+import ActivityPanelControllerDefault from "ActivityPanelController" /* 17116 */;
+import ActivityPanelUIDefault from "ActivityPanelUI" /* 17125 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

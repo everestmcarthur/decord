@@ -1,13 +1,13 @@
-// Module ID: 6458
-// Function ID: 6459
+// Module ID: 6488
+// Function ID: 6489
 // Name: RocketshipSpotIllustration
-// Dependencies: [21, 5638, 6459, 2]
+// Dependencies: [21, 5668, 6489, 2]
 // Exports: RocketshipSpotIllustration
 
-// Module 6458 (RocketshipSpotIllustration)
+// Module 6488 (RocketshipSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6459 from "module_6459" /* 6459 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6489 from "module_6489" /* 6489 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const RocketshipSpotIllustration = function RocketshipSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6459 };
+  const obj2 = { uri: _modDef6489 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

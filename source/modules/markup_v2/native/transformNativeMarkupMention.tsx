@@ -1,14 +1,14 @@
-// Module ID: 8187
-// Function ID: 8188
+// Module ID: 8219
+// Function ID: 8220
 // Name: transformNativeMarkupMention
-// Dependencies: [5078, 5049, 5047, 5057, 2]
+// Dependencies: [5108, 5079, 5077, 5087, 2]
 // Exports: applyChannelMentionIcons, transformNativeMention
 
-// Module 8187 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 5047 */;
-import MarkupRules from "MarkupRules" /* 5049 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5057 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 5078 */;
+// Module 8219 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 5077 */;
+import MarkupRules from "MarkupRules" /* 5079 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5087 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 5108 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -30,18 +30,18 @@ export const transformNativeMention = function transformNativeMention(value, all
     obj4.id = str1;
     return MarkupRules.hydrateUserMention(obj4, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "accessible", everyoneOrHere: 1758136846728074600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "accessible", everyoneOrHere: "reType" }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "accessible", everyoneOrHere: 57444578.91503907 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "accessible", everyoneOrHere: "reType" }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {
     const str16 = value.value.toString();
     if (allowGameMentions.allowGameMentions) {
-      let hydrateGameMentionResult = tmp21(5078).hydrateGameMention(str16, allowGameMentions);
-      const tmp21Result = tmp21(5078);
+      let hydrateGameMentionResult = tmp21(5108).hydrateGameMention(str16, allowGameMentions);
+      const tmp21Result = tmp21(5108);
     } else {
-      hydrateGameMentionResult = { type: tmp21(5047).AST_KEY.TEXT, content: null };
+      hydrateGameMentionResult = { type: tmp21(5077).AST_KEY.TEXT, content: null };
       const _HermesInternal = HermesInternal;
       hydrateGameMentionResult.content = "<@$" + str16 + ">";
     }
@@ -53,11 +53,11 @@ export const transformNativeMention = function transformNativeMention(value, all
     const guildIdFromChannelId = MarkupChannelMentionRule.getGuildIdFromChannelId(allowGameMentions.channelId);
     const channel = MarkupChannelMentionRule.getChannel(str17, allowGameMentions.mentionChannels);
     if (null == channel) {
-      const tmp4Result = tmp4(5057);
+      const tmp4Result = tmp4(5087);
       let handleUnknownChannelResult = tmp4Result.handleUnknownChannel(null, str17, null, guildIdFromChannelId);
     } else {
-      handleUnknownChannelResult = tmp4(5057).parseChannel(channel, null, guildIdFromChannelId);
-      const tmp4Result4 = tmp4(5057);
+      handleUnknownChannelResult = tmp4(5087).parseChannel(channel, null, guildIdFromChannelId);
+      const tmp4Result4 = tmp4(5087);
     }
     const obj5 = {};
     const merged = Object.assign(handleUnknownChannelResult);

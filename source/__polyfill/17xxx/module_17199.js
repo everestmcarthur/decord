@@ -1,9 +1,0 @@
-// Module ID: 17199
-// Function ID: 17200
-// Dependencies: [1122]
-
-// Module 17199
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 24, height: 24, scales: [2, 3, 4], hash: "10d4fca455cecd708fd329431845cd33", name: "deafen", type: "png" });

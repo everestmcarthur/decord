@@ -1,15 +1,15 @@
-// Module ID: 14672
-// Function ID: 14673
+// Module ID: 14706
+// Function ID: 14707
 // Name: UserProfileBadgesEditButton
-// Dependencies: [32, 19, 17, 1954, 21, 4606, 576, 11292, 7235, 7461, 1943, 4573, 14673, 1896, 14671, 1114, 4602, 11293, 11285, 2]
+// Dependencies: [32, 19, 17, 1954, 21, 4636, 576, 11331, 7265, 7491, 1943, 4603, 14707, 1896, 14705, 1114, 4632, 11332, 11324, 2]
 // Exports: default
 
-// Module 14672 (UserProfileBadgesEditButton)
+// Module 14706 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11285 */;
-import BadgeUtils from "BadgeUtils" /* 11293 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11324 */;
+import BadgeUtils from "BadgeUtils" /* 11332 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, badge: { width: 32, height: 32 }, overflowCount: { marginLeft: 2 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -61,7 +61,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   closure_5 = tmp8;
   const items2 = [analyticsLocations, tmp8, tmp6[1]];
   onPress = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14673, dependencyMap.paths), "Customize Badges", { analyticsLocations });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14707, dependencyMap.paths), "Customize Badges", { analyticsLocations });
     if (closure_5) {
       closure_4(ContentDismissActionType.TAKE_ACTION);
     }

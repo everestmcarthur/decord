@@ -1,12 +1,12 @@
-// Module ID: 13156
-// Function ID: 13157
+// Module ID: 13193
+// Function ID: 13194
 // Name: GameRelationshipStoreHooks
-// Dependencies: [32, 7730, 1074, 504, 5483, 2]
+// Dependencies: [32, 7760, 1074, 504, 5513, 2]
 // Exports: useGameFriendsForUser, useGameRelationshipsByType, useHasGameRelationshipsForUser, useHasGameRelationshipsForUserByType, useIncomingGameRelationshipsForUser
 
-// Module 13156 (GameRelationshipStoreHooks)
+// Module 13193 (GameRelationshipStoreHooks)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7730 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7760 */;
 
 const require = globalThis.__r;
 

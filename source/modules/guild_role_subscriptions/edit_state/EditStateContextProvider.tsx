@@ -1,10 +1,10 @@
-// Module ID: 17827
-// Function ID: 17828
+// Module ID: 17857
+// Function ID: 17858
 // Name: EditStateContextProvider
 // Dependencies: [19, 21, 2]
 // Exports: EditStateContextProvider, useEditStateContext
 
-// Module 17827 (EditStateContextProvider)
+// Module 17857 (EditStateContextProvider)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

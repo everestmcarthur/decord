@@ -1,13 +1,13 @@
-// Module ID: 6288
-// Function ID: 6289
+// Module ID: 6318
+// Function ID: 6319
 // Name: LaptopSpotIllustration
-// Dependencies: [21, 5638, 6289, 2]
+// Dependencies: [21, 5668, 6319, 2]
 // Exports: LaptopSpotIllustration
 
-// Module 6288 (LaptopSpotIllustration)
+// Module 6318 (LaptopSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6289 from "module_6289" /* 6289 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6319 from "module_6319" /* 6319 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const LaptopSpotIllustration = function LaptopSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6289 };
+  const obj2 = { uri: _modDef6319 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

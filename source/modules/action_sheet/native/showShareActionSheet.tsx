@@ -1,15 +1,15 @@
-// Module ID: 8447
-// Function ID: 8448
+// Module ID: 8479
+// Function ID: 8480
 // Name: showShareActionSheet
-// Dependencies: [17, 1116, 8448, 8449, 8452, 1232, 2]
+// Dependencies: [17, 1151, 8480, 8481, 8484, 1232, 2]
 // Exports: showShareActionSheet
 
-// Module 8447 (showShareActionSheet)
+// Module 8479 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8448 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8449 */;
-import PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8480 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8481 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1151 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

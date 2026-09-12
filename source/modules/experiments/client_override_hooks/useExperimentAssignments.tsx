@@ -1,13 +1,13 @@
-// Module ID: 11904
-// Function ID: 11905
+// Module ID: 11940
+// Function ID: 11941
 // Name: useExperimentAssignments
-// Dependencies: [32, 4522, 1236, 504, 4527, 2]
+// Dependencies: [32, 4552, 1236, 504, 4557, 2]
 // Exports: getExperimentServerAssignment, useExperimentAssignment, useExperimentServerAssignment
 
-// Module 11904 (useExperimentAssignments)
-import ExperimentManager from "ExperimentManager" /* 4527 */;
+// Module 11940 (useExperimentAssignments)
+import ExperimentManager from "ExperimentManager" /* 4557 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4522 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
 const require = globalThis.__r;

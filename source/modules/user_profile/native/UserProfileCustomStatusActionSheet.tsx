@@ -1,26 +1,26 @@
-// Module ID: 11244
-// Function ID: 11245
+// Module ID: 11283
+// Function ID: 11284
 // Name: UserProfileCustomStatusActionSheet
-// Dependencies: [19, 17, 1371, 7281, 21, 4606, 576, 504, 11245, 4758, 1114, 11246, 8341, 11207, 2]
+// Dependencies: [19, 17, 1371, 7311, 21, 4636, 576, 504, 11284, 4788, 1114, 11285, 8373, 11246, 2]
 // Exports: default
 
-// Module 11244 (UserProfileCustomStatusActionSheet)
+// Module 11283 (UserProfileCustomStatusActionSheet)
 import nativeDefault from "native" /* 576 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8341 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11207 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11245 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11246 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8373 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11246 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11284 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11285 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7281);
+const Constants = fn(7311);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { statusPreviewContainer: { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 }, avatarContainer: { height: AVATAR_CONTAINER_SIZE, width: AVATAR_CONTAINER_SIZE, alignItems: "center", justifyContent: "center" }, avatarStatus: null, customStatusBubble: null };
 let obj3 = { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.avatarStatus = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

@@ -1,15 +1,15 @@
-// Module ID: 15563
-// Function ID: 15564
+// Module ID: 15585
+// Function ID: 15586
 // Name: FriendAnniversaryNotificationSetting
-// Dependencies: [8049, 11562, 1114, 1935, 15564, 8156, 2]
+// Dependencies: [8079, 11601, 1114, 1935, 15586, 8186, 2]
 
-// Module 15563 (FriendAnniversaryNotificationSetting)
+// Module 15585 (FriendAnniversaryNotificationSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8049 */;
-import MobileFriendAnniversaryExperimentDefault from "MobileFriendAnniversaryExperiment" /* 8156 */;
-import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 15564 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import MobileFriendAnniversaryExperimentDefault from "MobileFriendAnniversaryExperiment" /* 8186 */;
+import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 15586 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

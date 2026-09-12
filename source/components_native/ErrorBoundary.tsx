@@ -1,20 +1,20 @@
-// Module ID: 14625
-// Function ID: 14626
+// Module ID: 14660
+// Function ID: 14661
 // Name: ErrorBoundary
-// Dependencies: [5, 32, 19, 17, 11519, 21, 4606, 504, 11883, 5026, 1114, 4317, 1232, 573, 1178, 9940, 4602, 2]
+// Dependencies: [5, 32, 19, 17, 11558, 21, 4636, 504, 11919, 5056, 1114, 4347, 1232, 573, 1178, 9979, 4632, 2]
 
-// Module 14625 (ErrorBoundary)
+// Module 14660 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import AppCrash from "AppCrash" /* 9940 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import AppCrash from "AppCrash" /* 9979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11519 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
 
 require = fn;
 function MaybeClearBuildOverride() {
@@ -62,7 +62,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5026).Button, obj2);
+    return closure_9(tmp2(5056).Button, obj2);
   }
   obj = require("initialize");
 }
@@ -70,7 +70,7 @@ get_ActivityIndicator = fn(17);
 ({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
 const PureComponent = noop.PureComponent;
 class ErrorBoundary extends PureComponent {
@@ -161,7 +161,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-ErrorBoundary.contextType = fn(4317).ThemeContext;
+ErrorBoundary.contextType = fn(4347).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

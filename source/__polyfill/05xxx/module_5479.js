@@ -1,0 +1,9 @@
+// Module ID: 5479
+// Function ID: 5480
+// Dependencies: [1120]
+
+// Module 5479
+import registerAsset from "module_1120" /* 1120 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "79308515b9134f67f900ad544808aa3a", name: "img_domain_dark", type: "svg" });

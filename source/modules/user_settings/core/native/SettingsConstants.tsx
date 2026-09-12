@@ -1,9 +1,9 @@
-// Module ID: 8049
-// Function ID: 8050
+// Module ID: 8079
+// Function ID: 8080
 // Name: SettingsConstants
 // Dependencies: [2]
 
-// Module 8049 (SettingsConstants)
+// Module 8079 (SettingsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsConstants.tsx");

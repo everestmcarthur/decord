@@ -1,11 +1,11 @@
-// Module ID: 4587
-// Function ID: 4588
+// Module ID: 4617
+// Function ID: 4618
 // Name: MobileNativeUpdateConstants
-// Dependencies: [4198, 1115, 1365, 1364, 2]
+// Dependencies: [4228, 1150, 1365, 1364, 2]
 
-// Module 4587 (MobileNativeUpdateConstants)
+// Module 4617 (MobileNativeUpdateConstants)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
-import hooks from "module_4198" /* 4198 */;
+import hooks from "module_4228" /* 4228 */;
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
@@ -18,10 +18,10 @@ if (undefined !== process.env.INTERNAL_UPDATE_URL) {
       const importDefaultResult1 = URLUtilsDefault;
     } else {
       toURLSafeResult = null;
-      const obj3 = fn(1115);
+      const obj3 = fn(1150);
     }
     tmp3 = toURLSafeResult;
-    obj2 = fn(1115);
+    obj2 = fn(1150);
   }
 }
 let ClientInfoUtils = fn(1364);

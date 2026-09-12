@@ -1,30 +1,30 @@
-// Module ID: 14913
-// Function ID: 14914
+// Module ID: 14947
+// Function ID: 14948
 // Name: RequestYourDataSetting
-// Dependencies: [17, 1371, 8049, 1074, 21, 1244, 7057, 1249, 504, 4229, 14914, 1114, 4198, 11562, 14916, 2]
+// Dependencies: [17, 1371, 8079, 1074, 21, 1244, 7087, 1249, 504, 4259, 14948, 1114, 4228, 11601, 14950, 2]
 // Exports: fetchHarvestStatus, useIsHarvestRequestDisabled
 
-// Module 14913 (RequestYourDataSetting)
+// Module 14947 (RequestYourDataSetting)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import _modDef4198 from "module_4198" /* 4198 */;
-import _mod4229 from "module_4229" /* 4229 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7057 */;
-import SettingsConstants from "SettingsConstants" /* 8049 */;
+import _modDef4228 from "module_4228" /* 4228 */;
+import _mod4259 from "module_4259" /* 4259 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7087 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
 import UserStore from "UserStore" /* 1371 */;
 import Constants from "Constants" /* 1074 */;
 import identity from "module_1244" /* 1244 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
-const HarvesterUtils = tmp(14914);
+const HarvesterUtils = tmp(14948);
 function useIsHarvestRequestDisabled() {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4229.shallow);
+  let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4259.shallow);
   let tmp6 = null == stateFromStores;
   if (!tmp6) {
     if (!harvestDisabledResult) {
@@ -47,13 +47,13 @@ const route = SettingBuilders.createRoute({
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useTrailing: function useHarvestRequestSettingTrailing() {
     let tmp = null;
-    if (closure_7((isRequesting) => isRequesting.isRequesting, _mod4229.shallow)) {
+    if (closure_7((isRequesting) => isRequesting.isRequesting, _mod4259.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;
   },
   useDescription: function useRequestYourDataSettingDescription() {
-    const tmp3 = closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4229.shallow);
+    const tmp3 = closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4259.shallow);
     const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
       return null;
@@ -63,9 +63,9 @@ const route = SettingBuilders.createRoute({
     } else if (null == tmp3) {
       return null;
     } else {
-      const addResult = _modDef4198(tmp3.created_at).add(hasOwnProperty, "days");
+      const addResult = _modDef4228(tmp3.created_at).add(hasOwnProperty, "days");
       let formatToPlainStringResult = null;
-      if (!addResult.isBefore(_modDef4198())) {
+      if (!addResult.isBefore(_modDef4228())) {
         const intl = tmp(1114).intl;
         const obj = { date: addResult.format("MMMM Do YYYY") };
         formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.RNDlV9, obj);
@@ -77,7 +77,7 @@ const route = SettingBuilders.createRoute({
   usePreNavigationAction() {
     const items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-    let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4229.shallow);
+    let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4259.shallow);
     let tmp6 = null == stateFromStores;
     if (!tmp6) {
       if (!harvestDisabledResult) {

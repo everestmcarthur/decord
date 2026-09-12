@@ -1,10 +1,10 @@
-// Module ID: 16148
-// Function ID: 16149
+// Module ID: 16172
+// Function ID: 16173
 // Name: EmojiSourceUtils
-// Dependencies: [5, 17, 4263, 1396, 2]
+// Dependencies: [5, 17, 4293, 1396, 2]
 // Exports: getEmojiSource
 
-// Module 16148 (EmojiSourceUtils)
+// Module 16172 (EmojiSourceUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -46,7 +46,7 @@ let closure_4 = async function _getEmojiSource(arg0, value) {
           closure_132_3 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

@@ -1,18 +1,18 @@
-// Module ID: 16485
-// Function ID: 16486
+// Module ID: 16509
+// Function ID: 16510
 // Name: NotificationCenterItemsActions
-// Dependencies: [5, 7711, 1074, 573, 4799, 1250, 1969, 7713, 1272, 1935, 2]
+// Dependencies: [5, 7741, 1074, 573, 4829, 1250, 1969, 7743, 1272, 1935, 2]
 // Exports: bulkMarkNotificationCenterItemsAcked, deleteNotificationCenterItem, fetchNotificationCenterItems, markNotificationCenterItemAcked, markNotificationCenterLocalItemsAcked, markNotificationCenterMentionAcked, resetNotificationCenter, setNotificationCenterActive, setNotificationCenterTabFocused
 
-// Module 16485 (NotificationCenterItemsActions)
+// Module 16509 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4799 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7713 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7743 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7711 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7741 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0, value) {

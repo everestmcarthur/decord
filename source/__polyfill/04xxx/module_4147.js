@@ -1,46 +1,42 @@
 // Module ID: 4147
 // Function ID: 4148
-// Dependencies: [4148, 4149, 4150, 4151, 4152]
+// Dependencies: [3729, 3725, 3726]
+// Exports: default
 
 // Module 4147
-import module_4148 from "module_4148" /* 4148 */;
-import module_4149 from "module_4149" /* 4149 */;
-import module_4150 from "module_4150" /* 4150 */;
-import date_mod from "module_4151" /* 4151 */;
-import date_mod from "module_4152" /* 4152 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
-if (!module_4148) {
-  const obj = { default: module_4148 };
+let module_3729 = module_3729_mod;
+if (!module_3729) {
+  const obj = { default: module_3729 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4148;
+  tmp3 = module_3729;
 }
-if (!module_4149) {
-  const obj2 = { default: module_4149 };
+module_3729 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4149;
+  tmp5 = _typeof;
 }
-if (!module_4150) {
-  const obj3 = { default: module_4150 };
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4150;
+  tmp7 = requiredArgs;
 }
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function setMinutes(module_3729, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_3729);
+  defaultResult1.setMinutes(module_3729.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

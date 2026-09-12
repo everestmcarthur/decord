@@ -1,13 +1,13 @@
-// Module ID: 8654
-// Function ID: 8655
+// Module ID: 8686
+// Function ID: 8687
 // Name: UnknownGameIcon
-// Dependencies: [19, 21, 576, 4307, 8216, 2]
+// Dependencies: [19, 21, 576, 4337, 8248, 2]
 // Exports: UnknownGameIcon
 
-// Module 8654 (UnknownGameIcon)
+// Module 8686 (UnknownGameIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8216 from "module_8216" /* 8216 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod8248 from "module_8248" /* 8248 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const UnknownGameIcon = function UnknownGameIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8216, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8248, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,13 +1,13 @@
-// Module ID: 15986
-// Function ID: 15987
+// Module ID: 16010
+// Function ID: 16011
 // Name: DeclarativeSystemNotifPermissionStore
-// Dependencies: [32, 504, 15987, 15988, 573, 2]
+// Dependencies: [32, 504, 16011, 16012, 573, 2]
 
-// Module 15986 (DeclarativeSystemNotifPermissionStore)
+// Module 16010 (DeclarativeSystemNotifPermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 15987 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 15988 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 16011 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 16012 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

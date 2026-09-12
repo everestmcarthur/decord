@@ -1,27 +1,27 @@
-// Module ID: 11970
-// Function ID: 11971
+// Module ID: 12006
+// Function ID: 12007
 // Name: ExplicitMediaLearnMoreActionSheet
-// Dependencies: [19, 17, 7673, 1074, 21, 4606, 576, 11971, 4819, 7672, 1114, 7455, 4573, 4301, 2024, 8497, 8499, 11770, 1896, 7223, 5743, 4602, 5026, 2]
+// Dependencies: [19, 17, 7703, 1074, 21, 4636, 576, 12007, 4849, 7702, 1114, 7485, 4603, 4331, 2024, 8529, 8531, 11806, 1896, 7253, 5773, 4632, 5056, 2]
 // Exports: default
 
-// Module 11970 (ExplicitMediaLearnMoreActionSheet)
+// Module 12006 (ExplicitMediaLearnMoreActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import openUserSettings from "openUserSettings" /* 7455 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7672 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8497 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8499 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import openUserSettings from "openUserSettings" /* 7485 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7673).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(7703).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" }, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" };
 obj2.art = { alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };

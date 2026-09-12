@@ -1,12 +1,12 @@
-// Module ID: 9624
-// Function ID: 9625
+// Module ID: 9663
+// Function ID: 9664
 // Name: handleJoinEmbeddedActivity
-// Dependencies: [5, 4834, 1957, 2011, 1371, 1956, 1920, 9625, 9605, 4235, 9626, 9628, 9630, 9619, 9636, 9637, 9638, 9595, 2]
+// Dependencies: [5, 4864, 1957, 2011, 1371, 1956, 1920, 9664, 9644, 4265, 9665, 9667, 9669, 9658, 9675, 9676, 9677, 9634, 2]
 // Exports: default
 
-// Module 9624 (handleJoinEmbeddedActivity)
+// Module 9663 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -64,7 +64,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0, value)
           closure_129_18 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

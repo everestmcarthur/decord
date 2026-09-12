@@ -1,16 +1,16 @@
-// Module ID: 16508
-// Function ID: 16509
+// Module ID: 16532
+// Function ID: 16533
 // Name: ForYouHoistedItemsHeader
-// Dependencies: [19, 17, 21, 4606, 576, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 2]
 // Exports: ForYouHoistedItemsHeader
 
-// Module 16508 (ForYouHoistedItemsHeader)
+// Module 16532 (ForYouHoistedItemsHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { container: { marginTop: nativeDefault.space.PX_16 } };
 let closure_2 = createStyles.createStyles(obj2);
 const size = fn(2);

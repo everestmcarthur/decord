@@ -1,13 +1,13 @@
-// Module ID: 11407
-// Function ID: 11408
+// Module ID: 11446
+// Function ID: 11447
 // Name: ThreadNotificationSettingsBottomSheet
-// Dependencies: [1113, 21, 10178, 7270, 7222, 1114, 5736, 7837, 5739, 2]
+// Dependencies: [1113, 21, 10217, 7300, 7252, 1114, 5766, 7867, 5769, 2]
 // Exports: default
 
-// Module 11407 (ThreadNotificationSettingsBottomSheet)
+// Module 11446 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7837 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ThreadConstants.getThreadNotificationOptions;
@@ -16,12 +16,12 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  const threadNotificationSetting = channel(10178).useThreadNotificationSetting(channel);
+  const threadNotificationSetting = channel(10217).useThreadNotificationSetting(channel);
   const obj2 = { header: null, children: null };
   const obj3 = { title: null };
   const intl = channel(1114).intl;
   obj3.title = intl.string(channel(1114).t.h850Ss);
-  obj2.header = jsx(channel(7222).BottomSheetTitleHeader, { title: null });
+  obj2.header = jsx(channel(7252).BottomSheetTitleHeader, { title: null });
   const obj4 = {
     hasIcons: false,
     value: threadNotificationSetting,
@@ -33,12 +33,12 @@ export default function ThreadNotificationsBottomSheet(channel) {
   };
   const intl2 = channel(1114).intl;
   obj4.accessibilityLabel = intl2.string(channel(1114).t.h850Ss);
-  const obj = channel(10178);
+  const obj = channel(10217);
   obj4.children = closure_3().map((label) => {
     const setting = label.setting;
     return jsx(channel(dependencyMap[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
-  obj2.children = jsx(channel(5736).TableRadioGroup, {
+  obj2.children = jsx(channel(5766).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
@@ -47,5 +47,5 @@ export default function ThreadNotificationsBottomSheet(channel) {
     accessibilityLabel: null,
     children: null
   });
-  return jsx(channel(7270).ActionSheet, { header: null, children: null });
+  return jsx(channel(7300).ActionSheet, { header: null, children: null });
 };

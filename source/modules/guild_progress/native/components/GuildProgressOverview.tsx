@@ -1,20 +1,20 @@
-// Module ID: 14028
-// Function ID: 14029
+// Module ID: 14062
+// Function ID: 14063
 // Name: GuildProgressOverview
-// Dependencies: [19, 17, 1074, 21, 4606, 576, 12567, 12570, 7267, 1114, 5174, 1178, 4602, 10030, 14029, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 12603, 12606, 7297, 1114, 5204, 1178, 4632, 10069, 14063, 2]
 // Exports: default
 
-// Module 14028 (GuildProgressOverview)
+// Module 14062 (GuildProgressOverview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7267 */;
-import _modDef10030 from "module_10030" /* 10030 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12567 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12570 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 14029 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7297 */;
+import _modDef10069 from "module_10069" /* 10069 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12603 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12606 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 14063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
 const React5 = createStyles.createStyles(obj2);
 const size = fn(2);

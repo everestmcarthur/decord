@@ -1,13 +1,13 @@
-// Module ID: 15466
-// Function ID: 15467
+// Module ID: 15488
+// Function ID: 15489
 // Name: EmojiSmilingFaceWithHeartsIcon
-// Dependencies: [19, 21, 576, 4307, 15467, 2]
+// Dependencies: [19, 21, 576, 4337, 15489, 2]
 // Exports: EmojiSmilingFaceWithHeartsIcon
 
-// Module 15466 (EmojiSmilingFaceWithHeartsIcon)
+// Module 15488 (EmojiSmilingFaceWithHeartsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod15467 from "module_15467" /* 15467 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod15489 from "module_15489" /* 15489 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiSmilingFaceWithHeartsIcon = function EmojiSmilingFaceWithHeart
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15467, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15489, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,26 +1,26 @@
-// Module ID: 17672
-// Function ID: 17673
+// Module ID: 17702
+// Function ID: 17703
 // Name: GuildSettingsServerTagColorPickerActionSheet
-// Dependencies: [32, 19, 17, 8018, 21, 576, 4606, 14651, 4456, 1477, 4343, 10162, 1114, 9883, 4573, 7223, 7222, 5024, 9274, 13968, 4602, 9884, 14652, 9847, 5026, 2]
+// Dependencies: [32, 19, 17, 8048, 21, 576, 4636, 14685, 4486, 1477, 4373, 10201, 1114, 9922, 4603, 7253, 7252, 5054, 9313, 14002, 4632, 9923, 14686, 9886, 5056, 2]
 // Exports: default
 
-// Module 17672 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 17702 (GuildSettingsServerTagColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4456 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14651 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8018);
+const GuildTagConstants = fn(8048);
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire, GUILD_TAG_BADGE_PALETTE_PRESETS: closure_7, GuildTagBadgeSize: closure_8 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = { container: { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 }, preview: null, previewChiplet: null, colorTabs: null, saturationValuePicker: null, saturationValueColorBox: null, saturationValueColorBoxInner: null, selector: null, huePicker: null, hueColorBarInner: null, hexInput: null, buttonGroup: null };
   const obj2 = { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 };

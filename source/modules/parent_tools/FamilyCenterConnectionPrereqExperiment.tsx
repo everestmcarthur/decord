@@ -1,9 +1,9 @@
-// Module ID: 12021
-// Function ID: 12022
+// Module ID: 12057
+// Function ID: 12058
 // Name: FamilyCenterConnectionPrereqExperiment
 // Dependencies: [1433, 2]
 
-// Module 12021 (FamilyCenterConnectionPrereqExperiment)
+// Module 12057 (FamilyCenterConnectionPrereqExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

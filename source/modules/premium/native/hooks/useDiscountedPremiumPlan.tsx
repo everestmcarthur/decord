@@ -1,12 +1,12 @@
-// Module ID: 9471
-// Function ID: 9472
+// Module ID: 9510
+// Function ID: 9511
 // Name: useDiscountedPremiumPlan
-// Dependencies: [19, 7310, 504, 2]
+// Dependencies: [19, 7340, 504, 2]
 // Exports: useDiscountedPremiumPlan
 
-// Module 9471 (useDiscountedPremiumPlan)
+// Module 9510 (useDiscountedPremiumPlan)
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7310 */;
+import IAPStore from "IAPStore" /* 7340 */;
 
 const require = globalThis.__r;
 

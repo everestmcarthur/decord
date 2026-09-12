@@ -1,20 +1,20 @@
-// Module ID: 13921
-// Function ID: 13922
+// Module ID: 13955
+// Function ID: 13956
 // Name: QRScannerModal
-// Dependencies: [32, 19, 17, 1074, 7611, 21, 1115, 13922, 576, 7111, 1611, 1365, 13902, 4809, 13917, 1896, 7455, 12007, 4301, 4951, 1114, 9140, 7162, 1178, 2]
+// Dependencies: [32, 19, 17, 1074, 7641, 21, 1150, 13956, 576, 7141, 1611, 1365, 13936, 4839, 13951, 1896, 7485, 12043, 4331, 4981, 1114, 9179, 7192, 1178, 2]
 // Exports: default
 
-// Module 13921 (QRScannerModal)
+// Module 13955 (QRScannerModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import _modDef7162 from "module_7162" /* 7162 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9140 */;
-import QRLoginUtils from "QRLoginUtils" /* 13902 */;
-import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 13922 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import _modDef7192 from "module_7192" /* 7192 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
+import QRLoginUtils from "QRLoginUtils" /* 13936 */;
+import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 13956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,10 +26,10 @@ function DCDQRScanner(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, requireNativeComponent } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-let closure_7 = fn(7611).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_7 = fn(7641).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = QRScannerNativeComponentDefault;
 } else {
@@ -84,10 +84,10 @@ export default function QRScannerModal(showHelp) {
           }
           const result = QRLoginUtils.findRemoteAuthFingerprint(url.hostname, str);
           if (null != result) {
-            tmp21(4809).pop();
-            const tmp21Result = tmp21(4809);
+            tmp21(4839).pop();
+            const tmp21Result = tmp21(4839);
             obj2 = { remoteAuthFingerprint: result };
-            tmp21(4809).pushLazy(tmp3(1896)(13917, tmp22.paths), obj2);
+            tmp21(4839).pushLazy(tmp3(1896)(13951, tmp22.paths), obj2);
           } else {
             let match;
             if (str != null) {
@@ -95,17 +95,17 @@ export default function QRScannerModal(showHelp) {
             }
             if (null != match) {
               if (null != str) {
-                tmp21(4809).pop();
-                const tmp21Result5 = tmp21(4809);
+                tmp21(4839).pop();
+                const tmp21Result5 = tmp21(4839);
                 const obj3 = { screen: UserSettingsSections.FAMILY_CENTER };
-                tmp3(7455).openUserSettings(obj3);
-                const tmp3Result = tmp3(7455);
-                const result1 = tmp3(12007).handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
+                tmp3(7485).openUserSettings(obj3);
+                const tmp3Result = tmp3(7485);
+                const result1 = tmp3(12043).handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
               }
             }
-            tmp21(4301).openURL(nativeEvent.nativeEvent.result, undefined, false);
+            tmp21(4331).openURL(nativeEvent.nativeEvent.result, undefined, false);
             let tmp9 = tmp21;
-            const tmp21Result6 = tmp21(4301);
+            const tmp21Result6 = tmp21(4331);
           }
         }
       } else {
@@ -118,7 +118,7 @@ export default function QRScannerModal(showHelp) {
         actions_AlertActionCreatorsDefault.show(obj4);
         tmp9 = importDefault;
       }
-      tmp9(4809).pop();
+      tmp9(4839).pop();
     };
     tmp10Result = tmp10(DCDQRScanner, obj3);
     tmp14 = tmp10;
@@ -129,7 +129,7 @@ export default function QRScannerModal(showHelp) {
   const tmp8 = closure_9;
   let intl = onScanSuccess(1114).intl;
   obj4.accessibilityLabel = intl.string(onScanSuccess(1114).t.cpT0Cq);
-  obj4.source = _modDef7162;
+  obj4.source = _modDef7192;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj4.style = items2;
   obj4.onPress = ModalActionCreatorsDefault.pop;

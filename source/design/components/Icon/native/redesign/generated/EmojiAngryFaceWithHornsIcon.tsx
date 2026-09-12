@@ -1,13 +1,13 @@
-// Module ID: 15424
-// Function ID: 15425
+// Module ID: 15446
+// Function ID: 15447
 // Name: EmojiAngryFaceWithHornsIcon
-// Dependencies: [19, 21, 576, 4307, 15425, 2]
+// Dependencies: [19, 21, 576, 4337, 15447, 2]
 // Exports: EmojiAngryFaceWithHornsIcon
 
-// Module 15424 (EmojiAngryFaceWithHornsIcon)
+// Module 15446 (EmojiAngryFaceWithHornsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod15425 from "module_15425" /* 15425 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod15447 from "module_15447" /* 15447 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiAngryFaceWithHornsIcon = function EmojiAngryFaceWithHornsIcon(
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15425, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15447, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

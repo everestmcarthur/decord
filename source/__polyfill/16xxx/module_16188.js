@@ -1,9 +1,9 @@
 // Module ID: 16188
 // Function ID: 16189
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 16188
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 18, height: 18, scales: [1, 2], hash: "424c540aff53032ef3cdcb5f4766723e", name: "ic_rulebook_16px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [1, 2, 3], hash: "bd1486d1560b353007e677fb6cc6f8f2", name: "ic_upload", type: "png" });

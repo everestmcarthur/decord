@@ -1,13 +1,13 @@
-// Module ID: 12679
-// Function ID: 12680
+// Module ID: 12715
+// Function ID: 12716
 // Name: getBoostRowMessageText
-// Dependencies: [1114, 2428, 12674, 2]
+// Dependencies: [1114, 2428, 12710, 2]
 // Exports: default
 
-// Module 12679 (getBoostRowMessageText)
+// Module 12715 (getBoostRowMessageText)
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12674 */;
+import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12710 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");

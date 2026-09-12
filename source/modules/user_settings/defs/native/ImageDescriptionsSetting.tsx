@@ -1,26 +1,26 @@
-// Module ID: 15525
-// Function ID: 15526
+// Module ID: 15547
+// Function ID: 15548
 // Name: ImageDescriptionsSetting
-// Dependencies: [1185, 8049, 1935, 15526, 11562, 1114, 2]
+// Dependencies: [1185, 8079, 1935, 15548, 11601, 1114, 2]
 // Exports: onImageDescriptionSettingValueChange
 
-// Module 15525 (ImageDescriptionsSetting)
+// Module 15547 (ImageDescriptionsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15526 */;
+import UserSettingsText from "UserSettingsText" /* 15548 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   UserSettingsText.setImageDescriptions({ videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode });
 }
-const SettingBuilders = fn(11562);
+const SettingBuilders = fn(11601);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
   },
-  parent: fn(8049).MobileUserSettings.CHAT,
+  parent: fn(8079).MobileUserSettings.CHAT,
   useValue: function useImageDescriptionSettingValue() {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();

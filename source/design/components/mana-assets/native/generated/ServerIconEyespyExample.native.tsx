@@ -1,13 +1,13 @@
-// Module ID: 6498
-// Function ID: 6499
+// Module ID: 6528
+// Function ID: 6529
 // Name: ServerIconEyespyExample
-// Dependencies: [21, 5638, 6499, 2]
+// Dependencies: [21, 5668, 6529, 2]
 // Exports: ServerIconEyespyExample
 
-// Module 6498 (ServerIconEyespyExample)
+// Module 6528 (ServerIconEyespyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6499 from "module_6499" /* 6499 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6529 from "module_6529" /* 6529 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconEyespyExample = function ServerIconEyespyExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6499 };
+  const obj2 = { uri: _modDef6529 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

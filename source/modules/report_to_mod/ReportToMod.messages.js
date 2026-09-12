@@ -1,9 +1,9 @@
 // Module ID: 2528
 // Function ID: 2529
-// Dependencies: [1120, 2529, 1155, 2]
+// Dependencies: [1118, 2529, 1155, 2]
 
 // Module 2528
-import AssetJsonUtils from "AssetJsonUtils" /* 1120 */;
+import AssetJsonUtils from "AssetJsonUtils" /* 1118 */;
 import _mod2529 from "module_2529" /* 2529 */;
 import module_1155_mod from "module_1155" /* 1155 */;
 import size from "module_2" /* 2 */;

@@ -1,23 +1,23 @@
-// Module ID: 13121
-// Function ID: 13122
+// Module ID: 13158
+// Function ID: 13159
 // Name: CutoutableAvatarImage
-// Dependencies: [19, 17, 13122, 21, 3, 1396, 13123, 13124, 8905, 5638, 4343, 5025, 1256, 8542, 558, 2]
+// Dependencies: [19, 17, 13159, 21, 3, 1396, 13160, 13161, 8940, 5668, 4373, 5055, 1256, 8574, 558, 2]
 
-// Module 13121 (CutoutableAvatarImage)
+// Module 13158 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import v1 from "v1" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import ClipView from "ClipView" /* 8905 */;
-import getChannelIcon from "getChannelIcon" /* 13123 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13124 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import ClipView from "ClipView" /* 8940 */;
+import getChannelIcon from "getChannelIcon" /* 13160 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13161 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8542);
-const inlineStylesDefault = tmp9(8542);
+const inlineStyles = Circle(8574);
+const inlineStylesDefault = tmp9(8574);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -41,42 +41,42 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
   const fn = function h() {
     const size = cutout;
     if (cutout.shape === ClipView.CutoutShape.RoundedRect) {
-      const size1 = { shape: tmp(8905).CutoutShape.RoundedRect, x: tmp(5025).withSpring(size.x, CHANNEL_SPRING_CONFIG), y: null, width: null, height: null, cornerRadius: null };
-      const tmpResult = tmp(5025);
-      size1.y = tmp(5025).withSpring(size.y, CHANNEL_SPRING_CONFIG);
-      const tmpResult8 = tmp(5025);
-      size1.width = tmp(5025).withSpring(size.width, CHANNEL_SPRING_CONFIG);
-      const tmpResult9 = tmp(5025);
-      size1.height = tmp(5025).withSpring(size.height, CHANNEL_SPRING_CONFIG);
-      const tmpResult10 = tmp(5025);
-      size1.cornerRadius = tmp(5025).withSpring(size.cornerRadius, CHANNEL_SPRING_CONFIG);
+      const size1 = { shape: tmp(8940).CutoutShape.RoundedRect, x: tmp(5055).withSpring(size.x, CHANNEL_SPRING_CONFIG), y: null, width: null, height: null, cornerRadius: null };
+      const tmpResult = tmp(5055);
+      size1.y = tmp(5055).withSpring(size.y, CHANNEL_SPRING_CONFIG);
+      const tmpResult8 = tmp(5055);
+      size1.width = tmp(5055).withSpring(size.width, CHANNEL_SPRING_CONFIG);
+      const tmpResult9 = tmp(5055);
+      size1.height = tmp(5055).withSpring(size.height, CHANNEL_SPRING_CONFIG);
+      const tmpResult10 = tmp(5055);
+      size1.cornerRadius = tmp(5055).withSpring(size.cornerRadius, CHANNEL_SPRING_CONFIG);
       let point = size1;
-      const tmpResult11 = tmp(5025);
+      const tmpResult11 = tmp(5055);
     } else {
-      point = { shape: tmp(8905).CutoutShape.Circle, x: tmp(5025).withSpring(size.x, CHANNEL_SPRING_CONFIG), y: null, size: null };
-      const tmpResult12 = tmp(5025);
-      point.y = tmp(5025).withSpring(size.y, CHANNEL_SPRING_CONFIG);
-      const tmpResult13 = tmp(5025);
-      point.size = tmp(5025).withSpring(size.size, CHANNEL_SPRING_CONFIG);
-      const tmpResult14 = tmp(5025);
+      point = { shape: tmp(8940).CutoutShape.Circle, x: tmp(5055).withSpring(size.x, CHANNEL_SPRING_CONFIG), y: null, size: null };
+      const tmpResult12 = tmp(5055);
+      point.y = tmp(5055).withSpring(size.y, CHANNEL_SPRING_CONFIG);
+      const tmpResult13 = tmp(5055);
+      point.size = tmp(5055).withSpring(size.size, CHANNEL_SPRING_CONFIG);
+      const tmpResult14 = tmp(5055);
     }
     const obj = { cutouts: null };
     const items = [point];
     obj.cutouts = items;
     return obj;
   };
-  obj2 = { cutout, CutoutShape: cutout(8905).CutoutShape, withSpring: cutout(5025).withSpring, CHANNEL_SPRING_CONFIG };
+  obj2 = { cutout, CutoutShape: cutout(8940).CutoutShape, withSpring: cutout(5055).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj2;
   fn.__workletHash = 12529564164821;
   fn.__initData = __initData;
-  const animatedProps = cutout(4343).useAnimatedProps(fn);
-  let obj = cutout(4343);
+  const animatedProps = cutout(4373).useAnimatedProps(fn);
+  let obj = cutout(4373);
   const obj3 = { style, animatedProps, children: null };
   const obj4 = { style: null, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true };
   let items = [obj2.image, imageStyle];
   obj4.style = items;
   obj3.children = closure_7(FastImageDefault, obj4);
-  return closure_7(cutout(8905).ClipViewAnimated, obj3);
+  return closure_7(cutout(8940).ClipViewAnimated, obj3);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {
@@ -183,7 +183,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(13122).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13159).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

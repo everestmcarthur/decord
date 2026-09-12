@@ -1,23 +1,23 @@
-// Module ID: 11566
-// Function ID: 11567
+// Module ID: 11605
+// Function ID: 11606
 // Name: ActivitiesActionCreators
-// Dependencies: [5, 1957, 1074, 4599, 573, 1272, 7754, 7529, 4786, 11567, 11568, 4619, 2]
+// Dependencies: [5, 1957, 1074, 4629, 573, 1272, 7784, 7559, 4816, 11606, 11607, 4649, 2]
 
-// Module 11566 (ActivitiesActionCreators)
+// Module 11605 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
-import getActivitySessionKey from "getActivitySessionKey" /* 11567 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
+import getActivitySessionKey from "getActivitySessionKey" /* 11606 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = globalThis.__r;
 
-const RichPresenceInviteBarActionCreators = tmp8(11568);
+const RichPresenceInviteBarActionCreators = tmp8(11607);
 require = fn;
 const Constants = fn(1074);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 

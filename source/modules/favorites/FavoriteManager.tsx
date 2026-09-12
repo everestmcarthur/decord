@@ -1,12 +1,12 @@
-// Module ID: 17583
-// Function ID: 17584
+// Module ID: 17613
+// Function ID: 17614
 // Name: FavoriteManager
-// Dependencies: [502, 16273, 1074, 10312, 1982, 7191, 2]
+// Dependencies: [502, 16297, 1074, 10351, 1982, 7221, 2]
 
-// Module 17583 (FavoriteManager)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
+// Module 17613 (FavoriteManager)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -85,7 +85,7 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(16273);
+const FavoritesGuildSuggestionsStore = fn(16297);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
 const prototype = function FavoriteManager() {

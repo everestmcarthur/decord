@@ -1,10 +1,10 @@
-// Module ID: 10219
-// Function ID: 10220
+// Module ID: 10258
+// Function ID: 10259
 // Name: useFormattedTimestamp
-// Dependencies: [32, 19, 1090, 7513, 4198, 5073, 2]
+// Dependencies: [32, 19, 1090, 7543, 4228, 5103, 2]
 // Exports: default
 
-// Module 10219 (useFormattedTimestamp)
+// Module 10258 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,9 +1,9 @@
 // Module ID: 2166
 // Function ID: 2167
-// Dependencies: [1120, 2167, 1155, 2]
+// Dependencies: [1118, 2167, 1155, 2]
 
 // Module 2166
-import AssetJsonUtils from "AssetJsonUtils" /* 1120 */;
+import AssetJsonUtils from "AssetJsonUtils" /* 1118 */;
 import _mod2167 from "module_2167" /* 2167 */;
 import module_1155_mod from "module_1155" /* 1155 */;
 import size from "module_2" /* 2 */;

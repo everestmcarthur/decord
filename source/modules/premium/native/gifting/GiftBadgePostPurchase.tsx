@@ -1,26 +1,26 @@
-// Module ID: 11123
-// Function ID: 11124
+// Module ID: 11162
+// Function ID: 11163
 // Name: GiftBadgePostPurchase
-// Dependencies: [19, 17, 8277, 11124, 1954, 21, 4606, 576, 1611, 4809, 4465, 5026, 11125, 1114, 2492, 11126, 4602, 4574, 4575, 10838, 11127, 4427, 1943, 504, 8269, 2]
+// Dependencies: [19, 17, 8309, 11163, 1954, 21, 4636, 576, 1611, 4839, 4495, 5056, 11164, 1114, 2492, 11165, 4632, 4604, 4605, 10877, 11166, 4457, 1943, 504, 8301, 2]
 // Exports: default
 
-// Module 11123 (GiftBadgePostPurchase)
+// Module 11162 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _modDef2492 from "module_2492" /* 2492 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
-import HapticUtils from "HapticUtils" /* 4574 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import BadgeId from "BadgeId" /* 8269 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11126 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11127 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+import HapticUtils from "HapticUtils" /* 4604 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import BadgeId from "BadgeId" /* 8301 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11165 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11166 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8277 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
 
 require = fn;
 function PostPurchaseFooter(onSendGift) {
@@ -33,23 +33,23 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(4465).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(4495).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(11125).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(11164).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1114).intl;
   obj2.text = intl.string(_modDef2492.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5026).Button, obj2), ];
+  const items1 = [closure_10(onSendGift(5056).Button, obj2), ];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1114).intl;
   obj4.text = intl2.string(_modDef2492["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5026).Button, obj4);
+  items1[1] = closure_10(onSendGift(5056).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -81,7 +81,7 @@ function LevelUpScreen(arg0) {
   let tmp7Result = null != newTier.simple_icon_url;
   if (tmp7Result) {
     const obj4 = { icon: newTier.simple_icon_url, size: 140 };
-    tmp7Result = tmp7(tmp(10838), obj4);
+    tmp7Result = tmp7(tmp(10877), obj4);
   }
   obj3.children = tmp7Result;
   const items = [closure_1_10(View, obj3), ];
@@ -110,7 +110,7 @@ function LevelUpScreen(arg0) {
     }
     obj10.nextTierName = str2;
     obj9.children = intl2.format(tmp(2492)["6QVlxw"], obj10);
-    tmp7Result2 = tmp7(tmp9(4602).Text, obj9);
+    tmp7Result2 = tmp7(tmp9(4632).Text, obj9);
   }
   items2[1] = tmp7Result2;
   obj7.children = items2;
@@ -123,12 +123,12 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11124);
+const GiftingBadgeConstants = fn(11163);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { screenContainer: { flex: 1 }, content: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 }, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };

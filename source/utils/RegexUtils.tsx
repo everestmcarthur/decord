@@ -1,9 +1,9 @@
-// Module ID: 4593
-// Function ID: 4594
+// Module ID: 4623
+// Function ID: 4624
 // Name: RegexUtils
 // Dependencies: [2]
 
-// Module 4593 (RegexUtils)
+// Module 4623 (RegexUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/RegexUtils.tsx");

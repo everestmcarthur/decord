@@ -1,9 +1,9 @@
-// Module ID: 5602
-// Function ID: 5603
+// Module ID: 5632
+// Function ID: 5633
 // Name: GuildProfileVisibility
 // Dependencies: [2]
 
-// Module 5602 (GuildProfileVisibility)
+// Module 5632 (GuildProfileVisibility)
 import size from "module_2" /* 2 */;
 
 const obj = { VISIBLE: new Set([1, 3]) };

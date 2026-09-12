@@ -1,90 +1,120 @@
 // Module ID: 5266
 // Function ID: 5267
-// Dependencies: [5267, 5268, 5270, 5271, 5272, 5276, 5277, 5278, 5279, 5264]
+// Dependencies: []
+// Exports: findMatroskaDocTypeElements, getFileChunk, isAvifStringIncluded, isFileContaineJfiforExifHeader, isFlvStringIncluded, isHeicSignatureIncluded, isftypStringIncluded
 
 // Module 5266
-import _mod5264 from "module_5264" /* 5264 */;
-import _modDef5267 from "module_5267" /* 5267 */;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  parseAppMarkers(byteLength, flag2) {
-    if (_modDef5267.USE_TIFF) {
-      if (tmpResult.isTiffFile(byteLength)) {
-        const tmpResult16 = tmp(5268);
-        const findTiffOffsetsResult = tmp(5268).findTiffOffsets();
-        const obj = { fileType: { value: "tiff", description: "TIFF" } };
-        return _mod5264.objectAssign({}, findTiffOffsetsResult, obj);
-      }
-      tmpResult = tmp(5268);
-    }
-    if (_modDef5267.USE_JPEG) {
-      if (tmpResult17.isJpegFile(byteLength)) {
-        const tmpResult18 = tmp(5270);
-        const findJpegOffsetsResult = tmp(5270).findJpegOffsets(byteLength);
-        const obj2 = { fileType: { value: "jpeg", description: "JPEG" } };
-        return _mod5264.objectAssign({}, findJpegOffsetsResult, obj2);
-      }
-      tmpResult17 = tmp(5270);
-    }
-    if (_modDef5267.USE_PNG) {
-      if (tmpResult19.isPngFile(byteLength)) {
-        const tmpResult20 = tmp(5271);
-        const findPngOffsetsResult = tmp(5271).findPngOffsets(byteLength, flag2);
-        const obj3 = { fileType: { value: "png", description: "PNG" } };
-        return _mod5264.objectAssign({}, findPngOffsetsResult, obj3);
-      }
-      tmpResult19 = tmp(5271);
-    }
-    if (_modDef5267.USE_HEIC) {
-      if (tmpResult21.isHeicFile(byteLength)) {
-        const tmpResult22 = tmp(5272);
-        const findHeicOffsetsResult = tmp(5272).findHeicOffsets(byteLength);
-        const obj4 = { fileType: { value: "heic", description: "HEIC" } };
-        return _mod5264.objectAssign({}, findHeicOffsetsResult, obj4);
-      }
-      tmpResult21 = tmp(5272);
-    }
-    if (_modDef5267.USE_AVIF) {
-      if (tmpResult23.isAvifFile(byteLength)) {
-        const tmpResult24 = tmp(5276);
-        const findAvifOffsetsResult = tmp(5276).findAvifOffsets(byteLength);
-        const obj5 = { fileType: { value: "avif", description: "AVIF" } };
-        return _mod5264.objectAssign({}, findAvifOffsetsResult, obj5);
-      }
-      tmpResult23 = tmp(5276);
-    }
-    if (_modDef5267.USE_WEBP) {
-      if (tmpResult25.isWebpFile(byteLength)) {
-        const tmpResult26 = tmp(5277);
-        const findOffsetsResult = tmp(5277).findOffsets(byteLength);
-        const obj6 = { fileType: { value: "webp", description: "WebP" } };
-        return _mod5264.objectAssign({}, findOffsetsResult, obj6);
-      }
-      tmpResult25 = tmp(5277);
-    }
-    if (_modDef5267.USE_GIF) {
-      if (tmpResult27.isGifFile(byteLength)) {
-        const tmpResult28 = tmp(5278);
-        const findOffsetsResult1 = tmp(5278).findOffsets(byteLength);
-        const obj7 = { fileType: { value: "gif", description: "GIF" } };
-        return _mod5264.objectAssign({}, findOffsetsResult1, obj7);
-      }
-      tmpResult27 = tmp(5278);
-    }
-    if (_modDef5267.USE_XMP) {
-      if (tmpResult29.isXMLFile(byteLength)) {
-        const tmpResult30 = tmp(5279);
-        const findOffsetsResult2 = tmp(5279).findOffsets(byteLength);
-        const obj8 = { fileType: { value: "xml", description: "XML" } };
-        return _mod5264.objectAssign({}, findOffsetsResult2, obj8);
-      }
-      tmpResult29 = tmp(5279);
-    }
-    const error = new Error("Invalid image format");
-    throw error;
+function fetchFromObject(FileTypes, arr) {
+  const index = arr.indexOf(".");
+  if (index > -1) {
+    let tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
+  } else {
+    tmp2 = FileTypes[arr];
   }
+  return tmp2;
+}
+
+export const getFileChunk = function getFileChunk(fileChunk, chunkSize) {
+  let num = chunkSize;
+  if (chunkSize === undefined) {
+    num = 32;
+  }
+  let uint8Array = fileChunk;
+  if (fileChunk instanceof ArrayBuffer) {
+    const _Uint8Array = Uint8Array;
+    uint8Array = new Uint8Array(fileChunk);
+  }
+  if (!Array.isArray(fileChunk)) {
+    const _ArrayBuffer = ArrayBuffer;
+    if (!(fileChunk instanceof ArrayBuffer)) {
+      const _Uint8Array2 = Uint8Array;
+      if (!(fileChunk instanceof Uint8Array)) {
+        const _TypeError = TypeError;
+        const _HermesInternal = HermesInternal;
+        const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
+        throw typeError;
+      }
+    }
+  }
+  const arr = Array.from(uint8Array.slice(0, num));
+  if (arr.every((item) => {
+    let tmp = typeof item === "number";
+    if (typeof item === "number") {
+      const _isNaN = isNaN;
+      tmp = !isNaN(item);
+    }
+    return tmp;
+  })) {
+    return arr;
+  } else {
+    const _TypeError2 = TypeError;
+    const typeError1 = new TypeError("File content contains illegal values");
+    throw typeError1;
+  }
+};
+export { fetchFromObject };
+export const findMatroskaDocTypeElements = function findMatroskaDocTypeElements(fileChunk) {
+  const mapped = fileChunk.map((item) => String.fromCharCode(item));
+  const joined = mapped.join("");
+  let str = "webm";
+  if (!joined.includes("webm")) {
+    let str3;
+    if (joined.includes("matroska")) {
+      str3 = "mkv";
+    }
+    str = str3;
+  }
+  return str;
+};
+export const isftypStringIncluded = function isftypStringIncluded(fileChunk) {
+  const items = [102, 116, 121, 112];
+  let num = 0;
+  if (0 < fileChunk.length - items.length) {
+    while (true) {
+      let num2 = 0;
+      let flag = true;
+      if (0 < items.length) {
+        flag = false;
+        while (fileChunk[num + num2] === items[num2]) {
+          let sum = num2 + 1;
+          num2 = sum;
+          flag = true;
+          if (sum >= items.length) {
+            break;
+          }
+        }
+      }
+      if (flag) {
+        break;
+      } else {
+        num = num + 1;
+      }
+    }
+    return true;
+  }
+  return false;
+};
+export const isFlvStringIncluded = function isFlvStringIncluded(fileChunk) {
+  const substr = fileChunk.slice(0, 3);
+  const decoder = new TextDecoder();
+  const uint8Array = new Uint8Array(substr);
+  return decoder.decode(uint8Array).includes("FLV");
+};
+export const isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(arg0) {
+  let tmp2 = 224 === tmp;
+  if (!tmp2) {
+    tmp2 = 225 === tmp;
+  }
+  return tmp2;
+};
+export const isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
+  const substr = fileChunk.slice(4, 12);
+  const mapped = substr.map((item) => String.fromCharCode(item));
+  return "ftypavif" === mapped.join("");
+};
+export const isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
+  const mapped = fileChunk.map((item) => String.fromCharCode(item));
+  closure_0 = mapped.join("");
+  const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
+  return items.some((item) => closure_0.includes(item));
 };

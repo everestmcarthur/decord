@@ -1,11 +1,11 @@
-// Module ID: 17811
-// Function ID: 17812
+// Module ID: 17841
+// Function ID: 17842
 // Name: CreatorMonetizationSettingsDisabledContext
-// Dependencies: [19, 21, 7326, 2]
+// Dependencies: [19, 21, 7356, 2]
 // Exports: CreatorMonetizationSettingsDisabledContextProvider, useCreatorMonetizationSettingsDisabled
 
-// Module 17811 (CreatorMonetizationSettingsDisabledContext)
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7326 */;
+// Module 17841 (CreatorMonetizationSettingsDisabledContext)
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7356 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

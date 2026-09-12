@@ -1,10 +1,10 @@
-// Module ID: 8814
-// Function ID: 8815
+// Module ID: 8848
+// Function ID: 8849
 // Name: calculateSteamReviewScoreDescription
 // Dependencies: [1934, 2]
 // Exports: calculateSteamReviewScoreDescription
 
-// Module 8814 (calculateSteamReviewScoreDescription)
+// Module 8848 (calculateSteamReviewScoreDescription)
 import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
 import size from "module_2" /* 2 */;
 

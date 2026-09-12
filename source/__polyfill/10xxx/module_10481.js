@@ -1,9 +1,9 @@
 // Module ID: 10481
 // Function ID: 10482
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 10481
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 24, height: 24, scales: [2, 3], hash: "14e9f26f2a47abbd4dc478a8a748d9e9", name: "history", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26998a89da8a094ca27d79afeba3b61f", name: "FoodIcon", type: "png" });

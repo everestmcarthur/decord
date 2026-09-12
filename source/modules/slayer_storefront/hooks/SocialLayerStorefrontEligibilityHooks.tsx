@@ -1,19 +1,19 @@
-// Module ID: 8882
-// Function ID: 8883
+// Module ID: 8917
+// Function ID: 8918
 // Name: SocialLayerStorefrontEligibilityHooks
-// Dependencies: [19, 8883, 1915, 7693, 1979, 4646, 7301, 504, 8427, 8884, 2]
+// Dependencies: [19, 8918, 1915, 7723, 1979, 4676, 7331, 504, 8459, 8919, 2]
 // Exports: useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds, useAreUsersPlayingStorefrontEnabledGames, useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds, useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds, useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds, useIsCurrentUserPlayingSocialLayerStorefrontGames, useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds, useUsersPlayingStorefrontEnabledGamesApplicationIds
 
-// Module 8882 (SocialLayerStorefrontEligibilityHooks)
+// Module 8917 (SocialLayerStorefrontEligibilityHooks)
 import initialize from "initialize" /* 504 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8427 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8459 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8883 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8918 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
-import UserProfileStore from "UserProfileStore" /* 7693 */;
+import UserProfileStore from "UserProfileStore" /* 7723 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7301 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7331 */;
 
 const require = globalThis.__r;
 

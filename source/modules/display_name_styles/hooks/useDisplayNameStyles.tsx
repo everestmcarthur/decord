@@ -1,10 +1,10 @@
-// Module ID: 4840
-// Function ID: 4841
+// Module ID: 4870
+// Function ID: 4871
 // Name: useDisplayNameStyles
-// Dependencies: [19, 2021, 1371, 4841, 504, 4843, 2]
+// Dependencies: [19, 2021, 1371, 4871, 504, 4873, 2]
 // Exports: default
 
-// Module 4840 (useDisplayNameStyles)
+// Module 4870 (useDisplayNameStyles)
 import _mod19 from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;

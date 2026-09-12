@@ -1,23 +1,23 @@
-// Module ID: 17399
-// Function ID: 17400
+// Module ID: 17429
+// Function ID: 17430
 // Name: VoicePermissionManager
-// Dependencies: [5472, 4626, 502, 1957, 1908, 4629, 1074, 4816, 5190, 17400, 4753, 7191, 2]
+// Dependencies: [5502, 4656, 502, 1957, 1908, 4659, 1074, 4846, 5220, 17430, 4783, 7221, 2]
 // Exports: shouldImmediatelyRequestVoicePermissions
 
-// Module 17399 (VoicePermissionManager)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4753 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5190 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5472 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 4626 */;
+// Module 17429 (VoicePermissionManager)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4783 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5220 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5502 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 4656 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
 const InputModes = fn(1074).InputModes;
-const NativePermissionTypes = fn(4816).NativePermissionTypes;
+const NativePermissionTypes = fn(4846).NativePermissionTypes;
 let c11 = null;
 class VoicePermissionManager extends tmp2 {
   constructor() {
@@ -71,8 +71,8 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
                   }
                 });
                 if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
-                  const permission3 = tmp13(5190).requestPermission(tmp14.INPUT_MONITORING);
-                  const tmp13Result = tmp13(5190);
+                  const permission3 = tmp13(5220).requestPermission(tmp14.INPUT_MONITORING);
+                  const tmp13Result = tmp13(5220);
                 }
                 tmp13 = importDefault;
                 tmp14 = constants2;

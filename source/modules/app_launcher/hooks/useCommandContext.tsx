@@ -1,10 +1,10 @@
-// Module ID: 12121
-// Function ID: 12122
+// Module ID: 12157
+// Function ID: 12158
 // Name: useCommandContext
 // Dependencies: [19, 1979, 2]
 // Exports: getCommandContext, useCommandContext
 
-// Module 12121 (useCommandContext)
+// Module 12157 (useCommandContext)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

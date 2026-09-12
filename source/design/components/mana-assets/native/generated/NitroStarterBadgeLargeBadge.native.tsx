@@ -1,13 +1,13 @@
-// Module ID: 6368
-// Function ID: 6369
+// Module ID: 6398
+// Function ID: 6399
 // Name: NitroStarterBadgeLargeBadge
-// Dependencies: [21, 5638, 6369, 2]
+// Dependencies: [21, 5668, 6399, 2]
 // Exports: NitroStarterBadgeLargeBadge
 
-// Module 6368 (NitroStarterBadgeLargeBadge)
+// Module 6398 (NitroStarterBadgeLargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6369 from "module_6369" /* 6369 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6399 from "module_6399" /* 6399 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroStarterBadgeLargeBadge = function NitroStarterBadgeLargeBadge(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6369 };
+  const obj2 = { uri: _modDef6399 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

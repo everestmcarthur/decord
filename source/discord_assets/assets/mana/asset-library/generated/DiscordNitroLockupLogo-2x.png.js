@@ -1,8 +1,8 @@
-// Module ID: 5979
-// Function ID: 5980
+// Module ID: 6009
+// Function ID: 6010
 // Dependencies: [2]
 
-// Module 5979
+// Module 6009
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordNitroLockupLogo-2x.png.js");

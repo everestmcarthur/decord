@@ -1,20 +1,20 @@
-// Module ID: 14928
-// Function ID: 14929
+// Module ID: 14962
+// Function ID: 14963
 // Name: FamilyCenterParentalConsentNotice
-// Dependencies: [19, 21, 4606, 576, 14920, 14921, 4301, 4602, 14929, 1114, 2396, 2]
+// Dependencies: [19, 21, 4636, 576, 14954, 14955, 4331, 4632, 14963, 1114, 2396, 2]
 // Exports: default
 
-// Module 14928 (FamilyCenterParentalConsentNotice)
+// Module 14962 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14929 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14963 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

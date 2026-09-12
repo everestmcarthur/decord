@@ -1,9 +1,9 @@
-// Module ID: 14509
-// Function ID: 14510
+// Module ID: 14544
+// Function ID: 14545
 // Name: FrecencySettingsMigrations
 // Dependencies: [1084, 1074, 504, 1222, 12, 1223, 510, 11, 2]
 
-// Module 14509 (FrecencySettingsMigrations)
+// Module 14544 (FrecencySettingsMigrations)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;

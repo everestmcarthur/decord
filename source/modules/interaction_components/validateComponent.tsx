@@ -1,10 +1,10 @@
-// Module ID: 8200
-// Function ID: 8201
+// Module ID: 8232
+// Function ID: 8233
 // Name: validateComponent
-// Dependencies: [1894, 4831, 1114, 38, 2]
+// Dependencies: [1894, 4861, 1114, 38, 2]
 // Exports: default
 
-// Module 8200 (validateComponent)
+// Module 8232 (validateComponent)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
 import size from "module_2" /* 2 */;
@@ -134,7 +134,7 @@ export default function validateComponent(type, arg1, modal) {
           stringResult4 = intl10.string(tmp4(1114).t.eJEUvD);
         }
         const tmp18 = stringResult4;
-        tmp4Result = tmp4(4831);
+        tmp4Result = tmp4(4861);
       }
       return tmp18;
     } else if (values.type === tmp4(1894).ComponentType.STRING_SELECT) {

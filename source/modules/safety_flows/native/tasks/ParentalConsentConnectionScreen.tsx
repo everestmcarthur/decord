@@ -1,29 +1,29 @@
-// Module ID: 17964
-// Function ID: 17965
+// Module ID: 17994
+// Function ID: 17995
 // Name: ParentalConsentConnectionScreen
-// Dependencies: [5, 32, 19, 17, 7610, 1371, 7611, 21, 4606, 576, 17955, 17954, 12010, 5043, 17548, 14935, 8736, 504, 14933, 17965, 17949, 4305, 1114, 2690, 4573, 14934, 1896, 17958, 12020, 5024, 17966, 11089, 17967, 4602, 2396, 14936, 2]
+// Dependencies: [5, 32, 19, 17, 7640, 1371, 7641, 21, 4636, 576, 17985, 17984, 12046, 5073, 17578, 14969, 8768, 504, 14967, 17995, 17979, 4335, 1114, 2690, 4603, 14968, 1896, 17988, 12056, 5054, 17996, 11128, 17997, 4632, 2396, 14970, 2]
 // Exports: default
 
-// Module 17964 (ParentalConsentConnectionScreen)
+// Module 17994 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2690 from "module_2690" /* 2690 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14933 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14967 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7611).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7641).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { body: { marginTop: nativeDefault.space.PX_24 }, cardSection: { alignItems: "center" }, cardTitle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.cardTitle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_24, textAlign: "center" };
@@ -198,7 +198,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2690.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2690["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(14934, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(14968, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

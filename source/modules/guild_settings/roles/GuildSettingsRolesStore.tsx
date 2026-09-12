@@ -1,9 +1,9 @@
-// Module ID: 17694
-// Function ID: 17695
+// Module ID: 17724
+// Function ID: 17725
 // Name: GuildSettingsRolesStore
-// Dependencies: [1972, 17695, 2016, 2015, 9154, 17689, 1074, 17696, 12509, 5055, 1369, 1086, 4250, 1091, 2018, 12, 504, 573, 2]
+// Dependencies: [1972, 17725, 2016, 2015, 9193, 17719, 1074, 17726, 12545, 5085, 1369, 1086, 4280, 1091, 2018, 12, 504, 573, 2]
 
-// Module 17694 (GuildSettingsRolesStore)
+// Module 17724 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
@@ -12,15 +12,15 @@ import GlobalUtils from "GlobalUtils" /* 1369 */;
 import PlainRecord from "PlainRecord" /* 1972 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2016 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5055 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12509 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 17689 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 17695 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5085 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12545 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 17719 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 17725 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
 import Constants from "Constants" /* 1074 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17696 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17726 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

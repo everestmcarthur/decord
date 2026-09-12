@@ -1,10 +1,10 @@
-// Module ID: 9188
-// Function ID: 9189
+// Module ID: 9227
+// Function ID: 9228
 // Name: VideoBackgroundActionCreators
-// Dependencies: [5, 1908, 1371, 1074, 1272, 573, 9189, 9190, 9187, 1940, 2]
+// Dependencies: [5, 1908, 1371, 1074, 1272, 573, 9228, 9229, 9226, 1940, 2]
 // Exports: applyMediaFilterSettings, deleteVideoFilterAsset, errorApplyingMediaFilterSettings, fetchVideoFilterAssets, startApplyMediaFilterSettings, uploadVideoFilterAsset
 
-// Module 9188 (VideoBackgroundActionCreators)
+// Module 9227 (VideoBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;

@@ -1,10 +1,10 @@
-// Module ID: 17164
-// Function ID: 17165
+// Module ID: 17191
+// Function ID: 17192
 // Name: VoicePanelStreamOutputSinkStack
 // Dependencies: [32, 19, 2]
 // Exports: useSetHasActiveVideoOutputSink
 
-// Module 17164 (VoicePanelStreamOutputSinkStack)
+// Module 17191 (VoicePanelStreamOutputSinkStack)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

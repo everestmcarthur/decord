@@ -1,19 +1,19 @@
-// Module ID: 17270
-// Function ID: 17271
+// Module ID: 17297
+// Function ID: 17298
 // Name: VoicePanelLockedIcon
-// Dependencies: [19, 21, 4606, 576, 5640, 1178, 17271, 2]
+// Dependencies: [19, 21, 4636, 576, 5670, 1178, 17298, 2]
 // Exports: default
 
-// Module 17270 (VoicePanelLockedIcon)
+// Module 17297 (VoicePanelLockedIcon)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import NativeViewDefault from "NativeView" /* 5640 */;
-import _modDef17271 from "module_17271" /* 17271 */;
+import NativeViewDefault from "NativeView" /* 5670 */;
+import _modDef17298 from "module_17298" /* 17298 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { container: null, icon: null };
 let size = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round };
 obj2.container = size;
@@ -25,6 +25,6 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelLockedIcon() {
   const tmp = closure_4();
   const obj = { style: tmp.container, children: null };
-  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17271, size: native.IconSizes.LARGE });
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17298, size: native.IconSizes.LARGE });
   return <tmp2 style={tmp.container}>{null}</tmp2>;
 };

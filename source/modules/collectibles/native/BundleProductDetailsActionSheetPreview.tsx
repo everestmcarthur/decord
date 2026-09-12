@@ -1,16 +1,16 @@
-// Module ID: 13235
-// Function ID: 13236
+// Module ID: 13268
+// Function ID: 13269
 // Name: BundleProductDetailsActionSheetPreview
-// Dependencies: [32, 19, 17, 1076, 21, 4606, 576, 13236, 6726, 1114, 7627, 13237, 4602, 2]
+// Dependencies: [32, 19, 17, 1076, 21, 4636, 576, 13269, 6756, 1114, 7657, 13270, 4632, 2]
 // Exports: default
 
-// Module 13235 (BundleProductDetailsActionSheetPreview)
+// Module 13268 (BundleProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7627 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13237 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13270 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { previewContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
 let size = { width: 56, height: 56, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
 obj2.bundleThumbnail = size;

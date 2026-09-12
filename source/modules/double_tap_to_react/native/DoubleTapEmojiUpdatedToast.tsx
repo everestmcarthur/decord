@@ -1,17 +1,17 @@
-// Module ID: 11219
-// Function ID: 11220
+// Module ID: 11258
+// Function ID: 11259
 // Name: DoubleTapEmojiUpdatedToast
-// Dependencies: [19, 4598, 1374, 21, 4606, 576, 1115, 504, 1396, 7203, 4602, 1114, 5013, 4318, 4305, 2]
+// Dependencies: [19, 4628, 1374, 21, 4636, 576, 1150, 504, 1396, 7233, 4632, 1114, 5043, 4348, 4335, 2]
 // Exports: showDoubleTapEmojiUpdatedToast
 
-// Module 11219 (DoubleTapEmojiUpdatedToast)
+// Module 11258 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 class ToastEmoji {
@@ -62,15 +62,15 @@ function ToastText(emoji) {
 }
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 }, toastEmojiCustom: { width: 24, height: 24 }, toastEmojiText: null, toastText: null };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 const obj5 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
@@ -88,7 +88,7 @@ export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4318).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4348).AccessibilityAnnouncer;
     const intl = tmp(1114).intl;
     const obj3 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1114).t.nKY0Fl, obj3));

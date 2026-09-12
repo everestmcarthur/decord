@@ -1,16 +1,16 @@
-// Module ID: 16309
-// Function ID: 16310
+// Module ID: 16333
+// Function ID: 16334
 // Name: useStageChannelSpeakerVoiceStates
-// Dependencies: [32, 1960, 1957, 4630, 5469, 504, 1982, 11, 1369, 5476, 5483, 2]
+// Dependencies: [32, 1960, 1957, 4660, 5499, 504, 1982, 11, 1369, 5506, 5513, 2]
 // Exports: default
 
-// Module 16309 (useStageChannelSpeakerVoiceStates)
+// Module 16333 (useStageChannelSpeakerVoiceStates)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5469 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(4630).getComparator;
+const getComparator = fn(4660).getComparator;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 

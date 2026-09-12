@@ -1,13 +1,13 @@
-// Module ID: 14525
-// Function ID: 14526
+// Module ID: 14560
+// Function ID: 14561
 // Name: commands/config
-// Dependencies: [4511, 1074, 9648, 9645, 573, 2]
+// Dependencies: [4541, 1074, 9687, 9684, 573, 2]
 
-// Module 14525 (commands/config)
+// Module 14560 (commands/config)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RPCErrorDefault from "RPCError" /* 9645 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9648 */;
-import Constants_mod from "Constants" /* 4511 */;
+import RPCErrorDefault from "RPCError" /* 9684 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;
+import Constants_mod from "Constants" /* 4541 */;
 import Constants_mod from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 6248
-// Function ID: 6249
+// Module ID: 6278
+// Function ID: 6279
 // Name: GoatIllocon
-// Dependencies: [21, 5638, 6249, 2]
+// Dependencies: [21, 5668, 6279, 2]
 // Exports: GoatIllocon
 
-// Module 6248 (GoatIllocon)
+// Module 6278 (GoatIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6249 from "module_6249" /* 6249 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6279 from "module_6279" /* 6279 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const GoatIllocon = function GoatIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6249 };
+  const obj2 = { uri: _modDef6279 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

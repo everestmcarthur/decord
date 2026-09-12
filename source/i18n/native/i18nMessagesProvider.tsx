@@ -1,13 +1,13 @@
-// Module ID: 17985
-// Function ID: 17986
+// Module ID: 18015
+// Function ID: 18016
 // Name: i18nMessagesProvider
-// Dependencies: [17, 1115, 17986, 1155, 1114, 2]
+// Dependencies: [17, 1150, 18016, 1155, 1114, 2]
 // Exports: default
 
-// Module 17985 (i18nMessagesProvider)
+// Module 18015 (i18nMessagesProvider)
 import _mod17 from "module_17" /* 17 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 17986 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 18016 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isAndroid()) {

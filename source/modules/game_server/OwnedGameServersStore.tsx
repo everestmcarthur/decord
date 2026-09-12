@@ -1,12 +1,12 @@
-// Module ID: 12576
-// Function ID: 12577
+// Module ID: 12612
+// Function ID: 12613
 // Name: OwnedGameServersStore
-// Dependencies: [4497, 504, 573, 2]
+// Dependencies: [4527, 504, 573, 2]
 
-// Module 12576 (OwnedGameServersStore)
+// Module 12612 (OwnedGameServersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GameServerConstants from "GameServerConstants" /* 4497 */;
+import GameServerConstants from "GameServerConstants" /* 4527 */;
 import size from "module_2" /* 2 */;
 
 function handleGameServerUpsert(gameServer) {

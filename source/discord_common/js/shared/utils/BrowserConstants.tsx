@@ -1,9 +1,9 @@
-// Module ID: 13856
-// Function ID: 13857
+// Module ID: 13890
+// Function ID: 13891
 // Name: BrowserConstants
 // Dependencies: [1341, 2]
 
-// Module 13856 (BrowserConstants)
+// Module 13890 (BrowserConstants)
 import formatDefault from "format" /* 1341 */;
 
 let str = formatDefault.version;

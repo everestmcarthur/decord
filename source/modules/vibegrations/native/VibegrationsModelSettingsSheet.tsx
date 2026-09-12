@@ -1,20 +1,20 @@
-// Module ID: 16676
-// Function ID: 16677
+// Module ID: 16701
+// Function ID: 16702
 // Name: VibegrationsModelSettingsSheet
-// Dependencies: [109, 19, 16666, 21, 504, 16677, 1114, 3590, 7270, 7222, 6698, 5024, 576, 5736, 5739, 16678, 5738, 7273, 4602, 2]
+// Dependencies: [109, 19, 16690, 21, 504, 16702, 1114, 3590, 7300, 7252, 6728, 5054, 576, 5766, 5769, 16703, 5768, 7303, 4632, 2]
 // Exports: default
 
-// Module 16676 (VibegrationsModelSettingsSheet)
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16677 */;
+// Module 16701 (VibegrationsModelSettingsSheet)
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16702 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16666 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16690 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["fast"];
-const sendModelSettings = fn(16666).sendModelSettings;
+const sendModelSettings = fn(16690).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

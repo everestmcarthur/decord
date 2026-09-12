@@ -1,12 +1,12 @@
-// Module ID: 17534
-// Function ID: 17535
+// Module ID: 17564
+// Function ID: 17565
 // Name: RedesignSkipAvatarUploadAlertModal
-// Dependencies: [19, 21, 4956, 1114, 4956, 2]
+// Dependencies: [19, 21, 4986, 1114, 4986, 2]
 // Exports: default
 
-// Module 17534 (RedesignSkipAvatarUploadAlertModal)
+// Module 17564 (RedesignSkipAvatarUploadAlertModal)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4956 */;
+import AlertModal from "AlertModal" /* 4986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

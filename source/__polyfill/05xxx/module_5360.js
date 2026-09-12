@@ -1,9 +1,0 @@
-// Module ID: 5360
-// Function ID: 5361
-// Dependencies: [1122]
-
-// Module 5360
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "e0157f8261da28670f8ce7828f01db25", name: "img_account_sync_skype_white", type: "svg" });

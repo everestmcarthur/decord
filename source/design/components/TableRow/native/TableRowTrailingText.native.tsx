@@ -1,11 +1,11 @@
-// Module ID: 5665
-// Function ID: 5666
+// Module ID: 5695
+// Function ID: 5696
 // Name: TableRowTrailingText
-// Dependencies: [19, 21, 4602, 2]
+// Dependencies: [19, 21, 4632, 2]
 // Exports: TableRowTrailingText
 
-// Module 5665 (TableRowTrailingText)
-import Text_Text from "Text/Text" /* 4602 */;
+// Module 5695 (TableRowTrailingText)
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

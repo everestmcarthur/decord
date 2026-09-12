@@ -1,26 +1,26 @@
-// Module ID: 12785
-// Function ID: 12786
+// Module ID: 12821
+// Function ID: 12822
 // Name: ContactSyncLandingOnboardingRedesign
-// Dependencies: [5, 19, 17, 4816, 21, 4606, 576, 5733, 5190, 12786, 4602, 1114, 5026, 12787, 12779, 2]
+// Dependencies: [5, 19, 17, 4846, 21, 4636, 576, 5763, 5220, 12822, 4632, 1114, 5056, 12823, 12815, 2]
 // Exports: default
 
-// Module 12785 (ContactSyncLandingOnboardingRedesign)
+// Module 12821 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 576 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12779 */;
-import _modDef12786 from "module_12786" /* 12786 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12787 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12815 */;
+import _modDef12822 from "module_12822" /* 12822 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12823 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const NativePermissionTypes = fn(4816).NativePermissionTypes;
+const NativePermissionTypes = fn(4846).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5733).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5763).NAV_BAR_HEIGHT };
 obj2.content = obj3;
 let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
 obj2.headerImage = size;
@@ -95,23 +95,23 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj3.source = _modDef12786;
+  obj3.source = _modDef12822;
   const items1 = [closure_8(closure_6, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1114).intl;
   obj4.children = intl.string(onNext(1114).t["/G+nci"]);
-  items1[1] = closure_8(onNext(4602).Text, obj4);
+  items1[1] = closure_8(onNext(4632).Text, obj4);
   let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
   const intl2 = onNext(1114).intl;
   obj5.children = intl2.string(onNext(1114).t.G8zcHt);
-  items1[2] = closure_8(onNext(4602).Text, obj5);
+  items1[2] = closure_8(onNext(4632).Text, obj5);
   const obj6 = { style: tmp.buttonContainer, children: null };
   const obj7 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1114).intl;
   obj7.text = intl3.string(onNext(1114).t.LhlgY9);
   obj7.onPress = callback;
   obj7.loading = loading;
-  obj6.children = closure_8(onNext(5026).Button, obj7);
+  obj6.children = closure_8(onNext(5056).Button, obj7);
   items1[3] = closure_8(closure_5, obj6);
   items1[4] = closure_8(ContactSyncErrorDefault, { error });
   obj2.children = items1;

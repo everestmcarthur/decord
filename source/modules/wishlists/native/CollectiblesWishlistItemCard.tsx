@@ -1,16 +1,16 @@
-// Module ID: 11129
-// Function ID: 11130
+// Module ID: 11168
+// Function ID: 11169
 // Name: CollectiblesWishlistItemCard
-// Dependencies: [19, 7619, 11130, 21, 504, 8860, 8863, 8864, 2]
+// Dependencies: [19, 7649, 11169, 21, 504, 8895, 8898, 8899, 2]
 // Exports: default
 
-// Module 11129 (CollectiblesWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 8863 */;
+// Module 11168 (CollectiblesWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8898 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 11130 */;
+import SentGiftsStore from "SentGiftsStore" /* 11169 */;
 
 require = fn;
-let closure_4 = fn(7619).transformSKUToCollectiblesItem;
+let closure_4 = fn(7649).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");

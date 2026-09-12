@@ -1,16 +1,16 @@
-// Module ID: 17361
-// Function ID: 17362
+// Module ID: 17391
+// Function ID: 17392
 // Name: superagentPatch
-// Dependencies: [5, 4522, 1074, 1273, 17362, 1365, 1433, 573, 1272, 502, 1347, 2025, 1371, 1242, 1115, 17363, 17, 1117, 17364, 17365, 7, 1232, 17368, 1896, 11371, 15731, 9135, 5573, 17374, 13884, 17375, 1461, 2]
+// Dependencies: [5, 4552, 1074, 1273, 17392, 1365, 1433, 573, 1272, 502, 1347, 2025, 1371, 1242, 1150, 17393, 1115, 17394, 17395, 7, 1232, 17398, 1896, 11410, 15753, 9174, 5603, 17404, 13918, 17405, 1461, 2]
 
-// Module 17361 (superagentPatch)
+// Module 17391 (superagentPatch)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1273 */;
-import getTimeZoneDefault from "getTimeZone" /* 17364 */;
-import trackHttpRequestDefault from "trackHttpRequest" /* 17365 */;
+import getTimeZoneDefault from "getTimeZone" /* 17394 */;
+import trackHttpRequestDefault from "trackHttpRequest" /* 17395 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4522 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 
 function isAnalyticsEndpoint(pathname) {
@@ -25,7 +25,7 @@ function isAnalyticsEndpoint(pathname) {
 const AbortCodes = fn(1074).AbortCodes;
 let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(17362).IdGenerator();
+const idGenerator = new fn(17392).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
 const ApexExperiment = fn(1433);
 let obj2 = { name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: null };
@@ -70,7 +70,7 @@ HTTPUtils.setRequestPatch({
         const result = promise.set("Authorization", _default.getToken());
       }
       const tmpResult = tmp(1272);
-      const result1 = tmp(17363).updateDynamicSuperProperties();
+      const result1 = tmp(17393).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -91,16 +91,11 @@ HTTPUtils.setRequestPatch({
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (closure_0(1115).isPlatformEmbedded) {
-        const tmpResult5 = tmp(17);
-        if (tmpResult6.isAndroid()) {
-          let LocalizationManager = tmp(1117).default;
-        } else {
-          LocalizationManager = tmpResult5.NativeModules.LocalizationManager;
-        }
+      if (closure_0(1150).isPlatformEmbedded) {
         let items = [];
-        if (null != LocalizationManager) {
-          let Languages = LocalizationManager.getConstants().Languages;
+        const _default5 = tmp(1115).default;
+        if (null != _default5) {
+          let Languages = _default5.getConstants().Languages;
           if (Languages == null) {
             Languages = [];
           }
@@ -120,27 +115,26 @@ HTTPUtils.setRequestPatch({
           }, []);
           return reduced.join(",");
         })(items));
-        tmpResult6 = tmp(1115);
       }
       const result6 = promise.set("X-Discord-Locale", closure_0(2025).default.locale);
-      const tmp19 = getTimeZoneDefault();
-      if (null != tmp19) {
-        const result7 = promise.set("X-Discord-Timezone", tmp19);
+      const tmp18 = getTimeZoneDefault();
+      if (null != tmp18) {
+        const result7 = promise.set("X-Discord-Timezone", tmp18);
       }
       const debugOptionsHeaderValue = _default2.getDebugOptionsHeaderValue();
-      let tmp22 = null != debugOptionsHeaderValue;
-      if (tmp22) {
-        tmp22 = "" !== debugOptionsHeaderValue;
+      let tmp21 = null != debugOptionsHeaderValue;
+      if (tmp21) {
+        tmp21 = "" !== debugOptionsHeaderValue;
       }
-      if (tmp22) {
+      if (tmp21) {
         const result8 = promise.set("X-Debug-Options", debugOptionsHeaderValue);
       }
       const routingKeyHeaderValue = _default2.getRoutingKeyHeaderValue();
-      let tmp25 = null != routingKeyHeaderValue;
-      if (tmp25) {
-        tmp25 = "" !== routingKeyHeaderValue;
+      let tmp24 = null != routingKeyHeaderValue;
+      if (tmp24) {
+        tmp24 = "" !== routingKeyHeaderValue;
       }
-      if (tmp25) {
+      if (tmp24) {
         const result9 = promise.set("X-Routing-Key", routingKeyHeaderValue);
       }
       if (_default2.isTracingRequests) {
@@ -173,7 +167,7 @@ HTTPUtils.setRequestPatch({
         } catch (err) {
         }
       }
-      const tmpResult4 = tmp(17363);
+      const tmpResult2 = tmp(17393);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
@@ -276,7 +270,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [statusCode(1896)(17368, dependencyMap.paths), statusCode(1896)(11371, dependencyMap.paths)];
+        const items = [statusCode(1896)(17398, dependencyMap.paths), statusCode(1896)(11410, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -375,12 +369,12 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(1896)(15731, dependencyMap.paths);
-          statusCode(1896)(15731, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = statusCode(1896)(15753, dependencyMap.paths);
+          statusCode(1896)(15753, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(1896)(15731, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(1896)(15753, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -392,11 +386,11 @@ HTTPUtils.setRequestPatch({
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(1896)(5573, tmp8.paths).then((result) => {
+      tmp7(1896)(5603, tmp8.paths).then((result) => {
         result.default();
       });
       flag = false;
-      const promise3 = tmp7(1896)(5573, tmp8.paths);
+      const promise3 = tmp7(1896)(5603, tmp8.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -404,7 +398,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(1896)(13884, tmp8.paths).then((result) => {
+        tmp7(1896)(13918, tmp8.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -413,7 +407,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(1896)(13884, tmp8.paths);
+        const promise2 = tmp7(1896)(13918, tmp8.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -425,14 +419,14 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(1896)(17375, tmp8.paths).then((openRestrictedHoursModal) => {
+          tmp7(1896)(17405, tmp8.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(1896)(17375, tmp8.paths);
+          const promise = tmp7(1896)(17405, tmp8.paths);
         }
       }
-      tmp7Result = tmp7(17374);
+      tmp7Result = tmp7(17404);
     }
   }
 });

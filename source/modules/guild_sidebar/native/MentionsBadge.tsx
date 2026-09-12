@@ -1,10 +1,10 @@
-// Module ID: 16301
-// Function ID: 16302
+// Module ID: 16325
+// Function ID: 16326
 // Name: MentionsBadge
 // Dependencies: [19, 21, 1178, 2]
 // Exports: default
 
-// Module 16301 (MentionsBadge)
+// Module 16325 (MentionsBadge)
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
 

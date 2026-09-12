@@ -1,13 +1,13 @@
-// Module ID: 9311
-// Function ID: 9312
+// Module ID: 9350
+// Function ID: 9351
 // Name: ScreenStreamIcon
-// Dependencies: [19, 21, 576, 4307, 9312, 2]
+// Dependencies: [19, 21, 576, 4337, 9351, 2]
 // Exports: ScreenStreamIcon
 
-// Module 9311 (ScreenStreamIcon)
+// Module 9350 (ScreenStreamIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod9312 from "module_9312" /* 9312 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod9351 from "module_9351" /* 9351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ScreenStreamIcon = function ScreenStreamIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9312, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9351, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

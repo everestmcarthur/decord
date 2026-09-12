@@ -1,41 +1,31 @@
 // Module ID: 3877
 // Function ID: 3878
-// Dependencies: [3878, 3695, 3696]
+// Dependencies: [3725, 3726]
 // Exports: default
 
 // Module 3877
-import _typeof_mod from "module_3878" /* 3878 */;
-import _typeof_mod from "module_3695" /* 3695 */;
-import requiredArgs_mod from "requiredArgs" /* 3696 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj = { default: _typeof };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isValid(num) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

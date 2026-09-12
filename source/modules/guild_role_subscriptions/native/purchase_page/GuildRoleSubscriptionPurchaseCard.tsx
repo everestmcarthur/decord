@@ -1,22 +1,22 @@
-// Module ID: 16623
-// Function ID: 16624
+// Module ID: 16647
+// Function ID: 16648
 // Name: GuildRoleSubscriptionPurchaseCard
-// Dependencies: [32, 19, 17, 21, 4606, 576, 7052, 1611, 15288, 16618, 7223, 4602, 1178, 16624, 6698, 1114, 15298, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 7082, 1611, 15310, 16642, 7253, 4632, 1178, 16648, 6728, 1114, 15320, 2]
 // Exports: default
 
-// Module 16623 (GuildRoleSubscriptionPurchaseCard)
+// Module 16647 (GuildRoleSubscriptionPurchaseCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import BottomSheetModal from "BottomSheetModal" /* 6698 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15298 */;
-import Elements from "Elements" /* 16618 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 16624 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import BottomSheetModal from "BottomSheetModal" /* 6728 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15320 */;
+import Elements from "Elements" /* 16642 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 16648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

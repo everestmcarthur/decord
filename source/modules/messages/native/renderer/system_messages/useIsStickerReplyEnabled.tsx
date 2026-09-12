@@ -1,13 +1,13 @@
-// Module ID: 8071
-// Function ID: 8072
+// Module ID: 8101
+// Function ID: 8102
 // Name: useIsStickerReplyEnabled
-// Dependencies: [2021, 4245, 1371, 1074, 7342, 2]
+// Dependencies: [2021, 4275, 1371, 1074, 7372, 2]
 // Exports: computeIsStickerReplyEnabled
 
-// Module 8071 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7342 */;
+// Module 8101 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7372 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

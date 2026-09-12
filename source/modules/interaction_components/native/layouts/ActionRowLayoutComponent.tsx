@@ -1,10 +1,10 @@
-// Module ID: 17476
-// Function ID: 17477
+// Module ID: 17506
+// Function ID: 17507
 // Name: ActionRowLayoutComponent
 // Dependencies: [19, 17, 21, 2]
 // Exports: default
 
-// Module 17476 (ActionRowLayoutComponent)
+// Module 17506 (ActionRowLayoutComponent)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

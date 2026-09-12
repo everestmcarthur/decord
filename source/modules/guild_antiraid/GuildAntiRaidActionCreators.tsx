@@ -1,16 +1,16 @@
-// Module ID: 11925
-// Function ID: 11926
+// Module ID: 11961
+// Function ID: 11962
 // Name: GuildAntiRaidActionCreators
-// Dependencies: [5, 1979, 8090, 1074, 1242, 4786, 9153, 4198, 1272, 10191, 2]
+// Dependencies: [5, 1979, 8120, 1074, 1242, 4816, 9192, 4228, 1272, 10230, 2]
 // Exports: handleReportRaid, handleResolveRaid, setGuildIncidentActions, setGuildRaidAlerts, trackReportRaidViewed
 
-// Module 11925 (GuildAntiRaidActionCreators)
+// Module 11961 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import _modDef4198 from "module_4198" /* 4198 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10191 */;
+import _modDef4228 from "module_4228" /* 4228 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -95,9 +95,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef4198();
-    toISOStringResult = _modDef4198().add(tmp8, "hours").toISOString();
-    _modDef4198().add(tmp8, "hours");
+    _modDef4228();
+    toISOStringResult = _modDef4228().add(tmp8, "hours").toISOString();
+    _modDef4228().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -246,7 +246,7 @@ let closure_12 = async function _handleReportRaid(arg0, value) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8090).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8120).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

@@ -1,10 +1,10 @@
-// Module ID: 14659
-// Function ID: 14660
+// Module ID: 14693
+// Function ID: 14694
 // Name: BadgeSettingsActionCreators
 // Dependencies: [5, 1074, 1272, 1232, 2]
 // Exports: updateBadgeSettings
 
-// Module 14659 (BadgeSettingsActionCreators)
+// Module 14693 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ let closure_5 = async function _updateBadgeSettings(arg0, value) {
           closure_129_2 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

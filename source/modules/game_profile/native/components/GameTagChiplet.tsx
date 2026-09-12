@@ -1,18 +1,18 @@
-// Module ID: 17241
-// Function ID: 17242
+// Module ID: 17268
+// Function ID: 17269
 // Name: GameTagChiplet
-// Dependencies: [19, 17, 21, 4606, 8766, 8777, 9274, 2]
+// Dependencies: [19, 17, 21, 4636, 8798, 8809, 9313, 2]
 
-// Module 17241 (GameTagChiplet)
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8766 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
-import GuildTag from "GuildTag" /* 9274 */;
+// Module 17268 (GameTagChiplet)
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8798 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
+import GuildTag from "GuildTag" /* 9313 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameTagChiplet.tsx");

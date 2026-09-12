@@ -1,12 +1,12 @@
-// Module ID: 12391
-// Function ID: 12392
+// Module ID: 12427
+// Function ID: 12428
 // Name: InvitesDisabledAlertModal
-// Dependencies: [19, 21, 4956, 1114, 4956, 2]
+// Dependencies: [19, 21, 4986, 1114, 4986, 2]
 // Exports: default
 
-// Module 12391 (InvitesDisabledAlertModal)
+// Module 12427 (InvitesDisabledAlertModal)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4956 */;
+import AlertModal from "AlertModal" /* 4986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

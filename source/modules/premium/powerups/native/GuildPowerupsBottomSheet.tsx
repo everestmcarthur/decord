@@ -1,36 +1,36 @@
-// Module ID: 12611
-// Function ID: 12612
+// Module ID: 12647
+// Function ID: 12648
 // Name: GuildPowerupsBottomSheet
-// Dependencies: [17, 4598, 4496, 4497, 21, 4606, 576, 12592, 12589, 12612, 12613, 504, 12614, 4317, 12616, 4602, 12617, 12619, 12620, 4561, 1114, 2428, 12606, 12626, 4499, 9157, 12627, 12628, 12632, 12637, 12638, 5026, 12636, 7223, 2]
+// Dependencies: [17, 4628, 4526, 4527, 21, 4636, 576, 12628, 12625, 12648, 12649, 504, 12650, 4347, 12652, 4632, 12653, 12655, 12656, 4591, 1114, 2428, 12642, 12662, 4529, 9196, 12663, 12664, 12668, 12673, 12674, 5056, 12672, 7253, 2]
 // Exports: default
 
-// Module 12611 (GuildPowerupsBottomSheet)
+// Module 12647 (GuildPowerupsBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import GameServerConstants from "GameServerConstants" /* 4497 */;
-import Powerups from "Powerups" /* 4499 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12589 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12592 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12606 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12612 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12613 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12617 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 12619 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12620 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 12626 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12627 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12628 */;
-import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 12636 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4496 */;
+import GameServerConstants from "GameServerConstants" /* 4527 */;
+import Powerups from "Powerups" /* 4529 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12625 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12628 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12642 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12648 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12649 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12653 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 12655 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12656 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 12662 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12663 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12664 */;
+import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 12672 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4526 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 function GuildPowerupsBottomSheetHeader(arg0) {
@@ -51,20 +51,20 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   }
   if (powerup.type === constants.LEVEL) {
     const obj2 = { style: tmp.gemContainer };
-    let tmp15 = React6(tmp2(12614), obj2);
+    let tmp15 = React6(tmp2(12650), obj2);
     let tmp14 = React6;
   } else if (tmp10 === closure_7) {
     const obj3 = { style: tmp.image, children: null };
     const obj4 = { stateMachine: "SM_Auto", dataBinding: null };
     const obj5 = { reducedMotion: stateFromStores };
     obj4.dataBinding = obj5;
-    obj3.children = React6(tmp6(4317).GameServerHostingRive, obj4);
+    obj3.children = React6(tmp6(4347).GameServerHostingRive, obj4);
     tmp15 = React6(tmp12, obj3);
     tmp14 = React6;
   } else {
     const obj6 = { imageUrl: str, style: tmp.image, isAnimated: true };
     tmp14 = React6;
-    tmp15 = React6(tmp2(12616), obj6);
+    tmp15 = React6(tmp2(12652), obj6);
   }
   const obj7 = { children: null };
   const items1 = [tmp15, ];
@@ -104,12 +104,12 @@ function GuildPowerupsBottomSheetBody(powerup) {
     if (tmp5Result) {
       const obj3 = { style: tmp.cooldownInfo, children: null };
       const obj4 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-      const items1 = [tmp7(tmp8(4561).CircleInformationIcon, obj4), ];
+      const items1 = [tmp7(tmp8(4591).CircleInformationIcon, obj4), ];
       const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = tmp8(1114).intl;
       const obj6 = { cooldownDays: powerup.deactivationCooldownPeriodDays };
       obj5.children = intl.formatToPlainString(_modDef2428.GMhQcE, obj6);
-      items1[1] = tmp7(tmp8(4602).Text, obj5);
+      items1[1] = tmp7(tmp8(4632).Text, obj5);
       obj3.children = items1;
       tmp5Result = tmp5(View, obj3);
     }
@@ -133,8 +133,8 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   if (showConfigureButton) {
     let result = powerup.skuId !== Powerups.GUILD_POWERUP_TAG_SKU_ID;
     if (!result) {
-      result = tmp6(9157).canUseMobileServerTagSettings(guildId);
-      const tmp6Result = tmp6(9157);
+      result = tmp6(9196).canUseMobileServerTagSettings(guildId);
+      const tmp6Result = tmp6(9196);
     }
     showConfigureButton = result;
     tmp6 = require;
@@ -143,7 +143,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   ({ disabled, reason } = useCanGuildPowerupBeToggledDefault(guildId, powerup, isPowerupActive));
   const tmp8 = useCanGuildPowerupBeToggledDefault(guildId, powerup, isPowerupActive);
   ({ onActivate: c1, isLoading } = useGuildPowerupOnActivateDefault(guildId, powerup));
-  closure_2 = tmp2(12632)(guildId, powerup);
+  closure_2 = tmp2(12668)(guildId, powerup);
   if (tmp4) {
     let tmp14 = !showConfigureButton;
     const hasItem = set.has(powerup.skuId);
@@ -173,7 +173,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     }
     if (tmp21) {
       const obj3 = { text: reason };
-      tmp21 = React6(tmp2(12638), obj3);
+      tmp21 = React6(tmp2(12674), obj3);
     }
     items[1] = tmp21;
     if (showConfigureButton) {

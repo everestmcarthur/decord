@@ -1,13 +1,13 @@
-// Module ID: 12590
-// Function ID: 12591
+// Module ID: 12626
+// Function ID: 12627
 // Name: useGuildPowerupRollbackNotificationConfig
-// Dependencies: [4495, 504, 4499, 12591, 1943, 1114, 2428, 12593, 2]
+// Dependencies: [4525, 504, 4529, 12627, 1943, 1114, 2428, 12629, 2]
 // Exports: default
 
-// Module 12590 (useGuildPowerupRollbackNotificationConfig)
+// Module 12626 (useGuildPowerupRollbackNotificationConfig)
 import _modDef2428 from "module_2428" /* 2428 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12593 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4495 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12629 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4499).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4529).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;

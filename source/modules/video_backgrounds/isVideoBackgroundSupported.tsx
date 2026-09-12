@@ -1,15 +1,15 @@
-// Module ID: 9197
-// Function ID: 9198
+// Module ID: 9236
+// Function ID: 9237
 // Name: isVideoBackgroundSupported
-// Dependencies: [1908, 4631, 1115, 9198, 2]
+// Dependencies: [1908, 4661, 1150, 9237, 2]
 // Exports: default
 
-// Module 9197 (isVideoBackgroundSupported)
-import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9198 */;
+// Module 9236 (isVideoBackgroundSupported)
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9237 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 const require = fn;
-const Features = fn(4631).Features;
+const Features = fn(4661).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

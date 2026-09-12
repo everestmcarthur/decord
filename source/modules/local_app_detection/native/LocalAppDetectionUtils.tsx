@@ -1,14 +1,14 @@
-// Module ID: 13768
-// Function ID: 13769
+// Module ID: 13802
+// Function ID: 13803
 // Name: LocalAppDetectionUtils
-// Dependencies: [5, 6666, 1074, 13769, 13767, 1116, 4739, 1242, 573, 2]
+// Dependencies: [5, 6696, 1074, 13803, 13801, 1151, 4769, 1242, 573, 2]
 // Exports: detectLocalApps
 
-// Module 13768 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13767 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13769 */;
+// Module 13802 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13801 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13803 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConsentStore from "ConsentStore" /* 6666 */;
+import ConsentStore from "ConsentStore" /* 6696 */;
 
 require = fn;
 function isGameCommunityAddServerEntryEnabled() {
@@ -18,52 +18,52 @@ function isGameCommunityAddServerEntryEnabled() {
 function getDetectableApp(arg0) {
   if (LocalAppDetectionTypes.DetectableAppNames.ROBLOX === arg0) {
     return { androidScheme: "roblox", iosScheme: "roblox" };
-  } else if (tmp(13767).DetectableAppNames.MINECRAFT === arg0) {
+  } else if (tmp(13801).DetectableAppNames.MINECRAFT === arg0) {
     const obj2 = { androidScheme: "minecraft", iosScheme: "minecraft", predicate: isGameCommunityAddServerEntryEnabled };
     return obj2;
-  } else if (tmp(13767).DetectableAppNames.FORTNITE === arg0) {
+  } else if (tmp(13801).DetectableAppNames.FORTNITE === arg0) {
     const obj3 = { androidScheme: "fortnite", iosScheme: "com.epicgames.fortnite", predicate: isGameCommunityAddServerEntryEnabled };
     return obj3;
-  } else if (tmp(13767).DetectableAppNames.GENSHIN === arg0) {
+  } else if (tmp(13801).DetectableAppNames.GENSHIN === arg0) {
     const obj4 = { androidScheme: "genshin", iosScheme: "genshin", predicate: isGameCommunityAddServerEntryEnabled };
     return obj4;
-  } else if (tmp(13767).DetectableAppNames.PUBG_MOBILE === arg0) {
+  } else if (tmp(13801).DetectableAppNames.PUBG_MOBILE === arg0) {
     const obj5 = { androidScheme: "pubgmobile", iosScheme: "igame1320", predicate: isGameCommunityAddServerEntryEnabled };
     return obj5;
-  } else if (tmp(13767).DetectableAppNames.CALL_OF_DUTY_MOBILE === arg0) {
+  } else if (tmp(13801).DetectableAppNames.CALL_OF_DUTY_MOBILE === arg0) {
     const obj6 = { androidScheme: "codm", iosScheme: "codm", predicate: isGameCommunityAddServerEntryEnabled };
     return obj6;
-  } else if (tmp(13767).DetectableAppNames.CLASH_OF_CLANS === arg0) {
+  } else if (tmp(13801).DetectableAppNames.CLASH_OF_CLANS === arg0) {
     const obj7 = { androidScheme: "clashofclans", iosScheme: "clashofclans", predicate: isGameCommunityAddServerEntryEnabled };
     return obj7;
-  } else if (tmp(13767).DetectableAppNames.MOBILE_LEGENDS_BANG_BANG === arg0) {
+  } else if (tmp(13801).DetectableAppNames.MOBILE_LEGENDS_BANG_BANG === arg0) {
     const obj8 = { androidScheme: "mobilelegends", iosScheme: "mobilelegends", predicate: isGameCommunityAddServerEntryEnabled };
     return obj8;
-  } else if (tmp(13767).DetectableAppNames.GARENA_FREE_FIRE === arg0) {
+  } else if (tmp(13801).DetectableAppNames.GARENA_FREE_FIRE === arg0) {
     const obj9 = { androidScheme: "garenafreefire", iosScheme: "freefire", predicate: isGameCommunityAddServerEntryEnabled };
     return obj9;
-  } else if (tmp(13767).DetectableAppNames.POKEMON_GO === arg0) {
+  } else if (tmp(13801).DetectableAppNames.POKEMON_GO === arg0) {
     const obj10 = { androidScheme: "pokemongo", iosScheme: "pokemongo", predicate: isGameCommunityAddServerEntryEnabled };
     return obj10;
-  } else if (tmp(13767).DetectableAppNames.POKEMON_TCG_POCKET === arg0) {
+  } else if (tmp(13801).DetectableAppNames.POKEMON_TCG_POCKET === arg0) {
     const obj11 = { androidScheme: "pokemontcgp", iosScheme: "pokemontcgp", predicate: isGameCommunityAddServerEntryEnabled };
     return obj11;
-  } else if (tmp(13767).DetectableAppNames.CLASH_ROYALE === arg0) {
+  } else if (tmp(13801).DetectableAppNames.CLASH_ROYALE === arg0) {
     const obj12 = { androidScheme: "clashroyale", iosScheme: "clashroyale", predicate: isGameCommunityAddServerEntryEnabled };
     return obj12;
-  } else if (tmp(13767).DetectableAppNames.AMONG_US === arg0) {
+  } else if (tmp(13801).DetectableAppNames.AMONG_US === arg0) {
     const obj13 = { androidScheme: "amongus", iosScheme: "amongus", predicate: isGameCommunityAddServerEntryEnabled };
     return obj13;
-  } else if (tmp(13767).DetectableAppNames.MONOPOLY_GO === arg0) {
+  } else if (tmp(13801).DetectableAppNames.MONOPOLY_GO === arg0) {
     const obj14 = { androidScheme: "monopolygo", iosScheme: "monopolygo", predicate: isGameCommunityAddServerEntryEnabled };
     return obj14;
-  } else if (tmp(13767).DetectableAppNames.BRAWL_STARS === arg0) {
+  } else if (tmp(13801).DetectableAppNames.BRAWL_STARS === arg0) {
     const obj15 = { androidScheme: "brawlstars", iosScheme: "brawlstars", predicate: isGameCommunityAddServerEntryEnabled };
     return obj15;
-  } else if (tmp(13767).DetectableAppNames.BRAWLHALLA === arg0) {
+  } else if (tmp(13801).DetectableAppNames.BRAWLHALLA === arg0) {
     const obj16 = { androidScheme: "brawlhalla", iosScheme: null, predicate: isGameCommunityAddServerEntryEnabled };
     return obj16;
-  } else if (tmp(13767).DetectableAppNames.WUTHERING_WAVES === arg0) {
+  } else if (tmp(13801).DetectableAppNames.WUTHERING_WAVES === arg0) {
     const obj = { androidScheme: "wutheringwaves", iosScheme: "akioversea", predicate: isGameCommunityAddServerEntryEnabled };
     return obj;
   }

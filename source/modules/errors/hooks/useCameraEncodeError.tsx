@@ -1,13 +1,13 @@
-// Module ID: 17219
-// Function ID: 17220
+// Module ID: 17246
+// Function ID: 17247
 // Name: useCameraEncodeError
-// Dependencies: [502, 9687, 504, 9200, 2]
+// Dependencies: [502, 9726, 504, 9239, 2]
 // Exports: default
 
-// Module 17219 (useCameraEncodeError)
-import AVError from "AVError" /* 9200 */;
+// Module 17246 (useCameraEncodeError)
+import AVError from "AVError" /* 9239 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9687 */;
+import AVErrorStore from "AVErrorStore" /* 9726 */;
 
 const require = globalThis.__r;
 

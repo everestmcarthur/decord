@@ -1,8 +1,8 @@
-// Module ID: 6403
-// Function ID: 6404
+// Module ID: 6433
+// Function ID: 6434
 // Dependencies: [2]
 
-// Module 6403
+// Module 6433
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/OrbMultiplierSpotIllustration-2x.png.js");

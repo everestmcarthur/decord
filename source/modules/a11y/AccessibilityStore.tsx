@@ -1,14 +1,14 @@
-// Module ID: 4598
-// Function ID: 4599
+// Module ID: 4628
+// Function ID: 4629
 // Name: AccessibilityStore
-// Dependencies: [109, 1184, 1183, 1221, 1074, 4599, 4600, 1935, 504, 510, 4458, 573, 2]
+// Dependencies: [109, 1184, 1183, 1221, 1074, 4629, 4630, 1935, 504, 510, 4488, 573, 2]
 
-// Module 4598 (AccessibilityStore)
+// Module 4628 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage7 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import shared from "shared" /* 4458 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4600 */;
+import shared from "shared" /* 4488 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -96,7 +96,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1074);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4599);
+const MessageConstants = fn(4629);
 ({ MESSAGE_GROUP_SPACING: c10, DEFAULT_COMPACT_SPACING: closure_11, DEFAULT_COZY_SPACING: closure_12 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };

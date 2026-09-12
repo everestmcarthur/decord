@@ -1,8 +1,8 @@
-// Module ID: 13496
-// Function ID: 13497
+// Module ID: 13529
+// Function ID: 13530
 // Dependencies: [2]
 
-// Module 13496
+// Module 13529
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/referral_trial/referral_program_load_issue.png.js");

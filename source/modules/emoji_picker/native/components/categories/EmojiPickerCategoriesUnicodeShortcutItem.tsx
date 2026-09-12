@@ -1,11 +1,11 @@
-// Module ID: 10449
-// Function ID: 10450
+// Module ID: 10488
+// Function ID: 10489
 // Name: EmojiPickerCategoriesUnicodeShortcutItem
-// Dependencies: [32, 19, 17, 1074, 21, 4606, 4343, 9586, 5174, 1114, 10438, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 4373, 9625, 5204, 1114, 10477, 2]
 // Exports: default
 
-// Module 10449 (EmojiPickerCategoriesUnicodeShortcutItem)
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
+// Module 10488 (EmojiPickerCategoriesUnicodeShortcutItem)
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9625 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj2.itemInner = size;
@@ -48,8 +48,8 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
           num = EXPRESSION_FOOTER_HEIGHT;
         }
         const diff = end.end - num;
-        tmp2(4343).runOnJS(closure_5)(result > diff);
-        const tmp2Result = tmp2(4343);
+        tmp2(4373).runOnJS(closure_5)(result > diff);
+        const tmp2Result = tmp2(4373);
       }
       obj = cheapWorkletShallowEqual;
       tmp = current;

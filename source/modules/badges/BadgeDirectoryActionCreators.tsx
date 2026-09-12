@@ -1,10 +1,10 @@
-// Module ID: 8282
-// Function ID: 8283
+// Module ID: 8314
+// Function ID: 8315
 // Name: BadgeDirectoryActionCreators
-// Dependencies: [5, 1371, 1074, 573, 1272, 7674, 7679, 1232, 2]
+// Dependencies: [5, 1371, 1074, 573, 1272, 7704, 7709, 1232, 2]
 // Exports: fetchBadge, fetchBadgeDirectory, markBadgeDirectoryBadgeIndicatorSeen
 
-// Module 8282 (BadgeDirectoryActionCreators)
+// Module 8314 (BadgeDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -66,7 +66,7 @@ let closure_8 = async function _fetchBadgeDirectory(arg0, value) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {

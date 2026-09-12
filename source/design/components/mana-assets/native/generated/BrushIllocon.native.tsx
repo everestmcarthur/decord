@@ -1,13 +1,13 @@
-// Module ID: 5882
-// Function ID: 5883
+// Module ID: 5912
+// Function ID: 5913
 // Name: BrushIllocon
-// Dependencies: [21, 5638, 5883, 2]
+// Dependencies: [21, 5668, 5913, 2]
 // Exports: BrushIllocon
 
-// Module 5882 (BrushIllocon)
+// Module 5912 (BrushIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5883 from "module_5883" /* 5883 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5913 from "module_5913" /* 5913 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BrushIllocon = function BrushIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5883 };
+  const obj2 = { uri: _modDef5913 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

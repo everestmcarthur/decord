@@ -1,21 +1,21 @@
-// Module ID: 13798
-// Function ID: 13799
+// Module ID: 13832
+// Function ID: 13833
 // Name: ActivityTrackingStore
-// Dependencies: [1915, 1221, 502, 1931, 7470, 4629, 2011, 1074, 1090, 510, 7472, 11566, 1952, 4735, 504, 573, 2]
+// Dependencies: [1915, 1221, 502, 1931, 7500, 4659, 2011, 1074, 1090, 510, 7502, 11605, 1952, 4765, 504, 573, 2]
 
-// Module 13798 (ActivityTrackingStore)
+// Module 13832 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4735 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11566 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4765 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11605 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7470 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7500 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;

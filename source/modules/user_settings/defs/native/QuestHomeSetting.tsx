@@ -1,16 +1,16 @@
-// Module ID: 15048
-// Function ID: 15049
+// Module ID: 15082
+// Function ID: 15083
 // Name: defs/QuestHomeSetting
-// Dependencies: [1074, 11562, 1114, 11578, 15049, 15051, 7794, 5500, 2]
+// Dependencies: [1074, 11601, 1114, 11617, 15083, 15085, 7824, 5530, 2]
 
-// Module 15048 (defs/QuestHomeSetting)
+// Module 15082 (defs/QuestHomeSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import QuestContent from "QuestContent" /* 5500 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7794 */;
-import QuestsEligibility from "QuestsEligibility" /* 11578 */;
-import QuestsIcon from "QuestsIcon" /* 15049 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import QuestContent from "QuestContent" /* 5530 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7824 */;
+import QuestsEligibility from "QuestsEligibility" /* 11617 */;
+import QuestsIcon from "QuestsIcon" /* 15083 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

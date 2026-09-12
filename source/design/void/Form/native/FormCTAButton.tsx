@@ -1,14 +1,14 @@
-// Module ID: 8689
-// Function ID: 8690
+// Module ID: 8721
+// Function ID: 8722
 // Name: FormCTAButton
-// Dependencies: [19, 17, 1182, 1074, 21, 4606, 5575, 576, 1178, 5737, 8686, 2]
+// Dependencies: [19, 17, 1182, 1074, 21, 4636, 5605, 576, 1178, 5767, 8718, 2]
 
-// Module 8689 (FormCTAButton)
+// Module 8721 (FormCTAButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import RedesignCompat from "RedesignCompat" /* 5737 */;
+import RedesignCompat from "RedesignCompat" /* 5767 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5575 */;
+import TextStyles_mod from "TextStyles" /* 5605 */;
 
 require = fn;
 class FormCTAButton {
@@ -107,7 +107,7 @@ const FormConstants = fn(1182);
 ({ ANDROID_FOREGROUND_RIPPLE: metroRequire, getThemedRippleConfig: closure_7 } = FormConstants);
 const Fonts = fn(1074).Fonts;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { rowButton: { paddingHorizontal: 16 }, sectionBody: {}, button: { minHeight: 44, justifyContent: "center" }, text: { lineHeight: 44, paddingHorizontal: 17, textAlign: "left" }, textBrand: null, textDanger: null, textWarning: null, alignLeft: null, disabled: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.CONTROL_BRAND_FOREGROUND, 16));

@@ -1,13 +1,13 @@
-// Module ID: 12283
-// Function ID: 12284
+// Module ID: 12319
+// Function ID: 12320
 // Name: AppLauncherChannelOption
-// Dependencies: [32, 19, 1957, 21, 504, 4759, 12269, 12284, 4573, 12284, 1896, 2]
+// Dependencies: [32, 19, 1957, 21, 504, 4789, 12305, 12320, 4603, 12320, 1896, 2]
 // Exports: default
 
-// Module 12283 (AppLauncherChannelOption)
+// Module 12319 (AppLauncherChannelOption)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12284 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12320 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -66,7 +66,7 @@ export default function AppLauncherChannelOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12284, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12320, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onChannelPress(channel) {

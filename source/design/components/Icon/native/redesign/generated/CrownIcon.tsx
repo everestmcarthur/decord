@@ -1,13 +1,13 @@
-// Module ID: 10986
-// Function ID: 10987
+// Module ID: 11025
+// Function ID: 11026
 // Name: CrownIcon
-// Dependencies: [19, 21, 576, 4307, 10987, 2]
+// Dependencies: [19, 21, 576, 4337, 11026, 2]
 // Exports: CrownIcon
 
-// Module 10986 (CrownIcon)
+// Module 11025 (CrownIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod10987 from "module_10987" /* 10987 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod11026 from "module_11026" /* 11026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const CrownIcon = function CrownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10987, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11026, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,12 +1,12 @@
-// Module ID: 13556
-// Function ID: 13557
+// Module ID: 13589
+// Function ID: 13590
 // Name: SubscriptionPlaceholderPattern
-// Dependencies: [19, 17, 21, 8317, 13557, 13558, 13559, 4458, 2]
+// Dependencies: [19, 17, 21, 8349, 13590, 13591, 13592, 4488, 2]
 // Exports: SubscriptionPlaceholderPattern, getSubscriptionPlaceholderPatternSource, useSubscriptionPlaceholderPatternSource
 
-// Module 13556 (SubscriptionPlaceholderPattern)
-import shared from "shared" /* 4458 */;
-import _mod8317 from "module_8317" /* 8317 */;
+// Module 13589 (SubscriptionPlaceholderPattern)
+import shared from "shared" /* 4488 */;
+import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,44 +18,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx");
 
 export const getSubscriptionPlaceholderPatternSource = function getSubscriptionPlaceholderPatternSource(theme) {
-  return _mod8317.getIllustrationSource(theme, {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_13557");
+      return require("module_13590");
     },
     darker() {
-      return require("module_13558");
+      return require("module_13591");
     },
     light() {
-      return require("module_13559");
+      return require("module_13592");
     }
   });
 };
 export const useSubscriptionPlaceholderPatternSource = function useSubscriptionPlaceholderPatternSource() {
   const obj = shared;
-  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13557");
+      return require("module_13590");
     },
     darker() {
-      return require("module_13558");
+      return require("module_13591");
     },
     light() {
-      return require("module_13559");
+      return require("module_13592");
     }
   });
 };
 export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPattern(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13557");
+      return require("module_13590");
     },
     darker() {
-      return require("module_13558");
+      return require("module_13591");
     },
     light() {
-      return require("module_13559");
+      return require("module_13592");
     }
   });
   const merged = Object.assign(arg0);

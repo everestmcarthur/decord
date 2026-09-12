@@ -1,10 +1,10 @@
-// Module ID: 7412
-// Function ID: 7413
+// Module ID: 7442
+// Function ID: 7443
 // Name: ErrorHandlingUtils
 // Dependencies: [1074, 1232, 2]
 // Exports: captureOrIgnoreApiError
 
-// Module 7412 (ErrorHandlingUtils)
+// Module 7442 (ErrorHandlingUtils)
 import Constants from "Constants" /* 1074 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import size from "module_2" /* 2 */;

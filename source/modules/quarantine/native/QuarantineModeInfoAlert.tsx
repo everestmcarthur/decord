@@ -1,22 +1,22 @@
-// Module ID: 5574
-// Function ID: 5575
+// Module ID: 5604
+// Function ID: 5605
 // Name: QuarantineModeInfoAlert
-// Dependencies: [19, 1074, 21, 4606, 5575, 576, 5045, 1178, 1114, 4602, 2]
+// Dependencies: [19, 1074, 21, 4636, 5605, 576, 5075, 1178, 1114, 4632, 2]
 // Exports: default
 
-// Module 5574 (QuarantineModeInfoAlert)
+// Module 5604 (QuarantineModeInfoAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import common_AlertDefault from "common/Alert" /* 5045 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import common_AlertDefault from "common/Alert" /* 5075 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5575 */;
+import TextStyles from "TextStyles" /* 5605 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

@@ -1,9 +1,9 @@
-// Module ID: 4508
-// Function ID: 4509
+// Module ID: 4538
+// Function ID: 4539
 // Name: APIError
 // Dependencies: [1074, 1272, 1114, 2]
 
-// Module 4508 (APIError)
+// Module 4538 (APIError)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;

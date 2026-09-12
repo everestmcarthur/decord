@@ -1,12 +1,12 @@
-// Module ID: 10303
-// Function ID: 10304
+// Module ID: 10342
+// Function ID: 10343
 // Name: BugReportManager
-// Dependencies: [5, 17, 1347, 1074, 4816, 1115, 10184, 10186, 1256, 7191, 10304, 2]
+// Dependencies: [5, 17, 1347, 1074, 4846, 1150, 10223, 10225, 1256, 7221, 10343, 2]
 
-// Module 10303 (BugReportManager)
+// Module 10342 (BugReportManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 const require = fn;
 function showNotification(uri) {
@@ -126,14 +126,14 @@ function showNotification(uri) {
                 };
                 return obj10;
               }
-              obj2 = tmp2(1115);
+              obj2 = tmp2(1150);
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(10184).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(10184);
+            notificationDuration = tmp2(10223).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(10223);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(10186);
+            const obj6 = tmp3(10225);
             obj11.key = tmp2(1256).v4();
             obj11.image = closure_128_0;
             uri = undefined;
@@ -171,7 +171,7 @@ function showNotification(uri) {
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
 const InAppNotificationTypes = fn(1074).InAppNotificationTypes;
-const NativePermissionStatus = fn(4816).NativePermissionStatus;
+const NativePermissionStatus = fn(4846).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {
 }

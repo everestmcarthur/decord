@@ -1,16 +1,16 @@
-// Module ID: 15011
-// Function ID: 15012
+// Module ID: 15045
+// Function ID: 15046
 // Name: ConnectionsSettingScreen
-// Dependencies: [19, 21, 4573, 15012, 1896, 1483, 7067, 7936, 1114, 15013, 2]
+// Dependencies: [19, 21, 4603, 15046, 1896, 1483, 7097, 7966, 1114, 15047, 2]
 
-// Module 15011 (ConnectionsSettingScreen)
+// Module 15045 (ConnectionsSettingScreen)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15012, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15046, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,7 +20,7 @@ export default noop.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1483).useStackNavigation();
   let obj = stackNavigation(1483);
   const tmp = stackNavigation;
-  const params = stackNavigation(7067).useSettingNavigationRoute().params;
+  const params = stackNavigation(7097).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -34,9 +34,9 @@ export default noop.memo(function ConnectionsSettingScreen() {
         obj.onPress = onPress;
         const intl = stackNavigation(1114).intl;
         obj.label = intl.string(stackNavigation(1114).t.OYkgVk);
-        return closure_1_4(stackNavigation(7936).HeaderTextButton, obj);
+        return closure_1_4(stackNavigation(7966).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(15013).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(15047).UserSettingsConnections, { selectedPlatformType });
 });

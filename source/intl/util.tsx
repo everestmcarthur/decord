@@ -1,10 +1,10 @@
-// Module ID: 1118
-// Function ID: 1119
+// Module ID: 1116
+// Function ID: 1117
 // Name: intl/util
-// Dependencies: [19, 1119, 1155, 1177, 2]
+// Dependencies: [19, 1117, 1155, 1177, 2]
 // Exports: getAvailableLocales, getLanguages, getNormalizedLocale, useSyncMessages
 
-// Module 1118 (intl/util)
+// Module 1116 (intl/util)
 import _mod1155 from "module_1155" /* 1155 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
-  _require = require("module_1119").default;
+  _require = require("module_1117").default;
   const found = require("module_1177").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;

@@ -1,25 +1,25 @@
-// Module ID: 15103
-// Function ID: 15104
+// Module ID: 15134
+// Function ID: 15135
 // Name: BountiesScrollRecapFooter
-// Dependencies: [19, 17, 4598, 21, 4606, 576, 1115, 7052, 1114, 4602, 8927, 504, 4317, 2]
+// Dependencies: [19, 17, 4628, 21, 4636, 576, 1150, 7082, 1114, 4632, 8962, 504, 4347, 2]
 // Exports: BountiesScrollRecapFooter, BountiesScrollRecapFooterGradient
 
-// Module 15103 (BountiesScrollRecapFooter)
+// Module 15134 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 4317 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
-import OrbsIcon from "OrbsIcon" /* 8927 */;
+import native from "native" /* 4347 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
+import OrbsIcon from "OrbsIcon" /* 8962 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 }, headerLabel: { textTransform: "uppercase" }, orbRow: null, rive: null, orbAmount: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
@@ -41,7 +41,7 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
   const tmp = closure_7();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
   const intl = util.intl;
-  const stringResult = intl.string(util.t.CzRXoC);
+  const stringResult = intl.string(util.t.d6Rrn6);
   const obj2 = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
   const obj3 = { variant: typeConsolidationEyebrow.variant, color: "text-brand", style: null, accessible: false, children: stringResult };
   const items = [tmp.headerLabel, typeConsolidationEyebrow.style];

@@ -1,20 +1,20 @@
-// Module ID: 14506
-// Function ID: 14507
+// Module ID: 14541
+// Function ID: 14542
 // Name: VoiceNotificationManager
-// Dependencies: [32, 17, 1956, 4834, 4628, 1957, 1908, 4629, 4255, 1371, 1074, 576, 7830, 7828, 10130, 10979, 4759, 1114, 1898, 2]
+// Dependencies: [32, 17, 1956, 4864, 4658, 1957, 1908, 4659, 4285, 1371, 1074, 576, 7860, 7858, 10169, 11018, 4789, 1114, 1898, 2]
 
-// Module 14506 (VoiceNotificationManager)
+// Module 14541 (VoiceNotificationManager)
 import nativeDefault from "native" /* 576 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7828 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10130 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7858 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
@@ -28,7 +28,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: 3612, isPushToTalk: 3613, embeddedActivity: 3614, isStreaming: 3615 };
+    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS", embeddedActivity: "bal\u00F3n", isStreaming: "hra" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -147,18 +147,18 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(10979)(name);
-            const tmp16Result = tmp16(10979);
+            str2 = " - " + tmp16(11018)(name);
+            const tmp16Result = tmp16(11018);
           }
           const obj3 = RTCConnectionUtilsDefault;
           obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
-          const channelName = obj2(4759).computeChannelName(channel, UserStore, RelationshipStore);
+          const channelName = obj2(4789).computeChannelName(channel, UserStore, RelationshipStore);
           const intl = obj2(1114).intl;
           const obj5 = { callState: obj3.getStatus(connectionState).connectionStatusText };
           obj.title = intl.formatToPlainString(obj2(1114).t["aUT3+M"], obj5);
           const _HermesInternal2 = HermesInternal;
           obj.content = "" + channelName + str2;
-          obj.priority = obj2(7830).ServiceNotificationPriority.HIGH;
+          obj.priority = obj2(7860).ServiceNotificationPriority.HIGH;
           obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
           const intl2 = obj2(1114).intl;
           const items = [updateServiceHandlerResult.createAction(channel, "Disconnect", intl2.string(obj2(1114).t["6vrfgt"])), , ];
@@ -181,14 +181,14 @@ class VoiceNotificationManager {
           }
           items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
           obj.auxiliaryActions = items;
-          const ServiceNotificationType = tmp23(7830).ServiceNotificationType;
+          const ServiceNotificationType = tmp23(7860).ServiceNotificationType;
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = tmp8;
-          tmp16 = tmp16(7828);
+          tmp16 = tmp16(7858);
           updateServiceHandler = tmp16.updateServiceHandler;
           updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
-          const obj4 = obj2(4759);
+          const obj4 = obj2(4789);
         } else {
           obj2 = ForegroundServiceManagerDefault;
           obj2.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
@@ -219,7 +219,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: 3612, isPushToTalk: 3613, embeddedActivity: 3614, isStreaming: 3615 };
+obj2.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS", embeddedActivity: "bal\u00F3n", isStreaming: "hra" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();
@@ -338,18 +338,18 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(10979)(name);
-        const tmp16Result = tmp16(10979);
+        str2 = " - " + tmp16(11018)(name);
+        const tmp16Result = tmp16(11018);
       }
       const obj3 = RTCConnectionUtilsDefault;
       obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
-      const channelName = obj2(4759).computeChannelName(channel, UserStore, RelationshipStore);
+      const channelName = obj2(4789).computeChannelName(channel, UserStore, RelationshipStore);
       const intl = obj2(1114).intl;
       const obj5 = { callState: obj3.getStatus(connectionState).connectionStatusText };
       obj.title = intl.formatToPlainString(obj2(1114).t["aUT3+M"], obj5);
       const _HermesInternal2 = HermesInternal;
       obj.content = "" + channelName + str2;
-      obj.priority = obj2(7830).ServiceNotificationPriority.HIGH;
+      obj.priority = obj2(7860).ServiceNotificationPriority.HIGH;
       obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
       const intl2 = obj2(1114).intl;
       const items = [updateServiceHandlerResult.createAction(channel, "Disconnect", intl2.string(obj2(1114).t["6vrfgt"])), , ];
@@ -372,14 +372,14 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       }
       items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
       obj.auxiliaryActions = items;
-      const ServiceNotificationType = tmp23(7830).ServiceNotificationType;
+      const ServiceNotificationType = tmp23(7860).ServiceNotificationType;
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = tmp8;
-      tmp16 = tmp16(7828);
+      tmp16 = tmp16(7858);
       updateServiceHandler = tmp16.updateServiceHandler;
       updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
-      const obj4 = obj2(4759);
+      const obj4 = obj2(4789);
     } else {
       obj2 = ForegroundServiceManagerDefault;
       obj2.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);

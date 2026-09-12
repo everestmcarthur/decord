@@ -1,21 +1,21 @@
-// Module ID: 16147
-// Function ID: 16148
+// Module ID: 16171
+// Function ID: 16172
 // Name: HappeningNowCustomStatus
-// Dependencies: [5, 32, 19, 17, 4646, 15357, 1085, 21, 4606, 576, 563, 4840, 9266, 16148, 16149, 10969, 9861, 15358, 1115, 10984, 1178, 4602, 2]
+// Dependencies: [5, 32, 19, 17, 4676, 15379, 1085, 21, 4636, 576, 563, 4870, 9305, 16172, 16173, 11008, 9900, 15380, 1150, 11023, 1178, 4632, 2]
 // Exports: CustomStatusActivityCard
 
-// Module 16147 (HappeningNowCustomStatus)
+// Module 16171 (HappeningNowCustomStatus)
 import nativeDefault from "native" /* 576 */;
-import ActivityEmojiDefault from "ActivityEmoji" /* 10984 */;
+import ActivityEmojiDefault from "ActivityEmoji" /* 11023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15357);
+const HappeningNowConstants = fn(15379);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 const STATUS_CUTOUT_SMALL = HappeningNowConstants.STATUS_CUTOUT_SMALL;
 const StatusTypes = fn(1085).StatusTypes;
@@ -47,7 +47,7 @@ const rect5 = { left: -3, top: (HAPPENING_NOW_CONTENT_HEIGHT - 32 - 16) / 2, tra
 let items6 = [{ rotate: "-12deg" }];
 rect5.transform = items6;
 items1[5] = rect5;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = { customStatusContainer: { flexShrink: 1, flexDirection: "row", alignItems: "center" }, customStatusContextContainer: { flexShrink: 1, flexDirection: "column", marginLeft: 12, gap: 2 }, statusAvatar: { marginBottom: 2 }, largeEmoji: null, smallEmoji: null, cardContainer: null, emojisContainer: null };
   const size = { width: v32, height: v32, borderRadius: 2, overflow: "hidden" };
@@ -97,8 +97,8 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   let obj = user(563);
   let obj2 = { userId: user.id, guildId };
-  let tmp10 = activity(4840)({ userId: user.id, guildId });
-  const displayNameStylesFont = user(9266).useDisplayNameStylesFont({ displayNameStyles: tmp10 });
+  let tmp10 = activity(4870)({ userId: user.id, guildId });
+  const displayNameStylesFont = user(9305).useDisplayNameStylesFont({ displayNameStyles: tmp10 });
   items1 = [activity.emoji];
   const effect = noop.useEffect(() => {
     closure_0 = async function _loadEmoji(arg0, value) {
@@ -134,7 +134,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
               if (null != c1.emoji) {
                 c2 = 1;
                 v3 = 1;
-                const obj5 = { value: user(16148).getEmojiSource(c1.emoji), done: false };
+                const obj5 = { value: user(16172).getEmojiSource(c1.emoji), done: false };
                 return obj5;
               } else {
                 v3 = 3;
@@ -153,7 +153,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
               const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
               c2 = 2;
               v3 = 1;
-              const obj9 = { value: user(16149).getEmojiDominantColors(obj8), done: false };
+              const obj9 = { value: user(16173).getEmojiDominantColors(obj8), done: false };
               return obj9;
             }
           } else if (arg0 === 1) {
@@ -191,16 +191,16 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   if (null != activity.emoji) {
     num = 1;
   }
-  let obj3 = user(9266);
-  const gameMentionsAsPlainText = user(10969).useGameMentionsAsPlainText(activity.state);
+  let obj3 = user(9305);
+  const gameMentionsAsPlainText = user(11008).useGameMentionsAsPlainText(activity.state);
   const items2 = [userTitle, , ];
-  const tmp6Result = user(10969);
-  items2[1] = user(9861).getStatusLabel(status);
+  const tmp6Result = user(11008);
+  items2[1] = user(9900).getStatusLabel(status);
   items2[2] = gameMentionsAsPlainText;
   const joined = items2.join(", ");
   let obj4 = { onPress, width: null, style: null, accessibilityLabel: null, panelVariant: null, children: null };
   let str = "stretchy";
-  const tmp6Result3 = user(9861);
+  const tmp6Result3 = user(9900);
   if (fullwidth) {
     str = "full";
   }
@@ -224,7 +224,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       let tmp15Result3 = tmp15Result;
     } else {
       let obj9 = { emoji: activity.emoji, size: v32, style: tmp.largeEmoji, animate: false };
-      tmp15Result3 = tmp15(tmp9(10984), obj9);
+      tmp15Result3 = tmp15(tmp9(11023), obj9);
     }
     const items4 = [
       tmp15Result3,
@@ -253,7 +253,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     const obj11 = { user, avatarDecoration: user.avatarDecoration, size: tmp6(1178).AvatarSizes.XSMALL, guildId, status, isMobileOnline, isVROnline, style: tmp.statusAvatar, autoStatusCutout: STATUS_CUTOUT_SMALL };
     const items6 = [tmp15(tmp6(1178).Avatar, obj11), , ];
     const obj12 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    items6[1] = tmp15(tmp6(15358).HappeningNowCardHeader, obj12);
+    items6[1] = tmp15(tmp6(15380).HappeningNowCardHeader, obj12);
     const state = activity.state;
     let num2;
     if (state != null) {
@@ -265,7 +265,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     let tmp15Result4 = num2 > 0;
     if (tmp15Result4) {
       const obj13 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: num, maxFontSizeMultiplier: 2, children: gameMentionsAsPlainText };
-      tmp15Result4 = tmp15(tmp6(4602).Text, obj13);
+      tmp15Result4 = tmp15(tmp6(4632).Text, obj13);
     }
     const obj14 = { children: null };
     items6[2] = tmp15Result4;
@@ -273,16 +273,16 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     items5[1] = closure_13(tmp17, obj10);
     obj14.children = items5;
     let tmp18Result = tmp18(closure_14, obj14);
-    tmp6Result4 = tmp6(1115);
+    tmp6Result4 = tmp6(1150);
   } else {
     const obj15 = { children: null };
     const obj16 = { user, avatarDecoration: user.avatarDecoration, size: tmp6(1178).AvatarSizes.LARGE, guildId, status, isMobileOnline, isVROnline, autoStatusCutout: true };
     const items7 = [tmp15(tmp6(1178).Avatar, obj16), ];
     const obj17 = { style: tmp.customStatusContextContainer, children: null };
     const obj18 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    const items8 = [tmp15(tmp6(15358).HappeningNowCardHeader, obj18), ];
+    const items8 = [tmp15(tmp6(15380).HappeningNowCardHeader, obj18), ];
     const obj19 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: num, maxFontSizeMultiplier: 2, children: gameMentionsAsPlainText };
-    items8[1] = tmp15(tmp6(4602).Text, obj19);
+    items8[1] = tmp15(tmp6(4632).Text, obj19);
     obj17.children = items8;
     items7[1] = closure_13(tmp17, obj17);
     obj15.children = items7;
@@ -290,5 +290,5 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   }
   obj5.children = tmp18Result;
   obj4.children = closure_12(closure_6, obj5);
-  return closure_12(activity(15358), obj4);
+  return closure_12(activity(15380), obj4);
 };

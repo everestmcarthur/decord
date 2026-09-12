@@ -1,17 +1,17 @@
-// Module ID: 12334
-// Function ID: 12335
+// Module ID: 12370
+// Function ID: 12371
 // Name: ChatInputActionButtonApps
-// Dependencies: [19, 17, 12055, 21, 12136, 12192, 12335, 12332, 5022, 12337, 1114, 2]
+// Dependencies: [19, 17, 12091, 21, 12172, 12228, 12371, 12368, 5052, 12373, 1114, 2]
 
-// Module 12334 (ChatInputActionButtonApps)
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5022 */;
-import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12192 */;
-import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 12335 */;
+// Module 12370 (ChatInputActionButtonApps)
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
+import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12228 */;
+import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 12371 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12055).ChatInputActionType;
+const ChatInputActionType = fn(12091).ChatInputActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);

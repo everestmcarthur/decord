@@ -1,16 +1,16 @@
-// Module ID: 11597
-// Function ID: 11598
+// Module ID: 11636
+// Function ID: 11637
 // Name: AppStoreOverlayStatsCarousel
-// Dependencies: [19, 17, 21, 4606, 576, 11598, 1114, 11599, 4602, 1115, 6726, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 11637, 1114, 11638, 4632, 1150, 6756, 2]
 // Exports: default
 
-// Module 11597 (AppStoreOverlayStatsCarousel)
+// Module 11636 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11598 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11599 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11637 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = AppStoreOverlayStatCardUtils.formatAppStoreRatingValue(stat.rating, util.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      result1 = tmp9(11598).formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
-      const tmp9Result = tmp9(11598);
+      result1 = tmp9(11637).formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
+      const tmp9Result = tmp9(11637);
     }
     const appStoreStarFillAmounts = AppStoreOverlayStatCardUtils.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1114).intl;
@@ -90,7 +90,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const obj8 = { style: tmp.secondaryRow, children: null };
     if (null == secondaryContent) {
       const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: secondaryText };
-      secondaryContent = tmp23(tmp20(4602).Text, obj9);
+      secondaryContent = tmp23(tmp20(4632).Text, obj9);
     }
     obj8.children = secondaryContent;
     tmp23Result = tmp23(hasOwnProperty, obj8);
@@ -107,7 +107,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     obj10.accessibilityHint = stringResult;
     obj10.children = tmp18Result;
     let tmp23Result2 = tmp23(React3, obj10);
-    tmp20Result = tmp20(1115);
+    tmp20Result = tmp20(1150);
   } else {
     const obj11 = { style: items, accessible: true, accessibilityRole: "text", accessibilityLabel, children: tmp18Result };
     tmp23Result2 = tmp23(hasOwnProperty, obj11);
@@ -118,7 +118,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };

@@ -1,12 +1,12 @@
-// Module ID: 5477
-// Function ID: 5478
+// Module ID: 5507
+// Function ID: 5508
 // Name: GuildMemberRequesterStore
-// Dependencies: [1957, 2021, 5478, 573, 504, 2]
+// Dependencies: [1957, 2021, 5508, 573, 504, 2]
 
-// Module 5477 (GuildMemberRequesterStore)
+// Module 5507 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5478 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5508 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 

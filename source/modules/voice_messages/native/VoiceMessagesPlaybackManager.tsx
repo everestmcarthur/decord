@@ -1,15 +1,15 @@
-// Module ID: 14595
-// Function ID: 14596
+// Module ID: 14630
+// Function ID: 14631
 // Name: VoiceMessagesPlaybackManager
-// Dependencies: [17, 4598, 2011, 1115, 14596, 1898, 573, 4954, 2]
+// Dependencies: [17, 4628, 2011, 1150, 14631, 1898, 573, 4984, 2]
 // Exports: handleVoiceMessageDeleted, pauseCurrentAudioPlayer, playCurrentAudioPlayer
 
-// Module 14595 (VoiceMessagesPlaybackManager)
+// Module 14630 (VoiceMessagesPlaybackManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4954 */;
-import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14596 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4984 */;
+import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14631 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 import size from "module_2" /* 2 */;
@@ -34,7 +34,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(1115);
+        obj = applyArgumentsResult(1150);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -62,7 +62,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
                 const result1 = DCDAudioPlayerManager2.maybePlayCurrentPlayer();
               }
             }
-            tmpResult = tmp(1115);
+            tmpResult = tmp(1150);
           }
         }
         if (tmp4) {
@@ -74,7 +74,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
               DCDAudioPlayerManager.pauseCurrentPlayer(true);
             }
           }
-          tmpResult2 = tmp(1115);
+          tmpResult2 = tmp(1150);
         }
         tmp4 = "active" !== state && "active" === appState;
       }

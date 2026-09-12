@@ -1,8 +1,8 @@
-// Module ID: 4412
-// Function ID: 4413
+// Module ID: 4442
+// Function ID: 4443
 // Dependencies: [2]
 
-// Module 4412
+// Module 4442
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/GameServerHosting.riv.js");

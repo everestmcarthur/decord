@@ -1,13 +1,13 @@
-// Module ID: 15381
-// Function ID: 15382
+// Module ID: 15403
+// Function ID: 15404
 // Name: useLatestChannelMessage
-// Dependencies: [32, 19, 13773, 504, 15382, 2]
+// Dependencies: [32, 19, 13807, 504, 15404, 2]
 // Exports: default
 
-// Module 15381 (useLatestChannelMessage)
-import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15382 */;
+// Module 15403 (useLatestChannelMessage)
+import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15404 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13773 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13807 */;
 
 const require = fn;
 const useEffect = fn(19).useEffect;

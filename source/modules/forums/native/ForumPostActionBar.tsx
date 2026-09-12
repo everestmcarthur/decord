@@ -1,19 +1,19 @@
-// Module ID: 11507
-// Function ID: 11508
+// Module ID: 11546
+// Function ID: 11547
 // Name: ForumPostActionBar
-// Dependencies: [32, 19, 17, 4246, 4247, 1957, 1074, 21, 4606, 576, 504, 7377, 1477, 11346, 7945, 11508, 5174, 1114, 4557, 4602, 9867, 4549, 7529, 11, 4537, 11509, 2]
+// Dependencies: [32, 19, 17, 4276, 4277, 1957, 1074, 21, 4636, 576, 504, 7407, 1477, 11385, 7975, 11547, 5204, 1114, 4587, 4632, 9906, 4579, 7559, 11, 4567, 11548, 2]
 // Exports: default
 
-// Module 11507 (ForumPostActionBar)
+// Module 11546 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import Client from "Client" /* 4537 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11346 */;
+import Client from "Client" /* 4567 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4246 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
+import LurkingStore from "LurkingStore" /* 4276 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { actionBarContainer: { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 }, actionRow: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, reactionRow: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
 let obj3 = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
 obj2.actionButton = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: nativeDefault.radii.xs, borderWidth: 1, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
@@ -39,8 +39,8 @@ export default function ForumPostActionBar(channel) {
   const items = [ChannelStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
   let obj = channel(504);
-  const firstMessage = channel(7377).useFirstForumPostMessage(channel).firstMessage;
-  let obj2 = channel(7377);
+  const firstMessage = channel(7407).useFirstForumPostMessage(channel).firstMessage;
+  let obj2 = channel(7407);
   const items1 = [JoinedThreadsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
@@ -62,13 +62,13 @@ export default function ForumPostActionBar(channel) {
   }, items3);
   const obj4 = channel(504);
   const obj6 = { style: null, children: null };
-  const items4 = [tmp.actionBarContainer, channel(7945).useGradientTop()];
+  const items4 = [tmp.actionBarContainer, channel(7975).useGradientTop()];
   obj6.style = items4;
   let tmp11 = null != firstMessage;
   if (tmp11) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj7.children = closure_10(tmp2(11508).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_10(tmp2(11547).ForumPostActionBarReactions, obj8);
     tmp11 = closure_10(tmp10, obj7);
   }
   const items5 = [tmp11, ];
@@ -89,8 +89,8 @@ export default function ForumPostActionBar(channel) {
         const result = messages_MessagesUtils.handleCopyLinkForumPost(guildId, channel.id, obj2);
       }
     };
-    obj10.children = closure_10(tmp2(4549).LinkIcon, { size: "xs" });
-    items7[1] = closure_10(tmp2(5174).PressableOpacity, obj10);
+    obj10.children = closure_10(tmp2(4579).LinkIcon, { size: "xs" });
+    items7[1] = closure_10(tmp2(5204).PressableOpacity, obj10);
     const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1114).intl;
     obj11.accessibilityLabel = intl5.string(tmp2(1114).t.nFP4oa);
@@ -104,8 +104,8 @@ export default function ForumPostActionBar(channel) {
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_10(tmp2(11509).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = closure_10(tmp2(5174).PressableOpacity, obj11);
+    obj11.children = closure_10(tmp2(11548).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = closure_10(tmp2(5204).PressableOpacity, obj11);
     obj9.children = items7;
     items5[1] = tmp9(tmp10, obj9);
     obj6.children = items5;
@@ -123,8 +123,8 @@ export default function ForumPostActionBar(channel) {
       obj12.style = tmp.actionButton;
       obj12.onPress = items9;
       intl = closure_10;
-      items9 = [closure_10(tmp2(4557).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
-      Text = tmp2(4602).Text;
+      items9 = [closure_10(tmp2(4587).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      Text = tmp2(4632).Text;
       const obj13 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
       obj13.style = items10;
@@ -138,14 +138,14 @@ export default function ForumPostActionBar(channel) {
       obj12.accessibilityLabel = Text(t["DjZ+6E"]);
       obj12.style = tmp.actionButton;
       obj12.onPress = items9;
-      const items11 = [closure_10(tmp2(9867).BellIcon, { size: "xs" }), ];
+      const items11 = [closure_10(tmp2(9906).BellIcon, { size: "xs" }), ];
       const obj14 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       const intl2 = tmp2(1114).intl;
       obj14.children = intl2.string(tmp2(1114).t["0rQinA"]);
-      items11[1] = closure_10(tmp2(4602).Text, obj14);
+      items11[1] = closure_10(tmp2(4632).Text, obj14);
       obj12.children = items11;
       tmp15 = obj12;
     }
-    tmp9(tmp2(5174).PressableOpacity, tmp15);
+    tmp9(tmp2(5204).PressableOpacity, tmp15);
   }
 };

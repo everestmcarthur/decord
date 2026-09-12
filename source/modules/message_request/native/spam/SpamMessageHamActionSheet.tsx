@@ -1,22 +1,22 @@
-// Module ID: 12540
-// Function ID: 12541
+// Module ID: 12576
+// Function ID: 12577
 // Name: SpamMessageHamActionSheet
-// Dependencies: [32, 19, 17, 1371, 21, 4606, 576, 504, 12535, 4305, 1114, 5648, 4573, 7223, 7222, 7271, 8684, 5026, 2]
+// Dependencies: [32, 19, 17, 1371, 21, 4636, 576, 504, 12571, 4335, 1114, 5678, 4603, 7253, 7252, 7301, 8716, 5056, 2]
 // Exports: default
 
-// Module 12540 (SpamMessageHamActionSheet)
+// Module 12576 (SpamMessageHamActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import _modDef5648 from "module_5648" /* 5648 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7271 */;
-import Form from "Form" /* 8684 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12535 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import _modDef5678 from "module_5678" /* 5678 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7301 */;
+import Form from "Form" /* 8716 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12571 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -25,7 +25,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj2 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, container: null, buttonContainer: null, switch: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.container = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -53,7 +53,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1114).intl;
       obj2.content = intl.string(recipientId(1114).t["EDYbS+"]);
-      obj2.icon = _modDef5648;
+      obj2.icon = _modDef5678;
       ToastActionCreatorsDefault.open(obj2);
     },
     onAcceptSuccess() {

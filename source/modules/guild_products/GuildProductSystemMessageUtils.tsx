@@ -1,10 +1,10 @@
-// Module ID: 8068
-// Function ID: 8069
+// Module ID: 8098
+// Function ID: 8099
 // Name: GuildProductSystemMessageUtils
 // Dependencies: [1074, 1114, 2]
 // Exports: getGuildProductPurchaseSystemMessageContentMobile
 
-// Module 8068 (GuildProductSystemMessageUtils)
+// Module 8098 (GuildProductSystemMessageUtils)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;

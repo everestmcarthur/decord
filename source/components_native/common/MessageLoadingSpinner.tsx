@@ -1,17 +1,17 @@
-// Module ID: 9704
-// Function ID: 9705
+// Module ID: 9743
+// Function ID: 9744
 // Name: MessageLoadingSpinner
-// Dependencies: [19, 17, 21, 1115, 4308, 576, 5628, 2]
+// Dependencies: [19, 17, 21, 1150, 4338, 576, 5658, 2]
 // Exports: default
 
-// Module 9704 (MessageLoadingSpinner)
+// Module 9743 (MessageLoadingSpinner)
 import nativeDefault from "native" /* 576 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5628 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5658 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let result = null;
 if (!PlatformUtils.isAndroid()) {
   result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");

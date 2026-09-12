@@ -1,13 +1,13 @@
-// Module ID: 5127
-// Function ID: 5128
+// Module ID: 5157
+// Function ID: 5158
 // Name: TextWarningIcon
-// Dependencies: [19, 21, 576, 4307, 5095, 2]
+// Dependencies: [19, 21, 576, 4337, 5125, 2]
 // Exports: TextWarningIcon
 
-// Module 5127 (TextWarningIcon)
+// Module 5157 (TextWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod5095 from "module_5095" /* 5095 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod5125 from "module_5125" /* 5125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const TextWarningIcon = function TextWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5095, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5125, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

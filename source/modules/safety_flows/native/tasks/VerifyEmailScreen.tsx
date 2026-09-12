@@ -1,10 +1,10 @@
-// Module ID: 17959
-// Function ID: 17960
+// Module ID: 17989
+// Function ID: 17990
 // Name: VerifyEmailScreen
-// Dependencies: [5, 32, 19, 21, 17954, 17955, 17949, 4305, 1114, 2690, 17958, 5024, 576, 4602, 6677, 17960, 2]
+// Dependencies: [5, 32, 19, 21, 17984, 17985, 17979, 4335, 1114, 2690, 17988, 5054, 576, 4632, 6707, 17990, 2]
 // Exports: default
 
-// Module 17959 (VerifyEmailScreen)
+// Module 17989 (VerifyEmailScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

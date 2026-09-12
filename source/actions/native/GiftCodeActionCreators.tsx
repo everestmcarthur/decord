@@ -1,12 +1,12 @@
-// Module ID: 11526
-// Function ID: 11527
+// Module ID: 11565
+// Function ID: 11566
 // Name: actions/GiftCodeActionCreators
-// Dependencies: [5, 1074, 7490, 11527, 573, 1272, 1242, 4507, 4809, 11532, 1896, 2]
+// Dependencies: [5, 1074, 7520, 11566, 573, 1272, 1242, 4537, 4839, 11571, 1896, 2]
 // Exports: openGiftCodeRedeemModal, redeemGiftCode
 
-// Module 11526 (actions/GiftCodeActionCreators)
+// Module 11565 (actions/GiftCodeActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -65,7 +65,7 @@ let closure_7 = async function _redeemGiftCode(arg0, value) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -160,7 +160,7 @@ let closure_7 = async function _redeemGiftCode(arg0, value) {
   }
 };
 function openGiftCodeRedeemModal(code) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11532, dependencyMap.paths), { code }, "GIFT_CODE_REDEEM_MODAL_KEY");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11571, dependencyMap.paths), { code }, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 const Constants = fn(1074);
 ({ Endpoints: closure_4, AnalyticEvents: hasOwnProperty } = Constants);

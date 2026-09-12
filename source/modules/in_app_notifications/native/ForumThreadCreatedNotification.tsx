@@ -1,17 +1,17 @@
-// Module ID: 10271
-// Function ID: 10272
+// Module ID: 10310
+// Function ID: 10311
 // Name: ForumThreadCreatedNotification
-// Dependencies: [19, 10185, 21, 4759, 1114, 4839, 4617, 4809, 10231, 1896, 10259, 1178, 4602, 2]
+// Dependencies: [19, 10224, 21, 4789, 1114, 4869, 4647, 4839, 10270, 1896, 10298, 1178, 4632, 2]
 // Exports: default
 
-// Module 10271 (ForumThreadCreatedNotification)
+// Module 10310 (ForumThreadCreatedNotification)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import transitionToChannel from "transitionToChannel" /* 4617 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import transitionToChannel from "transitionToChannel" /* 4647 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(10185).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(10224).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -38,7 +38,7 @@ export default function ForumThreadCreatedNotification(notification) {
   const callback = guild.useCallback(() => {
     transitionToChannel.transitionToThread(thread);
   }, items1);
-  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10231, dependencyMap.paths), { channelId: notification.parentChannel.id }), items2);
+  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10270, dependencyMap.paths), { channelId: notification.parentChannel.id }), items2);
   const obj2 = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   const obj = notification(parentChannel[5]);
   obj2.icon = jsx(notification(parentChannel[11]).Avatar, { size: notification(parentChannel[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });

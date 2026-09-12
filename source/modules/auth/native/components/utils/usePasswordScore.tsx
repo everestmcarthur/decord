@@ -1,10 +1,10 @@
-// Module ID: 16041
-// Function ID: 16042
+// Module ID: 16065
+// Function ID: 16066
 // Name: usePasswordScore
-// Dependencies: [5, 32, 19, 12, 16028, 2]
+// Dependencies: [5, 32, 19, 12, 16052, 2]
 // Exports: usePasswordScore
 
-// Module 16041 (usePasswordScore)
+// Module 16065 (usePasswordScore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

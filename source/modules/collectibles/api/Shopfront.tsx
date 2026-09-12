@@ -1,10 +1,10 @@
-// Module ID: 15128
-// Function ID: 15129
+// Module ID: 15150
+// Function ID: 15151
 // Name: Shopfront
-// Dependencies: [5, 1074, 1272, 1326, 7412, 2]
+// Dependencies: [5, 1074, 1272, 1326, 7442, 2]
 // Exports: search
 
-// Module 15128 (Shopfront)
+// Module 15150 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -45,7 +45,7 @@ let closure_4 = async function _search(arg0, value) {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

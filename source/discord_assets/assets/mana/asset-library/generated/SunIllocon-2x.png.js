@@ -1,8 +1,8 @@
-// Module ID: 6601
-// Function ID: 6602
+// Module ID: 6631
+// Function ID: 6632
 // Dependencies: [2]
 
-// Module 6601
+// Module 6631
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SunIllocon-2x.png.js");

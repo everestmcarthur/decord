@@ -1,11 +1,11 @@
-// Module ID: 16770
-// Function ID: 16771
+// Module ID: 16797
+// Function ID: 16798
 // Name: useContentContainerStyles
-// Dependencies: [7952, 4606, 2]
+// Dependencies: [7982, 4636, 2]
 
-// Module 16770 (useContentContainerStyles)
-import SearchConstants from "SearchConstants" /* 7952 */;
-import createStyles from "createStyles" /* 4606 */;
+// Module 16797 (useContentContainerStyles)
+import SearchConstants from "SearchConstants" /* 7982 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 ({ SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);

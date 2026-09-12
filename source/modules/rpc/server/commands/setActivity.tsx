@@ -1,17 +1,17 @@
-// Module ID: 14545
-// Function ID: 14546
+// Module ID: 14580
+// Function ID: 14581
 // Name: setActivity
-// Dependencies: [4834, 4511, 1074, 8425, 9648, 10978, 14515, 9645, 573, 11556, 9597, 12, 1090, 8224, 1242, 2]
+// Dependencies: [4864, 4541, 1074, 8457, 9687, 11017, 14550, 9684, 573, 11595, 9636, 12, 1090, 8256, 1242, 2]
 
-// Module 14545 (setActivity)
+// Module 14580 (setActivity)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9648 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10978 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 11017 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
 
 require = fn;
-let Constants = fn(4511);
+let Constants = fn(4541);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 ({ TransportTypes: hasOwnProperty, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1074);
@@ -20,7 +20,7 @@ let closure_11 = ["1402418171662569542"];
 let obj = {};
 let obj2 = { scope: null, validation: null, handler: null };
 let obj3 = {};
-let items = [fn(8425).OAuth2Scopes.RPC, fn(8425).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
+let items = [fn(8457).OAuth2Scopes.RPC, fn(8457).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
 obj3[RPC_SCOPE_CONFIG.ANY] = items;
 obj2.scope = obj3;
 obj2.validation = function validation(number) {

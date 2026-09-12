@@ -1,12 +1,12 @@
-// Module ID: 7203
-// Function ID: 7204
+// Module ID: 7233
+// Function ID: 7234
 // Name: Emoji
-// Dependencies: [19, 17, 1183, 21, 1115, 4263, 1178, 5638, 4458, 7204, 7205, 2]
+// Dependencies: [19, 17, 1183, 21, 1150, 4293, 1178, 5668, 4488, 7234, 7235, 2]
 // Exports: default
 
-// Module 7203 (Emoji)
-import EmojiUtilsDefault from "EmojiUtils" /* 4263 */;
-import FastImageDefault from "FastImage" /* 5638 */;
+// Module 7233 (Emoji)
+import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
+import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -33,16 +33,16 @@ export default function Emoji(arg0) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         const tmp10 = FastImageDefault;
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = tmp9(7204);
+          let tmp9Result = tmp9(7234);
         } else {
-          tmp9Result = tmp9(7205);
+          tmp9Result = tmp9(7235);
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };
         obj4.source = obj5;
         obj4.onError = onError;
         let tmp6Result = tmp6(tmp10, obj4);
-        tmpResult = tmp(4458);
+        tmpResult = tmp(4488);
       }
       obj3.children = tmp6Result;
       return tmp6(tmp7, obj3);

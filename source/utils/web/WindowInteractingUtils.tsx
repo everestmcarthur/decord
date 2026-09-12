@@ -1,10 +1,10 @@
-// Module ID: 5607
-// Function ID: 5608
+// Module ID: 5637
+// Function ID: 5638
 // Name: WindowInteractingUtils
 // Dependencies: [2]
 // Exports: clearCurrentlyInteractingWindowId, getCurrentlyInteractingWindowId, setCurrentlyInteractingWindowId
 
-// Module 5607 (WindowInteractingUtils)
+// Module 5637 (WindowInteractingUtils)
 import size from "module_2" /* 2 */;
 
 let c0 = null;

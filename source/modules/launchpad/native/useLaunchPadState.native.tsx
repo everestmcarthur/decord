@@ -1,18 +1,18 @@
-// Module ID: 17049
-// Function ID: 17050
+// Module ID: 17076
+// Function ID: 17077
 // Name: useLaunchPadState
-// Dependencies: [19, 11558, 17050, 4343, 12126, 11447, 11448, 2]
+// Dependencies: [19, 11597, 17077, 4373, 12162, 11486, 11487, 2]
 // Exports: default
 
-// Module 17049 (useLaunchPadState)
+// Module 17076 (useLaunchPadState)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const LaunchPadConstants = fn(11558);
+const LaunchPadConstants = fn(11597);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } = LaunchPadConstants);
 let closure_6 = { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1, requiresPop: false, startShown: false };
 let __closure = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(17050);
+const LaunchPadPullTabCache = fn(17077);
 __closure.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 let closure_8 = { code: "function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){const{launchPadShown}=this.__closure;launchPadShown.set(shown);}" };
 let closure_9 = { code: "function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){const{launchPadSharedState}=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));}" };

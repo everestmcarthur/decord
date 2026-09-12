@@ -1,12 +1,12 @@
-// Module ID: 9689
-// Function ID: 9690
+// Module ID: 9728
+// Function ID: 9729
 // Name: StreamEnded
-// Dependencies: [19, 17, 21, 8317, 9690, 9691, 4458, 2]
+// Dependencies: [19, 17, 21, 8349, 9729, 9730, 4488, 2]
 // Exports: StreamEnded, getStreamEndedSource, useStreamEndedSource
 
-// Module 9689 (StreamEnded)
-import shared from "shared" /* 4458 */;
-import _mod8317 from "module_8317" /* 8317 */;
+// Module 9728 (StreamEnded)
+import shared from "shared" /* 4488 */;
+import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,35 +18,35 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
 
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
-  return _mod8317.getIllustrationSource(theme, {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_9690");
+      return require("module_9729");
     },
     darker() {
-      return require("module_9691");
+      return require("module_9730");
     }
   });
 };
 export const useStreamEndedSource = function useStreamEndedSource() {
   const obj = shared;
-  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9690");
+      return require("module_9729");
     },
     darker() {
-      return require("module_9691");
+      return require("module_9730");
     }
   });
 };
 export const StreamEnded = function StreamEnded(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9690");
+      return require("module_9729");
     },
     darker() {
-      return require("module_9691");
+      return require("module_9730");
     }
   });
   const merged = Object.assign(arg0);

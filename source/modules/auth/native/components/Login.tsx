@@ -1,19 +1,19 @@
-// Module ID: 7013
-// Function ID: 7014
+// Module ID: 7043
+// Function ID: 7044
 // Name: Login
-// Dependencies: [5, 32, 19, 17, 7014, 502, 1074, 21, 4606, 5174, 4602, 4951, 1114, 1115, 5199, 7015, 1483, 504, 1486, 6664, 7017, 4952, 7018, 7019, 7020, 4507, 7021, 7025, 7026, 7028, 7022, 5026, 7029, 1608, 7031, 7033, 6677, 7039, 7041, 7043, 5024, 7050, 7012, 2]
+// Dependencies: [5, 32, 19, 17, 7044, 502, 1074, 21, 4636, 5204, 4632, 4981, 1114, 1150, 5229, 7045, 1483, 504, 1486, 6694, 7047, 4982, 7048, 7049, 7050, 4537, 7051, 7055, 7056, 7058, 7052, 5056, 7059, 1608, 7061, 7063, 6707, 7069, 7071, 7073, 5054, 7080, 7042, 2]
 // Exports: default
 
-// Module 7013 (Login)
+// Module 7043 (Login)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import Pressables from "Pressables" /* 5174 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5199 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import Pressables from "Pressables" /* 5204 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5229 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7014 */;
+import PhoneStore from "PhoneStore" /* 7044 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ const View = fn(17).View;
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -228,32 +228,91 @@ export default function Login(isMultiAccount) {
     c8 = 0;
     c6 = 0;
     const iter = (async (arg0, value) => {
-      closure_131_0 = isMultiAccount;
-      closure_131_1 = closure_1;
-      let flag = closure_2;
-      if (closure_2 === undefined) {
-        flag = false;
-      }
-      closure_131_2 = flag;
-      await "PX_16";
-      tmp3(true);
-      tmp22({});
-      await navigation(ref[19]).login({ login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount });
-      if (2 === tmp7) {
-        c6 = 0;
-        closure_131_4 = tmp22;
-        tmp3(false);
-        const authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(ref[23]).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
-        callback(authenticationErrorsFromV6OrEarlierAPIError);
+      if (c8 === 2) {
         c8 = 3;
-        isMultiAccount(ref[23]);
-      } else if (arg0 === 1) {
-        c8 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        c6 = 0;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              closure_3 = tmp7;
+              closure_131_2 = undefined;
+              closure_131_0 = isMultiAccount;
+              closure_131_1 = closure_1;
+              let flag = closure_2;
+              if (closure_2 === undefined) {
+                flag = false;
+              }
+              closure_131_2 = flag;
+              let authenticationErrorsFromV6OrEarlierAPIError;
+              c7 = 1;
+              c8 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              tmp3(true);
+              tmp22({});
+              c6 = 1;
+              const obj6 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
+              c7 = 3;
+              c8 = 1;
+              const obj8 = { value: navigation(ref[19]).login(obj6), done: false };
+              return obj8;
+            }
+          } else {
+            if (2 === tmp7) {
+              c6 = 0;
+              closure_131_4 = tmp22;
+              tmp3(false);
+              authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(ref[23]).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
+              callback(authenticationErrorsFromV6OrEarlierAPIError);
+              c8 = 3;
+              const obj2 = isMultiAccount(ref[23]);
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              c6 = 0;
+            }
+            c6 = 0;
+            c8 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+        } catch (tmp22) {
+          if (tmp4 === c6) {
+            c8 = tmp2;
+            throw tmp22;
+          } else {
+            c7 = tmp;
+          }
+        }
       }
-      return value;
     })();
     iter.next();
     return iter;

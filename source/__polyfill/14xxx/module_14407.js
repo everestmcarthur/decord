@@ -1,48 +1,20 @@
 // Module ID: 14407
 // Function ID: 14408
-// Dependencies: [14376, 14408, 14351, 14404]
+// Dependencies: [14392]
 
 // Module 14407
-import _mod14376 from "module_14376" /* 14376 */;
+import _mod14392 from "module_14392" /* 14392 */;
 
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod14392(1.toString);
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14376(value)) {
-    tmp3(14408)(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      tmp3(14351)(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        tmp3(14404).f(arg0, arg1, obj2);
-        const tmp3Result = tmp3(14404);
-      }
-    } catch (err) {
-    }
-  }
-  return arg0;
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

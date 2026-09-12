@@ -1,17 +1,17 @@
-// Module ID: 13211
-// Function ID: 13212
+// Module ID: 9002
+// Function ID: 9003
 // Name: StorefrontCollectionActionCreators
-// Dependencies: [5, 2025, 13209, 7633, 1074, 1090, 573, 4848, 4508, 2]
+// Dependencies: [5, 2025, 9000, 7663, 1074, 1090, 573, 4878, 4538, 2]
 // Exports: maybeFetchCollectionsAfter, maybeFetchCollectionsForApplication, maybeFetchCollectionsForApplicationPage, maybeFetchCollectionsWithProducts
 
-// Module 13211 (StorefrontCollectionActionCreators)
+// Module 9002 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import StoreUtils from "StoreUtils" /* 4848 */;
+import StoreUtils from "StoreUtils" /* 4878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13209 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7633 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9000 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7663 */;
 
 require = fn;
 let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0, value) {
@@ -64,7 +64,7 @@ let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0, value) 
           closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -504,7 +504,7 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0, value
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {

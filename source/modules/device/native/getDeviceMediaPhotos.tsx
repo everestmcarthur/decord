@@ -1,14 +1,14 @@
-// Module ID: 10734
-// Function ID: 10735
+// Module ID: 10773
+// Function ID: 10774
 // Name: getDeviceMediaPhotos
-// Dependencies: [17, 3, 1232, 1115, 10735, 2]
+// Dependencies: [17, 3, 1232, 1150, 10774, 2]
 // Exports: default
 
-// Module 10734 (getDeviceMediaPhotos)
+// Module 10773 (getDeviceMediaPhotos)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import DCDPhotosDefault from "DCDPhotos" /* 10735 */;
+import DCDPhotosDefault from "DCDPhotos" /* 10774 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

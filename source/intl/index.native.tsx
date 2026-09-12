@@ -1,47 +1,35 @@
 // Module ID: 1114
 // Function ID: 1115
 // Name: util
-// Dependencies: [19, 1074, 21, 17, 1115, 1117, 1118, 1155, 1178, 14237, 2, 14238, 14241]
+// Dependencies: [19, 1074, 21, 1115, 1116, 1155, 1178, 14272, 2, 14273, 14276]
 // Exports: getSystemLocale, useSyncMessages
 
 // Module 1114 (util)
-import _mod17 from "module_17" /* 17 */;
-import intl_util from "intl/util" /* 1118 */;
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1115 */;
+import intl_util from "intl/util" /* 1116 */;
 import native from "native" /* 1178 */;
-import migration from "migration" /* 14237 */;
-import _modDef14241 from "module_14241" /* 14241 */;
+import migration from "migration" /* 14272 */;
+import _modDef14276 from "module_14276" /* 14276 */;
 import noop from "module_19" /* 19 */;
 
-const NativeDeviceLocaleModule = tmp(1117);
 require = fn;
 const Fonts = fn(1074).Fonts;
 const jsx = fn(21).jsx;
 let obj = { strong: { fontFamily: Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, code: { fontFamily: Fonts.CODE_NORMAL }, del: { textDecorationLine: "line-through", textDecorationStyle: "solid" } };
-get_ActivityIndicator = fn(17);
-const PlatformUtils = fn(1115);
-if (PlatformUtils.isAndroid()) {
-  let LocalizationManager = fn(1117).default;
-} else {
-  LocalizationManager = get_ActivityIndicator.NativeModules.LocalizationManager;
-}
+let _default = fn(1115).default;
 let str = "en-US";
-if (null != LocalizationManager) {
-  str = LocalizationManager.getConstants().Language;
+if (null != _default) {
+  str = _default.getConstants().Language;
 }
 function getSystemLocale(arg0) {
-  const tmp3 = _mod17;
-  if (obj.isAndroid()) {
-    let LocalizationManager = NativeDeviceLocaleModule.default;
-  } else {
-    LocalizationManager = tmp3.NativeModules.LocalizationManager;
-  }
   let Language = arg0;
-  if (null != LocalizationManager) {
-    Language = LocalizationManager.getConstants().Language;
+  const _default = NativeDeviceLocaleModule.default;
+  if (null != _default) {
+    Language = _default.getConstants().Language;
   }
   return Language;
 }
-const util = fn(1118);
+const util = fn(1116);
 const normalizedLocale = util.getNormalizedLocale(str, "en-US");
 const module_1155 = fn(1155);
 const reactFormatter = module_1155.makeReactFormatter({
@@ -76,12 +64,12 @@ const result = size.fileFinishedImporting("intl/index.native.tsx");
 
 export const intl = withFormattersResult;
 export { getSystemLocale };
-export const getAvailableLocales = fn(1118).getAvailableLocales;
-export const getLanguages = fn(1118).getLanguages;
+export const getAvailableLocales = fn(1116).getAvailableLocales;
+export const getLanguages = fn(1116).getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
   return intl_util.useSyncMessages(arg0, withFormattersResult);
 };
-export const t = fn(14238)._defaultMessages;
-export const international = _modDef14241;
+export const t = fn(14273)._defaultMessages;
+export const international = _modDef14276;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

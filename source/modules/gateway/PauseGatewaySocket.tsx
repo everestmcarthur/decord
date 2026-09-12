@@ -1,10 +1,10 @@
-// Module ID: 13721
-// Function ID: 13722
+// Module ID: 13755
+// Function ID: 13756
 // Name: PauseGatewaySocket
 // Dependencies: [2]
 // Exports: getIsPaused, setIsPaused
 
-// Module 13721 (PauseGatewaySocket)
+// Module 13755 (PauseGatewaySocket)
 import size from "module_2" /* 2 */;
 
 let global = false;

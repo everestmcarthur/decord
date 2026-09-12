@@ -1,9 +1,9 @@
 // Module ID: 15669
 // Function ID: 15670
-// Dependencies: [1122]
+// Dependencies: [1120]
 
 // Module 15669
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9e0f7ca920e7d55418409ccf322d663c", name: "BurgerIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ec58bf96c6588d5215316bd58185df8c", name: "HashmarkIcon", type: "png" });

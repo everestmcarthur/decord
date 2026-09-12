@@ -1,13 +1,13 @@
-// Module ID: 6296
-// Function ID: 6297
+// Module ID: 6326
+// Function ID: 6327
 // Name: LogoHandSpotIllustration
-// Dependencies: [21, 5638, 6297, 2]
+// Dependencies: [21, 5668, 6327, 2]
 // Exports: LogoHandSpotIllustration
 
-// Module 6296 (LogoHandSpotIllustration)
+// Module 6326 (LogoHandSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6297 from "module_6297" /* 6297 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6327 from "module_6327" /* 6327 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const LogoHandSpotIllustration = function LogoHandSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6297 };
+  const obj2 = { uri: _modDef6327 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

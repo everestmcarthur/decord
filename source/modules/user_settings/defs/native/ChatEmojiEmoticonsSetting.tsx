@@ -1,13 +1,13 @@
-// Module ID: 15532
-// Function ID: 15533
+// Module ID: 15554
+// Function ID: 15555
 // Name: ChatEmojiEmoticonsSetting
-// Dependencies: [8049, 11562, 1114, 1935, 2]
+// Dependencies: [8079, 11601, 1114, 1935, 2]
 
-// Module 15532 (ChatEmojiEmoticonsSetting)
+// Module 15554 (ChatEmojiEmoticonsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8049 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
