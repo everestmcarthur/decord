@@ -224,7 +224,7 @@ function load(response, response) {
 function loadView(byteLength, response) {
   let obj = response;
   if (response === undefined) {
-    obj = { expanded: false, async: false, includeUnknown: false, domParser: "channel" };
+    obj = { expanded: false, async: false, includeUnknown: false, domParser: "call" };
   }
   let flag = obj.expanded;
   if (flag === undefined) {

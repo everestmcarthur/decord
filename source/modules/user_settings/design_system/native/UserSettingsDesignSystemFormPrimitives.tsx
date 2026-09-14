@@ -1,10 +1,10 @@
-// Module ID: 15890
-// Function ID: 15891
+// Module ID: 15892
+// Function ID: 15893
 // Name: UserSettingsDesignSystemFormPrimitives
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 4632, 5766, 5769, 5768, 7303, 9559, 5685, 5686, 14266, 10116, 5182, 5054, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 4632, 5766, 5769, 5768, 7303, 9559, 5685, 5686, 14267, 10116, 5182, 5054, 2]
 // Exports: default
 
-// Module 15890 (UserSettingsDesignSystemFormPrimitives)
+// Module 15892 (UserSettingsDesignSystemFormPrimitives)
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5182 */;
@@ -16,7 +16,7 @@ import TableRadioRow from "TableRadioRow" /* 5769 */;
 import TableSwitchRow from "TableSwitchRow" /* 7303 */;
 import Checkbox from "Checkbox" /* 9559 */;
 import VoiceXIcon from "VoiceXIcon" /* 10116 */;
-import Slider from "Slider" /* 14266 */;
+import Slider from "Slider" /* 14267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

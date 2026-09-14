@@ -1,19 +1,19 @@
-// Module ID: 16917
-// Function ID: 16918
+// Module ID: 16919
+// Function ID: 16920
 // Name: YouExpiringTrialOfferCard
-// Dependencies: [19, 17, 13811, 1074, 7535, 1373, 21, 1090, 4636, 576, 16918, 1242, 1114, 4228, 563, 7550, 7542, 16916, 2024, 4632, 4294, 5204, 1178, 8785, 5068, 7310, 2]
+// Dependencies: [19, 17, 13812, 1074, 7535, 1373, 21, 1090, 4636, 576, 16920, 1240, 1114, 4228, 563, 7550, 7542, 16918, 2024, 4632, 4294, 5204, 1176, 8785, 5068, 7310, 2]
 // Exports: default
 
-// Module 16917 (YouExpiringTrialOfferCard)
+// Module 16919 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import useCountdownDefault from "useCountdown" /* 7542 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 16918 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 16920 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 13811 */;
+import NoticeStore from "NoticeStore" /* 13812 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -53,7 +53,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(16916).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(16918).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -128,7 +128,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
           NoticeActionCreatorsDefault.dismiss({ untilAtLeast });
         };
         const size = { width: 16, height: 16, color: tmp3.closeIcon.color };
-        obj11.children = closure_12(tmp4(1178).CloseIcon, size);
+        obj11.children = closure_12(tmp4(1176).CloseIcon, size);
         items2[1] = closure_12(tmp4(5204).PressableOpacity, obj11);
         const obj12 = { style: tmp3.primaryCTA, text: null, onPress: null, renderIcon: null, renderLinearGradient: null };
         const intl5 = tmp4(1114).intl;
@@ -160,7 +160,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
           obj.colors = PREMIUM_TIER_2_TRI_COLOR;
           return closure_2_12(LinearGradientDefault, obj);
         };
-        items2[2] = closure_12(tmp4(1178).ShinyButton, obj12);
+        items2[2] = closure_12(tmp4(1176).ShinyButton, obj12);
         obj9.children = items2;
         const tmp4Result2 = tmp4(4294);
         const obj13 = { style: navigateToPremium.style, children: tmp13(tmp14, obj9) };
@@ -171,5 +171,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(16916);
+  const tmp4Result = navigateToPremium(16918);
 };

@@ -1,17 +1,17 @@
-// Module ID: 13407
-// Function ID: 13408
+// Module ID: 13408
+// Function ID: 13409
 // Name: GuildChannelHeader
-// Dependencies: [32, 19, 17, 13408, 5358, 1961, 7382, 1957, 4556, 1979, 4285, 1371, 1074, 1954, 21, 4338, 576, 504, 13401, 6721, 10422, 1114, 4789, 13399, 7491, 1943, 2024, 5109, 11261, 10381, 13394, 2]
+// Dependencies: [32, 19, 17, 13409, 5358, 1961, 7382, 1957, 4556, 1979, 4285, 1371, 1074, 1954, 21, 4338, 576, 504, 13402, 6721, 10423, 1114, 4789, 13400, 7491, 1943, 2024, 5109, 11262, 10382, 13395, 2]
 
-// Module 13407 (GuildChannelHeader)
+// Module 13408 (GuildChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
-import ChannelHeader from "ChannelHeader" /* 13394 */;
+import ChannelHeader from "ChannelHeader" /* 13395 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 13408 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 13409 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7382 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -71,7 +71,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13401);
+    const tmpResult = tmp(13402);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6721).ICON_SIZE[token]);
   }
 }
@@ -134,7 +134,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
     return obj;
   }, items1);
   let obj = guild(7491);
-  const coachmark = guild(11261).useCoachmark(guild.iconRef, memo);
+  const coachmark = guild(11262).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;

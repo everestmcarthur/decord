@@ -1,16 +1,16 @@
-// Module ID: 11171
-// Function ID: 11172
+// Module ID: 11172
+// Function ID: 11173
 // Name: SocialLayerStorefrontWishlistItemCard
-// Dependencies: [19, 4864, 11169, 21, 4636, 576, 504, 8952, 5668, 8899, 2]
+// Dependencies: [19, 4864, 11170, 21, 4636, 576, 504, 8952, 5668, 8899, 2]
 // Exports: default
 
-// Module 11171 (SocialLayerStorefrontWishlistItemCard)
+// Module 11172 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8952 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
-import SentGiftsStore from "SentGiftsStore" /* 11169 */;
+import SentGiftsStore from "SentGiftsStore" /* 11170 */;
 
 const require = fn;
 const jsxProd = fn(21);

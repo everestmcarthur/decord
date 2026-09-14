@@ -1,14 +1,14 @@
-// Module ID: 10434
-// Function ID: 10435
+// Module ID: 10435
+// Function ID: 10436
 // Name: PremiumUpsellSectionDivider
-// Dependencies: [19, 17, 7535, 21, 4636, 576, 10435, 5068, 1093, 5176, 2]
+// Dependencies: [19, 17, 7535, 21, 4636, 576, 10436, 5068, 1093, 5176, 2]
 // Exports: default
 
-// Module 10434 (PremiumUpsellSectionDivider)
+// Module 10435 (PremiumUpsellSectionDivider)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10435 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10436 */;
 import noop from "module_19" /* 19 */;
 
 const LockIcon2 = LockIcon(5176);

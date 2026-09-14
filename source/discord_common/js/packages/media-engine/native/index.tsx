@@ -1,11 +1,11 @@
 // Module ID: 4692
 // Function ID: 4693
 // Name: destroy
-// Dependencies: [32, 5, 4661, 4693, 4694, 4695, 4699, 4, 1910, 4691, 4700, 1341, 1151, 4702, 4762, 2]
+// Dependencies: [32, 5, 4661, 4693, 4694, 4695, 4699, 4, 1910, 4691, 4700, 1339, 1364, 4702, 4762, 2]
 
 // Module 4692 (destroy)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
-import formatDefault from "format" /* 1341 */;
+import formatDefault from "format" /* 1339 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import inject from "inject" /* 1910 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import VideoDefault from "Video" /* 4695 */;

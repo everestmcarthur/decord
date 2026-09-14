@@ -1,11 +1,11 @@
 // Module ID: 8730
 // Function ID: 8731
 // Name: FormSwitchRow
-// Dependencies: [32, 19, 17, 21, 4636, 1150, 7240, 7242, 8728, 5767, 7303, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 1363, 7240, 7242, 8728, 5767, 7303, 2]
 // Exports: default
 
 // Module 8730 (FormSwitchRow)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import RedesignCompat from "RedesignCompat" /* 5767 */;
 import FormRowDefault from "FormRow" /* 7240 */;
 import FormLabelDefault from "FormLabel" /* 7242 */;

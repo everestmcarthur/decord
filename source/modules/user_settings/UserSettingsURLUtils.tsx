@@ -1,11 +1,11 @@
 // Module ID: 5535
 // Function ID: 5536
 // Name: UserSettingsURLUtils
-// Dependencies: [32, 1084, 1074, 5536, 1242, 5537, 2]
+// Dependencies: [32, 1084, 1074, 5536, 1240, 5537, 2]
 // Exports: parseSettingsUrl, settingsPathToRoute, trackParseSettingsUrl
 
 // Module 5535 (UserSettingsURLUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettingsKeys from "UserSettingsKeys" /* 5536 */;
 import keysSorter from "keysSorter" /* 5537 */;
 import _slicedToArray from "module_32" /* 32 */;

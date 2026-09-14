@@ -1,13 +1,13 @@
-// Module ID: 10471
-// Function ID: 10472
+// Module ID: 10472
+// Function ID: 10473
 // Name: EmojiGrid
-// Dependencies: [19, 17, 21, 4636, 576, 4293, 1396, 7233, 10459, 10472, 10474, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4293, 1396, 7233, 10460, 10473, 10475, 2]
 // Exports: EmojiGrid
 
-// Module 10471 (EmojiGrid)
+// Module 10472 (EmojiGrid)
 import nativeDefault from "native" /* 576 */;
 import EmojiDefault from "Emoji" /* 7233 */;
-import LayoutUtils from "LayoutUtils" /* 10474 */;
+import LayoutUtils from "LayoutUtils" /* 10475 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
     num2 = 5;
   }
   let obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(10459).useSharedMessageEmojiStyles());
+  const merged = Object.assign(doNotDisplayEmojiIds(10460).useSharedMessageEmojiStyles());
   const merged1 = Object.assign(closure_5());
   let emojis;
   if (expressionSourceGuild != null) {
@@ -64,13 +64,13 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(10459);
+  const obj2 = doNotDisplayEmojiIds(10460);
   const tmp = doNotDisplayEmojiIds;
   const obj3 = { style: obj.emojiGridContainer, children: null };
-  const arr4 = obj(10472)(substr1, num2);
-  obj3.children = jsx(tmp(10474).GappedList, {
+  const arr4 = obj(10473)(substr1, num2);
+  obj3.children = jsx(tmp(10475).GappedList, {
     gap: 8,
-    children: obj(10472)(substr1, num2).map((arr, index) => {
+    children: obj(10473)(substr1, num2).map((arr, index) => {
       obj = { style: obj.emojiGridRowContainer, children: jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) }) };
       return <View key={arg1} style={obj.emojiGridRowContainer}>{jsx(LayoutUtils.GappedList, { gap: 32, children: arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) })}</View>;
     })

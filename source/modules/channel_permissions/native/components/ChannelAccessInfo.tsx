@@ -1,15 +1,15 @@
-// Module ID: 12600
-// Function ID: 12601
+// Module ID: 12601
+// Function ID: 12602
 // Name: ChannelAccessInfo
-// Dependencies: [19, 17, 1975, 2021, 2015, 21, 4636, 576, 1114, 504, 9868, 1369, 4632, 5204, 11737, 1178, 12599, 5170, 9884, 9882, 10069, 2]
+// Dependencies: [19, 17, 1975, 2021, 2015, 21, 4636, 576, 1114, 504, 9868, 1369, 4632, 5204, 11738, 1176, 12600, 5170, 9884, 9882, 10069, 2]
 // Exports: default
 
-// Module 12600 (ChannelAccessInfo)
+// Module 12601 (ChannelAccessInfo)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9868 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11737 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11738 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -68,8 +68,8 @@ export default function ChannelAccessInfo(guild) {
   let obj3 = { style: tmp.sectionContent, children: null };
   if (null != first) {
     let obj4 = { children: null };
-    let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1178).AvatarSizes.XSMALL };
-    const items3 = [tmp13(tmp2(1178).Avatar, obj5), ];
+    let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1176).AvatarSizes.XSMALL };
+    const items3 = [tmp13(tmp2(1176).Avatar, obj5), ];
     let obj6 = { children: null };
     let obj7 = { variant: "text-sm/semibold", children: first.tag };
     const items4 = [tmp13(tmp2(4632).Text, obj7), ];
@@ -125,7 +125,7 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(12599);
+    channel(12600);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(5170).GroupIcon), ];
     const ROLES = constants.ROLES;
     channel(9884);
@@ -136,7 +136,7 @@ export default function ChannelAccessInfo(guild) {
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3), ];
   const tmp2Result = guild(9868);
-  items6[1] = closure_8(guild(1178).Icon, { source: channel(10069), size: guild(1178).Icon.Sizes.SMALL });
+  items6[1] = closure_8(guild(1176).Icon, { source: channel(10069), size: guild(1176).Icon.Sizes.SMALL });
   obj2.children = items6;
   items2[1] = closure_9(guild(5204).PressableOpacity, obj2);
   obj10.children = items2;

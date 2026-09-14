@@ -1,9 +1,9 @@
-// Module ID: 16768
-// Function ID: 16769
+// Module ID: 16770
+// Function ID: 16771
 // Name: guild_channels/ChannelTitle
 // Dependencies: [19, 4818, 21, 4636, 576, 10249, 4632, 2]
 
-// Module 16768 (guild_channels/ChannelTitle)
+// Module 16770 (guild_channels/ChannelTitle)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

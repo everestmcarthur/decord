@@ -1,21 +1,21 @@
-// Module ID: 17028
-// Function ID: 17029
+// Module ID: 17030
+// Function ID: 17031
 // Name: Alerts
-// Dependencies: [19, 17, 4628, 13840, 14484, 4827, 11674, 21, 17029, 17030, 17034, 17035, 4636, 576, 4347, 4981, 5039, 5659, 504, 558, 5053, 12552, 1178, 2]
+// Dependencies: [19, 17, 4628, 13841, 14485, 4827, 11675, 21, 17031, 17032, 17036, 17037, 4636, 576, 4347, 4981, 5039, 5659, 504, 558, 5053, 12553, 1176, 2]
 
-// Module 17028 (Alerts)
+// Module 17030 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import Dialog from "Dialog" /* 5039 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5659 */;
-import ModalRegistryDefault from "ModalRegistry" /* 17029 */;
+import ModalRegistryDefault from "ModalRegistry" /* 17031 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 13840 */;
-import PermissionVADStore from "PermissionVADStore" /* 14484 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13841 */;
+import PermissionVADStore from "PermissionVADStore" /* 14485 */;
 import SurveyStore from "SurveyStore" /* 4827 */;
-import AlertStore from "AlertStore" /* 11674 */;
+import AlertStore from "AlertStore" /* 11675 */;
 
 const require = globalThis.__r;
 
@@ -151,7 +151,7 @@ AlertWrapper.prototype["render"] = function render() {
   return map1(Dialog.Dialog, obj2);
 };
 AlertWrapper.contextType = fn(4347).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "justifyContent", renderKey: "call", props: "window" });
+let closure_18 = Object.freeze({ renderAlert: "test", renderKey: "call", props: "intl" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -183,7 +183,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "justifyContent", renderKey: "call", props: "window" };
+        return { renderAlert: "test", renderKey: "call", props: "intl" };
       }
     }
   });

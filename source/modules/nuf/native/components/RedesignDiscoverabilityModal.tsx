@@ -1,15 +1,15 @@
-// Module ID: 17566
-// Function ID: 17567
+// Module ID: 17567
+// Function ID: 17568
 // Name: RedesignDiscoverabilityModal
-// Dependencies: [19, 17, 12806, 1371, 1074, 21, 4636, 576, 5763, 1483, 504, 12813, 1093, 17567, 12833, 12826, 1250, 12825, 7103, 1114, 2]
+// Dependencies: [19, 17, 12807, 1371, 1074, 21, 4636, 576, 5763, 1483, 504, 12814, 1093, 17568, 12834, 12827, 1248, 12826, 7103, 1114, 2]
 
-// Module 17566 (RedesignDiscoverabilityModal)
+// Module 17567 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12813 */;
-import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12825 */;
-import NUFActionCreators from "NUFActionCreators" /* 12833 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12814 */;
+import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12826 */;
+import NUFActionCreators from "NUFActionCreators" /* 12834 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -78,7 +78,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(12826), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12827), { onNext: callback, loading: false, initialName: null });
   return <tmp6 style={tmp.container}>{null}</tmp6>;
 }
 class RedesignDiscoverabilityModal {
@@ -158,7 +158,7 @@ class RedesignDiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12806).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12807).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: null };

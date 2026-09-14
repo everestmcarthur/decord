@@ -1,9 +1,9 @@
-// Module ID: 10999
-// Function ID: 11000
+// Module ID: 11000
+// Function ID: 11001
 // Name: GameRelationshipActionCreators
-// Dependencies: [5, 1074, 4537, 4980, 1114, 1272, 4488, 2]
+// Dependencies: [5, 1074, 4537, 4980, 1114, 1270, 4488, 2]
 
-// Module 10999 (GameRelationshipActionCreators)
+// Module 11000 (GameRelationshipActionCreators)
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4488 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4537 */;
@@ -165,7 +165,7 @@ export default {
 
     }
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1272).HTTP;
+    const HTTP = onSuccess(1270).HTTP;
     const request = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {

@@ -1,11 +1,11 @@
 // Module ID: 7084
 // Function ID: 7085
 // Name: useSafeAreaInsetsKeyboardAware
-// Dependencies: [32, 19, 1479, 5661, 5662, 1611, 1480, 1150, 1877, 4504, 1609, 5660, 2]
+// Dependencies: [32, 19, 1479, 5661, 5662, 1611, 1480, 1363, 1877, 4504, 1609, 5660, 2]
 // Exports: default
 
 // Module 7084 (useSafeAreaInsetsKeyboardAware)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1877 */;
 import useKeyboardDuration from "useKeyboardDuration" /* 5661 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5662 */;

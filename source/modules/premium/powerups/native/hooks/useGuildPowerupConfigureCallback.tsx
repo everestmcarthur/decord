@@ -1,13 +1,13 @@
-// Module ID: 12673
-// Function ID: 12674
+// Module ID: 12674
+// Function ID: 12675
 // Name: useGuildPowerupConfigureCallback
-// Dependencies: [19, 1074, 4603, 12646, 4529, 9192, 9196, 38, 2]
+// Dependencies: [19, 1074, 4603, 12647, 4529, 9192, 9196, 38, 2]
 // Exports: default
 
-// Module 12673 (useGuildPowerupConfigureCallback)
+// Module 12674 (useGuildPowerupConfigureCallback)
 import Powerups from "Powerups" /* 4529 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 12646 */;
+import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 12647 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

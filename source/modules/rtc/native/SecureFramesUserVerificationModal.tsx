@@ -1,13 +1,13 @@
 // Module ID: 9284
 // Function ID: 9285
 // Name: SecureFramesUserVerificationModal
-// Dependencies: [32, 19, 17, 1957, 1371, 9281, 1074, 1182, 21, 4636, 576, 504, 4788, 9285, 9287, 9260, 9288, 9279, 4839, 4335, 4596, 1114, 9289, 9290, 8479, 7265, 8296, 9291, 1178, 7226, 5204, 5709, 4632, 5054, 9292, 9294, 5056, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 9281, 1074, 1180, 21, 4636, 576, 504, 4788, 9285, 9287, 9260, 9288, 9279, 4839, 4335, 4596, 1114, 9289, 9290, 8479, 7265, 8296, 9291, 1176, 7226, 5204, 5709, 4632, 5054, 9292, 9294, 5056, 2]
 // Exports: default
 
 // Module 9284 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4596 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -26,7 +26,7 @@ const SecureFramesConstants = fn(9281);
 ({ USER_VERIFICATION_CHUNK_SIZE: closure_9, USER_VERIFICATION_LENGTH: c10, USER_VERIFICATION_NUM_COLUMNS: closure_11, USER_VERIFIED_TOAST_KEY: closure_12 } = SecureFramesConstants);
 const Constants = fn(1074);
 ({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = Constants);
-const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1180).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const createStyles = fn(4636);

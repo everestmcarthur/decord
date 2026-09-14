@@ -1,10 +1,10 @@
-// Module ID: 13645
-// Function ID: 13646
+// Module ID: 13646
+// Function ID: 13647
 // Name: useResettingValue
 // Dependencies: [32, 19, 5679, 1952, 2]
 // Exports: default
 
-// Module 13645 (useResettingValue)
+// Module 13646 (useResettingValue)
 import useInitialValueDefault from "useInitialValue" /* 5679 */;
 import _slicedToArray from "module_32" /* 32 */;
 

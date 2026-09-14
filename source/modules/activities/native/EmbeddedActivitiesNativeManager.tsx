@@ -1,14 +1,14 @@
 // Module ID: 9645
 // Function ID: 9646
 // Name: EmbeddedActivitiesNativeManager
-// Dependencies: [5, 17, 1957, 4659, 1956, 1920, 1074, 4541, 8416, 1150, 9646, 9647, 1232, 9648, 9680, 4981, 1114, 9651, 4265, 1242, 573, 9695, 9634, 4335, 9696, 1109, 1369, 1256, 2]
+// Dependencies: [5, 17, 1957, 4659, 1956, 1920, 1074, 4541, 8416, 1363, 9646, 9647, 1230, 9648, 9680, 4981, 1114, 9651, 4265, 1240, 573, 9695, 9634, 4335, 9696, 1109, 1369, 1254, 2]
 
 // Module 9645 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
@@ -58,7 +58,7 @@ const Constants = fn(1074);
 const TransportTypes = fn(4541).TransportTypes;
 const WebView = fn(8416);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

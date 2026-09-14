@@ -1,7 +1,7 @@
 // Module ID: 7232
 // Function ID: 7233
 // Name: GuildRoleMemberActionCreators
-// Dependencies: [5, 7231, 1074, 573, 1272, 1437, 5601, 2]
+// Dependencies: [5, 7231, 1074, 573, 1270, 1437, 5601, 2]
 // Exports: fetchMemberCounts, requestMembersForRole
 
 // Module 7232 (GuildRoleMemberActionCreators)

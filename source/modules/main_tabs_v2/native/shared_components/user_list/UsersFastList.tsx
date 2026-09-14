@@ -1,18 +1,18 @@
-// Module ID: 10994
-// Function ID: 10995
+// Module ID: 10995
+// Function ID: 10996
 // Name: UsersFastList
-// Dependencies: [32, 19, 17, 10341, 21, 4636, 576, 10995, 5686, 7975, 4373, 4632, 1178, 5204, 5206, 1611, 7152, 10340, 10996, 11040, 11043, 7158, 2]
+// Dependencies: [32, 19, 17, 10342, 21, 4636, 576, 10996, 5686, 7975, 4373, 4632, 1176, 5204, 5206, 1611, 7152, 10341, 10997, 11041, 11044, 7158, 2]
 
-// Module 10994 (UsersFastList)
+// Module 10995 (UsersFastList)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import TableRow from "TableRow" /* 5686 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 7975 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10995 */;
-import UserRowDefault from "UserRow" /* 10996 */;
-import GroupDMRowDefault from "GroupDMRow" /* 11040 */;
-import ChannelRowDefault from "ChannelRow" /* 11043 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10996 */;
+import UserRowDefault from "UserRow" /* 10997 */;
+import GroupDMRowDefault from "GroupDMRow" /* 11041 */;
+import ChannelRowDefault from "ChannelRow" /* 11044 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ function PlaceholderSection() {
   return React5(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10341);
+const UsersFastListConstants = fn(10342);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
@@ -147,7 +147,7 @@ let closure_16 = noop.memo(function UserSectionInner(stickyAt) {
   if (null != badge) {
     const obj7 = { style: tmp.badgeWrapper, children: null };
     const obj8 = { style: tmp.badge, value: badge };
-    obj7.children = React5(tmp3(1178).Badge, obj8);
+    obj7.children = React5(tmp3(1176).Badge, obj8);
     tmp12 = React5(View, obj7);
   }
   items3[1] = tmp12;

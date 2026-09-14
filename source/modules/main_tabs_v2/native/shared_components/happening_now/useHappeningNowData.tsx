@@ -1,20 +1,20 @@
-// Module ID: 16155
-// Function ID: 16156
+// Module ID: 16157
+// Function ID: 16158
 // Name: useHappeningNowData
-// Dependencies: [32, 19, 1956, 5358, 13794, 7629, 1962, 7761, 4658, 502, 7382, 1957, 2012, 1979, 4275, 4676, 4285, 4817, 1371, 4655, 15379, 1074, 9978, 504, 16156, 16157, 7415, 7389, 573, 9811, 10, 12, 4847, 16158, 16159, 16160, 7416, 16161, 9953, 1369, 5667, 2]
+// Dependencies: [32, 19, 1956, 5358, 13795, 7629, 1962, 7761, 4658, 502, 7382, 1957, 2012, 1979, 4275, 4676, 4285, 4817, 1371, 4655, 15380, 1074, 9978, 504, 16158, 16159, 7415, 7389, 573, 9811, 10, 12, 4847, 16160, 16161, 16162, 7416, 16163, 9953, 1369, 5667, 2]
 // Exports: default
 
-// Module 16155 (useHappeningNowData)
+// Module 16157 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7389 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7415 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16156 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16158 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13794 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13795 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7629 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
@@ -39,7 +39,7 @@ let GuildScheduledEventStore = fn(7629);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const MemberListRowTypes = fn(7382).MemberListRowTypes;
 let closure_20 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(15379).HappeningNowItem;
+const HappeningNowItem = fn(15380).HappeningNowItem;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];

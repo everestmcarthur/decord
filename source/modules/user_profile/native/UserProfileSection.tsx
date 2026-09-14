@@ -1,10 +1,10 @@
-// Module ID: 11711
-// Function ID: 11712
+// Module ID: 11712
+// Function ID: 11713
 // Name: UserProfileSection
 // Dependencies: [19, 17, 21, 4636, 576, 4347, 7287, 4486, 8722, 4632, 2]
 // Exports: default
 
-// Module 11711 (UserProfileSection)
+// Module 11712 (UserProfileSection)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import useProfileThemeValues from "useProfileThemeValues" /* 7287 */;

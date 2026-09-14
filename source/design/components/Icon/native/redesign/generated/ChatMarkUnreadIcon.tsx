@@ -1,13 +1,13 @@
-// Module ID: 10372
-// Function ID: 10373
+// Module ID: 10373
+// Function ID: 10374
 // Name: ChatMarkUnreadIcon
-// Dependencies: [19, 21, 576, 4337, 10373, 2]
+// Dependencies: [19, 21, 576, 4337, 10374, 2]
 // Exports: ChatMarkUnreadIcon
 
-// Module 10372 (ChatMarkUnreadIcon)
+// Module 10373 (ChatMarkUnreadIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod10373 from "module_10373" /* 10373 */;
+import _mod10374 from "module_10374" /* 10374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ChatMarkUnreadIcon = function ChatMarkUnreadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10373, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10374, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

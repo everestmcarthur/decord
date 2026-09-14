@@ -1,15 +1,15 @@
-// Module ID: 16306
-// Function ID: 16307
+// Module ID: 16308
+// Function ID: 16309
 // Name: HubSidebar
-// Dependencies: [19, 17, 2012, 2011, 1074, 10246, 21, 4636, 576, 12508, 1178, 504, 16307, 16308, 15680, 1114, 4647, 12882, 12437, 4573, 9950, 2]
+// Dependencies: [19, 17, 2012, 2011, 1074, 10246, 21, 4636, 576, 12509, 1176, 504, 16309, 16310, 15682, 1114, 4647, 12883, 12438, 4573, 9950, 2]
 // Exports: default
 
-// Module 16306 (HubSidebar)
+// Module 16308 (HubSidebar)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12437 */;
-import BaseChannelItem from "BaseChannelItem" /* 12508 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12438 */;
+import BaseChannelItem from "BaseChannelItem" /* 12509 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -30,12 +30,12 @@ function HubItem(arg0) {
   }
   const obj = { style: closure_9().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = closure_9();
-  obj.name = React5(tmp5(12508).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = React5(tmp5(12508).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = React5(tmp5(12509).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = React5(tmp5(12509).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     const obj2 = { value: unreadCount };
-    tmp6Result = tmp6(tmp5(1178).Badge, obj2);
+    tmp6Result = tmp6(tmp5(1176).Badge, obj2);
   }
   obj.channelInfo = tmp6Result;
   return React5(BaseChannelItemDefault, obj);
@@ -68,7 +68,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(16307);
+  guild(16309);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -77,8 +77,8 @@ export default function HubSidebar(guild) {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(16308), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(15680).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(16310), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(15682).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1114).intl;
     obj6.label = intl.string(tmp(1114).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -86,7 +86,7 @@ export default function HubSidebar(guild) {
     };
     obj6.unreadCount = tmp7;
     items4[1] = closure_7(HubItem, obj6);
-    const obj7 = { IconComponent: tmp(12882).PlusMediumIcon, label: null, handleItemClick: null };
+    const obj7 = { IconComponent: tmp(12883).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1114).intl;
     obj7.label = intl2.string(tmp(1114).t.emRpdS);
     obj7.handleItemClick = function handleItemClick() {

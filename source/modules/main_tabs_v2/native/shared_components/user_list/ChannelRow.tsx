@@ -1,16 +1,16 @@
-// Module ID: 11043
-// Function ID: 11044
+// Module ID: 11044
+// Function ID: 11045
 // Name: ChannelRow
-// Dependencies: [19, 17, 1957, 1979, 4651, 4285, 1371, 10988, 4818, 21, 4636, 576, 504, 4789, 11044, 11133, 5169, 5161, 4632, 4318, 4228, 5685, 5686, 2]
+// Dependencies: [19, 17, 1957, 1979, 4651, 4285, 1371, 10989, 4818, 21, 4636, 576, 504, 4789, 11045, 11134, 5169, 5161, 4632, 4318, 4228, 5685, 5686, 2]
 
-// Module 11043 (ChannelRow)
+// Module 11044 (ChannelRow)
 import nativeDefault from "native" /* 576 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import DateUtils from "DateUtils" /* 4318 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelName from "useChannelName" /* 4789 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11133 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11134 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -20,7 +20,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const ReadStateTypes = fn(4818).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

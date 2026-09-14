@@ -1,21 +1,21 @@
-// Module ID: 16934
-// Function ID: 16935
+// Module ID: 16936
+// Function ID: 16937
 // Name: EasyChannelPermissionSettings
-// Dependencies: [32, 5, 19, 17, 16935, 1957, 2021, 2015, 1979, 4275, 4285, 1371, 8519, 1074, 21, 4636, 576, 1483, 11739, 504, 9868, 9869, 9870, 1114, 4789, 4980, 9881, 4280, 5054, 5768, 7303, 1178, 5686, 11337, 11737, 5711, 4816, 9922, 9923, 16936, 16938, 2]
+// Dependencies: [32, 5, 19, 17, 16937, 1957, 2021, 2015, 1979, 4275, 4285, 1371, 8519, 1074, 21, 4636, 576, 1483, 11740, 504, 9868, 9869, 9870, 1114, 4789, 4980, 9881, 4280, 5054, 5768, 7303, 1176, 5686, 11338, 11738, 5711, 4816, 9922, 9923, 16938, 16940, 2]
 // Exports: default
 
-// Module 16934 (EasyChannelPermissionSettings)
+// Module 16936 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9868 */;
 import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9869 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9881 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11737 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16935 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16937 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;

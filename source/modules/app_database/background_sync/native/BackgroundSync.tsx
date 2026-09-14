@@ -1,15 +1,15 @@
-// Module ID: 17433
-// Function ID: 17434
+// Module ID: 17435
+// Function ID: 17436
 // Name: background_sync/BackgroundSync
-// Dependencies: [32, 5, 1961, 1957, 4651, 1895, 7582, 1074, 5583, 5540, 1979, 3, 1090, 510, 7857, 1150, 573, 1232, 1242, 1986, 1272, 11, 12, 7755, 7758, 7756, 13757, 15657, 7580, 1369, 7590, 2]
+// Dependencies: [32, 5, 1961, 1957, 4651, 1895, 7582, 1074, 5583, 5540, 1979, 3, 1090, 510, 7857, 1363, 573, 1230, 1240, 1986, 1270, 11, 12, 7755, 7758, 7756, 13758, 15658, 7580, 1369, 7590, 2]
 // Exports: backgroundSync
 
-// Module 17433 (background_sync/BackgroundSync)
+// Module 17435 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
 import modules_Messages from "modules/Messages" /* 7580 */;
 import GuildVersionsDefault from "GuildVersions" /* 7755 */;

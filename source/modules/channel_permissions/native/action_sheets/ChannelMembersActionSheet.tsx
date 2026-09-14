@@ -1,10 +1,10 @@
-// Module ID: 11738
-// Function ID: 11739
+// Module ID: 11739
+// Function ID: 11740
 // Name: ChannelMembersActionSheet
-// Dependencies: [19, 17, 1957, 2021, 2015, 1979, 4275, 1074, 21, 4636, 576, 1611, 504, 1483, 4789, 11739, 9868, 1114, 7253, 7252, 5204, 4603, 8748, 11741, 7483, 8718, 11737, 10161, 1178, 6728, 9881, 4632, 2]
+// Dependencies: [19, 17, 1957, 2021, 2015, 1979, 4275, 1074, 21, 4636, 576, 1611, 504, 1483, 4789, 11740, 9868, 1114, 7253, 7252, 5204, 4603, 8748, 11742, 7483, 8718, 11738, 10161, 1176, 6728, 9881, 4632, 2]
 // Exports: default
 
-// Module 11738 (ChannelMembersActionSheet)
+// Module 11739 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -14,9 +14,9 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603
 import Text_Text from "Text/Text" /* 4632 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9881 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11737 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11739 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11741 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11738 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11740 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11742 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -131,10 +131,10 @@ export default function ChannelMembersActionSheet(arg0) {
           let tmp32Result2 = tmp32(tmp5(8718).RowButton, obj12);
         } else {
           const obj13 = { style: tmp.warning, children: null };
-          const obj14 = { messageType: tmp5(1178).HelpMessageTypes.INFO, children: null };
+          const obj14 = { messageType: tmp5(1176).HelpMessageTypes.INFO, children: null };
           const intl2 = tmp5(1114).intl;
           obj14.children = intl2.string(tmp5(1114).t.VOuiSj);
-          obj13.children = tmp32(tmp5(1178).HelpMessage, obj14);
+          obj13.children = tmp32(tmp5(1176).HelpMessage, obj14);
           tmp32Result2 = tmp32(tmp14, obj13);
         }
         const items6 = [tmp32Result2, ];

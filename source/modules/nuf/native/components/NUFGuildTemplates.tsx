@@ -1,12 +1,12 @@
-// Module ID: 12835
-// Function ID: 12836
+// Module ID: 12836
+// Function ID: 12837
 // Name: NUFGuildTemplates
-// Dependencies: [5, 19, 17, 4462, 1074, 12836, 7081, 21, 5601, 12603, 11350, 12837, 12873, 1242, 1250, 5705, 12812, 1100, 12839, 12841, 12462, 1114, 12844, 12845, 12874, 12856, 7103, 2]
+// Dependencies: [5, 19, 17, 4462, 1074, 12837, 7081, 21, 5601, 12604, 11351, 12838, 12874, 1240, 1248, 5705, 12813, 1100, 12840, 12842, 12463, 1114, 12845, 12846, 12875, 12857, 7103, 2]
 // Exports: default
 
-// Module 12835 (NUFGuildTemplates)
+// Module 12836 (NUFGuildTemplates)
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import Navigator from "Navigator" /* 7103 */;
@@ -146,11 +146,11 @@ let closure_17 = async function _onCreateServer(arg0, arg1, arg2) {
 const Keyboard = fn(17).Keyboard;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(12836).GuildTemplateId;
+const GuildTemplateId = fn(12837).GuildTemplateId;
 const CreateGuildConstants = fn(7081);
 ({ CreateGuildModalStates: closure_11, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-let obj = { impression_group: fn(1250).ImpressionGroups.GUILD_ADD_FLOW };
+let obj = { impression_group: fn(1248).ImpressionGroups.GUILD_ADD_FLOW };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
 
@@ -166,14 +166,14 @@ export default function NUFGuildTemplates() {
           return null;
         },
         headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
-          closure_1_0(12812).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
-          obj = closure_1_0(12812);
+          closure_1_0(12813).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
+          obj = closure_1_0(12813);
           closure_1_0(1100).transitionTo(fallbackRoute.fallbackRoute);
           const obj2 = closure_1_0(1100);
-          const result = closure_1_1(12837).closeCreateGuildOnboardingModal();
+          const result = closure_1_1(12838).closeCreateGuildOnboardingModal();
         }),
         render() {
-          return closure_1_14(closure_1_1(12839), { trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12840), { trigger: constants.NUF });
         }
       };
       obj[constants.GUILD_TEMPLATES] = obj2;
@@ -185,7 +185,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(guildTemplate) {
-          return closure_1_14(closure_1_1(12841), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12842), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
         }
       };
       const obj4 = {
@@ -196,7 +196,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(guildTemplate) {
-          return closure_1_14(closure_1_1(12841), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12842), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
         }
       };
       obj[constants.CREATE_SERVER] = {
@@ -225,7 +225,7 @@ export default function NUFGuildTemplates() {
           };
           const intl = guildTemplate(1114).intl;
           obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
-          return closure_14(closure_1(12462), obj);
+          return closure_14(closure_1(12463), obj);
         }
       };
       const obj5 = {
@@ -254,7 +254,7 @@ export default function NUFGuildTemplates() {
           };
           const intl = guildTemplate(1114).intl;
           obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
-          return closure_14(closure_1(12462), obj);
+          return closure_14(closure_1(12463), obj);
         }
       };
       obj[constants.JOIN_SERVER] = {
@@ -265,8 +265,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render() {
-          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12844), obj);
+          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12845), obj);
         }
       };
       const obj6 = {
@@ -277,8 +277,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render() {
-          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12844), obj);
+          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12845), obj);
         }
       };
       obj[constants.ACCEPT_INVITE] = {
@@ -292,8 +292,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12845), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12846), obj);
         }
       };
       const obj7 = {
@@ -307,8 +307,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12845), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12846), obj);
         }
       };
       obj[constants.CHANNEL_PROMPT] = {
@@ -332,7 +332,7 @@ export default function NUFGuildTemplates() {
           };
           const intl = guildId(1114).intl;
           obj.buttonText = intl.string(guildId(1114).t["uHXB+F"]);
-          return closure_14(closure_1(12874), obj);
+          return closure_14(closure_1(12875), obj);
         }
       };
       const obj9 = {
@@ -347,7 +347,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render() {
-          return closure_1_14(closure_1_1(12856), { isNestedNavigator: true });
+          return closure_1_14(closure_1_1(12857), { isNestedNavigator: true });
         }
       };
       obj[constants.JOIN_STUDENT_HUB] = obj9;
@@ -371,14 +371,14 @@ export default function NUFGuildTemplates() {
           return null;
         },
         headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
-          closure_1_0(12812).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
-          obj = closure_1_0(12812);
+          closure_1_0(12813).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
+          obj = closure_1_0(12813);
           closure_1_0(1100).transitionTo(fallbackRoute.fallbackRoute);
           const obj2 = closure_1_0(1100);
-          const result = closure_1_1(12837).closeCreateGuildOnboardingModal();
+          const result = closure_1_1(12838).closeCreateGuildOnboardingModal();
         }),
         render() {
-          return closure_1_14(closure_1_1(12839), { trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12840), { trigger: constants.NUF });
         }
       };
       obj[constants.GUILD_TEMPLATES] = obj2;
@@ -390,7 +390,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(guildTemplate) {
-          return closure_1_14(closure_1_1(12841), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12842), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
         }
       };
       const obj4 = {
@@ -401,7 +401,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(guildTemplate) {
-          return closure_1_14(closure_1_1(12841), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12842), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
         }
       };
       obj[constants.CREATE_SERVER] = {
@@ -430,7 +430,7 @@ export default function NUFGuildTemplates() {
           };
           const intl = guildTemplate(1114).intl;
           obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
-          return closure_14(closure_1(12462), obj);
+          return closure_14(closure_1(12463), obj);
         }
       };
       const obj5 = {
@@ -459,7 +459,7 @@ export default function NUFGuildTemplates() {
           };
           const intl = guildTemplate(1114).intl;
           obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
-          return closure_14(closure_1(12462), obj);
+          return closure_14(closure_1(12463), obj);
         }
       };
       obj[constants.JOIN_SERVER] = {
@@ -470,8 +470,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render() {
-          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12844), obj);
+          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12845), obj);
         }
       };
       const obj6 = {
@@ -482,8 +482,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render() {
-          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12844), obj);
+          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12845), obj);
         }
       };
       obj[constants.ACCEPT_INVITE] = {
@@ -497,8 +497,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12845), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12846), obj);
         }
       };
       const obj7 = {
@@ -512,8 +512,8 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: closure_1_1(12837).closeCreateGuildModal };
-          return closure_1_14(closure_1_1(12845), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12838).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12846), obj);
         }
       };
       obj[constants.CHANNEL_PROMPT] = {
@@ -537,7 +537,7 @@ export default function NUFGuildTemplates() {
           };
           const intl = guildId(1114).intl;
           obj.buttonText = intl.string(guildId(1114).t["uHXB+F"]);
-          return closure_14(closure_1(12874), obj);
+          return closure_14(closure_1(12875), obj);
         }
       };
       const obj9 = {
@@ -552,7 +552,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render() {
-          return closure_1_14(closure_1_1(12856), { isNestedNavigator: true });
+          return closure_1_14(closure_1_1(12857), { isNestedNavigator: true });
         }
       };
       obj[constants.JOIN_STUDENT_HUB] = obj9;

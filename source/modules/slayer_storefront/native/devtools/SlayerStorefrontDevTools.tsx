@@ -1,10 +1,10 @@
-// Module ID: 15809
-// Function ID: 15810
+// Module ID: 15811
+// Function ID: 15812
 // Name: SlayerStorefrontDevTools
-// Dependencies: [32, 5, 19, 17, 1371, 5591, 7340, 1074, 21, 4636, 576, 1272, 7084, 504, 10926, 1150, 10925, 9497, 5054, 5768, 6707, 5686, 2]
+// Dependencies: [32, 5, 19, 17, 1371, 5591, 7340, 1074, 21, 4636, 576, 1270, 7084, 504, 10927, 1363, 10926, 9497, 5054, 5768, 6707, 5686, 2]
 // Exports: default
 
-// Module 15809 (SlayerStorefrontDevTools)
+// Module 15811 (SlayerStorefrontDevTools)
 import nativeDefault from "native" /* 576 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 9497 */;
 import _slicedToArray from "module_32" /* 32 */;

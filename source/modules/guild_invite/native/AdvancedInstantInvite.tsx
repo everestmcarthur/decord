@@ -1,10 +1,10 @@
-// Module ID: 17911
-// Function ID: 17912
+// Module ID: 17912
+// Function ID: 17913
 // Name: AdvancedInstantInvite
-// Dependencies: [19, 17, 4285, 1371, 21, 4636, 5109, 4789, 17912, 9954, 17913, 4603, 17914, 1896, 17915, 1114, 5665, 5692, 5054, 576, 5768, 5686, 7303, 1384, 8510, 2]
+// Dependencies: [19, 17, 4285, 1371, 21, 4636, 5109, 4789, 17913, 9954, 17914, 4603, 17915, 1896, 17916, 1114, 5665, 5692, 5054, 576, 5768, 5686, 7303, 1384, 8510, 2]
 // Exports: default
 
-// Module 17911 (AdvancedInstantInvite)
+// Module 17912 (AdvancedInstantInvite)
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -71,14 +71,14 @@ export default function AdvancedInstantInvite(maxAge) {
     if (tmp) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
-      obj.openLazy(asyncRequireImpl(17914, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(17915, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
   const callback1 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxAge) {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp5 = asyncRequireImpl(17915, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(17916, dependencyMap.paths);
       const obj2 = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t.gKmKP0);
@@ -92,7 +92,7 @@ export default function AdvancedInstantInvite(maxAge) {
   const callback2 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxUses) {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp5 = asyncRequireImpl(17915, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(17916, dependencyMap.paths);
       const obj2 = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t["+3vH1h"]);

@@ -1,7 +1,7 @@
 // Module ID: 7222
 // Function ID: 7223
 // Name: NotificationSettingsModalActionCreators
-// Dependencies: [5, 4817, 1074, 4288, 1084, 573, 7217, 7219, 11, 4488, 1114, 1384, 1272, 2]
+// Dependencies: [5, 4817, 1074, 4288, 1084, 573, 7217, 7219, 11, 4488, 1114, 1384, 1270, 2]
 
 // Module 7222 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
@@ -139,12 +139,12 @@ export default {
               closure_128_0 = undefined;
               const setFlagResult = closure_0(1384).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
               closure_128_0 = setFlagResult;
-              const HTTP = closure_0(1272).HTTP;
+              const HTTP = closure_0(1270).HTTP;
               const request = { url: constants.ACCOUNT_NOTIFICATION_SETTINGS, body: null, rejectWithError: null };
               const obj5 = { flags: setFlagResult };
               request.body = obj5;
               const obj10 = closure_0(1384);
-              request.rejectWithError = closure_0(1272).rejectWithMigratedError();
+              request.rejectWithError = closure_0(1270).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj6 = { value: HTTP.patch(request), done: false };

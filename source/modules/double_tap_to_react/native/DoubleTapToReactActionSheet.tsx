@@ -1,10 +1,10 @@
-// Module ID: 12510
-// Function ID: 12511
+// Module ID: 12511
+// Function ID: 12512
 // Name: DoubleTapToReactActionSheet
-// Dependencies: [5, 32, 19, 17, 4628, 5540, 1074, 1374, 21, 4636, 1150, 576, 4373, 4637, 5073, 504, 5055, 1935, 4289, 8072, 1396, 7233, 1242, 7285, 11258, 4603, 7300, 4632, 1114, 12420, 12511, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 4628, 5540, 1074, 1374, 21, 4636, 1363, 576, 4373, 4637, 5073, 504, 5055, 1935, 4289, 8072, 1396, 7233, 1240, 7285, 11259, 4603, 7300, 4632, 1114, 12421, 12512, 5056, 2]
 // Exports: default
 
-// Module 12510 (DoubleTapToReactActionSheet)
+// Module 12511 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserSettings from "UserSettings" /* 1935 */;
@@ -115,13 +115,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4636);
 let obj2 = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 36;
 if (PlatformUtils.isIOS()) {
   num = 48;
 }
 let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 56;
@@ -130,7 +130,7 @@ obj4.lineHeight = num2;
 obj4.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.selectedTextEmoji = obj4;
 let obj6 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num3;
 if (PlatformUtils.isIOS()) {
   num3 = 56;
@@ -342,7 +342,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           return obj;
         }
         const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7285).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
-        tmp22(1242).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
+        tmp22(1240).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;

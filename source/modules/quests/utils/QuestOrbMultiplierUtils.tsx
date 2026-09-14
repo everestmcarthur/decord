@@ -1,10 +1,10 @@
-// Module ID: 11426
-// Function ID: 11427
+// Module ID: 11427
+// Function ID: 11428
 // Name: QuestOrbMultiplierUtils
 // Dependencies: [4294, 1377, 1379, 2]
 // Exports: getQuestOrbMultiplierSource, shouldReceiveQuestOrbMultiplier
 
-// Module 11426 (QuestOrbMultiplierUtils)
+// Module 11427 (QuestOrbMultiplierUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 

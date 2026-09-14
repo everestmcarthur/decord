@@ -1,23 +1,23 @@
-// Module ID: 11340
-// Function ID: 11341
+// Module ID: 11341
+// Function ID: 11342
 // Name: UserProfileAboutMeCard
-// Dependencies: [19, 17, 2025, 2021, 1979, 7311, 1074, 1482, 21, 4636, 4338, 576, 4632, 1114, 11341, 504, 5488, 11, 10946, 5665, 11342, 1178, 8488, 7265, 8307, 11343, 4603, 4495, 1100, 7141, 4502, 1609, 8296, 11344, 5056, 7310, 2]
+// Dependencies: [19, 17, 2025, 2021, 1979, 7311, 1074, 1482, 21, 4636, 4338, 576, 4632, 1114, 11342, 504, 5488, 11, 10947, 5665, 11343, 1176, 8488, 7265, 8307, 11344, 4603, 4495, 1100, 7141, 4502, 1609, 8296, 11345, 5056, 7310, 2]
 // Exports: default
 
-// Module 11340 (UserProfileAboutMeCard)
+// Module 11341 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import useToken from "useToken" /* 4338 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7310 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8488 */;
-import BioTextDefault from "BioText" /* 11341 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 11342 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11344 */;
+import BioTextDefault from "BioText" /* 11342 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 11343 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11345 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -136,7 +136,7 @@ function MemberJoinDates(userId) {
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
-  const obj9 = { themeType, icon: closure_11(userId(10946).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  const obj9 = { themeType, icon: closure_11(userId(10947).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1114).intl;
   obj9.accessibilityLabel = intl2.formatToPlainString(userId(1114).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;

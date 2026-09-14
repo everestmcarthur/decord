@@ -1,10 +1,10 @@
-// Module ID: 16984
-// Function ID: 16985
+// Module ID: 16986
+// Function ID: 16987
 // Name: modal/ModalScreen
-// Dependencies: [109, 19, 17, 1074, 21, 4636, 576, 4839, 8894, 1250, 7578, 1611, 16985, 1150, 16868, 2]
+// Dependencies: [109, 19, 17, 1074, 21, 4636, 576, 4839, 8894, 1248, 7578, 1611, 16987, 1363, 16870, 2]
 // Exports: default
 
-// Module 16984 (modal/ModalScreen)
+// Module 16986 (modal/ModalScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8894 */;
@@ -38,7 +38,7 @@ export default function Modal(route) {
   }, []);
   const obj = { type: null, name: null, properties: null };
   const tmp2 = _objectWithoutProperties(props, closure_3);
-  obj.type = modal(1250).ImpressionTypes.MODAL;
+  obj.type = modal(1248).ImpressionTypes.MODAL;
   obj.name = impressionName;
   obj.properties = impressionProperties;
   useTrackImpressionDefault(obj);
@@ -91,10 +91,10 @@ export default function Modal(route) {
   const items2 = [<modal.modal />, ];
   const tmp14 = closure_10;
   const tmp15 = closure_6;
-  tmp7Result = modal(16985);
-  let isIOSResult = modal(1150).isIOS();
+  tmp7Result = modal(16987);
+  let isIOSResult = modal(1363).isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_9(tmp7(16868).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16870).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj4.children = items2;

@@ -1,10 +1,10 @@
-// Module ID: 12697
-// Function ID: 12698
+// Module ID: 12698
+// Function ID: 12699
 // Name: GuildPowerupsCard
 // Dependencies: [19, 17, 21, 4636, 672, 576, 5688, 2]
 // Exports: default
 
-// Module 12697 (GuildPowerupsCard)
+// Module 12698 (GuildPowerupsCard)
 import nativeDefault from "native" /* 576 */;
 import Card from "Card" /* 5688 */;
 import noop from "module_19" /* 19 */;

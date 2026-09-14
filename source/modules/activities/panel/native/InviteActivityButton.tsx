@@ -1,14 +1,14 @@
-// Module ID: 17135
-// Function ID: 17136
+// Module ID: 17137
+// Function ID: 17138
 // Name: InviteActivityButton
-// Dependencies: [19, 11590, 5360, 21, 4603, 17136, 1896, 504, 11890, 5056, 10160, 1114, 2]
+// Dependencies: [19, 11591, 5360, 21, 4603, 17138, 1896, 504, 11891, 5056, 10160, 1114, 2]
 
-// Module 17135 (InviteActivityButton)
+// Module 17137 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11890 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11891 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     const obj2 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17136, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(17138, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(10160),
       text: null,
@@ -43,7 +43,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     tmp4 = jsx(tmp(5056).Button, {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17136, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(17138, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(10160),
       text: null,

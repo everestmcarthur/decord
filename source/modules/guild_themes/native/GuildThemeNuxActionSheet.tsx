@@ -1,10 +1,10 @@
-// Module ID: 16256
-// Function ID: 16257
+// Module ID: 16258
+// Function ID: 16259
 // Name: GuildThemeNuxActionSheet
-// Dependencies: [5, 32, 19, 17, 4458, 4524, 1954, 21, 3, 4636, 576, 16257, 4567, 504, 4603, 1114, 7253, 16258, 4632, 5766, 5769, 1178, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 4458, 4524, 1954, 21, 3, 4636, 576, 16259, 4567, 504, 4603, 1114, 7253, 16260, 4632, 5766, 5769, 1176, 5056, 2]
 // Exports: default
 
-// Module 16256 (GuildThemeNuxActionSheet)
+// Module 16258 (GuildThemeNuxActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -49,8 +49,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = noop.useState(guildId(16257).getInitialGuildThemeNuxSelection);
-  const tmp4 = _slicedToArray(noop.useState(guildId(16257).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = noop.useState(guildId(16259).getInitialGuildThemeNuxSelection);
+  const tmp4 = _slicedToArray(noop.useState(guildId(16259).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = noop.useState(false);
@@ -185,7 +185,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj3.dismissAccessibilityLabel = intl2.string(guildId(1114).t.cpT0Cq);
   obj3.onDismiss = callback3;
   obj3.contentStyles = tmp.container;
-  const items7 = [closure_10(markAsDismissed(16258), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [closure_10(markAsDismissed(16260), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   const obj4 = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1114).intl;
   obj4.children = intl3.string(guildId(1114).t.Q9zFy9);
@@ -212,18 +212,18 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let tmp20Result = null;
   if (tmp10) {
     const obj10 = { style: tmp.warning, children: null };
-    const obj11 = { messageType: tmp2(1178).HelpMessageTypes.WARNING, borderRadius: tmp21(576).radii.md, children: null };
+    const obj11 = { messageType: tmp2(1176).HelpMessageTypes.WARNING, borderRadius: tmp21(576).radii.md, children: null };
     const intl7 = tmp2(1114).intl;
     obj11.children = intl7.string(tmp2(1114).t.tTHQAy);
-    obj10.children = tmp20(tmp2(1178).HelpMessage, obj11);
+    obj10.children = tmp20(tmp2(1176).HelpMessage, obj11);
     tmp20Result = tmp20(tmp22, obj10);
   }
   items7[4] = tmp20Result;
   let tmp20Result2 = null;
   if (null != tmp7) {
     const obj12 = { style: tmp.warning, children: null };
-    const obj13 = { messageType: tmp2(1178).HelpMessageTypes.ERROR, borderRadius: tmp21(576).radii.md, children: tmp7 };
-    obj12.children = tmp20(tmp2(1178).HelpMessage, obj13);
+    const obj13 = { messageType: tmp2(1176).HelpMessageTypes.ERROR, borderRadius: tmp21(576).radii.md, children: tmp7 };
+    obj12.children = tmp20(tmp2(1176).HelpMessage, obj13);
     tmp20Result2 = tmp20(tmp22, obj12);
   }
   items7[5] = tmp20Result2;

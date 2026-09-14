@@ -1,10 +1,10 @@
-// Module ID: 15165
-// Function ID: 15166
+// Module ID: 15166
+// Function ID: 15167
 // Name: QuestHomeOrbShopCarousel
-// Dependencies: [32, 19, 17, 1183, 7804, 5525, 21, 576, 15149, 4636, 504, 4632, 1114, 8997, 9003, 15141, 15166, 8890, 7820, 7830, 8893, 4347, 2]
+// Dependencies: [32, 19, 17, 1181, 7804, 5525, 21, 576, 15150, 4636, 504, 4632, 1114, 8997, 9003, 15142, 15167, 8890, 7820, 7830, 8893, 4347, 2]
 // Exports: default, useQuestHomeOrbShopCarouselData
 
-// Module 15165 (QuestHomeOrbShopCarousel)
+// Module 15166 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -12,11 +12,11 @@ import Text_Text from "Text/Text" /* 4632 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8893 */;
 import SkeletonCardDefault from "SkeletonCard" /* 8997 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 15149 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 15166 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 15150 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 15167 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import BountyStore from "BountyStore" /* 7804 */;
 
 require = fn;
@@ -100,7 +100,7 @@ const jsxProd = fn(21);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(15149).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(15150).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(4636);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };

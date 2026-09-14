@@ -1,7 +1,7 @@
 // Module ID: 7441
 // Function ID: 7442
 // Name: SoundboardActionCreators
-// Dependencies: [5, 5093, 5095, 1074, 1084, 1272, 5101, 573, 7442, 4538, 7443, 1242, 1940, 12, 4980, 1114, 7444, 2]
+// Dependencies: [5, 5093, 5095, 1074, 1084, 1270, 5101, 573, 7442, 4538, 7443, 1240, 1940, 12, 4980, 1114, 7444, 2]
 // Exports: addFavoriteSound, deleteSound, fetchSoundGuildData, maybeFetchSoundboardSounds, muteCustomJoinSound, playSoundLocally, removeFavoriteSound, reportSoundFinishedPlaying, reportSoundStartedPlaying, updateSound, updateUserSoundboardVolume, uploadSound
 
 // Module 7441 (SoundboardActionCreators)

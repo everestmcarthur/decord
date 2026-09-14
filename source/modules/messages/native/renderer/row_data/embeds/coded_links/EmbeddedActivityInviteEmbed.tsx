@@ -1,10 +1,10 @@
-// Module ID: 13345
-// Function ID: 13346
+// Module ID: 13346
+// Function ID: 13347
 // Name: EmbeddedActivityInviteEmbed
-// Dependencies: [32, 17, 1956, 8257, 4864, 502, 1957, 4620, 4285, 1371, 11442, 7838, 573, 8256, 8049, 5109, 1114, 4789, 13346, 2]
+// Dependencies: [32, 17, 1956, 8257, 4864, 502, 1957, 4620, 4285, 1371, 11443, 7838, 573, 8256, 8049, 5109, 1114, 4789, 13347, 2]
 // Exports: createEmbeddedActivityInviteEmbed
 
-// Module 13345 (EmbeddedActivityInviteEmbed)
+// Module 13346 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
@@ -23,7 +23,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 const Image = fn(17).Image;
 const FetchState = fn(8257).FetchState;
-const CodedLinkExtendedType = fn(11442).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11443).CodedLinkExtendedType;
 const InviteTargetTypes = fn(7838).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
@@ -109,8 +109,8 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           if (null != id1) {
             if (null != id2) {
               const obj6 = { channelId: id1, guildId: id2, applicationId: id };
-              let embeddedActivityParticipantAvatarUris = tmp25(13346).getEmbeddedActivityParticipantAvatarUris(obj6);
-              const tmp25Result4 = tmp25(13346);
+              let embeddedActivityParticipantAvatarUris = tmp25(13347).getEmbeddedActivityParticipantAvatarUris(obj6);
+              const tmp25Result4 = tmp25(13347);
             }
             const string2 = tmp25(1114).intl.string;
             if (0 === embeddedActivityParticipantAvatarUris.length) {

@@ -1,10 +1,10 @@
-// Module ID: 11161
-// Function ID: 11162
+// Module ID: 11162
+// Function ID: 11163
 // Name: CollectiblesShopGiftBadgePostPurchaseModal
-// Dependencies: [19, 17, 21, 4636, 576, 1611, 4839, 7644, 7285, 8539, 1114, 5761, 4632, 2492, 11162, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1611, 4839, 7644, 7285, 8539, 1114, 5761, 4632, 2492, 11163, 2]
 // Exports: default
 
-// Module 11161 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 11162 (CollectiblesShopGiftBadgePostPurchaseModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -15,7 +15,7 @@ import XSmallIcon from "XSmallIcon" /* 5761 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import ModalScreen from "ModalScreen" /* 8539 */;
-import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 11162 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 11163 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

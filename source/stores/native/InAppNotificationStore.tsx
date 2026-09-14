@@ -1,7 +1,7 @@
 // Module ID: 10208
 // Function ID: 10209
 // Name: InAppNotificationStore
-// Dependencies: [1956, 4652, 10209, 7218, 7640, 1221, 1957, 1979, 10210, 4651, 2011, 1951, 1371, 1074, 8121, 8119, 4228, 12, 10211, 10213, 7432, 7373, 10214, 9740, 4859, 10222, 10223, 10225, 10218, 10226, 10230, 4790, 1935, 1187, 7957, 7696, 10231, 4816, 11, 504, 573, 2]
+// Dependencies: [1956, 4652, 10209, 7218, 7640, 1219, 1957, 1979, 10210, 4651, 2011, 1951, 1371, 1074, 8121, 8119, 4228, 12, 10211, 10213, 7432, 7373, 10214, 9740, 4859, 10222, 10223, 10225, 10218, 10226, 10230, 4790, 1935, 1185, 7957, 7696, 10231, 4816, 11, 504, 573, 2]
 
 // Module 10208 (InAppNotificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
@@ -24,7 +24,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10209 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 10210 */;
@@ -396,7 +396,7 @@ const inAppNotificationStore = new InAppNotificationStore(DispatcherDefault, {
               if (null != guildId) {
                 const ReactionNotifications = tmp19(1935).ReactionNotifications;
                 const setting = ReactionNotifications.getSetting();
-                if (setting === tmp19(1187).ReactionNotificationType.NOTIFICATIONS_DISABLED) {
+                if (setting === tmp19(1185).ReactionNotificationType.NOTIFICATIONS_DISABLED) {
                   return false;
                 } else {
                   const channel = ChannelStore.getChannel(channelId);

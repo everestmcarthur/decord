@@ -1,12 +1,12 @@
-// Module ID: 17480
-// Function ID: 17481
+// Module ID: 17482
+// Function ID: 17483
 // Name: FrecencyUserSettingsManager
-// Dependencies: [5, 9421, 9420, 5540, 5093, 5582, 5590, 1221, 1084, 1350, 1090, 7221, 1940, 1222, 1223, 12, 2]
+// Dependencies: [5, 9421, 9420, 5540, 5093, 5582, 5590, 1219, 1084, 1348, 1090, 7221, 1940, 1220, 1221, 12, 2]
 
-// Module 17480 (FrecencyUserSettingsManager)
+// Module 17482 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1090 */;
-import frecency_user_settings from "frecency_user_settings" /* 1222 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
+import frecency_user_settings from "frecency_user_settings" /* 1220 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1221 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9421 */;
@@ -15,7 +15,7 @@ import EmojiStore from "EmojiStore" /* 5540 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;
 import StickersPersistedStore from "StickersPersistedStore" /* 5582 */;
 import FrecencyStore from "FrecencyStore" /* 5590 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -147,7 +147,7 @@ function resetTimer(arg0, arg1) {
 }
 const MAX_NUM_SELECTED_ITEMS = fn(5590).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1350).FREQUENCY_ITEM_LIMIT;
+const FREQUENCY_ITEM_LIMIT = fn(1348).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

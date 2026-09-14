@@ -1,22 +1,22 @@
-// Module ID: 11518
-// Function ID: 11519
+// Module ID: 11519
+// Function ID: 11520
 // Name: StrangerDangerMoreTipsModalActionItems
-// Dependencies: [32, 19, 4285, 1371, 11046, 21, 504, 4481, 11503, 9171, 1114, 7071, 7069, 8033, 5768, 11519, 2]
+// Dependencies: [32, 19, 4285, 1371, 11047, 21, 504, 4481, 11504, 9171, 1114, 7071, 7069, 8033, 5768, 11520, 2]
 // Exports: default
 
-// Module 11518 (StrangerDangerMoreTipsModalActionItems)
+// Module 11519 (StrangerDangerMoreTipsModalActionItems)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import DenyIcon from "DenyIcon" /* 8033 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
 let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");

@@ -1,10 +1,10 @@
-// Module ID: 13233
-// Function ID: 13234
+// Module ID: 13234
+// Function ID: 13235
 // Name: UserProfilePrivateBanner
 // Dependencies: [19, 17, 7311, 21, 4636, 576, 1091, 5176, 4632, 1114, 2]
 // Exports: default
 
-// Module 13233 (UserProfilePrivateBanner)
+// Module 13234 (UserProfilePrivateBanner)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;

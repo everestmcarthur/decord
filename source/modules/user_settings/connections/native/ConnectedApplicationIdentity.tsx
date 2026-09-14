@@ -1,12 +1,12 @@
-// Module ID: 15051
-// Function ID: 15052
+// Module ID: 15052
+// Function ID: 15053
 // Name: ConnectedApplicationIdentity
-// Dependencies: [5, 32, 19, 17, 21, 4636, 15052, 1114, 1178, 4632, 9589, 4980, 15030, 5075, 1396, 5058, 9153, 5054, 5204, 7095, 5686, 5768, 7303, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4636, 15053, 1114, 1176, 4632, 9589, 4980, 15031, 5075, 1396, 5058, 9153, 5054, 5204, 7095, 5686, 5768, 7303, 2]
 // Exports: default
 
-// Module 15051 (ConnectedApplicationIdentity)
+// Module 15052 (ConnectedApplicationIdentity)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;

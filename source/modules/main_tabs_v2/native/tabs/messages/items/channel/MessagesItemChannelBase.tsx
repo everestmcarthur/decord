@@ -1,13 +1,13 @@
-// Module ID: 16126
-// Function ID: 16127
+// Module ID: 16128
+// Function ID: 16129
 // Name: MessagesItemChannelBase
-// Dependencies: [19, 17, 4676, 4651, 4285, 2011, 4817, 1371, 1074, 21, 4636, 576, 504, 16127, 8334, 1150, 4649, 4647, 11044, 5204, 9900, 8945, 16128, 7983, 8941, 16129, 8375, 16130, 2]
+// Dependencies: [19, 17, 4676, 4651, 4285, 2011, 4817, 1371, 1074, 21, 4636, 576, 504, 16129, 8334, 1363, 4649, 4647, 11045, 5204, 9900, 8945, 16130, 7983, 8941, 16131, 8375, 16132, 2]
 
-// Module 16126 (MessagesItemChannelBase)
+// Module 16128 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;

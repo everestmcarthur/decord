@@ -1,25 +1,25 @@
-// Module ID: 15898
-// Function ID: 15899
+// Module ID: 15900
+// Function ID: 15901
 // Name: CollectiblesShopV2
-// Dependencies: [32, 19, 17, 4635, 1183, 1371, 7645, 1076, 1074, 21, 4636, 7285, 13538, 15899, 504, 5679, 1256, 10862, 15900, 1150, 7656, 9496, 8295, 8902, 4488, 7265, 1483, 8973, 4307, 15902, 1242, 7692, 8304, 15903, 15905, 15928, 1232, 8893, 10950, 15931, 15932, 15908, 15933, 7705, 2]
+// Dependencies: [32, 19, 17, 4635, 1181, 1371, 7645, 1076, 1074, 21, 4636, 7285, 13539, 15901, 504, 5679, 1254, 10863, 15902, 1363, 7656, 9496, 8295, 8902, 4488, 7265, 1483, 8973, 4307, 15904, 1240, 7692, 8304, 15905, 15907, 15930, 1230, 8893, 10951, 15933, 15934, 15910, 15935, 7705, 2]
 
-// Module 15898 (CollectiblesShopV2)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 15900 (CollectiblesShopV2)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7692 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8973 */;
 import NativePaymentHooksDefault from "NativePaymentHooks" /* 9496 */;
-import ShopCategory from "ShopCategory" /* 15903 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15905 */;
+import ShopCategory from "ShopCategory" /* 15905 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import UserStore from "UserStore" /* 1371 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 
-const SentryUtilsDefault = tmp(1232);
+const SentryUtilsDefault = tmp(1230);
 require = fn;
 class CollectiblesShopV2 {
   constructor(arg0) {

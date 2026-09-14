@@ -1,9 +1,9 @@
-// Module ID: 13358
-// Function ID: 13359
+// Module ID: 13359
+// Function ID: 13360
 // Name: SpotifyApplicationRecord
 // Dependencies: [1918, 5364, 2]
 
-// Module 13358 (SpotifyApplicationRecord)
+// Module 13359 (SpotifyApplicationRecord)
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import Platforms from "Platforms" /* 5364 */;
 

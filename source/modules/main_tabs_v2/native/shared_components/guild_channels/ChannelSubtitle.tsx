@@ -1,13 +1,13 @@
-// Module ID: 16763
-// Function ID: 16764
+// Module ID: 16765
+// Function ID: 16766
 // Name: guild_channels/ChannelSubtitle
-// Dependencies: [19, 21, 10249, 4632, 16321, 10244, 2]
+// Dependencies: [19, 21, 10249, 4632, 16323, 10244, 2]
 // Exports: renderChannelSubtitle
 
-// Module 16763 (guild_channels/ChannelSubtitle)
+// Module 16765 (guild_channels/ChannelSubtitle)
 import Text_Text from "Text/Text" /* 4632 */;
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16321 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

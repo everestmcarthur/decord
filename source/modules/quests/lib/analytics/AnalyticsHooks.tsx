@@ -1,12 +1,12 @@
-// Module ID: 11903
-// Function ID: 11904
+// Module ID: 11904
+// Function ID: 11905
 // Name: AnalyticsHooks
-// Dependencies: [19, 1074, 11619, 7820, 7801, 7831, 7830, 7779, 1256, 1150, 7836, 5528, 5532, 1242, 2]
+// Dependencies: [19, 1074, 11620, 7820, 7801, 7831, 7830, 7779, 1254, 1363, 7836, 5528, 5532, 1240, 2]
 // Exports: useBountyCarouselEmptyStateAnalytics, useQuestHomeEntrypointAnalyticsEvents, useQuestsEmbedFallbackAnalytics, useTrackAdContentClickedWithImpression, useTrackAdContentEventWithImpression, useTrackQuestContentClickedWithImpression, useTrackQuestEventWithImpression
 
-// Module 11903 (AnalyticsHooks)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+// Module 11904 (AnalyticsHooks)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7779 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
@@ -21,7 +21,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11619).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11620).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     const obj2 = {};
@@ -34,7 +34,7 @@ export const useTrackQuestEventWithImpression = function useTrackQuestEventWithI
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11619).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(11620).useGetQuestImpressionId();
   closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = noop.useCallback((properties) => {
@@ -72,7 +72,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
         if (tmp2Result.isIOS()) {
           advertisingId = advertisingId.advertisingId;
         }
-        tmp2Result = tmp2(1150);
+        tmp2Result = tmp2(1363);
       }
       obj2.apple_advertising_id = advertisingId;
       let advertisingId1 = null;
@@ -81,7 +81,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
         if (tmp2Result4.isAndroid()) {
           advertisingId1 = advertisingId.advertisingId;
         }
-        tmp2Result4 = tmp2(1150);
+        tmp2Result4 = tmp2(1363);
       }
       obj2.android_advertising_id = advertisingId1;
       let tmp9 = null;
@@ -113,7 +113,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11619).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11620).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     const obj2 = {};
@@ -126,7 +126,7 @@ export const useTrackAdContentEventWithImpression = function useTrackAdContentEv
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11619).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(11620).useGetQuestImpressionId();
   closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = noop.useCallback((properties) => {
@@ -159,7 +159,7 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
         if (tmp2Result.isIOS()) {
           advertisingId = advertisingId.advertisingId;
         }
-        tmp2Result = tmp2(1150);
+        tmp2Result = tmp2(1363);
       }
       obj2.apple_advertising_id = advertisingId;
       let advertisingId1 = null;
@@ -168,7 +168,7 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
         if (tmp2Result4.isAndroid()) {
           advertisingId1 = advertisingId.advertisingId;
         }
-        tmp2Result4 = tmp2(1150);
+        tmp2Result4 = tmp2(1363);
       }
       obj2.android_advertising_id = advertisingId1;
       const currentQuestHomeSearchSession = QuestHomeSearchSession.getCurrentQuestHomeSearchSession();

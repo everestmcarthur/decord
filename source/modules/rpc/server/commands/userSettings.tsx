@@ -1,9 +1,9 @@
-// Module ID: 14593
-// Function ID: 14594
+// Module ID: 14594
+// Function ID: 14595
 // Name: userSettings
 // Dependencies: [2025, 1074, 8457, 2]
 
-// Module 14593 (userSettings)
+// Module 14594 (userSettings)
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 const obj = {};

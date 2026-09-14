@@ -1,17 +1,17 @@
-// Module ID: 13945
-// Function ID: 13946
+// Module ID: 13946
+// Function ID: 13947
 // Name: ContactSyncUpsellCTA
-// Dependencies: [19, 12808, 1074, 21, 4636, 576, 8716, 1242, 12805, 7297, 1114, 13946, 2]
+// Dependencies: [19, 12809, 1074, 21, 4636, 576, 8716, 1240, 12806, 7297, 1114, 13947, 2]
 
-// Module 13945 (ContactSyncUpsellCTA)
+// Module 13946 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12805 */;
-import _modDef13946 from "module_13946" /* 13946 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12806 */;
+import _modDef13947 from "module_13947" /* 13947 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(12808).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12809).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
@@ -52,7 +52,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       const result = location(7297).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13946,
+    iconSource: _modDef13947,
     title: null,
     subtitle: null
   };
@@ -90,7 +90,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       const result = location(7297).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13946,
+    iconSource: _modDef13947,
     title: null,
     subtitle: null
   });

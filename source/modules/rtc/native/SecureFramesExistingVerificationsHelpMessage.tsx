@@ -1,7 +1,7 @@
 // Module ID: 9292
 // Function ID: 9293
 // Name: SecureFramesExistingVerificationsHelpMessage
-// Dependencies: [17, 21, 4636, 9293, 1178, 1114, 2]
+// Dependencies: [17, 21, 4636, 9293, 1176, 1114, 2]
 // Exports: default
 
 // Module 9292 (SecureFramesExistingVerificationsHelpMessage)
@@ -25,11 +25,11 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
     const obj2 = { style: null, children: null };
     const items = [tmp.container, style];
     obj2.style = items;
-    const obj3 = { messageType: tmp2(1178).HelpMessageTypes.INFO, children: null };
+    const obj3 = { messageType: tmp2(1176).HelpMessageTypes.INFO, children: null };
     const intl = tmp2(1114).intl;
     const obj4 = { count: secureFramesUserVerifiedKeysCount };
     obj3.children = intl.format(tmp2(1114).t.uZDkz0, obj4);
-    obj2.children = jsx(tmp2(1178).HelpMessage, { messageType: tmp2(1178).HelpMessageTypes.INFO, children: null });
+    obj2.children = jsx(tmp2(1176).HelpMessage, { messageType: tmp2(1176).HelpMessageTypes.INFO, children: null });
     tmp5 = <View style={null}>{null}</View>;
   }
   return tmp5;

@@ -1,10 +1,10 @@
-// Module ID: 16611
-// Function ID: 16612
+// Module ID: 16613
+// Function ID: 16614
 // Name: ICYMIGuildEventRow
-// Dependencies: [19, 17, 7629, 1957, 1979, 21, 16547, 576, 9798, 1114, 9795, 4789, 9835, 9899, 8469, 9919, 7445, 9910, 16588, 11, 4632, 9901, 5170, 1178, 504, 2]
+// Dependencies: [19, 17, 7629, 1957, 1979, 21, 16549, 576, 9798, 1114, 9795, 4789, 9835, 9899, 8469, 9919, 7445, 9910, 16590, 11, 4632, 9901, 5170, 1176, 504, 2]
 // Exports: default
 
-// Module 16611 (ICYMIGuildEventRow)
+// Module 16613 (ICYMIGuildEventRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
@@ -78,7 +78,7 @@ function ICYMIGuildEventRow(event) {
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(16588);
+  const tmp2Result3 = guild(16590);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;
@@ -138,8 +138,8 @@ function ICYMIGuildEventRow(event) {
   } else {
     tmp19Result2 = null != eventLocationIconSource;
     if (tmp19Result2) {
-      const obj18 = { source: eventLocationIconSource, size: tmp8(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.eventsChannelIcon, disableColor: true };
-      tmp19Result2 = tmp19(tmp8(1178).Icon, obj18);
+      const obj18 = { source: eventLocationIconSource, size: tmp8(1176).Icon.Sizes.EXTRA_SMALL, style: tmp.eventsChannelIcon, disableColor: true };
+      tmp19Result2 = tmp19(tmp8(1176).Icon, obj18);
     }
   }
   const items6 = [tmp19Result2, ];
@@ -168,7 +168,7 @@ let GuildScheduledEventStore = fn(7629);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin, marginLeft: marginHorizontal.margin + marginHorizontal.inset }, card: { marginTop: nativeDefault.space.PX_12 }, title: null, timeAndUserPillContainer: null, separator: null, eventsChannelIcon: null, infoContainer: null, locationContainer: null };
   const obj2 = { marginTop: nativeDefault.space.PX_12 };

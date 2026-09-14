@@ -1,9 +1,9 @@
-// Module ID: 16128
-// Function ID: 16129
+// Module ID: 16130
+// Function ID: 16131
 // Name: ChannelUnreadBadge
 // Dependencies: [19, 17, 10246, 4818, 21, 4636, 10249, 5063, 7972, 2]
 
-// Module 16128 (ChannelUnreadBadge)
+// Module 16130 (ChannelUnreadBadge)
 import useFontScale from "useFontScale" /* 5063 */;
 import BadgeDefault from "Badge" /* 7972 */;
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;

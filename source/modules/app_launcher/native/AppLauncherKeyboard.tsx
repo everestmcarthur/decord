@@ -1,12 +1,12 @@
-// Module ID: 12164
-// Function ID: 12165
+// Module ID: 12165
+// Function ID: 12166
 // Name: AppLauncherKeyboard
-// Dependencies: [19, 17, 1074, 1954, 12165, 21, 4636, 576, 11349, 11348, 11489, 5043, 12166, 4373, 12175, 4347, 6728, 12176, 1150, 4816, 1608, 1481, 1609, 5052, 12208, 9539, 12211, 2]
+// Dependencies: [19, 17, 1074, 1954, 12166, 21, 4636, 576, 11350, 11349, 11490, 5043, 12167, 4373, 12176, 4347, 6728, 12177, 1363, 4816, 1608, 1481, 1609, 5052, 12209, 9539, 12212, 2]
 // Exports: setAppLauncherA11yFocusReturnRef
 
-// Module 12164 (AppLauncherKeyboard)
+// Module 12165 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import native from "native" /* 4347 */;
@@ -14,15 +14,15 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
 import BottomSheetModal from "BottomSheetModal" /* 6728 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12175 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12176 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12176 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12165).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12166).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
@@ -141,11 +141,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.KEYBOARD;
+          let current = trackWithMetadata(11349).AppLauncherBottomSheetExpandReason.KEYBOARD;
         } else if (arg2 === trackWithMetadata(6728).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.GESTURE;
+          current = trackWithMetadata(11349).AppLauncherBottomSheetExpandReason.GESTURE;
         } else if (arg2 !== trackWithMetadata(6728).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.OTHER;
+          current = trackWithMetadata(11349).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }

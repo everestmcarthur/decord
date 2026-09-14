@@ -1,10 +1,10 @@
-// Module ID: 12633
-// Function ID: 12634
+// Module ID: 12634
+// Function ID: 12635
 // Name: useBoostToUnlockFeaturedPowerup
 // Dependencies: [32, 19, 1979, 4525, 4526, 1074, 4529, 504, 4545, 2]
 // Exports: default
 
-// Module 12633 (useBoostToUnlockFeaturedPowerup)
+// Module 12634 (useBoostToUnlockFeaturedPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

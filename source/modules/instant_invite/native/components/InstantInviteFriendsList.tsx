@@ -1,13 +1,13 @@
 // Module ID: 10022
 // Function ID: 10023
 // Name: InstantInviteFriendsList
-// Dependencies: [19, 1074, 21, 4636, 5605, 576, 1178, 1114, 5204, 4603, 4495, 4632, 10023, 7084, 6728, 2]
+// Dependencies: [19, 1074, 21, 4636, 5605, 576, 1176, 1114, 5204, 4603, 4495, 4632, 10023, 7084, 6728, 2]
 // Exports: default
 
 // Module 10022 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;

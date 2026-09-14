@@ -1,14 +1,14 @@
-// Module ID: 12109
-// Function ID: 12110
+// Module ID: 12110
+// Function ID: 12111
 // Name: CustomTypingIndicatorDisplay
-// Dependencies: [19, 21, 4636, 1114, 12100, 5054, 12110, 4632, 5204, 576, 2]
+// Dependencies: [19, 21, 4636, 1114, 12101, 5054, 12111, 4632, 5204, 576, 2]
 // Exports: default
 
-// Module 12109 (CustomTypingIndicatorDisplay)
+// Module 12110 (CustomTypingIndicatorDisplay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12100 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12110 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12101 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12111 */;
 import noop from "module_19" /* 19 */;
 
 const Text_Text = tmp3(4632);

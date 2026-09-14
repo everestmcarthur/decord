@@ -1,7 +1,7 @@
 // Module ID: 9210
 // Function ID: 9211
 // Name: EndStageActionSheet
-// Dependencies: [19, 17, 5495, 1074, 21, 4636, 576, 4603, 9211, 8714, 1178, 1114, 4632, 5056, 8516, 2]
+// Dependencies: [19, 17, 5495, 1074, 21, 4636, 576, 4603, 9211, 8714, 1176, 1114, 4632, 5056, 8516, 2]
 // Exports: default
 
 // Module 9210 (EndStageActionSheet)
@@ -31,7 +31,7 @@ export default function EndStageActionSheet(channel) {
   const obj3 = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = channel(1114).intl;
   obj3.children = intl.string(channel(1114).t.pADdJu);
-  const items = [closure_5(channel(1178).LegacyText, obj3), , , ];
+  const items = [closure_5(channel(1176).LegacyText, obj3), , , ];
   const obj4 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1114).intl;
   obj4.children = intl2.string(channel(1114).t.mT7jwN);

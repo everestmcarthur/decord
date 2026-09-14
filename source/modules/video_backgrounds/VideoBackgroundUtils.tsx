@@ -1,11 +1,11 @@
 // Module ID: 9226
 // Function ID: 9227
 // Name: VideoBackgroundUtils
-// Dependencies: [1957, 4659, 7090, 1074, 1396, 4816, 1242, 2]
+// Dependencies: [1957, 4659, 7090, 1074, 1396, 4816, 1240, 2]
 // Exports: getEffectAnalyticsType, getVideoBackgroundOptionFromProto, getVideoBackgroundProtoFromOption, isCustomBackgroundOption, isDefaultBackgroundOption, trackBackgroundOptionAdded, trackBackgroundOptionDeleted, trackBackgroundOptionUpdated
 
 // Module 9226 (VideoBackgroundUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

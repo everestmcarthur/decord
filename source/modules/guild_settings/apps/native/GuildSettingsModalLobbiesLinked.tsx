@@ -1,10 +1,10 @@
-// Module ID: 17715
-// Function ID: 17716
+// Module ID: 17716
+// Function ID: 17717
 // Name: GuildSettingsModalLobbiesLinked
-// Dependencies: [19, 4285, 1371, 1074, 21, 1483, 7271, 5768, 5686, 4789, 5109, 4338, 576, 17638, 12, 8716, 5054, 7143, 2]
+// Dependencies: [19, 4285, 1371, 1074, 21, 1483, 7271, 5768, 5686, 4789, 5109, 4338, 576, 17639, 12, 8716, 5054, 7143, 2]
 // Exports: default
 
-// Module 17715 (GuildSettingsModalLobbiesLinked)
+// Module 17716 (GuildSettingsModalLobbiesLinked)
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;

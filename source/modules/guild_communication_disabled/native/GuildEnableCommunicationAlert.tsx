@@ -1,12 +1,12 @@
-// Module ID: 11973
-// Function ID: 11974
+// Module ID: 11974
+// Function ID: 11975
 // Name: GuildEnableCommunicationAlert
-// Dependencies: [5, 32, 19, 17, 1371, 2023, 1074, 21, 4636, 8081, 5073, 1242, 11972, 4335, 1114, 9696, 5075, 4632, 4788, 11061, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 2023, 1074, 21, 4636, 8081, 5073, 1240, 11973, 4335, 1114, 9696, 5075, 4632, 4788, 11062, 2]
 // Exports: default
 
-// Module 11973 (GuildEnableCommunicationAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CountDownDefault from "CountDown" /* 11061 */;
+// Module 11974 (GuildEnableCommunicationAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import CountDownDefault from "CountDown" /* 11062 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(11972).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(11973).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

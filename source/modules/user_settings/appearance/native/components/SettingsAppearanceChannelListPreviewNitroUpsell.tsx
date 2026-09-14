@@ -1,9 +1,9 @@
-// Module ID: 15386
-// Function ID: 15387
+// Module ID: 15387
+// Function ID: 15388
 // Name: SettingsAppearanceChannelListPreviewNitroUpsell
-// Dependencies: [19, 17, 4628, 1074, 21, 4373, 5068, 5055, 5059, 4636, 576, 7265, 7285, 9522, 9492, 5056, 1114, 1178, 504, 10098, 2]
+// Dependencies: [19, 17, 4628, 1074, 21, 4373, 5068, 5055, 5059, 4636, 576, 7265, 7285, 9522, 9492, 5056, 1114, 1176, 504, 10098, 2]
 
-// Module 15386 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 15387 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
@@ -48,7 +48,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   const obj5 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
   const intl = theme(1114).intl;
   obj5.text = intl.string(theme(1114).t.pj0XBN);
-  obj5.icon = closure_10(theme(1178).NitroWheel, { style: tmp.nitroWheelIcon });
+  obj5.icon = closure_10(theme(1176).NitroWheel, { style: tmp.nitroWheelIcon });
   obj5.onPress = callback;
   items1[1] = closure_10(theme(5056).Button, obj5);
   obj3.children = items1;

@@ -1,18 +1,18 @@
 // Module ID: 4663
 // Function ID: 4664
 // Name: RTCConnection
-// Dependencies: [5, 4664, 4674, 9280, 9212, 502, 1957, 1979, 1908, 4659, 10167, 4686, 1371, 1074, 4683, 13890, 4661, 559, 4665, 4694, 1232, 3, 13891, 1256, 13893, 13895, 9739, 10168, 1461, 1150, 4257, 1365, 573, 1907, 1384, 4690, 14, 5501, 13896, 13897, 9735, 1242, 4630, 7774, 13898, 13900, 4294, 4774, 13901, 13902, 4691, 13903, 13904, 13906, 7850, 13907, 9239, 7577, 13908, 13909, 9651, 13911, 4980, 1114, 551, 1241, 2]
+// Dependencies: [5, 4664, 4674, 9280, 9212, 502, 1957, 1979, 1908, 4659, 10167, 4686, 1371, 1074, 4683, 13891, 4661, 559, 4665, 4694, 1230, 3, 13892, 1254, 13894, 13896, 9739, 10168, 1461, 1363, 4257, 1365, 573, 1907, 1384, 4690, 14, 5501, 13897, 13898, 9735, 1240, 4630, 7774, 13899, 13901, 4294, 4774, 13902, 13903, 4691, 13904, 13905, 13907, 7850, 13908, 9239, 7577, 13909, 13910, 9651, 13912, 4980, 1114, 551, 1239, 2]
 
 // Module 4663 (RTCConnection)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
 import RTCControlSocket from "RTCControlSocket" /* 1907 */;
@@ -29,15 +29,15 @@ import AVError from "AVError" /* 9239 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 9651 */;
 import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 9739 */;
 import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10168 */;
-import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13901 */;
-import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13902 */;
-import NativeMuteManagerDefault from "NativeMuteManager" /* 13903 */;
-import VoiceQuality from "VoiceQuality" /* 13904 */;
-import SystemResponsivenessDefault from "SystemResponsiveness" /* 13906 */;
-import VoiceDurationDefault from "VoiceDuration" /* 13907 */;
-import VideoQuality from "VideoQuality" /* 13908 */;
-import VideoHealthManager from "VideoHealthManager" /* 13909 */;
-import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13911 */;
+import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13902 */;
+import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13903 */;
+import NativeMuteManagerDefault from "NativeMuteManager" /* 13904 */;
+import VoiceQuality from "VoiceQuality" /* 13905 */;
+import SystemResponsivenessDefault from "SystemResponsiveness" /* 13907 */;
+import VoiceDurationDefault from "VoiceDuration" /* 13908 */;
+import VideoQuality from "VideoQuality" /* 13909 */;
+import VideoHealthManager from "VideoHealthManager" /* 13910 */;
+import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13912 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 4664 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4674 */;
@@ -57,7 +57,7 @@ const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
 
 const RTCBandwidthMonitorDefault = tmp19(7577);
-const VideoStabilizationExperimentDefault = tmp3(13897);
+const VideoStabilizationExperimentDefault = tmp3(13898);
 require = fn;
 function getEventHistoryString() {
   const items = [];
@@ -75,7 +75,7 @@ let Constants = fn(1074);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18, RTCConnectionStates: closure_19, RTCConnectionQuality: closure_20, BoostedGuildTiers: closure_21 } = Constants);
 const StreamSettingsConstants = fn(4683);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13890).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13891).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4661);
 ({ Features: closure_25, MediaEngineContextTypes: closure_26, ConnectionStates: closure_27, Codecs: closure_28, MediaTypes: closure_29, SpeakingFlags: closure_30, DISABLED_DEVICE_ID: items } = Constants);
 let str = "ws:";
@@ -1082,7 +1082,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   }
   let enabled = PlatformUtils.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13896).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13897).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -2132,13 +2132,13 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
       const defaultConfig = VideoHealthManager.VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13909).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13910).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13908).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13909).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2582,8 +2582,8 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
           }
         }
         obj7.rtc_connecting_native_crypto_modes = diff4;
-        tmp9(1242).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj7);
-        const tmp9Result = tmp9(1242);
+        tmp9(1240).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj7);
+        const tmp9Result = tmp9(1240);
       }
     }
   }

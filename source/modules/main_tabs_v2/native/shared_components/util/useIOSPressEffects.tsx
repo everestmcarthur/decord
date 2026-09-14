@@ -1,11 +1,11 @@
 // Module ID: 5691
 // Function ID: 5692
 // Name: useIOSPressEffects
-// Dependencies: [19, 1477, 4373, 1150, 5055, 2]
+// Dependencies: [19, 1477, 4373, 1363, 5055, 2]
 // Exports: useIOSPressEffects
 
 // Module 5691 (useIOSPressEffects)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import noop from "module_19" /* 19 */;

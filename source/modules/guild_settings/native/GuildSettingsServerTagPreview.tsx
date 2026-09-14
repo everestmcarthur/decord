@@ -1,10 +1,10 @@
-// Module ID: 14000
-// Function ID: 14001
+// Module ID: 14001
+// Function ID: 14002
 // Name: GuildSettingsServerTagPreview
-// Dependencies: [5, 32, 19, 17, 1371, 8048, 21, 4636, 576, 504, 4788, 1396, 14001, 4632, 1114, 5054, 10287, 9313, 14002, 14046, 5056, 5688, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 8048, 21, 4636, 576, 504, 4788, 1396, 14002, 4632, 1114, 5054, 10287, 9313, 14003, 14047, 5056, 5688, 2]
 // Exports: default
 
-// Module 14000 (GuildSettingsServerTagPreview)
+// Module 14001 (GuildSettingsServerTagPreview)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -103,7 +103,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
             dependencyMap(true);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(14001).adoptGuildIdentity(guildId, true), done: false };
+            const obj5 = { value: tmp2(14002).adoptGuildIdentity(guildId, true), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -174,7 +174,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
     if (null != badge) {
       const size = { badge, primaryTintColor: primaryColor, secondaryTintColor: secondaryColor, width: null, height: null };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = tmp15(tmp2(14002).GuildBadge, size);
+      tmp15Result = tmp15(tmp2(14003).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
     tmp15Result3 = tmp15(tmp2(9313).BaseGuildTagChiplet, obj14);
@@ -197,7 +197,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const obj7 = { source: onAdopted(10287), style: tmp.avatar, importantForAccessibility: "no" };
   const tmp18 = closure_6;
-  const items11 = [closure_10(tmp18, { source: onAdopted(14046), style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const items11 = [closure_10(tmp18, { source: onAdopted(14047), style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj19 = { style: tmp.messageBody, children: null };
   const items12 = [closure_10(guildId(4632).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
   const obj20 = { variant: "text-md/normal", color: "text-default", children: null };

@@ -1,10 +1,10 @@
-// Module ID: 16715
-// Function ID: 16716
+// Module ID: 16717
+// Function ID: 16718
 // Name: VibegrationsNativeComposer
-// Dependencies: [5, 32, 19, 17, 16690, 1074, 21, 4636, 576, 1114, 3590, 7348, 5231, 11356, 4632, 5204, 6717, 8789, 12368, 11082, 8724, 16032, 4581, 2]
+// Dependencies: [5, 32, 19, 17, 16692, 1074, 21, 4636, 576, 1114, 3590, 7348, 5231, 11357, 4632, 5204, 6717, 8789, 12369, 11083, 8724, 16034, 4581, 2]
 // Exports: default
 
-// Module 16715 (VibegrationsNativeComposer)
+// Module 16717 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
@@ -25,7 +25,7 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16690);
+const VibegrationsConnectionStore = fn(16692);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

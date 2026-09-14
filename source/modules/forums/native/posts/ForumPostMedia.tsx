@@ -1,19 +1,19 @@
-// Module ID: 12138
-// Function ID: 12139
+// Module ID: 12139
+// Function ID: 12140
 // Name: ForumPostMedia
-// Dependencies: [32, 19, 17, 1183, 1182, 21, 4636, 576, 5668, 5046, 12139, 7702, 12140, 1150, 7399, 5204, 8529, 8531, 12141, 4488, 1935, 10347, 1476, 2]
+// Dependencies: [32, 19, 17, 1181, 1180, 21, 4636, 576, 5668, 5046, 12140, 7702, 12141, 1363, 7399, 5204, 8529, 8531, 12142, 4488, 1935, 10348, 1476, 2]
 // Exports: ForumPostGridMedia, ForumPostMediaThumbnail, useSharedMediaProps
 
-// Module 12138 (ForumPostMedia)
+// Module 12139 (ForumPostMedia)
 import nativeDefault from "native" /* 576 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1476 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 12139 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12141 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 12140 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 const UserSettings = tmp(1935);
 require = fn;
@@ -74,9 +74,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_10(ref(12140), obj2);
+    let tmp6Result = closure_10(ref(12141), obj2);
     let tmp12 = closure_10;
-    const tmp19 = ref(12140);
+    const tmp19 = ref(12141);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -89,7 +89,7 @@ function ForumPostMedia(obscureReason) {
       tmp6Result = tmp6(ForumPostMediaIOS, obj4);
       tmp12 = tmp6;
     }
-    tmp3Result = tmp3(1150);
+    tmp3Result = tmp3(1363);
   }
   if (null != obscureReason.obscureReason) {
     const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7399).AGE_VERIFICATION_OBSCURABLE_REASONS;
@@ -145,7 +145,7 @@ function ForumPostMedia(obscureReason) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ImageBackground: closure_7, PixelRatio } = get_ActivityIndicator);
-const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1180).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = Math.min(PixelRatio.get(), 4);

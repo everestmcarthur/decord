@@ -1,13 +1,13 @@
-// Module ID: 12511
-// Function ID: 12512
+// Module ID: 12512
+// Function ID: 12513
 // Name: SelectDoubleTapEmojiRow
-// Dependencies: [19, 17, 4628, 7254, 1374, 21, 4636, 1150, 576, 504, 5204, 7233, 1396, 10413, 1477, 4293, 8072, 11255, 7865, 8883, 2]
+// Dependencies: [19, 17, 4628, 7254, 1374, 21, 4636, 1363, 576, 504, 5204, 7233, 1396, 10414, 1477, 4293, 8072, 11256, 7865, 8883, 2]
 
-// Module 12511 (SelectDoubleTapEmojiRow)
+// Module 12512 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 576 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -21,13 +21,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4636);
 let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 20;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 let obj3 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 28;

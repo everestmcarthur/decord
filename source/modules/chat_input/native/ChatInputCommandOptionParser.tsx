@@ -1,16 +1,16 @@
-// Module ID: 12120
-// Function ID: 12121
+// Module ID: 12121
+// Function ID: 12122
 // Name: ChatInputCommandOptionParser
-// Dependencies: [32, 17, 4628, 5540, 2015, 4275, 1074, 5081, 1374, 12121, 4293, 12122, 1924, 1925, 8248, 5103, 7437, 10390, 1935, 576, 4789, 2]
+// Dependencies: [32, 17, 4628, 5540, 2015, 4275, 1074, 5081, 1374, 12122, 4293, 12123, 1924, 1925, 8248, 5103, 7437, 10391, 1935, 576, 4789, 2]
 // Exports: formatTimestampPillText, getChannelHighlightNodes, getEmojiHighlightNodes, getGameHighlightNodes, getGameMentionInputNodes, getMatchedOptions, getMatchedOptionsWithValue, getRoleHighlightNodes, getSilentHighlightNodes, getTextBeforeFirstOption, getTimestampHighlightNodes, getTimestampMentionInputNodes, getUsernameHighlightNodes, serializeComposerGameMentions, serializeComposerTimestampMentions, uniqueTimestampPillText
 
-// Module 12120 (ChatInputCommandOptionParser)
+// Module 12121 (ChatInputCommandOptionParser)
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import _modDef8248 from "module_8248" /* 8248 */;
-import ChatInputParser from "ChatInputParser" /* 12121 */;
-import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 12122 */;
+import ChatInputParser from "ChatInputParser" /* 12122 */;
+import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 12123 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import EmojiStore from "EmojiStore" /* 5540 */;

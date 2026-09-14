@@ -1,10 +1,10 @@
-// Module ID: 14894
-// Function ID: 14895
+// Module ID: 14895
+// Function ID: 14896
 // Name: BlockedUserRowV2
-// Dependencies: [19, 1371, 21, 9171, 7265, 5686, 1178, 1114, 8296, 5056, 504, 2]
+// Dependencies: [19, 1371, 21, 9171, 7265, 5686, 1176, 1114, 8296, 5056, 504, 2]
 // Exports: default
 
-// Module 14894 (BlockedUserRowV2)
+// Module 14895 (BlockedUserRowV2)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
 import noop from "module_19" /* 19 */;
@@ -16,8 +16,8 @@ function BlockedUserRow(userRecord) {
   let analyticsLocations;
   analyticsLocations = analyticsLocations(7265)().analyticsLocations;
   const obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
-  const obj2 = { user: userRecord, guildId: "Array", size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj.icon = jsx(userRecord(1178).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 });
+  const obj2 = { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj.icon = jsx(userRecord(1176).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 });
   let tmp4 = null != userRecord;
   if (tmp4) {
     let username = userRecord.globalName;

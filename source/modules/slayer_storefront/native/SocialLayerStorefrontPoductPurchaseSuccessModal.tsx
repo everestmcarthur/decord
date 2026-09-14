@@ -1,13 +1,13 @@
-// Module ID: 11139
-// Function ID: 11140
+// Module ID: 11140
+// Function ID: 11141
 // Name: SocialLayerStorefrontPoductPurchaseSuccessModal
-// Dependencies: [32, 718, 19, 17, 4628, 5591, 7332, 1074, 21, 4636, 576, 4373, 5055, 4637, 4604, 1477, 504, 5207, 7329, 4632, 5056, 1114, 5068, 7226, 5712, 5761, 8952, 7271, 7268, 11140, 7285, 1242, 5073, 10925, 3460, 8861, 4481, 2]
+// Dependencies: [32, 718, 19, 17, 4628, 5591, 7332, 1074, 21, 4636, 576, 4373, 5055, 4637, 4604, 1477, 504, 5207, 7329, 4632, 5056, 1114, 5068, 7226, 5712, 5761, 8952, 7271, 7268, 11141, 7285, 1240, 5073, 10926, 3460, 8861, 4481, 2]
 // Exports: SocialLayerStorefrontProductGiftPurchaseSuccessModal, SocialLayerStorefrontProductSelfPurchaseSuccessModal
 
-// Module 11139 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 11140 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import _modDef3460 from "module_3460" /* 3460 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -17,7 +17,7 @@ import spring from "spring" /* 5055 */;
 import XSmallIcon from "XSmallIcon" /* 5761 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10925 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;

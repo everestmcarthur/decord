@@ -1,10 +1,10 @@
-// Module ID: 11643
-// Function ID: 11644
+// Module ID: 11644
+// Function ID: 11645
 // Name: AppStoreOverlayMediaModalWrapper
-// Dependencies: [19, 4327, 1074, 21, 11642, 4839, 8406, 8407, 2]
+// Dependencies: [19, 4327, 1074, 21, 11643, 4839, 8406, 8407, 2]
 // Exports: default
 
-// Module 11643 (AppStoreOverlayMediaModalWrapper)
+// Module 11644 (AppStoreOverlayMediaModalWrapper)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;

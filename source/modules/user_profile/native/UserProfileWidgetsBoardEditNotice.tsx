@@ -1,14 +1,14 @@
-// Module ID: 13194
-// Function ID: 13195
+// Module ID: 13195
+// Function ID: 13196
 // Name: UserProfileWidgetsBoardEditNotice
-// Dependencies: [19, 17, 1954, 21, 4636, 576, 8357, 10753, 1943, 4591, 4632, 1114, 5204, 5761, 2]
+// Dependencies: [19, 17, 1954, 21, 4636, 576, 8357, 10754, 1943, 4591, 4632, 1114, 5204, 5761, 2]
 // Exports: default
 
-// Module 13194 (UserProfileWidgetsBoardEditNotice)
+// Module 13195 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8357 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10753 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10754 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

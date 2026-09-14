@@ -1,10 +1,10 @@
-// Module ID: 12122
-// Function ID: 12123
+// Module ID: 12123
+// Function ID: 12124
 // Name: ApplicationCommandOptionValueParser
 // Dependencies: [32, 19, 5587, 1961, 2012, 2021, 2015, 4285, 1371, 5081, 12, 1369, 4789, 5523, 1894, 7784, 2]
 // Exports: getRoles, parseOptionValuesForSend, useApplicationCommandOptionValueParser
 
-// Module 12122 (ApplicationCommandOptionValueParser)
+// Module 12123 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import Server from "Server" /* 1894 */;

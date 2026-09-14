@@ -1,10 +1,10 @@
-// Module ID: 17648
-// Function ID: 17649
+// Module ID: 17649
+// Function ID: 17650
 // Name: GuildSettingsModalModeration
-// Dependencies: [19, 4275, 9193, 1074, 21, 4636, 576, 8767, 9192, 5768, 1114, 2024, 7303, 4347, 5705, 7480, 5766, 14926, 5769, 4632, 8716, 5054, 7143, 1483, 504, 2]
+// Dependencies: [19, 4275, 9193, 1074, 21, 4636, 576, 8767, 9192, 5768, 1114, 2024, 7303, 4347, 5705, 7480, 5766, 14927, 5769, 4632, 8716, 5054, 7143, 1483, 504, 2]
 // Exports: default
 
-// Module 17648 (GuildSettingsModalModeration)
+// Module 17649 (GuildSettingsModalModeration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -117,7 +117,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14926).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14927).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -156,7 +156,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(14926).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14927).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);

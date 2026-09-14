@@ -1,7 +1,7 @@
 // Module ID: 9923
 // Function ID: 9924
 // Name: SegmentedControl
-// Dependencies: [19, 17, 21, 4636, 576, 4338, 4373, 5055, 9924, 6756, 1150, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4338, 4373, 5055, 9924, 6756, 1363, 2]
 // Exports: SegmentedControl
 
 // Module 9923 (SegmentedControl)

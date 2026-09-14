@@ -1,13 +1,13 @@
 // Module ID: 9689
 // Function ID: 9690
 // Name: RPCHelpers
-// Dependencies: [5, 4864, 1918, 1961, 1385, 1957, 1979, 1908, 4857, 4676, 1371, 4655, 4541, 1074, 1365, 4623, 1090, 12, 7559, 4626, 4869, 9690, 4788, 1367, 8457, 1272, 9684, 9642, 9691, 2]
+// Dependencies: [5, 4864, 1918, 1961, 1385, 1957, 1979, 1908, 4857, 4676, 1371, 4655, 4541, 1074, 1365, 4623, 1090, 12, 7559, 4626, 4869, 9690, 4788, 1367, 8457, 1270, 9684, 9642, 9691, 2]
 // Exports: containsSameValues, getDeprecatedVoiceSettingsWithShortcut, getRemoteIconURL, getVoiceConnectionState, getVoiceSettingsWithShortcut, hasMessageReadPermission, isMatchingOrigin, processSocketThrottlers, transformApplicationRelationship, transformBaseRelationship, transformChannel, transformVoiceState, validateActivityInvite, validateApplication, validateOriginAndUpdateSocket, validatePostMessageTransport, validateSocketApplication
 
 // Module 9689 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import UrlDefault from "Url" /* 1367 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;

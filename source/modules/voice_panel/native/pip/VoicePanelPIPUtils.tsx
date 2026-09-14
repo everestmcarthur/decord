@@ -1,27 +1,27 @@
-// Module ID: 17196
-// Function ID: 17197
+// Module ID: 17198
+// Function ID: 17199
 // Name: VoicePanelPIPUtils
-// Dependencies: [4652, 4658, 502, 12402, 17197, 4657, 12403, 5055, 9752, 14072, 576, 2]
+// Dependencies: [4652, 4658, 502, 12403, 17199, 4657, 12404, 5055, 9752, 14073, 576, 2]
 // Exports: calculatePIPPositionFromVelocity, computePIPParticipantToShow, computePIPSize, getClampedPIPPosition, getPIPMode, getVoicePanelPIPBorderRadius, layoutTransition
 
-// Module 17196 (VoicePanelPIPUtils)
+// Module 17198 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import participantHasVideo from "participantHasVideo" /* 9752 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 14072 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 14073 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ SECONDARY_PIP_TOP_MARGIN: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelPIPConstants = fn(17197);
+const VoicePanelPIPConstants = fn(17199);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
 const ParticipantTypes = fn(4657).ParticipantTypes;
-const MorphablePanelConstants = fn(12403);
+const MorphablePanelConstants = fn(12404);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 const set = new Set();

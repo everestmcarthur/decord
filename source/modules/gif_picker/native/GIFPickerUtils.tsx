@@ -1,10 +1,10 @@
-// Module ID: 10497
-// Function ID: 10498
+// Module ID: 10498
+// Function ID: 10499
 // Name: gif_picker/GIFPickerUtils
-// Dependencies: [19, 1074, 1365, 10072, 10498, 1114, 2]
+// Dependencies: [19, 1074, 1365, 10072, 10499, 1114, 2]
 // Exports: useFavoriteGIFsMobile
 
-// Module 10497 (gif_picker/GIFPickerUtils)
+// Module 10498 (gif_picker/GIFPickerUtils)
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10072 */;
@@ -65,9 +65,9 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtil
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10498).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10499).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10498);
+  let obj = sortedFavoriteGIFs(10499);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

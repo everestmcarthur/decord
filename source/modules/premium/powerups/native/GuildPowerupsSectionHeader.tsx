@@ -1,10 +1,10 @@
-// Module ID: 12681
-// Function ID: 12682
+// Module ID: 12682
+// Function ID: 12683
 // Name: GuildPowerupsSectionHeader
 // Dependencies: [17, 21, 4636, 576, 7083, 4632, 2]
 // Exports: default
 
-// Module 12681 (GuildPowerupsSectionHeader)
+// Module 12682 (GuildPowerupsSectionHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;

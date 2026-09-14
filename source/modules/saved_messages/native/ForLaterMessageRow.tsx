@@ -1,12 +1,12 @@
-// Module ID: 12345
-// Function ID: 12346
+// Module ID: 12346
+// Function ID: 12347
 // Name: ForLaterMessageRow
-// Dependencies: [19, 17, 21, 4636, 576, 4571, 1935, 8036, 8775, 1150, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4571, 1935, 8036, 8775, 1363, 2]
 // Exports: ForLaterMessageRow
 
-// Module 12345 (ForLaterMessageRow)
+// Module 12346 (ForLaterMessageRow)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import RowGeneratorDefault from "RowGenerator" /* 8036 */;
 import noop from "module_19" /* 19 */;
 

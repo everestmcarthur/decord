@@ -1,10 +1,10 @@
-// Module ID: 11446
-// Function ID: 11447
+// Module ID: 11447
+// Function ID: 11448
 // Name: ThreadNotificationSettingsBottomSheet
 // Dependencies: [1113, 21, 10217, 7300, 7252, 1114, 5766, 7867, 5769, 2]
 // Exports: default
 
-// Module 11446 (ThreadNotificationSettingsBottomSheet)
+// Module 11447 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;

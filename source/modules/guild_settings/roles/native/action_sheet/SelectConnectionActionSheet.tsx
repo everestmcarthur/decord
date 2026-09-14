@@ -1,10 +1,10 @@
-// Module ID: 17754
-// Function ID: 17755
+// Module ID: 17755
+// Function ID: 17756
 // Name: SelectConnectionActionSheet
-// Dependencies: [32, 19, 17, 21, 11692, 5686, 1178, 4571, 7252, 1114, 7606, 1396, 4488, 4603, 9922, 7300, 9923, 6728, 7226, 5768, 2]
+// Dependencies: [32, 19, 17, 21, 11693, 5686, 1176, 4571, 7252, 1114, 7606, 1396, 4488, 4603, 9922, 7300, 9923, 6728, 7226, 5768, 2]
 // Exports: default
 
-// Module 17754 (SelectConnectionActionSheet)
+// Module 17755 (SelectConnectionActionSheet)
 import util from "util" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,7 +15,7 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import ConnectionsHooks from "ConnectionsHooks" /* 7606 */;
 import SegmentedControlState from "SegmentedControlState" /* 9922 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11692 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,8 +31,8 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      const obj2 = { user: bot, size: tmp(1178).AvatarSizes.XSMALL, guildId: "Array" };
-      tmp6Result = tmp6(tmp(1178).Avatar, obj2);
+      const obj2 = { user: bot, size: tmp(1176).AvatarSizes.XSMALL, guildId: "Array" };
+      tmp6Result = tmp6(tmp(1176).Avatar, obj2);
     }
     const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
     let description;

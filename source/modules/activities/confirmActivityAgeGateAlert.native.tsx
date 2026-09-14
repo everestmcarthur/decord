@@ -1,13 +1,13 @@
 // Module ID: 9671
 // Function ID: 9672
 // Name: confirmActivityAgeGateAlert
-// Dependencies: [19, 17, 21, 4636, 576, 9672, 4632, 1114, 4980, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 9672, 4632, 1114, 4980, 1176, 2]
 // Exports: confirmActivityAgeGateAlert
 
 // Module 9671 (confirmActivityAgeGateAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9672 */;

@@ -1,10 +1,10 @@
-// Module ID: 12888
-// Function ID: 12889
+// Module ID: 12889
+// Function ID: 12890
 // Name: TabsGradient
 // Dependencies: [19, 1074, 21, 4373, 5068, 4636, 5055, 2]
 // Exports: default
 
-// Module 12888 (TabsGradient)
+// Module 12889 (TabsGradient)
 import spring from "spring" /* 5055 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import noop from "module_19" /* 19 */;

@@ -1,16 +1,16 @@
-// Module ID: 10933
-// Function ID: 10934
+// Module ID: 10934
+// Function ID: 10935
 // Name: hooks/NativePaymentHooks
-// Dependencies: [5, 32, 19, 7342, 4299, 4300, 7340, 1074, 3, 504, 7522, 10883, 4309, 10934, 5679, 1242, 10936, 7343, 38, 4960, 10938, 10939, 2]
+// Dependencies: [5, 32, 19, 7342, 4299, 4300, 7340, 1074, 3, 504, 7522, 10884, 4309, 10935, 5679, 1240, 10937, 7343, 38, 4960, 10939, 10940, 2]
 // Exports: useCancelSubscription, useCreateSubscription, useGoogleSkuIds, useMobileStoreFront, useResubscribeSubscription
 
-// Module 10933 (hooks/NativePaymentHooks)
+// Module 10934 (hooks/NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import BillingUtils from "BillingUtils" /* 4309 */;
 import ProductIds from "ProductIds" /* 7343 */;
 import BillingActionCreatorsDefault from "BillingActionCreators" /* 7522 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10936 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10937 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -48,7 +48,7 @@ function useNativeIAPPayments() {
   if (nativePaymentsConnected) {
     nativePaymentsConnected = null != storeFront;
   }
-  storeFront(10883)(() => {
+  storeFront(10884)(() => {
     let tmp = nativePaymentsConnected;
     if (!nativePaymentsConnected) {
       tmp = c15;

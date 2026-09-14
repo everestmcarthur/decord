@@ -1,13 +1,13 @@
-// Module ID: 14760
-// Function ID: 14761
+// Module ID: 14761
+// Function ID: 14762
 // Name: WebAuthnRegisterStep
-// Dependencies: [32, 19, 17, 14744, 21, 4636, 576, 7050, 1114, 1178, 1483, 1150, 14761, 7226, 14762, 4632, 5514, 5056, 2]
+// Dependencies: [32, 19, 17, 14745, 21, 4636, 576, 7050, 1114, 1176, 1483, 1363, 14762, 7226, 14763, 4632, 5514, 5056, 2]
 // Exports: default
 
-// Module 14760 (WebAuthnRegisterStep)
+// Module 14761 (WebAuthnRegisterStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 7050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -42,7 +42,7 @@ function AndroidPasskeyRadioGroup(onChange) {
   return React5(native.RadioGroup, obj4);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(14744).WebAuthnScreens;
+const WebAuthnScreens = fn(14745).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
@@ -65,7 +65,7 @@ export default function WebAuthnRegisterStep() {
   [tmp10, tmp11] = authenticatorSelection(onRegisterSuccess.useState(""), 2);
   dependencyMap = tmp11;
   const tmp9 = authenticatorSelection(onRegisterSuccess.useState(""), 2);
-  const tmp5Result = tmp5(onRegisterSuccess.useState(navigation(1150).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
+  const tmp5Result = tmp5(onRegisterSuccess.useState(navigation(1363).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
   authenticatorSelection = tmp5Result[0];
   const items = [navigation];
   onRegisterSuccess = obj2.useCallback((arg0) => {
@@ -75,11 +75,11 @@ export default function WebAuthnRegisterStep() {
   closure_5 = obj2.useMemo(() => obj5[first], items1);
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
-  const obj3 = navigation(1150);
-  const announceError = navigation(14761).useAnnounceError(tmp10);
+  const obj3 = navigation(1363);
+  const announceError = navigation(14762).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(14762).KeyImage, {}), , ];
+  const items3 = [closure_7(navigation(14763).KeyImage, {}), , ];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1114).intl;
   const string = intl.string;

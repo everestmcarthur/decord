@@ -1,7 +1,7 @@
 // Module ID: 7229
 // Function ID: 7230
 // Name: GuildOnboardingPromptOptionButton
-// Dependencies: [32, 19, 17, 4628, 5540, 1374, 21, 4373, 4636, 576, 504, 4637, 5055, 7230, 4348, 1114, 4338, 4355, 5204, 7233, 1396, 4632, 7236, 1178, 2]
+// Dependencies: [32, 19, 17, 4628, 5540, 1374, 21, 4373, 4636, 576, 504, 4637, 5055, 7230, 4348, 1114, 4338, 4355, 5204, 7233, 1396, 4632, 7236, 1176, 2]
 // Exports: default
 
 // Module 7229 (GuildOnboardingPromptOptionButton)
@@ -500,11 +500,11 @@ export default function PromptOptionButton(option) {
     canBeNew = option.isUnseen;
   }
   if (canBeNew) {
-    const obj23 = { color: tmp2(1178).BadgeColors.BRAND, text: null, style: null, textStyle: null };
+    const obj23 = { color: tmp2(1176).BadgeColors.BRAND, text: null, style: null, textStyle: null };
     let intl2 = tmp2(1114).intl;
     obj23.text = intl2.string(tmp2(1114).t.y2b7CA);
     ({ newBadgeWrapper: obj35.style, newBadge: obj35.textStyle } = tmp);
-    canBeNew = tmp44(tmp2(1178).TextBadge, obj23);
+    canBeNew = tmp44(tmp2(1176).TextBadge, obj23);
   }
   items10[3] = canBeNew;
   obj10.children = items10;

@@ -1,10 +1,10 @@
-// Module ID: 13342
-// Function ID: 13343
+// Module ID: 13343
+// Function ID: 13344
 // Name: FriendInvite
 // Dependencies: [17, 4285, 7838, 8049, 1114, 4481, 1396, 2]
 // Exports: createFriendInvite
 
-// Module 13342 (FriendInvite)
+// Module 13343 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
 import Constants from "Constants" /* 7838 */;

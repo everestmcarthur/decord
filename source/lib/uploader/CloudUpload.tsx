@@ -1,21 +1,21 @@
 // Module ID: 5208
 // Function ID: 5209
 // Name: CloudUpload
-// Dependencies: [109, 5, 32, 4635, 1185, 4685, 1074, 3, 1272, 5209, 5217, 1090, 559, 5250, 12, 1461, 5219, 5252, 5253, 5238, 5254, 5255, 5259, 5260, 1232, 5218, 5210, 5261, 5262, 1896, 5347, 1242, 2]
+// Dependencies: [109, 5, 32, 4635, 1183, 4685, 1074, 3, 1270, 5209, 5217, 1090, 559, 5250, 12, 1461, 5219, 5252, 5253, 5238, 5254, 5255, 5259, 5260, 1230, 5218, 5210, 5261, 5262, 1896, 5347, 1240, 2]
 
 // Module 5208 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import Upload2 from "Upload" /* 5209 */;
 import InlineUploaderDefault from "InlineUploader" /* 5250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 import NetworkStore from "NetworkStore" /* 4685 */;
 
 const Upload = Upload2;
@@ -420,7 +420,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
       }
       currentSize = v1.currentSize;
     }).catch((error) => {
-      if (error instanceof c0(1272).HTTPResponseError) {
+      if (error instanceof c0(1270).HTTPResponseError) {
         if (308 === error.status) {
           let str = error.headers.range;
           if (str == null) {
@@ -1155,8 +1155,8 @@ prototype["upload"] = function upload() {
                   }
                   const _HermesInternal2 = HermesInternal;
                   logger.error("Requesting upload url failed with code " + dependencyMap + " for " + closure_133_0.id);
-                  status(1232).captureException(closure_132_11);
-                  let obj4 = status(1232);
+                  status(1230).captureException(closure_132_11);
+                  let obj4 = status(1230);
                 }
                 closure_133_0.handleError(closure_132_10);
                 c9 = 3;
@@ -1868,7 +1868,7 @@ prototype["delete"] = function delete() {
             const uploadTarget = v3(5255).getUploadTarget(tmp17.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp17.uploadedFilename);
-            const HTTP = v3(1272).HTTP;
+            const HTTP = v3(1270).HTTP;
             c1 = 2;
             v3 = 1;
             const obj5 = { value: HTTP.del(deleteUploadURL), done: false };

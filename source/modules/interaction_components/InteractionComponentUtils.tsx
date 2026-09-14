@@ -1,14 +1,14 @@
 // Module ID: 4861
 // Function ID: 4862
 // Name: InteractionComponentUtils
-// Dependencies: [4862, 3, 1396, 1114, 4863, 1894, 4866, 4867, 1256, 1369, 4868, 1091, 11, 2]
+// Dependencies: [4862, 3, 1396, 1114, 4863, 1894, 4866, 4867, 1254, 1369, 4868, 1091, 11, 2]
 // Exports: canSelectBeEmpty, deserializeComponentUploadId, getAllTextDisplayContent, getFileUploadComponentSubtitle, getFirstInteractionComponentMedia, getLayoutComponentErrorText, getParents, getSelectPlaceholder, makeComponentUploadId, transformComponents
 
 // Module 4861 (InteractionComponentUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Server from "Server" /* 1894 */;
 import CheckpointConstants from "CheckpointConstants" /* 4862 */;

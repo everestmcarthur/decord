@@ -1,19 +1,19 @@
-// Module ID: 15283
-// Function ID: 15284
+// Module ID: 15284
+// Function ID: 15285
 // Name: QuestDockBountyHeader
-// Dependencies: [19, 17, 5525, 15175, 21, 576, 4636, 15182, 15176, 4373, 5055, 15172, 15272, 5668, 7176, 4632, 2]
+// Dependencies: [19, 17, 5525, 15176, 21, 576, 4636, 15183, 15177, 4373, 5055, 15173, 15273, 5668, 7176, 4632, 2]
 
-// Module 15283 (QuestDockBountyHeader)
+// Module 15284 (QuestDockBountyHeader)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7176 */;
-import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 15272 */;
+import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 15273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const QuestDockMode = fn(5525).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = fn(15175).QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = fn(15176).QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
@@ -30,14 +30,14 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyHeader.tsx");
 
 export default noop.memo(function QuestDockBountyHeader() {
-  const questDockBounty = activeQuestDockMode(15182).useQuestDockBounty();
+  const questDockBounty = activeQuestDockMode(15183).useQuestDockBounty();
   const tmp4 = closure_9();
   let str = questDockBounty.productName;
   if (str == null) {
     str = "";
   }
-  activeQuestDockMode = noop.useContext(tmp(15176).QuestDockGestureContext).activeQuestDockMode;
-  let obj = activeQuestDockMode(15182);
+  activeQuestDockMode = noop.useContext(tmp(15177).QuestDockGestureContext).activeQuestDockMode;
+  let obj = activeQuestDockMode(15183);
   const fn = function n() {
     let num = 1;
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -51,13 +51,13 @@ export default noop.memo(function QuestDockBountyHeader() {
   fn.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
   const obj2 = { withSpring: activeQuestDockMode(5055).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
-  const bountyCreative = activeQuestDockMode(15182).useBountyCreative(questDockBounty);
-  const tmpResult3 = activeQuestDockMode(15182);
-  const tmpResult4 = activeQuestDockMode(15172);
-  const obj3 = { onSubmenuPress: activeQuestDockMode(15172).useActionSheetPressHandler(bountyCreative), children: null };
+  const bountyCreative = activeQuestDockMode(15183).useBountyCreative(questDockBounty);
+  const tmpResult3 = activeQuestDockMode(15183);
+  const tmpResult4 = activeQuestDockMode(15173);
+  const obj3 = { onSubmenuPress: activeQuestDockMode(15173).useActionSheetPressHandler(bountyCreative), children: null };
   const obj4 = { style: tmp4.wrapper, accessible: true, accessibilityRole: "text", accessibilityLabel: str, children: null };
   let tmp8Result = null != questDockBounty.productIcon;
-  const actionSheetPressHandler = activeQuestDockMode(15172).useActionSheetPressHandler(bountyCreative);
+  const actionSheetPressHandler = activeQuestDockMode(15173).useActionSheetPressHandler(bountyCreative);
   if (tmp8Result) {
     const obj5 = { style: tmp4.productIcon, source: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no" };
     const obj6 = { uri: questDockBounty.productIcon };

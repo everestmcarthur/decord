@@ -1,7 +1,7 @@
 // Module ID: 7866
 // Function ID: 7867
 // Name: ReactionActionCreators
-// Dependencies: [5, 502, 1957, 4857, 1074, 1090, 4980, 1114, 1109, 573, 7865, 1272, 7867, 1242, 4816, 4488, 7885, 4293, 2]
+// Dependencies: [5, 502, 1957, 4857, 1074, 1090, 4980, 1114, 1109, 573, 7865, 1270, 7867, 1240, 4816, 4488, 7885, 4293, 2]
 // Exports: getReactors, playBurstReaction
 
 // Module 7866 (ReactionActionCreators)

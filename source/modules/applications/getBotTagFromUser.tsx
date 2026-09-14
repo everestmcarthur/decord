@@ -1,11 +1,11 @@
-// Module ID: 11035
-// Function ID: 11036
+// Module ID: 11036
+// Function ID: 11037
 // Name: getBotTagFromUser
-// Dependencies: [1350, 2]
+// Dependencies: [1348, 2]
 // Exports: getBotTagTypeFromUser
 
-// Module 11035 (getBotTagFromUser)
-import ApplicationConstants from "ApplicationConstants" /* 1350 */;
+// Module 11036 (getBotTagFromUser)
+import ApplicationConstants from "ApplicationConstants" /* 1348 */;
 import size from "module_2" /* 2 */;
 
 const BotTagTypes = ApplicationConstants.BotTagTypes;

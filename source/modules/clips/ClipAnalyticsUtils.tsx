@@ -1,11 +1,11 @@
 // Module ID: 7842
 // Function ID: 7843
 // Name: ClipAnalyticsUtils
-// Dependencies: [4682, 4658, 4659, 4675, 1914, 5213, 1074, 4688, 7843, 4755, 1242, 2]
+// Dependencies: [4682, 4658, 4659, 4675, 1914, 5213, 1074, 4688, 7843, 4755, 1240, 2]
 // Exports: getClipBaseProperties, getClipContextProperties, getClipSaveFailureAnalytics, getClipSavedAnalytics, getClipType, getPreSaveClipAnalytics, trackClipEdited
 
 // Module 7842 (ClipAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import _modDef4755 from "module_4755" /* 4755 */;
 import VideoQualityStats from "VideoQualityStats" /* 7843 */;

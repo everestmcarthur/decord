@@ -1,12 +1,12 @@
 // Module ID: 7479
 // Function ID: 7480
 // Name: SearchBarNav
-// Dependencies: [19, 17, 21, 4636, 5763, 576, 5204, 1114, 1150, 5709, 4632, 7153, 2]
+// Dependencies: [19, 17, 21, 4636, 5763, 576, 5204, 1114, 1363, 5709, 4632, 7153, 2]
 
 // Module 7479 (SearchBarNav)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Pressables from "Pressables" /* 5204 */;
 import SearchField from "SearchField" /* 7153 */;
 import noop from "module_19" /* 19 */;

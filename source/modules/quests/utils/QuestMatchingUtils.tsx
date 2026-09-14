@@ -1,16 +1,16 @@
-// Module ID: 11648
-// Function ID: 11649
+// Module ID: 11649
+// Function ID: 11650
 // Name: QuestMatchingUtils
-// Dependencies: [32, 4864, 11590, 5525, 1074, 1920, 7826, 7801, 7824, 11649, 2]
+// Dependencies: [32, 4864, 11591, 5525, 1074, 1920, 7826, 7801, 7824, 11650, 2]
 // Exports: allPlayOnDesktopQuestsByApplicationId, getEligibleQuestsForApplicationId, getQuestApplicationIdsForRunningGame, getQuestByApplicationId, getQuestsFromActivities
 
-// Module 11648 (QuestMatchingUtils)
+// Module 11649 (QuestMatchingUtils)
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
-import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 11649 */;
+import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 11650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 
 require = fn;
 function questMatchesActivity(arg0, id) {

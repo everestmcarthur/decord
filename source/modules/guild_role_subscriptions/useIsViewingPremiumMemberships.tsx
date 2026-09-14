@@ -1,10 +1,10 @@
-// Module ID: 12905
-// Function ID: 12906
+// Module ID: 12906
+// Function ID: 12907
 // Name: useIsViewingPremiumMemberships
 // Dependencies: [1074, 1964, 4469, 4476, 2]
 // Exports: default
 
-// Module 12905 (useIsViewingPremiumMemberships)
+// Module 12906 (useIsViewingPremiumMemberships)
 import Constants from "Constants" /* 1074 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import _mod4469 from "module_4469" /* 4469 */;

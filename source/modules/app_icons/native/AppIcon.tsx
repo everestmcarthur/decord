@@ -1,10 +1,10 @@
-// Module ID: 15610
-// Function ID: 15611
+// Module ID: 15611
+// Function ID: 15612
 // Name: AppIcon
 // Dependencies: [19, 17, 9453, 21, 4636, 576, 4571, 4488, 2]
 // Exports: default
 
-// Module 15610 (AppIcon)
+// Module 15611 (AppIcon)
 import nativeDefault from "native" /* 576 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import noop from "module_19" /* 19 */;

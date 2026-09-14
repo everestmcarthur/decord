@@ -1,13 +1,13 @@
-// Module ID: 16505
-// Function ID: 16506
+// Module ID: 16507
+// Function ID: 16508
 // Name: NotificationCenterPermissionNudge
-// Dependencies: [32, 19, 17, 1074, 1954, 12539, 21, 4636, 576, 1242, 9188, 4632, 1114, 5056, 12540, 5204, 5761, 15567, 7491, 1943, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 12540, 21, 4636, 576, 1240, 9188, 4632, 1114, 5056, 12541, 5204, 5761, 15568, 7491, 1943, 2]
 // Exports: default
 
-// Module 16505 (NotificationCenterPermissionNudge)
+// Module 16507 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15567 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15568 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -38,8 +38,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1114).intl;
   obj9.text = intl3.string(onDismiss(1114).t.a4bgO0);
   obj9.onPress = function onPress() {
-    const pushNotificationPermission = onDismiss(12540).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-    const obj = onDismiss(12540);
+    const pushNotificationPermission = onDismiss(12541).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+    const obj = onDismiss(12541);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   };
   obj8.children = closure_14(onDismiss(5056).Button, obj9);
@@ -69,7 +69,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12539);
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionType: c10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

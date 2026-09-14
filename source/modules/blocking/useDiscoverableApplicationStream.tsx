@@ -1,10 +1,10 @@
-// Module ID: 11006
-// Function ID: 11007
+// Module ID: 11007
+// Function ID: 11008
 // Name: useDiscoverableApplicationStream
 // Dependencies: [4658, 4285, 1074, 504, 2]
 // Exports: default
 
-// Module 11006 (useDiscoverableApplicationStream)
+// Module 11007 (useDiscoverableApplicationStream)
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 

@@ -1,15 +1,15 @@
-// Module ID: 16935
-// Function ID: 16936
+// Module ID: 16937
+// Function ID: 16938
 // Name: ChannelSettingsPermissionsStore
-// Dependencies: [4864, 8749, 1957, 1074, 8519, 510, 4280, 11739, 12, 504, 573, 2]
+// Dependencies: [4864, 8749, 1957, 1074, 8519, 510, 4280, 11740, 12, 504, 573, 2]
 
-// Module 16935 (ChannelSettingsPermissionsStore)
+// Module 16937 (ChannelSettingsPermissionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11739 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11740 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 import ChannelSettingsStore from "ChannelSettingsStore" /* 8749 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -91,7 +91,7 @@ function syncChannelUpdates(id) {
           }
           const obj5 = PermissionUtilsAll;
           tmp = null != guildId1 && null == obj2[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11739).getAppChannelBotUserId(channel));
+          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11740).getAppChannelBotUserId(channel));
           return true;
         }
       }

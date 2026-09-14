@@ -1,7 +1,7 @@
 // Module ID: 5661
 // Function ID: 5662
 // Name: useKeyboardDuration
-// Dependencies: [1480, 1150, 1481, 2]
+// Dependencies: [1480, 1363, 1481, 2]
 // Exports: getKeyboardDuration
 
 // Module 5661 (useKeyboardDuration)

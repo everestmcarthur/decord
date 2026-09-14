@@ -1,13 +1,13 @@
-// Module ID: 11134
-// Function ID: 11135
+// Module ID: 11135
+// Function ID: 11136
 // Name: Pile
-// Dependencies: [19, 17, 21, 4636, 1369, 12, 8940, 11135, 2]
+// Dependencies: [19, 17, 21, 4636, 1369, 12, 8940, 11136, 2]
 // Exports: Pile
 
-// Module 11134 (Pile)
+// Module 11135 (Pile)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ClipViewDefault from "ClipView" /* 8940 */;
-import PileOverflow from "PileOverflow" /* 11135 */;
+import PileOverflow from "PileOverflow" /* 11136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

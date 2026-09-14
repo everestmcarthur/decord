@@ -1,10 +1,10 @@
-// Module ID: 11022
-// Function ID: 11023
+// Module ID: 11023
+// Function ID: 11024
 // Name: UserProfileVoiceActivityIcon
 // Dependencies: [19, 4275, 1085, 21, 504, 7984, 5143, 5177, 5178, 5180, 5179, 5182, 2]
 // Exports: default
 
-// Module 11022 (UserProfileVoiceActivityIcon)
+// Module 11023 (UserProfileVoiceActivityIcon)
 import isRoleRequiredDefault from "isRoleRequired" /* 5143 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;

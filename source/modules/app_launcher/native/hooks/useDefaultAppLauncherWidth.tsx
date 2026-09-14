@@ -1,10 +1,10 @@
-// Module ID: 11349
-// Function ID: 11350
+// Module ID: 11350
+// Function ID: 11351
 // Name: useDefaultAppLauncherWidth
 // Dependencies: [7254, 1477, 9539, 2]
 // Exports: useDefaultAppLauncherWidth
 
-// Module 11349 (useDefaultAppLauncherWidth)
+// Module 11350 (useDefaultAppLauncherWidth)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 7254 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;

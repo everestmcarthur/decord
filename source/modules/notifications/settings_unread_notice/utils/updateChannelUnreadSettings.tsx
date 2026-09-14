@@ -1,10 +1,10 @@
-// Module ID: 11552
-// Function ID: 11553
+// Module ID: 11553
+// Function ID: 11554
 // Name: updateChannelUnreadSettings
 // Dependencies: [4817, 1074, 4818, 1084, 7222, 10278, 7217, 2]
 // Exports: default
 
-// Module 11552 (updateChannelUnreadSettings)
+// Module 11553 (updateChannelUnreadSettings)
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10278 */;

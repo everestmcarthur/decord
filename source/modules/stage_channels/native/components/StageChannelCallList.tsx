@@ -1,7 +1,7 @@
 // Module ID: 10173
 // Function ID: 10174
 // Name: StageChannelCallList
-// Dependencies: [32, 19, 10174, 5495, 21, 1178, 10175, 5506, 5073, 5512, 38, 10182, 1114, 10183, 10184, 10196, 7175, 10200, 1477, 5207, 2]
+// Dependencies: [32, 19, 10174, 5495, 21, 1176, 10175, 5506, 5073, 5512, 38, 10182, 1114, 10183, 10184, 10196, 7175, 10200, 1477, 5207, 2]
 // Exports: default
 
 // Module 10173 (StageChannelCallList)
@@ -21,7 +21,7 @@ const StageChannelListStore = fn(10174);
 const MAX_AUDIENCE_ROW_LIMIT = fn(5495).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let cutout = { direction: fn(1178).CutoutDirection.RIGHT, radius: 13, inset: -6 };
+let cutout = { direction: fn(1176).CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
 let closure_12 = noop.memo((channel) => {
   channel = channel.channel;
@@ -161,7 +161,7 @@ let closure_12 = noop.memo((channel) => {
         obj3.collapsed = first1;
         let tmp21Result;
         if (first1) {
-          cutout = { users: mapped, max: 10, avatarSize: tmp25(1178).AvatarSizes.XSMALL_20, cutout: null };
+          cutout = { users: mapped, max: 10, avatarSize: tmp25(1176).AvatarSizes.XSMALL_20, cutout: null };
           cutout.cutout = cutout;
           tmp21Result = tmp21(tmp22(10183), cutout);
           const tmp22Result = tmp22(10183);

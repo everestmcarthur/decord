@@ -1,7 +1,7 @@
 // Module ID: 10115
 // Function ID: 10116
 // Name: VolumeSlider
-// Dependencies: [19, 17, 4661, 21, 1150, 4636, 576, 4338, 10116, 8396, 5096, 1114, 5182, 2]
+// Dependencies: [19, 17, 4661, 21, 1363, 4636, 576, 4338, 10116, 8396, 5096, 1114, 5182, 2]
 // Exports: default
 
 // Module 10115 (VolumeSlider)
@@ -18,7 +18,7 @@ const View = fn(17).View;
 let closure_4 = fn(4661).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -72,7 +72,7 @@ export default function VolumeSlider(maxTrackTintColor) {
       fn = () => true;
     }
     onResponderGrant = fn;
-    tmp5Result2 = tmp5(1150);
+    tmp5Result2 = tmp5(1363);
   }
   obj4.onResponderGrant = onResponderGrant;
   items1[1] = closure_5(tmp7Result, obj4);

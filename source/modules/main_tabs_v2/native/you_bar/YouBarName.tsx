@@ -1,17 +1,17 @@
-// Module ID: 16483
-// Function ID: 16484
+// Module ID: 16485
+// Function ID: 16486
 // Name: YouBarName
-// Dependencies: [19, 17, 4658, 1957, 4275, 4676, 4285, 5360, 4655, 1074, 21, 4636, 576, 16463, 11027, 9313, 11287, 16462, 504, 11244, 11008, 11006, 11007, 16484, 11004, 11023, 4632, 4481, 2]
+// Dependencies: [19, 17, 4658, 1957, 4275, 4676, 4285, 5360, 4655, 1074, 21, 4636, 576, 16465, 11028, 9313, 11288, 16464, 504, 11245, 11009, 11007, 11008, 16486, 11005, 11024, 4632, 4481, 2]
 
-// Module 16483 (YouBarName)
+// Module 16485 (YouBarName)
 import nativeDefault from "native" /* 576 */;
 import GuildTagDefault from "GuildTag" /* 9313 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11006 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11007 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11287 */;
-import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16463 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16484 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11007 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11008 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11288 */;
+import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16465 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16486 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

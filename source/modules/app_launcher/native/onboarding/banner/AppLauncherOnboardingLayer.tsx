@@ -1,11 +1,11 @@
-// Module ID: 12176
-// Function ID: 12177
+// Module ID: 12177
+// Function ID: 12178
 // Name: AppLauncherOnboardingLayer
-// Dependencies: [19, 17, 9615, 21, 4636, 576, 12177, 2]
+// Dependencies: [19, 17, 9615, 21, 4636, 576, 12178, 2]
 
-// Module 12176 (AppLauncherOnboardingLayer)
+// Module 12177 (AppLauncherOnboardingLayer)
 import nativeDefault from "native" /* 576 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12177 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12178 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

@@ -1,7 +1,7 @@
 // Module ID: 10185
 // Function ID: 10186
 // Name: MediaTile
-// Dependencies: [19, 17, 4652, 4657, 21, 4636, 576, 10175, 1477, 5207, 504, 10186, 1178, 2]
+// Dependencies: [19, 17, 4652, 4657, 21, 4636, 576, 10175, 1477, 5207, 504, 10186, 1176, 2]
 
 // Module 10185 (MediaTile)
 import nativeDefault from "native" /* 576 */;
@@ -43,7 +43,7 @@ export default noop.memo((channel) => {
       obj4.style = items2;
       const obj5 = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null };
       const tmp2Result2 = tmp2(10175);
-      obj5.avatarSize = tmp2(1178).AvatarSizes.XLARGE;
+      obj5.avatarSize = tmp2(1176).AvatarSizes.XLARGE;
       obj5.channel = channel;
       obj5.contentStyle = tmp.media;
       obj4.children = jsx(tmp5(10186), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });

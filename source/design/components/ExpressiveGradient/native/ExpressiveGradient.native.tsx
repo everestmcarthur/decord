@@ -1,10 +1,10 @@
-// Module ID: 10359
-// Function ID: 10360
+// Module ID: 10360
+// Function ID: 10361
 // Name: ExpressiveGradient
 // Dependencies: [19, 17, 21, 576, 4338, 672, 5068, 2]
 // Exports: ExpressiveGradient
 
-// Module 10359 (ExpressiveGradient)
+// Module 10360 (ExpressiveGradient)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import useToken from "useToken" /* 4338 */;

@@ -1,12 +1,12 @@
 // Module ID: 4534
 // Function ID: 4535
 // Name: BoostingActionCreators
-// Dependencies: [5, 4535, 4536, 4300, 1074, 1272, 573, 4537, 2]
+// Dependencies: [5, 4535, 4536, 4300, 1074, 1270, 573, 4537, 2]
 // Exports: applyToGuild, cancelGuildBoostSlot, fetchAppliedBoostsCooldown, fetchAppliedGuildBoostsForGuild, fetchAppliedGuildBoostsForUser, unapplyFromGuild, uncancelGuildBoostSlot
 
 // Module 4534 (BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 4535 */;
 import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 4536 */;

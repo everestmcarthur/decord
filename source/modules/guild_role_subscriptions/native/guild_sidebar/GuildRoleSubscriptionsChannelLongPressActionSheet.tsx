@@ -1,19 +1,19 @@
-// Module ID: 16301
-// Function ID: 16302
+// Module ID: 16303
+// Function ID: 16304
 // Name: GuildRoleSubscriptionsChannelLongPressActionSheet
-// Dependencies: [19, 17, 1964, 21, 4636, 576, 7300, 7252, 1178, 12908, 1114, 8716, 16194, 11087, 2]
+// Dependencies: [19, 17, 1964, 21, 4636, 576, 7300, 7252, 1176, 12909, 1114, 8716, 16196, 11088, 2]
 // Exports: default
 
-// Module 16301 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 16303 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import Form from "Form" /* 8716 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11087 */;
-import _modDef12908 from "module_12908" /* 12908 */;
-import _modDef16194 from "module_16194" /* 16194 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11088 */;
+import _modDef12909 from "module_12909" /* 12909 */;
+import _modDef16196 from "module_16196" /* 16196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,14 +35,14 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   const obj2 = { leading: null, title: null };
   const obj3 = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef12908 });
+  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef12909 });
   obj2.leading = closure_5(View, obj3);
   const intl = util.intl;
   obj2.title = intl.string(util.t["KzCF/6"]);
   const items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj4 = { disableColor: true, source: _modDef12908 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef16194 });
+  const obj4 = { disableColor: true, source: _modDef12909 };
+  obj5.leading = closure_5(native.Icon, { source: _modDef16196 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

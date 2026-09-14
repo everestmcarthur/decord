@@ -1,10 +1,10 @@
-// Module ID: 15876
-// Function ID: 15877
+// Module ID: 15878
+// Function ID: 15879
 // Name: UserSettingsDesignSystemTooltip
-// Dependencies: [32, 19, 17, 21, 4636, 8450, 11262, 5056, 7303, 4632, 7226, 7259, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 8450, 11263, 5056, 7303, 4632, 7226, 7259, 2]
 // Exports: default, useCanRotate
 
-// Module 15876 (UserSettingsDesignSystemTooltip)
+// Module 15878 (UserSettingsDesignSystemTooltip)
 import Text_Text from "Text/Text" /* 4632 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import LayerScope from "LayerScope" /* 7259 */;
@@ -54,7 +54,7 @@ function Content() {
     };
   }, items1);
   const tmp8 = first2(items, 2);
-  const tooltip = first1(11262).useTooltip(ref, memo);
+  const tooltip = first1(11263).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,

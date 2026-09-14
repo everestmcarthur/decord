@@ -1,7 +1,7 @@
 // Module ID: 9821
 // Function ID: 9822
 // Name: FocusedControlsBottomControls
-// Dependencies: [32, 19, 17, 9597, 9598, 1074, 21, 1150, 4636, 576, 5605, 1178, 1611, 4373, 9822, 1093, 1114, 7257, 4457, 1943, 4637, 6756, 9824, 1477, 9628, 1109, 4347, 5046, 4488, 9825, 2]
+// Dependencies: [32, 19, 17, 9597, 9598, 1074, 21, 1363, 4636, 576, 5605, 1176, 1611, 4373, 9822, 1093, 1114, 7257, 4457, 1943, 4637, 6756, 9824, 1477, 9628, 1109, 4347, 5046, 4488, 9825, 2]
 // Exports: default
 
 // Module 9821 (FocusedControlsBottomControls)
@@ -74,11 +74,11 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
   let tmp7 = null;
   if (canShowTooltip) {
     const obj3 = { style: tmp6, children: null };
-    const obj7 = { style: tmp.tooltipStyle, arrowPosition: tmp2(1178).TooltipArrowPositions.CENTER, arrowDirection: tmp2(1178).TooltipArrowDirections.DOWN, arrowWidth: 8, arrowHeight: 4, containerStyle: null, labelStyle: null, label: null };
+    const obj7 = { style: tmp.tooltipStyle, arrowPosition: tmp2(1176).TooltipArrowPositions.CENTER, arrowDirection: tmp2(1176).TooltipArrowDirections.DOWN, arrowWidth: 8, arrowHeight: 4, containerStyle: null, labelStyle: null, label: null };
     ({ containerStyle: obj4.containerStyle, labelStyle: obj4.labelStyle } = tmp);
     const intl = tmp2(1114).intl;
     obj7.label = intl.string(tmp2(1114).t.zYzy2i);
-    obj3.children = closure_13(tmp2(1178).Tooltip, obj7);
+    obj3.children = closure_13(tmp2(1176).Tooltip, obj7);
     tmp7 = closure_13(ReanimatedRexportDefault.View, obj3);
   }
   return tmp7;
@@ -668,8 +668,8 @@ obj2.containerStyle = { paddingHorizontal: 8, paddingVertical: 4 };
 const merged1 = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.labelStyle = {};
 const collapsedCategories = createStyles.createStyles(obj2);
-let obj5 = { easing: fn(1178).STANDARD_EASING, duration: 250 };
-let obj6 = { easing: fn(1178).STANDARD_EASING, duration: 400 };
+let obj5 = { easing: fn(1176).STANDARD_EASING, duration: 250 };
+let obj6 = { easing: fn(1176).STANDARD_EASING, duration: 400 };
 const __initData = { code: "function FocusedControlsBottomControlsTsx1(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};}" };
 const __initData2 = { code: "function FocusedControlsBottomControlsTsx2(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};}" };
 const __initData3 = { code: "function FocusedControlsBottomControlsTsx3(){const{offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY}=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};}" };

@@ -1,13 +1,13 @@
-// Module ID: 13156
-// Function ID: 13157
+// Module ID: 13157
+// Function ID: 13158
 // Name: UserProfileActivityVoiceChannelUsers
-// Dependencies: [19, 4676, 21, 8333, 504, 5686, 4788, 1178, 11285, 1114, 2]
+// Dependencies: [19, 4676, 21, 8333, 504, 5686, 4788, 1176, 11286, 1114, 2]
 // Exports: default
 
-// Module 13156 (UserProfileActivityVoiceChannelUsers)
+// Module 13157 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1114 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11285 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11286 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 
@@ -26,7 +26,7 @@ function UserRow(user) {
   const obj3 = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(504);
   obj3.label = NicknameUtilsDefault.getName(channel.guild_id, channel.id, user);
-  obj3.icon = jsx(user(1178).Avatar, { user, avatarDecoration, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  obj3.icon = jsx(user(1176).Avatar, { user, avatarDecoration, size: user(1176).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj3.start = start;
   obj3.end = end;
   return jsx(user(5686).TableRow, { onPress, label: null, icon: null, start: null, end: null });

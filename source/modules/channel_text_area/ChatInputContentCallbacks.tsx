@@ -1,10 +1,10 @@
-// Module ID: 12124
-// Function ID: 12125
+// Module ID: 12125
+// Function ID: 12126
 // Name: ChatInputContentCallbacks
 // Dependencies: [32, 19, 7382, 7415, 7389, 9433, 12, 2]
 // Exports: tryUpdateSubscriptionForHereMention, useHereMentionCallback
 
-// Module 12124 (ChatInputContentCallbacks)
+// Module 12125 (ChatInputContentCallbacks)
 import _modDef12 from "module_12" /* 12 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7389 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7415 */;

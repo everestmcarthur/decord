@@ -1,16 +1,16 @@
-// Module ID: 11208
-// Function ID: 11209
+// Module ID: 11209
+// Function ID: 11210
 // Name: PremiumGiftDMPurchaseSuccess
-// Dependencies: [19, 17, 21, 4636, 576, 10827, 1483, 10871, 10790, 5056, 1114, 2460, 10958, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 10828, 1483, 10872, 10791, 5056, 1114, 2460, 10959, 4632, 2]
 // Exports: PremiumGiftDMSuccessActions, default
 
-// Module 11208 (PremiumGiftDMPurchaseSuccess)
+// Module 11209 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10790 */;
-import NativeGiftContext from "NativeGiftContext" /* 10827 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10958 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10791 */;
+import NativeGiftContext from "NativeGiftContext" /* 10828 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10959 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

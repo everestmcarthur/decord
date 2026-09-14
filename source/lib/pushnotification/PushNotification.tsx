@@ -1,7 +1,7 @@
 // Module ID: 9817
 // Function ID: 9818
 // Name: PushNotification
-// Dependencies: [17, 1150, 9818, 9819, 9820, 2]
+// Dependencies: [17, 1363, 9818, 9819, 9820, 2]
 
 // Module 9817 (PushNotification)
 import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 9818 */;

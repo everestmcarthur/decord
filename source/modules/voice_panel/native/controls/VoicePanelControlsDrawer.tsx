@@ -1,17 +1,17 @@
-// Module ID: 17317
-// Function ID: 17318
+// Module ID: 17319
+// Function ID: 17320
 // Name: VoicePanelControlsDrawer
-// Dependencies: [32, 19, 17, 12402, 21, 4636, 576, 5667, 5011, 12399, 12401, 4373, 12408, 5055, 9625, 17318, 17329, 2]
+// Dependencies: [32, 19, 17, 12403, 21, 4636, 576, 5667, 5011, 12400, 12402, 4373, 12409, 5055, 9625, 17320, 17331, 2]
 
-// Module 17317 (VoicePanelControlsDrawer)
+// Module 17319 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 576 */;
 import Suspender from "Suspender" /* 5011 */;
 import spring from "spring" /* 5055 */;
 import useRefValueDefault from "useRefValue" /* 5667 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12399 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12408 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17318 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17329 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12400 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12409 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17320 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17331 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

@@ -1,10 +1,10 @@
-// Module ID: 16460
-// Function ID: 16461
+// Module ID: 16462
+// Function ID: 16463
 // Name: usePrivateProfileCoachmarkProps
-// Dependencies: [19, 17, 1074, 1954, 21, 4636, 6466, 1187, 1114, 8767, 1935, 1943, 7485, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4636, 6466, 1185, 1114, 8767, 1935, 1943, 7485, 2]
 // Exports: usePrivateProfileCoachmarkProps
 
-// Module 16460 (usePrivateProfileCoachmarkProps)
+// Module 16462 (usePrivateProfileCoachmarkProps)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 6466 */;

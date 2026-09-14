@@ -1,16 +1,16 @@
-// Module ID: 12344
-// Function ID: 12345
+// Module ID: 12345
+// Function ID: 12346
 // Name: ForLaterCardHeader
-// Dependencies: [17, 1979, 21, 4636, 576, 7312, 504, 5665, 11041, 1178, 5152, 4789, 5109, 1114, 4632, 2]
+// Dependencies: [17, 1979, 21, 4636, 576, 7312, 504, 5665, 11042, 1176, 5152, 4789, 5109, 1114, 4632, 2]
 // Exports: ForLaterCardHeader
 
-// Module 12344 (ForLaterCardHeader)
+// Module 12345 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7312 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
@@ -30,7 +30,7 @@ function HeaderIcon(channel) {
       isGroupDMResult = channel.isGroupDM();
     }
     if (isGroupDMResult) {
-      const obj3 = { channel, size: tmp2(1178).AvatarSizes.XSMALL };
+      const obj3 = { channel, size: tmp2(1176).AvatarSizes.XSMALL };
       tmp6Result = tmp6(GroupDMAvatarDefault, obj3);
     } else {
       const obj4 = { style: tmp.dmIcon, children: tmp6(tmp2(5152).ChatIcon, { size: "xxs" }) };

@@ -1,14 +1,14 @@
-// Module ID: 13162
-// Function ID: 13163
+// Module ID: 13163
+// Function ID: 13164
 // Name: UserProfileActivityButtons
-// Dependencies: [5, 19, 1956, 1957, 5362, 4556, 1979, 11590, 4275, 4285, 2011, 5360, 4655, 1074, 8458, 21, 4636, 576, 7265, 4265, 563, 13163, 13164, 7841, 5056, 1114, 5187, 9663, 4603, 11894, 11019, 1178, 8259, 11877, 4331, 13166, 8375, 4839, 4495, 8511, 4843, 5364, 1396, 9381, 7485, 8462, 11881, 1365, 8488, 2]
+// Dependencies: [5, 19, 1956, 1957, 5362, 4556, 1979, 11591, 4275, 4285, 2011, 5360, 4655, 1074, 8458, 21, 4636, 576, 7265, 4265, 563, 13164, 13165, 7841, 5056, 1114, 5187, 9663, 4603, 11895, 11020, 1176, 8259, 11878, 4331, 13167, 8375, 4839, 4495, 8511, 4843, 5364, 1396, 9381, 7485, 8462, 11882, 1365, 8488, 2]
 // Exports: ConnectPlatformButton, CustomActivityButton, JoinActivityButton, JoinGameActivityButton, PlayOnSpotifyButton, VoiceChannelButtons, WatchActivityButton
 
-// Module 13162 (UserProfileActivityButtons)
+// Module 13163 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -18,10 +18,10 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import isStreamingDefault from "isStreaming" /* 8375 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9381 */;
 import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9663 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11894 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 13163 */;
-import getActivityJoinabilityDefault from "getActivityJoinability" /* 13164 */;
-import getStreamURLDefault from "getStreamURL" /* 13166 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11895 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 13164 */;
+import getActivityJoinabilityDefault from "getActivityJoinability" /* 13165 */;
+import getStreamURLDefault from "getStreamURL" /* 13167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -29,7 +29,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -115,8 +115,8 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(13164).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(13164).ActivityJoinability.JOINED) {
+    if (stateFromStores !== tmp(13165).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(13165).ActivityJoinability.JOINED) {
         const intl2 = tmp(1114).intl;
         let stringResult = intl2.string(tmp(1114).t.DPfdsq);
       } else {
@@ -124,7 +124,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         stringResult = intl.string(tmp(1114).t.VJlc0S);
       }
       let obj2 = { text: stringResult, variant: "active", disabled: null, onPress: null };
-      JOINED = tmp(13164).ActivityJoinability.JOINED;
+      JOINED = tmp(13165).ActivityJoinability.JOINED;
       obj2.disabled = stateFromStores === JOINED;
       obj2.onPress = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -141,7 +141,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(11019)(activity)) {
+  if (sync_id(11020)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };

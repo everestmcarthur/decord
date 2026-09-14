@@ -1,10 +1,10 @@
-// Module ID: 12904
-// Function ID: 12905
+// Module ID: 12905
+// Function ID: 12906
 // Name: NavigationPathUtils
 // Dependencies: [1074, 4469, 2]
 // Exports: getSelectedSpecialNavigationPath, useSelectedSpecialNavigationPath
 
-// Module 12904 (NavigationPathUtils)
+// Module 12905 (NavigationPathUtils)
 import Constants from "Constants" /* 1074 */;
 import _mod4469 from "module_4469" /* 4469 */;
 import size from "module_2" /* 2 */;

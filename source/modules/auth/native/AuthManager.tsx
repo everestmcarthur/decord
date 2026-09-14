@@ -1,23 +1,23 @@
-// Module ID: 16092
-// Function ID: 16093
+// Module ID: 16094
+// Function ID: 16095
 // Name: AuthManager
-// Dependencies: [5, 17, 12538, 1074, 4846, 12834, 1898, 573, 1953, 16093, 1150, 12541, 9950, 12875, 12833, 7445, 7862, 2]
+// Dependencies: [5, 17, 12539, 1074, 4846, 12835, 1898, 573, 1953, 16095, 1363, 12542, 9950, 12876, 12834, 7445, 7862, 2]
 
-// Module 16092 (AuthManager)
+// Module 16094 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
 import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 7862 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12541 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12538).PermissionStateType;
+const PermissionStateType = fn(12539).PermissionStateType;
 const ME = fn(1074).ME;
 let closure_8 = fn(4846).NotificationAuthorizationStatus;
-const NewUserTypes = fn(12834).NewUserTypes;
+const NewUserTypes = fn(12835).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -82,8 +82,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(16093).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(16093);
+          const result = applyArgumentsResult(16095).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(16095);
         } catch (tmp19) {
           DCDShortcutManager = tmp;
           throw tmp19;
@@ -109,11 +109,11 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        tmp(12875).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = tmp(12875);
+        tmp(12876).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = tmp(12876);
       }
       obj = applyArgumentsResult(9950);
-      applyArgumentsResult(12833).startOnboarding();
+      applyArgumentsResult(12834).startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

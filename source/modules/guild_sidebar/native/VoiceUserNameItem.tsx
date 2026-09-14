@@ -1,10 +1,10 @@
-// Module ID: 16219
-// Function ID: 16220
+// Module ID: 16221
+// Function ID: 16222
 // Name: VoiceUserNameItem
-// Dependencies: [32, 19, 17, 21, 4636, 4870, 9305, 4632, 4481, 1114, 16220, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 4870, 9305, 4632, 4481, 1114, 16222, 2]
 // Exports: default
 
-// Module 16219 (VoiceUserNameItem)
+// Module 16221 (VoiceUserNameItem)
 import Text_Text from "Text/Text" /* 4632 */;
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4870 */;
 import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9305 */;
@@ -89,7 +89,7 @@ export default function VoiceUserNameItem(arg0) {
   if (tmp12) {
     const obj7 = { onLayout: callback2, style: tmp.tag, children: null };
     const obj8 = { userId: user.id };
-    obj7.children = React5(tmp2(16220), obj8);
+    obj7.children = React5(tmp2(16222), obj8);
     tmp12 = React5(tmp19, obj7);
   }
   items3[1] = tmp12;

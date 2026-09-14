@@ -1,15 +1,15 @@
 // Module ID: 5601
 // Function ID: 5602
 // Name: GuildActionCreators
-// Dependencies: [109, 5, 5602, 502, 5520, 2012, 1979, 2011, 4458, 1371, 1074, 1098, 4980, 1114, 573, 5603, 1272, 5606, 7198, 1896, 7314, 7315, 7320, 7350, 7424, 4829, 1250, 7425, 4280, 1086, 7426, 4317, 1242, 7430, 1100, 4847, 7432, 2]
+// Dependencies: [109, 5, 5602, 502, 5520, 2012, 1979, 2011, 4458, 1371, 1074, 1098, 4980, 1114, 573, 5603, 1270, 5606, 7198, 1896, 7314, 7315, 7320, 7350, 7424, 4829, 1248, 7425, 4280, 1086, 7426, 4317, 1240, 7430, 1100, 4847, 7432, 2]
 
 // Module 5601 (GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import AgeGateUtils from "AgeGateUtils" /* 4847 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
@@ -720,8 +720,8 @@ export default {
               obj5.colors = obj6;
               obj5.permissions = primary_color(4280).NONE;
               c6 = 1;
-              const HTTP = color(1272).HTTP;
-              const request = { url: closure_1_16.GUILD_ROLES(closure_0), oldFormErrors: true, body: obj5, rejectWithError: color(1272).rejectWithMigratedError() };
+              const HTTP = color(1270).HTTP;
+              const request = { url: closure_1_16.GUILD_ROLES(closure_0), oldFormErrors: true, body: obj5, rejectWithError: color(1270).rejectWithMigratedError() };
               c7 = 2;
               c8 = 1;
               const obj7 = { value: HTTP.post(request), done: false };
@@ -779,14 +779,14 @@ export default {
       } else if (icon != null) {
         icon.startsWith("data:");
       }
-      const HTTP = tmp5(1272).HTTP;
+      const HTTP = tmp5(1270).HTTP;
       const request = { url: closure_1_16.GUILD_ROLE(tmp5, tmp2), body: null, oldFormErrors: true, rejectWithError: null };
       const obj4 = {};
       const merged = Object.assign(_objectWithoutProperties(closure_2, closure_1_4));
       obj4.icon = tmp13;
       obj4.unicode_emoji = closure_2.unicodeEmoji;
       request.body = obj4;
-      request.rejectWithError = tmp5(1272).rejectWithMigratedError();
+      request.rejectWithError = tmp5(1270).rejectWithMigratedError();
       closure_128_0 = await HTTP.patch(request);
       const result = tmp2(7426).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
@@ -810,8 +810,8 @@ export default {
     closure_1 = arg1;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1272).HTTP;
-      const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
+      const HTTP = tmp5(1270).HTTP;
+      const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1270).rejectWithMigratedError() };
       closure_128_0 = await HTTP.patch(request);
       const result = body(7426).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
@@ -822,8 +822,8 @@ export default {
     closure_1 = arg1;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1272).HTTP;
-      const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
+      const HTTP = tmp5(1270).HTTP;
+      const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1270).rejectWithMigratedError() };
       closure_128_0 = await HTTP.patch(request);
       const result = body(7426).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
@@ -993,12 +993,12 @@ export default {
               return obj3;
             } else {
               let body;
-              const obj4 = { url: closure_1_16.GUILD_APPLICATIONS(tmp5), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
+              const obj4 = { url: closure_1_16.GUILD_APPLICATIONS(tmp5), oldFormErrors: true, rejectWithError: tmp5(1270).rejectWithMigratedError() };
               if (null != tmp2) {
                 const obj5 = { channel_id: tmp23 };
                 obj4.query = obj5;
               }
-              const HTTP = tmp5(1272).HTTP;
+              const HTTP = tmp5(1270).HTTP;
               c2 = 1;
               dependencyMap = 1;
               const obj6 = { value: HTTP.get(obj4), done: false };
@@ -1061,8 +1061,8 @@ export default {
               if (null != after) {
                 obj5.after = after;
               }
-              const HTTP = v3(1272).HTTP;
-              const request = { url: closure_1_16.GUILD_BANS(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1272).rejectWithMigratedError() };
+              const HTTP = v3(1270).HTTP;
+              const request = { url: closure_1_16.GUILD_BANS(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1270).rejectWithMigratedError() };
               value = HTTP.get(request);
               c1 = 1;
               v3 = 1;
@@ -1136,8 +1136,8 @@ export default {
               if (tmp6) {
                 obj5.query = str;
               }
-              const HTTP = v3(1272).HTTP;
-              const request = { url: closure_1_16.GUILD_BANS_SEARCH(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1272).rejectWithMigratedError() };
+              const HTTP = v3(1270).HTTP;
+              const request = { url: closure_1_16.GUILD_BANS_SEARCH(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1270).rejectWithMigratedError() };
               value = HTTP.get(request);
               c1 = 1;
               v3 = 1;
@@ -1194,8 +1194,8 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1272).HTTP;
-              const obj4 = { url: closure_1_16.GUILD_BANS(closure_0), oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() };
+              const HTTP = v3(1270).HTTP;
+              const obj4 = { url: closure_1_16.GUILD_BANS(closure_0), oldFormErrors: true, rejectWithError: v3(1270).rejectWithMigratedError() };
               value = HTTP.get(obj4);
               c1 = 1;
               v3 = 1;
@@ -1264,8 +1264,8 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1272).HTTP;
-              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_ASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() };
+              const HTTP = v3(1270).HTTP;
+              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_ASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1270).rejectWithMigratedError() };
               c1 = 1;
               v3 = 1;
               const obj5 = { value: HTTP.post(obj4), done: false };
@@ -1317,8 +1317,8 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1272).HTTP;
-              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_UNASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() };
+              const HTTP = v3(1270).HTTP;
+              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_UNASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1270).rejectWithMigratedError() };
               c1 = 1;
               v3 = 1;
               const obj5 = { value: HTTP.post(obj4), done: false };
@@ -1345,8 +1345,8 @@ export default {
   getGuildRoleConnectionsConfigurations(guildId) {
     closure_0 = guildId;
     return (async () => {
-      const HTTP = v3(1272).HTTP;
-      await HTTP.get({ url: closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(closure_0), oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() });
+      const HTTP = v3(1270).HTTP;
+      await HTTP.get({ url: closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(closure_0), oldFormErrors: true, rejectWithError: v3(1270).rejectWithMigratedError() });
       return arg1.body;
     })();
   }

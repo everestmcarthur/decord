@@ -1,13 +1,13 @@
-// Module ID: 12192
-// Function ID: 12193
+// Module ID: 12193
+// Function ID: 12194
 // Name: AppsBanner
-// Dependencies: [19, 17, 21, 4636, 12193, 12190, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 12194, 12191, 1114, 2]
 // Exports: default
 
-// Module 12192 (AppsBanner)
+// Module 12193 (AppsBanner)
 import util from "util" /* 1114 */;
-import BannerBaseDefault from "BannerBase" /* 12190 */;
-import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12193 */;
+import BannerBaseDefault from "BannerBase" /* 12191 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

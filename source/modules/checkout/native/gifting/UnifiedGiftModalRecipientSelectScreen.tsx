@@ -1,18 +1,18 @@
-// Module ID: 10987
-// Function ID: 10988
+// Module ID: 10988
+// Function ID: 10989
 // Name: UnifiedGiftModalRecipientSelectScreen
-// Dependencies: [19, 17, 10988, 21, 4636, 576, 1483, 10989, 10955, 2]
+// Dependencies: [19, 17, 10989, 21, 4636, 576, 1483, 10990, 10956, 2]
 // Exports: default
 
-// Module 10987 (UnifiedGiftModalRecipientSelectScreen)
+// Module 10988 (UnifiedGiftModalRecipientSelectScreen)
 import nativeDefault from "native" /* 576 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10955 */;
-import SearchableUserListDefault from "SearchableUserList" /* 10989 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10956 */;
+import SearchableUserListDefault from "SearchableUserList" /* 10990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };

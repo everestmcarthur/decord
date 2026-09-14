@@ -1,14 +1,14 @@
-// Module ID: 14268
-// Function ID: 14269
+// Module ID: 14269
+// Function ID: 14270
 // Name: CarouselPagination
-// Dependencies: [19, 17, 21, 4636, 576, 4373, 4637, 14206, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4373, 4637, 14207, 2]
 // Exports: default
 
-// Module 14268 (CarouselPagination)
+// Module 14269 (CarouselPagination)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
-import Easing from "Easing" /* 14206 */;
+import Easing from "Easing" /* 14207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

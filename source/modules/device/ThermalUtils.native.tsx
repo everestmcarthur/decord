@@ -1,7 +1,7 @@
 // Module ID: 9651
 // Function ID: 9652
 // Name: ThermalUtils
-// Dependencies: [17, 9652, 1150, 4615, 560, 1249, 2]
+// Dependencies: [17, 9652, 1363, 4615, 560, 1247, 2]
 
 // Module 9651 (ThermalUtils)
 import _mod17 from "module_17" /* 17 */;

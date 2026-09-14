@@ -1,9 +1,9 @@
-// Module ID: 16105
-// Function ID: 16106
+// Module ID: 16107
+// Function ID: 16108
 // Name: MainTabsNavigatorPanelContext
 // Dependencies: [19, 6756, 7177, 2]
 
-// Module 16105 (MainTabsNavigatorPanelContext)
+// Module 16107 (MainTabsNavigatorPanelContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { gesture: null, disallowGesture: null, translateX: null };

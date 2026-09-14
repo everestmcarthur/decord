@@ -1,10 +1,10 @@
-// Module ID: 16843
-// Function ID: 16844
+// Module ID: 16845
+// Function ID: 16846
 // Name: ChannelDetailsLinkedLobby
 // Dependencies: [19, 17, 1074, 21, 4636, 576, 7271, 4632, 1114, 2024, 2]
 // Exports: default
 
-// Module 16843 (ChannelDetailsLinkedLobby)
+// Module 16845 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7271 */;

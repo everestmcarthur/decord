@@ -1,9 +1,9 @@
-// Module ID: 16406
-// Function ID: 16407
+// Module ID: 16408
+// Function ID: 16409
 // Name: GuildsBarFavorites
-// Dependencies: [19, 17, 1960, 1074, 1954, 21, 4636, 576, 16389, 10352, 504, 16407, 16392, 10366, 16404, 16231, 1114, 16408, 10363, 16409, 2]
+// Dependencies: [19, 17, 1960, 1074, 1954, 21, 4636, 576, 16391, 10353, 504, 16409, 16394, 10367, 16406, 16233, 1114, 16410, 10364, 16411, 2]
 
-// Module 16406 (GuildsBarFavorites)
+// Module 16408 (GuildsBarFavorites)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -24,21 +24,21 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 
 export default noop.memo(function GuildsBarFavorites() {
-  let obj = shouldShowPopover(16389);
-  const guildsBarAnimatedWrapperStyles = shouldShowPopover(16389).useGuildsBarAnimatedWrapperStyles();
-  const isFavoritesGuildSelected = shouldShowPopover(10352).useIsFavoritesGuildSelected();
-  let obj2 = shouldShowPopover(10352);
+  let obj = shouldShowPopover(16391);
+  const guildsBarAnimatedWrapperStyles = shouldShowPopover(16391).useGuildsBarAnimatedWrapperStyles();
+  const isFavoritesGuildSelected = shouldShowPopover(10353).useIsFavoritesGuildSelected();
+  let obj2 = shouldShowPopover(10353);
   let items = [FavoriteStore];
   const stateFromStores = shouldShowPopover(504).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const obj3 = shouldShowPopover(504);
   const tmp5 = markPopoverAsDismissed;
-  ({ badge, unread } = markPopoverAsDismissed(16407)(stateFromStores));
-  const tmp6 = markPopoverAsDismissed(16407)(stateFromStores);
-  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16392)({ mentionCount: badge }));
+  ({ badge, unread } = markPopoverAsDismissed(16409)(stateFromStores));
+  const tmp6 = markPopoverAsDismissed(16409)(stateFromStores);
+  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16394)({ mentionCount: badge }));
   const ref = noop.useRef(null);
-  const tmp7 = markPopoverAsDismissed(16392)({ mentionCount: badge });
+  const tmp7 = markPopoverAsDismissed(16394)({ mentionCount: badge });
   const tmp9 = closure_11();
-  const favoritesIntroPopover = shouldShowPopover(10366).useFavoritesIntroPopover();
+  const favoritesIntroPopover = shouldShowPopover(10367).useFavoritesIntroPopover();
   shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
   markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
   const items1 = [shouldShowPopover, markPopoverAsDismissed];
@@ -47,7 +47,7 @@ export default noop.memo(function GuildsBarFavorites() {
       if (shouldShowPopover) {
         closure_1_1(constants.TAKE_ACTION);
       }
-      markPopoverAsDismissed(16404)(FAVORITES);
+      markPopoverAsDismissed(16406)(FAVORITES);
     },
     onLongPress() {
       markPopoverAsDismissed(dependencyMap[15])();
@@ -68,19 +68,19 @@ export default noop.memo(function GuildsBarFavorites() {
     return obj;
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  const obj5 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", externalChildren: null, expandedChildren: "heading-lg/semibold", children: "mobile-text-heading-primary" };
-  const obj4 = shouldShowPopover(10366);
+  const obj5 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: "Bubble_03", externalChildren: 7, expandedChildren: 1, children: null };
+  const obj4 = shouldShowPopover(10367);
   const tmp13 = closure_9;
   let intl = shouldShowPopover(1114).intl;
   obj5.label = intl.string(shouldShowPopover(1114).t.wMWyci);
   obj5.externalChildren = badge2;
-  obj5.expandedChildren = closure_8(shouldShowPopover(16408).HomeDrawerFavoritesRowExpandedChildren, {});
+  obj5.expandedChildren = closure_8(shouldShowPopover(16410).HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = markPopoverAsDismissed(576).colors;
-  obj5.children = closure_8(shouldShowPopover(10363).StarIcon, { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  const children = [closure_8(markPopoverAsDismissed(16389), obj5), closure_8(View, { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false }), ];
+  obj5.children = closure_8(shouldShowPopover(10364).StarIcon, { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  const children = [closure_8(markPopoverAsDismissed(16391), obj5), closure_8(View, { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false }), ];
   if (shouldShowPopover) {
     const obj8 = { targetRef: ref, markAsDismissed: markPopoverAsDismissed };
-    shouldShowPopover = tmp15(tmp5(16409), obj8);
+    shouldShowPopover = tmp15(tmp5(16411), obj8);
   }
   children[2] = shouldShowPopover;
   return tmp13(View, { children });

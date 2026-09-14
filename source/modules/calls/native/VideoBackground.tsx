@@ -1,11 +1,11 @@
 // Module ID: 8364
 // Function ID: 8365
 // Name: VideoBackground
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 12, 8365, 8366, 4486, 576, 8367, 1178, 5068, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 12, 8365, 8366, 4486, 576, 8367, 1176, 5068, 2]
 // Exports: useDominantColorFromImage
 
 // Module 8364 (VideoBackground)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8366 */;
 import useProfileTileGradientDefault from "useProfileTileGradient" /* 8367 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -193,12 +193,12 @@ const memoizeResult = apply.memoize((uri) => {
   }
   return tmp;
 });
-VideoBackground.AvatarSizes = fn(1178).AvatarSizes;
+VideoBackground.AvatarSizes = fn(1176).AvatarSizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default noop.memo(VideoBackground);
-export const AvatarSizes = fn(1178).AvatarSizes;
+export const AvatarSizes = fn(1176).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export const useDominantColorFromImage = function useDominantColorFromImage(arg0, arg1) {

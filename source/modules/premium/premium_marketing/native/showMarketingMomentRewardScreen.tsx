@@ -1,10 +1,10 @@
-// Module ID: 13513
-// Function ID: 13514
+// Module ID: 13514
+// Function ID: 13515
 // Name: showMarketingMomentRewardScreen
-// Dependencies: [5, 7645, 7644, 11211, 2]
+// Dependencies: [5, 7645, 7644, 11212, 2]
 // Exports: showMarketingMomentRewardScreen
 
-// Module 13513 (showMarketingMomentRewardScreen)
+// Module 13514 (showMarketingMomentRewardScreen)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;

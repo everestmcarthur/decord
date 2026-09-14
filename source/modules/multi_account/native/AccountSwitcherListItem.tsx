@@ -1,10 +1,10 @@
-// Module ID: 16047
-// Function ID: 16048
+// Module ID: 16049
+// Function ID: 16050
 // Name: AccountSwitcherListItem
-// Dependencies: [19, 17, 1385, 4482, 1371, 12542, 21, 4636, 504, 4596, 576, 4591, 4632, 1114, 5204, 4355, 1178, 4481, 2]
+// Dependencies: [19, 17, 1385, 4482, 1371, 12543, 21, 4636, 504, 4596, 576, 4591, 4632, 1114, 5204, 4355, 1176, 4481, 2]
 // Exports: default
 
-// Module 16047 (AccountSwitcherListItem)
+// Module 16049 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -49,7 +49,7 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12542).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12543).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
@@ -103,7 +103,7 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
     const obj9 = { user: obj3, guildId: "a" };
-    const items3 = [React7(tmp2(1178).Avatar, obj9), ];
+    const items3 = [React7(tmp2(1176).Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };
     const obj12 = { variant: "text-md/semibold", color: "text-default", style: tmp.username, lineClamp: 1, children: null };

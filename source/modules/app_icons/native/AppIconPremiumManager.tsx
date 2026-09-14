@@ -1,11 +1,11 @@
-// Module ID: 17426
-// Function ID: 17427
+// Module ID: 17428
+// Function ID: 17429
 // Name: AppIconPremiumManager
-// Dependencies: [5, 1371, 9453, 1074, 3, 9454, 7221, 1150, 13536, 4294, 1242, 2]
+// Dependencies: [5, 1371, 9453, 1074, 3, 9454, 7221, 1363, 13537, 4294, 1240, 2]
 
-// Module 17426 (AppIconPremiumManager)
+// Module 17428 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

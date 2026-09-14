@@ -1,15 +1,15 @@
-// Module ID: 17463
-// Function ID: 17464
+// Module ID: 17465
+// Function ID: 17466
 // Name: feedback/FeedbackManager
-// Dependencies: [7317, 4659, 17464, 11755, 7316, 1935, 510, 12, 17465, 7221, 2]
+// Dependencies: [7317, 4659, 17466, 11756, 7316, 1935, 510, 12, 17467, 7221, 2]
 
-// Module 17463 (feedback/FeedbackManager)
+// Module 17465 (feedback/FeedbackManager)
 import _mod12 from "module_12" /* 12 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 17465 */;
+import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 17467 */;
 import HotspotStore from "hotspot/HotspotStore" /* 7317 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 17464 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 17466 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -120,7 +120,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(11755);
+const Constants = fn(11756);
 ({ FeedbackGroup, FeedbackType, FeedbackTypePrecedence: hasOwnProperty, MAX_REPRESENTABLE_DATE: metroRequire } = Constants);
 let obj = { chance: 0.2, cooldown: 86400000 };
 let obj2 = {};

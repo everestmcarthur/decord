@@ -1,10 +1,10 @@
-// Module ID: 16345
-// Function ID: 16346
+// Module ID: 16347
+// Function ID: 16348
 // Name: useCanSeeNUFChannelsForGuild
 // Dependencies: [2021, 1979, 1371, 1074, 4262, 504, 4481, 1384, 2]
 // Exports: useCanSeeNUFChannelsForGuild
 
-// Module 16345 (useCanSeeNUFChannelsForGuild)
+// Module 16347 (useCanSeeNUFChannelsForGuild)
 import UserUtils from "UserUtils" /* 4481 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;

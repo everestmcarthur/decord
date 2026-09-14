@@ -1,16 +1,16 @@
-// Module ID: 11394
-// Function ID: 11395
+// Module ID: 11395
+// Function ID: 11396
 // Name: ReactionEmojiOptionsActionSheet
-// Dependencies: [19, 17, 4628, 5540, 4458, 21, 4636, 576, 1935, 7291, 504, 10413, 1396, 4603, 10363, 10369, 4632, 1114, 10464, 4335, 7292, 4334, 7866, 7300, 7233, 5768, 5686, 2]
+// Dependencies: [19, 17, 4628, 5540, 4458, 21, 4636, 576, 1935, 7291, 504, 10414, 1396, 4603, 10364, 10370, 4632, 1114, 10465, 4335, 7292, 4334, 7866, 7300, 7233, 5768, 5686, 2]
 // Exports: default
 
-// Module 11394 (ReactionEmojiOptionsActionSheet)
+// Module 11395 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7866 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10464 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10465 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
@@ -99,9 +99,9 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       style = obj;
     }
     if (arg0) {
-      let StarOutlineIcon = tmp9(10363).StarIcon;
+      let StarOutlineIcon = tmp9(10364).StarIcon;
     } else {
-      StarOutlineIcon = tmp9(10369).StarOutlineIcon;
+      StarOutlineIcon = tmp9(10370).StarOutlineIcon;
     }
     return React7(StarOutlineIcon, { style });
   }, items4);

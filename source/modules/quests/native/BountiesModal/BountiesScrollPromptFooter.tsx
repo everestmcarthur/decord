@@ -1,10 +1,10 @@
-// Module ID: 15096
-// Function ID: 15097
+// Module ID: 15097
+// Function ID: 15098
 // Name: BountiesScrollPromptFooter
-// Dependencies: [19, 17, 4628, 5525, 21, 4636, 576, 4637, 4640, 504, 1611, 4373, 4347, 15097, 15098, 10098, 2]
+// Dependencies: [19, 17, 4628, 5525, 21, 4636, 576, 4637, 4640, 504, 1611, 4373, 4347, 15098, 15099, 10098, 2]
 // Exports: default
 
-// Module 15096 (BountiesScrollPromptFooter)
+// Module 15097 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -12,8 +12,8 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10098 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15097 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15098 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15098 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15099 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 

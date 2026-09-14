@@ -1,13 +1,13 @@
 // Module ID: 9767
 // Function ID: 9768
 // Name: DiscordEnvironment
-// Dependencies: [4628, 1183, 9768, 1935, 2]
+// Dependencies: [4628, 1181, 9768, 1935, 2]
 // Exports: getDiscordBaseTheme, getDiscordCustomTheme, getDiscordEnvQueryParams, getDiscordEnvironment, getDiscordFontScale, getDiscordUIDensity
 
 // Module 9767 (DiscordEnvironment)
 import UserSettings from "UserSettings" /* 1935 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 const UIDensityConstants = fn(9768);

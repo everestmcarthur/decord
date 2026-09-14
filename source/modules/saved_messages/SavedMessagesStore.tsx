@@ -1,10 +1,10 @@
-// Module ID: 11789
-// Function ID: 11790
+// Module ID: 11790
+// Function ID: 11791
 // Name: SavedMessagesStore
 // Dependencies: [1371, 4271, 7963, 4859, 504, 573, 2]
 // Exports: getComparator
 
-// Module 11789 (SavedMessagesStore)
+// Module 11790 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;

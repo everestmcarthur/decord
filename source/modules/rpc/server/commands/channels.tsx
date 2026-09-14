@@ -1,9 +1,9 @@
-// Module ID: 14559
-// Function ID: 14560
+// Module ID: 14560
+// Function ID: 14561
 // Name: channels
-// Dependencies: [1961, 1957, 1979, 4275, 2011, 4655, 4541, 1074, 8457, 9684, 9689, 12, 14556, 9687, 14550, 5492, 4781, 1100, 8496, 2]
+// Dependencies: [1961, 1957, 1979, 4275, 2011, 4655, 4541, 1074, 8457, 9684, 9689, 12, 14557, 9687, 14551, 5492, 4781, 1100, 8496, 2]
 
-// Module 14559 (channels)
+// Module 14560 (channels)
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1100 */;
 import ChannelUtils from "ChannelUtils" /* 4781 */;
@@ -13,7 +13,7 @@ import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;
 import RPCHelpers from "RPCHelpers" /* 9689 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14556 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14557 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;

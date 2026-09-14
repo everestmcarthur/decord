@@ -1,16 +1,16 @@
-// Module ID: 11898
-// Function ID: 11899
+// Module ID: 11899
+// Function ID: 11900
 // Name: QuestRewardDetailsBottomSheet
-// Dependencies: [19, 17, 1371, 21, 4636, 576, 11896, 4603, 11616, 11423, 7810, 1114, 504, 7253, 5054, 11899, 4632, 2]
+// Dependencies: [19, 17, 1371, 21, 4636, 576, 11897, 4603, 11617, 11424, 7810, 1114, 504, 7253, 5054, 11900, 4632, 2]
 // Exports: default
 
-// Module 11898 (QuestRewardDetailsBottomSheet)
+// Module 11899 (QuestRewardDetailsBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7810 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11423 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
-import QuestUtils from "QuestUtils" /* 11896 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11424 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
+import QuestUtils from "QuestUtils" /* 11897 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -38,10 +38,10 @@ function QuestRewardDetailsBottomSheet(quest) {
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(11423).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(11424).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [closure_6(memo(11899), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(11900), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1114).intl;
@@ -61,7 +61,7 @@ function QuestRewardDetailsBottomSheet(quest) {
     obj7.children = items6;
     tmp9Result = tmp9(closure_8, obj7);
   }
-  const obj2 = quest(11423);
+  const obj2 = quest(11424);
   items5[1] = tmp9Result;
   obj3.children = items5;
   return closure_6(quest(7253).BottomSheet, { startExpanded: true, children: closure_7(quest(5054).Stack, obj3) });

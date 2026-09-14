@@ -1,10 +1,10 @@
-// Module ID: 10528
-// Function ID: 10529
+// Module ID: 10529
+// Function ID: 10530
 // Name: StickerPackInformationPopout
 // Dependencies: [19, 17, 21, 4636, 576, 4975, 1114, 4632, 5204, 2]
 // Exports: default, doesStickerPackHavePopoutInformation
 
-// Module 10528 (StickerPackInformationPopout)
+// Module 10529 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;

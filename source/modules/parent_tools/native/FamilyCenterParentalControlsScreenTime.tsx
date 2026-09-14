@@ -1,10 +1,10 @@
-// Module ID: 15021
-// Function ID: 15022
+// Module ID: 15022
+// Function ID: 15023
 // Name: FamilyCenterParentalControlsScreenTime
-// Dependencies: [17, 1074, 21, 4636, 576, 10212, 5686, 4632, 1114, 2396, 14982, 1483, 5768, 2]
+// Dependencies: [17, 1074, 21, 4636, 576, 10212, 5686, 4632, 1114, 2396, 14983, 1483, 5768, 2]
 // Exports: default
 
-// Module 15021 (FamilyCenterParentalControlsScreenTime)
+// Module 15022 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;

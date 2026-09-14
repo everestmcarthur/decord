@@ -1,12 +1,12 @@
 // Module ID: 9616
 // Function ID: 9617
 // Name: ChannelCallLifecycleStore
-// Dependencies: [2011, 9598, 8450, 1332, 504, 573, 2]
+// Dependencies: [2011, 9598, 8450, 1330, 504, 573, 2]
 
 // Module 9616 (ChannelCallLifecycleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 const VoiceCallOverlayType = fn(9598).VoiceCallOverlayType;

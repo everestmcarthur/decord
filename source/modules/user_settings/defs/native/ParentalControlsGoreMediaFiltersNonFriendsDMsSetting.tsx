@@ -1,14 +1,14 @@
-// Module ID: 15991
-// Function ID: 15992
+// Module ID: 15993
+// Function ID: 15994
 // Name: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting
-// Dependencies: [7640, 8079, 14913, 7702, 14917, 14910, 1114, 1187, 11601, 2]
+// Dependencies: [7640, 8079, 14914, 7702, 14918, 14911, 1114, 1185, 11602, 2]
 // Exports: onGoreContentNonFriendsDmOnPress, useGoreContentNonFriendsDmSettingValue
 
-// Module 15991 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
+// Module 15993 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
 import util from "util" /* 1114 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14917 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14918 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(14917);
+    const obj = selectedTeenId(14918);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1114).intl;
     obj3.title = intl.string(selectedTeenId(1114).t["16/3Bi"]);
@@ -38,13 +38,13 @@ function onGoreContentNonFriendsDmOnPress() {
       return FamilyCenterControlledSettingsUtils.updateGoreContentSetting(selectedTeenId, { goreContentNonFriendDm });
     };
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
-    const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
+    const items = [selectedTeenId(1185).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(14910).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(14910);
+    const result = selectedTeenId(14911).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(14911);
   }
 }
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;

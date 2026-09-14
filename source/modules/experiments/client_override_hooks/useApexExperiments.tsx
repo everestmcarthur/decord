@@ -1,15 +1,15 @@
-// Module ID: 11614
-// Function ID: 11615
+// Module ID: 11615
+// Function ID: 11616
 // Name: useApexExperiments
-// Dependencies: [32, 19, 1236, 7997, 4557, 1436, 11615, 504, 2]
+// Dependencies: [32, 19, 1234, 7997, 4557, 1436, 11616, 504, 2]
 // Exports: getApexExperiments, useApexExperiments
 
-// Module 11614 (useApexExperiments)
+// Module 11615 (useApexExperiments)
 import apex_ApexTypes from "apex/ApexTypes" /* 1436 */;
 import ExperimentManager from "ExperimentManager" /* 4557 */;
 import experiment from "experiment" /* 7997 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 
 require = fn;
 function makeClientVariant(id) {

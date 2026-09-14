@@ -1,10 +1,10 @@
-// Module ID: 14911
-// Function ID: 14912
+// Module ID: 14912
+// Function ID: 14913
 // Name: ExplicitMediaSettingsActionSheet
-// Dependencies: [19, 17, 21, 4636, 576, 4603, 7253, 7252, 5766, 1187, 5769, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4603, 7253, 7252, 5766, 1185, 5769, 2]
 // Exports: default
 
-// Module 14911 (ExplicitMediaSettingsActionSheet)
+// Module 14912 (ExplicitMediaSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ export default function ExplicitMediaSettingsActionSheet(options) {
   const items1 = [closure_5(options(7252).BottomSheetTitleHeader, { title, subtitle }), ];
   const obj = { style: closure_7().content, children: null };
   if (SHOW == null) {
-    SHOW = tmp4(1187).ExplicitContentRedaction.SHOW;
+    SHOW = tmp4(1185).ExplicitContentRedaction.SHOW;
   }
   let obj2 = { startExpanded: true, children: null };
   const tmp = closure_7();

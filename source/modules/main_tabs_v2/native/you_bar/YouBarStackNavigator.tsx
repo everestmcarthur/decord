@@ -1,10 +1,10 @@
-// Module ID: 16107
-// Function ID: 16108
+// Module ID: 16109
+// Function ID: 16110
 // Name: YouBarStackNavigator
-// Dependencies: [19, 17, 2011, 4458, 11218, 21, 8017, 16108, 16496, 16544, 504, 16618, 8470, 7103, 7259, 2]
+// Dependencies: [19, 17, 2011, 4458, 11219, 21, 8017, 16110, 16498, 16546, 504, 16620, 8470, 7103, 7259, 2]
 
-// Module 16107 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 16496 */;
+// Module 16109 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 16498 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
@@ -21,7 +21,7 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11218).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11219).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const NativeStackNavigator = fn(8017);

@@ -1,15 +1,15 @@
-// Module ID: 16968
-// Function ID: 16969
+// Module ID: 16970
+// Function ID: 16971
 // Name: ChannelSettingsEditForumTag
-// Dependencies: [32, 19, 17, 5540, 1957, 1374, 21, 4636, 576, 1483, 504, 4632, 1114, 8002, 7480, 5054, 5768, 5686, 5204, 11255, 7233, 1396, 8883, 1178, 6717, 7303, 4981, 2]
+// Dependencies: [32, 19, 17, 5540, 1957, 1374, 21, 4636, 576, 1483, 504, 4632, 1114, 8002, 7480, 5054, 5768, 5686, 5204, 11256, 7233, 1396, 8883, 1176, 6717, 7303, 4981, 2]
 // Exports: default
 
-// Module 16968 (ChannelSettingsEditForumTag)
+// Module 16970 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 8002 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
@@ -250,7 +250,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       let intl = tmp3(1114).intl;
       obj10.placeholder = intl.string(tmp3(1114).t.aMSq0a);
-      obj8.label = tmp27(tmp3(1178).TextInput, obj10);
+      obj8.label = tmp27(tmp3(1176).TextInput, obj10);
       if (null != emoji) {
         const obj12 = {
           accessibilityRole: "button",

@@ -1,16 +1,16 @@
-// Module ID: 17876
-// Function ID: 17877
+// Module ID: 17877
+// Function ID: 17878
 // Name: GuildRoleSubscriptionBenefitPreview
-// Dependencies: [19, 17, 15288, 21, 4636, 15323, 1178, 10069, 4632, 4289, 15316, 4789, 5109, 1114, 2]
+// Dependencies: [19, 17, 15289, 21, 4636, 15324, 1176, 10069, 4632, 4289, 15317, 4789, 5109, 1114, 2]
 // Exports: GuildRoleSubscriptionBenefitPreview
 
-// Module 17876 (GuildRoleSubscriptionBenefitPreview)
-import native from "native" /* 1178 */;
+// Module 17877 (GuildRoleSubscriptionBenefitPreview)
+import native from "native" /* 1176 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _modDef10069 from "module_10069" /* 10069 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15316 */;
-import EmojiIconDefault from "EmojiIcon" /* 15323 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15317 */;
+import EmojiIconDefault from "EmojiIcon" /* 15324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -76,8 +76,8 @@ function ChannelBenefitRow(benefit) {
   } else {
     const obj3 = { benefit, guildId, isInteractive, children: null };
     const obj4 = { style: tmp.channelRow, children: null };
-    const obj5 = { style: tmp.channelIcon, size: tmp2(1178).Icon.Sizes.CUSTOM, source: channelIcon };
-    const items = [hasOwnProperty(tmp2(1178).Icon, obj5), ];
+    const obj5 = { style: tmp.channelIcon, size: tmp2(1176).Icon.Sizes.CUSTOM, source: channelIcon };
+    const items = [hasOwnProperty(tmp2(1176).Icon, obj5), ];
     const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp5 };
     items[1] = hasOwnProperty(tmp2(4632).Text, obj6);
     obj4.children = items;
@@ -101,7 +101,7 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(15288).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(15289).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);

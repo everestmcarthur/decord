@@ -1,7 +1,7 @@
 // Module ID: 4658
 // Function ID: 4659
 // Name: ApplicationStreamingStore
-// Dependencies: [4653, 1915, 502, 1957, 1979, 1908, 4275, 4659, 2011, 4655, 1074, 4678, 1090, 4688, 13916, 13917, 13918, 1896, 7828, 504, 13889, 573, 2]
+// Dependencies: [4653, 1915, 502, 1957, 1979, 1908, 4275, 4659, 2011, 4655, 1074, 4678, 1090, 4688, 13917, 13918, 13919, 1896, 7828, 504, 13890, 573, 2]
 
 // Module 4658 (ApplicationStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
@@ -10,9 +10,9 @@ import DurationsDefault from "Durations" /* 1090 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import StreamPermissionUtils from "StreamPermissionUtils" /* 7828 */;
-import canSpectateDefault from "canSpectate" /* 13889 */;
-import windowSourceMatchesDefault from "windowSourceMatches" /* 13916 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13917 */;
+import canSpectateDefault from "canSpectate" /* 13890 */;
+import windowSourceMatchesDefault from "windowSourceMatches" /* 13917 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13918 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -755,11 +755,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = tmp22.FAILED;
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(13918, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(13919, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = asyncRequireImpl(13918, dependencyMap.paths);
+        const promise = asyncRequireImpl(13919, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

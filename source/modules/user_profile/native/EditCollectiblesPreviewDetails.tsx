@@ -1,10 +1,10 @@
-// Module ID: 13304
-// Function ID: 13305
+// Module ID: 13305
+// Function ID: 13306
 // Name: EditCollectiblesPreviewDetails
 // Dependencies: [19, 17, 2025, 21, 4636, 504, 4294, 7657, 4318, 4632, 1114, 8290, 2]
 // Exports: default
 
-// Module 13304 (EditCollectiblesPreviewDetails)
+// Module 13305 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import Text_Text from "Text/Text" /* 4632 */;

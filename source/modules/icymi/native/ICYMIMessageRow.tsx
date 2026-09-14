@@ -1,17 +1,17 @@
-// Module ID: 16590
-// Function ID: 16591
+// Module ID: 16592
+// Function ID: 16593
 // Name: ICYMIMessageRow
-// Dependencies: [19, 17, 1957, 2021, 1979, 4285, 4817, 1371, 16585, 1074, 21, 576, 16547, 1150, 16548, 8383, 8466, 504, 16591, 16592, 4632, 1114, 1178, 4788, 5601, 8468, 8469, 11044, 11786, 16586, 16588, 11, 5204, 9900, 16594, 2]
+// Dependencies: [19, 17, 1957, 2021, 1979, 4285, 4817, 1371, 16587, 1074, 21, 576, 16549, 1363, 16550, 8383, 8466, 504, 16593, 16594, 4632, 1114, 1176, 4788, 5601, 8468, 8469, 11045, 11787, 16588, 16590, 11, 5204, 9900, 16596, 2]
 // Exports: default
 
-// Module 16590 (ICYMIMessageRow)
+// Module 16592 (ICYMIMessageRow)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11786 */;
-import ICYMIShared from "ICYMIShared" /* 16586 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11787 */;
+import ICYMIShared from "ICYMIShared" /* 16588 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -142,7 +142,7 @@ function ReplyMessageContent(message) {
   message = message.message;
   ({ channel, guild } = message);
   const tmp = closure_18();
-  const context = noop.useContext(message(16548).ICYMIContext);
+  const context = noop.useContext(message(16550).ICYMIContext);
   const items = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items, () => UserStore.getUser(message.author.id));
   const obj = noop;
@@ -156,7 +156,7 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16548).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16550).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     const obj4 = { style: tmp.replyPreview, children: null };
@@ -165,8 +165,8 @@ function ReplyMessageContent(message) {
     obj5.children = intl.string(tmp2(1114).t.mPPcez);
     const items2 = [closure_14(tmp2(4632).Text, obj5), ];
     const obj6 = { style: tmp.replyInner, children: null };
-    const obj7 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1178).AvatarSizes.SMALL };
-    const items3 = [closure_14(tmp2(1178).Avatar, obj7), ];
+    const obj7 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1176).AvatarSizes.SMALL };
+    const items3 = [closure_14(tmp2(1176).Avatar, obj7), ];
     const obj8 = { style: null, children: null };
     const obj9 = { gap: 4, width: width - context.inset - 2 * ITEM_PADDING - 2 * PX_12 - 30 - PX_8 - 2 };
     obj8.style = obj9;
@@ -181,7 +181,7 @@ function ReplyMessageContent(message) {
     obj12.value = obj13;
     const obj15 = { message, channel, guild, nested: true };
     obj12.children = closure_14(MessageRowContent, obj15);
-    items4[1] = closure_14(tmp2(16548).ICYMIContext.Provider, obj12);
+    items4[1] = closure_14(tmp2(16550).ICYMIContext.Provider, obj12);
     obj8.children = items4;
     items3[1] = closure_15(View, obj8);
     obj6.children = items3;
@@ -193,14 +193,14 @@ function ReplyMessageContent(message) {
   return tmp8;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(16585).ITEM_PADDING;
+const ITEM_PADDING = fn(16587).ITEM_PADDING;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 }, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
   const obj2 = { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 };

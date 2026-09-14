@@ -1,10 +1,10 @@
-// Module ID: 11136
-// Function ID: 11137
+// Module ID: 11137
+// Function ID: 11138
 // Name: SocialLayerStorefrontGiftProductDetails
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 7271, 10930, 1396, 8952, 4632, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 7271, 10931, 1396, 8952, 4632, 2]
 // Exports: default
 
-// Module 11136 (SocialLayerStorefrontGiftProductDetails)
+// Module 11137 (SocialLayerStorefrontGiftProductDetails)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8952 */;
@@ -34,7 +34,7 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   const tmp = closure_9();
   getOrFetchApplication = getOrFetchApplication(7271).useGetOrFetchApplication(sku.applicationId);
   let obj = getOrFetchApplication(7271);
-  const userPrice = getOrFetchApplication(10930).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
+  const userPrice = getOrFetchApplication(10931).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
   const items = [getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let applicationIconURL = null;

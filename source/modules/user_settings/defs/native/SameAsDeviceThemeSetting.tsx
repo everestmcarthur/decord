@@ -1,16 +1,16 @@
-// Module ID: 15387
-// Function ID: 15388
+// Module ID: 15388
+// Function ID: 15389
 // Name: SameAsDeviceThemeSetting
-// Dependencies: [1183, 8079, 504, 15257, 11601, 1114, 2]
+// Dependencies: [1181, 8079, 504, 15258, 11602, 1114, 2]
 
-// Module 15387 (SameAsDeviceThemeSetting)
+// Module 15388 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15257 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15258 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

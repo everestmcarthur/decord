@@ -1,15 +1,15 @@
-// Module ID: 13628
-// Function ID: 13629
+// Module ID: 13629
+// Function ID: 13630
 // Name: PremiumPlanSelect
-// Dependencies: [5, 32, 19, 17, 7527, 1979, 4299, 4300, 7340, 13629, 1373, 1074, 7535, 4618, 21, 4636, 5605, 5522, 576, 5054, 5773, 4632, 1114, 4294, 13630, 13631, 13632, 13633, 13634, 13635, 8785, 4338, 504, 13636, 13431, 4571, 1178, 1242, 13463, 13464, 5686, 13637, 5658, 6756, 4488, 1151, 7512, 10791, 4981, 13638, 1896, 5768, 5068, 7513, 7343, 4309, 4839, 7515, 10837, 7265, 7360, 5679, 5073, 10936, 10831, 1483, 7520, 13473, 7285, 10832, 4960, 11568, 13439, 7507, 9495, 4306, 10932, 2]
+// Dependencies: [5, 32, 19, 17, 7527, 1979, 4299, 4300, 7340, 13630, 1373, 1074, 7535, 4618, 21, 4636, 5605, 5522, 576, 5054, 5773, 4632, 1114, 4294, 13631, 13632, 13633, 13634, 13635, 13636, 8785, 4338, 504, 13637, 13432, 4571, 1176, 1240, 13464, 13465, 5686, 13638, 5658, 6756, 4488, 1364, 7512, 10792, 4981, 13639, 1896, 5768, 5068, 7513, 7343, 4309, 4839, 7515, 10838, 7265, 7360, 5679, 5073, 10937, 10832, 1483, 7520, 13474, 7285, 10833, 4960, 11569, 13440, 7507, 9495, 4306, 10933, 2]
 // Exports: default
 
-// Module 13628 (PremiumPlanSelect)
+// Module 13629 (PremiumPlanSelect)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import PremiumSubscription from "PremiumSubscription" /* 4306 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -22,16 +22,16 @@ import ProductIds from "ProductIds" /* 7343 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7512 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10791 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10936 */;
-import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13463 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13464 */;
-import _modDef13630 from "module_13630" /* 13630 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10792 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10937 */;
+import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13464 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13465 */;
 import _modDef13631 from "module_13631" /* 13631 */;
 import _modDef13632 from "module_13632" /* 13632 */;
 import _modDef13633 from "module_13633" /* 13633 */;
 import _modDef13634 from "module_13634" /* 13634 */;
 import _modDef13635 from "module_13635" /* 13635 */;
+import _modDef13636 from "module_13636" /* 13636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -372,7 +372,7 @@ function PlanSection(showBoostOnlyLabels) {
   c12 = undefined;
   const tmp = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   closure_11 = tmp;
-  let isIOSResult = shouldShowModernBoostFlow(1151).isIOS();
+  let isIOSResult = shouldShowModernBoostFlow(1364).isIOS();
   if (isIOSResult) {
     isIOSResult = null != tmp;
   }
@@ -706,7 +706,7 @@ function PlanSections(showCurrentPlan) {
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const useNativeCheckoutStore = fn(7527).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13629);
+const PremiumPlanSelectStore = fn(13630);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1373);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
@@ -754,7 +754,7 @@ obj.nitroBannerText = { textAlign: "center" };
 let obj8 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
 obj.recommendedText = { color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 let closure_34 = createStyles.createStyles(obj);
-let closure_37 = { [_modDef13633]: "imgWumpusNitro", [_modDef13635]: "imgWumpusNitroBoost", [_modDef13632]: "imgWumpusNitroClassic", [_modDef13634]: "imgWumpusNitroClassicBoost", [_modDef13631]: "imgWumpusNitroTier0", [_modDef13630]: "imgBoost" };
+let closure_37 = { [_modDef13634]: "imgWumpusNitro", [_modDef13636]: "imgWumpusNitroBoost", [_modDef13633]: "imgWumpusNitroClassic", [_modDef13635]: "imgWumpusNitroClassicBoost", [_modDef13632]: "imgWumpusNitroTier0", [_modDef13631]: "imgBoost" };
 items = [
   {
     id: "premium",

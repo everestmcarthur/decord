@@ -1,11 +1,11 @@
-// Module ID: 16730
-// Function ID: 16731
+// Module ID: 16732
+// Function ID: 16733
 // Name: NavigationTTIDefinition
-// Dependencies: [1250, 1336, 2]
+// Dependencies: [1248, 1334, 2]
 
-// Module 16730 (NavigationTTIDefinition)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1336 */;
+// Module 16732 (NavigationTTIDefinition)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1334 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationTTIDefinition.tsx");

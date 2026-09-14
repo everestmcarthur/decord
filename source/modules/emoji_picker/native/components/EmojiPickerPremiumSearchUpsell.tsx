@@ -1,12 +1,12 @@
-// Module ID: 10441
-// Function ID: 10442
+// Module ID: 10442
+// Function ID: 10443
 // Name: EmojiPickerPremiumSearchUpsell
-// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4636, 576, 1242, 7959, 9443, 10095, 7955, 10096, 4294, 4603, 9522, 9492, 8785, 1178, 10442, 4632, 1114, 5204, 2]
+// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4636, 576, 1240, 7959, 9443, 10095, 7955, 10096, 4294, 4603, 9522, 9492, 8785, 1176, 10443, 4632, 1114, 5204, 2]
 // Exports: useEmojiPickerPremiumSearchUpsellClick, useEmojiPickerPremiumSearchUpsellViewed
 
-// Module 10441 (EmojiPickerPremiumSearchUpsell)
+// Module 10442 (EmojiPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;

@@ -1,12 +1,12 @@
 // Module ID: 9412
 // Function ID: 9413
 // Name: FederatedSocialModal
-// Dependencies: [5, 32, 19, 1074, 21, 4636, 5364, 1114, 5487, 4331, 9413, 7226, 4632, 6706, 1178, 5056, 5705, 7103, 2]
+// Dependencies: [5, 32, 19, 1074, 21, 4636, 5364, 1114, 5487, 4331, 9413, 7226, 4632, 6706, 1176, 5056, 5705, 7103, 2]
 // Exports: default
 
 // Module 9412 (FederatedSocialModal)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import PlatformsDefault from "Platforms" /* 5364 */;

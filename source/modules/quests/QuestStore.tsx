@@ -1,12 +1,12 @@
 // Module ID: 7805
 // Function ID: 7806
 // Name: QuestStore
-// Dependencies: [32, 7806, 7807, 5525, 12, 5533, 7810, 1232, 7801, 5528, 7811, 7812, 7803, 504, 573, 2]
+// Dependencies: [32, 7806, 7807, 5525, 12, 5533, 7810, 1230, 7801, 5528, 7811, 7812, 7803, 504, 573, 2]
 
 // Module 7805 (QuestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import AdDecisionUtils from "AdDecisionUtils" /* 7803 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7810 */;
 import getQuestLogger from "getQuestLogger" /* 7811 */;

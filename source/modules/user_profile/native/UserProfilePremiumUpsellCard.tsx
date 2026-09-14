@@ -1,10 +1,10 @@
-// Module ID: 14731
-// Function ID: 14732
+// Module ID: 14732
+// Function ID: 14733
 // Name: UserProfilePremiumUpsellCard
-// Dependencies: [19, 1074, 21, 4636, 1611, 1483, 7549, 7265, 7285, 7093, 9522, 9492, 14709, 1114, 4632, 2]
+// Dependencies: [19, 1074, 21, 4636, 1611, 1483, 7549, 7265, 7285, 7093, 9522, 9492, 14710, 1114, 4632, 2]
 // Exports: UserProfilePremiumUpsellCard
 
-// Module 14731 (UserProfilePremiumUpsellCard)
+// Module 14732 (UserProfilePremiumUpsellCard)
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
@@ -71,5 +71,5 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     stringResult1 = string(t.Tii53U);
   }
   obj3.children = jsx(navigation(4632).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14709), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  return jsx(tmp(14710), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

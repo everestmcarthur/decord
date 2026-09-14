@@ -1,10 +1,10 @@
-// Module ID: 11889
-// Function ID: 11890
+// Module ID: 11890
+// Function ID: 11891
 // Name: getRemoteJoinableActivityPlatform
-// Dependencies: [7211, 4654, 1074, 1151, 1384, 11595, 2]
+// Dependencies: [7211, 4654, 1074, 1364, 1384, 11596, 2]
 // Exports: getRemoteJoinableActivityPlatform
 
-// Module 11889 (getRemoteJoinableActivityPlatform)
+// Module 11890 (getRemoteJoinableActivityPlatform)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import ConnectedAppsStore from "ConnectedAppsStore" /* 7211 */;
 import SessionsStore from "SessionsStore" /* 4654 */;
@@ -53,18 +53,18 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
                 if (tmp11Result5.isAndroid()) {
                   let isIOSResult = platform === constants2.ANDROID;
                 } else {
-                  isIOSResult = tmp11(1151).isIOS();
+                  isIOSResult = tmp11(1364).isIOS();
                   if (isIOSResult) {
                     isIOSResult = platform === constants2.IOS;
                   }
-                  const tmp11Result6 = tmp11(1151);
+                  const tmp11Result6 = tmp11(1364);
                 }
                 tmp4 = null;
-                tmp11Result5 = tmp11(1151);
+                tmp11Result5 = tmp11(1364);
               }
             }
           }
-          tmp11Result = tmp11(11595);
+          tmp11Result = tmp11(11596);
         }
         return tmp4;
       }

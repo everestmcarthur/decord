@@ -1,13 +1,13 @@
-// Module ID: 13623
-// Function ID: 13624
+// Module ID: 13624
+// Function ID: 13625
 // Name: PremiumSubscriptionPricingUpsell
-// Dependencies: [32, 19, 17, 2025, 1371, 4299, 4300, 7340, 1074, 1373, 21, 4636, 504, 4294, 13484, 573, 7522, 7343, 4632, 1150, 7338, 7337, 1114, 1880, 2]
+// Dependencies: [32, 19, 17, 2025, 1371, 4299, 4300, 7340, 1074, 1373, 21, 4636, 504, 4294, 13485, 573, 7522, 7343, 4632, 1363, 7338, 7337, 1114, 1880, 2]
 // Exports: default
 
-// Module 13623 (PremiumSubscriptionPricingUpsell)
+// Module 13624 (PremiumSubscriptionPricingUpsell)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13484 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;

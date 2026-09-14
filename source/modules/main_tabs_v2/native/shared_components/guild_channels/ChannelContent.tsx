@@ -1,16 +1,16 @@
-// Module ID: 16767
-// Function ID: 16768
+// Module ID: 16769
+// Function ID: 16770
 // Name: ChannelContent
-// Dependencies: [19, 17, 10246, 4818, 21, 4636, 1150, 10249, 5143, 16768, 5176, 8711, 16213, 4632, 2]
+// Dependencies: [19, 17, 10246, 4818, 21, 4636, 1363, 10249, 5143, 16770, 5176, 8711, 16215, 4632, 2]
 // Exports: renderChannelContent
 
-// Module 16767 (ChannelContent)
+// Module 16769 (ChannelContent)
 import isRoleRequiredDefault from "isRoleRequired" /* 5143 */;
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 16768 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 16770 */;
 import noop from "module_19" /* 19 */;
 
-const GuildRoleSubscriptionGatedChannelIconDefault = tmp13(16213);
+const GuildRoleSubscriptionGatedChannelIconDefault = tmp13(16215);
 require = fn;
 function ChannelContentComponent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, lastMessageTimestampString, channel, layout, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
@@ -143,14 +143,14 @@ const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
 let obj4 = { opacity: fn(10246).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

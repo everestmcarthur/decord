@@ -1,17 +1,17 @@
 // Module ID: 7563
 // Function ID: 7564
 // Name: stores/AnalyticsTrackingStore
-// Dependencies: [502, 1074, 1250, 573, 7564, 1242, 7575, 7576, 2]
+// Dependencies: [502, 1074, 1248, 573, 7564, 1240, 7575, 7576, 2]
 
 // Module 7563 (stores/AnalyticsTrackingStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7564 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const AnalyticsUtils = fn(1250);
+const AnalyticsUtils = fn(1248);
 const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {

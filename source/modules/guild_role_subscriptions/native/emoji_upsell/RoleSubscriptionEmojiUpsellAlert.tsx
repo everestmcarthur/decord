@@ -1,14 +1,14 @@
-// Module ID: 10427
-// Function ID: 10428
+// Module ID: 10428
+// Function ID: 10429
 // Name: RoleSubscriptionEmojiUpsellAlert
-// Dependencies: [19, 1979, 1964, 21, 9444, 1114, 1477, 504, 5601, 5075, 10428, 9452, 2]
+// Dependencies: [19, 1979, 1964, 21, 9444, 1114, 1477, 504, 5601, 5075, 10429, 9452, 2]
 // Exports: default
 
-// Module 10427 (RoleSubscriptionEmojiUpsellAlert)
+// Module 10428 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1114 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import _modDef9444 from "module_9444" /* 9444 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10428 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10429 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

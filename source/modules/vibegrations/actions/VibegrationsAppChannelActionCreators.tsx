@@ -1,10 +1,10 @@
-// Module ID: 13385
-// Function ID: 13386
+// Module ID: 13386
+// Function ID: 13387
 // Name: VibegrationsAppChannelActionCreators
 // Dependencies: [7979, 573, 2]
 // Exports: setAppChannelChatOpen
 
-// Module 13385 (VibegrationsAppChannelActionCreators)
+// Module 13386 (VibegrationsAppChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7979 */;
 

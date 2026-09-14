@@ -1,11 +1,11 @@
 // Module ID: 7857
 // Function ID: 7858
 // Name: BackgroundTaskManager
-// Dependencies: [5, 17, 1150, 7858, 7860, 2]
+// Dependencies: [5, 17, 1363, 7858, 7860, 2]
 // Exports: backgroundify, endBackgroundTask
 
 // Module 7857 (BackgroundTaskManager)
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7858 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -27,7 +27,7 @@ function startBackgroundTask(arg0) {
   obj = PlatformUtils2;
 }
 const NativeModules = fn(17).NativeModules;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = -1;
 if (!PlatformUtils.isAndroid()) {
   num = NativeModules.DCDBackgroundTaskManager.backgroundTaskIdentifierInvalid;

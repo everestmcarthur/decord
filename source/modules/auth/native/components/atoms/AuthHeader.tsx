@@ -1,12 +1,12 @@
 // Module ID: 7075
 // Function ID: 7076
 // Name: AuthHeader
-// Dependencies: [19, 1074, 21, 4636, 5605, 576, 1178, 2]
+// Dependencies: [19, 1074, 21, 4636, 5605, 576, 1176, 2]
 // Exports: default
 
 // Module 7075 (AuthHeader)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5605 */;
 

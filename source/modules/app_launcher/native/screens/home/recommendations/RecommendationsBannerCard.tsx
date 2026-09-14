@@ -1,10 +1,10 @@
-// Module ID: 12220
-// Function ID: 12221
+// Module ID: 12221
+// Function ID: 12222
 // Name: RecommendationsBannerCard
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 9418, 8304, 1396, 12212, 5204, 12221, 1894, 12215, 4632, 1114, 12185, 5693, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 9418, 8304, 1396, 12213, 5204, 12222, 1894, 12216, 4632, 1114, 12186, 5693, 2]
 // Exports: default
 
-// Module 12220 (RecommendationsBannerCard)
+// Module 12221 (RecommendationsBannerCard)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
@@ -65,7 +65,7 @@ export default function RecommendationsBannerCard(application) {
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(12212).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(12213).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;
@@ -85,7 +85,7 @@ export default function RecommendationsBannerCard(application) {
     obj7.onPress = onPress;
     const obj9 = { style: tmp.banner, children: null };
     const obj10 = { applicationBot: application.bot, applicationEmbedded: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
-    const tmp10Result = tmp10(12221);
+    const tmp10Result = tmp10(12222);
     obj10.applicationEmbedded = tmp4(9418).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj10.applicationIcon = icon;
@@ -94,7 +94,7 @@ export default function RecommendationsBannerCard(application) {
     if (showsPromoted) {
       const obj11 = { style: tmp.notifsContainer, children: null };
       const obj12 = { labelType: shelfBadgeTypeIfActive, replacementStyles: tmp.badge };
-      const items3 = [tmp14(tmp10(12215), obj12), ];
+      const items3 = [tmp14(tmp10(12216), obj12), ];
       if (showsPromoted) {
         const obj13 = { style: tmp.promotedLabelWrapper, children: null };
         const obj14 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
@@ -116,7 +116,7 @@ export default function RecommendationsBannerCard(application) {
     let tmp14Result = null != applicationIconSource;
     if (tmp14Result) {
       const obj16 = { iconSource: applicationIconSource, iconSize: 36, wrapperStyle: tmp.appIconContainer };
-      tmp14Result = tmp14(tmp10(12185), obj16);
+      tmp14Result = tmp14(tmp10(12186), obj16);
     }
     const items5 = [tmp14Result, , ];
     const obj17 = { style: tmp.appDetails, children: null };

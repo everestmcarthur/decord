@@ -1,13 +1,13 @@
-// Module ID: 11381
-// Function ID: 11382
+// Module ID: 11382
+// Function ID: 11383
 // Name: ForumPostTagsActionSheet
-// Dependencies: [32, 19, 17, 7376, 21, 4636, 1114, 7378, 7300, 7252, 11382, 5056, 8002, 4603, 2]
+// Dependencies: [32, 19, 17, 7376, 21, 4636, 1114, 7378, 7300, 7252, 11383, 5056, 8002, 4603, 2]
 // Exports: default
 
-// Module 11381 (ForumPostTagsActionSheet)
+// Module 11382 (ForumPostTagsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 8002 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 11382 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 11383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,14 +1,14 @@
-// Module ID: 1229
-// Function ID: 1230
+// Module ID: 1227
+// Function ID: 1228
 // Name: ClientThemesUtils
-// Dependencies: [1230, 1186, 1085, 4488, 575, 2]
+// Dependencies: [1228, 1184, 1085, 4488, 575, 2]
 // Exports: areThemesEqualForGradientThemes, getBaseTheme, getCustomThemeBaseTheme, getLinearGradientForBackgroundGradient, getThemeForColor, getThemeName, hasCustomTheme, resolveThemeWithCustomSettings
 
-// Module 1229 (ClientThemesUtils)
+// Module 1227 (ClientThemesUtils)
 import shims from "shims" /* 575 */;
 import Constants from "Constants" /* 1085 */;
-import ThemeConstants from "ThemeConstants" /* 1186 */;
-import ClientThemesConstants from "ClientThemesConstants" /* 1230 */;
+import ThemeConstants from "ThemeConstants" /* 1184 */;
+import ClientThemesConstants from "ClientThemesConstants" /* 1228 */;
 import shared from "shared" /* 4488 */;
 import size from "module_2" /* 2 */;
 

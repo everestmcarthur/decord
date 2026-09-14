@@ -1,10 +1,10 @@
-// Module ID: 1338
-// Function ID: 1339
+// Module ID: 1336
+// Function ID: 1337
 // Name: getSystemLocale
 // Dependencies: [1115, 2]
 // Exports: getSystemLocale
 
-// Module 1338 (getSystemLocale)
+// Module 1336 (getSystemLocale)
 import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1115 */;
 import size from "module_2" /* 2 */;
 

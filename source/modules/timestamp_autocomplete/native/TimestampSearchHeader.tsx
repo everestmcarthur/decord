@@ -1,10 +1,10 @@
-// Module ID: 12518
-// Function ID: 12519
+// Module ID: 12519
+// Function ID: 12520
 // Name: TimestampSearchHeader
 // Dependencies: [19, 17, 21, 10247, 4636, 576, 4599, 4632, 1114, 8716, 2]
 // Exports: useTimestampSearchHeaderHeight
 
-// Module 12518 (TimestampSearchHeader)
+// Module 12519 (TimestampSearchHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ClockIcon from "ClockIcon" /* 4599 */;

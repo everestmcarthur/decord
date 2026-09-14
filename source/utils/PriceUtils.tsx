@@ -1,12 +1,12 @@
 // Module ID: 7337
 // Function ID: 7338
 // Name: PriceUtils
-// Dependencies: [2025, 4296, 1373, 1085, 1150, 7338, 7340, 7342, 1114, 4294, 2]
+// Dependencies: [2025, 4296, 1373, 1085, 1363, 7338, 7340, 7342, 1114, 4294, 2]
 // Exports: formatDualPriceForBG, formatPercent, formatSubscriptionPlanRate, maybeShortenPrice, shortenAndFormatPrice
 
 // Module 7337 (PriceUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import utils_PriceUtils from "utils/PriceUtils" /* 7338 */;
 import LocaleStore from "LocaleStore" /* 2025 */;

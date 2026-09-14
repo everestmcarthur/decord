@@ -1,10 +1,10 @@
-// Module ID: 12215
-// Function ID: 12216
+// Module ID: 12216
+// Function ID: 12217
 // Name: ActivityShelfBadge
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1178, 1894, 4632, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1176, 1894, 4632, 1114, 2]
 // Exports: default
 
-// Module 12215 (ActivityShelfBadge)
+// Module 12216 (ActivityShelfBadge)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1894 */;
 import noop from "module_19" /* 19 */;
@@ -19,8 +19,8 @@ obj2.badge = rect;
 obj2.newBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 let obj3 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 obj2.updatedBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-const native = fn(1178);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1178).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1176);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1176).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1074).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,18 +1,18 @@
-// Module ID: 14054
-// Function ID: 14055
+// Module ID: 14055
+// Function ID: 14056
 // Name: GuildActionSheetHeader
-// Dependencies: [19, 17, 14055, 1979, 7381, 1074, 21, 4636, 576, 1151, 1114, 8870, 8869, 9015, 8873, 5204, 4335, 1178, 4632, 7046, 504, 1971, 14056, 14057, 1477, 5665, 1396, 1430, 7975, 4338, 5668, 8866, 13403, 2]
+// Dependencies: [19, 17, 14056, 1979, 7381, 1074, 21, 4636, 576, 1364, 1114, 8870, 8869, 9015, 8873, 5204, 4335, 1176, 4632, 7046, 504, 1971, 14057, 14058, 1477, 5665, 1396, 1430, 7975, 4338, 5668, 8866, 13404, 2]
 // Exports: default
 
-// Module 14054 (GuildActionSheetHeader)
+// Module 14055 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 576 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import _modDef8870 from "module_8870" /* 8870 */;
 import _modDef8873 from "module_8873" /* 8873 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14056 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14057 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 14055 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 14056 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7381 */;
 
@@ -39,7 +39,7 @@ function CommunityPill(guildVisibility) {
     },
     children: null
   };
-  const items = [closure_10(GlobeEarthIcon(1178).Icon, { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true }), ];
+  const items = [closure_10(GlobeEarthIcon(1176).Icon, { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true }), ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1114).intl;
   obj3.children = intl3.string(GlobeEarthIcon(1114).t.K7iRig);
@@ -62,7 +62,7 @@ obj2.nameRow = { flexDirection: "row", alignItems: "center", marginTop: 8 };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.communityPill = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: nativeDefault.radii.round };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

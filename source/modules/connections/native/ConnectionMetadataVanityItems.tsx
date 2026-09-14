@@ -1,19 +1,19 @@
-// Module ID: 11704
-// Function ID: 11705
+// Module ID: 11705
+// Function ID: 11706
 // Name: ConnectionMetadataVanityItems
-// Dependencies: [19, 17, 5489, 21, 4636, 576, 1114, 11705, 11706, 12, 1880, 4632, 1178, 5488, 2]
+// Dependencies: [19, 17, 5489, 21, 4636, 576, 1114, 11706, 11707, 12, 1880, 4632, 1176, 5488, 2]
 // Exports: generateBlueskyMetadataItems, generateEbayMetadataItems, generatePaypalMetadataItems, generateRedditMetadataItems, generateRoleConnectionMetadataItems, generateSteamMetadataItems, generateTikTokMetadataItems, generateTwitterMetadataItems
 
-// Module 11704 (ConnectionMetadataVanityItems)
+// Module 11705 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 5488 */;
-import _modDef11705 from "module_11705" /* 11705 */;
 import _modDef11706 from "module_11706" /* 11706 */;
+import _modDef11707 from "module_11707" /* 11707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -196,7 +196,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11705;
+    obj2.imageSrc = _modDef11706;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj2, tmp2.STEAM_ITEM_COUNT_DOTA2));
@@ -206,7 +206,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11706;
+    obj4.imageSrc = _modDef11707;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj4, tmp2.STEAM_ITEM_COUNT_TF2));

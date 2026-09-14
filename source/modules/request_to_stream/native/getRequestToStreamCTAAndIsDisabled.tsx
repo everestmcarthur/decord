@@ -1,15 +1,15 @@
-// Module ID: 13370
-// Function ID: 13371
+// Module ID: 13371
+// Function ID: 13372
 // Name: getRequestToStreamCTAAndIsDisabled
-// Dependencies: [32, 502, 11895, 11, 11883, 1114, 2882, 2]
+// Dependencies: [32, 502, 11896, 11, 11884, 1114, 2882, 2]
 // Exports: default
 
-// Module 13370 (getRequestToStreamCTAAndIsDisabled)
+// Module 13371 (getRequestToStreamCTAAndIsDisabled)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
 import _modDef2882 from "module_2882" /* 2882 */;
-import isInviteActive from "isInviteActive" /* 11883 */;
-import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11895 */;
+import isInviteActive from "isInviteActive" /* 11884 */;
+import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -36,22 +36,22 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
     isDisabled = false;
     text = stringResult;
     if (!tmp3[0]) {
-      if (tmp(11895).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
+      if (tmp(11896).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
         const intl4 = tmp(1114).intl;
         text = intl4.string(tmp6(2882).P0wwmM);
         isDisabled = true;
-      } else if (tmp(11895).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
+      } else if (tmp(11896).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
         const intl3 = tmp(1114).intl;
         text = intl3.string(tmp6(2882)["43zohO"]);
         isDisabled = true;
-      } else if (tmp(11895).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
+      } else if (tmp(11896).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
         const intl2 = tmp(1114).intl;
         text = intl2.string(tmp6(2882).qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
-        if (tmp(11895).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
+        if (tmp(11896).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
           const intl7 = tmp(1114).intl;
           text = intl7.string(tmp6(2882)["fac+eE"]);
           isDisabled = true;

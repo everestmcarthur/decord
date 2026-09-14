@@ -1,10 +1,10 @@
-// Module ID: 12175
-// Function ID: 12176
+// Module ID: 12176
+// Function ID: 12177
 // Name: completeAppLauncherOnboarding
 // Dependencies: [4457, 1943, 2]
 // Exports: default
 
-// Module 12175 (completeAppLauncherOnboarding)
+// Module 12176 (completeAppLauncherOnboarding)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import size from "module_2" /* 2 */;

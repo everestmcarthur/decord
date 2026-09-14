@@ -1,18 +1,18 @@
-// Module ID: 17909
-// Function ID: 17910
+// Module ID: 17910
+// Function ID: 17911
 // Name: InviteSettingsModal
-// Dependencies: [32, 19, 1957, 9951, 1979, 4275, 1074, 21, 4636, 576, 1483, 504, 38, 12, 17910, 9956, 4980, 1114, 5073, 573, 7480, 8716, 17911, 9952, 1250, 5705, 7103, 2]
+// Dependencies: [32, 19, 1957, 9951, 1979, 4275, 1074, 21, 4636, 576, 1483, 504, 38, 12, 17911, 9956, 4980, 1114, 5073, 573, 7480, 8716, 17912, 9952, 1248, 5705, 7103, 2]
 // Exports: default
 
-// Module 17909 (InviteSettingsModal)
+// Module 17910 (InviteSettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import Navigator from "Navigator" /* 7103 */;
 import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9956 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 17910 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 17911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -134,7 +134,7 @@ function AdvancedInstantInviteScreen() {
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(17911), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  obj4.children = jsx(channel(17912), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
   return jsx(navigation(8716).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1074);

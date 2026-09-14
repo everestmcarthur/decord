@@ -1,10 +1,10 @@
-// Module ID: 17114
-// Function ID: 17115
+// Module ID: 17116
+// Function ID: 17117
 // Name: useExternalPipParticipant
 // Dependencies: [32, 19, 4652, 502, 1908, 4659, 4657, 504, 2]
 // Exports: default
 
-// Module 17114 (useExternalPipParticipant)
+// Module 17116 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;

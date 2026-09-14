@@ -1,13 +1,13 @@
-// Module ID: 16067
-// Function ID: 16068
+// Module ID: 16069
+// Function ID: 16070
 // Name: RegisterUsernameInput
-// Dependencies: [109, 32, 19, 16041, 21, 4636, 4373, 14792, 5054, 6711, 576, 4632, 1114, 16059, 6707, 1150, 2]
+// Dependencies: [109, 32, 19, 16043, 21, 4636, 4373, 14793, 5054, 6711, 576, 4632, 1114, 16061, 6707, 1363, 2]
 // Exports: RegisterUsernameInput
 
-// Module 16067 (RegisterUsernameInput)
+// Module 16069 (RegisterUsernameInput)
 import nativeDefault from "native" /* 576 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14792 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16059 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14793 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16061 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ function UsernameStatusMessage(arg0) {
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14792).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(14793).NameValidationState.AVAILABLE) {
         const obj5 = {};
         const merged2 = Object.assign(obj2);
         const merged3 = Object.assign(obj3);
@@ -67,7 +67,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -127,8 +127,8 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const tmp11 = closure_10;
   const tmp12 = closure_11;
   const tmp14 = setUsername;
-  obj3.secureTextEntry = setUsername(1150).isAndroid();
-  const obj4 = setUsername(1150);
+  obj3.secureTextEntry = setUsername(1363).isAndroid();
+  const obj4 = setUsername(1363);
   let str = "default";
   if (obj5.isAndroid()) {
     str = "visible-password";
@@ -143,7 +143,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14792).NameValidationState.ERROR) {
+  if (type === tmp14(14793).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

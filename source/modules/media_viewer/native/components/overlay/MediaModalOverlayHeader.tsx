@@ -1,14 +1,14 @@
-// Module ID: 13095
-// Function ID: 13096
+// Module ID: 13096
+// Function ID: 13097
 // Name: MediaModalOverlayHeader
-// Dependencies: [19, 17, 8482, 21, 4636, 13092, 8452, 11791, 4494, 4373, 4637, 8486, 8487, 1114, 5761, 1178, 576, 4632, 13096, 8789, 1150, 13097, 8795, 2]
+// Dependencies: [19, 17, 8482, 21, 4636, 13093, 8452, 11792, 4494, 4373, 4637, 8486, 8487, 1114, 5761, 1176, 576, 4632, 13097, 8789, 1363, 13098, 8795, 2]
 // Exports: MediaModalOverlayHeader
 
-// Module 13095 (MediaModalOverlayHeader)
+// Module 13096 (MediaModalOverlayHeader)
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8487 */;
-import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 11791 */;
+import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 11792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
   const tmp = closure_8();
-  const headerLayoutAnimation = isModalOpen(13092).useHeaderLayoutAnimation(animationDriver);
-  let obj = isModalOpen(13092);
+  const headerLayoutAnimation = isModalOpen(13093).useHeaderLayoutAnimation(animationDriver);
+  let obj = isModalOpen(13093);
   const mediaShareActions = isModalOpen(8452).useMediaShareActions({ source, disableDownload, shareable });
   const tmp7 = useShouldHideMediaOptionsDefault(channelId);
   const obj2 = isModalOpen(8452);
@@ -74,8 +74,8 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
     const obj13 = { style: tmp.navbarNameInner, children: null };
     let tmp10Result = null != contextIcon;
     if (tmp10Result) {
-      const obj14 = { source: contextIcon, color: tmp6(576).unsafe_rawColors.PRIMARY_345, size: tmp2(1178).Icon.Sizes.CUSTOM, style: tmp.contextIcon };
-      tmp10Result = tmp10(tmp2(1178).Icon, obj14);
+      const obj14 = { source: contextIcon, color: tmp6(576).unsafe_rawColors.PRIMARY_345, size: tmp2(1176).Icon.Sizes.CUSTOM, style: tmp.contextIcon };
+      tmp10Result = tmp10(tmp2(1176).Icon, obj14);
     }
     const items2 = [tmp10Result, ];
     const obj15 = { style: tmp.navbarNameShrinkWrapper, children: null };
@@ -93,7 +93,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   if (!tmp7) {
     const obj17 = { style: tmp.navbarRight, children: null };
     const obj18 = { source };
-    const items4 = [tmp10(tmp6(13096), obj18), ];
+    const items4 = [tmp10(tmp6(13097), obj18), ];
     let tmp10Result4 = null;
     if (!disableMediaOverlayButton) {
       const obj19 = {
@@ -105,7 +105,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
               obj.accessibilityLabel = intl.string(isModalOpen(1114).t.PdRCRg);
               const tmp4 = MediaViewerOverlayButtonDefault;
               if (obj2.isAndroid()) {
-                let tmp2Result = tmp2(tmp5(13097).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+                let tmp2Result = tmp2(tmp5(13098).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
               } else {
                 tmp2Result = tmp2(tmp5(8795).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
               }

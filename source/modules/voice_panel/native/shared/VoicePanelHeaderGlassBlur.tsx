@@ -1,9 +1,9 @@
-// Module ID: 12410
-// Function ID: 12411
+// Module ID: 12411
+// Function ID: 12412
 // Name: VoicePanelHeaderGlassBlur
-// Dependencies: [19, 17, 21, 4636, 1150, 4373, 5055, 4571, 7176, 5045, 4488, 5670, 2]
+// Dependencies: [19, 17, 21, 4636, 1363, 4373, 5055, 4571, 7176, 5045, 4488, 5670, 2]
 
-// Module 12410 (VoicePanelHeaderGlassBlur)
+// Module 12411 (VoicePanelHeaderGlassBlur)
 import useThemeDefault from "useTheme" /* 4571 */;
 import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5045 */;
 import spring from "spring" /* 5055 */;
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth }, stroke: { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" }, strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" }, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 const IS_ANDROID = PlatformUtils.isAndroid();
 const __initData = { code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}" };
 const __initData2 = { code: "function VoicePanelHeaderGlassBlurTsx2(){const{withSpring,shown}=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0)};}" };

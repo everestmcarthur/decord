@@ -1,10 +1,10 @@
-// Module ID: 15135
-// Function ID: 15136
+// Module ID: 15136
+// Function ID: 15137
 // Name: BountiesScrollRecapPage
-// Dependencies: [19, 17, 4628, 21, 576, 4636, 1150, 8935, 15136, 8425, 15137, 7082, 1611, 504, 15138, 4632, 1114, 8962, 5056, 2]
+// Dependencies: [19, 17, 4628, 21, 576, 4636, 1363, 8935, 15137, 8425, 15138, 7082, 1611, 504, 15139, 4632, 1114, 8962, 5056, 2]
 // Exports: BountiesScrollRecapPage
 
-// Module 15135 (BountiesScrollRecapPage)
+// Module 15136 (BountiesScrollRecapPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -14,9 +14,9 @@ import components_Button_Button from "components/Button/Button" /* 5056 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
 import common_Video from "common/Video" /* 8425 */;
 import OrbsIcon from "OrbsIcon" /* 8962 */;
-import _modDef15136 from "module_15136" /* 15136 */;
 import _modDef15137 from "module_15137" /* 15137 */;
 import _modDef15138 from "module_15138" /* 15138 */;
+import _modDef15139 from "module_15139" /* 15139 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -25,12 +25,12 @@ function BountiesRecapOrbsBackground(arg0) {
   ({ style, reducedMotion } = arg0);
   if (obj.isAndroid()) {
     const obj2 = { style, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: null };
-    const obj3 = { url: _modDef15136, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    const obj3 = { url: _modDef15137, style: React3.absoluteFillObject, autoplay: !reducedMotion };
     obj2.children = tmp3(tmp(8935).APNGPlayer, obj3);
     let tmp3Result = tmp3(React4, obj2);
   } else {
     const obj4 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-    const obj5 = { uri: _modDef15137 };
+    const obj5 = { uri: _modDef15138 };
     obj4.source = obj5;
     obj4.style = style;
     obj4.paused = reducedMotion;
@@ -80,7 +80,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   obj3.style = items1;
   const obj4 = { style: React3.absoluteFillObject, pointerEvents: "none", children: null };
   const obj5 = { source: null, style: null, resizeMode: "cover", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-  obj5.source = { uri: _modDef15138 };
+  obj5.source = { uri: _modDef15139 };
   obj5.style = React3.absoluteFillObject;
   obj5.paused = stateFromStores;
   const items2 = [timestampProducer(common_Video.VideoComponent, obj5), timestampProducer(BountiesRecapOrbsBackground, { style: tmp.orbsBackground, reducedMotion: stateFromStores })];
@@ -97,7 +97,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   const obj11 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj12 = { style: tmp.titleRow, children: null };
   const items6 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false }), ];
-  const obj6 = { uri: _modDef15138 };
+  const obj6 = { uri: _modDef15139 };
   const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items6[1] = timestampProducer(Text_Text.Text, { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount });
   obj12.children = items6;

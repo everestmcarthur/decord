@@ -1,10 +1,10 @@
-// Module ID: 14064
-// Function ID: 14065
+// Module ID: 14065
+// Function ID: 14066
 // Name: GuildActionSheetEmojiSection
-// Dependencies: [32, 19, 17, 5540, 1183, 1371, 1074, 21, 4636, 576, 504, 1477, 4338, 4294, 7265, 7285, 4603, 9443, 4488, 14065, 1114, 5204, 1178, 10442, 4604, 4605, 4334, 5668, 7234, 7235, 1396, 2]
+// Dependencies: [32, 19, 17, 5540, 1181, 1371, 1074, 21, 4636, 576, 504, 1477, 4338, 4294, 7265, 7285, 4603, 9443, 4488, 14066, 1114, 5204, 1176, 10443, 4604, 4605, 4334, 5668, 7234, 7235, 1396, 2]
 // Exports: default
 
-// Module 14064 (GuildActionSheetEmojiSection)
+// Module 14065 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -15,7 +15,7 @@ import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;

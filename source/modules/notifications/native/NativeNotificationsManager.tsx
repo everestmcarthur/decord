@@ -1,12 +1,12 @@
-// Module ID: 17921
-// Function ID: 17922
+// Module ID: 17922
+// Function ID: 17923
 // Name: NativeNotificationsManager
-// Dependencies: [5, 17, 7738, 4651, 1074, 3, 17922, 9817, 11, 7221, 1150, 8322, 1242, 2]
+// Dependencies: [5, 17, 7738, 4651, 1074, 3, 17923, 9817, 11, 7221, 1363, 8322, 1240, 2]
 
-// Module 17921 (NativeNotificationsManager)
+// Module 17922 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PushNotificationDefault from "PushNotification" /* 9817 */;
-import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment" /* 17922 */;
+import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment" /* 17923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7738 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
@@ -307,7 +307,7 @@ const prototype = function NativeNotificationsManager() {
                 return rounded;
               }
             };
-            obj14 = applyArgumentsResult(1150);
+            obj14 = applyArgumentsResult(1363);
             let str2 = "cache";
             if (obj8.isIOS()) {
               str2 = "shared";
@@ -358,7 +358,7 @@ const prototype = function NativeNotificationsManager() {
                     applyArgumentsResult = closure_131_6[Symbol.iterator]();
                     const str = closure_131_3.trim();
                   }
-                  obj13 = applyArgumentsResult(1150);
+                  obj13 = applyArgumentsResult(1363);
                 }
               }
             } else if (3 === tmp9) {
@@ -391,7 +391,7 @@ const prototype = function NativeNotificationsManager() {
                   const obj9 = { value, done: true };
                   return obj9;
                 } else {
-                  const obj12 = applyArgumentsResult(1150);
+                  const obj12 = applyArgumentsResult(1363);
                 }
               } else if (arg0 === 1) {
                 logger = 3;

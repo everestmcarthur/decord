@@ -1,10 +1,10 @@
-// Module ID: 15321
-// Function ID: 15322
+// Module ID: 15322
+// Function ID: 15323
 // Name: GuildRoleSubscriptionMemberPreview
-// Dependencies: [19, 17, 1371, 21, 4636, 576, 1114, 504, 4788, 1396, 7290, 5668, 4632, 1091, 1178, 7308, 2]
+// Dependencies: [19, 17, 1371, 21, 4636, 576, 1114, 504, 4788, 1396, 7290, 5668, 4632, 1091, 1176, 7308, 2]
 // Exports: GuildRoleSubscriptionMemberPreview
 
-// Module 15321 (GuildRoleSubscriptionMemberPreview)
+// Module 15322 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
@@ -66,7 +66,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     let tmp12Result = null;
     if (null != roleIconData) {
       const obj8 = { children: null };
-      const items4 = [tmp14(tmp4(1178).Spacer, { size: 4 }), ];
+      const items4 = [tmp14(tmp4(1176).Spacer, { size: 4 }), ];
       const obj9 = { name: role.name, src: null, unicodeEmoji: null, size: 16 };
       ({ customIconSrc: obj13.src, unicodeEmoji: obj13.unicodeEmoji } = roleIconData);
       items4[1] = tmp14(tmp6(7308), obj9);
@@ -74,7 +74,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       tmp12Result = tmp12(React5, obj8);
     }
     items3[1] = tmp12Result;
-    items3[2] = timestampProducer(tmp4(1178).Spacer, { size: 8 });
+    items3[2] = timestampProducer(tmp4(1176).Spacer, { size: 8 });
     items3[3] = timestampProducer(tmp4(4632).Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
     obj5.children = items3;
     const items5 = [React6(View, obj5), ];

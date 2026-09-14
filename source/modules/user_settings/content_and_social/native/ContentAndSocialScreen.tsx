@@ -1,17 +1,17 @@
-// Module ID: 15958
-// Function ID: 15959
+// Module ID: 15960
+// Function ID: 15961
 // Name: ContentAndSocialScreen
-// Dependencies: [32, 19, 17, 8079, 1074, 21, 4636, 576, 1114, 2024, 15959, 14905, 12809, 15962, 7404, 11601, 14903, 14775, 15963, 4632, 2]
+// Dependencies: [32, 19, 17, 8079, 1074, 21, 4636, 576, 1114, 2024, 15961, 14906, 12810, 15964, 7404, 11602, 14904, 14776, 15965, 4632, 2]
 // Exports: ConnectedGamesPage, DiscordPermissionsPage, default
 
-// Module 15958 (ContentAndSocialScreen)
+// Module 15960 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15963 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -120,7 +120,7 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     let tmp9 = items6;
     if (!allServersOptionSelected) {
       const items11 = [];
-      HermesBuiltin.arraySpread(tmp2(15959).GUILD_SPECIFIC_SETTINGS, HermesBuiltin.arraySpread(items6, 0));
+      HermesBuiltin.arraySpread(tmp2(15961).GUILD_SPECIFIC_SETTINGS, HermesBuiltin.arraySpread(items6, 0));
       tmp9 = items11;
       const arraySpreadResult = HermesBuiltin.arraySpread(items6, 0);
     }
@@ -128,7 +128,7 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     let tmp15;
     if (tmp7) {
       if (tmp8) {
-        tmp15 = React7(tmp2(14905).MessageRequestsNotice, {});
+        tmp15 = React7(tmp2(14906).MessageRequestsNotice, {});
       }
     }
     obj14.subLabel = tmp15;
@@ -215,7 +215,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     const tmp2Result = tmp2(2024);
   } else {
     let obj = { node: tmp5 };
-    tmp7 = React7(tmp2(14775), obj);
+    tmp7 = React7(tmp2(14776), obj);
   }
   return tmp7;
 };

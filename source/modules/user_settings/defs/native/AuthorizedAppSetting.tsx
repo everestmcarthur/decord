@@ -1,12 +1,12 @@
-// Module ID: 15028
-// Function ID: 15029
+// Module ID: 15029
+// Function ID: 15030
 // Name: AuthorizedAppSetting
-// Dependencies: [8079, 1074, 11601, 15029, 2]
+// Dependencies: [8079, 1074, 11602, 15030, 2]
 
-// Module 15028 (AuthorizedAppSetting)
+// Module 15029 (AuthorizedAppSetting)
 import Constants from "Constants" /* 1074 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

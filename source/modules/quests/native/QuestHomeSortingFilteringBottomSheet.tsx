@@ -1,10 +1,10 @@
-// Module ID: 15087
-// Function ID: 15088
+// Module ID: 15088
+// Function ID: 15089
 // Name: QuestHomeSortingFilteringBottomSheet
-// Dependencies: [32, 19, 17, 5525, 21, 4636, 576, 7226, 5514, 5056, 1114, 5043, 4488, 4603, 11616, 7253, 7252, 6728, 5054, 5766, 5769, 5768, 5685, 11428, 2]
+// Dependencies: [32, 19, 17, 5525, 21, 4636, 576, 7226, 5514, 5056, 1114, 5043, 4488, 4603, 11617, 7253, 7252, 6728, 5054, 5766, 5769, 5768, 5685, 11429, 2]
 // Exports: default
 
-// Module 15087 (QuestHomeSortingFilteringBottomSheet)
+// Module 15088 (QuestHomeSortingFilteringBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4488 */;
@@ -147,7 +147,7 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(11428).getFilterTypeText(item.filter),
+          label: onSortMethodChange(11429).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },

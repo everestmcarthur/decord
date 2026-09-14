@@ -1,9 +1,9 @@
-// Module ID: 11232
-// Function ID: 11233
+// Module ID: 11233
+// Function ID: 11234
 // Name: BalanceCounter
-// Dependencies: [32, 19, 21, 4373, 4357, 5055, 11233, 4632, 2]
+// Dependencies: [32, 19, 21, 4373, 4357, 5055, 11234, 4632, 2]
 
-// Module 11232 (BalanceCounter)
+// Module 11233 (BalanceCounter)
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4357 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;

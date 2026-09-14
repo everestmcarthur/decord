@@ -1,9 +1,9 @@
 // Module ID: 4895
 // Function ID: 4896
-// Dependencies: [1316, 1444]
+// Dependencies: [1314, 1444]
 
 // Module 4895
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 import _mod1444 from "module_1444" /* 1444 */;
 
 let closure_0 = callBoundIntrinsic("String.prototype.valueOf");

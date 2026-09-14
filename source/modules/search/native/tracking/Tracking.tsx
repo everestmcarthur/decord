@@ -1,16 +1,16 @@
-// Module ID: 12487
-// Function ID: 12488
+// Module ID: 12488
+// Function ID: 12489
 // Name: search/tracking/Tracking
-// Dependencies: [1957, 12468, 7981, 1074, 12488, 12469, 4816, 1256, 1935, 2]
+// Dependencies: [1957, 12469, 7981, 1074, 12489, 12470, 4816, 1254, 1935, 2]
 
-// Module 12487 (search/tracking/Tracking)
-import v1 from "v1" /* 1256 */;
+// Module 12488 (search/tracking/Tracking)
+import v1 from "v1" /* 1254 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12488 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12489 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 let closure_5 = fn(7981).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;

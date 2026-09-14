@@ -1,18 +1,18 @@
-// Module ID: 12442
-// Function ID: 12443
+// Module ID: 12443
+// Function ID: 12444
 // Name: GuildDirectoryMoreMenu
-// Dependencies: [19, 21, 12436, 12443, 4981, 1114, 12445, 1178, 8752, 10378, 4594, 8787, 8789, 8202, 8795, 576, 2]
+// Dependencies: [19, 21, 12437, 12444, 4981, 1114, 12446, 1176, 8752, 10379, 4594, 8787, 8789, 8202, 8795, 576, 2]
 // Exports: default
 
-// Module 12442 (GuildDirectoryMoreMenu)
+// Module 12443 (GuildDirectoryMoreMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import ReportModals from "ReportModals" /* 8752 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12436 */;
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12443 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12445 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12437 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12444 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1114).intl;
     obj.label = intl.string(entry(1114).t.XnuOvN);
-    obj.IconComponent = entry(10378).PencilIcon;
+    obj.IconComponent = entry(10379).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };

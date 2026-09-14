@@ -1,16 +1,16 @@
-// Module ID: 14555
-// Function ID: 14556
+// Module ID: 14556
+// Function ID: 14557
 // Name: application
-// Dependencies: [4864, 4541, 1074, 9687, 9689, 14556, 8981, 9684, 9648, 1242, 1272, 8979, 2]
+// Dependencies: [4864, 4541, 1074, 9687, 9689, 14557, 8981, 9684, 9648, 1240, 1270, 8979, 2]
 
-// Module 14555 (application)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 14556 (application)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import TestModeUtils from "TestModeUtils" /* 8979 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8981 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;
 import RPCHelpers from "RPCHelpers" /* 9689 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14556 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14557 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export default {
         const obj5 = {};
         const merged = Object.assign(obj4);
         const merged1 = Object.assign(event_properties);
-        tmp5(1242).track(args.event_name, obj5);
+        tmp5(1240).track(args.event_name, obj5);
       } else {
         const obj6 = { errorCode: constants2.INVALID_COMMAND };
         const tmp12 = new tmp5(9684)(obj6, "This application cannot access this API");

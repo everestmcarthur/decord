@@ -1,7 +1,7 @@
 // Module ID: 7778
 // Function ID: 7779
 // Name: ArtProfileAnalytics
-// Dependencies: [32, 5, 1074, 7776, 1952, 1242, 2]
+// Dependencies: [32, 5, 1074, 7776, 1952, 1240, 2]
 // Exports: trackAndroidArtProfileSnapshot
 
 // Module 7778 (ArtProfileAnalytics)

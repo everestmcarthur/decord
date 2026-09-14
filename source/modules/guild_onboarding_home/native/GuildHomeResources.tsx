@@ -1,16 +1,16 @@
-// Module ID: 16666
-// Function ID: 16667
+// Module ID: 16668
+// Function ID: 16669
 // Name: GuildHomeResources
-// Dependencies: [19, 17, 1957, 2012, 4857, 4275, 1074, 21, 4636, 576, 504, 8001, 12138, 16667, 7559, 12413, 1396, 5204, 4632, 4626, 16660, 1100, 1114, 16668, 5056, 2]
+// Dependencies: [19, 17, 1957, 2012, 4857, 4275, 1074, 21, 4636, 576, 504, 8001, 12139, 16669, 7559, 12414, 1396, 5204, 4632, 4626, 16662, 1100, 1114, 16670, 5056, 2]
 // Exports: default
 
-// Module 16666 (GuildHomeResources)
+// Module 16668 (GuildHomeResources)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12413 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16660 */;
-import _modDef16668 from "module_16668" /* 16668 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12414 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16662 */;
+import _modDef16670 from "module_16670" /* 16670 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
@@ -45,8 +45,8 @@ function ResourceChannelRow(channelId) {
     first = forumPostMediaProperties[0];
   }
   const obj6 = channelId(8001);
-  let flag = channelId(12138).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16667)(firstResult);
+  let flag = channelId(12139).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(16669)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -125,7 +125,7 @@ function ResourceChannelRow(channelId) {
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = tmp19(tmp2(12138).ForumPostMediaThumbnail, obj17);
+              tmp19Result6 = tmp19(tmp2(12139).ForumPostMediaThumbnail, obj17);
               const tmp2Result2 = tmp2(8001);
             }
           }
@@ -160,7 +160,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1114).intl;
     obj3.children = intl.string(guildId(1114).t.owvC9U);
     const items = [closure_12(guildId(4632).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16668 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16670 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {

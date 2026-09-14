@@ -1,7 +1,7 @@
 // Module ID: 9364
 // Function ID: 9365
 // Name: useOAuth2AuthorizeForm
-// Dependencies: [5, 32, 19, 17, 4290, 4628, 1918, 5362, 1371, 9365, 1074, 21, 4636, 4280, 504, 5043, 4373, 4637, 7266, 9366, 9367, 1086, 9368, 1272, 1256, 9369, 9371, 9373, 9374, 7273, 1232, 9375, 9376, 4816, 9377, 5053, 9378, 5056, 1114, 5658, 5364, 9380, 9414, 8457, 9372, 9550, 9554, 9553, 9555, 9557, 9558, 9560, 9567, 7233, 2]
+// Dependencies: [5, 32, 19, 17, 4290, 4628, 1918, 5362, 1371, 9365, 1074, 21, 4636, 4280, 504, 5043, 4373, 4637, 7266, 9366, 9367, 1086, 9368, 1270, 1254, 9369, 9371, 9373, 9374, 7273, 1230, 9375, 9376, 4816, 9377, 5053, 9378, 5056, 1114, 5658, 5364, 9380, 9414, 8457, 9372, 9550, 9554, 9553, 9555, 9557, 9558, 9560, 9567, 7233, 2]
 // Exports: default
 
 // Module 9364 (useOAuth2AuthorizeForm)
@@ -769,7 +769,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
         return tmp;
       }).catch((error) => {
-        responseType(1232).captureException(error);
+        responseType(1230).captureException(error);
       });
       const nextPromise4 = result.then(() => responseType(9368).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;

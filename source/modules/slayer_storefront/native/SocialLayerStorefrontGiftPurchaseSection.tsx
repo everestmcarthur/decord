@@ -1,15 +1,15 @@
-// Module ID: 11137
-// Function ID: 11138
+// Module ID: 11138
+// Function ID: 11139
 // Name: SocialLayerStorefrontGiftPurchaseSection
-// Dependencies: [32, 19, 17, 7527, 1371, 1074, 1373, 21, 4636, 576, 7084, 7271, 504, 1242, 11138, 10942, 1150, 573, 10925, 1114, 10948, 4632, 5056, 2]
+// Dependencies: [32, 19, 17, 7527, 1371, 1074, 1373, 21, 4636, 576, 7084, 7271, 504, 1240, 11139, 10943, 1363, 573, 10926, 1114, 10949, 4632, 5056, 2]
 // Exports: default
 
-// Module 11137 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 11138 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10925 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;

@@ -1,9 +1,9 @@
-// Module ID: 12776
-// Function ID: 12777
+// Module ID: 12777
+// Function ID: 12778
 // Name: VoiceMessageChat
-// Dependencies: [32, 19, 17, 4628, 12089, 12090, 21, 4373, 4636, 576, 1150, 5055, 4637, 4338, 5249, 4632, 2]
+// Dependencies: [32, 19, 17, 4628, 12090, 12091, 21, 4373, 4636, 576, 1363, 5055, 4637, 4338, 5249, 4632, 2]
 
-// Module 12776 (VoiceMessageChat)
+// Module 12777 (VoiceMessageChat)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -187,8 +187,8 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(12089).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12090);
+let useVoiceMessagesUIStore = fn(12090).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12091);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -203,11 +203,11 @@ let obj2 = { height: "100%", flexDirection: "row", alignItems: "center", padding
 obj.waveformBar = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 obj.durationContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 PlatformUtils = PlatformUtils.isAndroid();
 const mobile = nativeDefault.modules.mobile;
 let obj6 = { lineHeight: PlatformUtils ? mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS, textAlignVertical: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

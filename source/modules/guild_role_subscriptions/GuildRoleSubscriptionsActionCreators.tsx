@@ -1,7 +1,7 @@
 // Module ID: 7358
 // Function ID: 7359
 // Name: GuildRoleSubscriptionsActionCreators
-// Dependencies: [32, 5, 1074, 7359, 573, 4960, 7360, 1242, 4816, 4665, 1090, 2]
+// Dependencies: [32, 5, 1074, 7359, 573, 4960, 7360, 1240, 4816, 4665, 1090, 2]
 // Exports: archiveSubscriptionListing, createSubscriptionGroupListing, createSubscriptionListing, deleteSubscriptionGroupListing, deleteSubscriptionListing, fetchAllSubscriptionListingsDataForGuild, fetchMonetizationRestrictions, fetchSubscriptionListingForPlan, fetchSubscriptionsSettings, updateSubscriptionGroupListing, updateSubscriptionListing, updateSubscriptionTrial, updateSubscriptionsSettings
 
 // Module 7358 (GuildRoleSubscriptionsActionCreators)

@@ -1,15 +1,15 @@
-// Module ID: 1181
-// Function ID: 1182
+// Module ID: 1179
+// Function ID: 1180
 // Name: Button/Button
-// Dependencies: [19, 17, 1074, 1182, 21, 4636, 576, 4486, 5522, 1150, 12789, 8735, 4488, 5767, 5056, 2]
+// Dependencies: [19, 17, 1074, 1180, 21, 4636, 576, 4486, 5522, 1363, 12790, 8735, 4488, 5767, 5056, 2]
 // Exports: getRedesignSize, getRedesignVariant
 
-// Module 1181 (Button/Button)
+// Module 1179 (Button/Button)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import shared from "shared" /* 4488 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8735 */;
-import StylesheetUtils from "StylesheetUtils" /* 12789 */;
+import StylesheetUtils from "StylesheetUtils" /* 12790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -369,7 +369,7 @@ class Button {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getThemedRippleConfig = fn(1182).getThemedRippleConfig;
+const getThemedRippleConfig = fn(1180).getThemedRippleConfig;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);

@@ -1,9 +1,9 @@
-// Module ID: 14176
-// Function ID: 14177
+// Module ID: 14177
+// Function ID: 14178
 // Name: Ellipsis
 // Dependencies: [19, 17, 4628, 21, 4636, 576, 4373, 4637, 504, 2]
 
-// Module 14176 (Ellipsis)
+// Module 14177 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;

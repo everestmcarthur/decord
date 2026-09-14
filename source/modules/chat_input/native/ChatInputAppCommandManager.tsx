@@ -1,13 +1,13 @@
-// Module ID: 12534
-// Function ID: 12535
+// Module ID: 12535
+// Function ID: 12536
 // Name: ChatInputAppCommandManager
-// Dependencies: [32, 19, 7881, 7882, 1916, 5189, 1371, 5081, 4636, 576, 12121, 12, 7412, 504, 5192, 12122, 12120, 9546, 1894, 12535, 2]
+// Dependencies: [32, 19, 7881, 7882, 1916, 5189, 1371, 5081, 4636, 576, 12122, 12, 7412, 504, 5192, 12123, 12121, 9546, 1894, 12536, 2]
 
-// Module 12534 (ChatInputAppCommandManager)
+// Module 12535 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 576 */;
 import useGameProfileObscured from "useGameProfileObscured" /* 5192 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12120 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12535 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12121 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12536 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7881 */;

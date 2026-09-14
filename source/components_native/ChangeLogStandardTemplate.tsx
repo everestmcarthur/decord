@@ -1,13 +1,13 @@
 // Module ID: 8196
 // Function ID: 8197
 // Name: ChangeLogStandardTemplate
-// Dependencies: [19, 17, 2025, 1074, 21, 4636, 576, 1178, 563, 8197, 1242, 4331, 4333, 8199, 4626, 7226, 8202, 8204, 1114, 4258, 8206, 8208, 2]
+// Dependencies: [19, 17, 2025, 1074, 21, 4636, 576, 1176, 563, 8197, 1240, 4331, 4333, 8199, 4626, 7226, 8202, 8204, 1114, 4258, 8206, 8208, 2]
 // Exports: changelogRules, getRenderChangelog
 
 // Module 8196 (ChangeLogStandardTemplate)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import getLocalizedLinkDefault from "getLocalizedLink" /* 4258 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import _mod4333 from "module_4333" /* 4333 */;
@@ -66,7 +66,7 @@ function LinkInner(target) {
   const stateFromStores = target(563).useStateFromStores(items, () => locale.locale);
   let obj = target(563);
   const changelog = target(8197).useChangelog(changelogId, stateFromStores).changelog;
-  return closure_10(target(1178).LegacyText, {
+  return closure_10(target(1176).LegacyText, {
     accessibilityRole: "link",
     style: className,
     onPress() {

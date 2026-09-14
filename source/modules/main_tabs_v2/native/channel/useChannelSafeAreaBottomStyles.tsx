@@ -1,10 +1,10 @@
-// Module ID: 11490
-// Function ID: 11491
+// Module ID: 11491
+// Function ID: 11492
 // Name: useChannelSafeAreaBottomStyles
-// Dependencies: [19, 5358, 4276, 1957, 1908, 4659, 1074, 1964, 4636, 576, 11491, 5088, 4504, 563, 1609, 1150, 4338, 7975, 2]
+// Dependencies: [19, 5358, 4276, 1957, 1908, 4659, 1074, 1964, 4636, 576, 11492, 5088, 4504, 563, 1609, 1363, 4338, 7975, 2]
 // Exports: default
 
-// Module 11490 (useChannelSafeAreaBottomStyles)
+// Module 11491 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 576 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import noop from "module_19" /* 19 */;
@@ -62,19 +62,19 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
                 if (tmp10Result.isAndroid()) {
                   let VOICE = constants.EXPRESSION_PICKER;
                 }
-                tmp10Result = tmp10(1150);
+                tmp10Result = tmp10(1363);
               }
               if (noop === KeyboardTypes.KeyboardTypes.MEDIA) {
                 if (tmp10Result3.isAndroid()) {
                   VOICE = constants.MEDIA;
                 }
-                tmp10Result3 = tmp10(1150);
+                tmp10Result3 = tmp10(1363);
               }
               if (noop === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
                 if (tmp10Result4.isAndroid()) {
                   VOICE = constants.APPS;
                 }
-                tmp10Result4 = tmp10(1150);
+                tmp10Result4 = tmp10(1363);
               }
               let isDirectoryResult;
               if (channel != null) {

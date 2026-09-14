@@ -1,7 +1,7 @@
 // Module ID: 4301
 // Function ID: 4302
 // Name: SubscriptionRecord
-// Dependencies: [1386, 4302, 4303, 1074, 4305, 1373, 4306, 38, 1150, 4307, 1885, 2]
+// Dependencies: [1386, 4302, 4303, 1074, 4305, 1373, 4306, 38, 1363, 4307, 1885, 2]
 
 // Module 4301 (SubscriptionRecord)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;

@@ -1,22 +1,22 @@
-// Module ID: 12694
-// Function ID: 12695
+// Module ID: 12695
+// Function ID: 12696
 // Name: GuildPowerupsLevelCard
-// Dependencies: [19, 17, 4526, 1074, 12695, 21, 4636, 576, 5068, 9505, 7083, 12677, 12656, 4632, 1114, 2428, 12628, 12648, 12696, 12697, 12653, 2]
+// Dependencies: [19, 17, 4526, 1074, 12696, 21, 4636, 576, 5068, 9505, 7083, 12678, 12657, 4632, 1114, 2428, 12629, 12649, 12697, 12698, 12654, 2]
 // Exports: default
 
-// Module 12694 (GuildPowerupsLevelCard)
+// Module 12695 (GuildPowerupsLevelCard)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
 import BoostGemIcon from "BoostGemIcon" /* 9505 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12628 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12648 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12653 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12696 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12629 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12649 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12654 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12697 */;
 import noop from "module_19" /* 19 */;
 
-const GuildPowerupsCardDefault = tmp5(12697);
+const GuildPowerupsCardDefault = tmp5(12698);
 require = fn;
 function GuildLevelPowerupHeader(arg0) {
   ({ active, nextActive, position } = arg0);
@@ -146,7 +146,7 @@ const GuildPowerupsConstants = fn(4526);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(12695).TIER_CARDS;
+const TIER_CARDS = fn(12696).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4636);

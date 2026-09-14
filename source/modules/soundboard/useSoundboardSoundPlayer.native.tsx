@@ -1,10 +1,10 @@
-// Module ID: 17180
-// Function ID: 17181
+// Module ID: 17182
+// Function ID: 17183
 // Name: useSoundboardSoundPlayer
-// Dependencies: [19, 5093, 9220, 1935, 17181, 504, 7447, 2]
+// Dependencies: [19, 5093, 9220, 1935, 17183, 504, 7447, 2]
 // Exports: default
 
-// Module 17180 (useSoundboardSoundPlayer)
+// Module 17182 (useSoundboardSoundPlayer)
 import SoundboardUtils from "SoundboardUtils" /* 7447 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;

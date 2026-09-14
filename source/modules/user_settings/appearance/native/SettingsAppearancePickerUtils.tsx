@@ -1,14 +1,14 @@
-// Module ID: 15384
-// Function ID: 15385
+// Module ID: 15385
+// Function ID: 15386
 // Name: SettingsAppearancePickerUtils
-// Dependencies: [19, 1085, 4568, 1231, 4487, 4486, 576, 1220, 4338, 1114, 2]
+// Dependencies: [19, 1085, 4568, 1229, 4487, 4486, 576, 1218, 4338, 1114, 2]
 // Exports: convertThemesToAnimatedThemes, useLaunchWelcomeSystemTheme
 
-// Module 15384 (SettingsAppearancePickerUtils)
+// Module 15385 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1218 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1229 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import utils_ColorDefault from "utils/Color" /* 4487 */;
 import MobileThemesUtils from "MobileThemesUtils" /* 4568 */;
@@ -27,10 +27,10 @@ function getMaxColors() {
     if (ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let _Math3 = Math;
       num = Math.max(1, num);
-    } else if (tmp5(1231).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
+    } else if (tmp5(1229).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
       let _Math2 = Math;
       num = Math.max(tmp3.colors.length, num);
-    } else if (tmp5(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
+    } else if (tmp5(1229).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
       let _Math = Math;
       num = Math.max(tmp3.customThemeSettings.colors.length, num);
     }
@@ -201,9 +201,9 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
     let tmp6 = require;
     if (ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let arr = items1.push(convertStandardThemeToAnimatedTheme(tmp5, items, BACKGROUND_SURFACE_HIGH));
-    } else if (tmp6(1231).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
+    } else if (tmp6(1229).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
       let arr2 = items1.push(convertBackgroundGradientToAnimatedTheme(tmp5, num, num2));
-    } else if (tmp6(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
+    } else if (tmp6(1229).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
       let arr5 = items1.push(convertCustomBackgroundGradientToAnimatedTheme(tmp5, num, num2));
     }
     continue;

@@ -1,10 +1,10 @@
-// Module ID: 17075
-// Function ID: 17076
+// Module ID: 17077
+// Function ID: 17078
 // Name: LaunchPadContainer
-// Dependencies: [19, 17, 11597, 21, 4636, 11598, 17076, 17078, 12162, 4373, 5055, 4500, 16103, 6756, 17079, 2]
+// Dependencies: [19, 17, 11598, 21, 4636, 11599, 17078, 17080, 12163, 4373, 5055, 4500, 16105, 6756, 17081, 2]
 // Exports: default
 
-// Module 17075 (LaunchPadContainer)
+// Module 17077 (LaunchPadContainer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11597);
+const LaunchPadConstants = fn(11598);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -36,15 +36,15 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadCon
 export default function LaunchPadContainer(children) {
   updaters = undefined;
   const tmp = closure_8();
-  const tmp4 = updaters(11598)();
-  const tmp5 = updaters(17076)();
+  const tmp4 = updaters(11599)();
+  const tmp5 = updaters(17078)();
   const launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(17078)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
-  const tmp7 = updaters(12162)();
+  ({ gesture, gestureRef } = updaters(17080)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
+  const tmp7 = updaters(12163)();
   dependencyMap = tmp7;
   const tmp2 = updaters;
-  const tmp6 = updaters(17078)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters });
+  const tmp6 = updaters(17080)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters });
   const fn = function o() {
     return closure_2.get().height;
   };
@@ -94,11 +94,11 @@ export default function LaunchPadContainer(children) {
   let items1 = [closure_6(updaters(4373).View, obj7), ];
   if (tmp4 !== constants.DISABLED) {
     const obj8 = { launchPadType: tmp4, gestureState, launchPadShown, launchPadSharedState, launchPadPullTabState, updaters };
-    const tmp10Result = tmp10(tmp2(17079), obj8);
+    const tmp10Result = tmp10(tmp2(17081), obj8);
   }
   items1[1] = tmp10Result;
   obj6.children = items1;
   obj5.children = closure_7(closure_3, obj6);
   obj4.children = closure_6(launchPadSharedState(6756).GestureDetector, obj5);
-  return closure_6(updaters(16103).Provider, obj4);
+  return closure_6(updaters(16105).Provider, obj4);
 };

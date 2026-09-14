@@ -1,10 +1,10 @@
-// Module ID: 11126
-// Function ID: 11127
+// Module ID: 11127
+// Function ID: 11128
 // Name: NoResults
 // Dependencies: [19, 17, 21, 4636, 4632, 2]
 // Exports: default
 
-// Module 11126 (NoResults)
+// Module 11127 (NoResults)
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 

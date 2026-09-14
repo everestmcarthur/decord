@@ -1,10 +1,10 @@
-// Module ID: 15158
-// Function ID: 15159
+// Module ID: 15159
+// Function ID: 15160
 // Name: usePurchasedProductsSort
 // Dependencies: [19, 7660, 1889, 7656, 563, 2]
 // Exports: usePurchasedProductsSort
 
-// Module 15158 (usePurchasedProductsSort)
+// Module 15159 (usePurchasedProductsSort)
 import _mod19 from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 import size from "module_2" /* 2 */;

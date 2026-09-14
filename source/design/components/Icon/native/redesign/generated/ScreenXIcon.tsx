@@ -1,10 +1,10 @@
-// Module ID: 17304
-// Function ID: 17305
+// Module ID: 17306
+// Function ID: 17307
 // Name: ScreenXIcon
 // Dependencies: [19, 21, 576, 4337, 10100, 2]
 // Exports: ScreenXIcon
 
-// Module 17304 (ScreenXIcon)
+// Module 17306 (ScreenXIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
 import _mod10100 from "module_10100" /* 10100 */;

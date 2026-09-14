@@ -1,15 +1,15 @@
-// Module ID: 17703
-// Function ID: 17704
+// Module ID: 17704
+// Function ID: 17705
 // Name: GuildSettingsServerTagBadgeGrid
-// Dependencies: [19, 17, 8048, 21, 576, 4636, 17704, 12608, 5054, 4632, 1114, 17705, 17706, 14002, 7312, 2]
+// Dependencies: [19, 17, 8048, 21, 576, 4636, 17705, 12609, 5054, 4632, 1114, 17706, 17707, 14003, 7312, 2]
 // Exports: default
 
-// Module 17703 (GuildSettingsServerTagBadgeGrid)
+// Module 17704 (GuildSettingsServerTagBadgeGrid)
 import nativeDefault from "native" /* 576 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12608 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17704 */;
-import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 17705 */;
-import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 17706 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12609 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17705 */;
+import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 17706 */;
+import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 17707 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -56,7 +56,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
         children: null
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(14002).GuildBadge, size);
+      obj.children = closure_1_7(guildId(14003).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     })
   });
@@ -71,7 +71,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const substr = lockedBadges.slice(0, 10);
     obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(14002).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(14003).GuildBadge, size, badge.kind);
     });
     const items2 = [tmp8(closure_5, obj5), , ];
     const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };

@@ -1,12 +1,12 @@
 // Module ID: 7244
 // Function ID: 7245
 // Name: FormArrow
-// Dependencies: [19, 17, 21, 4636, 576, 4632, 1178, 7245, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4632, 1176, 7245, 2]
 // Exports: default
 
 // Module 7244 (FormArrow)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _modDef7245 from "module_7245" /* 7245 */;
 import noop from "module_19" /* 19 */;

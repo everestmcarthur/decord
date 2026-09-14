@@ -1,7 +1,7 @@
 // Module ID: 9215
 // Function ID: 9216
 // Name: AudioManagerStore
-// Dependencies: [17, 1074, 4661, 9216, 12, 1232, 504, 573, 2]
+// Dependencies: [17, 1074, 4661, 9216, 12, 1230, 504, 573, 2]
 
 // Module 9215 (AudioManagerStore)
 import _modDef12 from "module_12" /* 12 */;
@@ -78,8 +78,8 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
             const obj3 = { extra: null };
             const obj4 = { deviceString: tmp10 };
             obj3.extra = obj4;
-            tmp4(1232).captureMessage("AudioManagerStore received a string for an android audio device", obj3);
-            const tmp4Result3 = tmp4(1232);
+            tmp4(1230).captureMessage("AudioManagerStore received a string for an android audio device", obj3);
+            const tmp4Result3 = tmp4(1230);
           } else {
             tmp4(9216).setActiveAudioDevice(tmp10);
             const tmp4Result4 = tmp4(9216);
@@ -101,8 +101,8 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
         const obj2 = { extra: null };
         const obj3 = { deviceString: device };
         obj2.extra = obj3;
-        tmp(1232).captureMessage("AudioManagerStore received a string for an android audio device", obj2);
-        const tmpResult = tmp(1232);
+        tmp(1230).captureMessage("AudioManagerStore received a string for an android audio device", obj2);
+        const tmpResult = tmp(1230);
       } else {
         tmp(9216).setActiveAudioDevice(device);
         const tmpResult2 = tmp(9216);

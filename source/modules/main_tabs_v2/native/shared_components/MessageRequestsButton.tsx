@@ -1,14 +1,14 @@
-// Module ID: 16123
-// Function ID: 16124
+// Module ID: 16125
+// Function ID: 16126
 // Name: MessageRequestsButton
-// Dependencies: [19, 17, 7322, 7323, 21, 4636, 504, 16124, 5056, 1114, 8202, 13383, 10013, 2]
+// Dependencies: [19, 17, 7322, 7323, 21, 4636, 504, 16126, 5056, 1114, 8202, 13384, 10013, 2]
 // Exports: default
 
-// Module 16123 (MessageRequestsButton)
+// Module 16125 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import _modDef10013 from "module_10013" /* 10013 */;
-import IconActionButtonDefault from "IconActionButton" /* 13383 */;
-import _mod16124 from "module_16124" /* 16124 */;
+import IconActionButtonDefault from "IconActionButton" /* 13384 */;
+import _mod16126 from "module_16126" /* 16126 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 7322 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7323 */;
@@ -31,7 +31,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16124.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16126.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -77,7 +77,7 @@ export default function MessageRequestsButton(alternateVariant) {
       const merged2 = Object.assign(merged);
       tmp21 = React5(tmp3(8202).IconButton, obj5);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13383).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(tmp3(13384).ButtonBadge, { badgePosition: "right" })];
     obj3.children = items2;
     return React6(View, obj3);
   } else {

@@ -1,10 +1,10 @@
-// Module ID: 11610
-// Function ID: 11611
+// Module ID: 11611
+// Function ID: 11612
 // Name: ChannelInfoActionCreators
 // Dependencies: [5358, 7632, 573, 2]
 // Exports: fetchChannelInfo
 
-// Module 11610 (ChannelInfoActionCreators)
+// Module 11611 (ChannelInfoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ChannelStatusStore from "ChannelStatusStore" /* 7632 */;

@@ -1,23 +1,23 @@
-// Module ID: 16038
-// Function ID: 16039
+// Module ID: 16040
+// Function ID: 16041
 // Name: Auth
-// Dependencies: [32, 19, 17, 12542, 1074, 21, 16039, 16040, 5705, 16049, 7105, 7052, 4636, 576, 16090, 7045, 1625, 7076, 16091, 7074, 7103, 1151, 1114, 16092, 7578, 16096, 2]
+// Dependencies: [32, 19, 17, 12543, 1074, 21, 16041, 16042, 5705, 16051, 7105, 7052, 4636, 576, 16092, 7045, 1625, 7076, 16093, 7074, 7103, 1364, 1114, 16094, 7578, 16098, 2]
 
-// Module 16038 (Auth)
+// Module 16040 (Auth)
 import nativeDefault from "native" /* 576 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1625 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7045 */;
 import BackgroundImageDefault from "BackgroundImage" /* 7076 */;
 import StackNavigator from "StackNavigator" /* 7105 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 16039 */;
-import RegistrationUtils from "RegistrationUtils" /* 16049 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 16090 */;
-import _mod16091 from "module_16091" /* 16091 */;
-import AuthManagerDefault from "AuthManager" /* 16092 */;
-import useOrientationLockDefault from "useOrientationLock" /* 16096 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 16041 */;
+import RegistrationUtils from "RegistrationUtils" /* 16051 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 16092 */;
+import _mod16093 from "module_16093" /* 16093 */;
+import AuthManagerDefault from "AuthManager" /* 16094 */;
+import useOrientationLockDefault from "useOrientationLock" /* 16098 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -63,7 +63,7 @@ function NavigatorWithCaptchaHook() {
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
   const tmp15 = closure_11;
   const tmp16 = closure_10;
-  obj3.backgroundImageSource = _mod16091;
+  obj3.backgroundImageSource = _mod16093;
   const children = [closure_9(BackgroundImageDefault, obj3), ];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };
@@ -114,7 +114,7 @@ function NavigatorWithCaptchaHook() {
     obj7.children = tmp17(closure_6, obj10);
     obj5.children = tmp17(closure_6, obj7);
     let tmp17Result = tmp17(tmp(7074).WideAuthScrollContext.Provider, obj5);
-    tmpResult = tmp(1151);
+    tmpResult = tmp(1364);
   } else {
     const obj13 = { screens: RegistrationStepsUtils, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteStack: null, onWillFocus: null, headerStyle: null };
     ({ transparent: obj4.viewStyle, transparent: obj4.containerStyle } = tmp6);
@@ -133,7 +133,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(16040);
+let RegistrationStepsUtils = fn(16042);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {

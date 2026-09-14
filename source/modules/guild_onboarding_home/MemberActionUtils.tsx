@@ -1,10 +1,10 @@
-// Module ID: 12417
-// Function ID: 12418
+// Module ID: 12418
+// Function ID: 12419
 // Name: MemberActionUtils
 // Dependencies: [2021, 4823, 4824, 4262, 7326, 563, 1384, 2]
 // Exports: useAllActionsCompleted, useMemberActionsForChannel, useNextMemberAction
 
-// Module 12417 (MemberActionUtils)
+// Module 12418 (MemberActionUtils)
 import useIsNewMemberDefault from "useIsNewMember" /* 7326 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;

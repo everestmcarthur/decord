@@ -1,9 +1,9 @@
-// Module ID: 12363
-// Function ID: 12364
+// Module ID: 12364
+// Function ID: 12365
 // Name: ChatInputImageCarousel
-// Dependencies: [19, 7882, 4977, 4976, 9615, 21, 504, 10759, 2]
+// Dependencies: [19, 7882, 4977, 4976, 9615, 21, 504, 10760, 2]
 
-// Module 12363 (ChatInputImageCarousel)
+// Module 12364 (ChatInputImageCarousel)
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7882 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
@@ -40,7 +40,7 @@ export default noop.memo(function ChatInputImageCarousel(canUpload) {
   let tmp4 = null;
   if (null != stateFromStores) {
     const obj2 = { attachments: stateFromStores, channelId };
-    tmp4 = jsx(channelId(10759), { attachments: stateFromStores, channelId });
+    tmp4 = jsx(channelId(10760), { attachments: stateFromStores, channelId });
   }
   return tmp4;
 });

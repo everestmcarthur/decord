@@ -1,12 +1,12 @@
 // Module ID: 4878
 // Function ID: 4879
 // Name: StoreUtils
-// Dependencies: [5, 502, 4296, 4297, 4300, 1074, 4879, 4877, 4958, 1430, 4960, 1272, 1150, 1114, 2]
+// Dependencies: [5, 502, 4296, 4297, 4300, 1074, 4879, 4877, 4958, 1430, 4960, 1270, 1363, 1114, 2]
 // Exports: getAssetURL, getPrimarySKUForApplication, httpGetWithCountryCodeQuery, nativePlatformTypeToSKUOperatingSystem, skuOperatingSystemToText
 
 // Module 4878 (StoreUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -307,9 +307,9 @@ export const httpGetWithCountryCodeQuery = function httpGetWithCountryCodeQuery(
 export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTypeToSKUOperatingSystem(platform) {
   if (PlatformUtils.PlatformTypes.WINDOWS === platform) {
     return constants.WINDOWS;
-  } else if (tmp(1150).PlatformTypes.OSX === platform) {
+  } else if (tmp(1363).PlatformTypes.OSX === platform) {
     return constants.MACOS;
-  } else if (tmp(1150).PlatformTypes.LINUX === platform) {
+  } else if (tmp(1363).PlatformTypes.LINUX === platform) {
     return constants.LINUX;
   } else {
     return null;

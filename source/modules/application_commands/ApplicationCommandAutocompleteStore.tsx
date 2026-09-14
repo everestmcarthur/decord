@@ -1,7 +1,7 @@
 // Module ID: 7881
 // Function ID: 7882
 // Name: ApplicationCommandAutocompleteStore
-// Dependencies: [7882, 1074, 1150, 1894, 4816, 504, 573, 2]
+// Dependencies: [7882, 1074, 1363, 1894, 4816, 504, 573, 2]
 
 // Module 7881 (ApplicationCommandAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
@@ -49,7 +49,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_7 = PlatformUtils.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {

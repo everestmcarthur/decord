@@ -1,11 +1,11 @@
 // Module ID: 7303
 // Function ID: 7304
 // Name: TableSwitchRow
-// Dependencies: [32, 19, 17, 21, 4636, 1150, 4340, 5686, 4632, 7304, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 1363, 4340, 5686, 4632, 7304, 2]
 // Exports: TableSwitchRow
 
 // Module 7303 (TableSwitchRow)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import native from "native" /* 4340 */;
 import TableRow from "TableRow" /* 5686 */;
 import FormSwitch from "FormSwitch" /* 7304 */;

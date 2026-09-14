@@ -1,17 +1,17 @@
-// Module ID: 17823
-// Function ID: 17824
+// Module ID: 17824
+// Function ID: 17825
 // Name: CreatorHighlightSection
-// Dependencies: [19, 17, 21, 4636, 576, 4632, 1178, 10430, 1114, 7082, 17824, 4331, 17796, 5668, 15323, 5057, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4632, 1176, 10431, 1114, 7082, 17825, 4331, 17797, 5668, 15324, 5057, 2]
 // Exports: default
 
-// Module 17823 (CreatorHighlightSection)
+// Module 17824 (CreatorHighlightSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import _modDef10430 from "module_10430" /* 10430 */;
-import EmojiIconDefault from "EmojiIcon" /* 15323 */;
+import _modDef10431 from "module_10431" /* 10431 */;
+import EmojiIconDefault from "EmojiIcon" /* 15324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function GuildServerSubscriberCount(arg0) {
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10430 }), ];
+  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10431 }), ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
@@ -39,12 +39,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(17824)(guild_id, 3, 60);
+  const tmp6 = guild_id(17825)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17796), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17797), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;

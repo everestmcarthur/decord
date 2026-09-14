@@ -1,7 +1,7 @@
 // Module ID: 8557
 // Function ID: 8558
 // Name: AppStoreAgeSignalSupport
-// Dependencies: [1608, 4615, 1150, 2]
+// Dependencies: [1608, 4615, 1363, 2]
 // Exports: isAppStoreAgeSignalSupported
 
 // Module 8557 (AppStoreAgeSignalSupport)

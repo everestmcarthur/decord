@@ -1,10 +1,10 @@
-// Module ID: 16662
-// Function ID: 16663
+// Module ID: 16664
+// Function ID: 16665
 // Name: HomeWelcomeMessage
-// Dependencies: [19, 17, 1979, 1371, 4823, 21, 4636, 576, 563, 8303, 8343, 7414, 8304, 4481, 4347, 1091, 8373, 1178, 11245, 4632, 4788, 9883, 2]
+// Dependencies: [19, 17, 1979, 1371, 4823, 21, 4636, 576, 563, 8303, 8343, 7414, 8304, 4481, 4347, 1091, 8373, 1176, 11246, 4632, 4788, 9883, 2]
 // Exports: default
 
-// Module 16662 (HomeWelcomeMessage)
+// Module 16664 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 576 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
 import noop from "module_19" /* 19 */;

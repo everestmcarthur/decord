@@ -1,10 +1,10 @@
-// Module ID: 12155
-// Function ID: 12156
+// Module ID: 12156
+// Function ID: 12157
 // Name: GameInviteVoiceCount
 // Dependencies: [19, 17, 4660, 21, 4636, 504, 5182, 576, 4632, 2]
 // Exports: default
 
-// Module 12155 (GameInviteVoiceCount)
+// Module 12156 (GameInviteVoiceCount)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;

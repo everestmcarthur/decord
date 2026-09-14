@@ -1,12 +1,12 @@
 // Module ID: 9898
 // Function ID: 9899
 // Name: EditGuildEventPreview
-// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 1150, 504, 4789, 9835, 9899, 4632, 1114, 9900, 1178, 9901, 9834, 7226, 9902, 5056, 9795, 4981, 9917, 1896, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 1363, 504, 4789, 9835, 9899, 4632, 1114, 9900, 1176, 9901, 9834, 7226, 9902, 5056, 9795, 4981, 9917, 1896, 2]
 // Exports: default
 
 // Module 9898 (EditGuildEventPreview)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import EditGuildEventUtils from "EditGuildEventUtils" /* 9834 */;
@@ -102,7 +102,7 @@ let obj3 = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefa
 obj2.eventContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
 obj2.channelContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 14 };
 let obj5 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4, height: 14, transform: null };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;

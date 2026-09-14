@@ -1,13 +1,13 @@
-// Module ID: 12866
-// Function ID: 12867
+// Module ID: 12867
+// Function ID: 12868
 // Name: HubEmailConnectionGuildSelect
-// Dependencies: [5, 32, 19, 17, 12848, 21, 4636, 576, 8716, 5665, 1971, 4632, 1114, 1611, 5056, 1178, 1483, 7480, 7154, 12861, 4537, 12856, 2]
+// Dependencies: [5, 32, 19, 17, 12849, 21, 4636, 576, 8716, 5665, 1971, 4632, 1114, 1611, 5056, 1176, 1483, 7480, 7154, 12862, 4537, 12857, 2]
 // Exports: default
 
-// Module 12866 (HubEmailConnectionGuildSelect)
+// Module 12867 (HubEmailConnectionGuildSelect)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -75,7 +75,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12848).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12849).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
@@ -170,7 +170,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(12861).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(12862).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {

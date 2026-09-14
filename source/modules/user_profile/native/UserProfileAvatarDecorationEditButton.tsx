@@ -1,10 +1,10 @@
-// Module ID: 14712
-// Function ID: 14713
+// Module ID: 14713
+// Function ID: 14714
 // Name: UserProfileAvatarDecorationEditButton
-// Dependencies: [19, 17, 2021, 7311, 1085, 21, 4636, 576, 504, 8374, 8283, 11176, 8274, 1114, 14705, 8939, 1178, 13302, 2]
+// Dependencies: [19, 17, 2021, 7311, 1085, 21, 4636, 576, 504, 8374, 8283, 11177, 8274, 1114, 14706, 8939, 1176, 13303, 2]
 // Exports: default
 
-// Module 14712 (UserProfileAvatarDecorationEditButton)
+// Module 14713 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 576 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8274 */;
 import noop from "module_19" /* 19 */;

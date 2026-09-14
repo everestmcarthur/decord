@@ -1,11 +1,11 @@
-// Module ID: 13099
-// Function ID: 13100
+// Module ID: 13100
+// Function ID: 13101
 // Name: MediaModalOverlayAltText
-// Dependencies: [19, 21, 4636, 576, 1611, 1935, 5204, 11664, 4632, 1114, 2]
+// Dependencies: [19, 21, 4636, 576, 1611, 1935, 5204, 11665, 4632, 1114, 2]
 
-// Module 13099 (MediaModalOverlayAltText)
+// Module 13100 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 576 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11664 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11665 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

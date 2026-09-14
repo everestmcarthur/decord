@@ -1,16 +1,16 @@
-// Module ID: 11592
-// Function ID: 11593
+// Module ID: 11593
+// Function ID: 11594
 // Name: StageChannelSelfRichPresenceStore
-// Dependencies: [1957, 1979, 4659, 4285, 2011, 1371, 5499, 1962, 5495, 1074, 4280, 11020, 5506, 4789, 5498, 1332, 504, 573, 2]
+// Dependencies: [1957, 1979, 4659, 4285, 2011, 1371, 5499, 1962, 5495, 1074, 4280, 11021, 5506, 4789, 5498, 1330, 504, 573, 2]
 
-// Module 11592 (StageChannelSelfRichPresenceStore)
+// Module 11593 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import StageMediaHooks from "StageMediaHooks" /* 5498 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5506 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11020 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11021 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
@@ -109,7 +109,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = _modDef1332(tmp2, obj);
+  const tmp30 = _modDef1330(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
     obj = tmp2;

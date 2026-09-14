@@ -1,16 +1,16 @@
-// Module ID: 16211
-// Function ID: 16212
+// Module ID: 16213
+// Function ID: 16214
 // Name: ChannelItem
-// Dependencies: [109, 19, 17, 4676, 4285, 1371, 1074, 1964, 4818, 21, 4636, 576, 5522, 12508, 1396, 5668, 16212, 5156, 5109, 504, 1178, 5088, 16213, 4789, 1100, 2]
+// Dependencies: [109, 19, 17, 4676, 4285, 1371, 1074, 1964, 4818, 21, 4636, 576, 5522, 12509, 1396, 5668, 16214, 5156, 5109, 504, 1176, 5088, 16215, 4789, 1100, 2]
 
-// Module 16211 (ChannelItem)
+// Module 16213 (ChannelItem)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 5156 */;
-import BaseChannelItem from "BaseChannelItem" /* 12508 */;
-import _modDef16212 from "module_16212" /* 16212 */;
+import BaseChannelItem from "BaseChannelItem" /* 12509 */;
+import _modDef16214 from "module_16214" /* 16214 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
@@ -68,7 +68,7 @@ function ChannelIcon(arg0) {
       tmp5 = importDefault;
     }
     if (tmp2) {
-      let tmp12 = _modDef16212;
+      let tmp12 = _modDef16214;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -92,7 +92,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return map1(tmp9(12508).BaseChannelIcon, obj10);
+    return map1(tmp9(12509).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -107,14 +107,14 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1178).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "cactus" };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1176).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "plant" };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;
   }
   items4[1] = avatarStatusSelected;
   obj3.statusStyle = items4;
-  return closure_13(userId(1178).Avatar, obj3);
+  return closure_13(userId(1176).Avatar, obj3);
 }
 let closure_3 = ["channel", "subtitle", "hideIcon", "children", "textStyle", "channelInfo", "onPress"];
 const View = fn(17).View;

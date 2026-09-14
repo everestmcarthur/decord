@@ -1,10 +1,10 @@
-// Module ID: 15655
-// Function ID: 15656
+// Module ID: 15656
+// Function ID: 15657
 // Name: UserSettingsPushNotificationLogs
 // Dependencies: [5, 32, 19, 17, 1074, 21, 4636, 576, 6723, 510, 10319, 1611, 7153, 5204, 1114, 8479, 10320, 9182, 9003, 4632, 2]
 // Exports: default
 
-// Module 15655 (UserSettingsPushNotificationLogs)
+// Module 15656 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,10 +1,10 @@
 // Module ID: 4894
 // Function ID: 4895
 // Name: RequireObjectCoercible
-// Dependencies: [1283]
+// Dependencies: [1281]
 
 // Module 4894 (RequireObjectCoercible)
-import _mod1283 from "module_1283" /* 1283 */;
+import _mod1281 from "module_1281" /* 1281 */;
 
 
 export default function RequireObjectCoercible(arg0) {
@@ -16,7 +16,7 @@ export default function RequireObjectCoercible(arg0) {
     if (!text) {
       text = `Cannot call method on ${arg0}`;
     }
-    const tmp32 = new _mod1283(text);
+    const tmp32 = new _mod1281(text);
     throw tmp32;
   } else {
     return arg0;

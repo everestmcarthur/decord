@@ -1,10 +1,10 @@
-// Module ID: 11813
-// Function ID: 11814
+// Module ID: 11814
+// Function ID: 11815
 // Name: ForwardDestinationUtils
-// Dependencies: [19, 5583, 1961, 1957, 4275, 4285, 1371, 1074, 11113, 1369, 504, 1094, 4975, 1894, 4847, 1114, 4973, 7790, 4481, 4789, 2]
+// Dependencies: [19, 5583, 1961, 1957, 4275, 4285, 1371, 1074, 11114, 1369, 504, 1094, 4975, 1894, 4847, 1114, 4973, 7790, 4481, 4789, 2]
 // Exports: getDestinationIsUnavailable, isRatelimitedInChannel, useDestinationNamesWithSlowmode, useSelectedDestinationChannel, useSelectedDestinationNames
 
-// Module 11813 (ForwardDestinationUtils)
+// Module 11814 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import StickersUtils from "StickersUtils" /* 4975 */;
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11113).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(11114).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];

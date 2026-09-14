@@ -1,7 +1,7 @@
 // Module ID: 10304
 // Function ID: 10305
 // Name: Sticker
-// Dependencies: [19, 17, 1183, 21, 5349, 4975, 1114, 8103, 10305, 5668, 4488, 7234, 7235, 2]
+// Dependencies: [19, 17, 1181, 21, 5349, 4975, 1114, 8103, 10305, 5668, 4488, 7234, 7235, 2]
 // Exports: default, getStickerAssetUrl
 
 // Module 10304 (Sticker)
@@ -11,7 +11,7 @@ import FastImageDefault from "FastImage" /* 5668 */;
 import NativeLottieViewDefault from "NativeLottieView" /* 8103 */;
 import NativeAPNGViewDefault from "NativeAPNGView" /* 10305 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;

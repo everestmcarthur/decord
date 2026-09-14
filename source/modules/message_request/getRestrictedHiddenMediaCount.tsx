@@ -1,10 +1,10 @@
-// Module ID: 17013
-// Function ID: 17014
+// Module ID: 17015
+// Function ID: 17016
 // Name: getRestrictedHiddenMediaCount
 // Dependencies: [8058, 4975, 2]
 // Exports: default
 
-// Module 17013 (getRestrictedHiddenMediaCount)
+// Module 17015 (getRestrictedHiddenMediaCount)
 import StickersUtils from "StickersUtils" /* 4975 */;
 import formatMessageForwards from "formatMessageForwards" /* 8058 */;
 import size from "module_2" /* 2 */;

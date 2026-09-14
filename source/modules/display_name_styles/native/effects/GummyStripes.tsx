@@ -1,10 +1,10 @@
-// Module ID: 14704
-// Function ID: 14705
+// Module ID: 14705
+// Function ID: 14706
 // Name: GummyStripes
 // Dependencies: [19, 17, 21, 4636, 1091, 2]
 // Exports: default
 
-// Module 14704 (GummyStripes)
+// Module 14705 (GummyStripes)
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import noop from "module_19" /* 19 */;
 

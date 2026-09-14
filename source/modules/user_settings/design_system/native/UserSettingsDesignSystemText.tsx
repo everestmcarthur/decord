@@ -1,10 +1,10 @@
-// Module ID: 15843
-// Function ID: 15844
+// Module ID: 15845
+// Function ID: 15846
 // Name: UserSettingsDesignSystemText
 // Dependencies: [19, 17, 21, 4338, 576, 5054, 5768, 4633, 5686, 4632, 2]
 // Exports: default
 
-// Module 15843 (UserSettingsDesignSystemText)
+// Module 15845 (UserSettingsDesignSystemText)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import Text_Text from "Text/Text" /* 4632 */;

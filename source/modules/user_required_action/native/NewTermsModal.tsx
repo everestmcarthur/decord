@@ -1,10 +1,10 @@
-// Module ID: 17630
-// Function ID: 17631
+// Module ID: 17631
+// Function ID: 17632
 // Name: NewTermsModal
-// Dependencies: [5, 32, 19, 17, 1951, 1074, 21, 4636, 576, 7297, 1114, 6694, 1611, 5711, 5053, 8298, 8894, 1250, 4632, 5056, 9179, 9930, 2]
+// Dependencies: [5, 32, 19, 17, 1951, 1074, 21, 4636, 576, 7297, 1114, 6694, 1611, 5711, 5053, 8298, 8894, 1248, 4632, 5056, 9179, 9930, 2]
 // Exports: default
 
-// Module 17630 (NewTermsModal)
+// Module 17631 (NewTermsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -115,8 +115,8 @@ export default function NewTermsModal() {
   }), []);
   const obj2 = { type: null, name: null, properties: null };
   let obj = memo(5711);
-  obj2.type = memo(1250).ImpressionTypes.VIEW;
-  obj2.name = memo(1250).ImpressionNames.USER_AGREEMENTS;
+  obj2.type = memo(1248).ImpressionTypes.VIEW;
+  obj2.name = memo(1248).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
   useTrackImpressionDefault(obj2, {}, []);
   let tmp10 = null;

@@ -1,30 +1,30 @@
-// Module ID: 17276
-// Function ID: 17277
+// Module ID: 17278
+// Function ID: 17279
 // Name: VoicePanelPIPPushToTalkOverlay
-// Dependencies: [32, 19, 17, 12402, 21, 4373, 5670, 1178, 4636, 576, 9826, 17201, 5055, 17196, 6756, 17277, 2]
+// Dependencies: [32, 19, 17, 12403, 21, 4373, 5670, 1176, 4636, 576, 9826, 17203, 5055, 17198, 6756, 17279, 2]
 // Exports: default
 
-// Module 17276 (VoicePanelPIPPushToTalkOverlay)
+// Module 17278 (VoicePanelPIPPushToTalkOverlay)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9826 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17196 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(12402).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(12403).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const NativeView = ReanimatedRexport.createAnimatedComponent(NativeViewDefault);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(1176).Icon);
 const hitSlop = { top: 6, bottom: 6, left: 6, right: 6 };
 const createStyles = fn(4636);
 let obj = { iconContainer: null, overlay: null };
@@ -45,9 +45,9 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  pIPState = pIPState(17201).usePIPState();
+  pIPState = pIPState(17203).usePIPState();
   const tmp2 = closure_12();
-  let obj = pIPState(17201);
+  let obj = pIPState(17203);
   const sharedValue = pIPState(4373).useSharedValue(false);
   closure_129_0 = sharedValue;
   closure_129_1 = BLACK.useRef(false);
@@ -124,7 +124,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     }
   }
   const obj7 = pIPState(4373);
-  H.__closure = { withSpring: pIPState(5055).withSpring, isPushingToTalk, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: pIPState(17196).getVoicePanelPIPBorderRadius, pipState: pIPState };
+  H.__closure = { withSpring: pIPState(5055).withSpring, isPushingToTalk, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: pIPState(17198).getVoicePanelPIPBorderRadius, pipState: pIPState };
   H.__workletHash = 450590017248;
   H.__initData = __initData3;
   const items2 = [tmp4[1]];
@@ -174,8 +174,8 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const obj12 = { style: null, hitSlop, children: null };
   const items5 = [tmp2.iconContainer, animatedStyle];
   obj12.style = items5;
-  const obj8 = { withSpring: pIPState(5055).withSpring, isPushingToTalk, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: pIPState(17196).getVoicePanelPIPBorderRadius, pipState: pIPState };
-  obj12.children = closure_6(closure_10, { style: animatedStyle1, size: pIPState(1178).Icon.Sizes.SMALL_20, source: isPushingToTalk(17277), disableColor: true });
+  const obj8 = { withSpring: pIPState(5055).withSpring, isPushingToTalk, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: pIPState(17198).getVoicePanelPIPBorderRadius, pipState: pIPState };
+  obj12.children = closure_6(closure_10, { style: animatedStyle1, size: pIPState(1176).Icon.Sizes.SMALL_20, source: isPushingToTalk(17279), disableColor: true });
   obj11.children = closure_6(NativeView, obj12);
   items4[1] = closure_6(pIPState(6756).GestureDetector, obj11);
   obj9.children = items4;

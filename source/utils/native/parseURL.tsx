@@ -1,7 +1,7 @@
 // Module ID: 4616
 // Function ID: 4617
 // Name: parseURL
-// Dependencies: [32, 1074, 1076, 4617, 4618, 1471, 4333, 1367, 4619, 4624, 13075, 4875, 13936, 1365, 4790, 9366, 7509, 1608, 1150, 9289, 1242, 1255, 13937, 2]
+// Dependencies: [32, 1074, 1076, 4617, 4618, 1471, 4333, 1367, 4619, 4624, 13076, 4875, 13937, 1365, 4790, 9366, 7509, 1608, 1363, 9289, 1240, 1253, 13938, 2]
 // Exports: default
 
 // Module 4616 (parseURL)
@@ -121,7 +121,7 @@ export default function parseURL(arg0) {
                                   if (tmp5(4624).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
                                     if (tmp5(4624).CodedLinkType.APP_OAUTH2_LINK !== type) {
                                       if (tmp5(4624).CodedLinkType.COLLECTIBLES_SHOP === type) {
-                                        const tmp5Result = tmp5(13075);
+                                        const tmp5Result = tmp5(13076);
                                         const tmp10 = _slicedToArray(findCodedLinkResult.code.split("-"), 2)[1];
                                         if (tmp5Result.isVirtualCurrencyEnabled().enabled) {
                                           if (tmp9 === constants2.ORBS) {
@@ -174,7 +174,7 @@ export default function parseURL(arg0) {
       obj17.payload = obj18;
       return obj17;
     } else {
-      const result = tmp5(13936).findRemoteAuthFingerprint(host, pathname);
+      const result = tmp5(13937).findRemoteAuthFingerprint(host, pathname);
       if (null != result) {
         if (result.length > 0) {
           const obj19 = { fingerprint, attemptId, installationId, payload: null };
@@ -183,7 +183,7 @@ export default function parseURL(arg0) {
           return obj19;
         }
       }
-      const tmp5Result11 = tmp5(13936);
+      const tmp5Result11 = tmp5(13937);
       if (!tmpResult7.isDiscordHostname(host)) {
         if (!tmpResult8.isDiscordProtocol(protocol)) {
           const tmpResult9 = tmp(1365);
@@ -530,7 +530,7 @@ export default function parseURL(arg0) {
                           };
                           tmp28 = obj73;
                         }
-                        tmp5Result17 = tmp5(1150);
+                        tmp5Result17 = tmp5(1363);
                       break;
                       case "dave-protocol-verification":
                         let str9 = query;
@@ -616,8 +616,8 @@ export default function parseURL(arg0) {
                   }
                   const tmp126Result13 = tmp126(decodeURIComponent(query));
                   const obj85 = { reason: "invalid_query_params", fingerprint: null };
-                  const tmpResult12 = tmp(1242);
-                  obj85.fingerprint = tmp5(1255).maybeExtractId(fingerprint3);
+                  const tmpResult12 = tmp(1240);
+                  obj85.fingerprint = tmp5(1253).maybeExtractId(fingerprint3);
                   const obj86 = { fingerprint: fingerprint3 };
                   tmpResult12.track(constants.MOBILE_WEB_HANDOFF_FAILURE, obj85, obj86);
                   const _Error = Error;
@@ -653,7 +653,7 @@ export default function parseURL(arg0) {
                       if (null != match8) {
                         const tmp79 = _slicedToArray(match8, 4);
                         const obj91 = { fingerprint, attemptId, installationId, payload: null };
-                        const obj93 = { type: React5.GUILD_SETTINGS, guildId: tmp79[1], settingsSection: tmp(13937)(hasOwnProperty, tmp79[2]), settingsSubsection: tmp(13937)(timestampProducer, tmp79[3]) };
+                        const obj93 = { type: React5.GUILD_SETTINGS, guildId: tmp79[1], settingsSection: tmp(13938)(hasOwnProperty, tmp79[2]), settingsSubsection: tmp(13938)(timestampProducer, tmp79[3]) };
                         obj91.payload = obj93;
                         return obj91;
                       } else {
@@ -665,7 +665,7 @@ export default function parseURL(arg0) {
                             str18 = "";
                           }
                           const obj95 = { fingerprint, attemptId, installationId, payload: null };
-                          const obj96 = { type: React5.GUILD_SETTINGS_PICKER, settingsSection: tmp(13937)(hasOwnProperty, tmp74[1]), settingsSubsection: tmp(13937)(timestampProducer, tmp74[2]), feature: tmp126(str18).feature };
+                          const obj96 = { type: React5.GUILD_SETTINGS_PICKER, settingsSection: tmp(13938)(hasOwnProperty, tmp74[1]), settingsSubsection: tmp(13938)(timestampProducer, tmp74[2]), feature: tmp126(str18).feature };
                           obj95.payload = obj96;
                           return obj95;
                         } else if (null != pathname.match(re24)) {

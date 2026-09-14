@@ -1,17 +1,17 @@
-// Module ID: 17020
-// Function ID: 17021
+// Module ID: 17022
+// Function ID: 17023
 // Name: SuspendedUserPage
-// Dependencies: [19, 17, 8548, 8537, 21, 4636, 576, 504, 7226, 8202, 1114, 6694, 7095, 4632, 4331, 14854, 2]
+// Dependencies: [19, 17, 8548, 8537, 21, 4636, 576, 504, 7226, 8202, 1114, 6694, 7095, 4632, 4331, 14855, 2]
 // Exports: default
 
-// Module 17020 (SuspendedUserPage)
+// Module 17022 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
 import _modDef7095 from "module_7095" /* 7095 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14854 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14855 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 

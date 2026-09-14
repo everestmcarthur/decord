@@ -1,16 +1,16 @@
-// Module ID: 17242
-// Function ID: 17243
+// Module ID: 17244
+// Function ID: 17245
 // Name: VoicePanelVideoRenderer
-// Dependencies: [32, 19, 17, 12402, 12400, 17197, 12403, 21, 4373, 9746, 4636, 12401, 5055, 9625, 4604, 6756, 9735, 17201, 9738, 9736, 17191, 11487, 17113, 9740, 4338, 576, 4637, 7176, 9743, 2]
+// Dependencies: [32, 19, 17, 12403, 12401, 17199, 12404, 21, 4373, 9746, 4636, 12402, 5055, 9625, 4604, 6756, 9735, 17203, 9738, 9736, 17193, 11488, 17115, 9740, 4338, 576, 4637, 7176, 9743, 2]
 
-// Module 17242 (VoicePanelVideoRenderer)
+// Module 17244 (VoicePanelVideoRenderer)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9625 */;
 import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9746 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11487 */;
-import VideoActionCreators from "VideoActionCreators" /* 17113 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
+import VideoActionCreators from "VideoActionCreators" /* 17115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,12 +18,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17197).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12403).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17199).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12404).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;

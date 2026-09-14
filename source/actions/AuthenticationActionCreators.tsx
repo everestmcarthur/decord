@@ -1,14 +1,14 @@
 // Module ID: 6694
 // Function ID: 6695
 // Name: AuthenticationActionCreators
-// Dependencies: [5, 6695, 502, 6696, 1074, 6697, 3, 4630, 573, 4495, 1100, 4839, 4829, 1250, 1272, 4537, 6698, 6699, 510, 1099, 2]
+// Dependencies: [5, 6695, 502, 6696, 1074, 6697, 3, 4630, 573, 4495, 1100, 4839, 4829, 1248, 1270, 4537, 6698, 6699, 510, 1099, 2]
 
 // Module 6694 (AuthenticationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4537 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
@@ -379,8 +379,8 @@ export default {
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
     const request = { url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN, body: { credential, ticket, source, giftCodeSKUId }, retries: 1, trackedActionData: null, rejectWithError: true };
     const obj = self(4829);
-    request.trackedActionData = { event: isMultiAccount(1250).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
-    let obj2 = { event: isMultiAccount(1250).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    request.trackedActionData = { event: isMultiAccount(1248).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    let obj2 = { event: isMultiAccount(1248).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     const postResult = obj.post(request);
     return obj.post(request).then((body) => {
       body = body.body;
@@ -462,7 +462,7 @@ export default {
               const request = { url: constants.ONE_TIME_LOGIN, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
               const obj4 = { ticket };
               request.body = obj4;
-              const obj6 = { event: ticket(1250).NetworkActionNames.USER_ONE_TIME_LOGIN };
+              const obj6 = { event: ticket(1248).NetworkActionNames.USER_ONE_TIME_LOGIN };
               request.trackedActionData = obj6;
               c4 = 2;
               c5 = 1;
@@ -576,8 +576,8 @@ export default {
     }
     const merged = Object.assign(tmp4);
     const obj3 = { event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_LOGOUT, properties: { logout_source: TTI_test } };
-    request.rejectWithError = tmp3(1272).rejectWithMigratedError();
-    const tmp3Result = tmp3(1272);
+    request.rejectWithError = tmp3(1270).rejectWithMigratedError();
+    const tmp3Result = tmp3(1270);
     return obj.post(request).finally(() => {
       let tmp2 = null != closure_2;
       if (tmp2) {
@@ -633,9 +633,9 @@ export default {
     closure_0 = arg0;
     return (async () => {
       const token = tmp5;
-      const request = { url: constants.VERIFY, body: { token }, trackedActionData: { event: token(1250).NetworkActionNames.USER_VERIFY }, rejectWithError: null };
-      { event: token(1250).NetworkActionNames.USER_VERIFY };
-      request.rejectWithError = token(1272).rejectWithMigratedError();
+      const request = { url: constants.VERIFY, body: { token }, trackedActionData: { event: token(1248).NetworkActionNames.USER_VERIFY }, rejectWithError: null };
+      { event: token(1248).NetworkActionNames.USER_VERIFY };
+      request.rejectWithError = token(1270).rejectWithMigratedError();
       closure_128_0 = await tmp2(4829).post(request);
       tmp2(573).dispatch({ type: "LOGIN_SUCCESS", token: closure_128_0.body.token });
       return closure_128_0.body.user_id;
@@ -730,10 +730,10 @@ export default {
               const obj12 = password(573);
               tmp36 = voip_provider;
               const request = { url: constants.RESET_PASSWORD, body: obj6, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-              const obj7 = { event: token(1250).NetworkActionNames.USER_RESET_PASSWORD };
+              const obj7 = { event: token(1248).NetworkActionNames.USER_RESET_PASSWORD };
               request.trackedActionData = obj7;
               const obj5 = password(4829);
-              request.rejectWithError = token(1272).rejectWithMigratedError();
+              request.rejectWithError = token(1270).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj9 = { value: obj5.post(request), done: false };
@@ -792,7 +792,7 @@ export default {
     ({ method: require, code: importDefault, ticket: importAll, password: dependencyMap, token: closure_4, source: asyncGeneratorStep } = arg0);
     return (async () => {
       v1(573).dispatch({ type: "LOGIN_MFA" });
-      const request = { url: constants.RESET_PASSWORD, body: { code, ticket, password, token, source, method }, oldFormErrors: true, trackedActionData: { event: v3(1250).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } }, rejectWithError: true };
+      const request = { url: constants.RESET_PASSWORD, body: { code, ticket, password, token, source, method }, oldFormErrors: true, trackedActionData: { event: v3(1248).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } }, rejectWithError: true };
       await v1(4829).post(request);
       return arg1.body.token;
     })();
@@ -833,10 +833,10 @@ export default {
               const request = { url: constants.FORGOT_PASSWORD, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
               const obj5 = { login };
               request.body = obj5;
-              const obj7 = { event: login(1250).NetworkActionNames.FORGOT_PASSWORD };
+              const obj7 = { event: login(1248).NetworkActionNames.FORGOT_PASSWORD };
               request.trackedActionData = obj7;
               const obj13 = tmp3(4829);
-              request.rejectWithError = login(1272).rejectWithMigratedError();
+              request.rejectWithError = login(1270).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj8 = { value: obj13.post(request), done: false };

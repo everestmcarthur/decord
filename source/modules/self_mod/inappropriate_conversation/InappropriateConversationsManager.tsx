@@ -1,9 +1,9 @@
-// Module ID: 17925
-// Function ID: 17926
+// Module ID: 17926
+// Function ID: 17927
 // Name: InappropriateConversationsManager
 // Dependencies: [10032, 4760, 7221, 2]
 
-// Module 17925 (InappropriateConversationsManager)
+// Module 17926 (InappropriateConversationsManager)
 import _modDef4760 from "module_4760" /* 4760 */;
 import SoundUtils from "SoundUtils" /* 10032 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

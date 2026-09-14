@@ -1,14 +1,14 @@
-// Module ID: 12903
-// Function ID: 12904
+// Module ID: 12904
+// Function ID: 12905
 // Name: ChannelNavbar
-// Dependencies: [19, 17, 5358, 1961, 1957, 1979, 4676, 4285, 1371, 1074, 1964, 1954, 21, 4636, 5605, 576, 504, 1114, 5109, 4789, 11004, 12904, 12905, 1178, 12906, 12907, 5668, 12908, 10422, 5204, 4632, 4481, 8375, 9179, 4457, 1943, 10753, 12909, 2]
+// Dependencies: [19, 17, 5358, 1961, 1957, 1979, 4676, 4285, 1371, 1074, 1964, 1954, 21, 4636, 5605, 576, 504, 1114, 5109, 4789, 11005, 12905, 12906, 1176, 12907, 12908, 5668, 12909, 10423, 5204, 4632, 4481, 8375, 9179, 4457, 1943, 10754, 12910, 2]
 // Exports: ChannelButtons, ChannelTitleWithoutRoute
 
-// Module 12903 (ChannelNavbar)
+// Module 12904 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -16,7 +16,7 @@ import Text_Text from "Text/Text" /* 4632 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import Pressables from "Pressables" /* 5204 */;
 import isStreamingDefault from "isStreaming" /* 8375 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11004 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11005 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -88,7 +88,7 @@ function DMChannelName(style) {
   const intl = userId(1114).intl;
   obj2.accessibilityLabel = intl.formatToPlainString(userId(1114).t.fYqXVY, { channelName: stateFromStores });
   obj2.children = stateFromStores;
-  return closure_16(userId(1178).LegacyText, obj2);
+  return closure_16(userId(1176).LegacyText, obj2);
 }
 function ConnectedStatus(style) {
   const userId = style.userId;
@@ -99,7 +99,7 @@ function ConnectedStatus(style) {
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
   let obj = userId(504);
-  return closure_16(userId(1178).Status, { isMobileOnline, isVROnline, status, streaming, size: userId(1178).StatusSizes.SMALL, style: style.style });
+  return closure_16(userId(1176).Status, { isMobileOnline, isVROnline, status, streaming, size: userId(1176).StatusSizes.SMALL, style: style.style });
 }
 const View = fn(17).View;
 const THREAD_CHANNEL_TYPES = fn(1961).THREAD_CHANNEL_TYPES;
@@ -443,8 +443,8 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = tmp3(closure_1(10753), obj2);
-        const tmp4Result = closure_1(10753);
+        tmp3Result = tmp3(closure_1(10754), obj2);
+        const tmp4Result = closure_1(10754);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

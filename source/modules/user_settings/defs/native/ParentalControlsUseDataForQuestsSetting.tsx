@@ -1,16 +1,16 @@
-// Module ID: 15994
-// Function ID: 15995
+// Module ID: 15996
+// Function ID: 15997
 // Name: ParentalControlsUseDataForQuestsSetting
-// Dependencies: [7640, 8079, 14914, 1114, 2396, 11601, 2]
+// Dependencies: [7640, 8079, 14915, 1114, 2396, 11602, 2]
 
-// Module 15994 (ParentalControlsUseDataForQuestsSetting)
+// Module 15996 (ParentalControlsUseDataForQuestsSetting)
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14914 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14915 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;

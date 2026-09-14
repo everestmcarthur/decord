@@ -1,12 +1,12 @@
-// Module ID: 13272
-// Function ID: 13273
+// Module ID: 13273
+// Function ID: 13274
 // Name: NameplateProductPreview
-// Dependencies: [19, 17, 4628, 21, 4636, 576, 8288, 1886, 1114, 4632, 5068, 8295, 8374, 8283, 504, 4481, 4870, 11027, 11028, 1178, 11039, 5686, 2]
+// Dependencies: [19, 17, 4628, 21, 4636, 576, 8288, 1886, 1114, 4632, 5068, 8295, 8374, 8283, 504, 4481, 4870, 11028, 11029, 1176, 11040, 5686, 2]
 // Exports: default
 
-// Module 13272 (NameplateProductPreview)
+// Module 13273 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import utils from "utils" /* 1886 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import TableRow from "TableRow" /* 5686 */;
@@ -44,7 +44,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: "carburante", "aria-hidden": "fare il pieno" };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: 1, "aria-hidden": null };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });

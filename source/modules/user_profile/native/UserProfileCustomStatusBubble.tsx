@@ -1,11 +1,11 @@
-// Module ID: 11246
-// Function ID: 11247
+// Module ID: 11247
+// Function ID: 11248
 // Name: UserProfileCustomStatusBubble
-// Dependencies: [32, 19, 17, 7311, 1374, 1085, 21, 4636, 576, 8574, 1935, 5668, 1396, 1150, 4632, 7233, 4338, 8307, 11008, 10247, 4603, 11247, 7285, 1114, 5204, 11337, 2]
+// Dependencies: [32, 19, 17, 7311, 1374, 1085, 21, 4636, 576, 8574, 1935, 5668, 1396, 1363, 4632, 7233, 4338, 8307, 11009, 10247, 4603, 11248, 7285, 1114, 5204, 11338, 2]
 
-// Module 11246 (UserProfileCustomStatusBubble)
+// Module 11247 (UserProfileCustomStatusBubble)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -14,7 +14,7 @@ import FastImageDefault from "FastImage" /* 5668 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import inlineStyles from "inlineStyles" /* 8574 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 11247 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 11248 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

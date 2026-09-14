@@ -1,10 +1,10 @@
-// Module ID: 16100
-// Function ID: 16101
+// Module ID: 16102
+// Function ID: 16103
 // Name: useChannelScreensFromNavigation
 // Dependencies: [32, 19, 1957, 2011, 4458, 1074, 1964, 4495, 4494, 4497, 2]
 // Exports: default, isActiveTabsGuilds
 
-// Module 16100 (useChannelScreensFromNavigation)
+// Module 16102 (useChannelScreensFromNavigation)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import useChatLayoutDefault from "useChatLayout" /* 4497 */;

@@ -1,10 +1,10 @@
-// Module ID: 12652
-// Function ID: 12653
+// Module ID: 12653
+// Function ID: 12654
 // Name: GuildPowerupsImage
-// Dependencies: [4628, 21, 4636, 504, 1151, 8936, 5668, 2]
+// Dependencies: [4628, 21, 4636, 504, 1364, 8936, 5668, 2]
 // Exports: default
 
-// Module 12652 (GuildPowerupsImage)
+// Module 12653 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8936 */;

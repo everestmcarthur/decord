@@ -1,19 +1,19 @@
-// Module ID: 12469
-// Function ID: 12470
+// Module ID: 12470
+// Function ID: 12471
 // Name: SearchUtils
-// Dependencies: [32, 1957, 2012, 4848, 4285, 2011, 1371, 7982, 1074, 4228, 1114, 12470, 11, 12475, 12, 12476, 4789, 4481, 2]
+// Dependencies: [32, 1957, 2012, 4848, 4285, 2011, 1371, 7982, 1074, 4228, 1114, 12471, 11, 12476, 12, 12477, 4789, 4481, 2]
 // Exports: clearTokenCache, filterHasAnswer, getAutocompleteMode, getChannelActiveAgoTimestamp, getChannelDisplayName, getChannelIdFromSearchContext, getChannelPlaceholderName, getFlattenedAutocompleteResults, getGuildIdFromSearchContext, getIndexingErrorText, getNonTokenQuery, getQueryContentString, getQueryFromTokens, getSearchContextId, getSearchHistoryStateId, getSearchOptionAnswer, getSearchQueryFromTokens, getSearchTabFetchId, getSelectionScope, getTabTitle, isGuildLikeSearchContext, queryHasFilter, quoteChannelName, refreshSearchTokens, removeInvalidPrivateChannelSearchTokens, searchModeToSearchQueryParams, searchQueryParamsToSearchMode, setIncludeNSFW, showDatePicker, tokenizeQuery
 
-// Module 12469 (SearchUtils)
+// Module 12470 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import useChannelName from "useChannelName" /* 4789 */;
-import SearchTokens from "SearchTokens" /* 12470 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 12475 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12476 */;
+import SearchTokens from "SearchTokens" /* 12471 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 12476 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12477 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
@@ -481,7 +481,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       }
     }
     let tmp4;
-    if (currentToken.type === tmp3(12475).NON_TOKEN_TYPE) {
+    if (currentToken.type === tmp3(12476).NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
     obj7 = { type: constants2.FILTER_ALL, filter: null, token: tmp4 };

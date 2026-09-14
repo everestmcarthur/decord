@@ -1,20 +1,20 @@
-// Module ID: 10466
-// Function ID: 10467
+// Module ID: 10467
+// Function ID: 10468
 // Name: CustomEmojiContent
-// Dependencies: [19, 17, 5541, 4458, 1371, 1074, 21, 4636, 576, 4294, 1242, 9522, 4603, 10459, 504, 7265, 5545, 4292, 4268, 10413, 7291, 1935, 10467, 7485, 10460, 10363, 10369, 4632, 1114, 10464, 4335, 10468, 1896, 8795, 1178, 5056, 5668, 10469, 8716, 10470, 10471, 2]
+// Dependencies: [19, 17, 5541, 4458, 1371, 1074, 21, 4636, 576, 4294, 1240, 9522, 4603, 10460, 504, 7265, 5545, 4292, 4268, 10414, 7291, 1935, 10468, 7485, 10461, 10364, 10370, 4632, 1114, 10465, 4335, 10469, 1896, 8795, 1176, 5056, 5668, 10470, 8716, 10471, 10472, 2]
 // Exports: default
 
-// Module 10466 (CustomEmojiContent)
+// Module 10467 (CustomEmojiContent)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5545 */;
 import openUserSettings from "openUserSettings" /* 7485 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10464 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10469 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10465 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10470 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5541 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
@@ -300,7 +300,7 @@ export default function CustomEmojiContent(emojiNode) {
     if (setting) {
       const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10468, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10469, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
       }
       const intl3 = tmp2(tmp3[28]).intl;
       obj22.accessibilityLabel = intl3.string(tmp2(tmp3[28]).t.PdRCRg);

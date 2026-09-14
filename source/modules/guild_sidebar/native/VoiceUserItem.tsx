@@ -1,13 +1,13 @@
-// Module ID: 16218
-// Function ID: 16219
+// Module ID: 16220
+// Function ID: 16221
 // Name: VoiceUserItem
-// Dependencies: [19, 17, 4628, 1074, 21, 1178, 10247, 4636, 576, 10249, 504, 9307, 9308, 9310, 1242, 4373, 4637, 1396, 16219, 9254, 9256, 9250, 9252, 10238, 5114, 9593, 9312, 2]
+// Dependencies: [19, 17, 4628, 1074, 21, 1176, 10247, 4636, 576, 10249, 504, 9307, 9308, 9310, 1240, 4373, 4637, 1396, 16221, 9254, 9256, 9250, 9252, 10238, 5114, 9593, 9312, 2]
 // Exports: getVoiceUserHeight
 
-// Module 16218 (VoiceUserItem)
+// Module 16220 (VoiceUserItem)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -24,7 +24,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-sm/medium";
 let c10 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1178).AvatarSizes.XSMALL_20;
+const XSMALL_20 = fn(1176).AvatarSizes.XSMALL_20;
 const createStyles = fn(4636);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };

@@ -1,15 +1,15 @@
-// Module ID: 12829
-// Function ID: 12830
+// Module ID: 12830
+// Function ID: 12831
 // Name: ContactSyncInviteFriends
-// Dependencies: [19, 17, 1371, 1074, 21, 4636, 576, 504, 5668, 12830, 4632, 1114, 5056, 1242, 4481, 8479, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4636, 576, 504, 5668, 12831, 4632, 1114, 5056, 1240, 4481, 8479, 2]
 // Exports: default
 
-// Module 12829 (ContactSyncInviteFriends)
+// Module 12830 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef12830 from "module_12830" /* 12830 */;
+import _modDef12831 from "module_12831" /* 12831 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -37,7 +37,7 @@ export default function ContactSyncInviteFriends() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef12830;
+  obj4.source = _modDef12831;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

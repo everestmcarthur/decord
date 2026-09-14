@@ -1,10 +1,10 @@
-// Module ID: 17187
-// Function ID: 17188
+// Module ID: 17189
+// Function ID: 17190
 // Name: PremiumSoundboardFeatureUpsell
 // Dependencies: [19, 17, 21, 4636, 576, 1611, 1093, 10094, 7955, 2]
 // Exports: default
 
-// Module 17187 (PremiumSoundboardFeatureUpsell)
+// Module 17189 (PremiumSoundboardFeatureUpsell)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

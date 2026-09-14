@@ -1,11 +1,11 @@
 // Module ID: 9695
 // Function ID: 9696
 // Name: useThermalState
-// Dependencies: [1150, 9651, 2]
+// Dependencies: [1363, 9651, 2]
 // Exports: default, getThermalState
 
 // Module 9695 (useThermalState)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 9651 */;
 import size from "module_2" /* 2 */;
 
@@ -46,7 +46,7 @@ export default function useThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(1150);
+      tmp11Result = tmp11(1363);
     }
     obj3 = PlatformUtils;
     tmp11 = require;
@@ -88,7 +88,7 @@ export const getThermalState = function getThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(1150);
+      tmp11Result = tmp11(1363);
     }
     obj3 = PlatformUtils;
     tmp11 = require;

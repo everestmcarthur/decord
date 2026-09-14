@@ -1,12 +1,12 @@
-// Module ID: 16709
-// Function ID: 16710
+// Module ID: 16711
+// Function ID: 16712
 // Name: VibegrationsClarificationCard
-// Dependencies: [32, 19, 17, 21, 4636, 576, 16710, 4632, 1114, 3590, 5688, 5056, 14258, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 16712, 4632, 1114, 3590, 5688, 5056, 14259, 2]
 // Exports: default
 
-// Module 16709 (VibegrationsClarificationCard)
+// Module 16711 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16710 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16712 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,11 +53,11 @@ export default function VibegrationsClarificationCard(clarification) {
       closure_4(obj);
       const result = VibegrationsClarification.nextClarificationStep(clarification, obj, bound);
       if (null == result) {
-        const result1 = tmp13(16710).formatClarificationAnswers(tmp15, obj);
+        const result1 = tmp13(16712).formatClarificationAnswers(tmp15, obj);
         if ("" !== result1) {
           tmp(result1);
         }
-        const tmp13Result = tmp13(16710);
+        const tmp13Result = tmp13(16712);
       } else {
         closure_6(result);
       }
@@ -177,7 +177,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj9.onSubmitEditing = callback2;
-  obj8.children = closure_6(clarification(14258).GhostInput, obj9);
+  obj8.children = closure_6(clarification(14259).GhostInput, obj9);
   items5[1] = closure_6(closure_5, obj8);
   obj6.children = items5;
   items4[3] = closure_7(closure_5, obj6);

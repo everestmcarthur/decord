@@ -1,12 +1,12 @@
-// Module ID: 12017
-// Function ID: 12018
+// Module ID: 12018
+// Function ID: 12019
 // Name: AppealIngestionSpeedBump
-// Dependencies: [19, 17, 8548, 8537, 1074, 21, 4636, 504, 12010, 12018, 1114, 12016, 12019, 12029, 12030, 4632, 2]
+// Dependencies: [19, 17, 8548, 8537, 1074, 21, 4636, 504, 12011, 12019, 1114, 12017, 12020, 12030, 12031, 4632, 2]
 // Exports: default
 
-// Module 12017 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12019 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12029 */;
+// Module 12018 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12020 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12030 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 
@@ -74,8 +74,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj6.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAgeVerificationLink);
     };
-    tmp9Result3 = tmp9(tmp13(12030), obj6);
-    const tmp13Result = tmp13(12030);
+    tmp9Result3 = tmp9(tmp13(12031), obj6);
+    const tmp13Result = tmp13(12031);
   }
   items2[2] = tmp9Result3;
   if (isSpam) {
@@ -89,8 +89,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj7.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickSpamWebformLink);
     };
-    isSpam = tmp9(tmp13(12030), obj7);
-    const tmp13Result4 = tmp13(12030);
+    isSpam = tmp9(tmp13(12031), obj7);
+    const tmp13Result4 = tmp13(12031);
   }
   items2[3] = isSpam;
   if (isDeveloperClassification) {
@@ -101,8 +101,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj8.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAppAppealLink);
     };
-    isDeveloperClassification = tmp9(tmp13(12030), obj8);
-    const tmp13Result5 = tmp13(12030);
+    isDeveloperClassification = tmp9(tmp13(12031), obj8);
+    const tmp13Result5 = tmp13(12031);
   }
   items2[4] = isDeveloperClassification;
   let tmp9Result4 = !isCoppa;
@@ -114,8 +114,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj9.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickLearnMoreLink);
     };
-    tmp9Result4 = tmp9(tmp13(12030), obj9);
-    const tmp13Result6 = tmp13(12030);
+    tmp9Result4 = tmp9(tmp13(12031), obj9);
+    const tmp13Result6 = tmp13(12031);
   }
   items2[5] = tmp9Result4;
   if (isDsaEligible) {

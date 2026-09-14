@@ -1,23 +1,23 @@
-// Module ID: 16359
-// Function ID: 16360
+// Module ID: 16361
+// Function ID: 16362
 // Name: GuildUpsellChannelList
-// Dependencies: [19, 17, 15707, 16360, 1074, 21, 4636, 576, 1114, 5773, 13803, 16361, 504, 1242, 12837, 4632, 5688, 5056, 15180, 16362, 2]
+// Dependencies: [19, 17, 15709, 16362, 1074, 21, 4636, 576, 1114, 5773, 13804, 16363, 504, 1240, 12838, 4632, 5688, 5056, 15181, 16364, 2]
 // Exports: default
 
-// Module 16359 (GuildUpsellChannelList)
+// Module 16361 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15707 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15709 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(16360).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_8 = fn(16362).MAX_DISPLAYED_UPSELL_GUILDS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

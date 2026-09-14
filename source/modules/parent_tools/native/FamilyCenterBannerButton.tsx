@@ -1,19 +1,19 @@
-// Module ID: 14965
-// Function ID: 14966
+// Module ID: 14966
+// Function ID: 14967
 // Name: FamilyCenterBannerButton
-// Dependencies: [19, 17, 1371, 7640, 7641, 1074, 4846, 21, 4636, 576, 8768, 4334, 1114, 12046, 563, 14966, 1242, 14967, 4603, 14968, 1896, 5054, 5056, 9182, 2396, 14971, 4839, 1365, 12043, 1608, 5220, 13955, 2]
+// Dependencies: [19, 17, 1371, 7640, 7641, 1074, 4846, 21, 4636, 576, 8768, 4334, 1114, 12047, 563, 14967, 1240, 14968, 4603, 14969, 1896, 5054, 5056, 9182, 2396, 14972, 4839, 1365, 12044, 1608, 5220, 13956, 2]
 // Exports: FamilyCenterParentQRCodeButton, FamilyCenterTeenQRCodeButton
 
-// Module 14965 (FamilyCenterBannerButton)
+// Module 14966 (FamilyCenterBannerButton)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14967 */;
-import QrCodeIcon from "QrCodeIcon" /* 14971 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14968 */;
+import QrCodeIcon from "QrCodeIcon" /* 14972 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
@@ -68,7 +68,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React7.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14968, dependencyMap.paths), React5, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14969, dependencyMap.paths), React5, obj4);
     }
   }, items4);
   const obj8 = { direction: "horizontal", spacing: getLinkCode2(stateFromStores[9]).space.PX_8, style: tmp.container, children: null };

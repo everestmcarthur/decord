@@ -1,10 +1,10 @@
-// Module ID: 16096
-// Function ID: 16097
+// Module ID: 16098
+// Function ID: 16099
 // Name: useOrientationLock
 // Dependencies: [19, 4615, 1608, 7045, 8450, 2]
 // Exports: default
 
-// Module 16096 (useOrientationLock)
+// Module 16098 (useOrientationLock)
 import DeviceUtils from "DeviceUtils" /* 4615 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7045 */;
 import noop from "module_19" /* 19 */;

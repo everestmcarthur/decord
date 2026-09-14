@@ -1,14 +1,14 @@
-// Module ID: 12009
-// Function ID: 12010
+// Module ID: 12010
+// Function ID: 12011
 // Name: ClassificationDetail
-// Dependencies: [19, 17, 2025, 8548, 8537, 1074, 21, 4636, 576, 4632, 8538, 1114, 504, 2978, 9179, 4331, 9532, 5056, 12010, 12012, 8547, 8531, 1242, 12013, 7704, 7709, 12015, 7226, 12020, 8536, 2]
+// Dependencies: [19, 17, 2025, 8548, 8537, 1074, 21, 4636, 576, 4632, 8538, 1114, 504, 2978, 9179, 4331, 9532, 5056, 12011, 12013, 8547, 8531, 1240, 12014, 7704, 7709, 12016, 7226, 12021, 8536, 2]
 // Exports: default
 
-// Module 12009 (ClassificationDetail)
+// Module 12010 (ClassificationDetail)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import _modDef2978 from "module_2978" /* 2978 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -434,18 +434,18 @@ export default function ConnectedClassificationDetail(classificationId) {
         ({ isDsaEligible: obj2.is_dsa_eligible, violationType: obj2.violation_type } = safetyHubClassification);
         AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_HUB_ACTION, obj3);
         if (hasItem1) {
-          tmp(12013).openV2(tmp3, onClose);
-          const tmpResult = tmp(12013);
+          tmp(12014).openV2(tmp3, onClose);
+          const tmpResult = tmp(12014);
         } else if (hasItem) {
-          tmp(12013).open(tmp3, onClose);
-          const tmpResult5 = tmp(12013);
+          tmp(12014).open(tmp3, onClose);
+          const tmpResult5 = tmp(12014);
         } else if (isAppealEligible) {
           const obj4 = { name: MetricEvents.MetricEvents.APPEAL_INGESTION_VIEW };
           tmp(7704).increment(obj4);
           const tmpResult6 = tmp(7704);
           const obj5 = { classificationId: tmp3 };
-          tmp(12015).open(obj5);
-          const tmpResult7 = tmp(12015);
+          tmp(12016).open(obj5);
+          const tmpResult7 = tmp(12016);
         } else {
           tmp(4331).openURL(constants.APPEALS_LINK);
           const tmpResult8 = tmp(4331);

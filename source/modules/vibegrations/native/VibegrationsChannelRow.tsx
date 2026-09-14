@@ -1,14 +1,14 @@
-// Module ID: 16311
-// Function ID: 16312
+// Module ID: 16313
+// Function ID: 16314
 // Name: VibegrationsChannelRow
-// Dependencies: [19, 1074, 1964, 10246, 21, 4636, 576, 1100, 12508, 1114, 3590, 10281, 2]
+// Dependencies: [19, 1074, 1964, 10246, 21, 4636, 576, 1100, 12509, 1114, 3590, 10281, 2]
 // Exports: default
 
-// Module 16311 (VibegrationsChannelRow)
+// Module 16313 (VibegrationsChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12508 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12509 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,10 +29,10 @@ export default function VibegrationsChannelRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(12508).ChannelModes.SELECTED;
+    let DEFAULT = id(12509).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(12508).ChannelModes.DEFAULT;
+    DEFAULT = id(12509).ChannelModes.DEFAULT;
     tmp5 = id;
   }
   const obj = { onPress: callback, style: closure_7().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
@@ -45,7 +45,7 @@ export default function VibegrationsChannelRow(selected) {
   const intl2 = tmp5(1114).intl;
   obj2.name = intl2.string(_modDef3590.Xmvb23);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(12508).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(12508).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10281).MagicWandIcon });
+  obj.name = jsx(tmp5(12509).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12509).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10281).MagicWandIcon });
   return <tmp8 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

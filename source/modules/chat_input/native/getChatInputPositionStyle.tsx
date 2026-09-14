@@ -1,12 +1,12 @@
-// Module ID: 12389
-// Function ID: 12390
+// Module ID: 12390
+// Function ID: 12391
 // Name: getChatInputPositionStyle
-// Dependencies: [17, 1150, 2]
+// Dependencies: [17, 1363, 2]
 // Exports: default
 
-// Module 12389 (getChatInputPositionStyle)
+// Module 12390 (getChatInputPositionStyle)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 let obj = {};

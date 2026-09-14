@@ -1,13 +1,13 @@
-// Module ID: 11843
-// Function ID: 11844
+// Module ID: 11844
+// Function ID: 11845
 // Name: PollsActionCreators
-// Dependencies: [5, 4276, 7697, 502, 1957, 4977, 5494, 4857, 4976, 11560, 1074, 38, 4980, 1114, 5601, 11844, 11846, 4816, 12, 504, 573, 7865, 11855, 4488, 11849, 7559, 9439, 4537, 2]
+// Dependencies: [5, 4276, 7697, 502, 1957, 4977, 5494, 4857, 4976, 11561, 1074, 38, 4980, 1114, 5601, 11845, 11847, 4816, 12, 504, 573, 7865, 11856, 4488, 11850, 7559, 9439, 4537, 2]
 
-// Module 11843 (PollsActionCreators)
+// Module 11844 (PollsActionCreators)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 11844 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 11845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
@@ -710,7 +710,7 @@ let closure_28 = async function _createPoll(arg0, value) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11849).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11850).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -835,7 +835,7 @@ let closure_29 = async function _endPollEarly(arg0, value) {
   return "PX_16";
 };
 const DraftType = fn(4977).DraftType;
-const PollsInteractionStore = fn(11560);
+const PollsInteractionStore = fn(11561);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

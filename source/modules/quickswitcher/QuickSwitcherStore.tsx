@@ -1,7 +1,7 @@
 // Module ID: 9964
 // Function ID: 9965
 // Name: QuickSwitcherStore
-// Dependencies: [5189, 5587, 1183, 502, 1957, 4977, 2012, 2021, 1979, 4275, 4651, 2011, 4458, 4817, 1074, 9965, 12, 9974, 5523, 1114, 9975, 1369, 510, 504, 573, 2]
+// Dependencies: [5189, 5587, 1181, 502, 1957, 4977, 2012, 2021, 1979, 4275, 4651, 2011, 4458, 4817, 1074, 9965, 12, 9974, 5523, 1114, 9975, 1369, 510, 504, 573, 2]
 
 // Module 9964 (QuickSwitcherStore)
 import _modDef12 from "module_12" /* 12 */;
@@ -13,7 +13,7 @@ import createAutocompleterResultForChannelIdDefault from "createAutocompleterRes
 import ReadStateUtils from "ReadStateUtils" /* 9975 */;
 import GameAutocompleteStore from "GameAutocompleteStore" /* 5189 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import DraftStore from "DraftStore" /* 4977 */;

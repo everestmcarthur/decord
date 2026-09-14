@@ -1,9 +1,9 @@
-// Module ID: 11047
-// Function ID: 11048
+// Module ID: 11048
+// Function ID: 11049
 // Name: ChannelDetailsConstants
 // Dependencies: [7982, 2]
 
-// Module 11047 (ChannelDetailsConstants)
+// Module 11048 (ChannelDetailsConstants)
 import SearchConstants from "SearchConstants" /* 7982 */;
 import size from "module_2" /* 2 */;
 

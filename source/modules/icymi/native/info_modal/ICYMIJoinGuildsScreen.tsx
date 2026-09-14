@@ -1,10 +1,10 @@
-// Module ID: 16579
-// Function ID: 16580
+// Module ID: 16581
+// Function ID: 16582
 // Name: ICYMIJoinGuildsScreen
-// Dependencies: [5, 32, 19, 17, 4628, 1979, 16578, 1074, 21, 16547, 576, 5665, 9415, 4373, 4637, 7158, 504, 1396, 8940, 5668, 5204, 4632, 5056, 4596, 1114, 1611, 8477, 8469, 4335, 4839, 16562, 9003, 2]
+// Dependencies: [5, 32, 19, 17, 4628, 1979, 16580, 1074, 21, 16549, 576, 5665, 9415, 4373, 4637, 7158, 504, 1396, 8940, 5668, 5204, 4632, 5056, 4596, 1114, 1611, 8477, 8469, 4335, 4839, 16564, 9003, 2]
 // Exports: default
 
-// Module 16579 (ICYMIJoinGuildsScreen)
+// Module 16581 (ICYMIJoinGuildsScreen)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import timing from "timing" /* 4637 */;
@@ -13,13 +13,13 @@ import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
 import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8477 */;
 import ClipViewDefault from "ClipView" /* 8940 */;
 import ServerIcon from "ServerIcon" /* 9415 */;
-import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16562 */;
+import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16564 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ICYMIPopularGuildsStore from "ICYMIPopularGuildsStore" /* 16578 */;
+import ICYMIPopularGuildsStore from "ICYMIPopularGuildsStore" /* 16580 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -219,7 +219,7 @@ const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let c15 = 50;
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin }, scrollContentContainer: null, footer: null, title: null, subtitle: null, separator: null, featuredServerContainer: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, guildsScrollContainer: null, guildsColumn: null, selectedServersRowContainer: null, selectedServerIcon: null, noServerContainer: null, noServerExtraContainer: null, pressableUnderlayColor: null, guildIconBorder: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
@@ -364,7 +364,7 @@ export default function ICYMIJoinGuildsScreen() {
             const obj8 = v3(8469);
             const recommendedGuilds = v3(8469).getRecommendedGuilds();
             const obj9 = v3(8469);
-            v3(4839).popWithKey(stateFromStoresArray(16562).ICYMI_INFO_MODAL_KEY);
+            v3(4839).popWithKey(stateFromStoresArray(16564).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             const obj13 = { value: undefined, done: true };
             return obj13;
@@ -395,7 +395,7 @@ export default function ICYMIJoinGuildsScreen() {
           const obj19 = v3(8469);
           const recommendedGuilds1 = v3(8469).getRecommendedGuilds();
           const obj20 = v3(8469);
-          v3(4839).popWithKey(stateFromStoresArray(16562).ICYMI_INFO_MODAL_KEY);
+          v3(4839).popWithKey(stateFromStoresArray(16564).ICYMI_INFO_MODAL_KEY);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

@@ -1,13 +1,13 @@
 // Module ID: 7883
 // Function ID: 7884
 // Name: ThreadUtils
-// Dependencies: [109, 4651, 4817, 4277, 1113, 1074, 1114, 7602, 4816, 1242, 7876, 7217, 1384, 504, 11, 4228, 2]
+// Dependencies: [109, 4651, 4817, 4277, 1113, 1074, 1114, 7602, 4816, 1240, 7876, 7217, 1384, 504, 11, 4228, 2]
 // Exports: getTimestampAccessibilityLabel, trackActiveThreadsPopoutOpened, trackThreadBrowserOpened, trackThreadBrowserTab, trackThreadNotificationSettingsUpdated, useLastMessageTimestamp
 
 // Module 7883 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import getTimestampStringDefault from "getTimestampString" /* 7602 */;

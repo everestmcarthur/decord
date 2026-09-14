@@ -1,14 +1,14 @@
-// Module ID: 11517
-// Function ID: 11518
+// Module ID: 11518
+// Function ID: 11519
 // Name: IgnoreConfirmationActionSheet
-// Dependencies: [32, 19, 17, 1957, 1371, 9172, 11515, 1074, 21, 4636, 576, 8302, 1114, 4593, 5768, 5686, 1178, 1611, 7265, 7285, 504, 1242, 8298, 7253, 6728, 7070, 4632, 4788, 8034, 4603, 11516, 1896, 1250, 5056, 9171, 2024, 4331, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 9172, 11516, 1074, 21, 4636, 576, 8302, 1114, 4593, 5768, 5686, 1176, 1611, 7265, 7285, 504, 1240, 8298, 7253, 6728, 7070, 4632, 4788, 8034, 4603, 11517, 1896, 1248, 5056, 9171, 2024, 4331, 2]
 
-// Module 11517 (IgnoreConfirmationActionSheet)
+// Module 11518 (IgnoreConfirmationActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4593 from "module_4593" /* 4593 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -35,7 +35,7 @@ function IgnoredInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(9172).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11515);
+const RestrictionConfirmationConstants = fn(11516);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } = RestrictionConfirmationConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
@@ -192,7 +192,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   let tmp12Result = null;
   if (null != stateFromStores) {
     function handleClose() {
-      channelId(1242).track(constants2.USER_REMEDIATION_ACTION, { action: constants.DISMISS_IGNORE, location: "user-profile-context-menu" });
+      channelId(1240).track(constants2.USER_REMEDIATION_ACTION, { action: constants.DISMISS_IGNORE, location: "user-profile-context-menu" });
     }
     let obj3 = { value: tmp6(items).analyticsLocations, children: null };
     const obj4 = { onDismiss: handleClose, scrollable: true, startHeight: null, bodyStyles: null, children: null };
@@ -205,11 +205,11 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const obj6 = { style: tmp.header, children: null };
     const obj7 = { style: tmp.avatarContainer, children: null };
     const obj8 = { children: null };
-    const obj9 = { guildId: stateFromStores1, user: stateFromStores, animate: false, size: tmp7(1178).AvatarSizes.XLARGE, style: tmp.avatar };
-    const items6 = [closure_13(tmp7(1178).Avatar, obj9), ];
+    const obj9 = { guildId: stateFromStores1, user: stateFromStores, animate: false, size: tmp7(1176).AvatarSizes.XLARGE, style: tmp.avatar };
+    const items6 = [closure_13(tmp7(1176).Avatar, obj9), ];
     const obj10 = { style: tmp.avatarIconContainer, children: null };
-    const obj11 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp4(7070) };
-    obj10.children = closure_13(tmp7(1178).Icon, obj11);
+    const obj11 = { size: tmp7(1176).Icon.Sizes.MEDIUM, source: tmp4(7070) };
+    obj10.children = closure_13(tmp7(1176).Icon, obj11);
     items6[1] = closure_13(stateFromStores, obj10);
     obj7.children = items6;
     const items7 = [closure_14(stateFromStores, obj7), , ];
@@ -231,8 +231,8 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const intl3 = tmp7(1114).intl;
     obj17.title = intl3.string(tmp7(1114).t["1v01gh"]);
     const obj18 = { icon: null, label: null, variant: "danger", subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
-    const obj19 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp4(8034), color: tmp.destructiveIcon.color };
-    obj18.icon = closure_13(tmp7(1178).Icon, obj19);
+    const obj19 = { size: tmp7(1176).Icon.Sizes.MEDIUM, source: tmp4(8034), color: tmp.destructiveIcon.color };
+    obj18.icon = closure_13(tmp7(1176).Icon, obj19);
     const intl4 = tmp7(1114).intl;
     obj18.label = intl4.string(tmp7(1114).t.bwxY30);
     const obj20 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
@@ -245,7 +245,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       AnalyticsUtilsDefault.track(constants.USER_REMEDIATION_ACTION, { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" });
       const obj2 = { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" };
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(11516, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(11517, dependencyMap.paths);
       obj3.openLazy(tmp2, React7, { userId, channelId, onSuccess, impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION }, "replaceTopSheet");
     };
     obj17.children = closure_13(tmp7(5686).TableRow, obj18);

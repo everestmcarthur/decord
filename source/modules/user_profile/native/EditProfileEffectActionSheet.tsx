@@ -1,16 +1,16 @@
-// Module ID: 14714
-// Function ID: 14715
+// Module ID: 14715
+// Function ID: 14716
 // Name: EditProfileEffectActionSheet
-// Dependencies: [32, 19, 17, 7660, 7651, 1074, 21, 4636, 576, 8303, 8287, 7265, 7285, 1242, 8288, 8284, 8281, 7253, 4632, 1114, 8289, 10862, 504, 14715, 8283, 8304, 14716, 13304, 13305, 8290, 11242, 5068, 2]
+// Dependencies: [32, 19, 17, 7660, 7651, 1074, 21, 4636, 576, 8303, 8287, 7265, 7285, 1240, 8288, 8284, 8281, 7253, 4632, 1114, 8289, 10863, 504, 14716, 8283, 8304, 14717, 13305, 13306, 8290, 11243, 5068, 2]
 // Exports: default
 
-// Module 14714 (EditProfileEffectActionSheet)
+// Module 14715 (EditProfileEffectActionSheet)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import useShopProductItems from "useShopProductItems" /* 8288 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
-import EditProfileEffectSection from "EditProfileEffectSection" /* 14716 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 14717 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
@@ -122,7 +122,7 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11242), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [closure_9(purchase(11243), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;

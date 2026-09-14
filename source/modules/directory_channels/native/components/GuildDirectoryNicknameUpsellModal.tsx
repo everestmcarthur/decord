@@ -1,22 +1,22 @@
-// Module ID: 12791
-// Function ID: 12792
+// Module ID: 12792
+// Function ID: 12793
 // Name: GuildDirectoryNicknameUpsellModal
-// Dependencies: [5, 32, 19, 17, 1979, 12780, 21, 4636, 5763, 576, 504, 7084, 7223, 4537, 5665, 4632, 1114, 6706, 1178, 5056, 12781, 12790, 5705, 7103, 5679, 2]
+// Dependencies: [5, 32, 19, 17, 1979, 12781, 21, 4636, 5763, 576, 504, 7084, 7223, 4537, 5665, 4632, 1114, 6706, 1176, 5056, 12782, 12791, 5705, 7103, 5679, 2]
 // Exports: default
 
-// Module 12791 (GuildDirectoryNicknameUpsellModal)
+// Module 12792 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import GuildIcon from "GuildIcon" /* 5665 */;
 import useInitialValueDefault from "useInitialValue" /* 5679 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12781 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12790 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12782 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12791 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -136,7 +136,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12780).GuildPrompts;
+const GuildPrompts = fn(12781).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4636);

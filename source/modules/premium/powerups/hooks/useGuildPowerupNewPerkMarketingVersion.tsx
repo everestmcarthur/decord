@@ -1,10 +1,10 @@
-// Module ID: 12632
-// Function ID: 12633
+// Module ID: 12633
+// Function ID: 12634
 // Name: useGuildPowerupNewPerkMarketingVersion
 // Dependencies: [19, 1979, 4275, 4526, 1074, 4549, 504, 4565, 4564, 4529, 9196, 2]
 // Exports: default
 
-// Module 12632 (useGuildPowerupNewPerkMarketingVersion)
+// Module 12633 (useGuildPowerupNewPerkMarketingVersion)
 import Powerups from "Powerups" /* 4529 */;
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9196 */;
 import noop from "module_19" /* 19 */;

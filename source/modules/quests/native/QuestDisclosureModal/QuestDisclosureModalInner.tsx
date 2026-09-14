@@ -1,10 +1,10 @@
-// Module ID: 15195
-// Function ID: 15196
+// Module ID: 15196
+// Function ID: 15197
 // Name: QuestDisclosureModalInner
-// Dependencies: [17, 1074, 21, 4636, 576, 1935, 9415, 1114, 9015, 11955, 9352, 5773, 4632, 11428, 5688, 2024, 5056, 2]
+// Dependencies: [17, 1074, 21, 4636, 576, 1935, 9415, 1114, 9015, 11956, 9352, 5773, 4632, 11429, 5688, 2024, 5056, 2]
 // Exports: default
 
-// Module 15195 (QuestDisclosureModalInner)
+// Module 15196 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -53,7 +53,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     const intl = tmp2(1114).intl;
     obj.text = intl.string(tmp2(1114).t.xQSdPv);
     items1 = [obj, , ];
-    const obj2 = { icon: tmp5(tmp2(11955).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: tmp5(tmp2(11956).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1114).intl;
     obj2.text = intl2.string(tmp2(1114).t.mYt7hQ);
     items1[1] = obj2;

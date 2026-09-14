@@ -1,13 +1,13 @@
-// Module ID: 17576
-// Function ID: 17577
+// Module ID: 17577
+// Function ID: 17578
 // Name: ParentalConsentWarningModal
-// Dependencies: [19, 17, 7640, 7641, 1074, 1954, 21, 1943, 7642, 4495, 7485, 4842, 4636, 576, 1611, 1114, 2396, 1242, 573, 1945, 4603, 4839, 17577, 1896, 7253, 5054, 5773, 4632, 5056, 2]
+// Dependencies: [19, 17, 7640, 7641, 1074, 1954, 21, 1943, 7642, 4495, 7485, 4842, 4636, 576, 1611, 1114, 2396, 1240, 573, 1945, 4603, 4839, 17578, 1896, 7253, 5054, 5773, 4632, 5056, 2]
 // Exports: default
 
-// Module 17576 (ParentalConsentWarningModal)
+// Module 17577 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
@@ -99,7 +99,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       tmp2(4842).enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = tmp2(4842);
     } else {
-      tmp2(4839).pushLazy(asyncRequireImpl(17577, dependencyMap.paths));
+      tmp2(4839).pushLazy(asyncRequireImpl(17578, dependencyMap.paths));
       const tmp2Result4 = tmp2(4839);
     }
   }, items2);

@@ -1,15 +1,15 @@
-// Module ID: 15807
-// Function ID: 15808
+// Module ID: 15809
+// Function ID: 15810
 // Name: CollectiblesTool
-// Dependencies: [32, 19, 17, 7645, 7660, 8320, 21, 4636, 576, 8890, 4632, 5057, 563, 10862, 15808, 1178, 11211, 2]
+// Dependencies: [32, 19, 17, 7645, 7660, 8320, 21, 4636, 576, 8890, 4632, 5057, 563, 10863, 15810, 1176, 11212, 2]
 // Exports: default
 
-// Module 15807 (CollectiblesTool)
+// Module 15809 (CollectiblesTool)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import BaseTextButton from "BaseTextButton" /* 5057 */;
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8890 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11211 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;

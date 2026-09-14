@@ -1,10 +1,10 @@
-// Module ID: 11243
-// Function ID: 11244
+// Module ID: 11244
+// Function ID: 11245
 // Name: UserProfilePreview
-// Dependencies: [32, 19, 17, 8277, 7311, 21, 4636, 576, 504, 8303, 8343, 8357, 11244, 8354, 8283, 8318, 8286, 8358, 8340, 4347, 8337, 8324, 8362, 8930, 8372, 11245, 11246, 11286, 11340, 8928, 2]
+// Dependencies: [32, 19, 17, 8277, 7311, 21, 4636, 576, 504, 8303, 8343, 8357, 11245, 8354, 8283, 8318, 8286, 8358, 8340, 4347, 8337, 8324, 8362, 8930, 8372, 11246, 11247, 11287, 11341, 8928, 2]
 // Exports: default
 
-// Module 11243 (UserProfilePreview)
+// Module 11244 (UserProfilePreview)
 import nativeDefault from "native" /* 576 */;
 import scaleProfileFrameDefault from "scaleProfileFrame" /* 8340 */;
 import _slicedToArray from "module_32" /* 32 */;

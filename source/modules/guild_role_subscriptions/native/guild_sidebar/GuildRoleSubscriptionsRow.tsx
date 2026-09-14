@@ -1,16 +1,16 @@
-// Module ID: 16300
-// Function ID: 16301
+// Module ID: 16302
+// Function ID: 16303
 // Name: GuildRoleSubscriptionsRow
-// Dependencies: [19, 1074, 1964, 10246, 21, 4636, 576, 1100, 4603, 16301, 1896, 12508, 1114, 12908, 2]
+// Dependencies: [19, 1074, 1964, 10246, 21, 4636, 576, 1100, 4603, 16303, 1896, 12509, 1114, 12909, 2]
 // Exports: default
 
-// Module 16300 (GuildRoleSubscriptionsRow)
+// Module 16302 (GuildRoleSubscriptionsRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12508 */;
-import _modDef12908 from "module_12908" /* 12908 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12509 */;
+import _modDef12909 from "module_12909" /* 12909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,14 +33,14 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16301, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16303, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       }
     });
   }, items1);
-  const ChannelModes = id(12508).ChannelModes;
+  const ChannelModes = id(12509).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -58,7 +58,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1114).intl;
   obj2.name = intl2.string(tmp6(1114).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(12508).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(12508).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12908 });
+  obj.name = jsx(tmp6(12509).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(12509).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12909 });
   return <tmp8 onPress={callback} onLongPress={callback1} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

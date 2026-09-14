@@ -1,11 +1,11 @@
-// Module ID: 17252
-// Function ID: 17253
+// Module ID: 17254
+// Function ID: 17255
 // Name: useActivityShelfItemData
-// Dependencies: [19, 12168, 2]
+// Dependencies: [19, 12169, 2]
 // Exports: useActivityShelfItemData
 
-// Module 17252 (useActivityShelfItemData)
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12168 */;
+// Module 17254 (useActivityShelfItemData)
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12169 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

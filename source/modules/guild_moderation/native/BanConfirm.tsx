@@ -1,9 +1,9 @@
-// Module ID: 11981
-// Function ID: 11982
+// Module ID: 11982
+// Function ID: 11983
 // Name: BanConfirm
-// Dependencies: [32, 19, 17, 1979, 1371, 21, 1114, 1090, 4636, 576, 7084, 11280, 504, 5601, 11982, 4632, 4481, 5766, 5769, 7188, 5056, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 21, 1114, 1090, 4636, 576, 7084, 11281, 504, 5601, 11983, 4632, 4481, 5766, 5769, 7188, 5056, 2]
 
-// Module 11981 (BanConfirm)
+// Module 11982 (BanConfirm)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;

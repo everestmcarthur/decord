@@ -1,9 +1,9 @@
-// Module ID: 16793
-// Function ID: 16794
+// Module ID: 16795
+// Function ID: 16796
 // Name: SearchListSection
 // Dependencies: [19, 17, 7982, 21, 4636, 4632, 2]
 
-// Module 16793 (SearchListSection)
+// Module 16795 (SearchListSection)
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 

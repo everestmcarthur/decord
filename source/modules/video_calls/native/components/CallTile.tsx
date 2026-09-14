@@ -1,11 +1,11 @@
 // Module ID: 10186
 // Function ID: 10187
 // Name: CallTile
-// Dependencies: [19, 17, 4658, 1371, 9597, 4657, 21, 4636, 4486, 576, 7265, 1611, 504, 4837, 8296, 9724, 10153, 9753, 9761, 10187, 10192, 10193, 9572, 9594, 10194, 1178, 9604, 4373, 4637, 10195, 2]
+// Dependencies: [19, 17, 4658, 1371, 9597, 4657, 21, 4636, 4486, 576, 7265, 1611, 504, 4837, 8296, 9724, 10153, 9753, 9761, 10187, 10192, 10193, 9572, 9594, 10194, 1176, 9604, 4373, 4637, 10195, 2]
 
 // Module 10186 (CallTile)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;

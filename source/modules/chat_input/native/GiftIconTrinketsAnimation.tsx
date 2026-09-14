@@ -1,16 +1,16 @@
-// Module ID: 12379
-// Function ID: 12380
+// Module ID: 12380
+// Function ID: 12381
 // Name: GiftIconTrinketsAnimation
-// Dependencies: [19, 17, 4628, 21, 4636, 4338, 576, 504, 1925, 1150, 8935, 5668, 2]
+// Dependencies: [19, 17, 4628, 21, 4636, 4338, 576, 504, 1925, 1363, 8935, 5668, 2]
 
-// Module 12379 (GiftIconTrinketsAnimation)
+// Module 12380 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
-const PlatformUtils = APNGPlayer(1150);
+const PlatformUtils = APNGPlayer(1363);
 const FastImageDefault = tmp(5668);
 const APNGPlayer2 = APNGPlayer(8935);
 require = fn;

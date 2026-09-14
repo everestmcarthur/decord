@@ -1,10 +1,10 @@
-// Module ID: 12359
-// Function ID: 12360
+// Module ID: 12360
+// Function ID: 12361
 // Name: PollCreationInputError
-// Dependencies: [19, 17, 21, 4636, 576, 4348, 1178, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4348, 1176, 4632, 2]
 // Exports: default
 
-// Module 12359 (PollCreationInputError)
+// Module 12360 (PollCreationInputError)
 import nativeDefault from "native" /* 576 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ export default function PollCreationInputError(message) {
   }, items);
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [closure_4(message(1178).WarningCircle, size), closure_4(message(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [closure_4(message(1176).WarningCircle, size), closure_4(message(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
   obj.children = items1;
   return closure_5(View, obj);
 };

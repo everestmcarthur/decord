@@ -1,10 +1,10 @@
-// Module ID: 17428
-// Function ID: 17429
+// Module ID: 17430
+// Function ID: 17431
 // Name: AudioSessionModeManager
-// Dependencies: [17, 1956, 5502, 4658, 502, 1957, 1908, 2011, 4655, 1895, 1074, 1150, 17429, 7221, 2]
+// Dependencies: [17, 1956, 5502, 4658, 502, 1957, 1908, 2011, 4655, 1895, 1074, 1363, 17431, 7221, 2]
 
-// Module 17428 (AudioSessionModeManager)
-import VoicePermissionManager from "VoicePermissionManager" /* 17429 */;
+// Module 17430 (AudioSessionModeManager)
+import VoicePermissionManager from "VoicePermissionManager" /* 17431 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5502 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
@@ -55,7 +55,7 @@ function handleAVAudioSessionMode() {
   }
 }
 const AppStates = fn(1074).AppStates;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   let obj2 = {
     setAVAudioSessionMode() {

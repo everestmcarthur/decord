@@ -1,9 +1,9 @@
-// Module ID: 13812
-// Function ID: 13813
+// Module ID: 13813
+// Function ID: 13814
 // Name: GuildFriendshipStore
 // Dependencies: [504, 5601, 573, 2]
 
-// Module 13812 (GuildFriendshipStore)
+// Module 13813 (GuildFriendshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;

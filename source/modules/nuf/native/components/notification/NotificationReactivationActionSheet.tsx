@@ -1,21 +1,21 @@
-// Module ID: 17571
-// Function ID: 17572
+// Module ID: 17572
+// Function ID: 17573
 // Name: NotificationReactivationActionSheet
-// Dependencies: [19, 17, 12539, 1074, 21, 4636, 576, 1242, 12540, 4603, 7253, 17572, 4632, 1114, 5514, 5056, 2]
+// Dependencies: [19, 17, 12540, 1074, 21, 4636, 576, 1240, 12541, 4603, 7253, 17573, 4632, 1114, 5514, 5056, 2]
 // Exports: default
 
-// Module 17571 (NotificationReactivationActionSheet)
+// Module 17572 (NotificationReactivationActionSheet)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12540 */;
-import _modDef17572 from "module_17572" /* 17572 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12541 */;
+import _modDef17573 from "module_17573" /* 17573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const EventActionType = fn(12539).EventActionType;
+const EventActionType = fn(12540).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -49,7 +49,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17572, resizeMode: "contain" }), , , ];
+  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17573, resizeMode: "contain" }), , , ];
   const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1114).intl;
   obj4.children = intl.string(_location(1114).t.a4bgO0);

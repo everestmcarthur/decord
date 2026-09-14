@@ -1,14 +1,14 @@
-// Module ID: 12131
-// Function ID: 12132
+// Module ID: 12132
+// Function ID: 12133
 // Name: ForumPostGridHeader
-// Dependencies: [19, 17, 7376, 1964, 21, 4636, 12132, 12134, 12143, 12144, 12145, 2]
+// Dependencies: [19, 17, 7376, 1964, 21, 4636, 12133, 12135, 12144, 12145, 12146, 2]
 // Exports: default
 
-// Module 12131 (ForumPostGridHeader)
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12132 */;
-import ForumPostUsername from "ForumPostUsername" /* 12134 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12143 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 12145 */;
+// Module 12132 (ForumPostGridHeader)
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12133 */;
+import ForumPostUsername from "ForumPostUsername" /* 12135 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12144 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function ForumPostGridHeader(arg0) {
   }
   const items = [hasFlagResult, timestampProducer(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), timestampProducer(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
-    isNew = tmp8(tmp10(12144), {});
+    isNew = tmp8(tmp10(12145), {});
   }
   items[3] = isNew;
   obj2.children = items;

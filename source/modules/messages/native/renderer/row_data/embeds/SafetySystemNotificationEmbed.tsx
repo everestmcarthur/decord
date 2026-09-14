@@ -1,10 +1,10 @@
-// Module ID: 13376
-// Function ID: 13377
+// Module ID: 13377
+// Function ID: 13378
 // Name: SafetySystemNotificationEmbed
 // Dependencies: [17, 1074, 4228, 8712, 5117, 8536, 8050, 1114, 2]
 // Exports: createSafetySystemNotificationEmbed
 
-// Module 13376 (SafetySystemNotificationEmbed)
+// Module 13377 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import _modDef4228 from "module_4228" /* 4228 */;

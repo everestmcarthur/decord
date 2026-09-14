@@ -1,12 +1,12 @@
-// Module ID: 10347
-// Function ID: 10348
+// Module ID: 10348
+// Function ID: 10349
 // Name: useNativeForumPostHandlers
-// Dependencies: [19, 4327, 1957, 4285, 1371, 7380, 7411, 1074, 1113, 7865, 38, 4789, 5109, 1365, 8001, 10072, 8377, 1150, 4604, 4605, 7869, 4647, 4502, 10348, 11387, 11385, 2]
+// Dependencies: [19, 4327, 1957, 4285, 1371, 7380, 7411, 1074, 1113, 7865, 38, 4789, 5109, 1365, 8001, 10072, 8377, 1363, 4604, 4605, 7869, 4647, 4502, 10349, 11388, 11386, 2]
 // Exports: default
 
-// Module 10347 (useNativeForumPostHandlers)
+// Module 10348 (useNativeForumPostHandlers)
 import _modDef38 from "module_38" /* 38 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
@@ -15,9 +15,9 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
 import tracking_Tracking from "tracking/Tracking" /* 7869 */;
 import openMediaModal from "openMediaModal" /* 8377 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10348 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11387 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10349 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11388 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

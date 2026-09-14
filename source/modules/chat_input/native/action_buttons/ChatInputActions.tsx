@@ -1,28 +1,28 @@
-// Module ID: 12364
-// Function ID: 12365
+// Module ID: 12365
+// Function ID: 12366
 // Name: ChatInputActions
-// Dependencies: [32, 19, 12091, 1074, 21, 4636, 576, 5061, 7975, 4338, 6726, 4504, 1609, 12365, 7947, 5052, 5232, 1114, 10781, 5168, 10766, 12366, 5187, 10240, 12338, 12340, 7949, 1242, 4373, 8789, 12368, 4343, 12369, 12370, 12374, 2]
+// Dependencies: [32, 19, 12092, 1074, 21, 4636, 576, 5061, 7975, 4338, 6726, 4504, 1609, 12366, 7947, 5052, 5232, 1114, 10782, 5168, 10767, 12367, 5187, 10240, 12339, 12341, 7949, 1240, 4373, 8789, 12369, 4343, 12370, 12371, 12375, 2]
 
-// Module 12364 (ChatInputActions)
+// Module 12365 (ChatInputActions)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import mergeProps from "mergeProps" /* 4343 */;
 import ImageIcon from "ImageIcon" /* 5168 */;
 import AppsIcon from "AppsIcon" /* 5187 */;
 import ImagePickerUtils from "ImagePickerUtils" /* 5232 */;
 import AttachmentIcon from "AttachmentIcon" /* 10240 */;
-import PollsIcon from "PollsIcon" /* 10766 */;
-import CameraIcon from "CameraIcon" /* 10781 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12338 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 12366 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12368 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12369 */;
+import PollsIcon from "PollsIcon" /* 10767 */;
+import CameraIcon from "CameraIcon" /* 10782 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12339 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 12367 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12369 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ChatInputConstants = fn(12091);
+const ChatInputConstants = fn(12092);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

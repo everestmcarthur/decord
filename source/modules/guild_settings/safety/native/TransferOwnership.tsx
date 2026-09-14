@@ -1,10 +1,10 @@
-// Module ID: 11977
-// Function ID: 11978
+// Module ID: 11978
+// Function ID: 11979
 // Name: TransferOwnership
-// Dependencies: [5, 32, 19, 17, 1371, 11976, 1074, 21, 4636, 576, 4338, 1483, 504, 38, 9192, 11974, 4334, 4788, 5665, 4632, 11978, 1178, 1114, 4481, 5768, 5685, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 11977, 1074, 21, 4636, 576, 4338, 1483, 504, 38, 9192, 11975, 4334, 4788, 5665, 4632, 11979, 1176, 1114, 4481, 5768, 5685, 5056, 2]
 // Exports: default
 
-// Module 11977 (TransferOwnership)
+// Module 11978 (TransferOwnership)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GuildIcon from "GuildIcon" /* 5665 */;
@@ -16,7 +16,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(11976);
+const TransferOwnershipConstants = fn(11977);
 ({ TransferOwnershipModalScenes: c10, TransferOwnershipVerificationTypes: closure_11 } = TransferOwnershipConstants);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
@@ -85,8 +85,8 @@ export default function TransferOwnership(guild) {
             }
             const obj4 = v1(9192);
             v1(9192).transferOwnership(user.id, id.id, MFA).then(() => {
-              v1(11974).close();
-              const obj = v1(11974);
+              v1(11975).close();
+              const obj = v1(11975);
               v1(9192).close();
               const obj2 = v1(9192);
               const result = closure_1_0(4334).showTransferOwnershipSuccess();
@@ -163,13 +163,13 @@ export default function TransferOwnership(guild) {
   const obj8 = { style: tmp5.header, children: null };
   const obj7 = { paddingTop: toUser(576).space.PX_16, paddingHorizontal: token };
   const tmp12 = closure_8;
-  const items1 = [closure_13(c7, { source: toUser(11978), style: tmp5.arrow }), , , ];
+  const items1 = [closure_13(c7, { source: toUser(11979), style: tmp5.arrow }), , , ];
   const obj10 = { style: tmp5.avatarsWrapper, children: null };
-  const obj9 = { source: toUser(11978), style: tmp5.arrow };
-  const items2 = [closure_13(guild(1178).Avatar, { user: stateFromStores, guildId: guild.id, size: guild(1178).AvatarSizes.XXLARGE }), ];
+  const obj9 = { source: toUser(11979), style: tmp5.arrow };
+  const items2 = [closure_13(guild(1176).Avatar, { user: stateFromStores, guildId: guild.id, size: guild(1176).AvatarSizes.XXLARGE }), ];
   const obj12 = { style: tmp5.avatarFauxBorder, children: null };
-  const obj13 = { user: toUser, guildId: "r", size: guild(1178).AvatarSizes.XXLARGE, style: tmp5.otherUserAvatar };
-  obj12.children = closure_13(guild(1178).Avatar, obj13);
+  const obj13 = { user: toUser, guildId: "r", size: guild(1176).AvatarSizes.XXLARGE, style: tmp5.otherUserAvatar };
+  obj12.children = closure_13(guild(1176).Avatar, obj13);
   items2[1] = closure_13(nickname, obj12);
   obj10.children = items2;
   items1[1] = closure_15(nickname, obj10);
@@ -250,7 +250,7 @@ export default function TransferOwnership(guild) {
   }
   const intl2 = tmp(1114).intl;
   const obj21 = { GuildHook: GuildWithSmallIcon, user: null, AKAHook: null };
-  const obj11 = { user: stateFromStores, guildId: guild.id, size: guild(1178).AvatarSizes.XXLARGE };
+  const obj11 = { user: stateFromStores, guildId: guild.id, size: guild(1176).AvatarSizes.XXLARGE };
   const obj14 = { variant: "text-xs/medium", color: "text-default", children: guild.name };
   obj21.user = toUser(4481).getUserTag(toUser);
   obj21.AKAHook = function NicknameAKA() {
@@ -258,8 +258,8 @@ export default function TransferOwnership(guild) {
     const items = [__initData(Text_Text.Text, { style: tmp.aka, variant: "text-sm/bold", color: "text-default", children: ["AKA", " "] }), , ];
     let tmp6 = null;
     if (c7) {
-      const obj2 = { style: tmp.miniAvatar, user: toUser, guildId: guild.id, size: tmp4(1178).AvatarSizes.XXSMALL };
-      tmp6 = map1(tmp4(1178).Avatar, obj2);
+      const obj2 = { style: tmp.miniAvatar, user: toUser, guildId: guild.id, size: tmp4(1176).AvatarSizes.XXSMALL };
+      tmp6 = map1(tmp4(1176).Avatar, obj2);
     }
     items[1] = tmp6;
     let str = nickname;

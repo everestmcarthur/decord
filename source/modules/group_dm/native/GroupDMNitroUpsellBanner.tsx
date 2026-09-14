@@ -1,10 +1,10 @@
-// Module ID: 16800
-// Function ID: 16801
+// Module ID: 16802
+// Function ID: 16803
 // Name: GroupDMNitroUpsellBanner
-// Dependencies: [32, 19, 17, 4628, 11722, 21, 576, 4636, 1611, 16801, 4338, 4373, 672, 5055, 5068, 504, 11723, 11720, 11727, 16802, 5056, 1114, 8156, 4632, 2]
+// Dependencies: [32, 19, 17, 4628, 11723, 21, 576, 4636, 1611, 16803, 4338, 4373, 672, 5055, 5068, 504, 11724, 11721, 11728, 16804, 5056, 1114, 8156, 4632, 2]
 // Exports: default
 
-// Module 16800 (GroupDMNitroUpsellBanner)
+// Module 16802 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
@@ -13,10 +13,10 @@ import Text_Text from "Text/Text" /* 4632 */;
 import spring from "spring" /* 5055 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import _modDef8156 from "module_8156" /* 8156 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11720 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11723 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11727 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 16802 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11721 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11724 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11728 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 16804 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -153,7 +153,7 @@ function FloatingBanner(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11722).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11723).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;

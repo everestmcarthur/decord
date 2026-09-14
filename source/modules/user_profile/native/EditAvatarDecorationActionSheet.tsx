@@ -1,13 +1,13 @@
 // Module ID: 8275
 // Function ID: 8276
 // Name: EditAvatarDecorationActionSheet
-// Dependencies: [32, 19, 17, 7660, 7650, 2021, 1074, 21, 4636, 576, 8276, 8286, 8287, 7265, 7285, 1242, 8288, 4347, 7253, 4632, 1114, 8289, 10862, 504, 13298, 8283, 13299, 13304, 13305, 8290, 8373, 1178, 13306, 2]
+// Dependencies: [32, 19, 17, 7660, 7650, 2021, 1074, 21, 4636, 576, 8276, 8286, 8287, 7265, 7285, 1240, 8288, 4347, 7253, 4632, 1114, 8289, 10863, 504, 13299, 8283, 13300, 13305, 13306, 8290, 8373, 1176, 13307, 2]
 // Exports: default
 
 // Module 8275 (EditAvatarDecorationActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useShopProductItems from "useShopProductItems" /* 8288 */;
-import EditAvatarDecorationSection from "EditAvatarDecorationSection" /* 13299 */;
+import EditAvatarDecorationSection from "EditAvatarDecorationSection" /* 13300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
@@ -130,8 +130,8 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   const tmp = closure_13();
   const tmp6 = closure_11;
   const tmp7 = View;
-  obj3.size = tmp10(1178).AvatarSizes.EDIT_AVATAR_DECORATION;
-  const items1 = [closure_10(purchase(8373), obj3), closure_10(purchase(13306), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
+  obj3.size = tmp10(1176).AvatarSizes.EDIT_AVATAR_DECORATION;
+  const items1 = [closure_10(purchase(8373), obj3), closure_10(purchase(13307), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
   obj.children = items1;
   return tmp6(tmp7, obj);
 }
@@ -167,7 +167,7 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   const analyticsLocations2 = selectedAvatarDecoration(7265)(analyticsLocations, tmp2(7285).EDIT_AVATAR_DECORATION_SHEET).analyticsLocations;
   const items = [selectedAvatarDecoration, setPendingAvatarDecoration];
   const callback = obj3.useCallback(() => {
-    const obj = first(1242);
+    const obj = first(1240);
     obj.track(constants.OPEN_POPOUT, { type: first(7285).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true });
   }, []);
   const callback1 = obj3.useCallback((arg0) => {

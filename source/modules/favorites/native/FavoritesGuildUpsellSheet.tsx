@@ -1,16 +1,16 @@
-// Module ID: 10356
-// Function ID: 10357
+// Module ID: 10357
+// Function ID: 10358
 // Name: FavoritesGuildUpsellSheet
-// Dependencies: [19, 1970, 1074, 21, 10353, 10357, 4603, 10355, 10358, 1114, 3236, 6090, 5514, 5056, 9522, 9492, 10361, 1100, 2]
+// Dependencies: [19, 1970, 1074, 21, 10354, 10358, 4603, 10356, 10359, 1114, 3236, 6090, 5514, 5056, 9522, 9492, 10362, 1100, 2]
 // Exports: default
 
-// Module 10356 (FavoritesGuildUpsellSheet)
+// Module 10357 (FavoritesGuildUpsellSheet)
 import router_utils from "router_utils" /* 1100 */;
 import _modDef3236 from "module_3236" /* 3236 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10357 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10361 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10358 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10362 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuild
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10353).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10354).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -36,7 +36,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(4603).hideActionSheet(analyticsLocations(10355).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(4603).hideActionSheet(analyticsLocations(10356).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1114).intl;
   const tmp8 = _modDef3236;
@@ -74,5 +74,5 @@ export default function FavoritesGuildUpsellSheet(limit) {
   });
   obj4.children = items;
   obj.actions = closure_7(analyticsLocations(5514).ButtonGroup, obj4);
-  return closure_6(analyticsLocations(10358).PromoSheet, obj);
+  return closure_6(analyticsLocations(10359).PromoSheet, obj);
 };

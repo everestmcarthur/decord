@@ -1,13 +1,13 @@
 // Module ID: 7225
 // Function ID: 7226
 // Name: GuildOnboardingPrompts
-// Dependencies: [32, 5, 19, 17, 4628, 5653, 1957, 1979, 2011, 7203, 7204, 7200, 1074, 21, 1100, 4636, 5763, 576, 1474, 4486, 5668, 5068, 1093, 504, 1611, 1483, 4373, 7208, 7209, 1396, 1878, 1242, 4816, 4637, 5705, 7226, 7227, 1369, 5610, 4632, 1114, 2]
+// Dependencies: [32, 5, 19, 17, 4628, 5653, 1957, 1979, 2011, 7203, 7204, 7200, 1074, 21, 1100, 4636, 5763, 576, 1474, 4486, 5668, 5068, 1093, 504, 1611, 1483, 4373, 7208, 7209, 1396, 1878, 1240, 4816, 4637, 5705, 7226, 7227, 1369, 5610, 4632, 1114, 2]
 // Exports: default
 
 // Module 7225 (GuildOnboardingPrompts)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ImageUtils from "ImageUtils" /* 1474 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
@@ -499,7 +499,7 @@ export default function GuildOnboardingPrompt(guildId) {
             obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
             if (currentPromptIdx < prompts.length - 1) {
               const obj4 = {};
-              const tmp2Result = tmp2(1242);
+              const tmp2Result = tmp2(1240);
               const merged1 = Object.assign(tmp5(4816).collectGuildAnalyticsMetadata(tmp6));
               obj4.step = tmp9 + 1;
               obj4.required = arr[tmp9 + 1].required;

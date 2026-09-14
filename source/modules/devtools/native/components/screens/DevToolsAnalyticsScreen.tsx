@@ -1,17 +1,17 @@
-// Module ID: 15666
-// Function ID: 15667
+// Module ID: 15668
+// Function ID: 15669
 // Name: DevToolsAnalyticsScreen
-// Dependencies: [32, 19, 17, 1371, 14486, 1074, 21, 4636, 576, 4632, 5686, 10512, 4228, 9933, 5204, 7292, 4583, 504, 9003, 5054, 5768, 7303, 12280, 4594, 15661, 7153, 2]
+// Dependencies: [32, 19, 17, 1371, 14487, 1074, 21, 4636, 576, 4632, 5686, 10513, 4228, 9933, 5204, 7292, 4583, 504, 9003, 5054, 5768, 7303, 12281, 4594, 15663, 7153, 2]
 // Exports: default
 
-// Module 15666 (DevToolsAnalyticsScreen)
+// Module 15668 (DevToolsAnalyticsScreen)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import AnalyticsLogStore from "AnalyticsLogStore" /* 14486 */;
+import AnalyticsLogStore from "AnalyticsLogStore" /* 14487 */;
 
 require = fn;
 function CommonProperty(arg0) {
@@ -30,7 +30,7 @@ function LoggedEvent(arg0) {
   const user = UserStore.getUser(fingerprint);
   let CopyIcon = fingerprint;
   let tmp6Result2 = dependencyMap;
-  let obj = { arrow: !tmp2, icon: closure_8(fingerprint(10512).AnalyticsIcon, {}), label: event, subLabel: null, onPress: null, start: null, end: null };
+  let obj = { arrow: !tmp2, icon: closure_8(fingerprint(10513).AnalyticsIcon, {}), label: event, subLabel: null, onPress: null, start: null, end: null };
   if ("name" in properties) {
     let str2 = properties.name;
   } else {
@@ -183,12 +183,12 @@ export default function DevToolsAnalyticsScreen() {
   const str2 = str.toLowerCase();
   const tmp12 = View;
   const tmp13 = closure_9;
-  const items2 = [closure_8(trimmed(7303).TableSwitchRow, { icon: closure_8(trimmed(12280).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
-  const obj4 = { icon: closure_8(trimmed(12280).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
-  items2[1] = closure_8(trimmed(5686).TableRow, { arrow: true, variant: "danger", icon: closure_8(trimmed(4594).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15661).clearAnalyticsLog });
+  const items2 = [closure_8(trimmed(7303).TableSwitchRow, { icon: closure_8(trimmed(12281).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
+  const obj4 = { icon: closure_8(trimmed(12281).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
+  items2[1] = closure_8(trimmed(5686).TableRow, { arrow: true, variant: "danger", icon: closure_8(trimmed(4594).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15663).clearAnalyticsLog });
   obj3.children = items2;
   const items3 = [closure_9(trimmed(5768).TableRowGroup, obj3), , ];
-  const obj5 = { arrow: true, variant: "danger", icon: closure_8(trimmed(4594).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15661).clearAnalyticsLog };
+  const obj5 = { arrow: true, variant: "danger", icon: closure_8(trimmed(4594).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15663).clearAnalyticsLog };
   items3[1] = closure_8(View, { style: tmp.searchFieldContainer, children: closure_8(trimmed(7153).SearchField, { placeholder: "Search by event name", onChange: tmp8 }) });
   if (0 === loggedEvents.length) {
     let tmp11Result = tmp11(tmp2(5686).TableRow, { label: "No events logged." });

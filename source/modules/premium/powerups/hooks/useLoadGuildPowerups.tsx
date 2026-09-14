@@ -1,12 +1,12 @@
-// Module ID: 12610
-// Function ID: 12611
+// Module ID: 12611
+// Function ID: 12612
 // Name: useLoadGuildPowerups
-// Dependencies: [19, 4549, 12611, 12617, 2]
+// Dependencies: [19, 4549, 12612, 12618, 2]
 // Exports: default
 
-// Module 12610 (useLoadGuildPowerups)
-import GameServerActionCreators from "GameServerActionCreators" /* 12611 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12617 */;
+// Module 12611 (useLoadGuildPowerups)
+import GameServerActionCreators from "GameServerActionCreators" /* 12612 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12618 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,16 +1,16 @@
-// Module ID: 16982
-// Function ID: 16983
+// Module ID: 16984
+// Function ID: 16985
 // Name: ContextMenuCommandItem
-// Dependencies: [19, 17, 21, 4636, 576, 5686, 12, 1114, 12360, 5668, 1894, 4581, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5686, 12, 1114, 12361, 5668, 1894, 4581, 2]
 // Exports: ContextMenuCommandAppItem, ContextMenuCommandEmptyItem, ContextMenuCommandLoadingItem, default
 
-// Module 16982 (ContextMenuCommandItem)
+// Module 16984 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import TableRow from "TableRow" /* 5686 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12360 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ContextMenuCommandItem(item) {
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(12360).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(12361).getApplicationCommandsIconSource(section);
   const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {

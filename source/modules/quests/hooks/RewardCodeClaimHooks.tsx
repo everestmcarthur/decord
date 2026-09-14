@@ -1,14 +1,14 @@
-// Module ID: 11902
-// Function ID: 11903
+// Module ID: 11903
+// Function ID: 11904
 // Name: RewardCodeClaimHooks
-// Dependencies: [5, 32, 19, 11409, 5528, 11903, 11619, 11325, 11326, 11330, 5532, 7830, 4325, 2]
+// Dependencies: [5, 32, 19, 11410, 5528, 11904, 11620, 11326, 11327, 11331, 5532, 7830, 4325, 2]
 // Exports: useClaimOrFetchRewardCode, useClaimRewardCodePrimaryCtaClickHandler, useHandleRedemptionLinkClick
 
-// Module 11902 (RewardCodeClaimHooks)
+// Module 11903 (RewardCodeClaimHooks)
 import openURLDefault from "openURL" /* 4325 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11325 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -120,12 +120,12 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
   return trackQuestContentClickedWithImpression.useCallback(() => {
     if (null != fetchCode) {
       if (obj7.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_reward_code_redemption_link")) {
-        const obj2 = { type: tmp18(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.REDEEM_REWARD, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
-        tmp18(11326).captureAdUserAction(obj2);
-        const tmp18Result = tmp18(11326);
-        const obj3 = { type: tmp18(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.VISIT_REDEMPTION_LINK, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
-        tmp18(11326).captureAdUserAction(obj3);
-        const tmp18Result2 = tmp18(11326);
+        const obj2 = { type: tmp18(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.REDEEM_REWARD, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
+        tmp18(11327).captureAdUserAction(obj2);
+        const tmp18Result = tmp18(11327);
+        const obj3 = { type: tmp18(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.VISIT_REDEMPTION_LINK, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
+        tmp18(11327).captureAdUserAction(obj3);
+        const tmp18Result2 = tmp18(11327);
       } else {
         const obj = { questId: claimCode.id, questContent: hasError, questContentCTA: tmp18(7830).QuestContentCTA.REDEEM_REWARD, questContentPosition: onDismiss, sourceQuestContent: quest };
         questContent(obj);
@@ -174,12 +174,12 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
   const callback = questContent.useCallback(() => {
     if (null != fetchCode) {
       if (obj7.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_reward_code_redemption_link")) {
-        const obj2 = { type: tmp18(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.REDEEM_REWARD, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
-        tmp18(11326).captureAdUserAction(obj2);
-        const tmp18Result = tmp18(11326);
-        const obj3 = { type: tmp18(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.VISIT_REDEMPTION_LINK, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
-        tmp18(11326).captureAdUserAction(obj3);
-        const tmp18Result2 = tmp18(11326);
+        const obj2 = { type: tmp18(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.REDEEM_REWARD, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
+        tmp18(11327).captureAdUserAction(obj2);
+        const tmp18Result = tmp18(11327);
+        const obj3 = { type: tmp18(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp18(5532).AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: tmp18(7830).QuestContentCTA.VISIT_REDEMPTION_LINK, surfaceId: hasError, sourceQuestContent: quest, impressionId: GET_REWARD_CODE, questContentPosition: onDismiss };
+        tmp18(11327).captureAdUserAction(obj3);
+        const tmp18Result2 = tmp18(11327);
       } else {
         const obj = { questId: claimCode.id, questContent: hasError, questContentCTA: tmp18(7830).QuestContentCTA.REDEEM_REWARD, questContentPosition: onDismiss, sourceQuestContent: quest };
         questContent(obj);
@@ -217,9 +217,9 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
       } else {
         claimCode(tmp7.id, QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM, questContent);
         if (obj4.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_reward_code_primary_cta")) {
-          const obj2 = { type: tmp23(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp23(5532).AdCreativeType.QUEST, adCreativeId: tmp7.id, questContentCTA: GET_REWARD_CODE, surfaceId: tmp25, sourceQuestContent, impressionId: questImpressionId, questContentPosition };
-          tmp23(11326).captureAdUserAction(obj2);
-          const tmp23Result = tmp23(11326);
+          const obj2 = { type: tmp23(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp23(5532).AdCreativeType.QUEST, adCreativeId: tmp7.id, questContentCTA: GET_REWARD_CODE, surfaceId: tmp25, sourceQuestContent, impressionId: questImpressionId, questContentPosition };
+          tmp23(11327).captureAdUserAction(obj2);
+          const tmp23Result = tmp23(11327);
         } else {
           const obj = { questId: tmp7.id, questContent: tmp25, questContentCTA: GET_REWARD_CODE, questContentPosition, sourceQuestContent };
           trackQuestContentClickedWithImpression(obj);

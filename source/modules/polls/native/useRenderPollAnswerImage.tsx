@@ -1,10 +1,10 @@
-// Module ID: 12355
-// Function ID: 12356
+// Module ID: 12356
+// Function ID: 12357
 // Name: useRenderPollAnswerImage
-// Dependencies: [32, 19, 17, 4977, 4976, 1374, 21, 504, 12335, 5668, 7233, 4292, 1396, 2]
+// Dependencies: [32, 19, 17, 4977, 4976, 1374, 21, 504, 12336, 5668, 7233, 4292, 1396, 2]
 // Exports: default
 
-// Module 12355 (useRenderPollAnswerImage)
+// Module 12356 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import EmojiTypes from "EmojiTypes" /* 4292 */;
 import FastImageDefault from "FastImage" /* 5668 */;

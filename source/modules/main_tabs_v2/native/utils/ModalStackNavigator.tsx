@@ -1,12 +1,12 @@
-// Module ID: 11055
-// Function ID: 11056
+// Module ID: 11056
+// Function ID: 11057
 // Name: ModalStackNavigator
-// Dependencies: [19, 21, 8017, 7103, 7966, 11056, 1150, 2]
+// Dependencies: [19, 21, 8017, 7103, 7966, 11057, 1363, 2]
 
-// Module 11055 (ModalStackNavigator)
+// Module 11056 (ModalStackNavigator)
 import Navigator from "Navigator" /* 7103 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11056 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11057 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

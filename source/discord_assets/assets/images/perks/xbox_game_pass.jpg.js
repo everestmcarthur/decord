@@ -1,8 +1,8 @@
-// Module ID: 13501
-// Function ID: 13502
+// Module ID: 13502
+// Function ID: 13503
 // Dependencies: [2]
 
-// Module 13501
+// Module 13502
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/images/perks/xbox_game_pass.jpg.js");

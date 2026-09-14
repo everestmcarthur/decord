@@ -1,16 +1,16 @@
-// Module ID: 15437
-// Function ID: 15438
+// Module ID: 15438
+// Function ID: 15439
 // Name: DisplayNameStylesColorPickerSheet
-// Dependencies: [32, 19, 17, 1389, 1074, 21, 4636, 576, 8287, 11031, 4604, 4603, 14682, 1242, 7253, 7252, 1114, 2786, 5056, 12, 1091, 1390, 15435, 2]
+// Dependencies: [32, 19, 17, 1389, 1074, 21, 4636, 576, 8287, 11032, 4604, 4603, 14683, 1240, 7253, 7252, 1114, 2786, 5056, 12, 1091, 1390, 15436, 2]
 // Exports: default
 
-// Module 15437 (DisplayNameStylesColorPickerSheet)
+// Module 15438 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14682 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14683 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

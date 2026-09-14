@@ -1,11 +1,11 @@
-// Module ID: 11027
-// Function ID: 11028
+// Module ID: 11028
+// Function ID: 11029
 // Name: UsernameWithEffects
-// Dependencies: [19, 17, 1389, 21, 1390, 4636, 576, 1151, 11028, 4870, 9306, 1388, 4871, 9305, 4338, 11029, 4632, 4642, 4341, 11032, 1369, 2]
+// Dependencies: [19, 17, 1389, 21, 1390, 4636, 576, 1364, 11029, 4870, 9306, 1388, 4871, 9305, 4338, 11030, 4632, 4642, 4341, 11033, 1369, 2]
 
-// Module 11027 (UsernameWithEffects)
+// Module 11028 (UsernameWithEffects)
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import getNodeText from "getNodeText" /* 4341 */;
 import noop from "module_19" /* 19 */;
@@ -105,7 +105,7 @@ export default noop.memo((userName) => {
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(11028).EffectDisplayType.STATIC;
+    STATIC = userName(11029).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -144,7 +144,7 @@ export default noop.memo((userName) => {
   const tmp7Result = userName(4338);
   const token1 = userName(4338).useToken(tmp4(576).colors.WHITE);
   const tmp7Result7 = userName(4338);
-  const displayNameStylesAccessibleColors = userName(11029).useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
+  const displayNameStylesAccessibleColors = userName(11030).useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
     first = displayNameStylesAccessibleColors[0];
@@ -217,14 +217,14 @@ export default noop.memo((userName) => {
   const tmp28Result = closure_12(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(11028).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(11029).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp13];
           if (tmp7Result11.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp28Result.layoutImpact;
           }
           if (effectId === tmp7(1390).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(11032);
+            const tmp4Result = tmp4(11033);
             const tmp66 = closure_9;
             let str3 = tmp7(4341).getNodeText(userName);
             if (str3 == null) {

@@ -1,17 +1,17 @@
-// Module ID: 11635
-// Function ID: 11636
+// Module ID: 11636
+// Function ID: 11637
 // Name: AppStoreOverlayBody
-// Dependencies: [19, 17, 1074, 7254, 21, 4636, 576, 5668, 4632, 11636, 1114, 11639, 11644, 1611, 4338, 672, 5068, 5056, 2]
+// Dependencies: [19, 17, 1074, 7254, 21, 4636, 576, 5668, 4632, 11637, 1114, 11640, 11645, 1611, 4338, 672, 5068, 5056, 2]
 // Exports: AppStoreOverlayBody, AppStoreOverlayFooter
 
-// Module 11635 (AppStoreOverlayBody)
+// Module 11636 (AppStoreOverlayBody)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 11636 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 11639 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11644 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 11637 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 11640 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11645 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

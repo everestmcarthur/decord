@@ -1,13 +1,13 @@
-// Module ID: 11428
-// Function ID: 11429
+// Module ID: 11429
+// Function ID: 11430
 // Name: QuestCopyUtils
-// Dependencies: [5525, 1114, 5532, 11325, 11326, 11330, 7820, 7292, 2]
+// Dependencies: [5525, 1114, 5532, 11326, 11327, 11331, 7820, 7292, 2]
 // Exports: copyShareLink, getContextualEntrypointHeading, getCtaLink, getDefaultReward, getDisclosureText, getExternalCtaLabel, getFilterGroupHeadingText, getFilterTypeText, getQuestUrl, getSortMethodText
 
-// Module 11428 (QuestCopyUtils)
+// Module 11429 (QuestCopyUtils)
 import util from "util" /* 1114 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11325 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
 import QuestConstants from "QuestConstants" /* 5525 */;
 import size from "module_2" /* 2 */;
 
@@ -158,10 +158,10 @@ export const getCtaLink = function getCtaLink(config) {
 export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
-    const obj2 = { type: tmp(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5532).AdCreativeType.QUEST, adCreativeId: id, questContentCTA: ctaContent, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+    const obj2 = { type: tmp(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5532).AdCreativeType.QUEST, adCreativeId: id, questContentCTA: ctaContent, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
     ({ content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, position: obj5.questContentPosition, impressionId: obj5.impressionId } = ctaContent);
-    tmp(11326).captureAdUserAction(obj2);
-    const tmpResult = tmp(11326);
+    tmp(11327).captureAdUserAction(obj2);
+    const tmpResult = tmp(11327);
   } else {
     const obj4 = { questId: id, questContent: ctaContent.content, questContentCTA: ctaContent, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     ({ position: obj3.questContentPosition, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = ctaContent);

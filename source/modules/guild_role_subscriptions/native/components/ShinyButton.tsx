@@ -1,13 +1,13 @@
-// Module ID: 10429
-// Function ID: 10430
+// Module ID: 10430
+// Function ID: 10431
 // Name: ShinyButton
-// Dependencies: [19, 21, 4636, 576, 5057, 1178, 10430, 2]
+// Dependencies: [19, 21, 4636, 576, 5057, 1176, 10431, 2]
 // Exports: default
 
-// Module 10429 (ShinyButton)
+// Module 10430 (ShinyButton)
 import nativeDefault from "native" /* 576 */;
 import BaseTextButton from "BaseTextButton" /* 5057 */;
-import _modDef10430 from "module_10430" /* 10430 */;
+import _modDef10431 from "module_10431" /* 10431 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,14 +35,14 @@ export default function ShinyButton(style) {
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    const obj2 = { size: tmp4(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef10430, style: null };
+    const obj2 = { size: tmp4(1176).Icon.Sizes.REFRESH_SMALL_16, source: _modDef10431, style: null };
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
     obj2.style = items1;
-    tmp3Result = tmp3(tmp4(1178).Icon, obj2);
+    tmp3Result = tmp3(tmp4(1176).Icon, obj2);
   }
   obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);

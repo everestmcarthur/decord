@@ -1,10 +1,10 @@
-// Module ID: 11007
-// Function ID: 11008
+// Module ID: 11008
+// Function ID: 11009
 // Name: useUserVoiceActivity
 // Dependencies: [1957, 4275, 4655, 1085, 504, 2]
 // Exports: canViewUserVoiceChannel, default, getUserVoiceState
 
-// Module 11007 (useUserVoiceActivity)
+// Module 11008 (useUserVoiceActivity)
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;

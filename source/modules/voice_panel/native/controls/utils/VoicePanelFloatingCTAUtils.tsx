@@ -1,32 +1,32 @@
-// Module ID: 17163
-// Function ID: 17164
+// Module ID: 17165
+// Function ID: 17166
 // Name: VoicePanelFloatingCTAUtils
-// Dependencies: [32, 19, 17, 4652, 17164, 7629, 1957, 1963, 21, 4571, 12401, 17146, 9792, 563, 9801, 9795, 9910, 4603, 9828, 17165, 9912, 8718, 9915, 1114, 5761, 17166, 10161, 17167, 7492, 8385, 4457, 6711, 1943, 17168, 12657, 7926, 2]
+// Dependencies: [32, 19, 17, 4652, 17166, 7629, 1957, 1963, 21, 4571, 12402, 17148, 9792, 563, 9801, 9795, 9910, 4603, 9828, 17167, 9912, 8718, 9915, 1114, 5761, 17168, 10161, 17169, 7492, 8385, 4457, 6711, 1943, 17170, 12658, 7926, 2]
 // Exports: useShouldShowFloatingCTA
 
-// Module 17163 (VoicePanelFloatingCTAUtils)
+// Module 17165 (VoicePanelFloatingCTAUtils)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import XSmallIcon from "XSmallIcon" /* 5761 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9828 */;
-import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17165 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17168 */;
+import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17167 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
-import EventBannerStore from "EventBannerStore" /* 17164 */;
+import EventBannerStore from "EventBannerStore" /* 17166 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function useFloatingCTAProps(stateFromStores) {
-  let tmp3 = setShowFloatingCTA(8385)(noop.useContext(setShowFloatingCTA(12401)).showFloatingCTA);
+  let tmp3 = setShowFloatingCTA(8385)(noop.useContext(setShowFloatingCTA(12402)).showFloatingCTA);
   _require = tmp3;
   setShowFloatingCTA = undefined;
-  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12401)).setShowFloatingCTA;
+  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12402)).setShowFloatingCTA;
   const items = [setShowFloatingCTA, tmp3];
   let memo = noop.useMemo(() => {
     let tmp = null;
@@ -39,7 +39,7 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   const tmp5 = setShowFloatingCTA(4571)();
-  const tmp6 = setShowFloatingCTA(17146)(noop.useContext(setShowFloatingCTA(12401)).channelId);
+  const tmp6 = setShowFloatingCTA(17148)(noop.useContext(setShowFloatingCTA(12402)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -117,7 +117,7 @@ function useFloatingCTAProps(stateFromStores) {
   }
   closure_130_0 = stateFromStores;
   tmpResultResult = setShowFloatingCTA(9910)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp26 = setShowFloatingCTA(17146)(noop.useContext(setShowFloatingCTA(12401)).channelId);
+  const tmp26 = setShowFloatingCTA(17148)(noop.useContext(setShowFloatingCTA(12402)).channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;
@@ -202,7 +202,7 @@ function getDismissableCTAProps(arg0) {
     return getBadConnectionCTAProps();
   } else if (tmp(1943).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     let obj = {
-      icon: jsx(tmp(12657).SoundboardIcon, { color: "interactive-icon-default" }),
+      icon: jsx(tmp(12658).SoundboardIcon, { color: "interactive-icon-default" }),
       onPress() {
           if (null != _require) {
             const obj2 = { channel: tmp, analyticsSource: "SOUNDBOARD_MOBILE_FLOATING_CTA" };

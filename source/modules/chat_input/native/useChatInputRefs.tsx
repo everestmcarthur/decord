@@ -1,17 +1,17 @@
-// Module ID: 12116
-// Function ID: 12117
+// Module ID: 12117
+// Function ID: 12118
 // Name: useChatInputRefs
-// Dependencies: [19, 7882, 5583, 4977, 7783, 7789, 1371, 9615, 1074, 5081, 4629, 5679, 4502, 12, 12117, 12119, 12120, 12123, 12124, 9433, 7879, 4504, 1609, 1481, 1150, 4505, 1874, 1242, 11796, 7559, 11798, 12125, 7784, 12126, 4975, 12158, 6726, 2]
+// Dependencies: [19, 7882, 5583, 4977, 7783, 7789, 1371, 9615, 1074, 5081, 4629, 5679, 4502, 12, 12118, 12120, 12121, 12124, 12125, 9433, 7879, 4504, 1609, 1481, 1363, 4505, 1874, 1240, 11797, 7559, 11799, 12126, 7784, 12127, 4975, 12159, 6726, 2]
 // Exports: default
 
-// Module 12116 (useChatInputRefs)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 12117 (useChatInputRefs)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
 import StickersUtils from "StickersUtils" /* 4975 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11796 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12117 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 12126 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11797 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12118 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 12127 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7882 */;
 import StickersStore from "StickersStore" /* 5583 */;
@@ -364,7 +364,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(12126).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(12127).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
@@ -385,8 +385,8 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(12126).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(12126);
+                  const result = chatInputProps(12127).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(12127);
                 }
                 const keyboardType = chatInputProps(4504).getKeyboardType();
                 if (keyboardType === chatInputProps(1609).KeyboardTypes.SYSTEM) {
@@ -453,7 +453,7 @@ export default function useChatInputRefs(chatInputProps) {
               let dismissKeyboardResult = chatInputRef;
               obj2.chatInputRef = chatInputRef;
               obj.params = obj2;
-              const result = tmp27(12126).chatInputValidateContentLength(obj);
+              const result = tmp27(12127).chatInputValidateContentLength(obj);
               if (null != result) {
                 closure_1.cancel();
                 if (null != threadCreationCallback) {
@@ -481,8 +481,8 @@ export default function useChatInputRefs(chatInputProps) {
                     }
                   }
                   const tmp31 = importDefault;
-                  tmp27(11798).deletePendingReply(channel.id);
-                  const tmp27Result2 = tmp27(11798);
+                  tmp27(11799).deletePendingReply(channel.id);
+                  const tmp27Result2 = tmp27(11799);
                   tmp31(7879).saveDraft(channel.id, "", DraftType.ChannelMessage);
                   const current4 = dismissKeyboardResult.current;
                   if (current4 != null) {
@@ -497,7 +497,7 @@ export default function useChatInputRefs(chatInputProps) {
                 current2 = dismissKeyboardResult.current;
                 dismissKeyboardResult = current2.dismissKeyboard();
               }
-              const tmp27Result = tmp27(12126);
+              const tmp27Result = tmp27(12127);
             }
             obj7 = StickersUtils;
           }

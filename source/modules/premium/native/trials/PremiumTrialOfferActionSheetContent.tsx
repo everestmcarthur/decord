@@ -1,9 +1,9 @@
-// Module ID: 15777
-// Function ID: 15778
+// Module ID: 15779
+// Function ID: 15780
 // Name: PremiumTrialOfferActionSheetContent
-// Dependencies: [19, 17, 1373, 21, 4636, 576, 11955, 1114, 9551, 5155, 5211, 4294, 5773, 4632, 15778, 5056, 8785, 2]
+// Dependencies: [19, 17, 1373, 21, 4636, 576, 11956, 1114, 9551, 5155, 5211, 4294, 5773, 4632, 15780, 5056, 8785, 2]
 
-// Module 15777 (PremiumTrialOfferActionSheetContent)
+// Module 15779 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
@@ -14,8 +14,8 @@ import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5211 */;
 import native from "native" /* 5773 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
 import ChatSmileIcon from "ChatSmileIcon" /* 9551 */;
-import UserIcon from "UserIcon" /* 11955 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15778 */;
+import UserIcon from "UserIcon" /* 11956 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15780 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

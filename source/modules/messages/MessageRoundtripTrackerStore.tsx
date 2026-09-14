@@ -1,13 +1,13 @@
 // Module ID: 7561
 // Function ID: 7562
 // Name: MessageRoundtripTrackerStore
-// Dependencies: [1957, 4556, 4685, 1074, 3, 7562, 1242, 7779, 504, 573, 2]
+// Dependencies: [1957, 4556, 4685, 1074, 3, 7562, 1240, 7779, 504, 573, 2]
 
 // Module 7561 (MessageRoundtripTrackerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import NetStats from "NetStats" /* 7562 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7779 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

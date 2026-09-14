@@ -1,11 +1,11 @@
-// Module ID: 15936
-// Function ID: 15937
+// Module ID: 15938
+// Function ID: 15939
 // Name: CollectiblesShopViewAllCategoryItems
-// Dependencies: [19, 17, 1076, 1074, 21, 4636, 576, 11213, 7265, 7285, 1611, 15155, 4373, 5055, 1242, 7692, 8893, 10950, 15937, 15938, 15917, 1114, 2]
+// Dependencies: [19, 17, 1076, 1074, 21, 4636, 576, 11214, 7265, 7285, 1611, 15156, 4373, 5055, 1240, 7692, 8893, 10951, 15939, 15940, 15919, 1114, 2]
 
-// Module 15936 (CollectiblesShopViewAllCategoryItems)
+// Module 15938 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import spring from "spring" /* 5055 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7692 */;

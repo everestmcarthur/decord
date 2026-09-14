@@ -1,12 +1,12 @@
-// Module ID: 15789
-// Function ID: 15790
+// Module ID: 15791
+// Function ID: 15792
 // Name: DevToolsGuildPowerupsModal
-// Dependencies: [19, 21, 8017, 7103, 7966, 11056, 15790, 2]
+// Dependencies: [19, 21, 8017, 7103, 7966, 11057, 15792, 2]
 
-// Module 15789 (DevToolsGuildPowerupsModal)
+// Module 15791 (DevToolsGuildPowerupsModal)
 import HeaderShared from "HeaderShared" /* 7966 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11056 */;
-import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 15790 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11057 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 15792 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

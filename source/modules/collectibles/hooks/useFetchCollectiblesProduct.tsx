@@ -1,10 +1,10 @@
-// Module ID: 11176
-// Function ID: 11177
+// Module ID: 11177
+// Function ID: 11178
 // Name: useFetchCollectiblesProduct
 // Dependencies: [32, 19, 5591, 7645, 1074, 563, 1889, 7644, 2]
 // Exports: useFetchCollectiblesProduct
 
-// Module 11176 (useFetchCollectiblesProduct)
+// Module 11177 (useFetchCollectiblesProduct)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SKUStore from "SKUStore" /* 5591 */;

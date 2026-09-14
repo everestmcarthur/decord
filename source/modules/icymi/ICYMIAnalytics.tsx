@@ -1,10 +1,10 @@
 // Module ID: 8477
 // Function ID: 8478
 // Name: ICYMIAnalytics
-// Dependencies: [8453, 1074, 8247, 8466, 1242, 2]
+// Dependencies: [8453, 1074, 8247, 8466, 1240, 2]
 
 // Module 8477 (ICYMIAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8247 */;
 import ICYMITypes from "ICYMITypes" /* 8466 */;
 import ICYMIStore from "ICYMIStore" /* 8453 */;

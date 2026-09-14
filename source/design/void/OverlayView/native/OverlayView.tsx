@@ -1,7 +1,7 @@
 // Module ID: 4987
 // Function ID: 4988
 // Name: OverlayView
-// Dependencies: [19, 17, 21, 1150, 4988, 5037, 2]
+// Dependencies: [19, 17, 21, 1363, 4988, 5037, 2]
 // Exports: TransitionGroupOverlayView
 
 // Module 4987 (OverlayView)
@@ -12,12 +12,12 @@ get_ActivityIndicator = fn(17);
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
   FullWindowOverlay = fn(4988).FullWindowOverlay;
 }
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 if (PlatformUtils.isIOS()) {
   View = _modDef5037;
 }

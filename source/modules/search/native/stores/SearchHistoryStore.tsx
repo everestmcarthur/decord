@@ -1,9 +1,9 @@
-// Module ID: 16748
-// Function ID: 16749
+// Module ID: 16750
+// Function ID: 16751
 // Name: SearchHistoryStore
 // Dependencies: [7982, 1969, 12, 504, 573, 2]
 
-// Module 16748 (SearchHistoryStore)
+// Module 16750 (SearchHistoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

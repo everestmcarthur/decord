@@ -1,7 +1,7 @@
 // Module ID: 8356
 // Function ID: 8357
 // Name: NonUserBotProfileContent
-// Dependencies: [19, 17, 7311, 7254, 21, 8357, 8307, 4788, 4481, 8358, 8346, 8359, 1611, 8343, 8354, 7292, 4334, 8360, 4373, 8372, 11286, 1114, 11340, 2]
+// Dependencies: [19, 17, 7311, 7254, 21, 8357, 8307, 4788, 4481, 8358, 8346, 8359, 1611, 8343, 8354, 7292, 4334, 8360, 4373, 8372, 11287, 1114, 11341, 2]
 
 // Module 8356 (NonUserBotProfileContent)
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -100,7 +100,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
       ToastUtils.presentUserPronouns();
     };
-    obj8.children = closure_7(tmp(11286), obj9);
+    obj8.children = closure_7(tmp(11287), obj9);
     const items3 = [closure_7(View, obj8), ];
     const obj11 = { style: tmp3.cards, children: null };
     const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -108,7 +108,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     const obj13 = { backgroundColor: containerBackground };
     items4[1] = obj13;
     obj12.style = items4;
-    obj11.children = closure_7(tmp(11340), obj12);
+    obj11.children = closure_7(tmp(11341), obj12);
     items3[1] = closure_7(View, obj11);
     obj6.children = items3;
     items1[1] = closure_8(View, obj6);

@@ -1,9 +1,9 @@
-// Module ID: 13790
-// Function ID: 13791
+// Module ID: 13791
+// Function ID: 13792
 // Name: FriendGroupsStore
 // Dependencies: [7761, 6696, 4285, 1371, 504, 573, 2]
 
-// Module 13790 (FriendGroupsStore)
+// Module 13791 (FriendGroupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;

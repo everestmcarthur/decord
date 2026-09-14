@@ -1,22 +1,22 @@
-// Module ID: 14870
-// Function ID: 14871
+// Module ID: 14871
+// Function ID: 14872
 // Name: TwoFASetupModal
-// Dependencies: [19, 17, 14871, 21, 4636, 576, 1483, 14869, 7226, 5056, 1114, 14872, 5705, 14873, 14876, 14877, 14879, 5679, 7052, 7103, 2]
+// Dependencies: [19, 17, 14872, 21, 4636, 576, 1483, 14870, 7226, 5056, 1114, 14873, 5705, 14874, 14877, 14878, 14880, 5679, 7052, 7103, 2]
 // Exports: TwoFASetupModalScreen, default
 
-// Module 14870 (TwoFASetupModal)
+// Module 14871 (TwoFASetupModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useInitialValueDefault from "useInitialValue" /* 5679 */;
 import Navigator from "Navigator" /* 7103 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 14869 */;
-import TwoFASetupScanDefault from "TwoFASetupScan" /* 14876 */;
-import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 14877 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 14870 */;
+import TwoFASetupScanDefault from "TwoFASetupScan" /* 14877 */;
+import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 14878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(14871).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(14872).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
@@ -38,17 +38,17 @@ export default function TwoFASetupModal(initialRouteName) {
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
       const obj = totpSecret(7052);
-      obj3.headerLeft = totpSecret(5705).getHeaderCloseButton(closure_1(14869).close);
+      obj3.headerLeft = totpSecret(5705).getHeaderCloseButton(closure_1(14870).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(14872).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(14873).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(14873), {});
+        return closure_1_6(closure_1_1(14874), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14872).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(14873).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -56,7 +56,7 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14872).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(14873).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
@@ -64,12 +64,12 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = totpSecret(5705);
-      obj5.headerLeft = totpSecret(5705).getHeaderCloseButton(closure_1(14869).close);
+      obj5.headerLeft = totpSecret(5705).getHeaderCloseButton(closure_1(14870).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(14879), {});
+        return closure_1_6(closure_1_1(14880), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;

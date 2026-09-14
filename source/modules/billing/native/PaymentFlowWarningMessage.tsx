@@ -1,12 +1,12 @@
-// Module ID: 13432
-// Function ID: 13433
+// Module ID: 13433
+// Function ID: 13434
 // Name: PaymentFlowWarningMessage
-// Dependencies: [19, 17, 21, 4636, 576, 5522, 1178, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5522, 1176, 4632, 2]
 // Exports: default
 
-// Module 13432 (PaymentFlowWarningMessage)
+// Module 13433 (PaymentFlowWarningMessage)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 

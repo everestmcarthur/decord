@@ -1,10 +1,10 @@
-// Module ID: 15004
-// Function ID: 15005
+// Module ID: 15005
+// Function ID: 15006
 // Name: FamilyCenterAcceptedLinks
-// Dependencies: [19, 17, 7641, 21, 4636, 576, 8769, 8768, 12049, 1114, 2396, 4632, 15005, 15007, 5204, 4839, 15010, 1896, 1178, 15012, 2]
+// Dependencies: [19, 17, 7641, 21, 4636, 576, 8769, 8768, 12050, 1114, 2396, 4632, 15006, 15008, 5204, 4839, 15011, 1896, 1176, 15013, 2]
 // Exports: default
 
-// Module 15004 (FamilyCenterAcceptedLinks)
+// Module 15005 (FamilyCenterAcceptedLinks)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
@@ -12,9 +12,9 @@ import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import useUserLinks from "useUserLinks" /* 8768 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12049 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15007 */;
-import _modDef15012 from "module_15012" /* 15012 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12050 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15008 */;
+import _modDef15013 from "module_15013" /* 15013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,11 +32,11 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj3 = { name: str1 };
     obj.accessibilityLabel = intl.formatToPlainString(_modDef2396.T7DUoU, obj3);
     obj.onPress = function onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15010, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15011, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef15012 };
-    obj.children = closure_6(str(1178).Icon, obj4);
+    const obj4 = { size: str(1176).Icon.Sizes.SMALL, disableColor: true, source: _modDef15013 };
+    obj.children = closure_6(str(1176).Icon, obj4);
     obj2.actions = closure_6(str(5204).PressableOpacity, obj);
     tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj2);
   }
@@ -75,9 +75,9 @@ export default function FamilyCenterAcceptedLinks() {
     const obj7 = { text: null };
     const intl3 = tmp5(1114).intl;
     obj7.text = intl3.string(tmp2(2396).C4ScLD);
-    obj6.children = tmp10(tmp2(15005), obj7);
+    obj6.children = tmp10(tmp2(15006), obj7);
     let mapped = tmp10(tmp9, obj6);
-    const tmp2Result = tmp2(15005);
+    const tmp2Result = tmp2(15006);
   } else {
     mapped = activeLinkUsers.map((otherUser) => closure_1_6(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id));
   }

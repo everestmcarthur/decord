@@ -1,10 +1,10 @@
-// Module ID: 16989
-// Function ID: 16990
+// Module ID: 16991
+// Function ID: 16992
 // Name: MessageRequestRowSenderDetails
-// Dependencies: [19, 17, 4285, 21, 4636, 1178, 576, 504, 4481, 16990, 1399, 4632, 1114, 16991, 16992, 2]
+// Dependencies: [19, 17, 4285, 21, 4636, 1176, 576, 504, 4481, 16992, 1399, 4632, 1114, 16993, 16994, 2]
 // Exports: default
 
-// Module 16989 (MessageRequestRowSenderDetails)
+// Module 16991 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1399 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -16,8 +16,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 const createStyles = fn(4636);
-const obj2 = { avatar: { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
-let obj3 = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const obj2 = { avatar: { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
+let obj3 = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.timestampSeparator = { marginHorizontal: 6 };
 obj2.messagePreview = { marginTop: 2 };
@@ -46,7 +46,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(16990).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(16992).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -61,7 +61,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   } else {
     obj5 = { avatarStyle: tmp.avatar, source: utils_AvatarUtilsDefault.DEFAULT_AVATARS[rounded] };
   }
-  obj3.children = closure_5(otherUser(1178).Avatar, obj5);
+  obj3.children = closure_5(otherUser(1176).Avatar, obj5);
   const items1 = [closure_5(View, obj3), ];
   const obj6 = { style: tmp.detailsContainer, children: null };
   const obj7 = { style: tmp.messageDetails, children: null };
@@ -97,7 +97,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   let tmp11Result = !flag;
   if (!flag) {
     const obj12 = { style: tmp.messagePreview, channel };
-    tmp11Result = tmp11(tmp7(16991), obj12);
+    tmp11Result = tmp11(tmp7(16993), obj12);
   }
   items5[1] = tmp11Result;
   if (flag) {
@@ -107,8 +107,8 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const obj13 = { style: tmp.messagePreview, userId: otherUser.id, suffix: null };
     const intl2 = tmp2(1114).intl;
     obj13.suffix = intl2.string(tmp2(1114).t.hTltPn);
-    flag = tmp11(tmp7(16992), obj13);
-    const tmp7Result = tmp7(16992);
+    flag = tmp11(tmp7(16994), obj13);
+    const tmp7Result = tmp7(16994);
   }
   const obj14 = { children: null };
   items5[2] = flag;

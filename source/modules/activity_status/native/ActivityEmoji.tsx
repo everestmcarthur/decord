@@ -1,10 +1,10 @@
-// Module ID: 11023
-// Function ID: 11024
+// Module ID: 11024
+// Function ID: 11025
 // Name: ActivityEmoji
 // Dependencies: [19, 21, 4636, 1935, 1396, 8883, 7233, 2]
 // Exports: default
 
-// Module 11023 (ActivityEmoji)
+// Module 11024 (ActivityEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import noop from "module_19" /* 19 */;

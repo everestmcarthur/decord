@@ -1,10 +1,10 @@
-// Module ID: 11513
-// Function ID: 11514
+// Module ID: 11514
+// Function ID: 11515
 // Name: LikelyAtoMoreTipsModalActionItems
 // Dependencies: [19, 1371, 21, 504, 4481, 5768, 5686, 1114, 9188, 2]
 // Exports: default
 
-// Module 11513 (LikelyAtoMoreTipsModalActionItems)
+// Module 11514 (LikelyAtoMoreTipsModalActionItems)
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;

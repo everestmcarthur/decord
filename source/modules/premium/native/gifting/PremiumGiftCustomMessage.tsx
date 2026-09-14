@@ -1,13 +1,13 @@
-// Module ID: 10986
-// Function ID: 10987
+// Module ID: 10987
+// Function ID: 10988
 // Name: PremiumGiftCustomMessage
-// Dependencies: [19, 17, 1373, 21, 4636, 576, 1114, 7188, 10827, 2]
+// Dependencies: [19, 17, 1373, 21, 4636, 576, 1114, 7188, 10828, 2]
 
-// Module 10986 (PremiumGiftCustomMessage)
+// Module 10987 (PremiumGiftCustomMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import TextArea from "TextArea" /* 7188 */;
-import NativeGiftContext from "NativeGiftContext" /* 10827 */;
+import NativeGiftContext from "NativeGiftContext" /* 10828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

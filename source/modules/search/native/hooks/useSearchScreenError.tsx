@@ -1,16 +1,16 @@
-// Module ID: 16795
-// Function ID: 16796
+// Module ID: 16797
+// Function ID: 16798
 // Name: useSearchScreenError
-// Dependencies: [19, 7384, 12468, 7982, 504, 12469, 1114, 4335, 9755, 2]
+// Dependencies: [19, 7384, 12469, 7982, 504, 12470, 1114, 4335, 9755, 2]
 // Exports: useMessageSearchErrorScreen, useMessageTabCountsErrorText
 
-// Module 16795 (useSearchScreenError)
+// Module 16797 (useSearchScreenError)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import _modDef9755 from "module_9755" /* 9755 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const require = globalThis.__r;
 

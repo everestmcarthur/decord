@@ -1,10 +1,10 @@
-// Module ID: 11024
-// Function ID: 11025
+// Module ID: 11025
+// Function ID: 11026
 // Name: ActionButton
 // Dependencies: [19, 17, 21, 5062, 8202, 2]
 // Exports: default
 
-// Module 11024 (ActionButton)
+// Module 11025 (ActionButton)
 import ButtonHooks from "ButtonHooks" /* 5062 */;
 import IconButton from "IconButton" /* 8202 */;
 import noop from "module_19" /* 19 */;

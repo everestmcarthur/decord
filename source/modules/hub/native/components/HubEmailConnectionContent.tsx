@@ -1,18 +1,18 @@
-// Module ID: 12860
-// Function ID: 12861
+// Module ID: 12861
+// Function ID: 12862
 // Name: HubEmailConnectionContent
-// Dependencies: [5, 32, 19, 17, 1957, 12848, 1074, 21, 4636, 576, 1483, 7084, 12861, 4537, 1114, 12856, 5773, 4632, 4603, 12862, 1896, 6706, 1178, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 12849, 1074, 21, 4636, 576, 1483, 7084, 12862, 4537, 1114, 12857, 5773, 4632, 4603, 12863, 1896, 6706, 1176, 5056, 2]
 // Exports: default
 
-// Module 12860 (HubEmailConnectionContent)
+// Module 12861 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import native2 from "native" /* 5773 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12856 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(12848);
+const HubConstants = fn(12849);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);

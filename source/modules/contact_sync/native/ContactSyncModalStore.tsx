@@ -1,17 +1,17 @@
-// Module ID: 12806
-// Function ID: 12807
+// Module ID: 12807
+// Function ID: 12808
 // Name: ContactSyncModalStore
-// Dependencies: [5362, 1371, 12807, 1074, 560, 1249, 2]
+// Dependencies: [5362, 1371, 12808, 1074, 560, 1247, 2]
 // Exports: getIsOnboarding, initialize, setAllowEmail, setAllowPhone, setAllowSync, setError, setName, setPermissionState, setPhone, setPhoneToken, setSuggestions, useIsOnboarding
 
-// Module 12806 (ContactSyncModalStore)
+// Module 12807 (ContactSyncModalStore)
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(12807).ContactPermissions;
+const ContactPermissions = fn(12808).ContactPermissions;
 const PlatformTypes = fn(1074).PlatformTypes;
 const ContactSyncModes = { NORMAL: 0, [0]: "NORMAL", ONBOARDING: 1, [1]: "ONBOARDING", ONBOARDING_INVITE: 2, [2]: "ONBOARDING_INVITE" };
 const module_560 = fn(560);

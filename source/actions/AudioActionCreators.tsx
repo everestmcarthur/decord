@@ -1,13 +1,13 @@
 // Module ID: 9218
 // Function ID: 9219
 // Name: AudioActionCreators
-// Dependencies: [5, 9219, 1957, 1908, 4659, 2011, 1371, 1074, 9220, 4661, 3, 1242, 551, 573, 9221, 9223, 9224, 9238, 2]
+// Dependencies: [5, 9219, 1957, 1908, 4659, 2011, 1371, 1074, 9220, 4661, 3, 1240, 551, 573, 9221, 9223, 9224, 9238, 2]
 
 // Module 9218 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AudioSettingsUtils from "AudioSettingsUtils" /* 9221 */;
 import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9223 */;
 import applyBackgroundOption from "applyBackgroundOption" /* 9224 */;
@@ -318,8 +318,8 @@ export default {
         obj7.input_device_name = str2;
         obj7.audio_subsystem = audioSubsystem;
         obj7.audio_layer = audioLayer;
-        tmp5(1242).track(constants2.VOICE_ACTIVATION_MODE_CHANGED, obj7);
-        const tmp5Result = tmp5(1242);
+        tmp5(1240).track(constants2.VOICE_ACTIVATION_MODE_CHANGED, obj7);
+        const tmp5Result = tmp5(1240);
       } else if (mode === constants.VOICE_ACTIVITY) {
         if (modeOptions !== obj) {
           const mediaEngine2 = obj3.getMediaEngine();
@@ -350,8 +350,8 @@ export default {
           obj8.new_threshold = obj.threshold;
           obj8.old_auto_threshold = modeOptions.autoThreshold;
           obj8.new_auto_threshold = obj.autoThreshold;
-          tmp5(1242).track(constants2.VOICE_ACTIVITY_THRESHOLD_CHANGED, obj8);
-          const tmp5Result2 = tmp5(1242);
+          tmp5(1240).track(constants2.VOICE_ACTIVITY_THRESHOLD_CHANGED, obj8);
+          const tmp5Result2 = tmp5(1240);
         }
       }
     } else {

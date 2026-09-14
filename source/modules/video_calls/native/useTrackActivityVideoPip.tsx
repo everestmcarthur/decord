@@ -1,11 +1,11 @@
 // Module ID: 9785
 // Function ID: 9786
 // Name: useTrackActivityVideoPip
-// Dependencies: [19, 9616, 1074, 563, 8390, 9763, 1242, 2]
+// Dependencies: [19, 9616, 1074, 563, 8390, 9763, 1240, 2]
 // Exports: default
 
 // Module 9785 (useTrackActivityVideoPip)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9616 */;
 

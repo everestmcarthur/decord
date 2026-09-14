@@ -1,16 +1,16 @@
-// Module ID: 13101
-// Function ID: 13102
+// Module ID: 13102
+// Function ID: 13103
 // Name: MediaModalOverlayFooter
-// Dependencies: [32, 19, 17, 21, 4636, 576, 4373, 11666, 4637, 1178, 13102, 6756, 4374, 7226, 7257, 13103, 13093, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 4373, 11667, 4637, 1176, 13103, 6756, 4374, 7226, 7257, 13104, 13094, 2]
 // Exports: MediaModalOverlayFooter
 
-// Module 13101 (MediaModalOverlayFooter)
+// Module 13102 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11666 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11667 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

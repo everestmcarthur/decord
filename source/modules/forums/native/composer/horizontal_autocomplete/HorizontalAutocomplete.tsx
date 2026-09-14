@@ -1,12 +1,12 @@
-// Module ID: 10752
-// Function ID: 10753
+// Module ID: 10753
+// Function ID: 10754
 // Name: HorizontalAutocomplete
-// Dependencies: [19, 17, 4628, 2015, 1979, 4285, 1371, 1074, 21, 4636, 5605, 576, 4373, 5073, 4637, 504, 1178, 4632, 4481, 7290, 7308, 8241, 5109, 4789, 5668, 2]
+// Dependencies: [19, 17, 4628, 2015, 1979, 4285, 1371, 1074, 21, 4636, 5605, 576, 4373, 5073, 4637, 504, 1176, 4632, 4481, 7290, 7308, 8241, 5109, 4789, 5668, 2]
 
-// Module 10752 (HorizontalAutocomplete)
+// Module 10753 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -144,7 +144,7 @@ export default {
       const tmp2Result = tmp2(5109);
     }
     const tmp = closure_13();
-    const tmp8 = closure_11(channel(1178).Icon, { source: channelIconWithGuild });
+    const tmp8 = closure_11(channel(1176).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     const items = [tmp8, ];
     const channelName = channel(4789).computeChannelName(channel, UserStore, RelationshipStore);

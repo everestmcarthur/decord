@@ -1,7 +1,7 @@
 // Module ID: 10183
 // Function ID: 10184
 // Name: UserSummaryItem
-// Dependencies: [19, 17, 2021, 21, 4636, 576, 1178, 504, 1396, 4788, 1114, 4632, 2]
+// Dependencies: [19, 17, 2021, 21, 4636, 576, 1176, 504, 1396, 4788, 1114, 4632, 2]
 // Exports: default
 
 // Module 10183 (UserSummaryItem)
@@ -20,7 +20,7 @@ let obj3 = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_S
 obj2.plusCountContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
 obj2.cutout = { marginRight: -4 };
 let closure_6 = createStyles.createStyles(obj2);
-let obj5 = { direction: fn(1178).CutoutDirection.RIGHT };
+let obj5 = { direction: fn(1176).CutoutDirection.RIGHT };
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/UserSummaryItem.tsx");
 

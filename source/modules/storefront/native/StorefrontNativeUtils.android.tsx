@@ -1,10 +1,10 @@
-// Module ID: 10930
-// Function ID: 10931
+// Module ID: 10931
+// Function ID: 10932
 // Name: StorefrontNativeUtils
 // Dependencies: [19, 9497, 504, 7340, 2]
 // Exports: useFormattedSKUPrice
 
-// Module 10930 (StorefrontNativeUtils)
+// Module 10931 (StorefrontNativeUtils)
 import IAPStoreDefault from "IAPStore" /* 7340 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 9497 */;
 import noop from "module_19" /* 19 */;

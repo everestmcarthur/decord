@@ -1,11 +1,11 @@
-// Module ID: 14681
-// Function ID: 14682
+// Module ID: 14682
+// Function ID: 14683
 // Name: UserProfileUpsellButton
-// Dependencies: [19, 1074, 1373, 21, 4636, 7265, 7549, 1242, 5056, 9443, 1114, 8785, 2]
+// Dependencies: [19, 1074, 1373, 21, 4636, 7265, 7549, 1240, 5056, 9443, 1114, 8785, 2]
 // Exports: default
 
-// Module 14681 (UserProfileUpsellButton)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 14682 (UserProfileUpsellButton)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
 import noop from "module_19" /* 19 */;
 

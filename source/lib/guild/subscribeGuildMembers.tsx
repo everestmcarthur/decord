@@ -1,7 +1,7 @@
 // Module ID: 7414
 // Function ID: 7415
 // Name: subscribeGuildMembers
-// Dependencies: [109, 19, 21, 12, 7415, 558, 1232, 2]
+// Dependencies: [109, 19, 21, 12, 7415, 558, 1230, 2]
 // Exports: default, useSubscribeGuildMembers
 
 // Module 7414 (subscribeGuildMembers)
@@ -98,8 +98,8 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
         const obj2 = { extra: null };
         const obj3 = { count: userIds.length, guildId, reason };
         obj2.extra = obj3;
-        reason(1232).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
-        const obj = reason(1232);
+        reason(1230).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
+        const obj = reason(1230);
       }
       closure_0(7415).subscribeMembers(guildId, userIds);
     });

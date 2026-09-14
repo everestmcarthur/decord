@@ -1,10 +1,10 @@
-// Module ID: 16756
-// Function ID: 16757
+// Module ID: 16758
+// Function ID: 16759
 // Name: Separators
 // Dependencies: [19, 17, 7982, 21, 4636, 2]
 // Exports: CardVerticalSeparator, MediaVerticalSeparator, MessageVerticalSeparator
 
-// Module 16756 (Separators)
+// Module 16758 (Separators)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

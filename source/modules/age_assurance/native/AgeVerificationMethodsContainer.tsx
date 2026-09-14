@@ -1,7 +1,7 @@
 // Module ID: 8707
 // Function ID: 8708
 // Name: AgeVerificationMethodsContainer
-// Dependencies: [19, 8530, 8537, 21, 4636, 576, 8536, 7704, 7709, 5054, 1178, 1114, 5768, 4632, 2946, 5514, 5056, 8535, 5686, 8529, 2]
+// Dependencies: [19, 8530, 8537, 21, 4636, 576, 8536, 7704, 7709, 5054, 1176, 1114, 5768, 4632, 2946, 5514, 5056, 8535, 5686, 8529, 2]
 // Exports: AgeVerificationMethodsContainer
 
 // Module 8707 (AgeVerificationMethodsContainer)
@@ -43,10 +43,10 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     }
   }, items);
   let obj2 = { spacing: 16, style: tmp.content, children: null };
-  let obj3 = { messageType: prop(1178).HelpMessageTypes.INFO, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
+  let obj3 = { messageType: prop(1176).HelpMessageTypes.INFO, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
   const intl = prop(1114).intl;
   obj3.children = intl.string(prop(1114).t.El4aXl);
-  const items1 = [closure_6(prop(1178).HelpMessage, obj3), ];
+  const items1 = [closure_6(prop(1176).HelpMessage, obj3), ];
   if (null != prop) {
     if (0 !== prop.length) {
       let mapped = prop.map((label) => closure_1_6(prop(5686).TableRow, {

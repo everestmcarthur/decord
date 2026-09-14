@@ -1,9 +1,9 @@
-// Module ID: 17048
-// Function ID: 17049
+// Module ID: 17050
+// Function ID: 17051
 // Name: PremiumDiscountOfferActionSheetContent
-// Dependencies: [19, 17, 1373, 21, 4636, 576, 11955, 1114, 9551, 5155, 5211, 4294, 5773, 4632, 15778, 5056, 8785, 2]
+// Dependencies: [19, 17, 1373, 21, 4636, 576, 11956, 1114, 9551, 5155, 5211, 4294, 5773, 4632, 15780, 5056, 8785, 2]
 
-// Module 17048 (PremiumDiscountOfferActionSheetContent)
+// Module 17050 (PremiumDiscountOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
@@ -14,8 +14,8 @@ import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5211 */;
 import native from "native" /* 5773 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
 import ChatSmileIcon from "ChatSmileIcon" /* 9551 */;
-import UserIcon from "UserIcon" /* 11955 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15778 */;
+import UserIcon from "UserIcon" /* 11956 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15780 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

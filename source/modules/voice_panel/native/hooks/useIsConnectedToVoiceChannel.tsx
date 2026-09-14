@@ -1,10 +1,10 @@
-// Module ID: 17146
-// Function ID: 17147
+// Module ID: 17148
+// Function ID: 17149
 // Name: useIsConnectedToVoiceChannel
 // Dependencies: [502, 4659, 4655, 1074, 504, 2]
 // Exports: default
 
-// Module 17146 (useIsConnectedToVoiceChannel)
+// Module 17148 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;

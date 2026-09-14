@@ -1,7 +1,7 @@
 // Module ID: 5540
 // Function ID: 5541
 // Name: EmojiStore
-// Dependencies: [32, 5, 4552, 5541, 2025, 1221, 2021, 1959, 2015, 1979, 5519, 1371, 5542, 5543, 1374, 1074, 5544, 1084, 4289, 5545, 11, 12, 1090, 1986, 2006, 10, 5546, 573, 4673, 38, 4623, 1369, 5547, 5548, 5580, 4266, 4228, 504, 4293, 4292, 2]
+// Dependencies: [32, 5, 4552, 5541, 2025, 1219, 2021, 1959, 2015, 1979, 5519, 1371, 5542, 5543, 1374, 1074, 5544, 1084, 4289, 5545, 11, 12, 1090, 1986, 2006, 10, 5546, 573, 4673, 38, 4623, 1369, 5547, 5548, 5580, 4266, 4228, 504, 4293, 4292, 2]
 
 // Module 5540 (EmojiStore)
 import _modDef12 from "module_12" /* 12 */;
@@ -19,7 +19,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5541 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 1959 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;

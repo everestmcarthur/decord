@@ -1,18 +1,18 @@
-// Module ID: 12546
-// Function ID: 12547
+// Module ID: 12547
+// Function ID: 12548
 // Name: MultiAccountActionCreators
-// Dependencies: [5, 502, 12542, 1074, 3, 1099, 573, 1272, 1242, 6694, 2]
+// Dependencies: [5, 502, 12543, 1074, 3, 1099, 573, 1270, 1240, 6694, 2]
 // Exports: invalidatePushSyncTokens, moveAccount, removeAccount, reportAccountSwitchTimeout, switchAccount, updatePushSyncToken, validateMultiAccountTokens
 
-// Module 12546 (MultiAccountActionCreators)
+// Module 12547 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
 
 const require = fn;
 const Constants = fn(1074);
@@ -78,7 +78,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                   const obj8 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: id2 };
                   DispatcherDefault.dispatch(obj8);
                   c5 = 1;
-                  const HTTP = closure_0(1272).HTTP;
+                  const HTTP = closure_0(1270).HTTP;
                   const obj9 = { url: constants2.ME, headers: null, retries: 3, rejectWithError: false };
                   const obj10 = { authorization: token };
                   obj9.headers = obj10;

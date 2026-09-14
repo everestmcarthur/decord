@@ -1,13 +1,13 @@
-// Module ID: 12094
-// Function ID: 12095
+// Module ID: 12095
+// Function ID: 12096
 // Name: TypingStore
-// Dependencies: [502, 1957, 7789, 1074, 1090, 7324, 1272, 573, 504, 2]
+// Dependencies: [502, 1957, 7789, 1074, 1090, 7324, 1270, 573, 504, 2]
 
-// Module 12094 (TypingStore)
+// Module 12095 (TypingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

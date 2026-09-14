@@ -1,18 +1,18 @@
-// Module ID: 11477
-// Function ID: 11478
+// Module ID: 11478
+// Function ID: 11479
 // Name: SummaryActionCreators
-// Dependencies: [5, 19, 5358, 1957, 11478, 1074, 1090, 573, 1272, 4537, 12, 11480, 563, 2]
+// Dependencies: [5, 19, 5358, 1957, 11479, 1074, 1090, 573, 1270, 4537, 12, 11481, 563, 2]
 // Exports: deleteSummary, fetchSummaries, setHighlightedSummary, setSelectedSummary, setSummaryFeedback, stopPolling, toggleTopicsBar, updateVisibleMessages, useChannelSummaries, useMaybeFetchChannelAffinitiesAndSummaries
 
-// Module 11477 (SummaryActionCreators)
+// Module 11478 (SummaryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SummaryStore from "SummaryStore" /* 11478 */;
+import SummaryStore from "SummaryStore" /* 11479 */;
 
 require = fn;
 function fetchSummary() {

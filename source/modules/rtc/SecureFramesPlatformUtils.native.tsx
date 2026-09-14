@@ -1,11 +1,11 @@
 // Module ID: 9283
 // Function ID: 9284
 // Name: SecureFramesPlatformUtils
-// Dependencies: [1957, 4659, 9281, 1074, 4839, 9284, 1896, 4603, 9295, 1114, 4981, 1178, 7350, 9298, 2]
+// Dependencies: [1957, 4659, 9281, 1074, 4839, 9284, 1896, 4603, 9295, 1114, 4981, 1176, 7350, 9298, 2]
 
 // Module 9283 (SecureFramesPlatformUtils)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;

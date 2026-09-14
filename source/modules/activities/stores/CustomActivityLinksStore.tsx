@@ -1,12 +1,12 @@
-// Module ID: 13071
-// Function ID: 13072
+// Module ID: 13072
+// Function ID: 13073
 // Name: CustomActivityLinksStore
-// Dependencies: [13072, 504, 573, 2]
+// Dependencies: [13073, 504, 573, 2]
 
-// Module 13071 (CustomActivityLinksStore)
+// Module 13072 (CustomActivityLinksStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import CustomActivityLinkRecord from "CustomActivityLinkRecord" /* 13072 */;
+import CustomActivityLinkRecord from "CustomActivityLinkRecord" /* 13073 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;

@@ -1,13 +1,13 @@
 // Module ID: 8955
 // Function ID: 8956
 // Name: CollectiblesShopVariantsUIStore
-// Dependencies: [1244, 4259, 8891, 7656, 2]
+// Dependencies: [1242, 4259, 8891, 7656, 2]
 // Exports: setSelectedVariantIndex, useSelectedVariantIndex
 
 // Module 8955 (CollectiblesShopVariantsUIStore)
 import _mod4259 from "module_4259" /* 4259 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

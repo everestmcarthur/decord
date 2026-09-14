@@ -1,18 +1,18 @@
-// Module ID: 11928
-// Function ID: 11929
+// Module ID: 11929
+// Function ID: 11930
 // Name: GuildIconUploader
-// Dependencies: [19, 17, 1183, 21, 4636, 576, 4347, 4488, 11929, 11930, 4632, 1114, 11931, 11932, 5204, 2]
+// Dependencies: [19, 17, 1181, 21, 4636, 576, 4347, 4488, 11930, 11931, 4632, 1114, 11932, 11933, 5204, 2]
 
-// Module 11928 (GuildIconUploader)
+// Module 11929 (GuildIconUploader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4488 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
-import _modDef11931 from "module_11931" /* 11931 */;
 import _modDef11932 from "module_11932" /* 11932 */;
+import _modDef11933 from "module_11933" /* 11933 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -51,9 +51,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj4.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = tmp13(11929);
+      let tmp13Result = tmp13(11930);
     } else {
-      tmp13Result = tmp13(11930);
+      tmp13Result = tmp13(11931);
     }
     const obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj), ];
@@ -86,13 +86,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef11931;
+    obj5.source = _modDef11932;
     obj4.children = tmp2(React4, obj5);
     obj2.children = tmp2(tmp3, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef11932 };
+    const obj7 = { source: _modDef11933 };
     obj.children = tmp2(React4, obj7);
   }
   return timestampProducer(React3, obj);

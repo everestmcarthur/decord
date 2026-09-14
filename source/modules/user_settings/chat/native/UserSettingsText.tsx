@@ -1,26 +1,26 @@
-// Module ID: 15548
-// Function ID: 15549
+// Module ID: 15549
+// Function ID: 15550
 // Name: UserSettingsText
-// Dependencies: [19, 17, 1371, 4300, 1184, 1185, 1074, 21, 4636, 576, 1242, 1935, 9488, 4338, 504, 4294, 1483, 7093, 1178, 10526, 4632, 1114, 8716, 5054, 5768, 7303, 5766, 5769, 2]
+// Dependencies: [19, 17, 1371, 4300, 1182, 1183, 1074, 21, 4636, 576, 1240, 1935, 9488, 4338, 504, 4294, 1483, 7093, 1176, 10527, 4632, 1114, 8716, 5054, 5768, 7303, 5766, 5769, 2]
 // Exports: default, setDataSavingMode, setImageDescriptions, setLowQualityImageMode, setStickerAutocomplete, setVideoUploadQuality
 
-// Module 15548 (UserSettingsText)
+// Module 15549 (UserSettingsText)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9488 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VideoQualitySettings = fn(1185).VideoQualitySettings;
+const VideoQualitySettings = fn(1183).VideoQualitySettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);

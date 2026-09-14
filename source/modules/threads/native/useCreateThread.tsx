@@ -1,10 +1,10 @@
-// Module ID: 10383
-// Function ID: 10384
+// Module ID: 10384
+// Function ID: 10385
 // Name: useCreateThread
 // Dependencies: [5, 19, 4977, 4629, 7265, 9434, 7559, 7784, 9439, 9436, 7941, 5260, 5215, 9440, 2]
 // Exports: default, useCreateForumPost
 
-// Module 10383 (useCreateThread)
+// Module 10384 (useCreateThread)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
 import MessageParserDefault from "MessageParser" /* 7784 */;

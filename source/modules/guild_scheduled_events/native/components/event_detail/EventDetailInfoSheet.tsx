@@ -1,12 +1,12 @@
 // Module ID: 9925
 // Function ID: 9926
 // Name: EventDetailInfoSheet
-// Dependencies: [19, 17, 4628, 2021, 1979, 4659, 1371, 1963, 9829, 1085, 21, 4636, 576, 5605, 4603, 504, 9834, 9911, 9910, 9902, 9906, 4632, 1114, 1178, 4481, 8528, 5514, 9926, 2]
+// Dependencies: [19, 17, 4628, 2021, 1979, 4659, 1371, 1963, 9829, 1085, 21, 4636, 576, 5605, 4603, 504, 9834, 9911, 9910, 9902, 9906, 4632, 1114, 1176, 4481, 8528, 5514, 9926, 2]
 // Exports: closeGuildEventInfoActionSheet, default
 
 // Module 9925 (EventDetailInfoSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 9910 */;
@@ -110,8 +110,8 @@ export default function EventDetailInfoSheet(guildEvent) {
   let tmp11Result = null != creator && stateFromStores1;
   if (tmp11Result) {
     const obj14 = { style: tmp.interestedContainer, children: null };
-    const obj15 = { user: creator, guildId: guildEvent.guild_id, size: tmp2(1178).AvatarSizes.XSMALL_20, style: tmp.interestedIcon };
-    const items10 = [tmp13(tmp2(1178).Avatar, obj15), ];
+    const obj15 = { user: creator, guildId: guildEvent.guild_id, size: tmp2(1176).AvatarSizes.XSMALL_20, style: tmp.interestedIcon };
+    const items10 = [tmp13(tmp2(1176).Avatar, obj15), ];
     const obj16 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = tmp2(1114).intl;
     const obj17 = {

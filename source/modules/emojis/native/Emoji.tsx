@@ -1,14 +1,14 @@
 // Module ID: 7233
 // Function ID: 7234
 // Name: Emoji
-// Dependencies: [19, 17, 1183, 21, 1150, 4293, 1178, 5668, 4488, 7234, 7235, 2]
+// Dependencies: [19, 17, 1181, 21, 1363, 4293, 1176, 5668, 4488, 7234, 7235, 2]
 // Exports: default
 
 // Module 7233 (Emoji)
 import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -48,5 +48,5 @@ export default function Emoji(arg0) {
       return tmp6(tmp7, obj3);
     }
   }
-  tmp6Result = tmp6(tmp(1178).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
+  tmp6Result = tmp6(tmp(1176).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
 };

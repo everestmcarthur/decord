@@ -1,21 +1,21 @@
-// Module ID: 15393
-// Function ID: 15394
+// Module ID: 15394
+// Function ID: 15395
 // Name: SyncThemeSetting
-// Dependencies: [4456, 1184, 1183, 1221, 8079, 1074, 504, 1114, 15394, 9488, 11601, 2]
+// Dependencies: [4456, 1182, 1181, 1219, 8079, 1074, 504, 1114, 15395, 9488, 11602, 2]
 
-// Module 15393 (SyncThemeSetting)
+// Module 15394 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9488 */;
-import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15394 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15395 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

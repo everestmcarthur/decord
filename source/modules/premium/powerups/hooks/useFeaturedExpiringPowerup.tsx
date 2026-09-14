@@ -1,10 +1,10 @@
-// Module ID: 12635
-// Function ID: 12636
+// Module ID: 12636
+// Function ID: 12637
 // Name: useFeaturedExpiringPowerup
-// Dependencies: [19, 4546, 4525, 504, 12636, 7657, 2]
+// Dependencies: [19, 4546, 4525, 504, 12637, 7657, 2]
 // Exports: default
 
-// Module 12635 (useFeaturedExpiringPowerup)
+// Module 12636 (useFeaturedExpiringPowerup)
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 4546 */;

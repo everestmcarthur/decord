@@ -1,12 +1,12 @@
 // Module ID: 9881
 // Function ID: 9882
 // Name: ChannelOverwritesItem
-// Dependencies: [19, 17, 1371, 8519, 21, 4636, 4986, 1114, 4649, 4334, 5204, 6717, 5686, 9882, 9868, 4632, 1178, 9883, 9884, 4355, 5698, 2]
+// Dependencies: [19, 17, 1371, 8519, 21, 4636, 4986, 1114, 4649, 4334, 5204, 6717, 5686, 9882, 9868, 4632, 1176, 9883, 9884, 4355, 5698, 2]
 // Exports: ChannelOverwritesCheckboxItem
 
 // Module 9881 (ChannelOverwritesItem)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AlertModal from "AlertModal" /* 4986 */;
@@ -98,8 +98,8 @@ function MemberItem(arg0) {
   const items1 = [React5(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: tmp5(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true, style: tmp.ownerIcon };
-    tmp4Result = tmp4(tmp5(1178).Icon, obj3);
+    const obj3 = { size: tmp5(1176).Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true, style: tmp.ownerIcon };
+    tmp4Result = tmp4(tmp5(1176).Icon, obj3);
   }
   items1[1] = tmp4Result;
   obj.children = items1;

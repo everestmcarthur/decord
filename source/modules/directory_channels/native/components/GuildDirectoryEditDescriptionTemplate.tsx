@@ -1,21 +1,21 @@
-// Module ID: 12446
-// Function ID: 12447
+// Module ID: 12447
+// Function ID: 12448
 // Name: GuildDirectoryEditDescriptionTemplate
-// Dependencies: [5, 32, 19, 17, 12441, 12434, 21, 4636, 504, 4538, 7188, 1114, 5766, 5769, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 12442, 12435, 21, 4636, 504, 4538, 7188, 1114, 5766, 5769, 5056, 2]
 // Exports: default
 
-// Module 12446 (GuildDirectoryEditDescriptionTemplate)
+// Module 12447 (GuildDirectoryEditDescriptionTemplate)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12441 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12442 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7 } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(12434);
+const GuildDirectoryConstants = fn(12435);
 ({ DirectoryEntryCategories: closure_9, getHubCategories: c10 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

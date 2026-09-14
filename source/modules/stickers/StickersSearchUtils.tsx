@@ -1,10 +1,10 @@
-// Module ID: 10521
-// Function ID: 10522
+// Module ID: 10522
+// Function ID: 10523
 // Name: StickersSearchUtils
 // Dependencies: [5523, 7440, 2]
 // Exports: searchAllStickers, searchSendableStickers, searchUnsendableStickers
 
-// Module 10521 (StickersSearchUtils)
+// Module 10522 (StickersSearchUtils)
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
 import StickerSendability from "StickerSendability" /* 7440 */;
 import size from "module_2" /* 2 */;

@@ -1,13 +1,13 @@
 // Module ID: 9939
 // Function ID: 9940
 // Name: StartEventModal
-// Dependencies: [5, 32, 19, 17, 1957, 1979, 1963, 9829, 21, 4636, 576, 4839, 5204, 1114, 1178, 7192, 4632, 9938, 504, 9801, 9940, 7226, 8528, 9943, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 1979, 1963, 9829, 21, 4636, 576, 4839, 5204, 1114, 1176, 7192, 4632, 9938, 504, 9801, 9940, 7226, 8528, 9943, 5056, 2]
 // Exports: default
 
 // Module 9939 (StartEventModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import Pressables from "Pressables" /* 5204 */;

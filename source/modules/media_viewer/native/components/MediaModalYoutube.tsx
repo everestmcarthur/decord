@@ -1,9 +1,9 @@
-// Module ID: 13106
-// Function ID: 13107
+// Module ID: 13107
+// Function ID: 13108
 // Name: MediaModalYoutube
-// Dependencies: [32, 19, 1074, 21, 8415, 8390, 8379, 8383, 13107, 1150, 2]
+// Dependencies: [32, 19, 1074, 21, 8415, 8390, 8379, 8383, 13108, 1363, 2]
 
-// Module 13106 (MediaModalYoutube)
+// Module 13107 (MediaModalYoutube)
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8379 */;
 import MediaModalWebView from "MediaModalWebView" /* 8415 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -135,15 +135,15 @@ export default noop.memo((visible) => {
     if (playerState === tmp2(8415).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp7(13107), obj2);
+        return ref(tmp7(13108), obj2);
       }
     }
-    let tmp15 = tmp2(1150).isAndroid() ? { nestedScrollEnabled: true, overScrollMode: "never", domStorageEnabled: true, mixedContentMode: "compatibility" } : {};
+    let tmp15 = tmp2(1363).isAndroid() ? { nestedScrollEnabled: true, overScrollMode: "never", domStorageEnabled: true, mixedContentMode: "compatibility" } : {};
     const obj3 = { ref, style: visible.style, source: null, baseURL: null, playerState: null, onDataReceived: null, javaScriptEnabled: true, javaScriptCanOpenWindowsAutomatically: true };
     let str2 = "";
     let str3 = "";
     const tmp16 = ref;
-    const tmp2Result2 = tmp2(1150);
+    const tmp2Result2 = tmp2(1363);
     if (null != youtubeVideoIdFromURI.start) {
       const _HermesInternal = HermesInternal;
       str3 = "'start': " + youtubeVideoIdFromURI.start + ",";

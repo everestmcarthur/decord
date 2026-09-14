@@ -1,7 +1,7 @@
 // Module ID: 7407
 // Function ID: 7408
 // Name: ForumPostDataLoader
-// Dependencies: [5, 1957, 7408, 7380, 7411, 1074, 12, 11, 504, 1272, 573, 2]
+// Dependencies: [5, 1957, 7408, 7380, 7411, 1074, 12, 11, 504, 1270, 573, 2]
 // Exports: preloadForumThreads, useFirstForumPostMessage, useMostRecentForumMessage
 
 // Module 7407 (ForumPostDataLoader)

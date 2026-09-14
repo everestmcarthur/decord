@@ -1,17 +1,17 @@
-// Module ID: 16470
-// Function ID: 16471
+// Module ID: 16472
+// Function ID: 16473
 // Name: ManageAccountsModal
-// Dependencies: [32, 5, 19, 17, 502, 4482, 1371, 12542, 12543, 16471, 1074, 21, 8017, 4636, 576, 504, 1178, 4981, 1114, 12546, 5204, 15397, 16046, 4373, 4637, 8390, 1242, 7226, 16472, 16047, 12552, 16473, 5696, 8716, 11337, 7103, 7966, 11056, 16072, 6694, 7043, 16071, 2]
+// Dependencies: [32, 5, 19, 17, 502, 4482, 1371, 12543, 12544, 16473, 1074, 21, 8017, 4636, 576, 504, 1176, 4981, 1114, 12547, 5204, 15398, 16048, 4373, 4637, 8390, 1240, 7226, 16474, 16049, 12553, 16475, 5696, 8716, 11338, 7103, 7966, 11057, 16074, 6694, 7043, 16073, 2]
 
-// Module 16470 (ManageAccountsModal)
+// Module 16472 (ManageAccountsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import timing from "timing" /* 4637 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11056 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12546 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11057 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -58,7 +58,7 @@ function RemoveMultiAccountUserButton(user) {
             obj4.body = intl2.formatToPlainString(tmp2(1114).t.phEQmS, obj5);
             const intl3 = tmp2(1114).intl;
             obj4.confirmText = intl3.string(tmp2(1114).t.N86XcP);
-            obj4.confirmColor = tmp2(1178).ButtonColors.RED;
+            obj4.confirmColor = tmp2(1176).ButtonColors.RED;
             const intl4 = tmp2(1114).intl;
             obj4.cancelText = intl4.string(tmp2(1114).t["ETE/oC"]);
             v1 = 1;
@@ -75,8 +75,8 @@ function RemoveMultiAccountUserButton(user) {
           return obj8;
         } else {
           if (value) {
-            v3(12546).removeAccount(closure_128_0.id);
-            const obj = v3(12546);
+            v3(12547).removeAccount(closure_128_0.id);
+            const obj = v3(12547);
           }
           v3 = 3;
           return { value: "HermesInternal", done: null };
@@ -97,7 +97,7 @@ function RemoveMultiAccountUserButton(user) {
     id = stateFromStores1.id;
   }
   if (id === user.id) {
-    return closure_18(tmp(1178).Spacer, { size: 21 });
+    return closure_18(tmp(1176).Spacer, { size: 21 });
   } else {
     const username = user.username;
     importDefault = username;
@@ -122,7 +122,7 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_18(tmp(15397).CircleMinusIcon, obj4);
+    obj3.children = closure_18(tmp(15398).CircleMinusIcon, obj4);
     return closure_18(tmp(5204).PressableOpacity, obj3);
   }
   let obj2 = user(504);
@@ -264,10 +264,10 @@ function ManageAccounts(isEditing) {
   return closure_18(isEditing(multiAccountUsers[27]).SafeAreaPaddingView, obj6);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(12542).MultiAccountTokenStatus;
-let Constants = fn(12543);
+const MultiAccountTokenStatus = fn(12543).MultiAccountTokenStatus;
+let Constants = fn(12544);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_12, MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
-const ManageAccountsScreens = fn(16471).ManageAccountsScreens;
+const ManageAccountsScreens = fn(16473).ManageAccountsScreens;
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
@@ -354,7 +354,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(16072), {
+        return closure_1_18(isEditing(16074), {
           handleLogin(login, password, undelete) {
             isEditing(6694).login({ login, password, undelete });
           },
@@ -379,7 +379,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(16071), { isMultiAccount: true });
+        return closure_1_18(isEditing(16073), { isMultiAccount: true });
       }
     })
   ];

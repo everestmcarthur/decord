@@ -1,10 +1,10 @@
-// Module ID: 17767
-// Function ID: 17768
+// Module ID: 17768
+// Function ID: 17769
 // Name: BansEmpty
-// Dependencies: [19, 17, 21, 8349, 17768, 17769, 17770, 4488, 2]
+// Dependencies: [19, 17, 21, 8349, 17769, 17770, 17771, 4488, 2]
 // Exports: BansEmpty, getBansEmptySource, useBansEmptySource
 
-// Module 17767 (BansEmpty)
+// Module 17768 (BansEmpty)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
@@ -20,13 +20,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getBansEmptySource = function getBansEmptySource(theme) {
   return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_17768");
-    },
-    darker() {
       return require("module_17769");
     },
-    light() {
+    darker() {
       return require("module_17770");
+    },
+    light() {
+      return require("module_17771");
     }
   });
 };
@@ -34,13 +34,13 @@ export const useBansEmptySource = function useBansEmptySource() {
   const obj = shared;
   return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17768");
-    },
-    darker() {
       return require("module_17769");
     },
-    light() {
+    darker() {
       return require("module_17770");
+    },
+    light() {
+      return require("module_17771");
     }
   });
 };
@@ -49,13 +49,13 @@ export const BansEmpty = function BansEmpty(arg0) {
   const obj4 = {};
   const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17768");
-    },
-    darker() {
       return require("module_17769");
     },
-    light() {
+    darker() {
       return require("module_17770");
+    },
+    light() {
+      return require("module_17771");
     }
   });
   const merged = Object.assign(arg0);

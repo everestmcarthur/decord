@@ -1,11 +1,11 @@
 // Module ID: 9179
 // Function ID: 9180
 // Name: TouchableHitBox
-// Dependencies: [19, 17, 21, 4636, 576, 4347, 1178, 5204, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4347, 1176, 5204, 2]
 
 // Module 9179 (TouchableHitBox)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Pressables from "Pressables" /* 5204 */;
 import noop from "module_19" /* 19 */;
 

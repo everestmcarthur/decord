@@ -1,14 +1,14 @@
-// Module ID: 16819
-// Function ID: 16820
+// Module ID: 16821
+// Function ID: 16822
 // Name: ThreadListEmpty
-// Dependencies: [19, 17, 21, 4636, 576, 1178, 12367, 4632, 1114, 5056, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1176, 12368, 4632, 1114, 5056, 2]
 
-// Module 16819 (ThreadListEmpty)
+// Module 16821 (ThreadListEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import _modDef12367 from "module_12367" /* 12367 */;
+import _modDef12368 from "module_12368" /* 12368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default noop.memo((onCreateThreadPress) => {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef12367, size: native.Icon.Sizes.MEDIUM }) };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef12368, size: native.Icon.Sizes.MEDIUM }) };
   const items = [React4(View, obj2), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

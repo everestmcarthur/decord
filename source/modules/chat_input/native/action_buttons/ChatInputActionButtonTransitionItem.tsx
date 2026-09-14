@@ -1,13 +1,13 @@
-// Module ID: 12375
-// Function ID: 12376
+// Module ID: 12376
+// Function ID: 12377
 // Name: ChatInputActionButtonTransitionItem
-// Dependencies: [19, 17, 12091, 21, 4347, 4373, 4637, 12376, 2]
+// Dependencies: [19, 17, 12092, 21, 4347, 4373, 4637, 12377, 2]
 // Exports: default, interactivityProps
 
-// Module 12375 (ChatInputActionButtonTransitionItem)
+// Module 12376 (ChatInputActionButtonTransitionItem)
 import native from "native" /* 4347 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12376 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -92,7 +92,7 @@ function BounceTransitionItem(state) {
   return jsx(ReanimatedRexportDefault.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12091).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12092).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };

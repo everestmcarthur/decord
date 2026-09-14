@@ -1,11 +1,11 @@
-// Module ID: 12166
-// Function ID: 12167
+// Module ID: 12167
+// Function ID: 12168
 // Name: useAppLauncherOnboardingContent
-// Dependencies: [32, 9420, 1957, 1954, 4457, 1943, 504, 12167, 12172, 7491, 2]
+// Dependencies: [32, 9420, 1957, 1954, 4457, 1943, 504, 12168, 12173, 7491, 2]
 // Exports: default
 
-// Module 12166 (useAppLauncherOnboardingContent)
-import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12172 */;
+// Module 12167 (useAppLauncherOnboardingContent)
+import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9420 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -47,7 +47,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         result = result1;
       }
       obj4.fetchesShelf = !result;
-      const activityApplications = tmp(12167).useActivityApplications(obj4);
+      const activityApplications = tmp(12168).useActivityApplications(obj4);
       let flag = false;
       for (const item10042 of activityApplications) {
         if (null != stateFromStores.getEntry(item10042.id)) {

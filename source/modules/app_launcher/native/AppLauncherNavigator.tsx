@@ -1,17 +1,17 @@
-// Module ID: 12211
-// Function ID: 12212
+// Module ID: 12212
+// Function ID: 12213
 // Name: AppLauncherNavigator
-// Dependencies: [109, 19, 1482, 1074, 21, 8017, 4636, 576, 7265, 7285, 4504, 1609, 7103, 4816, 1484, 12212, 12256, 12282, 12324, 11348, 2]
+// Dependencies: [109, 19, 1482, 1074, 21, 8017, 4636, 576, 7265, 7285, 4504, 1609, 7103, 4816, 1484, 12213, 12257, 12283, 12325, 11349, 2]
 
-// Module 12211 (AppLauncherNavigator)
+// Module 12212 (AppLauncherNavigator)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12212 */;
-import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12256 */;
-import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12282 */;
-import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12324 */;
+import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12213 */;
+import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12257 */;
+import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12283 */;
+import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12325 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -113,5 +113,5 @@ export default noop.memo(function AppLauncherNavigator(arg0) {
     const obj18 = { customId: null, referrerId: null };
   }
   const tmp8Result = closure_8(entrypoint(1484).NavigationIndependentTree, obj16);
-  return closure_8(entrypoint(11348).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: tmp20, keyboardCloseReasonRef, onActivityItemSelected, width }, children: closure_8(entrypoint(1484).NavigationIndependentTree, obj16) });
+  return closure_8(entrypoint(11349).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: tmp20, keyboardCloseReasonRef, onActivityItemSelected, width }, children: closure_8(entrypoint(1484).NavigationIndependentTree, obj16) });
 });

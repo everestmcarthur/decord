@@ -1,11 +1,11 @@
 // Module ID: 7859
 // Function ID: 7860
 // Name: RequestGatewaySocket
-// Dependencies: [5, 1074, 7575, 1242, 2]
+// Dependencies: [5, 1074, 7575, 1240, 2]
 // Exports: describeConnectionReasons, isRequested, recordStartHeadlessTask, startBridgeTo, withRequest
 
 // Module 7859 (RequestGatewaySocket)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

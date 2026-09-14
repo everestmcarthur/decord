@@ -158,7 +158,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "a" };
+    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "Array" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
       let title1;
@@ -285,7 +285,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp44 = closure_10(tmp(4988).ScreenStackHeaderSearchBarView, obj19);
   }
   items7[3] = tmp44;
-  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "gpt-5.6-sol", title: "GPT-5.6 Sol", titleColor: "openai", titleFontFamily: true, titleFontSize: "/assets/.cache/intl/ZGVzaWdu", titleFontWeight: null, topInsetEnabled: "86b91484df1ac0b8ccad956aae12b775", disableTopInsetApplication: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages", disableLeftInsetApplication: "jsona", disableRightInsetApplication: "gpt-5.6-terra", disableBottomInsetApplication: "GPT-5.6 Terra", translucent: "openai", children: true, headerLeftBarButtonItems: "/assets/.cache/intl/ZGVzaWdu", headerRightBarButtonItems: null, experimental_userInterfaceStyle: "72a624908b343db34ae78e6d520bec11" };
+  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "gpt-5.6-sol", title: "GPT-5.6 Sol", titleColor: "openai", titleFontFamily: true, titleFontSize: "/assets/.cache/intl/ZGVzaWdu", titleFontWeight: null, topInsetEnabled: "28eaf73d0eb1a1456a138ded13cb8941", disableTopInsetApplication: "de.messages.28eaf73d0eb1a1456a138ded13cb8941.compiled.messages", disableLeftInsetApplication: "jsona", disableRightInsetApplication: "gpt-5.6-terra", disableBottomInsetApplication: "GPT-5.6 Terra", translucent: "openai", children: true, headerLeftBarButtonItems: "/assets/.cache/intl/ZGVzaWdu", headerRightBarButtonItems: null, experimental_userInterfaceStyle: "84406581322fd3209a5e50ba02a76da6" };
   let tmp50 = false === headerShadowVisible;
   const tmpResult2 = colors(5712);
   if (!tmp50) {

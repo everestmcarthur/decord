@@ -1,12 +1,12 @@
-// Module ID: 13873
-// Function ID: 13874
+// Module ID: 13874
+// Function ID: 13875
 // Name: VoiceMemberEmbeddedActivity
-// Dependencies: [32, 19, 17, 1956, 1957, 1371, 1182, 7254, 21, 1178, 4636, 576, 7271, 1369, 504, 4265, 9661, 1477, 5114, 9660, 5204, 1114, 4632, 9781, 5057, 2]
+// Dependencies: [32, 19, 17, 1956, 1957, 1371, 1180, 7254, 21, 1176, 4636, 576, 7271, 1369, 504, 4265, 9661, 1477, 5114, 9660, 5204, 1114, 4632, 9781, 5057, 2]
 // Exports: calculateActivityRowHeight, default
 
-// Module 13873 (VoiceMemberEmbeddedActivity)
+// Module 13874 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9660 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,8 +20,8 @@ get_ActivityIndicator = fn(17);
 const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const XSMALL = fn(1178).AvatarSizes.XSMALL;
-const androidRippleConfig = fn(1182).getThemedRippleConfig({ foreground: true });
+const XSMALL = fn(1176).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1180).getThemedRippleConfig({ foreground: true });
 let size = { width: 32, height: 32, marginRight: 16, borderRadius: 4 };
 let c14 = 1.7777777777777777;
 const createStyles = fn(4636);
@@ -35,8 +35,8 @@ obj.applicationName = { lineHeight: 20 };
 obj.joinButton = { alignSelf: "center" };
 obj.joinButtonPill = { borderRadius: 100, paddingHorizontal: 24 };
 obj.joinButtonContainer = { alignItems: "center", justifyContent: "center", display: "flex", width: "100%", paddingHorizontal: 16 };
-obj.overflow = { height: fn(1178).AVATAR_SIZE_MAP[XSMALL] };
-let obj4 = { height: fn(1178).AVATAR_SIZE_MAP[XSMALL] };
+obj.overflow = { height: fn(1176).AVATAR_SIZE_MAP[XSMALL] };
+let obj4 = { height: fn(1176).AVATAR_SIZE_MAP[XSMALL] };
 obj.overflowBackgroundColor = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj.overflowBackgroundColorActionSheet = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -130,7 +130,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
         const obj = { user, guildId, size: XSMALL, cutout: null };
         let tmp5;
         if (!arg1) {
-          const obj2 = { radius: tmp2(1178).AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: tmp2(1178).CutoutDirection.RIGHT, inset: -6 };
+          const obj2 = { radius: tmp2(1176).AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: tmp2(1176).CutoutDirection.RIGHT, inset: -6 };
           tmp5 = obj2;
         }
         obj.cutout = tmp5;

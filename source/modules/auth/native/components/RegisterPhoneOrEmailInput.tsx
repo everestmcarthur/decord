@@ -1,17 +1,17 @@
-// Module ID: 16058
-// Function ID: 16059
+// Module ID: 16060
+// Function ID: 16061
 // Name: RegisterPhoneOrEmailInput
-// Dependencies: [19, 7044, 16041, 21, 1483, 16059, 504, 7064, 1093, 1114, 7063, 2]
+// Dependencies: [19, 7044, 16043, 21, 1483, 16061, 504, 7064, 1093, 1114, 7063, 2]
 // Exports: RegisterPhoneOrEmailInput
 
-// Module 16058 (RegisterPhoneOrEmailInput)
+// Module 16060 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7064 */;
 import noop from "module_19" /* 19 */;
 import PhoneStore from "PhoneStore" /* 7044 */;
 
 require = fn;
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);

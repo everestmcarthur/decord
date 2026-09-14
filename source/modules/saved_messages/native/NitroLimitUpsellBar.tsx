@@ -1,10 +1,10 @@
-// Module ID: 12350
-// Function ID: 12351
+// Module ID: 12351
+// Function ID: 12352
 // Name: NitroLimitUpsellBar
 // Dependencies: [17, 21, 4636, 576, 8711, 10093, 4632, 1114, 10099, 5056, 2]
 // Exports: default
 
-// Module 12350 (NitroLimitUpsellBar)
+// Module 12351 (NitroLimitUpsellBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

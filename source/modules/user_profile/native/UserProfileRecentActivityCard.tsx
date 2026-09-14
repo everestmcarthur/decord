@@ -1,10 +1,10 @@
-// Module ID: 13200
-// Function ID: 13201
+// Module ID: 13201
+// Function ID: 13202
 // Name: UserProfileRecentActivityCard
-// Dependencies: [19, 17, 21, 13138, 8252, 13143, 4636, 576, 8459, 4347, 8686, 4488, 5668, 1396, 1925, 4632, 13129, 7265, 7285, 13150, 13151, 8798, 8809, 5204, 1114, 2]
+// Dependencies: [19, 17, 21, 13139, 8252, 13144, 4636, 576, 8459, 4347, 8686, 4488, 5668, 1396, 1925, 4632, 13130, 7265, 7285, 13151, 13152, 8798, 8809, 5204, 1114, 2]
 // Exports: default
 
-// Module 13200 (UserProfileRecentActivityCard)
+// Module 13201 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 576 */;
 import StringUtils from "StringUtils" /* 1925 */;
 import FastImageDefault from "FastImage" /* 5668 */;
@@ -13,11 +13,11 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import utils from "utils" /* 8252 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8459 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13129 */;
-import BadgesAll from "Badges" /* 13138 */;
-import TrendingType from "TrendingType" /* 13143 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13150 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13151 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13130 */;
+import BadgesAll from "Badges" /* 13139 */;
+import TrendingType from "TrendingType" /* 13144 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13151 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13152 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;

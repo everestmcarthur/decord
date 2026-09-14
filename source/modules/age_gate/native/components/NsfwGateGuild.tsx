@@ -1,12 +1,12 @@
-// Module ID: 10423
-// Function ID: 10424
+// Module ID: 10424
+// Function ID: 10425
 // Name: NsfwGateGuild
-// Dependencies: [19, 17, 2021, 1371, 10424, 1074, 21, 4636, 576, 1114, 2024, 1242, 9425, 7076, 10425, 4632, 5056, 2]
+// Dependencies: [19, 17, 2021, 1371, 10425, 1074, 21, 4636, 576, 1114, 2024, 1240, 9425, 7076, 10426, 4632, 5056, 2]
 // Exports: default
 
-// Module 10423 (NsfwGateGuild)
+// Module 10424 (NsfwGateGuild)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9425 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(10424).NsfwGateSource;
+const NsfwGateSource = fn(10425).NsfwGateSource;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
 const jsxProd = fn(21);
@@ -66,7 +66,7 @@ export default function NsfwGateGuild(guildId) {
   let obj3 = { style: tmp.container, children: null };
   const items1 = [closure_11(currentUser(7076), {}), , , , , ];
   const formatResult = intl3.format(guildId(1114).t.Z12LNW, obj);
-  items1[1] = closure_11(closure_5, { source: currentUser(10425), style: tmp.image });
+  items1[1] = closure_11(closure_5, { source: currentUser(10426), style: tmp.image });
   items1[2] = closure_11(guildId(4632).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });
   items1[3] = closure_11(guildId(4632).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
   items1[4] = closure_11(guildId(4632).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult });

@@ -1,7 +1,7 @@
 // Module ID: 10124
 // Function ID: 10125
 // Name: getEffectiveNoiseCancellation
-// Dependencies: [1150, 10125, 2]
+// Dependencies: [1363, 10125, 2]
 // Exports: default
 
 // Module 10124 (getEffectiveNoiseCancellation)
@@ -21,8 +21,8 @@ export default function getEffectiveNoiseCancellation(arg0, arg1) {
           tmp5 = "" === arg1;
         }
         if (!tmp5) {
-          tmp5 = !tmp(1150).isWindows();
-          const tmpResult3 = tmp(1150);
+          tmp5 = !tmp(1363).isWindows();
+          const tmpResult3 = tmp(1363);
         }
         if (!tmp5) {
           tmp5 = arg1 !== deep_noise_suppression;

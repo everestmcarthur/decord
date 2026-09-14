@@ -1,7 +1,7 @@
 // Module ID: 7993
 // Function ID: 7994
 // Name: MarkupPostProcessors
-// Dependencies: [1074, 4973, 1362, 7994, 4619, 1232, 2]
+// Dependencies: [1074, 4973, 1360, 7994, 4619, 1230, 2]
 // Exports: checkForSimpleEmbedMessage, convertNewlinesInContent, removeBuildOverrideLinks, removeExperimentLinks, removeGameServerShareLinks, removeQuestsEmbedLinks, runMessageMarkupPostProcessors
 
 // Module 7993 (MarkupPostProcessors)
@@ -41001,8 +41001,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(1362).isBuildOverrideLink(type.target);
-      const obj = closure_0(1362);
+      tmp = !closure_0(1360).isBuildOverrideLink(type.target);
+      const obj = closure_0(1360);
     }
     return tmp;
   });
@@ -41263,8 +41263,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(1362).isBuildOverrideLink(type.target);
-        const obj = closure_0(1362);
+        tmp = !closure_0(1360).isBuildOverrideLink(type.target);
+        const obj = closure_0(1360);
       }
       return tmp;
     });

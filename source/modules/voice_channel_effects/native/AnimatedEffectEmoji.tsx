@@ -1,13 +1,13 @@
 // Module ID: 9760
 // Function ID: 9761
 // Name: AnimatedEffectEmoji
-// Dependencies: [19, 17, 4628, 21, 1090, 4636, 576, 5668, 1178, 504, 4373, 4637, 7452, 2]
+// Dependencies: [19, 17, 4628, 21, 1090, 4636, 576, 5668, 1176, 504, 4373, 4637, 7452, 2]
 // Exports: default
 
 // Module 9760 (AnimatedEffectEmoji)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import FastImageDefault from "FastImage" /* 5668 */;

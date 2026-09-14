@@ -1,15 +1,15 @@
-// Module ID: 15304
-// Function ID: 15305
+// Module ID: 15305
+// Function ID: 15306
 // Name: NavigateForwardButton
-// Dependencies: [19, 21, 4636, 576, 5204, 4632, 1178, 15305, 2]
+// Dependencies: [19, 21, 4636, 576, 5204, 4632, 1176, 15306, 2]
 // Exports: default
 
-// Module 15304 (NavigateForwardButton)
+// Module 15305 (NavigateForwardButton)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
-import _modDef15305 from "module_15305" /* 15305 */;
+import _modDef15306 from "module_15306" /* 15306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function NavigateForwardButton(arg0) {
   ({ onPress, text } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, children: null };
-  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef15305 })];
+  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef15306 })];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);
 };

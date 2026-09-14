@@ -1,7 +1,7 @@
 // Module ID: 4617
 // Function ID: 4618
 // Name: MobileNativeUpdateConstants
-// Dependencies: [4228, 1150, 1365, 1364, 2]
+// Dependencies: [4228, 1363, 1365, 1362, 2]
 
 // Module 4617 (MobileNativeUpdateConstants)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
@@ -18,13 +18,13 @@ if (undefined !== process.env.INTERNAL_UPDATE_URL) {
       const importDefaultResult1 = URLUtilsDefault;
     } else {
       toURLSafeResult = null;
-      const obj3 = fn(1150);
+      const obj3 = fn(1363);
     }
     tmp3 = toURLSafeResult;
-    obj2 = fn(1150);
+    obj2 = fn(1363);
   }
 }
-let ClientInfoUtils = fn(1364);
+let ClientInfoUtils = fn(1362);
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let Build;
 if (ClientInfoUtils != null) {
@@ -44,7 +44,7 @@ if (!Number.isNaN(parsed)) {
     }
   }
 }
-ClientInfoUtils = fn(1364);
+ClientInfoUtils = fn(1362);
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let Version;
 if (ClientInfoUtils != null) {

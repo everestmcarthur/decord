@@ -1,16 +1,16 @@
-// Module ID: 17038
-// Function ID: 17039
+// Module ID: 17040
+// Function ID: 17041
 // Name: AppIconsCoachmark
-// Dependencies: [19, 17, 1371, 1954, 21, 4636, 576, 504, 4294, 4603, 7253, 17039, 1178, 10093, 4632, 1114, 5056, 13536, 2]
+// Dependencies: [19, 17, 1371, 1954, 21, 4636, 576, 504, 4294, 4603, 7253, 17041, 1176, 10093, 4632, 1114, 5056, 13537, 2]
 // Exports: default
 
-// Module 17038 (AppIconsCoachmark)
+// Module 17040 (AppIconsCoachmark)
 import nativeDefault from "native" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import _modDef10093 from "module_10093" /* 10093 */;
-import AppIconUtils from "AppIconUtils" /* 13536 */;
-import _modDef17039 from "module_17039" /* 17039 */;
+import AppIconUtils from "AppIconUtils" /* 13537 */;
+import _modDef17041 from "module_17041" /* 17041 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -50,10 +50,10 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   const obj4 = { style: tmp.info, children: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  const items2 = [closure_8(closure_4, { source: _modDef17039, style: tmp.image }), , ];
+  const items2 = [closure_8(closure_4, { source: _modDef17041, style: tmp.image }), , ];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const obj5 = { source: _modDef17039, style: tmp.image };
-  const items3 = [closure_8(markAsDismissed(1178).Icon, { source: _modDef10093, size: markAsDismissed(1178).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const obj5 = { source: _modDef17041, style: tmp.image };
+  const items3 = [closure_8(markAsDismissed(1176).Icon, { source: _modDef10093, size: markAsDismissed(1176).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1114).intl;
   obj8.children = intl.string(markAsDismissed(1114).t.EfA4Cq);

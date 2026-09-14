@@ -1,10 +1,10 @@
-// Module ID: 16649
-// Function ID: 16650
+// Module ID: 16651
+// Function ID: 16652
 // Name: ChangeSubscriptionCard
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 4632, 1611, 15310, 4228, 7253, 1114, 1178, 16642, 4839, 16650, 1896, 4603, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 4632, 1611, 15311, 4228, 7253, 1114, 1176, 16644, 4839, 16652, 1896, 4603, 2]
 // Exports: default
 
-// Module 16649 (ChangeSubscriptionCard)
+// Module 16651 (ChangeSubscriptionCard)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -12,7 +12,7 @@ import _modDef4228 from "module_4228" /* 4228 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = activeSubscription(1114).intl;
   obj6.children = intl.format(activeSubscription(1114).t.l3uCCX, { activeListingName: first });
-  const items1 = [closure_7(activeSubscription(4632).Text, obj6), closure_7(activeSubscription(1178).Spacer, { size: 16 }), , ];
+  const items1 = [closure_7(activeSubscription(4632).Text, obj6), closure_7(activeSubscription(1176).Spacer, { size: 16 }), , ];
   const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = activeSubscription(1114).intl;
   const obj5 = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
@@ -58,16 +58,16 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   let tmp7Result = null;
   if (activeSubscription.status !== SubscriptionStatusTypes.CANCELED) {
     const obj10 = { children: null };
-    const items3 = [tmp5(tmp6(1178).Spacer, { size: 16 }), ];
+    const items3 = [tmp5(tmp6(1176).Spacer, { size: 16 }), ];
     const obj11 = { text: null, onPress: null };
     const intl4 = tmp6(1114).intl;
     obj11.text = intl4.string(tmp6(1114).t.UwHVxr);
     obj11.onPress = function onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16650, dependencyMap.paths), { subscriptionId: activeSubscription.id });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16652, dependencyMap.paths), { subscriptionId: activeSubscription.id });
       const obj2 = { subscriptionId: activeSubscription.id };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = tmp5(tmp6(16642).ArrowButton, obj11);
+    items3[1] = tmp5(tmp6(16644).ArrowButton, obj11);
     obj10.children = items3;
     tmp7Result = tmp7(closure_9, obj10);
   }

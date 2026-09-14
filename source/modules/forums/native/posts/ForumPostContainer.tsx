@@ -1,14 +1,14 @@
-// Module ID: 12149
-// Function ID: 12150
+// Module ID: 12150
+// Function ID: 12151
 // Name: ForumPostContainer
-// Dependencies: [19, 17, 21, 4636, 576, 7177, 4373, 10347, 5688, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7177, 4373, 10348, 5688, 2]
 // Exports: ForumPostDisabledContainer, ForumPostPressableContainer, useForumPostContainerPressedIn
 
-// Module 12149 (ForumPostContainer)
+// Module 12150 (ForumPostContainer)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Card from "Card" /* 5688 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10347 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10348 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

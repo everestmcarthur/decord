@@ -1,10 +1,10 @@
-// Module ID: 14696
-// Function ID: 14697
+// Module ID: 14697
+// Function ID: 14698
 // Name: useUploadAvatar
-// Dependencies: [5, 19, 1371, 1074, 1373, 563, 9443, 4603, 5219, 4294, 14680, 8286, 8284, 8281, 8283, 2]
+// Dependencies: [5, 19, 1371, 1074, 1373, 563, 9443, 4603, 5219, 4294, 14681, 8286, 8284, 8281, 8283, 2]
 // Exports: default
 
-// Module 14696 (useUploadAvatar)
+// Module 14697 (useUploadAvatar)
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -104,7 +104,7 @@ export default function useUploadAvatar(guildId) {
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
           tmp22 = tmp2;
-          const obj2 = tmp2(14680);
+          const obj2 = tmp2(14681);
           obj10.description = tmp2(8286).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);

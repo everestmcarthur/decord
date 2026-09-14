@@ -1,10 +1,10 @@
-// Module ID: 11845
-// Function ID: 11846
+// Module ID: 11846
+// Function ID: 11847
 // Name: PollVotesActionSheet
-// Dependencies: [32, 5, 19, 17, 4628, 5540, 1957, 4857, 1371, 21, 4636, 576, 504, 1396, 7233, 1114, 5204, 4632, 7863, 6756, 11846, 7265, 11852, 11389, 7865, 4788, 4481, 5686, 1178, 9933, 8296, 4373, 4637, 9003, 4571, 4488, 11853, 11854, 7285, 4603, 7253, 2]
+// Dependencies: [32, 5, 19, 17, 4628, 5540, 1957, 4857, 1371, 21, 4636, 576, 504, 1396, 7233, 1114, 5204, 4632, 7863, 6756, 11847, 7265, 11853, 11390, 7865, 4788, 4481, 5686, 1176, 9933, 8296, 4373, 4637, 9003, 4571, 4488, 11854, 11855, 7285, 4603, 7253, 2]
 // Exports: default
 
-// Module 11845 (PollVotesActionSheet)
+// Module 11846 (PollVotesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -16,7 +16,7 @@ import Pressables from "Pressables" /* 5204 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import PollsUtils from "PollsUtils" /* 7863 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 11846 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 11847 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -316,9 +316,9 @@ function NoResults() {
   const tmp6 = React5;
   const tmp8 = timestampProducer;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11853);
+    let tmp2Result = tmp2(11854);
   } else {
-    tmp2Result = tmp2(11854);
+    tmp2Result = tmp2(11855);
   }
   obj2.source = tmp2Result;
   const items = [closure_1_14(tmp8, obj2), , ];

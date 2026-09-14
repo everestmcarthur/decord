@@ -1,19 +1,19 @@
-// Module ID: 14953
-// Function ID: 14954
+// Module ID: 14954
+// Function ID: 14955
 // Name: FamilyCenterSetting
-// Dependencies: [19, 1074, 21, 14954, 14955, 8711, 576, 1114, 2396, 11601, 5170, 14958, 2]
+// Dependencies: [19, 1074, 21, 14955, 14956, 8711, 576, 1114, 2396, 11602, 5170, 14959, 2]
 
-// Module 14953 (FamilyCenterSetting)
+// Module 14954 (FamilyCenterSetting)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14954 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14955 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14955 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

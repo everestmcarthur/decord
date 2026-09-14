@@ -1,10 +1,10 @@
-// Module ID: 13055
-// Function ID: 13056
+// Module ID: 13056
+// Function ID: 13057
 // Name: useModalPanGesture
 // Dependencies: [4373, 6756, 5055, 4839, 2]
 // Exports: default
 
-// Module 13055 (useModalPanGesture)
+// Module 13056 (useModalPanGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import spring from "spring" /* 5055 */;

@@ -1,7 +1,7 @@
 // Module ID: 9858
 // Function ID: 9859
 // Name: EditGuildEventChannelSelection
-// Dependencies: [19, 17, 4275, 4285, 1371, 7629, 1074, 21, 4636, 576, 6722, 9856, 9842, 4789, 504, 5109, 9844, 9845, 1114, 4632, 5204, 1874, 9859, 9828, 4603, 9556, 1896, 1178, 9841, 2]
+// Dependencies: [19, 17, 4275, 4285, 1371, 7629, 1074, 21, 4636, 576, 6722, 9856, 9842, 4789, 504, 5109, 9844, 9845, 1114, 4632, 5204, 1874, 9859, 9828, 4603, 9556, 1896, 1176, 9841, 2]
 // Exports: default
 
 // Module 9858 (EditGuildEventChannelSelection)
@@ -138,14 +138,14 @@ export default function EditGuildEventChannelSelection(guild) {
     let tmp12Result = tmp12(LocationIcon, obj9);
   } else {
     const obj10 = { source: channelIcon, style: tmp.channelIcon };
-    tmp12Result = tmp12(tmp2(1178).Icon, obj10);
+    tmp12Result = tmp12(tmp2(1176).Icon, obj10);
   }
   const items6 = [tmp12Result, closure_11(guild(4632).Text, { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 }), ];
   const obj11 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };
   const obj5 = guild(504);
   const obj7 = { style: tmp.channelTypeText, variant: "text-sm/semibold", color: "text-subtle", children: stringResult };
   const tmp11 = View;
-  items6[2] = closure_11(guild(1178).Icon, { source: channel(9841) });
+  items6[2] = closure_11(guild(1176).Icon, { source: channel(9841) });
   obj8.children = items6;
   items4[1] = closure_12(guild(5204).PressableOpacity, obj8);
   obj6.children = items4;

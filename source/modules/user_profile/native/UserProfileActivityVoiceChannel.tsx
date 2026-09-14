@@ -1,13 +1,13 @@
-// Module ID: 13154
-// Function ID: 13155
+// Module ID: 13155
+// Function ID: 13156
 // Name: UserProfileActivityVoiceChannel
-// Dependencies: [17, 4275, 1085, 21, 4636, 1150, 7265, 8307, 5043, 13155, 4789, 504, 5178, 5182, 1114, 5665, 5204, 4335, 7312, 4632, 9900, 4843, 4603, 13156, 1896, 8296, 13157, 1178, 2]
+// Dependencies: [17, 4275, 1085, 21, 4636, 1363, 7265, 8307, 5043, 13156, 4789, 504, 5178, 5182, 1114, 5665, 5204, 4335, 7312, 4632, 9900, 4843, 4603, 13157, 1896, 8296, 13158, 1176, 2]
 // Exports: default
 
-// Module 13154 (UserProfileActivityVoiceChannel)
+// Module 13155 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,7 +15,7 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -122,7 +122,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[14]).t.e95u3C, { count: users.length });
   obj15.onPress = function onPress() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13156, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13157, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
       users,
       channel,
       onPressUser(userId) {

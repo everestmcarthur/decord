@@ -1,7 +1,7 @@
 // Module ID: 5046
 // Function ID: 5047
 // Name: VisualEffectView
-// Dependencies: [19, 17, 5047, 1074, 21, 1150, 5048, 4338, 576, 5051, 2]
+// Dependencies: [19, 17, 5047, 1074, 21, 1363, 5048, 4338, 576, 5051, 2]
 // Exports: isBlurDisabled, isBlurThemeLight, normalizeBlurTheme
 
 // Module 5046 (VisualEffectView)
@@ -15,7 +15,7 @@ const View = fn(17).View;
 let closure_4 = fn(5047).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_7 = PlatformUtils.isAndroid();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectView.tsx");

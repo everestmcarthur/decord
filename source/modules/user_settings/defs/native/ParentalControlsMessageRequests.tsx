@@ -1,20 +1,20 @@
-// Module ID: 15984
-// Function ID: 15985
+// Module ID: 15986
+// Function ID: 15987
 // Name: ParentalControlsMessageRequests
-// Dependencies: [7640, 8079, 8770, 14914, 15970, 8529, 8531, 14913, 11601, 1114, 2396, 2]
+// Dependencies: [7640, 8079, 8770, 14915, 15972, 8529, 8531, 14914, 11602, 1114, 2396, 2]
 
-// Module 15984 (ParentalControlsMessageRequests)
+// Module 15986 (ParentalControlsMessageRequests)
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
 import useSelectedTeen from "useSelectedTeen" /* 8770 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14914 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15970 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14915 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15972 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

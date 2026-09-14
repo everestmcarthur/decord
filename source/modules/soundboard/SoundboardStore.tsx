@@ -1,19 +1,19 @@
 // Module ID: 5093
 // Function ID: 5094
 // Name: SoundboardStore
-// Dependencies: [32, 1221, 1371, 5094, 5095, 1074, 1084, 4673, 4228, 12, 1242, 5096, 1935, 11, 504, 573, 2]
+// Dependencies: [32, 1219, 1371, 5094, 5095, 1074, 1084, 4673, 4228, 12, 1240, 5096, 1935, 11, 504, 573, 2]
 
 // Module 5093 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import FrecencyDefault from "Frecency" /* 4673 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5096 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import UserStore from "UserStore" /* 1371 */;
 import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5094 */;
 import apply from "module_12" /* 12 */;

@@ -1,16 +1,16 @@
-// Module ID: 16165
-// Function ID: 16166
+// Module ID: 16167
+// Function ID: 16168
 // Name: HappeningNowCardLiveStage
-// Dependencies: [19, 17, 15379, 1074, 21, 4636, 576, 1242, 9666, 1896, 16166, 16167, 16168, 15380, 5178, 1178, 16177, 4789, 1114, 4788, 2]
+// Dependencies: [19, 17, 15380, 1074, 21, 4636, 576, 1240, 9666, 1896, 16168, 16169, 16170, 15381, 5178, 1176, 16179, 4789, 1114, 4788, 2]
 
-// Module 16165 (HappeningNowCardLiveStage)
+// Module 16167 (HappeningNowCardLiveStage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import HappeningNowCard from "HappeningNowCard" /* 15380 */;
-import useLiveStageData from "useLiveStageData" /* 16166 */;
+import HappeningNowCard from "HappeningNowCard" /* 15381 */;
+import useLiveStageData from "useLiveStageData" /* 16168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -179,7 +179,7 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15379);
+const HappeningNowConstants = fn(15380);
 ({ HappeningNowCardTrackingType: hasOwnProperty, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

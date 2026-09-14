@@ -1,13 +1,13 @@
 // Module ID: 10094
 // Function ID: 10095
 // Name: PremiumFeatureUpsell
-// Dependencies: [19, 17, 1373, 1074, 7535, 21, 7955, 4294, 1114, 4636, 576, 9443, 10095, 7959, 9451, 7952, 10096, 1178, 10097, 10093, 4632, 8785, 5068, 1093, 5055, 5059, 7265, 9749, 8385, 4373, 1242, 10098, 2]
+// Dependencies: [19, 17, 1373, 1074, 7535, 21, 7955, 4294, 1114, 4636, 576, 9443, 10095, 7959, 9451, 7952, 10096, 1176, 10097, 10093, 4632, 8785, 5068, 1093, 5055, 5059, 7265, 9749, 8385, 4373, 1240, 10098, 2]
 // Exports: default
 
 // Module 10094 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
@@ -87,7 +87,7 @@ function PremiumFeatureUpsellPill(featureName) {
     items1[1] = closure_12(tmp(4632).Text, obj12);
     obj11.children = items1;
     const items2 = [tmp15(tmp16, obj11), ];
-    const obj13 = { disabled: loading, shrink: true, style: tmp4.button, size: tmp(1178).ButtonSizes.XSMALL, onPress: tmp11Result.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
+    const obj13 = { disabled: loading, shrink: true, style: tmp4.button, size: tmp(1176).ButtonSizes.XSMALL, onPress: tmp11Result.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
     const intl6 = tmp(1114).intl;
     const string = intl6.string;
     const t = tmp(1114).t;
@@ -97,7 +97,7 @@ function PremiumFeatureUpsellPill(featureName) {
       stringResult = string(t["8x0jKT"]);
     }
     obj13.text = stringResult;
-    obj13.color = tmp(1178).ButtonColors.GREEN;
+    obj13.color = tmp(1176).ButtonColors.GREEN;
     obj13.renderIcon = function renderIcon() {
       if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
         const obj2 = { size: "xxs", color: nativeDefault.colors.WHITE, style: null };
@@ -118,7 +118,7 @@ function PremiumFeatureUpsellPill(featureName) {
         const obj = { style: null };
         items1[1] = nitroWheelDisabled;
         obj.style = items1;
-        tmpResult = tmp(tmp2(1178).NitroWheel, obj);
+        tmpResult = tmp(tmp2(1176).NitroWheel, obj);
       }
       return tmpResult;
     };
@@ -126,12 +126,12 @@ function PremiumFeatureUpsellPill(featureName) {
       const obj = { style: closure_2.gradient, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: useTier0UpsellContent ? Gradients.PREMIUM_TIER_0 : Gradients.PREMIUM_TIER_2_TRI_COLOR };
       return closure_2_12(LinearGradientDefault, obj);
     };
-    items2[1] = closure_12(tmp(1178).ShinyButton, obj13);
+    items2[1] = closure_12(tmp(1176).ShinyButton, obj13);
     obj10.children = items2;
     return tmp15(tmp16, obj10);
   } else {
     const obj14 = { source: tmp10(useTier0UpsellContent ? 10097 : 10093), style: tmp4.nitroWheel, disableColor: true };
-    closure_12(tmp(1178).Icon, obj14);
+    closure_12(tmp(1176).Icon, obj14);
   }
 }
 get_ActivityIndicator = fn(17);

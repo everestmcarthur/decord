@@ -1,12 +1,12 @@
-// Module ID: 16878
-// Function ID: 16879
+// Module ID: 16880
+// Function ID: 16881
 // Name: AddFriendScreen
-// Dependencies: [32, 19, 17, 1371, 1074, 12807, 21, 4636, 576, 12809, 4481, 1242, 1114, 8479, 7966, 1150, 5206, 4632, 13943, 13945, 2]
+// Dependencies: [32, 19, 17, 1371, 1074, 12808, 21, 4636, 576, 12810, 4481, 1240, 1114, 8479, 7966, 1363, 5206, 4632, 13944, 13946, 2]
 // Exports: default
 
-// Module 16878 (AddFriendScreen)
+// Module 16880 (AddFriendScreen)
 import nativeDefault from "native" /* 576 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ContactPermissions = fn(12807).ContactPermissions;
+const ContactPermissions = fn(12808).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4636);
@@ -31,10 +31,10 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   let tmp = closure_13();
-  const contactSyncAccount = navigation(12809).useContactSyncAccount();
-  let obj = navigation(12809);
-  let obj2 = navigation(12809);
-  [tmp5, c2] = callback(noop.useState(!navigation(12809).isContactSyncEnabled(contactSyncAccount)), 2);
+  const contactSyncAccount = navigation(12810).useContactSyncAccount();
+  let obj = navigation(12810);
+  let obj2 = navigation(12810);
+  [tmp5, c2] = callback(noop.useState(!navigation(12810).isContactSyncEnabled(contactSyncAccount)), 2);
   callback = noop.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
     let userTag;
@@ -61,12 +61,12 @@ export default function AddFriendScreen(navigation) {
     });
     const result = ContactSyncUtils.checkContactPermissions();
     result.then((result) => {
-      const obj = navigation(1150);
+      const obj = navigation(1363);
       const tmp2 = navigation;
-      let tmp5 = result === constants2.NOT_DETERMINED || navigation(1150).isAndroid() && result === constants2.UNAUTHORIZED;
+      let tmp5 = result === constants2.NOT_DETERMINED || navigation(1363).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !tmp2(12809).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = tmp2(12809);
+        tmp5 = !tmp2(12810).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = tmp2(12810);
       }
       dependencyMap(tmp5);
     });
@@ -81,7 +81,7 @@ export default function AddFriendScreen(navigation) {
   const intl2 = navigation(1114).intl;
   obj5.children = intl2.string(navigation(1114).t["Rn/sLl"]);
   items2[1] = closure_10(navigation(4632).Text, obj5);
-  items2[2] = closure_10(contactSyncAccount(13943), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[2] = closure_10(contactSyncAccount(13944), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj7 = { style: tmp.otherOptionsContainer, children: null };
   const obj8 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1114).intl;
@@ -90,7 +90,7 @@ export default function AddFriendScreen(navigation) {
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(13945), obj9);
+    tmp10Result = closure_10(contactSyncAccount(13946), obj9);
   }
   const obj10 = { children: null };
   items3[1] = tmp10Result;

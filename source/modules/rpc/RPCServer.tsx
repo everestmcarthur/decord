@@ -1,15 +1,15 @@
-// Module ID: 14614
-// Function ID: 14615
+// Module ID: 14615
+// Function ID: 14616
 // Name: RPCServer
-// Dependencies: [5, 4541, 1074, 12, 9690, 9684, 14590, 1242, 38, 14615, 1090, 2]
+// Dependencies: [5, 4541, 1074, 12, 9690, 9684, 14591, 1240, 38, 14616, 1090, 2]
 
-// Module 14614 (RPCServer)
+// Module 14615 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import transformUserDefault from "transformUser" /* 9690 */;
-import validateScopeDefault from "validateScope" /* 14590 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 14615 */;
+import validateScopeDefault from "validateScope" /* 14591 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 14616 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -97,7 +97,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           obj3.scope = scope;
           obj3.application_id = tmp28.application.id;
           obj3.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj3);
+          tmp29(1240).track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
         } else {
           const obj = { errorCode: constants4.INVALID_PERMISSIONS };
@@ -128,7 +128,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           obj3.scope = scope;
           obj3.application_id = tmp28.application.id;
           obj3.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj3);
+          tmp29(1240).track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
         } else {
           const obj = { errorCode: constants4.INVALID_PERMISSIONS };
@@ -235,7 +235,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           obj3.scope = scope;
           obj3.application_id = tmp28.application.id;
           obj3.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj3);
+          tmp29(1240).track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
         } else {
           const obj = { errorCode: constants4.INVALID_PERMISSIONS };
@@ -367,7 +367,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           obj3.scope = scope;
           obj3.application_id = tmp28.application.id;
           obj3.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj3);
+          tmp29(1240).track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
         } else {
           const obj = { errorCode: constants4.INVALID_PERMISSIONS };

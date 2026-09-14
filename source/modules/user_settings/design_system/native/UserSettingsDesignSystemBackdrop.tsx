@@ -1,10 +1,10 @@
-// Module ID: 15882
-// Function ID: 15883
+// Module ID: 15884
+// Function ID: 15885
 // Name: UserSettingsDesignSystemBackdrop
 // Dependencies: [32, 19, 17, 21, 4636, 5688, 5054, 4632, 5056, 4373, 5055, 5059, 5039, 5044, 2]
 // Exports: default
 
-// Module 15882 (UserSettingsDesignSystemBackdrop)
+// Module 15884 (UserSettingsDesignSystemBackdrop)
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import spring from "spring" /* 5055 */;

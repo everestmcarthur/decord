@@ -1,12 +1,12 @@
-// Module ID: 16518
-// Function ID: 16519
+// Module ID: 16520
+// Function ID: 16521
 // Name: ForYouItemActionButtons
-// Dependencies: [5, 19, 17, 1957, 1371, 1074, 21, 4636, 1109, 4373, 4637, 5054, 5056, 1114, 4632, 563, 8080, 16139, 4616, 13938, 10998, 7742, 4649, 9171, 4335, 11798, 1242, 2]
+// Dependencies: [5, 19, 17, 1957, 1371, 1074, 21, 4636, 1109, 4373, 4637, 5054, 5056, 1114, 4632, 563, 8080, 16141, 4616, 13939, 10999, 7742, 4649, 9171, 4335, 11799, 1240, 2]
 // Exports: ForYouItemActionButtons, useItemActionButtonPropsV2
 
-// Module 16518 (ForYouItemActionButtons)
+// Module 16520 (ForYouItemActionButtons)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import parseURLDefault from "parseURL" /* 4616 */;
@@ -14,9 +14,9 @@ import timing from "timing" /* 4637 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7742 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10998 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13938 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16139 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10999 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13939 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -363,7 +363,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(13938)({ payload: closure_1(4616)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(13939)({ payload: closure_1(4616)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {

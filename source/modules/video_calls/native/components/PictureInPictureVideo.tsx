@@ -1,11 +1,11 @@
 // Module ID: 9718
 // Function ID: 9719
 // Name: PictureInPictureVideo
-// Dependencies: [32, 19, 17, 1956, 4652, 502, 1908, 2011, 5500, 9616, 9597, 4657, 21, 4636, 1178, 576, 9719, 12, 9605, 9720, 504, 4837, 9721, 9724, 9734, 9752, 9753, 9761, 9665, 9783, 4338, 8249, 9755, 9623, 9619, 9622, 1477, 1150, 8450, 2]
+// Dependencies: [32, 19, 17, 1956, 4652, 502, 1908, 2011, 5500, 9616, 9597, 4657, 21, 4636, 1176, 576, 9719, 12, 9605, 9720, 504, 4837, 9721, 9724, 9734, 9752, 9753, 9761, 9665, 9783, 4338, 8249, 9755, 9623, 9619, 9622, 1477, 1363, 8450, 2]
 
 // Module 9718 (PictureInPictureVideo)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9619 */;
@@ -37,8 +37,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4636);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
-const native = fn(1178);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1176);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1176).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.backgroundPipFab = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.lg };

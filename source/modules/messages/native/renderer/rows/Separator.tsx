@@ -1,10 +1,10 @@
-// Module ID: 13378
-// Function ID: 13379
+// Module ID: 13379
+// Function ID: 13380
 // Name: Separator
 // Dependencies: [8037, 4636, 576, 1369, 2]
 // Exports: generateSeparatorRowData
 
-// Module 13378 (Separator)
+// Module 13379 (Separator)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import RowGeneratorConstants from "RowGeneratorConstants" /* 8037 */;

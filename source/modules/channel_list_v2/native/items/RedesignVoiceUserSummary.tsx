@@ -1,10 +1,10 @@
-// Module ID: 16226
-// Function ID: 16227
+// Module ID: 16228
+// Function ID: 16229
 // Name: RedesignVoiceUserSummary
-// Dependencies: [19, 2011, 4660, 21, 504, 4781, 16225, 2]
+// Dependencies: [19, 2011, 4660, 21, 504, 4781, 16227, 2]
 // Exports: default
 
-// Module 16226 (RedesignVoiceUserSummary)
+// Module 16228 (RedesignVoiceUserSummary)
 import ChannelUtils from "ChannelUtils" /* 4781 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

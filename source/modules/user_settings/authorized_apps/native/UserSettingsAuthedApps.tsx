@@ -1,10 +1,10 @@
-// Module ID: 15027
-// Function ID: 15028
+// Module ID: 15028
+// Function ID: 15029
 // Name: UserSettingsAuthedApps
-// Dependencies: [19, 17, 7210, 1074, 21, 576, 4636, 9370, 9015, 9561, 4591, 1611, 504, 1483, 1484, 7273, 4632, 1114, 5768, 1396, 5686, 12185, 7093, 7098, 2]
+// Dependencies: [19, 17, 7210, 1074, 21, 576, 4636, 9370, 9015, 9561, 4591, 1611, 504, 1483, 1484, 7273, 4632, 1114, 5768, 1396, 5686, 12186, 7093, 7098, 2]
 // Exports: DisclosureIcon, default
 
-// Module 15027 (UserSettingsAuthedApps)
+// Module 15028 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

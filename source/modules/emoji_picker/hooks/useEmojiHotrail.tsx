@@ -1,10 +1,10 @@
-// Module ID: 10410
-// Function ID: 10411
+// Module ID: 10411
+// Function ID: 10412
 // Name: useEmojiHotrail
 // Dependencies: [19, 5544, 2]
 // Exports: default, getEmojiHotrail
 
-// Module 10410 (useEmojiHotrail)
+// Module 10411 (useEmojiHotrail)
 import noop from "module_19" /* 19 */;
 
 const EMOJI_ROW_SIZE = fn(5544).EMOJI_ROW_SIZE;

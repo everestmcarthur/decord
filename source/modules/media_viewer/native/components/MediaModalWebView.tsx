@@ -1,7 +1,7 @@
 // Module ID: 8415
 // Function ID: 8416
 // Name: MediaModalWebView
-// Dependencies: [19, 17, 21, 1150, 4636, 4373, 4637, 4331, 8416, 2]
+// Dependencies: [19, 17, 21, 1363, 4636, 4373, 4637, 4331, 8416, 2]
 
 // Module 8415 (MediaModalWebView)
 import LinkingDefault from "Linking" /* 4331 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let str = "";
 if (PlatformUtils.isIOS()) {
   str = "\n  window.addEventListener('click', function(event) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({event: 'click'}));\n  });\n";

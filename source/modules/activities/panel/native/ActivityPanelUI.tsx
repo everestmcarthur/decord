@@ -1,21 +1,21 @@
-// Module ID: 17125
-// Function ID: 17126
+// Module ID: 17127
+// Function ID: 17128
 // Name: ActivityPanelUI
-// Dependencies: [19, 17, 9635, 21, 17126, 17132, 17146, 7259, 4347, 17147, 17124, 2]
+// Dependencies: [19, 17, 9635, 21, 17128, 17134, 17148, 7259, 4347, 17149, 17126, 2]
 // Exports: default
 
-// Module 17125 (ActivityPanelUI)
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17124 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17146 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17147 */;
+// Module 17127 (ActivityPanelUI)
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17126 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17148 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17149 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17126;
+    let tmp4 = 17128;
   } else {
-    tmp4 = 17132;
+    tmp4 = 17134;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

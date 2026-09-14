@@ -1,15 +1,15 @@
-// Module ID: 17185
-// Function ID: 17186
+// Module ID: 17187
+// Function ID: 17188
 // Name: SoundboardSoundPreviewActionSheet
-// Dependencies: [32, 19, 17, 1957, 1371, 5093, 1074, 21, 4636, 576, 1150, 17183, 17182, 17168, 504, 7441, 7447, 1242, 5056, 10363, 10369, 1114, 10263, 8746, 7300, 7233, 12064, 4632, 5176, 8392, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 5093, 1074, 21, 4636, 576, 1363, 17185, 17184, 17170, 504, 7441, 7447, 1240, 5056, 10364, 10370, 1114, 10263, 8746, 7300, 7233, 12065, 4632, 5176, 8392, 2]
 // Exports: default
 
-// Module 17185 (SoundboardSoundPreviewActionSheet)
+// Module 17187 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7441 */;
 import SoundboardUtils from "SoundboardUtils" /* 7447 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17168 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -30,7 +30,7 @@ obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAK
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;

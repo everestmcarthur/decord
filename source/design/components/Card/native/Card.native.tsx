@@ -1,7 +1,7 @@
 // Module ID: 5688
 // Function ID: 5689
 // Name: Card
-// Dependencies: [109, 19, 17, 21, 4373, 576, 4636, 5689, 4338, 1150, 5055, 5059, 5690, 2]
+// Dependencies: [109, 19, 17, 21, 4373, 576, 4636, 5689, 4338, 1363, 5055, 5059, 5690, 2]
 
 // Module 5688 (Card)
 import nativeDefault from "native" /* 576 */;

@@ -1,13 +1,13 @@
 // Module ID: 9902
 // Function ID: 9903
 // Name: GuildEventCardComponents
-// Dependencies: [5, 32, 19, 17, 502, 1957, 2021, 1979, 4275, 1371, 7629, 1963, 1074, 1085, 21, 4636, 576, 9903, 9905, 8202, 1114, 9828, 7292, 4334, 9183, 4580, 504, 9801, 8796, 4587, 9906, 9907, 9795, 5601, 7445, 9908, 4981, 9833, 5075, 4843, 1369, 1477, 1396, 9909, 9910, 1178, 5170, 4571, 9799, 9798, 9912, 5204, 4632, 9915, 9901, 4789, 9835, 9899, 9900, 5665, 2]
+// Dependencies: [5, 32, 19, 17, 502, 1957, 2021, 1979, 4275, 1371, 7629, 1963, 1074, 1085, 21, 4636, 576, 9903, 9905, 8202, 1114, 9828, 7292, 4334, 9183, 4580, 504, 9801, 8796, 4587, 9906, 9907, 9795, 5601, 7445, 9908, 4981, 9833, 5075, 4843, 1369, 1477, 1396, 9909, 9910, 1176, 5170, 4571, 9799, 9798, 9912, 5204, 4632, 9915, 9901, 4789, 9835, 9899, 9900, 5665, 2]
 // Exports: GuildEventCardGuildInfo, GuildEventCardHeader, GuildEventCardImageHeader, GuildEventCardMetaInfo, GuildEventCardSimpleGuildInfo, GuildEventIndicateInterestAction, GuildEventModeratorAction, GuildEventShareAction, GuildEventSimpleLocation, useEventRsvpState
 
 // Module 9902 (GuildEventCardComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ToastUtils from "ToastUtils" /* 4334 */;

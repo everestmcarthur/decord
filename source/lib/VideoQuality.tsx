@@ -1,16 +1,16 @@
-// Module ID: 13908
-// Function ID: 13909
+// Module ID: 13909
+// Function ID: 13910
 // Name: VideoQuality
-// Dependencies: [4694, 13905, 4665, 7844, 4691, 7843, 12, 1150, 11, 1974, 2]
+// Dependencies: [4694, 13906, 4665, 7844, 4691, 7843, 12, 1363, 11, 1974, 2]
 
-// Module 13908 (VideoQuality)
+// Module 13909 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import VideoQualityStats from "VideoQualityStats" /* 7843 */;
 import Histogram from "Histogram" /* 7844 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13905 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13906 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
 
 require = fn;
@@ -800,7 +800,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
         obj3.duration_encoder_wmf_direct3d = num37;
         items.push(obj3);
       }
-      tmp9Result = tmp9(1150);
+      tmp9Result = tmp9(1363);
     }
     framesCodec = vmafHistogram.aggregatedProperties.framesCodec;
   });
@@ -1282,7 +1282,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       if (!tmp45Result.isWeb()) {
         obj.frames_dropped_render = framesDropped;
       }
-      tmp45Result = tmp45(1150);
+      tmp45Result = tmp45(1363);
     }
     const obj2 = {};
     const merged1 = Object.assign(obj);
@@ -1374,7 +1374,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   if (tmp13) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  obj = videoEntropy(1150);
+  obj = videoEntropy(1363);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
   closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;

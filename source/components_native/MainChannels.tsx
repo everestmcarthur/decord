@@ -1,20 +1,20 @@
-// Module ID: 16110
-// Function ID: 16111
+// Module ID: 16112
+// Function ID: 16113
 // Name: MainChannels
-// Dependencies: [32, 19, 17, 1074, 21, 16111, 5667, 4636, 576, 4497, 1611, 16112, 16113, 16114, 16198, 16376, 4373, 16115, 16457, 4500, 11662, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 16113, 5667, 4636, 576, 4497, 1611, 16114, 16115, 16116, 16200, 16378, 4373, 16117, 16459, 4500, 11663, 2]
 
-// Module 16110 (MainChannels)
+// Module 16112 (MainChannels)
 import nativeDefault from "native" /* 576 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4500 */;
 import useRefValueDefault from "useRefValue" /* 5667 */;
-import StartupProfiler from "StartupProfiler" /* 11662 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16111 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 16113 */;
-import messages_MessagesDefault from "messages/Messages" /* 16114 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16115 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 16198 */;
-import HomePanelContent from "HomePanelContent" /* 16376 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16457 */;
+import StartupProfiler from "StartupProfiler" /* 11663 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16113 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 16115 */;
+import messages_MessagesDefault from "messages/Messages" /* 16116 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16117 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 16200 */;
+import HomePanelContent from "HomePanelContent" /* 16378 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,7 +58,7 @@ function LeftPanelContent(panelStyles) {
     items[1] = sideTablet;
     return items;
   }, items2);
-  const sum = DM_WIDTH + tmp10(16112)();
+  const sum = DM_WIDTH + tmp10(16114)();
   let num = 0;
   if (tmp8) {
     num = 1;

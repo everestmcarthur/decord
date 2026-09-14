@@ -1,7 +1,7 @@
 // Module ID: 4323
 // Function ID: 4324
 // Name: makeDateFormatter
-// Dependencies: [1935, 1187, 4321, 4324, 4228, 2]
+// Dependencies: [1935, 1185, 4321, 4324, 4228, 2]
 // Exports: default
 
 // Module 4323 (makeDateFormatter)

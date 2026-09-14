@@ -1,9 +1,9 @@
-// Module ID: 14589
-// Function ID: 14590
+// Module ID: 14590
+// Function ID: 14591
 // Name: subscriptions
-// Dependencies: [5, 1074, 9684, 14590, 1242, 14591, 2]
+// Dependencies: [5, 1074, 9684, 14591, 1240, 14592, 2]
 
-// Module 14589 (subscriptions)
+// Module 14590 (subscriptions)
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -53,7 +53,7 @@ export default {
                   const _HermesInternal = HermesInternal;
                   const tmp352 = new v0(9684)(obj4, "Invalid event: " + event);
                   throw tmp352;
-                } else if (v0(14590)(importDefault.authorization.scopes, tmp66.scope)) {
+                } else if (v0(14591)(importDefault.authorization.scopes, tmp66.scope)) {
                   const obj5 = { event, scope: null, application_id: null, socket_scope: null };
                   if (typeof tmp66.scope === "object") {
                     const _JSON = JSON;
@@ -64,14 +64,14 @@ export default {
                   obj5.scope = scope;
                   obj5.application_id = importDefault.application.id;
                   obj5.socket_scope = importDefault.authorization.scopes.toString();
-                  tmp71(1242).track(constants.RPC_SUBSCRIPTION_REQUESTED, obj5);
+                  tmp71(1240).track(constants.RPC_SUBSCRIPTION_REQUESTED, obj5);
                   if (null != tmp66.validation) {
                     dependencyMap = 1;
                     c3 = 1;
                     const obj7 = { value: obj13.getJoi(), done: false };
                     return obj7;
                   }
-                  const tmp71Result = tmp71(1242);
+                  const tmp71Result = tmp71(1240);
                 } else {
                   const obj8 = { errorCode: constants2.INVALID_PERMISSIONS };
                   const tmp10 = new tmp71(9684)(obj8, "Not authenticated or invalid scope");
@@ -96,7 +96,7 @@ export default {
             }
             const obj10 = { args: closure_129_3, socket: closure_129_1 };
             closure_128_2 = closure_128_0.handler(obj10);
-            initialSubscriptionPayload = tmp2(14591).getInitialSubscriptionPayload(closure_129_1, closure_129_2, closure_129_3);
+            initialSubscriptionPayload = tmp2(14592).getInitialSubscriptionPayload(closure_129_1, closure_129_2, closure_129_3);
             const promise = new Promise((fn) => {
               setImmediate(() => {
                 closure_2_0.addSubscription(v0, closure_2_2, closure_2_3, closure_1_2);

@@ -1,9 +1,9 @@
-// Module ID: 13506
-// Function ID: 13507
+// Module ID: 13507
+// Function ID: 13508
 // Name: MarketingComponentPlatform
 // Dependencies: [2]
 
-// Module 13506 (MarketingComponentPlatform)
+// Module 13507 (MarketingComponentPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentPlatform.tsx");

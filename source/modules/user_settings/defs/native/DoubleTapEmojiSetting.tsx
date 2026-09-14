@@ -1,9 +1,9 @@
-// Module ID: 15979
-// Function ID: 15980
+// Module ID: 15981
+// Function ID: 15982
 // Name: DoubleTapEmojiSetting
-// Dependencies: [5, 19, 8079, 1074, 1374, 21, 4636, 576, 1935, 8072, 1396, 7233, 11255, 1242, 7285, 11258, 11601, 1114, 2]
+// Dependencies: [5, 19, 8079, 1074, 1374, 21, 4636, 576, 1935, 8072, 1396, 7233, 11256, 1240, 7285, 11259, 11602, 1114, 2]
 
-// Module 15979 (DoubleTapEmojiSetting)
+// Module 15981 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -39,7 +39,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {

@@ -1,11 +1,11 @@
 // Module ID: 4604
 // Function ID: 4605
 // Name: HapticUtils
-// Dependencies: [4605, 4606, 1150, 4615, 2]
+// Dependencies: [4605, 4606, 1363, 4615, 2]
 // Exports: triggerHapticFeedback
 
 // Module 4604 (HapticUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import Patterns from "Patterns" /* 4606 */;
 import size from "module_2" /* 2 */;

@@ -1,17 +1,17 @@
-// Module ID: 15609
-// Function ID: 15610
+// Module ID: 15610
+// Function ID: 15611
 // Name: SettingsItemAppIcon
-// Dependencies: [19, 9453, 21, 4636, 576, 13536, 9454, 10946, 15610, 2]
+// Dependencies: [19, 9453, 21, 4636, 576, 13537, 9454, 10947, 15611, 2]
 // Exports: default
 
-// Module 15609 (SettingsItemAppIcon)
+// Module 15610 (SettingsItemAppIcon)
 import nativeDefault from "native" /* 576 */;
 import AppIconTypes from "AppIconTypes" /* 9454 */;
-import AppIconUtils from "AppIconUtils" /* 13536 */;
-import AppIconDefault from "AppIcon" /* 15610 */;
+import AppIconUtils from "AppIconUtils" /* 13537 */;
+import AppIconDefault from "AppIcon" /* 15611 */;
 import noop from "module_19" /* 19 */;
 
-const ClydeIcon = tmp4(10946);
+const ClydeIcon = tmp4(10947);
 require = fn;
 const getIconById = fn(9453).getIconById;
 const jsx = fn(21).jsx;

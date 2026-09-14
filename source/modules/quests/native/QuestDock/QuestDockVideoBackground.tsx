@@ -1,13 +1,13 @@
-// Module ID: 15282
-// Function ID: 15283
+// Module ID: 15283
+// Function ID: 15284
 // Name: QuestDockVideoBackground
-// Dependencies: [32, 19, 17, 4628, 5525, 15175, 1074, 21, 4636, 15176, 4373, 5055, 7176, 15179, 15262, 8385, 1477, 1611, 504, 15174, 672, 1150, 11896, 8425, 5668, 5068, 2]
+// Dependencies: [32, 19, 17, 4628, 5525, 15176, 1074, 21, 4636, 15177, 4373, 5055, 7176, 15180, 15263, 8385, 1477, 1611, 504, 15175, 672, 1363, 11897, 8425, 5668, 5068, 2]
 
-// Module 15282 (QuestDockVideoBackground)
+// Module 15283 (QuestDockVideoBackground)
 import _modDef672 from "module_672" /* 672 */;
 import spring from "spring" /* 5055 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7176 */;
-import QuestDockUtils from "QuestDockUtils" /* 15174 */;
+import QuestDockUtils from "QuestDockUtils" /* 15175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -16,7 +16,7 @@ require = fn;
 function QuestDockBackgroundMediaFade(arg0) {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(15176).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(15177).QuestDockGestureContext).activeQuestDockMode;
   const tmp = closure_16();
   const fn = function n() {
     let num = 0;
@@ -38,7 +38,7 @@ function QuestDockBackgroundMediaFade(arg0) {
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const QuestDockMode = fn(5525).QuestDockMode;
-const QuestDockConstants = fn(15175);
+const QuestDockConstants = fn(15176);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_9 } = QuestDockConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
@@ -87,10 +87,10 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   closure_11 = undefined;
   dependencyMap = tmp2;
   let tmp3 = closure_16();
-  const context = windowDimensions.useContext(gradientBaseColor(15176).QuestDockGestureContext);
+  const context = windowDimensions.useContext(gradientBaseColor(15177).QuestDockGestureContext);
   const activeQuestDockMode = context.activeQuestDockMode;
   windowDimensions = context.windowDimensions;
-  const setRestingQuestDockMode = windowDimensions.useContext(gradientBaseColor(15179).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const setRestingQuestDockMode = windowDimensions.useContext(gradientBaseColor(15180).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
   const tmp8 = expandedHeight(8385)(activeQuestDockMode);
   const height = expandedHeight(1477)().height;
   const top = expandedHeight(1611)().top;
@@ -163,7 +163,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   }, items3);
   isRendered = !tmp22;
   if (!tmp22) {
-    isRendered = windowDimensions.useContext(expandedHeight(15262)).isRendered;
+    isRendered = windowDimensions.useContext(expandedHeight(15263)).isRendered;
   }
   if (isRendered) {
     isRendered = !stateFromStores;
@@ -172,12 +172,12 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     isRendered = null != videoUrl;
   }
   if (isRendered) {
-    isRendered = !tmp4(1150).isAndroid();
-    const tmp4Result = tmp4(1150);
+    isRendered = !tmp4(1363).isAndroid();
+    const tmp4Result = tmp4(1363);
   }
   if (isRendered) {
-    isRendered = tmp4(11896).isHeroVideoSupported(gradientBaseColor.videoMimetype);
-    const tmp4Result3 = tmp4(11896);
+    isRendered = tmp4(11897).isHeroVideoSupported(gradientBaseColor.videoMimetype);
+    const tmp4Result3 = tmp4(11897);
   }
   if (isRendered) {
     let tmp25 = !tmp2;

@@ -1,7 +1,7 @@
 // Module ID: 7424
 // Function ID: 7425
 // Name: LurkerActionCreators
-// Dependencies: [5, 4659, 4276, 1074, 573, 1272, 1369, 2]
+// Dependencies: [5, 4659, 4276, 1074, 573, 1270, 1369, 2]
 // Exports: stopLurking
 
 // Module 7424 (LurkerActionCreators)
@@ -69,7 +69,7 @@ let closure_8 = async function _stopLurkingAll(arg0, value) {
                               _null = null;
                             }
                             closure_130_1 = _null;
-                            const HTTP = closure_0(1272).HTTP;
+                            const HTTP = closure_0(1270).HTTP;
                             const request = { url: closure_2_6.GUILD_LEAVE(closure_0), body: { lurking: true }, oldFormErrors: true, rejectWithError: true };
                             yield HTTP.del(request);
                             if (1 === tmp8) {

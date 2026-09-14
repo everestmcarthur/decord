@@ -1,18 +1,18 @@
-// Module ID: 11270
-// Function ID: 11271
+// Module ID: 11271
+// Function ID: 11272
 // Name: SuperReactionUpsellActionSheet
-// Dependencies: [19, 17, 1371, 1074, 21, 1943, 11271, 11272, 11273, 11274, 11275, 11276, 11277, 4636, 576, 7265, 504, 4294, 9522, 9492, 12, 11278, 7897, 11279, 1114, 7886, 1178, 4603, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 1943, 11272, 11273, 11274, 11275, 11276, 11277, 11278, 4636, 576, 7265, 504, 4294, 9522, 9492, 12, 11279, 7897, 11280, 1114, 7886, 1176, 4603, 2]
 // Exports: default
 
-// Module 11270 (SuperReactionUpsellActionSheet)
+// Module 11271 (SuperReactionUpsellActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import _mod7897 from "module_7897" /* 7897 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 11278 */;
+import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 11279 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsPages = fn(1074).AnalyticsPages;
 const jsx = fn(21).jsx;
 const dismissibleContent = fn(1943).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(11271), fn(11272), fn(11273), fn(11274), fn(11272), fn(11275), fn(11276), fn(11277)];
+let items = [fn(11272), fn(11273), fn(11274), fn(11275), fn(11273), fn(11276), fn(11277), fn(11278)];
 const createStyles = fn(4636);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};

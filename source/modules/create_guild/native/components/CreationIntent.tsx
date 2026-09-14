@@ -1,13 +1,13 @@
-// Module ID: 12841
-// Function ID: 12842
+// Module ID: 12842
+// Function ID: 12843
 // Name: CreationIntent
-// Dependencies: [19, 17, 7081, 1074, 21, 4636, 5763, 576, 1483, 5043, 5052, 12812, 1242, 7226, 4632, 1114, 5768, 12453, 5773, 2]
+// Dependencies: [19, 17, 7081, 1074, 21, 4636, 5763, 576, 1483, 5043, 5052, 12813, 1240, 7226, 4632, 1114, 5768, 12454, 5773, 2]
 // Exports: default
 
-// Module 12841 (CreationIntent)
+// Module 12842 (CreationIntent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
@@ -15,7 +15,7 @@ import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
 import native from "native" /* 5773 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12812 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,20 +60,20 @@ export default function CreationIntent(arg0) {
         id = tmp5.id;
       }
       const obj5 = { guild_template_name: id };
-      tmp(1242).track(tmp3.CREATE_GUILD_VIEWED, obj5);
-      const tmpResult = tmp(1242);
+      tmp(1240).track(tmp3.CREATE_GUILD_VIEWED, obj5);
+      const tmpResult = tmp(1240);
     } else if (tmp8.IN_APP === tmp7) {
       const obj6 = { type: "Create Guild Step 2", location_section: constants5.CREATE_JOIN_GUILD_MODAL };
-      tmp(1242).track(tmp3.OPEN_MODAL, obj6);
-      const tmpResult3 = tmp(1242);
+      tmp(1240).track(tmp3.OPEN_MODAL, obj6);
+      const tmpResult3 = tmp(1240);
       const obj7 = { location_section: constants5.CREATE_JOIN_GUILD_MODAL, guild_template_name: null };
       let id1;
       if (tmp5 != null) {
         id1 = tmp5.id;
       }
       obj7.guild_template_name = id1;
-      tmp(1242).track(tmp3.CREATE_GUILD_VIEWED, obj7);
-      const tmpResult4 = tmp(1242);
+      tmp(1240).track(tmp3.CREATE_GUILD_VIEWED, obj7);
+      const tmpResult4 = tmp(1240);
     }
   }
   let tmp = closure_13();
@@ -114,7 +114,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), , ];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(12453);
+  const tmp13 = trigger(12454);
   const obj9 = { Icon: null, message: null, onPress: null };
   const tmp14 = native;
   if (closure_14) {
@@ -131,10 +131,10 @@ export default function CreationIntent(arg0) {
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = tmp8(tmp12(12453), obj10);
+    items4[1] = tmp8(tmp12(12454), obj10);
     obj8.children = items4;
     let tmp16 = obj8;
-    const tmp12Result = tmp12(12453);
+    const tmp12Result = tmp12(12454);
   } else {
     obj9.Icon = tmp14.WorldIllocon;
     const intl3 = tmp2(1114).intl;
@@ -149,10 +149,10 @@ export default function CreationIntent(arg0) {
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = tmp8(tmp12(12453), obj11);
+    items5[1] = tmp8(tmp12(12454), obj11);
     obj8.children = items5;
     tmp16 = obj8;
-    const tmp12Result2 = tmp12(12453);
+    const tmp12Result2 = tmp12(12454);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp16);
   items3[1] = closure_11(ref, obj7);

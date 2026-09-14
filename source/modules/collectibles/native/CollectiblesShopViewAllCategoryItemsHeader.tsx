@@ -1,15 +1,15 @@
-// Module ID: 15938
-// Function ID: 15939
+// Module ID: 15940
+// Function ID: 15941
 // Name: CollectiblesShopViewAllCategoryItemsHeader
-// Dependencies: [19, 17, 21, 4636, 1483, 13540, 7966, 7970, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 1483, 13541, 7966, 7970, 1114, 2]
 // Exports: default
 
-// Module 15938 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15940 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
 import _modDef7970 from "module_7970" /* 7970 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13540 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13541 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

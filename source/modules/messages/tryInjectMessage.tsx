@@ -1,10 +1,10 @@
-// Module ID: 12082
-// Function ID: 12083
+// Module ID: 12083
+// Function ID: 12084
 // Name: tryInjectMessage
-// Dependencies: [502, 1074, 7854, 4859, 1384, 12083, 12084, 2]
+// Dependencies: [502, 1074, 7854, 4859, 1384, 12084, 12085, 2]
 // Exports: tryCreateInjectedMessage
 
-// Module 12082 (tryInjectMessage)
+// Module 12083 (tryInjectMessage)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
 import createMessageDefault from "createMessage" /* 7854 */;
@@ -40,7 +40,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id
                 num = 0;
               }
               tmp4 = null;
-              if (!tmpResult.hasFlag(num, tmp(12083).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)) {
+              if (!tmpResult.hasFlag(num, tmp(12084).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)) {
                 tmp4 = null;
                 if (!obj.has(id2.id)) {
                   const obj4 = { channelId: id2.id, type: constants3.IN_GAME_MESSAGE_NUX, content: "", author: id.author, flags: tmp3.EPHEMERAL, state: constants2.SENT };
@@ -55,10 +55,10 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id
                     num2 = 0;
                   }
                   const tmpResult4 = tmp(1384);
-                  const setFlagResult = tmp(1384).setFlag(num2, tmp(12083).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX, true);
-                  const result1 = tmp6(12084).updatePrivateChannelRecipientFlags(id2.id, setFlagResult);
+                  const setFlagResult = tmp(1384).setFlag(num2, tmp(12084).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX, true);
+                  const result1 = tmp6(12085).updatePrivateChannelRecipientFlags(id2.id, setFlagResult);
                   tmp4 = messageRecord1;
-                  const tmp6Result = tmp6(12084);
+                  const tmp6Result = tmp6(12085);
                 }
               }
               tmpResult = tmp(1384);

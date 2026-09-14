@@ -1,10 +1,10 @@
-// Module ID: 14603
-// Function ID: 14604
+// Module ID: 14604
+// Function ID: 14605
 // Name: AuthCommandsFactory
-// Dependencies: [32, 5, 4864, 1918, 1371, 4541, 1074, 9691, 1090, 510, 9684, 8981, 9374, 9668, 9373, 9369, 9376, 4280, 1086, 1272, 573, 14564, 8457, 1471, 2]
+// Dependencies: [32, 5, 4864, 1918, 1371, 4541, 1074, 9691, 1090, 510, 9684, 8981, 9374, 9668, 9373, 9369, 9376, 4280, 1086, 1270, 573, 14565, 8457, 1471, 2]
 // Exports: default
 
-// Module 14603 (AuthCommandsFactory)
+// Module 14604 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;

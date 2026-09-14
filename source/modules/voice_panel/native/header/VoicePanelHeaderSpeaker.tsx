@@ -1,21 +1,21 @@
-// Module ID: 17227
-// Function ID: 17228
+// Module ID: 17229
+// Function ID: 17230
 // Name: VoicePanelHeaderSpeaker
-// Dependencies: [109, 19, 17, 17228, 4653, 17229, 9212, 1957, 4654, 1074, 21, 17231, 17204, 9211, 9595, 9344, 563, 9593, 9343, 17235, 1150, 9243, 9213, 1114, 9240, 9242, 17236, 9345, 4457, 1943, 5670, 17144, 14219, 2]
+// Dependencies: [109, 19, 17, 17230, 4653, 17231, 9212, 1957, 4654, 1074, 21, 17233, 17206, 9211, 9595, 9344, 563, 9593, 9343, 17237, 1363, 9243, 9213, 1114, 9240, 9242, 17238, 9345, 4457, 1943, 5670, 17146, 14220, 2]
 
-// Module 17227 (VoicePanelHeaderSpeaker)
+// Module 17229 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9243 */;
 import getConsoleIconDefault from "getConsoleIcon" /* 9593 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17144 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17231 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17146 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17233 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;
-import StageChannelAudioStore from "StageChannelAudioStore" /* 17229 */;
+import StageChannelAudioStore from "StageChannelAudioStore" /* 17231 */;
 import AudioRouteStore from "AudioRouteStore" /* 9212 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SessionsStore from "SessionsStore" /* 4654 */;
@@ -23,7 +23,7 @@ import SessionsStore from "SessionsStore" /* 4654 */;
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17228).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(17230).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);

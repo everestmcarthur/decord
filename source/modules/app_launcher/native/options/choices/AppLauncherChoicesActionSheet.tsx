@@ -1,10 +1,10 @@
-// Module ID: 12294
-// Function ID: 12295
+// Module ID: 12295
+// Function ID: 12296
 // Name: AppLauncherChoicesActionSheet
-// Dependencies: [32, 19, 17, 1482, 21, 4636, 576, 9003, 1611, 1150, 5523, 8716, 4603, 7046, 12295, 12296, 2]
+// Dependencies: [32, 19, 17, 1482, 21, 4636, 576, 9003, 1611, 1363, 5523, 8716, 4603, 7046, 12296, 12297, 2]
 // Exports: default
 
-// Module 12294 (AppLauncherChoicesActionSheet)
+// Module 12295 (AppLauncherChoicesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
@@ -135,11 +135,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_7(tmp3(12296).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_7(tmp3(12297).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_7(tmp3(12296).AppLauncherListEmptyState, {});
+    let tmp20 = closure_7(tmp3(12297).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -156,5 +156,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_8(option(12295).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_8(option(12296).AppLauncherCommandOptionActionSheet, obj2);
 };

@@ -1,7 +1,7 @@
 // Module ID: 10256
 // Function ID: 10257
 // Name: MarkupInlineChannelMentionRules
-// Dependencies: [19, 21, 8201, 1178, 1369, 2]
+// Dependencies: [19, 21, 8201, 1176, 1369, 2]
 // Exports: createInlineChannelReact, inlineChannelMentionReact, inlineChannelReact
 
 // Module 10256 (MarkupInlineChannelMentionRules)
@@ -20,7 +20,7 @@ export const inlineChannelMentionReact = function inlineChannelMentionReact(inCo
     const obj = { children: null };
     const items = [fn(inContent.inContent, key), " \u203A ", u1F4AC(8201).smartOutput(inContent, fn, key)];
     obj.children = items;
-    smartOutputResult = jsxs(u1F4AC(1178).LegacyText, { children: null }, key.key);
+    smartOutputResult = jsxs(u1F4AC(1176).LegacyText, { children: null }, key.key);
     const obj2 = u1F4AC(8201);
   }
   return smartOutputResult;
@@ -35,7 +35,7 @@ export function createInlineChannelReact(arg0) {
       case "text":
         let str2 = "#";
         str = undefined;
-        let tmp9 = str(1178);
+        let tmp9 = str(1176);
         let obj2 = { children: null };
         let items = [str2, , ];
         let obj3 = str(8201);
@@ -48,7 +48,7 @@ export function createInlineChannelReact(arg0) {
       case "text-nsfw":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -61,7 +61,7 @@ export function createInlineChannelReact(arg0) {
       case "text-spoiler":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -74,7 +74,7 @@ export function createInlineChannelReact(arg0) {
       case "announcement":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -87,7 +87,7 @@ export function createInlineChannelReact(arg0) {
       case "announcement-nsfw":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -100,7 +100,7 @@ export function createInlineChannelReact(arg0) {
       case "announcement-spoiler":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -113,7 +113,7 @@ export function createInlineChannelReact(arg0) {
       case "forum":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -126,7 +126,7 @@ export function createInlineChannelReact(arg0) {
       case "forum-nsfw":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -139,7 +139,7 @@ export function createInlineChannelReact(arg0) {
       case "forum-spoiler":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -152,7 +152,7 @@ export function createInlineChannelReact(arg0) {
       case "media":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -165,7 +165,7 @@ export function createInlineChannelReact(arg0) {
       case "media-nsfw":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -178,7 +178,7 @@ export function createInlineChannelReact(arg0) {
       case "app":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -191,7 +191,7 @@ export function createInlineChannelReact(arg0) {
       case "app-nsfw":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -204,7 +204,7 @@ export function createInlineChannelReact(arg0) {
       case "app-spoiler":
         str2 = "#";
         str = undefined;
-        tmp9 = str(1178);
+        tmp9 = str(1176);
         obj2 = { children: null };
         items = [str2, , ];
         obj3 = str(8201);
@@ -261,7 +261,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "text":
       let str2 = "#";
       str = undefined;
-      let tmp9 = str(1178);
+      let tmp9 = str(1176);
       let obj2 = { children: null };
       let items = [str2, , ];
       let obj3 = str(8201);
@@ -274,7 +274,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "text-nsfw":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -287,7 +287,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "text-spoiler":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -300,7 +300,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "announcement":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -313,7 +313,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "announcement-nsfw":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -326,7 +326,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "announcement-spoiler":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -339,7 +339,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "forum":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -352,7 +352,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "forum-nsfw":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -365,7 +365,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "forum-spoiler":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -378,7 +378,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "media":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -391,7 +391,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "media-nsfw":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -404,7 +404,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "app":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -417,7 +417,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "app-nsfw":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);
@@ -430,7 +430,7 @@ export const inlineChannelReact = (iconType, output, key) => {
     case "app-spoiler":
       str2 = "#";
       str = undefined;
-      tmp9 = str(1178);
+      tmp9 = str(1176);
       obj2 = { children: null };
       items = [str2, , ];
       obj3 = str(8201);

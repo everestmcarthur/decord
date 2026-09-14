@@ -1,16 +1,16 @@
-// Module ID: 15978
-// Function ID: 15979
+// Module ID: 15980
+// Function ID: 15981
 // Name: InGameDMsSetting
-// Dependencies: [19, 8079, 1935, 1187, 1114, 11601, 2]
+// Dependencies: [19, 8079, 1935, 1185, 1114, 11602, 2]
 
-// Module 15978 (InGameDMsSetting)
+// Module 15980 (InGameDMsSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

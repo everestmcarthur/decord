@@ -1,13 +1,13 @@
-// Module ID: 17153
-// Function ID: 17154
+// Module ID: 17155
+// Function ID: 17156
 // Name: FramePanelFocusedView
-// Dependencies: [19, 9640, 9641, 9635, 21, 504, 17132, 17150, 17154, 9637, 16718, 2]
+// Dependencies: [19, 9640, 9641, 9635, 21, 504, 17134, 17152, 17156, 9637, 16720, 2]
 
-// Module 17153 (FramePanelFocusedView)
+// Module 17155 (FramePanelFocusedView)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
-import FrameViewDefault from "FrameView" /* 16718 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17132 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17150 */;
+import FrameViewDefault from "FrameView" /* 16720 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17134 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17152 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;
 

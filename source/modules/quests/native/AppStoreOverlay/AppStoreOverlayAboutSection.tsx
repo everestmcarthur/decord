@@ -1,10 +1,10 @@
-// Module ID: 11644
-// Function ID: 11645
+// Module ID: 11645
+// Function ID: 11646
 // Name: AppStoreOverlayAboutSection
 // Dependencies: [32, 19, 17, 21, 576, 4636, 1114, 4632, 2]
 // Exports: default
 
-// Module 11644 (AppStoreOverlayAboutSection)
+// Module 11645 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

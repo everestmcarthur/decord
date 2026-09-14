@@ -1,9 +1,9 @@
-// Module ID: 11979
-// Function ID: 11980
+// Module ID: 11980
+// Function ID: 11981
 // Name: KickConfirm
-// Dependencies: [32, 19, 17, 1979, 1371, 21, 4636, 576, 7084, 11280, 504, 5601, 11980, 4632, 1114, 4481, 7188, 5056, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 21, 4636, 576, 7084, 11281, 504, 5601, 11981, 4632, 1114, 4481, 7188, 5056, 2]
 
-// Module 11979 (KickConfirm)
+// Module 11980 (KickConfirm)
 import nativeDefault from "native" /* 576 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import _slicedToArray from "module_32" /* 32 */;

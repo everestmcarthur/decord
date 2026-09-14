@@ -1,13 +1,13 @@
-// Module ID: 14898
-// Function ID: 14899
+// Module ID: 14899
+// Function ID: 14900
 // Name: AccountDeleteSetting
-// Dependencies: [8079, 14899, 11601, 1114, 2]
+// Dependencies: [8079, 14900, 11602, 1114, 2]
 
-// Module 14898 (AccountDeleteSetting)
+// Module 14899 (AccountDeleteSetting)
 import util from "util" /* 1114 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import handleDisableAccountDefault from "handleDisableAccount" /* 14899 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import handleDisableAccountDefault from "handleDisableAccount" /* 14900 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

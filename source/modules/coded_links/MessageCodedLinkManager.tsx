@@ -1,11 +1,11 @@
-// Module ID: 17529
-// Function ID: 17530
+// Module ID: 17530
+// Function ID: 17531
 // Name: MessageCodedLinkManager
-// Dependencies: [5, 7560, 1957, 4620, 4619, 4624, 17530, 8496, 7427, 12200, 7221, 17537, 2]
+// Dependencies: [5, 7560, 1957, 4620, 4619, 4624, 17531, 8496, 7427, 12201, 7221, 17538, 2]
 
-// Module 17529 (MessageCodedLinkManager)
+// Module 17530 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 4619 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17537 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7560 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

@@ -1,10 +1,10 @@
-// Module ID: 12555
-// Function ID: 12556
+// Module ID: 12556
+// Function ID: 12557
 // Name: EmojiSuggestionBarUtils
-// Dependencies: [32, 19, 4628, 1074, 21, 1178, 4373, 5055, 4347, 4637, 504, 12520, 12556, 12557, 9443, 2]
+// Dependencies: [32, 19, 4628, 1074, 21, 1176, 4373, 5055, 4347, 4637, 504, 12521, 12557, 12558, 9443, 2]
 // Exports: EmojiEntranceAnimation, getEmojiEntranceKey, sortEmojisForDisplay, useEmojiSuggestionBarState, useSuggestionBarHeight
 
-// Module 12555 (EmojiSuggestionBarUtils)
+// Module 12556 (EmojiSuggestionBarUtils)
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
@@ -18,7 +18,7 @@ require = fn;
 const UpsellTypes = fn(1074).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1178).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1176).STANDARD_EASING };
 let closure_10 = { duration: 200, dampingRatio: 0.7 };
 const __initData = { code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}" };
 let closure_12 = { code: "function EmojiSuggestionBarUtilsTsx2(finished){const{runOnJS,cleanUp}=this.__closure;if(finished){runOnJS(cleanUp)();}}" };

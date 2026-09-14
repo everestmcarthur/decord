@@ -1,10 +1,10 @@
-// Module ID: 16969
-// Function ID: 16970
+// Module ID: 16971
+// Function ID: 16972
 // Name: ChannelSettingsChangeDefaultForumLayout
-// Dependencies: [32, 19, 17, 1957, 21, 4636, 576, 8748, 5766, 1114, 1967, 5769, 16930, 7196, 4632, 5768, 5668, 16970, 16971, 504, 2]
+// Dependencies: [32, 19, 17, 1957, 21, 4636, 576, 8748, 5766, 1114, 1967, 5769, 16932, 7196, 4632, 5768, 5668, 16972, 16973, 504, 2]
 // Exports: default
 
-// Module 16969 (ChannelSettingsChangeDefaultForumLayout)
+// Module 16971 (ChannelSettingsChangeDefaultForumLayout)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;

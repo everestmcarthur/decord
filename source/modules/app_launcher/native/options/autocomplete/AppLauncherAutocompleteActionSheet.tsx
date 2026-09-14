@@ -1,20 +1,20 @@
-// Module ID: 12300
-// Function ID: 12301
+// Module ID: 12301
+// Function ID: 12302
 // Name: AppLauncherAutocompleteActionSheet
-// Dependencies: [32, 19, 17, 7881, 1979, 1074, 5080, 21, 12, 9541, 4636, 576, 563, 4603, 12295, 12296, 1114, 38, 5686, 4821, 4632, 1178, 12297, 2]
+// Dependencies: [32, 19, 17, 7881, 1979, 1074, 5080, 21, 12, 9541, 4636, 576, 563, 4603, 12296, 12297, 1114, 38, 5686, 4821, 4632, 1176, 12298, 2]
 // Exports: default
 
-// Module 12300 (AppLauncherAutocompleteActionSheet)
+// Module 12301 (AppLauncherAutocompleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _mod4821 from "module_4821" /* 4821 */;
 import TableRow from "TableRow" /* 5686 */;
 import executeCommandDefault from "executeCommand" /* 9541 */;
-import _modDef12297 from "module_12297" /* 12297 */;
+import _modDef12298 from "module_12298" /* 12298 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7881 */;
@@ -130,7 +130,7 @@ function Item(arg0) {
   }).exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12297, darkSource: _modDef12297, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12298, darkSource: _modDef12298, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React7(native.EmptyState, obj);

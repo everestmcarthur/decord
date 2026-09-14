@@ -1,7 +1,7 @@
 // Module ID: 8391
 // Function ID: 8392
 // Name: MediaSlider
-// Dependencies: [32, 19, 17, 21, 4636, 1150, 5679, 12, 672, 5249, 5204, 1114, 8392, 8394, 4632, 8396, 8405, 576, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 1363, 5679, 12, 672, 5249, 5204, 1114, 8392, 8394, 4632, 8396, 8405, 576, 2]
 // Exports: default
 
 // Module 8391 (MediaSlider)
@@ -15,13 +15,13 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
 let obj2 = { container: { flex: 1, marginHorizontal: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, icon: { marginRight: 16 }, centerText: null, sliderContainer: null, progressSliderContainer: null, timelineBackgroundSlider: null, downloadProgressSlider: null, playbackSlider: null };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 12;
 }
 obj2.centerText = { lineHeight: num };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2 = 16;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

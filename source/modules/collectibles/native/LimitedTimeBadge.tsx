@@ -1,7 +1,7 @@
 // Module ID: 8961
 // Function ID: 8962
 // Name: LimitedTimeBadge
-// Dependencies: [19, 17, 2025, 1183, 21, 4636, 576, 1114, 504, 4488, 7542, 4632, 2]
+// Dependencies: [19, 17, 2025, 1181, 21, 4636, 576, 1114, 504, 4488, 7542, 4632, 2]
 // Exports: default
 
 // Module 8961 (LimitedTimeBadge)
@@ -11,7 +11,7 @@ import shared from "shared" /* 4488 */;
 import useCountdownDefault from "useCountdown" /* 7542 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 const View = fn(17).View;

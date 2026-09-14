@@ -1,7 +1,7 @@
 // Module ID: 5634
 // Function ID: 5635
 // Name: ContextMenuActionCreators
-// Dependencies: [1074, 573, 5635, 1150, 5638, 2]
+// Dependencies: [1074, 573, 5635, 1363, 5638, 2]
 // Exports: closeContextMenu, openContextMenuLazy
 
 // Module 5634 (ContextMenuActionCreators)
@@ -129,7 +129,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
           const tmp16Result2 = tmp16(5638);
         }
       }
-      tmp16Result = tmp16(1150);
+      tmp16Result = tmp16(1363);
     }
     stopPropagation.preventDefault();
     const obj3 = contextMenu(5635);

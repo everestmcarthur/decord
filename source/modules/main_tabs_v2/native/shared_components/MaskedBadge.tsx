@@ -1,12 +1,12 @@
 // Module ID: 7971
 // Function ID: 7972
 // Name: MaskedBadge
-// Dependencies: [19, 21, 4636, 576, 1178, 7972, 2]
+// Dependencies: [19, 21, 4636, 576, 1176, 7972, 2]
 // Exports: default
 
 // Module 7971 (MaskedBadge)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import BadgeDefault from "Badge" /* 7972 */;
 import noop from "module_19" /* 19 */;
 

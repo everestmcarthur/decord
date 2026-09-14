@@ -1,14 +1,14 @@
 // Module ID: 4975
 // Function ID: 4976
 // Name: StickersUtils
-// Dependencies: [1221, 1979, 4976, 5348, 1938, 1074, 5349, 1396, 1879, 1150, 1430, 5351, 2]
+// Dependencies: [1219, 1979, 4976, 5348, 1938, 1074, 5349, 1396, 1879, 1363, 1430, 5351, 2]
 // Exports: createStickerPackCategory, getFavoriteStickerIds, getFilenameForSticker, getMessageStickers, getStickerAssetUrl, getStickerFormatTypeFromFileType, getStickerPackBannerAssetUrl, getStickerPackPreviewSticker, getStickerTagForEmoji, isAvailableGuildSticker, isFavoriteSticker, isGuildSticker, isStandardSticker, isStickerAssetUrl, isStickerPackAnimated, shouldAnimateSticker, shouldAttachSticker
 
 // Module 4975 (StickersUtils)
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import StickersTypes from "StickersTypes" /* 5349 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5348 */;
@@ -136,7 +136,7 @@ export const getStickerAssetUrl = (format_type) => {
               if (!tmp23Result.isAndroid()) {
                 str6 = "&passthrough=false";
               }
-              tmp23Result = tmp23(1150);
+              tmp23Result = tmp23(1363);
             }
           }
           const _Math = Math;
@@ -151,7 +151,7 @@ export const getStickerAssetUrl = (format_type) => {
           if (tmp23Result6.isWeb()) {
             return STICKER_ASSETResult;
           }
-          tmp23Result6 = tmp23(1150);
+          tmp23Result6 = tmp23(1363);
         }
         const _location = location;
         const _HermesInternal = HermesInternal;

@@ -1,17 +1,17 @@
-// Module ID: 17154
-// Function ID: 17155
+// Module ID: 17156
+// Function ID: 17157
 // Name: FramePanelHeader
-// Dependencies: [32, 19, 17, 9640, 9641, 21, 7271, 17133, 17135, 17139, 17140, 17155, 504, 17150, 2]
+// Dependencies: [32, 19, 17, 9640, 9641, 21, 7271, 17135, 17137, 17141, 17142, 17157, 504, 17152, 2]
 
-// Module 17154 (FramePanelHeader)
+// Module 17156 (FramePanelHeader)
 import initialize from "initialize" /* 504 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7271 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 17133 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17135 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17139 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17140 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17150 */;
-import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 17155 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 17135 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17137 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17141 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17142 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17152 */;
+import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 17157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;

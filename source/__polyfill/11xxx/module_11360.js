@@ -1,15 +1,10 @@
 // Module ID: 11360
 // Function ID: 11361
-// Dependencies: [11359]
-// Exports: keepLocalCopy
+// Dependencies: [17]
 
 // Module 11360
-import _mod11359 from "module_11359" /* 11359 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11359.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

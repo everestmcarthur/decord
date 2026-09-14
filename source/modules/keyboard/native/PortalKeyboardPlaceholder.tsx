@@ -1,11 +1,11 @@
-// Module ID: 12381
-// Function ID: 12382
+// Module ID: 12382
+// Function ID: 12383
 // Name: PortalKeyboardPlaceholder
-// Dependencies: [19, 17, 21, 4636, 1150, 576, 1609, 1611, 7046, 1477, 5660, 7975, 4504, 1877, 2]
+// Dependencies: [19, 17, 21, 4636, 1363, 576, 1609, 1611, 7046, 1477, 5660, 7975, 4504, 1877, 2]
 
-// Module 12381 (PortalKeyboardPlaceholder)
+// Module 12382 (PortalKeyboardPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

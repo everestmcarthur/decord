@@ -1,13 +1,13 @@
-// Module ID: 13377
-// Function ID: 13378
+// Module ID: 13378
+// Function ID: 13379
 // Name: CtaButton
-// Dependencies: [7396, 12041, 4849, 1114, 2978, 2]
+// Dependencies: [7396, 12042, 4849, 1114, 2978, 2]
 // Exports: createCtaButtons
 
-// Module 13377 (CtaButton)
+// Module 13378 (CtaButton)
 import _modDef2978 from "module_2978" /* 2978 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
-import CtaButtonUtils from "CtaButtonUtils" /* 12041 */;
+import CtaButtonUtils from "CtaButtonUtils" /* 12042 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7396 */;
 
 require = fn;
@@ -25,13 +25,13 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     ({ reportFpTextColor: obj10.textColor, reportFpBackgroundColor: obj10.backgroundColor } = arg2);
     let prop;
     if (ExplicitMediaStore.canSubmitFpReport(id)) {
-      prop = tmp(12041).CtaButtonType.MARK_AS_FALSE_POSITIVE;
+      prop = tmp(12042).CtaButtonType.MARK_AS_FALSE_POSITIVE;
     }
     const obj7 = { ctaButton: null };
     obj4.callback = prop;
     obj7.ctaButton = obj4;
     return obj7;
-  } else if (tmp(12041).CtaButtonType.AGE_VERIFICATION_RETRY === ctaButtonType) {
+  } else if (tmp(12042).CtaButtonType.AGE_VERIFICATION_RETRY === ctaButtonType) {
     const intl2 = tmp(1114).intl;
     const string = intl2.string;
     const t = tmp(1114).t;
@@ -44,7 +44,7 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     ({ retryTextColor: obj6.textColor, retryBackgroundColor: obj6.backgroundColor } = arg2);
     let prop1;
     if (result) {
-      prop1 = tmp(12041).CtaButtonType.AGE_VERIFICATION_RETRY;
+      prop1 = tmp(12042).CtaButtonType.AGE_VERIFICATION_RETRY;
     }
     const obj11 = { ctaButton: null, secondaryCtaButton: null };
     obj8.callback = prop1;
@@ -57,20 +57,20 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
       ({ reportFpTextColor: obj9.textColor, reportFpBackgroundColor: obj9.backgroundColor } = arg2);
       let prop2;
       if (result) {
-        prop2 = tmp(12041).CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW;
+        prop2 = tmp(12042).CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW;
       }
       obj18.callback = prop2;
       tmp8 = obj18;
     }
     obj11.secondaryCtaButton = tmp8;
     return obj11;
-  } else if (tmp(12041).CtaButtonType.CONNECT_TO_TEEN === ctaButtonType) {
+  } else if (tmp(12042).CtaButtonType.CONNECT_TO_TEEN === ctaButtonType) {
     const obj19 = { ctaButton: null };
     const obj20 = { text: null, textColor: null, backgroundColor: null, callback: null };
     const intl = tmp(1114).intl;
     obj20.text = intl.string(tmp(1114).t.n8a49k);
     ({ retryTextColor: obj5.textColor, retryBackgroundColor: obj5.backgroundColor } = arg2);
-    obj20.callback = tmp(12041).CtaButtonType.CONNECT_TO_TEEN;
+    obj20.callback = tmp(12042).CtaButtonType.CONNECT_TO_TEEN;
     obj19.ctaButton = obj20;
     return obj19;
   } else {

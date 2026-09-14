@@ -1,22 +1,22 @@
-// Module ID: 15438
-// Function ID: 15439
+// Module ID: 15439
+// Function ID: 15440
 // Name: DisplayNameStylesEditPreview
-// Dependencies: [19, 17, 21, 4636, 576, 8283, 1886, 11243, 1114, 2786, 11353, 4318, 1178, 11027, 11028, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 8283, 1886, 11244, 1114, 2786, 11354, 4318, 1176, 11028, 11029, 4632, 2]
 // Exports: default
 
-// Module 15438 (DisplayNameStylesEditPreview)
+// Module 15439 (DisplayNameStylesEditPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import utils from "utils" /* 1886 */;
 import _modDef2786 from "module_2786" /* 2786 */;
 import DateUtils from "DateUtils" /* 4318 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8283 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import types from "types" /* 11028 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11243 */;
-import NameplatePreview from "NameplatePreview" /* 11353 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import types from "types" /* 11029 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11244 */;
+import NameplatePreview from "NameplatePreview" /* 11354 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

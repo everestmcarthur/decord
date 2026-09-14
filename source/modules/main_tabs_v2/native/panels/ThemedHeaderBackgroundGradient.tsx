@@ -1,9 +1,9 @@
-// Module ID: 16623
-// Function ID: 16624
+// Module ID: 16625
+// Function ID: 16626
 // Name: ThemedHeaderBackgroundGradient
 // Dependencies: [19, 17, 21, 4636, 576, 1611, 4338, 1091, 5068, 2]
 
-// Module 16623 (ThemedHeaderBackgroundGradient)
+// Module 16625 (ThemedHeaderBackgroundGradient)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

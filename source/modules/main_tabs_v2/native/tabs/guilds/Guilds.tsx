@@ -1,21 +1,21 @@
-// Module ID: 16108
-// Function ID: 16109
+// Module ID: 16110
+// Function ID: 16111
 // Name: guilds/Guilds
-// Dependencies: [19, 11218, 21, 16109, 4490, 11617, 4347, 15179, 16110, 16458, 15263, 2]
+// Dependencies: [19, 11219, 21, 16111, 4490, 11618, 4347, 15180, 16112, 16460, 15264, 2]
 
-// Module 16108 (guilds/Guilds)
+// Module 16110 (guilds/Guilds)
 import native from "native" /* 4347 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4490 */;
-import QuestsEligibility from "QuestsEligibility" /* 11617 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15179 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16109 */;
-import MainChannelsDefault from "MainChannels" /* 16110 */;
-import YouBarDefault from "YouBar" /* 16458 */;
+import QuestsEligibility from "QuestsEligibility" /* 11618 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15180 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16111 */;
+import MainChannelsDefault from "MainChannels" /* 16112 */;
+import YouBarDefault from "YouBar" /* 16460 */;
 import noop from "module_19" /* 19 */;
 
-const QuestDockDefault = tmp3(15263);
+const QuestDockDefault = tmp3(15264);
 require = fn;
-const YouBarNavigatorScreens = fn(11218).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11219).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

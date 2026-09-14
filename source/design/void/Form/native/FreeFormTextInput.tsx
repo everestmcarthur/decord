@@ -1,13 +1,13 @@
 // Module ID: 7040
 // Function ID: 7041
 // Name: FreeFormTextInput
-// Dependencies: [19, 17, 21, 4636, 576, 5204, 1114, 1178, 7041, 38, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5204, 1114, 1176, 7041, 38, 2]
 
 // Module 7040 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Pressables from "Pressables" /* 5204 */;
 import _modDef7041 from "module_7041" /* 7041 */;
 import noop from "module_19" /* 19 */;
@@ -64,13 +64,13 @@ export default noop.forwardRef((editable, ref) => {
   const imperativeHandle = noop.useImperativeHandle(ref, () => ref.current);
   let flag2 = true;
   if (native.ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
-    if (tmp7(1178).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
+    if (tmp7(1176).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
       let tmp9 = null != value;
       if (tmp9) {
         tmp9 = "" !== value;
       }
       flag2 = tmp9;
-    } else if (tmp7(1178).ClearButtonVisibility.NEVER === WITH_CONTENT) {
+    } else if (tmp7(1176).ClearButtonVisibility.NEVER === WITH_CONTENT) {
       flag2 = false;
     }
   }

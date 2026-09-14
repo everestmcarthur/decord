@@ -1,9 +1,9 @@
-// Module ID: 14560
-// Function ID: 14561
+// Module ID: 14561
+// Function ID: 14562
 // Name: commands/config
 // Dependencies: [4541, 1074, 9687, 9684, 573, 2]
 
-// Module 14560 (commands/config)
+// Module 14561 (commands/config)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;

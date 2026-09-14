@@ -1,14 +1,14 @@
-// Module ID: 14191
-// Function ID: 14192
+// Module ID: 14192
+// Function ID: 14193
 // Name: Status
-// Dependencies: [32, 19, 17, 1179, 1074, 13159, 21, 4636, 14189, 576, 14192, 14193, 14194, 14195, 14196, 14197, 14198, 14190, 14199, 4373, 5055, 14176, 2]
+// Dependencies: [32, 19, 17, 1177, 1074, 13160, 21, 4636, 14190, 576, 14193, 14194, 14195, 14196, 14197, 14198, 14199, 14191, 14200, 4373, 5055, 14177, 2]
 // Exports: StatusWithTyping, default
 
-// Module 14191 (Status)
+// Module 14192 (Status)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 14189 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14190 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 14190 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14191 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,9 +17,9 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const STATUS_PADDING = fn(1179).STATUS_PADDING;
+const STATUS_PADDING = fn(1177).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13159);
+const ChannelAnimationConstants = fn(13160);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -78,23 +78,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(14192);
+    let tmp4Result = tmp4(14193);
   } else if (flag2) {
-    tmp4Result = tmp4(14193);
-  } else if (flag) {
     tmp4Result = tmp4(14194);
-  } else if (StatusTypes.IDLE === status) {
+  } else if (flag) {
     tmp4Result = tmp4(14195);
-  } else if (tmp7.DND === status) {
+  } else if (StatusTypes.IDLE === status) {
     tmp4Result = tmp4(14196);
+  } else if (tmp7.DND === status) {
+    tmp4Result = tmp4(14197);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(14198);
+        tmp4Result = tmp4(14199);
       }
     }
-    tmp4Result = tmp4(14197);
+    tmp4Result = tmp4(14198);
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_11(React4, obj2);

@@ -1,20 +1,20 @@
-// Module ID: 11326
-// Function ID: 11327
+// Module ID: 11327
+// Function ID: 11328
 // Name: captureAdUserAction
-// Dependencies: [5, 7805, 1074, 5532, 7820, 7801, 7830, 7836, 1242, 1256, 1150, 7779, 11327, 7831, 7811, 11330, 2]
+// Dependencies: [5, 7805, 1074, 5532, 7820, 7801, 7830, 7836, 1240, 1254, 1363, 7779, 11328, 7831, 7811, 11331, 2]
 // Exports: captureAdUserAction
 
-// Module 11326 (captureAdUserAction)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 11327 (captureAdUserAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7779 */;
 import getQuestLogger from "getQuestLogger" /* 7811 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
 import AdDataUtils from "AdDataUtils" /* 7831 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 11327 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11330 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 11328 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import QuestStore from "QuestStore" /* 7805 */;
 
@@ -191,8 +191,8 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
             const obj5 = { cta_name: questContentCTA, click_id: null, is_targeted: null, content_id: null, content_name: null, content_position: null, row_index: null, ad_content_id: null, quest_id: null };
             click_id = clickId;
             if (clickId == null) {
-              click_id = tmp16(1256).v4();
-              const tmp16Result = tmp16(1256);
+              click_id = tmp16(1254).v4();
+              const tmp16Result = tmp16(1254);
             }
             obj5.click_id = click_id;
             const isTargeted = tmp14.isTargeted;
@@ -482,7 +482,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           const tmp2Result10 = tmp2(tmp3[6]);
         }
       })(captureAdUserActionResult1);
-    } else if (tmp2(11330).AdUserActionType.CLICK_INTERNAL === type) {
+    } else if (tmp2(11331).AdUserActionType.CLICK_INTERNAL === type) {
       (function handleClickInternalAction() {
         const self = this;
         const apply = closure_1_8.apply;
@@ -503,7 +503,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
         }
         return applyArgumentsResult;
       })(captureAdUserActionResult1);
-    } else if (tmp2(11330).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
+    } else if (tmp2(11331).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
       (function handleClickExternalAdvertiserCtaAction() {
         const self = this;
         const apply = closure_1_9.apply;
@@ -524,7 +524,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
         }
         return applyArgumentsResult;
       })(captureAdUserActionResult1);
-    } else if (tmp2(11330).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
+    } else if (tmp2(11331).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
       (function handleViewInternalSurfaceImpressionAction() {
         const self = this;
         const apply = closure_1_11.apply;
@@ -545,7 +545,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
         }
         return applyArgumentsResult;
       })(captureAdUserActionResult1);
-    } else if (tmp2(11330).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
+    } else if (tmp2(11331).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
       handleViewImpression(captureAdUserActionResult1);
     }
   } catch (tmp13) {

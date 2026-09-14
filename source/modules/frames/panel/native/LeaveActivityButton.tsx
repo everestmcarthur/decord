@@ -1,11 +1,11 @@
-// Module ID: 17155
-// Function ID: 17156
+// Module ID: 17157
+// Function ID: 17158
 // Name: panel/LeaveActivityButton
-// Dependencies: [19, 9635, 21, 17145, 9698, 2]
+// Dependencies: [19, 9635, 21, 17147, 9698, 2]
 
-// Module 17155 (panel/LeaveActivityButton)
+// Module 17157 (panel/LeaveActivityButton)
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 17145 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 17147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// Module ID: 17275
-// Function ID: 17276
+// Module ID: 17277
+// Function ID: 17278
 // Name: VoicePanelSecondaryPIPContent
-// Dependencies: [19, 1956, 9640, 1957, 1920, 9635, 9641, 21, 4636, 12401, 17201, 504, 4265, 11125, 9658, 4373, 17129, 5670, 7176, 16718, 9765, 2]
+// Dependencies: [19, 1956, 9640, 1957, 1920, 9635, 9641, 21, 4636, 12402, 17203, 504, 4265, 11126, 9658, 4373, 17131, 5670, 7176, 16720, 9765, 2]
 // Exports: default
 
-// Module 17275 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17129 */;
+// Module 17277 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17131 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import FramesStore from "FramesStore" /* 9640 */;

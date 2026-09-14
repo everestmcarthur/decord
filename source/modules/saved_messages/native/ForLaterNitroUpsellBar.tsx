@@ -1,11 +1,11 @@
-// Module ID: 13426
-// Function ID: 13427
+// Module ID: 13427
+// Function ID: 13428
 // Name: ForLaterNitroUpsellBar
-// Dependencies: [19, 1373, 7954, 21, 7265, 11835, 12350, 4294, 1114, 2]
+// Dependencies: [19, 1373, 7954, 21, 7265, 11836, 12351, 4294, 1114, 2]
 // Exports: default
 
-// Module 13426 (ForLaterNitroUpsellBar)
-import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11835 */;
+// Module 13427 (ForLaterNitroUpsellBar)
+import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11836 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -24,7 +24,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   const items = [isReminder, analyticsLocations];
   const callback = noop.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
   const tmp2 = jsx;
-  const tmp3 = analyticsLocations(12350);
+  const tmp3 = analyticsLocations(12351);
   const premiumTypeDisplayName = isReminder(4294).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = isReminder(1114).intl;
   const formatToPlainString = intl.formatToPlainString;

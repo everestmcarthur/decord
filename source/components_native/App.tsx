@@ -1,10 +1,10 @@
-// Module ID: 14481
-// Function ID: 14482
+// Module ID: 14482
+// Function ID: 14483
 // Name: App
-// Dependencies: [19, 17, 14482, 502, 9215, 13775, 13784, 13804, 10793, 14082, 14483, 14484, 14485, 7746, 4300, 4628, 14486, 7044, 14487, 14488, 21, 14489, 1896, 14522, 5042, 14528, 14529, 14530, 14531, 7858, 14541, 7862, 14542, 14545, 10836, 14616, 9645, 9698, 8381, 14624, 14626, 14630, 14632, 14633, 14634, 14635, 4777, 14636, 1150, 5241, 12911, 504, 6694, 14638, 9, 13757, 13726, 14640, 11662, 14642, 16035, 2]
+// Dependencies: [19, 17, 14483, 502, 9215, 13776, 13785, 13805, 10794, 14083, 14484, 14485, 14486, 7746, 4300, 4628, 14487, 7044, 14488, 14489, 21, 14490, 1896, 14523, 5042, 14529, 14530, 14531, 14532, 7858, 14542, 7862, 14543, 14546, 10837, 14617, 9645, 9698, 8381, 14625, 14627, 14631, 14633, 14634, 14635, 14636, 4777, 14637, 1363, 5241, 12912, 504, 6694, 14639, 9, 13758, 13727, 14641, 11663, 14643, 16037, 2]
 // Exports: default
 
-// Module 14481 (App)
+// Module 14482 (App)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import VoiceEngineStreamingManagerDefault from "VoiceEngineStreamingManager" /* 4777 */;
 import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5042 */;
@@ -14,55 +14,55 @@ import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 7862
 import MediaPlayerMuteManagerDefault from "MediaPlayerMuteManager" /* 8381 */;
 import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9645 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import GPlayManagerDefault from "GPlayManager" /* 10836 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11662 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13726 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 14522 */;
-import BackPressManagerDefault from "BackPressManager" /* 14528 */;
-import CallKitManagerDefault from "CallKitManager" /* 14529 */;
-import AccessibilityCallManagerDefault from "AccessibilityCallManager" /* 14530 */;
-import NotificationTokenManagerDefault from "NotificationTokenManager" /* 14531 */;
-import VoiceNotificationManagerDefault from "VoiceNotificationManager" /* 14541 */;
-import UserSettingsProtoManagerDefault from "UserSettingsProtoManager" /* 14542 */;
-import NativeRPCServerManagerDefault from "NativeRPCServerManager" /* 14545 */;
-import MobileVoiceOverlayLifecycleManagerDefault from "MobileVoiceOverlayLifecycleManager" /* 14616 */;
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14624 */;
-import SoundboardManagerDefault from "SoundboardManager" /* 14626 */;
-import VoiceMessagesPlaybackManagerDefault from "VoiceMessagesPlaybackManager" /* 14630 */;
-import ICYMIManagerDefault from "ICYMIManager" /* 14632 */;
-import GameRelationshipManagerDefault from "GameRelationshipManager" /* 14633 */;
-import CollectiblesMarketingManagerDefault from "CollectiblesMarketingManager" /* 14634 */;
-import SessionAdManagerDefault from "SessionAdManager" /* 14635 */;
-import TouchEventAnalyticsManagerDefault from "TouchEventAnalyticsManager" /* 14636 */;
-import LocalMessageCacheManagerDefault from "LocalMessageCacheManager" /* 14638 */;
-import AppContainerDefault from "AppContainer" /* 14642 */;
-import MainNavigatorDefault from "MainNavigator" /* 16035 */;
+import GPlayManagerDefault from "GPlayManager" /* 10837 */;
+import StartupProfilerDefault from "StartupProfiler" /* 11663 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13727 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14523 */;
+import BackPressManagerDefault from "BackPressManager" /* 14529 */;
+import CallKitManagerDefault from "CallKitManager" /* 14530 */;
+import AccessibilityCallManagerDefault from "AccessibilityCallManager" /* 14531 */;
+import NotificationTokenManagerDefault from "NotificationTokenManager" /* 14532 */;
+import VoiceNotificationManagerDefault from "VoiceNotificationManager" /* 14542 */;
+import UserSettingsProtoManagerDefault from "UserSettingsProtoManager" /* 14543 */;
+import NativeRPCServerManagerDefault from "NativeRPCServerManager" /* 14546 */;
+import MobileVoiceOverlayLifecycleManagerDefault from "MobileVoiceOverlayLifecycleManager" /* 14617 */;
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14625 */;
+import SoundboardManagerDefault from "SoundboardManager" /* 14627 */;
+import VoiceMessagesPlaybackManagerDefault from "VoiceMessagesPlaybackManager" /* 14631 */;
+import ICYMIManagerDefault from "ICYMIManager" /* 14633 */;
+import GameRelationshipManagerDefault from "GameRelationshipManager" /* 14634 */;
+import CollectiblesMarketingManagerDefault from "CollectiblesMarketingManager" /* 14635 */;
+import SessionAdManagerDefault from "SessionAdManager" /* 14636 */;
+import TouchEventAnalyticsManagerDefault from "TouchEventAnalyticsManager" /* 14637 */;
+import LocalMessageCacheManagerDefault from "LocalMessageCacheManager" /* 14639 */;
+import AppContainerDefault from "AppContainer" /* 14643 */;
+import MainNavigatorDefault from "MainNavigator" /* 16037 */;
 import noop from "module_19" /* 19 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14482 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14483 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const IosImageTypesManagerDefault = tmp(5241);
 const require = fn;
 const NativeModules = fn(17).NativeModules;
 const AudioManagerStore = fn(9215);
-const ConnectivityIndicatorStateStore = fn(13775);
-const RequestReviewStore = fn(13784);
-const LocalPushNotificationStore = fn(13804);
-const PromotionsStore = fn(10793);
-const BitRateStore = fn(14082);
-const ShareStore = fn(14483);
-const PermissionVADStore = fn(14484);
-const InteractionModalStore = fn(14485);
+const ConnectivityIndicatorStateStore = fn(13776);
+const RequestReviewStore = fn(13785);
+const LocalPushNotificationStore = fn(13805);
+const PromotionsStore = fn(10794);
+const BitRateStore = fn(14083);
+const ShareStore = fn(14484);
+const PermissionVADStore = fn(14485);
+const InteractionModalStore = fn(14486);
 const MobileAppDatabaseManager = fn(7746);
 const SubscriptionStore = fn(4300);
 const AccessibilityStore = fn(4628);
-const AnalyticsLogStore = fn(14486);
+const AnalyticsLogStore = fn(14487);
 const PhoneStore = fn(7044);
-const ICYMISessionStore = fn(14487);
-const MemoryExperiment = fn(14488);
+const ICYMISessionStore = fn(14488);
+const MemoryExperiment = fn(14489);
 const jsx = fn(21).jsx;
 if (global.__DEV__) {
-  fn(1896)(14489, dependencyMap.paths);
+  fn(1896)(14490, dependencyMap.paths);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/App.tsx");
@@ -102,40 +102,40 @@ export default function App() {
       IosImageTypesManagerDefault.initialize();
       const tmpResult = IosImageTypesManagerDefault;
     }
-    obj26 = stateFromStores(1150);
-    const result = tmp29(12911).initializeRouteManagerIfNeeded();
+    obj26 = stateFromStores(1363);
+    const result = tmp29(12912).initializeRouteManagerIfNeeded();
     return () => {
-      closure_1_1(14530).terminate();
-      const obj = closure_1_1(14530);
+      closure_1_1(14531).terminate();
+      const obj = closure_1_1(14531);
       closure_1_1(5042).terminate();
       const obj2 = closure_1_1(5042);
-      closure_1_1(10836).terminate();
-      const obj3 = closure_1_1(10836);
-      closure_1_1(14616).terminate();
-      const obj4 = closure_1_1(14616);
-      stateFromStores(12911).cleanupRouteManager();
-      const obj5 = stateFromStores(12911);
-      closure_1_1(14636).terminate();
-      const obj6 = closure_1_1(14636);
-      closure_1_1(14624).terminate();
-      const obj7 = closure_1_1(14624);
+      closure_1_1(10837).terminate();
+      const obj3 = closure_1_1(10837);
+      closure_1_1(14617).terminate();
+      const obj4 = closure_1_1(14617);
+      stateFromStores(12912).cleanupRouteManager();
+      const obj5 = stateFromStores(12912);
+      closure_1_1(14637).terminate();
+      const obj6 = closure_1_1(14637);
+      closure_1_1(14625).terminate();
+      const obj7 = closure_1_1(14625);
       closure_1_1(8381).terminate();
       const obj8 = closure_1_1(8381);
-      closure_1_1(14545).terminate();
-      const obj9 = closure_1_1(14545);
-      closure_1_1(14528).terminate();
-      const obj10 = closure_1_1(14528);
-      closure_1_1(14630).terminate();
-      const obj11 = closure_1_1(14630);
-      closure_1_1(14632).terminate();
-      const obj12 = closure_1_1(14632);
+      closure_1_1(14546).terminate();
+      const obj9 = closure_1_1(14546);
+      closure_1_1(14529).terminate();
+      const obj10 = closure_1_1(14529);
+      closure_1_1(14631).terminate();
+      const obj11 = closure_1_1(14631);
       closure_1_1(14633).terminate();
-      const obj13 = closure_1_1(14633);
-      closure_1_1(14635).terminate();
-      const obj14 = closure_1_1(14635);
+      const obj12 = closure_1_1(14633);
+      closure_1_1(14634).terminate();
+      const obj13 = closure_1_1(14634);
+      closure_1_1(14636).terminate();
+      const obj14 = closure_1_1(14636);
       closure_1_1(4777).terminate();
       const obj15 = closure_1_1(4777);
-      closure_1_1(14541).terminate();
+      closure_1_1(14542).terminate();
     };
   }, []);
   let stateFromStores;
@@ -166,14 +166,14 @@ export default function App() {
     TTITrackerDefault.wasAuthenticated = AuthenticationStore.isAuthenticated();
   }, []);
   let obj = stateFromStores(504);
-  const isChannelMetadataObfuscationEnabled = stateFromStores(13757).useIsChannelMetadataObfuscationEnabled("App");
+  const isChannelMetadataObfuscationEnabled = stateFromStores(13758).useIsChannelMetadataObfuscationEnabled("App");
   closure_129_0 = isChannelMetadataObfuscationEnabled;
   const items2 = [isChannelMetadataObfuscationEnabled];
   const effect3 = noop.useEffect(() => {
     const result = NativeFastConnectModuleDefault.setUseChannelObfuscation(stateFromStores);
   }, items2);
-  let obj2 = stateFromStores(13757);
-  const shouldUseAltGateway = stateFromStores(14640).useShouldUseAltGateway("App");
+  let obj2 = stateFromStores(13758);
+  const shouldUseAltGateway = stateFromStores(14641).useShouldUseAltGateway("App");
   closure_130_0 = shouldUseAltGateway;
   const items3 = [shouldUseAltGateway];
   const effect4 = noop.useEffect(() => {
@@ -184,8 +184,8 @@ export default function App() {
     return renderAppEffect.record();
   }, []);
   let obj4 = { profile: null, children: null };
-  let obj3 = stateFromStores(14640);
-  obj4.profile = stateFromStores(11662).Profiles.App;
+  let obj3 = stateFromStores(14641);
+  obj4.profile = stateFromStores(11663).Profiles.App;
   let obj5 = { appEntryKey: "main", children: null };
   obj5.children = jsx(MainNavigatorDefault, {});
   obj4.children = jsx(AppContainerDefault, { appEntryKey: "main", children: null });

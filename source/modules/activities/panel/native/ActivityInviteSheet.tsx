@@ -1,10 +1,10 @@
-// Module ID: 17136
-// Function ID: 17137
+// Module ID: 17138
+// Function ID: 17139
 // Name: ActivityInviteSheet
-// Dependencies: [32, 19, 17, 10024, 9963, 1074, 7838, 1085, 21, 4636, 576, 9959, 7265, 7285, 4603, 8296, 9952, 11605, 504, 9977, 7253, 7252, 1114, 1178, 9979, 7153, 17137, 2]
+// Dependencies: [32, 19, 17, 10024, 9963, 1074, 7838, 1085, 21, 4636, 576, 9959, 7265, 7285, 4603, 8296, 9952, 11606, 504, 9977, 7253, 7252, 1114, 1176, 9979, 7153, 17139, 2]
 // Exports: default
 
-// Module 17136 (ActivityInviteSheet)
+// Module 17138 (ActivityInviteSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
@@ -161,7 +161,7 @@ export default function ActivityInviteSheet(activity) {
   obj3.header = closure_13(activity(7252).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
     const obj5 = { style: tmp.emptyState, Illustration: tmp11(9979).AppCrash, title: tmp6 };
-    let tmp19Result = tmp17(tmp11(1178).EmptyState, obj5);
+    let tmp19Result = tmp17(tmp11(1176).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = tmp17(Loading, {});
   } else {
@@ -177,10 +177,10 @@ export default function ActivityInviteSheet(activity) {
       const obj9 = { style: tmp.emptyState, title: null };
       const intl3 = tmp11(1114).intl;
       obj9.title = intl3.string(tmp11(1114).t.ojoWgX);
-      let tmp17Result2 = tmp17(tmp11(1178).EmptyState, obj9);
+      let tmp17Result2 = tmp17(tmp11(1176).EmptyState, obj9);
     } else {
       const obj10 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result2 = tmp17(tmp2(17137), obj10);
+      tmp17Result2 = tmp17(tmp2(17139), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;

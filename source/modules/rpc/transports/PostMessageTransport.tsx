@@ -1,7 +1,7 @@
 // Module ID: 9682
 // Function ID: 9683
 // Name: PostMessageTransport
-// Dependencies: [5, 32, 1956, 4541, 1074, 1090, 9683, 568, 1109, 1242, 4265, 9684, 9686, 1896, 9687, 2]
+// Dependencies: [5, 32, 1956, 4541, 1074, 1090, 9683, 568, 1109, 1240, 4265, 9684, 9686, 1896, 9687, 2]
 
 // Module 9682 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1090 */;
@@ -62,7 +62,7 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          const obj = closure_1_1(1242);
+          const obj = closure_1_1(1240);
           obj2.channel_id = closure_1_0(4265).getEmbeddedActivityLocationChannelId(tmp2.location);
           const obj3 = closure_1_0(4265);
           obj2.guild_id = closure_1_0(4265).getEmbeddedActivityLocationGuildId(tmp2.location);

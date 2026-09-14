@@ -1,10 +1,10 @@
-// Module ID: 11144
-// Function ID: 11145
+// Module ID: 11145
+// Function ID: 11146
 // Name: CollectiblesShopCheckoutDetails
-// Dependencies: [19, 17, 1076, 8925, 21, 4636, 576, 8342, 5668, 11145, 8318, 8949, 8288, 8924, 1886, 8945, 1889, 1077, 8971, 8970, 8937, 1114, 4632, 7656, 8973, 11146, 8295, 4294, 8989, 2]
+// Dependencies: [19, 17, 1076, 8925, 21, 4636, 576, 8342, 5668, 11146, 8318, 8949, 8288, 8924, 1886, 8945, 1889, 1077, 8971, 8970, 8937, 1114, 4632, 7656, 8973, 11147, 8295, 4294, 8989, 2]
 // Exports: default
 
-// Module 11144 (CollectiblesShopCheckoutDetails)
+// Module 11145 (CollectiblesShopCheckoutDetails)
 import nativeDefault from "native" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import utils from "utils" /* 1886 */;
@@ -30,7 +30,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, alt: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: tmp2(11145) };
+    const obj3 = { uri: tmp2(11146) };
     obj2.source = obj3;
     obj2.alt = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;

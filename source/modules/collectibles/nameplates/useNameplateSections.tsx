@@ -1,10 +1,10 @@
-// Module ID: 14724
-// Function ID: 14725
+// Module ID: 14725
+// Function ID: 14726
 // Name: useNameplateSections
 // Dependencies: [32, 19, 7645, 7660, 563, 7657, 1114, 2]
 // Exports: default
 
-// Module 14724 (useNameplateSections)
+// Module 14725 (useNameplateSections)
 import util from "util" /* 1114 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import _slicedToArray from "module_32" /* 32 */;

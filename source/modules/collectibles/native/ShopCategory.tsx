@@ -1,10 +1,10 @@
-// Module ID: 15903
-// Function ID: 15904
+// Module ID: 15905
+// Function ID: 15906
 // Name: ShopCategory
-// Dependencies: [19, 17, 1076, 1074, 21, 8890, 4636, 576, 7265, 1483, 15155, 15902, 9003, 15904, 8893, 4603, 8293, 7644, 7285, 5204, 1114, 5668, 7312, 2]
+// Dependencies: [19, 17, 1076, 1074, 21, 8890, 4636, 576, 7265, 1483, 15156, 15904, 9003, 15906, 8893, 4603, 8293, 7644, 7285, 5204, 1114, 5668, 7312, 2]
 // Exports: ShopCategory
 
-// Module 15903 (ShopCategory)
+// Module 15905 (ShopCategory)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
@@ -55,15 +55,15 @@ export const ShopCategory = function ShopCategory(category) {
   dependencyMap = category(1483).useNavigation();
   const unpublishedAt = category.unpublishedAt;
   let obj = category(1483);
-  const filteredAndSortedProducts = category(15155).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
+  const filteredAndSortedProducts = category(15156).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj2 = category(15155);
+  let obj2 = category(15156);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const collectiblesShopDeepLinkProps = category(15902).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
+  const collectiblesShopDeepLinkProps = category(15904).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const ref = unpublishedAt.useRef(null);
-  const obj4 = category(15902);
+  const obj4 = category(15904);
   let items = [category.storeListingId];
   const recyclingState = category(9003).useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -76,9 +76,9 @@ export const ShopCategory = function ShopCategory(category) {
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  const obj7 = category(15904);
-  const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({ shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(15904).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId });
-  const obj8 = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(15904).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
+  const obj7 = category(15906);
+  const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({ shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(15906).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId });
+  const obj8 = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(15906).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
   collectiblesAnalyticsContext = category(8893).useCollectiblesAnalyticsContext();
   const items1 = [initialProductSkuId, initialVariantIndex, filteredAndSortedProducts, analyticsLocations, collectiblesAnalyticsContext];
   const effect = obj5.useEffect(() => {

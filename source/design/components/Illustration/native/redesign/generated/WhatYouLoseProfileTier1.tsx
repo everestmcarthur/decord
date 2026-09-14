@@ -1,10 +1,10 @@
-// Module ID: 13465
-// Function ID: 13466
+// Module ID: 13466
+// Function ID: 13467
 // Name: WhatYouLoseProfileTier1
-// Dependencies: [19, 17, 21, 8349, 13466, 13467, 13468, 4488, 2]
+// Dependencies: [19, 17, 21, 8349, 13467, 13468, 13469, 4488, 2]
 // Exports: WhatYouLoseProfileTier1, getWhatYouLoseProfileTier1Source, useWhatYouLoseProfileTier1Source
 
-// Module 13465 (WhatYouLoseProfileTier1)
+// Module 13466 (WhatYouLoseProfileTier1)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
@@ -20,13 +20,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTier1Source(theme) {
   return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_13466");
-    },
-    darker() {
       return require("module_13467");
     },
-    light() {
+    darker() {
       return require("module_13468");
+    },
+    light() {
+      return require("module_13469");
     }
   });
 };
@@ -34,13 +34,13 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
   const obj = shared;
   return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13466");
-    },
-    darker() {
       return require("module_13467");
     },
-    light() {
+    darker() {
       return require("module_13468");
+    },
+    light() {
+      return require("module_13469");
     }
   });
 };
@@ -49,13 +49,13 @@ export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
   const obj4 = {};
   const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13466");
-    },
-    darker() {
       return require("module_13467");
     },
-    light() {
+    darker() {
       return require("module_13468");
+    },
+    light() {
+      return require("module_13469");
     }
   });
   const merged = Object.assign(arg0);

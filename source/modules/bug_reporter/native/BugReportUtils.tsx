@@ -1,7 +1,7 @@
 // Module ID: 10314
 // Function ID: 10315
 // Name: BugReportUtils
-// Dependencies: [5, 3, 1256, 5219, 1232, 2]
+// Dependencies: [5, 3, 1254, 5219, 1230, 2]
 // Exports: getAttachments
 
 // Module 10314 (BugReportUtils)

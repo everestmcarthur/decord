@@ -1,10 +1,10 @@
-// Module ID: 16220
-// Function ID: 16221
+// Module ID: 16222
+// Function ID: 16223
 // Name: VoiceGuildTag
-// Dependencies: [19, 17, 1371, 8048, 21, 1150, 4636, 576, 504, 8282, 9313, 4632, 2]
+// Dependencies: [19, 17, 1371, 8048, 21, 1363, 4636, 576, 504, 8282, 9313, 4632, 2]
 // Exports: default
 
-// Module 16220 (VoiceGuildTag)
+// Module 16222 (VoiceGuildTag)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -22,7 +22,7 @@ if (PlatformUtils.isAndroid()) {
 const createStyles = fn(4636);
 let obj3 = { gapContainer: { height: num }, tagContainer: { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 }, tag: null };
 let num2 = 16;
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   num2 = 13;
 }

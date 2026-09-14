@@ -1,10 +1,10 @@
-// Module ID: 16228
-// Function ID: 16229
+// Module ID: 16230
+// Function ID: 16231
 // Name: RedesignGuildHeader
-// Dependencies: [19, 17, 4628, 4327, 10246, 1074, 21, 7976, 4571, 4488, 5063, 16229, 1982, 16199, 10247, 4338, 576, 5061, 11125, 4636, 4373, 4374, 5206, 16230, 1477, 504, 1484, 5055, 5059, 13994, 1396, 5668, 16273, 2]
+// Dependencies: [19, 17, 4628, 4327, 10246, 1074, 21, 7976, 4571, 4488, 5063, 16231, 1982, 16201, 10247, 4338, 576, 5061, 11126, 4636, 4373, 4374, 5206, 16232, 1477, 504, 1484, 5055, 5059, 13995, 1396, 5668, 16275, 2]
 // Exports: useRedesignGuildHeaderHeight
 
-// Module 16228 (RedesignGuildHeader)
+// Module 16230 (RedesignGuildHeader)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
@@ -18,11 +18,11 @@ import useFontScale from "useFontScale" /* 5063 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7976 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13994 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16199 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16229 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16230 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13995 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16201 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16231 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16232 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;

@@ -1,10 +1,10 @@
-// Module ID: 13556
-// Function ID: 13557
+// Module ID: 13557
+// Function ID: 13558
 // Name: PremiumPromotionCard
 // Dependencies: [19, 17, 4628, 1074, 1373, 21, 4636, 576, 504, 7265, 7525, 5668, 4632, 1114, 2024, 5056, 8785, 2]
 // Exports: default
 
-// Module 13556 (PremiumPromotionCard)
+// Module 13557 (PremiumPromotionCard)
 import nativeDefault from "native" /* 576 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
 import noop from "module_19" /* 19 */;

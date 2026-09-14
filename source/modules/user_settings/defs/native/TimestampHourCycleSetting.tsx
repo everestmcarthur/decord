@@ -1,16 +1,16 @@
-// Module ID: 15558
-// Function ID: 15559
+// Module ID: 15559
+// Function ID: 15560
 // Name: TimestampHourCycleSetting
-// Dependencies: [19, 8079, 1935, 1114, 1187, 11601, 4321, 2]
+// Dependencies: [19, 8079, 1935, 1114, 1185, 11602, 4321, 2]
 
-// Module 15558 (TimestampHourCycleSetting)
+// Module 15559 (TimestampHourCycleSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

@@ -1,10 +1,10 @@
-// Module ID: 16550
-// Function ID: 16551
+// Module ID: 16552
+// Function ID: 16553
 // Name: ICYMICustomScoresModal
-// Dependencies: [19, 21, 8017, 4636, 576, 7103, 7966, 1114, 11056, 16551, 16552, 2]
+// Dependencies: [19, 21, 8017, 4636, 576, 7103, 7966, 1114, 11057, 16553, 16554, 2]
 // Exports: default
 
-// Module 16550 (ICYMICustomScoresModal)
+// Module 16552 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,11 +48,11 @@ export default function ICYMICustomScoresModal() {
         const intl = closure_0(1114).intl;
         obj.title = intl.string(closure_0(1114).t.jVshKt);
         obj.headerLeft = closure_0(7966).getRenderModalCloseImage(navigation.navigation);
-        const merged = Object.assign(closure_1(11056)());
+        const merged = Object.assign(closure_1(11057)());
         return obj;
       },
       getComponent() {
-        return closure_0(16551).default;
+        return closure_0(16553).default;
       }
     }),
     closure_3(closure_5.Screen, {
@@ -62,7 +62,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return closure_0(16552).default;
+        return closure_0(16554).default;
       }
     })
   ];

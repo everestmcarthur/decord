@@ -1,10 +1,10 @@
-// Module ID: 13603
-// Function ID: 13604
+// Module ID: 13604
+// Function ID: 13605
 // Name: BoostingCountDownPill
-// Dependencies: [17, 21, 4636, 576, 4603, 13604, 1896, 1114, 4632, 2]
+// Dependencies: [17, 21, 4636, 576, 4603, 13605, 1896, 1114, 4632, 2]
 // Exports: default
 
-// Module 13603 (BoostingCountDownPill)
+// Module 13604 (BoostingCountDownPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -20,7 +20,7 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13604, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(13605, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

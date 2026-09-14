@@ -1,9 +1,9 @@
-// Module ID: 12766
-// Function ID: 12767
+// Module ID: 12767
+// Function ID: 12768
 // Name: PortalKeyboardInlineComponent
-// Dependencies: [19, 17, 4628, 4504, 1877, 6726, 1609, 5073, 4505, 4502, 4508, 11489, 2]
+// Dependencies: [19, 17, 4628, 4504, 1877, 6726, 1609, 5073, 4505, 4502, 4508, 11490, 2]
 
-// Module 12766 (PortalKeyboardInlineComponent)
+// Module 12767 (PortalKeyboardInlineComponent)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -61,8 +61,8 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
                 tmp.current = true;
                 const obj2 = messagesRef(4505);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11489).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(11489);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11490).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(11490);
               }
             }
           }

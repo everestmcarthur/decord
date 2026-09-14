@@ -1,14 +1,14 @@
 // Module ID: 8741
 // Function ID: 8742
 // Name: StageBlockedUsersActionSheet
-// Dependencies: [32, 19, 17, 4285, 5502, 5495, 21, 4636, 576, 504, 1114, 1178, 8742, 4632, 4603, 8743, 7226, 5056, 7253, 7175, 2]
+// Dependencies: [32, 19, 17, 4285, 5502, 5495, 21, 4636, 576, 504, 1114, 1176, 8742, 4632, 4603, 8743, 7226, 5056, 7253, 7175, 2]
 // Exports: default
 
 // Module 8741 (StageBlockedUsersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -46,7 +46,7 @@ function RestrictedUser(guildId) {
     const items3 = [tmp.iconContainer];
     obj6.style = items3;
     const obj7 = { style: tmp.icon, source: user(8742), color: user(576).unsafe_rawColors.WHITE };
-    obj6.children = tmp11(tmp2(1178).Icon, obj7);
+    obj6.children = tmp11(tmp2(1176).Icon, obj7);
     speaker = tmp11(tmp10, obj6);
   }
   items2[1] = speaker;

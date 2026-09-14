@@ -1,7 +1,7 @@
 // Module ID: 9279
 // Function ID: 9280
 // Name: SecureFramesUtils
-// Dependencies: [32, 5, 502, 1908, 4659, 4675, 1371, 9280, 9281, 1074, 2024, 9282, 9290, 9264, 9283, 1114, 4481, 4228, 1090, 38, 206, 1272, 1232, 4980, 4788, 2]
+// Dependencies: [32, 5, 502, 1908, 4659, 4675, 1371, 9280, 9281, 1074, 2024, 9282, 9290, 9264, 9283, 1114, 4481, 4228, 1090, 38, 206, 1270, 1230, 4980, 4788, 2]
 // Exports: addVerification, deletePersistentVerification, deleteUserPersistentVerifications, deleteVerification, ensureCurrentUserPublicKey, getSecureFramesHelpdeskArticle, getSecureFramesPersistentCodesHelpdeskArticle, getSecureFramesUserVerifiedTimestamp, getSecureFramesVerifiedDevicesHelpdeskArticle, getUserVerificationDeeplink, getUserVerificationFooterText, getUserVerifyStateText, isCurrentUserPublicKeyMatch, showSecureFramesKeyInconsistentAlert, validateSecureFramesKeyConsistent
 
 // Module 9279 (SecureFramesUtils)

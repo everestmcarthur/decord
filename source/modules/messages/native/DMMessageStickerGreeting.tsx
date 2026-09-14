@@ -1,15 +1,15 @@
-// Module ID: 12392
-// Function ID: 12393
+// Module ID: 12393
+// Function ID: 12394
 // Name: DMMessageStickerGreeting
-// Dependencies: [5, 32, 19, 17, 5583, 4857, 1371, 21, 4636, 576, 4455, 4338, 4486, 4335, 12393, 12394, 7559, 1114, 504, 1089, 4481, 12395, 10516, 4373, 4637, 1178, 10515, 5068, 5204, 10304, 4632, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 5583, 4857, 1371, 21, 4636, 576, 4455, 4338, 4486, 4335, 12394, 12395, 7559, 1114, 504, 1089, 4481, 12396, 10517, 4373, 4637, 1176, 10516, 5068, 5204, 10304, 4632, 5056, 2]
 // Exports: default
 
-// Module 12392 (DMMessageStickerGreeting)
+// Module 12393 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
-import StickersActionCreators from "StickersActionCreators" /* 10516 */;
+import StickersActionCreators from "StickersActionCreators" /* 10517 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -131,7 +131,7 @@ export default function DMMessageStickerGreeting(channel) {
                 dependencyMap(content);
               }
               const obj = closure_1(4335);
-              obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12393) });
+              obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12394) });
             }
             closure_128_0 = showErrorToast;
             tmp7 = stateFromStores;

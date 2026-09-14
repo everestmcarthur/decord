@@ -1,15 +1,15 @@
-// Module ID: 16287
-// Function ID: 16288
+// Module ID: 16289
+// Function ID: 16290
 // Name: UnclaimedGamesActionCreators
-// Dependencies: [5, 16288, 1074, 1272, 573, 504, 1090, 559, 2]
+// Dependencies: [5, 16290, 1074, 1270, 573, 504, 1090, 559, 2]
 // Exports: useHasUnclaimedGames, useUnclaimedGameIdsForGuild
 
-// Module 16287 (UnclaimedGamesActionCreators)
+// Module 16289 (UnclaimedGamesActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UnclaimedGamesStore from "UnclaimedGamesStore" /* 16288 */;
+import UnclaimedGamesStore from "UnclaimedGamesStore" /* 16290 */;
 
 require = fn;
 function fetchUnclaimedGames() {

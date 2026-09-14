@@ -1,12 +1,12 @@
 // Module ID: 8450
 // Function ID: 8451
 // Name: DeviceOrientation
-// Dependencies: [19, 17, 560, 1150, 1249, 4615, 8451, 2]
+// Dependencies: [19, 17, 560, 1363, 1247, 4615, 8451, 2]
 // Exports: getOrientation, getOrientationLock, handleOrientationChange, lockOrientation, restoreDefaultOrientation, unlockOrientation, useOrientation, useOrientationListener
 
 // Module 8450 (DeviceOrientation)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
 import get_ActivityIndicator_mod from "module_8451" /* 8451 */;
 
@@ -24,8 +24,8 @@ function handleOrientationChange(initialOrientation) {
     }
     if ("LANDSCAPE" === global) {
       if (!hasItem) {
-        tmp(1249).batchUpdates(() => obj3.setState({ orientation: constants.LANDSCAPE }));
-        const tmpResult = tmp(1249);
+        tmp(1247).batchUpdates(() => obj3.setState({ orientation: constants.LANDSCAPE }));
+        const tmpResult = tmp(1247);
       }
     }
     let tmp9 = "PORTRAIT" === global;
@@ -41,8 +41,8 @@ function handleOrientationChange(initialOrientation) {
       tmp9 = "LANDSCAPE" !== orientationLock;
     }
     if (tmp9) {
-      tmp(1249).batchUpdates(() => obj3.setState({ orientation: constants.PORTRAIT }));
-      const tmpResult4 = tmp(1249);
+      tmp(1247).batchUpdates(() => obj3.setState({ orientation: constants.PORTRAIT }));
+      const tmpResult4 = tmp(1247);
     }
   }
 }
@@ -57,7 +57,7 @@ function handleDeviceOrientationChange(LANDSCAPE) {
             tmp14(4615).getSystemVersionMajor() >= 16;
             const tmp14Result3 = tmp14(4615);
           }
-          tmp14Result = tmp14(1150);
+          tmp14Result = tmp14(1363);
         }
         obj13 = PlatformUtils;
         get_ActivityIndicator.ignoreAutoRotate(false);
@@ -76,7 +76,7 @@ function handleDeviceOrientationChange(LANDSCAPE) {
             tmp12(4615).getSystemVersionMajor() >= 16;
             const tmp12Result3 = tmp12(4615);
           }
-          tmp12Result = tmp12(1150);
+          tmp12Result = tmp12(1363);
         }
         obj12 = PlatformUtils;
         get_ActivityIndicator.ignoreAutoRotate(false);
@@ -106,17 +106,17 @@ function lockOrientationForiOS(PORTRAIT) {
     if ("LANDSCAPE" === PORTRAIT) {
       tmp6(8451).lockToLandscapeLeft();
       const tmp6Result = tmp6(8451);
-      tmp(1249).batchUpdates(() => {
+      tmp(1247).batchUpdates(() => {
         obj3.setState({ orientationLock: "LANDSCAPE" });
       });
-      const tmpResult3 = tmp(1249);
+      const tmpResult3 = tmp(1247);
     } else {
       tmp6(8451).lockToPortrait();
       const tmp6Result2 = tmp6(8451);
-      tmp(1249).batchUpdates(() => {
+      tmp(1247).batchUpdates(() => {
         obj3.setState({ orientationLock: "PORTRAIT" });
       });
-      const tmpResult4 = tmp(1249);
+      const tmpResult4 = tmp(1247);
     }
   }
 }
@@ -219,7 +219,7 @@ export const unlockOrientation = function unlockOrientation(unlockAfterRotatingT
     if (tmpResult.isIOS()) {
       const tmpResult3 = tmp(4615);
     }
-    tmpResult = tmp(1150);
+    tmpResult = tmp(1363);
   }
   obj = PlatformUtils;
   get_ActivityIndicator.ignoreAutoRotate(false);
@@ -274,7 +274,7 @@ export const restoreDefaultOrientation = function restoreDefaultOrientation() {
       tmp(4615).getSystemVersionMajor() >= 16;
       const tmpResult7 = tmp(4615);
     }
-    tmpResult6 = tmp(1150);
+    tmpResult6 = tmp(1363);
   }
   tmpResult5 = PlatformUtils;
   get_ActivityIndicator.ignoreAutoRotate(false);

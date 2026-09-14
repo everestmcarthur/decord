@@ -1,9 +1,9 @@
-// Module ID: 15335
-// Function ID: 15336
+// Module ID: 15336
+// Function ID: 15337
 // Name: StreamOutputVolumeSetting
-// Dependencies: [4658, 502, 1908, 8079, 504, 4691, 38, 9218, 10111, 11601, 1114, 2]
+// Dependencies: [4658, 502, 1908, 8079, 504, 4691, 38, 9218, 10111, 11602, 1114, 2]
 
-// Module 15335 (StreamOutputVolumeSetting)
+// Module 15336 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
@@ -15,7 +15,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;

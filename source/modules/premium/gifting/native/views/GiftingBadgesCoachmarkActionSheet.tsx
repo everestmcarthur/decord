@@ -1,10 +1,10 @@
-// Module ID: 17051
-// Function ID: 17052
+// Module ID: 17053
+// Function ID: 17054
 // Name: GiftingBadgesCoachmarkActionSheet
-// Dependencies: [19, 17, 8309, 1954, 21, 4636, 576, 4603, 4495, 7253, 10877, 4632, 1114, 2492, 5056, 10789, 7285, 17052, 11164, 504, 8301, 2]
+// Dependencies: [19, 17, 8309, 1954, 21, 4636, 576, 4603, 4495, 7253, 10878, 4632, 1114, 2492, 5056, 10790, 7285, 17054, 11165, 504, 8301, 2]
 // Exports: default
 
-// Module 17051 (GiftingBadgesCoachmarkActionSheet)
+// Module 17053 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2492 from "module_2492" /* 2492 */;
@@ -12,9 +12,9 @@ import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import BadgeId from "BadgeId" /* 8301 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10789 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10877 */;
-import _modDef17052 from "module_17052" /* 17052 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10790 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10878 */;
+import _modDef17054 from "module_17054" /* 17054 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
 
@@ -94,7 +94,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   let obj = { startExpanded: true, onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
-  const obj4 = { source: { uri: _modDef17052 }, style: tmp.newBadgeImage };
+  const obj4 = { source: { uri: _modDef17054 }, style: tmp.newBadgeImage };
   obj3.children = closure_8(closure_4, obj4);
   const items2 = [closure_8(closure_5, obj3), , ];
   const obj6 = { style: tmp.textContainer, children: null };
@@ -112,8 +112,8 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1114).intl;
   obj10.text = intl3.string(_modDef2492.DZnomS);
-  const obj5 = { uri: _modDef17052 };
-  obj10.icon = closure_8(markAsDismissed(11164).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  const obj5 = { uri: _modDef17054 };
+  obj10.icon = closure_8(markAsDismissed(11165).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
   obj9.children = closure_8(markAsDismissed(5056).Button, obj10);
   items2[2] = closure_8(closure_5, obj9);

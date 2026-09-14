@@ -1,10 +1,10 @@
-// Module ID: 13311
-// Function ID: 13312
+// Module ID: 13312
+// Function ID: 13313
 // Name: formatSharedClientThemeData
 // Dependencies: [17, 8156, 1114, 2626, 2]
 // Exports: formatSharedClientThemeData
 
-// Module 13311 (formatSharedClientThemeData)
+// Module 13312 (formatSharedClientThemeData)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
 import _modDef2626 from "module_2626" /* 2626 */;

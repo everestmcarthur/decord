@@ -1,14 +1,14 @@
-// Module ID: 10936
-// Function ID: 10937
+// Module ID: 10937
+// Function ID: 10938
 // Name: PaymentFlowStartedTriggerPoint
-// Dependencies: [4553, 1074, 10937, 1242, 2]
+// Dependencies: [4553, 1074, 10938, 1240, 2]
 // Exports: trackPaymentFlowStartedAnalyticsAndCTP
 
-// Module 10936 (PaymentFlowStartedTriggerPoint)
+// Module 10937 (PaymentFlowStartedTriggerPoint)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ExperimentConstants from "ExperimentConstants" /* 4553 */;
-import Helpers from "Helpers" /* 10937 */;
+import Helpers from "Helpers" /* 10938 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

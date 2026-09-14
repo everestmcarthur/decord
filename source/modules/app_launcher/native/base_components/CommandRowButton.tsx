@@ -1,10 +1,10 @@
-// Module ID: 12234
-// Function ID: 12235
+// Module ID: 12235
+// Function ID: 12236
 // Name: CommandRowButton
-// Dependencies: [5, 32, 19, 21, 12157, 9418, 12122, 7626, 5693, 5056, 1114, 4581, 2]
+// Dependencies: [5, 32, 19, 21, 12158, 9418, 12123, 7626, 5693, 5056, 1114, 4581, 2]
 // Exports: default, useCommandRowSend
 
-// Module 12234 (CommandRowButton)
+// Module 12235 (CommandRowButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -77,7 +77,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             c3 = 1;
             const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             const obj2 = tmp3(9418);
-            obj6.optionValues = tmp3(12122).parseOptionValuesForSend(commandContext.channel, command, {});
+            obj6.optionValues = tmp3(12123).parseOptionValuesForSend(commandContext.channel, command, {});
             obj6.context = commandContext;
             obj6.sectionName = sectionName;
             obj6.commandOrigin = tmp3(7626).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;

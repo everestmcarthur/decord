@@ -1,12 +1,12 @@
-// Module ID: 12378
-// Function ID: 12379
+// Module ID: 12379
+// Function ID: 12380
 // Name: PremiumAnimatedGiftButton
-// Dependencies: [19, 4628, 21, 4636, 576, 4338, 504, 1150, 4373, 5204, 5610, 2]
+// Dependencies: [19, 4628, 21, 4636, 576, 4338, 504, 1363, 4373, 5204, 5610, 2]
 // Exports: PremiumAnimatedGiftButton
 
-// Module 12378 (PremiumAnimatedGiftButton)
+// Module 12379 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 

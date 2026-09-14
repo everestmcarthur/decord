@@ -1,10 +1,10 @@
-// Module ID: 17893
-// Function ID: 17894
+// Module ID: 17894
+// Function ID: 17895
 // Name: GuildRoleSubscriptionTierTemplateSelectedActionSheet
-// Dependencies: [19, 17, 1954, 21, 4636, 576, 1611, 7253, 6728, 4632, 1114, 1178, 5057, 2]
+// Dependencies: [19, 17, 1954, 21, 4636, 576, 1611, 7253, 6728, 4632, 1114, 1176, 5057, 2]
 // Exports: default
 
-// Module 17893 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
+// Module 17894 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import noop from "module_19" /* 19 */;
@@ -37,12 +37,12 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1114).intl;
   obj4.children = intl.string(markAsDismissed(1114).t.Y0PTc0);
-  const items = [closure_5(markAsDismissed(4632).Text, obj4), closure_5(markAsDismissed(1178).Spacer, { size: 12 }), , , ];
+  const items = [closure_5(markAsDismissed(4632).Text, obj4), closure_5(markAsDismissed(1176).Spacer, { size: 12 }), , , ];
   const obj5 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = markAsDismissed(1114).intl;
   obj5.children = intl2.string(markAsDismissed(1114).t["YSI/1/"]);
   items[2] = closure_5(markAsDismissed(4632).Text, obj5);
-  items[3] = closure_5(markAsDismissed(1178).Spacer, { size: 48 });
+  items[3] = closure_5(markAsDismissed(1176).Spacer, { size: 48 });
   const obj6 = { text: null, pillStyle: null, onPress: null, grow: true };
   const intl3 = markAsDismissed(1114).intl;
   obj6.text = intl3.string(markAsDismissed(1114).t.MhldXX);

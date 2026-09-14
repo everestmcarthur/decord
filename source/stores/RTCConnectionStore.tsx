@@ -1,16 +1,16 @@
 // Module ID: 4659
 // Function ID: 4660
 // Name: RTCConnectionStore
-// Dependencies: [4653, 502, 4660, 1074, 4661, 3, 4663, 4690, 573, 13912, 1952, 4665, 5492, 13913, 504, 13915, 1242, 1896, 2]
+// Dependencies: [4653, 502, 4660, 1074, 4661, 3, 4663, 4690, 573, 13913, 1952, 4665, 5492, 13914, 504, 13916, 1240, 1896, 2]
 
 // Module 4659 (RTCConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
-import VoiceStateAnalyticsDefault from "VoiceStateAnalytics" /* 13912 */;
-import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13913 */;
-import trackVideoToggle from "trackVideoToggle" /* 13915 */;
+import VoiceStateAnalyticsDefault from "VoiceStateAnalytics" /* 13913 */;
+import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13914 */;
+import trackVideoToggle from "trackVideoToggle" /* 13916 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
@@ -930,7 +930,7 @@ let obj = {
   }
 };
 let tmp3 = new LoggerDefault("RTCConnectionStore");
-fn(1896)(1242, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
+fn(1896)(1240, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_rtc_state = state.getState();
   });

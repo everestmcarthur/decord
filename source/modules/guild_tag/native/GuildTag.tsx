@@ -1,7 +1,7 @@
 // Module ID: 9313
 // Function ID: 9314
 // Name: GuildTag
-// Dependencies: [19, 17, 1371, 8048, 21, 4636, 576, 1150, 1114, 4632, 5204, 504, 8282, 4603, 9314, 1896, 2]
+// Dependencies: [19, 17, 1371, 8048, 21, 4636, 576, 1363, 1114, 4632, 5204, 504, 8282, 4603, 9314, 1896, 2]
 
 // Module 9313 (GuildTag)
 import nativeDefault from "native" /* 576 */;
@@ -21,13 +21,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
 let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 let obj4 = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

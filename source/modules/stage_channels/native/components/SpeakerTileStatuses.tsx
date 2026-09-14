@@ -1,12 +1,12 @@
 // Module ID: 10179
 // Function ID: 10180
 // Name: SpeakerTileStatuses
-// Dependencies: [19, 17, 1908, 4655, 5502, 21, 4636, 576, 504, 10136, 9756, 9757, 1178, 10180, 10181, 7070, 2]
+// Dependencies: [19, 17, 1908, 4655, 5502, 21, 4636, 576, 504, 10136, 9756, 9757, 1176, 10180, 10181, 7070, 2]
 // Exports: BlockedStatus, IgnoredStatus
 
 // Module 10179 (SpeakerTileStatuses)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import _modDef7070 from "module_7070" /* 7070 */;
 import _modDef10181 from "module_10181" /* 10181 */;
 import noop from "module_19" /* 19 */;
@@ -69,8 +69,8 @@ const memoResult = noop.memo((userId) => {
     const obj3 = { style: null, children: null };
     const items4 = [tmp.voiceStatusWrapper, userId.style];
     obj3.style = items4;
-    const obj4 = { source: tmp5, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 };
-    obj3.children = jsx(tmp2(1178).Icon, { source: tmp5, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 });
+    const obj4 = { source: tmp5, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 };
+    obj3.children = jsx(tmp2(1176).Icon, { source: tmp5, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 });
     tmp9 = <View style={null}>{null}</View>;
   }
   return tmp9;
@@ -94,8 +94,8 @@ export const ModeratorStatus = noop.memo((userId) => {
     const obj2 = { style: null, children: null };
     const items2 = [tmp.moderatorStatusWrapper, userId.style];
     obj2.style = items2;
-    const obj3 = { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
-    obj2.children = jsx(tmp2(1178).Icon, { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK });
+    const obj3 = { source: tmp4, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
+    obj2.children = jsx(tmp2(1176).Icon, { source: tmp4, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK });
     tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;

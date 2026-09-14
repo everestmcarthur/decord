@@ -1,13 +1,13 @@
-// Module ID: 14707
-// Function ID: 14708
+// Module ID: 14708
+// Function ID: 14709
 // Name: CustomizeBadgesSheet
-// Dependencies: [19, 17, 8277, 1371, 8309, 1074, 7254, 1373, 21, 4636, 576, 4604, 8791, 14708, 8789, 1114, 7069, 4591, 5688, 11324, 8202, 11332, 7065, 4373, 4637, 4640, 13203, 8790, 6756, 4348, 11331, 1611, 504, 4294, 7265, 7285, 7255, 9522, 9492, 8308, 1242, 8314, 4335, 1477, 11125, 14709, 4632, 5658, 7253, 7252, 6728, 2]
+// Dependencies: [19, 17, 8277, 1371, 8309, 1074, 7254, 1373, 21, 4636, 576, 4604, 8791, 14709, 8789, 1114, 7069, 4591, 5688, 11325, 8202, 11333, 7065, 4373, 4637, 4640, 13204, 8790, 6756, 4348, 11332, 1611, 504, 4294, 7265, 7285, 7255, 9522, 9492, 8308, 1240, 8314, 4335, 1477, 11126, 14710, 4632, 5658, 7253, 7252, 6728, 2]
 // Exports: default
 
-// Module 14707 (CustomizeBadgesSheet)
+// Module 14708 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -23,11 +23,11 @@ import ContextMenu from "ContextMenu" /* 8789 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 8791 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11324 */;
-import BadgeUtils from "BadgeUtils" /* 11332 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13203 */;
-import BadgeGrid from "BadgeGrid" /* 14708 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11325 */;
+import BadgeUtils from "BadgeUtils" /* 11333 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13204 */;
+import BadgeGrid from "BadgeGrid" /* 14709 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -152,7 +152,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj9 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14708).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14708).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14709).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14709).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_24 = noop.memo((badge) => {
@@ -234,10 +234,10 @@ let closure_24 = noop.memo((badge) => {
           return tmp(React4, obj);
         } else {
           const intl2 = tmp6(1114).intl;
-          const tmp6Result = tmp6(11332);
+          const tmp6Result = tmp6(11333);
           const t2 = tmp6(1114).t;
-          intl2.string(tmp6(11332).isPinnedBadge(tmp9) ? t2.t3udZb : t2.nPQVxb);
-          const isPinnedBadgeResult = tmp6(11332).isPinnedBadge(tmp9);
+          intl2.string(tmp6(11333).isPinnedBadge(tmp9) ? t2.t3udZb : t2.nPQVxb);
+          const isPinnedBadgeResult = tmp6(11333).isPinnedBadge(tmp9);
         }
       }
       if (!alwaysVisible) {

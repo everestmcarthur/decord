@@ -1,10 +1,10 @@
-// Module ID: 12287
-// Function ID: 12288
+// Module ID: 12288
+// Function ID: 12289
 // Name: FileTypeFiltering
-// Dependencies: [32, 19, 2025, 1150, 1114, 504, 4980, 2]
+// Dependencies: [32, 19, 2025, 1363, 1114, 504, 4980, 2]
 // Exports: getFileTypeFiltering, useFileTypeFiltering, useFileTypesFormattedString
 
-// Module 12287 (FileTypeFiltering)
+// Module 12288 (FileTypeFiltering)
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import _slicedToArray from "module_32" /* 32 */;

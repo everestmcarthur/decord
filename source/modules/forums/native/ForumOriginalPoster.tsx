@@ -1,10 +1,10 @@
-// Module ID: 12002
-// Function ID: 12003
+// Module ID: 12003
+// Function ID: 12004
 // Name: ForumOriginalPoster
 // Dependencies: [19, 17, 21, 4636, 576, 5522, 4632, 1114, 2]
 // Exports: getForumOriginalPoster
 
-// Module 12002 (ForumOriginalPoster)
+// Module 12003 (ForumOriginalPoster)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

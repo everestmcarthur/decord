@@ -1,17 +1,17 @@
-// Module ID: 15988
-// Function ID: 15989
+// Module ID: 15990
+// Function ID: 15991
 // Name: ParentalControlsExplicitMediaFiltersFriendsDMsSetting
-// Dependencies: [7640, 8079, 14913, 7702, 14917, 1114, 14910, 1187, 11601, 2]
+// Dependencies: [7640, 8079, 14914, 7702, 14918, 1114, 14911, 1185, 11602, 2]
 
-// Module 15988 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
+// Module 15990 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
 import util from "util" /* 1114 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14917 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14918 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
@@ -35,7 +35,7 @@ const pressable = SettingBuilders.createPressable({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       const intl = selectedTeenId(1114).intl;
-      const obj = selectedTeenId(14917);
+      const obj = selectedTeenId(14918);
       const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl2 = selectedTeenId(1114).intl;
@@ -44,10 +44,10 @@ const pressable = SettingBuilders.createPressable({
         return FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, { explicitContentFriendDm });
       };
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
-      const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
+      const items = [selectedTeenId(1185).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(14910).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(14910);
+      const result = selectedTeenId(14911).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(14911);
     }
   },
   unsearchable: true

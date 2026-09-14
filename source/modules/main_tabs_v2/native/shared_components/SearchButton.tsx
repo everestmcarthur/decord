@@ -1,10 +1,10 @@
-// Module ID: 12499
-// Function ID: 12500
+// Module ID: 12500
+// Function ID: 12501
 // Name: SearchButton
 // Dependencies: [19, 17, 21, 4636, 576, 7154, 4632, 1114, 2]
 // Exports: SearchButtonContent
 
-// Module 12499 (SearchButton)
+// Module 12500 (SearchButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

@@ -1,10 +1,10 @@
-// Module ID: 12396
-// Function ID: 12397
+// Module ID: 12397
+// Function ID: 12398
 // Name: JumpToPresentButton
-// Dependencies: [19, 17, 9615, 5358, 4857, 21, 4636, 576, 1150, 4338, 504, 9811, 1114, 12397, 12398, 12399, 2]
+// Dependencies: [19, 17, 9615, 5358, 4857, 21, 4636, 576, 1363, 4338, 504, 9811, 1114, 12398, 12399, 12400, 2]
 // Exports: default
 
-// Module 12396 (JumpToPresentButton)
+// Module 12397 (JumpToPresentButton)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { container: { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING }, containerIOS: { bottom: "100%", pointerEvents: "box-none" } };
 let closure_10 = createStyles.createStyles(obj2);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_11 = PlatformUtils.isIOS() ? ((arg0) => {
   const obj = { marginBottom: null };
   const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
@@ -87,11 +87,11 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12398), onPress: channelId.onJumpToPresent };
-    let tmp12Result = tmp12(screenIndex(12397), obj6);
-    const tmp16 = screenIndex(12397);
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12399), onPress: channelId.onJumpToPresent };
+    let tmp12Result = tmp12(screenIndex(12398), obj6);
+    const tmp16 = screenIndex(12398);
   } else {
-    tmp12Result = tmp12(tmp3(12399).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = tmp12(tmp3(12400).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

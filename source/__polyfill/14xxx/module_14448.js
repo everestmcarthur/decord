@@ -1,19 +1,16 @@
 // Module ID: 14448
 // Function ID: 14449
-// Dependencies: [14400, 14407]
+// Dependencies: [14412, 14386]
 
 // Module 14448
-import _mod14400 from "module_14400" /* 14400 */;
-import _mod14407 from "module_14407" /* 14407 */;
+import _mod14386 from "module_14386" /* 14386 */;
+import all from "module_14412" /* 14412 */;
 
-let closure_2 = _mod14400("keys");
+let _moduleResult = all(_mod14386.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14386.WeakMap));
+  const obj = /native code/;
+}
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod14407(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _moduleResult;

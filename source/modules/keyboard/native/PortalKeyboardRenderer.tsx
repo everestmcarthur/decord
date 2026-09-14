@@ -1,13 +1,13 @@
-// Module ID: 16868
-// Function ID: 16869
+// Module ID: 16870
+// Function ID: 16871
 // Name: PortalKeyboardRenderer
-// Dependencies: [19, 1479, 21, 4347, 4504, 1609, 1150, 16869, 4505, 4495, 7324, 10218, 1481, 4508, 10450, 2]
+// Dependencies: [19, 1479, 21, 4347, 4504, 1609, 1363, 16871, 4505, 4495, 7324, 10218, 1481, 4508, 10451, 2]
 // Exports: PortalKeyboardRenderer
 
-// Module 16868 (PortalKeyboardRenderer)
+// Module 16870 (PortalKeyboardRenderer)
 import native from "native" /* 4347 */;
 import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 4505 */;
-import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16869 */;
+import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16871 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 
@@ -25,8 +25,8 @@ function transitionGroupRenderItem(arg0, item, state, cleanUp) {
     const tmpResult = tmp(4504);
   }
   if (isAndroidResult) {
-    isAndroidResult = tmp(1150).isAndroid();
-    const tmpResult2 = tmp(1150);
+    isAndroidResult = tmp(1363).isAndroid();
+    const tmpResult2 = tmp(1363);
   }
   let tmp5 = null;
   if (!isAndroidResult) {
@@ -123,7 +123,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     let tmp10Result = tmp10(tmp5(4508).PortalKeyboard, obj3);
   } else {
     const obj4 = { value: true, children: tmp11 };
-    tmp10Result = tmp10(tmp5(10450).PortalKeyboardInModalContext.Provider, obj4);
+    tmp10Result = tmp10(tmp5(10451).PortalKeyboardInModalContext.Provider, obj4);
   }
   return tmp10Result;
 };

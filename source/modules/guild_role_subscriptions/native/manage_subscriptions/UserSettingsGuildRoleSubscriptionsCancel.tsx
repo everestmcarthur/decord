@@ -1,30 +1,30 @@
-// Module ID: 15309
-// Function ID: 15310
+// Module ID: 15310
+// Function ID: 15311
 // Name: UserSettingsGuildRoleSubscriptionsCancel
-// Dependencies: [5, 32, 19, 17, 4300, 21, 4636, 576, 15310, 4228, 1114, 5665, 1178, 4632, 15300, 5668, 15318, 7265, 7285, 9496, 4981, 4960, 4334, 4316, 5056, 7082, 15306, 15295, 15319, 15320, 504, 2]
+// Dependencies: [5, 32, 19, 17, 4300, 21, 4636, 576, 15311, 4228, 1114, 5665, 1176, 4632, 15301, 5668, 15319, 7265, 7285, 9496, 4981, 4960, 4334, 4316, 5056, 7082, 15307, 15296, 15320, 15321, 504, 2]
 // Exports: default
 
-// Module 15309 (UserSettingsGuildRoleSubscriptionsCancel)
+// Module 15310 (UserSettingsGuildRoleSubscriptionsCancel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15295 */;
-import FormSeparatorDefault from "FormSeparator" /* 15300 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15306 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
-import _modDef15318 from "module_15318" /* 15318 */;
-import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 15320 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15296 */;
+import FormSeparatorDefault from "FormSeparator" /* 15301 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15307 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
+import _modDef15319 from "module_15319" /* 15319 */;
+import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 15321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 
-const FastAssetImageDefault = tmp5(15319);
+const FastAssetImageDefault = tmp5(15320);
 require = fn;
 function WhatYouLose(subscription) {
   ({ listingId, guild } = subscription);
@@ -61,7 +61,7 @@ function WhatYouLose(subscription) {
   const obj13 = { source: null, style: null };
   const formatToPlainStringResult = intl2.formatToPlainString(util.t.OVlNGT, { numEmojis: _slicedToArray(obj.useTierEmojiIds(listingId, guild.id), 1)[0].size, numChannels: _slicedToArray(obj2.useChannelBenefits(listingId), 1)[0].length, numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length });
   const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef15318;
+  obj13.source = _modDef15319;
   obj13.style = tmp.cactus;
   items2[6] = closure_1_10(FastImageDefault, obj13);
   obj7.children = items2;
@@ -125,7 +125,7 @@ function CancelSubscriptionButtonFooter(guild) {
             obj6.body = "You can resubscribe any time before " + tmp3(4228)(subscription.currentPeriodEnd).format(closure_1_12) + ".";
             const intl3 = guild(1114).intl;
             obj6.confirmText = intl3.string(guild(1114).t["3KZjFH"]);
-            obj6.confirmColor = guild(1178).ButtonColors.RED;
+            obj6.confirmColor = guild(1176).ButtonColors.RED;
             c4 = 1;
             c5 = 1;
             const obj10 = { value: obj15.confirm(obj6), done: false };
@@ -276,14 +276,14 @@ function Content(subscription) {
       const items = [closure_1_10(FastAssetImageDefault, obj5), ];
       const obj6 = { style: tmp4.body, children: null };
       const obj7 = { guild, listingId: listing.id, subscription };
-      const items1 = [closure_1_10(WhatYouLose, obj7), closure_1_10(tmp(1178).Spacer, { size: 24 }), , , ];
+      const items1 = [closure_1_10(WhatYouLose, obj7), closure_1_10(tmp(1176).Spacer, { size: 24 }), , , ];
       const obj8 = { variant: "text-sm/bold", color: "text-default", style: null, children: null };
       const items2 = [{ textTransform: "uppercase" }, typeConsolidationTextTransform];
       obj8.style = items2;
       const intl = tmp(1114).intl;
       obj8.children = intl.string(tmp(1114).t.xyvN8p);
       items1[2] = closure_1_10(tmp(4632).Text, obj8);
-      items1[3] = closure_1_10(tmp(1178).Spacer, { size: 16 });
+      items1[3] = closure_1_10(tmp(1176).Spacer, { size: 16 });
       const obj9 = { listingId: listing.id, guildId: guild.id };
       items1[4] = closure_1_10(GuildRoleSubscriptionCardAll.Content, obj9);
       obj6.children = items1;

@@ -1,16 +1,16 @@
-// Module ID: 11574
-// Function ID: 11575
+// Module ID: 11575
+// Function ID: 11576
 // Name: SubscriptionUtils
-// Dependencies: [32, 19, 4299, 1074, 1373, 38, 11575, 4294, 7360, 504, 11577, 4228, 2]
+// Dependencies: [32, 19, 4299, 1074, 1373, 38, 11576, 4294, 7360, 504, 11578, 4228, 2]
 // Exports: didBeginPurchaseFlowOnFractionalPremium, getOrFetchSubscriptionPlan, getSubscriptionPauseDurations, getSubscriptionPlans, getSubscriptionSKUs, subscriptionCanDowngrade, subscriptionCanSwitchImmediately, useGetOrFetchSubscriptionPlan
 
-// Module 11574 (SubscriptionUtils)
+// Module 11575 (SubscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
-import CheckoutError from "CheckoutError" /* 11575 */;
-import PauseDuration from "PauseDuration" /* 11577 */;
+import CheckoutError from "CheckoutError" /* 11576 */;
+import PauseDuration from "PauseDuration" /* 11578 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;

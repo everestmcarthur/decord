@@ -1,16 +1,16 @@
-// Module ID: 11636
-// Function ID: 11637
+// Module ID: 11637
+// Function ID: 11638
 // Name: AppStoreOverlayStatsCarousel
-// Dependencies: [19, 17, 21, 4636, 576, 11637, 1114, 11638, 4632, 1150, 6756, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 11638, 1114, 11639, 4632, 1363, 6756, 2]
 // Exports: default
 
-// Module 11636 (AppStoreOverlayStatsCarousel)
+// Module 11637 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11637 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11638 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11638 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = AppStoreOverlayStatCardUtils.formatAppStoreRatingValue(stat.rating, util.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      result1 = tmp9(11637).formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
-      const tmp9Result = tmp9(11637);
+      result1 = tmp9(11638).formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
+      const tmp9Result = tmp9(11638);
     }
     const appStoreStarFillAmounts = AppStoreOverlayStatCardUtils.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1114).intl;
@@ -107,7 +107,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     obj10.accessibilityHint = stringResult;
     obj10.children = tmp18Result;
     let tmp23Result2 = tmp23(React3, obj10);
-    tmp20Result = tmp20(1150);
+    tmp20Result = tmp20(1363);
   } else {
     const obj11 = { style: items, accessible: true, accessibilityRole: "text", accessibilityLabel, children: tmp18Result };
     tmp23Result2 = tmp23(hasOwnProperty, obj11);

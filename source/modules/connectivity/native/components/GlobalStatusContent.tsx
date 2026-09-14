@@ -1,7 +1,7 @@
 // Module ID: 9815
 // Function ID: 9816
 // Name: GlobalStatusContent
-// Dependencies: [19, 17, 1957, 1979, 4659, 4654, 9810, 1074, 21, 4636, 576, 9344, 504, 9713, 9808, 4488, 4571, 5207, 4494, 9596, 1150, 1611, 9611, 9816, 2]
+// Dependencies: [19, 17, 1957, 1979, 4659, 4654, 9810, 1074, 21, 4636, 576, 9344, 504, 9713, 9808, 4488, 4571, 5207, 4494, 9596, 1363, 1611, 9611, 9816, 2]
 // Exports: default
 
 // Module 9815 (GlobalStatusContent)
@@ -109,8 +109,8 @@ export default function ConnectivityGlobalStatusContent() {
     const tmp5Result5 = tmp5(4494);
   }
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(1150).isAndroid();
-    const tmp5Result6 = tmp5(1150);
+    isScreenLandscape = tmp5(1363).isAndroid();
+    const tmp5Result6 = tmp5(1363);
   }
   let num = 0;
   if (!isScreenLandscape) {

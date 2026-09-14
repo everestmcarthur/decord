@@ -1,21 +1,21 @@
-// Module ID: 15240
-// Function ID: 15241
+// Module ID: 15241
+// Function ID: 15242
 // Name: QuestBottomSheetProgressCard
-// Dependencies: [19, 17, 1371, 21, 4636, 576, 11616, 11629, 504, 11423, 7824, 1114, 4632, 5533, 5688, 15211, 11418, 15203, 11896, 15198, 5204, 8425, 5068, 5668, 15241, 8392, 2]
+// Dependencies: [19, 17, 1371, 21, 4636, 576, 11617, 11630, 504, 11424, 7824, 1114, 4632, 5533, 5688, 15212, 11419, 15204, 11897, 15199, 5204, 8425, 5068, 5668, 15242, 8392, 2]
 // Exports: QuestBottomSheetProgressCardInGameTask, QuestBottomSheetProgressCardPlayStreamTask, QuestBottomSheetProgressCardWatchTask
 
-// Module 15240 (QuestBottomSheetProgressCard)
+// Module 15241 (QuestBottomSheetProgressCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5533 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import Card from "Card" /* 5688 */;
-import AssetUtils from "AssetUtils" /* 11418 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15198 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15211 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 15241 */;
+import AssetUtils from "AssetUtils" /* 11419 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15199 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15212 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 15242 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -56,9 +56,9 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
   let defaultRewardName;
   c8 = undefined;
   const tmp = closure_9();
-  questTaskDetails = questTaskDetails(11616).useQuestTaskDetails(quest);
-  let obj = questTaskDetails(11616);
-  let isQuestProgressing = questTaskDetails(11616).useIsQuestProgressing(quest);
+  questTaskDetails = questTaskDetails(11617).useQuestTaskDetails(quest);
+  let obj = questTaskDetails(11617);
+  let isQuestProgressing = questTaskDetails(11617).useIsQuestProgressing(quest);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
@@ -72,18 +72,18 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
     claimedAt = userStatus2.claimedAt;
   }
   noop = tmp9;
-  let obj2 = questTaskDetails(11616);
-  const result = questTaskDetails(11629).supportedTaskPlatforms(quest);
+  let obj2 = questTaskDetails(11617);
+  const result = questTaskDetails(11630).supportedTaskPlatforms(quest);
   c4 = result;
-  const tmp2Result = questTaskDetails(11629);
-  questFormattedDate = questTaskDetails(11616).useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
+  const tmp2Result = questTaskDetails(11630);
+  questFormattedDate = questTaskDetails(11617).useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
   gameTitle = quest.config.messages.gameTitle;
-  const tmp2Result5 = questTaskDetails(11616);
+  const tmp2Result5 = questTaskDetails(11617);
   const items = [gameTitle];
   const stateFromStores = questTaskDetails(504).useStateFromStores(items, () => gameTitle.getCurrentUser());
   const tmp2Result6 = questTaskDetails(504);
-  defaultRewardName = questTaskDetails(11423).getDefaultRewardName(quest.config, stateFromStores);
-  const tmp2Result7 = questTaskDetails(11423);
+  defaultRewardName = questTaskDetails(11424).getDefaultRewardName(quest.config, stateFromStores);
+  const tmp2Result7 = questTaskDetails(11424);
   const isSponsoredPlayQuestResult = questTaskDetails(7824).isSponsoredPlayQuest(quest);
   c8 = isSponsoredPlayQuestResult;
   const items1 = [questTaskDetails, tmp7, null != claimedAt, gameTitle, defaultRewardName, isQuestProgressing, result, questFormattedDate, isSponsoredPlayQuestResult];
@@ -147,7 +147,7 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
     tmp7 = isQuestProgressing;
   }
   obj5.loading = !tmp7;
-  const items2 = [defaultRewardName(isQuestProgressing(15211), obj5), ];
+  const items2 = [defaultRewardName(isQuestProgressing(15212), obj5), ];
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj6 = { style: tmp.instructionsText, variant: "text-sm/semibold", color: "text-subtle", children: memo };
@@ -173,19 +173,19 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   quest = quest.quest;
   const tmp = closure_9();
   const items = [quest];
-  const questTaskDetails = quest(11616).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(11617).useQuestTaskDetails(quest);
   const memo = noop.useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.QUEST_BAR_HERO_VIDEO), items);
   const items1 = [quest];
   const memo1 = noop.useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items1);
   const items2 = [quest];
   const memo2 = noop.useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
-  const obj = quest(11616);
+  const obj = quest(11617);
   let isHeroVideoSupportedResult = null != memo;
-  const obj2 = quest(15203);
+  const obj2 = quest(15204);
   const obj3 = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   if (isHeroVideoSupportedResult) {
-    isHeroVideoSupportedResult = tmp2(11896).isHeroVideoSupported(memo.mimetype);
-    const tmp2Result = tmp2(11896);
+    isHeroVideoSupportedResult = tmp2(11897).isHeroVideoSupported(memo.mimetype);
+    const tmp2Result = tmp2(11897);
   }
   const userStatus = quest.userStatus;
   let completedAt;
@@ -197,7 +197,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   } else {
     YsCuyF = tmp2(1114).t["74KqrR"];
   }
-  const watchTaskPressHandler = quest(15203).useWatchTaskPressHandler({ questId: quest.id, sourceQuestContent: quest.sourceQuestContent });
+  const watchTaskPressHandler = quest(15204).useWatchTaskPressHandler({ questId: quest.id, sourceQuestContent: quest.sourceQuestContent });
   let tmp12 = watchTaskPressHandler;
   if (tmp2Result2.useIsQuestAccessSuspended()) {
     tmp12 = openQuestAccessSuspendedBottomSheetDefault;
@@ -245,7 +245,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   items5[1] = tmp15Result2;
   const obj14 = { style: tmp.playVideoIconWrapper, children: null };
   const items7 = [closure_7(QuestDockBlurredContentBackgroundDefault, { blurTheme: "light" }), ];
-  tmp2Result2 = quest(11616);
+  tmp2Result2 = quest(11617);
   items7[1] = closure_7(quest(8392).PlayIcon, { color: nativeDefault.colors.WHITE });
   obj14.children = items7;
   items5[2] = closure_8(closure_4, obj14);

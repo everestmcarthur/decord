@@ -1,23 +1,23 @@
-// Module ID: 16540
-// Function ID: 16541
+// Module ID: 16542
+// Function ID: 16543
 // Name: ForYouShowAllRow
-// Dependencies: [19, 17, 1074, 12828, 21, 4636, 10249, 576, 1150, 1483, 1242, 1178, 5063, 16535, 5204, 16536, 14265, 4632, 1114, 7245, 2]
+// Dependencies: [19, 17, 1074, 12829, 21, 4636, 10249, 576, 1363, 1483, 1240, 1176, 5063, 16537, 5204, 16538, 14266, 4632, 1114, 7245, 2]
 // Exports: ForYouSuggestedFriendShowAllRow
 
-// Module 16540 (ForYouShowAllRow)
+// Module 16542 (ForYouShowAllRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useFontScale from "useFontScale" /* 5063 */;
 import Pressables from "Pressables" /* 5204 */;
 import _modDef7245 from "module_7245" /* 7245 */;
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14265 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16535 */;
-import ChannelWrapper from "ChannelWrapper" /* 16536 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14266 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16537 */;
+import ChannelWrapper from "ChannelWrapper" /* 16538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Sections = fn(12828).Sections;
+const Sections = fn(12829).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4636);

@@ -1,16 +1,16 @@
-// Module ID: 14153
-// Function ID: 14154
+// Module ID: 14154
+// Function ID: 14155
 // Name: KeyboardLayoutMapUtils
-// Dependencies: [32, 5, 1347, 7607, 3, 1150, 14152, 510, 2]
+// Dependencies: [32, 5, 1345, 7607, 3, 1363, 14153, 510, 2]
 // Exports: __DEV_overrideLayoutMapKey, getKeyboardEventShapeFromAny, getKeyboardEventShapeFromKey, getKeyboardEventShapeFromKeycode, getLayoutMap, initializeKeyboardMapper, resetKeyboardMapper
 
-// Module 14153 (KeyboardLayoutMapUtils)
+// Module 14154 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 14152 */;
+import keyCodeDefault from "keyCode" /* 14153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1345 */;
 
 require = fn;
 function normalizeKey(toLocaleLowerCase) {
@@ -481,17 +481,17 @@ function getExactKeyboardEventMatchFromAny(key) {
 const KeyboardConstants = fn(7607);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (!PlatformUtils.isLinux()) {
   if (!obj2.isMac()) {
     if (!obj3.isWindows()) {
       WindowsKeyToCode = keyCodeDefault.codes;
     }
     MacosKeyToCode = WindowsKeyToCode;
-    obj3 = fn(1150);
+    obj3 = fn(1363);
   }
   LinuxKeyToCode = MacosKeyToCode;
-  obj2 = fn(1150);
+  obj2 = fn(1363);
 }
 function initializeKeyboardMapper() {
   if (null == promise) {

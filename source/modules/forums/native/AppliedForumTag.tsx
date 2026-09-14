@@ -1,16 +1,16 @@
-// Module ID: 10755
-// Function ID: 10756
+// Module ID: 10756
+// Function ID: 10757
 // Name: AppliedForumTag
-// Dependencies: [19, 17, 5540, 1374, 21, 4636, 576, 504, 10756, 1114, 7233, 1396, 4632, 2]
+// Dependencies: [19, 17, 5540, 1374, 21, 4636, 576, 504, 10757, 1114, 7233, 1396, 4632, 2]
 // Exports: AppliedForumTagPill
 
-// Module 10755 (AppliedForumTag)
+// Module 10756 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import EmojiDefault from "Emoji" /* 7233 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10756 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10757 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 13804
-// Function ID: 13805
+// Module ID: 13805
+// Function ID: 13806
 // Name: LocalPushNotificationStore
-// Dependencies: [1979, 5494, 13805, 1074, 9817, 4228, 1114, 504, 573, 2]
+// Dependencies: [1979, 5494, 13806, 1074, 9817, 4228, 1114, 504, 573, 2]
 
-// Module 13804 (LocalPushNotificationStore)
+// Module 13805 (LocalPushNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
@@ -13,7 +13,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5494 */;
 
 require = fn;
-const Constants = fn(13805);
+const Constants = fn(13806);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1074).VerificationLevels;
 const set = new Set();

@@ -1,10 +1,10 @@
-// Module ID: 13283
-// Function ID: 13284
+// Module ID: 13284
+// Function ID: 13285
 // Name: ProductDetailsActionSheetPurchaseSection
-// Dependencies: [32, 19, 17, 7660, 1076, 1074, 11218, 1373, 21, 4636, 576, 8202, 11164, 4603, 11141, 1114, 13281, 8994, 8967, 1483, 7265, 4839, 13284, 1896, 7644, 13288, 1077, 13289, 11211, 8962, 4632, 5057, 1889, 8295, 504, 11290, 4294, 7657, 7656, 8975, 11217, 13291, 13292, 1611, 5056, 13293, 2]
+// Dependencies: [32, 19, 17, 7660, 1076, 1074, 11219, 1373, 21, 4636, 576, 8202, 11165, 4603, 11142, 1114, 13282, 8994, 8967, 1483, 7265, 4839, 13285, 1896, 7644, 13289, 1077, 13290, 11212, 8962, 4632, 5057, 1889, 8295, 504, 11291, 4294, 7657, 7656, 8975, 11218, 13292, 13293, 1611, 5056, 13294, 2]
 // Exports: default
 
-// Module 13283 (ProductDetailsActionSheetPurchaseSection)
+// Module 13284 (ProductDetailsActionSheetPurchaseSection)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -13,7 +13,7 @@ import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import OrbsIcon from "OrbsIcon" /* 8962 */;
-import openGiftModal from "openGiftModal" /* 11141 */;
+import openGiftModal from "openGiftModal" /* 11142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
@@ -58,9 +58,9 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(13281).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(13282).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(13281);
+  let obj = balance(13282);
   let isPartiallyOwnedBundle = balance(8994).useProductDisableState(product.skuId).isDisabled;
   const obj2 = balance(8994);
   if (!isPartiallyOwnedBundle) {
@@ -75,7 +75,7 @@ function VCButton(balance) {
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13284, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13285, dependencyMap.paths), {
       skuId: product.skuId,
       analyticsLocations,
       onCheckoutSuccess(arg0) {
@@ -90,7 +90,7 @@ function VCButton(balance) {
               },
             orbBalancePriorToPurchase
           };
-          tmp4(4839).pushLazy(tmp(1896)(13288, tmp2.paths), obj3, modalKey);
+          tmp4(4839).pushLazy(tmp(1896)(13289, tmp2.paths), obj3, modalKey);
           const tmp4Result = tmp4(4839);
         } else {
           const ALL = tmp(1077).FractionalPremiumSKUsSets.ALL;
@@ -114,12 +114,12 @@ function VCButton(balance) {
               navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
               closure_2_1(4603).hideActionSheet();
             };
-            tmp4Result3.openLazy(tmp(1896)(13289, tmp2.paths), "FractionalNitroCollectedActionSheet", obj4);
-            const tmp10 = tmp(1896)(13289, tmp2.paths);
+            tmp4Result3.openLazy(tmp(1896)(13290, tmp2.paths), "FractionalNitroCollectedActionSheet", obj4);
+            const tmp10 = tmp(1896)(13290, tmp2.paths);
           } else {
             const obj5 = { product: tmp6, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
-            tmp4(11211).open(obj5);
-            const tmp4Result4 = tmp4(11211);
+            tmp4(11212).open(obj5);
+            const tmp4Result4 = tmp4(11212);
           }
         }
       }
@@ -203,7 +203,7 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1074);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(11218).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11219).RootNavigatorScreen;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

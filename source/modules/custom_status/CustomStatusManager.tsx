@@ -1,9 +1,9 @@
-// Module ID: 17450
-// Function ID: 17451
+// Module ID: 17452
+// Function ID: 17453
 // Name: CustomStatusManager
-// Dependencies: [5360, 1074, 1952, 7221, 1935, 10220, 1940, 1218, 10219, 2]
+// Dependencies: [5360, 1074, 1952, 7221, 1935, 10220, 1940, 1216, 10219, 2]
 
-// Module 17450 (CustomStatusManager)
+// Module 17452 (CustomStatusManager)
 import setUserStatusDefault from "setUserStatus" /* 10220 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

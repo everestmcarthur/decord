@@ -1,19 +1,19 @@
-// Module ID: 12470
-// Function ID: 12471
+// Module ID: 12471
+// Function ID: 12472
 // Name: SearchTokens
-// Dependencies: [32, 1957, 2012, 4285, 2011, 4482, 1371, 12471, 12472, 1074, 4228, 12, 1114, 4789, 4481, 12469, 12473, 5598, 5523, 9965, 12474, 12475, 2]
+// Dependencies: [32, 1957, 2012, 4285, 2011, 4482, 1371, 12472, 12473, 1074, 4228, 12, 1114, 4789, 4481, 12470, 12474, 5598, 5523, 9965, 12475, 12476, 2]
 // Exports: buildCrossDMSearchTokensConfig, getLocalizedAuthorTypeAnswer, getLocalizedHasAnswer, getRandomDateShortcut, isMeAutcompleteAnswer, isSearchFilterTokenType, isValidFilterAnswerForSubmit, rebuildSearchTokenConfigs
 
-// Module 12470 (SearchTokens)
+// Module 12471 (SearchTokens)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
-import SearchTokensUtils from "SearchTokensUtils" /* 12473 */;
-import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12474 */;
-import QueryTokenizer from "QueryTokenizer" /* 12475 */;
+import SearchTokensUtils from "SearchTokensUtils" /* 12474 */;
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12475 */;
+import QueryTokenizer from "QueryTokenizer" /* 12476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
@@ -21,8 +21,8 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import StreamerModeStore from "StreamerModeStore" /* 4482 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12471 */;
-import SearchRecentMessageStore from "SearchRecentMessageStore" /* 12472 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12472 */;
+import SearchRecentMessageStore from "SearchRecentMessageStore" /* 12473 */;
 
 require = fn;
 function getShortcuts() {
@@ -288,7 +288,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(12469);
+    obj2 = replaced(12470);
   }
   return flag;
 }
@@ -1083,7 +1083,7 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new QueryTokenizer.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      return tmp7(12473).validateForMapWithNegation("has", getHasMap(), token);
+      return tmp7(12474).validateForMapWithNegation("has", getHasMap(), token);
     } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
       const obj = {};
       const intl = tmp7(1114).intl;
@@ -1092,7 +1092,7 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
       obj[intl2.string(tmp7(1114).t.JL7sRS)] = "bot";
       const intl3 = tmp7(1114).intl;
       obj[intl3.string(tmp7(1114).t.WjkIKU)] = "webhook";
-      return tmp7(12473).validateForMapWithNegation("author_type", obj, token);
+      return tmp7(12474).validateForMapWithNegation("author_type", obj, token);
     } else if (tmp15.ANSWER_PINNED === tmp) {
       const match = token.getMatch(1);
       if ("true" === match) {

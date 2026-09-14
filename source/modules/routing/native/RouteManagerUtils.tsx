@@ -1,10 +1,10 @@
-// Module ID: 12911
-// Function ID: 12912
+// Module ID: 12912
+// Function ID: 12913
 // Name: RouteManagerUtils
-// Dependencies: [109, 9597, 1961, 1957, 4462, 2012, 2011, 1074, 9598, 3, 4476, 12912, 5492, 1100, 12917, 4839, 4843, 5601, 9811, 4494, 573, 4837, 4567, 12918, 2]
+// Dependencies: [109, 9597, 1961, 1957, 4462, 2012, 2011, 1074, 9598, 3, 4476, 12913, 5492, 1100, 12918, 4839, 4843, 5601, 9811, 4494, 573, 4837, 4567, 12919, 2]
 // Exports: cleanupRouteManager, extractParamsFromVoiceModalRoute, initializeRouteManagerIfNeeded, popVoiceRoute, transitionToVoiceRoute
 
-// Module 12911 (RouteManagerUtils)
+// Module 12912 (RouteManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
@@ -15,9 +15,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import MemoryRouter from "MemoryRouter" /* 12912 */;
-import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 12917 */;
-import RouteManagerDefault from "RouteManager" /* 12918 */;
+import MemoryRouter from "MemoryRouter" /* 12913 */;
+import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 12918 */;
+import RouteManagerDefault from "RouteManager" /* 12919 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 4462 */;
@@ -110,7 +110,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   }
 }
 function updateSelectedChannelListener(location) {
-  const matchPathResult = channel2(12912).matchPath(location.pathname, { path: items, strict: false, exact: false });
+  const matchPathResult = channel2(12913).matchPath(location.pathname, { path: items, strict: false, exact: false });
   let params;
   if (matchPathResult != null) {
     params = matchPathResult.params;
@@ -198,7 +198,7 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     obj8.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj9) + " ");
   }
-  const obj = channel2(12912);
+  const obj = channel2(12913);
   const obj2 = { path: items, strict: false, exact: false };
   const obj4 = { match: matchPathResult, location };
   obj8 = closure_15;

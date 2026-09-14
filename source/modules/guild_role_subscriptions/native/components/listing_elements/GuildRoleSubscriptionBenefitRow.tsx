@@ -1,13 +1,13 @@
-// Module ID: 15325
-// Function ID: 15326
+// Module ID: 15326
+// Function ID: 15327
 // Name: GuildRoleSubscriptionBenefitRow
-// Dependencies: [19, 17, 1957, 21, 4636, 4289, 15323, 1178, 4632, 504, 4789, 1114, 5109, 2]
+// Dependencies: [19, 17, 1957, 21, 4636, 4289, 15324, 1176, 4632, 504, 4789, 1114, 5109, 2]
 // Exports: ChannelBenefitRow, IntangibleBenefitRow
 
-// Module 15325 (GuildRoleSubscriptionBenefitRow)
-import native from "native" /* 1178 */;
+// Module 15326 (GuildRoleSubscriptionBenefitRow)
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import EmojiIconDefault from "EmojiIcon" /* 15323 */;
+import EmojiIconDefault from "EmojiIcon" /* 15324 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -53,8 +53,8 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   let tmp8 = closure_5(benefit(4632).Text, obj2);
   if (null != stateFromStores) {
     const obj3 = { style: tmp.channelTitle, children: null };
-    const obj4 = { style: tmp.channelIcon, size: tmp2(1178).Icon.Sizes.CUSTOM, source: tmp2(5109).getChannelIcon(stateFromStores) };
-    const items2 = [tmp7(tmp2(1178).Icon, obj4), ];
+    const obj4 = { style: tmp.channelIcon, size: tmp2(1176).Icon.Sizes.CUSTOM, source: tmp2(5109).getChannelIcon(stateFromStores) };
+    const items2 = [tmp7(tmp2(1176).Icon, obj4), ];
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
     items2[1] = tmp7(tmp2(4632).Text, obj5);
     obj3.children = items2;

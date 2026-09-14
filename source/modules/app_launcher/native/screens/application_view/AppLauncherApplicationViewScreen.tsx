@@ -1,12 +1,12 @@
-// Module ID: 12256
-// Function ID: 12257
+// Module ID: 12257
+// Function ID: 12258
 // Name: AppLauncherApplicationViewScreen
-// Dependencies: [19, 17, 9419, 1482, 5080, 21, 4636, 11348, 12257, 9418, 1609, 12258, 7271, 4373, 12259, 2]
+// Dependencies: [19, 17, 9419, 1482, 5080, 21, 4636, 11349, 12258, 9418, 1609, 12259, 7271, 4373, 12260, 2]
 // Exports: default
 
-// Module 12256 (AppLauncherApplicationViewScreen)
+// Module 12257 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import AppLauncherContext from "AppLauncherContext" /* 11348 */;
+import AppLauncherContext from "AppLauncherContext" /* 11349 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9419 */;
 

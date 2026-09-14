@@ -1,9 +1,9 @@
-// Module ID: 14874
-// Function ID: 14875
+// Module ID: 14875
+// Function ID: 14876
 // Name: TwoFASetupStyles
 // Dependencies: [1074, 4636, 5605, 576, 2]
 
-// Module 14874 (TwoFASetupStyles)
+// Module 14875 (TwoFASetupStyles)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import createStyles from "createStyles" /* 4636 */;

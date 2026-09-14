@@ -1,14 +1,14 @@
-// Module ID: 16718
-// Function ID: 16719
+// Module ID: 16720
+// Function ID: 16721
 // Name: FrameView
-// Dependencies: [32, 19, 9640, 9641, 1920, 21, 7266, 573, 9698, 16719, 9765, 16720, 16721, 9780, 504, 2]
+// Dependencies: [32, 19, 9640, 9641, 1920, 21, 7266, 573, 9698, 16721, 9765, 16722, 16723, 9780, 504, 2]
 // Exports: InlineFrameView
 
-// Module 16718 (FrameView)
+// Module 16720 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16719 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16721 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;

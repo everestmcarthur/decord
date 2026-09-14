@@ -1,9 +1,9 @@
-// Module ID: 17302
-// Function ID: 17303
+// Module ID: 17304
+// Function ID: 17305
 // Name: CircleWithCutout
 // Dependencies: [19, 17, 21, 9629, 8574, 2]
 
-// Module 17302 (CircleWithCutout)
+// Module 17304 (CircleWithCutout)
 import inlineStyles from "inlineStyles" /* 8574 */;
 import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9629 */;
 import noop from "module_19" /* 19 */;

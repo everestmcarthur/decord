@@ -1,10 +1,10 @@
-// Module ID: 10380
-// Function ID: 10381
+// Module ID: 10381
+// Function ID: 10382
 // Name: ForumComposerModal
-// Dependencies: [19, 17, 9814, 1957, 4977, 4976, 7380, 21, 4636, 576, 1874, 4981, 1114, 7879, 9436, 7265, 504, 10381, 10379, 1481, 1609, 11, 7869, 5711, 10382, 2]
+// Dependencies: [19, 17, 9814, 1957, 4977, 4976, 7380, 21, 4636, 576, 1874, 4981, 1114, 7879, 9436, 7265, 504, 10382, 10380, 1481, 1609, 11, 7869, 5711, 10383, 2]
 // Exports: default
 
-// Module 10380 (ForumComposerModal)
+// Module 10381 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -13,7 +13,7 @@ import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10379 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10380 */;
 import noop from "module_19" /* 19 */;
 import NativeMenuStore from "NativeMenuStore" /* 9814 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -41,8 +41,8 @@ export default function ForumComposerModal(parentChannelId) {
   function handleClose(arg0) {
     if (null != stateFromStores) {
       if (arg0) {
-        let result = tmp52(10379).closeCreateForumPostModal();
-        const tmp52Result = tmp52(10379);
+        let result = tmp52(10380).closeCreateForumPostModal();
+        const tmp52Result = tmp52(10380);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
         UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);

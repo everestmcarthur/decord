@@ -1,19 +1,19 @@
-// Module ID: 15601
-// Function ID: 15602
+// Module ID: 15602
+// Function ID: 15603
 // Name: ScreenDowntimeReminderSetting
-// Dependencies: [10210, 8079, 7696, 15000, 8768, 11601, 1114, 504, 15602, 2]
+// Dependencies: [10210, 8079, 7696, 15001, 8768, 11602, 1114, 504, 15603, 2]
 
-// Module 15601 (ScreenDowntimeReminderSetting)
+// Module 15602 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7696 */;
 import useUserLinks from "useUserLinks" /* 8768 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15000 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15602 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15001 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15603 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 10210 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -1,22 +1,22 @@
-// Module ID: 12258
-// Function ID: 12259
+// Module ID: 12259
+// Function ID: 12260
 // Name: AppDetailContent
-// Dependencies: [5, 19, 17, 9419, 1482, 1074, 5080, 21, 4636, 12259, 576, 12183, 5686, 11348, 12234, 7624, 9702, 1114, 1611, 9546, 1894, 12263, 9418, 7626, 12180, 1150, 12265, 4632, 12267, 12231, 12269, 9417, 1178, 12276, 12278, 4603, 4816, 9703, 2]
+// Dependencies: [5, 19, 17, 9419, 1482, 1074, 5080, 21, 4636, 12260, 576, 12184, 5686, 11349, 12235, 7624, 9702, 1114, 1611, 9546, 1894, 12264, 9418, 7626, 12181, 1363, 12266, 4632, 12268, 12232, 12270, 9417, 1176, 12277, 12279, 4603, 4816, 9703, 2]
 // Exports: default
 
-// Module 12258 (AppDetailContent)
+// Module 12259 (AppDetailContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import TableRow from "TableRow" /* 5686 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9418 */;
-import AppLauncherContext from "AppLauncherContext" /* 11348 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12180 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12183 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 12234 */;
+import AppLauncherContext from "AppLauncherContext" /* 11349 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12181 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12184 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 12235 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -209,8 +209,8 @@ let closure_12 = fn(5080).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(4636);
-let obj2 = { headerSpacer: { height: fn(12259).EXPANDED_HEADER_HEIGHT - fn(12259).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-let obj3 = { height: fn(12259).EXPANDED_HEADER_HEIGHT - fn(12259).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj2 = { headerSpacer: { height: fn(12260).EXPANDED_HEADER_HEIGHT - fn(12260).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(12260).EXPANDED_HEADER_HEIGHT - fn(12260).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
@@ -349,7 +349,7 @@ export default function AppDetailContent(context) {
     let tmp6 = null;
     if (result) {
       const obj2 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items = [map1(tmp(12265).BillIcon, { size: "sm", color: "icon-muted" }), ];
+      const items = [map1(tmp(12266).BillIcon, { size: "sm", color: "icon-muted" }), ];
       const obj3 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       const intl = tmp(1114).intl;
       obj3.children = intl.string(tmp(1114).t["5khEk8"]);
@@ -360,7 +360,7 @@ export default function AppDetailContent(context) {
     let tmp11 = null;
     if (isAndroidResult) {
       const obj4 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items1 = [map1(tmp(12267).ShopIcon, { size: "sm", color: "icon-muted" }), ];
+      const items1 = [map1(tmp(12268).ShopIcon, { size: "sm", color: "icon-muted" }), ];
       const obj5 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       const intl2 = tmp(1114).intl;
       obj5.children = intl2.string(tmp(1114).t["8z5B2U"]);

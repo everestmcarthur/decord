@@ -1,9 +1,9 @@
-// Module ID: 11935
-// Function ID: 11936
+// Module ID: 11936
+// Function ID: 11937
 // Name: AcceptGuildTemplateActionCreators
-// Dependencies: [5358, 1979, 1074, 573, 1272, 7445, 2]
+// Dependencies: [5358, 1979, 1074, 573, 1270, 7445, 2]
 
-// Module 11935 (AcceptGuildTemplateActionCreators)
+// Module 11936 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;

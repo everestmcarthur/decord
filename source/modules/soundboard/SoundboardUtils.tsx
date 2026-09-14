@@ -1,13 +1,13 @@
 // Module ID: 7447
 // Function ID: 7448
 // Name: SoundboardUtils
-// Dependencies: [5, 1221, 1961, 4275, 1371, 5093, 5095, 1074, 1219, 1935, 4294, 7448, 7441, 7449, 573, 7476, 7477, 7478, 563, 4481, 1943, 1940, 5101, 1242, 4816, 2]
+// Dependencies: [5, 1219, 1961, 4275, 1371, 5093, 5095, 1074, 1217, 1935, 4294, 7448, 7441, 7449, 573, 7476, 7477, 7478, 563, 4481, 1943, 1940, 5101, 1240, 4816, 2]
 // Exports: getAmplitudinalSoundboardVolume, hasSetAnyCustomJoinSound, maybePlayCustomJoinSound, playSound, removeCustomJoinSound, trackCustomCallSoundExternallyDeleted, trackSoundFavorited, updateCustomJoinSound, useSoundBoardDismissContentTypes
 
 // Module 7447 (SoundboardUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
@@ -17,7 +17,7 @@ import useMuteStates from "useMuteStates" /* 7448 */;
 import VoiceChannelEffectsActionCreators from "VoiceChannelEffectsActionCreators" /* 7449 */;
 import getCurrentVoiceChannelDefault from "getCurrentVoiceChannel" /* 7476 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;
@@ -206,7 +206,7 @@ const SoundboardConstants = fn(5095);
 ({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: c10 } = SoundboardConstants);
 const Constants = fn(1074);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
-const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 

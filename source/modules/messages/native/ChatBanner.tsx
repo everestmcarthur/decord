@@ -1,19 +1,19 @@
-// Module ID: 11553
-// Function ID: 11554
+// Module ID: 11554
+// Function ID: 11555
 // Name: ChatBanner
-// Dependencies: [19, 17, 5358, 4651, 11554, 1074, 21, 4636, 576, 11555, 11556, 504, 11, 1242, 4816, 7216, 4632, 1114, 5056, 7372, 7867, 5204, 7213, 8077, 2]
+// Dependencies: [19, 17, 5358, 4651, 11555, 1074, 21, 4636, 576, 11556, 11557, 504, 11, 1240, 4816, 7216, 4632, 1114, 5056, 7372, 7867, 5204, 7213, 8077, 2]
 // Exports: default
 
-// Module 11553 (ChatBanner)
+// Module 11554 (ChatBanner)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7216 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
-import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11555 */;
-import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11556 */;
+import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11556 */;
+import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11557 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
@@ -216,7 +216,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11554).ChatOverlays;
+const ChatOverlays = fn(11555).ChatOverlays;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticEvents: c10, AnalyticsSections: closure_11 } = Constants);
 const jsxProd = fn(21);

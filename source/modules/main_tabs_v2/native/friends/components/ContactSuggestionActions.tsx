@@ -1,15 +1,15 @@
-// Module ID: 16538
-// Function ID: 16539
+// Module ID: 16540
+// Function ID: 16541
 // Name: ContactSuggestionActions
-// Dependencies: [19, 17, 21, 4373, 4636, 576, 16139, 4637, 5055, 1178, 16539, 5056, 1114, 2]
+// Dependencies: [19, 17, 21, 4373, 4636, 576, 16141, 4637, 5055, 1176, 16541, 5056, 1114, 2]
 // Exports: ContactSuggestionActions
 
-// Module 16538 (ContactSuggestionActions)
+// Module 16540 (ContactSuggestionActions)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import spring from "spring" /* 5055 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16139 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16141 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

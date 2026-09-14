@@ -1,11 +1,11 @@
 // Module ID: 8513
 // Function ID: 8514
 // Name: useIsOnStartStageScreenStore
-// Dependencies: [19, 4275, 2011, 560, 1249, 504, 1965, 8514, 2]
+// Dependencies: [19, 4275, 2011, 560, 1247, 504, 1965, 8514, 2]
 // Exports: setIsOnStartStageScreen, useUpdateIsOnStartStageScreenEffect
 
 // Module 8513 (useIsOnStartStageScreenStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;

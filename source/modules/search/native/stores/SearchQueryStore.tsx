@@ -1,13 +1,13 @@
-// Module ID: 12468
-// Function ID: 12469
+// Module ID: 12469
+// Function ID: 12470
 // Name: SearchQueryStore
-// Dependencies: [1957, 4285, 1371, 7982, 7981, 1074, 4789, 1114, 12469, 12481, 1933, 504, 573, 2]
+// Dependencies: [1957, 4285, 1371, 7982, 7981, 1074, 4789, 1114, 12470, 12482, 1933, 504, 573, 2]
 
-// Module 12468 (SearchQueryStore)
+// Module 12469 (SearchQueryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
-import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 12481 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
+import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 12482 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -186,11 +186,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1114).intl;
       const stringResult = intl.string(obj(1114).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(12469).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(12470).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(12469);
+      const obj4 = obj(12470);
     }
     items = items1;
   }

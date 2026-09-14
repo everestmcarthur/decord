@@ -1,17 +1,17 @@
-// Module ID: 15388
-// Function ID: 15389
+// Module ID: 15389
+// Function ID: 15390
 // Name: LightModeThemeSetting
-// Dependencies: [1183, 1186, 8079, 1074, 504, 11601, 1114, 15389, 15390, 2]
+// Dependencies: [1181, 1184, 8079, 1074, 504, 11602, 1114, 15390, 15391, 2]
 
-// Module 15388 (LightModeThemeSetting)
+// Module 15389 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15389 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15390 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const SystemTheme = fn(1186).SystemTheme;
-const SettingBuilders = fn(11601);
+const SystemTheme = fn(1184).SystemTheme;
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

@@ -1,10 +1,10 @@
-// Module ID: 10533
-// Function ID: 10534
+// Module ID: 10534
+// Function ID: 10535
 // Name: StickerOptionsActionSheet
 // Dependencies: [19, 21, 7292, 4334, 4603, 7300, 5768, 5686, 4579, 1114, 2]
 // Exports: default
 
-// Module 10533 (StickerOptionsActionSheet)
+// Module 10534 (StickerOptionsActionSheet)
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;

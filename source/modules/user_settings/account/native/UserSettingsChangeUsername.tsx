@@ -1,10 +1,10 @@
-// Module ID: 14791
-// Function ID: 14792
+// Module ID: 14792
+// Function ID: 14793
 // Name: UserSettingsChangeUsername
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4636, 576, 4821, 14792, 4632, 1114, 1483, 504, 4294, 14793, 7093, 7087, 1272, 1484, 7966, 6707, 7101, 7039, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4636, 576, 4821, 14793, 4632, 1114, 1483, 504, 4294, 14794, 7093, 7087, 1270, 1484, 7966, 6707, 7101, 7039, 2]
 // Exports: default
 
-// Module 14791 (UserSettingsChangeUsername)
+// Module 14792 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -17,11 +17,11 @@ require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(4821).match(showHint.usernameStatus);
-  let obj = { type: showHint(14792).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14793).NameValidationState.ERROR, message: null };
   const P = showHint(4821).P;
   obj.message = P.select();
   const str = showHint(4821);
-  const obj2 = { type: showHint(14792).NameValidationState.AVAILABLE, message: null };
+  const obj2 = { type: showHint(14793).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(4821).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) => closure_1_11(showHint(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
@@ -144,7 +144,7 @@ export default function UserSettingsChangeUsername() {
         user.discriminator = tmp34;
         closure_129_0 = yield closure_2_2(7087).saveAccountChanges(user, { close: false });
         if (!closure_129_0.ok) {
-          const v6OrEarlierAPIError = new closure_0(1272).V6OrEarlierAPIError(closure_129_0);
+          const v6OrEarlierAPIError = new closure_0(1270).V6OrEarlierAPIError(closure_129_0);
           closure_129_1 = v6OrEarlierAPIError;
           const CommonActions = closure_0(1484).CommonActions;
           closure_0.dispatch(CommonActions.navigate(constants.ACCOUNT_CHANGE_USERNAME));

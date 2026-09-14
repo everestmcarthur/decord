@@ -1,13 +1,13 @@
 // Module ID: 4793
 // Function ID: 4794
 // Name: _guildRoomConnect
-// Dependencies: [5, 502, 4794, 1074, 4796, 1272, 4797, 573, 4815, 4826, 4834, 11, 4795, 4835, 4836, 2]
+// Dependencies: [5, 502, 4794, 1074, 4796, 1270, 4797, 573, 4815, 4826, 4834, 11, 4795, 4835, 4836, 2]
 // Exports: clearGuildRoomPendingPosition, createGuildRoomNote, deleteGuildRoomNote, fetchGuildRoom, guildRoomConnect, guildRoomDisconnect, guildRoomLocalDisconnect, guildRoomObjectUpdate, guildRoomToggleLayout, guildRoomUpdate, maybeSetGuildRoomVideoOverlay, placePendingGuildRoomNote, selectGuildRoomLocalPosition, setGuildRoomRememberVideoOverlayVisibility, setGuildRoomVideoOverlayVisibility, startPendingGuildRoomNote
 
 // Module 4793 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import GuildRoomTypes from "GuildRoomTypes" /* 4795 */;
 import GuildRoomSeats from "GuildRoomSeats" /* 4796 */;
 import GuildRoomAnalytics from "GuildRoomAnalytics" /* 4815 */;

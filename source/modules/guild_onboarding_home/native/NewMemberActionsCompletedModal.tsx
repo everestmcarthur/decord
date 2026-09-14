@@ -1,10 +1,10 @@
-// Module ID: 17484
-// Function ID: 17485
+// Module ID: 17486
+// Function ID: 17487
 // Name: NewMemberActionsCompletedModal
-// Dependencies: [19, 17, 21, 4636, 576, 4373, 4637, 4839, 12414, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4373, 4637, 4839, 12415, 4632, 1114, 2]
 // Exports: default
 
-// Module 17484 (NewMemberActionsCompletedModal)
+// Module 17486 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -48,7 +48,7 @@ export default function NewMemberActionsCompleted(arg0) {
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
-    const timerId = setTimeout(() => closure_1_1(4839).popWithKey(sharedValue(12414).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => closure_1_1(4839).popWithKey(sharedValue(12415).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };

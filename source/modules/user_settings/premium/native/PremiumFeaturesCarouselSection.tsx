@@ -1,21 +1,21 @@
-// Module ID: 13557
-// Function ID: 13558
+// Module ID: 13558
+// Function ID: 13559
 // Name: PremiumFeaturesCarouselSection
-// Dependencies: [32, 19, 17, 1074, 7535, 1373, 21, 576, 4636, 5068, 1093, 4632, 5668, 1114, 13558, 13559, 13560, 13561, 5043, 1608, 10885, 1178, 7265, 1477, 1242, 2]
+// Dependencies: [32, 19, 17, 1074, 7535, 1373, 21, 576, 4636, 5068, 1093, 4632, 5668, 1114, 13559, 13560, 13561, 13562, 5043, 1608, 10886, 1176, 7265, 1477, 1240, 2]
 // Exports: default
 
-// Module 13557 (PremiumFeaturesCarouselSection)
+// Module 13558 (PremiumFeaturesCarouselSection)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef13558 from "module_13558" /* 13558 */;
 import _modDef13559 from "module_13559" /* 13559 */;
 import _modDef13560 from "module_13560" /* 13560 */;
 import _modDef13561 from "module_13561" /* 13561 */;
+import _modDef13562 from "module_13562" /* 13562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -68,7 +68,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef13558;
+    obj.imageSrc = _modDef13559;
     obj.imageStyle = first.emojiImage;
     const items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -77,7 +77,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef13559;
+    obj2.imageSrc = _modDef13560;
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -86,7 +86,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef13560;
+    obj3.imageSrc = _modDef13561;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -94,7 +94,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef13561;
+    obj4.imageSrc = _modDef13562;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -142,11 +142,11 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7
       };
-      let tmp19 = closure_10(currentIndex(10885), obj3);
+      let tmp19 = closure_10(currentIndex(10886), obj3);
     }
     let items3 = [tmp19, ];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
-    items3[1] = tmp17(tmp2(1178).CarouselPagination, obj4);
+    items3[1] = tmp17(tmp2(1176).CarouselPagination, obj4);
     obj2.children = items3;
     return tmp15(tmp16, obj2);
   }

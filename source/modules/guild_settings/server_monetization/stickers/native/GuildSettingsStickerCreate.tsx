@@ -1,15 +1,15 @@
-// Module ID: 17693
-// Function ID: 17694
+// Module ID: 17694
+// Function ID: 17695
 // Name: GuildSettingsStickerCreate
-// Dependencies: [5, 32, 19, 17, 5540, 5583, 1074, 1374, 1938, 21, 4636, 576, 7084, 11280, 5679, 4289, 5219, 17694, 10516, 4975, 4632, 1114, 4533, 2024, 5056, 5054, 5204, 10304, 17695, 11255, 7233, 1396, 8883, 6707, 7188, 2]
+// Dependencies: [5, 32, 19, 17, 5540, 5583, 1074, 1374, 1938, 21, 4636, 576, 7084, 11281, 5679, 4289, 5219, 17695, 10517, 4975, 4632, 1114, 4533, 2024, 5056, 5054, 5204, 10304, 17696, 11256, 7233, 1396, 8883, 6707, 7188, 2]
 
-// Module 17693 (GuildSettingsStickerCreate)
+// Module 17694 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 576 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import useInitialValueDefault from "useInitialValue" /* 5679 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11280 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11281 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -475,7 +475,7 @@ export default noop.forwardRef((stickerId, ref) => {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(17695).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17696).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(5204).PressableHighlight, obj16);

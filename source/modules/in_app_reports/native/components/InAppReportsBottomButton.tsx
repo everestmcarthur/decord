@@ -1,7 +1,7 @@
 // Module ID: 9209
 // Function ID: 9210
 // Name: InAppReportsBottomButton
-// Dependencies: [19, 17, 1085, 21, 4636, 576, 1114, 2528, 4632, 5056, 1178, 2]
+// Dependencies: [19, 17, 1085, 21, 4636, 576, 1114, 2528, 4632, 5056, 1176, 2]
 // Exports: default
 
 // Module 9209 (InAppReportsBottomButton)
@@ -82,7 +82,7 @@ export default function InAppReportsBottomButton(button) {
       let tmp14Result2 = null;
       if (hasError) {
         const obj6 = { style: tmp.errorText, children: string2Result };
-        tmp14Result2 = tmp14(tmp17(1178).LegacyText, obj6);
+        tmp14Result2 = tmp14(tmp17(1176).LegacyText, obj6);
       }
       items1[2] = tmp14Result2;
       obj3.children = items1;

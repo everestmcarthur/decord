@@ -1,18 +1,18 @@
-// Module ID: 12700
-// Function ID: 12701
+// Module ID: 12701
+// Function ID: 12702
 // Name: GuildPowerupsPerkCard
-// Dependencies: [19, 17, 21, 4636, 576, 4571, 4488, 7083, 12697, 12652, 5068, 4632, 12653, 1178, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4571, 4488, 7083, 12698, 12653, 5068, 4632, 12654, 1176, 1114, 2]
 // Exports: default
 
-// Module 12700 (GuildPowerupsPerkCard)
+// Module 12701 (GuildPowerupsPerkCard)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4488 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12653 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12697 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12654 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12698 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,8 +56,8 @@ export default function GuildPowerupsPerkCard(arg0) {
       imageUrl = "";
     }
     const obj5 = { imageUrl, isAnimated: isImageAnimated };
-    riveComponent = React4(tmp3(12652), obj5);
-    const tmp3Result2 = tmp3(12652);
+    riveComponent = React4(tmp3(12653), obj5);
+    const tmp3Result2 = tmp3(12653);
   }
   const items1 = [riveComponent, React4(LinearGradientDefault, { colors: tmp9, style: tmp2.gradient })];
   obj4.children = items1;
@@ -95,7 +95,7 @@ export default function GuildPowerupsPerkCard(arg0) {
     const intl = tmp6(1114).intl;
     obj11.text = intl.string(tmp6(1114).t.y2b7CA);
     obj11.style = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1178).TextBadge, obj11);
+    tmp15Result = tmp15(tmp6(1176).TextBadge, obj11);
   }
   items2[2] = tmp15Result;
   let tmp15Result2 = "beta" === badge;
@@ -103,9 +103,9 @@ export default function GuildPowerupsPerkCard(arg0) {
     const obj12 = { text: null, color: null, style: null };
     const intl2 = tmp6(1114).intl;
     obj12.text = intl2.string(tmp6(1114).t.oW0eUd);
-    obj12.color = tmp6(1178).BadgeColors.BRAND;
+    obj12.color = tmp6(1176).BadgeColors.BRAND;
     obj12.style = tmp2.badge;
-    tmp15Result2 = tmp15(tmp6(1178).TextBadge, obj12);
+    tmp15Result2 = tmp15(tmp6(1176).TextBadge, obj12);
   }
   items2[3] = tmp15Result2;
   obj3.children = items2;

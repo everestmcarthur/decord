@@ -1,14 +1,14 @@
-// Module ID: 11975
-// Function ID: 11976
+// Module ID: 11976
+// Function ID: 11977
 // Name: TransferOwnershipModal
-// Dependencies: [5, 19, 11976, 21, 11974, 1250, 1114, 5705, 11977, 6705, 9192, 4334, 7103, 2]
+// Dependencies: [5, 19, 11977, 21, 11975, 1248, 1114, 5705, 11978, 6705, 9192, 4334, 7103, 2]
 // Exports: default
 
-// Module 11975 (TransferOwnershipModal)
+// Module 11976 (TransferOwnershipModal)
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11974 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11975 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(11976);
+const TransferOwnershipConstants = fn(11977);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -67,8 +67,8 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(11974).close();
-        const obj = toUser(11974);
+        toUser(11975).close();
+        const obj = toUser(11975);
         toUser(9192).close();
         const obj2 = toUser(9192);
         const result = closure_0(4334).showTransferOwnershipSuccess();

@@ -1,12 +1,12 @@
-// Module ID: 10501
-// Function ID: 10502
+// Module ID: 10502
+// Function ID: 10503
 // Name: GIFPickerSearchSuggestions
-// Dependencies: [19, 17, 10493, 21, 4636, 576, 504, 4632, 1114, 5056, 2]
+// Dependencies: [19, 17, 10494, 21, 4636, 576, 504, 4632, 1114, 5056, 2]
 
-// Module 10501 (GIFPickerSearchSuggestions)
+// Module 10502 (GIFPickerSearchSuggestions)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10493 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10494 */;
 
 const require = fn;
 const View = fn(17).View;

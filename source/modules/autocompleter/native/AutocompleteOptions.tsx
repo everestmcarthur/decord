@@ -1,14 +1,14 @@
-// Module ID: 10551
-// Function ID: 10552
+// Module ID: 10552
+// Function ID: 10553
 // Name: AutocompleteOptions
-// Dependencies: [7881, 7882, 5189, 5583, 1957, 2021, 1979, 1074, 5080, 5081, 10552, 1374, 12, 9541, 5523, 1935, 9971, 7437, 10553, 10516, 7440, 1396, 1114, 2]
+// Dependencies: [7881, 7882, 5189, 5583, 1957, 2021, 1979, 1074, 5080, 5081, 10553, 1374, 12, 9541, 5523, 1935, 9971, 7437, 10554, 10517, 7440, 1396, 1114, 2]
 // Exports: getAutocompleteOptions
 
-// Module 10551 (AutocompleteOptions)
+// Module 10552 (AutocompleteOptions)
 import util from "util" /* 1114 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
 import executeCommandDefault from "executeCommand" /* 9541 */;
-import StickersActionCreators from "StickersActionCreators" /* 10516 */;
+import StickersActionCreators from "StickersActionCreators" /* 10517 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7881 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7882 */;
 import GameAutocompleteStore from "GameAutocompleteStore" /* 5189 */;
@@ -23,7 +23,7 @@ const Constants = fn(1074);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
 const ChannelAutocompleteConstants = fn(5081);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10552).AutocompleteTypes;
+const AutocompleteTypes = fn(10553).AutocompleteTypes;
 const EmojiConstants = fn(1374);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;

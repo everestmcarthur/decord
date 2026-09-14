@@ -1,7 +1,7 @@
 // Module ID: 8011
 // Function ID: 8012
 // Name: ConversationsActionCreators
-// Dependencies: [5, 7698, 8012, 7700, 1074, 8009, 573, 1272, 7559, 8013, 4826, 4834, 2]
+// Dependencies: [5, 7698, 8012, 7700, 1074, 8009, 573, 1270, 7559, 8013, 4826, 4834, 2]
 // Exports: clearConversationSelection, fetchChannelConversations, setConversationFeedbackRating, setSelectedConversation, toggleConversationHighlighting, trackTopicalNavigationEntrypointImpression
 
 // Module 8011 (ConversationsActionCreators)
@@ -182,7 +182,7 @@ let closure_10 = async function _fetchConversationMessages(arg0, value) {
                 const obj7 = { type: "CONVERSATION_FETCH_START", channelId: tmp47, conversationId: tmp49, full: tmp18 };
                 DispatcherDefault.dispatch(obj7);
                 c8 = 1;
-                const HTTP = tmp51(1272).HTTP;
+                const HTTP = tmp51(1270).HTTP;
                 const request = { url: Endpoints.CHANNEL_CONVERSATION_MESSAGES(tmp47, tmp49), query: null, oldFormErrors: true, rejectWithError: true };
                 const obj8 = { limit: previewLimit, include_message_references: includeMessageReferences, include_reactions: includeReactions };
                 request.query = obj8;

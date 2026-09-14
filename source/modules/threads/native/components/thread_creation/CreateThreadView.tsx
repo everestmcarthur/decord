@@ -1,16 +1,16 @@
-// Module ID: 16724
-// Function ID: 16725
+// Module ID: 16726
+// Function ID: 16727
 // Name: CreateThreadView
-// Dependencies: [5, 32, 19, 17, 4977, 7789, 1074, 21, 4636, 576, 9434, 7879, 7265, 7285, 1611, 7084, 5206, 5154, 16725, 7303, 1114, 16727, 12112, 12087, 12771, 11491, 1484, 1242, 4816, 4519, 1100, 10383, 16726, 4502, 2]
+// Dependencies: [5, 32, 19, 17, 4977, 7789, 1074, 21, 4636, 576, 9434, 7879, 7265, 7285, 1611, 7084, 5206, 5154, 16727, 7303, 1114, 16729, 12113, 12088, 12772, 11492, 1484, 1240, 4816, 4519, 1100, 10384, 16728, 4502, 2]
 
-// Module 16724 (CreateThreadView)
+// Module 16726 (CreateThreadView)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Types from "Types" /* 4519 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
-import useCreateThreadViewPropsDefault from "useCreateThreadViewProps" /* 11491 */;
+import useCreateThreadViewPropsDefault from "useCreateThreadViewProps" /* 11492 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -76,7 +76,7 @@ function CreateThreadViewInner(screenIndex) {
   }
   obj4.location = str;
   obj4.onThreadCreated = callback;
-  const tmp12Result = parentChannel(10383)(obj4);
+  const tmp12Result = parentChannel(10384)(obj4);
   closure_129_6 = tmp12Result;
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     closure_0 = arg0;
@@ -117,8 +117,8 @@ function CreateThreadViewInner(screenIndex) {
                 current(null);
                 c5 = 1;
                 if (null == parentMessageId.parentMessageId) {
-                  current(closure_0(16726).makeEmptyTitleError());
-                  const obj8 = closure_0(16726);
+                  current(closure_0(16728).makeEmptyTitleError());
+                  const obj8 = closure_0(16728);
                   closure_0(4502).dismissKeyboard();
                   tmp60.current = false;
                   c5 = 0;
@@ -141,8 +141,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === constants.AUTOMOD_TITLE_BLOCKED) {
-                current(closure_0(16726).makeAutomodViolationError(closure_130_0.body, closure_0));
-                const obj5 = closure_0(16726);
+                current(closure_0(16728).makeAutomodViolationError(closure_130_0.body, closure_0));
+                const obj5 = closure_0(16728);
                 closure_0(4502).dismissKeyboard();
                 const obj6 = closure_0(4502);
               } else {
@@ -164,8 +164,8 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  current(closure_0(16726).makeApiNameRequiredError());
-                  const obj3 = closure_0(16726);
+                  current(closure_0(16728).makeApiNameRequiredError());
+                  const obj3 = closure_0(16728);
                   closure_0(4502).dismissKeyboard();
                   const obj4 = closure_0(4502);
                 }
@@ -212,7 +212,7 @@ function CreateThreadViewInner(screenIndex) {
     }
     return applyArgumentsResult;
   }, items2);
-  const tmp12 = parentChannel(10383);
+  const tmp12 = parentChannel(10384);
   const tmp11Result = parentChannel(7265);
   const tmp16 = parentChannel(1611)();
   const ref = noop.useRef(null);
@@ -229,7 +229,7 @@ function CreateThreadViewInner(screenIndex) {
   const isForumLikeChannelResult = parentChannel.isForumLikeChannel();
   let obj7 = { style: tmp.expander };
   const tmp20 = null != threadSettingsDraft.parentMessageId;
-  const items6 = [closure_13(closure_6, { style: tmp.threadIconContainer, children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }) }), closure_13(parentChannel(16725), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
+  const items6 = [closure_13(closure_6, { style: tmp.threadIconContainer, children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }) }), closure_13(parentChannel(16727), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
   let tmp22Result = null;
   if (!isForumLikeChannelResult) {
     tmp22Result = null;
@@ -265,7 +265,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj15 = { style: tmp.border };
     const items8 = [tmp22(tmp23, obj15), ];
     const obj16 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = tmp22(tmp2(16727).ThreadCreationStarterMessage, obj16);
+    items8[1] = tmp22(tmp2(16729).ThreadCreationStarterMessage, obj16);
     obj14.children = items8;
     tmp21Result = tmp21(tmp23, obj14);
   }
@@ -277,12 +277,12 @@ function CreateThreadViewInner(screenIndex) {
   if (parentChannel.rateLimitPerUser > 0) {
     const obj17 = { style: tmp.typingWrapper, children: null };
     const obj18 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj17.children = tmp22(tmp11(12112), obj18);
+    obj17.children = tmp22(tmp11(12113), obj18);
     tmp22Result2 = tmp22(tmp23, obj17);
   }
   items5[2] = tmp22Result2;
-  items5[3] = closure_13(parentChannel(12087), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
-  items5[4] = closure_13(parentChannel(12771), { channelId: parentChannel.id });
+  items5[3] = closure_13(parentChannel(12088), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
+  items5[4] = closure_13(parentChannel(12772), { channelId: parentChannel.id });
   obj6.children = items5;
   items3[1] = closure_14(closure_6, obj6);
   obj5.children = items3;

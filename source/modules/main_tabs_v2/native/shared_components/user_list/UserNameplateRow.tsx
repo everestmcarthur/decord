@@ -1,10 +1,10 @@
-// Module ID: 11039
-// Function ID: 11040
+// Module ID: 11040
+// Function ID: 11041
 // Name: UserNameplateRow
 // Dependencies: [32, 19, 21, 4636, 576, 5687, 4338, 5688, 8945, 5686, 5683, 2]
 // Exports: UserNameplateRow
 
-// Module 11039 (UserNameplateRow)
+// Module 11040 (UserNameplateRow)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import TableRow from "TableRow" /* 5686 */;

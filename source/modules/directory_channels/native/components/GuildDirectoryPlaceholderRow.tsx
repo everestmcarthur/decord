@@ -1,11 +1,11 @@
-// Module ID: 12465
-// Function ID: 12466
+// Module ID: 12466
+// Function ID: 12467
 // Name: GuildDirectoryPlaceholderRow
-// Dependencies: [19, 17, 21, 4636, 576, 5522, 12466, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5522, 12467, 2]
 
-// Module 12465 (GuildDirectoryPlaceholderRow)
+// Module 12466 (GuildDirectoryPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12466 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12467 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

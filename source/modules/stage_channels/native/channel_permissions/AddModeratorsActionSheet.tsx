@@ -1,10 +1,10 @@
-// Module ID: 16937
-// Function ID: 16938
+// Module ID: 16939
+// Function ID: 16940
 // Name: AddModeratorsActionSheet
 // Dependencies: [5, 32, 19, 17, 1979, 8519, 21, 4636, 576, 504, 4789, 5496, 1894, 9869, 4334, 4603, 7253, 7252, 1114, 5056, 9894, 1965, 2]
 // Exports: default
 
-// Module 16937 (AddModeratorsActionSheet)
+// Module 16939 (AddModeratorsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

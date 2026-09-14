@@ -1,19 +1,19 @@
-// Module ID: 16978
-// Function ID: 16979
+// Module ID: 16980
+// Function ID: 16981
 // Name: SearchNavigatorScreen
-// Dependencies: [19, 17, 21, 4636, 576, 16732, 4499, 16979, 5204, 1114, 5709, 5206, 16457, 16734, 16743, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 16734, 4499, 16981, 5204, 1114, 5709, 5206, 16459, 16736, 16745, 2]
 // Exports: default
 
-// Module 16978 (SearchNavigatorScreen)
+// Module 16980 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4499 */;
 import Pressables from "Pressables" /* 5204 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5709 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16734 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16743 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16979 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16736 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16745 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,10 +35,10 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(16732).useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(16734).useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  let obj = navigation(16732);
+  let obj = navigation(16734);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -60,7 +60,7 @@ export default function SearchNavigatorScreen(navigation) {
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj4.children = items3;
   obj3.children = closure_6(View, obj4);
-  items1[1] = closure_5(navigation(16457).NonCollapsableGestureDetector, obj3);
+  items1[1] = closure_5(navigation(16459).NonCollapsableGestureDetector, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 };

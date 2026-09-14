@@ -1,9 +1,9 @@
-// Module ID: 12013
-// Function ID: 12014
+// Module ID: 12014
+// Function ID: 12015
 // Name: AutomatedUnderageAppealModalActionCreators
-// Dependencies: [5, 8537, 8530, 21, 12011, 573, 4603, 12014, 1896, 8536, 8547, 8531, 8553, 8529, 4839, 8560, 8697, 2]
+// Dependencies: [5, 8537, 8530, 21, 12012, 573, 4603, 12015, 1896, 8536, 8547, 8531, 8553, 8529, 4839, 8560, 8697, 2]
 
-// Module 12013 (AutomatedUnderageAppealModalActionCreators)
+// Module 12014 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -18,7 +18,7 @@ const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12014, dependencyMap.paths), React4, { classificationId, onClose });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12015, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -88,8 +88,8 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(12011).resetAgeCheckStatus();
-                        obj = closure_2_0(12011);
+                        closure_2_0(12012).resetAgeCheckStatus();
+                        obj = closure_2_0(12012);
                         closure_2_1(573).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(573);
                         closure_2_1(573).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });

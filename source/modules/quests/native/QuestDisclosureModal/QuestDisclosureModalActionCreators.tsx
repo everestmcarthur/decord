@@ -1,14 +1,14 @@
-// Module ID: 15193
-// Function ID: 15194
+// Module ID: 15194
+// Function ID: 15195
 // Name: QuestDisclosureModalActionCreators
-// Dependencies: [5532, 7826, 15182, 11325, 11326, 11330, 7820, 4839, 15194, 1896, 2]
+// Dependencies: [5532, 7826, 15183, 11326, 11327, 11331, 7820, 4839, 15195, 1896, 2]
 
-// Module 15193 (QuestDisclosureModalActionCreators)
+// Module 15194 (QuestDisclosureModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11325 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15182 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15183 */;
 import size from "module_2" /* 2 */;
 
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
@@ -20,11 +20,11 @@ export default {
     const creativeAnalyticsParams = QuestDockCreativeContext.getCreativeAnalyticsParams(creative);
     const tmp2 = dependencyMap;
     if (obj2.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
-      const obj3 = { type: tmp(11330).AdUserActionType.CLICK_INTERNAL };
+      const obj3 = { type: tmp(11331).AdUserActionType.CLICK_INTERNAL };
       const merged = Object.assign(creativeAnalyticsParams);
       ({ ctaContent: obj8.questContentCTA, content: obj8.surfaceId, sourceQuestContent: obj8.sourceQuestContent, position: obj8.questContentPosition } = trackingCtx);
-      tmp(11326).captureAdUserAction(obj3);
-      const tmpResult = tmp(11326);
+      tmp(11327).captureAdUserAction(obj3);
+      const tmpResult = tmp(11327);
     } else if (creativeAnalyticsParams.adCreativeType === tmp(5532).AdCreativeType.QUEST) {
       const obj5 = { questId: creativeAnalyticsParams.adCreativeId, questContent: null, questContentCTA: null, questContentPosition: null, sourceQuestContent: null };
       ({ content: obj6.questContent, ctaContent: obj6.questContentCTA, position: obj6.questContentPosition, sourceQuestContent: obj6.sourceQuestContent } = trackingCtx);
@@ -62,7 +62,7 @@ export default {
     const obj12 = {};
     const merged1 = Object.assign(tmp11);
     obj12.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj9.pushLazy(asyncRequireImpl(15194, tmp2.paths), obj12, QUEST_DISCLOSURE_MODAL);
+    obj9.pushLazy(asyncRequireImpl(15195, tmp2.paths), obj12, QUEST_DISCLOSURE_MODAL);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(QUEST_DISCLOSURE_MODAL);

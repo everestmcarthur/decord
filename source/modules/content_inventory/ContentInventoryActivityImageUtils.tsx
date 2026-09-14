@@ -1,22 +1,22 @@
-// Module ID: 13129
-// Function ID: 13130
+// Module ID: 13130
+// Function ID: 13131
 // Name: ContentInventoryActivityImageUtils
-// Dependencies: [19, 4864, 1074, 1920, 8459, 8256, 1114, 13130, 7412, 11020, 1396, 13132, 5364, 13133, 7271, 504, 1242, 8462, 2]
+// Dependencies: [19, 4864, 1074, 1920, 8459, 8256, 1114, 13131, 7412, 11021, 1396, 13133, 5364, 13134, 7271, 504, 1240, 8462, 2]
 // Exports: getApplicationImage, useImageForActivity, useImageForContentEntry
 
-// Module 13129 (ContentInventoryActivityImageUtils)
+// Module 13130 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Constants2 from "Constants" /* 1920 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7271 */;
 import useGame from "useGame" /* 7412 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8459 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8462 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11020 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13130 */;
-import isOnXboxDefault from "isOnXbox" /* 13132 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11021 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13131 */;
+import isOnXboxDefault from "isOnXbox" /* 13133 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -28,7 +28,7 @@ function useComputedImagesForActivity(activity, activityApplication) {
     let obj11 = obj2;
   } else {
     if (obj17.isStageActivity(activity)) {
-      const result = tmp15(11020).unpackStageChannelParty(activity);
+      const result = tmp15(11021).unpackStageChannelParty(activity);
       let guildIconURL;
       if (null != result) {
         const obj3 = { id: result.guildId, icon: null, size: null };
@@ -50,7 +50,7 @@ function useComputedImagesForActivity(activity, activityApplication) {
       }
       const obj5 = { largeImage: tmp14, smallImage: "a" };
       obj11 = obj5;
-      const tmp15Result = tmp15(11020);
+      const tmp15Result = tmp15(11021);
     } else if (isOnXboxDefault(activity)) {
       const obj6 = { largeImage: null, smallImage: "a" };
       const obj7 = { src: tmp2(5364).get(constants2.XBOX).icon.customPNG, alt: null };
@@ -61,7 +61,7 @@ function useComputedImagesForActivity(activity, activityApplication) {
       const tmp2Result = tmp2(5364);
     } else {
       if (null == smallImage) {
-        if (tmp2(13133)(activity)) {
+        if (tmp2(13134)(activity)) {
           const obj8 = { largeImage: null, smallImage: "a" };
           const obj9 = { src: tmp2(5364).get(constants2.PLAYSTATION).icon.lightPNG, alt: null };
           const intl3 = tmp15(1114).intl;

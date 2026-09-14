@@ -1,9 +1,9 @@
-// Module ID: 18001
-// Function ID: 18002
+// Module ID: 18002
+// Function ID: 18003
 // Name: UserApplicationIdentityManager
 // Dependencies: [9153, 7221, 2]
 
-// Module 18001 (UserApplicationIdentityManager)
+// Module 18002 (UserApplicationIdentityManager)
 import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 9153 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 

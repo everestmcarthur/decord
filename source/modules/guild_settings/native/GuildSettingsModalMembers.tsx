@@ -1,16 +1,16 @@
-// Module ID: 16672
-// Function ID: 16673
+// Module ID: 16674
+// Function ID: 16675
 // Name: GuildSettingsModalMembers
-// Dependencies: [32, 19, 17, 502, 4556, 2021, 2015, 1979, 4275, 1371, 9193, 1074, 21, 9965, 4636, 576, 1483, 11078, 4788, 4481, 1114, 11073, 1611, 504, 7368, 9868, 8789, 16673, 7480, 9930, 5601, 9192, 11, 4348, 7153, 9003, 1178, 8348, 7143, 2]
+// Dependencies: [32, 19, 17, 502, 4556, 2021, 2015, 1979, 4275, 1371, 9193, 1074, 21, 9965, 4636, 576, 1483, 11079, 4788, 4481, 1114, 11074, 1611, 504, 7368, 9868, 8789, 16675, 7480, 9930, 5601, 9192, 11, 4348, 7153, 9003, 1176, 8348, 7143, 2]
 
-// Module 16672 (GuildSettingsModalMembers)
+// Module 16674 (GuildSettingsModalMembers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7368 */;
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
-import RolePillDefault from "RolePill" /* 11078 */;
+import RolePillDefault from "RolePill" /* 11079 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -94,7 +94,7 @@ let closure_20 = noop.memo((guild) => {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(11073), obj4);
+    return closure_15(guildMember(11074), obj4);
   }
   const obj = guild(1483);
 });

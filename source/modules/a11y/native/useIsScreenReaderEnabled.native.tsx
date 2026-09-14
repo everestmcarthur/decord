@@ -1,7 +1,7 @@
 // Module ID: 5043
 // Function ID: 5044
 // Name: useIsScreenReaderEnabled
-// Dependencies: [17, 510, 560, 1249, 2]
+// Dependencies: [17, 510, 560, 1247, 2]
 // Exports: addScreenReaderEnabledListener, getIsScreenReaderEnabled, useIsScreenReaderEnabled
 
 // Module 5043 (useIsScreenReaderEnabled)
@@ -20,7 +20,7 @@ let closure_5 = module_560.create((arg0) => {
   _require = arg0;
   function updateScreenReaderEnabled(event) {
     closure_0 = event;
-    closure_0(1249).batchUpdates(() => closure_0((screenReaderEnabled) => {
+    closure_0(1247).batchUpdates(() => closure_0((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== closure_1_0) {
         const Storage = closure_0(510).Storage;
@@ -34,7 +34,7 @@ let closure_5 = module_560.create((arg0) => {
   let result = AccessibilityInfo.isScreenReaderEnabled();
   result.then(updateScreenReaderEnabled).catch(() => {
     c0 = false;
-    closure_0(1249).batchUpdates(() => closure_0((screenReaderEnabled) => {
+    closure_0(1247).batchUpdates(() => closure_0((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== closure_1_0) {
         const Storage = closure_0(510).Storage;

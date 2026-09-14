@@ -1,11 +1,11 @@
 // Module ID: 8320
 // Function ID: 8321
 // Name: FramePreviewOverrideStore
-// Dependencies: [5, 17, 8321, 3, 8322, 1152, 8323, 8327, 560, 2]
+// Dependencies: [5, 17, 8321, 3, 8322, 1150, 8323, 8327, 560, 2]
 
 // Module 8320 (FramePreviewOverrideStore)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
+import NativeFileModuleDefault from "NativeFileModule" /* 1150 */;
 import FileManagerUtils from "FileManagerUtils" /* 8322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

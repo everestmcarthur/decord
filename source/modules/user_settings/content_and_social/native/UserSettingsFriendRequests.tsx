@@ -1,10 +1,10 @@
-// Module ID: 16888
-// Function ID: 16889
+// Module ID: 16890
+// Function ID: 16891
 // Name: UserSettingsFriendRequests
 // Dependencies: [19, 17, 1074, 21, 1935, 7098, 5768, 1114, 7303, 1384, 2]
 // Exports: default
 
-// Module 16888 (UserSettingsFriendRequests)
+// Module 16890 (UserSettingsFriendRequests)
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;

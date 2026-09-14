@@ -1,14 +1,14 @@
-// Module ID: 14904
-// Function ID: 14905
+// Module ID: 14905
+// Function ID: 14906
 // Name: FamilyCenterSettingsNotice
-// Dependencies: [19, 8517, 21, 8768, 14773, 2396, 7689, 4649, 2]
+// Dependencies: [19, 8517, 21, 8768, 14774, 2396, 7689, 4649, 2]
 // Exports: default
 
-// Module 14904 (FamilyCenterSettingsNotice)
+// Module 14905 (FamilyCenterSettingsNotice)
 import _modDef2396 from "module_2396" /* 2396 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import LayerActionCreators from "LayerActionCreators" /* 7689 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14773 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

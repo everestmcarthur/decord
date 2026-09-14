@@ -1,9 +1,9 @@
-// Module ID: 17241
-// Function ID: 17242
+// Module ID: 17243
+// Function ID: 17244
 // Name: VoicePanelCard
-// Dependencies: [32, 19, 17, 4658, 4659, 5500, 12402, 12400, 17197, 12405, 1074, 4657, 12403, 21, 4373, 4632, 5068, 1178, 4636, 576, 4778, 4688, 5670, 1114, 5056, 12401, 504, 9725, 4691, 13168, 9727, 9724, 17242, 9737, 8953, 8367, 4637, 5055, 7176, 5668, 4338, 17243, 11125, 9625, 4347, 7265, 17201, 17213, 17196, 17244, 17245, 8296, 6756, 17246, 12404, 17247, 17248, 17249, 17250, 17251, 17261, 2]
+// Dependencies: [32, 19, 17, 4658, 4659, 5500, 12403, 12401, 17199, 12406, 1074, 4657, 12404, 21, 4373, 4632, 5068, 1176, 4636, 576, 4778, 4688, 5670, 1114, 5056, 12402, 504, 9725, 4691, 13169, 9727, 9724, 17244, 9737, 8953, 8367, 4637, 5055, 7176, 5668, 4338, 17245, 11126, 9625, 4347, 7265, 17203, 17215, 17198, 17246, 17247, 8296, 6756, 17248, 12405, 17249, 17250, 17251, 17252, 17253, 17263, 2]
 
-// Module 17241 (VoicePanelCard)
+// Module 17243 (VoicePanelCard)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
@@ -13,10 +13,10 @@ import StreamActionCreators from "StreamActionCreators" /* 4778 */;
 import spring from "spring" /* 5055 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17196 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 17243 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 17244 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17198 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 17245 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 17246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
@@ -821,21 +821,21 @@ function AnimatedWrapper(children) {
   return windowDimensions(cleanUp(id[52]).GestureDetector, obj10);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17197).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12405).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17199).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12406).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const ParticipantTypes = fn(4657).ParticipantTypes;
-let SCALE_PHYSICS = fn(12403).SCALE_PHYSICS;
+let SCALE_PHYSICS = fn(12404).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4632).Text);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let tmp4 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XXLARGE];
+let tmp4 = fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.XXLARGE];
 let obj = {};
 let merged = Object.assign(SCALE_PHYSICS);
 obj.stiffness = 150;
@@ -1373,7 +1373,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp25 = closure_20;
     }
   }
-  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "call", layout: layoutTransition, layoutPhysics: physics };
+  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: layoutTransition, layoutPhysics: physics };
   tmp26Result = closure_20(closure_37, obj13);
   tmp25 = closure_20;
 });

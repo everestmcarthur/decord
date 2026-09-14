@@ -1,19 +1,19 @@
-// Module ID: 15928
-// Function ID: 15929
+// Module ID: 15930
+// Function ID: 15931
 // Name: useCollectiblesShopHeader
-// Dependencies: [19, 17, 1371, 1076, 1074, 5525, 8300, 21, 4636, 576, 12267, 4632, 1114, 504, 8976, 11617, 7644, 7285, 7236, 4603, 11235, 1896, 1242, 11896, 5528, 4839, 8296, 11224, 8202, 8900, 8789, 15929, 1483, 2]
+// Dependencies: [19, 17, 1371, 1076, 1074, 5525, 8300, 21, 4636, 576, 12268, 4632, 1114, 504, 8976, 11618, 7644, 7285, 7236, 4603, 11236, 1896, 1240, 11897, 5528, 4839, 8296, 11225, 8202, 8900, 8789, 15931, 1483, 2]
 // Exports: default
 
-// Module 15928 (useCollectiblesShopHeader)
+// Module 15930 (useCollectiblesShopHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import ShopIcon from "ShopIcon" /* 12267 */;
+import ShopIcon from "ShopIcon" /* 12268 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 

@@ -1,25 +1,25 @@
-// Module ID: 14531
-// Function ID: 14532
+// Module ID: 14532
+// Function ID: 14533
 // Name: NotificationTokenManager
-// Dependencies: [17, 1236, 12542, 13718, 502, 14532, 1074, 1898, 573, 9817, 14535, 14536, 1232, 1114, 2722, 1150, 14537, 1242, 12541, 2]
+// Dependencies: [17, 1234, 12543, 13719, 502, 14533, 1074, 1898, 573, 9817, 14536, 14537, 1230, 1114, 2722, 1363, 14538, 1240, 12542, 2]
 
-// Module 14531 (NotificationTokenManager)
+// Module 14532 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import _modDef2722 from "module_2722" /* 2722 */;
 import PushNotificationDefault from "PushNotification" /* 9817 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12541 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14532 */;
-import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14535 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14536 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14537 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13718 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12542 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14533 */;
+import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14536 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14537 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14538 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13719 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 import size from "module_2" /* 2 */;
@@ -263,8 +263,8 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
         });
         const propResult = prop();
         const obj2 = { disabled_channels: found.map((channelId) => channelId.channelId) };
-        tmp4(1242).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj2);
-        const tmp4Result = tmp4(1242);
+        tmp4(1240).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj2);
+        const tmp4Result = tmp4(1240);
       }
       tmp4 = importDefault;
     }

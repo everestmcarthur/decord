@@ -1,9 +1,9 @@
-// Module ID: 16388
-// Function ID: 16389
+// Module ID: 16390
+// Function ID: 16391
 // Name: GuildsBarGuildFolder
-// Dependencies: [19, 7738, 1979, 4458, 5519, 16380, 16385, 16377, 21, 4636, 576, 4338, 504, 5665, 5055, 4486, 1091, 7176, 4373, 4347, 5668, 5112, 16389, 16392, 12748, 16399, 4604, 5601, 5670, 16382, 16400, 2]
+// Dependencies: [19, 7738, 1979, 4458, 5519, 16382, 16387, 16379, 21, 4636, 576, 4338, 504, 5665, 5055, 4486, 1091, 7176, 4373, 4347, 5668, 5112, 16391, 16394, 12749, 16401, 4604, 5601, 5670, 16384, 16402, 2]
 
-// Module 16388 (GuildsBarGuildFolder)
+// Module 16390 (GuildsBarGuildFolder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
@@ -15,8 +15,8 @@ import spring from "spring" /* 5055 */;
 import _modDef5112 from "module_5112" /* 5112 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
-import ListUtils from "ListUtils" /* 12748 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16382 */;
+import ListUtils from "ListUtils" /* 12749 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16384 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7738 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -171,11 +171,11 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
   }
 }
 const GuildsNodeType = fn(5519).GuildsNodeType;
-const GuildsBarDnDStore = fn(16380);
+const GuildsBarDnDStore = fn(16382);
 ({ useItemDragState: closure_9, useFolderBGHeightOffset: c10 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(16385);
+let GuildsBarConstants = fn(16387);
 ({ DEFAULT_FOLDER_COLOR: closure_11, isDefaultFolderColor: closure_12, normalizeFolderColor: map1 } = GuildsBarConstants);
-GuildsBarConstants = fn(16377);
+GuildsBarConstants = fn(16379);
 ({ TRANSITION_PHYSICS: closure_14, FOLDER_SPRING_PHYSICS: closure_15 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);

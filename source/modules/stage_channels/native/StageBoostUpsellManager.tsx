@@ -1,9 +1,9 @@
-// Module ID: 17599
-// Function ID: 17600
+// Module ID: 17600
+// Function ID: 17601
 // Name: StageBoostUpsellManager
 // Dependencies: [4327, 1957, 4275, 2011, 5495, 7221, 4603, 5498, 9217, 1965, 5511, 1896, 2]
 
-// Module 17599 (StageBoostUpsellManager)
+// Module 17600 (StageBoostUpsellManager)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import StageMediaHooks from "StageMediaHooks" /* 5498 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;

@@ -1,17 +1,17 @@
-// Module ID: 11530
-// Function ID: 11531
+// Module ID: 11531
+// Function ID: 11532
 // Name: InappropriateConversationUtils
-// Dependencies: [1221, 1371, 11046, 11503, 2]
+// Dependencies: [1219, 1371, 11047, 11504, 2]
 // Exports: getInappropriateConversationTakeoverForChannel, getSafetyAlertsSettingOrDefault, shouldShowInappropriateConversationTakeoverForChannelRecord, shouldShowTakeoverForWarnings
 
-// Module 11530 (InappropriateConversationUtils)
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+// Module 11531 (InappropriateConversationUtils)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import UserStore from "UserStore" /* 1371 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11046 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11047 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
 

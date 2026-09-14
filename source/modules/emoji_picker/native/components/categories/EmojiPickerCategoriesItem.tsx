@@ -1,9 +1,9 @@
-// Module ID: 10476
-// Function ID: 10477
+// Module ID: 10477
+// Function ID: 10478
 // Name: EmojiPickerCategoriesItem
-// Dependencies: [32, 19, 17, 5544, 1074, 21, 4636, 576, 4373, 4637, 4640, 5204, 5665, 10477, 5176, 2]
+// Dependencies: [32, 19, 17, 5544, 1074, 21, 4636, 576, 4373, 4637, 4640, 5204, 5665, 10478, 5176, 2]
 
-// Module 10476 (EmojiPickerCategoriesItem)
+// Module 10477 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;

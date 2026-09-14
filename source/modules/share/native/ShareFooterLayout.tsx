@@ -1,10 +1,10 @@
-// Module ID: 11822
-// Function ID: 11823
+// Module ID: 11823
+// Function ID: 11824
 // Name: ShareFooterLayout
 // Dependencies: [19, 17, 21, 4636, 576, 7084, 4373, 5055, 5059, 4632, 2]
 // Exports: default
 
-// Module 11822 (ShareFooterLayout)
+// Module 11823 (ShareFooterLayout)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;

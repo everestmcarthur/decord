@@ -1,12 +1,12 @@
-// Module ID: 12030
-// Function ID: 12031
+// Module ID: 12031
+// Function ID: 12032
 // Name: AppealIngestionExternalLink
-// Dependencies: [19, 17, 21, 4636, 576, 5204, 4331, 4632, 1178, 8762, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5204, 4331, 4632, 1176, 8762, 2]
 // Exports: default
 
-// Module 12030 (AppealIngestionExternalLink)
+// Module 12031 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;

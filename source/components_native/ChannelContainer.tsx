@@ -1,7 +1,7 @@
 // Module ID: 10206
 // Function ID: 10207
 // Name: ChannelContainer
-// Dependencies: [19, 17, 4276, 1957, 2011, 1074, 1954, 21, 4636, 4497, 10207, 504, 9713, 8390, 4457, 1943, 11456, 11457, 9825, 2]
+// Dependencies: [19, 17, 4276, 1957, 2011, 1074, 1954, 21, 4636, 4497, 10207, 504, 9713, 8390, 4457, 1943, 11457, 11458, 9825, 2]
 // Exports: ChannelContainer
 
 // Module 10206 (ChannelContainer)
@@ -10,7 +10,7 @@ import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import useChatLayoutDefault from "useChatLayout" /* 4497 */;
 import common_NotificationsDefault from "common/Notifications" /* 10207 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 11456 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11457 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -108,7 +108,7 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(tmp4(11457), obj4);
+      tmp15 = closure_10(tmp4(11458), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];

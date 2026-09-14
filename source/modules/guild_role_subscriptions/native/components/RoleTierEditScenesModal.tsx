@@ -1,10 +1,10 @@
-// Module ID: 17858
-// Function ID: 17859
+// Module ID: 17859
+// Function ID: 17860
 // Name: RoleTierEditScenesModal
-// Dependencies: [32, 19, 17845, 15288, 21, 4636, 38, 7480, 7095, 1114, 17859, 17844, 17860, 17880, 17883, 17885, 1611, 4839, 5679, 7103, 17887, 2]
+// Dependencies: [32, 19, 17846, 15289, 21, 4636, 38, 7480, 7095, 1114, 17860, 17845, 17861, 17881, 17884, 17886, 1611, 4839, 5679, 7103, 17888, 2]
 // Exports: default
 
-// Module 17858 (RoleTierEditScenesModal)
+// Module 17859 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -25,9 +25,9 @@ function orderify(scene, arg1) {
   }
   return obj2;
 }
-const RoleTierEditStore = fn(17845);
+const RoleTierEditStore = fn(17846);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-let closure_7 = fn(15288).GuildRoleSubscriptionsTierScenes;
+let closure_7 = fn(15289).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);

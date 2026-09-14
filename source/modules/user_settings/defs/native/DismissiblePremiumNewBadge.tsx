@@ -1,16 +1,16 @@
-// Module ID: 14804
-// Function ID: 14805
+// Module ID: 14805
+// Function ID: 14806
 // Name: DismissiblePremiumNewBadge
-// Dependencies: [19, 7535, 21, 4636, 576, 10753, 1150, 1178, 5068, 1093, 2]
+// Dependencies: [19, 7535, 21, 4636, 576, 10754, 1363, 1176, 5068, 1093, 2]
 // Exports: default
 
-// Module 14804 (DismissiblePremiumNewBadge)
+// Module 14805 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10753 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

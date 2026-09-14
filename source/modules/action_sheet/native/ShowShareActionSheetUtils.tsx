@@ -1,12 +1,12 @@
 // Module ID: 8481
 // Function ID: 8482
 // Name: ShowShareActionSheetUtils
-// Dependencies: [1074, 8482, 1242, 8483, 1365, 1150, 5649, 2]
+// Dependencies: [1074, 8482, 1240, 8483, 1365, 1363, 5649, 2]
 // Exports: getMediaShareParams, resolveShareFileExtension, trackAppClickInNativeShareSheet
 
 // Module 8481 (ShowShareActionSheetUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import FileExtensionUtils from "FileExtensionUtils" /* 5649 */;
 import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8482 */;
@@ -55,7 +55,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj5.mediaStagingOptions = tmp6;
             return obj5;
           }
-          tmpResult = tmp(1150);
+          tmpResult = tmp(1363);
         } else {
           const obj7 = { mediaFallbackUrl: source.shareURI };
           return obj7;

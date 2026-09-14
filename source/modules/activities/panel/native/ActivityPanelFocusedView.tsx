@@ -1,16 +1,16 @@
-// Module ID: 17132
-// Function ID: 17133
+// Module ID: 17134
+// Function ID: 17135
 // Name: ActivityPanelFocusedView
-// Dependencies: [19, 17, 4628, 1957, 1956, 1920, 9635, 17127, 1074, 12402, 21, 4636, 576, 1611, 504, 1477, 17122, 16801, 4373, 4347, 4637, 5055, 5040, 4265, 17124, 17133, 9634, 9765, 2]
+// Dependencies: [19, 17, 4628, 1957, 1956, 1920, 9635, 17129, 1074, 12403, 21, 4636, 576, 1611, 504, 1477, 17124, 16803, 4373, 4347, 4637, 5055, 5040, 4265, 17126, 17135, 9634, 9765, 2]
 // Exports: useBaseActivityPanelFocusedView
 
-// Module 17132 (ActivityPanelFocusedView)
+// Module 17134 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9765 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17124 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17126 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -227,10 +227,10 @@ class BaseActivityPanelFocusedView {
 const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
 const ActivityPanelConstants = fn(9635);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17127);
+const ActivityPanelNativeConstants = fn(17129);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(12402).IS_IOS;
+const IS_IOS = fn(12403).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };

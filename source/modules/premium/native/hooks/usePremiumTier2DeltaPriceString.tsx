@@ -1,10 +1,10 @@
-// Module ID: 13636
-// Function ID: 13637
+// Module ID: 13637
+// Function ID: 13638
 // Name: usePremiumTier2DeltaPriceString
-// Dependencies: [19, 7527, 7340, 1373, 7512, 7343, 1150, 7337, 4309, 504, 2]
+// Dependencies: [19, 7527, 7340, 1373, 7512, 7343, 1363, 7337, 4309, 504, 2]
 // Exports: usePremiumTier2DeltaPriceString
 
-// Module 13636 (usePremiumTier2DeltaPriceString)
+// Module 13637 (usePremiumTier2DeltaPriceString)
 import BillingUtils from "BillingUtils" /* 4309 */;
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7512 */;
 import noop from "module_19" /* 19 */;
@@ -83,7 +83,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
     if (!tmp7) {
       if (null != currencyCode) {
         if (null != stateFromStores) {
-          const platformName = tmp4(1150).getPlatformName();
+          const platformName = tmp4(1363).getPlatformName();
           if (currencyCode.currencyCode !== stateFromStores.currencyCode) {
             let obj3 = { priceString: null, failure: null };
             const obj4 = { kind: "currency_mismatch", platform: platformName, productId: plan.productId, currencyCode: currencyCode.currencyCode };
@@ -98,7 +98,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
                   result = diff / 100;
                 }
                 const obj5 = { priceString: null, failure: null };
-                tmp4Result7 = tmp4(1150);
+                tmp4Result7 = tmp4(1363);
                 obj5.priceString = tmp4(7337).formatPrice(result, currencyCode.currencyCode, { convertToMajorUnits: false });
                 obj6 = obj5;
                 const tmp4Result8 = tmp4(7337);
@@ -108,7 +108,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
             const obj7 = { kind: "delta_out_of_range", platform: platformName, productId: plan.productId, currencyCode: currencyCode.currencyCode };
             obj6.failure = obj7;
           }
-          const tmp4Result = tmp4(1150);
+          const tmp4Result = tmp4(1363);
         }
       }
       obj6 = priceString;

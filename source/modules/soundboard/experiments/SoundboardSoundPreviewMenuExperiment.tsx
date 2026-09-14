@@ -1,10 +1,10 @@
-// Module ID: 17183
-// Function ID: 17184
+// Module ID: 17185
+// Function ID: 17186
 // Name: SoundboardSoundPreviewMenuExperiment
 // Dependencies: [1433, 2]
 // Exports: useSoundboardSoundPreviewMenuEnabled
 
-// Module 17183 (SoundboardSoundPreviewMenuExperiment)
+// Module 17185 (SoundboardSoundPreviewMenuExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

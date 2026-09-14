@@ -1,15 +1,15 @@
-// Module ID: 13962
-// Function ID: 13963
+// Module ID: 13963
+// Function ID: 13964
 // Name: ActivateDevice
-// Dependencies: [32, 19, 17, 21, 4636, 576, 13963, 13965, 9703, 9390, 13966, 9367, 13967, 5668, 13968, 13972, 13973, 1396, 13974, 7226, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 13964, 13966, 9703, 9390, 13967, 9367, 13968, 5668, 13969, 13973, 13974, 1396, 13975, 7226, 2]
 // Exports: ActivateDevice
 
-// Module 13962 (ActivateDevice)
+// Module 13963 (ActivateDevice)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 9390 */;
-import _modDef13966 from "module_13966" /* 13966 */;
 import _modDef13967 from "module_13967" /* 13967 */;
+import _modDef13968 from "module_13968" /* 13968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,11 +76,11 @@ export const ActivateDevice = (onClose) => {
       const userCodeData = first.userCodeData;
       const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef13966);
+        closure_3(_modDef13967);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef13967);
+          closure_3(_modDef13968);
         }
       }
     }
@@ -113,7 +113,7 @@ export const ActivateDevice = (onClose) => {
   }
   const obj6 = { source: null, imageStyle: null, style: null, children: null };
   const obj2 = first(first1[7]);
-  obj6.source = first(first1[17]).makeSource(require("module_13974"));
+  obj6.source = first(first1[17]).makeSource(require("module_13975"));
   obj6.imageStyle = tmp.imageStyle;
   const items6 = [tmp.background];
   obj6.style = items6;

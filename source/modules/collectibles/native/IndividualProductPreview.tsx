@@ -1,18 +1,18 @@
-// Module ID: 13270
-// Function ID: 13271
+// Module ID: 13271
+// Function ID: 13272
 // Name: IndividualProductPreview
-// Dependencies: [19, 17, 1076, 21, 4636, 576, 5068, 8295, 11242, 11352, 13271, 13272, 1889, 1077, 13273, 13276, 2]
+// Dependencies: [19, 17, 1076, 21, 4636, 576, 5068, 8295, 11243, 11353, 13272, 13273, 1889, 1077, 13274, 13277, 2]
 // Exports: IndividualProductPreview
 
-// Module 13270 (IndividualProductPreview)
+// Module 13271 (IndividualProductPreview)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import useCurrentUser from "useCurrentUser" /* 8295 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11242 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11352 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13271 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13272 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11243 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11353 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13272 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -111,11 +111,11 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   } else if (tmp(1889).CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = tmp(1077).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = React5(tmp(13273).FractionalNitroPreview, {});
+      let tmp5 = React5(tmp(13274).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = React5(tmp(13276).OrbBadgePreview, {});
+        tmp5 = React5(tmp(13277).OrbBadgePreview, {});
       }
     }
     return tmp5;

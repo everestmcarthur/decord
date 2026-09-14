@@ -1,26 +1,26 @@
-// Module ID: 17103
-// Function ID: 17104
+// Module ID: 17105
+// Function ID: 17106
 // Name: LaunchPadSearchResultUser
-// Dependencies: [19, 4628, 2025, 1957, 4676, 12094, 4817, 1074, 4818, 21, 4636, 576, 16770, 4649, 5063, 504, 11, 7743, 17092, 5204, 16771, 17093, 1178, 8375, 16773, 4481, 10237, 7983, 17094, 16439, 15402, 2]
+// Dependencies: [19, 4628, 2025, 1957, 4676, 12095, 4817, 1074, 4818, 21, 4636, 576, 16772, 4649, 5063, 504, 11, 7743, 17094, 5204, 16773, 17095, 1176, 8375, 16775, 4481, 10237, 7983, 17096, 16441, 15403, 2]
 
-// Module 17103 (LaunchPadSearchResultUser)
+// Module 17105 (LaunchPadSearchResultUser)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import isStreamingDefault from "isStreaming" /* 8375 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16439 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16770 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16771 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16773 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17092 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17093 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17094 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16441 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16772 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16773 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16775 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17094 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17095 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17096 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
-import TypingStore from "TypingStore" /* 12094 */;
+import TypingStore from "TypingStore" /* 12095 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 require = fn;
@@ -86,7 +86,7 @@ function UserResult(user) {
   obj5.style = items4;
   const tmp2Result5 = renderChannelPressableWrapperDefault;
   const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), , ];
-  const obj7 = { user, guildId: "e", isMobileOnline, isVROnline, status: null, streaming: "87baeefdf7c0d9a1502798941428fe60", style: "zh-TW.messages.87baeefdf7c0d9a1502798941428fe60.compiled.messages", size: "jsona", animate: "INTERACTION_FAILURE", typing: null, autoStatusCutout: true };
+  const obj7 = { user, guildId: "e", isMobileOnline, isVROnline, status: null, streaming: "38db3a0349491965cb68956b320d320d", style: "el.messages.38db3a0349491965cb68956b320d320d.compiled.messages", size: "jsona", animate: "rofl", typing: "rolling_on_the_floor_laughing", autoStatusCutout: null };
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;
@@ -108,7 +108,7 @@ function UserResult(user) {
   }
   obj7.animate = tmp21;
   obj7.typing = flag2;
-  items5[1] = closure_12(user(1178).Avatar, obj7);
+  items5[1] = closure_12(user(1176).Avatar, obj7);
   const obj6 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
   const tmp16 = closure_14;
   const tmp17 = closure_13;
@@ -150,7 +150,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(15402)(channel, { unread });
+  obj4.lastMessage = channel(15403)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

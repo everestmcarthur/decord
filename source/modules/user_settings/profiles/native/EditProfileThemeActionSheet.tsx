@@ -1,10 +1,10 @@
-// Module ID: 14711
-// Function ID: 14712
+// Module ID: 14712
+// Function ID: 14713
 // Name: EditProfileThemeActionSheet
-// Dependencies: [19, 21, 4636, 576, 7300, 7252, 1114, 1178, 5768, 5686, 4603, 2]
+// Dependencies: [19, 21, 4636, 576, 7300, 7252, 1114, 1176, 5768, 5686, 4603, 2]
 // Exports: default
 
-// Module 14711 (EditProfileThemeActionSheet)
+// Module 14712 (EditProfileThemeActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import noop from "module_19" /* 19 */;
@@ -29,7 +29,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   const obj3 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = onResetTheme(1114).intl;
   obj3.title = intl.string(onResetTheme(1114).t.DMeO2X);
-  obj3.trailing = closure_3(onResetTheme(1178).NitroWheel, { style: tmp.nitroWheel });
+  obj3.trailing = closure_3(onResetTheme(1176).NitroWheel, { style: tmp.nitroWheel });
   ({ titleWrapper: obj2.titleWrapperStyle, titleContainer: obj2.titleContainerStyle } = tmp);
   const items = [closure_3(onResetTheme(7252).BottomSheetTitleHeader, obj3), ];
   const obj5 = { hasIcons: false, children: null };

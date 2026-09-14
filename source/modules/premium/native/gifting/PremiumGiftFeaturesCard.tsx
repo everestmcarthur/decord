@@ -1,9 +1,9 @@
-// Module ID: 10878
-// Function ID: 10879
+// Module ID: 10879
+// Function ID: 10880
 // Name: PremiumGiftFeaturesCard
-// Dependencies: [19, 17, 10793, 1373, 1085, 21, 576, 4636, 5605, 504, 10870, 9500, 10879, 10880, 8958, 9514, 9512, 4632, 1114, 9521, 5056, 10881, 4347, 5068, 10882, 1925, 2]
+// Dependencies: [19, 17, 10794, 1373, 1085, 21, 576, 4636, 5605, 504, 10871, 9500, 10880, 10881, 8958, 9514, 9512, 4632, 1114, 9521, 5056, 10882, 4347, 5068, 10883, 1925, 2]
 
-// Module 10878 (PremiumGiftFeaturesCard)
+// Module 10879 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -17,13 +17,13 @@ import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9500 */;
 import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9512 */;
 import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9514 */;
 import PremiumFeatureListDefault from "PremiumFeatureList" /* 9521 */;
-import MarketingComponentType from "MarketingComponentType" /* 10870 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10879 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10880 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10881 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10882 */;
+import MarketingComponentType from "MarketingComponentType" /* 10871 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10880 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10881 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10882 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10883 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {

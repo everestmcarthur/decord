@@ -1,9 +1,9 @@
-// Module ID: 13057
-// Function ID: 13058
+// Module ID: 13058
+// Function ID: 13059
 // Name: StageChannelNewUserManager
-// Dependencies: [502, 2011, 5502, 5495, 1898, 573, 510, 13058, 2]
+// Dependencies: [502, 2011, 5502, 5495, 1898, 573, 510, 13059, 2]
 
-// Module 13057 (StageChannelNewUserManager)
+// Module 13058 (StageChannelNewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

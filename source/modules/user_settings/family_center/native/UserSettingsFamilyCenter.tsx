@@ -1,12 +1,12 @@
-// Module ID: 14958
-// Function ID: 14959
+// Module ID: 14959
+// Function ID: 14960
 // Name: UserSettingsFamilyCenter
-// Dependencies: [32, 19, 17, 7640, 1371, 1074, 1098, 1954, 7641, 21, 5054, 4636, 576, 7265, 7285, 8768, 14959, 14960, 8770, 563, 9922, 1114, 2396, 14961, 15001, 7642, 1242, 7704, 7709, 5073, 4457, 1943, 7314, 9923, 12745, 2]
+// Dependencies: [32, 19, 17, 7640, 1371, 1074, 1098, 1954, 7641, 21, 5054, 4636, 576, 7265, 7285, 8768, 14960, 14961, 8770, 563, 9922, 1114, 2396, 14962, 15002, 7642, 1240, 7704, 7709, 5073, 4457, 1943, 7314, 9923, 12746, 2]
 // Exports: default
 
-// Module 14958 (UserSettingsFamilyCenter)
+// Module 14959 (UserSettingsFamilyCenter)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
@@ -27,8 +27,8 @@ function FamilyCenter() {
   const tmp = closure_19();
   const tmp3 = isLoading(7265);
   const acceptedRequestsCount = familyCenterInitialized(8768).useAcceptedRequestsCount();
-  const tmp6 = isLoading(14959)();
-  const selectedTab = isLoading(14960)().selectedTab;
+  const tmp6 = isLoading(14960)();
+  const selectedTab = isLoading(14961)().selectedTab;
   let obj = familyCenterInitialized(8768);
   const selectedTeenId = familyCenterInitialized(8770).useSelectedTeenId();
   let obj2 = familyCenterInitialized(8770);
@@ -49,13 +49,13 @@ function FamilyCenter() {
   const intl = familyCenterInitialized(1114).intl;
   obj6.label = intl.string(isLoading(2396).bdBmqy);
   obj6.id = FamilyCenterSubPages.ACTIVITY;
-  obj6.page = closure_15(isLoading(14961), {});
+  obj6.page = closure_15(isLoading(14962), {});
   const items1 = [obj6, ];
   const obj7 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1114).intl;
   obj7.label = intl2.string(isLoading(2396)["gVWG+6"]);
   obj7.id = FamilyCenterSubPages.REQUESTS;
-  obj7.page = closure_15(isLoading(15001), {});
+  obj7.page = closure_15(isLoading(15002), {});
   items1[1] = obj7;
   obj5.items = items1;
   obj5.onPageChange = function onPageChange(arg0) {
@@ -108,7 +108,7 @@ function FamilyCenter() {
     let tmp14Result = tmp14(FamilyCenterLoading, {});
   } else {
     const obj13 = { state: segmentedControlState };
-    tmp14Result = tmp14(tmp4(12745).SegmentedControlPages, obj13);
+    tmp14Result = tmp14(tmp4(12746).SegmentedControlPages, obj13);
   }
   obj12.children = tmp14Result;
   obj12 = tmp14(tmp23, obj12);

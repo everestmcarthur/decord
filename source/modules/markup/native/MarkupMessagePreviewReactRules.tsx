@@ -1,11 +1,11 @@
 // Module ID: 10245
 // Function ID: 10246
 // Name: MarkupMessagePreviewReactRules
-// Dependencies: [19, 10246, 21, 4631, 8201, 10249, 6721, 5077, 5079, 10254, 5668, 1151, 10255, 10256, 1178, 10257, 2]
+// Dependencies: [19, 10246, 21, 4631, 8201, 10249, 6721, 5077, 5079, 10254, 5668, 1364, 10255, 10256, 1176, 10257, 2]
 // Exports: default
 
 // Module 10245 (MarkupMessagePreviewReactRules)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import MarkupRulesDefault from "MarkupRules" /* 5079 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import IconSize from "IconSize" /* 6721 */;
@@ -166,7 +166,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
     const obj = { children: null };
     const items = ["\u{1F4CE} ", num(8201).smartOutput(node, output, key)];
     obj.children = items;
-    return closure_1_5(num(1178).LegacyText, obj, key.key);
+    return closure_1_5(num(1176).LegacyText, obj, key.key);
   };
   obj[num(5077).AST_KEY.ATTACHMENT_LINK] = obj17;
   const obj18 = {};
@@ -182,7 +182,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
     const obj = { children: null };
     const items = ["/", num(8201).smartOutput(node, output, key)];
     obj.children = items;
-    return closure_1_5(num(1178).LegacyText, obj, key.key);
+    return closure_1_5(num(1176).LegacyText, obj, key.key);
   };
   obj[num(5077).AST_KEY.COMMAND_MENTION] = obj21;
   const obj22 = {};

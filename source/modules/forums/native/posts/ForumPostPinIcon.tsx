@@ -1,13 +1,13 @@
-// Module ID: 12132
-// Function ID: 12133
+// Module ID: 12133
+// Function ID: 12134
 // Name: ForumPostPinIcon
-// Dependencies: [19, 17, 21, 4636, 576, 1178, 12133, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1176, 12134, 2]
 // Exports: default
 
-// Module 12132 (ForumPostPinIcon)
+// Module 12133 (ForumPostPinIcon)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import _modDef12133 from "module_12133" /* 12133 */;
+import native from "native" /* 1176 */;
+import _modDef12134 from "module_12134" /* 12134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,8 +25,8 @@ const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPost
 
 export default function ForumPostPinIcon(containerStyle) {
   const tmp = closure_5();
-  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12133, style: tmp.pinIcon }) };
+  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12134, style: tmp.pinIcon }) };
   const items = [tmp.pin, containerStyle.containerStyle];
   obj.style = items;
-  return <View style={null}>{jsx(native.Icon, { source: _modDef12133, style: tmp.pinIcon })}</View>;
+  return <View style={null}>{jsx(native.Icon, { source: _modDef12134, style: tmp.pinIcon })}</View>;
 };

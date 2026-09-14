@@ -1,7 +1,7 @@
 // Module ID: 10205
 // Function ID: 10206
 // Name: ChannelVoiceChat
-// Dependencies: [19, 17, 9597, 21, 4636, 576, 10071, 1611, 9719, 12, 9601, 4571, 5206, 10206, 9611, 4488, 11473, 5204, 1114, 1178, 11708, 12903, 2]
+// Dependencies: [19, 17, 9597, 21, 4636, 576, 10071, 1611, 9719, 12, 9601, 4571, 5206, 10206, 9611, 4488, 11474, 5204, 1114, 1176, 11709, 12904, 2]
 
 // Module 10205 (ChannelVoiceChat)
 import nativeDefault from "native" /* 576 */;
@@ -104,7 +104,7 @@ export default noop.memo((channel) => {
   }
   items5[1] = { display: str4 };
   items3[2] = closure_6(View, { style: items5 });
-  items3[3] = closure_6(guild_id(11473), { guildId: guild_id, channelId: id, chatInputRef: ref, screenIndex: "voice-panel" });
+  items3[3] = closure_6(guild_id(11474), { guildId: guild_id, channelId: id, chatInputRef: ref, screenIndex: "voice-panel" });
   const items6 = [tmp.chatHeader, ];
   const obj8 = { top, display: null };
   let str5;
@@ -119,10 +119,10 @@ export default noop.memo((channel) => {
   obj10.accessibilityLabel = intl.string(id(1114).t["13/7kX"]);
   obj10.style = tmp.chatHeaderBackIconContainer;
   const tmp12 = guild_id(4571)();
-  obj10.children = closure_6(id(1178).Icon, { source: guild_id(11708), size: id(1178).Icon.Sizes.MEDIUM });
+  obj10.children = closure_6(id(1176).Icon, { source: guild_id(11709), size: id(1176).Icon.Sizes.MEDIUM });
   const items7 = [closure_6(id(5204).PressableOpacity, obj10), ];
-  const obj11 = { source: guild_id(11708), size: id(1178).Icon.Sizes.MEDIUM };
-  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(12903).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  const obj11 = { source: guild_id(11709), size: id(1176).Icon.Sizes.MEDIUM };
+  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(12904).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj9.children = items7;
   items3[4] = closure_7(View, obj9);
   obj5.children = items3;

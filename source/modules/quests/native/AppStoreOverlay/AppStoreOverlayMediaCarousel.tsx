@@ -1,13 +1,13 @@
-// Module ID: 11639
-// Function ID: 11640
+// Module ID: 11640
+// Function ID: 11641
 // Name: AppStoreOverlayMediaCarousel
-// Dependencies: [19, 17, 4628, 1085, 21, 4636, 576, 11640, 11641, 1114, 5668, 504, 8425, 10260, 6756, 2]
+// Dependencies: [19, 17, 4628, 1085, 21, 4636, 576, 11641, 11642, 1114, 5668, 504, 8425, 10260, 6756, 2]
 // Exports: default
 
-// Module 11639 (AppStoreOverlayMediaCarousel)
+// Module 11640 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 576 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11640 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11641 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11641 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11642 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 

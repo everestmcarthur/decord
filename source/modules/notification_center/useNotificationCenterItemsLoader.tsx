@@ -1,18 +1,18 @@
-// Module ID: 16508
-// Function ID: 16509
+// Module ID: 16510
+// Function ID: 16511
 // Name: useNotificationCenterItemsLoader
-// Dependencies: [5, 32, 19, 7739, 7741, 16507, 4818, 504, 16509, 7213, 8365, 2]
+// Dependencies: [5, 32, 19, 7739, 7741, 16509, 4818, 504, 16511, 7213, 8365, 2]
 // Exports: useNotificationCenterItemsLoader
 
-// Module 16508 (useNotificationCenterItemsLoader)
+// Module 16510 (useNotificationCenterItemsLoader)
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16509 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16511 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RecentMentionsStore from "RecentMentionsStore" /* 7739 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7741 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 16507 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 16509 */;
 
 const require = globalThis.__r;
 

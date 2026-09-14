@@ -1,15 +1,15 @@
-// Module ID: 11684
-// Function ID: 11685
+// Module ID: 11685
+// Function ID: 11686
 // Name: OptInOnboardingUtils
-// Dependencies: [1221, 2012, 2021, 4817, 4262, 7638, 1384, 7216, 7208, 1187, 2]
+// Dependencies: [1219, 2012, 2021, 4817, 4262, 7638, 1384, 7216, 7208, 1185, 2]
 // Exports: hasClearedGuildOnboardingNotice, hasNotSetUpChannelOptIn, toggleShowAllChannels
 
-// Module 11684 (OptInOnboardingUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+// Module 11685 (OptInOnboardingUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7208 */;
 import isOptInEnabled from "isOptInEnabled" /* 7638 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;

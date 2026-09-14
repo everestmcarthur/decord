@@ -1,15 +1,15 @@
-// Module ID: 14989
-// Function ID: 14990
+// Module ID: 14990
+// Function ID: 14991
 // Name: FamilyCenterActivityRow
-// Dependencies: [19, 17, 1371, 7640, 7641, 1074, 21, 4636, 576, 1178, 38, 563, 11, 4632, 4481, 7695, 5665, 5671, 1114, 2396, 14990, 14993, 14994, 2]
+// Dependencies: [19, 17, 1371, 7640, 7641, 1074, 21, 4636, 576, 1176, 38, 563, 11, 4632, 4481, 7695, 5665, 5671, 1114, 2396, 14991, 14994, 14995, 2]
 // Exports: default
 
-// Module 14989 (FamilyCenterActivityRow)
+// Module 14990 (FamilyCenterActivityRow)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7695 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14990 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14994 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14991 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14995 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 let createStyles = fn(4636);
 let obj = { container: { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarContainer: null, textContainer: null, text: null };
 let obj3 = { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-obj.avatar = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.avatar = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj.avatarContainer = { marginRight: 12, alignItems: "flex-start" };
 obj.textContainer = { display: "flex", flexDirection: "column", flexShrink: 1 };
 obj.text = { display: "flex", flexDirection: "row", flexShrink: 1 };
@@ -42,7 +42,7 @@ const memoResult = noop.memo((action) => {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.avatarContainer, children: null };
     const obj4 = { avatarStyle: tmp.avatar, user: stateFromStores, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: stateFromStores.avatarDecoration };
-    obj3.children = closure_8(tmp6(1178).Avatar, obj4);
+    obj3.children = closure_8(tmp6(1176).Avatar, obj4);
     const items1 = [closure_8(View, obj3), ];
     const obj5 = { style: tmp.textContainer, children: null };
     const obj6 = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
@@ -65,7 +65,7 @@ const memoResult = noop.memo((action) => {
 memoResult.displayName = "FamilyCenterActivityRowUser";
 createStyles = fn(4636);
 let obj5 = { container: null, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
-let obj4 = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj4 = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj5.container = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 let size = { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
 obj5.avatar = size;
@@ -164,7 +164,7 @@ export default function FamilyCenterActivityRow(action) {
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14993).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = tmp(14994).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         const obj3 = { skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt };
         return React6(FamilyCenterActivityGiftRowDefault, obj3);

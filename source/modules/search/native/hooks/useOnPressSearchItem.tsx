@@ -1,10 +1,10 @@
-// Module ID: 16749
-// Function ID: 16750
+// Module ID: 16751
+// Function ID: 16752
 // Name: useOnPressSearchItem
-// Dependencies: [5, 19, 1957, 12468, 7982, 16750, 7981, 1074, 1964, 12467, 12490, 1365, 4334, 1114, 8488, 4331, 1483, 16728, 16751, 1109, 7432, 8377, 4649, 4647, 8511, 1896, 4843, 4847, 13062, 5088, 5138, 5650, 1100, 12487, 2]
+// Dependencies: [5, 19, 1957, 12469, 7982, 16752, 7981, 1074, 1964, 12468, 12491, 1365, 4334, 1114, 8488, 4331, 1483, 16730, 16753, 1109, 7432, 8377, 4649, 4647, 8511, 1896, 4843, 4847, 13063, 5088, 5138, 5650, 1100, 12488, 2]
 // Exports: useOnPressDMItem, useOnPressGroupDMItem, useOnPressGuildTextChannel, useOnPressGuildVoiceChannel, useOnPressMediaItem, useOnPressMessageItem, useOnPressSearchHistoryText, useOnPressSearchLink
 
-// Module 16749 (useOnPressSearchItem)
+// Module 16751 (useOnPressSearchItem)
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -12,13 +12,13 @@ import LinkingDefault from "Linking" /* 4331 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8488 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
@@ -110,7 +110,7 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(7982);
 ({ SearchMediaTypes: closure_7, SearchHistoryItemTypes: closure_8, SearchQueryTagTypes: closure_9 } = SearchConstants);
-const SearchNavigatorScreens = fn(16750).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16752).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(7981).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ Routes: closure_12, ComponentActions: map1, ME: closure_14, SearchTypes: closure_15 } = Constants);
@@ -460,11 +460,11 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     let obj = { type: constants.TEXT, text, tags };
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(12467).delayUntilNavigationComplete(() => {
+      const result = searchContext(12468).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(12467);
+      let obj2 = searchContext(12468);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

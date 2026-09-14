@@ -1,7 +1,7 @@
 // Module ID: 7104
 // Function ID: 7105
 // Name: useNavigatorShouldCrossfade
-// Dependencies: [19, 1150, 4357, 2]
+// Dependencies: [19, 1363, 4357, 2]
 // Exports: useNavigatorShouldCrossfade
 
 // Module 7104 (useNavigatorShouldCrossfade)

@@ -1,12 +1,12 @@
 // Module ID: 9156
 // Function ID: 9157
 // Name: ApplicationWidgetConfigActions
-// Dependencies: [5, 9155, 1074, 9157, 559, 1090, 573, 1272, 1232, 2]
+// Dependencies: [5, 9155, 1074, 9157, 559, 1090, 573, 1270, 1230, 2]
 // Exports: fetchDeveloperWidgetConfigs, fetchFeaturedWidgetConfigs, fetchWidgetConfigs
 
 // Module 9156 (ApplicationWidgetConfigActions)
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 9155 */;
 import Backoff from "Backoff" /* 559 */;

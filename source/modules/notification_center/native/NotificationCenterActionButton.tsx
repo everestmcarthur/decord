@@ -1,10 +1,10 @@
-// Module ID: 16501
-// Function ID: 16502
+// Module ID: 16503
+// Function ID: 16504
 // Name: NotificationCenterActionButton
-// Dependencies: [19, 21, 8202, 8796, 4603, 16502, 1896, 1114, 2]
+// Dependencies: [19, 21, 8202, 8796, 4603, 16504, 1896, 1114, 2]
 // Exports: default
 
-// Module 16501 (NotificationCenterActionButton)
+// Module 16503 (NotificationCenterActionButton)
 import util from "util" /* 1114 */;
 import IconButton from "IconButton" /* 8202 */;
 import _modDef8796 from "module_8796" /* 8796 */;

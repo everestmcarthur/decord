@@ -1,7 +1,7 @@
 // Module ID: 7507
 // Function ID: 7508
 // Name: PremiumManagementUtils
-// Dependencies: [1074, 1085, 21, 3, 4981, 1114, 1150, 1608, 7508, 7511, 2]
+// Dependencies: [1074, 1085, 21, 3, 4981, 1114, 1363, 1608, 7508, 7511, 2]
 // Exports: getExternalManagementMessage, getPremiumManagementMethod
 
 // Module 7507 (PremiumManagementUtils)

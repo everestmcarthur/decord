@@ -1,17 +1,17 @@
-// Module ID: 12708
-// Function ID: 12709
+// Module ID: 12709
+// Function ID: 12710
 // Name: GuildPowerupsRecentActivitySection
-// Dependencies: [17, 4628, 21, 4636, 576, 7083, 12709, 4318, 504, 8065, 9505, 12711, 12713, 1178, 4632, 12715, 1114, 2]
+// Dependencies: [17, 4628, 21, 4636, 576, 7083, 12710, 4318, 504, 8065, 9505, 12712, 12714, 1176, 4632, 12716, 1114, 2]
 // Exports: default
 
-// Module 12708 (GuildPowerupsRecentActivitySection)
+// Module 12709 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DateUtils from "DateUtils" /* 4318 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12709 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12715 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12710 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12716 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
@@ -41,9 +41,9 @@ function GuildPowerupsRecentActivityRow(row) {
     if ("gave" === phase) {
       let BoostGemSlashIcon = tmp(9505).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12711).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12712).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12713).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12714).BoostGemSlashIcon;
     }
     const obj6 = { style: tmp4.boostRowContainer, children: null };
     if ("gave" === phase) {
@@ -60,7 +60,7 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     if (tmp19Result) {
       const obj10 = { size: "small", color: roleColor, colors: roleColorStrings };
-      tmp19Result = tmp19(tmp(1178).RoleDot, obj10);
+      tmp19Result = tmp19(tmp(1176).RoleDot, obj10);
     }
     const items2 = [tmp19Result, , , ];
     const obj11 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };

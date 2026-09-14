@@ -1,10 +1,10 @@
-// Module ID: 16980
-// Function ID: 16981
+// Module ID: 16982
+// Function ID: 16983
 // Name: ContextMenuCommandNavigator
-// Dependencies: [19, 17, 21, 8017, 4636, 576, 7578, 7103, 1611, 7966, 1114, 16981, 16983, 2]
+// Dependencies: [19, 17, 21, 8017, 4636, 576, 7578, 7103, 1611, 7966, 1114, 16983, 16985, 2]
 // Exports: default
 
-// Module 16980 (ContextMenuCommandNavigator)
+// Module 16982 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
@@ -65,7 +65,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(16981).default;
+    return closure_0(16983).default;
   };
   const items1 = [
     closure_5(Screen, obj4),
@@ -80,7 +80,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(16983).default;
+        return closure_0(16985).default;
       }
     })
   ];

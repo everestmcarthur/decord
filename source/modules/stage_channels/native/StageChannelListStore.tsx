@@ -1,7 +1,7 @@
 // Module ID: 10174
 // Function ID: 10175
 // Name: StageChannelListStore
-// Dependencies: [32, 19, 1244, 1249, 4259, 2]
+// Dependencies: [32, 19, 1242, 1247, 4259, 2]
 // Exports: useActiveSpeakerPillScrollHandler, useActiveSpeakerPillState
 
 // Module 10174 (StageChannelListStore)
@@ -10,17 +10,17 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const identity = fn(1244);
+const identity = fn(1242);
 let closure_4 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(showActiveSpeakerPill) {
-      return showActiveSpeakerPill(1249).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
+      return showActiveSpeakerPill(1247).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
     },
     listRef: null,
     setListRef(listRef) {
-      return listRef(1249).batchUpdates(() => listRef({ listRef }));
+      return listRef(1247).batchUpdates(() => listRef({ listRef }));
     }
   };
 });

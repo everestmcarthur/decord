@@ -1,10 +1,10 @@
-// Module ID: 13381
-// Function ID: 13382
+// Module ID: 13382
+// Function ID: 13383
 // Name: ConversationFocusScreen
-// Dependencies: [19, 17, 7698, 21, 4636, 576, 4338, 1486, 504, 8013, 8027, 1114, 4632, 5056, 13382, 2]
+// Dependencies: [19, 17, 7698, 21, 4636, 576, 4338, 1486, 504, 8013, 8027, 1114, 4632, 5056, 13383, 2]
 // Exports: default
 
-// Module 13381 (ConversationFocusScreen)
+// Module 13382 (ConversationFocusScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8013 */;

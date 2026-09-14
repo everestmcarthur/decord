@@ -1,13 +1,13 @@
-// Module ID: 10457
-// Function ID: 10458
+// Module ID: 10458
+// Function ID: 10459
 // Name: MessageEmojiActionSheet
-// Dependencies: [19, 17, 1074, 21, 4636, 1150, 1256, 7253, 1242, 10458, 10465, 10466, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 1363, 1254, 7253, 1240, 10459, 10466, 10467, 2]
 // Exports: default
 
-// Module 10457 (MessageEmojiActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 10458 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 10466 */;
+// Module 10458 (MessageEmojiActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 10459 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 10467 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
   if (emojiAndSource.isFetching) {
     return null;
   } else {
-    const v4Result = tmp2(1256).v4();
+    const v4Result = tmp2(1254).v4();
     _require = v4Result;
     const obj3 = {
       startExpanded: true,
@@ -69,7 +69,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;

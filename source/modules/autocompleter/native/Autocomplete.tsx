@@ -1,12 +1,12 @@
-// Module ID: 12515
-// Function ID: 12516
+// Module ID: 12516
+// Function ID: 12517
 // Name: Autocomplete
-// Dependencies: [19, 17, 1979, 4285, 1371, 1074, 10391, 21, 4636, 576, 8716, 504, 4481, 1178, 9933, 5686, 5695, 1114, 8241, 5109, 4789, 4632, 5668, 12516, 10515, 5204, 10304, 12, 5103, 1924, 1925, 8686, 2]
+// Dependencies: [19, 17, 1979, 4285, 1371, 1074, 10392, 21, 4636, 576, 8716, 504, 4481, 1176, 9933, 5686, 5695, 1114, 8241, 5109, 4789, 4632, 5668, 12517, 10516, 5204, 10304, 12, 5103, 1924, 1925, 8686, 2]
 
-// Module 12515 (Autocomplete)
+// Module 12516 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelName from "useChannelName" /* 4789 */;
@@ -19,8 +19,8 @@ import TableRowTrailingText from "TableRowTrailingText" /* 5695 */;
 import _modDef8241 from "module_8241" /* 8241 */;
 import Form from "Form" /* 8716 */;
 import StickerDefault from "Sticker" /* 10304 */;
-import StickersHooks from "StickersHooks" /* 10515 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12516 */;
+import StickersHooks from "StickersHooks" /* 10516 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12517 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
@@ -37,8 +37,8 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
-let obj2 = { row: { height: fn(10391).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-let obj3 = { height: fn(10391).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = { row: { height: fn(10392).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
+let obj3 = { height: fn(10392).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
@@ -86,7 +86,7 @@ export default {
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);
-    obj2.leading = closure_9(user(1178).Avatar, { status, user, size: user(1178).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
+    obj2.leading = closure_9(user(1176).Avatar, { status, user, size: user(1176).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
     const obj5 = { user, usernameStyle: null, discriminatorStyle: tmp.trailing };
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);

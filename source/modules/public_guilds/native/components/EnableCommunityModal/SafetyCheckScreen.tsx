@@ -1,10 +1,10 @@
-// Module ID: 17780
-// Function ID: 17781
+// Module ID: 17781
+// Function ID: 17782
 // Name: SafetyCheckScreen
-// Dependencies: [32, 19, 17, 9193, 1074, 21, 4338, 576, 17781, 504, 17782, 17779, 4632, 1114, 5054, 5768, 17791, 7303, 9192, 2]
+// Dependencies: [32, 19, 17, 9193, 1074, 21, 4338, 576, 17782, 504, 17783, 17780, 4632, 1114, 5054, 5768, 17792, 7303, 9192, 2]
 // Exports: default
 
-// Module 17780 (SafetyCheckScreen)
+// Module 17781 (SafetyCheckScreen)
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

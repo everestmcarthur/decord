@@ -1,17 +1,17 @@
-// Module ID: 17577
-// Function ID: 17578
+// Module ID: 17578
+// Function ID: 17579
 // Name: ConnectGuardianShareModal
-// Dependencies: [19, 17, 7640, 21, 4636, 576, 1114, 2396, 4334, 4839, 12046, 563, 14969, 8539, 8540, 5054, 4632, 14970, 5658, 5705, 12058, 2]
+// Dependencies: [19, 17, 7640, 21, 4636, 576, 1114, 2396, 4334, 4839, 12047, 563, 14970, 8539, 8540, 5054, 4632, 14971, 5658, 5705, 12059, 2]
 // Exports: default
 
-// Module 17577 (ConnectGuardianShareModal)
+// Module 17578 (ConnectGuardianShareModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import Modal from "Modal" /* 12058 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14969 */;
+import Modal from "Modal" /* 12059 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14970 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
@@ -26,8 +26,8 @@ function ConnectGuardianShareScreen() {
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1114);
-  getLinkCode = getLinkCode(12046).useFamilyCenterActions({ onError: callback }).getLinkCode;
-  const obj2 = getLinkCode(12046);
+  getLinkCode = getLinkCode(12047).useFamilyCenterActions({ onError: callback }).getLinkCode;
+  const obj2 = getLinkCode(12047);
   const items = [FamilyCenterStore];
   const stateFromStores = getLinkCode(563).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(563);
@@ -58,7 +58,7 @@ function ConnectGuardianShareScreen() {
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj11 = { shareActions: "full", linkCode: stateFromStores, expiresAt: stateFromStores1, onRefresh: getLinkCode };
-      let tmp11Result = tmp11(tmp2(14970).ConnectGuardianCard, obj11);
+      let tmp11Result = tmp11(tmp2(14971).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };

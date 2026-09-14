@@ -1,10 +1,10 @@
-// Module ID: 16133
-// Function ID: 16134
+// Module ID: 16135
+// Function ID: 16136
 // Name: usePrivateChannelWaveEligible
-// Dependencies: [4857, 4285, 1964, 1074, 504, 11, 4318, 4228, 11497, 2]
+// Dependencies: [4857, 4285, 1964, 1074, 504, 11, 4318, 4228, 11498, 2]
 // Exports: usePrivateChannelWaveEligible
 
-// Module 16133 (usePrivateChannelWaveEligible)
+// Module 16135 (usePrivateChannelWaveEligible)
 import MessageStore from "MessageStore" /* 4857 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 

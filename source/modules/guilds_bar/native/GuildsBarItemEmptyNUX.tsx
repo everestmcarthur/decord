@@ -1,9 +1,9 @@
-// Module ID: 16446
-// Function ID: 16447
+// Module ID: 16448
+// Function ID: 16449
 // Name: GuildsBarItemEmptyNUX
-// Dependencies: [19, 17, 4458, 16377, 1074, 11218, 21, 4636, 576, 7445, 4338, 504, 4373, 5055, 16115, 16390, 1114, 16447, 16389, 5670, 16401, 4632, 2]
+// Dependencies: [19, 17, 4458, 16379, 1074, 11219, 21, 4636, 576, 7445, 4338, 504, 4373, 5055, 16117, 16392, 1114, 16449, 16391, 5670, 16403, 4632, 2]
 
-// Module 16446 (GuildsBarItemEmptyNUX)
+// Module 16448 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
@@ -16,10 +16,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16377);
+const GuildsBarConstants = fn(16379);
 ({ GUILD_ITEM_HIT_SLOP: closure_8, useGuildWrapperSize: closure_9 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1074).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11218).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11219).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4636);

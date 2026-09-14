@@ -1,16 +1,16 @@
-// Module ID: 11207
-// Function ID: 11208
+// Module ID: 11208
+// Function ID: 11209
 // Name: PremiumGiftPurchaseSuccess
-// Dependencies: [19, 17, 5591, 1373, 1074, 21, 4636, 576, 10827, 1483, 10871, 4875, 10790, 8479, 5056, 1114, 4294, 7292, 4334, 10958, 4632, 9031, 4584, 2]
+// Dependencies: [19, 17, 5591, 1373, 1074, 21, 4636, 576, 10828, 1483, 10872, 4875, 10791, 8479, 5056, 1114, 4294, 7292, 4334, 10959, 4632, 9031, 4584, 2]
 // Exports: PremiumGiftSuccessActions, default
 
-// Module 11207 (PremiumGiftPurchaseSuccess)
+// Module 11208 (PremiumGiftPurchaseSuccess)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 4875 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import showShareActionSheet from "showShareActionSheet" /* 8479 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10790 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10791 */;
 import noop from "module_19" /* 19 */;
 import SKUStore from "SKUStore" /* 5591 */;
 
@@ -37,9 +37,9 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(10827).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10828).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(10827);
+  let obj = giftCodeRecord(10828);
   const giftCodeURL = giftCodeRecord(4875).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
@@ -65,7 +65,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     tmp = giftCodeRecord;
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(10958), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10959), { giftStyle });
   const items1 = [closure_8(View, obj3), , , , ];
   const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1114).intl;

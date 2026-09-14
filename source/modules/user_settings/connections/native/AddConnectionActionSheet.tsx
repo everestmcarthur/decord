@@ -1,10 +1,10 @@
-// Module ID: 15046
-// Function ID: 15047
+// Module ID: 15047
+// Function ID: 15048
 // Name: AddConnectionActionSheet
-// Dependencies: [1074, 1921, 21, 4636, 1178, 4571, 1611, 7606, 7271, 7253, 7252, 1114, 6728, 5686, 4603, 9381, 1396, 4488, 7268, 7265, 7285, 2]
+// Dependencies: [1074, 1921, 21, 4636, 1176, 4571, 1611, 7606, 7271, 7253, 7252, 1114, 6728, 5686, 4603, 9381, 1396, 4488, 7268, 7265, 7285, 2]
 // Exports: default
 
-// Module 15046 (AddConnectionActionSheet)
+// Module 15047 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1074 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 1921 */;
@@ -13,7 +13,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603
 import TableRow from "TableRow" /* 5686 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -44,7 +44,7 @@ function AddApplicationIdentityTableRow(application) {
   let tmp7Result = null;
   if (null != iconSource) {
     const obj3 = { source: iconSource, style: tmp4.icon, disableColor: true };
-    tmp7Result = tmp7(tmp5(1178).Icon, obj3);
+    tmp7Result = tmp7(tmp5(1176).Icon, obj3);
   }
   obj2.icon = tmp7Result;
   obj2.trailing = closure_5(require("TableRow").TableRow.Arrow, {});

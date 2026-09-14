@@ -1,9 +1,9 @@
-// Module ID: 13895
-// Function ID: 13896
+// Module ID: 13896
+// Function ID: 13897
 // Name: GoLiveQualityManager
 // Dependencies: [4694, 3, 1952, 2]
 
-// Module 13895 (GoLiveQualityManager)
+// Module 13896 (GoLiveQualityManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Timers from "Timers" /* 1952 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;

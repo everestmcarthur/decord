@@ -1,10 +1,10 @@
-// Module ID: 12318
-// Function ID: 12319
+// Module ID: 12319
+// Function ID: 12320
 // Name: GroupDMNitroCapInfoActionSheet
-// Dependencies: [19, 17, 11722, 21, 4636, 576, 4603, 7253, 4632, 1114, 5056, 2]
+// Dependencies: [19, 17, 11723, 21, 4636, 576, 4603, 7253, 4632, 1114, 5056, 2]
 // Exports: default
 
-// Module 12318 (GroupDMNitroCapInfoActionSheet)
+// Module 12319 (GroupDMNitroCapInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,7 +15,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11722).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11723).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);

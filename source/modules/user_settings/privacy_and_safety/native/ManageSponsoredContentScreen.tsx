@@ -1,10 +1,10 @@
-// Module ID: 15953
-// Function ID: 15954
+// Module ID: 15955
+// Function ID: 15956
 // Name: ManageSponsoredContentScreen
-// Dependencies: [19, 17, 1074, 21, 1187, 2070, 1935, 7303, 1114, 4636, 576, 5768, 2024, 2]
+// Dependencies: [19, 17, 1074, 21, 1185, 2070, 1935, 7303, 1114, 4636, 576, 5768, 2024, 2]
 // Exports: default
 
-// Module 15953 (ManageSponsoredContentScreen)
+// Module 15955 (ManageSponsoredContentScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
@@ -45,7 +45,7 @@ const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1187).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
+obj[fn(1185).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
 const createStyles = fn(4636);

@@ -1,11 +1,11 @@
 // Module ID: 4815
 // Function ID: 4816
 // Name: GuildRoomAnalytics
-// Dependencies: [502, 1957, 4659, 4655, 4794, 1074, 4797, 4799, 4816, 1242, 2]
+// Dependencies: [502, 1957, 4659, 4655, 4794, 1074, 4797, 4799, 4816, 1240, 2]
 // Exports: trackGuildRoomInteracted, trackGuildRoomLayoutToggled, trackGuildRoomObjectInteracted, trackGuildRoomOpened, trackGuildRoomSeatSelected, trackGuildRoomSettingsUpdate, trackGuildRoomUpdated, trackGuildRoomUserConnected, trackGuildRoomUserDisconnected, trackGuildRoomUserInteracted, trackGuildRoomUserUpdated
 
 // Module 4815 (GuildRoomAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import GuildRoomUtils from "GuildRoomUtils" /* 4797 */;
 import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 4799 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;

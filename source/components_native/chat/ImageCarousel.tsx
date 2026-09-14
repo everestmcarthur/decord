@@ -1,13 +1,13 @@
-// Module ID: 10759
-// Function ID: 10760
+// Module ID: 10760
+// Function ID: 10761
 // Name: ImageCarousel
-// Dependencies: [19, 17, 4977, 4976, 10760, 21, 4636, 576, 4373, 4637, 1178, 5055, 38, 5209, 504, 10761, 10324, 11378, 8361, 4632, 1114, 8392, 7071, 5204, 7041, 1477, 9436, 10763, 2]
+// Dependencies: [19, 17, 4977, 4976, 10761, 21, 4636, 576, 4373, 4637, 1176, 5055, 38, 5209, 504, 10762, 10325, 11379, 8361, 4632, 1114, 8392, 7071, 5204, 7041, 1477, 9436, 10764, 2]
 // Exports: useTileEntranceAnimatedStyle
 
-// Module 10759 (ImageCarousel)
+// Module 10760 (ImageCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -17,9 +17,9 @@ import Upload from "Upload" /* 5209 */;
 import EyeIcon from "EyeIcon" /* 7071 */;
 import PlayIcon from "PlayIcon" /* 8392 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10324 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10761 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10763 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10325 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10762 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10764 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 
@@ -157,7 +157,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       const obj2 = { style: tmp5.footerRightContainer, children: null };
-      const obj3 = { source: tmp3(11378), size: native.Icon.Sizes.SMALL_14 };
+      const obj3 = { source: tmp3(11379), size: native.Icon.Sizes.SMALL_14 };
       obj2.children = tmp6(native.Icon, obj3);
       tmp6Result = tmp6(React4, obj2);
     }
@@ -277,7 +277,7 @@ function CustomScrollView(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(4977).DraftType;
-const ImageCarouselConstants = fn(10760);
+const ImageCarouselConstants = fn(10761);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
@@ -397,7 +397,7 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     return obj;
   };
   const obj2 = sharedValue(4373);
-  fn.__closure = { withTiming: sharedValue(4637).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1178).STANDARD_EASING, withSpring: sharedValue(5055).withSpring };
+  fn.__closure = { withTiming: sharedValue(4637).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1176).STANDARD_EASING, withSpring: sharedValue(5055).withSpring };
   fn.__workletHash = 14458898683767;
   fn.__initData = __initData;
   return obj2.useAnimatedStyle(fn);

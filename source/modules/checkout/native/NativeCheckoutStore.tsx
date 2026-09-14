@@ -1,11 +1,11 @@
 // Module ID: 7527
 // Function ID: 7528
 // Name: NativeCheckoutStore
-// Dependencies: [5, 32, 19, 7528, 7531, 4259, 1244, 7532, 12, 4309, 7533, 2]
+// Dependencies: [5, 32, 19, 7528, 7531, 4259, 1242, 7532, 12, 4309, 7533, 2]
 // Exports: createNativeStore, useNativeCheckoutStore, useNativeCheckoutStoreOrNull
 
 // Module 7527 (NativeCheckoutStore)
-import _mod1244 from "module_1244" /* 1244 */;
+import _mod1242 from "module_1242" /* 1242 */;
 import _mod4259 from "module_4259" /* 4259 */;
 import ContextUtilsDefault from "ContextUtils" /* 7531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -27,7 +27,7 @@ export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0, shal
     shallow = _mod4259.shallow;
   }
   const tmp3 = closure_6();
-  return _mod1244.useStoreWithEqualityFn(tmp3, arg0, shallow);
+  return _mod1242.useStoreWithEqualityFn(tmp3, arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0, shallow) {
   if (shallow === undefined) {
@@ -36,13 +36,13 @@ export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNul
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
   if ("unset_context" !== context) {
-    storeWithEqualityFn = _mod1244.useStoreWithEqualityFn(context, arg0, shallow);
+    storeWithEqualityFn = _mod1242.useStoreWithEqualityFn(context, arg0, shallow);
   }
   return storeWithEqualityFn;
 };
 export const createNativeStore = function createNativeStore(arg0) {
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, analyticsFields: asyncGeneratorStep, paymentGateway: noop, orderRequired: OrderRecord, onOrderRetryCancellation: closure_6, initialSubscriptionFacet: context } = arg0);
-  return _mod1244.createWithEqualityFn((arg0, arg1) => {
+  return _mod1242.createWithEqualityFn((arg0, arg1) => {
     closure_0 = arg0;
     checkoutInitParameters = arg1;
     function runPatchOrderLineItems() {

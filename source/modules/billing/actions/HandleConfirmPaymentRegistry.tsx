@@ -1,7 +1,7 @@
 // Module ID: 4970
 // Function ID: 4971
 // Name: HandleConfirmPaymentRegistry
-// Dependencies: [5, 1074, 1085, 4961, 4966, 1272, 2]
+// Dependencies: [5, 1074, 1085, 4961, 4966, 1270, 2]
 // Exports: getIsStripeDirectConfirmationPaymentSource, getIsStripeRedirectedPaymentSource
 
 // Module 4970 (HandleConfirmPaymentRegistry)
@@ -150,7 +150,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     const paymentMethod = closure_129_1.paymentMethod;
     const obj10 = { payment_method: paymentMethod, return_url: null };
     let _var = closure_130_1;
-    const aPIBaseURL = _var(1272).getAPIBaseURL();
+    const aPIBaseURL = _var(1270).getAPIBaseURL();
     if (closure_130_1 == null) {
       _var = "";
     }

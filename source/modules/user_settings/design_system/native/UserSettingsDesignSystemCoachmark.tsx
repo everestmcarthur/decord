@@ -1,10 +1,10 @@
-// Module ID: 15878
-// Function ID: 15879
+// Module ID: 15880
+// Function ID: 15881
 // Name: UserSettingsDesignSystemCoachmark
-// Dependencies: [32, 19, 17, 21, 4636, 15876, 5855, 11261, 5056, 5068, 5768, 7303, 5766, 5769, 7226, 7259, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 15878, 5855, 11262, 5056, 5068, 5768, 7303, 5766, 5769, 7226, 7259, 2]
 // Exports: default
 
-// Module 15878 (UserSettingsDesignSystemCoachmark)
+// Module 15880 (UserSettingsDesignSystemCoachmark)
 import _modDef5855 from "module_5855" /* 5855 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import LayerScope from "LayerScope" /* 7259 */;

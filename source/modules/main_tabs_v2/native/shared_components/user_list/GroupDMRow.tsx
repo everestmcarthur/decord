@@ -1,18 +1,18 @@
-// Module ID: 11040
-// Function ID: 11041
+// Module ID: 11041
+// Function ID: 11042
 // Name: GroupDMRow
-// Dependencies: [19, 10988, 21, 4789, 11041, 1178, 11042, 4632, 5685, 5686, 2]
+// Dependencies: [19, 10989, 21, 4789, 11042, 1176, 11043, 4632, 5685, 5686, 2]
 // Exports: default
 
-// Module 11040 (GroupDMRow)
-import native from "native" /* 1178 */;
+// Module 11041 (GroupDMRow)
+import native from "native" /* 1176 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 11042 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 11043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");

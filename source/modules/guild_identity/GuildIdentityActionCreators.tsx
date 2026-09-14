@@ -1,7 +1,7 @@
 // Module ID: 9339
 // Function ID: 9340
 // Name: GuildIdentityActionCreators
-// Dependencies: [5, 1074, 573, 1272, 5250, 7088, 2]
+// Dependencies: [5, 1074, 573, 1270, 5250, 7088, 2]
 // Exports: clearErrors, initGuildIdentitySettings, resetAllPending, resetPendingMemberChanges, resetPendingProfileChanges, saveGuildIdentityChanges, setCurrentGuild
 
 // Module 9339 (GuildIdentityActionCreators)

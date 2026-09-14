@@ -1,10 +1,10 @@
-// Module ID: 15933
-// Function ID: 15934
+// Module ID: 15935
+// Function ID: 15936
 // Name: DebugLogView
 // Dependencies: [19, 17, 4635, 7659, 21, 4636, 576, 504, 4632, 2]
 // Exports: default
 
-// Module 15933 (DebugLogView)
+// Module 15935 (DebugLogView)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;

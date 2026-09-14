@@ -1,9 +1,9 @@
-// Module ID: 17941
-// Function ID: 17942
+// Module ID: 17942
+// Function ID: 17943
 // Name: WebAuthnSignalManager
 // Dependencies: [5, 502, 7221, 6699, 2]
 
-// Module 17941 (WebAuthnSignalManager)
+// Module 17942 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

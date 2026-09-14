@@ -1,9 +1,9 @@
-// Module ID: 13403
-// Function ID: 13404
+// Module ID: 13404
+// Function ID: 13405
 // Name: GuildActionSheetMemberCount
-// Dependencies: [19, 17, 21, 4636, 576, 1151, 1114, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1364, 1114, 4632, 2]
 
-// Module 13403 (GuildActionSheetMemberCount)
+// Module 13404 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -21,7 +21,7 @@ obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight
 obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-const PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

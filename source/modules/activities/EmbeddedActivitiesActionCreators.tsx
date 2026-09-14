@@ -1,12 +1,12 @@
 // Module ID: 9634
 // Function ID: 9635
 // Name: EmbeddedActivitiesActionCreators
-// Dependencies: [5, 9419, 4864, 4652, 4779, 1918, 502, 1957, 1979, 4275, 1371, 4655, 1956, 1920, 9635, 1074, 1350, 1954, 7838, 9636, 7855, 9637, 9653, 9654, 9655, 573, 9700, 9657, 4538, 4865, 8981, 9676, 9701, 1894, 9702, 9669, 9541, 1242, 9667, 9712, 9662, 4980, 1114, 9658, 9675, 1250, 4829, 4265, 9606, 4837, 1272, 1369, 8496, 7559, 4649, 7784, 1945, 1943, 2]
+// Dependencies: [5, 9419, 4864, 4652, 4779, 1918, 502, 1957, 1979, 4275, 1371, 4655, 1956, 1920, 9635, 1074, 1348, 1954, 7838, 9636, 7855, 9637, 9653, 9654, 9655, 573, 9700, 9657, 4538, 4865, 8981, 9676, 9701, 1894, 9702, 9669, 9541, 1240, 9667, 9712, 9662, 4980, 1114, 9658, 9675, 1248, 4829, 4265, 9606, 4837, 1270, 1369, 8496, 7559, 4649, 7784, 1945, 1943, 2]
 // Exports: consumeRequestToReactToSeriousThermalState, dismissNewActivityIndicator, disregardSeriousThermalState, fetchDeveloperApplications, fetchShelf, maybeDisconnectFromCurrentActivity, openActivityPopoutWindow, refreshProxyTicket, requestRespondToSeriousThermalState, runPrimaryAppCommandOrJoinEmbeddedActivity, sendEmbeddedActivityInvite, sendEmbeddedActivityInviteUser, updateActivityPanelMode, updateActivityPopoutWindowLayout, updateFocusedActivityLayout, uploadImageAttachment, validateTestMode
 
 // Module 9634 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
@@ -575,7 +575,7 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0, value) {
                         obj2.error_status = error_status;
                         obj2.error_reason_code = error_reason_code;
                         obj2.source = source;
-                        nonce(1242).track(constants.ACTIVITY_INTERACTION_CALLBACK_ERROR, obj2);
+                        nonce(1240).track(constants.ACTIVITY_INTERACTION_CALLBACK_ERROR, obj2);
                         if (null != error_code) {
                           if (null != error_message) {
                             if (null != error_status) {
@@ -593,7 +593,7 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0, value) {
                             closure_1_1(tmp14);
                           }
                         }
-                        const obj = nonce(1242);
+                        const obj = nonce(1240);
                         const tmp3Result = nonce(4865);
                         closure_1_1(new nonce(4865)(nonce(4865).ReasonCodes.UNKNOWN));
                       }
@@ -1538,7 +1538,7 @@ let closure_16 = fn(1920).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const ActivityPanelModes = fn(9635).ActivityPanelModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, AnalyticsGameOpenTypes: closure_19, ApplicationFlags: closure_20, ChannelTypes: closure_21, Endpoints: closure_22, PopoutWindowKeys: closure_23 } = Constants);
-const INSTALL_LESS_APP_IDS = fn(1350).INSTALL_LESS_APP_IDS;
+const INSTALL_LESS_APP_IDS = fn(1348).INSTALL_LESS_APP_IDS;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const InviteTargetTypes = fn(7838).InviteTargetTypes;
 let closure_28 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };

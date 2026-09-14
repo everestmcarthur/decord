@@ -1,19 +1,19 @@
-// Module ID: 13257
-// Function ID: 13258
+// Module ID: 13258
+// Function ID: 13259
 // Name: UserProfileContactButtons
-// Dependencies: [19, 17, 4285, 1074, 21, 4636, 576, 5056, 7265, 8307, 13193, 504, 4481, 13258, 4573, 1114, 12749, 9171, 11350, 4603, 4839, 4649, 13260, 8202, 5152, 7984, 13261, 2]
+// Dependencies: [19, 17, 4285, 1074, 21, 4636, 576, 5056, 7265, 8307, 13194, 504, 4481, 13259, 4573, 1114, 12750, 9171, 11351, 4603, 4839, 4649, 13261, 8202, 5152, 7984, 13262, 2]
 // Exports: default
 
-// Module 13257 (UserProfileContactButtons)
+// Module 13258 (UserProfileContactButtons)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11350 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12749 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13261 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11351 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12750 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13262 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
@@ -49,8 +49,8 @@ function FriendRequestButton(user) {
   dependencyMap = { location: newestAnalyticsLocation };
   let obj = user(8307);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13193).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13193);
+  const gameFriendsForUser = user(13194).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13194);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -63,7 +63,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13258).UserClockIcon;
+          let UserPlusIcon = tmp3(13259).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4573).UserPlusIcon;
         }

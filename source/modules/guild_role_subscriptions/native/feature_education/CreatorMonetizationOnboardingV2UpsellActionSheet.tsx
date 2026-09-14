@@ -1,17 +1,17 @@
-// Module ID: 16342
-// Function ID: 16343
+// Module ID: 16344
+// Function ID: 16345
 // Name: CreatorMonetizationOnboardingV2UpsellActionSheet
-// Dependencies: [19, 17, 1074, 1954, 21, 4636, 7253, 4632, 1114, 5668, 16343, 5056, 9192, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4636, 7253, 4632, 1114, 5668, 16345, 5056, 9192, 2]
 // Exports: default
 
-// Module 16342 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 16344 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import _modDef16343 from "module_16343" /* 16343 */;
+import _modDef16345 from "module_16345" /* 16345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16343 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16345 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress() {

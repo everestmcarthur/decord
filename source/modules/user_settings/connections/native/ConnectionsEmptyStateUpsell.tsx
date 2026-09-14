@@ -1,10 +1,10 @@
-// Module ID: 15048
-// Function ID: 15049
+// Module ID: 15049
+// Function ID: 15050
 // Name: ConnectionsEmptyStateUpsell
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4571, 9381, 15049, 15050, 1396, 4488, 5688, 1178, 4603, 15046, 1896, 4632, 7606, 1611, 5054, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4571, 9381, 15050, 15051, 1396, 4488, 5688, 1176, 4603, 15047, 1896, 4632, 7606, 1611, 5054, 1114, 2]
 // Exports: default
 
-// Module 15048 (ConnectionsEmptyStateUpsell)
+// Module 15049 (ConnectionsEmptyStateUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -12,7 +12,7 @@ import shared from "shared" /* 4488 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Card from "Card" /* 5688 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9381 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 15049 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 15050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

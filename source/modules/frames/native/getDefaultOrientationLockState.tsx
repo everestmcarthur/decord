@@ -1,10 +1,10 @@
-// Module ID: 16719
-// Function ID: 16720
+// Module ID: 16721
+// Function ID: 16722
 // Name: frames/getDefaultOrientationLockState
 // Dependencies: [9764, 573, 2]
 // Exports: setOrientationLockState
 
-// Module 16719 (frames/getDefaultOrientationLockState)
+// Module 16721 (frames/getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import getDefaultOrientationLockState from "getDefaultOrientationLockState" /* 9764 */;
 import size from "module_2" /* 2 */;

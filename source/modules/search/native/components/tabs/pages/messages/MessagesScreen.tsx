@@ -1,13 +1,13 @@
-// Module ID: 16821
-// Function ID: 16822
+// Module ID: 16823
+// Function ID: 16824
 // Name: MessagesScreen
-// Dependencies: [19, 12468, 7982, 21, 16805, 504, 16749, 16807, 16822, 16806, 16811, 16797, 16756, 2]
+// Dependencies: [19, 12469, 7982, 21, 16807, 504, 16751, 16809, 16824, 16808, 16813, 16799, 16758, 2]
 
-// Module 16821 (MessagesScreen)
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16807 */;
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16822 */;
+// Module 16823 (MessagesScreen)
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16809 */;
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16824 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 const SearchConstants = fn(7982);

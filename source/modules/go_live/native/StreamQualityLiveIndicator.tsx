@@ -1,13 +1,13 @@
 // Module ID: 9748
 // Function ID: 9749
 // Name: StreamQualityLiveIndicator
-// Dependencies: [19, 17, 1074, 1373, 4661, 21, 4636, 576, 9604, 9749, 7265, 4373, 4637, 1178, 9238, 9750, 1242, 9522, 9492, 4294, 5204, 5668, 9490, 2]
+// Dependencies: [19, 17, 1074, 1373, 4661, 21, 4636, 576, 9604, 9749, 7265, 4373, 4637, 1176, 9238, 9750, 1240, 9522, 9492, 4294, 5204, 5668, 9490, 2]
 // Exports: default
 
 // Module 9748 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import timing from "timing" /* 4637 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;

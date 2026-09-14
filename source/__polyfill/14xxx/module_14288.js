@@ -1,144 +1,25 @@
 // Module ID: 14288
 // Function ID: 14289
-// Dependencies: [1162, 14289, 14290, 14291, 14297, 14299, 14300, 14301, 14302, 14303, 14304, 14305, 14306, 14307, 14308, 14309, 14314, 14315, 14318, 14319, 14321, 14323, 14324, 14310, 14311, 14325, 14320, 14322, 14341, 14340, 14313, 14312, 14342, 14343, 14294, 14292, 14344, 14345, 14346, 14347, 14348, 14349, 14350, 14296, 14351]
+// Dependencies: []
+// Exports: default
 
 // Module 14288
-import CanonicalizeLocaleList from "CanonicalizeLocaleList" /* 14289 */;
-import CanonicalizeTimeZoneName from "CanonicalizeTimeZoneName" /* 14290 */;
-import CoerceOptionsToObject from "CoerceOptionsToObject" /* 14291 */;
-import _mod14292 from "module_14292" /* 14292 */;
-import GetNumberOption from "GetNumberOption" /* 14297 */;
-import GetOption from "GetOption" /* 14299 */;
-import GetOptionsObject from "GetOptionsObject" /* 14300 */;
-import GetStringOrBooleanOption from "GetStringOrBooleanOption" /* 14301 */;
-import IsSanctionedSimpleUnitIdentifier from "IsSanctionedSimpleUnitIdentifier" /* 14302 */;
-import IsValidTimeZoneName from "IsValidTimeZoneName" /* 14303 */;
-import IsWellFormedCurrencyCode from "IsWellFormedCurrencyCode" /* 14304 */;
-import IsWellFormedUnitIdentifier from "IsWellFormedUnitIdentifier" /* 14305 */;
-import ApplyUnsignedRoundingMode from "ApplyUnsignedRoundingMode" /* 14306 */;
-import CollapseNumberRange from "CollapseNumberRange" /* 14307 */;
-import ComputeExponent from "ComputeExponent" /* 14308 */;
-import ComputeExponentForMagnitude from "ComputeExponentForMagnitude" /* 14309 */;
-import FormatNumericToString from "FormatNumericToString" /* 14310 */;
-import GetUnsignedRoundingMode from "GetUnsignedRoundingMode" /* 14311 */;
-import ToRawPrecision from "ToRawPrecision" /* 14312 */;
-import ToRawFixed from "ToRawFixed" /* 14313 */;
-import CurrencyDigits from "CurrencyDigits" /* 14314 */;
-import FormatApproximately from "FormatApproximately" /* 14318 */;
-import FormatNumeric from "FormatNumeric" /* 14319 */;
-import PartitionNumberPattern from "PartitionNumberPattern" /* 14320 */;
-import FormatNumericRange from "FormatNumericRange" /* 14321 */;
-import PartitionNumberRangePattern from "PartitionNumberRangePattern" /* 14322 */;
-import FormatNumericRangeToParts from "FormatNumericRangeToParts" /* 14323 */;
-import FormatNumericToParts from "FormatNumericToParts" /* 14324 */;
-import InitializeNumberFormat from "InitializeNumberFormat" /* 14325 */;
-import SetNumberFormatUnitOptions from "SetNumberFormatUnitOptions" /* 14340 */;
-import SetNumberFormatDigitOptions from "SetNumberFormatDigitOptions" /* 14341 */;
-import PartitionPattern from "PartitionPattern" /* 14342 */;
-import SupportedLocales from "SupportedLocales" /* 14343 */;
-import RangePatternType from "RangePatternType" /* 14345 */;
-import _mod14346 from "module_14346" /* 14346 */;
-import _mod14347 from "module_14347" /* 14347 */;
-import _mod14348 from "module_14348" /* 14348 */;
-import _mod14349 from "module_14349" /* 14349 */;
-import _mod14350 from "module_14350" /* 14350 */;
-import e_mod from "e" /* 1162 */;
+const weakMap = new WeakMap();
 
-const require = globalThis.__r;
-
-let e = e_mod;
-e.__exportStar(CanonicalizeLocaleList, exports);
-let e = e_mod;
-e.__exportStar(CanonicalizeTimeZoneName, exports);
-let e = e_mod;
-e.__exportStar(CoerceOptionsToObject, exports);
-let e = e_mod;
-e.__exportStar(GetNumberOption, exports);
-let e = e_mod;
-e.__exportStar(GetOption, exports);
-let e = e_mod;
-e.__exportStar(GetOptionsObject, exports);
-let e = e_mod;
-e.__exportStar(GetStringOrBooleanOption, exports);
-let e = e_mod;
-e.__exportStar(IsSanctionedSimpleUnitIdentifier, exports);
-let e = e_mod;
-e.__exportStar(IsValidTimeZoneName, exports);
-let e = e_mod;
-e.__exportStar(IsWellFormedCurrencyCode, exports);
-let e = e_mod;
-e.__exportStar(IsWellFormedUnitIdentifier, exports);
-let e = e_mod;
-e.__exportStar(ApplyUnsignedRoundingMode, exports);
-let e = e_mod;
-e.__exportStar(CollapseNumberRange, exports);
-let e = e_mod;
-e.__exportStar(ComputeExponent, exports);
-let e = e_mod;
-e.__exportStar(ComputeExponentForMagnitude, exports);
-let e = e_mod;
-e.__exportStar(CurrencyDigits, exports);
-let e = e_mod;
-e.__exportStar(FormatApproximately, exports);
-let e = e_mod;
-e.__exportStar(FormatNumeric, exports);
-let e = e_mod;
-e.__exportStar(FormatNumericRange, exports);
-let e = e_mod;
-e.__exportStar(FormatNumericRangeToParts, exports);
-let e = e_mod;
-e.__exportStar(FormatNumericToParts, exports);
-let e = e_mod;
-e.__exportStar(FormatNumericToString, exports);
-let e = e_mod;
-e.__exportStar(GetUnsignedRoundingMode, exports);
-let e = e_mod;
-e.__exportStar(InitializeNumberFormat, exports);
-let e = e_mod;
-e.__exportStar(PartitionNumberPattern, exports);
-let e = e_mod;
-e.__exportStar(PartitionNumberRangePattern, exports);
-let e = e_mod;
-e.__exportStar(SetNumberFormatDigitOptions, exports);
-let e = e_mod;
-e.__exportStar(SetNumberFormatUnitOptions, exports);
-let e = e_mod;
-e.__exportStar(ToRawFixed, exports);
-let e = e_mod;
-e.__exportStar(ToRawPrecision, exports);
-let e = e_mod;
-e.__exportStar(PartitionPattern, exports);
-let e = e_mod;
-e.__exportStar(SupportedLocales, exports);
-let e = e_mod;
-e.__exportStar(_mod14292, exports);
-let e = e_mod;
-e.__exportStar(RangePatternType, exports);
-let e = e_mod;
-e.__exportStar(_mod14346, exports);
-let e = e_mod;
-e.__exportStar(_mod14347, exports);
-let e = e_mod;
-e.__exportStar(_mod14348, exports);
-let e = e_mod;
-e.__exportStar(_mod14349, exports);
-let e = e_mod;
-e.__exportStar(_mod14350, exports);
-
-export const _formatToParts = require("e").__importDefault(require("module_14315")).default;
-export const createDataProperty = require("module_14294").createDataProperty;
-export const defineProperty = require("module_14294").defineProperty;
-export const getInternalSlot = require("module_14294").getInternalSlot;
-export const getMultiInternalSlots = require("module_14294").getMultiInternalSlots;
-export const isLiteralPart = require("module_14294").isLiteralPart;
-export const setInternalSlot = require("module_14294").setInternalSlot;
-export const setMultiInternalSlots = require("module_14294").setMultiInternalSlots;
-export const isMissingLocaleDataError = require("module_14344").isMissingLocaleDataError;
-export const createMemoizedDateTimeFormat = require("module_14294").createMemoizedDateTimeFormat;
-export const createMemoizedListFormat = require("module_14294").createMemoizedListFormat;
-export const createMemoizedLocale = require("module_14294").createMemoizedLocale;
-export const createMemoizedNumberFormat = require("module_14294").createMemoizedNumberFormat;
-export const createMemoizedPluralRules = require("module_14294").createMemoizedPluralRules;
-export const invariant = require("module_14294").invariant;
-export const ZERO = require("TEN").ZERO;
-export const ToIntlMathematicalValue = require("ToIntlMathematicalValue").ToIntlMathematicalValue;
+export default function getInternalSlots(arg0, arg1) {
+  let items = arg1;
+  if (undefined === arg1) {
+    items = [];
+  }
+  value = weakMap.get(arg0);
+  if (!value) {
+    const _Object = Object;
+    const obj2 = Object.create(null, items.reduce((acc, item) => {
+      acc[item] = { enumerable: false, writable: true, configurable: true };
+      return acc;
+    }, {}));
+    const result = weakMap.set(arg0, obj2);
+    value = obj2;
+  }
+  return value;
+};

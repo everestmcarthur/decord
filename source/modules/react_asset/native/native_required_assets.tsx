@@ -1,11 +1,11 @@
-// Module ID: 18019
-// Function ID: 18020
+// Module ID: 18020
+// Function ID: 18021
 // Name: native_required_assets
-// Dependencies: [18020, 18027, 2]
+// Dependencies: [18021, 18028, 2]
 
-// Module 18019 (native_required_assets)
-import native_required_assets_icons from "native_required_assets_icons" /* 18020 */;
-import native_required_assets_misc from "native_required_assets_misc" /* 18027 */;
+// Module 18020 (native_required_assets)
+import native_required_assets_icons from "native_required_assets_icons" /* 18021 */;
+import native_required_assets_misc from "native_required_assets_misc" /* 18028 */;
 import size from "module_2" /* 2 */;
 
 const merged = Object.assign(native_required_assets_icons.NATIVE_REQUIRED_ASSETS_ICONS);

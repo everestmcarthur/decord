@@ -1,9 +1,9 @@
-// Module ID: 17485
-// Function ID: 17486
+// Module ID: 17487
+// Function ID: 17488
 // Name: GuildOnboardingManager
 // Dependencies: [2021, 1979, 4458, 1074, 4262, 7221, 7198, 1384, 2]
 
-// Module 17485 (GuildOnboardingManager)
+// Module 17487 (GuildOnboardingManager)
 import doGuildOnboardingDefault from "doGuildOnboarding" /* 7198 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;

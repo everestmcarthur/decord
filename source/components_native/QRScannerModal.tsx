@@ -1,10 +1,10 @@
-// Module ID: 13955
-// Function ID: 13956
+// Module ID: 13956
+// Function ID: 13957
 // Name: QRScannerModal
-// Dependencies: [32, 19, 17, 1074, 7641, 21, 1150, 13956, 576, 7141, 1611, 1365, 13936, 4839, 13951, 1896, 7485, 12043, 4331, 4981, 1114, 9179, 7192, 1178, 2]
+// Dependencies: [32, 19, 17, 1074, 7641, 21, 1363, 13957, 576, 7141, 1611, 1365, 13937, 4839, 13952, 1896, 7485, 12044, 4331, 4981, 1114, 9179, 7192, 1176, 2]
 // Exports: default
 
-// Module 13955 (QRScannerModal)
+// Module 13956 (QRScannerModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
@@ -13,8 +13,8 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import _modDef7192 from "module_7192" /* 7192 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
-import QRLoginUtils from "QRLoginUtils" /* 13936 */;
-import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 13956 */;
+import QRLoginUtils from "QRLoginUtils" /* 13937 */;
+import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 13957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 let closure_7 = fn(7641).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = QRScannerNativeComponentDefault;
 } else {
@@ -87,7 +87,7 @@ export default function QRScannerModal(showHelp) {
             tmp21(4839).pop();
             const tmp21Result = tmp21(4839);
             obj2 = { remoteAuthFingerprint: result };
-            tmp21(4839).pushLazy(tmp3(1896)(13951, tmp22.paths), obj2);
+            tmp21(4839).pushLazy(tmp3(1896)(13952, tmp22.paths), obj2);
           } else {
             let match;
             if (str != null) {
@@ -100,7 +100,7 @@ export default function QRScannerModal(showHelp) {
                 const obj3 = { screen: UserSettingsSections.FAMILY_CENTER };
                 tmp3(7485).openUserSettings(obj3);
                 const tmp3Result = tmp3(7485);
-                const result1 = tmp3(12043).handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
+                const result1 = tmp3(12044).handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
               }
             }
             tmp21(4331).openURL(nativeEvent.nativeEvent.result, undefined, false);
@@ -146,7 +146,7 @@ export default function QRScannerModal(showHelp) {
       const obj7 = { style: tmp12.text, children: null };
       let intl2 = tmp17(1114).intl;
       obj7.children = intl2.string(tmp17(1114).t.dklV0G);
-      obj5.children = tmp14(tmp17(1178).LegacyText, obj7);
+      obj5.children = tmp14(tmp17(1176).LegacyText, obj7);
       tmp14Result = tmp14(tmp9, obj5);
     }
   }

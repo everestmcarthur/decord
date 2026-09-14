@@ -1,13 +1,13 @@
 // Module ID: 7754
 // Function ID: 7755
 // Name: GuildsRequiringChannelSync
-// Dependencies: [1961, 502, 1957, 2021, 2015, 1979, 4275, 1074, 1964, 1085, 1086, 3, 1986, 4266, 1256, 1242, 1384, 2]
+// Dependencies: [1961, 502, 1957, 2021, 2015, 1979, 4275, 1074, 1964, 1085, 1086, 3, 1986, 4266, 1254, 1240, 1384, 2]
 
 // Module 7754 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;

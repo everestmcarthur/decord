@@ -1,10 +1,10 @@
-// Module ID: 16217
-// Function ID: 16218
+// Module ID: 16219
+// Function ID: 16220
 // Name: VoiceUser
-// Dependencies: [19, 1956, 4652, 4658, 502, 1908, 4654, 4655, 21, 504, 16218, 2]
+// Dependencies: [19, 1956, 4652, 4658, 502, 1908, 4654, 4655, 21, 504, 16220, 2]
 // Exports: default
 
-// Module 16217 (VoiceUser)
+// Module 16219 (VoiceUser)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;

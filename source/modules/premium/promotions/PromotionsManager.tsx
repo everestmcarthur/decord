@@ -1,16 +1,16 @@
-// Module ID: 17583
-// Function ID: 17584
+// Module ID: 17584
+// Function ID: 17585
 // Name: PromotionsManager
-// Dependencies: [5, 2025, 1371, 4300, 10793, 1373, 1074, 1085, 7221, 13505, 4294, 13548, 2]
+// Dependencies: [5, 2025, 1371, 4300, 10794, 1373, 1074, 1085, 7221, 13506, 4294, 13549, 2]
 
-// Module 17583 (PromotionsManager)
+// Module 17584 (PromotionsManager)
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13505 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// Module ID: 11740
-// Function ID: 11741
+// Module ID: 11741
+// Function ID: 11742
 // Name: useAppChannelApplication
 // Dependencies: [1074, 7266, 2]
 // Exports: useAppChannelApplication
 
-// Module 11740 (useAppChannelApplication)
+// Module 11741 (useAppChannelApplication)
 import Constants from "Constants" /* 1074 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 7266 */;
 import size from "module_2" /* 2 */;

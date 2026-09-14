@@ -1,10 +1,10 @@
-// Module ID: 10435
-// Function ID: 10436
+// Module ID: 10436
+// Function ID: 10437
 // Name: PremiumUpsellGradientBackground
 // Dependencies: [19, 17, 7535, 21, 4636, 5068, 1093, 2]
 // Exports: PremiumUpsellGradientBackground
 
-// Module 10435 (PremiumUpsellGradientBackground)
+// Module 10436 (PremiumUpsellGradientBackground)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import noop from "module_19" /* 19 */;

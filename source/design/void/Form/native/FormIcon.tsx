@@ -1,11 +1,11 @@
 // Module ID: 7251
 // Function ID: 7252
 // Name: FormIcon
-// Dependencies: [19, 21, 4636, 1178, 2]
+// Dependencies: [19, 21, 4636, 1176, 2]
 // Exports: default
 
 // Module 7251 (FormIcon)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

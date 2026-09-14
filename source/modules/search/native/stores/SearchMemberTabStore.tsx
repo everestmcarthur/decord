@@ -1,9 +1,9 @@
-// Module ID: 12493
-// Function ID: 12494
+// Module ID: 12494
+// Function ID: 12495
 // Name: SearchMemberTabStore
 // Dependencies: [1957, 1074, 9965, 4280, 5600, 504, 573, 2]
 
-// Module 12493 (SearchMemberTabStore)
+// Module 12494 (SearchMemberTabStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;

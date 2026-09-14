@@ -1,10 +1,10 @@
-// Module ID: 11259
-// Function ID: 11260
+// Module ID: 11260
+// Function ID: 11261
 // Name: BurstReactionToggle
-// Dependencies: [19, 17, 4628, 1954, 21, 4373, 504, 4338, 576, 4637, 5055, 4636, 11260, 1114, 9503, 2]
+// Dependencies: [19, 17, 4628, 1954, 21, 4373, 504, 4338, 576, 4637, 5055, 4636, 11261, 1114, 9503, 2]
 // Exports: default
 
-// Module 11259 (BurstReactionToggle)
+// Module 11260 (BurstReactionToggle)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
@@ -48,7 +48,7 @@ export default function BurstReactionToggle(arg0) {
     tmp7 = tmp2;
   }
   const ref = noop.useRef(null);
-  importDefault = tmp7(11260)(ref);
+  importDefault = tmp7(11261)(ref);
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   closure_129_3 = undefined;

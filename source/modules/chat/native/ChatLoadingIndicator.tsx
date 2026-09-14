@@ -1,10 +1,10 @@
-// Module ID: 13399
-// Function ID: 13400
+// Module ID: 13400
+// Function ID: 13401
 // Name: ChatLoadingIndicator
-// Dependencies: [32, 19, 17, 4628, 5358, 4857, 2011, 1371, 1895, 1074, 21, 4636, 576, 4981, 5075, 1896, 504, 4632, 13400, 4373, 4637, 1114, 5204, 2]
+// Dependencies: [32, 19, 17, 4628, 5358, 4857, 2011, 1371, 1895, 1074, 21, 4636, 576, 4981, 5075, 1896, 504, 4632, 13401, 4373, 4637, 1114, 5204, 2]
 // Exports: ChannelHeaderLoadingIndicator, useShouldChannelShowLoadingIndicator
 
-// Module 13399 (ChatLoadingIndicator)
+// Module 13400 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;

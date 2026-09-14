@@ -1,10 +1,10 @@
-// Module ID: 16329
-// Function ID: 16330
+// Module ID: 16331
+// Function ID: 16332
 // Name: FavoritesGuildCoachmarkMenuItem
-// Dependencies: [19, 1960, 1074, 1954, 21, 10368, 7259, 504, 1114, 3236, 11261, 2]
+// Dependencies: [19, 1960, 1074, 1954, 21, 10369, 7259, 504, 1114, 3236, 11262, 2]
 // Exports: default
 
-// Module 16329 (FavoritesGuildCoachmarkMenuItem)
+// Module 16331 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
 import LayerScope from "LayerScope" /* 7259 */;
@@ -34,7 +34,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M15 2V1H9v1H3v5H1v5h12V7h2V2Z", onButtonPress: null };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M15 2V1H9v1h6ZM9 3V2H5v1h4Z", onButtonPress: "#fff" };
     const intl = util.intl;
     const tmp4 = _modDef3236;
     if (stateFromStores) {

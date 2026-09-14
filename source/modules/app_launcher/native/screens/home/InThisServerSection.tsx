@@ -1,16 +1,16 @@
-// Module ID: 12239
-// Function ID: 12240
+// Module ID: 12240
+// Function ID: 12241
 // Name: InThisServerSection
-// Dependencies: [19, 17, 21, 4636, 576, 12217, 1369, 4632, 1114, 5204, 12180, 9031, 9539, 12185, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12218, 1369, 4632, 1114, 5204, 12181, 9031, 9539, 12186, 2]
 // Exports: default
 
-// Module 12239 (InThisServerSection)
+// Module 12240 (InThisServerSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12217 */;
+import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12218 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  const appLauncherIconSource = onAppSelected(12180).getAppLauncherIconSource(application);
+  const appLauncherIconSource = onAppSelected(12181).getAppLauncherIconSource(application);
   const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
@@ -39,7 +39,7 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(12185), obj3);
+    tmp6 = closure_5(application(12186), obj3);
   }
   const items = [tmp6, closure_5(onAppSelected(4632).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj2.children = items;

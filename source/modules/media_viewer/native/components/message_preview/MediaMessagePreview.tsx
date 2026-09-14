@@ -1,20 +1,20 @@
-// Module ID: 13103
-// Function ID: 13104
+// Module ID: 13104
+// Function ID: 13105
 // Name: MediaMessagePreview
-// Dependencies: [32, 19, 17, 7380, 7384, 1957, 4857, 8478, 1074, 21, 8036, 8243, 4636, 8411, 8775, 576, 504, 11447, 1114, 11, 13104, 11676, 11385, 7866, 11713, 6756, 12024, 11745, 4647, 2]
+// Dependencies: [32, 19, 17, 7380, 7384, 1957, 4857, 8478, 1074, 21, 8036, 8243, 4636, 8411, 8775, 576, 504, 11448, 1114, 11, 13105, 11677, 11386, 7866, 11714, 6756, 12025, 11746, 4647, 2]
 // Exports: default
 
-// Module 13103 (MediaMessagePreview)
+// Module 13104 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7866 */;
 import RowGeneratorDefault from "RowGenerator" /* 8036 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11676 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11745 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13104 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11677 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11746 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13105 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7380 */;

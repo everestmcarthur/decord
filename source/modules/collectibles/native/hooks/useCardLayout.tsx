@@ -1,10 +1,10 @@
-// Module ID: 15916
-// Function ID: 15917
+// Module ID: 15918
+// Function ID: 15919
 // Name: useCardLayout
 // Dependencies: [8890, 1477, 2]
 // Exports: useCardLayout
 
-// Module 15916 (useCardLayout)
+// Module 15918 (useCardLayout)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8890 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "accessible" };
+    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "isArray" };
     return obj2;
   } else {
     let num2 = 2;

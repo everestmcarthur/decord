@@ -1,11 +1,11 @@
-// Module ID: 16814
-// Function ID: 16815
+// Module ID: 16816
+// Function ID: 16817
 // Name: LinksScreen
-// Dependencies: [19, 7982, 21, 16797, 16805, 16813, 16749, 16806, 16807, 12467, 16811, 16756, 2]
+// Dependencies: [19, 7982, 21, 16799, 16807, 16815, 16751, 16808, 16809, 12468, 16813, 16758, 2]
 
-// Module 16814 (LinksScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16807 */;
+// Module 16816 (LinksScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

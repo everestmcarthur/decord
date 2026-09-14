@@ -1,10 +1,10 @@
-// Module ID: 12845
-// Function ID: 12846
+// Module ID: 12846
+// Function ID: 12847
 // Name: AcceptInviteContainer
-// Dependencies: [5, 19, 2021, 1979, 4620, 1074, 4262, 21, 4636, 576, 1483, 504, 5705, 1384, 7198, 1896, 7837, 9828, 7418, 8496, 10422, 12846, 7226, 4347, 2]
+// Dependencies: [5, 19, 2021, 1979, 4620, 1074, 4262, 21, 4636, 576, 1483, 504, 5705, 1384, 7198, 1896, 7837, 9828, 7418, 8496, 10423, 12847, 7226, 4347, 2]
 // Exports: default
 
-// Module 12845 (AcceptInviteContainer)
+// Module 12846 (AcceptInviteContainer)
 import nativeDefault from "native" /* 576 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

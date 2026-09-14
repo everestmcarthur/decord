@@ -1,7 +1,7 @@
 // Module ID: 8407
 // Function ID: 8408
 // Name: MediaModal
-// Dependencies: [19, 17, 8408, 1895, 1074, 21, 8378, 8409, 8380, 504, 1150, 8383, 8386, 8414, 8424, 8425, 1874, 8450, 4604, 4605, 4603, 8452, 1896, 13088, 8381, 13106, 13108, 5668, 13110, 2]
+// Dependencies: [19, 17, 8408, 1895, 1074, 21, 8378, 8409, 8380, 504, 1363, 8383, 8386, 8414, 8424, 8425, 1874, 8450, 4604, 4605, 4603, 8452, 1896, 13089, 8381, 13107, 13109, 5668, 13111, 2]
 // Exports: default
 
 // Module 8407 (MediaModal)
@@ -12,9 +12,9 @@ import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
 import NativePortalViewDefault from "NativePortalView" /* 8386 */;
 import MediaModalTiktokDefault from "MediaModalTiktok" /* 8414 */;
 import MediaModalWebVideoFileDefault from "MediaModalWebVideoFile" /* 8424 */;
-import MediaModalOverlayDefault from "MediaModalOverlay" /* 13088 */;
-import MediaModalYoutubeDefault from "MediaModalYoutube" /* 13106 */;
-import MediaModalLoaderDefault from "MediaModalLoader" /* 13108 */;
+import MediaModalOverlayDefault from "MediaModalOverlay" /* 13089 */;
+import MediaModalYoutubeDefault from "MediaModalYoutube" /* 13107 */;
+import MediaModalLoaderDefault from "MediaModalLoader" /* 13109 */;
 import noop from "module_19" /* 19 */;
 import AppFreezeStore from "AppFreezeStore" /* 8408 */;
 import AppStateStore from "AppStateStore" /* 1895 */;

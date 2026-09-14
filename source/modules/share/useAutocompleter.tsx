@@ -1,10 +1,10 @@
-// Module ID: 11124
-// Function ID: 11125
+// Module ID: 11125
+// Function ID: 11126
 // Name: useAutocompleter
 // Dependencies: [32, 19, 5679, 9965, 2]
 // Exports: default
 
-// Module 11124 (useAutocompleter)
+// Module 11125 (useAutocompleter)
 import sortByMatchScoreDefault from "sortByMatchScore" /* 9965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,10 +1,10 @@
-// Module ID: 10950
-// Function ID: 10951
+// Module ID: 10951
+// Function ID: 10952
 // Name: NativePaymentContext
-// Dependencies: [32, 19, 4299, 1085, 21, 7531, 9496, 7360, 10951, 504, 2]
+// Dependencies: [32, 19, 4299, 1085, 21, 7531, 9496, 7360, 10952, 504, 2]
 // Exports: NativePaymentContextProvider
 
-// Module 10950 (NativePaymentContext)
+// Module 10951 (NativePaymentContext)
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
 import ContextUtilsDefault from "ContextUtils" /* 7531 */;
 import _slicedToArray from "module_32" /* 32 */;

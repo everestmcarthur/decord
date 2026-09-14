@@ -1,13 +1,13 @@
 // Module ID: 9703
 // Function ID: 9704
 // Name: ApplicationUtils
-// Dependencies: [1074, 9704, 1242, 8488, 4331, 9705, 1086, 4839, 9708, 1896, 8457, 2]
+// Dependencies: [1074, 9704, 1240, 8488, 4331, 9705, 1086, 4839, 9708, 1896, 8457, 2]
 // Exports: installApplication, installPrivateChannelIntegration, openOAuth2Modal
 
 // Module 9703 (ApplicationUtils)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;

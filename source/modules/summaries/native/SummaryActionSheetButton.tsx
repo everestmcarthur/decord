@@ -1,12 +1,12 @@
-// Module ID: 11784
-// Function ID: 11785
+// Module ID: 11785
+// Function ID: 11786
 // Name: SummaryActionSheetButton
-// Dependencies: [19, 17, 21, 4636, 576, 5204, 1178, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5204, 1176, 4632, 2]
 // Exports: SummaryActionSheetButton
 
-// Module 11784 (SummaryActionSheetButton)
+// Module 11785 (SummaryActionSheetButton)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import noop from "module_19" /* 19 */;

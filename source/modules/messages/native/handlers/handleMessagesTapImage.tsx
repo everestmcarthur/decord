@@ -1,10 +1,10 @@
-// Module ID: 11675
-// Function ID: 11676
+// Module ID: 11676
+// Function ID: 11677
 // Name: handleMessagesTapImage
-// Dependencies: [7697, 4285, 1371, 1074, 8386, 11673, 1096, 8383, 4331, 4868, 8377, 4789, 5109, 2]
+// Dependencies: [7697, 4285, 1371, 1074, 8386, 11674, 1096, 8383, 4331, 4868, 8377, 4789, 5109, 2]
 // Exports: handleMessagesTapImage
 
-// Module 11675 (handleMessagesTapImage)
+// Module 11676 (handleMessagesTapImage)
 import LinkingDefault from "Linking" /* 4331 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
@@ -196,6 +196,6 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       tmp12 = message1;
     }
   } else {
-    const obj2 = embedId(11673);
+    const obj2 = embedId(11674);
   }
 };

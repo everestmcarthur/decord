@@ -1,15 +1,15 @@
-// Module ID: 11616
-// Function ID: 11617
+// Module ID: 11617
+// Function ID: 11618
 // Name: hooks/QuestHooks
-// Dependencies: [5, 32, 19, 7802, 2025, 1957, 5362, 1371, 7804, 7806, 7805, 5525, 1074, 1373, 504, 11617, 11409, 1150, 11433, 7801, 1090, 7824, 7826, 7829, 11423, 12, 1241, 11618, 11426, 11619, 2024, 11629, 5533, 11645, 7830, 7271, 11648, 11428, 11176, 5532, 11650, 1114, 1880, 4821, 5528, 7820, 4571, 4488, 11418, 4294, 11651, 1242, 1369, 11653, 11622, 11654, 1935, 4834, 4826, 2]
+// Dependencies: [5, 32, 19, 7802, 2025, 1957, 5362, 1371, 7804, 7806, 7805, 5525, 1074, 1373, 504, 11618, 11410, 1363, 11434, 7801, 1090, 7824, 7826, 7829, 11424, 12, 1239, 11619, 11427, 11620, 2024, 11630, 5533, 11646, 7830, 7271, 11649, 11429, 11177, 5532, 11651, 1114, 1880, 4821, 5528, 7820, 4571, 4488, 11419, 4294, 11652, 1240, 1369, 11654, 11623, 11655, 1935, 4834, 4826, 2]
 // Exports: useClaimedCollectibleRewardMessage, useClaimedQuests, useConnectedAccounts, useConnectedConsoleLinkOnClick, useCosponsoredLogotypeAsset, useExpiredQuestsMap, useFetchQuestHomeBounties, useFilteredQuests, useGetOrFetchApplicationForConsoleQuests, useIsPreviewerOnAnyQuest, useIsQuestAccessSuspended, useIsQuestEligibleForMembersListPopout, useIsQuestExpired, useIsQuestProgressingOnConsole, useIsQuestProgressingOnDesktop, useIsQuestProgressingVideoQuest, useLaunchInGameActivityQuest, useManuallyStartConsoleQuest, useNonNullableQuest, useOnOpenGameClick, useProgressState, useQuest, useQuestBarImpressionSurvey, useQuestBarOrDockModeChangeTracking, useQuestCollectibles, useQuestCompletionDetails, useQuestForMemberListSocialEntryPoint, useQuestFormattedDate, useQuestHomeBounties, useQuestHomeFilterOptions, useQuestHomeHeroShelf, useQuestHomeSortOptions, useQuestHomeSortingFilteringAnalytics, useQuestHowToHelpArticle, useQuestOrbRewardMultiplier, useQuestPreviewActions, useQuestWarningTips, useQuestsWithPreviewAccess, useSelectedTaskPlatform, useShouldShowBonusOrbsUX, useShouldShowPreviewToolTab, useShouldShowQuestPreviewOverrides, useShouldShowQuestsActivityPanelItem, useThirdPartyTaskDetails, useWaitingForConsoleConnection
 
-// Module 11616 (hooks/QuestHooks)
+// Module 11617 (hooks/QuestHooks)
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
@@ -24,17 +24,17 @@ import AnalyticsActions from "AnalyticsActions" /* 7820 */;
 import utils_QuestUtils from "utils/QuestUtils" /* 7824 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11176 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
-import AssetUtils from "AssetUtils" /* 11418 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11423 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11428 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11645 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11648 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 11650 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 11651 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11177 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+import AssetUtils from "AssetUtils" /* 11419 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11424 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11429 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11646 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 11649 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 11651 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 11652 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -78,7 +78,7 @@ function useQuests(arg0) {
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(11617).getIsEligibleForQuests();
+  isEligibleForQuests = obj(11618).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -1075,7 +1075,7 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
   }
   c3 = isConsoleQuestResult;
   obj2 = quest(7826);
-  closure_4 = tmp(11619).useGetQuestImpressionId();
+  closure_4 = tmp(11620).useGetQuestImpressionId();
   return () => {
     const obj = QuestPlatformUtils;
     if (c3) {
@@ -1165,23 +1165,23 @@ export const useQuestPreviewActions = function useQuestPreviewActions(id) {
   let items = [id];
   return noop.useMemo(() => ({
     handleComplete() {
-      return closure_0(11409).completeQuestPreview(id);
+      return closure_0(11410).completeQuestPreview(id);
     },
     handleProgress(random) {
-      return closure_0(11409).completeQuestPreview(id, random);
+      return closure_0(11410).completeQuestPreview(id, random);
     },
     handleResetStatusClick() {
-      return closure_0(11409).resetQuestPreviewStatus(id);
+      return closure_0(11410).resetQuestPreviewStatus(id);
     },
     handleResetDismissibilityClick() {
-      return closure_0(11409).resetQuestDismissibilityStatus(id);
+      return closure_0(11410).resetQuestDismissibilityStatus(id);
     },
     handleOverridePreviewClick(placement) {
-      return closure_0(11409).overrideQuestForPlacement(placement, id);
+      return closure_0(11410).overrideQuestForPlacement(placement, id);
     },
     handleResetHasBeenSeenClick() {
       const items = [id];
-      return closure_0(11409).markAdContentUnseen(closure_0(5532).AdCreativeType.QUEST, items);
+      return closure_0(11410).markAdContentUnseen(closure_0(5532).AdCreativeType.QUEST, items);
     }
   }), items);
 };
@@ -1626,8 +1626,8 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
     tmp19 = null != completedAt;
     let tmp22 = require("PlatformUtils").isWeb() && tmp17;
     if (tmp22) {
-      tmp22 = !tmp11(11629).isQuestSupportedOnWeb(userStatus);
-      const tmp11Result3 = tmp11(11629);
+      tmp22 = !tmp11(11630).isQuestSupportedOnWeb(userStatus);
+      const tmp11Result3 = tmp11(11630);
     }
     const tmp11Result = require("PlatformUtils");
     let isMacResult = require("PlatformUtils").isMac();
@@ -2029,13 +2029,13 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(11654).fetchBountyPreview(arr, previewAdCreativeIds(5528).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(11655).fetchBountyPreview(arr, previewAdCreativeIds(5528).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(11654).fetchQuestHomeBounties(previewAdCreativeIds(5528).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(11655).fetchQuestHomeBounties(previewAdCreativeIds(5528).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {

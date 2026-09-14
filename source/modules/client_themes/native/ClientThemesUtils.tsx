@@ -1,13 +1,13 @@
 // Module ID: 4455
 // Function ID: 4456
 // Name: client_themes/ClientThemesUtils
-// Dependencies: [32, 19, 1183, 4456, 1228, 576, 672, 4486, 4487, 1231, 4488, 4490, 4571, 4568, 2]
+// Dependencies: [32, 19, 1181, 4456, 1226, 576, 672, 4486, 4487, 1229, 4488, 4490, 4571, 4568, 2]
 // Exports: colorToHex, getClientThemesGradientColorByPercentage, getClientThemesGradientHexColors, getEmbedBackground, getEmbedScrollGradientBackground, getGradientThemeMetadata, getGradientValue, useGradientValue
 
 // Module 4455 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1229 */;
 import utils_ColorDefault from "utils/Color" /* 4487 */;
 import shared from "shared" /* 4488 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4490 */;
@@ -15,9 +15,9 @@ import MobileThemesUtils from "MobileThemesUtils" /* 4568 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1226 */;
 
 const ColorUtils = tmp(4486);
 require = fn;

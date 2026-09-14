@@ -1,12 +1,12 @@
 // Module ID: 7156
 // Function ID: 7157
 // Name: ViewEmptyState
-// Dependencies: [19, 17, 1074, 21, 4636, 5605, 576, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 5605, 576, 1176, 2]
 // Exports: default
 
 // Module 7156 (ViewEmptyState)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5605 */;
 

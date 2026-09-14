@@ -1,14 +1,14 @@
 // Module ID: 5519
 // Function ID: 5520
 // Name: SortedGuildStore
-// Dependencies: [4459, 4276, 1221, 5520, 4978, 2021, 1979, 1073, 4817, 1371, 5521, 1332, 38, 1369, 1933, 2]
+// Dependencies: [4459, 4276, 1219, 5520, 4978, 2021, 1979, 1073, 4817, 1371, 5521, 1330, 38, 1369, 1933, 2]
 
 // Module 5519 (SortedGuildStore)
 import _modDef38 from "module_38" /* 38 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5520 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -105,7 +105,7 @@ function rebuildTree(arg0, arg1) {
     }
     insertUnsortedGuilds((arg0) => null == guildsTree.nodes[arg0], (item10030) => guildsTree.addNode(obj42(dependencyMap[10]).createGuildNode(item10030), guildsTree.root, false));
     guildsTree.version = tmp.version;
-    const tmp69 = _modDef1332(tmp, guildsTree);
+    const tmp69 = _modDef1330(tmp, guildsTree);
     if (tmp69) {
       guildsTree = tmp;
     } else {
@@ -156,7 +156,7 @@ function handleSettingsUpdate() {
   guildFolders1 = UserSettingsProtoStore.getGuildFolders();
   let tmp6Result = null == guildFolders1;
   if (!tmp6Result) {
-    tmp6Result = !_modDef1332(guildFolders1, guildFolders1);
+    tmp6Result = !_modDef1330(guildFolders1, guildFolders1);
   }
   if (tmp6Result) {
     if (guildFolders1 == null) {

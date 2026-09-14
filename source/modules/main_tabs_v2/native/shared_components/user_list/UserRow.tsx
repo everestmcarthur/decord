@@ -1,13 +1,13 @@
-// Module ID: 10996
-// Function ID: 10997
+// Module ID: 10997
+// Function ID: 10998
 // Name: UserRow
-// Dependencies: [19, 17, 4628, 4864, 7764, 1957, 4676, 4285, 10988, 1074, 21, 4636, 576, 4649, 38, 10997, 10998, 4334, 10999, 9171, 7765, 504, 1178, 4632, 4481, 11004, 7265, 8333, 1114, 11024, 4589, 4587, 5056, 1926, 7984, 5152, 8296, 1896, 8334, 11025, 9505, 5085, 8065, 4870, 9305, 11027, 9568, 11035, 9313, 11036, 5685, 11039, 5686, 2]
+// Dependencies: [19, 17, 4628, 4864, 7764, 1957, 4676, 4285, 10989, 1074, 21, 4636, 576, 4649, 38, 10998, 10999, 4334, 11000, 9171, 7765, 504, 1176, 4632, 4481, 11005, 7265, 8333, 1114, 11025, 4589, 4587, 5056, 1926, 7984, 5152, 8296, 1896, 8334, 11026, 9505, 5085, 8065, 4870, 9305, 11028, 9568, 11036, 9313, 11037, 5685, 11040, 5686, 2]
 
-// Module 10996 (UserRow)
+// Module 10997 (UserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import utils_StringUtils from "utils/StringUtils" /* 1926 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -21,11 +21,11 @@ import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreator
 import PhoneCallIcon from "PhoneCallIcon" /* 7984 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
 import BoostGemIcon from "BoostGemIcon" /* 9505 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10998 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10999 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11004 */;
-import ActionButtonDefault from "ActionButton" /* 11024 */;
-import CrownIcon from "CrownIcon" /* 11025 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10999 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 11000 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11005 */;
+import ActionButtonDefault from "ActionButton" /* 11025 */;
+import CrownIcon from "CrownIcon" /* 11026 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
@@ -68,7 +68,7 @@ function UserRowSubLabel(arg0) {
     }
     const obj7 = { uri: str };
     obj6.source = obj7;
-    const items1 = [closure_14(tmp(1178).Icon, obj6, stateFromStores.id), ];
+    const items1 = [closure_14(tmp(1176).Icon, obj6, stateFromStores.id), ];
     const obj8 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: stateFromStores.name };
     items1[1] = closure_14(tmp(4632).Text, obj8);
     obj5.children = items1;
@@ -76,7 +76,7 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -331,7 +331,7 @@ export default noop.memo(function UserRow(type) {
             channel = channel.getChannel(result);
             if (null != channel) {
               user(38)(channel.isPrivate(), "must be a DM");
-              const obj2 = user(10997)(channel, false);
+              const obj2 = user(10998)(channel, false);
               if (!obj2.inCall) {
                 obj2.onPress();
               }
@@ -381,7 +381,7 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10997)(channel, false);
+          const obj2 = user(10998)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }

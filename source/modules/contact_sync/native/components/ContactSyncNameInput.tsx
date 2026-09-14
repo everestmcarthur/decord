@@ -1,14 +1,14 @@
-// Module ID: 12826
-// Function ID: 12827
+// Module ID: 12827
+// Function ID: 12828
 // Name: ContactSyncNameInput
-// Dependencies: [32, 19, 17, 21, 4636, 576, 7084, 1114, 4632, 1178, 5056, 12823, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 7084, 1114, 4632, 1176, 5056, 12824, 2]
 // Exports: default
 
-// Module 12826 (ContactSyncNameInput)
+// Module 12827 (ContactSyncNameInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12823 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -77,7 +77,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   const intl4 = tmp9(1114).intl;
   obj5.children = intl4.string(tmp9(1114).t["42/D2U"]);
   items1[2] = timestampProducer(tmp9(4632).Text, obj5);
-  items1[3] = timestampProducer(tmp9(1178).InputView, { value, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(1178).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
+  items1[3] = timestampProducer(tmp9(1176).InputView, { value, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(1176).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
   let tmp12Result = null;
   if (flag) {
     const obj7 = { style: tmp.formSubtitle, variant: "text-xs/medium", color: "text-default", children: null };

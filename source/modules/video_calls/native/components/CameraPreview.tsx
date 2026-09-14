@@ -1,7 +1,7 @@
 // Module ID: 9614
 // Function ID: 9615
 // Name: CameraPreview
-// Dependencies: [32, 19, 17, 1956, 4652, 9615, 4658, 502, 9616, 9597, 9598, 1074, 4657, 21, 6756, 4373, 1178, 504, 9617, 9604, 9626, 9605, 5207, 1611, 9623, 8450, 8390, 9618, 5763, 4637, 9714, 1114, 9715, 9717, 9718, 9620, 9600, 9606, 9784, 9785, 2]
+// Dependencies: [32, 19, 17, 1956, 4652, 9615, 4658, 502, 9616, 9597, 9598, 1074, 4657, 21, 6756, 4373, 1176, 504, 9617, 9604, 9626, 9605, 5207, 1611, 9623, 8450, 8390, 9618, 5763, 4637, 9714, 1114, 9715, 9717, 9718, 9620, 9600, 9606, 9784, 9785, 2]
 // Exports: default
 
 // Module 9614 (CameraPreview)
@@ -199,7 +199,7 @@ const CallConstants = fn(4657);
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 let closure_24 = { code: "function CameraPreviewTsx1(){const{closeFunc,runOnJS}=this.__closure;if(closeFunc!=null){runOnJS(closeFunc)();}}" };
-let obj = { duration: 250, easing: fn(1178).STANDARD_EASING };
+let obj = { duration: 250, easing: fn(1176).STANDARD_EASING };
 const constants3 = { HIDE_PIP: "HIDE_PIP", HANDLE_THERMAL_EVENT: "HANDLE_THERMAL_EVENT" };
 const __initData = { code: "function CameraPreviewTsx2(){const{withTiming,marginTopState,TIMING_CONFIG,marginBottomState}=this.__closure;return{marginTop:withTiming(marginTopState,TIMING_CONFIG),marginBottom:withTiming(marginBottomState,TIMING_CONFIG)};}" };
 const size = fn(2);

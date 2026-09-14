@@ -1,10 +1,10 @@
-// Module ID: 15673
-// Function ID: 15674
+// Module ID: 15675
+// Function ID: 15676
 // Name: DevToolsLocalMessageCache
 // Dependencies: [17, 1957, 21, 4636, 576, 5686, 5054, 5768, 7591, 4632, 2]
 // Exports: default
 
-// Module 15673 (DevToolsLocalMessageCache)
+// Module 15675 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;

@@ -1,10 +1,10 @@
-// Module ID: 16254
-// Function ID: 16255
+// Module ID: 16256
+// Function ID: 16257
 // Name: useIsGuildThemePerkEnabled
 // Dependencies: [1979, 4525, 1074, 504, 4529, 2]
 // Exports: default
 
-// Module 16254 (useIsGuildThemePerkEnabled)
+// Module 16256 (useIsGuildThemePerkEnabled)
 import Powerups from "Powerups" /* 4529 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;

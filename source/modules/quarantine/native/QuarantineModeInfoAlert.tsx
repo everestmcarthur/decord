@@ -1,13 +1,13 @@
 // Module ID: 5604
 // Function ID: 5605
 // Name: QuarantineModeInfoAlert
-// Dependencies: [19, 1074, 21, 4636, 5605, 576, 5075, 1178, 1114, 4632, 2]
+// Dependencies: [19, 1074, 21, 4636, 5605, 576, 5075, 1176, 1114, 4632, 2]
 // Exports: default
 
 // Module 5604 (QuarantineModeInfoAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
 import noop from "module_19" /* 19 */;

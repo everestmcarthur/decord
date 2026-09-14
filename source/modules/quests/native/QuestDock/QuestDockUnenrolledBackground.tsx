@@ -1,18 +1,18 @@
-// Module ID: 15281
-// Function ID: 15282
+// Module ID: 15282
+// Function ID: 15283
 // Name: QuestDockUnenrolledBackground
-// Dependencies: [19, 15175, 21, 15182, 15171, 4338, 576, 15282, 2]
+// Dependencies: [19, 15176, 21, 15183, 15172, 4338, 576, 15283, 2]
 
-// Module 15281 (QuestDockUnenrolledBackground)
+// Module 15282 (QuestDockUnenrolledBackground)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
-import QuestHooks from "QuestHooks" /* 15171 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15182 */;
-import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15282 */;
+import QuestHooks from "QuestHooks" /* 15172 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15183 */;
+import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15283 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const expandedHeight = fn(15175).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(15176).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");

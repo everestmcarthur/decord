@@ -1,24 +1,24 @@
-// Module ID: 16115
-// Function ID: 16116
+// Module ID: 16117
+// Function ID: 16118
 // Name: useHomeDrawerGesture
-// Dependencies: [32, 19, 16116, 16118, 1074, 11597, 4500, 4373, 1484, 1242, 4637, 16117, 4604, 1477, 1611, 4497, 11598, 16119, 4494, 6756, 7177, 2]
+// Dependencies: [32, 19, 16118, 16120, 1074, 11598, 4500, 4373, 1484, 1240, 4637, 16119, 4604, 1477, 1611, 4497, 11599, 16121, 4494, 6756, 7177, 2]
 // Exports: useDoesLandOnHomeDrawer, useHomeDrawerState, useHomeGesture, useIsHomeDrawerEnabled
 
-// Module 16115 (useHomeDrawerGesture)
+// Module 16117 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import timing from "timing" /* 4637 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16117 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16119 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16116 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16118 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16118 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16120 */;
 
 require = fn;
-const computeMaxX = fn(16116).computeMaxX;
+const computeMaxX = fn(16118).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11597).LaunchPadTypes;
+const LaunchPadTypes = fn(11598).LaunchPadTypes;
 let c10 = 144;
 let c11 = 1000;
 let c12 = 96.00000000000001;

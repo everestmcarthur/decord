@@ -1,13 +1,13 @@
-// Module ID: 16419
-// Function ID: 16420
+// Module ID: 16421
+// Function ID: 16422
 // Name: MentionSubtitle
-// Dependencies: [19, 17, 21, 16420, 5109, 5161, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 16422, 5109, 5161, 4632, 1114, 2]
 // Exports: default
 
-// Module 16419 (MentionSubtitle)
+// Module 16421 (MentionSubtitle)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 16420 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 16422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

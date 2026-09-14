@@ -1,15 +1,15 @@
-// Module ID: 16777
-// Function ID: 16778
+// Module ID: 16779
+// Function ID: 16780
 // Name: SearchMediaImage
-// Dependencies: [32, 19, 17, 1957, 7384, 1074, 21, 4636, 4571, 4488, 7399, 11374, 5162, 5046, 504, 8389, 1476, 12141, 1150, 1114, 8881, 10303, 1384, 7432, 8383, 10260, 10324, 2]
+// Dependencies: [32, 19, 17, 1957, 7384, 1074, 21, 4636, 4571, 4488, 7399, 11375, 5162, 5046, 504, 8389, 1476, 12142, 1363, 1114, 8881, 10303, 1384, 7432, 8383, 10260, 10325, 2]
 // Exports: SearchAttachmentMediaImage, SearchComponentMediaImage, SearchEmbedMediaImage, SearchFileMediaImage, SearchSoundMediaImage
 
-// Module 16777 (SearchMediaImage)
+// Module 16779 (SearchMediaImage)
 import ObscureMediaModels from "ObscureMediaModels" /* 7399 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
 import CirclePlayIcon from "CirclePlayIcon" /* 10260 */;
-import AttachmentPreview from "AttachmentPreview" /* 10324 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12141 */;
+import AttachmentPreview from "AttachmentPreview" /* 10325 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -36,7 +36,7 @@ function SearchMediaObscurityIcon(obscureReason) {
   }, items);
   const memo1 = noop.useMemo(() => {
     if (ObscureMediaModels.ObscureReason.SPOILER === obscureReason) {
-      return closure_2_11(tmp2(11374).SpoilerIcon, { size: "lg" });
+      return closure_2_11(tmp2(11375).SpoilerIcon, { size: "lg" });
     } else {
       if (tmp2(7399).ObscureReason.EXPLICIT_CONTENT !== tmp) {
         if (tmp2(7399).ObscureReason.GORE_CONTENT !== tmp) {

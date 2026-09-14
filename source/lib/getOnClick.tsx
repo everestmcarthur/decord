@@ -1,12 +1,12 @@
 // Module ID: 8495
 // Function ID: 8496
 // Name: getOnClick
-// Dependencies: [32, 5, 4864, 7629, 7331, 502, 2021, 1979, 4620, 4857, 2011, 4458, 5519, 1074, 1076, 7332, 573, 4621, 8496, 9833, 1896, 5601, 7350, 9919, 4619, 4624, 7793, 4325, 1242, 9644, 12072, 13070, 9634, 4649, 9678, 13074, 10925, 11617, 1365, 11896, 5530, 13075, 7644, 4816, 4790, 8244, 13076, 2]
+// Dependencies: [32, 5, 4864, 7629, 7331, 502, 2021, 1979, 4620, 4857, 2011, 4458, 5519, 1074, 1076, 7332, 573, 4621, 8496, 9833, 1896, 5601, 7350, 9919, 4619, 4624, 7793, 4325, 1240, 9644, 12073, 13071, 9634, 4649, 9678, 13075, 10926, 11618, 1365, 11897, 5530, 13076, 7644, 4816, 4790, 8244, 13077, 2]
 // Exports: default
 
 // Module 8495 (getOnClick)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import openURLDefault from "openURL" /* 4325 */;
@@ -15,9 +15,9 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import QuestContent from "QuestContent" /* 5530 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7350 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8496 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10925 */;
-import QuestUtils from "QuestUtils" /* 11896 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 13076 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10926 */;
+import QuestUtils from "QuestUtils" /* 11897 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 13077 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
@@ -501,7 +501,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13074, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(13075, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -568,7 +568,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(11617);
+      tmp2Result = tmp2(11618);
     }
   }
   if (null != findCodedLinkResult) {

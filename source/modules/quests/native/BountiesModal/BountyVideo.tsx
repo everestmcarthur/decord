@@ -1,15 +1,15 @@
-// Module ID: 15112
-// Function ID: 15113
+// Module ID: 15113
+// Function ID: 15114
 // Name: BountyVideo
-// Dependencies: [32, 19, 17, 21, 1151, 11418, 576, 4636, 15113, 4373, 4338, 4637, 4640, 15104, 15114, 15124, 5668, 1114, 15125, 15127, 15129, 11225, 2]
+// Dependencies: [32, 19, 17, 21, 1364, 11419, 576, 4636, 15114, 4373, 4338, 4637, 4640, 15105, 15115, 15125, 5668, 1114, 15126, 15128, 15130, 11226, 2]
 // Exports: BountyVideo
 
-// Module 15112 (BountyVideo)
+// Module 15113 (BountyVideo)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
-import AssetUtils from "AssetUtils" /* 11418 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 15113 */;
+import AssetUtils from "AssetUtils" /* 11419 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 15114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 let closure_13 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
 const createStyles = fn(4636);

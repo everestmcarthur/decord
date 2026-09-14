@@ -1,7 +1,7 @@
 // Module ID: 8541
 // Function ID: 8542
 // Name: AgeVerificationWebViewScreen
-// Dependencies: [32, 19, 17, 8530, 8532, 21, 3, 4636, 576, 4494, 4849, 8535, 4331, 8416, 1150, 5658, 2]
+// Dependencies: [32, 19, 17, 8530, 8532, 21, 3, 4636, 576, 4494, 4849, 8535, 4331, 8416, 1363, 5658, 2]
 // Exports: default
 
 // Module 8541 (AgeVerificationWebViewScreen)

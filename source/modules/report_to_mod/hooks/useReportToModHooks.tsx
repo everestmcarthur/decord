@@ -1,10 +1,10 @@
-// Module ID: 11795
-// Function ID: 11796
+// Module ID: 11796
+// Function ID: 11797
 // Name: useReportToModHooks
 // Dependencies: [19, 1979, 4857, 504, 7369, 7393, 7379, 7559, 8298, 2]
 // Exports: loadOriginalAuthorFromSnapshot, useIsModeratorReportOrPostChannel, useIsModeratorReportPostChannel, useIsReportToModEnabled, useLoadReportedMessage, useReportToModChannelId
 
-// Module 11795 (useReportToModHooks)
+// Module 11796 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7369 */;
 import ReportToModUtils from "ReportToModUtils" /* 7379 */;

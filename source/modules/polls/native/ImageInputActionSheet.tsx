@@ -1,12 +1,12 @@
-// Module ID: 12356
-// Function ID: 12357
+// Module ID: 12357
+// Function ID: 12358
 // Name: ImageInputActionSheet
-// Dependencies: [19, 17, 7931, 21, 4636, 576, 12355, 4502, 4603, 7300, 4632, 1178, 7302, 1114, 12357, 2]
+// Dependencies: [19, 17, 7931, 21, 4636, 576, 12356, 4502, 4603, 7300, 4632, 1176, 7302, 1114, 12358, 2]
 // Exports: default
 
-// Module 12356 (ImageInputActionSheet)
+// Module 12357 (ImageInputActionSheet)
 import nativeDefault from "native" /* 576 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12357 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12358 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

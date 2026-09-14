@@ -1,15 +1,15 @@
-// Module ID: 10453
-// Function ID: 10454
+// Module ID: 10454
+// Function ID: 10455
 // Name: components/EmojiPickerListComponent
-// Dependencies: [19, 10418, 21, 10431, 10441, 10454, 10450, 9003, 2]
+// Dependencies: [19, 10419, 21, 10432, 10442, 10455, 10451, 9003, 2]
 
-// Module 10453 (components/EmojiPickerListComponent)
+// Module 10454 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10418);
+const EmojiPickerListConstants = fn(10419);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: metroRequire, LABEL_BOTTOM_PADDING: closure_7 } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,15 +1,15 @@
-// Module ID: 16354
-// Function ID: 16355
+// Module ID: 16356
+// Function ID: 16357
 // Name: useChannelNoticeRows
-// Dependencies: [32, 19, 12604, 2012, 1979, 1371, 7637, 1074, 1954, 563, 7266, 7268, 16355, 7491, 1943, 4457, 16279, 16356, 2]
+// Dependencies: [32, 19, 12605, 2012, 1979, 1371, 7637, 1074, 1954, 563, 7266, 7268, 16357, 7491, 1943, 4457, 16281, 16358, 2]
 // Exports: default
 
-// Module 16354 (useChannelNoticeRows)
+// Module 16356 (useChannelNoticeRows)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildProgressStore from "GuildProgressStore" /* 12604 */;
+import GuildProgressStore from "GuildProgressStore" /* 12605 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;

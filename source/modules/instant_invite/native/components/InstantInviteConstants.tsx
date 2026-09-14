@@ -1,7 +1,7 @@
 // Module ID: 9986
 // Function ID: 9987
 // Name: components/InstantInviteConstants
-// Dependencies: [17, 9955, 1074, 9987, 9183, 576, 1114, 9950, 9990, 4580, 9991, 1608, 9992, 4603, 9993, 1896, 7861, 1150, 10010, 10011, 4769, 7559, 4981, 10012, 10013, 10014, 10015, 10016, 10017, 10018, 10019, 2]
+// Dependencies: [17, 9955, 1074, 9987, 9183, 576, 1114, 9950, 9990, 4580, 9991, 1608, 9992, 4603, 9993, 1896, 7861, 1363, 10010, 10011, 4769, 7559, 4981, 10012, 10013, 10014, 10015, 10016, 10017, 10018, 10019, 2]
 
 // Module 9986 (components/InstantInviteConstants)
 import _mod17 from "module_17" /* 17 */;
@@ -31,7 +31,7 @@ import _modDef10019 from "module_10019" /* 10019 */;
 import InstantInviteConstants from "InstantInviteConstants" /* 9955 */;
 import Constants from "Constants" /* 1074 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1150 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1363 */;
 import DCDSendUtils_mod from "DCDSendUtils" /* 4769 */;
 import InstantInviteUtils_mod from "instant_invite/InstantInviteUtils" /* 9950 */;
 import size from "module_2" /* 2 */;
@@ -146,7 +146,7 @@ obj5.onPress = function onPress(channel) {
     code(4603).hideActionSheet();
     let obj3 = code(4603);
   }
-  obj2 = channel(1150);
+  obj2 = channel(1363);
   tmp(4769).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
@@ -201,7 +201,7 @@ obj6.onPress = function onPress(channel) {
     code(4603).hideActionSheet();
     let obj3 = code(4603);
   }
-  obj2 = channel(1150);
+  obj2 = channel(1363);
   tmp(4769).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };

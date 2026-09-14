@@ -1,17 +1,17 @@
-// Module ID: 14718
-// Function ID: 14719
+// Module ID: 14719
+// Function ID: 14720
 // Name: EditProfileFrameActionSheet
-// Dependencies: [32, 19, 17, 7660, 7652, 1074, 21, 4636, 576, 8303, 8287, 7265, 7285, 1242, 8281, 8288, 7253, 4632, 1114, 8289, 10862, 504, 14719, 8283, 8304, 14720, 13304, 13305, 8290, 11352, 5068, 2]
+// Dependencies: [32, 19, 17, 7660, 7652, 1074, 21, 4636, 576, 8303, 8287, 7265, 7285, 1240, 8281, 8288, 7253, 4632, 1114, 8289, 10863, 504, 14720, 8283, 8304, 14721, 13305, 13306, 8290, 11353, 5068, 2]
 // Exports: default
 
-// Module 14718 (EditProfileFrameActionSheet)
+// Module 14719 (EditProfileFrameActionSheet)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
 import useShopProductItems from "useShopProductItems" /* 8288 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
-import EditProfileFrameSection from "EditProfileFrameSection" /* 14720 */;
+import EditProfileFrameSection from "EditProfileFrameSection" /* 14721 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
@@ -121,7 +121,7 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11352), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  const items1 = [closure_9(purchase(11353), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;

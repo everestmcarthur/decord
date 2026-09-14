@@ -1,10 +1,10 @@
-// Module ID: 13380
-// Function ID: 13381
+// Module ID: 13381
+// Function ID: 13382
 // Name: ConversationNavigatorMoreMenu
 // Dependencies: [19, 17, 21, 4636, 576, 1114, 9045, 8011, 8013, 4334, 9047, 8789, 8202, 8795, 2]
 // Exports: default
 
-// Module 13380 (ConversationNavigatorMoreMenu)
+// Module 13381 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import IconButton from "IconButton" /* 8202 */;

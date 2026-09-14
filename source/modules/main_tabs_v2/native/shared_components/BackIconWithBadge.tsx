@@ -1,12 +1,12 @@
-// Module ID: 16498
-// Function ID: 16499
+// Module ID: 16500
+// Function ID: 16501
 // Name: BackIconWithBadge
-// Dependencies: [19, 17, 7738, 21, 4636, 576, 504, 16489, 1178, 8940, 1151, 5709, 5761, 4589, 2]
+// Dependencies: [19, 17, 7738, 21, 4636, 576, 504, 16491, 1176, 8940, 1364, 5709, 5761, 4589, 2]
 // Exports: CloseIconWithBadgeOnSide, LeftBackIconWithBadge, SettingsLeftIconWithBadge
 
-// Module 16498 (BackIconWithBadge)
+// Module 16500 (BackIconWithBadge)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import XLargeIcon from "XLargeIcon" /* 4589 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5709 */;
 import ClipView from "ClipView" /* 8940 */;
@@ -30,7 +30,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16489)().value;
+    num2 = memo(16491)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -73,7 +73,7 @@ function IconWithBadge(includeNotificationsCount) {
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
     const obj7 = { value: sum, maxValue: 99 };
-    obj6.children = tmp9(tmp2(1178).Badge, obj7);
+    obj6.children = tmp9(tmp2(1176).Badge, obj7);
     tmp9Result = tmp9(tmp10, obj6);
   }
   items5[1] = tmp9Result;

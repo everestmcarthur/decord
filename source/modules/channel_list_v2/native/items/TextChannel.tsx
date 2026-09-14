@@ -1,15 +1,15 @@
-// Module ID: 16320
-// Function ID: 16321
+// Module ID: 16322
+// Function ID: 16323
 // Name: TextChannel
-// Dependencies: [19, 17, 1956, 2013, 1957, 4275, 4651, 4817, 10246, 21, 4636, 576, 16212, 5156, 5109, 12508, 504, 5088, 4649, 4647, 1112, 11044, 16211, 9676, 4789, 4632, 5670, 10293, 9031, 9900, 16321, 16322, 16329, 2]
+// Dependencies: [19, 17, 1956, 2013, 1957, 4275, 4651, 4817, 10246, 21, 4636, 576, 16214, 5156, 5109, 12509, 504, 5088, 4649, 4647, 1112, 11045, 16213, 9676, 4789, 4632, 5670, 10293, 9031, 9900, 16323, 16324, 16331, 2]
 
-// Module 16320 (TextChannel)
+// Module 16322 (TextChannel)
 import nativeDefault from "native" /* 576 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1112 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5088 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;

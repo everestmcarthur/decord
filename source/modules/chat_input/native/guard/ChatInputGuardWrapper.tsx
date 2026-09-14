@@ -1,17 +1,17 @@
-// Module ID: 12562
-// Function ID: 12563
+// Module ID: 12563
+// Function ID: 12564
 // Name: ChatInputGuardWrapper
-// Dependencies: [19, 4276, 1961, 2021, 1979, 5494, 4285, 1371, 12091, 1074, 7146, 21, 504, 5139, 4263, 4281, 12563, 12564, 11499, 11498, 12565, 12566, 4816, 9171, 4839, 7145, 1896, 7148, 5702, 11698, 11355, 12568, 12578, 12577, 4591, 1114, 12580, 12583, 12584, 12585, 12589, 12590, 12593, 12594, 9915, 12596, 2]
+// Dependencies: [19, 4276, 1961, 2021, 1979, 5494, 4285, 1371, 12092, 1074, 7146, 21, 504, 5139, 4263, 4281, 12564, 12565, 11500, 11499, 12566, 12567, 4816, 9171, 4839, 7145, 1896, 7148, 5702, 11699, 11356, 12569, 12579, 12578, 4591, 1114, 12581, 12584, 12585, 12586, 12590, 12591, 12594, 12595, 9915, 12597, 2]
 // Exports: default
 
-// Module 12562 (ChatInputGuardWrapper)
+// Module 12563 (ChatInputGuardWrapper)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4263 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4281 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import MemberVerificationUtils from "MemberVerificationUtils" /* 5139 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11355 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11698 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11356 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11699 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -22,7 +22,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const isThread = fn(1961).isThread;
-const TextAreaCta = fn(12091).TextAreaCta;
+const TextAreaCta = fn(12092).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
 let closure_14 = fn(7146).PHONE_VERIFICATION_MODAL_KEY;

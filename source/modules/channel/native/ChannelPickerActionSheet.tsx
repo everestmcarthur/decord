@@ -1,10 +1,10 @@
-// Module ID: 11463
-// Function ID: 11464
+// Module ID: 11464
+// Function ID: 11465
 // Name: ChannelPickerActionSheet
-// Dependencies: [19, 4285, 1371, 21, 1611, 7301, 4603, 7252, 5769, 5692, 11464, 7300, 6728, 5766, 5109, 4789, 2]
+// Dependencies: [19, 4285, 1371, 21, 1611, 7301, 4603, 7252, 5769, 5692, 11465, 7300, 6728, 5766, 5109, 4789, 2]
 // Exports: default
 
-// Module 11463 (ChannelPickerActionSheet)
+// Module 11464 (ChannelPickerActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
@@ -45,7 +45,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     const obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("module_11464") };
+    let obj4 = { source: require("module_11465") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

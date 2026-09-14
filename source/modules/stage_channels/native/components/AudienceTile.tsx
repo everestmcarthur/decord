@@ -1,12 +1,12 @@
 // Module ID: 10198
 // Function ID: 10199
 // Name: AudienceTile
-// Dependencies: [19, 17, 2021, 21, 4636, 576, 4783, 1178, 8739, 1477, 504, 5506, 4788, 6756, 1114, 8511, 10179, 4488, 10199, 2]
+// Dependencies: [19, 17, 2021, 21, 4636, 576, 4783, 1176, 8739, 1477, 504, 5506, 4788, 6756, 1114, 8511, 10179, 4488, 10199, 2]
 // Exports: getTileWidthStyle
 
 // Module 10198 (AudienceTile)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4783 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8511 */;
 import noop from "module_19" /* 19 */;

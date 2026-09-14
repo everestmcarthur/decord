@@ -1,10 +1,10 @@
-// Module ID: 15700
-// Function ID: 15701
+// Module ID: 15702
+// Function ID: 15703
 // Name: DevToolsDataStorageScreen
-// Dependencies: [32, 19, 17, 505, 502, 21, 4636, 576, 5686, 1986, 4335, 504, 2003, 1484, 7084, 7152, 10340, 10995, 7153, 4603, 4632, 7158, 7300, 7252, 7302, 2]
+// Dependencies: [32, 19, 17, 505, 502, 21, 4636, 576, 5686, 1986, 4335, 504, 2003, 1484, 7084, 7152, 10341, 10996, 7153, 4603, 4632, 7158, 7300, 7252, 7302, 2]
 // Exports: default
 
-// Module 15700 (DevToolsDataStorageScreen)
+// Module 15702 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import Link from "Link" /* 1484 */;

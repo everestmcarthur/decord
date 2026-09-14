@@ -1,14 +1,14 @@
 // Module ID: 8951
 // Function ID: 8952
 // Name: NameplateCardPreview
-// Dependencies: [17, 21, 4636, 576, 38, 1889, 1886, 8944, 1178, 2]
+// Dependencies: [17, 21, 4636, 576, 38, 1889, 1886, 8944, 1176, 2]
 // Exports: default
 
 // Module 8951 (NameplateCardPreview)
 import _mod17 from "module_17" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import utils from "utils" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8944 */;

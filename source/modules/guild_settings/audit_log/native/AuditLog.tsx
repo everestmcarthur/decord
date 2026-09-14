@@ -1,12 +1,12 @@
-// Module ID: 17669
-// Function ID: 17670
+// Module ID: 17670
+// Function ID: 17671
 // Name: AuditLog
-// Dependencies: [19, 17, 1183, 1385, 4285, 1371, 1074, 21, 4636, 576, 1399, 1396, 5364, 4488, 7271, 4632, 1150, 4347, 17652, 1114, 4481, 1178, 1971, 4789, 4781, 4228, 1369, 1091, 10755, 7233, 5688, 17661, 5204, 4603, 8296, 14689, 504, 2]
+// Dependencies: [19, 17, 1181, 1385, 4285, 1371, 1074, 21, 4636, 576, 1399, 1396, 5364, 4488, 7271, 4632, 1363, 4347, 17653, 1114, 4481, 1176, 1971, 4789, 4781, 4228, 1369, 1091, 10756, 7233, 5688, 17662, 5204, 4603, 8296, 14690, 504, 2]
 
-// Module 17669 (AuditLog)
+// Module 17670 (AuditLog)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
@@ -17,10 +17,10 @@ import PlatformsDefault from "Platforms" /* 5364 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7271 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import AppliedForumTag from "AppliedForumTag" /* 10755 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 17652 */;
+import AppliedForumTag from "AppliedForumTag" /* 10756 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 17653 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -82,7 +82,7 @@ obj2.forumTag = obj8;
 obj2.imageEmoji = { height: 14, width: 14 };
 obj2.textEmoji = { fontSize: 14, lineHeight: 16 };
 let closure_16 = createStyles.createLegacyClassComponentStyles(obj2);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let tmp6;
 if (PlatformUtils.isAndroid()) {
   let obj9 = { transform: null };
@@ -157,7 +157,7 @@ prototype["renderTitle"] = function renderTitle() {
               let tmp12 = "0" !== tmp3.discriminator;
               if (tmp12) {
                 const obj2 = { style: closure_0.discriminator, children: `#${tmp3.discriminator}` };
-                tmp12 = closure_2_14(tmp9(1178).LegacyText, obj2);
+                tmp12 = closure_2_14(tmp9(1176).LegacyText, obj2);
               }
               const obj4 = { variant: "text-md/medium", color: "text-default", children: null };
               items[1] = tmp12;
@@ -541,7 +541,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(17661), { action: log.action }), , , ];
+  const items2 = [closure_14(user(17662), { action: log.action }), , , ];
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1114).intl;
   obj7.accessibilityLabel = intl.string(tmp10(1114).t.iXAna6);
@@ -583,7 +583,7 @@ prototype["render"] = function render() {
           }
         }
         obj8.source = source;
-        obj8.size = tmp10(1178).AvatarSizes.SMALL;
+        obj8.size = tmp10(1176).AvatarSizes.SMALL;
         obj7.children = tmp17(tmp20, obj8);
         items2[1] = tmp17(tmp10(5204).PressableOpacity, obj7);
         obj9 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
@@ -600,9 +600,9 @@ prototype["render"] = function render() {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
-          obj11.size = tmp10(1178).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(14689);
-          tmp17Result = tmp17(tmp10(1178).Icon, obj11);
+          obj11.size = tmp10(1176).Icon.Sizes.CUSTOM;
+          obj11.source = tmp18(14690);
+          tmp17Result = tmp17(tmp10(1176).Icon, obj11);
         }
         items2[3] = tmp17Result;
         obj5.children = items2;

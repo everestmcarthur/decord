@@ -1,7 +1,7 @@
 // Module ID: 7506
 // Function ID: 7507
 // Name: GuildBoostPurchasingUtils
-// Dependencies: [5, 4300, 1074, 1373, 4981, 1114, 1242, 4960, 7507, 7512, 7343, 7513, 7514, 4294, 2]
+// Dependencies: [5, 4300, 1074, 1373, 4981, 1114, 1240, 4960, 7507, 7512, 7343, 7513, 7514, 4294, 2]
 // Exports: launchGuildBoostFlowOrAlert
 
 // Module 7506 (GuildBoostPurchasingUtils)
@@ -72,7 +72,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
                 obj2.body = body;
                 closure_1_1(4981).show(obj2);
                 const obj = closure_1_1(4981);
-                closure_1_1(1242).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
+                closure_1_1(1240).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {
               closure_130_8 = null;

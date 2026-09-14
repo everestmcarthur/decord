@@ -1,10 +1,10 @@
-// Module ID: 15182
-// Function ID: 15183
+// Module ID: 15183
+// Function ID: 15184
 // Name: QuestDockCreativeContext
 // Dependencies: [19, 21, 5532, 2]
 // Exports: QuestDockBountyProvider, QuestDockQuestProvider, getCreativeAnalyticsParams, getDeliveredAdCreativeId, getDeliveredQuest, useBountyCreative, useQuestCreative, useQuestDockBounty, useQuestDockCreative, useQuestDockQuest
 
-// Module 15182 (QuestDockCreativeContext)
+// Module 15183 (QuestDockCreativeContext)
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import noop from "module_19" /* 19 */;
 

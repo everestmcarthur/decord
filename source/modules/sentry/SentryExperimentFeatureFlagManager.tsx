@@ -1,12 +1,12 @@
-// Module ID: 18003
-// Function ID: 18004
+// Module ID: 18004
+// Function ID: 18005
 // Name: SentryExperimentFeatureFlagManager
-// Dependencies: [4552, 1236, 4458, 1232, 7221, 2]
+// Dependencies: [4552, 1234, 4458, 1230, 7221, 2]
 
-// Module 18003 (SentryExperimentFeatureFlagManager)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+// Module 18004 (SentryExperimentFeatureFlagManager)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 

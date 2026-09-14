@@ -1,7 +1,7 @@
 // Module ID: 8725
 // Function ID: 8726
 // Name: FormSection
-// Dependencies: [19, 17, 1182, 21, 4636, 576, 5767, 7240, 8722, 5768, 8726, 1150, 2]
+// Dependencies: [19, 17, 1180, 21, 4636, 576, 5767, 7240, 8722, 5768, 8726, 1363, 2]
 // Exports: default
 
 // Module 8725 (FormSection)
@@ -15,7 +15,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
-const TitleStyleType = fn(1182).TitleStyleType;
+const TitleStyleType = fn(1180).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
@@ -103,8 +103,8 @@ export default function FormSection(arg0) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
       } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = tmp3(1150).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = tmp3(1150);
+        titledSectionNoBorderOrMargin = tmp3(1363).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
+        const tmp3Result = tmp3(1363);
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
         if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {

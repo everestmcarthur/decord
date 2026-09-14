@@ -1,7 +1,7 @@
 // Module ID: 10182
 // Function ID: 10183
 // Name: StageSectionHeader
-// Dependencies: [19, 17, 21, 4636, 576, 4373, 4637, 4632, 1178, 7261, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4373, 4637, 4632, 1176, 7261, 2]
 // Exports: default
 
 // Module 10182 (StageSectionHeader)
@@ -63,7 +63,7 @@ export default function StageSectionHeader(collapsed) {
   let obj2 = { withTiming: collapsed(4637).withTiming, collapsed };
   const tmp7 = closure_5;
   const tmp8 = closure_3;
-  obj8.children = closure_6(tmp2(1178).Icon, { source: _modDef7261, style: tmp.collapseIcon });
+  obj8.children = closure_6(tmp2(1176).Icon, { source: _modDef7261, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

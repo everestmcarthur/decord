@@ -1,7 +1,7 @@
 // Module ID: 4769
 // Function ID: 4770
 // Name: DCDSendUtils
-// Dependencies: [17, 1150, 4770, 2]
+// Dependencies: [17, 1363, 4770, 2]
 // Exports: canOpenUrlScheme, canSendMail, canSendSMS, sendMail, sendSMS
 
 // Module 4769 (DCDSendUtils)

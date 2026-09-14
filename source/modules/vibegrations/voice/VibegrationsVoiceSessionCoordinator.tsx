@@ -1,14 +1,14 @@
-// Module ID: 14547
-// Function ID: 14548
+// Module ID: 14548
+// Function ID: 14549
 // Name: VibegrationsVoiceSessionCoordinator
-// Dependencies: [14548, 9640, 502, 1908, 4659, 1371, 4655, 1074, 4661, 9684, 13914, 1256, 9218, 14549, 14550, 2]
+// Dependencies: [14549, 9640, 502, 1908, 4659, 1371, 4655, 1074, 4661, 9684, 13915, 1254, 9218, 14550, 14551, 2]
 
-// Module 14547 (VibegrationsVoiceSessionCoordinator)
+// Module 14548 (VibegrationsVoiceSessionCoordinator)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13914 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14550 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 14548 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13915 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14551 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 14549 */;
 import FramesStore from "FramesStore" /* 9640 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -147,7 +147,7 @@ prototype["start"] = function start(id) {
         }
         focusSequence = num;
       }
-      const obj = { id: obj2(1256).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, focusSequence, backgrounded: !FrameVisibilityStore.isFrameVisible(frameId), pooled: FrameVisibilityStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
+      const obj = { id: obj2(1254).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, focusSequence, backgrounded: !FrameVisibilityStore.isFrameVisible(frameId), pooled: FrameVisibilityStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
       const _Set = Set;
       const set = new Set();
       obj.appliedUserIds = set;
@@ -163,7 +163,7 @@ prototype["start"] = function start(id) {
         const tmp19 = new RPCErrorDefault(obj2, "The voice connection is unavailable");
         throw tmp19;
       }
-      const obj3 = obj2(1256);
+      const obj3 = obj2(1254);
       obj4 = FrameVisibilityStore;
     }
   }
@@ -294,7 +294,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               obj.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14549).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14550).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
             obj = set;

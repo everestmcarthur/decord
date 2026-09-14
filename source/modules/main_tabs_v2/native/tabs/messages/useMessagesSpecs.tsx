@@ -1,14 +1,14 @@
-// Module ID: 16121
-// Function ID: 16122
+// Module ID: 16123
+// Function ID: 16124
 // Name: useMessagesSpecs
-// Dependencies: [109, 19, 1074, 5063, 1611, 16122, 16125, 16137, 576, 2]
+// Dependencies: [109, 19, 1074, 5063, 1611, 16124, 16127, 16139, 576, 2]
 // Exports: default
 
-// Module 16121 (useMessagesSpecs)
+// Module 16123 (useMessagesSpecs)
 import nativeDefault from "native" /* 576 */;
-import MessagesHeader from "MessagesHeader" /* 16122 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 16125 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16137 */;
+import MessagesHeader from "MessagesHeader" /* 16124 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16127 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16139 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

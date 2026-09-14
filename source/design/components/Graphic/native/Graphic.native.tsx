@@ -1,10 +1,10 @@
-// Module ID: 10360
-// Function ID: 10361
+// Module ID: 10361
+// Function ID: 10362
 // Name: Graphic
 // Dependencies: [19, 17, 21, 4636, 5668, 4347, 4454, 2]
 // Exports: Graphic
 
-// Module 10360 (Graphic)
+// Module 10361 (Graphic)
 import GraphicTypes from "GraphicTypes" /* 4454 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;

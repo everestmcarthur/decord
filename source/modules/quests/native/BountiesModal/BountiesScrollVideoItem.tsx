@@ -1,16 +1,16 @@
-// Module ID: 15102
-// Function ID: 15103
+// Module ID: 15103
+// Function ID: 15104
 // Name: BountiesScrollVideoItem
-// Dependencies: [5, 32, 19, 17, 8977, 7804, 5525, 21, 15103, 504, 15104, 15106, 11654, 15107, 15108, 15109, 15111, 11622, 11619, 11629, 5532, 5530, 7830, 15112, 11907, 15130, 2]
+// Dependencies: [5, 32, 19, 17, 8977, 7804, 5525, 21, 15104, 504, 15105, 15107, 11655, 15108, 15109, 15110, 15112, 11623, 11620, 11630, 5532, 5530, 7830, 15113, 11908, 15131, 2]
 // Exports: BountiesScrollVideoItem
 
-// Module 15102 (BountiesScrollVideoItem)
+// Module 15103 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 5530 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11907 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15103 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11908 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -380,7 +380,7 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return softDownloadCapsEnabled(bounty(11907).BillableAdPlacementImpressionTrackerNative, {
+  return softDownloadCapsEnabled(bounty(11908).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(5532).AdCreativeType.BOUNTY,
     questContent: bounty(5530).QuestContent.VIDEO_MODAL_MOBILE,

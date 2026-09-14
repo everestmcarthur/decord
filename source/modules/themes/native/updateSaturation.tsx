@@ -1,12 +1,12 @@
-// Module ID: 14526
-// Function ID: 14527
+// Module ID: 14527
+// Function ID: 14528
 // Name: updateSaturation
-// Dependencies: [17, 1150, 14527, 2]
+// Dependencies: [17, 1363, 14528, 2]
 // Exports: updateSaturation
 
-// Module 14526 (updateSaturation)
+// Module 14527 (updateSaturation)
 import _mod17 from "module_17" /* 17 */;
-import NativeThemeModuleDefault from "NativeThemeModule" /* 14527 */;
+import NativeThemeModuleDefault from "NativeThemeModule" /* 14528 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

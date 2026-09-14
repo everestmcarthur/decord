@@ -1,9 +1,9 @@
-// Module ID: 11699
-// Function ID: 11700
+// Module ID: 11700
+// Function ID: 11701
 // Name: GuildRoleConnectionsModal
-// Dependencies: [19, 21, 1114, 7480, 7095, 11700, 7103, 2]
+// Dependencies: [19, 21, 1114, 7480, 7095, 11701, 7103, 2]
 
-// Module 11699 (GuildRoleConnectionsModal)
+// Module 11700 (GuildRoleConnectionsModal)
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ export default noop.memo((guildId) => {
       return jsx(guildId(7480).HeaderActionButton, { source: onClose(7095), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
-      return jsx(onClose(11700), { guildId, onCloseModal });
+      return jsx(onClose(11701), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;

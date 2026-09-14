@@ -1,15 +1,15 @@
-// Module ID: 16208
-// Function ID: 16209
+// Module ID: 16210
+// Function ID: 16211
 // Name: ThreadChannel
-// Dependencies: [19, 17, 4277, 1957, 4275, 4651, 2011, 1371, 4655, 4660, 10246, 1074, 4818, 1113, 21, 4636, 576, 8574, 5063, 504, 12423, 4647, 10348, 16209, 16211, 9900, 16214, 1178, 16216, 16225, 4781, 2]
+// Dependencies: [19, 17, 4277, 1957, 4275, 4651, 2011, 1371, 4655, 4660, 10246, 1074, 4818, 1113, 21, 4636, 576, 8574, 5063, 504, 12424, 4647, 10349, 16211, 16213, 9900, 16216, 1176, 16218, 16227, 4781, 2]
 // Exports: default
 
-// Module 16208 (ThreadChannel)
+// Module 16210 (ThreadChannel)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import inlineStyles from "inlineStyles" /* 8574 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10348 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16209 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10349 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16211 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

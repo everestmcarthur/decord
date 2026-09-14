@@ -1,10 +1,10 @@
-// Module ID: 12890
-// Function ID: 12891
+// Module ID: 12891
+// Function ID: 12892
 // Name: ThreadBrowserHooks
-// Dependencies: [32, 19, 12891, 1957, 4275, 4651, 5588, 7868, 4277, 1085, 7883, 504, 12, 1369, 11, 7867, 8002, 2]
+// Dependencies: [32, 19, 12892, 1957, 4275, 4651, 5588, 7868, 4277, 1085, 7883, 504, 12, 1369, 11, 7867, 8002, 2]
 // Exports: useActiveGuildThreads, useActiveThreadIds, useActiveThreads, useArchivedThreads, useTrackThreadBrowserTab
 
-// Module 12890 (ThreadBrowserHooks)
+// Module 12891 (ThreadBrowserHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
@@ -21,7 +21,7 @@ import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12891).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12892).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

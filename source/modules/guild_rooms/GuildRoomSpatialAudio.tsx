@@ -1,10 +1,10 @@
-// Module ID: 17489
-// Function ID: 17490
+// Module ID: 17491
+// Function ID: 17492
 // Name: GuildRoomSpatialAudio
 // Dependencies: [502, 4794, 4798, 4799, 504, 4836, 2]
 // Exports: computeLivingRoomWorldPoints, livingRoomWorldPointToMediaEnginePoint, useGuildRoomSpatialAudio
 
-// Module 17489 (GuildRoomSpatialAudio)
+// Module 17491 (GuildRoomSpatialAudio)
 import initialize from "initialize" /* 504 */;
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4836 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

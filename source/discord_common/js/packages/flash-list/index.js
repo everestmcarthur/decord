@@ -1,9 +1,9 @@
 // Module ID: 9003
 // Function ID: 9004
-// Dependencies: [19, 17, 21, 1150, 6953, 4373, 6952, 6728, 2]
+// Dependencies: [19, 17, 21, 1363, 6953, 4373, 6952, 6728, 2]
 
 // Module 9003
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import _mod6953 from "module_6953" /* 6953 */;
 import noop_mod from "module_19" /* 19 */;
 import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
@@ -12,7 +12,7 @@ require = fn;
 let noop = noop_mod;
 const RefreshControl = fn(17).RefreshControl;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let defaultMVCPConfig;
 if (PlatformUtils.isAndroid()) {
   defaultMVCPConfig = { disabled: true };

@@ -1,9 +1,9 @@
-// Module ID: 10386
-// Function ID: 10387
+// Module ID: 10387
+// Function ID: 10388
 // Name: MentionGuardUtils
 // Dependencies: [32, 7382, 4275, 1074, 38, 7784, 2]
 
-// Module 10386 (MentionGuardUtils)
+// Module 10387 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
 import MessageParserDefault from "MessageParser" /* 7784 */;
 import _slicedToArray from "module_32" /* 32 */;

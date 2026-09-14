@@ -1,10 +1,10 @@
-// Module ID: 17014
-// Function ID: 17015
+// Module ID: 17016
+// Function ID: 17017
 // Name: RestrictedBlockedMessageGroup
-// Dependencies: [32, 19, 17, 21, 4636, 17012, 576, 5204, 4632, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 17014, 576, 5204, 4632, 1114, 2]
 // Exports: default
 
-// Module 17014 (RestrictedBlockedMessageGroup)
+// Module 17016 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
-let obj2 = { toggle: { marginLeft: fn(17012).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+let obj2 = { toggle: { marginLeft: fn(17014).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");

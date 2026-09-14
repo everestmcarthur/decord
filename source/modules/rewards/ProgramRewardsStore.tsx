@@ -1,15 +1,15 @@
-// Module ID: 13813
-// Function ID: 13814
+// Module ID: 13814
+// Function ID: 13815
 // Name: ProgramRewardsStore
-// Dependencies: [32, 1371, 13814, 3890, 3918, 3873, 504, 1090, 13815, 13816, 573, 2]
+// Dependencies: [32, 1371, 13815, 3890, 3918, 3873, 504, 1090, 13816, 13817, 573, 2]
 
-// Module 13813 (ProgramRewardsStore)
+// Module 13814 (ProgramRewardsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import _modDef3890 from "module_3890" /* 3890 */;
-import ProgramRewardsUtils from "ProgramRewardsUtils" /* 13815 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 13816 */;
+import ProgramRewardsUtils from "ProgramRewardsUtils" /* 13816 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 13817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -77,7 +77,7 @@ function updateTtl() {
 }
 const DidNotFetchReason = { NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD", CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH" };
 let c6 = 86400000;
-const networkTtlCache = new fn(13814).NetworkTtlCache({ ttlMs: 86400000 });
+const networkTtlCache = new fn(13815).NetworkTtlCache({ ttlMs: 86400000 });
 let closure_8 = { MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD", LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD", PAST_REWARD_DATE: "PAST_REWARD_DATE" };
 const PersistedStore = initializeDefault.PersistedStore;
 class ProgramRewardsStore extends PersistedStore {

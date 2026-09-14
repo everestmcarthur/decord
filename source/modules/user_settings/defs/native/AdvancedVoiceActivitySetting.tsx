@@ -1,16 +1,16 @@
-// Module ID: 15343
-// Function ID: 15344
+// Module ID: 15344
+// Function ID: 15345
 // Name: AdvancedVoiceActivitySetting
-// Dependencies: [1908, 8079, 504, 9218, 1114, 11601, 2]
+// Dependencies: [1908, 8079, 504, 9218, 1114, 11602, 2]
 
-// Module 15343 (AdvancedVoiceActivitySetting)
+// Module 15344 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -1,10 +1,10 @@
-// Module ID: 15376
-// Function ID: 15377
+// Module ID: 15377
+// Function ID: 15378
 // Name: SettingsAppearanceMessagesHeaderItem
 // Dependencies: [19, 17, 21, 4636, 576, 4632, 1114, 2]
 // Exports: default
 
-// Module 15376 (SettingsAppearanceMessagesHeaderItem)
+// Module 15377 (SettingsAppearanceMessagesHeaderItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

@@ -1,10 +1,10 @@
-// Module ID: 11078
-// Function ID: 11079
+// Module ID: 11079
+// Function ID: 11080
 // Name: RolePill
 // Dependencies: [19, 17, 1074, 21, 4636, 576, 1935, 7289, 7292, 4334, 5204, 7306, 7308, 4632, 2]
 // Exports: default
 
-// Module 11078 (RolePill)
+// Module 11079 (RolePill)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;

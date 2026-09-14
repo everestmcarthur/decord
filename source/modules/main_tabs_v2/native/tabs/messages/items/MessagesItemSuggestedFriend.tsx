@@ -1,20 +1,20 @@
-// Module ID: 16137
-// Function ID: 16138
+// Module ID: 16139
+// Function ID: 16140
 // Name: MessagesItemSuggestedFriend
-// Dependencies: [32, 19, 17, 4285, 1074, 21, 4636, 576, 10247, 8296, 1896, 563, 1114, 4481, 16138, 16139, 1242, 5204, 1178, 4632, 5056, 4581, 9003, 16136, 2]
+// Dependencies: [32, 19, 17, 4285, 1074, 21, 4636, 576, 10247, 8296, 1896, 563, 1114, 4481, 16140, 16141, 1240, 5204, 1176, 4632, 5056, 4581, 9003, 16138, 2]
 // Exports: getMessagesItemSuggestedFriendHeight
 
-// Module 16137 (MessagesItemSuggestedFriend)
+// Module 16139 (MessagesItemSuggestedFriend)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import _mod9003 from "module_9003" /* 9003 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import _mod16136 from "module_16136" /* 16136 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16138 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16139 */;
+import _mod16138 from "module_16138" /* 16138 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16140 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
@@ -154,7 +154,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod16136.useRecyclingState(false);
+  [tmp2, tmp3] = _mod16138.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

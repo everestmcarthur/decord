@@ -1,12 +1,12 @@
 // Module ID: 4601
 // Function ID: 4602
 // Name: BrowserManager
-// Dependencies: [17, 560, 1150, 4602, 1093, 4331, 1369, 2]
+// Dependencies: [17, 560, 1363, 4602, 1093, 4331, 1369, 2]
 // Exports: browserManagerCloseBrowser, browserManagerOpenUrl, browserManagerSelectBrowser, getBrowserManagerIsChromeInstalled, getBrowserManagerSelectedBrowser, getIsInAppBrowserOpen, openPlayStoreInlineInstall, subscribeToIsInAppBrowserOpen, useBrowserManagerIsChromeInstalled, useBrowserManagerSelectedBrowser, useBrowserManagerSupportsInAppBrowser, useIsInAppBrowserOpen
 
 // Module 4601 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4602 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
@@ -78,7 +78,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href, CHROME
   if (selectedBrowser !== ConstantsIOS.WebBrowserType.SAFARI) {
     if (selectedBrowser !== tmp2(1093).WebBrowserType.CHROME) {
       if (selectedBrowser === tmp2(1093).WebBrowserType.IN_APP) {
-        let tmp2Result = tmp2(1150);
+        let tmp2Result = tmp2(1363);
       }
       if (tmp2(1093).WebBrowserType.IN_APP === selectedBrowser) {
         if (tmp2Result4.isAndroid()) {

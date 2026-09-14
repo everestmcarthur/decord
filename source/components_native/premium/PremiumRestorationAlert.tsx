@@ -1,10 +1,10 @@
-// Module ID: 15327
-// Function ID: 15328
+// Module ID: 15328
+// Function ID: 15329
 // Name: PremiumRestorationAlert
-// Dependencies: [19, 7340, 21, 15328, 504, 2]
+// Dependencies: [19, 7340, 21, 15329, 504, 2]
 
-// Module 15327 (PremiumRestorationAlert)
-import UntouchableAlertDefault from "UntouchableAlert" /* 15328 */;
+// Module 15328 (PremiumRestorationAlert)
+import UntouchableAlertDefault from "UntouchableAlert" /* 15329 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7340 */;
 import initialize from "initialize" /* 504 */;

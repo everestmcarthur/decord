@@ -1,7 +1,7 @@
 // Module ID: 4675
 // Function ID: 4676
 // Name: StreamRTCConnectionStore
-// Dependencies: [1915, 502, 1908, 4676, 4659, 1074, 4678, 38, 4680, 12, 4688, 7840, 573, 4691, 1150, 504, 13889, 2]
+// Dependencies: [1915, 502, 1908, 4676, 4659, 1074, 4678, 38, 4680, 12, 4688, 7840, 573, 4691, 1363, 504, 13890, 2]
 
 // Module 4675 (StreamRTCConnectionStore)
 import _modDef12 from "module_12" /* 12 */;
@@ -10,7 +10,7 @@ import initializeDefault from "initialize" /* 504 */;
 import StreamRTCConnectionDefault from "StreamRTCConnection" /* 4680 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import canSpectateDefault from "canSpectate" /* 13889 */;
+import canSpectateDefault from "canSpectate" /* 13890 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -328,7 +328,7 @@ if (MediaEngineStore.isSupported()) {
           const obj3 = { streamRegion: region, streamApplication: dependencyMap[streamKey], streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
           let str2 = "unknown";
           if (null != dependencyMap2[streamKey]) {
-            if (!tmp4(1150).isPlatformEmbedded) {
+            if (!tmp4(1363).isPlatformEmbedded) {
               let name;
               if (globalThis.platform != null) {
                 name = globalThis.platform.name;

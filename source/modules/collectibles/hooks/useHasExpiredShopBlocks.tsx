@@ -1,10 +1,10 @@
-// Module ID: 15901
-// Function ID: 15902
+// Module ID: 15903
+// Function ID: 15904
 // Name: useHasExpiredShopBlocks
 // Dependencies: [32, 19, 1074, 7675, 2]
 // Exports: useHasExpiredShopBlocks
 
-// Module 15901 (useHasExpiredShopBlocks)
+// Module 15903 (useHasExpiredShopBlocks)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;

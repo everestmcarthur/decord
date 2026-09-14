@@ -1,10 +1,10 @@
-// Module ID: 11862
-// Function ID: 11863
+// Module ID: 11863
+// Function ID: 11864
 // Name: DoubleTapEmojiEditNudge
-// Dependencies: [5, 19, 17, 4628, 1478, 1074, 1374, 21, 4636, 576, 1935, 8072, 1480, 504, 1396, 11255, 1242, 11258, 4632, 1114, 7233, 5204, 2]
+// Dependencies: [5, 19, 17, 4628, 1478, 1074, 1374, 21, 4636, 576, 1935, 8072, 1480, 504, 1396, 11256, 1240, 11259, 4632, 1114, 7233, 5204, 2]
 // Exports: DoubleTapEmojiEditNudge
 
-// Module 11862 (DoubleTapEmojiEditNudge)
+// Module 11863 (DoubleTapEmojiEditNudge)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8072 */;
@@ -76,7 +76,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
                 const obj4 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
                 ({ id: obj8.emoji_id, name: obj8.emoji_name, animated: obj8.emoji_animated } = _location);
                 obj4.location = _location;
-                emoji(1242).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
+                emoji(1240).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
                 const DoubleTapReactionEmoji = _location(1935).DoubleTapReactionEmoji;
                 ({ id: obj9.emojiId, name: obj9.emojiName, animated: obj9.animated } = _location);
                 c3 = 1;
@@ -93,7 +93,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(11258).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(11259).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -114,7 +114,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(11255).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(11256).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1114).intl;

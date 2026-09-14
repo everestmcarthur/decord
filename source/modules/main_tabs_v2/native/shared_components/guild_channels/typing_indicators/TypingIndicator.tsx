@@ -1,12 +1,12 @@
-// Module ID: 16178
-// Function ID: 16179
+// Module ID: 16180
+// Function ID: 16181
 // Name: typing_indicators/TypingIndicator
-// Dependencies: [19, 17, 21, 4636, 576, 4571, 4488, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4571, 4488, 1176, 2]
 // Exports: TypingIndicator
 
-// Module 16178 (typing_indicators/TypingIndicator)
+// Module 16180 (typing_indicators/TypingIndicator)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import shared from "shared" /* 4488 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import noop from "module_19" /* 19 */;

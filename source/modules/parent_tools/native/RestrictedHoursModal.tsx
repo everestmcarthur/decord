@@ -1,10 +1,10 @@
-// Module ID: 17406
-// Function ID: 17407
+// Module ID: 17408
+// Function ID: 17409
 // Name: RestrictedHoursModal
-// Dependencies: [32, 19, 17, 1371, 21, 4636, 576, 5658, 1611, 17407, 504, 4373, 4637, 1114, 2396, 8539, 17408, 4347, 4632, 7103, 17409, 6694, 17405, 5053, 12058, 2]
+// Dependencies: [32, 19, 17, 1371, 21, 4636, 576, 5658, 1611, 17409, 504, 4373, 4637, 1114, 2396, 8539, 17410, 4347, 4632, 7103, 17411, 6694, 17407, 5053, 12059, 2]
 // Exports: default
 
-// Module 17406 (RestrictedHoursModal)
+// Module 17408 (RestrictedHoursModal)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -12,8 +12,8 @@ import timing from "timing" /* 4637 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 5053 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5658 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17405 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17409 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17407 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17411 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;

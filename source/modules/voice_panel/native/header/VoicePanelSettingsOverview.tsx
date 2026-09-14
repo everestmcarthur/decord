@@ -1,9 +1,9 @@
-// Module ID: 17220
-// Function ID: 17221
+// Module ID: 17222
+// Function ID: 17223
 // Name: VoicePanelSettingsOverview
-// Dependencies: [19, 1956, 4652, 9616, 502, 1957, 1908, 4275, 1371, 4660, 1074, 4657, 9281, 21, 4636, 576, 504, 17221, 4789, 9299, 9260, 5670, 4632, 9341, 1114, 5176, 7, 4335, 17218, 8479, 5686, 5692, 15649, 8750, 5693, 573, 7303, 1935, 9218, 4837, 8748, 10107, 4603, 17222, 1896, 9283, 9302, 17223, 17211, 17166, 11555, 9247, 17224, 7483, 17225, 9252, 17226, 10238, 10080, 10161, 10160, 2]
+// Dependencies: [19, 1956, 4652, 9616, 502, 1957, 1908, 4275, 1371, 4660, 1074, 4657, 9281, 21, 4636, 576, 504, 17223, 4789, 9299, 9260, 5670, 4632, 9341, 1114, 5176, 7, 4335, 17220, 8479, 5686, 5692, 15650, 8750, 5693, 573, 7303, 1935, 9218, 4837, 8748, 10107, 4603, 17224, 1896, 9283, 9302, 17225, 17213, 17168, 11556, 9247, 17226, 7483, 17227, 9252, 17228, 10238, 10080, 10161, 10160, 2]
 
-// Module 17220 (VoicePanelSettingsOverview)
+// Module 17222 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -24,9 +24,9 @@ import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 9260 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9283 */;
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9299 */;
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10107 */;
-import WrenchIcon from "WrenchIcon" /* 15649 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17218 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 17221 */;
+import WrenchIcon from "WrenchIcon" /* 15650 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17220 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 17223 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
@@ -240,7 +240,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17222, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17224, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

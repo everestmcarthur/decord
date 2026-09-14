@@ -1,10 +1,10 @@
-// Module ID: 16373
-// Function ID: 16374
+// Module ID: 16375
+// Function ID: 16376
 // Name: FavoritesGuildSidebarHeader
-// Dependencies: [19, 17, 16297, 21, 4636, 576, 10352, 11108, 4603, 10356, 1896, 10355, 4632, 1114, 3236, 5161, 5182, 5152, 5054, 2]
+// Dependencies: [19, 17, 16299, 21, 4636, 576, 10353, 11109, 4603, 10357, 1896, 10356, 4632, 1114, 3236, 5161, 5182, 5152, 5054, 2]
 // Exports: default
 
-// Module 16373 (FavoritesGuildSidebarHeader)
+// Module 16375 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
@@ -67,7 +67,7 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16297).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16299).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(4636);

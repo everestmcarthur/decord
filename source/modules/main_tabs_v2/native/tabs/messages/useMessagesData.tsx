@@ -1,10 +1,10 @@
-// Module ID: 16140
-// Function ID: 16141
+// Module ID: 16142
+// Function ID: 16143
 // Name: useMessagesData
-// Dependencies: [32, 19, 5358, 502, 4285, 7321, 504, 16141, 1935, 2]
+// Dependencies: [32, 19, 5358, 502, 4285, 7321, 504, 16143, 1935, 2]
 // Exports: default
 
-// Module 16140 (useMessagesData)
+// Module 16142 (useMessagesData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;

@@ -1,15 +1,15 @@
-// Module ID: 16766
-// Function ID: 16767
+// Module ID: 16768
+// Function ID: 16769
 // Name: GuildChannelRow
-// Dependencies: [19, 17, 7982, 21, 4636, 576, 4789, 16767, 5109, 16769, 16759, 2]
+// Dependencies: [19, 17, 7982, 21, 4636, 576, 4789, 16769, 5109, 16771, 16761, 2]
 
-// Module 16766 (GuildChannelRow)
+// Module 16768 (GuildChannelRow)
 import nativeDefault from "native" /* 576 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
-import SearchListRow from "SearchListRow" /* 16759 */;
-import ChannelContent from "ChannelContent" /* 16767 */;
-import renderChannelItem from "renderChannelItem" /* 16769 */;
+import SearchListRow from "SearchListRow" /* 16761 */;
+import ChannelContent from "ChannelContent" /* 16769 */;
+import renderChannelItem from "renderChannelItem" /* 16771 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// Module ID: 15915
-// Function ID: 15916
+// Module ID: 15917
+// Function ID: 15918
 // Name: FeedProductList
-// Dependencies: [19, 17, 21, 4636, 8890, 15916, 8997, 15917, 2]
+// Dependencies: [19, 17, 21, 4636, 8890, 15918, 8997, 15919, 2]
 // Exports: default
 
-// Module 15915 (FeedProductList)
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15917 */;
+// Module 15917 (FeedProductList)
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15919 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(15916).useCardLayout();
+  const cardLayout = num(15918).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
   for (let num = 0; num < loadingCardsNum; num = num + columns) {

@@ -1,17 +1,17 @@
-// Module ID: 16378
-// Function ID: 16379
+// Module ID: 16380
+// Function ID: 16381
 // Name: GuildsBar
-// Dependencies: [19, 21, 4636, 1150, 9740, 16379, 16387, 16275, 11662, 6756, 5670, 7175, 16456, 10366, 2]
+// Dependencies: [19, 21, 4636, 1363, 9740, 16381, 16389, 16277, 11663, 6756, 5670, 7175, 16458, 10367, 2]
 
-// Module 16378 (GuildsBar)
+// Module 16380 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 5670 */;
 import FastListDefault from "FastList" /* 7175 */;
-import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 10366 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11662 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16275 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16379 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16387 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16456 */;
+import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 10367 */;
+import StartupProfilerDefault from "StartupProfiler" /* 11663 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16277 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16381 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16389 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16458 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -85,7 +85,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11662).Profiles.Guilds;
+  obj.profile = fastListRef(11663).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;

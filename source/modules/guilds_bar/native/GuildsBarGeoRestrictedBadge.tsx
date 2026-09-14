@@ -1,12 +1,12 @@
-// Module ID: 16443
-// Function ID: 16444
+// Module ID: 16445
+// Function ID: 16446
 // Name: GuildsBarGeoRestrictedBadge
-// Dependencies: [19, 17, 21, 4636, 576, 5522, 5668, 12393, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5522, 5668, 12394, 2]
 
-// Module 16443 (GuildsBarGeoRestrictedBadge)
+// Module 16445 (GuildsBarGeoRestrictedBadge)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef12393 from "module_12393" /* 12393 */;
+import _modDef12394 from "module_12394" /* 12394 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -26,7 +26,7 @@ export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef12393, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef12393, style: tmp.badgeImage });
+  const obj2 = { source: _modDef12394, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef12394, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 });

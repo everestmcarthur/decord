@@ -1,13 +1,13 @@
 // Module ID: 4680
 // Function ID: 4681
 // Name: StreamRTCConnection
-// Dependencies: [1914, 4681, 4682, 502, 1957, 4684, 1908, 4685, 4659, 4686, 1074, 4661, 1090, 4663, 4687, 1952, 4688, 4689, 12, 573, 4690, 4691, 4765, 1242, 4630, 4771, 4665, 4772, 4776, 4777, 13763, 7774, 2]
+// Dependencies: [1914, 4681, 4682, 502, 1957, 4684, 1908, 4685, 4659, 4686, 1074, 4661, 1090, 4663, 4687, 1952, 4688, 4689, 12, 573, 4690, 4691, 4765, 1240, 4630, 4771, 4665, 4772, 4776, 4777, 13764, 7774, 2]
 
 // Module 4680 (StreamRTCConnection)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
 import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 4687 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
@@ -300,7 +300,7 @@ prototype["initializeEvents"] = function initializeEvents() {
             obj3.share_game_distributor = share_game_distributor;
             obj3.hdr_frames_capable = hdr_frames_capable;
             obj3.hdr_frames = hdr_frames;
-            const obj2 = self(1242);
+            const obj2 = self(1240);
             const tmp12 = closure_24;
             const tmp14 = closure_23;
             obj3.discord_is_elevated = self(4630).getDiscordIsElevated();
@@ -323,7 +323,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
           if (null != desktopSource) {
             let desktopSource1;
-            const obj = self(1242);
+            const obj = self(1240);
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
             }
@@ -357,7 +357,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
           if (null != desktopSource) {
             let desktopSource1;
-            const obj3 = self(1242);
+            const obj3 = self(1240);
             const tmp13 = self;
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
@@ -433,7 +433,7 @@ prototype["initializeEvents"] = function initializeEvents() {
             ({ guild_id: obj3.guild_id, channel_id: obj3.channel_id, rtc_connection_id: obj3.rtc_connection_id, media_session_id: obj3.media_session_id, parent_media_session_id: obj3.parent_media_session_id } = streamAnalyticsProperties);
             obj5.num_viewers = obj.analyticsContext.numViewers;
             obj5.time_connected_to_first_frame_delivered = obj.getDuration();
-            const obj2 = self(1242);
+            const obj2 = self(1240);
             const obj4 = c0(4665);
             obj5.time_total_to_first_frame = c0(4665).now() - obj.getCreatedTime();
             let NumberResult = null;
@@ -554,7 +554,7 @@ prototype["initializeEvents"] = function initializeEvents() {
             }
           }
           obj2.time_local_user_to_first_frame_encrypted = NumberResult4;
-          self(1242).track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj2);
+          self(1240).track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj2);
         });
       }
       const _connection7 = tmp4._connection;
@@ -694,9 +694,9 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
     }
     let obj = { stream_application_name: obj5(4777).default.getApplicationNames() };
     if (self.isOwner) {
-      let obj2 = { clips_enabled: tmp5(13763).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
+      let obj2 = { clips_enabled: tmp5(13764).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
       obj3 = obj2;
-      const tmp5Result = tmp5(13763);
+      const tmp5Result = tmp5(13764);
     } else {
       obj3 = {};
     }

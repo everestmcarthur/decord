@@ -1,13 +1,13 @@
-// Module ID: 11799
-// Function ID: 11800
+// Module ID: 11800
+// Function ID: 11801
 // Name: PublishModal
-// Dependencies: [32, 19, 17, 21, 4636, 5522, 11800, 1178, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 5522, 11801, 1176, 1114, 2]
 // Exports: default
 
-// Module 11799 (PublishModal)
+// Module 11800 (PublishModal)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11800 */;
+import native from "native" /* 1176 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11801 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

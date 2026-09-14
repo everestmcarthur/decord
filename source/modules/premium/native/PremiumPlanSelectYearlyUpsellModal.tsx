@@ -1,13 +1,13 @@
-// Module ID: 13638
-// Function ID: 13639
+// Module ID: 13639
+// Function ID: 13640
 // Name: PremiumPlanSelectYearlyUpsellModal
-// Dependencies: [32, 19, 17, 2025, 7340, 13629, 1373, 1085, 21, 4636, 5605, 5522, 7512, 504, 1880, 5075, 13639, 1178, 1114, 4294, 5056, 2]
+// Dependencies: [32, 19, 17, 2025, 7340, 13630, 1373, 1085, 21, 4636, 5605, 5522, 7512, 504, 1880, 5075, 13640, 1176, 1114, 4294, 5056, 2]
 // Exports: default
 
-// Module 13638 (PremiumPlanSelectYearlyUpsellModal)
+// Module 13639 (PremiumPlanSelectYearlyUpsellModal)
 import common_AlertDefault from "common/Alert" /* 5075 */;
 import TextStylesDefault from "TextStyles" /* 5605 */;
-import _modDef13639 from "module_13639" /* 13639 */;
+import _modDef13640 from "module_13640" /* 13640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -16,7 +16,7 @@ import IAPStore from "IAPStore" /* 7340 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13629).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13630).usePremiumPlanSelectStore;
 let closure_10 = fn(1373).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -84,7 +84,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
     const tmp5Result = tmp5(1880);
-    obj7.source = _modDef13639;
+    obj7.source = _modDef13640;
     const items2 = [closure_11(closure_5, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = tmp5(1114).intl;
@@ -93,12 +93,12 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const tmp20 = closure_12;
     obj9.planName = tmp5(4294).getPremiumTypeDisplayName(premiumTier);
     obj8.children = intl.format(tmp5(1114).t.LQCVfK, obj9);
-    items2[1] = closure_11(tmp5(1178).LegacyText, obj8);
+    items2[1] = closure_11(tmp5(1176).LegacyText, obj8);
     const obj10 = { style: tmp.description, children: null };
     const intl2 = tmp5(1114).intl;
     const obj11 = { discountPercentage: formatPercentResult };
     obj10.children = intl2.format(tmp5(1114).t["7chOVL"], obj11);
-    items2[2] = closure_11(tmp5(1178).LegacyText, obj10);
+    items2[2] = closure_11(tmp5(1176).LegacyText, obj10);
     const obj12 = { style: tmp.upsellButton, children: null };
     const obj13 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };
     const intl3 = tmp5(1114).intl;

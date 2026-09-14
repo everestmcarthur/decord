@@ -1,18 +1,18 @@
-// Module ID: 15404
-// Function ID: 15405
+// Module ID: 15405
+// Function ID: 15406
 // Name: MessagePreviewManager
-// Dependencies: [32, 5, 5358, 1961, 502, 1957, 13807, 1074, 3, 7221, 12, 1986, 573, 1272, 15405, 2]
+// Dependencies: [32, 5, 5358, 1961, 502, 1957, 13808, 1074, 3, 7221, 12, 1986, 573, 1270, 15406, 2]
 
-// Module 15404 (MessagePreviewManager)
+// Module 15405 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 15405 */;
+import RemoteFetchData from "RemoteFetchData" /* 15406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13807 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13808 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -367,7 +367,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               let body;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")");
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
               const obj4 = { channel_ids: nextWantsResult };
               request.body = obj4;

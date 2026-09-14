@@ -1,16 +1,16 @@
-// Module ID: 11645
-// Function ID: 11646
+// Module ID: 11646
+// Function ID: 11647
 // Name: VideoQuestUtils
-// Dependencies: [4685, 7805, 7807, 1074, 7801, 11409, 7826, 1114, 7820, 4494, 2, 11646]
+// Dependencies: [4685, 7805, 7807, 1074, 7801, 11410, 7826, 1114, 7820, 4494, 2, 11647]
 // Exports: computeMaxSeekableTime, formatVideoProgressRatio, getVideoOrientation, getVideoQuestEndCardCtaText, getVideoQuestModalKey, getVideoQuestProgressRemainingAccessibilityLabel, handleVideoQuestModalClose, isVideoQuestProgressing, sendVideoProgress
 
-// Module 11645 (VideoQuestUtils)
+// Module 11646 (VideoQuestUtils)
 import util from "util" /* 1114 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
 import NetworkStore from "NetworkStore" /* 4685 */;
 import QuestStore from "QuestStore" /* 7805 */;
 import VideoQuestUIStore from "VideoQuestUIStore" /* 7807 */;
@@ -21,7 +21,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(11646).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(11647).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -157,8 +157,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(11409).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(11409);
+        tmp6(11410).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = tmp6(11410);
       }
       tmp6 = require;
     }

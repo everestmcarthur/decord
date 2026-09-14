@@ -1,12 +1,12 @@
 // Module ID: 9567
 // Function ID: 9568
 // Name: oauth2/Header
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1396, 1178, 4632, 9568, 1384, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1396, 1176, 4632, 9568, 1384, 1114, 2]
 // Exports: default
 
 // Module 9567 (oauth2/Header)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;

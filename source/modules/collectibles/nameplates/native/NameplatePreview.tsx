@@ -1,12 +1,12 @@
-// Module ID: 11353
-// Function ID: 11354
+// Module ID: 11354
+// Function ID: 11355
 // Name: NameplatePreview
-// Dependencies: [19, 17, 4628, 2021, 21, 4636, 576, 1886, 8333, 8276, 504, 4481, 4870, 1178, 8945, 11027, 11028, 4632, 2]
+// Dependencies: [19, 17, 4628, 2021, 21, 4636, 576, 1886, 8333, 8276, 504, 4481, 4870, 1176, 8945, 11028, 11029, 4632, 2]
 // Exports: NameplatePreview
 
-// Module 11353 (NameplatePreview)
+// Module 11354 (NameplatePreview)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -106,9 +106,9 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   const obj10 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    const obj11 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: tmp4(11028).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
-    tmp19Result = tmp19(tmp7(11027), obj11);
-    const tmp7Result = tmp7(11027);
+    const obj11 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: tmp4(11029).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+    tmp19Result = tmp19(tmp7(11028), obj11);
+    const tmp7Result = tmp7(11028);
   }
   const items4 = [tmp19Result, ];
   let tmp19Result2 = null == tmp15;

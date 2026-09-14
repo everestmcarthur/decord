@@ -1,9 +1,9 @@
-// Module ID: 17930
-// Function ID: 17931
+// Module ID: 17931
+// Function ID: 17932
 // Name: QuestMobileEmbedVisibilityManager
-// Dependencies: [32, 4327, 4652, 7980, 4844, 1961, 1957, 2011, 11674, 1895, 7805, 11329, 1074, 7811, 7221, 1437, 4624, 5528, 5532, 11620, 10218, 4494, 1093, 1094, 4982, 7830, 4495, 2]
+// Dependencies: [32, 4327, 4652, 7980, 4844, 1961, 1957, 2011, 11675, 1895, 7805, 11330, 1074, 7811, 7221, 1437, 4624, 5528, 5532, 11621, 10218, 4494, 1093, 1094, 4982, 7830, 4495, 2]
 
-// Module 17930 (QuestMobileEmbedVisibilityManager)
+// Module 17931 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import privDefault from "priv" /* 1437 */;
@@ -14,14 +14,14 @@ import QuestTypes from "QuestTypes" /* 5528 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import getQuestLogger from "getQuestLogger" /* 7811 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 11620 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 11621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import VoicePanelStore from "VoicePanelStore" /* 4844 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AlertStore from "AlertStore" /* 11674 */;
+import AlertStore from "AlertStore" /* 11675 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 import QuestStore from "QuestStore" /* 7805 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -30,7 +30,7 @@ require = fn;
 const ChannelDetailsStore = fn(7980);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(1961).isTextChannel;
-let closure_16 = fn(11329).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(11330).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1074).MessageStates;
 function log() {
   if (questLogger == null) {

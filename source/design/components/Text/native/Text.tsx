@@ -1,12 +1,12 @@
 // Module ID: 4632
 // Function ID: 4633
 // Name: Text/Text
-// Dependencies: [109, 19, 17, 1085, 21, 4373, 576, 12, 4633, 4634, 4636, 4641, 4642, 4645, 1151, 4646, 299, 2]
+// Dependencies: [109, 19, 17, 1085, 21, 4373, 576, 12, 4633, 4634, 4636, 4641, 4642, 4645, 1364, 4646, 299, 2]
 
 // Module 4632 (Text/Text)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 4634 */;
 import PlainTextExperimentContext from "PlainTextExperimentContext" /* 4641 */;
 import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4642 */;

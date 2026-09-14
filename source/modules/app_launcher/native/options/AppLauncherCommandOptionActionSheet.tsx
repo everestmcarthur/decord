@@ -1,10 +1,10 @@
-// Module ID: 12295
-// Function ID: 12296
+// Module ID: 12296
+// Function ID: 12297
 // Name: AppLauncherCommandOptionActionSheet
-// Dependencies: [19, 17, 1482, 21, 4636, 576, 7253, 7252, 7301, 4603, 1178, 2]
+// Dependencies: [19, 17, 1482, 21, 4636, 576, 7253, 7252, 7301, 4603, 1176, 2]
 // Exports: AppLauncherCommandOptionActionSheet
 
-// Module 12295 (AppLauncherCommandOptionActionSheet)
+// Module 12296 (AppLauncherCommandOptionActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +59,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
     }
   })}</View>;
   ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
-  obj3.trailing = jsx(merged(1178).Spacer, { size: 24 });
+  obj3.trailing = jsx(merged(1176).Spacer, { size: 24 });
   obj.header = jsx(merged(7252).BottomSheetTitleHeader, { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null });
   const obj9 = { style: null, children };
   const items = [tmp2.contentContainer, contentContainerStyles];

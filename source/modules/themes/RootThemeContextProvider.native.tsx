@@ -1,14 +1,14 @@
-// Module ID: 14657
-// Function ID: 14658
+// Module ID: 14658
+// Function ID: 14659
 // Name: RootThemeContextProvider
-// Dependencies: [19, 4628, 1183, 1085, 21, 504, 4490, 7083, 14658, 4347, 10204, 4641, 2]
+// Dependencies: [19, 4628, 1181, 1085, 21, 504, 4490, 7083, 14659, 4347, 10204, 4641, 2]
 // Exports: RootThemeContextProvider
 
-// Module 14657 (RootThemeContextProvider)
+// Module 14658 (RootThemeContextProvider)
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4490 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 const require = fn;
 const ThemeTypes = fn(1085).ThemeTypes;
@@ -26,7 +26,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(7083).useManaTypeConsolidationExperiment("RootThemeContextProvider");
   const obj2 = manaTypeConsolidationExperiment(7083);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(14658).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(14659).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {

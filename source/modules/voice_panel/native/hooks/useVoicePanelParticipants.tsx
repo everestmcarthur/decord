@@ -1,10 +1,10 @@
-// Module ID: 17192
-// Function ID: 17193
+// Module ID: 17194
+// Function ID: 17195
 // Name: useVoicePanelParticipants
-// Dependencies: [32, 19, 4652, 502, 1957, 4659, 4655, 4660, 12402, 1074, 17146, 504, 16331, 12401, 12404, 2]
+// Dependencies: [32, 19, 4652, 502, 1957, 4659, 4655, 4660, 12403, 1074, 17148, 504, 16333, 12402, 12405, 2]
 // Exports: default, useChunkedParticipants
 
-// Module 17192 (useVoicePanelParticipants)
+// Module 17194 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
@@ -26,7 +26,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 let closure_14 = [];

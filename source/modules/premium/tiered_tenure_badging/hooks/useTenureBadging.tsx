@@ -1,13 +1,13 @@
-// Module ID: 11318
-// Function ID: 11319
+// Module ID: 11319
+// Function ID: 11320
 // Name: useTenureBadging
-// Dependencies: [7723, 1371, 4300, 1373, 504, 11319, 1885, 7736, 11320, 2]
+// Dependencies: [7723, 1371, 4300, 1373, 504, 11320, 1885, 7736, 11321, 2]
 // Exports: usePremiumSinceForUser, useTieredTenureBadge, useTieredTenureBadgeData, useTieredTenureBadgeDataForUser, useTieredTenureBadgesFromSubscriptionData, useTieredTenureEarnedOnDate
 
-// Module 11318 (useTenureBadging)
+// Module 11319 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11319 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11320 */;
 import UserProfileStore from "UserProfileStore" /* 7723 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
@@ -199,7 +199,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
           obj3.status = obj.WITHHELD;
           return obj3;
         }
-        tmpResult13 = tmp(11320);
+        tmpResult13 = tmp(11321);
       }
       const tmpResult12 = tmp(7736);
     }

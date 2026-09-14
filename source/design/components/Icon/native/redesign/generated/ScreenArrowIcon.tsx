@@ -1,10 +1,10 @@
-// Module ID: 12661
-// Function ID: 12662
+// Module ID: 12662
+// Function ID: 12663
 // Name: ScreenArrowIcon
 // Dependencies: [19, 21, 576, 4337, 10101, 2]
 // Exports: ScreenArrowIcon
 
-// Module 12661 (ScreenArrowIcon)
+// Module 12662 (ScreenArrowIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
 import _mod10101 from "module_10101" /* 10101 */;

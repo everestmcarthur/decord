@@ -1,17 +1,17 @@
-// Module ID: 16873
-// Function ID: 16874
+// Module ID: 16875
+// Function ID: 16876
 // Name: MediaKeyboardAccessoriesContainer
-// Dependencies: [19, 17, 9814, 21, 1150, 4636, 4373, 504, 2]
+// Dependencies: [19, 17, 9814, 21, 1363, 4636, 4373, 504, 2]
 // Exports: default
 
-// Module 16873 (MediaKeyboardAccessoriesContainer)
+// Module 16875 (MediaKeyboardAccessoriesContainer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import noop from "module_19" /* 19 */;
 import NativeMenuStore from "NativeMenuStore" /* 9814 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_6 = PlatformUtils.isAndroid();
 const createStyles = fn(4636);
 let obj3 = { androidContainer: { flex: 1 }, iosContainer: null };

@@ -1,10 +1,10 @@
-// Module ID: 17996
-// Function ID: 17997
+// Module ID: 17997
+// Function ID: 17998
 // Name: AgeUpdateFooter
 // Dependencies: [19, 21, 4636, 4632, 1114, 2690, 8529, 8531, 2]
 // Exports: default
 
-// Module 17996 (AgeUpdateFooter)
+// Module 17997 (AgeUpdateFooter)
 import util from "util" /* 1114 */;
 import _modDef2690 from "module_2690" /* 2690 */;
 import Text_Text from "Text/Text" /* 4632 */;

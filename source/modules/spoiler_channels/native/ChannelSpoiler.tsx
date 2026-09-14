@@ -1,16 +1,16 @@
-// Module ID: 12796
-// Function ID: 12797
+// Module ID: 12797
+// Function ID: 12798
 // Name: ChannelSpoiler
-// Dependencies: [32, 19, 17, 4652, 1957, 1979, 12400, 21, 4636, 576, 504, 4789, 12401, 4837, 5601, 4495, 5109, 4632, 1114, 5054, 4626, 5204, 12795, 8531, 2]
+// Dependencies: [32, 19, 17, 4652, 1957, 1979, 12401, 21, 4636, 576, 504, 4789, 12402, 4837, 5601, 4495, 5109, 4632, 1114, 5054, 4626, 5204, 12796, 8531, 2]
 // Exports: default
 
-// Module 12796 (ChannelSpoiler)
+// Module 12797 (ChannelSpoiler)
 import nativeDefault from "native" /* 576 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import GatedContentDefault from "GatedContent" /* 12795 */;
+import GatedContentDefault from "GatedContent" /* 12796 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4636);
@@ -49,7 +49,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj4.useContext(tmp6(12401)).setControlsMode;
+  setControlsMode = obj4.useContext(tmp6(12402)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;

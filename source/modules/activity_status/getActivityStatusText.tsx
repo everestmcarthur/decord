@@ -1,13 +1,13 @@
-// Module ID: 11016
-// Function ID: 11017
+// Module ID: 11017
+// Function ID: 11018
 // Name: getActivityStatusText
-// Dependencies: [1074, 11017, 7841, 11018, 1114, 11019, 11020, 8462, 2]
+// Dependencies: [1074, 11018, 7841, 11019, 1114, 11020, 11021, 8462, 2]
 // Exports: default
 
-// Module 11016 (getActivityStatusText)
+// Module 11017 (getActivityStatusText)
 import Constants from "Constants" /* 1074 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7841 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 11017 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 11018 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;
@@ -75,7 +75,7 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       status_display_type1 = name.status_display_type;
     }
-    if (status_display_type1 !== tmp15(11017).StatusDisplayTypes.STATE) {
+    if (status_display_type1 !== tmp15(11018).StatusDisplayTypes.STATE) {
       let status_display_type2;
       if (name != null) {
         status_display_type2 = name.status_display_type;
@@ -84,7 +84,7 @@ export default function getActivityStatusText(name) {
       if (tmp20) {
         tmp17 = tmp5;
       }
-      tmp20 = status_display_type2 === tmp15(11017).StatusDisplayTypes.DETAILS && null != tmp5;
+      tmp20 = status_display_type2 === tmp15(11018).StatusDisplayTypes.DETAILS && null != tmp5;
     } else {
       tmp17 = tmp8;
     }
@@ -92,7 +92,7 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (isEmbeddedActivityDefault(name)) {
-    const tmp28 = tmp21(11018)(tmp2);
+    const tmp28 = tmp21(11019)(tmp2);
     const obj = { text: tmp28, tooltip: tmp28 };
     return obj;
   } else {
@@ -109,7 +109,7 @@ export default function getActivityStatusText(name) {
         return obj2;
       }
     }
-    if (tmp21(11019)(name)) {
+    if (tmp21(11020)(name)) {
       if (flag) {
         if (null != tmp8) {
           const parts = tmp8.split("; ");
@@ -199,6 +199,6 @@ export default function getActivityStatusText(name) {
       }
     }
     obj18 = {};
-    tmp15Result = tmp15(11020);
+    tmp15Result = tmp15(11021);
   }
 };

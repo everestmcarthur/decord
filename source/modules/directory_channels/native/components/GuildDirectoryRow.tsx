@@ -1,13 +1,13 @@
-// Module ID: 12464
-// Function ID: 12465
+// Module ID: 12465
+// Function ID: 12466
 // Name: GuildDirectoryRow
-// Dependencies: [5, 32, 19, 17, 1957, 1979, 1074, 21, 4636, 576, 504, 7445, 5601, 9960, 1187, 1396, 1114, 5688, 5665, 1971, 4632, 12442, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 1979, 1074, 21, 4636, 576, 504, 7445, 5601, 9960, 1185, 1396, 1114, 5688, 5665, 1971, 4632, 12443, 5056, 2]
 
-// Module 12464 (GuildDirectoryRow)
+// Module 12465 (GuildDirectoryRow)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 12442 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 12443 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

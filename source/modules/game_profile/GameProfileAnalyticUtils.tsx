@@ -1,12 +1,12 @@
 // Module ID: 8809
 // Function ID: 8810
 // Name: GameProfileAnalyticUtils
-// Dependencies: [8454, 1074, 8476, 1256, 1242, 2]
+// Dependencies: [8454, 1074, 8476, 1254, 1240, 2]
 // Exports: generateViewId, getGuildIdAndVerifiedFromInvite, trackGameProfileAction, trackGameProfileClose, trackGameProfileEmbedAction, trackGameProfileFeedback, trackGameProfileOpen
 
 // Module 8809 (GameProfileAnalyticUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 8454 */;
 
 require = fn;

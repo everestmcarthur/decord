@@ -1,11 +1,11 @@
-// Module ID: 17966
-// Function ID: 17967
+// Module ID: 17967
+// Function ID: 17968
 // Name: AVErrorCameraSendLowFPS
-// Dependencies: [502, 1908, 4659, 1090, 17952, 9239, 17949, 2]
+// Dependencies: [502, 1908, 4659, 1090, 17953, 9239, 17950, 2]
 
-// Module 17966 (AVErrorCameraSendLowFPS)
+// Module 17967 (AVErrorCameraSendLowFPS)
 import DurationsDefault from "Durations" /* 1090 */;
-import AVErrorUtils from "AVErrorUtils" /* 17952 */;
+import AVErrorUtils from "AVErrorUtils" /* 17953 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
@@ -38,9 +38,9 @@ export const AVErrorCameraSendLowFPSDefinition = {
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
               const obj2 = { type: tmp4(9239).AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
-              const merged = Object.assign(tmp4(17949).getVoiceChannelErrorContext());
+              const merged = Object.assign(tmp4(17950).getVoiceChannelErrorContext());
               const items = [obj2];
-              const tmp4Result = tmp4(17949);
+              const tmp4Result = tmp4(17950);
               const tmp8 = items;
             }
             tmp7 = tmp8;

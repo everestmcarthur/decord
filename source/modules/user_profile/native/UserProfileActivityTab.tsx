@@ -1,13 +1,13 @@
-// Module ID: 13195
-// Function ID: 13196
+// Module ID: 13196
+// Function ID: 13197
 // Name: UserProfileActivityTab
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4632, 1114, 8488, 2024, 13196, 13199, 13128, 13200, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4632, 1114, 8488, 2024, 13197, 13200, 13129, 13201, 2]
 // Exports: default
 
-// Module 13195 (UserProfileActivityTab)
+// Module 13196 (UserProfileActivityTab)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 13200 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 13201 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -88,13 +88,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13196)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13197)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = tmp5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(13199);
+        const tmp7 = user(13200);
         if (isCurrentUser) {
           tmp10Result = tmp5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -110,7 +110,7 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1114).intl;
     obj3.heading = intl.string(user(1114).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(13128), obj4);
+    obj3.children = closure_5(cardStyle(13129), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
   const items = [hasCurrentActivity, ];

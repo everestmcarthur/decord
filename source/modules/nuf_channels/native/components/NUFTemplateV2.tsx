@@ -1,10 +1,10 @@
-// Module ID: 13857
-// Function ID: 13858
+// Module ID: 13858
+// Function ID: 13859
 // Name: NUFTemplateV2
 // Dependencies: [19, 17, 21, 4636, 4632, 5056, 2]
 // Exports: default
 
-// Module 13857 (NUFTemplateV2)
+// Module 13858 (NUFTemplateV2)
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;

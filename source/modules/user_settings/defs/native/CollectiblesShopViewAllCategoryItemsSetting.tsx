@@ -1,12 +1,12 @@
-// Module ID: 15934
-// Function ID: 15935
+// Module ID: 15936
+// Function ID: 15937
 // Name: CollectiblesShopViewAllCategoryItemsSetting
-// Dependencies: [1074, 11601, 14931, 15935, 2]
+// Dependencies: [1074, 11602, 14932, 15937, 2]
 
-// Module 15934 (CollectiblesShopViewAllCategoryItemsSetting)
+// Module 15936 (CollectiblesShopViewAllCategoryItemsSetting)
 import Constants from "Constants" /* 1074 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14931 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14932 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

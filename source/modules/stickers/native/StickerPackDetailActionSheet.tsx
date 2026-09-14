@@ -1,16 +1,16 @@
-// Module ID: 10523
-// Function ID: 10524
+// Module ID: 10524
+// Function ID: 10525
 // Name: StickerPackDetailActionSheet
-// Dependencies: [32, 19, 10401, 1074, 7254, 21, 4636, 1477, 1611, 12, 1242, 7253, 10524, 10528, 7257, 6728, 10529, 5204, 10304, 2]
+// Dependencies: [32, 19, 10402, 1074, 7254, 21, 4636, 1477, 1611, 12, 1240, 7253, 10525, 10529, 7257, 6728, 10530, 5204, 10304, 2]
 
-// Module 10523 (StickerPackDetailActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10529 */;
+// Module 10524 (StickerPackDetailActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10530 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(10401);
+const StickerPickerConstants = fn(10402);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;

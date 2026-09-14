@@ -1,20 +1,20 @@
-// Module ID: 13112
-// Function ID: 13113
+// Module ID: 13113
+// Function ID: 13114
 // Name: MediaViewerItem
-// Dependencies: [32, 19, 17, 21, 1150, 4502, 13113, 13114, 8383, 8382, 11791, 8378, 6756, 13115, 9744, 2]
+// Dependencies: [32, 19, 17, 21, 1363, 4502, 13114, 13115, 8383, 8382, 11792, 8378, 6756, 13116, 9744, 2]
 
-// Module 13112 (MediaViewerItem)
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+// Module 13113 (MediaViewerItem)
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8378 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 13114 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 13115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_7 = PlatformUtils.isAndroid();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");

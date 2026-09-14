@@ -82,8 +82,8 @@ fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "GUILD_SETTINGS_VANITY_URL_RESET",
-      reduceMotion: "GUILD_SETTINGS_VANITY_URL_SET"
+      startTimestamp: "text-xxs/medium",
+      reduceMotion: 10
     };
     let num = obj.velocity;
     if (num == null) {

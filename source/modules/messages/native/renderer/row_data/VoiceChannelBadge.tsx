@@ -1,10 +1,10 @@
-// Module ID: 13312
-// Function ID: 13313
+// Module ID: 13313
+// Function ID: 13314
 // Name: VoiceChannelBadge
-// Dependencies: [17, 1957, 4275, 4655, 1074, 13313, 5109, 4847, 2]
+// Dependencies: [17, 1957, 4275, 4655, 1074, 13314, 5109, 4847, 2]
 // Exports: createVoiceChannelBadge
 
-// Module 13312 (VoiceChannelBadge)
+// Module 13313 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

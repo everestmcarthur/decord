@@ -1,10 +1,10 @@
-// Module ID: 11388
-// Function ID: 11389
+// Module ID: 11389
+// Function ID: 11390
 // Name: MessageReactions
-// Dependencies: [19, 4857, 21, 504, 7265, 7285, 11389, 2]
+// Dependencies: [19, 4857, 21, 504, 7265, 7285, 11390, 2]
 // Exports: default
 
-// Module 11388 (MessageReactions)
+// Module 11389 (MessageReactions)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import noop from "module_19" /* 19 */;
@@ -71,9 +71,9 @@ export default function MessageReactions(emoji) {
   if (items3.length > 0) {
     let obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = tmp9(tmp4(11389).MessageReactionsContent, obj3);
+    let tmp9Result = tmp9(tmp4(11390).MessageReactionsContent, obj3);
   } else {
-    tmp9Result = tmp9(tmp4(11389).MessageReactionsEmpty, {});
+    tmp9Result = tmp9(tmp4(11390).MessageReactionsEmpty, {});
   }
   obj2.children = tmp9Result;
   return jsx(items3(7265).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null });

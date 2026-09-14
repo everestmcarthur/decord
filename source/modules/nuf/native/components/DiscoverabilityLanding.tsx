@@ -1,10 +1,10 @@
-// Module ID: 12877
-// Function ID: 12878
+// Module ID: 12878
+// Function ID: 12879
 // Name: DiscoverabilityLanding
-// Dependencies: [19, 17, 12806, 1074, 21, 4636, 576, 5605, 1611, 4603, 12878, 1896, 5763, 5668, 12879, 4632, 1114, 8716, 12833, 5056, 2]
+// Dependencies: [19, 17, 12807, 1074, 21, 4636, 576, 5605, 1611, 4603, 12879, 1896, 5763, 5668, 12880, 4632, 1114, 8716, 12834, 5056, 2]
 // Exports: default
 
-// Module 12877 (DiscoverabilityLanding)
+// Module 12878 (DiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,7 +15,7 @@ import TextStyles from "TextStyles" /* 5605 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(12806).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12807).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
@@ -38,7 +38,7 @@ export default function DiscoverabilityLanding(onNext) {
   const allowPhone = tmp2.allowPhone;
   const items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12878, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12879, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
   }, items);
   const obj = { style: tmp.container, contentContainerStyle: { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 }, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };

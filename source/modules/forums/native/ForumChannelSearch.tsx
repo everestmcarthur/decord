@@ -1,9 +1,9 @@
-// Module ID: 13388
-// Function ID: 13389
+// Module ID: 13389
+// Function ID: 13390
 // Name: ForumChannelSearch
-// Dependencies: [19, 17, 1957, 7870, 21, 4636, 1484, 13389, 7966, 5056, 1114, 8002, 504, 7153, 7869, 2]
+// Dependencies: [19, 17, 1957, 7870, 21, 4636, 1484, 13390, 7966, 5056, 1114, 8002, 504, 7153, 7869, 2]
 
-// Module 13388 (ForumChannelSearch)
+// Module 13389 (ForumChannelSearch)
 import tracking_Tracking from "tracking/Tracking" /* 7869 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 8002 */;
 import noop from "module_19" /* 19 */;
@@ -55,8 +55,8 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13389).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13389);
+  const canSearchForumPostsByChannelId = channelId(13390).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(13390);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {

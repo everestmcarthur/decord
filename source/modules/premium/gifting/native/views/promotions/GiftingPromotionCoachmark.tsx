@@ -1,19 +1,19 @@
-// Module ID: 17040
-// Function ID: 17041
+// Module ID: 17042
+// Function ID: 17043
 // Name: GiftingPromotionCoachmark
-// Dependencies: [19, 17, 4628, 10793, 1074, 1954, 21, 4636, 576, 1150, 504, 10881, 17041, 8390, 4603, 7265, 7285, 10789, 7253, 8935, 5668, 4632, 5056, 11164, 1114, 2]
+// Dependencies: [19, 17, 4628, 10794, 1074, 1954, 21, 4636, 576, 1363, 504, 10882, 17043, 8390, 4603, 7265, 7285, 10790, 7253, 8935, 5668, 4632, 5056, 11165, 1114, 2]
 // Exports: default
 
-// Module 17040 (GiftingPromotionCoachmark)
+// Module 17042 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import usePreviousDefault from "usePrevious" /* 8390 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10789 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10790 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 const View = fn(17).View;
@@ -29,11 +29,11 @@ obj2.textContainer = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeD
 obj2.text = { textAlign: "center" };
 let obj4 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
 obj2.countdownBadge = { flexDirection: "row", alignSelf: "center", borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 let obj7 = { lineHeight: PlatformUtils ? space.PX_12 : space.PX_16, paddingVertical: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let PX_4;
 if (PlatformUtils.isAndroid()) {
   PX_4 = nativeDefault.space.PX_4;
@@ -62,8 +62,8 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10881).useThemeAndReducedMotionAwareAssetUrl(asset);
-  let obj2 = markAsDismissed(10881);
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10882).useThemeAndReducedMotionAwareAssetUrl(asset);
+  let obj2 = markAsDismissed(10882);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -71,7 +71,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const str = markAsDismissed(17041).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const str = markAsDismissed(17043).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp9;
   const tmp11 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp11;
@@ -94,7 +94,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result3 = markAsDismissed(17041);
+  const tmp2Result3 = markAsDismissed(17043);
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK).analyticsLocations;
   const items3 = [analyticsLocations, markAsDismissed];
   let tmp18Result3 = null;
@@ -126,7 +126,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       items4[2] = tmp20(tmp21, obj7);
       const obj10 = { grow: true, icon: null, text: null, onPress: null };
       const obj11 = { size: "sm", color: tmp10(576).colors.WHITE };
-      obj10.icon = tmp18(tmp2(11164).GiftIcon, obj11);
+      obj10.icon = tmp18(tmp2(11165).GiftIcon, obj11);
       const intl = tmp2(1114).intl;
       obj10.text = intl.string(tmp2(1114).t.Ve9Ge6);
       obj10.onPress = tmp16;
@@ -151,7 +151,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj14.source = obj15;
       obj14.style = tmp.imageShared;
       tmp18Result4 = tmp18(tmp10(5668), obj14);
-      tmp2Result4 = tmp2(1150);
+      tmp2Result4 = tmp2(1363);
     }
   }
   return tmp18Result3;

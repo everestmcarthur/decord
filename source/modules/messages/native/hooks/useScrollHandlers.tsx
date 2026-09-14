@@ -1,16 +1,16 @@
-// Module ID: 11671
-// Function ID: 11672
+// Module ID: 11672
+// Function ID: 11673
 // Name: useScrollHandlers
-// Dependencies: [19, 9615, 3, 5043, 11119, 1249, 11404, 11406, 5528, 2]
+// Dependencies: [19, 9615, 3, 5043, 11120, 1247, 11405, 11407, 5528, 2]
 // Exports: default
 
-// Module 11671 (useScrollHandlers)
+// Module 11672 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11119 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11404 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11406 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11120 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11405 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11407 */;
 import noop from "module_19" /* 19 */;
 
 const QuestTypes = tmp(5528);

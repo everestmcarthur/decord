@@ -1,12 +1,12 @@
 // Module ID: 8105
 // Function ID: 8106
 // Name: WelcomeCTAUtils
-// Dependencies: [1371, 8106, 1074, 11, 7559, 1242, 2]
+// Dependencies: [1371, 8106, 1074, 11, 7559, 1240, 2]
 // Exports: handleWelcomeCtaClicked, pickHelloSticker, pickWelcomeSticker
 
 // Module 8105 (WelcomeCTAUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
 import UserStore from "UserStore" /* 1371 */;
 

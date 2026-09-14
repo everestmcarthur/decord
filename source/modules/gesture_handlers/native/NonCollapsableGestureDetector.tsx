@@ -1,10 +1,10 @@
-// Module ID: 16457
-// Function ID: 16458
+// Module ID: 16459
+// Function ID: 16460
 // Name: NonCollapsableGestureDetector
 // Dependencies: [109, 19, 17, 21, 6756, 2]
 // Exports: NonCollapsableGestureDetector
 
-// Module 16457 (NonCollapsableGestureDetector)
+// Module 16459 (NonCollapsableGestureDetector)
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

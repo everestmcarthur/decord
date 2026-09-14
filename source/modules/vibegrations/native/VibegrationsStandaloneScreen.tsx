@@ -1,10 +1,10 @@
-// Module ID: 16686
-// Function ID: 16687
+// Module ID: 16688
+// Function ID: 16689
 // Name: VibegrationsStandaloneScreen
-// Dependencies: [5, 32, 19, 17, 2021, 1979, 4275, 16687, 16690, 16688, 1074, 9641, 21, 4636, 576, 1611, 1483, 504, 7347, 16695, 16696, 4632, 1114, 3590, 7188, 5056, 5768, 5686, 7743, 7084, 9637, 13384, 4981, 4335, 4603, 16700, 16701, 16704, 9501, 7483, 15088, 10308, 7348, 5705, 7480, 8392, 8789, 8795, 16705, 7349, 7103, 2]
+// Dependencies: [5, 32, 19, 17, 2021, 1979, 4275, 16689, 16692, 16690, 1074, 9641, 21, 4636, 576, 1611, 1483, 504, 7347, 16697, 16698, 4632, 1114, 3590, 7188, 5056, 5768, 5686, 7743, 7084, 9637, 13385, 4981, 4335, 4603, 16702, 16703, 16706, 9501, 7483, 15089, 10308, 7348, 5705, 7480, 8392, 8789, 8795, 16707, 7349, 7103, 2]
 // Exports: default
 
-// Module 16686 (VibegrationsStandaloneScreen)
+// Module 16688 (VibegrationsStandaloneScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
@@ -15,21 +15,21 @@ import SettingsIcon from "SettingsIcon" /* 7483 */;
 import UploadIcon from "UploadIcon" /* 9501 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
 import RetryIcon from "RetryIcon" /* 10308 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13384 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15088 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16695 */;
-import VibegrationsPublishNotesSheetDefault from "VibegrationsPublishNotesSheet" /* 16700 */;
-import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16701 */;
-import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet" /* 16704 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13385 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15089 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16697 */;
+import VibegrationsPublishNotesSheetDefault from "VibegrationsPublishNotesSheet" /* 16702 */;
+import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16703 */;
+import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet" /* 16706 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16687 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16690 */;
-import VibegrationsProjectStore_mod from "VibegrationsProjectStore" /* 16688 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16689 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16692 */;
+import VibegrationsProjectStore_mod from "VibegrationsProjectStore" /* 16690 */;
 
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
 const VibegrationsProjectSettingsSheetDefault = VibegrationsProjectSettingsSheet;
@@ -459,7 +459,7 @@ function ChatScene(guildId) {
                 obj6.publish = nextPromise;
                 obj6.initialDraft = promise5;
                 obj3.content = tmp16(VibegrationsPublishNotesSheetDefault, obj6);
-                obj3.key = tmp14(16700).VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
+                obj3.key = tmp14(16702).VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
                 obj2.showActionSheet(obj3);
               } else {
                 const nextPromise1 = __initData(tmp).then((ok) => {
@@ -631,10 +631,10 @@ function ChatScene(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(16690);
+let VibegrationsConnectionStore = fn(16692);
 ({ draftPatchNotes: map1, ensureConnection: closure_14, publishProject: closure_15, sendUserMessage: closure_16 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
-let VibegrationsProjectStore = fn(16688);
+let VibegrationsProjectStore = fn(16690);
 ({ canPublishProject: closure_18, isProjectOwner: closure_19 } = VibegrationsProjectStore);
 let VibegrationsProjectStore = VibegrationsProjectStore_mod;
 const Permissions = fn(1074).Permissions;

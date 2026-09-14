@@ -1,11 +1,11 @@
 // Module ID: 8866
 // Function ID: 8867
 // Name: GuildBadgeV2
-// Dependencies: [19, 21, 4636, 1178, 4488, 8867, 8869, 8868, 2]
+// Dependencies: [19, 21, 4636, 1176, 4488, 8867, 8869, 8868, 2]
 // Exports: default, hasGuildBadge
 
 // Module 8866 (GuildBadgeV2)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import shared from "shared" /* 4488 */;
 import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8867 */;
 import BadgeCategory from "BadgeCategory" /* 8868 */;
@@ -34,7 +34,7 @@ export default function GuildBadgeV2(arg0) {
     if (null != guildBadgeImageSource) {
       const obj = { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true };
       const merged1 = Object.assign(merged);
-      tmp10 = jsx(tmp5(1178).Icon, { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true });
+      tmp10 = jsx(tmp5(1176).Icon, { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true });
     }
     return tmp10;
   }

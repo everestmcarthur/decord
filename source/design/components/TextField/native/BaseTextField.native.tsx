@@ -1,7 +1,7 @@
 // Module ID: 6724
 // Function ID: 6725
 // Name: BaseTextField
-// Dependencies: [19, 21, 1150, 6722, 4344, 6725, 4343, 2]
+// Dependencies: [19, 21, 1363, 6722, 4344, 6725, 4343, 2]
 
 // Module 6724 (BaseTextField)
 import mergeProps from "mergeProps" /* 4343 */;
@@ -36,17 +36,17 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
       str = autoComplete;
     }
     const obj5 = { autoComplete: str, secureTextEntry: null, keyboardType: null };
-    tmpResult = tmp(1150);
-    const tmpResult5 = tmp(1150);
-    obj5.secureTextEntry = tmp(1150).isAndroid() || secureTextEntry;
-    const tmp7 = tmp(1150).isAndroid() || secureTextEntry;
+    tmpResult = tmp(1363);
+    const tmpResult5 = tmp(1363);
+    obj5.secureTextEntry = tmp(1363).isAndroid() || secureTextEntry;
+    const tmp7 = tmp(1363).isAndroid() || secureTextEntry;
     let str2 = "visible-password";
     if (!tmpResult6.isAndroid()) {
       str2 = keyboardType;
     }
     obj5.keyboardType = str2;
     tmp6 = obj5;
-    tmpResult6 = tmp(1150);
+    tmpResult6 = tmp(1363);
   }
   const onChangeText = size.onChangeText;
   const items = [onChangeText];

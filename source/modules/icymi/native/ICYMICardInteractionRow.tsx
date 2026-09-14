@@ -1,13 +1,13 @@
-// Module ID: 16594
-// Function ID: 16595
+// Module ID: 16596
+// Function ID: 16597
 // Name: ICYMICardInteractionRow
-// Dependencies: [32, 19, 17, 7409, 1957, 5494, 4275, 1074, 1374, 21, 4287, 7866, 4636, 576, 1150, 4486, 504, 4649, 7559, 11255, 5204, 1114, 8883, 4632, 11392, 1091, 1396, 11385, 11023, 11449, 11817, 11863, 16586, 5152, 7865, 8075, 11790, 8469, 11809, 11798, 4338, 5068, 672, 7312, 2]
+// Dependencies: [32, 19, 17, 7409, 1957, 5494, 4275, 1074, 1374, 21, 4287, 7866, 4636, 576, 1363, 4486, 504, 4649, 7559, 11256, 5204, 1114, 8883, 4632, 11393, 1091, 1396, 11386, 11024, 11450, 11818, 11864, 16588, 5152, 7865, 8075, 11791, 8469, 11810, 11799, 4338, 5068, 672, 7312, 2]
 // Exports: default, onAddReaction, useThread
 
-// Module 16594 (ICYMICardInteractionRow)
+// Module 16596 (ICYMICardInteractionRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ReactionUtils from "ReactionUtils" /* 4287 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
@@ -17,13 +17,13 @@ import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7866 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 8075 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11798 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11809 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11817 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11863 */;
-import ICYMIShared from "ICYMIShared" /* 16586 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11799 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11810 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11818 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11864 */;
+import ICYMIShared from "ICYMIShared" /* 16588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7409 */;

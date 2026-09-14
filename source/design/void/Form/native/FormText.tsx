@@ -1,11 +1,11 @@
 // Module ID: 8729
 // Function ID: 8730
 // Name: FormText
-// Dependencies: [19, 21, 4636, 5522, 576, 1178, 2]
+// Dependencies: [19, 21, 4636, 5522, 576, 1176, 2]
 
 // Module 8729 (FormText)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LegacyTokens from "LegacyTokens" /* 5522 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,11 +1,11 @@
 // Module ID: 7885
 // Function ID: 7886
 // Name: EmojiUtilsPlatformed
-// Dependencies: [32, 5, 17, 4290, 4615, 1150, 12, 1396, 7886, 1474, 4486, 7925, 7930, 2]
+// Dependencies: [32, 5, 17, 4290, 4615, 1363, 12, 1396, 7886, 1474, 4486, 7925, 7930, 2]
 
 // Module 7885 (EmojiUtilsPlatformed)
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import DeviceUtils from "DeviceUtils" /* 4615 */;
 import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7886 */;

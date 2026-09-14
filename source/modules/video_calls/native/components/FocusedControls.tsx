@@ -1,10 +1,10 @@
 // Module ID: 9807
 // Function ID: 9808
 // Name: FocusedControls
-// Dependencies: [19, 17, 1074, 21, 4636, 1178, 4373, 9808, 4637, 7226, 1477, 8574, 9809, 9813, 9604, 5043, 7265, 7285, 9763, 9821, 1242, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 1176, 4373, 9808, 4637, 7226, 1477, 8574, 9809, 9813, 9604, 5043, 7265, 7285, 9763, 9821, 1240, 2]
 
 // Module 9807 (FocusedControls)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -73,7 +73,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({ backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 }, headerContainer: { position: "relative", height: 54 } });
-let TIMING_CONFIG = { easing: fn(1178).STANDARD_EASING, duration: 250 };
+let TIMING_CONFIG = { easing: fn(1176).STANDARD_EASING, duration: 250 };
 const __initData = { code: "function FocusedControlsTsx1(){const{reveal,FOCUSED_CONTROLS_HEADER_HEIGHT}=this.__closure;return reveal?0:-FOCUSED_CONTROLS_HEADER_HEIGHT;}" };
 const __initData2 = { code: "function FocusedControlsTsx2(){const{withTiming,offsetY,TIMING_CONFIG}=this.__closure;return{transform:[{translateY:withTiming(offsetY.get(),TIMING_CONFIG)}]};}" };
 const __initData3 = { code: "function FocusedControlsTsx3(){const{isInvitedToSpeak,statusIndicatorHeight}=this.__closure;return isInvitedToSpeak?statusIndicatorHeight.get():0;}" };

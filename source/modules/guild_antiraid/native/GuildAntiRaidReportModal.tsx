@@ -1,10 +1,10 @@
-// Module ID: 14051
-// Function ID: 14052
+// Module ID: 14052
+// Function ID: 14053
 // Name: GuildAntiRaidReportModal
-// Dependencies: [5, 32, 19, 17, 14052, 21, 4636, 576, 1611, 4632, 4331, 1114, 5768, 5685, 5056, 5705, 11058, 7065, 11961, 7103, 2]
+// Dependencies: [5, 32, 19, 17, 14053, 21, 4636, 576, 1611, 4632, 4331, 1114, 5768, 5685, 5056, 5705, 11059, 7065, 11962, 7103, 2]
 // Exports: default
 
-// Module 14051 (GuildAntiRaidReportModal)
+// Module 14052 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -79,7 +79,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14052);
+const GuildReportRaidModalConstants = fn(14053);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -129,9 +129,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(11961).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(11961);
-            tmp2(11961).handleReportRaid(guildId);
+            const result = tmp2(11962).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(11962);
+            tmp2(11962).handleReportRaid(guildId);
             const intl = tmp2(1114).intl;
             c1 = 1;
             dependencyMap = 1;

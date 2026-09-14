@@ -1,10 +1,10 @@
-// Module ID: 14717
-// Function ID: 14718
+// Module ID: 14718
+// Function ID: 14719
 // Name: UserProfileFrameEditButton
-// Dependencies: [32, 19, 17, 7311, 1954, 1085, 21, 576, 4636, 7491, 1943, 8283, 11176, 1889, 4603, 14718, 1896, 1114, 14705, 5658, 8949, 1178, 13302, 2]
+// Dependencies: [32, 19, 17, 7311, 1954, 1085, 21, 576, 4636, 7491, 1943, 8283, 11177, 1889, 4603, 14719, 1896, 1114, 14706, 5658, 8949, 1176, 13303, 2]
 // Exports: default
 
-// Module 14717 (UserProfileFrameEditButton)
+// Module 14718 (UserProfileFrameEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -60,7 +60,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchCollectiblesProduct = user(11176).useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = user(11177).useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
   if (product != null) {
@@ -72,7 +72,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1889).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  const tmp2Result = user(11176);
+  const tmp2Result = user(11177);
   userProfileFrame = user(8283).useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -80,7 +80,7 @@ export default function UserProfileFrameEditButton(arg0) {
   const items1 = [userProfileFrame, guildId, user, tmp4[1]];
   let name;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14718, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14719, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
     closure_2(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   if (product != null) {
@@ -113,7 +113,7 @@ export default function UserProfileFrameEditButton(arg0) {
     const intl3 = tmp2(1114).intl;
     obj6.label = intl3.string(tmp2(1114).t.GWrZOd);
     const obj7 = { showNewBadge: tmp4[0] === tmp2(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-    obj6.labelTrailing = tmp18(tmp2(14705).UserProfileEditFormLabelBadges, obj7);
+    obj6.labelTrailing = tmp18(tmp2(14706).UserProfileEditFormLabelBadges, obj7);
     obj6.buttonText = formatToPlainStringResult;
     const obj8 = { text: formatToPlainStringResult };
     obj6.accessibilityValue = obj8;
@@ -125,10 +125,10 @@ export default function UserProfileFrameEditButton(arg0) {
       let tmp18Result = tmp18(View, obj9);
       const tmp23 = guildId(8949);
     } else {
-      const obj11 = { source: guildId(13302), style: tmp.noneIcon };
-      tmp18Result = tmp18(tmp2(1178).Icon, obj11);
+      const obj11 = { source: guildId(13303), style: tmp.noneIcon };
+      tmp18Result = tmp18(tmp2(1176).Icon, obj11);
     }
     obj6.leading = tmp18Result;
   }
-  return jsx(user(14705).UserProfileEditFormButton, obj6);
+  return jsx(user(14706).UserProfileEditFormButton, obj6);
 };

@@ -1,7 +1,7 @@
 // Module ID: 8723
 // Function ID: 8724
 // Name: FormHint
-// Dependencies: [19, 17, 21, 4636, 576, 5767, 4632, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5767, 4632, 1176, 2]
 // Exports: default
 
 // Module 8723 (FormHint)
@@ -46,7 +46,7 @@ export default function FormHint(inset) {
     items1[2] = style;
     obj.style = items1;
     obj.children = children;
-    tmp4Result = tmp4(tmp2(1178).LegacyText, obj);
+    tmp4Result = tmp4(tmp2(1176).LegacyText, obj);
   }
   return tmp4Result;
 };

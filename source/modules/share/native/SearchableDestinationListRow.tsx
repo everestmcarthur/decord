@@ -1,12 +1,12 @@
-// Module ID: 16298
-// Function ID: 16299
+// Module ID: 16300
+// Function ID: 16301
 // Name: SearchableDestinationListRow
-// Dependencies: [19, 21, 9965, 11113, 10996, 7763, 11040, 11043, 1369, 2]
+// Dependencies: [19, 21, 9965, 11114, 10997, 7763, 11041, 11044, 1369, 2]
 // Exports: default
 
-// Module 16298 (SearchableDestinationListRow)
+// Module 16300 (SearchableDestinationListRow)
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
-import formatResults from "formatResults" /* 11113 */;
+import formatResults from "formatResults" /* 11114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ export default function SearchableDestinationListRow(result) {
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.user = record;
-      const tmp18 = onPressDestination(10996);
+      const tmp18 = onPressDestination(10997);
       obj.type = tmp2(7763).getRelationshipType(record.id);
       obj.onPress = fn;
       return <tmp18 />;
@@ -39,7 +39,7 @@ export default function SearchableDestinationListRow(result) {
       const merged2 = Object.assign(merged);
       obj2.channel = record;
       obj2.onPress = fn;
-      return jsx(onPressDestination(11040), {});
+      return jsx(onPressDestination(11041), {});
     } else {
       if (tmp2(9965).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
         if (tmp2(9965).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
@@ -50,7 +50,7 @@ export default function SearchableDestinationListRow(result) {
       const merged3 = Object.assign(merged);
       obj3.channel = record;
       obj3.onPress = fn;
-      return jsx(onPressDestination(11043), {});
+      return jsx(onPressDestination(11044), {});
     }
   }
 };

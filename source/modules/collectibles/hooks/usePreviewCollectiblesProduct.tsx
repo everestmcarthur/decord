@@ -1,12 +1,12 @@
-// Module ID: 11223
-// Function ID: 11224
+// Module ID: 11224
+// Function ID: 11225
 // Name: usePreviewCollectiblesProduct
-// Dependencies: [32, 19, 8277, 7650, 1887, 7651, 7652, 8288, 11222, 1889, 8281, 2]
+// Dependencies: [32, 19, 8277, 7650, 1887, 7651, 7652, 8288, 11223, 1889, 8281, 2]
 // Exports: usePreviewCollectibleProduct
 
-// Module 11223 (usePreviewCollectiblesProduct)
+// Module 11224 (usePreviewCollectiblesProduct)
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
-import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11222 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11223 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
@@ -33,7 +33,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    product = product(11222).currentPreviewGeneration();
+    product = product(11223).currentPreviewGeneration();
     const pendingChanges = firstAvatarDecoration.getPendingChanges();
     dependencyMap = { avatarDecoration: pendingChanges.pendingAvatarDecoration, profileEffect: pendingChanges.pendingProfileEffect, nameplate: pendingChanges.pendingNameplate, profileFrame: pendingChanges.pendingProfileFrame };
     if (product.type === product(1889).CollectiblesItemType.BUNDLE) {

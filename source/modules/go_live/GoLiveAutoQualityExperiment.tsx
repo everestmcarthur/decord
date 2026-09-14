@@ -1,12 +1,12 @@
 // Module ID: 10086
 // Function ID: 10087
 // Name: GoLiveAutoQualityExperiment
-// Dependencies: [1236, 4682, 4683, 1434, 504, 510, 4778, 2]
+// Dependencies: [1234, 4682, 4683, 1434, 504, 510, 4778, 2]
 // Exports: getGoLiveAutoQualityExperimentConfig, maybeMigrateToAutoQuality, useGoLiveAutoQualityExperimentConfig
 
 // Module 10086 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
 

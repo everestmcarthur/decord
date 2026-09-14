@@ -1,18 +1,18 @@
-// Module ID: 13211
-// Function ID: 13212
+// Module ID: 13212
+// Function ID: 13213
 // Name: UserProfilePrivacyNotice
-// Dependencies: [32, 19, 17, 1074, 1954, 21, 4636, 576, 1187, 1114, 13212, 8767, 1935, 1943, 7491, 4632, 7485, 4591, 5204, 5761, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 21, 4636, 576, 1185, 1114, 13213, 8767, 1935, 1943, 7491, 4632, 7485, 4591, 5204, 5761, 2]
 // Exports: default, useIsPrivacyNoticeVisible
 
-// Module 13211 (UserProfilePrivacyNotice)
+// Module 13212 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
 import useUserIsTeen from "useUserIsTeen" /* 8767 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13212 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13213 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,12 +64,12 @@ export default function UserProfilePrivacyNotice() {
   if (tmp9 !== dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
-    if (tmp2(1187).ProfileVisibility.FRIENDS_ONLY === setting1) {
+    if (tmp2(1185).ProfileVisibility.FRIENDS_ONLY === setting1) {
       let dqQ7AN = tmp2(1114).t["0UBDvq"];
-    } else if (tmp2(1187).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting1) {
+    } else if (tmp2(1185).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting1) {
       dqQ7AN = tmp2(1114).t["9AvQO/"];
     } else {
-      const FRIENDS_AND_ALL_GUILDS = tmp2(1187).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+      const FRIENDS_AND_ALL_GUILDS = tmp2(1185).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
       dqQ7AN = tmp2(1114).t.dqQ7AN;
     }
     const obj4 = { style: tmp.container, children: null };

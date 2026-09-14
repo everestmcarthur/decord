@@ -1,15 +1,15 @@
-// Module ID: 11166
-// Function ID: 11167
+// Module ID: 11167
+// Function ID: 11168
 // Name: GiftingBadgeLevelUpProgress
-// Dependencies: [19, 17, 8309, 21, 4636, 576, 10877, 4632, 1114, 2492, 2]
+// Dependencies: [19, 17, 8309, 21, 4636, 576, 10878, 4632, 1114, 2492, 2]
 // Exports: default
 
-// Module 11166 (GiftingBadgeLevelUpProgress)
+// Module 11167 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10877 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

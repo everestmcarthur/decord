@@ -1,11 +1,11 @@
-// Module ID: 11505
-// Function ID: 11506
+// Module ID: 11506
+// Function ID: 11507
 // Name: SafetyWarningBanner
-// Dependencies: [19, 17, 21, 4636, 576, 7704, 7709, 11503, 1114, 1178, 11506, 11507, 4632, 5056, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7704, 7709, 11504, 1114, 1176, 11507, 11508, 4632, 5056, 2]
 
-// Module 11505 (SafetyWarningBanner)
+// Module 11506 (SafetyWarningBanner)
 import nativeDefault from "native" /* 576 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

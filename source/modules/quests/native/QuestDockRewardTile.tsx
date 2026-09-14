@@ -1,11 +1,11 @@
-// Module ID: 11900
-// Function ID: 11901
+// Module ID: 11901
+// Function ID: 11902
 // Name: QuestDockRewardTile
-// Dependencies: [32, 19, 17, 4628, 21, 4636, 576, 1150, 504, 11418, 8425, 5668, 2]
+// Dependencies: [32, 19, 17, 4628, 21, 4636, 576, 1363, 504, 11419, 8425, 5668, 2]
 
-// Module 11900 (QuestDockRewardTile)
+// Module 11901 (QuestDockRewardTile)
 import nativeDefault from "native" /* 576 */;
-import AssetUtils from "AssetUtils" /* 11418 */;
+import AssetUtils from "AssetUtils" /* 11419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;

@@ -1,18 +1,18 @@
-// Module ID: 14932
-// Function ID: 14933
+// Module ID: 14933
+// Function ID: 14934
 // Name: SyncContactsSetting
-// Dependencies: [5362, 1371, 8079, 1074, 12809, 14933, 11601, 1114, 2]
+// Dependencies: [5362, 1371, 8079, 1074, 12810, 14934, 11602, 1114, 2]
 
-// Module 14932 (SyncContactsSetting)
+// Module 14933 (SyncContactsSetting)
 import util from "util" /* 1114 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 14933 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 14934 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

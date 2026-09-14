@@ -1,9 +1,9 @@
-// Module ID: 15159
-// Function ID: 15160
+// Module ID: 15160
+// Function ID: 15161
 // Name: BountiesCtaHeader
-// Dependencies: [19, 17, 4628, 15160, 5525, 21, 576, 5061, 4636, 504, 8425, 15138, 5056, 1114, 4632, 15147, 15161, 5532, 7820, 5528, 7830, 15091, 15093, 1178, 15162, 15163, 15164, 11903, 4347, 15141, 11907, 2]
+// Dependencies: [19, 17, 4628, 15161, 5525, 21, 576, 5061, 4636, 504, 8425, 15139, 5056, 1114, 4632, 15148, 15162, 5532, 7820, 5528, 7830, 15092, 15094, 1176, 15163, 15164, 15165, 11904, 4347, 15142, 11908, 2]
 
-// Module 15159 (BountiesCtaHeader)
+// Module 15160 (BountiesCtaHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -13,15 +13,15 @@ import AdCreativeType from "AdCreativeType" /* 5532 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
 import common_Video from "common/Video" /* 8425 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15091 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 15093 */;
-import _modDef15138 from "module_15138" /* 15138 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15147 */;
-import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 15162 */;
-import _modDef15163 from "module_15163" /* 15163 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15092 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 15094 */;
+import _modDef15139 from "module_15139" /* 15139 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15148 */;
+import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 15163 */;
+import _modDef15164 from "module_15164" /* 15164 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 15160 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 15161 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ function StarfieldBackground() {
   const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, style: null, resizeMode: "cover", muted: true, disableFocus: true, paused: null, importantForAccessibility: "no-hide-descendants" };
-  obj2.source = { uri: _modDef15138 };
+  obj2.source = { uri: _modDef15139 };
   obj2.style = absoluteFillObject.absoluteFillObject;
   obj2.paused = stateFromStores;
   return closure_1_10(common_Video.VideoComponent, obj2);
@@ -97,8 +97,8 @@ function BountiesCtaHeaderInner(bounties) {
   const tmp = closure_16();
   let tmp9Result2 = null != footer;
   let tmp11Result6 = !flag;
-  const bountiesEntryPointButtonVariant = bounties(15161).getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
-  let obj = bounties(15161);
+  const bountiesEntryPointButtonVariant = bounties(15162).getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
+  let obj = bounties(15162);
   const items = [AdContentSeenStore];
   const items1 = [bounties];
   let stateFromStores = bounties(504).useStateFromStores(items, () => bounties.some((id) => !closure_1_7.hasSeen(bounties(closure_1_2[17]).AdCreativeType.BOUNTY, id.id)), items1);
@@ -132,7 +132,7 @@ function BountiesCtaHeaderInner(bounties) {
     const obj8 = { style: tmp.headerHeadingGroup, children: null };
     if (stateFromStores) {
       ({ newPillInline: obj12.containerStyle, newPillText: obj12.textStyle } = tmp);
-      stateFromStores = tmp11(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      stateFromStores = tmp11(tmp4(1176).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj9 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
     const items6 = [stateFromStores, ];
@@ -158,7 +158,7 @@ function BountiesCtaHeaderInner(bounties) {
     obj6.children = items5;
     let tmp9Result = tmp9(tmp10, obj6);
   } else {
-    const obj15 = { uri: _modDef15163, style: null, children: null };
+    const obj15 = { uri: _modDef15164, style: null, children: null };
     const items7 = [tmp.header, , ];
     let headerWithFooter = tmp9Result2;
     if (tmp9Result2) {
@@ -174,7 +174,7 @@ function BountiesCtaHeaderInner(bounties) {
     let tmp11Result4 = stateFromStores;
     if (stateFromStores) {
       ({ newPill: obj5.containerStyle, newPillText: obj5.textStyle } = tmp);
-      tmp11Result4 = tmp11(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      tmp11Result4 = tmp11(tmp4(1176).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj16 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
     const items8 = [tmp11Result4, ];
@@ -271,7 +271,7 @@ let result = size.fileFinishedImporting("modules/quests/native/BountiesCtaHeader
 
 export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(15164)();
+  const tmp2 = containerRef(15165)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -301,7 +301,7 @@ export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
               return closure_2_10(BountiesCtaHeaderInner, obj);
             }
       };
-      tmp9Result = tmp9(tmp7(11907).QuestContentImpressionTrackerNative, obj4);
+      tmp9Result = tmp9(tmp7(11908).QuestContentImpressionTrackerNative, obj4);
     }
     obj2.children = tmp9Result;
     return closure_10(require("native").ThemeContextProvider, obj2);

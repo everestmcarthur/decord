@@ -1,9 +1,9 @@
-// Module ID: 15653
-// Function ID: 15654
+// Module ID: 15654
+// Function ID: 15655
 // Name: ShareLogsButton
 // Dependencies: [19, 21, 5204, 1114, 8479, 7, 9182, 2]
 
-// Module 15653 (ShareLogsButton)
+// Module 15654 (ShareLogsButton)
 import LogAggregator from "LogAggregator" /* 7 */;
 import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5204 */;

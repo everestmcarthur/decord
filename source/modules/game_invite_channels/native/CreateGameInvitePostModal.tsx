@@ -1,10 +1,10 @@
-// Module ID: 12900
-// Function ID: 12901
+// Module ID: 12901
+// Function ID: 12902
 // Name: CreateGameInvitePostModal
-// Dependencies: [32, 19, 17, 1957, 21, 4636, 576, 7265, 504, 5711, 12899, 7084, 12901, 4647, 4603, 11381, 1896, 1114, 5204, 5761, 4632, 3526, 7188, 7375, 5768, 5686, 7303, 5056, 2]
+// Dependencies: [32, 19, 17, 1957, 21, 4636, 576, 7265, 504, 5711, 12900, 7084, 12902, 4647, 4603, 11382, 1896, 1114, 5204, 5761, 4632, 3526, 7188, 7375, 5768, 5686, 7303, 5056, 2]
 // Exports: default
 
-// Module 12900 (CreateGameInvitePostModal)
+// Module 12901 (CreateGameInvitePostModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -33,7 +33,7 @@ function CreateGameInvitePostContent(parentChannel) {
   let items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
   const tmp4 = noMicTag(noop.useState(""), 2);
-  const createGameInvitePost = parentChannel(12901).useCreateGameInvitePost({
+  const createGameInvitePost = parentChannel(12902).useCreateGameInvitePost({
     parentChannel,
     description: tmp5,
     appliedTagIds: memo,
@@ -73,7 +73,7 @@ function CreateGameInvitePostContent(parentChannel) {
     const intl = util.intl;
     obj2.title = intl.string(util.t.HPu3kq);
     obj2.tags = tags;
-    obj.openLazy(asyncRequireImpl(11381, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(11382, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
   }, items2);
   const obj5 = { style: tmp.closeButton, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   let intl = parentChannel(1114).intl;

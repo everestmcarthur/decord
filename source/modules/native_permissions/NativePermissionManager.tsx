@@ -1,12 +1,12 @@
 // Module ID: 5221
 // Function ID: 5222
 // Name: NativePermissionManager
-// Dependencies: [4846, 1074, 1898, 1150, 5222, 573, 5220, 2]
+// Dependencies: [4846, 1074, 1898, 1363, 5222, 573, 5220, 2]
 
 // Module 5221 (NativePermissionManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativePermissionConstants from "NativePermissionConstants" /* 4846 */;
 import NativePermissionUtils from "NativePermissionUtils" /* 5220 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
@@ -20,8 +20,8 @@ const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
   let isDesktopResult = PlatformUtils.isDesktop();
   if (isDesktopResult) {
-    isDesktopResult = tmp(1150).isMac();
-    const tmpResult = tmp(1150);
+    isDesktopResult = tmp(1363).isMac();
+    const tmpResult = tmp(1363);
   }
   if (isDesktopResult) {
     const ProcessArgs = tmp(5222).ProcessArgs;

@@ -1,17 +1,17 @@
-// Module ID: 15356
-// Function ID: 15357
+// Module ID: 15357
+// Function ID: 15358
 // Name: SettingsAppearanceThemeCarousel
-// Dependencies: [19, 17, 15357, 1074, 21, 4373, 1178, 4636, 576, 5043, 12, 15358, 4637, 4640, 1231, 9490, 4632, 1608, 10885, 4604, 1114, 15361, 2]
+// Dependencies: [19, 17, 15358, 1074, 21, 4373, 1176, 4636, 576, 5043, 12, 15359, 4637, 4640, 1229, 9490, 4632, 1608, 10886, 4604, 1114, 15362, 2]
 // Exports: default
 
-// Module 15356 (SettingsAppearanceThemeCarousel)
+// Module 15357 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15357 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15358 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1176).Icon);
 const createStyles = fn(4636);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };

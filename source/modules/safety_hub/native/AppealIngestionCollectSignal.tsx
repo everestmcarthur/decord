@@ -1,10 +1,10 @@
-// Module ID: 12031
-// Function ID: 12032
+// Module ID: 12032
+// Function ID: 12033
 // Name: AppealIngestionCollectSignal
-// Dependencies: [19, 17, 8537, 21, 4636, 576, 4355, 8716, 8536, 12010, 573, 4603, 12032, 1896, 1114, 12016, 4632, 2]
+// Dependencies: [19, 17, 8537, 21, 4636, 576, 4355, 8716, 8536, 12011, 573, 4603, 12033, 1896, 1114, 12017, 4632, 2]
 // Exports: default
 
-// Module 12031 (AppealIngestionCollectSignal)
+// Module 12032 (AppealIngestionCollectSignal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -67,19 +67,19 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
             return formRow(4603).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12032, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12033, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(12010).useSafetyHubAppealSignal();
+  dependencyMap = isDsaEligible(12011).useSafetyHubAppealSignal();
   const intl = isDsaEligible(1114).intl;
-  let obj = isDsaEligible(12010);
+  let obj = isDsaEligible(12011);
   const intl2 = isDsaEligible(1114).intl;
   const stringResult = intl.string(isDsaEligible(1114).t["C5q+pW"]);
   let obj2 = { children: null };
-  const items = [closure_6(isDsaEligible(12016).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1114).t.VEcRhw) }), ];
+  const items = [closure_6(isDsaEligible(12017).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1114).t.VEcRhw) }), ];
   let obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1114).t.VEcRhw);
@@ -94,5 +94,5 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj3.children = closure_7(isDsaEligible(8716).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
   obj2.children = items;
-  return closure_7(isDsaEligible(12016).AppealIngestionModalScreen, obj2);
+  return closure_7(isDsaEligible(12017).AppealIngestionModalScreen, obj2);
 };

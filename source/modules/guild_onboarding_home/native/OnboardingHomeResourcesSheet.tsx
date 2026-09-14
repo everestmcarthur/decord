@@ -1,18 +1,18 @@
-// Module ID: 16661
-// Function ID: 16662
+// Module ID: 16663
+// Function ID: 16664
 // Name: OnboardingHomeResourcesSheet
-// Dependencies: [19, 16659, 21, 4338, 576, 16660, 12413, 4603, 7300, 7302, 1396, 5668, 2]
+// Dependencies: [19, 16661, 21, 4338, 576, 16662, 12414, 4603, 7300, 7302, 1396, 5668, 2]
 // Exports: default
 
-// Module 16661 (OnboardingHomeResourcesSheet)
+// Module 16663 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12413 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16660 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12414 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(16659).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16661).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");

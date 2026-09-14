@@ -1,7 +1,7 @@
 // Module ID: 8939
 // Function ID: 8940
 // Name: CutoutableAvatarDecoration
-// Dependencies: [19, 17, 4628, 21, 563, 1396, 1150, 8940, 8936, 5668, 2]
+// Dependencies: [19, 17, 4628, 21, 563, 1396, 1363, 8940, 8936, 5668, 2]
 // Exports: default
 
 // Module 8939 (CutoutableAvatarDecoration)

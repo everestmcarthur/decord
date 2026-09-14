@@ -1,12 +1,12 @@
-// Module ID: 13352
-// Function ID: 13353
+// Module ID: 13353
+// Function ID: 13354
 // Name: VoiceChannelLinkEmbed
-// Dependencies: [32, 17, 1975, 1957, 1979, 4275, 4285, 1371, 1074, 7838, 8049, 1396, 1150, 1114, 5109, 4789, 2]
+// Dependencies: [32, 17, 1975, 1957, 1979, 4275, 4285, 1371, 1074, 7838, 8049, 1396, 1363, 1114, 5109, 4789, 2]
 // Exports: createVoiceChannelLinkEmbed
 
-// Module 13352 (VoiceChannelLinkEmbed)
+// Module 13353 (VoiceChannelLinkEmbed)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;

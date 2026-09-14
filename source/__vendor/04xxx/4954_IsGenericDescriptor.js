@@ -1,7 +1,7 @@
 // Module ID: 4954
 // Function ID: 4955
 // Name: IsGenericDescriptor
-// Dependencies: [4936, 1283, 4949, 4940]
+// Dependencies: [4936, 1281, 4949, 4940]
 
 // Module 4954 (IsGenericDescriptor)
 import _mod4936 from "module_4936" /* 4936 */;
@@ -18,7 +18,7 @@ export default function IsGenericDescriptor(arg0) {
     }
     return tmp8;
   } else {
-    const tmp5 = new tmp(1283)("Assertion failed: `Desc` must be a Property Descriptor");
+    const tmp5 = new tmp(1281)("Assertion failed: `Desc` must be a Property Descriptor");
     throw tmp5;
   }
 };

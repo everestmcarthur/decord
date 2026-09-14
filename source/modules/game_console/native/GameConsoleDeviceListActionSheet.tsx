@@ -1,7 +1,7 @@
 // Module ID: 9586
 // Function ID: 9587
 // Name: GameConsoleDeviceListActionSheet
-// Dependencies: [5, 32, 19, 17, 4653, 1074, 21, 4636, 576, 7226, 5056, 1114, 9587, 4632, 9588, 504, 9578, 38, 9585, 4603, 1109, 1178, 9589, 7253, 7252, 6728, 2]
+// Dependencies: [5, 32, 19, 17, 4653, 1074, 21, 4636, 576, 7226, 5056, 1114, 9587, 4632, 9588, 504, 9578, 38, 9585, 4603, 1109, 1176, 9589, 7253, 7252, 6728, 2]
 // Exports: default
 
 // Module 9586 (GameConsoleDeviceListActionSheet)

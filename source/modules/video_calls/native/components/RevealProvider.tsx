@@ -1,7 +1,7 @@
 // Module ID: 9604
 // Function ID: 9605
 // Name: RevealProvider
-// Dependencies: [19, 4327, 4653, 9597, 21, 504, 9599, 9605, 1150, 4571, 4488, 9611, 9613, 2]
+// Dependencies: [19, 4327, 4653, 9597, 21, 504, 9599, 9605, 1363, 4571, 4488, 9611, 9613, 2]
 // Exports: default
 
 // Module 9604 (RevealProvider)
@@ -44,7 +44,7 @@ function useRevealProviderValue(arg0, channel) {
   }
   stateFromStores1 = tmp;
   const tmp8 = useIsActivityFocusedDefault(channel.id);
-  const tmp10 = tmp2(1150).isIOS() && tmp8;
+  const tmp10 = tmp2(1363).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);

@@ -1,21 +1,21 @@
-// Module ID: 14946
-// Function ID: 14947
+// Module ID: 14947
+// Function ID: 14948
 // Name: UseDataToCustomizeDiscordSetting
-// Dependencies: [6696, 8079, 1074, 14913, 504, 4980, 1114, 5075, 14944, 14945, 11601, 2]
+// Dependencies: [6696, 8079, 1074, 14914, 504, 4980, 1114, 5075, 14945, 14946, 11602, 2]
 
-// Module 14946 (UseDataToCustomizeDiscordSetting)
+// Module 14947 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14944 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14945 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14945 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14946 */;
 import ConsentStore from "ConsentStore" /* 6696 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

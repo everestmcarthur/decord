@@ -1,14 +1,14 @@
-// Module ID: 13394
-// Function ID: 13395
+// Module ID: 13395
+// Function ID: 13396
 // Name: ChannelHeader
-// Dependencies: [19, 1957, 1074, 1964, 21, 1150, 4502, 11599, 1109, 4495, 563, 4847, 13395, 13396, 13397, 13405, 1114, 13407, 2]
+// Dependencies: [19, 1957, 1074, 1964, 21, 1363, 4502, 11600, 1109, 4495, 563, 4847, 13396, 13397, 13398, 13406, 1114, 13408, 2]
 // Exports: default, navigateToChannelDetails
 
-// Module 13394 (ChannelHeader)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13395 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13396 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13397 */;
+// Module 13395 (ChannelHeader)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13396 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13397 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13398 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -75,8 +75,8 @@ export default function ChannelHeader(channelId) {
           stringResult = intl.string(tmp(1114).t["L9fR+P"]);
         }
         obj4.searchPlaceholder = stringResult;
-        tmp8Result = tmp8(tmp9(13405), obj4);
-        const tmp9Result = tmp9(13405);
+        tmp8Result = tmp8(tmp9(13406), obj4);
+        const tmp9Result = tmp9(13406);
       } else {
         const obj5 = { channelId, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
         let guild_id1;
@@ -89,8 +89,8 @@ export default function ChannelHeader(channelId) {
         obj5.isNavigationScreen = isNavigationScreen;
         obj5.screenIndex = screenIndex;
         obj5.showCreateThread = flag2;
-        tmp8Result = tmp8(tmp9(13407), obj5);
-        const tmp9Result2 = tmp9(13407);
+        tmp8Result = tmp8(tmp9(13408), obj5);
+        const tmp9Result2 = tmp9(13408);
       }
     }
   }

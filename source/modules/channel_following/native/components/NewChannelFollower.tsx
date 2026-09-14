@@ -1,16 +1,16 @@
-// Module ID: 11459
-// Function ID: 11460
+// Module ID: 11460
+// Function ID: 11461
 // Name: NewChannelFollower
-// Dependencies: [32, 19, 17, 1961, 1957, 2012, 1979, 4275, 5519, 1074, 21, 4636, 576, 8287, 4571, 504, 4789, 5073, 4488, 11460, 11461, 7253, 6728, 5665, 1178, 5109, 4632, 1114, 5054, 5768, 5686, 4603, 9556, 1896, 11462, 8716, 5514, 5056, 11465, 7257, 2]
+// Dependencies: [32, 19, 17, 1961, 1957, 2012, 1979, 4275, 5519, 1074, 21, 4636, 576, 8287, 4571, 504, 4789, 5073, 4488, 11461, 11462, 7253, 6728, 5665, 1176, 5109, 4632, 1114, 5054, 5768, 5686, 4603, 9556, 1896, 11463, 8716, 5514, 5056, 11466, 7257, 2]
 // Exports: default
 
-// Module 11459 (NewChannelFollower)
+// Module 11460 (NewChannelFollower)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11462 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11465 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11463 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11466 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

@@ -1,14 +1,14 @@
-// Module ID: 16778
-// Function ID: 16779
+// Module ID: 16780
+// Function ID: 16781
 // Name: FileOrLinkGridPlaceholder
-// Dependencies: [19, 21, 16753, 5063, 4373, 16779, 2]
+// Dependencies: [19, 21, 16755, 5063, 4373, 16781, 2]
 // Exports: default
 
-// Module 16778 (FileOrLinkGridPlaceholder)
+// Module 16780 (FileOrLinkGridPlaceholder)
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import useFontScale from "useFontScale" /* 5063 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16753 */;
-import SearchListCard from "SearchListCard" /* 16779 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16755 */;
+import SearchListCard from "SearchListCard" /* 16781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

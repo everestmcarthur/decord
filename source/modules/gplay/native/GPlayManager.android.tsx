@@ -1,9 +1,9 @@
-// Module ID: 10836
-// Function ID: 10837
+// Module ID: 10837
+// Function ID: 10838
 // Name: GPlayManager
-// Dependencies: [109, 5, 19, 17, 7523, 7524, 502, 4300, 7340, 9498, 7341, 1074, 4618, 1373, 21, 3, 7343, 573, 9497, 1241, 4228, 7532, 4309, 4960, 1242, 4981, 1114, 10837, 1896, 4839, 7515, 2]
+// Dependencies: [109, 5, 19, 17, 7523, 7524, 502, 4300, 7340, 9498, 7341, 1074, 4618, 1373, 21, 3, 7343, 573, 9497, 1239, 4228, 7532, 4309, 4960, 1240, 4981, 1114, 10838, 1896, 4839, 7515, 2]
 
-// Module 10836 (GPlayManager)
+// Module 10837 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4960 */;

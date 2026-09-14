@@ -1,10 +1,10 @@
-// Module ID: 17389
-// Function ID: 17390
+// Module ID: 17391
+// Function ID: 17392
 // Name: i18n/updateRules
 // Dependencies: [19, 21, 4333, 2]
 // Exports: default
 
-// Module 17389 (i18n/updateRules)
+// Module 17391 (i18n/updateRules)
 import _mod4333 from "module_4333" /* 4333 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 13931
-// Function ID: 13932
+// Module ID: 13932
+// Function ID: 13933
 // Name: ChannelListMagnifyingGlassIcon
-// Dependencies: [19, 21, 576, 4337, 13932, 2]
+// Dependencies: [19, 21, 576, 4337, 13933, 2]
 // Exports: ChannelListMagnifyingGlassIcon
 
-// Module 13931 (ChannelListMagnifyingGlassIcon)
+// Module 13932 (ChannelListMagnifyingGlassIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod13932 from "module_13932" /* 13932 */;
+import _mod13933 from "module_13933" /* 13933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ChannelListMagnifyingGlassIcon = function ChannelListMagnifyingGlas
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13932, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13933, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

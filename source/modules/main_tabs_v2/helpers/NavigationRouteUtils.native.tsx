@@ -1,7 +1,7 @@
 // Module ID: 4494
 // Function ID: 4495
 // Name: NavigationRouteUtils
-// Dependencies: [32, 19, 4495, 1484, 1256, 4496, 4501, 4502, 4519, 2]
+// Dependencies: [32, 19, 4495, 1484, 1254, 4496, 4501, 4502, 4519, 2]
 // Exports: coerceICYMIRoute, coerceModalRoute, coerceSidebarRoute, getCurrentNavigationRouteName, getCurrentRouteParents, getICYMIRouteIfActive, getOpenModalKey, getSelectedChannelFromRoute, getSelectedGuildFromRoute, getTabsRouteIfActive, navigateToChannel, navigateToContextMenuCommands, navigateToCreateThread, navigateToMemberVerification, navigateToNewGroupDM, navigateToRootTab, popAllModals, popModalsAboveKey, popScreens, pushModal, resetToAuthRoute, setHomeDrawerState, useCurrentNavigationRouteName, useIsModalOpen, useOpenModalKey
 
 // Module 4494 (NavigationRouteUtils)
@@ -219,8 +219,8 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
               let combined = channelId;
               if (channelId == null) {
                 const _HermesInternal2 = HermesInternal;
-                combined = "channel-" + tmp(1256).v4();
-                const tmpResult = tmp(1256);
+                combined = "channel-" + tmp(1254).v4();
+                const tmpResult = tmp(1254);
               }
               const obj4 = { name: "channel", key: combined, params: null };
               const obj5 = { channelId, guildId, messageId };
@@ -246,9 +246,9 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
         }
         const obj8 = { channelId, guildId, messageId, screenKey: null };
         const _HermesInternal = HermesInternal;
-        obj8.screenKey = "channel-" + tmp(1256).v4();
+        obj8.screenKey = "channel-" + tmp(1254).v4();
         rootNavigationRef.navigate("channel", obj8);
-        const tmpResult2 = tmp(1256);
+        const tmpResult2 = tmp(1254);
       }
     }
   }
@@ -295,7 +295,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   const obj4 = { name: "tabs", key: null, params: null };
                   const tmpResult3 = tmp(4496);
                   const _HermesInternal = HermesInternal;
-                  obj4.key = "tabs-" + tmp(1256).v4();
+                  obj4.key = "tabs-" + tmp(1254).v4();
                   obj4.params = obj2;
                   const items = [obj4];
                   const items1 = [];
@@ -306,7 +306,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   obj5.routes = items1;
                   obj5.index = items1.length - 1;
                   rootNavigationRef1.dispatch(CommonActions.reset(obj5));
-                  const tmpResult4 = tmp(1256);
+                  const tmpResult4 = tmp(1254);
                 } else {
                   rootNavigationRef1.navigate("tabs", obj2, { pop: true });
                 }

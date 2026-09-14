@@ -1,6 +1,6 @@
 // Module ID: 1117
 // Function ID: 1118
-// Dependencies: [1118, 1119, 1121, 1122, 1123, 1124, 1125, 1127, 1126, 1128, 1129, 1149, 1130, 1131, 1153, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1154, 1155, 2]
+// Dependencies: [1118, 1119, 1121, 1122, 1123, 1124, 1125, 1127, 1126, 1128, 1129, 1149, 1130, 1131, 1151, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1152, 1153, 2]
 
 // Module 1117
 import AssetJsonUtils from "AssetJsonUtils" /* 1118 */;
@@ -34,13 +34,13 @@ import _mod1146 from "module_1146" /* 1146 */;
 import _mod1147 from "module_1147" /* 1147 */;
 import _mod1148 from "module_1148" /* 1148 */;
 import _mod1149 from "module_1149" /* 1149 */;
-import _mod1153 from "module_1153" /* 1153 */;
-import _mod1154 from "module_1154" /* 1154 */;
-import module_1155_mod from "module_1155" /* 1155 */;
+import _mod1151 from "module_1151" /* 1151 */;
+import _mod1152 from "module_1152" /* 1152 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-let module_1155 = module_1155_mod;
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1119);
     return jsonAsset.then((result) => ({ default: result }));
@@ -94,7 +94,7 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   },
   id() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1153);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1151);
     return jsonAsset.then((result) => ({ default: result }));
   },
   it() {
@@ -166,12 +166,12 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1154);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1152);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1155 = module_1155_mod;
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("intl/messages/en-US.messages.js");
 
 export default messagesProxy;

@@ -1,13 +1,13 @@
-// Module ID: 14773
-// Function ID: 14774
+// Module ID: 14774
+// Function ID: 14775
 // Name: SafetySettingsNotice
-// Dependencies: [19, 17, 8517, 21, 4636, 576, 14774, 4591, 4632, 1114, 2]
+// Dependencies: [19, 17, 8517, 21, 4636, 576, 14775, 4591, 4632, 1114, 2]
 // Exports: default
 
-// Module 14773 (SafetySettingsNotice)
+// Module 14774 (SafetySettingsNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14774 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

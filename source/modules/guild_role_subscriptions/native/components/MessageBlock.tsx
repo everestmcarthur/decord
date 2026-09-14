@@ -1,12 +1,12 @@
-// Module ID: 12353
-// Function ID: 12354
+// Module ID: 12354
+// Function ID: 12355
 // Name: MessageBlock
-// Dependencies: [19, 17, 21, 576, 4636, 1178, 2]
+// Dependencies: [19, 17, 21, 576, 4636, 1176, 2]
 // Exports: default
 
-// Module 12353 (MessageBlock)
+// Module 12354 (MessageBlock)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

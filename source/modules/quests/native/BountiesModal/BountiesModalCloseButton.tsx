@@ -1,10 +1,10 @@
-// Module ID: 15140
-// Function ID: 15141
+// Module ID: 15141
+// Function ID: 15142
 // Name: BountiesModalCloseButton
 // Dependencies: [19, 21, 4636, 576, 5204, 1114, 5761, 2]
 // Exports: default
 
-// Module 15140 (BountiesModalCloseButton)
+// Module 15141 (BountiesModalCloseButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5204 */;

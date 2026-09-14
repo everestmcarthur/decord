@@ -1,7 +1,7 @@
 // Module ID: 8697
 // Function ID: 8698
 // Name: AgeVerificationGetStartedModal
-// Dependencies: [19, 21, 4636, 576, 4839, 5705, 8698, 8703, 8704, 8687, 1256, 8531, 7103, 1114, 2]
+// Dependencies: [19, 21, 4636, 576, 4839, 5705, 8698, 8703, 8704, 8687, 1254, 8531, 7103, 1114, 2]
 // Exports: default
 
 // Module 8697 (AgeVerificationGetStartedModal)

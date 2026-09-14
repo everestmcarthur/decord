@@ -1,10 +1,10 @@
-// Module ID: 17322
-// Function ID: 17323
+// Module ID: 17324
+// Function ID: 17325
 // Name: useHideSelfVideo
 // Dependencies: [502, 1908, 1074, 4661, 504, 9218, 2]
 // Exports: default
 
-// Module 17322 (useHideSelfVideo)
+// Module 17324 (useHideSelfVideo)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;

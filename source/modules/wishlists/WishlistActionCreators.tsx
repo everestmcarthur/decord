@@ -1,11 +1,11 @@
 // Module ID: 8909
 // Function ID: 8910
 // Name: WishlistActionCreators
-// Dependencies: [5, 7723, 1371, 4296, 7330, 8904, 1074, 1151, 1369, 573, 7334, 1272, 8902, 1232, 4537, 1242, 8298, 2]
+// Dependencies: [5, 7723, 1371, 4296, 7330, 8904, 1074, 1364, 1369, 573, 7334, 1270, 8902, 1230, 4537, 1240, 8298, 2]
 
 // Module 8909 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import StorefrontUtils from "StorefrontUtils" /* 7334 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,11 +1,11 @@
-// Module ID: 10550
-// Function ID: 10551
+// Module ID: 10551
+// Function ID: 10552
 // Name: useHorizontalAutocompleteResults
-// Dependencies: [32, 19, 1074, 10551, 7785, 504, 2]
+// Dependencies: [32, 19, 1074, 10552, 7785, 504, 2]
 // Exports: useHorizontalAutocompleteResults
 
-// Module 10550 (useHorizontalAutocompleteResults)
-import AutocompleteOptions from "AutocompleteOptions" /* 10551 */;
+// Module 10551 (useHorizontalAutocompleteResults)
+import AutocompleteOptions from "AutocompleteOptions" /* 10552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 13138
-// Function ID: 13139
+// Module ID: 13139
+// Function ID: 13140
 // Name: Badges
-// Dependencies: [19, 17, 2025, 21, 576, 4636, 13136, 8252, 4632, 504, 9352, 11734, 13139, 1114, 13141, 13143, 9327, 10308, 8842, 1090, 2]
+// Dependencies: [19, 17, 2025, 21, 576, 4636, 13137, 8252, 4632, 504, 9352, 11735, 13140, 1114, 13142, 13144, 9327, 10308, 8842, 1090, 2]
 // Exports: BadgesContainer, CustomStatusTimestampBadge, GameTimestampBadge, MarathonBadge, NewGameBadge, ResurrectedBadge, StreakBadge, TopGameBadge, TrendingBadge
 
-// Module 13138 (Badges)
+// Module 13139 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import utils from "utils" /* 8252 */;
 import GameControllerIcon from "GameControllerIcon" /* 9352 */;
-import TimerIcon from "TimerIcon" /* 11734 */;
+import TimerIcon from "TimerIcon" /* 11735 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -108,7 +108,7 @@ export const MarathonBadge = function MarathonBadge(entry) {
     const text = marathonDescription.text;
     let tmp7 = null;
     if (null != text) {
-      const obj2 = { Icon: tmp(11734).TimerIcon, iconColor: icon, text, accessibilityLabel: tmp6 };
+      const obj2 = { Icon: tmp(11735).TimerIcon, iconColor: icon, text, accessibilityLabel: tmp6 };
       tmp7 = timestampProducer(BaseBadge, obj2);
     }
     return tmp7;
@@ -119,7 +119,7 @@ export const MarathonBadge = function MarathonBadge(entry) {
 export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
-    const obj2 = { Icon: tmp(13139).NewUserIcon, text: null, iconColor: null };
+    const obj2 = { Icon: tmp(13140).NewUserIcon, text: null, iconColor: null };
     const intl = tmp(1114).intl;
     obj2.text = intl.string(tmp(1114).t.keY6mW);
     obj2.iconColor = nativeDefault.colors.STATUS_POSITIVE;
@@ -134,7 +134,7 @@ export const StreakBadge = function StreakBadge(entry) {
   if (null != streakCount) {
     tmp4 = null;
     if (streakCount >= 2) {
-      const obj2 = { Icon: tmp(13141).FlashIcon, text: null, iconColor: null, accessibilityLabel: null };
+      const obj2 = { Icon: tmp(13142).FlashIcon, text: null, iconColor: null, accessibilityLabel: null };
       const intl = tmp(1114).intl;
       const obj3 = { days: streakCount };
       obj2.text = intl.formatToPlainString(tmp(1114).t["Klie/P"], obj3);
@@ -153,7 +153,7 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(13143).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== tmp(13144).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       const obj2 = { Icon: tmp(9327).FireIcon, text: null, iconColor: null };
       const intl = tmp(1114).intl;
       obj2.text = intl.string(tmp(1114).t.TsWCdW);

@@ -1,7 +1,7 @@
 // Module ID: 8528
 // Function ID: 8529
 // Name: StageChannelAgeVerificationNotice
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4849, 1114, 4632, 4325, 2024, 8529, 8531, 4591, 8711, 1178, 5503, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4849, 1114, 4632, 4325, 2024, 8529, 8531, 4591, 8711, 1176, 5503, 2]
 // Exports: default
 
 // Module 8528 (StageChannelAgeVerificationNotice)
@@ -9,7 +9,7 @@ import nativeDefault from "native" /* 576 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
 import noop from "module_19" /* 19 */;
 
-const native = Text(1178);
+const native = Text(1176);
 const CircleInformationIcon = Text(4591);
 const Text_Text = Text(4632);
 const WarningIcon2 = Text(8711);

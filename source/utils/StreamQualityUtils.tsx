@@ -1,12 +1,12 @@
 // Module ID: 9238
 // Function ID: 9239
 // Name: StreamQualityUtils
-// Dependencies: [19, 4682, 502, 1979, 4659, 1371, 1074, 4683, 1373, 4661, 1114, 504, 4772, 1242, 2]
+// Dependencies: [19, 4682, 502, 1979, 4659, 1371, 1074, 4683, 1373, 4661, 1114, 504, 4772, 1240, 2]
 // Exports: getFPSText, getMaxQuality, getPremiumRequirement, getResolutionText, isPremiumFPS, isPremiumRequirement, isPremiumResolution, trackStreamSettingsUpdate, useMaxQuality
 
 // Module 9238 (StreamQualityUtils)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4772 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;

@@ -1,7 +1,7 @@
 // Module ID: 8223
 // Function ID: 8224
 // Name: transformEmbeds
-// Dependencies: [17, 1074, 8224, 8225, 4973, 8226, 1150, 8050, 4786, 8194, 4318, 7395, 7400, 4849, 1114, 2]
+// Dependencies: [17, 1074, 8224, 8225, 4973, 8226, 1363, 8050, 4786, 8194, 4318, 7395, 7400, 4849, 1114, 2]
 // Exports: default
 
 // Module 8223 (transformEmbeds)
@@ -368,8 +368,8 @@ export default function transformEmbeds(arg0) {
                   }
                   let tmp27 = null == tmp25;
                   if (!tmp27) {
-                    tmp27 = !tmp3(1150).isIOS();
-                    const tmp3Result24 = tmp3(1150);
+                    tmp27 = !tmp3(1363).isIOS();
+                    const tmp3Result24 = tmp3(1363);
                   }
                   let tmp28 = !tmp27;
                   if (!tmp27) {

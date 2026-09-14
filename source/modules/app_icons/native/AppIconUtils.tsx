@@ -1,10 +1,10 @@
-// Module ID: 13536
-// Function ID: 13537
+// Module ID: 13537
+// Function ID: 13538
 // Name: AppIconUtils
-// Dependencies: [32, 5, 19, 17, 9453, 1074, 1373, 3, 1150, 13537, 9454, 5073, 573, 1242, 4335, 1114, 7485, 1608, 2]
+// Dependencies: [32, 5, 19, 17, 9453, 1074, 1373, 3, 1363, 13538, 9454, 5073, 573, 1240, 4335, 1114, 7485, 1608, 2]
 // Exports: isAppIconsSupported, navigateToAppIconSettings, setAppIcon, useAppIcons, useCurrentAppIcon
 
-// Module 13536 (AppIconUtils)
+// Module 13537 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
@@ -142,9 +142,9 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
 const PremiumTypes = fn(1373).PremiumTypes;
 let closure_12 = new LoggerDefault("AppIconUtils");
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
-  let DCDIconManager = fn(13537).default;
+  let DCDIconManager = fn(13538).default;
 } else {
   DCDIconManager = fn(17).NativeModules.DCDIconManager;
 }

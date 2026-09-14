@@ -1,16 +1,16 @@
-// Module ID: 11072
-// Function ID: 11073
+// Module ID: 11073
+// Function ID: 11074
 // Name: InstantInviteCode
-// Dependencies: [19, 17, 1961, 4285, 1371, 21, 4636, 576, 5109, 5161, 5054, 4632, 4789, 4599, 1114, 11061, 2]
+// Dependencies: [19, 17, 1961, 4285, 1371, 21, 4636, 576, 5109, 5161, 5054, 4632, 4789, 4599, 1114, 11062, 2]
 // Exports: default
 
-// Module 11072 (InstantInviteCode)
+// Module 11073 (InstantInviteCode)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
-import CountDownDefault from "CountDown" /* 11061 */;
+import CountDownDefault from "CountDown" /* 11062 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;

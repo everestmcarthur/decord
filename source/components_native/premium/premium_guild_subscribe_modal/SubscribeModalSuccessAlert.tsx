@@ -1,10 +1,10 @@
-// Module ID: 13710
-// Function ID: 13711
+// Module ID: 13711
+// Function ID: 13712
 // Name: SubscribeModalSuccessAlert
-// Dependencies: [32, 19, 17, 1979, 7535, 21, 4636, 576, 13711, 13712, 504, 4571, 5075, 1114, 4981, 5515, 5068, 1093, 4488, 13713, 13714, 4632, 2]
+// Dependencies: [32, 19, 17, 1979, 7535, 21, 4636, 576, 13712, 13713, 504, 4571, 5075, 1114, 4981, 5515, 5068, 1093, 4488, 13714, 13715, 4632, 2]
 // Exports: default
 
-// Module 13710 (SubscribeModalSuccessAlert)
+// Module 13711 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
@@ -14,8 +14,8 @@ import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
 import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5515 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13711 */;
-import _mod13712 from "module_13712" /* 13712 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13712 */;
+import _mod13713 from "module_13713" /* 13713 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -115,9 +115,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13713);
+    let tmp8Result = tmp8(13714);
   } else {
-    tmp8Result = tmp8(13714);
+    tmp8Result = tmp8(13715);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_9(tmp15, obj6);

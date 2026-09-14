@@ -1,13 +1,13 @@
 // Module ID: 8167
 // Function ID: 8168
 // Name: UserOfferActionCreators
-// Dependencies: [5, 8168, 7557, 7553, 1373, 1074, 1150, 573, 1242, 1272, 8169, 1232, 4457, 1943, 1940, 2]
+// Dependencies: [5, 8168, 7557, 7553, 1373, 1074, 1363, 573, 1240, 1270, 8169, 1230, 4457, 1943, 1940, 2]
 // Exports: acknowledgeUserOffer, fetchChurnDiscountOffer, fetchExistingChurnDiscountOffer, fetchUserOffer, triggerUserOffer
 
 // Module 8167 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8168 */;
 import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7557 */;
@@ -383,13 +383,13 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1150);
+      postResultResult = postResult(1363);
     }
     const obj5 = { payment_gateway: GOOGLE, trigger_type: _JSON, trigger_location_stack, trigger_metadata: null, trigger_uptime_app: null };
     _JSON = JSON;
     obj5.trigger_metadata = JSON.stringify(tmp5);
     obj5.trigger_uptime_app = UserOfferStore.getUptimeForTrigger();
-    const HTTP = postResult(1272).HTTP;
+    const HTTP = postResult(1270).HTTP;
     const request = { url: constants.USER_OFFER_TRIGGER, body: obj5, rejectWithError: true };
     postResult = HTTP.post(request);
     then = postResult.then;

@@ -1,16 +1,16 @@
-// Module ID: 11585
-// Function ID: 11586
+// Module ID: 11586
+// Function ID: 11587
 // Name: GiftCodeRedeemSuccess
-// Dependencies: [32, 19, 17, 5591, 21, 4636, 576, 504, 11574, 7271, 11176, 7657, 1889, 8288, 11217, 7226, 7329, 8952, 7275, 8924, 4821, 1178, 11242, 11352, 11353, 11581, 4632, 1114, 4875, 5056, 4839, 2]
+// Dependencies: [32, 19, 17, 5591, 21, 4636, 576, 504, 11575, 7271, 11177, 7657, 1889, 8288, 11218, 7226, 7329, 8952, 7275, 8924, 4821, 1176, 11243, 11353, 11354, 11582, 4632, 1114, 4875, 5056, 4839, 2]
 // Exports: default
 
-// Module 11585 (GiftCodeRedeemSuccess)
+// Module 11586 (GiftCodeRedeemSuccess)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11242 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11352 */;
-import NameplatePreview from "NameplatePreview" /* 11353 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11581 */;
+import native from "native" /* 1176 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11243 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11353 */;
+import NameplatePreview from "NameplatePreview" /* 11354 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11582 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SKUStore from "SKUStore" /* 5591 */;
@@ -44,11 +44,11 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   const items = [SKUStore];
   const stateFromStores = giftCode(504).useStateFromStores(items, () => SKUStore.get(giftCode.skuId));
   let obj = giftCode(504);
-  const getOrFetchSubscriptionPlan = giftCode(11574).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-  const obj2 = giftCode(11574);
+  const getOrFetchSubscriptionPlan = giftCode(11575).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+  const obj2 = giftCode(11575);
   const getOrFetchApplication = giftCode(7271).useGetOrFetchApplication(giftCode.applicationId);
   const obj3 = giftCode(7271);
-  const obj4 = giftCode(11176);
+  const obj4 = giftCode(11177);
   let skuId = null;
   if (obj5.isCollectiblesGiftCode(giftCode)) {
     skuId = giftCode.skuId;
@@ -76,10 +76,10 @@ export default function GiftCodeRedeemSuccess(giftCode) {
     const obj7 = { skuId: "", type: tmp2(1889).CollectiblesItemType.BUNDLE, items: [] };
     tmp12 = obj7;
   }
-  const handleUseNow1 = giftCode(11217).useHandleUseNow({ product: tmp12 });
+  const handleUseNow1 = giftCode(11218).useHandleUseNow({ product: tmp12 });
   const isApplying = handleUseNow1.isApplying;
   ({ handleUseNow, canUseNow } = handleUseNow1);
-  const tmp2Result6 = giftCode(11217);
+  const tmp2Result6 = giftCode(11218);
   [tmp15, c3] = noop.useState();
   const callback = noop.useCallback((nativeEvent) => {
     ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);
@@ -230,7 +230,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   const withResult = match.with({ type: giftCode(1889).CollectiblesItemType.AVATAR_DECORATION }, (avatarDecoration) => {
     let avatarSource;
     if (user != null) {
-      avatarSource = user.getAvatarSource(null, true, tmp2(1178).AVATAR_SIZE_MAP[tmp2(undefined, 1178).AvatarSizes.GIFT_SUCCESS]);
+      avatarSource = user.getAvatarSource(null, true, tmp2(1176).AVATAR_SIZE_MAP[tmp2(undefined, 1176).AvatarSizes.GIFT_SUCCESS]);
     }
     return React6(native.Avatar, { source: avatarSource, avatarDecoration, size: native.AvatarSizes.GIFT_SUCCESS, animate: true });
   });

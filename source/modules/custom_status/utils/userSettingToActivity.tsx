@@ -1,10 +1,10 @@
-// Module ID: 11244
-// Function ID: 11245
+// Module ID: 11245
+// Function ID: 11246
 // Name: userSettingToActivity
 // Dependencies: [19, 5540, 1074, 4289, 1935, 504, 2]
 // Exports: getActivityFromCustomStatus, useCustomStatusActivity
 
-// Module 11244 (userSettingToActivity)
+// Module 11245 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1074 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;

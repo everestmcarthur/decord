@@ -1,7 +1,7 @@
 // Module ID: 8772
 // Function ID: 8773
 // Name: InAppReportsTextLineElement
-// Dependencies: [5, 32, 19, 17, 21, 4636, 576, 5679, 5076, 1150, 4615, 4331, 4632, 5056, 1114, 7292, 4334, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4636, 576, 5679, 5076, 1363, 4615, 4331, 4632, 5056, 1114, 7292, 4334, 2]
 // Exports: default
 
 // Module 8772 (InAppReportsTextLineElement)

@@ -1,10 +1,10 @@
-// Module ID: 12863
-// Function ID: 12864
+// Module ID: 12864
+// Function ID: 12865
 // Name: HubEmailConnectionWaitlist
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1483, 7480, 1114, 12864, 1178, 4632, 5056, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1483, 7480, 1114, 12865, 1176, 4632, 5056, 2]
 // Exports: default
 
-// Module 12863 (HubEmailConnectionWaitlist)
+// Module 12864 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,11 +37,11 @@ export default function HubEmailConnectionWaitlist(school) {
   }, items);
   const obj2 = { style: tmp.container, children: null };
   let obj = onClose(1483);
-  const items1 = [closure_6(closure_5, { source: navigation(12864), style: tmp.header }), , , ];
+  const items1 = [closure_6(closure_5, { source: navigation(12865), style: tmp.header }), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1114).intl;
   obj4.children = intl.string(onClose(1114).t.OaloU5);
-  items1[1] = closure_6(onClose(1178).LegacyText, obj4);
+  items1[1] = closure_6(onClose(1176).LegacyText, obj4);
   const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1114).intl;
   obj5.children = intl2.format(onClose(1114).t.Rs7MXJ, { school: school.school });

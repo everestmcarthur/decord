@@ -1,17 +1,17 @@
-// Module ID: 15085
-// Function ID: 15086
+// Module ID: 15086
+// Function ID: 15087
 // Name: QuestHomeSetting
-// Dependencies: [32, 19, 11897, 5525, 21, 4636, 576, 1483, 4259, 7093, 15086, 15090, 2]
+// Dependencies: [32, 19, 11898, 5525, 21, 4636, 576, 1483, 4259, 7093, 15087, 15091, 2]
 // Exports: default
 
-// Module 15085 (QuestHomeSetting)
+// Module 15086 (QuestHomeSetting)
 import nativeDefault from "native" /* 576 */;
 import _mod4259 from "module_4259" /* 4259 */;
-import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15086 */;
-import QuestHomeDefault from "QuestHome" /* 15090 */;
+import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15087 */;
+import QuestHomeDefault from "QuestHome" /* 15091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11897 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11898 */;
 
 require = fn;
 const QuestConstants = fn(5525);

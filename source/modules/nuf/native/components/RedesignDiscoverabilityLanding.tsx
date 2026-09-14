@@ -1,10 +1,10 @@
-// Module ID: 17567
-// Function ID: 17568
+// Module ID: 17568
+// Function ID: 17569
 // Name: RedesignDiscoverabilityLanding
-// Dependencies: [19, 17, 21, 4636, 576, 1611, 5763, 4632, 1114, 5668, 12879, 12809, 5056, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1611, 5763, 4632, 1114, 5668, 12880, 12810, 5056, 2]
 // Exports: default
 
-// Module 17567 (RedesignDiscoverabilityLanding)
+// Module 17568 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -12,8 +12,8 @@ import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import NavigatorConstants from "NavigatorConstants" /* 5763 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import _modDef12879 from "module_12879" /* 12879 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import _modDef12880 from "module_12880" /* 12880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const obj6 = { resizeMode: "contain", style: tmp.image, source: null };
   const obj2 = { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 };
   const obj3 = { style: tmp.topContainer };
-  obj6.source = _modDef12879;
+  obj6.source = _modDef12880;
   items[3] = hasOwnProperty(FastImageDefault, obj6);
   const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

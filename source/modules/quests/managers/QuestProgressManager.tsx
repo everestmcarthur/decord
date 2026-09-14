@@ -1,9 +1,9 @@
-// Module ID: 18004
-// Function ID: 18005
+// Module ID: 18005
+// Function ID: 18006
 // Name: QuestProgressManager
-// Dependencies: [5, 32, 1956, 9640, 1915, 4658, 1931, 4660, 7805, 17141, 5525, 9641, 1090, 7811, 7801, 11648, 5526, 11409, 5528, 7830, 4767, 4766, 7221, 5533, 7826, 4688, 1369, 4765, 7824, 573, 2]
+// Dependencies: [5, 32, 1956, 9640, 1915, 4658, 1931, 4660, 7805, 17143, 5525, 9641, 1090, 7811, 7801, 11649, 5526, 11410, 5528, 7830, 4767, 4766, 7221, 5533, 7826, 4688, 1369, 4765, 7824, 573, 2]
 
-// Module 18004 (QuestProgressManager)
+// Module 18005 (QuestProgressManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4765 */;
@@ -14,8 +14,8 @@ import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5533 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
 import utils_QuestUtils from "utils/QuestUtils" /* 7824 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11648 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 11649 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -25,7 +25,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
 import QuestStore from "QuestStore" /* 7805 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17141 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17143 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -50,7 +50,7 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       let features = tmp3.config.features;
       let tmp6 = require;
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
-        let tmp6Result = tmp6(11409);
+        let tmp6Result = tmp6(11410);
         let obj3 = { questContent: tmp6(5528).QuestContent.RUNNING_ACTIVITY, questContentCTA: tmp6(7830).QuestContentCTA.START_QUEST, sourceQuestContent: tmp6(5528).QuestContent.RUNNING_ACTIVITY };
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj3);
         obj2.return();
@@ -161,15 +161,15 @@ class QuestProgressManager extends tmp4 {
                 logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
                 const encodeStreamKeyResult = timerId(4688).encodeStreamKey(currentUserActiveStream);
                 const obj2 = { questId: tmp2, streamKey: encodeStreamKeyResult, applicationId, executablePath, executableFingerprint: prop };
-                timerId(11409).sendHeartbeat(obj2);
-                const timerIdResult1 = timerId(11409);
+                timerId(11410).sendHeartbeat(obj2);
+                const timerIdResult1 = timerId(11410);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
               const obj3 = { questId: tmp2, applicationId, executablePath, executableFingerprint: prop };
-              timerId(11409).sendHeartbeat(obj3);
-              const timerIdResult2 = timerId(11409);
+              timerId(11410).sendHeartbeat(obj3);
+              const timerIdResult2 = timerId(11410);
             }
             prop = obj.calculateHeartbeatDurationMs(tmp2);
             const _window = window;

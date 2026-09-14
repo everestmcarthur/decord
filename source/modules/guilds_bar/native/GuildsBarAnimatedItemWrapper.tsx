@@ -1,10 +1,10 @@
-// Module ID: 16389
-// Function ID: 16390
+// Module ID: 16391
+// Function ID: 16392
 // Name: GuildsBarAnimatedItemWrapper
-// Dependencies: [19, 5065, 16377, 21, 4636, 576, 4338, 4347, 5055, 4373, 7176, 16390, 16115, 16120, 1114, 4348, 16391, 5670, 8940, 2]
+// Dependencies: [19, 5065, 16379, 21, 4636, 576, 4338, 4347, 5055, 4373, 7176, 16392, 16117, 16122, 1114, 4348, 16393, 5670, 8940, 2]
 // Exports: default, useGuildsBarAnimatedWrapperStyles
 
-// Module 16389 (GuildsBarAnimatedItemWrapper)
+// Module 16391 (GuildsBarAnimatedItemWrapper)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4338 */;
@@ -129,7 +129,7 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return React6(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
 const IOS_POINTER_STYLE = fn(5065).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16377);
+const GuildsBarConstants = fn(16379);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

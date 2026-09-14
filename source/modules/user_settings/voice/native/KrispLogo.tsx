@@ -1,18 +1,18 @@
 // Module ID: 10126
 // Function ID: 10127
 // Name: KrispLogo
-// Dependencies: [19, 17, 1183, 1074, 21, 2024, 1242, 1114, 4331, 504, 4488, 10127, 10128, 4632, 2]
+// Dependencies: [19, 17, 1181, 1074, 21, 2024, 1240, 1114, 4331, 504, 4488, 10127, 10128, 4632, 2]
 // Exports: default
 
 // Module 10126 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 function handleKrispLinkPressed() {

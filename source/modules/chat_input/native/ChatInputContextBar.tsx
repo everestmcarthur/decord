@@ -1,18 +1,18 @@
-// Module ID: 12550
-// Function ID: 12551
+// Module ID: 12551
+// Function ID: 12552
 // Name: ChatInputContextBar
-// Dependencies: [19, 17, 4628, 4977, 1371, 1074, 21, 1178, 4636, 576, 4338, 4632, 1114, 5204, 7041, 504, 4355, 4870, 9305, 8065, 12551, 4455, 4373, 4637, 11798, 1242, 11796, 1100, 4869, 12552, 7879, 12340, 7949, 2]
+// Dependencies: [19, 17, 4628, 4977, 1371, 1074, 21, 1176, 4636, 576, 4338, 4632, 1114, 5204, 7041, 504, 4355, 4870, 9305, 8065, 12552, 4455, 4373, 4637, 11799, 1240, 11797, 1100, 4869, 12553, 7879, 12341, 7949, 2]
 
-// Module 12550 (ChatInputContextBar)
+// Module 12551 (ChatInputContextBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useToken from "useToken" /* 4338 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
 import ScheduledMessageTypes from "ScheduledMessageTypes" /* 7949 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12340 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12341 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import DraftStore from "DraftStore" /* 4977 */;
@@ -377,7 +377,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let obj = { duration: 250, easing: fn(1178).STANDARD_EASING };
+let obj = { duration: 250, easing: fn(1176).STANDARD_EASING };
 let createStyles = fn(4636);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;

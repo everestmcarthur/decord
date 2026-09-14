@@ -1,17 +1,17 @@
-// Module ID: 16687
-// Function ID: 16688
+// Module ID: 16689
+// Function ID: 16690
 // Name: VibegrationsChatStore
-// Dependencies: [32, 109, 7640, 10210, 2011, 4458, 5360, 16688, 1074, 1964, 1114, 3590, 16689, 1935, 10032, 504, 573, 2]
+// Dependencies: [32, 109, 7640, 10210, 2011, 4458, 5360, 16690, 1074, 1964, 1114, 3590, 16691, 1935, 10032, 504, 573, 2]
 // Exports: getOlderHistoryCursor, turnSettled
 
-// Module 16687 (VibegrationsChatStore)
+// Module 16689 (VibegrationsChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef3590 from "module_3590" /* 3590 */;
 import SoundUtils from "SoundUtils" /* 10032 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16689 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
@@ -19,7 +19,7 @@ import NotificationSettingsStore from "NotificationSettingsStore" /* 10210 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16688 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16690 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -344,8 +344,8 @@ function recordThinkingTransition(projectId) {
             isWindowFocusedResult = SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
           }
           if (isWindowFocusedResult) {
-            isWindowFocusedResult = tmp68(16689).isWindowFocused();
-            const tmp68Result = tmp68(16689);
+            isWindowFocusedResult = tmp68(16691).isWindowFocused();
+            const tmp68Result = tmp68(16691);
           }
           if (guild_id == null) {
             guild_id = project.guild_id;

@@ -1,9 +1,9 @@
-// Module ID: 15119
-// Function ID: 15120
+// Module ID: 15120
+// Function ID: 15121
 // Name: VideoQuestPlayerControlButton
 // Dependencies: [19, 21, 4636, 576, 672, 5204, 5046, 2]
 
-// Module 15119 (VideoQuestPlayerControlButton)
+// Module 15120 (VideoQuestPlayerControlButton)
 import nativeDefault from "native" /* 576 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
 import Pressables from "Pressables" /* 5204 */;

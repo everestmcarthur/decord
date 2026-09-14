@@ -1,10 +1,10 @@
-// Module ID: 13223
-// Function ID: 13224
+// Module ID: 13224
+// Function ID: 13225
 // Name: useCardGridLayout
 // Dependencies: [7311, 1477, 2]
 // Exports: default
 
-// Module 13223 (useCardGridLayout)
+// Module 13224 (useCardGridLayout)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import Constants from "Constants" /* 7311 */;
 import size from "module_2" /* 2 */;

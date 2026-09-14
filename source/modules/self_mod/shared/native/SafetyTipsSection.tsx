@@ -1,10 +1,10 @@
-// Module ID: 11509
-// Function ID: 11510
+// Module ID: 11510
+// Function ID: 11511
 // Name: SafetyTipsSection
 // Dependencies: [19, 17, 21, 4636, 576, 5054, 5773, 4632, 1114, 8700, 2]
 // Exports: default
 
-// Module 11509 (SafetyTipsSection)
+// Module 11510 (SafetyTipsSection)
 import nativeDefault from "native" /* 576 */;
 import SafetyTipsRowDefault from "SafetyTipsRow" /* 8700 */;
 import noop from "module_19" /* 19 */;

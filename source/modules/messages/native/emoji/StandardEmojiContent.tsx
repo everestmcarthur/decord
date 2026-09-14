@@ -1,15 +1,15 @@
-// Module ID: 10458
-// Function ID: 10459
+// Module ID: 10459
+// Function ID: 10460
 // Name: StandardEmojiContent
-// Dependencies: [19, 17, 4458, 21, 4636, 576, 10459, 4293, 5668, 4632, 10460, 4289, 10413, 10462, 1114, 8716, 5056, 10464, 2]
+// Dependencies: [19, 17, 4458, 21, 4636, 576, 10460, 4293, 5668, 4632, 10461, 4289, 10414, 10463, 1114, 8716, 5056, 10465, 2]
 // Exports: default
 
-// Module 10458 (StandardEmojiContent)
+// Module 10459 (StandardEmojiContent)
 import nativeDefault from "native" /* 576 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10459 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10464 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10460 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10465 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 

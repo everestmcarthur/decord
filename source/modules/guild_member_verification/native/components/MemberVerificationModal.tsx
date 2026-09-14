@@ -1,7 +1,7 @@
 // Module ID: 5652
 // Function ID: 5653
 // Name: MemberVerificationModal
-// Dependencies: [19, 17, 2021, 5653, 5654, 21, 4373, 1178, 4636, 576, 1611, 4571, 4488, 5655, 5657, 504, 4461, 573, 5608, 5658, 5659, 5663, 5676, 5677, 5204, 1114, 7192, 2]
+// Dependencies: [19, 17, 2021, 5653, 5654, 21, 4373, 1176, 4636, 576, 1611, 4571, 4488, 5655, 5657, 504, 4461, 573, 5608, 5658, 5659, 5663, 5676, 5677, 5204, 1114, 7192, 2]
 // Exports: default
 
 // Module 5652 (MemberVerificationModal)
@@ -22,7 +22,7 @@ const MemberVerificationFormConstants = fn(5654);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1176).Icon);
 const createStyles = fn(4636);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

@@ -1,10 +1,10 @@
-// Module ID: 14759
-// Function ID: 14760
+// Module ID: 14760
+// Function ID: 14761
 // Name: WebAuthnEditStep
-// Dependencies: [32, 19, 21, 4636, 576, 1483, 5705, 8716, 1114, 1178, 5056, 6698, 4335, 10780, 4596, 2]
+// Dependencies: [32, 19, 21, 4636, 576, 1483, 5705, 8716, 1114, 1176, 5056, 6698, 4335, 10781, 4596, 2]
 // Exports: default
 
-// Module 14759 (WebAuthnEditStep)
+// Module 14760 (WebAuthnEditStep)
 import nativeDefault from "native" /* 576 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6698 */;
@@ -50,7 +50,7 @@ export default function EditCredentialModal(credential) {
   obj3.title = intl.string(credential(1114).t["Jzd+z/"]);
   obj3.placeholder = credential.name;
   obj3.disabled = tmp6;
-  obj3.clearButtonVisibility = credential(1178).ClearButtonVisibility.WITH_CONTENT;
+  obj3.clearButtonVisibility = credential(1176).ClearButtonVisibility.WITH_CONTENT;
   const items1 = [closure_5(credential(8716).FormInput, obj3), closure_5(credential(8716).FormDivider, {}), ];
   const obj4 = {
     onPress() {
@@ -61,7 +61,7 @@ export default function EditCredentialModal(credential) {
         const obj2 = { key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
         const intl = credential(1114).intl;
         obj2.content = intl.string(credential(1114).t.IV13mH);
-        obj2.icon = navigation(10780);
+        obj2.icon = navigation(10781);
         obj2.IconComponent = credential(4596).CircleCheckIcon;
         navigation(4335).open(obj2);
         closure_1_1.popToTop();
@@ -70,7 +70,7 @@ export default function EditCredentialModal(credential) {
         const obj2 = { key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
         const intl = credential(1114).intl;
         obj2.content = intl.string(credential(1114).t.IV13mH);
-        obj2.icon = navigation(10780);
+        obj2.icon = navigation(10781);
         obj2.IconComponent = credential(4596).CircleCheckIcon;
         navigation(4335).open(obj2);
         closure_1_1.popToTop();

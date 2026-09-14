@@ -1,13 +1,13 @@
 // Module ID: 1949
 // Function ID: 1950
 // Name: DismissibleContentShownStateStore
-// Dependencies: [1950, 1951, 1074, 1244, 1948, 1952, 1249, 504, 1953, 573, 2]
+// Dependencies: [1950, 1951, 1074, 1242, 1948, 1952, 1247, 504, 1953, 573, 2]
 // Exports: addCandidateContent, default, getCurrentFatigableWinner, getCurrentlyShownCounts, getLastShownDismissibleContent, isAnyContentShown, isContentShown, isInCooldown, isPostConnectionOpen, isStateInCooldown, removeCandidateContent, reset, resetFatigueCooldown, useIsAnyContentShown, useIsContentShown
 
 // Module 1949 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
 import isActionRequiredDefault from "isActionRequired" /* 1953 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
@@ -167,7 +167,7 @@ function withUpdateWinner(candidates, arg1) {
   }
 }
 const NOOP = fn(1074).NOOP;
-const identity = fn(1244);
+const identity = fn(1242);
 let closure_6 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();

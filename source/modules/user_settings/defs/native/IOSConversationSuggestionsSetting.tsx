@@ -1,20 +1,20 @@
-// Module ID: 14938
-// Function ID: 14939
+// Module ID: 14939
+// Function ID: 14940
 // Name: IOSConversationSuggestionsSetting
-// Dependencies: [19, 17, 8079, 1244, 1249, 4259, 1150, 3, 11601, 1114, 2]
+// Dependencies: [19, 17, 8079, 1242, 1247, 4259, 1363, 3, 11602, 1114, 2]
 
-// Module 14938 (IOSConversationSuggestionsSetting)
+// Module 14939 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import _mod4259 from "module_4259" /* 4259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const identity = fn(1244);
+const identity = fn(1242);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
     result.then((result) => {
       closure_0 = result;
-      closure_0(1249).batchUpdates(() => state.setState({ isEnabled }));
+      closure_0(1247).batchUpdates(() => state.setState({ isEnabled }));
     }).catch((error) => {
       new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);
     });

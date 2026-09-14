@@ -1,10 +1,10 @@
-// Module ID: 13866
-// Function ID: 13867
+// Module ID: 13867
+// Function ID: 13868
 // Name: NUFTemplate
 // Dependencies: [19, 17, 21, 4636, 576, 4632, 5056, 2]
 // Exports: default
 
-// Module 13866 (NUFTemplate)
+// Module 13867 (NUFTemplate)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;

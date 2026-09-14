@@ -1,11 +1,11 @@
 // Module ID: 4787
 // Function ID: 4788
 // Name: WebViewWebmSupportTest
-// Dependencies: [1150, 4615, 2]
+// Dependencies: [1363, 4615, 2]
 // Exports: isIOSWithWebM
 
 // Module 4787 (WebViewWebmSupportTest)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 const DeviceUtils = tmp(4615);

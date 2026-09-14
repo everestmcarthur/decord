@@ -1,10 +1,10 @@
-// Module ID: 15778
-// Function ID: 15779
+// Module ID: 15780
+// Function ID: 15781
 // Name: PremiumPerksList
 // Dependencies: [19, 17, 21, 4636, 576, 4632, 2]
 // Exports: default
 
-// Module 15778 (PremiumPerksList)
+// Module 15780 (PremiumPerksList)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;

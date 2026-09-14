@@ -1,10 +1,10 @@
-// Module ID: 12516
-// Function ID: 12517
+// Module ID: 12517
+// Function ID: 12518
 // Name: ChannelAutocompleteEmojiUpsell
 // Dependencies: [19, 17, 1374, 21, 4636, 576, 5668, 1396, 4632, 1114, 2]
 // Exports: default
 
-// Module 12516 (ChannelAutocompleteEmojiUpsell)
+// Module 12517 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5668 */;

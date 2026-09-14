@@ -1,7 +1,7 @@
 // Module ID: 10045
 // Function ID: 10046
 // Name: RequestToSpeakActionSheet
-// Dependencies: [32, 19, 17, 502, 1957, 5495, 21, 4636, 576, 10046, 7303, 1114, 504, 4783, 10047, 10049, 5686, 5503, 8529, 8531, 4603, 8516, 1178, 10051, 4338, 7265, 7285, 5512, 5506, 7253, 6728, 5054, 5768, 4632, 10052, 2]
+// Dependencies: [32, 19, 17, 502, 1957, 5495, 21, 4636, 576, 10046, 7303, 1114, 504, 4783, 10047, 10049, 5686, 5503, 8529, 8531, 4603, 8516, 1176, 10051, 4338, 7265, 7285, 5512, 5506, 7253, 6728, 5054, 5768, 4632, 10052, 2]
 // Exports: default
 
 // Module 10045 (RequestToSpeakActionSheet)
@@ -86,7 +86,7 @@ function ManageSelfSpeakerRow(channel) {
     trailing: null
   };
   const tmp5Result = useAudienceRequestToSpeakStateDefault(stateFromStores, id);
-  obj2.trailing = closure_9(channel(1178).Icon, { source: _modDef10051 });
+  obj2.trailing = closure_9(channel(1176).Icon, { source: _modDef10051 });
   return closure_9(channel(5686).TableRow, obj2);
 }
 const View = fn(17).View;

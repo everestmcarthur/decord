@@ -1,10 +1,10 @@
-// Module ID: 12351
-// Function ID: 12352
+// Module ID: 12352
+// Function ID: 12353
 // Name: ScheduledMessageEditContentModal
-// Dependencies: [5, 32, 19, 17, 1957, 21, 4636, 576, 1611, 9433, 504, 7784, 7947, 12340, 4839, 1114, 5712, 7966, 1150, 5705, 5204, 4632, 7188, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 21, 4636, 576, 1611, 9433, 504, 7784, 7947, 12341, 4839, 1114, 5712, 7966, 1363, 5705, 5204, 4632, 7188, 2]
 // Exports: default
 
-// Module 12351 (ScheduledMessageEditContentModal)
+// Module 12352 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -78,7 +78,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             const obj4 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(12340).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
+            const obj7 = { value: tmp4(12341).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {

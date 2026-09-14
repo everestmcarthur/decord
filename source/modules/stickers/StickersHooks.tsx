@@ -1,18 +1,18 @@
-// Module ID: 10515
-// Function ID: 10516
+// Module ID: 10516
+// Function ID: 10517
 // Name: StickersHooks
-// Dependencies: [5, 32, 19, 1979, 4458, 5519, 1371, 5582, 5583, 1074, 504, 10516, 1935, 4975, 9801, 5349, 4530, 1114, 4280, 10499, 7440, 2]
+// Dependencies: [5, 32, 19, 1979, 4458, 5519, 1371, 5582, 5583, 1074, 504, 10517, 1935, 4975, 9801, 5349, 4530, 1114, 4280, 10500, 7440, 2]
 // Exports: useFavoriteStickerIds, useFavoriteStickers, useFetchStickerPack, useFetchStickerPacks, useFilteredStickerPackCategories, useHasSendableSticker, useLatestFrecentStickerIds, useLatestFrecentStickers, useShouldAnimateSticker, useStickerForRenderableSticker, useStickersGrid
 
-// Module 10515 (StickersHooks)
+// Module 10516 (StickersHooks)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import StickersUtils from "StickersUtils" /* 4975 */;
 import StickersTypes from "StickersTypes" /* 5349 */;
 import useManageResourcePermissions from "useManageResourcePermissions" /* 9801 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10499 */;
-import StickersActionCreators from "StickersActionCreators" /* 10516 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10500 */;
+import StickersActionCreators from "StickersActionCreators" /* 10517 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -377,7 +377,7 @@ export const useFavoriteStickerIds = function useFavoriteStickerIds() {
   return stickerIds;
 };
 export const useFavoriteStickers = function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10499).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10500).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -385,7 +385,7 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10499);
+  const obj = stickerIds(10500);
   const items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(items, () => {
@@ -431,7 +431,7 @@ export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() 
   return keys;
 };
 export const useLatestFrecentStickers = function useLatestFrecentStickers() {
-  const frecencySettings = keys(10499).useFrecencySettings();
+  const frecencySettings = keys(10500).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -450,7 +450,7 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10499);
+  const obj = keys(10500);
   const items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(items, () => {

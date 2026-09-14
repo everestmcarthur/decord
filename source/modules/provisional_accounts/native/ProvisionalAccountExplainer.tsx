@@ -1,13 +1,13 @@
-// Module ID: 12756
-// Function ID: 12757
+// Module ID: 12757
+// Function ID: 12758
 // Name: ProvisionalAccountExplainer
-// Dependencies: [19, 17, 21, 4636, 576, 12757, 12758, 5688, 4632, 1114, 6711, 7310, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12758, 12759, 5688, 4632, 1114, 6711, 7310, 2]
 // Exports: ChatProvisionalAccountExplainerCard, UserProfileProvisionalAccountExplainerCard
 
-// Module 12756 (ProvisionalAccountExplainer)
+// Module 12757 (ProvisionalAccountExplainer)
 import nativeDefault from "native" /* 576 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7310 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12757 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12758 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -31,7 +31,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   c1 = "text-sm/semibold";
   const items = [iconSize, "text-sm/semibold"];
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  const provisionalAccountExplanationText = iconSize(12758).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
+  const provisionalAccountExplanationText = iconSize(12759).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   const obj2 = { style: null, children: null };
   const items1 = [tmp.chatContainer, style];
   obj2.style = items1;
@@ -51,9 +51,9 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
   const items = [iconSize, "text-md/semibold"];
   ({ style, userId } = iconSize);
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  const provisionalAccountExplanationText = iconSize(12758).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
+  const provisionalAccountExplanationText = iconSize(12759).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   const obj2 = { style, title: null, titleIcon: null, children: null };
-  const obj = iconSize(12758);
+  const obj = iconSize(12759);
   const intl = iconSize(1114).intl;
   obj2.title = intl.string(iconSize(1114).t.Iyka0U);
   obj2.titleIcon = closure_5(iconSize(6711).CircleErrorIcon, { size: "xs", color: "text-default" });

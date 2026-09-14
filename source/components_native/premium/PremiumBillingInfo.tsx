@@ -1,14 +1,14 @@
-// Module ID: 13476
-// Function ID: 13477
+// Module ID: 13477
+// Function ID: 13478
 // Name: PremiumBillingInfo
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 4307, 4632, 1114, 4294, 13473, 7265, 7285, 7507, 13477, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 4307, 4632, 1114, 4294, 13474, 7265, 7285, 7507, 13478, 2]
 // Exports: default
 
-// Module 13476 (PremiumBillingInfo)
+// Module 13477 (PremiumBillingInfo)
 import nativeDefault from "native" /* 576 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13473 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13474 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,7 +76,7 @@ export default function PremiumBillingInfo(subscription) {
     const tmp11 = timestampProducer;
     const tmp2Result = tmp2(7507);
     const tmp9 = React5;
-    obj7.children = tmp2(13477).getBillingInformationStringNative(subscription, first, tmp6);
+    obj7.children = tmp2(13478).getBillingInformationStringNative(subscription, first, tmp6);
     items1[1] = timestampProducer(tmp2(4632).Text, obj7);
     const obj8 = { style: tmp.billingManageGoogle, subscription };
     items1[2] = timestampProducer(GoogleManagementLink, obj8);

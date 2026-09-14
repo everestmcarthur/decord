@@ -1,7 +1,7 @@
 // Module ID: 5361
 // Function ID: 5362
 // Name: SpotifyStore
-// Dependencies: [1915, 502, 5362, 5491, 4676, 5500, 4655, 8458, 1074, 5364, 1090, 3, 1952, 573, 559, 11880, 12, 1242, 558, 13716, 9608, 1369, 504, 8256, 2]
+// Dependencies: [1915, 502, 5362, 5491, 4676, 5500, 4655, 8458, 1074, 5364, 1090, 3, 1952, 573, 559, 11881, 12, 1240, 558, 13717, 9608, 1369, 504, 8256, 2]
 
 // Module 5361 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
@@ -10,12 +10,12 @@ import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Timers from "Timers" /* 1952 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8256 */;
 import useIsSpeaking from "useIsSpeaking" /* 9608 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11880 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13716 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11881 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13717 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
@@ -579,7 +579,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11880).SpotifyAPI;
+    const SpotifyAPI = self(11881).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1217,8 +1217,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
               obj7.author_ids = artists.map((id) => id.id);
               const artists1 = tmp10.artists;
               obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1242).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1242);
+              tmp25(1240).track(constants4.ACTIVITY_UPDATED, obj7);
+              const tmp25Result2 = tmp25(1240);
             }
           } else {
             tmp55 = flag;

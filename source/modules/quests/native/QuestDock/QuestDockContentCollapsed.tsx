@@ -1,15 +1,15 @@
-// Module ID: 15266
-// Function ID: 15267
+// Module ID: 15267
+// Function ID: 15268
 // Name: QuestDockContentCollapsed
-// Dependencies: [19, 17, 5525, 15175, 21, 4636, 15176, 4373, 5055, 7176, 2]
+// Dependencies: [19, 17, 5525, 15176, 21, 4636, 15177, 4373, 5055, 7176, 2]
 
-// Module 15266 (QuestDockContentCollapsed)
+// Module 15267 (QuestDockContentCollapsed)
 import spring from "spring" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const QuestDockMode = fn(5525).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15175).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15176).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj = { questDockContentCollapsed: null };
@@ -31,7 +31,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15176).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15177).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   const fn = function l() {
     let num = 1;

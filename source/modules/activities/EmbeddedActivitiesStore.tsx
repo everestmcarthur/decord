@@ -1,7 +1,7 @@
 // Module ID: 1956
 // Function ID: 1957
 // Name: EmbeddedActivitiesStore
-// Dependencies: [32, 502, 1957, 2011, 1371, 1920, 9635, 1074, 9609, 9610, 4265, 9642, 14072, 1109, 9664, 573, 9658, 9540, 1150, 1894, 7626, 504, 2]
+// Dependencies: [32, 502, 1957, 2011, 1371, 1920, 9635, 1074, 9609, 9610, 4265, 9642, 14073, 1109, 9664, 573, 9658, 9540, 1363, 1894, 7626, 504, 2]
 
 // Module 1956 (EmbeddedActivitiesStore)
 import initializeDefault from "initialize" /* 504 */;
@@ -269,7 +269,7 @@ function updateEmbeddedActivities(content_classification) {
       obj6.delete("" + application_id + ":" + tmp59);
     }
     obj6 = map4;
-    const someResult1 = mapped.some((item) => application_id(14072).isActivityParticipantCurrentUserCurrentSession(item));
+    const someResult1 = mapped.some((item) => application_id(14073).isActivityParticipantCurrentUserCurrentSession(item));
   }
 }
 const ActivityPanelConstants = fn(9635);
@@ -898,7 +898,7 @@ const embeddedActivitiesStoreClass = new EmbeddedActivitiesStoreClass(Dispatcher
     }
     const result = map5.set(guildId, activities);
     const timestamp = Date.now();
-    obj = timestamp(1150);
+    obj = timestamp(1363);
     importDefault = getPlatformDefault(obj.getOS());
     obj.dateRangesForSurfaces = activities.reduce((acc, item) => {
       closure_1 = tmp;

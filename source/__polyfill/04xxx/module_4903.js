@@ -1,9 +1,9 @@
 // Module ID: 4903
 // Function ID: 4904
-// Dependencies: [1316, 1444]
+// Dependencies: [1314, 1444]
 
 // Module 4903
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 import _mod1444 from "module_1444" /* 1444 */;
 
 let closure_0 = callBoundIntrinsic("Date.prototype.getDay");

@@ -1,10 +1,10 @@
-// Module ID: 14778
-// Function ID: 14779
+// Module ID: 14779
+// Function ID: 14780
 // Name: SettingRenderer
-// Dependencies: [32, 109, 19, 17, 2025, 14777, 1979, 11602, 21, 4636, 576, 1178, 5686, 1483, 14779, 504, 1114, 10946, 5665, 14781, 14782, 4632, 7304, 7303, 4357, 5766, 5769, 7292, 4334, 10115, 4604, 4605, 5688, 5054, 1880, 1150, 14266, 5204, 5056, 4338, 7100, 1874, 2]
+// Dependencies: [32, 109, 19, 17, 2025, 14778, 1979, 11603, 21, 4636, 576, 1176, 5686, 1483, 14780, 504, 1114, 10947, 5665, 14782, 14783, 4632, 7304, 7303, 4357, 5766, 5769, 7292, 4334, 10115, 4604, 4605, 5688, 5054, 1880, 1363, 14267, 5204, 5056, 4338, 7100, 1874, 2]
 // Exports: renderSettingItem, renderSettingSearchResultItem, renderSettingSearchResultPlaceholderItem
 
-// Module 14778 (SettingRenderer)
+// Module 14779 (SettingRenderer)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -19,15 +19,15 @@ import TableRadioRow from "TableRadioRow" /* 5769 */;
 import Tracking from "Tracking" /* 7100 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import VolumeSliderDefault from "VolumeSlider" /* 10115 */;
-import ClydeIcon from "ClydeIcon" /* 10946 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14779 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 14781 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14782 */;
+import ClydeIcon from "ClydeIcon" /* 10947 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14780 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14782 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14778 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const GuildIconDefault = GuildIcon;
@@ -210,7 +210,7 @@ function SettingSearchResultPlaceholder(arg0) {
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11602);
+const SettingRendererConstants = fn(11603);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -218,7 +218,7 @@ const createStyles = fn(4636);
 let obj = { slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 }, sliderTitle: { flexDirection: "row", justifyContent: "space-between" }, radioSettingHighlight: { top: 26 }, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
 obj.defaultIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-let size = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let size = { width: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.placeholderAvatar = size;
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
 obj.placeholderUsername = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -489,7 +489,7 @@ let closure_26 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(14781).useHighlightSettingItem(setting);
+  let highlightSettingItem = trailing(14782).useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
   if (useTrailing != null) {

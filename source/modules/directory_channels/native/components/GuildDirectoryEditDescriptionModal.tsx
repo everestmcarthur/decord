@@ -1,12 +1,12 @@
-// Module ID: 12444
-// Function ID: 12445
+// Module ID: 12445
+// Function ID: 12446
 // Name: GuildDirectoryEditDescriptionModal
-// Dependencies: [5, 19, 17, 21, 4636, 5763, 12445, 12443, 7226, 4632, 1114, 12446, 5705, 7103, 2]
+// Dependencies: [5, 19, 17, 21, 4636, 5763, 12446, 12444, 7226, 4632, 1114, 12447, 5705, 7103, 2]
 // Exports: default
 
-// Module 12444 (GuildDirectoryEditDescriptionModal)
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12443 */;
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12446 */;
+// Module 12445 (GuildDirectoryEditDescriptionModal)
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12444 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12447 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ function GuildDirectoryEditDescription(entry) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(12445);
+            const obj3 = tmp4(12446);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = { value: obj3.updateDirectoryEntry(entry.channelId, entry.guildId, closure_0, closure_1), done: false };
@@ -54,7 +54,7 @@ function GuildDirectoryEditDescription(entry) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(12443).close();
+          closure_1(12444).close();
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

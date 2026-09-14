@@ -1,13 +1,13 @@
-// Module ID: 13654
-// Function ID: 13655
+// Module ID: 13655
+// Function ID: 13656
 // Name: renderPremiumButtonText
-// Dependencies: [19, 17, 1373, 21, 4636, 4486, 576, 4294, 1114, 1178, 2]
+// Dependencies: [19, 17, 1373, 21, 4636, 4486, 576, 4294, 1114, 1176, 2]
 // Exports: default
 
-// Module 13654 (renderPremiumButtonText)
+// Module 13655 (renderPremiumButtonText)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import noop from "module_19" /* 19 */;
 

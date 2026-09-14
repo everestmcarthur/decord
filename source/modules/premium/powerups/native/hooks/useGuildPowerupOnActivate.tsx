@@ -1,10 +1,10 @@
-// Module ID: 12664
-// Function ID: 12665
+// Module ID: 12665
+// Function ID: 12666
 // Name: useGuildPowerupOnActivate
-// Dependencies: [19, 1979, 4531, 4526, 12665, 504, 12666, 7265, 12667, 4530, 4603, 12646, 5515, 7506, 4839, 7515, 2]
+// Dependencies: [19, 1979, 4531, 4526, 12666, 504, 12667, 7265, 12668, 4530, 4603, 12647, 5515, 7506, 4839, 7515, 2]
 // Exports: default
 
-// Module 12664 (useGuildPowerupOnActivate)
+// Module 12665 (useGuildPowerupOnActivate)
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4530 */;
 import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5515 */;
 import noop from "module_19" /* 19 */;

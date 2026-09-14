@@ -1,10 +1,10 @@
-// Module ID: 16696
-// Function ID: 16697
+// Module ID: 16698
+// Function ID: 16699
 // Name: VibegrationsCreateErrors
 // Dependencies: [1074, 1114, 3590, 2]
 // Exports: classifyCreateFailure, createFailureStatus, getVibegrationsCreateErrorMessage
 
-// Module 16696 (VibegrationsCreateErrors)
+// Module 16698 (VibegrationsCreateErrors)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;

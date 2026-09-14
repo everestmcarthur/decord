@@ -1,10 +1,10 @@
-// Module ID: 13248
-// Function ID: 13249
+// Module ID: 13249
+// Function ID: 13250
 // Name: AddFriendNicknameModal
-// Dependencies: [5, 32, 19, 17, 4285, 1371, 21, 4636, 576, 11058, 504, 1114, 4839, 9171, 5659, 5075, 4632, 6714, 4481, 2]
+// Dependencies: [5, 32, 19, 17, 4285, 1371, 21, 4636, 576, 11059, 504, 1114, 4839, 9171, 5659, 5075, 4632, 6714, 4481, 2]
 // Exports: default
 
-// Module 13248 (AddFriendNicknameModal)
+// Module 13249 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -131,7 +131,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(11058)();
+  _slicedToArray = showUserProfile(11059)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   const items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));

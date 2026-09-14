@@ -1,10 +1,10 @@
-// Module ID: 13642
-// Function ID: 13643
+// Module ID: 13643
+// Function ID: 13644
 // Name: OutboundPromotionCard
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 5522, 7253, 7252, 1114, 4632, 4626, 4571, 13507, 13643, 4981, 13644, 1896, 13505, 5056, 4603, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 5522, 7253, 7252, 1114, 4632, 4626, 4571, 13508, 13644, 4981, 13645, 1896, 13506, 5056, 4603, 2]
 // Exports: default
 
-// Module 13642 (OutboundPromotionCard)
+// Module 13643 (OutboundPromotionCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;

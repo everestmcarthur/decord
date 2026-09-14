@@ -1,11 +1,11 @@
-// Module ID: 17976
-// Function ID: 17977
+// Module ID: 17977
+// Function ID: 17978
 // Name: NavigationTTIDispatcherManager
-// Dependencies: [1957, 4857, 2011, 16633, 16631, 16730, 7221, 2]
+// Dependencies: [1957, 4857, 2011, 16635, 16633, 16732, 7221, 2]
 
-// Module 17976 (NavigationTTIDispatcherManager)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16631 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 16730 */;
+// Module 17977 (NavigationTTIDispatcherManager)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16633 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 16732 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MessageStore from "MessageStore" /* 4857 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

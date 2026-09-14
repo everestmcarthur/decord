@@ -1,33 +1,33 @@
-// Module ID: 13562
-// Function ID: 13563
+// Module ID: 13563
+// Function ID: 13564
 // Name: PremiumFeaturesTable
-// Dependencies: [32, 19, 17, 1074, 1373, 21, 4636, 576, 5522, 4571, 4488, 1178, 13563, 13564, 4632, 1114, 5068, 9494, 4294, 13565, 13566, 5668, 13567, 13568, 13569, 13570, 13571, 2]
+// Dependencies: [32, 19, 17, 1074, 1373, 21, 4636, 576, 5522, 4571, 4488, 1176, 13564, 13565, 4632, 1114, 5068, 9494, 4294, 13566, 13567, 5668, 13568, 13569, 13570, 13571, 13572, 2]
 // Exports: default
 
-// Module 13562 (PremiumFeaturesTable)
+// Module 13563 (PremiumFeaturesTable)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import shared from "shared" /* 4488 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import _modDef13564 from "module_13564" /* 13564 */;
+import _modDef13565 from "module_13565" /* 13565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef13563 = tmp(13563);
+const _modDef13564 = tmp(13564);
 require = fn;
 function CheckIcon() {
   const tmp3 = useThemeDefault();
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  return closure_1_11(native.Icon, { source: _modDef13563, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef13564, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef13564, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef13565, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(children) {
   return closure_1_11(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });

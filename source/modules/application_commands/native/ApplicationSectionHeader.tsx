@@ -1,10 +1,10 @@
-// Module ID: 12525
-// Function ID: 12526
+// Module ID: 12526
+// Function ID: 12527
 // Name: ApplicationSectionHeader
-// Dependencies: [19, 17, 2021, 21, 4636, 576, 504, 12360, 1114, 5668, 4632, 2]
+// Dependencies: [19, 17, 2021, 21, 4636, 576, 504, 12361, 1114, 5668, 4632, 2]
 // Exports: default
 
-// Module 12525 (ApplicationSectionHeader)
+// Module 12526 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -38,7 +38,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(12360).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12361).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;

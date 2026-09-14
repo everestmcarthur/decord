@@ -1,10 +1,10 @@
-// Module ID: 12099
-// Function ID: 12100
+// Module ID: 12100
+// Function ID: 12101
 // Name: CustomTypingIndicatorDynamicAsset
-// Dependencies: [19, 17, 21, 4636, 5054, 5668, 4632, 1114, 12100, 2]
+// Dependencies: [19, 17, 21, 4636, 5054, 5668, 4632, 1114, 12101, 2]
 // Exports: default
 
-// Module 12099 (CustomTypingIndicatorDynamicAsset)
+// Module 12100 (CustomTypingIndicatorDynamicAsset)
 import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 11633
-// Function ID: 11634
+// Module ID: 11634
+// Function ID: 11635
 // Name: openAppStoreOverlayBottomSheet
-// Dependencies: [1074, 4603, 11634, 1896, 7820, 1109, 11630, 2]
+// Dependencies: [1074, 4603, 11635, 1896, 7820, 1109, 11631, 2]
 // Exports: openAppStoreOverlayBottomSheet
 
-// Module 11633 (openAppStoreOverlayBottomSheet)
+// Module 11634 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11630 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11631 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/o
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1) {
   _require = arg1;
   appId = appId.appId;
-  appId(4603).openLazy(require("asyncRequireImpl")(11634, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", {
+  appId(4603).openLazy(require("asyncRequireImpl")(11635, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", {
     metadata: appId,
     onOpen() {
       closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, appId, AnalyticsActions.AppStoreOverlayVariant.CUSTOM);

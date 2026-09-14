@@ -1,10 +1,10 @@
-// Module ID: 15134
-// Function ID: 15135
+// Module ID: 15135
+// Function ID: 15136
 // Name: BountiesScrollRecapFooter
-// Dependencies: [19, 17, 4628, 21, 4636, 576, 1150, 7082, 1114, 4632, 8962, 504, 4347, 2]
+// Dependencies: [19, 17, 4628, 21, 4636, 576, 1363, 7082, 1114, 4632, 8962, 504, 4347, 2]
 // Exports: BountiesScrollRecapFooter, BountiesScrollRecapFooterGradient
 
-// Module 15134 (BountiesScrollRecapFooter)
+// Module 15135 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;

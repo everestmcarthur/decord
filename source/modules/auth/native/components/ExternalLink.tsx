@@ -1,10 +1,10 @@
-// Module ID: 16076
-// Function ID: 16077
+// Module ID: 16078
+// Function ID: 16079
 // Name: ExternalLink
 // Dependencies: [19, 17, 21, 4636, 576, 7045, 1483, 7075, 1114, 4632, 5514, 5056, 2]
 // Exports: default
 
-// Module 16076 (ExternalLink)
+// Module 16078 (ExternalLink)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

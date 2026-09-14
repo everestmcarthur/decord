@@ -1,22 +1,22 @@
-// Module ID: 17844
-// Function ID: 17845
+// Module ID: 17845
+// Function ID: 17846
 // Name: GuildRoleSubscriptionGroupDetailsModal
-// Dependencies: [32, 19, 17, 17845, 15288, 1074, 21, 4636, 13985, 17840, 9946, 1114, 17846, 4632, 15300, 8716, 17849, 2]
+// Dependencies: [32, 19, 17, 17846, 15289, 1074, 21, 4636, 13986, 17841, 9946, 1114, 17847, 4632, 15301, 8716, 17850, 2]
 // Exports: default
 
-// Module 17844 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 17845 (GuildRoleSubscriptionGroupDetailsModal)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Form from "Form" /* 8716 */;
 import FormHeaderDefault from "FormHeader" /* 9946 */;
-import FormStylesDefault from "FormStyles" /* 13985 */;
-import FormSeparatorDefault from "FormSeparator" /* 15300 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17840 */;
-import FormImagePicker from "FormImagePicker" /* 17846 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17849 */;
+import FormStylesDefault from "FormStyles" /* 13986 */;
+import FormSeparatorDefault from "FormSeparator" /* 15301 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17841 */;
+import FormImagePicker from "FormImagePicker" /* 17847 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17845 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17846 */;
 
 require = fn;
 class Content {
@@ -61,7 +61,7 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(15288);
+const GuildRoleSubscriptionsConstants = fn(15289);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1074).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);

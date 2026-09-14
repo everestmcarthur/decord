@@ -1,7 +1,7 @@
 // Module ID: 10257
 // Function ID: 10258
 // Name: Timestamp
-// Dependencies: [19, 21, 4636, 576, 10258, 1178, 4335, 2]
+// Dependencies: [19, 21, 4636, 576, 10258, 1176, 4335, 2]
 // Exports: default
 
 // Module 10257 (Timestamp)
@@ -27,7 +27,7 @@ export default function Timestamp(node) {
   }
   const tmp2 = useFormattedTimestampDefault(node);
   const tmp3 = jsx;
-  return tmp3(node(1178).LegacyText, {
+  return tmp3(node(1176).LegacyText, {
     style,
     onPress() {
       ToastActionCreatorsDefault.open({ key: "TIMESTAMP", content: node.full });

@@ -1,7 +1,7 @@
 // Module ID: 9193
 // Function ID: 9194
 // Name: GuildSettingsStore
-// Dependencies: [1972, 9194, 1961, 1975, 8498, 1385, 1979, 1371, 1074, 9195, 8140, 11, 9196, 1272, 573, 9198, 1971, 9199, 4228, 9200, 504, 12, 510, 2]
+// Dependencies: [1972, 9194, 1961, 1975, 8498, 1385, 1979, 1371, 1074, 9195, 8140, 11, 9196, 1270, 573, 9198, 1971, 9199, 4228, 9200, 504, 12, 510, 2]
 
 // Module 9193 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
@@ -9,7 +9,7 @@ import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import PlainRecord from "PlainRecord" /* 1972 */;

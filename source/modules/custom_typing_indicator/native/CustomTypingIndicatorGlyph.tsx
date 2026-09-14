@@ -1,11 +1,11 @@
-// Module ID: 12110
-// Function ID: 12111
+// Module ID: 12111
+// Function ID: 12112
 // Name: CustomTypingIndicatorGlyph
-// Dependencies: [19, 17, 21, 4636, 1392, 1178, 576, 12111, 2]
+// Dependencies: [19, 17, 21, 4636, 1392, 1176, 576, 12112, 2]
 // Exports: default
 
-// Module 12110 (CustomTypingIndicatorGlyph)
-import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 12111 */;
+// Module 12111 (CustomTypingIndicatorGlyph)
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 12112 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -41,6 +41,6 @@ export default function CustomTypingIndicatorGlyph(config) {
     obj.children = map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: map.emojis.length, animation, size }, index));
     tmp3(View, obj);
   } else {
-    return tmp3(tmp2(1178).Ellipsis, {});
+    return tmp3(tmp2(1176).Ellipsis, {});
   }
 };

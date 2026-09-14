@@ -1,13 +1,13 @@
 // Module ID: 10156
 // Function ID: 10157
 // Name: StageActionHeader
-// Dependencies: [19, 17, 4652, 1957, 7738, 1979, 1962, 10029, 1074, 21, 4636, 5763, 4486, 576, 1242, 4816, 9611, 4839, 4843, 504, 10054, 10157, 1114, 4837, 1178, 4789, 5512, 5506, 5068, 4632, 8745, 8742, 10158, 10159, 8512, 9792, 10160, 10161, 9950, 10031, 10037, 10038, 10043, 10162, 10163, 2]
+// Dependencies: [19, 17, 4652, 1957, 7738, 1979, 1962, 10029, 1074, 21, 4636, 5763, 4486, 576, 1240, 4816, 9611, 4839, 4843, 504, 10054, 10157, 1114, 4837, 1176, 4789, 5512, 5506, 5068, 4632, 8745, 8742, 10158, 10159, 8512, 9792, 10160, 10161, 9950, 10031, 10037, 10038, 10043, 10162, 10163, 2]
 // Exports: HideChannelCallButton, closeStageModal
 
 // Module 10156 (StageActionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
@@ -350,7 +350,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
     const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
   };
   obj2.containerStyle = tmp.iconContainer;
-  obj2.children = closure_12(channel(1178).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj2.children = closure_12(channel(1176).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return closure_12(ChannelCallNavigatorIconDefault, obj2);
 };
 export { StageSettingsButton };

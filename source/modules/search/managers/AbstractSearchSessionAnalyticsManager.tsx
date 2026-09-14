@@ -1,11 +1,11 @@
-// Module ID: 12489
-// Function ID: 12490
+// Module ID: 12490
+// Function ID: 12491
 // Name: AbstractSearchSessionAnalyticsManager
-// Dependencies: [1256, 12469, 2]
+// Dependencies: [1254, 12470, 2]
 
-// Module 12489 (AbstractSearchSessionAnalyticsManager)
-import v1 from "v1" /* 1256 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
+// Module 12490 (AbstractSearchSessionAnalyticsManager)
+import v1 from "v1" /* 1254 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");

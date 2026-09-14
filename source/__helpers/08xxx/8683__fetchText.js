@@ -1,11 +1,11 @@
 // Module ID: 8683
 // Function ID: 8684
 // Name: _fetchText
-// Dependencies: [5, 17, 1253]
+// Dependencies: [5, 17, 1251]
 // Exports: fetchText
 
 // Module 8683 (_fetchText)
-import Buffer from "Buffer" /* 1253 */;
+import Buffer from "Buffer" /* 1251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

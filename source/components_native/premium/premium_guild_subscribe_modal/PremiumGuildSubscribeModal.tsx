@@ -1,7 +1,7 @@
 // Module ID: 5516
 // Function ID: 5517
 // Name: PremiumGuildSubscribeModal
-// Dependencies: [32, 19, 1183, 5517, 1074, 21, 5518, 5705, 5515, 7480, 4488, 7481, 7482, 7483, 1114, 7098, 7485, 1178, 7487, 13695, 5679, 5053, 7103, 2]
+// Dependencies: [32, 19, 1181, 5517, 1074, 21, 5518, 5705, 5515, 7480, 4488, 7481, 7482, 7483, 1114, 7098, 7485, 1176, 7487, 13696, 5679, 5053, 7103, 2]
 // Exports: default
 
 // Module 5516 (PremiumGuildSubscribeModal)
@@ -13,7 +13,7 @@ import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import Navigator from "Navigator" /* 7103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 let closure_6 = fn(5517).PremiumGuildSubscribeModalScenes;
@@ -77,7 +77,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
                 let tmpResult = null;
                 if (children.length > 0) {
                   const obj2 = { children };
-                  tmpResult = tmp(closure_1_0(1178).LegacyText, obj2);
+                  tmpResult = tmp(closure_1_0(1176).LegacyText, obj2);
                 }
                 obj.subtitle = tmpResult;
                 return closure_1_8(closure_1_0(5705).NavigatorHeader, obj);
@@ -94,7 +94,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
         obj8.headerTitle = intl.string(util.t.VJEVbu);
         obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(13695), {});
+          return closure_1_8(guildBoostSlots(13696), {});
         };
         obj5[constants.CONFIRMATION] = obj8;
         obj4.screens = obj5;

@@ -1,10 +1,10 @@
-// Module ID: 11951
-// Function ID: 11952
+// Module ID: 11952
+// Function ID: 11953
 // Name: StringSelectComponentActionSheet
-// Dependencies: [32, 19, 21, 4636, 576, 8236, 1894, 4603, 11952, 7233, 4632, 1114, 2]
+// Dependencies: [32, 19, 21, 4636, 576, 8236, 1894, 4603, 11953, 7233, 4632, 1114, 2]
 // Exports: default
 
-// Module 11951 (StringSelectComponentActionSheet)
+// Module 11952 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1894 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -141,5 +141,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(11952), obj2);
+  return tmp9(onSubmit(11953), obj2);
 };

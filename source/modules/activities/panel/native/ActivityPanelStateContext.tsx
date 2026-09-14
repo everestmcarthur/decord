@@ -1,9 +1,9 @@
-// Module ID: 17124
-// Function ID: 17125
+// Module ID: 17126
+// Function ID: 17127
 // Name: ActivityPanelStateContext
 // Dependencies: [19, 9635, 7177, 2]
 
-// Module 17124 (ActivityPanelStateContext)
+// Module 17126 (ActivityPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = {

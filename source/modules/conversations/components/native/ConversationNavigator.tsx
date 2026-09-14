@@ -1,17 +1,17 @@
 // Module ID: 8016
 // Function ID: 8017
 // Name: ConversationNavigator
-// Dependencies: [19, 21, 4338, 576, 7966, 1150, 8017, 7103, 8027, 8028, 1114, 8029, 13380, 13381, 4495, 2]
+// Dependencies: [19, 21, 4338, 576, 7966, 1363, 8017, 7103, 8027, 8028, 1114, 8029, 13381, 13382, 4495, 2]
 // Exports: default, openConversationNavigator
 
 // Module 8016 (ConversationNavigator)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useToken from "useToken" /* 4338 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
 import ConversationNavigatorHeaderDefault from "ConversationNavigatorHeader" /* 8028 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 13380 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 13381 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -117,7 +117,7 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(13381).default;
+      return channelId(13382).default;
     }
   });
   obj2.children = items;

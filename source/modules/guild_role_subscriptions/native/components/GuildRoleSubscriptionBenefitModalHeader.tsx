@@ -1,17 +1,17 @@
-// Module ID: 17872
-// Function ID: 17873
+// Module ID: 17873
+// Function ID: 17874
 // Name: GuildRoleSubscriptionBenefitModalHeader
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 5605, 15310, 7226, 9179, 4632, 1114, 1178, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 5605, 15311, 7226, 9179, 4632, 1114, 1176, 2]
 // Exports: default
 
-// Module 17872 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 17873 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 5605 */;

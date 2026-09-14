@@ -1,12 +1,12 @@
-// Module ID: 16808
-// Function ID: 16809
+// Module ID: 16810
+// Function ID: 16811
 // Name: SearchFetchPendingManager
-// Dependencies: [19, 12467, 5679, 2]
+// Dependencies: [19, 12468, 5679, 2]
 // Exports: useSearchFetchPendingManager
 
-// Module 16808 (SearchFetchPendingManager)
+// Module 16810 (SearchFetchPendingManager)
 import useInitialValueDefault from "useInitialValue" /* 5679 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
 import noop from "module_19" /* 19 */;
 
 let closure_3 = function SearchFetchPendingManager() {

@@ -1,17 +1,17 @@
-// Module ID: 16762
-// Function ID: 16763
+// Module ID: 16764
+// Function ID: 16765
 // Name: GuildVoiceOrStageChannelRow
-// Dependencies: [19, 17, 1962, 7982, 21, 10249, 4481, 1114, 4636, 504, 16763, 5512, 5506, 16764, 16766, 12420, 2]
+// Dependencies: [19, 17, 1962, 7982, 21, 10249, 4481, 1114, 4636, 504, 16765, 5512, 5506, 16766, 16768, 12421, 2]
 
-// Module 16762 (GuildVoiceOrStageChannelRow)
+// Module 16764 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5512 */;
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;
-import renderChannelBadge from "renderChannelBadge" /* 12420 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16763 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16764 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16766 */;
+import renderChannelBadge from "renderChannelBadge" /* 12421 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16765 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16766 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 16768 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 

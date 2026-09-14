@@ -1,15 +1,15 @@
-// Module ID: 16541
-// Function ID: 16542
+// Module ID: 16543
+// Function ID: 16544
 // Name: ForYouUnreadClearedState
-// Dependencies: [19, 17, 21, 4636, 576, 1178, 10780, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1176, 10781, 4632, 1114, 2]
 // Exports: ForYouUnreadClearedState
 
-// Module 16541 (ForYouUnreadClearedState)
+// Module 16543 (ForYouUnreadClearedState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import _modDef10780 from "module_10780" /* 10780 */;
+import _modDef10781 from "module_10781" /* 10781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10780, style: tmp.icon, color: tmp.icon.color }), ];
+  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10781, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
   const obj5 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;

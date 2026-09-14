@@ -1,7 +1,7 @@
 // Module ID: 5518
 // Function ID: 5519
 // Name: SubscribeModalGuildSelect
-// Dependencies: [32, 19, 17, 1979, 5519, 5517, 21, 4636, 576, 5522, 1483, 504, 5523, 7226, 7479, 1114, 5515, 5204, 5665, 1178, 2]
+// Dependencies: [32, 19, 17, 1979, 5519, 5517, 21, 4636, 576, 5522, 1483, 504, 5523, 7226, 7479, 1114, 5515, 5204, 5665, 1176, 2]
 // Exports: default
 
 // Module 5518 (SubscribeModalGuildSelect)

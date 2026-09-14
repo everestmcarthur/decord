@@ -1,27 +1,27 @@
 // Module ID: 7978
 // Function ID: 7979
 // Name: ChannelActions
-// Dependencies: [19, 17, 5588, 7979, 1961, 1957, 4655, 7980, 1074, 7981, 21, 4636, 7984, 576, 7986, 5182, 7988, 7989, 8006, 504, 7372, 8007, 8008, 7375, 7347, 13383, 10308, 13384, 1114, 3590, 5187, 5152, 13385, 4843, 13386, 7154, 12429, 8002, 1150, 4502, 12428, 12487, 11599, 1109, 4495, 11785, 5154, 11095, 13387, 4847, 13388, 13390, 2]
+// Dependencies: [19, 17, 5588, 7979, 1961, 1957, 4655, 7980, 1074, 7981, 21, 4636, 7984, 576, 7986, 5182, 7988, 7989, 8006, 504, 7372, 8007, 8008, 7375, 7347, 13384, 10308, 13385, 1114, 3590, 5187, 5152, 13386, 4843, 13387, 7154, 12430, 8002, 1363, 4502, 12429, 12488, 11600, 1109, 4495, 11786, 5154, 11096, 13388, 4847, 13389, 13391, 2]
 // Exports: default
 
 // Module 7978 (ChannelActions)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5182 */;
 import VibegrationsUtils from "VibegrationsUtils" /* 7347 */;
 import PhoneCallIcon from "PhoneCallIcon" /* 7984 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7986 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 8002 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 11095 */;
-import useSearchContext from "useSearchContext" /* 12428 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12429 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import IconActionButtonDefault from "IconActionButton" /* 13383 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13384 */;
-import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13385 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 13387 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13390 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 11096 */;
+import useSearchContext from "useSearchContext" /* 12429 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12430 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import IconActionButtonDefault from "IconActionButton" /* 13384 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13385 */;
+import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13386 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 13388 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13391 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 5588 */;
 import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7979 */;
@@ -379,7 +379,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = tmp4(tmp(13388).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = tmp4(tmp(13389).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

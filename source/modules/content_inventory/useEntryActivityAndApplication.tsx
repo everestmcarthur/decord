@@ -1,13 +1,13 @@
-// Module ID: 13130
-// Function ID: 13131
+// Module ID: 13131
+// Function ID: 13132
 // Name: useEntryActivityAndApplication
-// Dependencies: [32, 1956, 13131, 504, 7271, 2]
+// Dependencies: [32, 1956, 13132, 504, 7271, 2]
 // Exports: default
 
-// Module 13130 (useEntryActivityAndApplication)
+// Module 13131 (useEntryActivityAndApplication)
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 13131 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 13132 */;
 
 const require = globalThis.__r;
 

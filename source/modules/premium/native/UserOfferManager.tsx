@@ -1,9 +1,9 @@
-// Module ID: 17615
-// Function ID: 17616
+// Module ID: 17616
+// Function ID: 17617
 // Name: UserOfferManager
 // Dependencies: [1371, 7553, 1085, 7221, 9495, 1885, 8167, 2]
 
-// Module 17615 (UserOfferManager)
+// Module 17616 (UserOfferManager)
 import UserStore from "UserStore" /* 1371 */;
 import UserOfferStore from "UserOfferStore" /* 7553 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

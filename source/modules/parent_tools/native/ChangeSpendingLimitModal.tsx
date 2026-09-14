@@ -1,10 +1,10 @@
-// Module ID: 14996
-// Function ID: 14997
+// Module ID: 14997
+// Function ID: 14998
 // Name: ChangeSpendingLimitModal
-// Dependencies: [5, 19, 17, 21, 4636, 576, 8711, 4632, 1114, 2396, 14997, 4335, 4596, 4839, 4334, 7337, 8539, 8540, 5054, 6707, 12056, 5514, 5056, 5705, 12058, 2]
+// Dependencies: [5, 19, 17, 21, 4636, 576, 8711, 4632, 1114, 2396, 14998, 4335, 4596, 4839, 4334, 7337, 8539, 8540, 5054, 6707, 12057, 5514, 5056, 5705, 12059, 2]
 // Exports: default
 
-// Module 14996 (ChangeSpendingLimitModal)
+// Module 14997 (ChangeSpendingLimitModal)
 import nativeDefault from "native" /* 576 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -135,7 +135,7 @@ function ChangeSpendingLimitScreen(teenId) {
     items4[1] = tmp9(tmp2(5056).Button, obj14);
     obj13.children = items4;
     obj12.children = tmp8(tmp2(5514).ButtonGroup, obj13);
-    items3[1] = tmp9(tmp2(12056).ModalFooter, obj12);
+    items3[1] = tmp9(tmp2(12057).ModalFooter, obj12);
     obj11.children = items3;
     return tmp8(tmp2(8539).ModalScreen, obj11);
   } else if (isOverspending) {
@@ -202,5 +202,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1114).intl;
   obj.headerBackTitle = intl.string(teenId(1114).t["13/7kX"]);
-  return closure_6(teenId(12058).Modal, obj);
+  return closure_6(teenId(12059).Modal, obj);
 };

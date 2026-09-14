@@ -1,9 +1,9 @@
-// Module ID: 11972
-// Function ID: 11973
+// Module ID: 11973
+// Function ID: 11974
 // Name: CommunicationDisabledActionCreators
 // Dependencies: [5, 4228, 5601, 2]
 
-// Module 11972 (CommunicationDisabledActionCreators)
+// Module 11973 (CommunicationDisabledActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const size = fn(2);

@@ -1,12 +1,12 @@
 // Module ID: 7644
 // Function ID: 7645
 // Name: CollectiblesActionCreators
-// Dependencies: [5, 4635, 2025, 7645, 7659, 7660, 7661, 7662, 7666, 7647, 7672, 7673, 1076, 1074, 7687, 7688, 4495, 573, 7689, 7690, 7692, 1272, 4537, 7442, 7691, 7657, 7693, 7694, 2]
+// Dependencies: [5, 4635, 2025, 7645, 7659, 7660, 7661, 7662, 7666, 7647, 7672, 7673, 1076, 1074, 7687, 7688, 4495, 573, 7689, 7690, 7692, 1270, 4537, 7442, 7691, 7657, 7693, 7694, 2]
 // Exports: areRequestOptionsEqual, claimCollectiblesCategoryReward, claimPremiumCollectiblesProduct, closeCollectiblesShop, dispatchOpenCollectiblesShop, fetchCollectiblesCategories, fetchCollectiblesMarketings, fetchCollectiblesPurchases, fetchCollectiblesShopHome, isCollectiblesShopOpen, maybeFetchCollectiblesProduct, maybeFetchCollectiblesShopTabLayout, openCollectiblesShop, productDetailsOpened, seedCollectiblesProductFromStandaloneLoad, setShopHomeConfigOverride, setShopLayoutUrlOverride, setSkipNumCategories, validateCollectiblesRecipient, validateCollectiblesRecipientsBatch
 
 // Module 7644 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import LayerActionCreators from "LayerActionCreators" /* 7689 */;

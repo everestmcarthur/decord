@@ -1,14 +1,14 @@
-// Module ID: 16230
-// Function ID: 16231
+// Module ID: 16232
+// Function ID: 16233
 // Name: ChannelListStickyHeader
-// Dependencies: [19, 17, 1074, 21, 4373, 4636, 576, 16199, 1982, 1114, 16231, 13994, 16229, 5691, 4338, 10363, 4632, 8866, 1178, 7312, 16245, 12426, 16250, 16251, 2]
+// Dependencies: [19, 17, 1074, 21, 4373, 4636, 576, 16201, 1982, 1114, 16233, 13995, 16231, 5691, 4338, 10364, 4632, 8866, 1176, 7312, 16247, 12427, 16252, 16253, 2]
 // Exports: default
 
-// Module 16230 (ChannelListStickyHeader)
+// Module 16232 (ChannelListStickyHeader)
 import nativeDefault from "native" /* 576 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 8866 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16199 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16229 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16201 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16231 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
@@ -82,9 +82,9 @@ export default function ChannelListStickyHeader(guild) {
   const items = [guild, isFavoritesGuildIdResult];
   const callback = noop.useCallback(() => {
     if (c1) {
-      tmp(16231)();
+      tmp(16233)();
     } else {
-      tmp(13994)(guild);
+      tmp(13995)(guild);
     }
   }, items);
   const tmp10 = useStickyServerHeaderSubtitleDefault(guild);
@@ -131,7 +131,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp22 = null;
   if (isFavoritesGuildIdResult) {
     const obj5 = { style: tmp.headerIcon, size: "sm", color: tmp2(576).colors.MOBILE_TEXT_HEADING_PRIMARY };
-    tmp22 = closure_6(tmp6(10363).StarIcon, obj5);
+    tmp22 = closure_6(tmp6(10364).StarIcon, obj5);
   }
   const items2 = [tmp22, , , ];
   const tmp16 = closure_8;
@@ -139,7 +139,7 @@ export default function ChannelListStickyHeader(guild) {
   items2[1] = closure_6(closure_4, { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(4632).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
   const obj7 = { guild, size: null, style: null };
   const obj6 = { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(4632).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
-  obj7.size = guild(1178).Icon.Sizes.REFRESH_SMALL_16;
+  obj7.size = guild(1176).Icon.Sizes.REFRESH_SMALL_16;
   obj7.style = tmp.guildBadge;
   items2[2] = closure_6(GuildBadgeV2Default, obj7);
   let tmp24Result = null;
@@ -184,7 +184,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [closure_7(tmp16, obj3), ];
   let tmp24Result5 = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result5 = tmp24(tmp6(16245).FavoritesGuildHeaderActionButton, {});
+    tmp24Result5 = tmp24(tmp6(16247).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp24Result5;
   obj15.children = items6;
@@ -192,13 +192,13 @@ export default function ChannelListStickyHeader(guild) {
   let tmp24Result6 = null;
   if (flag) {
     const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
-    tmp24Result6 = tmp24(tmp2(12426), obj16);
+    tmp24Result6 = tmp24(tmp2(12427), obj16);
   }
   items7[1] = tmp24Result6;
   if (tmp24Result7) {
     const obj17 = { style: tmp.joinButton, children: null };
     const obj18 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
-    obj17.children = tmp24(tmp2(16250), obj18);
+    obj17.children = tmp24(tmp2(16252), obj18);
     tmp24Result7 = tmp24(tmp21, obj17);
   }
   items7[2] = tmp24Result7;
@@ -206,7 +206,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp24Result8 = null;
   if (flag3) {
     const obj20 = { targetRef: ref, guild };
-    tmp24Result8 = tmp24(tmp2(16251), obj20);
+    tmp24Result8 = tmp24(tmp2(16253), obj20);
   }
   items7[4] = tmp24Result8;
   obj14.children = items7;

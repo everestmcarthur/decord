@@ -1,11 +1,11 @@
 // Module ID: 8954
 // Function ID: 8955
 // Name: useTrackShopCardClick
-// Dependencies: [19, 8955, 1074, 8893, 8295, 7657, 7656, 1242, 2]
+// Dependencies: [19, 8955, 1074, 8893, 8295, 7657, 7656, 1240, 2]
 // Exports: useTrackShopCardClick
 
 // Module 8954 (useTrackShopCardClick)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import noop from "module_19" /* 19 */;

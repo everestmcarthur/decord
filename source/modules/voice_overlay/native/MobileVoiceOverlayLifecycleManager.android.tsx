@@ -1,16 +1,16 @@
-// Module ID: 14616
-// Function ID: 14617
+// Module ID: 14617
+// Function ID: 14618
 // Name: MobileVoiceOverlayLifecycleManager
-// Dependencies: [1957, 2012, 1979, 1908, 4275, 4659, 4285, 5500, 1371, 4655, 10109, 1074, 14617, 14618, 14619, 14620, 7095, 13875, 14621, 14622, 8746, 1114, 14623, 10120, 7858, 4789, 5523, 1242, 4816, 1898, 2]
+// Dependencies: [1957, 2012, 1979, 1908, 4275, 4659, 4285, 5500, 1371, 4655, 10109, 1074, 14618, 14619, 14620, 14621, 7095, 13876, 14622, 14623, 8746, 1114, 14624, 10120, 7858, 4789, 5523, 1240, 4816, 1898, 2]
 
-// Module 14616 (MobileVoiceOverlayLifecycleManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 14617 (MobileVoiceOverlayLifecycleManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7858 */;
 import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10120 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14623 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14624 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -27,14 +27,14 @@ require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14617);
 fn(14618);
 fn(14619);
 fn(14620);
-fn(7095);
-fn(13875);
 fn(14621);
+fn(7095);
+fn(13876);
 fn(14622);
+fn(14623);
 const registerAsset = fn(8746);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };

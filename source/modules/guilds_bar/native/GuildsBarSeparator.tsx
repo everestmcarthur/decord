@@ -1,14 +1,14 @@
-// Module ID: 16440
-// Function ID: 16441
+// Module ID: 16442
+// Function ID: 16443
 // Name: GuildsBarSeparator
-// Dependencies: [19, 21, 4636, 576, 16115, 4373, 7176, 4338, 5670, 2]
+// Dependencies: [19, 21, 4636, 576, 16117, 4373, 7176, 4338, 5670, 2]
 
-// Module 16440 (GuildsBarSeparator)
+// Module 16442 (GuildsBarSeparator)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7176 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16115 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16117 */;
 import noop from "module_19" /* 19 */;
 
 const NativeViewDefault = tmp2(5670);

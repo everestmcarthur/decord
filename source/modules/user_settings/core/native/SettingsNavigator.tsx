@@ -1,30 +1,30 @@
-// Module ID: 17016
-// Function ID: 17017
+// Module ID: 17018
+// Function ID: 17019
 // Name: SettingsNavigator
-// Dependencies: [32, 19, 17, 2025, 14777, 1074, 21, 8017, 4636, 576, 15491, 1178, 4632, 1484, 13538, 17017, 7098, 563, 7265, 7285, 14779, 7578, 14780, 7103, 14260, 4338, 5204, 1114, 16498, 17018, 14669, 17019, 38, 2]
+// Dependencies: [32, 19, 17, 2025, 14778, 1074, 21, 8017, 4636, 576, 15492, 1176, 4632, 1484, 13539, 17019, 7098, 563, 7265, 7285, 14780, 7578, 14781, 7103, 14261, 4338, 5204, 1114, 16500, 17020, 14670, 17021, 38, 2]
 
-// Module 17016 (SettingsNavigator)
+// Module 17018 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14779 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 15491 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 16498 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14780 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15492 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16500 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14778 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
-    const obj = { size: tmp(1178).BetaSizes.SMALL };
-    return closure_1_10(tmp(1178).BetaTag, obj);
+    const obj = { size: tmp(1176).BetaSizes.SMALL };
+    return closure_1_10(tmp(1176).BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {

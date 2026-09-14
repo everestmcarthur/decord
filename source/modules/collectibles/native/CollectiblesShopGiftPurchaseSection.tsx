@@ -1,13 +1,13 @@
-// Module ID: 11147
-// Function ID: 11148
+// Module ID: 11148
+// Function ID: 11149
 // Name: CollectiblesShopGiftPurchaseSection
-// Dependencies: [5, 32, 19, 17, 8309, 7527, 1074, 1373, 21, 4636, 576, 7084, 10871, 504, 8301, 7265, 11138, 1242, 11148, 573, 4839, 4981, 11149, 1896, 1150, 10884, 4632, 1114, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 8309, 7527, 1074, 1373, 21, 4636, 576, 7084, 10872, 504, 8301, 7265, 11139, 1240, 11149, 573, 4839, 4981, 11150, 1896, 1363, 10885, 4632, 1114, 5056, 2]
 // Exports: default
 
-// Module 11147 (CollectiblesShopGiftPurchaseSection)
+// Module 11148 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

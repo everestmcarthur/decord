@@ -1,7 +1,7 @@
 // Module ID: 8863
 // Function ID: 8864
 // Name: GameProfileCommunity
-// Dependencies: [19, 17, 21, 576, 4636, 7046, 8860, 8859, 8838, 8809, 7445, 8864, 1971, 1114, 5665, 4632, 8866, 1178, 5056, 2]
+// Dependencies: [19, 17, 21, 576, 4636, 7046, 8860, 8859, 8838, 8809, 7445, 8864, 1971, 1114, 5665, 4632, 8866, 1176, 5056, 2]
 // Exports: default
 
 // Module 8863 (GameProfileCommunity)

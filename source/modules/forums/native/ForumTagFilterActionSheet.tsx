@@ -1,10 +1,10 @@
-// Module ID: 12893
-// Function ID: 12894
+// Module ID: 12894
+// Function ID: 12895
 // Name: ForumTagFilterActionSheet
-// Dependencies: [32, 19, 5540, 12130, 1074, 21, 4636, 7869, 5073, 7300, 7252, 1114, 9848, 6728, 5768, 5685, 504, 7233, 1396, 2]
+// Dependencies: [32, 19, 5540, 12131, 1074, 21, 4636, 7869, 5073, 7300, 7252, 1114, 9848, 6728, 5768, 5685, 504, 7233, 1396, 2]
 // Exports: default
 
-// Module 12893 (ForumTagFilterActionSheet)
+// Module 12894 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import tracking_Tracking from "tracking/Tracking" /* 7869 */;
@@ -41,7 +41,7 @@ function EmojiIcon(arg0) {
   obj2.name = emojiName;
   return tmp4(EmojiDefault, obj2);
 }
-const ForumChannelStore = fn(12130);
+const ForumChannelStore = fn(12131);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);

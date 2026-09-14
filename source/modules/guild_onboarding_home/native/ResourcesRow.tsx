@@ -1,20 +1,20 @@
-// Module ID: 16658
-// Function ID: 16659
+// Module ID: 16660
+// Function ID: 16661
 // Name: ResourcesRow
-// Dependencies: [19, 17, 16659, 21, 4636, 576, 16660, 12413, 4603, 16661, 1896, 5204, 4632, 1114, 2]
+// Dependencies: [19, 17, 16661, 21, 4636, 576, 16662, 12414, 4603, 16663, 1896, 5204, 4632, 1114, 2]
 // Exports: default
 
-// Module 16658 (ResourcesRow)
+// Module 16660 (ResourcesRow)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12413 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16660 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12414 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(16659).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(16661).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
@@ -49,7 +49,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16661, dependencyMap.paths), closure_4, { guildId });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16663, dependencyMap.paths), closure_4, { guildId });
         },
       children: null
     };

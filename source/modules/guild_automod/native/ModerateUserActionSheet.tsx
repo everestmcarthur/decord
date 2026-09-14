@@ -1,16 +1,16 @@
-// Module ID: 11964
-// Function ID: 11965
+// Module ID: 11965
+// Function ID: 11966
 // Name: ModerateUserActionSheet
-// Dependencies: [19, 2021, 1979, 4275, 1371, 1074, 21, 4636, 504, 11965, 9533, 4788, 4603, 7302, 1114, 7483, 4839, 11966, 1896, 11963, 4263, 11983, 11969, 4577, 11985, 9563, 11987, 7253, 7252, 11989, 5768, 2]
+// Dependencies: [19, 2021, 1979, 4275, 1371, 1074, 21, 4636, 504, 11966, 9533, 4788, 4603, 7302, 1114, 7483, 4839, 11967, 1896, 11964, 4263, 11984, 11970, 4577, 11986, 9563, 11988, 7253, 7252, 11990, 5768, 2]
 
-// Module 11964 (ModerateUserActionSheet)
+// Module 11965 (ModerateUserActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9533 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 11965 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11969 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 11985 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 11987 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 11966 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11970 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 11986 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 11988 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -106,7 +106,7 @@ export default noop.memo((user) => {
         obj2.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj3);
         obj2.onPress = function onPress() {
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11966, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11967, dependencyMap.paths), {
             userId: user.id,
             guildId: guild.id,
             onClose() {

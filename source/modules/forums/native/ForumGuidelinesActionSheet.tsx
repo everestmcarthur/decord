@@ -1,17 +1,17 @@
-// Module ID: 10395
-// Function ID: 10396
+// Module ID: 10396
+// Function ID: 10397
 // Name: ForumGuidelinesActionSheet
-// Dependencies: [32, 19, 17, 7376, 21, 4636, 576, 7989, 1611, 10396, 1150, 10397, 4603, 7226, 5057, 1114, 4464, 4790, 8748, 7253, 6728, 5204, 4632, 10378, 8525, 5156, 4626, 10395, 1896, 2]
+// Dependencies: [32, 19, 17, 7376, 21, 4636, 576, 7989, 1611, 10397, 1363, 10398, 4603, 7226, 5057, 1114, 4464, 4790, 8748, 7253, 6728, 5204, 4632, 10379, 8525, 5156, 4626, 10396, 1896, 2]
 // Exports: default, openForumGuidelinesActionSheet
 
-// Module 10395 (ForumGuidelinesActionSheet)
+// Module 10396 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import LinkUtils from "LinkUtils" /* 4790 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10397 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -187,5 +187,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10395, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(10396, dependencyMap.paths), closure_6, obj2);
 };

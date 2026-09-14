@@ -1,13 +1,13 @@
 // Module ID: 9862
 // Function ID: 9863
 // Name: CreateChannelModal
-// Dependencies: [32, 19, 17, 1961, 1975, 1957, 1979, 4275, 4285, 1371, 1074, 8519, 21, 4636, 576, 5161, 5169, 5182, 5178, 5175, 5168, 5187, 5159, 5167, 5179, 5177, 5174, 5166, 5186, 1114, 4632, 2024, 4355, 5686, 5770, 8716, 1178, 7084, 504, 38, 4789, 5496, 9863, 9864, 1483, 9865, 4816, 5705, 9867, 7480, 9868, 12, 9871, 5054, 6707, 5768, 9872, 9879, 7303, 5176, 4781, 9880, 1250, 9893, 5679, 7103, 2]
+// Dependencies: [32, 19, 17, 1961, 1975, 1957, 1979, 4275, 4285, 1371, 1074, 8519, 21, 4636, 576, 5161, 5169, 5182, 5178, 5175, 5168, 5187, 5159, 5167, 5179, 5177, 5174, 5166, 5186, 1114, 4632, 2024, 4355, 5686, 5770, 8716, 1176, 7084, 504, 38, 4789, 5496, 9863, 9864, 1483, 9865, 4816, 5705, 9867, 7480, 9868, 12, 9871, 5054, 6707, 5768, 9872, 9879, 7303, 5176, 4781, 9880, 1248, 9893, 5679, 7103, 2]
 // Exports: default
 
 // Module 9862 (CreateChannelModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import ChannelUtils from "ChannelUtils" /* 4781 */;
@@ -118,8 +118,8 @@ function ChannelTypeRow(selected) {
     const obj16 = { style: tmp.horizontalContainer, children: null };
     const obj17 = { text: label };
     const items1 = [tmp7(tmp2(8716).FormLabel, obj17), ];
-    const obj18 = { size: tmp2(1178).BetaSizes.SMALL };
-    items1[1] = tmp7(tmp2(1178).BetaTag, obj18);
+    const obj18 = { size: tmp2(1176).BetaSizes.SMALL };
+    items1[1] = tmp7(tmp2(1176).BetaTag, obj18);
     obj16.children = items1;
     tmp9 = __initData2(timestampProducer, obj16);
   }

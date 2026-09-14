@@ -1,22 +1,22 @@
-// Module ID: 12527
-// Function ID: 12528
+// Module ID: 12528
+// Function ID: 12529
 // Name: ApplicationCommandsCategories
-// Dependencies: [19, 17, 2021, 12524, 21, 4636, 576, 504, 12360, 5668, 5204, 1114, 4604, 4605, 2]
+// Dependencies: [19, 17, 2021, 12525, 21, 4636, 576, 504, 12361, 5668, 5204, 1114, 4604, 4605, 2]
 // Exports: default
 
-// Module 12527 (ApplicationCommandsCategories)
+// Module 12528 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12360 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12361 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12524);
+const ApplicationCommandsCategoriesConstants = fn(12525);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);

@@ -1,10 +1,10 @@
-// Module ID: 13280
-// Function ID: 13281
+// Module ID: 13281
+// Function ID: 13282
 // Name: useOpenNitroSubscribeActionSheet
 // Dependencies: [19, 1074, 1373, 7265, 7525, 2]
 // Exports: default
 
-// Module 13280 (useOpenNitroSubscribeActionSheet)
+// Module 13281 (useOpenNitroSubscribeActionSheet)
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
 import noop from "module_19" /* 19 */;
 

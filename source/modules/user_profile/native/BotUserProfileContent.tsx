@@ -1,9 +1,9 @@
-// Module ID: 13117
-// Function ID: 13118
+// Module ID: 13118
+// Function ID: 13119
 // Name: BotUserProfileContent
-// Dependencies: [19, 17, 1371, 7311, 7254, 21, 8357, 8346, 8359, 1611, 8307, 504, 4788, 4481, 7414, 8358, 11284, 8343, 8354, 7292, 4334, 8360, 4373, 13118, 8372, 11246, 4603, 11283, 1896, 11286, 1114, 13123, 13126, 9548, 13127, 5056, 5152, 576, 4839, 4649, 13128, 11340, 7288, 13178, 13181, 2]
+// Dependencies: [19, 17, 1371, 7311, 7254, 21, 8357, 8346, 8359, 1611, 8307, 504, 4788, 4481, 7414, 8358, 11285, 8343, 8354, 7292, 4334, 8360, 4373, 13119, 8372, 11247, 4603, 11284, 1896, 11287, 1114, 13124, 13127, 9548, 13128, 5056, 5152, 576, 4839, 4649, 13129, 11341, 7288, 13179, 13182, 2]
 
-// Module 13117 (BotUserProfileContent)
+// Module 13118 (BotUserProfileContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -121,7 +121,7 @@ export default noop.memo(function BotUserProfileContent(user) {
                 id = channel.id;
               }
               obj2.channelId = id;
-              obj.openLazy(asyncRequireImpl(11283, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj2, "stack");
+              obj.openLazy(asyncRequireImpl(11284, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj2, "stack");
             },
         style: null,
         emojiOnlyStyle: null

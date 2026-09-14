@@ -1,11 +1,11 @@
 // Module ID: 7820
 // Function ID: 7821
 // Name: AnalyticsActions
-// Dependencies: [5, 7821, 1347, 7805, 1074, 7564, 7823, 7801, 7824, 7826, 7830, 5532, 4816, 1242, 7831, 7779, 1150, 1256, 7836, 5528, 2]
+// Dependencies: [5, 7821, 1345, 7805, 1074, 7564, 7823, 7801, 7824, 7826, 7830, 5532, 4816, 1240, 7831, 7779, 1363, 1254, 7836, 5528, 2]
 // Exports: trackAdContentAppStoreOverlayEvent, trackAdContentClicked, trackAdContentQuestBarOrDockModeChange, trackAppStoreOverlayEvent, trackBountyCarouselEmptyStateViewed, trackBountyVerticalScroll, trackQuestContentClicked, trackQuestContentQuestBarOrDockModeChange, trackQuestEmbedFallbackViewed, trackQuestHomeCarouselScroll, trackQuestHomeOrbShopCarouselScroll, trackQuestHomeOrbShopCarouselViewed, trackQuestHomeSearchClosed, trackQuestHomeSearchEntered, trackQuestHomeSearchQuerySubmitted
 
 // Module 7820 (AnalyticsActions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
@@ -15,7 +15,7 @@ import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7821 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1345 */;
 import QuestStore from "QuestStore" /* 7805 */;
 
 const SessionHeartbeatScheduler = tmp(7564);
@@ -80,8 +80,8 @@ function trackQuestEvent(sourceQuestContent) {
           const tmp21Result = tmp21(4816);
         } else {
           const obj4 = { flush: hasItem };
-          tmp21(1242).track(event, obj3, obj4);
-          const tmp21Result2 = tmp21(1242);
+          tmp21(1240).track(event, obj3, obj4);
+          const tmp21Result2 = tmp21(1240);
         }
       }
     }
@@ -162,8 +162,8 @@ function trackAdContentEvent(sourceQuestContent) {
       const tmp20Result = tmp20(4816);
     } else {
       const obj9 = { flush: hasItem };
-      tmp20(1242).track(event, obj8, obj9);
-      const tmp20Result2 = tmp20(1242);
+      tmp20(1240).track(event, obj8, obj9);
+      const tmp20Result2 = tmp20(1240);
     }
   }
 }

@@ -1,13 +1,13 @@
-// Module ID: 12508
-// Function ID: 12509
+// Module ID: 12509
+// Function ID: 12510
 // Name: BaseChannelItem
-// Dependencies: [19, 17, 10246, 4818, 21, 4636, 576, 4632, 1151, 1178, 10293, 9031, 12509, 2]
+// Dependencies: [19, 17, 10246, 4818, 21, 4636, 576, 4632, 1364, 1176, 10293, 9031, 12510, 2]
 // Exports: BaseChannelIcon, BaseChannelName, default, getChannelSubtitleTextProps, useChannelNameTextProps
 
-// Module 12508 (BaseChannelItem)
+// Module 12509 (BaseChannelItem)
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
@@ -134,7 +134,7 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12509);
+      let AnimatedPressableHighlight = hideIcon(12510);
     } else {
       AnimatedPressableHighlight = mode(9031).AnimatedPressableHighlight;
     }

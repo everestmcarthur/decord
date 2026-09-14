@@ -1,16 +1,16 @@
-// Module ID: 15544
-// Function ID: 15545
+// Module ID: 15545
+// Function ID: 15546
 // Name: SettingsChatScreen
-// Dependencies: [19, 17, 1371, 4300, 8079, 1074, 21, 4636, 576, 1483, 563, 4294, 4632, 1114, 5688, 1178, 10526, 7093, 11601, 14775, 2]
+// Dependencies: [19, 17, 1371, 4300, 8079, 1074, 21, 4636, 576, 1483, 563, 4294, 4632, 1114, 5688, 1176, 10527, 7093, 11602, 14776, 2]
 // Exports: default
 
-// Module 15544 (SettingsChatScreen)
+// Module 15545 (SettingsChatScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
-import _modDef10526 from "module_10526" /* 10526 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import _modDef10527 from "module_10527" /* 10527 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
@@ -35,8 +35,8 @@ function VideoUploadQualityNitroUpsell() {
     const obj4 = { style: tmp3.card, children: null };
     const obj5 = { border: "none", shadow: "none", children: null };
     const obj6 = { style: tmp3.cardContent, children: null };
-    const obj7 = { style: tmp3.cardIcon, source: _modDef10526, size: tmp(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
-    const items2 = [tmp7(tmp(1178).Icon, obj7), ];
+    const obj7 = { style: tmp3.cardIcon, source: _modDef10527, size: tmp(1176).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const items2 = [tmp7(tmp(1176).Icon, obj7), ];
     const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1114).intl;
     const obj9 = {

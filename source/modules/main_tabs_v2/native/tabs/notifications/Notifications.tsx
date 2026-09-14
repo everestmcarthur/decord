@@ -1,10 +1,10 @@
-// Module ID: 16496
-// Function ID: 16497
+// Module ID: 16498
+// Function ID: 16499
 // Name: notifications/Notifications
-// Dependencies: [19, 17, 11218, 1954, 21, 4636, 576, 4495, 7046, 7957, 16497, 7226, 5204, 1114, 16498, 4632, 16499, 7963, 16501, 7265, 7285, 7578, 5711, 7259, 16505, 16506, 12026, 4490, 1611, 16109, 5206, 4347, 2]
+// Dependencies: [19, 17, 11219, 1954, 21, 4636, 576, 4495, 7046, 7957, 16499, 7226, 5204, 1114, 16500, 4632, 16501, 7963, 16503, 7265, 7285, 7578, 5711, 7259, 16507, 16508, 12027, 4490, 1611, 16111, 5206, 4347, 2]
 // Exports: ThemedNotificationsModal
 
-// Module 16496 (notifications/Notifications)
+// Module 16498 (notifications/Notifications)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import native from "native" /* 4347 */;
@@ -16,11 +16,11 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 7046 */;
 import LayerScope from "LayerScope" /* 7259 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12026 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16109 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16497 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16505 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 16506 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12027 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16111 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16499 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16507 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 16508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -129,7 +129,7 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11218).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11219).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -168,7 +168,7 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1114).intl;
     obj4.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
     obj4.onPress = goBack;
-    obj4.children = tmp12(tmp5(16498).LeftBackIconWithBadge, {});
+    obj4.children = tmp12(tmp5(16500).LeftBackIconWithBadge, {});
     const items1 = [tmp12(tmp5(5204).PressableOpacity, obj4), , ];
     const obj5 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp5(1114).intl;
@@ -179,17 +179,17 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     if (isForLaterExperimentOn) {
       const obj7 = { children: null };
       const obj8 = { ref, type: tmp5(7963).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
-      const items2 = [tmp12(tmp2(16499), obj8), ];
+      const items2 = [tmp12(tmp2(16501), obj8), ];
       const obj9 = { type: null, onOpen: null };
-      const tmp2Result = tmp2(16499);
+      const tmp2Result = tmp2(16501);
       obj9.type = tmp5(7963).SavedMessageSortTypes.REMINDER;
       obj9.onOpen = callback;
-      items2[1] = tmp12(tmp2(16499), obj9);
+      items2[1] = tmp12(tmp2(16501), obj9);
       obj7.children = items2;
       tmp10Result = tmp10(closure_8, obj7);
-      const tmp2Result2 = tmp2(16499);
+      const tmp2Result2 = tmp2(16501);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(16501), {})];
+    const items3 = [tmp10Result, tmp12(tmp2(16503), {})];
     obj6.children = items3;
     items1[2] = tmp10(tmp11, obj6);
     obj3.children = items1;

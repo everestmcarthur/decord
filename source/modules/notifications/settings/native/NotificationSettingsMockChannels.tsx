@@ -1,12 +1,12 @@
 // Module ID: 10292
 // Function ID: 10293
 // Name: NotificationSettingsMockChannels
-// Dependencies: [19, 17, 4818, 21, 4636, 576, 1114, 10293, 5161, 4632, 1178, 2]
+// Dependencies: [19, 17, 4818, 21, 4636, 576, 1114, 10293, 5161, 4632, 1176, 2]
 // Exports: default
 
 // Module 10292 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import TextIcon from "TextIcon" /* 5161 */;
 import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 10293 */;

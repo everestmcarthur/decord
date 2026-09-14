@@ -1,12 +1,12 @@
-// Module ID: 13251
-// Function ID: 13252
+// Module ID: 13252
+// Function ID: 13253
 // Name: UserProfileIncomingFriendRequest
-// Dependencies: [19, 17, 21, 4636, 576, 8357, 8307, 7265, 13252, 4788, 7271, 4632, 1114, 1178, 1396, 13253, 5056, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 8357, 8307, 7265, 13253, 4788, 7271, 4632, 1114, 1176, 1396, 13254, 5056, 2]
 // Exports: default
 
-// Module 13251 (UserProfileIncomingFriendRequest)
+// Module 13252 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import noop from "module_19" /* 19 */;
 

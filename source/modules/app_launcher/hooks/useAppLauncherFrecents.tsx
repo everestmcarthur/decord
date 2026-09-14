@@ -1,16 +1,16 @@
-// Module ID: 12248
-// Function ID: 12249
+// Module ID: 12249
+// Function ID: 12250
 // Name: useAppLauncherFrecents
-// Dependencies: [19, 7210, 1371, 12249, 1920, 5080, 1894, 9546, 504, 7273, 8457, 12250, 9536, 9418, 9701, 2]
+// Dependencies: [19, 7210, 1371, 12250, 1920, 5080, 1894, 9546, 504, 7273, 8457, 12251, 9536, 9418, 9701, 2]
 // Exports: default, useAppLauncherFrecentApps
 
-// Module 12248 (useAppLauncherFrecents)
+// Module 12249 (useAppLauncherFrecents)
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7273 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9546 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
 import UserStore from "UserStore" /* 1371 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12249 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12250 */;
 
 const require = fn;
 function useFrecentApps(onlyActivityApps) {

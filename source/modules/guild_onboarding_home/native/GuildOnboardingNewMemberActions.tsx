@@ -1,13 +1,13 @@
-// Module ID: 16663
-// Function ID: 16664
+// Module ID: 16665
+// Function ID: 16666
 // Name: GuildOnboardingNewMemberActions
-// Dependencies: [19, 17, 5540, 1957, 2021, 1979, 4275, 4823, 4824, 1074, 1374, 4262, 21, 4636, 576, 504, 4789, 1396, 12413, 5668, 4289, 4632, 1178, 11934, 5204, 1114, 12418, 16664, 1384, 16665, 2]
+// Dependencies: [19, 17, 5540, 1957, 2021, 1979, 4275, 4823, 4824, 1074, 1374, 4262, 21, 4636, 576, 504, 4789, 1396, 12414, 5668, 4289, 4632, 1176, 11935, 5204, 1114, 12419, 16666, 1384, 16667, 2]
 // Exports: default
 
-// Module 16663 (GuildOnboardingNewMemberActions)
+// Module 16665 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 576 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12413 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12414 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

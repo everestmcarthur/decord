@@ -1,13 +1,13 @@
-// Module ID: 13170
-// Function ID: 13171
+// Module ID: 13171
+// Function ID: 13172
 // Name: useUserProfileActivity
-// Dependencies: [19, 8918, 1908, 4676, 4661, 504, 11006, 13171, 8252, 8459, 8455, 2]
+// Dependencies: [19, 8918, 1908, 4676, 4661, 504, 11007, 13172, 8252, 8459, 8455, 2]
 // Exports: default
 
-// Module 13170 (useUserProfileActivity)
+// Module 13171 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 4661 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13171 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13172 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8918 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import PresenceStore from "PresenceStore" /* 4676 */;

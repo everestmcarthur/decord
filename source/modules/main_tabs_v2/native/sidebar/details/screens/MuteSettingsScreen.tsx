@@ -1,12 +1,12 @@
-// Module ID: 16976
-// Function ID: 16977
+// Module ID: 16978
+// Function ID: 16979
 // Name: MuteSettingsScreen
-// Dependencies: [19, 17, 1957, 1979, 4285, 1371, 1074, 21, 4636, 576, 7867, 7222, 7217, 9186, 5686, 1178, 10273, 4632, 1114, 4789, 10274, 1483, 11445, 10272, 1484, 563, 7966, 1611, 2]
+// Dependencies: [19, 17, 1957, 1979, 4285, 1371, 1074, 21, 4636, 576, 7867, 7222, 7217, 9186, 5686, 1176, 10273, 4632, 1114, 4789, 10274, 1483, 11446, 10272, 1484, 563, 7966, 1611, 2]
 
-// Module 16976 (MuteSettingsScreen)
+// Module 16978 (MuteSettingsScreen)
 import nativeDefault from "native" /* 576 */;
 import MuteSettingsUtils from "MuteSettingsUtils" /* 9186 */;
-import threadActionSheets from "threadActionSheets" /* 11445 */;
+import threadActionSheets from "threadActionSheets" /* 11446 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -30,7 +30,7 @@ function UnmuteOptions(channel) {
   const tmp3 = closure_11;
   const tmp4 = View;
   const tmp5 = closure_10;
-  obj2.icon = closure_10(channel(1178).Icon, { disableColor: true, source: navigation(10273) });
+  obj2.icon = closure_10(channel(1176).Icon, { disableColor: true, source: navigation(10273) });
   const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1114).intl;
   const obj5 = { name: null };

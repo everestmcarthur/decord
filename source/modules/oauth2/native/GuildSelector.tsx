@@ -1,7 +1,7 @@
 // Module ID: 9555
 // Function ID: 9556
 // Name: GuildSelector
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4603, 9556, 1896, 1114, 1086, 4632, 1178, 8716, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4603, 9556, 1896, 1114, 1086, 4632, 1176, 8716, 2]
 // Exports: default
 
 // Module 9555 (GuildSelector)
@@ -58,7 +58,7 @@ export default function GuildSelector(disabled) {
     tmp6Result = null;
     if ("" !== error) {
       const obj3 = { style: tmp.error, children: error };
-      tmp6Result = tmp6(tmp7(1178).LegacyText, obj3);
+      tmp6Result = tmp6(tmp7(1176).LegacyText, obj3);
     }
   }
   items1[1] = tmp6Result;
@@ -74,7 +74,7 @@ export default function GuildSelector(disabled) {
   const obj5 = { style: tmp.label, children: null };
   const intl3 = tmp7(1114).intl;
   obj5.children = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});
-  items1[3] = closure_7(selectedGuildId(1178).LegacyText, obj5);
+  items1[3] = closure_7(selectedGuildId(1176).LegacyText, obj5);
   obj.children = items1;
   return closure_8(View, obj);
 };

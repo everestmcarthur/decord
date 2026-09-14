@@ -1,12 +1,12 @@
 // Module ID: 9418
 // Function ID: 9419
 // Name: AppLauncherUtils
-// Dependencies: [109, 5, 9419, 1918, 9538, 1074, 5080, 4629, 1114, 8981, 9540, 1150, 1894, 7626, 9541, 7784, 7559, 4980, 1396, 9539, 9547, 7624, 9548, 2]
+// Dependencies: [109, 5, 9419, 1918, 9538, 1074, 5080, 4629, 1114, 8981, 9540, 1363, 1894, 7626, 9541, 7784, 7559, 4980, 1396, 9539, 9547, 7624, 9548, 2]
 // Exports: appLauncherShowsRecommendations, ensureRecommendationSectionsOnlyContainActivities, executeAppLauncherCommand, formatPrimaryEntryPointCommandName, getApplicationDetails, getEmbeddedActivityConfig, getInstallAppProps, getInstallAppPropsFromProfileApplication, getSectionDescription, getSectionName, getShelfBadgeNameIfActive, isAppAvailableInAppLauncher, isApplicationAdSupported, isApplicationMonetizedWithIAP, isEmbeddedApp, isPartnerApplication, isPromotedApplication, isRealApplication
 
 // Module 9418 (AppLauncherUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Server from "Server" /* 1894 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;

@@ -1,19 +1,19 @@
-// Module ID: 12737
-// Function ID: 12738
+// Module ID: 12738
+// Function ID: 12739
 // Name: UserProfileMutualsActionSheet
-// Dependencies: [32, 19, 17, 4676, 8300, 21, 4636, 576, 8333, 504, 5686, 1178, 4788, 11004, 5665, 4632, 12731, 9922, 12738, 12739, 11285, 12732, 12733, 1114, 12743, 12745, 2]
+// Dependencies: [32, 19, 17, 4676, 8300, 21, 4636, 576, 8333, 504, 5686, 1176, 4788, 11005, 5665, 4632, 12732, 9922, 12739, 12740, 11286, 12733, 12734, 1114, 12744, 12746, 2]
 // Exports: default
 
-// Module 12737 (UserProfileMutualsActionSheet)
+// Module 12738 (UserProfileMutualsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import GuildIcon from "GuildIcon" /* 5665 */;
 import TableRow from "TableRow" /* 5686 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11004 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11285 */;
-import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12731 */;
-import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12732 */;
-import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12738 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11005 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11286 */;
+import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12732 */;
+import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12733 */;
+import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
@@ -31,8 +31,8 @@ function MutualFriendRow(mutualFriend) {
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   const obj3 = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
   const obj2 = user(504);
-  obj3.icon = closure_9(user(1178).Avatar, { user, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true });
-  const obj4 = { user, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
+  obj3.icon = closure_9(user(1176).Avatar, { user, size: user(1176).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true });
+  const obj4 = { user, size: user(1176).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
   obj3.label = NicknameUtilsDefault.getName(guildId, undefined, user);
   obj3.subLabel = closure_9(ActivityStatusDefault, { userId: user.id, guildId, textStyle: tmp.activityStatusText });
   obj3.start = start;
@@ -134,7 +134,7 @@ export default function UserProfileMutualsActionSheet(user) {
     let tmp10 = closure_9(closure_5, obj5);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12739).NoMutualFriends, {}) };
+    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12740).NoMutualFriends, {}) };
     tmp10 = closure_9(closure_5, obj6);
     tmp9 = closure_9;
   } else {
@@ -157,7 +157,7 @@ export default function UserProfileMutualsActionSheet(user) {
           });
         }
     };
-    tmp10 = closure_9(tmp6(11285).UserProfileStackedActionSheetList, obj7);
+    tmp10 = closure_9(tmp6(11286).UserProfileStackedActionSheetList, obj7);
   }
   obj4.page = tmp10;
   const items = [obj4, ];
@@ -171,7 +171,7 @@ export default function UserProfileMutualsActionSheet(user) {
     const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
     let tmp9Result = tmp9(closure_5, obj9);
   } else if (0 === mutualGuilds.length) {
-    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12733).NoMutualServers, {}) };
+    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12734).NoMutualServers, {}) };
     tmp9Result = tmp9(closure_5, obj10);
   } else {
     const obj11 = {
@@ -192,7 +192,7 @@ export default function UserProfileMutualsActionSheet(user) {
           });
         }
     };
-    tmp9Result = tmp9(tmp6(11285).UserProfileStackedActionSheetList, obj11);
+    tmp9Result = tmp9(tmp6(11286).UserProfileStackedActionSheetList, obj11);
   }
   obj8.page = tmp9Result;
   items[1] = obj8;
@@ -207,7 +207,7 @@ export default function UserProfileMutualsActionSheet(user) {
   obj12.title = intl.string(user(1114).t["l2/aLi"]);
   const obj13 = { style: tmp.container, onLayout: callback, children: null };
   const tmp3Result4 = UserProfileStackedActionSheetDefault;
-  const items1 = [tmp9(closure_5, { children: tmp9(user(12743).Tabs, { state: segmentedControlState }) }), tmp9(user(12745).SegmentedControlPages, { state: segmentedControlState })];
+  const items1 = [tmp9(closure_5, { children: tmp9(user(12744).Tabs, { state: segmentedControlState }) }), tmp9(user(12746).SegmentedControlPages, { state: segmentedControlState })];
   obj13.children = items1;
   obj12.children = closure_10(closure_5, obj13);
   return tmp9(tmp3Result4, obj12);

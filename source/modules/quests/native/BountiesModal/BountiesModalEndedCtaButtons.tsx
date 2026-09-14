@@ -1,17 +1,17 @@
-// Module ID: 15133
-// Function ID: 15134
+// Module ID: 15134
+// Function ID: 15135
 // Name: BountiesModalEndedCtaButtons
-// Dependencies: [21, 4636, 576, 11619, 4373, 4637, 4640, 15128, 5056, 11629, 5532, 5530, 7830, 1114, 2]
+// Dependencies: [21, 4636, 576, 11620, 4373, 4637, 4640, 15129, 5056, 11630, 5532, 5530, 7830, 1114, 2]
 // Exports: default
 
-// Module 15133 (BountiesModalEndedCtaButtons)
+// Module 15134 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import QuestContent from "QuestContent" /* 5530 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
@@ -36,8 +36,8 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   let tmp = closure_5();
-  closure_3 = bounty(11619).useGetQuestImpressionId();
-  let obj = bounty(11619);
+  closure_3 = bounty(11620).useGetQuestImpressionId();
+  let obj = bounty(11620);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -50,7 +50,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   fn.__workletHash = 11417131685254;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  bounty(15128);
+  bounty(15129);
   if (visible) {
     const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];

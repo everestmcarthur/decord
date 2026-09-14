@@ -1,7 +1,7 @@
 // Module ID: 7413
 // Function ID: 7414
 // Name: GameActionCreators
-// Dependencies: [5, 1916, 1074, 1272, 573, 1952, 12, 2]
+// Dependencies: [5, 1916, 1074, 1270, 573, 1952, 12, 2]
 // Exports: fetchGamesWithSupplementalData
 
 // Module 7413 (GameActionCreators)

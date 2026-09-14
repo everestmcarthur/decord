@@ -1,10 +1,10 @@
 // Module ID: 7398
 // Function ID: 7399
 // Name: HarmTypeConfiguration
-// Dependencies: [1074, 7399, 4867, 7400, 1935, 7401, 7404, 1187, 2]
+// Dependencies: [1074, 7399, 4867, 7400, 1935, 7401, 7404, 1185, 2]
 
 // Module 7398 (HarmTypeConfiguration)
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import MediaTypes from "MediaTypes" /* 4867 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 7399 */;

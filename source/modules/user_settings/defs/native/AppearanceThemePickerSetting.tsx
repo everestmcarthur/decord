@@ -1,15 +1,15 @@
-// Module ID: 15350
-// Function ID: 15351
+// Module ID: 15351
+// Function ID: 15352
 // Name: AppearanceThemePickerSetting
-// Dependencies: [1183, 8079, 1074, 504, 11601, 1114, 15344, 15351, 2]
+// Dependencies: [1181, 8079, 1074, 504, 11602, 1114, 15345, 15352, 2]
 
-// Module 15350 (AppearanceThemePickerSetting)
+// Module 15351 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -20,7 +20,7 @@ const route = SettingBuilders.createRoute({
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: fn(15344).useAppearanceSettingTrailing,
+  useTrailing: fn(15345).useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

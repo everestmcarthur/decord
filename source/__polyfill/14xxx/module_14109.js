@@ -1,17 +1,16 @@
 // Module ID: 14109
 // Function ID: 14110
-// Dependencies: [14101]
+// Dependencies: [14102]
 
 // Module 14109
-import _mod14101 from "module_14101" /* 14101 */;
+import _mod14102 from "module_14102" /* 14102 */;
 
 
-export default (str, arg1) => {
-  const tmp = _mod14101;
-  const tmpResult = tmp(str.trim().replace(/^[=v]+/, ""), arg1);
+export default (arg0, arg1) => {
+  const tmp = _mod14102(arg0, arg1);
   let version = null;
-  if (tmpResult) {
-    version = tmpResult.version;
+  if (tmp) {
+    version = tmp.version;
   }
   return version;
 };

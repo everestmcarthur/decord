@@ -1,12 +1,12 @@
 // Module ID: 9950
 // Function ID: 9951
 // Name: instant_invite/InstantInviteUtils
-// Dependencies: [7560, 1961, 1957, 9951, 2012, 4620, 4676, 1371, 8865, 7838, 9955, 1074, 1242, 7840, 9956, 9957, 4621, 4603, 8479, 4334, 7861, 7292, 4769, 38, 9953, 2]
+// Dependencies: [7560, 1961, 1957, 9951, 2012, 4620, 4676, 1371, 8865, 7838, 9955, 1074, 1240, 7840, 9956, 9957, 4621, 4603, 8479, 4334, 7861, 7292, 4769, 38, 9953, 2]
 // Exports: getShareMessage, handleCopy, handleOpenInviteActionsheet, handleOpenShareSheet, handlePressSettings, hasDeferredInvite, isAppInstalled, showInstantInviteActionSheetForChannel, showVanityUrlInviteActionSheet
 
 // Module 9950 (instant_invite/InstantInviteUtils)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4621 */;
@@ -59,8 +59,8 @@ function showInstantInviteActionSheet(channel, source) {
       id1 = streamerApplication.id;
     }
     obj4.game_id = id1;
-    tmp(1242).track(tmp3.OPEN_MODAL, obj4);
-    const tmpResult = tmp(1242);
+    tmp(1240).track(tmp3.OPEN_MODAL, obj4);
+    const tmpResult = tmp(1240);
   } else {
     let targetApplicationId;
     if (source != null) {
@@ -359,8 +359,8 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
   if (null != guild.vanityURLCode) {
     if ("" !== guild.vanityURLCode) {
       const obj3 = { type: "Vanity URL Invite", source: GUILD_HEADER };
-      tmp4(1242).track(constants.OPEN_POPOUT, obj3);
-      const tmp4Result = tmp4(1242);
+      tmp4(1240).track(constants.OPEN_POPOUT, obj3);
+      const tmp4Result = tmp4(1240);
       tmp4(9956).init(guild.id, channel.id, { skipCreateInvite: true });
       const obj4 = { vanityURLCode: guild.vanityURLCode, channel, source: GUILD_HEADER, guildScheduledEventId: undefined, stackingBehavior: undefined };
       tmp4(9957)(obj4);

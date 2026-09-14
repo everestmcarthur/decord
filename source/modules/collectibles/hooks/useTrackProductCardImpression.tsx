@@ -1,11 +1,11 @@
-// Module ID: 15909
-// Function ID: 15910
+// Module ID: 15911
+// Function ID: 15912
 // Name: useTrackProductCardImpression
-// Dependencies: [19, 7645, 1074, 8893, 504, 8295, 4294, 7657, 1242, 2]
+// Dependencies: [19, 7645, 1074, 8893, 504, 8295, 4294, 7657, 1240, 2]
 // Exports: useTrackProductCardImpression
 
-// Module 15909 (useTrackProductCardImpression)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 15911 (useTrackProductCardImpression)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;

@@ -1,14 +1,14 @@
-// Module ID: 13110
-// Function ID: 13111
+// Module ID: 13111
+// Function ID: 13112
 // Name: MediaViewer
-// Dependencies: [32, 19, 17, 21, 1150, 4373, 13111, 13112, 8385, 6756, 7175, 7265, 7285, 8411, 13116, 4637, 8380, 8450, 9611, 4374, 9613, 2]
+// Dependencies: [32, 19, 17, 21, 1363, 4373, 13112, 13113, 8385, 6756, 7175, 7265, 7285, 8411, 13117, 4637, 8380, 8450, 9611, 4374, 9613, 2]
 
-// Module 13110 (MediaViewer)
+// Module 13111 (MediaViewer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import useVideoControls from "useVideoControls" /* 8380 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8411 */;
-import MediaViewerItem from "MediaViewerItem" /* 13112 */;
+import MediaViewerItem from "MediaViewerItem" /* 13113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ function MediaViewer(arg0) {
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13116)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13117)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -240,7 +240,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_9 = PlatformUtils.isAndroid();
 let closure_10 = { code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}" };
 let closure_11 = { code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };

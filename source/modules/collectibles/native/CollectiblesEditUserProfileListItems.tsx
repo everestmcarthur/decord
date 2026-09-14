@@ -1,14 +1,14 @@
-// Module ID: 13301
-// Function ID: 13302
+// Module ID: 13302
+// Function ID: 13303
 // Name: CollectiblesEditUserProfileListItems
-// Dependencies: [19, 17, 1371, 1076, 21, 4636, 576, 5204, 4604, 4605, 1178, 13302, 4632, 1114, 7265, 7644, 4603, 13303, 8957, 504, 4294, 8290, 7657, 2]
+// Dependencies: [19, 17, 1371, 1076, 21, 4636, 576, 5204, 4604, 4605, 1176, 13303, 4632, 1114, 7265, 7644, 4603, 13304, 8957, 504, 4294, 8290, 7657, 2]
 // Exports: EditCollectiblesListItemNone, EditCollectiblesListItemProduct, EditCollectiblesListItemShop
 
-// Module 13301 (CollectiblesEditUserProfileListItems)
+// Module 13302 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
@@ -18,7 +18,7 @@ import Pressables from "Pressables" /* 5204 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8290 */;
-import _modDef13302 from "module_13302" /* 13302 */;
+import _modDef13303 from "module_13303" /* 13303 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -82,7 +82,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [React5(native.Icon, { source: _modDef13302, size: native.IconSizes.LARGE }), ];
+  const items = [React5(native.Icon, { source: _modDef13303, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -114,7 +114,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_7(analyticsSource(1178).Icon, { source: analyticsLocations(13303), size: analyticsSource(1178).IconSizes.LARGE }), , ];
+  const items1 = [closure_7(analyticsSource(1176).Icon, { source: analyticsLocations(13304), size: analyticsSource(1176).IconSizes.LARGE }), , ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1114).intl;
   obj3.children = intl.string(analyticsSource(1114).t.pWG4ze);

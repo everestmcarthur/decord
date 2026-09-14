@@ -1,7 +1,7 @@
 // Module ID: 4521
 // Function ID: 4522
 // Name: GuildThemeResolver
-// Dependencies: [19, 1221, 1979, 4458, 4522, 4524, 1074, 4491, 504, 4564, 4567, 2]
+// Dependencies: [19, 1219, 1979, 4458, 4522, 4524, 1074, 4491, 504, 4564, 4567, 2]
 // Exports: getActiveGuildTheme, getActiveGuildThemeForGuildId, isRenderableGuildThemeSettings, resolveRenderableGuildThemeSettings, useActiveGuildTheme, useEnabledGuildThemeForGuildId, useIsGuildThemePreviewActive
 
 // Module 4521 (GuildThemeResolver)
@@ -10,7 +10,7 @@ import GuildThemePresets from "GuildThemePresets" /* 4491 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4564 */;
 import Client from "Client" /* 4567 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import GuildThemePreviewStore from "GuildThemePreviewStore" /* 4522 */;

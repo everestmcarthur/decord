@@ -1,7 +1,7 @@
 // Module ID: 8052
 // Function ID: 8053
 // Name: ForumPostActions
-// Dependencies: [1074, 8050, 4588, 8053, 1232, 4580, 1114, 2024, 8054, 7192, 1396, 8055, 4287, 4293, 2]
+// Dependencies: [1074, 8050, 4588, 8053, 1230, 4580, 1114, 2024, 8054, 7192, 1396, 8055, 4287, 4293, 2]
 // Exports: createDefaultReaction, createForumPostActions
 
 // Module 8052 (ForumPostActions)
@@ -28,7 +28,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "r", displayName: "isArray" };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: true, displayName: true };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -133,7 +133,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1232).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4588 : 8053));
-    const tmp6Result2 = tmp6(1232);
+    tmp6(1230).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4588 : 8053));
+    const tmp6Result2 = tmp6(1230);
   }
 };

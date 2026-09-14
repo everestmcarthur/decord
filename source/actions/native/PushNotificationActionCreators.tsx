@@ -1,19 +1,19 @@
-// Module ID: 12541
-// Function ID: 12542
+// Module ID: 12542
+// Function ID: 12543
 // Name: PushNotificationActionCreators
-// Dependencies: [5, 12542, 502, 1074, 12543, 6697, 3, 1099, 1272, 1232, 12546, 510, 4829, 1150, 1250, 1369, 573, 2]
+// Dependencies: [5, 12543, 502, 1074, 12544, 6697, 3, 1099, 1270, 1230, 12547, 510, 4829, 1363, 1248, 1369, 573, 2]
 // Exports: setPushNotificationPermissionEligibleForPrompt, setPushPermissionReactivationSeen, setPushPermissionState, updateNotificationAuthorizationStatus
 
-// Module 12541 (PushNotificationActionCreators)
+// Module 12542 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -119,7 +119,7 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1074);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12543).MAX_PUSH_SYNC_ACCOUNTS;
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12544).MAX_PUSH_SYNC_ACCOUNTS;
 const PushNotificationConstants = fn(6697);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
@@ -147,17 +147,17 @@ export default {
       }
       const obj2 = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
       const obj = TrackedHTTPUtilsDefault;
-      let isAndroidResult = tmp2(1150).isAndroid();
+      let isAndroidResult = tmp2(1363).isAndroid();
       if (isAndroidResult) {
         isAndroidResult = !closure_1_14;
       }
       obj2.bypass_server_throttling_supported = isAndroidResult;
       obj2.bundle_id = bundle_id;
       request.body = obj2;
-      const obj3 = { event: tmp2(1250).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
+      const obj3 = { event: tmp2(1248).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
       request.trackedActionData = obj3;
       syncDeviceResult = obj.post(request);
-      const tmp2Result = tmp2(1150);
+      const tmp2Result = tmp2(1363);
     }
     return syncDeviceResult;
   },
@@ -193,7 +193,7 @@ export default {
           closure_128_1 = value;
           if (closure_128_1.length >= 1) {
             if (null != closure_128_1[0]) {
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
                 let tmp9 = closure_1_12;
@@ -201,7 +201,7 @@ export default {
                 tmp9 = closure_1_13();
               }
               const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1369).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
-              let isAndroidResult = tmp2(1150).isAndroid();
+              let isAndroidResult = tmp2(1363).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
@@ -221,8 +221,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12546).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12546);
+          const result = v2(12547).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12547);
         }
       }
       return value;

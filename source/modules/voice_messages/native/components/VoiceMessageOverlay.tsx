@@ -1,9 +1,9 @@
-// Module ID: 12774
-// Function ID: 12775
+// Module ID: 12775
+// Function ID: 12776
 // Name: VoiceMessageOverlay
-// Dependencies: [32, 19, 17, 4628, 1957, 12089, 12090, 1074, 12091, 21, 4373, 1178, 4632, 12, 8574, 4636, 576, 5522, 504, 4338, 5667, 1114, 4637, 5149, 10377, 12775, 7084, 12536, 5043, 5052, 1109, 12003, 9769, 12390, 12776, 8202, 4595, 12385, 12368, 4581, 10134, 2]
+// Dependencies: [32, 19, 17, 4628, 1957, 12090, 12091, 1074, 12092, 21, 4373, 1176, 4632, 12, 8574, 4636, 576, 5522, 504, 4338, 5667, 1114, 4637, 5149, 10378, 12776, 7084, 12537, 5043, 5052, 1109, 12004, 9769, 12391, 12777, 8202, 4595, 12386, 12369, 4581, 10134, 2]
 
-// Module 12774 (VoiceMessageOverlay)
+// Module 12775 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
@@ -235,14 +235,14 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12089).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12090).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12090).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12091).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12091).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12092).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1176).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4632).Text);
 let closure_18 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));

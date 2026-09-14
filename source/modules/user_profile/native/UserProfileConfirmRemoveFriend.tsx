@@ -1,10 +1,10 @@
-// Module ID: 12751
-// Function ID: 12752
+// Module ID: 12752
+// Function ID: 12753
 // Name: UserProfileConfirmRemoveFriend
 // Dependencies: [19, 21, 4986, 1114, 4986, 2]
 // Exports: default
 
-// Module 12751 (UserProfileConfirmRemoveFriend)
+// Module 12752 (UserProfileConfirmRemoveFriend)
 import util from "util" /* 1114 */;
 import AlertModal from "AlertModal" /* 4986 */;
 import noop from "module_19" /* 19 */;

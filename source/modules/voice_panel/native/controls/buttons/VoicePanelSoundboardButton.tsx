@@ -1,14 +1,14 @@
-// Module ID: 17307
-// Function ID: 17308
+// Module ID: 17309
+// Function ID: 17310
 // Name: VoicePanelSoundboardButton
-// Dependencies: [19, 21, 4636, 576, 12401, 17293, 17308, 17294, 1114, 5670, 12657, 2]
+// Dependencies: [19, 21, 4636, 576, 12402, 17295, 17310, 17296, 1114, 5670, 12658, 2]
 // Exports: default
 
-// Module 17307 (VoicePanelSoundboardButton)
+// Module 17309 (VoicePanelSoundboardButton)
 import nativeDefault from "native" /* 576 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12401 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17293 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17308 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12402 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17295 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17310 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -48,9 +48,9 @@ export default function SoundboardButton(arg0) {
     obj2.style = items;
     const items1 = [React4(tmp(5670), obj2), ];
     const obj4 = { style: tmp3.iconContainer, children: null };
-    const tmpResult = tmp(17294);
+    const tmpResult = tmp(17296);
     const obj5 = { color };
-    obj4.children = React4(tmp4(12657).SoundboardIcon, obj5);
+    obj4.children = React4(tmp4(12658).SoundboardIcon, obj5);
     items1[1] = React4(tmp(5670), obj4);
     element.children = items1;
     tmp8 = hasOwnProperty(tmpResult, element);

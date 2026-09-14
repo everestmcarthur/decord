@@ -1,12 +1,12 @@
-// Module ID: 11921
-// Function ID: 11922
+// Module ID: 11922
+// Function ID: 11923
 // Name: BundleUpdater
-// Dependencies: [5, 17, 1074, 3, 1150, 81, 1896, 4821, 1242, 7704, 2]
+// Dependencies: [5, 17, 1074, 3, 1363, 81, 1896, 4821, 1240, 7704, 2]
 
-// Module 11921 (BundleUpdater)
+// Module 11922 (BundleUpdater)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import _mod4821 from "module_4821" /* 4821 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

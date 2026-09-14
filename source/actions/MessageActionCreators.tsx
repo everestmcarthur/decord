@@ -1,7 +1,7 @@
 // Module ID: 7559
 // Function ID: 7560
 // Name: MessageActionCreators
-// Dependencies: [32, 5, 5358, 5623, 7560, 7561, 7780, 7782, 7697, 5583, 4658, 502, 1957, 7783, 1979, 4620, 4857, 4275, 4676, 4651, 7789, 1371, 1074, 7791, 7429, 4629, 17, 3, 4619, 7792, 4624, 7795, 7796, 4816, 7801, 5530, 7820, 1242, 4621, 7837, 7840, 4875, 7842, 1114, 2024, 5210, 573, 7854, 4821, 7855, 7702, 1272, 4859, 7324, 9, 7591, 5353, 11, 1986, 2006, 7580, 5356, 7856, 7857, 7861, 7862, 4294, 7786, 1384, 7370, 7863, 7932, 7936, 7939, 7945, 7946, 7950, 11816, 5624, 1090, 8043, 1894, 7867, 4488, 10872, 4980, 2]
+// Dependencies: [32, 5, 5358, 5623, 7560, 7561, 7780, 7782, 7697, 5583, 4658, 502, 1957, 7783, 1979, 4620, 4857, 4275, 4676, 4651, 7789, 1371, 1074, 7791, 7429, 4629, 17, 3, 4619, 7792, 4624, 7795, 7796, 4816, 7801, 5530, 7820, 1240, 4621, 7837, 7840, 4875, 7842, 1114, 2024, 5210, 573, 7854, 4821, 7855, 7702, 1270, 4859, 7324, 9, 7591, 5353, 11, 1986, 2006, 7580, 5356, 7856, 7857, 7861, 7862, 4294, 7786, 1384, 7370, 7863, 7932, 7936, 7939, 7945, 7946, 7950, 11817, 5624, 1090, 8043, 1894, 7867, 4488, 10873, 4980, 2]
 
 // Module 7559 (MessageActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
@@ -20,7 +20,7 @@ import createMessage from "createMessage" /* 7854 */;
 import createNonce from "createNonce" /* 7855 */;
 import getInviteURLDefault from "getInviteURL" /* 7861 */;
 import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 7862 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10872 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10873 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
@@ -542,11 +542,11 @@ let obj17 = {
               closure_1 = tmp2;
               const v0 = 0;
               closure_128_0 = undefined;
-              const HTTP = v0(1272).HTTP;
+              const HTTP = v0(1270).HTTP;
               const request = { url: closure_1_28.MESSAGES(_require), query: null, retries: 2, oldFormErrors: true, rejectWithError: null };
               const obj4 = { limit: 1, around };
               request.query = obj4;
-              request.rejectWithError = v0(1272).rejectWithMigratedError();
+              request.rejectWithError = v0(1270).rejectWithMigratedError();
               c2 = 1;
               dependencyMap = 1;
               const obj5 = { value: HTTP.get(request), done: false };
@@ -2357,14 +2357,14 @@ let obj17 = {
           } else {
             message2 = message.getMessage(closure_129_0, closure_129_1);
             if (null != message2) {
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: closure_1_28.MESSAGE(closure_129_0, closure_129_1), body: null, oldFormErrors: true, rejectWithError: null };
               const obj6 = { flags: tmp2(1384).setFlag(message2.flags, constants.SUPPRESS_EMBEDS, true) };
               request.body = obj6;
               const obj8 = tmp2(1384);
-              request.rejectWithError = tmp2(1272).rejectWithMigratedError();
+              request.rejectWithError = tmp2(1270).rejectWithMigratedError();
               HTTP.patch(request);
-              const obj9 = tmp2(1272);
+              const obj9 = tmp2(1270);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -2421,14 +2421,14 @@ let obj17 = {
           } else {
             message2 = message.getMessage(closure_129_0, closure_129_1);
             if (null != message2) {
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: closure_1_28.MESSAGE(closure_129_0, closure_129_1), body: null, oldFormErrors: true, rejectWithError: null };
               const obj6 = { flags: tmp2(1384).setFlag(message2.flags, constants.IS_GUILD_OFFICIAL, closure_129_2) };
               request.body = obj6;
               const obj8 = tmp2(1384);
-              request.rejectWithError = tmp2(1272).rejectWithMigratedError();
+              request.rejectWithError = tmp2(1270).rejectWithMigratedError();
               HTTP.patch(request);
-              const obj9 = tmp2(1272);
+              const obj9 = tmp2(1270);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -2482,11 +2482,11 @@ let obj17 = {
             const obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = tmp4(1272).HTTP;
+            const HTTP = tmp4(1270).HTTP;
             const request = { url: closure_1_28.MESSAGE(closure_128_0, closure_128_1), body: null, oldFormErrors: true, rejectWithError: null };
             const obj6 = { attachments: closure_128_2 };
             request.body = obj6;
-            request.rejectWithError = tmp4(1272).rejectWithMigratedError();
+            request.rejectWithError = tmp4(1270).rejectWithMigratedError();
             HTTP.patch(request);
             c2 = 3;
             return { value: "HermesInternal", done: null };
@@ -2554,9 +2554,9 @@ let obj17 = {
             dependencyMap = 3;
             throw value;
           } else if (arg0 !== 2) {
-            const HTTP = channelId(1272).HTTP;
-            const obj6 = { url: closure_1_28.MESSAGE(closure_129_0, closure_129_1), oldFormErrors: true, rejectWithError: channelId(1272).rejectWithMigratedError() };
-            const obj7 = channelId(1272);
+            const HTTP = channelId(1270).HTTP;
+            const obj6 = { url: closure_1_28.MESSAGE(closure_129_0, closure_129_1), oldFormErrors: true, rejectWithError: channelId(1270).rejectWithMigratedError() };
+            const obj7 = channelId(1270);
             HTTP.del(obj6).then(() => {
               const obj = id(573);
               const obj2 = { type: "MESSAGE_DELETE", id, channelId };
@@ -2619,8 +2619,8 @@ let obj17 = {
               channel = tmp7;
               closure_128_0 = undefined;
               dependencyMap = 1;
-              const HTTP = channel(1272).HTTP;
-              const obj5 = { url: closure_1_28.MESSAGE_CROSSPOST(channel, tmp3), oldFormErrors: true, failImmediatelyWhenRateLimited: true, rejectWithError: channel(1272).rejectWithMigratedError() };
+              const HTTP = channel(1270).HTTP;
+              const obj5 = { url: closure_1_28.MESSAGE_CROSSPOST(channel, tmp3), oldFormErrors: true, failImmediatelyWhenRateLimited: true, rejectWithError: channel(1270).rejectWithMigratedError() };
               c4 = 2;
               c5 = 1;
               const obj6 = { value: HTTP.post(obj5), done: false };

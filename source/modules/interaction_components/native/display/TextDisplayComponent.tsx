@@ -1,13 +1,13 @@
-// Module ID: 15804
-// Function ID: 15805
+// Module ID: 15806
+// Function ID: 15807
 // Name: TextDisplayComponent
-// Dependencies: [32, 19, 4628, 1957, 2011, 8228, 21, 8229, 38, 4626, 7992, 504, 1935, 8389, 15805, 11745, 11715, 2]
+// Dependencies: [32, 19, 4628, 1957, 2011, 8228, 21, 8229, 38, 4626, 7992, 504, 1935, 8389, 15807, 11746, 11716, 2]
 // Exports: default
 
-// Module 15804 (TextDisplayComponent)
+// Module 15806 (TextDisplayComponent)
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 7992 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11745 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;

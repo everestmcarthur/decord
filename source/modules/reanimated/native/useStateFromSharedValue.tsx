@@ -1,7 +1,7 @@
 // Module ID: 8385
 // Function ID: 8386
 // Name: useStateFromSharedValue
-// Dependencies: [32, 19, 1249, 4373, 2]
+// Dependencies: [32, 19, 1247, 4373, 2]
 // Exports: default, useDerivedStateFromSharedValue
 
 // Module 8385 (useStateFromSharedValue)
@@ -32,7 +32,7 @@ export default function useStateFromSharedValue(arg0) {
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1249).batchUpdates(() => {
+            set(1247).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -99,7 +99,7 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1249).batchUpdates(() => {
+            set(1247).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;

@@ -1,10 +1,10 @@
-// Module ID: 15156
-// Function ID: 15157
+// Module ID: 15157
+// Function ID: 15158
 // Name: useBadBundleFilter
 // Dependencies: [19, 1371, 7660, 563, 4294, 8967, 7657, 7656, 2]
 // Exports: useBadBundleFilter
 
-// Module 15156 (useBadBundleFilter)
+// Module 15157 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;

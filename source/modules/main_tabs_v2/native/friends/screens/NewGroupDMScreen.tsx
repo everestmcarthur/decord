@@ -1,23 +1,23 @@
-// Module ID: 16877
-// Function ID: 16878
+// Module ID: 16879
+// Function ID: 16880
 // Name: NewGroupDMScreen
-// Dependencies: [32, 5, 19, 17, 1957, 13843, 4659, 1371, 10988, 1074, 21, 4636, 576, 4649, 4843, 9311, 9666, 4603, 504, 11721, 11723, 11720, 1242, 4335, 1114, 16867, 7966, 11724, 4334, 7976, 9985, 8496, 7861, 1178, 10989, 16800, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 13844, 4659, 1371, 10989, 1074, 21, 4636, 576, 4649, 4843, 9311, 9666, 4603, 504, 11722, 11724, 11721, 1240, 4335, 1114, 16869, 7966, 11725, 4334, 7976, 9985, 8496, 7861, 1176, 10990, 16802, 2]
 // Exports: default
 
-// Module 16877 (NewGroupDMScreen)
+// Module 16879 (NewGroupDMScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11724 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16867 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11725 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16869 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13843 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13844 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -280,7 +280,7 @@ let closure_22 = async function _handleInviteUsers(arg0, value) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const Constants = fn(1074);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);

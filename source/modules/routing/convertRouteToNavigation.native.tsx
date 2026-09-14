@@ -1,10 +1,10 @@
-// Module ID: 12920
-// Function ID: 12921
+// Module ID: 12921
+// Function ID: 12922
 // Name: convertRouteToNavigation
 // Dependencies: [1074, 4497, 4494, 4495, 4463, 4476, 2]
 // Exports: convertRouteToNavigation
 
-// Module 12920 (convertRouteToNavigation)
+// Module 12921 (convertRouteToNavigation)
 import Constants from "Constants" /* 1074 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import size from "module_2" /* 2 */;
@@ -87,7 +87,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                 const tmpResult23 = tmp(4494);
               }
               if (tmp15) {
-                const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
+                const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "Array" };
                 tmp(4494).navigateToChannel(obj10);
                 const tmpResult24 = tmp(4494);
               }

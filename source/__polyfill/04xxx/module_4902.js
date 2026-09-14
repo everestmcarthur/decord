@@ -1,10 +1,10 @@
 // Module ID: 4902
 // Function ID: 4903
-// Dependencies: [1316, 1286, 1446]
+// Dependencies: [1314, 1284, 1446]
 
 // Module 4902
-import _Symbol from "_Symbol" /* 1286 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import _Symbol from "_Symbol" /* 1284 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 import regexTester from "regexTester" /* 1446 */;
 
 let closure_0 = callBoundIntrinsic("Object.prototype.toString");

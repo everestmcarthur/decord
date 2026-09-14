@@ -1,12 +1,12 @@
-// Module ID: 10958
-// Function ID: 10959
+// Module ID: 10959
+// Function ID: 10960
 // Name: PremiumGiftBackgroundAnimation
-// Dependencies: [32, 19, 17, 4628, 21, 4636, 504, 8187, 10959, 5610, 2]
+// Dependencies: [32, 19, 17, 4628, 21, 4636, 504, 8187, 10960, 5610, 2]
 // Exports: default
 
-// Module 10958 (PremiumGiftBackgroundAnimation)
+// Module 10959 (PremiumGiftBackgroundAnimation)
 import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8187 */;
-import GiftAnimationData from "GiftAnimationData" /* 10959 */;
+import GiftAnimationData from "GiftAnimationData" /* 10960 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;

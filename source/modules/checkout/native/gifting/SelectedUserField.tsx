@@ -1,10 +1,10 @@
-// Module ID: 10985
-// Function ID: 10986
+// Module ID: 10986
+// Function ID: 10987
 // Name: SelectedUserField
-// Dependencies: [19, 17, 21, 4636, 576, 6722, 1114, 4481, 7154, 1178, 4632, 6717, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 6722, 1114, 4481, 7154, 1176, 4632, 6717, 2]
 // Exports: default
 
-// Module 10985 (SelectedUserField)
+// Module 10986 (SelectedUserField)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import InputFieldContainer from "InputFieldContainer" /* 6722 */;
@@ -62,8 +62,8 @@ export default function SelectedUserField(onPress) {
   const items1 = [hasOwnProperty(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
   if (null != selectedUser) {
     const obj6 = { style: tmp.userPill, children: null };
-    const obj7 = { user: selectedUser, guildId: "Array", size: tmp4(1178).AvatarSizes.XSMALL_20 };
-    const items2 = [tmp2(tmp4(1178).Avatar, obj7), ];
+    const obj7 = { user: selectedUser, guildId: "Array", size: tmp4(1176).AvatarSizes.XSMALL_20 };
+    const items2 = [tmp2(tmp4(1176).Avatar, obj7), ];
     const obj8 = { variant: "text-md/medium", style: tmp.userPillText, children: UserUtilsDefault.getName(selectedUser) };
     items2[1] = tmp2(tmp4(4632).Text, obj8);
     obj6.children = items2;

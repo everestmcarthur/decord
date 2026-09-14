@@ -1,16 +1,16 @@
-// Module ID: 11937
-// Function ID: 11938
+// Module ID: 11938
+// Function ID: 11939
 // Name: ExperimentEmbed
-// Dependencies: [19, 17, 502, 4553, 7838, 21, 8049, 7994, 11613, 11614, 4345, 11938, 11939, 11940, 8050, 11941, 7996, 4603, 4557, 7253, 7252, 11942, 11612, 2]
+// Dependencies: [19, 17, 502, 4553, 7838, 21, 8049, 7994, 11614, 11615, 4345, 11939, 11940, 11941, 8050, 11942, 7996, 4603, 4557, 7253, 7252, 11943, 11613, 2]
 // Exports: createExperimentEmbed, default
 
-// Module 11937 (ExperimentEmbed)
+// Module 11938 (ExperimentEmbed)
 import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7994 */;
 import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7996 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
-import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11612 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11613 */;
-import useApexExperiments from "useApexExperiments" /* 11614 */;
+import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11613 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11614 */;
+import useApexExperiments from "useApexExperiments" /* 11615 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -151,8 +151,8 @@ export const createExperimentEmbed = function createExperimentEmbed(url, arg1) {
       }
       const id = AuthenticationStore.getId();
       const tmp4Result = tmp4(7994);
-      const experimentServerAssignment = tmp4(11940).getExperimentServerAssignment(tmp10, id);
-      const tmp4Result6 = tmp4(11940);
+      const experimentServerAssignment = tmp4(11941).getExperimentServerAssignment(tmp10, id);
+      const tmp4Result6 = tmp4(11941);
       const experimentServerAssignmentLabel = tmp4(7994).getExperimentServerAssignmentLabel(tmp10, experimentServerAssignment);
       if (EXPERIMENT === tmp13.EXPERIMENT_TREATMENT) {
         if (null != iter) {
@@ -168,7 +168,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, arg1) {
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = tmp4(8050).getAssetUriForEmbed(tmp(11941));
+        obj5.thumbnailUrl = tmp4(8050).getAssetUriForEmbed(tmp(11942));
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj5.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -197,7 +197,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, arg1) {
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = tmp4(8050).getAssetUriForEmbed(tmp(11941));
+        obj6.thumbnailUrl = tmp4(8050).getAssetUriForEmbed(tmp(11942));
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj6.acceptLabelText = "View Experiment Details";
         obj6.embedCanBeTapped = true;
@@ -221,9 +221,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, arg1) {
   obj7.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(arg1)) {
-    let tmpResult = tmp(11938);
+    let tmpResult = tmp(11939);
   } else {
-    tmpResult = tmp(11939);
+    tmpResult = tmp(11940);
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

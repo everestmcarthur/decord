@@ -1,13 +1,13 @@
 // Module ID: 7175
 // Function ID: 7176
 // Name: FastList
-// Dependencies: [109, 32, 19, 17, 21, 12, 558, 5670, 4632, 1150, 4373, 7176, 7177, 6728, 7178, 2]
+// Dependencies: [109, 32, 19, 17, 21, 12, 558, 5670, 4632, 1363, 4373, 7176, 7177, 6728, 7178, 2]
 // Exports: getItemSizeOverrideKey
 
 // Module 7175 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import BottomSheetModal from "BottomSheetModal" /* 6728 */;

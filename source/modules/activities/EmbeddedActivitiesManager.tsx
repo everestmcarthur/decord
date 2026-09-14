@@ -1,14 +1,14 @@
 // Module ID: 9648
 // Function ID: 9649
 // Name: EmbeddedActivitiesManager
-// Dependencies: [5, 4652, 1961, 502, 1957, 4659, 2011, 1371, 9649, 1956, 1074, 9540, 1150, 1272, 4265, 9650, 9651, 1242, 9637, 9653, 9654, 4837, 1256, 1925, 9424, 9655, 9656, 1898, 1109, 573, 9658, 9642, 7266, 9632, 1114, 9659, 9634, 9660, 9678, 1894, 7285, 2]
+// Dependencies: [5, 4652, 1961, 502, 1957, 4659, 2011, 1371, 9649, 1956, 1074, 9540, 1363, 1270, 4265, 9650, 9651, 1240, 9637, 9653, 9654, 4837, 1254, 1925, 9424, 9655, 9656, 1898, 1109, 573, 9658, 9642, 7266, 9632, 1114, 9659, 9634, 9660, 9678, 1894, 7285, 2]
 // Exports: getActiveAnalyticsSessionIDs, trackFrameSessionEnd, trackFrameSessionStart, trackFrameSessionStartFailed
 
 // Module 9648 (EmbeddedActivitiesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
@@ -219,7 +219,7 @@ function handleOpenEmbeddedActivity(applicationId) {
       }
       if (null != compositeInstanceId) {
         if (!tmp18) {
-          const v4Result = tmp4(1256).v4();
+          const v4Result = tmp4(1254).v4();
           let num2 = 1;
           if ("location" in embeddedActivity) {
             num2 = 2;
@@ -235,7 +235,7 @@ function handleOpenEmbeddedActivity(applicationId) {
             if (tmp55 != null) {
               const activity = tmp55.activity;
               if (activity != null) {
-                const tmp4Result14 = tmp4(1150);
+                const tmp4Result14 = tmp4(1363);
                 release_phase = activity.client_platform_config[tmp54(9540)(undefined, tmp4Result14.getOS(tmp4Result14))].release_phase;
                 const tmp54Result = tmp54(9540);
               }
@@ -349,7 +349,7 @@ function handleOpenEmbeddedActivity(applicationId) {
             AnalyticsUtilsDefault.track(tmp31.ACTIVITY_IFRAME_MOUNT, obj8);
             const tmp54Result6 = AnalyticsUtilsDefault;
           }
-          const tmp4Result13 = tmp4(1256);
+          const tmp4Result13 = tmp4(1254);
         }
       }
     }
@@ -1120,7 +1120,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       } else {
         items1 = [];
       }
-      const v4Result = tmp2(1256).v4();
+      const v4Result = tmp2(1254).v4();
       const obj3 = { activitySessionId: compositeInstanceId, activityUserSessionId: v4Result, launchId, mediaSessionIds: items1, activitiesInfraVersion, connectedSince: null, frameChannelId: null, frameGuildId: null, frameLocationKind: null };
       const _Date = Date;
       obj3.connectedSince = Date.now();
@@ -1137,12 +1137,12 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       if (tmp27 != null) {
         const activity = tmp27.activity;
         if (activity != null) {
-          const tmp2Result3 = tmp2(1150);
+          const tmp2Result3 = tmp2(1363);
           release_phase = activity.client_platform_config[tmp26(9540)(undefined, tmp2Result3.getOS(tmp2Result3))].release_phase;
           const tmp26Result = tmp26(9540);
         }
       }
-      const tmp2Result = tmp2(1256);
+      const tmp2Result = tmp2(1254);
       const rawThermalState = ThermalUtilsDefault.getRawThermalState();
       const tmp26Result4 = ThermalUtilsDefault;
       const obj5 = { channel_id: channelId, guild_id: guildId, media_session_id: items1[0], activity_session_id: compositeInstanceId, application_id: applicationId, location_stack: analyticsLocations2, user_premium_tier: currentUser.premiumType, raw_thermal_state: rawThermalState, n_participants: null, is_activity_start: null, release_phase: null, shelf_rank: null, shelf_sorted_rank: null, activity_user_session_id: null, channel_type: null, source: null, command_context_type: null, invite_inviter_id: null, interaction_id: null, embedded_activity_location_kind: null };

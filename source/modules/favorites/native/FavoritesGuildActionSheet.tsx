@@ -1,14 +1,14 @@
-// Module ID: 16232
-// Function ID: 16233
+// Module ID: 16234
+// Function ID: 16235
 // Name: FavoritesGuildActionSheet
-// Dependencies: [19, 1960, 21, 16233, 16234, 16235, 10352, 504, 7300, 7252, 1114, 7302, 5154, 12280, 16236, 5761, 7069, 4594, 2]
+// Dependencies: [19, 1960, 21, 16235, 16236, 16237, 10353, 504, 7300, 7252, 1114, 7302, 5154, 12281, 16238, 5761, 7069, 4594, 2]
 // Exports: default
 
-// Module 16232 (FavoritesGuildActionSheet)
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16233 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16234 */;
-import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16235 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 16236 */;
+// Module 16234 (FavoritesGuildActionSheet)
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16235 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16236 */;
+import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16237 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 16238 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
@@ -25,7 +25,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
   const tmp4 = useFavoritesGuildAutoAddedThreadsActionDefault();
-  const obj = onClose(10352);
+  const obj = onClose(10353);
   const items = [FavoriteStore];
   const stateFromStores = onClose(504).useStateFromStores(items, () => FavoriteStore.hasStoredFavorites());
   const obj3 = { header: null, children: null };
@@ -53,7 +53,7 @@ export default function FavoritesGuildActionSheet(onClose) {
       const obj10 = { label: null, icon: null, onPress: null };
       const intl2 = tmp5(1114).intl;
       obj10.label = intl2.string(tmp5(1114).t["0dOFq+"]);
-      const obj11 = { IconComponent: tmp5(12280).ArrowsUpDownIcon };
+      const obj11 = { IconComponent: tmp5(12281).ArrowsUpDownIcon };
       obj10.icon = tmp8(tmp5(7302).ActionSheetRow.Icon, obj11);
       obj10.onPress = function onPress() {
         onClose();

@@ -1,10 +1,10 @@
-// Module ID: 11146
-// Function ID: 11147
+// Module ID: 11147
+// Function ID: 11148
 // Name: OrbCheckoutAmountTag
 // Dependencies: [17, 21, 4636, 576, 8962, 4632, 1114, 2]
 // Exports: default
 
-// Module 11146 (OrbCheckoutAmountTag)
+// Module 11147 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;

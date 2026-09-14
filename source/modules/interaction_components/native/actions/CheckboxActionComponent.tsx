@@ -1,9 +1,9 @@
-// Module ID: 17513
-// Function ID: 17514
+// Module ID: 17515
+// Function ID: 17516
 // Name: CheckboxActionComponent
 // Dependencies: [19, 21, 8229, 38, 1894, 9559, 2]
 
-// Module 17513 (CheckboxActionComponent)
+// Module 17515 (CheckboxActionComponent)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
 import ComponentStateContext from "ComponentStateContext" /* 8229 */;

@@ -1,9 +1,9 @@
-// Module ID: 16023
-// Function ID: 16024
+// Module ID: 16025
+// Function ID: 16026
 // Name: VEVOOSlider
-// Dependencies: [19, 21, 4636, 1150, 576, 8396, 2]
+// Dependencies: [19, 21, 4636, 1363, 576, 8396, 2]
 
-// Module 16023 (VEVOOSlider)
+// Module 16025 (VEVOOSlider)
 import nativeDefault from "native" /* 576 */;
 import _modDef8396 from "module_8396" /* 8396 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = nativeDefault.space.PX_8;

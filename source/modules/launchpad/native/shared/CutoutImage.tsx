@@ -1,14 +1,14 @@
-// Module ID: 17088
-// Function ID: 17089
+// Module ID: 17090
+// Function ID: 17091
 // Name: CutoutImage
-// Dependencies: [32, 19, 17, 21, 1256, 8574, 13161, 2]
+// Dependencies: [32, 19, 17, 21, 1254, 8574, 13162, 2]
 
-// Module 17088 (CutoutImage)
-import v1 from "v1" /* 1256 */;
+// Module 17090 (CutoutImage)
+import v1 from "v1" /* 1254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const getReactNativeSVGImageSourceDefault = tmp13(13161);
+const getReactNativeSVGImageSourceDefault = tmp13(13162);
 require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
@@ -80,16 +80,16 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
   }
   const borderStroke = cutoutTopLeftSize.borderStroke;
   importDefault = undefined;
-  const obj2 = imageTintColor(1256);
-  [tmp4, c1] = noop.useState(imageTintColor(1256).v4());
+  const obj2 = imageTintColor(1254);
+  [tmp4, c1] = noop.useState(imageTintColor(1254).v4());
   if (null != tmp4) {
     const _HermesInternal = HermesInternal;
     const combined = "url(#" + tmp4 + ")";
   }
   let v4Result;
   if (num15 > 0) {
-    v4Result = tmp(1256).v4();
-    const tmpResult = tmp(1256);
+    v4Result = tmp(1254).v4();
+    const tmpResult = tmp(1254);
   }
   if (null != v4Result) {
     const _HermesInternal2 = HermesInternal;
@@ -105,7 +105,7 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
     }
   }, items);
   const size = { style: cutoutTopLeftSize.style, height: imageSize, width: imageSize, children: null };
-  const tmp3 = _slicedToArray(noop.useState(imageTintColor(1256).v4()), 2);
+  const tmp3 = _slicedToArray(noop.useState(imageTintColor(1254).v4()), 2);
   const size1 = { width: imageSize, height: imageSize, id: tmp4, children: null };
   if (imageBorderRadius === imageSize / 2) {
     const obj3 = { cx: imageSize / 2, cy: imageSize / 2, r: imageSize / 2, fill: "white" };

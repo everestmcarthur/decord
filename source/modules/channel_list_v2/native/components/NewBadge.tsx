@@ -1,13 +1,13 @@
-// Module ID: 12425
-// Function ID: 12426
+// Module ID: 12426
+// Function ID: 12427
 // Name: NewBadge
-// Dependencies: [19, 17, 21, 4636, 1150, 576, 4488, 7976, 4571, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 1363, 576, 4488, 7976, 4571, 4632, 1114, 2]
 // Exports: default
 
-// Module 12425 (NewBadge)
+// Module 12426 (NewBadge)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7976 */;

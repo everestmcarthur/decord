@@ -1,10 +1,10 @@
-// Module ID: 15845
-// Function ID: 15846
+// Module ID: 15847
+// Function ID: 15848
 // Name: UserSettingsDesignSystemButton
-// Dependencies: [32, 19, 17, 1074, 1230, 21, 15846, 5056, 15847, 8202, 7484, 10020, 14251, 8053, 14253, 9189, 14252, 9257, 4636, 576, 1483, 4603, 15848, 1896, 5054, 4632, 10780, 10010, 10016, 10018, 10017, 10015, 10014, 5514, 4347, 1091, 5068, 5688, 5206, 9038, 2]
+// Dependencies: [32, 19, 17, 1074, 1228, 21, 15848, 5056, 15849, 8202, 7484, 10020, 14252, 8053, 14254, 9189, 14253, 9257, 4636, 576, 1483, 4603, 15850, 1896, 5054, 4632, 10781, 10010, 10016, 10018, 10017, 10015, 10014, 5514, 4347, 1091, 5068, 5688, 5206, 9038, 2]
 // Exports: default
 
-// Module 15845 (UserSettingsDesignSystemButton)
+// Module 15847 (UserSettingsDesignSystemButton)
 import nativeDefault from "native" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
@@ -20,12 +20,12 @@ import _modDef10016 from "module_10016" /* 10016 */;
 import _modDef10017 from "module_10017" /* 10017 */;
 import _modDef10018 from "module_10018" /* 10018 */;
 import ImageButton from "ImageButton" /* 10020 */;
-import _modDef10780 from "module_10780" /* 10780 */;
-import ToggleButton from "ToggleButton" /* 14251 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 14252 */;
-import ToggleIconButton from "ToggleIconButton" /* 14253 */;
-import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 15846 */;
-import _modDef15847 from "module_15847" /* 15847 */;
+import _modDef10781 from "module_10781" /* 10781 */;
+import ToggleButton from "ToggleButton" /* 14252 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 14253 */;
+import ToggleIconButton from "ToggleIconButton" /* 14254 */;
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 15848 */;
+import _modDef15849 from "module_15849" /* 15849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,7 +75,7 @@ function ExampleButton(arg0) {
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef15847;
+    tmpResult = _modDef15849;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;
@@ -251,7 +251,7 @@ function ExampleCustomIconToggleButton() {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const ThemeTypes = fn(1074).ThemeTypes;
-const ClientThemesConstants = fn(1230);
+const ClientThemesConstants = fn(1228);
 ({ LIGHT_BACKGROUND_GRADIENT_PRESETS: closure_8, DARK_BACKGROUND_GRADIENT_PRESETS: closure_9 } = ClientThemesConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -402,7 +402,7 @@ export default function UserSettingsDesignSystemButton() {
       return closure_2_10(hasOwnProperty, obj, variant);
     })
   };
-  obj25.icon = closure_10(require("components/Button/Button").Button.Icon, { source: _modDef10780 });
+  obj25.icon = closure_10(require("components/Button/Button").Button.Icon, { source: _modDef10781 });
   obj24.children = closure_10(require("components/Button/Button").Button, obj25);
   const items9 = [closure_10(closure_5, obj24), ];
   const obj27 = { style: tmp.buttonContainer, children: null };
@@ -415,7 +415,7 @@ export default function UserSettingsDesignSystemButton() {
     size: "md",
     icon: null
   };
-  const obj26 = { source: _modDef10780 };
+  const obj26 = { source: _modDef10781 };
   obj28.icon = closure_10(require("components/Button/Button").Button.Icon, { variant: "entity", source: _modDef10010 });
   obj27.children = closure_10(require("components/Button/Button").Button, obj28);
   items9[1] = closure_10(closure_5, obj27);
@@ -436,7 +436,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef10780
+    icon: _modDef10781
   });
   const items11 = [closure_10(closure_5, obj33), , , ];
   const obj35 = { style: tmp.buttonContainer, children: null };
@@ -447,7 +447,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef10780
+    icon: _modDef10781
   };
   obj35.children = closure_10(require("components/Button/Button").Button, {
     onPress() {
@@ -456,7 +456,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef10780,
+    icon: _modDef10781,
     iconPosition: "end"
   });
   items11[1] = closure_10(closure_5, obj35);
@@ -501,7 +501,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef10780,
+    icon: _modDef10781,
     iconPosition: "end"
   };
   const obj38 = {

@@ -1,21 +1,21 @@
-// Module ID: 12269
-// Function ID: 12270
+// Module ID: 12270
+// Function ID: 12271
 // Name: ActivityDetailContent
-// Dependencies: [5, 32, 19, 17, 8980, 1918, 1074, 21, 576, 4636, 4632, 11348, 12270, 12186, 12180, 7626, 9418, 1114, 1242, 9539, 5056, 4649, 9678, 9701, 7265, 7285, 11125, 5207, 504, 5683, 7303, 9679, 6707, 7271, 12271, 12272, 12273, 1178, 12213, 9417, 5170, 12275, 2]
+// Dependencies: [5, 32, 19, 17, 8980, 1918, 1074, 21, 576, 4636, 4632, 11349, 12271, 12187, 12181, 7626, 9418, 1114, 1240, 9539, 5056, 4649, 9678, 9701, 7265, 7285, 11126, 5207, 504, 5683, 7303, 9679, 6707, 7271, 12272, 12273, 12274, 1176, 12214, 9417, 5170, 12276, 2]
 // Exports: default
 
-// Module 12269 (ActivityDetailContent)
+// Module 12270 (ActivityDetailContent)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9418 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
 import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 9679 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import AppLauncherContext from "AppLauncherContext" /* 11348 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12186 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import AppLauncherContext from "AppLauncherContext" /* 11349 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12187 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -97,7 +97,7 @@ function TryItOutButton(botUserId) {
   const items = [botUserId, applicationId, analyticsLocations];
   let str = "primary";
   const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
-    tmp3(1242).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: botUserId(9539).EntryPointCommandButtonActions.OPEN_APP_DM });
+    tmp3(1240).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: botUserId(9539).EntryPointCommandButtonActions.OPEN_APP_DM });
     const _setTimeout = setTimeout;
     closure_4.current = setTimeout(() => {
       dependencyMap(true);
@@ -168,8 +168,8 @@ export default function ActivityDetailContent(application) {
   importDefault = undefined;
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
   const tmp = closure_15();
-  const width = application(11348).useRequiredAppLauncherContext().width;
-  let obj = application(11348);
+  const width = application(11349).useRequiredAppLauncherContext().width;
+  let obj = application(11349);
   const getPrimaryAppCommand = application(9701).useGetPrimaryAppCommand(context, application.id);
   const obj2 = application(9701);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
@@ -226,15 +226,15 @@ export default function ActivityDetailContent(application) {
     }
     const tmp2Result8 = tmp2(7271);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(12186).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(12186);
-    const delayedSwapToActivityActionLeave = tmp2(12271).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(12187).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(12187);
+    const delayedSwapToActivityActionLeave = tmp2(12272).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(12271);
-    ({ reason, disabled } = tmp5(12272)(obj10));
+    const tmp2Result10 = tmp2(12272);
+    ({ reason, disabled } = tmp5(12273)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(12273);
+    tmp5(12274);
     if (bot != null) {
       id = bot.id;
     }
@@ -279,10 +279,10 @@ export default function ActivityDetailContent(application) {
       }
       if (isDeveloperOfThisApp) {
         const obj18 = { style: tmp.buttonContainer, children: null };
-        const obj19 = { messageType: tmp2(1178).HelpMessageTypes.WARNING, children: null };
+        const obj19 = { messageType: tmp2(1176).HelpMessageTypes.WARNING, children: null };
         const intl2 = tmp2(1114).intl;
         obj19.children = intl2.format(tmp2(1114).t["s/3hjE"], {});
-        obj18.children = closure_11(tmp2(1178).HelpMessage, obj19);
+        obj18.children = closure_11(tmp2(1176).HelpMessage, obj19);
         const tmp33 = closure_11(View, obj18);
       }
     }
@@ -303,13 +303,13 @@ export default function ActivityDetailContent(application) {
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(12272)(obj10);
+    const tmp29 = tmp5(12273)(obj10);
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(12213), obj25);
+    obj24.children = closure_11(tmp5(12214), obj25);
     const items5 = [closure_11(View, obj24), ];
     const items6 = [tmp.details, ];
     if (detailsContainerLandscape) {
@@ -325,17 +325,17 @@ export default function ActivityDetailContent(application) {
     const obj30 = { style: tmp.tagIcon, size: "xs" };
     obj29.icon = closure_11(tmp2(5170).GroupIcon, obj30);
     const tmp52 = Tag;
-    const tmp5Result3 = tmp5(12213);
+    const tmp5Result3 = tmp5(12214);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(12275).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(12275);
+    obj29.tagName = tmp2(12276).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(12276);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(12275)(num);
+    obj29.accessibilityLabel = tmp5(12276)(num);
     const items8 = [closure_11(tmp52, obj29, "participants"), ];
     const tags = application.tags;
     let mapped;

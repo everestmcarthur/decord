@@ -1,11 +1,11 @@
 // Module ID: 5686
 // Function ID: 5687
 // Name: TableRow
-// Dependencies: [19, 17, 21, 4636, 576, 5687, 4338, 5688, 5683, 5692, 5693, 5695, 5063, 1150, 5696, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5687, 4338, 5688, 5683, 5692, 5693, 5695, 5063, 1363, 5696, 4632, 2]
 
 // Module 5686 (TableRow)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useToken from "useToken" /* 4338 */;
 import useFontScale from "useFontScale" /* 5063 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 5687 */;

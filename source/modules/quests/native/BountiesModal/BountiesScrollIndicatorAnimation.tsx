@@ -1,10 +1,10 @@
-// Module ID: 15126
-// Function ID: 15127
+// Module ID: 15127
+// Function ID: 15128
 // Name: BountiesScrollIndicatorAnimation
 // Dependencies: [32, 19, 17, 21, 4636, 4338, 576, 4347, 2]
 // Exports: default
 
-// Module 15126 (BountiesScrollIndicatorAnimation)
+// Module 15127 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import _slicedToArray from "module_32" /* 32 */;

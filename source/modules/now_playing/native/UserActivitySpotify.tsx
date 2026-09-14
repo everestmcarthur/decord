@@ -1,13 +1,13 @@
-// Module ID: 11877
-// Function ID: 11878
+// Module ID: 11878
+// Function ID: 11879
 // Name: UserActivitySpotify
-// Dependencies: [19, 17, 8458, 21, 1364, 1272, 4331, 11878, 5056, 8259, 1114, 1178, 2]
+// Dependencies: [19, 17, 8458, 21, 1362, 1270, 4331, 11879, 5056, 8259, 1114, 1176, 2]
 // Exports: SpotifyPlayButton, attributeInstall, canOpenSpotifyUrl, openAlbum, openArtist, openTrack, openUrl
 
-// Module 11877 (UserActivitySpotify)
-import native from "native" /* 1178 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
+// Module 11878 (UserActivitySpotify)
+import native from "native" /* 1176 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1362 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import _modDef8259 from "module_8259" /* 8259 */;
 import noop from "module_19" /* 19 */;
@@ -261,7 +261,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
         });
         const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
       } else {
-        const HTTP = activity(1272).HTTP;
+        const HTTP = activity(1270).HTTP;
         const obj2 = { url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier), rejectWithError: true };
         value = HTTP.get(obj2);
         catchPromise = LinkingDefault.openURL(closure_2_7.APP_STORE);

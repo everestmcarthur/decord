@@ -1,17 +1,17 @@
-// Module ID: 16807
-// Function ID: 16808
+// Module ID: 16809
+// Function ID: 16810
 // Name: BaseMessagesScreen
-// Dependencies: [19, 7384, 12468, 7981, 21, 12487, 504, 12469, 16795, 16808, 12467, 16809, 16810, 16745, 16757, 2]
+// Dependencies: [19, 7384, 12469, 7981, 21, 12488, 504, 12470, 16797, 16810, 12468, 16811, 16812, 16747, 16759, 2]
 // Exports: default, trackMessageItemPress
 
-// Module 16807 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16809 */;
+// Module 16809 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16811 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 const constants = fn(7981).SearchResultContentEntityTypes;

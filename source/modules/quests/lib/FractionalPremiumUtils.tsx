@@ -1,10 +1,10 @@
-// Module ID: 11427
-// Function ID: 11428
+// Module ID: 11428
+// Function ID: 11429
 // Name: FractionalPremiumUtils
 // Dependencies: [4294, 1114, 7810, 4318, 1090, 2]
 // Exports: getDurationStringOfFractionalPremium, getFractionalPremiumQuestRewardName, getFractionalPremiumQuestRewards
 
-// Module 11427 (FractionalPremiumUtils)
+// Module 11428 (FractionalPremiumUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;

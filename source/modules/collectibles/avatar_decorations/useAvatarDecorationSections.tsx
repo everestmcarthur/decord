@@ -1,10 +1,10 @@
-// Module ID: 13298
-// Function ID: 13299
+// Module ID: 13299
+// Function ID: 13300
 // Name: useAvatarDecorationSections
 // Dependencies: [32, 19, 7645, 7660, 563, 7657, 1114, 2]
 // Exports: default
 
-// Module 13298 (useAvatarDecorationSections)
+// Module 13299 (useAvatarDecorationSections)
 import util from "util" /* 1114 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import _slicedToArray from "module_32" /* 32 */;

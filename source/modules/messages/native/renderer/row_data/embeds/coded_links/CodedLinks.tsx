@@ -1,10 +1,10 @@
-// Module ID: 13336
-// Function ID: 13337
+// Module ID: 13337
+// Function ID: 13338
 // Name: CodedLinks
-// Dependencies: [32, 4276, 1979, 1371, 7792, 12069, 4624, 13337, 13338, 13348, 13350, 13343, 13352, 13345, 11612, 11937, 11660, 13353, 1369, 2]
+// Dependencies: [32, 4276, 1979, 1371, 7792, 12070, 4624, 13338, 13339, 13349, 13351, 13344, 13353, 13346, 11613, 11938, 11661, 13354, 1369, 2]
 // Exports: createCodedLinkEmbeds
 
-// Module 13336 (CodedLinks)
+// Module 13337 (CodedLinks)
 import ApplicationCodedLink from "ApplicationCodedLink" /* 7792 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
@@ -34,7 +34,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                 return null;
               } else {
                 const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp34, message, theme };
-                const appLinkGateResult = tmp(12069).getAppLinkGateResult(obj2);
+                const appLinkGateResult = tmp(12070).getAppLinkGateResult(obj2);
                 if ("unavailable" === appLinkGateResult.state) {
                   return null;
                 } else if ("blocked" === appLinkGateResult.state) {
@@ -44,7 +44,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                   const type2 = applicationCodedLinkData.type;
                   if (tmp(4624).CodedLinkType.ACTIVITY_BOOKMARK === type2) {
                     const obj3 = { theme: tmp38, embedUrl: url, message: tmp37, app, params: applicationCodedLinkData.params };
-                    return tmp(13337).createActivityMessageEmbed(obj3);
+                    return tmp(13338).createActivityMessageEmbed(obj3);
                   } else {
                     if (tmp(4624).CodedLinkType.APP_DIRECTORY_PROFILE !== type2) {
                       if (tmp(4624).CodedLinkType.APP_OAUTH2_LINK !== type2) {
@@ -52,10 +52,10 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                       }
                     }
                     const obj4 = { theme: tmp38, embedUrl: url, message: tmp37, app };
-                    return tmp(12069).createAppMessageEmbed(obj4);
+                    return tmp(12070).createAppMessageEmbed(obj4);
                   }
                 }
-                const tmpResult19 = tmp(12069);
+                const tmpResult19 = tmp(12070);
               }
               const tmpResult18 = tmp(7792);
             } else {
@@ -64,11 +64,11 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
             tmpResult = tmp(7792);
           }
         } else if (tmp(4624).CodedLinkType.INVITE === type) {
-          return tmp(13338).createInviteEmbed(message, code, theme);
+          return tmp(13339).createInviteEmbed(message, code, theme);
         } else if (tmp(4624).CodedLinkType.TEMPLATE === type) {
-          return tmp(13348).createGuildTemplateEmbed(code, theme);
+          return tmp(13349).createGuildTemplateEmbed(code, theme);
         } else if (tmp(4624).CodedLinkType.BUILD_OVERRIDE === type) {
-          return tmp(13350).createBuildOverrideEmbed(code, theme);
+          return tmp(13351).createBuildOverrideEmbed(code, theme);
         } else if (tmp(4624).CodedLinkType.MANUAL_BUILD_OVERRIDE === type) {
           currentUser = UserStore.getCurrentUser();
           let isStaffResult;
@@ -92,22 +92,22 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
           }
           let buildOverrideEmbed = null;
           if (isStaffResult) {
-            buildOverrideEmbed = tmp(13350).createBuildOverrideEmbed(code, theme);
-            const tmpResult25 = tmp(13350);
+            buildOverrideEmbed = tmp(13351).createBuildOverrideEmbed(code, theme);
+            const tmpResult25 = tmp(13351);
           }
           return buildOverrideEmbed;
         } else if (tmp(4624).CodedLinkType.EVENT === type) {
-          return tmp(13343).createGuildScheduledEventLinkEmbed(code, theme);
+          return tmp(13344).createGuildScheduledEventLinkEmbed(code, theme);
         } else if (tmp(4624).CodedLinkType.CHANNEL_LINK === type) {
-          return tmp(13352).createVoiceChannelLinkEmbed(code, theme);
+          return tmp(13353).createVoiceChannelLinkEmbed(code, theme);
         } else if (tmp(4624).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
           const obj5 = { theme, inviteCode: code };
-          return tmp(13345).createEmbeddedActivityInviteEmbed(obj5);
+          return tmp(13346).createEmbeddedActivityInviteEmbed(obj5);
         } else if (tmp(4624).CodedLinkType.EXPERIMENT === type) {
           let experimentEmbed = null;
           if (tmpResult29.canSeeExperimentEmbeds()) {
-            experimentEmbed = tmp(11937).createExperimentEmbed(url, theme);
-            const tmpResult30 = tmp(11937);
+            experimentEmbed = tmp(11938).createExperimentEmbed(url, theme);
+            const tmpResult30 = tmp(11938);
           }
           return experimentEmbed;
         } else {
@@ -117,7 +117,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                 if (tmp(4624).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                   if (tmp(4624).CodedLinkType.QUESTS_EMBED === type) {
                     const obj6 = { theme, questId: code, currentUser };
-                    return tmp(13353).createQuestsEmbed(obj6);
+                    return tmp(13354).createQuestsEmbed(obj6);
                   } else {
                     if (tmp(4624).CodedLinkType.COLLECTIBLES_SHOP !== type) {
                       if (tmp(4624).CodedLinkType.GAME_PROFILE !== type) {
@@ -139,7 +139,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                 const obj8 = { type: "application", applicationId: tmp14 };
                 obj7.guildOrApplication = obj8;
                 obj7.theme = theme;
-                return tmp(11660).createSocialLayerStorefrontProductDetailsEmbed(obj7);
+                return tmp(11661).createSocialLayerStorefrontProductDetailsEmbed(obj7);
               } else {
                 [tmp8, tmp9] = code.split("-");
                 const tmp7 = _slicedToArray(code.split("-"), 2);
@@ -147,7 +147,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                 const obj10 = { type: "guild", guildId: tmp9 };
                 obj9.guildOrApplication = obj10;
                 obj9.theme = theme;
-                return tmp(11660).createSocialLayerStorefrontProductDetailsEmbed(obj9);
+                return tmp(11661).createSocialLayerStorefrontProductDetailsEmbed(obj9);
               }
             }
           }

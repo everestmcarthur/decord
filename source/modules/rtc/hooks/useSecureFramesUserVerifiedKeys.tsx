@@ -1,10 +1,10 @@
-// Module ID: 15942
-// Function ID: 15943
+// Module ID: 15944
+// Function ID: 15945
 // Name: useSecureFramesUserVerifiedKeys
 // Dependencies: [9263, 504, 12, 2]
 // Exports: useSecureFramesUserVerifiedKeys
 
-// Module 15942 (useSecureFramesUserVerifiedKeys)
+// Module 15944 (useSecureFramesUserVerifiedKeys)
 import _modDef12 from "module_12" /* 12 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9263 */;
 

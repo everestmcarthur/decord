@@ -1,10 +1,10 @@
-// Module ID: 13228
-// Function ID: 13229
+// Module ID: 13229
+// Function ID: 13230
 // Name: useWishlistSuggestionsDismissibleContent
 // Dependencies: [32, 19, 7723, 1954, 1090, 504, 7491, 1943, 2]
 // Exports: default
 
-// Module 13228 (useWishlistSuggestionsDismissibleContent)
+// Module 13229 (useWishlistSuggestionsDismissibleContent)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

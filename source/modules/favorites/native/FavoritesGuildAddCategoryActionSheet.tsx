@@ -1,13 +1,13 @@
-// Module ID: 16248
-// Function ID: 16249
+// Module ID: 16250
+// Function ID: 16251
 // Name: FavoritesGuildAddCategoryActionSheet
-// Dependencies: [32, 19, 1970, 21, 4636, 576, 1982, 10351, 4603, 7253, 7252, 1114, 6707, 5056, 2]
+// Dependencies: [32, 19, 1970, 21, 4636, 576, 1982, 10352, 4603, 7253, 7252, 1114, 6707, 5056, 2]
 // Exports: openFavoritesGuildAddCategoryActionSheet
 
-// Module 16248 (FavoritesGuildAddCategoryActionSheet)
+// Module 16250 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4603 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10352 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

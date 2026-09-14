@@ -1,15 +1,15 @@
-// Module ID: 15270
-// Function ID: 15271
+// Module ID: 15271
+// Function ID: 15272
 // Name: QuestDockEnrolledHeader
-// Dependencies: [32, 19, 17, 21, 4636, 15182, 11616, 11904, 5528, 15211, 4632, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 15183, 11617, 11905, 5528, 15212, 4632, 2]
 
-// Module 15270 (QuestDockEnrolledHeader)
+// Module 15271 (QuestDockEnrolledHeader)
 import Text_Text from "Text/Text" /* 4632 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 11904 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15182 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15211 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 11905 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15183 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

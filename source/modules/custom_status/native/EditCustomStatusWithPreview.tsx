@@ -1,14 +1,14 @@
-// Module ID: 11248
-// Function ID: 11249
+// Module ID: 11249
+// Function ID: 11250
 // Name: EditCustomStatusWithPreview
-// Dependencies: [32, 19, 17, 1371, 11249, 1074, 1374, 21, 4636, 576, 5204, 1114, 1178, 7041, 11250, 1242, 11244, 504, 11251, 11252, 4488, 11254, 5052, 11255, 7084, 11280, 11054, 4502, 11282, 7966, 5705, 4632, 11023, 8724, 5768, 5686, 4603, 11334, 1896, 11336, 4594, 1151, 1625, 4839, 7103, 2]
+// Dependencies: [32, 19, 17, 1371, 11250, 1074, 1374, 21, 4636, 576, 5204, 1114, 1176, 7041, 11251, 1240, 11245, 504, 11252, 11253, 4488, 11255, 5052, 11256, 7084, 11281, 11055, 4502, 11283, 7966, 5705, 4632, 11024, 8724, 5768, 5686, 4603, 11335, 1896, 11337, 4594, 1364, 1625, 4839, 7103, 2]
 // Exports: default
 
-// Module 11248 (EditCustomStatusWithPreview)
+// Module 11249 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import shared from "shared" /* 4488 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
@@ -18,11 +18,11 @@ import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
 import Pressables from "Pressables" /* 5204 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import _modDef7041 from "module_7041" /* 7041 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 11054 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11252 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11254 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11282 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 11055 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11253 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11255 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11283 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -268,7 +268,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function onPress() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11334, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11335, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj18.trailing = ref1(tmp6(tmp7[31]).Text, obj19);
@@ -306,7 +306,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11249).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11250).STATUS_MAX_LENGTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1374).EmojiIntention;
@@ -353,7 +353,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     return obj;
   }, items);
   let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: 12, headerStyle: null };
-  let obj2 = analyticsLocations(1151);
+  let obj2 = analyticsLocations(1364);
   const tmp2 = closure_13;
   let obj3;
   if (!tmp3Result.isAndroid()) {

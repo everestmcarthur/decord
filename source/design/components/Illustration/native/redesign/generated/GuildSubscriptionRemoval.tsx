@@ -1,10 +1,10 @@
-// Module ID: 13706
-// Function ID: 13707
+// Module ID: 13707
+// Function ID: 13708
 // Name: GuildSubscriptionRemoval
-// Dependencies: [19, 17, 21, 8349, 13707, 13708, 13709, 4488, 2]
+// Dependencies: [19, 17, 21, 8349, 13708, 13709, 13710, 4488, 2]
 // Exports: GuildSubscriptionRemoval, getGuildSubscriptionRemovalSource, useGuildSubscriptionRemovalSource
 
-// Module 13706 (GuildSubscriptionRemoval)
+// Module 13707 (GuildSubscriptionRemoval)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
@@ -20,13 +20,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
   return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_13707");
-    },
-    darker() {
       return require("module_13708");
     },
-    light() {
+    darker() {
       return require("module_13709");
+    },
+    light() {
+      return require("module_13710");
     }
   });
 };
@@ -34,13 +34,13 @@ export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRe
   const obj = shared;
   return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13707");
-    },
-    darker() {
       return require("module_13708");
     },
-    light() {
+    darker() {
       return require("module_13709");
+    },
+    light() {
+      return require("module_13710");
     }
   });
 };
@@ -49,13 +49,13 @@ export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) 
   const obj4 = {};
   const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13707");
-    },
-    darker() {
       return require("module_13708");
     },
-    light() {
+    darker() {
       return require("module_13709");
+    },
+    light() {
+      return require("module_13710");
     }
   });
   const merged = Object.assign(arg0);

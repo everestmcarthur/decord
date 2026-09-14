@@ -1,15 +1,15 @@
 // Module ID: 8724
 // Function ID: 8725
 // Name: FormInput
-// Dependencies: [19, 1074, 21, 4636, 576, 1150, 4347, 4488, 5767, 7188, 6707, 1178, 2]
+// Dependencies: [19, 1074, 21, 4636, 576, 1363, 4347, 4488, 5767, 7188, 6707, 1176, 2]
 
 // Module 8724 (FormInput)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import native2 from "native" /* 4347 */;
 import noop from "module_19" /* 19 */;
 
-const native = TextArea(1178);
+const native = TextArea(1176);
 const shared = TextArea(4488);
 const RedesignCompat = TextArea(5767);
 const TextInput = TextArea(6707);

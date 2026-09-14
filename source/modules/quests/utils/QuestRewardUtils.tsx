@@ -1,18 +1,18 @@
-// Module ID: 11423
-// Function ID: 11424
+// Module ID: 11424
+// Function ID: 11425
 // Name: QuestRewardUtils
-// Dependencies: [7645, 11424, 7810, 7801, 3871, 1114, 11425, 11426, 11427, 11428, 11429, 5528, 2]
+// Dependencies: [7645, 11425, 7810, 7801, 3871, 1114, 11426, 11427, 11428, 11429, 11430, 5528, 2]
 // Exports: getCollectibleQuestRewardDuration, getCollectibleQuestRewardExtendableExpirationDate, getCollectiblesQuestReward, getCollectiblesQuestRewardItem, getDefaultPlatform, getDefaultRewardName, getDefaultRewardNameWithArticle, getInGameQuestReward, getPlatformString, getQuestOrbMultiplier, getQuestOrbMultiplierForUser, getQuestOrbRewardQuantityForUser, getQuestPrimaryReward, getRewardCodeQuestReward, getVirtualCurrencyRewardOrbQuantity, getVirtualCurrencyRewardPremiumOrbQuantity, hasCollectiblesQuestReward, hasFractionalPremiumQuestReward, hasInGameQuestReward, hasPremiumOrbQuantity, hasQuestRewardCode, hasVirtualCurrencyReward, isCollectibleQuestRewardPermanentWithPremiumSubscription, isCollectibleQuestRewardPremiumExtendable, isTieredRewardCodeQuest
 
-// Module 11423 (QuestRewardUtils)
+// Module 11424 (QuestRewardUtils)
 import util from "util" /* 1114 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7810 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11425 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 11427 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11428 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11429 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11426 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 11428 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11429 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11430 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 
 require = fn;
@@ -50,7 +50,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
               let orbQuantity = orbQuantity2;
             }
             num = orbQuantity;
-            tmp15Result = tmp15(11426);
+            tmp15Result = tmp15(11427);
           }
           orbQuantity = found.orbQuantity;
           tmp15 = require;
@@ -77,7 +77,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
     }
   }
 }
-let items = [fn(11424).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(11424).QuestRewardExpirationMode.PREMIUM_PERMANENT];
+let items = [fn(11425).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(11425).QuestRewardExpirationMode.PREMIUM_PERMANENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestRewardUtils.tsx");
@@ -329,7 +329,7 @@ export const isCollectibleQuestRewardPermanentWithPremiumSubscription = function
     if (tmp11 != null) {
       expirationMode1 = tmp11.expirationMode;
     }
-    hasItem = expirationMode1 === tmp3(11424).QuestRewardExpirationMode.PREMIUM_PERMANENT;
+    hasItem = expirationMode1 === tmp3(11425).QuestRewardExpirationMode.PREMIUM_PERMANENT;
   }
   return hasItem;
 };
@@ -415,7 +415,7 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
       if (tmp2Result2.shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser)) {
         num6 = num;
       }
-      tmp2Result2 = tmp2(11426);
+      tmp2Result2 = tmp2(11427);
     }
     return num6;
   }

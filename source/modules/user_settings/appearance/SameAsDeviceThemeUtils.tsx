@@ -1,19 +1,19 @@
-// Module ID: 15259
-// Function ID: 15260
+// Module ID: 15260
+// Function ID: 15261
 // Name: SameAsDeviceThemeUtils
-// Dependencies: [4456, 1183, 1186, 9488, 1229, 4488, 4485, 2]
+// Dependencies: [4456, 1181, 1184, 9488, 1227, 4488, 4485, 2]
 // Exports: disableSameAsDeviceTheme, enableSameAsDeviceTheme
 
-// Module 15259 (SameAsDeviceThemeUtils)
-import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+// Module 15260 (SameAsDeviceThemeUtils)
+import ClientThemesUtils from "ClientThemesUtils" /* 1227 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 4485 */;
 import shared from "shared" /* 4488 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9488 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const ThemeConstants = fn(1186);
+const ThemeConstants = fn(1184);
 ({ SystemTheme: hasOwnProperty, SystemThemeState: metroRequire } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");

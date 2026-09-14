@@ -1,20 +1,20 @@
 // Module ID: 7966
 // Function ID: 7967
 // Name: HeaderShared
-// Dependencies: [19, 17, 7967, 21, 4636, 576, 4632, 4338, 5706, 5712, 7968, 1150, 7973, 1611, 1484, 7975, 5662, 558, 7978, 13394, 5204, 1178, 2]
+// Dependencies: [19, 17, 7967, 21, 4636, 576, 4632, 4338, 5706, 5712, 7968, 1363, 7973, 1611, 1484, 7975, 5662, 558, 7978, 13395, 5204, 1176, 2]
 // Exports: HeaderIconButton, getDefaultChannelStackHeaderProps, getDefaultStackHeaderProps, getRenderBackImage, getRenderHeaderTextButton, getRenderModalBackImage, getRenderModalCloseImage, renderHeader
 
 // Module 7966 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import _mod5712 from "module_5712" /* 5712 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7968 */;
 import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7973 */;
 import ChannelActionsDefault from "ChannelActions" /* 7978 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13394 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13395 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

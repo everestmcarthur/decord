@@ -1,7 +1,7 @@
 // Module ID: 9727
 // Function ID: 9728
 // Name: VideoEmptyState
-// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 9728, 1178, 1114, 9731, 9239, 504, 5073, 4778, 4688, 4632, 5057, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 9728, 1176, 1114, 9731, 9239, 504, 5073, 4778, 4688, 4632, 5057, 2]
 // Exports: default
 
 // Module 9727 (VideoEmptyState)
@@ -44,7 +44,7 @@ export default function VideoEmptyState(style) {
     const obj4 = { style: tmp2.placeholderText, children: null };
     const intl2 = stream(1114).intl;
     obj4.children = intl2.formatToMarkdownString(stream(1114).t["1Ww0Hi"], {});
-    items[1] = closure_5(stream(1178).LegacyText, obj4);
+    items[1] = closure_5(stream(1176).LegacyText, obj4);
     obj3.children = items;
     let tmp5Result = closure_7(closure_6, obj3);
   } else if (tmp3.STREAM_FAILED === type) {
@@ -58,7 +58,7 @@ export default function VideoEmptyState(style) {
     const obj6 = { style: tmp2.placeholderText, children: null };
     const intl = stream(1114).intl;
     obj6.children = intl.string(stream(1114).t.rSlOep);
-    items1[1] = closure_5(stream(1178).LegacyText, obj6);
+    items1[1] = closure_5(stream(1176).LegacyText, obj6);
     obj5.children = items1;
     tmp5Result = closure_7(closure_6, obj5);
   } else if (tmp3.NONE === type) {

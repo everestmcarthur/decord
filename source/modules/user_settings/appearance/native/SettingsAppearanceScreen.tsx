@@ -1,18 +1,18 @@
-// Module ID: 15347
-// Function ID: 15348
+// Module ID: 15348
+// Function ID: 15349
 // Name: SettingsAppearanceScreen
-// Dependencies: [19, 4456, 1184, 1183, 15348, 8079, 1074, 21, 1483, 1150, 7966, 1114, 10248, 1249, 3236, 2024, 5073, 15349, 563, 11601, 14775, 2]
+// Dependencies: [19, 4456, 1182, 1181, 15349, 8079, 1074, 21, 1483, 1363, 7966, 1114, 10248, 1247, 3236, 2024, 5073, 15350, 563, 11602, 14776, 2]
 
-// Module 15347 (SettingsAppearanceScreen)
+// Module 15348 (SettingsAppearanceScreen)
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FontScaleStore = fn(15348);
+const FontScaleStore = fn(15349);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(8079).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -23,8 +23,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(() => {
   nativeStackNavigation(5073)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(15349).fetchUserCustomThemes();
-      const obj = closure_0(15349);
+      const userCustomThemes = closure_0(15350).fetchUserCustomThemes();
+      const obj = closure_0(15350);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -98,7 +98,7 @@ export default noop.memo(() => {
     obj8.settings = items6;
     const intl3 = closure_0(1114).intl;
     const obj9 = { helpCenterLink: null };
-    const obj = closure_0(11601);
+    const obj = closure_0(11602);
     obj9.helpCenterLink = nativeStackNavigation(2024).getArticleURL(constants2.FAVORITES_GUILD);
     obj8.subLabel = intl3.format(nativeStackNavigation(3236).GR2KOG, obj9);
     items1[5] = obj8;
@@ -122,5 +122,5 @@ export default noop.memo(() => {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(14775), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14776), { node }, "" + theme + "-" + gradientPresetId);
 });

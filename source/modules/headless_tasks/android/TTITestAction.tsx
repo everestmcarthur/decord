@@ -1,14 +1,14 @@
-// Module ID: 18042
-// Function ID: 18043
+// Module ID: 18043
+// Function ID: 18044
 // Name: TTITestAction
-// Dependencies: [5, 17340, 4552, 5639, 502, 1957, 1979, 3, 4501, 10322, 17525, 573, 1359, 1364, 1242, 6694, 8496, 4647, 15657, 1188, 2]
+// Dependencies: [5, 17342, 4552, 5639, 502, 1957, 1979, 3, 4501, 10322, 17526, 573, 1357, 1362, 1240, 6694, 8496, 4647, 15658, 1186, 2]
 
-// Module 18042 (TTITestAction)
+// Module 18043 (TTITestAction)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1357 */;
 import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4501 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17525 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17526 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -592,13 +592,13 @@ let closure_19 = async function _apiLogin(arg0, value) {
         const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(573);
-          const f126371 = () => {
+          const f126374 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f126371(arg0);
+            return f126374(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -626,11 +626,11 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f126371(arg0);
+    return f126374(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(17340).applicationReady;
+const applicationReady = fn(17342).applicationReady;
 fn(5639).addPostConnectionCallback;
 const logger = new LoggerDefault("TTITestAction");
 let obj = {
@@ -755,7 +755,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, value) => {
           closure_135_2 = undefined;
           ({ reply: closure_135_0, args } = closure_0);
           const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
-          const obj5 = { getConstants: closure_0(1364).getConstants };
+          const obj5 = { getConstants: closure_0(1362).getConstants };
           obj4.ClientInfoUtils = obj5;
           const obj6 = { resetComponentProfiler: closure_0(10322).resetComponentProfiler, resumeComponentProfiler: closure_0(10322).resumeComponentProfiler, pauseComponentProfiler: closure_0(10322).pauseComponentProfiler, dumpStats: closure_0(10322).dumpStats };
           obj4.ComponentProfiler = obj6;
@@ -763,7 +763,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, value) => {
           obj4.ExperimentStore = ExperimentStore;
           obj4.NativeJankStats = NativeJankStatsModuleDefault;
           obj4.ProcessUtils = ProcessUtilsDefault;
-          const obj7 = { startRecordingAnalyticsEvents: closure_0(1242).startRecordingAnalyticsEvents, stopRecordingAnalyticsEvents: closure_0(1242).stopRecordingAnalyticsEvents, getAnalyticsEventsRecording: closure_0(1242).getAnalyticsEventsRecording, clearAnalyticsEventsRecording: closure_0(1242).clearAnalyticsEventsRecording };
+          const obj7 = { startRecordingAnalyticsEvents: closure_0(1240).startRecordingAnalyticsEvents, stopRecordingAnalyticsEvents: closure_0(1240).stopRecordingAnalyticsEvents, getAnalyticsEventsRecording: closure_0(1240).getAnalyticsEventsRecording, clearAnalyticsEventsRecording: closure_0(1240).clearAnalyticsEventsRecording };
           obj4.AnalyticsUtils = obj7;
           const obj8 = { apiLogin, setupTTITest };
           obj4.TTITestAction = obj8;

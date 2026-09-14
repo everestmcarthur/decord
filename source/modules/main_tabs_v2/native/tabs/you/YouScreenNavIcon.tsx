@@ -1,9 +1,9 @@
-// Module ID: 16906
-// Function ID: 16907
+// Module ID: 16908
+// Function ID: 16909
 // Name: YouScreenNavIcon
-// Dependencies: [19, 17, 21, 16500, 576, 8940, 4636, 1114, 9031, 4632, 2]
+// Dependencies: [19, 17, 21, 16502, 576, 8940, 4636, 1114, 9031, 4632, 2]
 
-// Module 16906 (YouScreenNavIcon)
+// Module 16908 (YouScreenNavIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16500).ICON_SIZE.md;
+const md = fn(16502).ICON_SIZE.md;
 const result = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
 const point = { shape: fn(8940).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };

@@ -1,15 +1,15 @@
-// Module ID: 14668
-// Function ID: 14669
+// Module ID: 14669
+// Function ID: 14670
 // Name: DevToolsNavigator
-// Dependencies: [19, 17, 21, 8017, 7103, 14669, 7966, 15832, 9563, 4632, 576, 15665, 14779, 4603, 4839, 2]
+// Dependencies: [19, 17, 21, 8017, 7103, 14670, 7966, 15834, 9563, 4632, 576, 15667, 14780, 4603, 4839, 2]
 // Exports: navigateToDevTools
 
-// Module 14668 (DevToolsNavigator)
+// Module 14669 (DevToolsNavigator)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 14669 */;
-import DevToolsContentDefault from "DevToolsContent" /* 15832 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 14670 */;
+import DevToolsContentDefault from "DevToolsContent" /* 15834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -69,8 +69,8 @@ let closure_8 = noop.memo((screenKey) => {
   ,
 
   ];
-  let merged = Object.assign(tmp(15665).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15665).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15667).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15667).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;

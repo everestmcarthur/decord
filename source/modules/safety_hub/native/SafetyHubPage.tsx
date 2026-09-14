@@ -1,15 +1,15 @@
-// Module ID: 14854
-// Function ID: 14855
+// Module ID: 14855
+// Function ID: 14856
 // Name: SafetyHubPage
-// Dependencies: [19, 17, 8548, 8537, 1074, 21, 6694, 12013, 8710, 1178, 5056, 1114, 504, 2978, 4632, 14855, 1379, 14856, 4636, 576, 14857, 12040, 12012, 14851, 5073, 12011, 1242, 7704, 7709, 4603, 14858, 1896, 14859, 14861, 2]
+// Dependencies: [19, 17, 8548, 8537, 1074, 21, 6694, 12014, 8710, 1176, 5056, 1114, 504, 2978, 4632, 14856, 1379, 14857, 4636, 576, 14858, 12041, 12013, 14852, 5073, 12012, 1240, 7704, 7709, 4603, 14859, 1896, 14860, 14862, 2]
 // Exports: default
 
-// Module 14854 (SafetyHubPage)
+// Module 14855 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import user from "user" /* 1379 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2978 from "module_2978" /* 2978 */;
@@ -20,10 +20,10 @@ import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import MetricEvents from "MetricEvents" /* 7709 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8710 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12011 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12013 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14855 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14856 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12012 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12014 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14856 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14857 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 
@@ -125,7 +125,7 @@ function AutomatedUnderageAppealStatus() {
     }
     let tmp10 = tmp22;
   } else if (stateFromStores === tmp7.SUCCESS) {
-    const obj3 = { messageType: tmp(1178).HelpMessageTypes.SUCCESS, children: null };
+    const obj3 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, children: null };
     const intl6 = tmp(1114).intl;
     const obj4 = {
       loginHook(children) {
@@ -140,9 +140,9 @@ function AutomatedUnderageAppealStatus() {
         }
     };
     obj3.children = intl6.format(tmp(1114).t.hyh4ls, obj4);
-    tmp10 = closure_1_12(tmp(1178).HelpMessage, obj3);
+    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj3);
   } else if (stateFromStores === tmp7.VERIFIED) {
-    const obj5 = { messageType: tmp(1178).HelpMessageTypes.SUCCESS, button: null, children: null };
+    const obj5 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, button: null, children: null };
     const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl4 = tmp(1114).intl;
     obj6.text = intl4.string(tmp(1114).t["2jvQ6K"]);
@@ -150,22 +150,22 @@ function AutomatedUnderageAppealStatus() {
     obj5.button = closure_1_12(tmp(5056).Button, obj6);
     const intl5 = tmp(1114).intl;
     obj5.children = intl5.string(tmp(1114).t["2Qe65J"]);
-    tmp10 = closure_1_12(tmp(1178).HelpMessage, obj5);
+    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj5);
   } else if (stateFromStores === tmp7.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
-    const obj7 = { messageType: tmp(1178).HelpMessageTypes.SUCCESS, children: null };
+    const obj7 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, children: null };
     const intl3 = tmp(1114).intl;
     obj7.children = intl3.string(tmp(1114).t.Ie7p1Q);
-    tmp10 = closure_1_12(tmp(1178).HelpMessage, obj7);
+    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj7);
   } else if (stateFromStores === tmp7.ERROR) {
-    const obj8 = { messageType: tmp(1178).HelpMessageTypes.ERROR, children: null };
+    const obj8 = { messageType: tmp(1176).HelpMessageTypes.ERROR, children: null };
     const intl2 = tmp(1114).intl;
     obj8.children = intl2.string(tmp(1114).t["4sILBU"]);
-    tmp10 = closure_1_12(tmp(1178).HelpMessage, obj8);
+    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj8);
   } else if (stateFromStores === tmp7.FAILURE) {
-    const obj9 = { messageType: tmp(1178).HelpMessageTypes.ERROR, children: null };
+    const obj9 = { messageType: tmp(1176).HelpMessageTypes.ERROR, children: null };
     const intl = tmp(1114).intl;
     obj9.children = intl.string(tmp(1114).t["40R63o"]);
-    tmp10 = closure_1_12(tmp(1178).HelpMessage, obj9);
+    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj9);
   } else {
     if (stateFromStores !== tmp7.UNDERAGE) {
       if (stateFromStores !== tmp7.UNDERAGE_MANUAL_REVIEW) {
@@ -222,7 +222,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14858, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14859, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

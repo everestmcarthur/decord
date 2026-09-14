@@ -1,10 +1,10 @@
-// Module ID: 16705
-// Function ID: 16706
+// Module ID: 16707
+// Function ID: 16708
 // Name: VibegrationsNativeChat
-// Dependencies: [19, 17, 1895, 16687, 16690, 21, 4636, 576, 1114, 3590, 5054, 4632, 4626, 5056, 5688, 4331, 16706, 16707, 16709, 16711, 16713, 504, 9003, 16715, 2]
+// Dependencies: [19, 17, 1895, 16689, 16692, 21, 4636, 576, 1114, 3590, 5054, 4632, 4626, 5056, 5688, 4331, 16708, 16709, 16711, 16713, 16715, 504, 9003, 16717, 2]
 // Exports: default
 
-// Module 16705 (VibegrationsNativeChat)
+// Module 16707 (VibegrationsNativeChat)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
@@ -12,15 +12,15 @@ import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16706 */;
-import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16707 */;
-import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16709 */;
-import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16711 */;
-import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16713 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16708 */;
+import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16709 */;
+import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16711 */;
+import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16713 */;
+import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16715 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16687 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16690 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16689 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16692 */;
 
 require = fn;
 function ProposalCard(proposal) {
@@ -264,8 +264,8 @@ function TodoList(todos) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const turnSettled = fn(16687).turnSettled;
-let VibegrationsConnectionStore = fn(16690);
+const turnSettled = fn(16689).turnSettled;
+let VibegrationsConnectionStore = fn(16692);
 ({ ensureConnection: closure_9, getAttachmentUrl: c10, interruptTurn: closure_11, sendUserMessage: closure_12 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);

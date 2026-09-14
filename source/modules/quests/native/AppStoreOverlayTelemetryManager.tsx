@@ -1,12 +1,12 @@
-// Module ID: 11630
-// Function ID: 11631
+// Module ID: 11631
+// Function ID: 11632
 // Name: AppStoreOverlayTelemetryManager
-// Dependencies: [1074, 7221, 1150, 1093, 2]
+// Dependencies: [1074, 7221, 1363, 1093, 2]
 // Exports: clearAppStoreOverlayOpen, setAppStoreOverlayOpen
 
-// Module 11630 (AppStoreOverlayTelemetryManager)
+// Module 11631 (AppStoreOverlayTelemetryManager)
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
 

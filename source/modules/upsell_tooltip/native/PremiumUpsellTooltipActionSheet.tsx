@@ -1,12 +1,12 @@
-// Module ID: 11279
-// Function ID: 11280
+// Module ID: 11280
+// Function ID: 11281
 // Name: PremiumUpsellTooltipActionSheet
-// Dependencies: [19, 17, 1954, 21, 4636, 576, 4457, 7253, 1178, 4632, 5056, 4603, 2]
+// Dependencies: [19, 17, 1954, 21, 4636, 576, 4457, 7253, 1176, 4632, 5056, 4603, 2]
 // Exports: default
 
-// Module 11279 (PremiumUpsellTooltipActionSheet)
+// Module 11280 (PremiumUpsellTooltipActionSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;

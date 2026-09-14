@@ -1,16 +1,16 @@
-// Module ID: 16098
-// Function ID: 16099
+// Module ID: 16100
+// Function ID: 16101
 // Name: MainTabsNavigatorPanel
-// Dependencies: [32, 19, 17, 1074, 21, 3, 4636, 576, 1484, 4497, 11657, 11656, 16099, 4502, 16100, 4495, 4647, 1109, 16101, 4649, 16104, 4373, 5707, 7977, 16105, 6756, 16106, 16107, 16622, 16623, 16624, 16846, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 3, 4636, 576, 1484, 4497, 11658, 11657, 16101, 4502, 16102, 4495, 4647, 1109, 16103, 4649, 16106, 4373, 5707, 7977, 16107, 6756, 16108, 16109, 16624, 16625, 16626, 16848, 2]
 
-// Module 16098 (MainTabsNavigatorPanel)
+// Module 16100 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16099 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16100 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 16104 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16101 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16102 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 16106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (tmp2) {
-        obj = obj(16099);
+        obj = obj(16101);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(4502).dismissKeyboard();

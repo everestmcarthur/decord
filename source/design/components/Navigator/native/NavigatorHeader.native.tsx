@@ -1,7 +1,7 @@
 // Module ID: 5705
 // Function ID: 5706
 // Name: NavigatorHeader
-// Dependencies: [5, 19, 17, 1074, 21, 4636, 576, 4632, 5706, 5709, 1484, 5711, 1114, 5712, 5761, 1150, 1611, 5763, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 4636, 576, 4632, 5706, 5709, 1484, 5711, 1114, 5712, 5761, 1363, 1611, 5763, 2]
 // Exports: FauxHeader, HeaderSubmittingIndicator, NavigatorHeader, getHeaderBackButton, getHeaderCloseButton, getHeaderConditionalBackButton, getHeaderNoTitle, getHeaderTextButton, renderBackImage
 
 // Module 5705 (NavigatorHeader)

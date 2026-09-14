@@ -1,18 +1,18 @@
-// Module ID: 15002
-// Function ID: 15003
+// Module ID: 15003
+// Function ID: 15004
 // Name: FamilyCenterLinkingBanner
-// Dependencies: [19, 17, 21, 4636, 576, 8769, 12049, 1114, 2396, 15003, 4632, 14965, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 8769, 12050, 1114, 2396, 15004, 4632, 14966, 2]
 // Exports: default
 
-// Module 15002 (FamilyCenterLinkingBanner)
+// Module 15003 (FamilyCenterLinkingBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12049 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14965 */;
-import _modDef15003 from "module_15003" /* 15003 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12050 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14966 */;
+import _modDef15004 from "module_15004" /* 15004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -107,7 +107,7 @@ export default function FamilyCenterLinkingBanner() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null, resizeMethod: "resize" };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2396.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(_modDef2396.JsAEDi));
-  obj4.source = _modDef15003;
+  obj4.source = _modDef15004;
   obj4.style = tmp.art;
   const items = [hasOwnProperty(React4, obj4), , ];
   const obj5 = { style: tmp.content, children: null };

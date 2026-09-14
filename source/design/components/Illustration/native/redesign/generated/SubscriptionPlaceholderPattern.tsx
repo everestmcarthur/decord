@@ -1,10 +1,10 @@
-// Module ID: 13589
-// Function ID: 13590
+// Module ID: 13590
+// Function ID: 13591
 // Name: SubscriptionPlaceholderPattern
-// Dependencies: [19, 17, 21, 8349, 13590, 13591, 13592, 4488, 2]
+// Dependencies: [19, 17, 21, 8349, 13591, 13592, 13593, 4488, 2]
 // Exports: SubscriptionPlaceholderPattern, getSubscriptionPlaceholderPatternSource, useSubscriptionPlaceholderPatternSource
 
-// Module 13589 (SubscriptionPlaceholderPattern)
+// Module 13590 (SubscriptionPlaceholderPattern)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
@@ -20,13 +20,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getSubscriptionPlaceholderPatternSource = function getSubscriptionPlaceholderPatternSource(theme) {
   return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_13590");
-    },
-    darker() {
       return require("module_13591");
     },
-    light() {
+    darker() {
       return require("module_13592");
+    },
+    light() {
+      return require("module_13593");
     }
   });
 };
@@ -34,13 +34,13 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
   const obj = shared;
   return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13590");
-    },
-    darker() {
       return require("module_13591");
     },
-    light() {
+    darker() {
       return require("module_13592");
+    },
+    light() {
+      return require("module_13593");
     }
   });
 };
@@ -49,13 +49,13 @@ export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPa
   const obj4 = {};
   const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13590");
-    },
-    darker() {
       return require("module_13591");
     },
-    light() {
+    darker() {
       return require("module_13592");
+    },
+    light() {
+      return require("module_13593");
     }
   });
   const merged = Object.assign(arg0);

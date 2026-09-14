@@ -1,10 +1,10 @@
-// Module ID: 16966
-// Function ID: 16967
+// Module ID: 16968
+// Function ID: 16969
 // Name: ChannelSettingsChangeCategory
-// Dependencies: [32, 718, 19, 1957, 7214, 1979, 4275, 4285, 1371, 1074, 21, 4636, 576, 4347, 7215, 12545, 4280, 5601, 4980, 1114, 4789, 5686, 5768, 8716, 5054, 4632, 504, 1483, 11739, 38, 2]
+// Dependencies: [32, 718, 19, 1957, 7214, 1979, 4275, 4285, 1371, 1074, 21, 4636, 576, 4347, 7215, 12546, 4280, 5601, 4980, 1114, 4789, 5686, 5768, 8716, 5054, 4632, 504, 1483, 11740, 38, 2]
 // Exports: default
 
-// Module 16966 (ChannelSettingsChangeCategory)
+// Module 16968 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -289,7 +289,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1483).useNavigation();
   const obj2 = channelId(1483);
-  const appChannelBotUserId = channelId(11739).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11740).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

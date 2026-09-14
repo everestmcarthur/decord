@@ -1,11 +1,11 @@
 // Module ID: 9962
 // Function ID: 9963
 // Name: useMobileInviteSuggestions
-// Dependencies: [32, 19, 2021, 1979, 9963, 4660, 7838, 1074, 1085, 504, 1242, 9976, 9977, 2]
+// Dependencies: [32, 19, 2021, 1979, 9963, 4660, 7838, 1074, 1085, 504, 1240, 9976, 9977, 2]
 // Exports: default
 
 // Module 9962 (useMobileInviteSuggestions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;

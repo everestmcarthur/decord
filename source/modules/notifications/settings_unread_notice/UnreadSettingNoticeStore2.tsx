@@ -1,9 +1,9 @@
-// Module ID: 11545
-// Function ID: 11546
+// Module ID: 11546
+// Function ID: 11547
 // Name: UnreadSettingNoticeStore2
 // Dependencies: [502, 1957, 1979, 2011, 4817, 1074, 4818, 1084, 1090, 11, 1384, 504, 10277, 573, 2]
 
-// Module 11545 (UnreadSettingNoticeStore2)
+// Module 11546 (UnreadSettingNoticeStore2)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

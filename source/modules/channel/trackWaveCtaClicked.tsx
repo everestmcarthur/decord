@@ -1,11 +1,11 @@
-// Module ID: 12394
-// Function ID: 12395
+// Module ID: 12395
+// Function ID: 12396
 // Name: trackWaveCtaClicked
-// Dependencies: [1957, 1074, 1242, 2]
+// Dependencies: [1957, 1074, 1240, 2]
 // Exports: getDmHasMessageHistory, trackWaveCtaClicked
 
-// Module 12394 (trackWaveCtaClicked)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 12395 (trackWaveCtaClicked)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;

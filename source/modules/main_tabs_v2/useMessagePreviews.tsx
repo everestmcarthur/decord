@@ -1,14 +1,14 @@
-// Module ID: 15402
-// Function ID: 15403
+// Module ID: 15403
+// Function ID: 15404
 // Name: useMessagePreviews
-// Dependencies: [1221, 4651, 1935, 504, 7988, 7983, 15403, 2]
+// Dependencies: [1219, 4651, 1935, 504, 7988, 7983, 15404, 2]
 // Exports: default, useMessagePreviewSetting
 
-// Module 15402 (useMessagePreviews)
+// Module 15403 (useMessagePreviews)
 import UserSettings from "UserSettings" /* 1935 */;
 import useIsNsfwGatedDefault from "useIsNsfwGated" /* 7988 */;
-import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15403 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15404 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
 
 const require = globalThis.__r;

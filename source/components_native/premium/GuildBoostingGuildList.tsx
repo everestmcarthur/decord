@@ -1,10 +1,10 @@
-// Module ID: 13624
-// Function ID: 13625
+// Module ID: 13625
+// Function ID: 13626
 // Name: GuildBoostingGuildList
-// Dependencies: [19, 17, 1979, 5519, 1074, 21, 4636, 576, 4571, 504, 4545, 9179, 7445, 7093, 5665, 4632, 10538, 1114, 13593, 2]
+// Dependencies: [19, 17, 1979, 5519, 1074, 21, 4636, 576, 4571, 504, 4545, 9179, 7445, 7093, 5665, 4632, 10539, 1114, 13594, 2]
 // Exports: default
 
-// Module 13624 (GuildBoostingGuildList)
+// Module 13625 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4545 */;
@@ -47,7 +47,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
     const items2 = [closure_8(tmp5(4632).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
-    const obj7 = { source: tmp2(10538), style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const obj7 = { source: tmp2(10539), style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
     const items3 = [closure_8(closure_4, obj7), ];
     const obj8 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1114).intl;
@@ -59,7 +59,7 @@ function GuildBoostingGuildListItem(guildId) {
     obj4.children = items2;
     items1[1] = closure_9(closure_3, obj4);
     const obj10 = { guild: stateFromStores, theme: tmp4 };
-    items1[2] = closure_8(tmp2(13593), obj10);
+    items1[2] = closure_8(tmp2(13594), obj10);
     obj2.children = items1;
     tmp9 = closure_9(tmp2Result, obj2);
     const tmp2Result2 = tmp2(5665);

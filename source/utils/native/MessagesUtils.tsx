@@ -1,9 +1,9 @@
-// Module ID: 12085
-// Function ID: 12086
+// Module ID: 12086
+// Function ID: 12087
 // Name: MessagesUtils
 // Dependencies: [1074, 7429, 4624, 7994, 4784, 2]
 
-// Module 12085 (MessagesUtils)
+// Module 12086 (MessagesUtils)
 import CodedLink from "CodedLink" /* 4624 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4784 */;
 import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7429 */;

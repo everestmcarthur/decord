@@ -1,13 +1,13 @@
 // Module ID: 9721
 // Function ID: 9722
 // Name: ScreenshareTile
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 9722, 6756, 1178, 9723, 4632, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 9722, 6756, 1176, 9723, 4632, 1114, 2]
 // Exports: default
 
 // Module 9721 (ScreenshareTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9722 */;

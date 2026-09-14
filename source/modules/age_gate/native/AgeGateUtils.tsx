@@ -1,11 +1,11 @@
-// Module ID: 10422
-// Function ID: 10423
+// Module ID: 10423
+// Function ID: 10424
 // Name: age_gate/AgeGateUtils
-// Dependencies: [1979, 4275, 1371, 1074, 1150, 4839, 10423, 1896, 9425, 2]
+// Dependencies: [1979, 4275, 1371, 1074, 1363, 4839, 10424, 1896, 9425, 2]
 // Exports: handleNSFWGuildInvite, isNSFWInvite, shouldNSFWGateGuild
 
-// Module 10422 (age_gate/AgeGateUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 10423 (age_gate/AgeGateUtils)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -70,9 +70,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
         }
       }
       const obj3 = { guildId: id1 };
-      obj2.pushLazy(asyncRequireImpl(10423, tmp2.paths), obj3);
+      obj2.pushLazy(asyncRequireImpl(10424, tmp2.paths), obj3);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10423, tmp2.paths);
+      const tmp12 = asyncRequireImpl(10424, tmp2.paths);
     }
     return flag2;
   } else {

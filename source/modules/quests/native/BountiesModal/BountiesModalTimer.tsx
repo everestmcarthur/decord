@@ -1,10 +1,10 @@
-// Module ID: 15129
-// Function ID: 15130
+// Module ID: 15130
+// Function ID: 15131
 // Name: BountiesModalTimer
-// Dependencies: [19, 17, 21, 5061, 4373, 8574, 4636, 576, 1150, 4637, 4632, 9569, 2]
+// Dependencies: [19, 17, 21, 5061, 4373, 8574, 4636, 576, 1363, 4637, 4632, 9569, 2]
 // Exports: default
 
-// Module 15129 (BountiesModalTimer)
+// Module 15130 (BountiesModalTimer)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -37,7 +37,7 @@ obj3.transform = items;
 obj.ring = obj3;
 obj.trackPath = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let obj5 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, lineHeight: null };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

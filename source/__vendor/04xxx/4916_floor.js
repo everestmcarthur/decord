@@ -1,16 +1,16 @@
 // Module ID: 4916
 // Function ID: 4917
 // Name: floor
-// Dependencies: [1308]
+// Dependencies: [1306]
 
 // Module 4916 (floor)
-import _mod1308 from "module_1308" /* 1308 */;
+import _mod1306 from "module_1306" /* 1306 */;
 
 
 export default function floor(arg0) {
   let tmp = arg0;
   if (typeof arg0 !== "bigint") {
-    tmp = _mod1308(arg0);
+    tmp = _mod1306(arg0);
   }
   return tmp;
 };

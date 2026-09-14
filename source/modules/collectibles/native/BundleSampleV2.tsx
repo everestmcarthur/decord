@@ -1,7 +1,7 @@
 // Module ID: 8924
 // Function ID: 8925
 // Name: BundleSampleV2
-// Dependencies: [19, 17, 8925, 21, 5668, 4636, 576, 38, 1889, 1886, 8926, 8937, 8944, 1178, 2]
+// Dependencies: [19, 17, 8925, 21, 5668, 4636, 576, 38, 1889, 1886, 8926, 8937, 8944, 1176, 2]
 // Exports: default
 
 // Module 8924 (BundleSampleV2)
@@ -124,10 +124,10 @@ function BundleSampleV2Composed(arg0) {
       let AvatarSizes = dependencyMap;
       let obj6 = { width: tmp8.nameplatePreviewWidth, avatarSize: null, nameplate: null };
       if ("large" === size) {
-        AvatarSizes = tmp23(1178).AvatarSizes;
+        AvatarSizes = tmp23(1176).AvatarSizes;
         let XSMALL_20 = AvatarSizes.NORMAL;
       } else {
-        XSMALL_20 = tmp23(1178).AvatarSizes.XSMALL_20;
+        XSMALL_20 = tmp23(1176).AvatarSizes.XSMALL_20;
       }
       obj6.avatarSize = XSMALL_20;
       obj6.nameplate = nameplateData;

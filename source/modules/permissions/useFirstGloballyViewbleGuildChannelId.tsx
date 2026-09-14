@@ -1,10 +1,10 @@
-// Module ID: 16157
-// Function ID: 16158
+// Module ID: 16159
+// Function ID: 16160
 // Name: useFirstGloballyViewbleGuildChannelId
 // Dependencies: [2012, 1085, 504, 4280, 2]
 // Exports: useFirstGloballyViewbleGuildChannelId
 
-// Module 16157 (useFirstGloballyViewbleGuildChannelId)
+// Module 16159 (useFirstGloballyViewbleGuildChannelId)
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 

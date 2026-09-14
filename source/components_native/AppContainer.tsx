@@ -1,14 +1,14 @@
-// Module ID: 14642
-// Function ID: 14643
+// Module ID: 14643
+// Function ID: 14644
 // Name: AppContainer
-// Dependencies: [32, 19, 17, 7431, 1957, 2011, 1074, 1964, 21, 4636, 576, 4373, 5207, 14643, 4842, 1109, 1233, 4495, 4988, 7139, 14645, 14646, 4494, 1100, 4571, 1242, 4496, 14647, 7144, 1484, 1369, 14648, 1150, 11662, 14649, 14657, 4418, 14659, 1480, 9773, 12912, 12918, 14660, 4509, 14661, 14663, 14664, 14665, 16026, 16034, 1232, 2]
+// Dependencies: [32, 19, 17, 7431, 1957, 2011, 1074, 1964, 21, 4636, 576, 4373, 5207, 14644, 4842, 1109, 1231, 4495, 4988, 7139, 14646, 14647, 4494, 1100, 4571, 1240, 4496, 14648, 7144, 1484, 1369, 14649, 1363, 11663, 14650, 14658, 4418, 14660, 1480, 9773, 12913, 12919, 14661, 4509, 14662, 14664, 14665, 14666, 16028, 16036, 1230, 2]
 
-// Module 14642 (AppContainer)
+// Module 14643 (AppContainer)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import SentryInitUtils from "SentryInitUtils" /* 1233 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import SentryInitUtils from "SentryInitUtils" /* 1231 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
 import Link from "Link" /* 1484 */;
@@ -21,21 +21,21 @@ import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 4842 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5207 */;
 import useNavigationTheme from "useNavigationTheme" /* 7144 */;
 import WebViewContext from "WebViewContext" /* 9773 */;
-import StartupProfiler from "StartupProfiler" /* 11662 */;
-import MemoryRouter from "MemoryRouter" /* 12912 */;
-import RouteManagerDefault from "RouteManager" /* 12918 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14643 */;
-import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 14646 */;
-import MainNavigationLoggerDefault from "MainNavigationLogger" /* 14647 */;
-import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 14649 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 14657 */;
-import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 14659 */;
-import ErrorBoundaryDefault from "ErrorBoundary" /* 14660 */;
-import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 14661 */;
-import ThemedStatusBarDefault from "ThemedStatusBar" /* 14663 */;
-import SafeAreaProvider from "SafeAreaProvider" /* 14664 */;
-import DevToolsLazyDefault from "DevToolsLazy" /* 14665 */;
-import ScreenRecordingPipDefault from "ScreenRecordingPip" /* 16026 */;
+import StartupProfiler from "StartupProfiler" /* 11663 */;
+import MemoryRouter from "MemoryRouter" /* 12913 */;
+import RouteManagerDefault from "RouteManager" /* 12919 */;
+import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14644 */;
+import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 14647 */;
+import MainNavigationLoggerDefault from "MainNavigationLogger" /* 14648 */;
+import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 14650 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 14658 */;
+import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 14660 */;
+import ErrorBoundaryDefault from "ErrorBoundary" /* 14661 */;
+import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 14662 */;
+import ThemedStatusBarDefault from "ThemedStatusBar" /* 14664 */;
+import SafeAreaProvider from "SafeAreaProvider" /* 14665 */;
+import DevToolsLazyDefault from "DevToolsLazy" /* 14666 */;
+import ScreenRecordingPipDefault from "ScreenRecordingPip" /* 16028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -180,7 +180,7 @@ let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4373).Reani
 try {
   fn(4988).enableFreeze();
   let obj6 = fn(4988);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(14645).useTrackNavigatorScreenImpression };
+  let obj8 = { useTrackNavigatorScreenImpression: fn(14646).useTrackNavigatorScreenImpression };
   fn(7139).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = { code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}" };
@@ -188,7 +188,7 @@ try {
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14648).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14649).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -205,7 +205,7 @@ try {
       }
     }, []);
     const effect1 = noop.useEffect(() => {
-      let SplashScreenManager = appEntryKey(1150).isIOS();
+      let SplashScreenManager = appEntryKey(1363).isIOS();
       if (SplashScreenManager) {
         SplashScreenManager = NativeModules.SplashScreenManager;
       }
@@ -214,8 +214,8 @@ try {
         SplashScreenManager2.hideSplashScreen();
       }
     }, []);
-    let obj = appEntryKey(14648);
-    const riveAppStatePlaybackExperiment = appEntryKey(16034).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14649);
+    const riveAppStatePlaybackExperiment = appEntryKey(16036).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

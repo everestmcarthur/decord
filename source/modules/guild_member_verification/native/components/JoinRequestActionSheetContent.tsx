@@ -1,9 +1,9 @@
-// Module ID: 16681
-// Function ID: 16682
+// Module ID: 16683
+// Function ID: 16684
 // Name: JoinRequestActionSheetContent
-// Dependencies: [19, 17, 1957, 7254, 7311, 21, 4636, 576, 8357, 8346, 8343, 8354, 8296, 16679, 8362, 8372, 11245, 13190, 13250, 504, 12762, 4460, 5056, 5152, 1114, 4461, 9159, 4632, 6717, 4318, 11, 4596, 5514, 8202, 4587, 4589, 1611, 16682, 2]
+// Dependencies: [19, 17, 1957, 7254, 7311, 21, 4636, 576, 8357, 8346, 8343, 8354, 8296, 16681, 8362, 8372, 11246, 13191, 13251, 504, 12763, 4460, 5056, 5152, 1114, 4461, 9159, 4632, 6717, 4318, 11, 4596, 5514, 8202, 4587, 4589, 1611, 16684, 2]
 
-// Module 16681 (JoinRequestActionSheetContent)
+// Module 16683 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -11,7 +11,7 @@ import DateUtils from "DateUtils" /* 4318 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16679 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16681 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -29,9 +29,9 @@ function OpenInterviewButton(arg0) {
     return tmp2;
   }, items1);
   const obj = interviewChannelId(504);
-  const joinRequestButtonActions = interviewChannelId(12762).useJoinRequestButtonActions(joinRequest, interviewChannelId);
+  const joinRequestButtonActions = interviewChannelId(12763).useJoinRequestButtonActions(joinRequest, interviewChannelId);
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const obj2 = interviewChannelId(12762);
+  const obj2 = interviewChannelId(12763);
   if (!obj3.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     const obj4 = { variant: "secondary", size: "md", icon: null, text: null, onPress: null, disabled: null };
     const obj5 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "sm" };
@@ -103,17 +103,17 @@ let closure_12 = noop.memo((user) => {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(13190).PrimaryInfo, obj10), ];
+    const items4 = [closure_8(tmp6(13191).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(tmp(13250), obj11);
+    items4[1] = closure_8(tmp(13251), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
-    items2[1] = closure_8(tmp(11245), obj7);
+    items2[1] = closure_8(tmp(11246), obj7);
     obj4.children = items2;
     items1[1] = closure_9(View, obj4);
     obj2.children = items1;
     tmp9 = closure_9(closure_10, obj2);
-    const tmpResult = tmp(11245);
+    const tmpResult = tmp(11246);
   }
   return tmp9;
 });
@@ -254,10 +254,10 @@ let closure_15 = noop.memo((joinRequest) => {
   const callback = noop.useCallback(() => {
     openJoinRequestActionSheetDefault(joinRequest);
   }, items);
-  const joinRequestButtonActions = joinRequest(12762).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
+  const joinRequestButtonActions = joinRequest(12763).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
   ({ submitting, approveRequest, rejectRequest, handleOpenInterview } = joinRequestButtonActions);
   const obj2 = { variant: "primary", icon: null, label: null, onPress: null, disabled: null };
-  const obj = joinRequest(12762);
+  const obj = joinRequest(12763);
   const tmp5 = closure_9;
   obj2.icon = closure_8(joinRequest(4587).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl = joinRequest(1114).intl;
@@ -434,7 +434,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(16682), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(16684), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

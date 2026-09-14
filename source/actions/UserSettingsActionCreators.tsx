@@ -1,24 +1,24 @@
 // Module ID: 9488
 // Function ID: 9489
 // Name: UserSettingsActionCreators
-// Dependencies: [5, 4456, 1184, 1183, 1074, 1186, 1940, 1187, 1218, 573, 4485, 1935, 2]
+// Dependencies: [5, 4456, 1182, 1181, 1074, 1184, 1940, 1185, 1216, 573, 4485, 1935, 2]
 // Exports: saveClientTheme, saveGuildFolders
 
 // Module 9488 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import wrappers from "wrappers" /* 1218 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import wrappers from "wrappers" /* 1216 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ThemeTypes = fn(1074).ThemeTypes;
-const ThemeConstants = fn(1186);
+const ThemeConstants = fn(1184);
 ({ SystemTheme, SystemThemeState: closure_8 } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
@@ -89,19 +89,19 @@ export default {
                 value: PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
                           theme = theme.theme;
                           if (constants.ASH === theme) {
-                            let DARK = closure_1_0(1187).Theme.DARK;
+                            let DARK = closure_1_0(1185).Theme.DARK;
                             let tmp4 = closure_1_0;
                           } else if (tmp.LIGHT === theme) {
-                            DARK = closure_1_0(1187).Theme.LIGHT;
+                            DARK = closure_1_0(1185).Theme.LIGHT;
                             tmp4 = closure_1_0;
                           } else if (tmp.DARK === theme) {
-                            DARK = closure_1_0(1187).Theme.DARKER;
+                            DARK = closure_1_0(1185).Theme.DARKER;
                             tmp4 = closure_1_0;
                           } else if (tmp.ONYX === theme) {
-                            DARK = closure_1_0(1187).Theme.MIDNIGHT;
+                            DARK = closure_1_0(1185).Theme.MIDNIGHT;
                             tmp4 = closure_1_0;
                           } else {
-                            DARK = closure_1_0(1187).Theme.DARK;
+                            DARK = closure_1_0(1185).Theme.DARK;
                             tmp4 = closure_1_0;
                           }
                           arg0.theme = DARK;
@@ -118,7 +118,7 @@ export default {
                           }
                           let obj2;
                           if (null != id) {
-                            const UInt32Value = tmp4(1218).UInt32Value;
+                            const UInt32Value = tmp4(1216).UInt32Value;
                             const obj = { value: id };
                             obj2 = UInt32Value.create(obj);
                           }
@@ -312,7 +312,7 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
       arg0.theme = DARK;
       let obj2;
       if (null != backgroundGradientPresetId) {
-        const UInt32Value = tmp3(1218).UInt32Value;
+        const UInt32Value = tmp3(1216).UInt32Value;
         const obj = { value: tmp13 };
         obj2 = UInt32Value.create(obj);
       }

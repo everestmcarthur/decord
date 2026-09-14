@@ -1,10 +1,10 @@
-// Module ID: 13136
-// Function ID: 13137
+// Module ID: 13137
+// Function ID: 13138
 // Name: useTimestampTickedNow
 // Dependencies: [32, 19, 4628, 1090, 504, 1952, 2]
 // Exports: useTimestampTickedNow
 
-// Module 13136 (useTimestampTickedNow)
+// Module 13137 (useTimestampTickedNow)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

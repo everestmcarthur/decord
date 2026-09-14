@@ -1,11 +1,11 @@
 // Module ID: 10151
 // Function ID: 10152
 // Name: ChannelCallSingleController
-// Dependencies: [19, 4658, 502, 1074, 4657, 21, 1242, 4816, 504, 10152, 10154, 10155, 2]
+// Dependencies: [19, 4658, 502, 1074, 4657, 21, 1240, 4816, 504, 10152, 10154, 10155, 2]
 // Exports: ChannelCallSingleController
 
 // Module 10151 (ChannelCallSingleController)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;

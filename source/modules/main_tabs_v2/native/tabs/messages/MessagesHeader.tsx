@@ -1,15 +1,15 @@
-// Module ID: 16122
-// Function ID: 16123
+// Module ID: 16124
+// Function ID: 16125
 // Name: MessagesHeader
-// Dependencies: [19, 17, 1074, 21, 576, 12316, 10247, 5061, 4636, 4373, 5055, 16115, 4495, 12467, 5706, 8202, 11082, 1114, 4632, 7155, 16123, 5056, 4574, 2]
+// Dependencies: [19, 17, 1074, 21, 576, 12317, 10247, 5061, 4636, 4373, 5055, 16117, 4495, 12468, 5706, 8202, 11083, 1114, 4632, 7155, 16125, 5056, 4574, 2]
 // Exports: getMessagesHeaderHeight
 
-// Module 16122 (MessagesHeader)
+// Module 16124 (MessagesHeader)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import ButtonConstants from "ButtonConstants" /* 5061 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12316 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ export default noop.memo(function MessagesHeader(height) {
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = { withSpring: height(5055).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(16115).useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = height(16117).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -93,10 +93,10 @@ export default noop.memo(function MessagesHeader(height) {
       }
     }
   }, []);
-  let obj3 = height(16115);
+  let obj3 = height(16117);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const tmp12 = scrollPosition(5706)("bespoke");
-  obj4.icon = closure_6(height(11082).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
+  obj4.icon = closure_6(height(11083).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
   const intl = height(1114).intl;
   obj4.accessibilityLabel = intl.string(height(1114).t.jD1qzM);
   obj4.onPress = callback3;
@@ -117,7 +117,7 @@ export default noop.memo(function MessagesHeader(height) {
   const obj9 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(7155), accessibilityLabel: null };
   const intl3 = tmp3(1114).intl;
   obj9.accessibilityLabel = intl3.string(height(1114).t["5h0QOP"]);
-  const items2 = [closure_6(height(8202).IconButton, obj9), closure_6(scrollPosition(16123), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const items2 = [closure_6(height(8202).IconButton, obj9), closure_6(scrollPosition(16125), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
   const obj10 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(4574), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1114).intl;
   obj10.text = intl4.string(height(1114).t.zIJnA6);

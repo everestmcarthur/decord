@@ -1,13 +1,13 @@
-// Module ID: 15023
-// Function ID: 15024
+// Module ID: 15024
+// Function ID: 15025
 // Name: ScheduleDowntimeScreen
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4603, 9847, 1896, 4636, 576, 1178, 5054, 4632, 1114, 2396, 1483, 7097, 10212, 563, 15024, 15025, 4594, 5768, 7303, 5686, 7226, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4603, 9847, 1896, 4636, 576, 1176, 5054, 4632, 1114, 2396, 1483, 7097, 10212, 563, 15025, 15026, 4594, 5768, 7303, 5686, 7226, 5056, 2]
 // Exports: default
 
-// Module 15023 (ScheduleDowntimeScreen)
+// Module 15024 (ScheduleDowntimeScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -530,7 +530,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = closure_11(tmp2(stringResult[14]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f116625 = (first1) => {
+      const f116628 = (first1) => {
         closure_1_11(first1);
         const result = (closure_0(rule[19]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };

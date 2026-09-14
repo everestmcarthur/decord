@@ -1,15 +1,15 @@
-// Module ID: 17700
-// Function ID: 17701
+// Module ID: 17701
+// Function ID: 17702
 // Name: GuildSettingsServerTagUpsellCard
-// Dependencies: [19, 17, 4525, 21, 4636, 576, 504, 4529, 12649, 12617, 5068, 5054, 12652, 4632, 1114, 5056, 16313, 2]
+// Dependencies: [19, 17, 4525, 21, 4636, 576, 504, 4529, 12650, 12618, 5068, 5054, 12653, 4632, 1114, 5056, 16315, 2]
 // Exports: default
 
-// Module 17700 (GuildSettingsServerTagUpsellCard)
+// Module 17701 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import Powerups from "Powerups" /* 4529 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12617 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12649 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12618 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12650 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
 
@@ -59,7 +59,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   let tmp10Result = null != tmp6;
   if (tmp10Result) {
     const obj8 = { imageUrl: tmp6, style: tmp.powerupImage };
-    tmp10Result = tmp10(tmp5(12652), obj8);
+    tmp10Result = tmp10(tmp5(12653), obj8);
   }
   obj7.children = tmp10Result;
   const items5 = [closure_6(closure_4, obj7), , ];
@@ -80,7 +80,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1114).intl;
   obj12.text = intl3.string(guildId(1114).t.kMRDWs);
-  obj12.icon = closure_6(guildId(16313).BoostTier2Icon, { color: "white" });
+  obj12.icon = closure_6(guildId(16315).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
   items5[2] = closure_6(guildId(5056).Button, obj12);
   obj6.children = items5;

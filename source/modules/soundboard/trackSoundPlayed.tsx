@@ -1,11 +1,11 @@
 // Module ID: 7475
 // Function ID: 7476
 // Name: trackSoundPlayed
-// Dependencies: [1915, 1957, 4659, 2011, 5095, 1074, 1373, 1242, 2]
+// Dependencies: [1915, 1957, 4659, 2011, 5095, 1074, 1373, 1240, 2]
 // Exports: default
 
 // Module 7475 (trackSoundPlayed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;

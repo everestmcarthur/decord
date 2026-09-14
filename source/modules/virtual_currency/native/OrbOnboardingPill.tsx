@@ -1,9 +1,9 @@
-// Module ID: 15785
-// Function ID: 15786
+// Module ID: 15787
+// Function ID: 15788
 // Name: OrbOnboardingPill
 // Dependencies: [19, 21, 5204, 8962, 4632, 1114, 4636, 576, 2]
 
-// Module 15785 (OrbOnboardingPill)
+// Module 15787 (OrbOnboardingPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

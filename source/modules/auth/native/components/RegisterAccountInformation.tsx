@@ -1,16 +1,16 @@
-// Module ID: 16063
-// Function ID: 16064
+// Module ID: 16065
+// Function ID: 16066
 // Name: RegisterAccountInformation
-// Dependencies: [5, 32, 19, 17, 6696, 4620, 8865, 16041, 16042, 1074, 21, 4636, 576, 4373, 7045, 16038, 504, 16064, 16066, 16049, 1114, 16057, 16040, 16056, 7073, 16067, 16068, 5056, 7042, 5659, 2]
+// Dependencies: [5, 32, 19, 17, 6696, 4620, 8865, 16043, 16044, 1074, 21, 4636, 576, 4373, 7045, 16040, 504, 16066, 16068, 16051, 1114, 16059, 16042, 16058, 7073, 16069, 16070, 5056, 7042, 5659, 2]
 // Exports: default
 
-// Module 16063 (RegisterAccountInformation)
+// Module 16065 (RegisterAccountInformation)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7045 */;
 import AuthFormViewDefault from "AuthFormView" /* 7073 */;
-import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 16056 */;
-import useAuthFlowBackHandlerDefault from "useAuthFlowBackHandler" /* 16057 */;
+import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 16058 */;
+import useAuthFlowBackHandlerDefault from "useAuthFlowBackHandler" /* 16059 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,9 +21,9 @@ import DisplayedInviteStore from "DisplayedInviteStore" /* 8865 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ setRegistrationErrors: closure_11, updateRegistrationOptions: closure_12, useRegistrationUIStore: map1 } = RegistrationUIStore);
-const RegistrationConstants = fn(16042);
+const RegistrationConstants = fn(16044);
 ({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
@@ -142,7 +142,7 @@ export default function RegisterAccountInformation() {
   };
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = closure_19(tmp3);
-  context = noop.useContext(context(16038).TrackRegistrationContext);
+  context = noop.useContext(context(16040).TrackRegistrationContext);
   let tmp8 = closure_13((submitting) => submitting.submitting);
   const tmp7 = closure_13((registrationOptions) => registrationOptions.registrationOptions);
   [tmp10, importDefault] = noop.useState(false);
@@ -161,10 +161,10 @@ export default function RegisterAccountInformation() {
   });
   const ref = noop.useRef(null);
   let obj3 = context(504);
-  const passwordRegistrationStep = context(16064).usePasswordRegistrationStep();
+  const passwordRegistrationStep = context(16066).usePasswordRegistrationStep();
   ({ password, validatePassword: _slicedToArray, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
-  let obj4 = context(16064);
-  const usernameRegistrationStep = context(16066).useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
+  let obj4 = context(16066);
+  const usernameRegistrationStep = context(16068).useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({ transitionToNextStepOrSubmit: noop, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
   let obj6 = {};
   ({ usernameStatus, setUsername } = usernameRegistrationStep);
@@ -176,11 +176,11 @@ export default function RegisterAccountInformation() {
     code = stateFromStores.code;
   }
   obj6.invite = code;
-  let obj5 = context(16066);
+  let obj5 = context(16068);
   const items2 = [ConsentStore];
   const stateFromStores1 = context(504).useStateFromStores(items2, () => result.getAuthenticationConsentRequired());
   const tmp5Result = context(504);
-  const result = context(16049).hasAllRegistrationFieldsCompleted(obj6, { isConsentRequired: true === stateFromStores1 });
+  const result = context(16051).hasAllRegistrationFieldsCompleted(obj6, { isConsentRequired: true === stateFromStores1 });
   ConsentStore = result;
   const intl = tmp5(1114).intl;
   const string = intl.string;
@@ -201,9 +201,9 @@ export default function RegisterAccountInformation() {
     return applyArgumentsResult;
   }
   let obj7 = { isConsentRequired: true === stateFromStores1 };
-  const tmp5Result3 = context(16049);
+  const tmp5Result3 = context(16051);
   const tmpResult = useAuthFlowBackHandlerDefault;
-  tmpResult(context(16040).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
+  tmpResult(context(16042).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
   const effect = obj.useEffect(() => {
@@ -216,12 +216,12 @@ export default function RegisterAccountInformation() {
     }
   }, []);
   let obj8 = { headerText: null, children: null };
-  const tmp5Result4 = context(16040);
+  const tmp5Result4 = context(16042);
   const intl2 = tmp5(1114).intl;
   obj8.headerText = intl2.string(context(1114).t.jec90v);
   const obj9 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
   const tmpResult2 = AuthFormViewDefault;
-  const items4 = [closure_17(closure_6, { style: tmp4.container, children: closure_17(context(16067).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) }), , ];
+  const items4 = [closure_17(closure_6, { style: tmp4.container, children: closure_17(context(16069).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) }), , ];
   const obj11 = { style: tmp4.password };
   const merged1 = Object.assign(obj2);
   const obj12 = { ref, password, onPasswordChange: setPassword, onSubmitEditing: handleSubmit, passwordScore, returnKeyType: null };
@@ -230,7 +230,7 @@ export default function RegisterAccountInformation() {
     str = "done";
   }
   obj12.returnKeyType = str;
-  obj11.children = closure_17(context(16068).RegisterPasswordInput, obj12);
+  obj11.children = closure_17(context(16070).RegisterPasswordInput, obj12);
   items4[1] = closure_17(ReanimatedRexportDefault.View, obj11);
   const obj13 = { style: tmp4.button };
   const merged2 = Object.assign(obj2);

@@ -1,16 +1,16 @@
-// Module ID: 13127
-// Function ID: 13128
+// Module ID: 13128
+// Function ID: 13129
 // Name: AddOrOpenAppButton
-// Dependencies: [5, 32, 19, 9419, 1074, 1482, 21, 12274, 9703, 4603, 7292, 12261, 4334, 1365, 8701, 8992, 1114, 5056, 576, 7266, 4649, 4502, 1609, 1242, 2]
+// Dependencies: [5, 32, 19, 9419, 1074, 1482, 21, 12275, 9703, 4603, 7292, 12262, 4334, 1365, 8701, 8992, 1114, 5056, 576, 7266, 4649, 4502, 1609, 1240, 2]
 // Exports: default
 
-// Module 13127 (AddOrOpenAppButton)
+// Module 13128 (AddOrOpenAppButton)
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import ApplicationUtils from "ApplicationUtils" /* 9703 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12261 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12274 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12262 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -169,8 +169,8 @@ function OpenAppButton(profileApplication) {
             }
           }, 0);
           const obj12 = { application_id: closure_129_1.id };
-          tmp2(1242).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
-          const obj = tmp2(1242);
+          tmp2(1240).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
+          const obj = tmp2(1240);
         }
         c4 = 3;
         const obj13 = { value, done: true };

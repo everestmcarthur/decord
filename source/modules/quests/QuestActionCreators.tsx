@@ -1,24 +1,24 @@
-// Module ID: 11409
-// Function ID: 11410
+// Module ID: 11410
+// Function ID: 11411
 // Name: QuestActionCreators
-// Dependencies: [5, 7802, 11328, 5520, 4685, 5519, 7805, 7807, 5525, 1074, 5528, 1272, 573, 4538, 1114, 7812, 1232, 4829, 1250, 11410, 11325, 11326, 11330, 5532, 7820, 11413, 7801, 4826, 4834, 11414, 7564, 7823, 11415, 4476, 11416, 11417, 11432, 1242, 7779, 11434, 11418, 1090, 11435, 2]
+// Dependencies: [5, 7802, 11329, 5520, 4685, 5519, 7805, 7807, 5525, 1074, 5528, 1270, 573, 4538, 1114, 7812, 1230, 4829, 1248, 11411, 11326, 11327, 11331, 5532, 7820, 11414, 7801, 4826, 4834, 11415, 7564, 7823, 11416, 4476, 11417, 11418, 11433, 1240, 7779, 11435, 11419, 1090, 11436, 2]
 // Exports: claimQuestReward, clearQuestAdDecision, completeQuestPreview, dismissProgressTrackingFailureNotice, dismissQuestActivityModal, dismissQuestContent, enrollInQuest, fetchClaimedQuests, fetchCurrentQuests, fetchEarnedQuestToDeliver, fetchQuest, fetchQuestHomeHero, fetchQuestHomeHeroPreview, fetchQuestPreview, fetchQuestRewardCode, fetchQuestToDeliver, fetchVideoTranscript, manualStopConsoleQuest, manuallyStartConsoleQuest, markAdContentSeen, markAdContentUnseen, markQuestDiscovered, overrideQuestForPlacement, questsVisibleMobileMessagesChanged, resetOptimisticProgress, resetQuestDismissibilityStatus, resetQuestPreviewStatus, resetRecentQuestCompletions, selectTaskPlatform, sendHeartbeat, setAutoEnroll, updateOptimisticProgress, updatePrevRestingQuestDockMode, updateQuestDockVisibilityEligibility, updateVideoProgress
 
-// Module 11409 (QuestActionCreators)
+// Module 11410 (QuestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7564 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11325 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11330 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11413 */;
-import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 11414 */;
-import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 11434 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11331 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11414 */;
+import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 11415 */;
+import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 11435 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 7802 */;
 import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5520 */;
@@ -542,8 +542,8 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
               if (obj27.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "enroll_in_quest")) {
                 const obj5 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: tmp67, questContentCTA, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
                 ({ questContent: obj9.surfaceId, sourceQuestContent: obj9.sourceQuestContent, questContentPosition: obj9.questContentPosition, questContentRowIndex: obj9.questContentRowIndex } = tmp68);
-                tmp73(11326).captureAdUserAction(obj5);
-                const tmp73Result = tmp73(11326);
+                tmp73(11327).captureAdUserAction(obj5);
+                const tmp73Result = tmp73(11327);
               } else {
                 const obj6 = { questId: tmp67, questContent: tmp68.questContent, questContentCTA, questContentPosition: null, questContentRowIndex: null, sourceQuestContent: null };
                 ({ questContentPosition: obj7.questContentPosition, questContentRowIndex: obj7.questContentRowIndex, sourceQuestContent: obj7.sourceQuestContent } = tmp68);
@@ -2364,7 +2364,7 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0, value) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(11328).getVisibleGuildIdsMethod;
+const getVisibleGuildIdsMethod = fn(11329).getVisibleGuildIdsMethod;
 const FetchStatus = fn(7807).FetchStatus;
 const ORBS_INTRO_QUEST_ID = fn(5525).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1074);

@@ -1,11 +1,11 @@
 // Module ID: 9434
 // Function ID: 9435
 // Name: ThreadCreationHooks
-// Dependencies: [32, 5, 19, 7408, 502, 1957, 4977, 4857, 7789, 1113, 1074, 4629, 7372, 7784, 7377, 1114, 9435, 11, 1272, 7879, 9436, 7786, 1384, 5210, 9439, 7869, 4816, 7559, 4980, 573, 4488, 1090, 7855, 9524, 2]
+// Dependencies: [32, 5, 19, 7408, 502, 1957, 4977, 4857, 7789, 1113, 1074, 4629, 7372, 7784, 7377, 1114, 9435, 11, 1270, 7879, 9436, 7786, 1384, 5210, 9439, 7869, 4816, 7559, 4980, 573, 4488, 1090, 7855, 9524, 2]
 // Exports: createThread, useCreateForumPostCommon, useCreateThreadCommon, usePrivateThreadMode
 
 // Module 9434 (ThreadCreationHooks)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ThreadHooks from "ThreadHooks" /* 7372 */;
 import MessageParserDefault from "MessageParser" /* 7784 */;
 import _slicedToArray from "module_32" /* 32 */;

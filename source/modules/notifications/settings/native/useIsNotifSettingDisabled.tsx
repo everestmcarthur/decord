@@ -1,14 +1,14 @@
-// Module ID: 16019
-// Function ID: 16020
+// Module ID: 16021
+// Function ID: 16022
 // Name: useIsNotifSettingDisabled
-// Dependencies: [16010, 16012, 16011, 504, 1114, 2722, 2]
+// Dependencies: [16012, 16014, 16013, 504, 1114, 2722, 2]
 // Exports: default
 
-// Module 16019 (useIsNotifSettingDisabled)
+// Module 16021 (useIsNotifSettingDisabled)
 import _modDef2722 from "module_2722" /* 2722 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 16011 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 16012 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 16010 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 16013 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 16014 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 16012 */;
 
 const require = globalThis.__r;
 

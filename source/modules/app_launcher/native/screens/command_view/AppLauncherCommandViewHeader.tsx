@@ -1,13 +1,13 @@
-// Module ID: 12283
-// Function ID: 12284
+// Module ID: 12284
+// Function ID: 12285
 // Name: AppLauncherCommandViewHeader
-// Dependencies: [19, 17, 1482, 21, 12260, 4636, 576, 12180, 4373, 4338, 8249, 5668, 4632, 1178, 2]
+// Dependencies: [19, 17, 1482, 21, 12261, 4636, 576, 12181, 4373, 4338, 8249, 5668, 4632, 1176, 2]
 // Exports: AppLauncherCommandViewHeader
 
-// Module 12283 (AppLauncherCommandViewHeader)
+// Module 12284 (AppLauncherCommandViewHeader)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12180 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(12260).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12261).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 const createStyles = fn(4636);
 let obj2 = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
@@ -161,7 +161,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const obj11 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj11.style = items3;
-  const items4 = [tmp16(section(4373).View, obj11), tmp16(section(12260), { onPress: onPress.onPressBack }), , , ];
+  const items4 = [tmp16(section(4373).View, obj11), tmp16(section(12261), { onPress: onPress.onPressBack }), , , ];
   const obj12 = { lineClamp: 1, animated: true, style: null, variant: "heading-lg/bold", color: "text-overlay-light", children: null };
   const items5 = [tmp.appSmallName, animatedStyle];
   obj12.style = items5;
@@ -171,7 +171,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   }
   obj12.children = displayName;
   items4[2] = tmp16(scrollOffsetY(4632).Text, obj12);
-  items4[3] = tmp16(scrollOffsetY(1178).Spacer, { size: 32 });
+  items4[3] = tmp16(scrollOffsetY(1176).Spacer, { size: 32 });
   const obj13 = { style: null, children: tmp15 };
   const items6 = [tmp.appIconMask, animatedStyle1];
   obj13.style = items6;

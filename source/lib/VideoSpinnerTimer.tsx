@@ -1,11 +1,11 @@
 // Module ID: 9737
 // Function ID: 9738
 // Name: VideoSpinnerTimer
-// Dependencies: [502, 1957, 4685, 4659, 4655, 1074, 3, 4665, 1242, 2]
+// Dependencies: [502, 1957, 4685, 4659, 4655, 1074, 3, 4665, 1240, 2]
 
 // Module 9737 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

@@ -1,7 +1,7 @@
 // Module ID: 9596
 // Function ID: 9597
 // Name: ChannelCallModal
-// Dependencies: [32, 19, 4652, 1957, 9597, 9598, 9603, 1074, 21, 9601, 9604, 4494, 9614, 9786, 9611, 9787, 4373, 4502, 12910, 504, 1477, 9605, 12911, 7265, 7285, 13055, 4843, 6756, 9719, 2]
+// Dependencies: [32, 19, 4652, 1957, 9597, 9598, 9603, 1074, 21, 9601, 9604, 4494, 9614, 9786, 9611, 9787, 4373, 4502, 12911, 504, 1477, 9605, 12912, 7265, 7285, 13056, 4843, 6756, 9719, 2]
 
 // Module 9596 (ChannelCallModal)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -12,8 +12,8 @@ import RevealProvider from "RevealProvider" /* 9604 */;
 import CameraPreviewDefault from "CameraPreview" /* 9614 */;
 import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 9786 */;
 import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 9787 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 12910 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 12911 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 12911 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 12912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
@@ -210,7 +210,7 @@ let closure_30 = noop.memo((channelId) => {
     if (tmp2) {
       ReanimatedRexport.runOnJS(closure_2_10)(channelId, arg0);
       if (arg0 === VoiceChatDrawerState.OPEN) {
-        tmp4(4373).runOnJS(tmp4(12911).transitionToVoiceRoute)(guildId, tmp7);
+        tmp4(4373).runOnJS(tmp4(12912).transitionToVoiceRoute)(guildId, tmp7);
         const tmp4Result = tmp4(4373);
       }
       tmp7 = channelId;

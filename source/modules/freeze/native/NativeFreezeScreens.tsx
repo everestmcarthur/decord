@@ -1,10 +1,10 @@
-// Module ID: 16113
-// Function ID: 16114
+// Module ID: 16115
+// Function ID: 16116
 // Name: NativeFreezeScreens
 // Dependencies: [32, 19, 17, 21, 38, 4988, 4636, 2]
 // Exports: NativeFreezeScreens
 
-// Module 16113 (NativeFreezeScreens)
+// Module 16115 (NativeFreezeScreens)
 import enableScreens from "enableScreens" /* 4988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

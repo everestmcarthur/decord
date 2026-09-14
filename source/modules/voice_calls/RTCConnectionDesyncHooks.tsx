@@ -1,10 +1,10 @@
-// Module ID: 16331
-// Function ID: 16332
+// Module ID: 16333
+// Function ID: 16334
 // Name: RTCConnectionDesyncHooks
-// Dependencies: [32, 19, 4652, 4656, 502, 1957, 2021, 13844, 4659, 1371, 4655, 12, 504, 1369, 9606, 2]
+// Dependencies: [32, 19, 4652, 4656, 502, 1957, 2021, 13845, 4659, 1371, 4655, 12, 504, 1369, 9606, 2]
 // Exports: useDesyncedChannelParticipants, useEnsureSyncedChannelParticipants, useEnsureSyncedChannelVoiceStates, useIsRTCDisconnectedUIVisible
 
-// Module 16331 (RTCConnectionDesyncHooks)
+// Module 16333 (RTCConnectionDesyncHooks)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ import VoiceStateRecord from "VoiceStateRecord" /* 4656 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 13844 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 13845 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;

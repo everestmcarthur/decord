@@ -1,16 +1,16 @@
-// Module ID: 12242
-// Function ID: 12243
+// Module ID: 12243
+// Function ID: 12244
 // Name: NoPermsState
-// Dependencies: [19, 17, 21, 4636, 576, 4488, 4571, 12243, 12244, 12180, 9539, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4488, 4571, 12244, 12245, 12181, 9539, 4632, 1114, 2]
 // Exports: default
 
-// Module 12242 (NoPermsState)
+// Module 12243 (NoPermsState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4488 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12180 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_7();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12243 : 12244);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12244 : 12245);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(tmp2(9539).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   const items = [hasOwnProperty(React4, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];

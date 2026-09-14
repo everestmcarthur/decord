@@ -1,10 +1,10 @@
-// Module ID: 16533
-// Function ID: 16534
+// Module ID: 16535
+// Function ID: 16536
 // Name: ForYouSuggestedFriendsSectionHeader
 // Dependencies: [19, 17, 21, 4636, 576, 4632, 1114, 2]
 // Exports: default
 
-// Module 16533 (ForYouSuggestedFriendsSectionHeader)
+// Module 16535 (ForYouSuggestedFriendsSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

@@ -1,13 +1,13 @@
 // Module ID: 9753
 // Function ID: 9754
 // Name: UserTile
-// Dependencies: [32, 19, 17, 9754, 502, 1957, 1908, 1074, 4657, 4661, 21, 4636, 576, 4486, 504, 8364, 1178, 9755, 4632, 1114, 9734, 9737, 8737, 9756, 9757, 9758, 9608, 9752, 9759, 9719, 9722, 6756, 9760, 2]
+// Dependencies: [32, 19, 17, 9754, 502, 1957, 1908, 1074, 4657, 4661, 21, 4636, 576, 4486, 504, 8364, 1176, 9755, 4632, 1114, 9734, 9737, 8737, 9756, 9757, 9758, 9608, 9752, 9759, 9719, 9722, 6756, 9760, 2]
 // Exports: default
 
 // Module 9753 (UserTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _modDef8737 from "module_8737" /* 8737 */;
 import _modDef9755 from "module_9755" /* 9755 */;
@@ -153,8 +153,8 @@ let closure_19 = noop.memo((userId) => {
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef9758, size: tmp2(1178).Icon.Sizes.SMALL, disableColor: true };
-      obj2.children = closure_14(tmp2(1178).Icon, obj3);
+      const obj3 = { source: _modDef9758, size: tmp2(1176).Icon.Sizes.SMALL, disableColor: true };
+      obj2.children = closure_14(tmp2(1176).Icon, obj3);
       tmp14 = closure_14(View, obj2);
     }
     const items3 = [tmp14, ];
@@ -168,8 +168,8 @@ let closure_19 = noop.memo((userId) => {
       const obj5 = { style: null, children: null };
       items4[2] = obj4;
       obj5.style = items4;
-      const obj6 = { source: tmp6, size: tmp2(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8737 };
-      obj5.children = closure_14(tmp2(1178).Icon, obj6);
+      const obj6 = { source: tmp6, size: tmp2(1176).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8737 };
+      obj5.children = closure_14(tmp2(1176).Icon, obj6);
       tmp19Result = tmp19(View, obj5);
     }
     const obj7 = { children: null };

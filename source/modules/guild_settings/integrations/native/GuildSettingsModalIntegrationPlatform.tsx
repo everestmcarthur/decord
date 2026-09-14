@@ -1,10 +1,10 @@
-// Module ID: 17713
-// Function ID: 17714
+// Module ID: 17714
+// Function ID: 17715
 // Name: GuildSettingsModalIntegrationPlatform
-// Dependencies: [19, 17, 9193, 1074, 21, 4636, 576, 17674, 17714, 5364, 1396, 4488, 5768, 5686, 7303, 1114, 9192, 4981, 5075, 4338, 1483, 504, 4571, 5705, 7480, 7485, 2024, 8716, 5054, 4632, 7143, 2]
+// Dependencies: [19, 17, 9193, 1074, 21, 4636, 576, 17675, 17715, 5364, 1396, 4488, 5768, 5686, 7303, 1114, 9192, 4981, 5075, 4338, 1483, 504, 4571, 5705, 7480, 7485, 2024, 8716, 5054, 4632, 7143, 2]
 // Exports: default
 
-// Module 17713 (GuildSettingsModalIntegrationPlatform)
+// Module 17714 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
@@ -14,7 +14,7 @@ import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
 import openUserSettings from "openUserSettings" /* 7485 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17674 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17675 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
 
@@ -98,14 +98,14 @@ IntegrationItem.prototype["render"] = function render() {
   const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = GuildSettingsModalIntegrations.SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(17714).IntegrationTypes.YOUTUBE === type) {
+    if (tmp(17715).IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(17714).IntegrationTypes.TWITCH === type) {
+    } else if (tmp(17715).IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       combined = "twitch.tv/" + integration.name;
     }

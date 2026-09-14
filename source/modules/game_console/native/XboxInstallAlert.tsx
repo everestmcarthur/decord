@@ -1,12 +1,12 @@
 // Module ID: 9592
 // Function ID: 9593
 // Name: XboxInstallAlert
-// Dependencies: [19, 9362, 21, 4636, 576, 5075, 1114, 1178, 9574, 1150, 4331, 2]
+// Dependencies: [19, 9362, 21, 4636, 576, 5075, 1114, 1176, 9574, 1363, 4331, 2]
 // Exports: default
 
 // Module 9592 (XboxInstallAlert)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
 import _modDef9574 from "module_9574" /* 9574 */;
@@ -43,8 +43,8 @@ export default function XboxInstallAlert(arg0) {
     return jsx(native.Icon, { source: _modDef9574, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = closure_0(1150);
-    const isAndroidResult = closure_0(1150).isAndroid();
+    const obj = closure_0(1363);
+    const isAndroidResult = closure_0(1363).isAndroid();
     const openURL = LinkingDefault.openURL;
     if (isAndroidResult) {
       openURL(closure_1_3);

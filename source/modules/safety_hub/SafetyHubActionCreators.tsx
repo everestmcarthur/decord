@@ -1,12 +1,12 @@
-// Module ID: 12011
-// Function ID: 12012
+// Module ID: 12012
+// Function ID: 12013
 // Name: SafetyHubActionCreators
-// Dependencies: [5, 502, 8548, 8537, 1074, 573, 1272, 4786, 8536, 2]
+// Dependencies: [5, 502, 8548, 8537, 1074, 573, 1270, 4786, 8536, 2]
 // Exports: getSafetyHubDataForClassification, requestReview, requestSuspendedUserAgeVerification, resetAgeCheckStatus
 
-// Module 12011 (SafetyHubActionCreators)
+// Module 12012 (SafetyHubActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;

@@ -1,14 +1,14 @@
-// Module ID: 10470
-// Function ID: 10471
+// Module ID: 10471
+// Function ID: 10472
 // Name: ExpressionGuildDetails
-// Dependencies: [19, 17, 5666, 21, 4636, 576, 5665, 1396, 5668, 4632, 1114, 5204, 10469, 5671, 1178, 2]
+// Dependencies: [19, 17, 5666, 21, 4636, 576, 5665, 1396, 5668, 4632, 1114, 5204, 10470, 5671, 1176, 2]
 
-// Module 10470 (ExpressionGuildDetails)
+// Module 10471 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10469 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10470 */;
 import noop from "module_19" /* 19 */;
 
 const GuildBadgeDefault = tmp8(5671);

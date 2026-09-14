@@ -1,10 +1,10 @@
-// Module ID: 12500
-// Function ID: 12501
+// Module ID: 12501
+// Function ID: 12502
 // Name: GuildInvitesDisabledUtils
 // Dependencies: [10209, 4275, 1074, 504, 2]
 // Exports: useInvitesDisabled, useInvitesDisabledPermission, useShouldShowInvitesDisabledNotif
 
-// Module 12500 (GuildInvitesDisabledUtils)
+// Module 12501 (GuildInvitesDisabledUtils)
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10209 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 

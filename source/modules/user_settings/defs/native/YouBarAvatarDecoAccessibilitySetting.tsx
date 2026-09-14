@@ -1,16 +1,16 @@
-// Module ID: 15494
-// Function ID: 15495
+// Module ID: 15495
+// Function ID: 15496
 // Name: YouBarAvatarDecoAccessibilitySetting
-// Dependencies: [4628, 8079, 11601, 1114, 504, 14525, 2]
+// Dependencies: [4628, 8079, 11602, 1114, 504, 14526, 2]
 
-// Module 15494 (YouBarAvatarDecoAccessibilitySetting)
+// Module 15495 (YouBarAvatarDecoAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14525 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14526 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

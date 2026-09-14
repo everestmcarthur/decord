@@ -1,7 +1,7 @@
 // Module ID: 5646
 // Function ID: 5647
 // Name: DesktopNativeUtils
-// Dependencies: [32, 5, 1074, 38, 4567, 1150, 510, 5647, 1934, 4, 5648, 5649, 1365, 1272, 4662, 2]
+// Dependencies: [32, 5, 1074, 38, 4567, 1363, 510, 5647, 1934, 4, 5648, 5649, 1365, 1270, 4662, 2]
 
 // Module 5646 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
@@ -593,9 +593,9 @@ obj2.setBadge = function setBadge(arg0) {
         }
         app.setBadgeCount(num);
       }
-      tmpResult2 = tmp(1150);
+      tmpResult2 = tmp(1363);
     }
-    tmpResult = tmp(1150);
+    tmpResult = tmp(1363);
   }
 };
 obj2.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
@@ -758,7 +758,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             closure_129_2 = undefined;
-            tmp2(38)(closure_0(1150).isPlatformEmbedded, "Copy image method called outside native app");
+            tmp2(38)(closure_0(1363).isPlatformEmbedded, "Copy image method called outside native app");
             tmp2(38)(typeof DiscordNative.clipboard.copyImage === "function", "Copy image not supported");
             c3 = 1;
             c4 = 1;
@@ -943,7 +943,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
             closure_133_3 = undefined;
             closure_133_4 = undefined;
             closure_133_5 = undefined;
-            png(38)(unknown(1150).isPlatformEmbedded, "Save image method called outside native app");
+            png(38)(unknown(1363).isPlatformEmbedded, "Save image method called outside native app");
             const tmp84 = png(38);
             let tmp54 = closure_0;
             const toURLSafeResult = png(1365).toURLSafe(closure_0);
@@ -1196,7 +1196,7 @@ obj2.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1150).isPlatformEmbedded, "Download ML model file method called outside native app");
+    v1(38)(v3(1363).isPlatformEmbedded, "Download ML model file method called outside native app");
     v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadMLModelFile(closure_0, closure_1, closure_2);
@@ -1231,7 +1231,7 @@ obj2.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1150).isPlatformEmbedded, "Download clips file method called outside native app");
+    v1(38)(v3(1363).isPlatformEmbedded, "Download clips file method called outside native app");
     v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadClipsFile(closure_0, closure_1, closure_2);
@@ -1273,7 +1273,7 @@ obj2.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
   closure_2 = arg2;
   closure_3 = arg3;
   return (async () => {
-    v1(38)(v3(1150).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+    v1(38)(v3(1363).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
     v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadOpenH264(closure_0, closure_1, closure_2, closure_3);
@@ -1640,7 +1640,7 @@ obj2.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
       } catch (err) {
       }
     }
-    tmpResult = tmp(1150);
+    tmpResult = tmp(1363);
   }
 };
 obj2.purgeMemory = function purgeMemory() {

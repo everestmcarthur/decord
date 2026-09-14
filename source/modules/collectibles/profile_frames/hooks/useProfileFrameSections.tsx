@@ -1,10 +1,10 @@
-// Module ID: 14719
-// Function ID: 14720
+// Module ID: 14720
+// Function ID: 14721
 // Name: useProfileFrameSections
 // Dependencies: [32, 19, 7645, 7660, 563, 7657, 1114, 2]
 // Exports: default
 
-// Module 14719 (useProfileFrameSections)
+// Module 14720 (useProfileFrameSections)
 import util from "util" /* 1114 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import _slicedToArray from "module_32" /* 32 */;

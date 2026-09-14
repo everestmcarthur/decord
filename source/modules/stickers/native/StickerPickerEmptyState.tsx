@@ -1,15 +1,15 @@
-// Module ID: 10541
-// Function ID: 10542
+// Module ID: 10542
+// Function ID: 10543
 // Name: StickerPickerEmptyState
-// Dependencies: [32, 19, 17, 5583, 1938, 1074, 1373, 21, 4636, 10515, 10304, 7265, 7285, 504, 1242, 4632, 1114, 5204, 4604, 4605, 5056, 5668, 9490, 10535, 2]
+// Dependencies: [32, 19, 17, 5583, 1938, 1074, 1373, 21, 4636, 10516, 10304, 7265, 7285, 504, 1240, 4632, 1114, 5204, 4604, 4605, 5056, 5668, 9490, 10536, 2]
 // Exports: default
 
-// Module 10541 (StickerPickerEmptyState)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 10542 (StickerPickerEmptyState)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import StickerDefault from "Sticker" /* 10304 */;
-import StickersHooks from "StickersHooks" /* 10515 */;
+import StickersHooks from "StickersHooks" /* 10516 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 5583 */;
@@ -115,7 +115,7 @@ export default function _default() {
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10535)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10536)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

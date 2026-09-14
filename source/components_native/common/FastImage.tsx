@@ -1,7 +1,7 @@
 // Module ID: 5668
 // Function ID: 5669
 // Name: FastImage
-// Dependencies: [19, 17, 21, 4636, 5669, 1150, 2]
+// Dependencies: [19, 17, 21, 4636, 5669, 1363, 2]
 
 // Module 5668 (FastImage)
 import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5669 */;
@@ -94,7 +94,7 @@ FastImageAndroid.preload = (arg0, arg1) => {
   }
   return racePromise;
 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   merged = FastImageAndroid;
 }

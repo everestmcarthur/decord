@@ -1,10 +1,10 @@
-// Module ID: 13296
-// Function ID: 13297
+// Module ID: 13297
+// Function ID: 13298
 // Name: useHandleBuyNow
-// Dependencies: [5, 32, 19, 1074, 3, 11148, 7644, 4603, 11211, 1608, 7419, 4309, 4335, 1114, 2]
+// Dependencies: [5, 32, 19, 1074, 3, 11149, 7644, 4603, 11212, 1608, 7419, 4309, 4335, 1114, 2]
 // Exports: default, useHandleBuyNow
 
-// Module 13296 (useHandleBuyNow)
+// Module 13297 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -61,7 +61,7 @@ function useHandleBuyNow(product) {
           v1(4603).hideAllActionSheets();
           const obj = v1(4603);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_3 };
-          v1(11211).open(obj8);
+          v1(11212).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

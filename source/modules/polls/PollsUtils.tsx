@@ -1,13 +1,13 @@
 // Module ID: 7863
 // Function ID: 7864
 // Name: PollsUtils
-// Dependencies: [1957, 7864, 4857, 4275, 4285, 7931, 1074, 1256, 504, 7324, 1090, 1926, 4869, 1114, 7865, 12, 4788, 2]
+// Dependencies: [1957, 7864, 4857, 4275, 4285, 7931, 1074, 1254, 504, 7324, 1090, 1926, 4869, 1114, 7865, 12, 4788, 2]
 // Exports: createPollExpiryTimestamp, createPollServerDataFromCreateRequest, filterOutUUID, formatPollResultNotificationCenterText, generateEmptyPollAnswer, generateLocalCreationAnswerId, getPollAnswerVotesTooltipText, getPollReplyPreview, getPollResultsReplyPreview, getPollResultsReplyPreviewMobile, getTotalVotes, hasNonVoteReactions, isAnswerFilled, isIncompleteAnswer, isPollCreationEmpty, useCanPostPollsInChannel
 
 // Module 7863 (PollsUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import useMessageAuthor from "useMessageAuthor" /* 4869 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7324 */;

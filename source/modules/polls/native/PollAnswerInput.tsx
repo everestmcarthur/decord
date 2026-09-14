@@ -1,17 +1,17 @@
-// Module ID: 12354
-// Function ID: 12355
+// Module ID: 12355
+// Function ID: 12356
 // Name: PollAnswerInput
-// Dependencies: [19, 17, 1957, 4977, 7931, 1374, 21, 4636, 576, 12355, 1114, 7863, 5204, 1178, 11255, 9436, 4603, 12356, 1896, 8884, 8716, 4595, 12359, 2]
+// Dependencies: [19, 17, 1957, 4977, 7931, 1374, 21, 4636, 576, 12356, 1114, 7863, 5204, 1176, 11256, 9436, 4603, 12357, 1896, 8884, 8716, 4595, 12360, 2]
 // Exports: default
 
-// Module 12354 (PollAnswerInput)
+// Module 12355 (PollAnswerInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import PollsUtils from "PollsUtils" /* 7863 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -158,7 +158,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12356, dependencyMap.paths), closure_2_10, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12357, dependencyMap.paths), closure_2_10, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
       },
       iconSrc: index(channelId[19]),
       containerStyle: tmp.defaultImageContainer,

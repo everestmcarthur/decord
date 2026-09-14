@@ -1,14 +1,14 @@
-// Module ID: 13693
-// Function ID: 13694
+// Module ID: 13694
+// Function ID: 13695
 // Name: GuildBoostingMarketingFaq
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 7504, 576, 1114, 2024, 4632, 5204, 1178, 13694, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 7504, 576, 1114, 2024, 4632, 5204, 1176, 13695, 2]
 // Exports: default
 
-// Module 13693 (GuildBoostingMarketingFaq)
+// Module 13694 (GuildBoostingMarketingFaq)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef13694 from "module_13694" /* 13694 */;
+import _modDef13695 from "module_13695" /* 13695 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -178,7 +178,7 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       items1 = [closure_1_7(closure_0(4632).Text, { color: str, style: closure_0.question, variant: "text-md/normal", children: getQuestion.getQuestion() }), ];
-      const obj4 = { source: _modDef13694, style: null };
+      const obj4 = { source: _modDef13695, style: null };
       const items2 = [closure_0.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {
@@ -186,7 +186,7 @@ export default function GuildBoostingMarketingFaq() {
       }
       items2[1] = questionIconExpanded;
       obj4.style = items2;
-      items1[1] = closure_1_7(closure_0(1178).Icon, obj4);
+      items1[1] = closure_1_7(closure_0(1176).Icon, obj4);
       obj2.children = items1;
       const items3 = [closure_1_8(closure_0(5204).PressableOpacity, obj2), ];
       if (tmp) {

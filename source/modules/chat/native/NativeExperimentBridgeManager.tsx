@@ -1,15 +1,15 @@
-// Module ID: 17932
-// Function ID: 17933
+// Module ID: 17933
+// Function ID: 17934
 // Name: NativeExperimentBridgeManager
-// Dependencies: [17, 2025, 502, 1150, 17933, 5356, 17934, 1242, 17935, 1272, 7221, 2]
+// Dependencies: [17, 2025, 502, 1363, 17934, 5356, 17935, 1240, 17936, 1270, 7221, 2]
 
-// Module 17932 (NativeExperimentBridgeManager)
+// Module 17933 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 17933 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 17935 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 17934 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 17936 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -33,8 +33,8 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        const result = setShouldEnableYYTextReplacement(tmp(17933).shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
-        const tmpResult = tmp(17933);
+        const result = setShouldEnableYYTextReplacement(tmp(17934).shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = tmp(17934);
       }
     }
   }

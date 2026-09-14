@@ -1,7 +1,7 @@
 // Module ID: 8373
 // Function ID: 8374
 // Name: HeaderAvatar
-// Dependencies: [19, 17, 4628, 2021, 4676, 1074, 21, 4636, 576, 1178, 504, 8374, 8283, 8375, 8363, 5204, 2]
+// Dependencies: [19, 17, 4628, 2021, 4676, 1074, 21, 4636, 576, 1176, 504, 8374, 8283, 8375, 8363, 5204, 2]
 
 // Module 8373 (HeaderAvatar)
 import nativeDefault from "native" /* 576 */;
@@ -26,7 +26,7 @@ export default noop.forwardRef((animate, ref) => {
   ({ pendingAvatarSrc, style, onPress, size } = animate);
   ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
   if (size === undefined) {
-    size = guildId(1178).AvatarSizes.XXLARGE;
+    size = guildId(1176).AvatarSizes.XXLARGE;
   }
   let flag = animate.animate;
   if (flag === undefined) {
@@ -97,7 +97,7 @@ export default noop.forwardRef((animate, ref) => {
       obj10 = { user, guildId };
       const merged2 = Object.assign(obj7);
     }
-    obj8.children = jsx(obj(1178).Avatar, obj10);
+    obj8.children = jsx(obj(1176).Avatar, obj10);
     jsx(obj(5204).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
   } else {
     const obj11 = { ref, style, accessibilityRole: "image", accessible: true };
@@ -112,7 +112,7 @@ export default noop.forwardRef((animate, ref) => {
       obj13 = { user, guildId };
       const merged5 = Object.assign(obj7);
     }
-    obj11.children = jsx(obj(1178).Avatar, obj13);
+    obj11.children = jsx(obj(1176).Avatar, obj13);
     return <View ref={arg1} style={style} accessibilityRole="image" accessible />;
   }
 });

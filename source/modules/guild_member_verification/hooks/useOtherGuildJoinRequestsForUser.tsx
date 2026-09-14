@@ -1,10 +1,10 @@
-// Module ID: 16683
-// Function ID: 16684
+// Module ID: 16685
+// Function ID: 16686
 // Name: useOtherGuildJoinRequestsForUser
 // Dependencies: [19, 5623, 504, 5622, 2]
 // Exports: useOtherGuildJoinRequestsForUser
 
-// Module 16683 (useOtherGuildJoinRequestsForUser)
+// Module 16685 (useOtherGuildJoinRequestsForUser)
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5622 */;
 import noop from "module_19" /* 19 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5623 */;

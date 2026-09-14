@@ -1,10 +1,10 @@
-// Module ID: 13392
-// Function ID: 13393
+// Module ID: 13393
+// Function ID: 13394
 // Name: useAppDMChatInputState
 // Dependencies: [19, 9419, 4864, 7723, 1918, 1371, 1074, 1894, 504, 8304, 573, 7271, 2]
 // Exports: default
 
-// Module 13392 (useAppDMChatInputState)
+// Module 13393 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
 import noop from "module_19" /* 19 */;

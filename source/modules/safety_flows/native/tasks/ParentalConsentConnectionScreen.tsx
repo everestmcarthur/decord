@@ -1,16 +1,16 @@
-// Module ID: 17994
-// Function ID: 17995
+// Module ID: 17995
+// Function ID: 17996
 // Name: ParentalConsentConnectionScreen
-// Dependencies: [5, 32, 19, 17, 7640, 1371, 7641, 21, 4636, 576, 17985, 17984, 12046, 5073, 17578, 14969, 8768, 504, 14967, 17995, 17979, 4335, 1114, 2690, 4603, 14968, 1896, 17988, 12056, 5054, 17996, 11128, 17997, 4632, 2396, 14970, 2]
+// Dependencies: [5, 32, 19, 17, 7640, 1371, 7641, 21, 4636, 576, 17986, 17985, 12047, 5073, 17579, 14970, 8768, 504, 14968, 17996, 17980, 4335, 1114, 2690, 4603, 14969, 1896, 17989, 12057, 5054, 17997, 11129, 17998, 4632, 2396, 14971, 2]
 // Exports: default
 
-// Module 17994 (ParentalConsentConnectionScreen)
+// Module 17995 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2690 from "module_2690" /* 2690 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14967 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14968 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -198,7 +198,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2690.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2690["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(14968, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(14969, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

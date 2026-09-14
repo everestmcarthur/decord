@@ -1,7 +1,7 @@
 // Module ID: 5057
 // Function ID: 5058
 // Name: BaseTextButton
-// Dependencies: [32, 19, 17, 21, 4636, 576, 4373, 5058, 5055, 5059, 5061, 1150, 5062, 4632, 4357, 4604, 5064, 4340, 5066, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 4373, 5058, 5055, 5059, 5061, 1363, 5062, 4632, 4357, 4604, 5064, 4340, 5066, 2]
 
 // Module 5057 (BaseTextButton)
 import nativeDefault from "native" /* 576 */;
@@ -147,14 +147,14 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
 let obj6 = { sm: null, md: null, lg: null };
 const LARGE_BUTTON_HEIGHT = fn(5061).LARGE_BUTTON_HEIGHT;
 const bound = Math.max((fn(5061).MINIMUM_HIT_AREA - fn(5061).SMALL_BUTTON_HEIGHT) / 2, 0);
-const rect = { top: bound, left: "Array", right: "accessible", bottom: bound };
+const rect = { top: bound, left: "Array", right: "isArray", bottom: bound };
 obj6.sm = rect;
 const LARGE_BUTTON_HEIGHT2 = fn(5061).LARGE_BUTTON_HEIGHT;
 const bound1 = Math.max((fn(5061).MINIMUM_HIT_AREA - fn(5061).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-const rect1 = { top: bound1, left: "Array", right: "accessible", bottom: bound1 };
+const rect1 = { top: bound1, left: "Array", right: "isArray", bottom: bound1 };
 obj6.md = rect1;
 const bound2 = Math.max((fn(5061).MINIMUM_HIT_AREA - fn(5061).LARGE_BUTTON_HEIGHT) / 2, 0);
-const rect2 = { top: bound2, left: "Array", right: "accessible", bottom: bound2 };
+const rect2 = { top: bound2, left: "Array", right: "isArray", bottom: bound2 };
 obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {
 

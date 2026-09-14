@@ -1,10 +1,10 @@
-// Module ID: 14756
-// Function ID: 14757
+// Module ID: 14757
+// Function ID: 14758
 // Name: WebAuthnDeleteActionSheet
-// Dependencies: [19, 17, 21, 4636, 576, 4603, 7253, 7252, 1114, 7301, 4632, 5056, 6698, 4335, 10780, 4596, 9755, 8711, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4603, 7253, 7252, 1114, 7301, 4632, 5056, 6698, 4335, 10781, 4596, 9755, 8711, 2]
 // Exports: default
 
-// Module 14756 (WebAuthnDeleteActionSheet)
+// Module 14757 (WebAuthnDeleteActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6698 */;
@@ -62,7 +62,7 @@ export default function WebAuthnDeleteActionSheet(credential) {
       const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
       const intl = credential(1114).intl;
       obj2.content = intl.string(credential(1114).t.ZnkeXs);
-      obj2.icon = closure_1_1(10780);
+      obj2.icon = closure_1_1(10781);
       obj2.IconComponent = credential(4596).CircleCheckIcon;
       closure_1_1(4335).open(obj2);
     });
@@ -70,7 +70,7 @@ export default function WebAuthnDeleteActionSheet(credential) {
       const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
       const intl = credential(1114).intl;
       obj2.content = intl.string(credential(1114).t.ZnkeXs);
-      obj2.icon = closure_1_1(10780);
+      obj2.icon = closure_1_1(10781);
       obj2.IconComponent = credential(4596).CircleCheckIcon;
       closure_1_1(4335).open(obj2);
     }).catch((error) => {

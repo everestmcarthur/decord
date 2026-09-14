@@ -1,12 +1,12 @@
-// Module ID: 15063
-// Function ID: 15064
+// Module ID: 15064
+// Function ID: 15065
 // Name: SettingsClipsScreen
-// Dependencies: [19, 8079, 21, 11601, 14775, 2]
+// Dependencies: [19, 8079, 21, 11602, 14776, 2]
 // Exports: default
 
-// Module 15063 (SettingsClipsScreen)
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+// Module 15064 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

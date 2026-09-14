@@ -1,10 +1,10 @@
-// Module ID: 16042
-// Function ID: 16043
+// Module ID: 16044
+// Function ID: 16045
 // Name: RegistrationConstants
 // Dependencies: [1093, 2]
 // Exports: authStateToRegisterTransitionStep
 
-// Module 16042 (RegistrationConstants)
+// Module 16044 (RegistrationConstants)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import size from "module_2" /* 2 */;
 

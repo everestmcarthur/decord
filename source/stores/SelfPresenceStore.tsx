@@ -1,22 +1,22 @@
 // Module ID: 5360
 // Function ID: 5361
 // Name: SelfPresenceStore
-// Dependencies: [5361, 1221, 1931, 5491, 7500, 11590, 4676, 4654, 1074, 7502, 1935, 1384, 11019, 1332, 12, 504, 573, 2]
+// Dependencies: [5361, 1219, 1931, 5491, 7500, 11591, 4676, 4654, 1074, 7502, 1935, 1384, 11020, 1330, 12, 504, 573, 2]
 
 // Module 5360 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11019 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11020 */;
 import SpotifyStore from "SpotifyStore" /* 5361 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
 import IdleStore from "IdleStore" /* 5491 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 7500 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import SessionsStore from "SessionsStore" /* 4654 */;
 
@@ -134,7 +134,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1332(found, found)) {
+    if (!_modDef1330(found, found)) {
       closure_21 = filterPlayingActivities(found);
       flag = true;
     }

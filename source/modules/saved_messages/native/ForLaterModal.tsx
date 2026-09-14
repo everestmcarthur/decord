@@ -1,7 +1,7 @@
 // Module ID: 7965
 // Function ID: 7966
 // Name: ForLaterModal
-// Dependencies: [19, 17, 21, 4636, 576, 1611, 1114, 7963, 5712, 7966, 1150, 5705, 4839, 13413, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1611, 1114, 7963, 5712, 7966, 1363, 5705, 4839, 13414, 2]
 // Exports: default
 
 // Module 7965 (ForLaterModal)
@@ -9,7 +9,7 @@ import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 13413 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 13414 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

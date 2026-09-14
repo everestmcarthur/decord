@@ -1,15 +1,15 @@
-// Module ID: 11678
-// Function ID: 11679
+// Module ID: 11679
+// Function ID: 11680
 // Name: ChannelsAndRolesModal
-// Dependencies: [32, 19, 17, 1979, 7204, 21, 4636, 576, 563, 7438, 9922, 1114, 9923, 11679, 11685, 11055, 2]
+// Dependencies: [32, 19, 17, 1979, 7204, 21, 4636, 576, 563, 7438, 9922, 1114, 9923, 11680, 11686, 11056, 2]
 // Exports: default
 
-// Module 11678 (ChannelsAndRolesModal)
+// Module 11679 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7438 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11055 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11056 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

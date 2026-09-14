@@ -1,9 +1,9 @@
-// Module ID: 13855
-// Function ID: 13856
+// Module ID: 13856
+// Function ID: 13857
 // Name: NUFChannelsManager
-// Dependencies: [2021, 1979, 4458, 1371, 1074, 4262, 510, 4481, 7221, 4495, 4494, 1384, 4603, 13856, 1896, 2]
+// Dependencies: [2021, 1979, 4458, 1371, 1074, 4262, 510, 4481, 7221, 4495, 4494, 1384, 4603, 13857, 1896, 2]
 
-// Module 13855 (NUFChannelsManager)
+// Module 13856 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -83,7 +83,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = tmp(4481);
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(13856, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(13857, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = tmp(510).Storage;
             const result = Storage2.set(tmp12, true);
           }

@@ -1,17 +1,17 @@
-// Module ID: 12540
-// Function ID: 12541
+// Module ID: 12541
+// Function ID: 12542
 // Name: NotificationPermissionUtil
-// Dependencies: [32, 5, 19, 17, 12538, 12539, 1074, 4846, 9820, 1242, 12541, 12547, 12548, 504, 2]
+// Dependencies: [32, 5, 19, 17, 12539, 12540, 1074, 4846, 9820, 1240, 12542, 12548, 12549, 504, 2]
 // Exports: enableProvisionalPushNotification, requestPushNotificationPermission, useCanSeePushNotificationNudge, useShouldShowPushNotificationNudgeByPromptType, useShowReactivationPrompt
 
-// Module 12540 (NotificationPermissionUtil)
+// Module 12541 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12541 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 12548 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12549 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12538 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12539 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0, value) {
@@ -69,7 +69,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0, value) 
           const obj3 = closure_132_1(closure_132_2[9]);
         } else if (closure_131_3 !== closure_132_10.AUTHORIZED) {
           const permission = closure_132_1(closure_132_2[11]).requestPermission((permission_granted) => {
-            action_location(1242).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type, action_location, permission_granted });
+            action_location(1240).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type, action_location, permission_granted });
             dependencyMap();
           });
           const obj = closure_132_1(closure_132_2[11]);
@@ -153,7 +153,7 @@ let closure_12 = async function _enableProvisionalPushNotification(arg0, value) 
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12539).EventActionType;
+const EventActionType = fn(12540).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_10 = fn(4846).NotificationAuthorizationStatus;
 const size = fn(2);

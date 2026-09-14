@@ -1,13 +1,13 @@
-// Module ID: 17750
-// Function ID: 17751
+// Module ID: 17751
+// Function ID: 17752
 // Name: GuildSettingsRoleMembers
-// Dependencies: [32, 19, 17, 7231, 1074, 21, 4636, 576, 4335, 5678, 1114, 17728, 7414, 504, 4980, 9192, 1178, 1242, 4603, 17729, 1896, 11073, 8202, 6717, 7153, 4591, 4632, 5686, 11337, 2]
+// Dependencies: [32, 19, 17, 7231, 1074, 21, 4636, 576, 4335, 5678, 1114, 17729, 7414, 504, 4980, 9192, 1176, 1240, 4603, 17730, 1896, 11074, 8202, 6717, 7153, 4591, 4632, 5686, 11338, 2]
 // Exports: default
 
-// Module 17750 (GuildSettingsRoleMembers)
+// Module 17751 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -101,7 +101,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const callback1 = found.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(17729, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
+    obj2.openLazy(asyncRequireImpl(17730, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

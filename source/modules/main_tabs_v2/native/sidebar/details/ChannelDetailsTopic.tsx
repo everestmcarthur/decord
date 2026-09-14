@@ -1,9 +1,9 @@
-// Module ID: 16844
-// Function ID: 16845
+// Module ID: 16846
+// Function ID: 16847
 // Name: ChannelDetailsTopic
-// Dependencies: [32, 19, 17, 1371, 11047, 1074, 21, 1150, 4636, 16845, 4373, 5055, 4626, 5204, 4632, 5068, 504, 4481, 4781, 2]
+// Dependencies: [32, 19, 17, 1371, 11048, 1074, 21, 1363, 4636, 16847, 4373, 5055, 4626, 5204, 4632, 5068, 504, 4481, 4781, 2]
 
-// Module 16844 (ChannelDetailsTopic)
+// Module 16846 (ChannelDetailsTopic)
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import ChannelUtils from "ChannelUtils" /* 4781 */;
@@ -207,12 +207,12 @@ function GroupDMChannelDetailsTopic(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(11047);
+const ChannelDetailsConstants = fn(11048);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 const EMPTY_STYLE = {};

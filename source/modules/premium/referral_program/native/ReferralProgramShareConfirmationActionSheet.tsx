@@ -1,10 +1,10 @@
-// Module ID: 13528
-// Function ID: 13529
+// Module ID: 13529
+// Function ID: 13530
 // Name: ReferralProgramShareConfirmationActionSheet
-// Dependencies: [17, 1074, 21, 4636, 576, 4481, 7556, 1178, 4632, 1114, 5056, 5152, 4603, 4649, 2024, 7253, 7252, 5054, 5773, 2]
+// Dependencies: [17, 1074, 21, 4636, 576, 4481, 7556, 1176, 4632, 1114, 5056, 5152, 4603, 4649, 2024, 7253, 7252, 5054, 5773, 2]
 // Exports: default
 
-// Module 13528 (ReferralProgramShareConfirmationActionSheet)
+// Module 13529 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
@@ -30,7 +30,7 @@ function SharedUser(user) {
   }
   const tmp8 = View;
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1178).Avatar, { style: items, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" }), , ];
+  const items1 = [closure_5(user(1176).Avatar, { style: items, size: user(1176).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" }), , ];
   if (tmp6) {
     const obj4 = { children: null };
     const obj5 = { variant: "text-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
@@ -50,7 +50,7 @@ function SharedUser(user) {
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1114).intl;
   obj9.text = intl2.string(user(1114).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
+  const obj3 = { style: items, size: user(1176).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
   obj9.icon = closure_5(user(5152).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();

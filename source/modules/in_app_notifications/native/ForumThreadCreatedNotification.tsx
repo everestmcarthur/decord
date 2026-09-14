@@ -1,7 +1,7 @@
 // Module ID: 10310
 // Function ID: 10311
 // Name: ForumThreadCreatedNotification
-// Dependencies: [19, 10224, 21, 4789, 1114, 4869, 4647, 4839, 10270, 1896, 10298, 1178, 4632, 2]
+// Dependencies: [19, 10224, 21, 4789, 1114, 4869, 4647, 4839, 10270, 1896, 10298, 1176, 4632, 2]
 // Exports: default
 
 // Module 10310 (ForumThreadCreatedNotification)

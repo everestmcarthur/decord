@@ -1,14 +1,14 @@
-// Module ID: 12554
-// Function ID: 12555
+// Module ID: 12555
+// Function ID: 12556
 // Name: EmojiSuggestionBarLarge
-// Dependencies: [32, 19, 17, 10418, 21, 4636, 576, 12555, 4373, 10438, 10456, 4347, 2]
+// Dependencies: [32, 19, 17, 10419, 21, 4636, 576, 12556, 4373, 10439, 10457, 4347, 2]
 
-// Module 12554 (EmojiSuggestionBarLarge)
+// Module 12555 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10438 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12555 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10439 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12556 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -59,7 +59,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       if (locked) {
         let openEmojiActionSheet = dependencyMap;
       } else {
-        openEmojiActionSheet = tmp8(10456).openEmojiActionSheet;
+        openEmojiActionSheet = tmp8(10457).openEmojiActionSheet;
       }
       obj3.onLongPressEmoji = openEmojiActionSheet;
       obj3.animateEmoji = !reducedMotion;
@@ -77,7 +77,7 @@ function renderEmojiSuggestionBarLargeItem(arg0, arg1, transitionState, cleanUp)
   return <EmojiSuggestionBarLargeAnimated key={arg0} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(10418).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10419).IMAGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0) => {

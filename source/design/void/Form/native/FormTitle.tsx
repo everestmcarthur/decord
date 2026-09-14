@@ -1,12 +1,12 @@
 // Module ID: 8726
 // Function ID: 8727
 // Name: FormTitle
-// Dependencies: [19, 17, 1074, 21, 1150, 4636, 576, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 1363, 4636, 576, 1176, 2]
 // Exports: default
 
 // Module 8726 (FormTitle)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,12 +14,12 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;

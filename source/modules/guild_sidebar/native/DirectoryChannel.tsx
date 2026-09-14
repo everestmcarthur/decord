@@ -1,12 +1,12 @@
-// Module ID: 16304
-// Function ID: 16305
+// Module ID: 16306
+// Function ID: 16307
 // Name: DirectoryChannel
-// Dependencies: [19, 1957, 2012, 10246, 4818, 21, 4636, 576, 563, 1100, 11044, 16211, 9900, 2]
+// Dependencies: [19, 1957, 2012, 10246, 4818, 21, 4636, 576, 563, 1100, 11045, 16213, 9900, 2]
 
-// Module 16304 (DirectoryChannel)
+// Module 16306 (DirectoryChannel)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
@@ -56,8 +56,8 @@ export default noop.memo((guildId) => {
     obj2.channel = stateFromStores;
     obj2.selected = selected;
     obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(16211), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
-    const tmp10 = id(16211);
+    tmp7 = jsx(id(16213), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
+    const tmp10 = id(16213);
   }
   return tmp7;
 });

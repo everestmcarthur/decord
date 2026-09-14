@@ -1,10 +1,10 @@
-// Module ID: 11258
-// Function ID: 11259
+// Module ID: 11259
+// Function ID: 11260
 // Name: DoubleTapEmojiUpdatedToast
-// Dependencies: [19, 4628, 1374, 21, 4636, 576, 1150, 504, 1396, 7233, 4632, 1114, 5043, 4348, 4335, 2]
+// Dependencies: [19, 4628, 1374, 21, 4636, 576, 1363, 504, 1396, 7233, 4632, 1114, 5043, 4348, 4335, 2]
 // Exports: showDoubleTapEmojiUpdatedToast
 
-// Module 11258 (DoubleTapEmojiUpdatedToast)
+// Module 11259 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -64,13 +64,13 @@ const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 }, toastEmojiCustom: { width: 24, height: 24 }, toastEmojiText: null, toastText: null };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 const obj5 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;

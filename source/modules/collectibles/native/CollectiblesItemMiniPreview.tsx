@@ -1,9 +1,9 @@
-// Module ID: 13269
-// Function ID: 13270
+// Module ID: 13270
+// Function ID: 13271
 // Name: CollectiblesItemMiniPreview
 // Dependencies: [19, 17, 7650, 1887, 7651, 7652, 8338, 8925, 21, 576, 4636, 8937, 8949, 5668, 8950, 8928, 1886, 8945, 2]
 
-// Module 13269 (CollectiblesItemMiniPreview)
+// Module 13270 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 576 */;
 import utils from "utils" /* 1886 */;
 import FastImageDefault from "FastImage" /* 5668 */;

@@ -1,14 +1,14 @@
-// Module ID: 13904
-// Function ID: 13905
+// Module ID: 13905
+// Function ID: 13906
 // Name: VoiceQuality
-// Dependencies: [32, 7844, 4694, 13905, 7850, 4691, 12, 4665, 2]
+// Dependencies: [32, 7844, 4694, 13906, 7850, 4691, 12, 4665, 2]
 
-// Module 13904 (VoiceQuality)
+// Module 13905 (VoiceQuality)
 import _modDef12 from "module_12" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import Histogram from "Histogram" /* 7844 */;
 import SystemResourcesDefault from "SystemResources" /* 7850 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13905 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 11063
-// Function ID: 11064
+// Module ID: 11064
+// Function ID: 11065
 // Name: InstantInvite
-// Dependencies: [19, 17, 1961, 1074, 21, 4636, 7271, 11064, 11065, 4981, 1114, 11066, 1100, 11068, 5688, 5054, 7275, 4632, 8789, 8202, 11072, 11073, 11074, 11077, 11079, 2]
+// Dependencies: [19, 17, 1961, 1074, 21, 4636, 7271, 11065, 11066, 4981, 1114, 11067, 1100, 11069, 5688, 5054, 7275, 4632, 8789, 8202, 11073, 11074, 11075, 11078, 11080, 2]
 // Exports: LinkedChannelInvite
 
-// Module 11063 (InstantInvite)
+// Module 11064 (InstantInvite)
 import util from "util" /* 1114 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 11066 */;
-import InstantInviteIconsDefault from "InstantInviteIcons" /* 11068 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11073 */;
-import InviteRolesDisplayDefault from "InviteRolesDisplay" /* 11077 */;
-import InstantInviteUsesLabelDefault from "InstantInviteUsesLabel" /* 11079 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 11067 */;
+import InstantInviteIconsDefault from "InstantInviteIcons" /* 11069 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11074 */;
+import InviteRolesDisplayDefault from "InviteRolesDisplay" /* 11078 */;
+import InstantInviteUsesLabelDefault from "InstantInviteUsesLabel" /* 11080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export default noop.memo((onInviteRevoked) => {
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const tmp = closure_9();
   const items1 = [invite.roles];
-  const inviteActions = invite(11074).useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
+  const inviteActions = invite(11075).useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
   const memo1 = noop.useMemo(() => {
     const roles = invite.roles;
     return roles.map((id) => id.id);
@@ -61,7 +61,7 @@ export default noop.memo((onInviteRevoked) => {
   ];
   obj2.children = items2;
   const items3 = [closure_8(invite(5054).Stack, obj2), , , ];
-  let obj = invite(11074);
+  let obj = invite(11075);
   const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const obj4 = {
     items: inviteActions,
@@ -75,7 +75,7 @@ export default noop.memo((onInviteRevoked) => {
       return closure_1_7(invite(8202).IconButton, obj);
     }
   };
-  items3[1] = closure_7(invite(11072).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+  items3[1] = closure_7(invite(11073).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   if (tmp9Result) {
     const obj6 = { roleIds: memo1, guildId: id };
     tmp9Result = tmp9(InviteRolesDisplayDefault, obj6);
@@ -124,16 +124,16 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   }
   const getOrFetchApplication = channel(7271).useGetOrFetchApplication(application_id);
   let obj = channel(7271);
-  canUnlinkLobbyChannel = channel(11064).useCanUnlinkLobbyChannel(channel);
+  canUnlinkLobbyChannel = channel(11065).useCanUnlinkLobbyChannel(channel);
   let str;
-  const tmp3Result = channel(11064);
+  const tmp3Result = channel(11065);
   if (getOrFetchApplication != null) {
     str = getOrFetchApplication.name;
   }
   if (str == null) {
     str = "";
   }
-  const tmp9Result = canUnlinkLobbyChannel(11065)(channel.id, str);
+  const tmp9Result = canUnlinkLobbyChannel(11066)(channel.id, str);
   dependencyMap = tmp9Result;
   let items = [canUnlinkLobbyChannel, tmp9Result];
   action = action.useCallback(() => {
@@ -170,7 +170,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   }, items1);
   let obj2 = { style: tmp.gameWrapper, children: null };
   const obj3 = { game: getOrFetchApplication, size: null };
-  const tmp9 = canUnlinkLobbyChannel(11065);
+  const tmp9 = canUnlinkLobbyChannel(11066);
   obj3.size = channel(7275).GameIconSizes.SIZE_24;
   const items2 = [closure_7(canUnlinkLobbyChannel(7275), obj3), ];
   const obj4 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
@@ -188,7 +188,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
       items: memo,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(11068).more, accessibilityLabel: null, ref: null };
+        const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(11069).more, accessibilityLabel: null, ref: null };
         const intl = channel(1114).intl;
         obj.accessibilityLabel = intl.string(channel(1114).t.DEoVWZ);
         obj.ref = ref.ref;
@@ -198,19 +198,19 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     })
   ];
   obj5.children = items3;
-  const items4 = [closure_8(channel(5054).Stack, obj5), closure_7(channel(11072).InstantInviteDetails, { channel }), ];
+  const items4 = [closure_8(channel(5054).Stack, obj5), closure_7(channel(11073).InstantInviteDetails, { channel }), ];
   const obj7 = { style: tmp.creatorWrapper, children: null };
   let tmp15Result = null;
   if (null != linked_by) {
     const obj8 = { start: true, end: true, userId: linked_by, guildId: channel.guild_id };
-    tmp15Result = tmp15(tmp8(11073), obj8);
+    tmp15Result = tmp15(tmp8(11074), obj8);
   }
   const obj9 = { children: null };
   const obj6 = {
     items: memo,
     children(ref) {
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-      const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(11068).more, accessibilityLabel: null, ref: null };
+      const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(11069).more, accessibilityLabel: null, ref: null };
       const intl = channel(1114).intl;
       obj.accessibilityLabel = intl.string(channel(1114).t.DEoVWZ);
       obj.ref = ref.ref;

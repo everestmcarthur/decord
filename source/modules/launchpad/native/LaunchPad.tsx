@@ -1,20 +1,20 @@
-// Module ID: 17083
-// Function ID: 17084
+// Module ID: 17085
+// Function ID: 17086
 // Name: LaunchPad
-// Dependencies: [32, 19, 17, 4327, 7628, 7431, 5587, 1961, 502, 1957, 7822, 7738, 1979, 13842, 4651, 5519, 4817, 4655, 1074, 21, 576, 4636, 5204, 4632, 504, 4373, 4502, 7153, 1114, 13141, 9906, 15662, 1150, 14668, 11098, 9974, 4494, 9975, 9965, 1477, 1611, 9966, 12918, 1242, 17084, 17091, 15832, 17104, 17105, 2]
+// Dependencies: [32, 19, 17, 4327, 7628, 7431, 5587, 1961, 502, 1957, 7822, 7738, 1979, 13843, 4651, 5519, 4817, 4655, 1074, 21, 576, 4636, 5204, 4632, 504, 4373, 4502, 7153, 1114, 13142, 9906, 15664, 1363, 14669, 11099, 9974, 4494, 9975, 9965, 1477, 1611, 9966, 12919, 1240, 17086, 17093, 15834, 17106, 17107, 2]
 
-// Module 17083 (LaunchPad)
+// Module 17085 (LaunchPad)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import AutocompleterDefault from "Autocompleter" /* 9966 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9974 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 11098 */;
-import RouteManagerDefault from "RouteManager" /* 12918 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14668 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 11099 */;
+import RouteManagerDefault from "RouteManager" /* 12919 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
@@ -26,7 +26,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7822 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7738 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13842 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13843 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;

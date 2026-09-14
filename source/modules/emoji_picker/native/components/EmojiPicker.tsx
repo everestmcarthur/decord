@@ -1,11 +1,11 @@
-// Module ID: 10412
-// Function ID: 10413
+// Module ID: 10413
+// Function ID: 10414
 // Name: EmojiPicker
-// Dependencies: [19, 17, 1074, 1374, 21, 4636, 576, 1242, 4373, 10413, 7265, 7285, 10416, 10411, 7153, 1114, 10417, 10456, 5068, 4486, 10475, 2]
+// Dependencies: [19, 17, 1074, 1374, 21, 4636, 576, 1240, 4373, 10414, 7265, 7285, 10417, 10412, 7153, 1114, 10418, 10457, 5068, 4486, 10476, 2]
 
-// Module 10412 (EmojiPicker)
+// Module 10413 (EmojiPicker)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

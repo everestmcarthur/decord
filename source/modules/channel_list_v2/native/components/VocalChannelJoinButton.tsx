@@ -1,9 +1,9 @@
-// Module ID: 12422
-// Function ID: 12423
+// Module ID: 12423
+// Function ID: 12424
 // Name: VocalChannelJoinButton
-// Dependencies: [19, 17, 4275, 4655, 1074, 21, 4636, 576, 1150, 7976, 4571, 4488, 9601, 563, 5512, 5506, 5498, 12423, 4632, 1114, 5056, 5178, 5182, 2]
+// Dependencies: [19, 17, 4275, 4655, 1074, 21, 4636, 576, 1363, 7976, 4571, 4488, 9601, 563, 5512, 5506, 5498, 12424, 4632, 1114, 5056, 5178, 5182, 2]
 
-// Module 12422 (VocalChannelJoinButton)
+// Module 12423 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -90,9 +90,9 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     tmp12 = tmp8;
   }
   const tmp3Result = channel(563);
-  const connectedUserLimit = channel(12423).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(12423);
-  let connectedUserLimitFormatted = channel(12423).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(12424).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(12424);
+  let connectedUserLimitFormatted = channel(12424).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;

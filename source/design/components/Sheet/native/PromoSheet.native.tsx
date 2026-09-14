@@ -1,10 +1,10 @@
-// Module ID: 10358
-// Function ID: 10359
+// Module ID: 10359
+// Function ID: 10360
 // Name: PromoSheet
-// Dependencies: [109, 19, 17, 21, 4636, 576, 10359, 7253, 5054, 10360, 4632, 2]
+// Dependencies: [109, 19, 17, 21, 4636, 576, 10360, 7253, 5054, 10361, 4632, 2]
 // Exports: PromoSheet
 
-// Module 10358 (PromoSheet)
+// Module 10359 (PromoSheet)
 import nativeDefault from "native" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export const PromoSheet = function PromoSheet(arg0) {
   const memo = noop.useMemo(() => null != gradientColor ? ((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.children = closure_2_7(gradientColor(10359).ExpressiveGradient, { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
+    obj.children = closure_2_7(gradientColor(10360).ExpressiveGradient, { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
     return closure_2_7(View, obj);
   }) : undefined, items);
   let obj = {};
@@ -40,7 +40,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(graphic);
     obj2.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(10360).Graphic, obj2);
+    let tmp4Result = tmp4(tmp5(10361).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {

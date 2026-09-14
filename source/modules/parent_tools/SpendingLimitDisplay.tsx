@@ -1,15 +1,15 @@
-// Module ID: 14998
-// Function ID: 14999
+// Module ID: 14999
+// Function ID: 15000
 // Name: SpendingLimitDisplay
-// Dependencies: [1221, 7640, 1373, 504, 14916, 7337, 7338, 1114, 2396, 2]
+// Dependencies: [1219, 7640, 1373, 504, 14917, 7337, 7338, 1114, 2396, 2]
 // Exports: useSpendingLimitDisplayState, useSpendingLimitFromUserSettings
 
-// Module 14998 (SpendingLimitDisplay)
+// Module 14999 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import PriceUtils from "PriceUtils" /* 7337 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14916 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14917 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;

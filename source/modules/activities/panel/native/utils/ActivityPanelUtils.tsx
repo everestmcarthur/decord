@@ -1,10 +1,10 @@
-// Module ID: 17117
-// Function ID: 17118
+// Module ID: 17119
+// Function ID: 17120
 // Name: ActivityPanelUtils
 // Dependencies: [1956, 9635, 504, 4265, 9658, 2]
 // Exports: useIsActivityPanelFullscreen
 
-// Module 17117 (ActivityPanelUtils)
+// Module 17119 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
 import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9658 */;

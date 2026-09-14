@@ -1,14 +1,14 @@
-// Module ID: 12419
-// Function ID: 12420
+// Module ID: 12420
+// Function ID: 12421
 // Name: DoubleTapToReactChatInputBanner
-// Dependencies: [32, 19, 17, 4628, 1954, 1374, 21, 4636, 576, 1150, 563, 7233, 1396, 4632, 1114, 12420, 5204, 5761, 8894, 1250, 4373, 4637, 1178, 4603, 12510, 1896, 8390, 5074, 9031, 1935, 8075, 8072, 10753, 1943, 2]
+// Dependencies: [32, 19, 17, 4628, 1954, 1374, 21, 4636, 576, 1363, 563, 7233, 1396, 4632, 1114, 12421, 5204, 5761, 8894, 1248, 4373, 4637, 1176, 4603, 12511, 1896, 8390, 5074, 9031, 1935, 8075, 8072, 10754, 1943, 2]
 // Exports: DoubleTapToReactChatInputBanner
 
-// Module 12419 (DoubleTapToReactChatInputBanner)
+// Module 12420 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -19,7 +19,7 @@ import Pressables from "Pressables" /* 5204 */;
 import XSmallIcon from "XSmallIcon" /* 5761 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 8075 */;
-import renderChannelBadge from "renderChannelBadge" /* 12420 */;
+import renderChannelBadge from "renderChannelBadge" /* 12421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -146,7 +146,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12510, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12511, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -197,13 +197,13 @@ obj2.text = { marginHorizontal: 12, flex: 1 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.emojiContainer = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, flexDirection: "row", gap: 8, alignItems: "center", justifyContent: "center", padding: 12 };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj7 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;

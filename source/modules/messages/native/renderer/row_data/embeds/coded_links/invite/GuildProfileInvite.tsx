@@ -1,10 +1,10 @@
-// Module ID: 13347
-// Function ID: 13348
+// Module ID: 13348
+// Function ID: 13349
 // Name: GuildProfileInvite
-// Dependencies: [32, 2025, 11442, 1074, 7838, 8049, 5629, 4488, 576, 1971, 9321, 9319, 1396, 1926, 1878, 1114, 9334, 8867, 7839, 11, 2019, 7290, 1091, 8040, 8050, 2]
+// Dependencies: [32, 2025, 11443, 1074, 7838, 8049, 5629, 4488, 576, 1971, 9321, 9319, 1396, 1926, 1878, 1114, 9334, 8867, 7839, 11, 2019, 7290, 1091, 8040, 8050, 2]
 // Exports: createGuildProfileInvite
 
-// Module 13347 (GuildProfileInvite)
+// Module 13348 (GuildProfileInvite)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
@@ -15,7 +15,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11442).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11443).CodedLinkExtendedType;
 const GuildFeatures = fn(1074).GuildFeatures;
 const InviteTypes = fn(7838).InviteTypes;
 const size = fn(2);

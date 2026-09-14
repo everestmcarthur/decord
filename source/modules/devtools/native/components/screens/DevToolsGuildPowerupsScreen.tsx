@@ -1,22 +1,22 @@
-// Module ID: 15790
-// Function ID: 15791
+// Module ID: 15792
+// Function ID: 15793
 // Name: DevToolsGuildPowerupsScreen
-// Dependencies: [5, 19, 17, 1221, 12691, 1979, 4458, 15791, 1074, 21, 4636, 576, 1272, 4228, 4534, 12617, 15703, 7303, 12623, 1940, 1943, 1611, 504, 4632, 5768, 5686, 2]
+// Dependencies: [5, 19, 17, 1219, 12692, 1979, 4458, 15793, 1074, 21, 4636, 576, 1270, 4228, 4534, 12618, 15705, 7303, 12624, 1940, 1943, 1611, 504, 4632, 5768, 5686, 2]
 // Exports: default
 
-// Module 15790 (DevToolsGuildPowerupsScreen)
+// Module 15792 (DevToolsGuildPowerupsScreen)
 import nativeDefault from "native" /* 576 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import TableSwitchRow from "TableSwitchRow" /* 7303 */;
-import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 12623 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15703 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 12624 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12691 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12692 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
@@ -155,8 +155,8 @@ function GuildDCSwitchRow(dc) {
   const items = [dc, guildId];
   const callback = noop.useCallback((arg0) => {
     if (arg0) {
-      const result = tmp(12623).markContentAsDismissed(dc, guildId, false);
-      const tmpResult = tmp(12623);
+      const result = tmp(12624).markContentAsDismissed(dc, guildId, false);
+      const tmpResult = tmp(12624);
     } else {
       const result1 = tmp(1940).removeDismissedRecurringContent(dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION);
       const tmpResult2 = tmp(1940);
@@ -167,7 +167,7 @@ function GuildDCSwitchRow(dc) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(15791);
+const DevToolsGuildPowerupsConstants = fn(15793);
 ({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, VANITY_URL_POWERUP_DCS: closure_14, getGuildDCString: closure_15, getUserDCString: closure_16 } = DevToolsGuildPowerupsConstants);
 const Endpoints = fn(1074).Endpoints;
 const jsxProd = fn(21);

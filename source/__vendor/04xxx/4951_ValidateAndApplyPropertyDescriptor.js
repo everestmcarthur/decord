@@ -1,7 +1,7 @@
 // Module ID: 4951
 // Function ID: 4952
 // Name: ValidateAndApplyPropertyDescriptor
-// Dependencies: [4952, 4885, 1283, 4932, 4936, 4949, 4939, 4940, 4941, 4942, 4953, 4954]
+// Dependencies: [4952, 4885, 1281, 4932, 4936, 4949, 4939, 4940, 4941, 4942, 4953, 4954]
 
 // Module 4951 (ValidateAndApplyPropertyDescriptor)
 import _mod4932 from "module_4932" /* 4932 */;
@@ -12,19 +12,19 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
   const tmp3 = _mod4952(arg0);
   if (undefined !== arg0) {
     if (!tmp(4885)(arg0)) {
-      const tmp6 = new tmp(1283)("Assertion failed: O must be undefined or an Object");
+      const tmp6 = new tmp(1281)("Assertion failed: O must be undefined or an Object");
       throw tmp6;
     }
   }
   if (_mod4932(arg1)) {
     if (typeof flag !== "boolean") {
-      const tmp88 = new tmp(1283)("Assertion failed: extensible must be a Boolean");
+      const tmp88 = new tmp(1281)("Assertion failed: extensible must be a Boolean");
       throw tmp88;
     } else if (tmp(4936)(__Configurable__)) {
       let prop = arg4;
       if (undefined !== arg4) {
         if (!tmp(4936)(prop)) {
-          const tmp20 = new tmp(1283)("Assertion failed: current must be a Property Descriptor, or undefined");
+          const tmp20 = new tmp(1281)("Assertion failed: current must be a Property Descriptor, or undefined");
           throw tmp20;
         }
       }
@@ -156,17 +156,17 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
             const tmpResult29 = tmp(4939);
           }
         } else {
-          const tmp24 = new tmp(1283)("`current`, when present, must be a fully populated and valid Property Descriptor");
+          const tmp24 = new tmp(1281)("`current`, when present, must be a fully populated and valid Property Descriptor");
           throw tmp24;
         }
         tmpResult20 = tmp(4953);
       }
     } else {
-      const tmp15 = new tmp(1283)("Assertion failed: Desc must be a Property Descriptor");
+      const tmp15 = new tmp(1281)("Assertion failed: Desc must be a Property Descriptor");
       throw tmp15;
     }
   } else {
-    const tmp10 = new tmp(1283)("Assertion failed: P must be a Property Key");
+    const tmp10 = new tmp(1281)("Assertion failed: P must be a Property Key");
     throw tmp10;
   }
 };

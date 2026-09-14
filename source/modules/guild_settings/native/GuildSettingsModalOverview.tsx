@@ -1,10 +1,10 @@
-// Module ID: 17644
-// Function ID: 17645
+// Module ID: 17645
+// Function ID: 17646
 // Name: GuildSettingsModalOverview
-// Dependencies: [19, 1975, 1957, 2012, 4556, 4275, 4285, 1371, 9193, 1074, 21, 4636, 576, 1114, 4347, 4334, 5705, 7480, 9192, 11462, 1384, 7297, 4981, 5075, 6707, 4789, 5768, 5686, 8096, 17448, 7303, 5766, 5769, 16252, 2024, 17645, 1396, 11480, 1178, 7188, 5630, 8716, 5054, 7143, 1483, 504, 2]
+// Dependencies: [19, 1975, 1957, 2012, 4556, 4275, 4285, 1371, 9193, 1074, 21, 4636, 576, 1114, 4347, 4334, 5705, 7480, 9192, 11463, 1384, 7297, 4981, 5075, 6707, 4789, 5768, 5686, 8096, 17450, 7303, 5766, 5769, 16254, 2024, 17646, 1396, 11481, 1176, 7188, 5630, 8716, 5054, 7143, 1483, 504, 2]
 // Exports: default
 
-// Module 17644 (GuildSettingsModalOverview)
+// Module 17645 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
@@ -26,9 +26,9 @@ import TextArea from "TextArea" /* 7188 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
 import Form from "Form" /* 8716 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11462 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11480 */;
-import AssetChooserDefault from "AssetChooser" /* 17645 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11463 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11481 */;
+import AssetChooserDefault from "AssetChooser" /* 17646 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
@@ -364,7 +364,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const tmpResult13 = tmp(1384);
   }
   const tmpResult = tmp(8096);
-  let result1 = tmp(17448).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(17450).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult15 = tmp(1384);
@@ -386,7 +386,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   obj4.label = intl5.string(tmp(1114).t["+f0bXQ"]);
   obj4.disabled = !canManage;
   const tmp15 = closure_1_20;
-  const tmpResult14 = tmp(17448);
+  const tmpResult14 = tmp(17450);
   obj4.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_JOIN_NOTIFICATIONS);
   obj4.onValueChange = self.handleSystemJoinMessages;
   items[1] = closure_1_19(tmp(7303).TableSwitchRow, obj4);
@@ -546,7 +546,7 @@ prototype["renderSummaries"] = function renderSummaries() {
     const obj5 = { label: null, trailing: null, value: null, disabled: null, onValueChange: null };
     const intl3 = tmp(1114).intl;
     obj5.label = intl3.string(tmp(1114).t.vmEDQs);
-    obj5.trailing = closure_1_19(tmp(1178).BetaTag, {});
+    obj5.trailing = closure_1_19(tmp(1176).BetaTag, {});
     const features = guild.features;
     obj5.value = features.has(constants3.SUMMARIES_ENABLED_BY_USER);
     obj5.disabled = !props.canManage;

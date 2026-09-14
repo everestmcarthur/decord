@@ -1,25 +1,25 @@
-// Module ID: 16148
-// Function ID: 16149
+// Module ID: 16150
+// Function ID: 16151
 // Name: MessagesEmptyState
-// Dependencies: [32, 19, 17, 21, 4636, 1477, 1483, 8894, 1250, 5207, 15180, 16149, 4632, 1114, 5056, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 1477, 1483, 8894, 1248, 5207, 15181, 16151, 4632, 1114, 5056, 2]
 // Exports: default
 
-// Module 16148 (MessagesEmptyState)
+// Module 16150 (MessagesEmptyState)
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5207 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8894 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15180 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15181 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const _modDef16149 = tmp2(16149);
+const _modDef16151 = tmp2(16151);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
@@ -64,7 +64,7 @@ export default function MessagesEmptyState() {
   const obj5 = { style: tmp.container, onLayout: callback, children: null };
   const obj6 = { style: tmp.innerContainer, children: null };
   const obj7 = { style: tmp.imageContainer, children: null };
-  const obj8 = { resizeMode: "contain", source: _modDef16149, style: null };
+  const obj8 = { resizeMode: "contain", source: _modDef16151, style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;

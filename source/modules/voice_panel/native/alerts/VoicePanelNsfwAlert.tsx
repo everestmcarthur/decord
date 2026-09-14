@@ -1,10 +1,10 @@
-// Module ID: 17300
-// Function ID: 17301
+// Module ID: 17302
+// Function ID: 17303
 // Name: VoicePanelNsfwAlert
 // Dependencies: [19, 1975, 1979, 21, 4986, 4986, 1114, 5601, 5492, 2]
 // Exports: default
 
-// Module 17300 (VoicePanelNsfwAlert)
+// Module 17302 (VoicePanelNsfwAlert)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import noop from "module_19" /* 19 */;

@@ -1,10 +1,10 @@
-// Module ID: 13667
-// Function ID: 13668
+// Module ID: 13668
+// Function ID: 13669
 // Name: GuildBoostingMarketingWave
 // Dependencies: [19, 21, 4338, 576, 8574, 2]
 // Exports: default
 
-// Module 13667 (GuildBoostingMarketingWave)
+// Module 13668 (GuildBoostingMarketingWave)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import inlineStylesDefault from "inlineStyles" /* 8574 */;

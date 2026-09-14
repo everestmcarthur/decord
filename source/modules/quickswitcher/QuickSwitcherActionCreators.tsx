@@ -1,12 +1,12 @@
-// Module ID: 11118
-// Function ID: 11119
+// Module ID: 11119
+// Function ID: 11120
 // Name: QuickSwitcherActionCreators
-// Dependencies: [5, 32, 5524, 1961, 1957, 7500, 2011, 4458, 9964, 1074, 1964, 1076, 9965, 1242, 8494, 573, 7445, 4647, 4837, 5492, 4649, 11119, 8803, 8809, 7350, 11120, 7644, 7285, 11121, 8496, 2]
+// Dependencies: [5, 32, 5524, 1961, 1957, 7500, 2011, 4458, 9964, 1074, 1964, 1076, 9965, 1240, 8494, 573, 7445, 4647, 4837, 5492, 4649, 11120, 8803, 8809, 7350, 11121, 7644, 7285, 11122, 8496, 2]
 // Exports: hide, search, selectResult, switchToResultInNewTab, toggle, trackOpen
 
-// Module 11118 (QuickSwitcherActionCreators)
+// Module 11119 (QuickSwitcherActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ValidationUtilsDefault from "ValidationUtils" /* 8494 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8496 */;
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
@@ -215,13 +215,13 @@ function switchToResult(record) {
     obj7.recipientIds = items;
     tmp(4649).openPrivateChannel(obj7);
     const tmpResult8 = tmp(4649);
-    tmp(11119).channelListScrollTo(closure_1_12, ChannelStore.getDMFromUserId(record.id));
-    const tmpResult9 = tmp(11119);
+    tmp(11120).channelListScrollTo(closure_1_12, ChannelStore.getDMFromUserId(record.id));
+    const tmpResult9 = tmp(11120);
   } else if (tmp5(9965).AutocompleterResultTypes.GROUP_DM === type) {
     tmp5(4647).transitionToChannel(record.id, { navigationReplace: true });
     const tmp5Result8 = tmp5(4647);
-    tmp(11119).channelListScrollTo(closure_1_12, record.id);
-    const tmpResult10 = tmp(11119);
+    tmp(11120).channelListScrollTo(closure_1_12, record.id);
+    const tmpResult10 = tmp(11120);
   } else if (tmp5(9965).AutocompleterResultTypes.APPLICATION === type) {
     const activeLibraryApplication = LibraryApplicationStore.getActiveLibraryApplication(record.id);
     const id = record.id;
@@ -252,7 +252,7 @@ function switchToResult(record) {
   } else if (tmp5(9965).AutocompleterResultTypes.IN_APP_NAVIGATION === type) {
     if (record.record.type !== InAppNavigationType.SETTINGS) {
       if (record.record.type === tmp37.PLAYGROUND) {
-        const tmp5Result9 = tmp5(11120);
+        const tmp5Result9 = tmp5(11121);
       } else if (record.record.type === tmp37.SHOP_ORBS_TAB) {
         const obj10 = { tab: CollectibleShopTab.ORBS, analyticsLocations: null, analyticsSource: null };
         const items1 = [tmp(7285).QUICK_SWITCHER];
@@ -440,7 +440,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(11121).openChannelTabActive(closure_128_0, null);
+                    tmp5(11122).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "HermesInternal", done: null };
                   }
@@ -471,7 +471,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     let obj4 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj4);
-    tmp(11121).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(11121);
+    tmp(11122).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(11122);
   }
 };

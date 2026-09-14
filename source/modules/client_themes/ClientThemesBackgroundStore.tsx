@@ -1,20 +1,20 @@
 // Module ID: 4456
 // Function ID: 4457
 // Name: ClientThemesBackgroundStore
-// Dependencies: [1184, 1183, 1185, 1221, 1961, 1957, 1371, 1230, 1186, 4457, 1943, 4481, 4294, 1935, 4484, 4485, 504, 1229, 573, 2]
+// Dependencies: [1182, 1181, 1183, 1219, 1961, 1957, 1371, 1228, 1184, 4457, 1943, 4481, 4294, 1935, 4484, 4485, 504, 1227, 573, 2]
 
 // Module 4456 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1227 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -92,8 +92,8 @@ function handleUserSettingsProtoStoreUpdate() {
   }
 }
 const isGuildTextChannelType = fn(1961).isGuildTextChannelType;
-const dependencyMap = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
-const SystemThemeState = fn(1186).SystemThemeState;
+const dependencyMap = fn(1228).BACKGROUND_GRADIENT_PRESETS_MAP;
+const SystemThemeState = fn(1184).SystemThemeState;
 let closure_14 = true;
 let c15 = false;
 let c16 = false;

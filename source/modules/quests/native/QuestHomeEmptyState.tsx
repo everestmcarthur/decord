@@ -1,13 +1,13 @@
-// Module ID: 15144
-// Function ID: 15145
+// Module ID: 15145
+// Function ID: 15146
 // Name: QuestHomeEmptyState
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1114, 4338, 4497, 7226, 1150, 4632, 15145, 5068, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1114, 4338, 4497, 7226, 1363, 4632, 15146, 5068, 2]
 // Exports: default
 
-// Module 15144 (QuestHomeEmptyState)
+// Module 15145 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useToken from "useToken" /* 4338 */;
 import useChatLayoutDefault from "useChatLayout" /* 4497 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -57,7 +57,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
-    const obj11 = { style: tmp5.emptyImage, source: tmp7(15145), resizeMode: "cover" };
+    const obj11 = { style: tmp5.emptyImage, source: tmp7(15146), resizeMode: "cover" };
     const items2 = [tmp9(React4, obj11), ];
     const obj22 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

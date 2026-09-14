@@ -1,10 +1,10 @@
-// Module ID: 12001
-// Function ID: 12002
+// Module ID: 12002
+// Function ID: 12003
 // Name: AutomodQuarantineUtils
 // Dependencies: [19, 9337, 502, 2021, 1979, 4275, 4458, 1074, 4262, 1084, 563, 4281, 1114, 9338, 9339, 7485, 2]
 // Exports: useCurrentUserHasAutomodQuarantinedProfile, useGuildAutomodProfileQuarantineErrors, useOpenFixQuarantinedProfileModal
 
-// Module 12001 (AutomodQuarantineUtils)
+// Module 12002 (AutomodQuarantineUtils)
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4281 */;
 import openUserSettings2 from "openUserSettings" /* 7485 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9339 */;

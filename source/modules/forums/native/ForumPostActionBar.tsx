@@ -1,15 +1,15 @@
-// Module ID: 11546
-// Function ID: 11547
+// Module ID: 11547
+// Function ID: 11548
 // Name: ForumPostActionBar
-// Dependencies: [32, 19, 17, 4276, 4277, 1957, 1074, 21, 4636, 576, 504, 7407, 1477, 11385, 7975, 11547, 5204, 1114, 4587, 4632, 9906, 4579, 7559, 11, 4567, 11548, 2]
+// Dependencies: [32, 19, 17, 4276, 4277, 1957, 1074, 21, 4636, 576, 504, 7407, 1477, 11386, 7975, 11548, 5204, 1114, 4587, 4632, 9906, 4579, 7559, 11, 4567, 11549, 2]
 // Exports: default
 
-// Module 11546 (ForumPostActionBar)
+// Module 11547 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import Client from "Client" /* 4567 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
@@ -68,7 +68,7 @@ export default function ForumPostActionBar(channel) {
   if (tmp11) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj7.children = closure_10(tmp2(11547).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_10(tmp2(11548).ForumPostActionBarReactions, obj8);
     tmp11 = closure_10(tmp10, obj7);
   }
   const items5 = [tmp11, ];
@@ -104,7 +104,7 @@ export default function ForumPostActionBar(channel) {
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_10(tmp2(11548).ArrowLargeUpIcon, { size: "xs" });
+    obj11.children = closure_10(tmp2(11549).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = closure_10(tmp2(5204).PressableOpacity, obj11);
     obj9.children = items7;
     items5[1] = tmp9(tmp10, obj9);

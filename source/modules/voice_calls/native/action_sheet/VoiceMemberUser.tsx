@@ -1,9 +1,9 @@
-// Module ID: 13874
-// Function ID: 13875
+// Module ID: 13875
+// Function ID: 13876
 // Name: VoiceMemberUser
-// Dependencies: [19, 17, 1183, 502, 5359, 1957, 2021, 1908, 4676, 1074, 21, 4636, 576, 9608, 504, 4488, 13875, 13876, 1178, 13877, 13878, 13879, 13880, 9755, 4632, 1114, 8716, 7840, 10187, 4494, 4843, 4603, 5204, 9311, 4788, 9303, 4481, 2]
+// Dependencies: [19, 17, 1181, 502, 5359, 1957, 2021, 1908, 4676, 1074, 21, 4636, 576, 9608, 504, 4488, 13876, 13877, 1176, 13878, 13879, 13880, 13881, 9755, 4632, 1114, 8716, 7840, 10187, 4494, 4843, 4603, 5204, 9311, 4788, 9303, 4481, 2]
 
-// Module 13874 (VoiceMemberUser)
+// Module 13875 (VoiceMemberUser)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
@@ -12,7 +12,7 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7840 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 9311 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 5359 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -104,7 +104,7 @@ function RingButton(channelId) {
       const intl = tmp5(1114).intl;
       const stringResult = intl.string(tmp5(1114).t.bHa9kN);
       obj2.children = stringResult;
-      tmp4Result = tmp4(tmp5(1178).LegacyText, obj2);
+      tmp4Result = tmp4(tmp5(1176).LegacyText, obj2);
       obj.children = tmp4Result;
       closure_11(channelId(5204).PressableOpacity, obj);
     }
@@ -134,7 +134,7 @@ function StopRingButton(channelId) {
       const intl = tmp5(1114).intl;
       const stringResult = intl.string(tmp5(1114).t.ygslb0);
       obj2.children = stringResult;
-      tmp4Result = tmp4(tmp5(1178).LegacyText, obj2);
+      tmp4Result = tmp4(tmp5(1176).LegacyText, obj2);
       obj.children = tmp4Result;
       closure_11(channelId(5204).PressableOpacity, obj);
     }
@@ -270,9 +270,9 @@ let closure_16 = noop.memo((user) => {
     guild_id = channel.guild_id;
   }
   obj7.guildId = guild_id;
-  obj7.size = user(1178).AvatarSizes.REFRESH_MEDIUM_32;
+  obj7.size = user(1176).AvatarSizes.REFRESH_MEDIUM_32;
   obj7.speaking = tmp7;
-  obj6.leading = closure_11(user(1178).Avatar, obj7);
+  obj6.leading = closure_11(user(1176).Avatar, obj7);
   let tmp23Result = null;
   if (flag3) {
     tmp23Result = null;
@@ -280,16 +280,16 @@ let closure_16 = noop.memo((user) => {
       const obj8 = { style: tmp2.row, children: null };
       let tmp20Result = null;
       if (user.isSpectating) {
-        const obj9 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13880), style: tmp19 };
-        tmp20Result = tmp20(tmp8(1178).Icon, obj9);
+        const obj9 = { size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13881), style: tmp19 };
+        tmp20Result = tmp20(tmp8(1176).Icon, obj9);
       }
       const items3 = [tmp20Result, , , , ];
       if (!tmp15) {
         items3[1] = null;
         let tmp20Result5 = null;
         if (tmp14) {
-          const obj10 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13877), style: tmp19 };
-          tmp20Result5 = tmp20(tmp8(1178).Icon, obj10);
+          const obj10 = { size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13878), style: tmp19 };
+          tmp20Result5 = tmp20(tmp8(1176).Icon, obj10);
         }
         items3[2] = tmp20Result5;
         if (!tmp13) {
@@ -297,28 +297,28 @@ let closure_16 = noop.memo((user) => {
           let tmp20Result6 = null;
           if (flag2) {
             const obj11 = { style: tmp19 };
-            tmp20Result6 = tmp20(tmp8(1178).LiveTag, obj11);
+            tmp20Result6 = tmp20(tmp8(1176).LiveTag, obj11);
           }
           items3[4] = tmp20Result6;
           obj8.children = items3;
           tmp23Result = tmp23(tmp24, obj8);
         } else {
           if (localVideoDisabled) {
-            const obj12 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13878), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj12 = { size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13879), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj13 = obj12;
           } else {
-            obj13 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13879), style: tmp19 };
+            obj13 = { size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(13880), style: tmp19 };
           }
-          tmp20(tmp8(1178).Icon, obj13);
+          tmp20(tmp8(1176).Icon, obj13);
         }
       } else {
         if (tmp8Result.isThemeDark(stateFromStores)) {
-          let tmp5Result = tmp5(13875);
+          let tmp5Result = tmp5(13876);
         } else {
-          tmp5Result = tmp5(13876);
+          tmp5Result = tmp5(13877);
         }
-        const obj14 = { size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp19.tintColor, disableColor: localMute };
-        tmp20(tmp8(1178).Icon, obj14);
+        const obj14 = { size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp19.tintColor, disableColor: localMute };
+        tmp20(tmp8(1176).Icon, obj14);
         tmp8Result = tmp8(4488);
       }
       tmp23 = closure_12;
@@ -350,8 +350,8 @@ let closure_16 = noop.memo((user) => {
   obj15.label = closure_11(user(8716).FormRow.Label, obj18);
   if (localVideoAutoDisabled) {
     const obj19 = { style: tmp2.autoDisabledVideo, children: null };
-    const obj20 = { source: tmp5(9755), size: tmp8(1178).Icon.Sizes.EXTRA_SMALL, disableColor: true };
-    const items6 = [tmp20(tmp8(1178).Icon, obj20), ];
+    const obj20 = { source: tmp5(9755), size: tmp8(1176).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+    const items6 = [tmp20(tmp8(1176).Icon, obj20), ];
     const obj21 = { variant: "text-xs/medium", color: "text-default", style: tmp2.autoDisabledVideoLabel, children: null };
     const intl3 = tmp8(1114).intl;
     obj21.children = intl3.string(tmp8(1114).t.m2Hyj0);
@@ -405,7 +405,7 @@ const memoResult = noop.memo(function DisconnectedUserRow(user) {
   obj5.style = labelCallScreen;
   obj4.label = closure_11(id(8716).FormRow.Label, obj5);
   const obj3 = id(9303);
-  obj4.leading = closure_11(id(1178).Avatar, { user: id, guildId: id2.guild_id, size: id(1178).AvatarSizes.REFRESH_MEDIUM_32 });
+  obj4.leading = closure_11(id(1176).Avatar, { user: id, guildId: id2.guild_id, size: id(1176).AvatarSizes.REFRESH_MEDIUM_32 });
   if (!canRing) {
     obj4.trailing = null;
     const obj7 = {};

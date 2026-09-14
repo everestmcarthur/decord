@@ -1,13 +1,13 @@
-// Module ID: 11856
-// Function ID: 11857
+// Module ID: 11857
+// Function ID: 11858
 // Name: AppInteractionInfoActionSheet
-// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4636, 1611, 11857, 9374, 504, 8298, 5665, 4632, 1114, 5204, 8296, 1178, 7253, 2]
+// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4636, 1611, 11858, 9374, 504, 8298, 5665, 4632, 1114, 5204, 8296, 1176, 7253, 2]
 // Exports: default
 
-// Module 11856 (AppInteractionInfoActionSheet)
+// Module 11857 (AppInteractionInfoActionSheet)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import UserActionCreators from "UserActionCreators" /* 8298 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11857 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11858 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -108,8 +108,8 @@ export default function AppInteractionInfoActionSheet(message) {
         children: null
       };
       const obj12 = { style: tmp.itemContainer, children: null };
-      const obj13 = { user: stateFromStores, size: tmp10(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId };
-      const items7 = [closure_8(tmp10(1178).Avatar, obj13), ];
+      const obj13 = { user: stateFromStores, size: tmp10(1176).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+      const items7 = [closure_8(tmp10(1176).Avatar, obj13), ];
       const obj14 = { style: tmp.itemLabel, children: null };
       const obj15 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.username };
       const items8 = [closure_8(tmp10(4632).Text, obj15), ];
@@ -136,8 +136,8 @@ export default function AppInteractionInfoActionSheet(message) {
       children: null
     };
     const obj20 = { style: tmp.itemContainer, children: null };
-    const obj21 = { user: tmp15, size: tmp10(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId };
-    const items10 = [closure_8(tmp10(1178).Avatar, obj21), ];
+    const obj21 = { user: tmp15, size: tmp10(1176).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+    const items10 = [closure_8(tmp10(1176).Avatar, obj21), ];
     const obj22 = { style: tmp.itemLabel, children: null };
     const obj23 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp15.username };
     const items11 = [closure_8(tmp10(4632).Text, obj23), ];

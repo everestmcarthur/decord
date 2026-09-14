@@ -1,11 +1,11 @@
 // Module ID: 7801
 // Function ID: 7802
 // Name: QuestDataUtils
-// Dependencies: [7802, 2025, 7804, 7805, 5525, 5528, 1384, 7803, 1232, 2]
+// Dependencies: [7802, 2025, 7804, 7805, 5525, 5528, 1384, 7803, 1230, 2]
 // Exports: captureQuestsException, earnedDecisionIsValid, findNextUpcomingExpirationEpochMs, findQuestOrReplacement, getAdContext, getAdDecisionData, getAdMetadataSealed, getAdProvenanceMetadataSealed, getAdTrafficMetadataSealed, getBountyByPlacementAndId, getIsQuestExpiredButWithinThirtyDayLookback, getQuestFormattedDate, getQuestPlacementFromQuestContent, hasUnclaimedReward, isBillableQuestContent, isBountyQuestHomePlacement, isDismissed, isDismissible, isQuestConfigExpired, isQuestExpired
 
 // Module 7801 (QuestDataUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
 import AdDecisionUtils from "AdDecisionUtils" /* 7803 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 7802 */;

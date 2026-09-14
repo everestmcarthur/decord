@@ -1,9 +1,9 @@
-// Module ID: 12558
-// Function ID: 12559
+// Module ID: 12559
+// Function ID: 12560
 // Name: ChatInputCharCounter
 // Dependencies: [32, 19, 1371, 1074, 1373, 21, 4636, 504, 4294, 9433, 9443, 4335, 1114, 5204, 4632, 8785, 2]
 
-// Module 12558 (ChatInputCharCounter)
+// Module 12559 (ChatInputCharCounter)
 import util from "util" /* 1114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

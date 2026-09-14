@@ -1,9 +1,9 @@
-// Module ID: 14607
-// Function ID: 14608
+// Module ID: 14608
+// Function ID: 14609
 // Name: crossPlatformRPCEventHandlers
-// Dependencies: [4864, 1915, 1975, 4658, 1957, 2021, 1979, 1908, 4659, 1371, 4655, 4541, 1074, 9687, 9689, 9684, 4847, 14547, 8457, 12, 14552, 1086, 558, 9690, 14608, 14609, 2]
+// Dependencies: [4864, 1915, 1975, 4658, 1957, 2021, 1979, 1908, 4659, 1371, 4655, 4541, 1074, 9687, 9689, 9684, 4847, 14548, 8457, 12, 14553, 1086, 558, 9690, 14609, 14610, 2]
 
-// Module 14607 (crossPlatformRPCEventHandlers)
+// Module 14608 (crossPlatformRPCEventHandlers)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
@@ -11,9 +11,9 @@ import RPCErrorDefault from "RPCError" /* 9684 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;
 import RPCHelpers from "RPCHelpers" /* 9689 */;
 import transformUserDefault from "transformUser" /* 9690 */;
-import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14547 */;
-import transformGuildMemberDefault from "transformGuildMember" /* 14608 */;
-import transformApplicationDefault from "transformApplication" /* 14609 */;
+import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14548 */;
+import transformGuildMemberDefault from "transformGuildMember" /* 14609 */;
+import transformApplicationDefault from "transformApplication" /* 14610 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
@@ -318,7 +318,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14547).validateEventSubscription(socket, session_id);
+    const result = socket(14548).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       const participantsForEventSubscription = VibegrationsVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
@@ -436,7 +436,7 @@ const obj35 = {
   }
 };
 obj2[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj35;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14552).activityInstanceConnectedParticipantsUpdateEvent;
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14553).activityInstanceConnectedParticipantsUpdateEvent;
 const obj36 = {
   scope: null,
   handler() {

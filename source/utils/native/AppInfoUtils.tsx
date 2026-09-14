@@ -1,11 +1,11 @@
-// Module ID: 17439
-// Function ID: 17440
+// Module ID: 17441
+// Function ID: 17442
 // Name: AppInfoUtils
-// Dependencies: [1364, 2]
+// Dependencies: [1362, 2]
 // Exports: getAppMajorVersion
 
-// Module 17439 (AppInfoUtils)
-import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
+// Module 17441 (AppInfoUtils)
+import ClientInfoUtils from "ClientInfoUtils" /* 1362 */;
 import size from "module_2" /* 2 */;
 
 const constants = ClientInfoUtils.getConstants();

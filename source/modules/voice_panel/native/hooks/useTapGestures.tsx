@@ -1,10 +1,10 @@
-// Module ID: 17245
-// Function ID: 17246
+// Module ID: 17247
+// Function ID: 17248
 // Name: useTapGestures
-// Dependencies: [19, 12401, 6756, 4373, 4604, 2]
+// Dependencies: [19, 12402, 6756, 4373, 4604, 2]
 // Exports: default
 
-// Module 17245 (useTapGestures)
+// Module 17247 (useTapGestures)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useT
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12401)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12402)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   __initData = tmp2;

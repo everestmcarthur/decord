@@ -1,15 +1,15 @@
-// Module ID: 17301
-// Function ID: 17302
+// Module ID: 17303
+// Function ID: 17304
 // Name: VoicePanelChatButton
-// Dependencies: [19, 21, 4636, 576, 12401, 17293, 17239, 17280, 17294, 1114, 17302, 5670, 5152, 2]
+// Dependencies: [19, 21, 4636, 576, 12402, 17295, 17241, 17282, 17296, 1114, 17304, 5670, 5152, 2]
 // Exports: default
 
-// Module 17301 (VoicePanelChatButton)
+// Module 17303 (VoicePanelChatButton)
 import nativeDefault from "native" /* 576 */;
 import ChatIcon from "ChatIcon" /* 5152 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17280 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 17302 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17282 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 17304 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

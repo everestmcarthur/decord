@@ -1,15 +1,15 @@
-// Module ID: 11344
-// Function ID: 11345
+// Module ID: 11345
+// Function ID: 11346
 // Name: UserProfileAboutMeCardCommand
-// Dependencies: [19, 1074, 21, 4636, 576, 4632, 4502, 11345, 1242, 4816, 4603, 11350, 7624, 7626, 2]
+// Dependencies: [19, 1074, 21, 4636, 576, 4632, 4502, 11346, 1240, 4816, 4603, 11351, 7624, 7626, 2]
 
-// Module 11344 (UserProfileAboutMeCardCommand)
+// Module 11345 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11345 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11350 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11346 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11351 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

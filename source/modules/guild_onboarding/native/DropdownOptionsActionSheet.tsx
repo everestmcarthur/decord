@@ -1,7 +1,7 @@
 // Module ID: 7238
 // Function ID: 7239
 // Name: DropdownOptionsActionSheet
-// Dependencies: [19, 17, 5540, 7203, 1374, 21, 4636, 563, 7233, 1396, 1178, 1114, 4632, 7239, 1611, 4603, 7252, 7253, 6728, 5056, 2]
+// Dependencies: [19, 17, 5540, 7203, 1374, 21, 4636, 563, 7233, 1396, 1176, 1114, 4632, 7239, 1611, 4603, 7252, 7253, 6728, 5056, 2]
 // Exports: default
 
 // Module 7238 (DropdownOptionsActionSheet)
@@ -128,7 +128,7 @@ export default function DropdownOptionsActionSheet(arg0) {
     obj7.accessibilityLabel = intl2.string(tmp3(1114).t.E2ICbC);
     const options = stateFromStores.options;
     obj7.children = options.map((option) => React6(DropdownOptionRow, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id));
-    const items2 = [closure_8(tmp3(1178).CardSection, obj7), ];
+    const items2 = [closure_8(tmp3(1176).CardSection, obj7), ];
     const obj8 = { style: tmp.closeButtonWrapper, children: null };
     const obj9 = { onPress: tmp5, text: null, grow: true };
     const intl3 = tmp3(1114).intl;

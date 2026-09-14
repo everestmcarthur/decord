@@ -1,14 +1,14 @@
-// Module ID: 16349
-// Function ID: 16350
+// Module ID: 16351
+// Function ID: 16352
 // Name: ChannelsEmpty
-// Dependencies: [19, 17, 4275, 1074, 21, 4636, 4632, 576, 563, 9192, 9867, 15180, 8718, 1178, 16350, 1114, 16351, 5057, 2]
+// Dependencies: [19, 17, 4275, 1074, 21, 4636, 4632, 576, 563, 9192, 9867, 15181, 8718, 1176, 16352, 1114, 16353, 5057, 2]
 
-// Module 16349 (ChannelsEmpty)
+// Module 16351 (ChannelsEmpty)
 import nativeDefault from "native" /* 576 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9867 */;
-import _modDef16350 from "module_16350" /* 16350 */;
-import _modDef16351 from "module_16351" /* 16351 */;
+import _modDef16352 from "module_16352" /* 16352 */;
+import _modDef16353 from "module_16353" /* 16353 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
@@ -53,14 +53,14 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const obj = guild(563);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  const obj2 = guild(15180);
-  items4[1] = { paddingBottom: guild(15180).useYouBarTotalHeight(16) };
+  const obj2 = guild(15181);
+  items4[1] = { paddingBottom: guild(15181).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef16350, disableColor: true };
-    obj6.icon = closure_8(tmp2(1178).Icon, obj7);
+    const obj7 = { source: _modDef16352, disableColor: true };
+    obj6.icon = closure_8(tmp2(1176).Icon, obj7);
     const intl = tmp2(1114).intl;
     obj6.label = intl.string(tmp2(1114).t["Yhi9/N"]);
     obj6.onPress = callback;
@@ -69,8 +69,8 @@ export default noop.memo(function ChannelsEmpty(guild) {
   }
   const items5 = [canCustomizeGuild, ];
   const obj8 = { style: tmp.content, children: null };
-  const obj4 = { paddingBottom: guild(15180).useYouBarTotalHeight(16) };
-  const items6 = [closure_8(closure_5, { source: _modDef16351 }), , , ];
+  const obj4 = { paddingBottom: guild(15181).useYouBarTotalHeight(16) };
+  const items6 = [closure_8(closure_5, { source: _modDef16353 }), , , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);

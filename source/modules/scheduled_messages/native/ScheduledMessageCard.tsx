@@ -1,16 +1,16 @@
-// Module ID: 12343
-// Function ID: 12344
+// Module ID: 12344
+// Function ID: 12345
 // Name: ScheduledMessageCard
-// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 504, 1100, 4839, 5688, 12344, 5658, 12345, 10240, 4632, 1114, 7947, 12346, 12338, 12347, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4636, 576, 504, 1100, 4839, 5688, 12345, 5658, 12346, 10240, 4632, 1114, 7947, 12347, 12339, 12348, 2]
 
-// Module 12343 (ScheduledMessageCard)
+// Module 12344 (ScheduledMessageCard)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7947 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12338 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12346 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12347 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12339 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12347 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12348 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -58,7 +58,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(ScheduledMessageCardStatusHeader, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(12344).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(12345).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
@@ -80,7 +80,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
         tmp9Result = tmp9(tmp12, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = tmp10(tmp2(12345).ForLaterMessageRow, obj7);
+      tmp10Result = tmp10(tmp2(12346).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;

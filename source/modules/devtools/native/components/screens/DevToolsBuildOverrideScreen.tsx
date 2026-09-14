@@ -1,17 +1,17 @@
-// Module ID: 15667
-// Function ID: 15668
+// Module ID: 15669
+// Function ID: 15670
 // Name: DevToolsBuildOverrideScreen
-// Dependencies: [32, 19, 17, 11558, 21, 4636, 576, 8987, 15668, 7084, 504, 11919, 5054, 5768, 5686, 4583, 7292, 4334, 15238, 4594, 5766, 5769, 6707, 5056, 1369, 2]
+// Dependencies: [32, 19, 17, 11559, 21, 4636, 576, 8987, 15670, 7084, 504, 11920, 5054, 5768, 5686, 4583, 7292, 4334, 15239, 4594, 5766, 5769, 6707, 5056, 1369, 2]
 
-// Module 15667 (DevToolsBuildOverrideScreen)
+// Module 15669 (DevToolsBuildOverrideScreen)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11919 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11920 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -26,8 +26,8 @@ let closure_9 = createStyles.createStyles(obj);
 let obj4 = { padding: nativeDefault.space.PX_16 };
 let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(8987).TagIcon, {}) }, ];
 let obj5 = { label: "Branch Name", value: "branch", icon: jsx(fn(8987).TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(15668).HashmarkIcon, {}) };
-let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(15668).HashmarkIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(15670).HashmarkIcon, {}) };
+let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(15670).HashmarkIcon, {}) };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
 
@@ -38,7 +38,7 @@ export default noop.memo(() => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[first(undefined, 11919).DEVICE_FIELD];
+      tmp = overrides[first(undefined, 11920).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -66,9 +66,9 @@ export default noop.memo(() => {
       const result = ToastUtils.presentCopiedToClipboard();
     };
     const items1 = [tmp7(tmp3(5686).TableRow, obj4), , ];
-    const obj6 = { icon: tmp7(tmp3(15238).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11919).refreshBuildOverride, arrow: true };
+    const obj6 = { icon: tmp7(tmp3(15239).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11920).refreshBuildOverride, arrow: true };
     items1[1] = tmp7(tmp3(5686).TableRow, obj6);
-    const obj7 = { icon: tmp7(tmp3(4594).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11919).clearBuildOverride, arrow: true };
+    const obj7 = { icon: tmp7(tmp3(4594).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11920).clearBuildOverride, arrow: true };
     items1[2] = tmp7(tmp3(5686).TableRow, obj7);
     obj5.children = items1;
     tmp10Result = tmp10(tmp3(5768).TableRowGroup, obj5);

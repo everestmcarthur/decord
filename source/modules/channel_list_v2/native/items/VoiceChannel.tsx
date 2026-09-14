@@ -1,14 +1,14 @@
-// Module ID: 16330
-// Function ID: 16331
+// Module ID: 16332
+// Function ID: 16333
 // Name: VoiceChannel
-// Dependencies: [5, 19, 17, 7630, 4275, 4651, 4817, 4660, 10246, 1074, 21, 576, 5138, 5650, 1896, 4843, 9792, 16328, 16331, 9601, 504, 16321, 11008, 4626, 8055, 9900, 1242, 16322, 16211, 11044, 1114, 4781, 16225, 16216, 12188, 2]
+// Dependencies: [5, 19, 17, 7630, 4275, 4651, 4817, 4660, 10246, 1074, 21, 576, 5138, 5650, 1896, 4843, 9792, 16330, 16333, 9601, 504, 16323, 11009, 4626, 8055, 9900, 1240, 16324, 16213, 11045, 1114, 4781, 16227, 16218, 12189, 2]
 
-// Module 16330 (VoiceChannel)
+// Module 16332 (VoiceChannel)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9900 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12188 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7630 */;

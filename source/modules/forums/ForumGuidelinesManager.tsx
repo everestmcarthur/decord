@@ -1,9 +1,9 @@
-// Module ID: 10397
-// Function ID: 10398
+// Module ID: 10398
+// Function ID: 10399
 // Name: ForumGuidelinesManager
 // Dependencies: [7221, 510, 2]
 
-// Module 10397 (ForumGuidelinesManager)
+// Module 10398 (ForumGuidelinesManager)
 import Storage2 from "Storage" /* 510 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 

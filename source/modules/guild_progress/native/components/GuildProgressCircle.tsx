@@ -1,13 +1,13 @@
-// Module ID: 12719
-// Function ID: 12720
+// Module ID: 12720
+// Function ID: 12721
 // Name: GuildProgressCircle
-// Dependencies: [19, 17, 21, 4636, 576, 12720, 12603, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12721, 12604, 2]
 // Exports: default
 
-// Module 12719 (GuildProgressCircle)
+// Module 12720 (GuildProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12603 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12720 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12604 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

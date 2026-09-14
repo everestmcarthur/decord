@@ -1,14 +1,14 @@
-// Module ID: 17112
-// Function ID: 17113
+// Module ID: 17114
+// Function ID: 17115
 // Name: ExternalPipViewVideo
-// Dependencies: [32, 19, 17, 1957, 1371, 4657, 21, 4636, 576, 9728, 4591, 4632, 1114, 504, 1178, 9735, 4338, 17113, 9746, 17114, 9740, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 4657, 21, 4636, 576, 9728, 4591, 4632, 1114, 504, 1176, 9735, 4338, 17115, 9746, 17116, 9740, 2]
 
-// Module 17112 (ExternalPipViewVideo)
+// Module 17114 (ExternalPipViewVideo)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ExternalPipDefault from "ExternalPip" /* 9740 */;
-import VideoActionCreators from "VideoActionCreators" /* 17113 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17114 */;
+import VideoActionCreators from "VideoActionCreators" /* 17115 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -52,8 +52,8 @@ function ExternalPipViewVideoUser(arg0) {
   const obj2 = { style: tmp.user, children: null };
   let tmp7Result = null;
   if (null != stateFromStores) {
-    const obj3 = { user: stateFromStores, avatarDecoration: stateFromStores.avatarDecoration, guildId: tmp6, size: tmp2(1178).AvatarSizes.XXLARGE, animate: speaking, speaking };
-    tmp7Result = tmp7(tmp2(1178).Avatar, obj3);
+    const obj3 = { user: stateFromStores, avatarDecoration: stateFromStores.avatarDecoration, guildId: tmp6, size: tmp2(1176).AvatarSizes.XXLARGE, animate: speaking, speaking };
+    tmp7Result = tmp7(tmp2(1176).Avatar, obj3);
   }
   obj2.children = tmp7Result;
   return closure_11(closure_6, obj2);

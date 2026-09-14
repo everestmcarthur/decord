@@ -1,16 +1,16 @@
-// Module ID: 15374
-// Function ID: 15375
+// Module ID: 15375
+// Function ID: 15376
 // Name: SettingsAppearanceChannelList
-// Dependencies: [19, 17, 21, 4636, 576, 15375, 15376, 15377, 4373, 1114, 15383, 9003, 15386, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 15376, 15377, 15378, 4373, 1114, 15384, 9003, 15387, 2]
 // Exports: default
 
-// Module 15374 (SettingsAppearanceChannelList)
+// Module 15375 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15375 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15376 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15377 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15386 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15376 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15377 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15378 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15387 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -74,9 +74,9 @@ export default function ChannelListPreview(useGradientBackground) {
   if (useGradientBackground) {
     let obj2 = { style: tmp.channelPreviewGradient, children: null };
     let obj3 = { themes, themeIndex, isDimmed: false, backgroundToken: tmp4(576).colors.BACKGROUND_BASE_LOW };
-    obj2.children = closure_5(tmp4(15383), obj3);
+    obj2.children = closure_5(tmp4(15384), obj3);
     tmp7 = closure_5(closure_4, obj2);
-    const tmp4Result = tmp4(15383);
+    const tmp4Result = tmp4(15384);
   }
   const items2 = [tmp7, , ];
   const obj4 = {

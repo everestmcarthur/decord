@@ -1,14 +1,14 @@
-// Module ID: 17907
-// Function ID: 17908
+// Module ID: 17908
+// Function ID: 17909
 // Name: NotificationSettingsModal
-// Dependencies: [109, 19, 17, 1961, 1957, 7214, 4556, 1979, 17620, 4285, 4817, 1371, 1074, 21, 4636, 576, 4347, 4816, 4603, 10272, 1896, 7222, 7217, 10280, 10284, 10291, 5766, 1114, 5769, 5768, 7303, 4632, 1178, 4331, 2024, 10279, 5686, 10274, 5692, 12882, 4278, 4820, 5109, 4789, 8716, 5054, 10275, 1483, 504, 7215, 7143, 5705, 17908, 10271, 7103, 2]
+// Dependencies: [109, 19, 17, 1961, 1957, 7214, 4556, 1979, 17621, 4285, 4817, 1371, 1074, 21, 4636, 576, 4347, 4816, 4603, 10272, 1896, 7222, 7217, 10280, 10284, 10291, 5766, 1114, 5769, 5768, 7303, 4632, 1176, 4331, 2024, 10279, 5686, 10274, 5692, 12883, 4278, 4820, 5109, 4789, 8716, 5054, 10275, 1483, 504, 7215, 7143, 5705, 17909, 10271, 7103, 2]
 // Exports: default
 
-// Module 17907 (NotificationSettingsModal)
+// Module 17908 (NotificationSettingsModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import MuteTimers from "MuteTimers" /* 4278 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -33,14 +33,14 @@ import NotificationSettingsMuteBanner from "NotificationSettingsMuteBanner" /* 1
 import NotificationSettingsPresets from "NotificationSettingsPresets" /* 10280 */;
 import NotificationSettingsMessageNotification from "NotificationSettingsMessageNotification" /* 10284 */;
 import NotificationSettingsMessageUnread from "NotificationSettingsMessageUnread" /* 10291 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 12882 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12883 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7214 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17620 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17621 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -466,7 +466,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_26(closure_1_1(17908), { guildId: guildId.guildId, navigation });
+      return closure_1_26(closure_1_1(17909), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };

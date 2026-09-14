@@ -1,13 +1,13 @@
-// Module ID: 15417
-// Function ID: 15418
+// Module ID: 15418
+// Function ID: 15419
 // Name: OfficialMessageStyleSetting
-// Dependencies: [19, 4628, 8079, 504, 14525, 1114, 11601, 2]
+// Dependencies: [19, 4628, 8079, 504, 14526, 1114, 11602, 2]
 // Exports: onOfficialMessageStyleSettingValueChange, useOfficialMessageStyleSettingOptions, useOfficialMessageStyleSettingValue
 
-// Module 15417 (OfficialMessageStyleSetting)
+// Module 15418 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14525 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14526 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -40,7 +40,7 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

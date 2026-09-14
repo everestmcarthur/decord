@@ -1,45 +1,19 @@
 // Module ID: 12999
 // Function ID: 13000
-// Dependencies: [12953, 12940, 12926]
-// Exports: addBreadcrumb
+// Dependencies: [12998]
+// Exports: getTraceMetaTags
 
 // Module 12999
-import _mod12953 from "module_12953" /* 12953 */;
+import _mod12998 from "module_12998" /* 12998 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  const client = _mod12953.getClient();
-  const isolationScope = _mod12953.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      let obj2 = { timestamp: tmp(12940).dateTimestampInSeconds() };
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        obj2 = tmp(12926).consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-        const tmpResult2 = tmp(12926);
-      }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
-        }
-        isolationScope.addBreadcrumb(obj2, num);
-      }
-      const tmpResult = tmp(12940);
-    }
-  }
+export const getTraceMetaTags = function getTraceMetaTags() {
+  const entries = Object.entries(_mod12998.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
+  });
+  return mapped.join("\n");
 };

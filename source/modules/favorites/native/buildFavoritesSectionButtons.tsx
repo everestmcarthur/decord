@@ -1,18 +1,18 @@
-// Module ID: 10350
-// Function ID: 10351
+// Module ID: 10351
+// Function ID: 10352
 // Name: buildFavoritesSectionButtons
-// Dependencies: [5, 21, 10351, 1896, 4603, 10356, 10355, 1114, 3236, 8785, 10363, 10369, 1178, 2]
+// Dependencies: [5, 21, 10352, 1896, 4603, 10357, 10356, 1114, 3236, 8785, 10364, 10370, 1176, 2]
 // Exports: default
 
-// Module 10350 (buildFavoritesSectionButtons)
+// Module 10351 (buildFavoritesSectionButtons)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef3236 from "module_3236" /* 3236 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10355 */;
-import StarIcon from "StarIcon" /* 10363 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10369 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10356 */;
+import StarIcon from "StarIcon" /* 10364 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10370 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -121,7 +121,7 @@ let closure_6 = async function _removeChannelFromFavorites(arg0, value) {
 };
 function openNoAccessUpsell() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(10356, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10357, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -164,8 +164,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
         obj3.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {
-          const obj4 = { size: tmp12(1178).BetaSizes.SMALL };
-          tmp15 = jsx(tmp12(1178).BetaTag, { size: tmp12(1178).BetaSizes.SMALL });
+          const obj4 = { size: tmp12(1176).BetaSizes.SMALL };
+          tmp15 = jsx(tmp12(1176).BetaTag, { size: tmp12(1176).BetaSizes.SMALL });
         }
         obj3.trailing = tmp15;
         obj3.onPress = function onPress() {

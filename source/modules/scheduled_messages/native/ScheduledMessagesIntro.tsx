@@ -1,17 +1,17 @@
-// Module ID: 12348
-// Function ID: 12349
+// Module ID: 12349
+// Function ID: 12350
 // Name: ScheduledMessagesIntro
-// Dependencies: [17, 21, 4636, 576, 12349, 4632, 1114, 10240, 12338, 11082, 2]
+// Dependencies: [17, 21, 4636, 576, 12350, 4632, 1114, 10240, 12339, 11083, 2]
 // Exports: default
 
-// Module 12348 (ScheduledMessagesIntro)
+// Module 12349 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AttachmentIcon from "AttachmentIcon" /* 10240 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 11082 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12338 */;
-import _modDef12349 from "module_12349" /* 12349 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 11083 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12339 */;
+import _modDef12350 from "module_12350" /* 12350 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
@@ -61,7 +61,7 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_8();
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [timestampProducer(React3, { source: _modDef12349, style: tmp.upsellImage }), , ];
+  const items = [timestampProducer(React3, { source: _modDef12350, style: tmp.upsellImage }), , ];
   const obj4 = { style: tmp.textContainer, children: null };
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
@@ -88,7 +88,7 @@ export default function ScheduledMessagesIntro() {
   const obj12 = { style: tmp.chatInput, children: null };
   const obj13 = { style: tmp.plusButton, children: null };
   const obj10 = { style: tmp.menuDivider };
-  const obj3 = { source: _modDef12349, style: tmp.upsellImage };
+  const obj3 = { source: _modDef12350, style: tmp.upsellImage };
   obj13.children = timestampProducer(PlusLargeIcon.PlusLargeIcon, { size: "xs", color: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT });
   const items4 = [timestampProducer(hasOwnProperty, obj13), ];
   const obj15 = { variant: "text-sm/normal", color: "text-muted", children: null };

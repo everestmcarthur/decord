@@ -1,11 +1,11 @@
-// Module ID: 13114
-// Function ID: 13115
+// Module ID: 13115
+// Function ID: 13116
 // Name: useEntranceAnimation
-// Dependencies: [32, 19, 1178, 560, 1249, 4637, 4373, 2]
+// Dependencies: [32, 19, 1176, 560, 1247, 4637, 4373, 2]
 // Exports: useEntranceAnimation
 
-// Module 13114 (useEntranceAnimation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 13115 (useEntranceAnimation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -16,7 +16,7 @@ function setUseEntranceAnimationState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj4.setState(closure_0));
 }
-let obj = { duration: 300, easing: fn(1178).STANDARD_EASING };
+let obj = { duration: 300, easing: fn(1176).STANDARD_EASING };
 const module_560 = fn(560);
 let obj4 = module_560.create(() => ({ isComplete: false }));
 let closure_7 = { code: "function useEntranceAnimationTsx1(){const{runOnJS,setUseEntranceAnimationState}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});}" };

@@ -1,10 +1,10 @@
-// Module ID: 11113
-// Function ID: 11114
+// Module ID: 11114
+// Function ID: 11115
 // Name: formatResults
-// Dependencies: [5, 9964, 1957, 4275, 1371, 11114, 1074, 9965, 4649, 9974, 1114, 1369, 12, 2]
+// Dependencies: [5, 9964, 1957, 4275, 1371, 11115, 1074, 9965, 4649, 9974, 1114, 1369, 12, 2]
 // Exports: default, destinationKey, formatResultsWithHeaders, getDestinationIdFromChannelId, getDestinationIdFromResult, getOrResolveChannelIdFromDestinationId
 
-// Module 11113 (formatResults)
+// Module 11114 (formatResults)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
@@ -152,7 +152,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(11114).isAllowedType;
+const isAllowedType = fn(11115).isAllowedType;
 const Constants = fn(1074);
 ({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
 const size = fn(2);

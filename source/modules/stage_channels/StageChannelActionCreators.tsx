@@ -1,7 +1,7 @@
 // Module ID: 8516
 // Function ID: 8517
 // Name: StageChannelActionCreators
-// Dependencies: [5, 2011, 4655, 1074, 8517, 38, 4816, 8518, 1272, 8522, 4783, 5503, 5601, 1894, 4280, 1086, 4649, 8511, 8524, 2]
+// Dependencies: [5, 2011, 4655, 1074, 8517, 38, 4816, 8518, 1270, 8522, 4783, 5503, 5601, 1894, 4280, 1086, 4649, 8511, 8524, 2]
 // Exports: editStage, endStage, inviteUserToStage, moveSelfToAudience, moveUserToAudience, removeUserFromChannel, setEveryoneRolePermissionAllowed, setUserSuppress, startStage, toggleRequestToSpeak
 
 // Module 8516 (StageChannelActionCreators)
@@ -19,7 +19,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
-const HTTPUtils = obj(1272);
+const HTTPUtils = obj(1270);
 const AppAnalyticsUtils = obj(4816);
 const useStageSpeakingForCurrentUser = obj(5503);
 const StageChannelUtils = obj(8518);

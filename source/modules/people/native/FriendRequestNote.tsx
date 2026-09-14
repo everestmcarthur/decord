@@ -1,12 +1,12 @@
-// Module ID: 13253
-// Function ID: 13254
+// Module ID: 13254
+// Function ID: 13255
 // Name: FriendRequestNote
-// Dependencies: [32, 19, 17, 4285, 1074, 21, 4636, 576, 13254, 504, 13255, 4632, 5056, 7071, 1114, 2]
+// Dependencies: [32, 19, 17, 4285, 1074, 21, 4636, 576, 13255, 504, 13256, 4632, 5056, 7071, 1114, 2]
 // Exports: default
 
-// Module 13253 (FriendRequestNote)
+// Module 13254 (FriendRequestNote)
 import nativeDefault from "native" /* 576 */;
-import PeopleListTracking from "PeopleListTracking" /* 13255 */;
+import PeopleListTracking from "PeopleListTracking" /* 13256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;

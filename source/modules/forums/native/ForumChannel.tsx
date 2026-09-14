@@ -1,10 +1,10 @@
-// Module ID: 12889
-// Function ID: 12890
+// Module ID: 12890
+// Function ID: 12891
 // Name: ForumChannel
-// Dependencies: [19, 17, 4276, 5588, 1957, 4977, 5494, 12130, 1074, 1085, 21, 4636, 576, 5605, 7975, 4632, 1114, 7989, 7407, 504, 12890, 7375, 9, 8799, 8809, 5204, 8803, 7275, 4603, 12892, 1896, 5056, 12280, 12893, 8987, 8004, 12894, 4789, 12156, 12129, 12895, 9003, 7869, 5206, 4335, 12898, 7372, 7265, 7285, 5138, 11555, 8002, 12899, 7879, 10379, 10397, 4604, 4605, 10395, 5650, 7084, 11553, 9038, 12902, 12416, 2]
+// Dependencies: [19, 17, 4276, 5588, 1957, 4977, 5494, 12131, 1074, 1085, 21, 4636, 576, 5605, 7975, 4632, 1114, 7989, 7407, 504, 12891, 7375, 9, 8799, 8809, 5204, 8803, 7275, 4603, 12893, 1896, 5056, 12281, 12894, 8987, 8004, 12895, 4789, 12157, 12130, 12896, 9003, 7869, 5206, 4335, 12899, 7372, 7265, 7285, 5138, 11556, 8002, 12900, 7879, 10380, 10398, 4604, 4605, 10396, 5650, 7084, 11554, 9038, 12903, 12417, 2]
 // Exports: default
 
-// Module 12889 (ForumChannel)
+// Module 12890 (ForumChannel)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -19,11 +19,11 @@ import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 7975 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8803 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10379 */;
-import ForumPostDefault from "ForumPost" /* 12129 */;
-import ForumPostPlaceholderDefault from "ForumPostPlaceholder" /* 12156 */;
-import _modDef12898 from "module_12898" /* 12898 */;
-import CreateGameInvitePostModalActionCreators from "CreateGameInvitePostModalActionCreators" /* 12899 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10380 */;
+import ForumPostDefault from "ForumPost" /* 12130 */;
+import ForumPostPlaceholderDefault from "ForumPostPlaceholder" /* 12157 */;
+import _modDef12899 from "module_12899" /* 12899 */;
+import CreateGameInvitePostModalActionCreators from "CreateGameInvitePostModalActionCreators" /* 12900 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 5588 */;
@@ -136,7 +136,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12892, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12893, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -152,7 +152,7 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_14(id(5056).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(12280).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_14(id(5056).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(12281).ArrowsUpDownIcon, { size: "xxs" }) });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -160,7 +160,7 @@ function TagFilter(channel) {
   const intl = channel(1114).intl;
   obj.text = intl.string(channel(1114).t["112vVE"]);
   obj.onPress = function onPress() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12893, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12894, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
   };
   obj.icon = closure_14(channel(8987).TagIcon, { size: "xxs" });
   return closure_14(channel(5056).Button, obj);
@@ -415,11 +415,11 @@ function onCreatePostWithoutPermission() {
   const obj2 = { key: "FORUM_NO_POST_PERMISSION_HELP", content: null, icon: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.iyzwnD);
-  obj2.icon = _modDef12898;
+  obj2.icon = _modDef12899;
   ToastActionCreatorsDefault.open(obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12130).useForumChannelStore;
+const useForumChannelStore = fn(12131).useForumChannelStore;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const Fonts = fn(1085).Fonts;
@@ -605,7 +605,7 @@ export default function ForumChannel(channel) {
   const obj12 = { accessibilityLabel: null, icon: null, disabled: null, positionBottom: null, onPress: null, onPressDisabled: null, accessibilityHint: null };
   const intl = tmp2(tmp3[16]).intl;
   obj12.accessibilityLabel = intl.string(channel(analyticsLocations[16]).t.TyAuoT);
-  obj12.icon = require("module_12902");
+  obj12.icon = require("module_12903");
   obj12.disabled = tmp15;
   obj12.positionBottom = insets.bottom + require("native").space.PX_16;
   obj12.onPress = callback1;

@@ -1,13 +1,13 @@
-// Module ID: 13475
-// Function ID: 13476
+// Module ID: 13476
+// Function ID: 13477
 // Name: SubscriptionAccountHoldNotice
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1178, 12898, 4632, 1114, 4294, 5056, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1176, 12899, 4632, 1114, 4294, 5056, 2]
 // Exports: default
 
-// Module 13475 (SubscriptionAccountHoldNotice)
+// Module 13476 (SubscriptionAccountHoldNotice)
 import nativeDefault from "native" /* 576 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
-import _modDef12898 from "module_12898" /* 12898 */;
+import _modDef12899 from "module_12899" /* 12899 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,8 +29,8 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1178).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12898 };
-    const items = [closure_6(subscription(1178).Icon, obj3), ];
+    const obj3 = { size: subscription(1176).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12899 };
+    const items = [closure_6(subscription(1176).Icon, obj3), ];
     const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
     const intl = subscription(1114).intl;
     const obj5 = { endDate: subscription.currentPeriodEnd, planDescription: subscription(4294).getDisplayName(subscription.planId) };

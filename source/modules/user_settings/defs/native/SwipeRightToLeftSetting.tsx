@@ -1,15 +1,15 @@
-// Module ID: 15559
-// Function ID: 15560
+// Module ID: 15560
+// Function ID: 15561
 // Name: SwipeRightToLeftSetting
-// Dependencies: [8079, 1074, 1935, 1187, 1114, 11601, 15560, 2]
+// Dependencies: [8079, 1074, 1935, 1185, 1114, 11602, 15561, 2]
 
-// Module 15559 (SwipeRightToLeftSetting)
+// Module 15560 (SwipeRightToLeftSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ const route = SettingBuilders.createRoute({
       let stringResult = intl2.string(tmp(1114).t["3tYNDS"]);
     } else {
       stringResult = null;
-      if (setting === tmp(1187).SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
+      if (setting === tmp(1185).SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
         const intl = tmp(1114).intl;
         stringResult = intl.string(tmp(1114).t["6eXLcJ"]);
       }

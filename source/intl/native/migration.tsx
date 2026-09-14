@@ -1,10 +1,10 @@
-// Module ID: 14272
-// Function ID: 14273
+// Module ID: 14273
+// Function ID: 14274
 // Name: migration
-// Dependencies: [19, 21, 4636, 576, 4357, 4331, 4333, 1178, 2]
+// Dependencies: [19, 21, 4636, 576, 4357, 4331, 4333, 1176, 2]
 // Exports: IntlLink
 
-// Module 14272 (migration)
+// Module 14273 (migration)
 import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import _modDef4333 from "module_4333" /* 4333 */;
@@ -51,5 +51,5 @@ export const IntlLink = function IntlLink(children) {
   }
   const tmp = target;
   const tmp3 = closure_5(noop.useContext(target(4357).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4357).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  return jsx(tmp(1176).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4357).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 };

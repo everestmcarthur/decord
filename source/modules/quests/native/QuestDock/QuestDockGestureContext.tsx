@@ -1,16 +1,16 @@
-// Module ID: 15176
-// Function ID: 15177
+// Module ID: 15177
+// Function ID: 15178
 // Name: QuestDockGestureContext
-// Dependencies: [19, 15173, 5525, 15175, 21, 7177, 1477, 4373, 15177, 15174, 12163, 2]
+// Dependencies: [19, 15174, 5525, 15176, 21, 7177, 1477, 4373, 15178, 15175, 12164, 2]
 
-// Module 15176 (QuestDockGestureContext)
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12163 */;
+// Module 15177 (QuestDockGestureContext)
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12164 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15173 */;
+import QuestDockStore from "QuestDockStore" /* 15174 */;
 
 const require = fn;
 const QuestDockMode = fn(5525).QuestDockMode;
-const height = fn(15175).QUEST_DOCK_COLLAPSED_HEIGHT;
+const height = fn(15176).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
 let ReanimatedHelperTypes = fn(7177);

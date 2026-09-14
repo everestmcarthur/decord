@@ -1,19 +1,19 @@
-// Module ID: 15565
-// Function ID: 15566
+// Module ID: 15566
+// Function ID: 15567
 // Name: SettingsNotificationScreen
-// Dependencies: [19, 17, 15566, 8079, 21, 4636, 576, 7083, 12540, 15567, 15568, 4632, 1114, 5688, 6711, 7696, 11601, 15569, 15570, 14775, 2]
+// Dependencies: [19, 17, 15567, 8079, 21, 4636, 576, 7083, 12541, 15568, 15569, 4632, 1114, 5688, 6711, 7696, 11602, 15570, 15571, 14776, 2]
 
-// Module 15565 (SettingsNotificationScreen)
+// Module 15566 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12540 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15567 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15568 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15569 */;
-import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15570 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12541 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15568 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15569 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15570 */;
+import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function SystemNotificationsSubLabel() {
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(15566).initializeAndroidNotificationSettingsStore;
+let closure_5 = fn(15567).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(8079).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);

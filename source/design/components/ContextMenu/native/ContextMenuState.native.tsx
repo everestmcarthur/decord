@@ -1,11 +1,11 @@
 // Module ID: 8790
 // Function ID: 8791
 // Name: ContextMenuState
-// Dependencies: [19, 560, 1249, 4373, 4604, 2]
+// Dependencies: [19, 560, 1247, 4373, 4604, 2]
 // Exports: hideContextMenu, resetContextMenuState, showContextMenu, updateContextMenuState, useActiveContextMenu, useContextMenuState
 
 // Module 8790 (ContextMenuState)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import noop from "module_19" /* 19 */;

@@ -1,16 +1,16 @@
-// Module ID: 12033
-// Function ID: 12034
+// Module ID: 12034
+// Function ID: 12035
 // Name: AppealIngestionConfirmSubmission
-// Dependencies: [19, 17, 8548, 1074, 21, 4636, 504, 12010, 1114, 12016, 12034, 8536, 4632, 4603, 12032, 1896, 573, 12019, 12029, 2]
+// Dependencies: [19, 17, 8548, 1074, 21, 4636, 504, 12011, 1114, 12017, 12035, 8536, 4632, 4603, 12033, 1896, 573, 12020, 12030, 2]
 // Exports: default
 
-// Module 12033 (AppealIngestionConfirmSubmission)
+// Module 12034 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12010 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12016 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12034 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12011 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12017 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12035 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 
@@ -66,16 +66,16 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     let tmp11Result = flagged_content.length > 0;
     if (tmp11Result) {
       const obj5 = { flaggedContent: flagged_content };
-      tmp11Result = tmp11(tmp13(12019), obj5);
+      tmp11Result = tmp11(tmp13(12020), obj5);
     }
     const obj6 = { children: null };
     items5[2] = tmp11Result;
     const obj7 = { classification: safetyHubClassification.classification };
-    items5[3] = tmp11(tmp13(12029), obj7);
+    items5[3] = tmp11(tmp13(12030), obj7);
     obj3.children = items5;
     items3[1] = tmp10(tmp12, obj3);
     obj6.children = items3;
-    return tmp10(tmp2(12016).AppealIngestionModalScreen, obj6);
+    return tmp10(tmp2(12017).AppealIngestionModalScreen, obj6);
   } else {
     const obj8 = {
       variant: "heading-md/normal",

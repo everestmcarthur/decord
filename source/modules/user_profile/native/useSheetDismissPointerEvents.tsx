@@ -1,10 +1,10 @@
-// Module ID: 13120
-// Function ID: 13121
+// Module ID: 13121
+// Function ID: 13122
 // Name: useSheetDismissPointerEvents
 // Dependencies: [6728, 4373, 6756, 2]
 // Exports: default
 
-// Module 13120 (useSheetDismissPointerEvents)
+// Module 13121 (useSheetDismissPointerEvents)
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import size from "module_2" /* 2 */;
 

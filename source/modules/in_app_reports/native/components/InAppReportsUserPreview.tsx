@@ -1,12 +1,12 @@
 // Module ID: 8779
 // Function ID: 8780
 // Name: InAppReportsUserPreview
-// Dependencies: [19, 17, 21, 4636, 576, 7082, 4486, 4632, 1114, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7082, 4486, 4632, 1114, 1176, 2]
 // Exports: default
 
 // Module 8779 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;

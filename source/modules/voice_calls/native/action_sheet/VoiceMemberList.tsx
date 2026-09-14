@@ -1,9 +1,9 @@
-// Module ID: 13872
-// Function ID: 13873
+// Module ID: 13873
+// Function ID: 13874
 // Name: VoiceMemberList
-// Dependencies: [32, 5, 19, 17, 1956, 1385, 4658, 4275, 1371, 4660, 1074, 1182, 7254, 1085, 21, 4636, 13868, 10067, 504, 8716, 13547, 1114, 10160, 11719, 9950, 4632, 9749, 7265, 1874, 5492, 9663, 4843, 13873, 13874, 1477, 13881, 4494, 12, 4603, 8296, 4347, 13882, 7175, 2]
+// Dependencies: [32, 5, 19, 17, 1956, 1385, 4658, 4275, 1371, 4660, 1074, 1180, 7254, 1085, 21, 4636, 13869, 10067, 504, 8716, 13548, 1114, 10160, 11720, 9950, 4632, 9749, 7265, 1874, 5492, 9663, 4843, 13874, 13875, 1477, 13882, 4494, 12, 4603, 8296, 4347, 13883, 7175, 2]
 
-// Module 13872 (VoiceMemberList)
+// Module 13873 (VoiceMemberList)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
@@ -11,9 +11,9 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 82
 import Form from "Form" /* 8716 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
 import _modDef10160 from "module_10160" /* 10160 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11719 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13868 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 13874 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11720 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13869 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 13875 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -144,13 +144,13 @@ function VoiceSectionRow(arg0) {
         },
       isActionSheet
     };
-    return closure_21(tmp2(13873), obj2);
+    return closure_21(tmp2(13874), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13874), obj3);
+    return closure_21(tmp2(13875), obj3);
   }
   let obj = isActionSheet(9749);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 ({ SectionList: closure_7, View: closure_8 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
-const FORM_ROW_VERTICAL_PADDING = fn(1182).FORM_ROW_VERTICAL_PADDING;
+const FORM_ROW_VERTICAL_PADDING = fn(1180).FORM_ROW_VERTICAL_PADDING;
 const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
@@ -182,8 +182,8 @@ let closure_26 = noop.memo((channel) => {
       const intl = tmp4(1114).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1114).t["6Qgrev"]);
       obj3.source = _modDef10160;
-      obj3.size = tmp4(13547).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(13547).CircularIconButton, obj3);
+      obj3.size = tmp4(13548).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(13548).CircularIconButton, obj3);
       const intl2 = tmp4(1114).intl;
       obj2.label = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -365,7 +365,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13873);
+                tmp4 = tmp4(13874);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(tmp9);
               } else {

@@ -1,7 +1,7 @@
 // Module ID: 9557
 // Function ID: 9558
 // Name: WebhookGuildChannelSelector
-// Dependencies: [5, 32, 19, 17, 1961, 4285, 1371, 21, 4636, 576, 4603, 9556, 1896, 1114, 4789, 9373, 4632, 1178, 8716, 2]
+// Dependencies: [5, 32, 19, 17, 1961, 4285, 1371, 21, 4636, 576, 4603, 9556, 1896, 1114, 4789, 9373, 4632, 1176, 8716, 2]
 // Exports: default
 
 // Module 9557 (WebhookGuildChannelSelector)

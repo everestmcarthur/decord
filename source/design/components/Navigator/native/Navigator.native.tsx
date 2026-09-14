@@ -1,12 +1,12 @@
 // Module ID: 7103
 // Function ID: 7104
 // Name: Navigator
-// Dependencies: [32, 19, 17, 21, 4636, 576, 7104, 5705, 4338, 7105, 1611, 1114, 12, 7138, 1484, 4571, 7144, 1233, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 7104, 5705, 4338, 7105, 1611, 1114, 12, 7138, 1484, 4571, 7144, 1231, 2]
 // Exports: Navigator, useAccessibilityNativeStackOptions, useNavigatorScreens
 
 // Module 7103 (Navigator)
 import nativeDefault from "native" /* 576 */;
-import SentryInitUtils from "SentryInitUtils" /* 1233 */;
+import SentryInitUtils from "SentryInitUtils" /* 1231 */;
 import Link from "Link" /* 1484 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7104 */;

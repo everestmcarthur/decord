@@ -1,14 +1,14 @@
-// Module ID: 17516
-// Function ID: 17517
+// Module ID: 17518
+// Function ID: 17519
 // Name: InteractionIframeModal
-// Dependencies: [32, 19, 17, 1350, 21, 4636, 576, 17504, 7084, 8450, 17517, 5053, 4335, 1114, 9772, 9780, 5204, 4589, 4632, 9568, 2]
+// Dependencies: [32, 19, 17, 1348, 21, 4636, 576, 17506, 7084, 8450, 17519, 5053, 4335, 1114, 9772, 9780, 5204, 4589, 4632, 9568, 2]
 // Exports: default
 
-// Module 17516 (InteractionIframeModal)
+// Module 17518 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17517 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17519 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const BotTagTypes = fn(1350).BotTagTypes;
+const BotTagTypes = fn(1348).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);

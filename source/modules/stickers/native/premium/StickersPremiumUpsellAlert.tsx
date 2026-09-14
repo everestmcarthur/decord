@@ -1,20 +1,20 @@
-// Module ID: 10536
-// Function ID: 10537
+// Module ID: 10537
+// Function ID: 10538
 // Name: StickersPremiumUpsellAlert
-// Dependencies: [19, 17, 7340, 1074, 1373, 21, 10537, 1114, 576, 10538, 10539, 4636, 1178, 4632, 573, 7522, 9494, 1477, 7265, 5075, 1242, 9522, 5204, 7095, 10540, 2]
+// Dependencies: [19, 17, 7340, 1074, 1373, 21, 10538, 1114, 576, 10539, 10540, 4636, 1176, 4632, 573, 7522, 9494, 1477, 7265, 5075, 1240, 9522, 5204, 7095, 10541, 2]
 // Exports: default
 
-// Module 10536 (StickersPremiumUpsellAlert)
+// Module 10537 (StickersPremiumUpsellAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import _modDef10537 from "module_10537" /* 10537 */;
 import _modDef10538 from "module_10538" /* 10538 */;
 import _modDef10539 from "module_10539" /* 10539 */;
+import _modDef10540 from "module_10540" /* 10540 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7340 */;
 
@@ -43,7 +43,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [
   {
-    icon: _modDef10537,
+    icon: _modDef10538,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -54,7 +54,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef10537,
+  icon: _modDef10538,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -62,21 +62,21 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef10538,
+  icon: _modDef10539,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef10538,
+  icon: _modDef10539,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef10539,
+  icon: _modDef10540,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -86,7 +86,7 @@ items[2] = {
 const createStyles = fn(4636);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef10539,
+  icon: _modDef10540,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -159,7 +159,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
     children: null
   };
   const obj4 = { source: analyticsLocations(7095) };
-  const items2 = [closure_14(closure_5, { source: analyticsLocations(10540), style: tmp.imageHeader }), , ];
+  const items2 = [closure_14(closure_5, { source: analyticsLocations(10541), style: tmp.imageHeader }), , ];
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = tmp9(1114).intl;
   if (priceString == null) {
@@ -168,7 +168,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_14(Text_Text.Text, obj7);
-  const obj6 = { source: analyticsLocations(10540), style: tmp.imageHeader };
+  const obj6 = { source: analyticsLocations(10541), style: tmp.imageHeader };
   const tmp13 = closure_6;
   items2[2] = closure_14(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_14(PerkRow, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj5.children = items2;

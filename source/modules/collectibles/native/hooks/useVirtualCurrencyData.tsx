@@ -1,10 +1,10 @@
-// Module ID: 13281
-// Function ID: 13282
+// Module ID: 13282
+// Function ID: 13283
 // Name: useVirtualCurrencyData
 // Dependencies: [19, 7656, 8975, 2]
 // Exports: useVirtualCurrencyData
 
-// Module 13281 (useVirtualCurrencyData)
+// Module 13282 (useVirtualCurrencyData)
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
 import _mod8975 from "module_8975" /* 8975 */;
 import noop from "module_19" /* 19 */;

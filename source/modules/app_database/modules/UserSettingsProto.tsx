@@ -1,12 +1,12 @@
 // Module ID: 7592
 // Function ID: 7593
 // Name: UserSettingsProto
-// Dependencies: [5, 1221, 502, 3, 1986, 2003, 12, 2]
+// Dependencies: [5, 1219, 502, 3, 1986, 2003, 12, 2]
 
 // Module 7592 (UserSettingsProto)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import apply from "module_12" /* 12 */;
 

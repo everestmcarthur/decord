@@ -1,12 +1,12 @@
 // Module ID: 8840
 // Function ID: 8841
 // Name: SKUUtils
-// Dependencies: [32, 1074, 4463, 1114, 4878, 1150, 4228, 2]
+// Dependencies: [32, 1074, 4463, 1114, 4878, 1363, 4228, 2]
 // Exports: canUserInstall, getGenreIdFromURLSlug, getGenreText, getGenreURLSlugFromId, getReadablePreorderReleaseDate, getSKUIdFromURL, isThirdPartySKU
 
 // Module 8840 (SKUUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import matchPathCompat from "matchPathCompat" /* 4463 */;
 import StoreUtils from "StoreUtils" /* 4878 */;

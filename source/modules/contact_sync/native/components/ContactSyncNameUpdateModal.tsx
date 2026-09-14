@@ -1,10 +1,10 @@
-// Module ID: 14934
-// Function ID: 14935
+// Module ID: 14935
+// Function ID: 14936
 // Name: ContactSyncNameUpdateModal
-// Dependencies: [5, 32, 19, 17, 12807, 21, 4839, 4636, 576, 5763, 12809, 12813, 4335, 1114, 5678, 12826, 5705, 7103, 2]
+// Dependencies: [5, 32, 19, 17, 12808, 21, 4839, 4636, 576, 5763, 12810, 12814, 4335, 1114, 5678, 12827, 5705, 7103, 2]
 // Exports: default
 
-// Module 14934 (ContactSyncNameUpdateModal)
+// Module 14935 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 576 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import Navigator from "Navigator" /* 7103 */;
@@ -29,7 +29,7 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0, arg1) {
     _require(true);
-    await tmp3(12813).updateName(closure_0);
+    await tmp3(12814).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
@@ -72,7 +72,7 @@ function ContactSyncNameInputScreen() {
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(12826), {
+  obj2.children = jsx(onNext(12827), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -83,7 +83,7 @@ function ContactSyncNameInputScreen() {
   return <tmp5 style={tmp.container}>{null}</tmp5>;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(12807).ContactSyncScenes;
+const ContactSyncScenes = fn(12808).ContactSyncScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5763).NAV_BAR_HEIGHT + 32 } };

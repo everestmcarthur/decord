@@ -1,7 +1,7 @@
 // Module ID: 4843
 // Function ID: 4844
 // Name: PrivateChannelCallUtils
-// Dependencies: [5, 19, 4327, 4844, 1957, 4285, 2011, 1371, 1074, 1098, 4846, 21, 4847, 4837, 9811, 1109, 4839, 9596, 1896, 7141, 7314, 4603, 13853, 5492, 4981, 1114, 5220, 4502, 13888, 4982, 9311, 4494, 8512, 2]
+// Dependencies: [5, 19, 4327, 4844, 1957, 4285, 2011, 1371, 1074, 1098, 4846, 21, 4847, 4837, 9811, 1109, 4839, 9596, 1896, 7141, 7314, 4603, 13854, 5492, 4981, 1114, 5220, 4502, 13889, 4982, 9311, 4494, 8512, 2]
 // Exports: dismissVoiceChannelScreens, getVoiceChannelKey, getVoiceChannelKeyByChannelId, handleJoinCall, handleRedesignGroupDMCall, handleRedesignJoinCall, handleStartCall, hideVoiceChannelActionSheet, isVoiceChannelModalKey, maybeShowAgeGateModal, navigateToVoiceChannel, openGuildVoiceModal, openVoiceChannelActionSheet, showGuardCallAlert
 
 // Module 4843 (PrivateChannelCallUtils)
@@ -167,7 +167,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(channel) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13853, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
+  obj.openLazy(asyncRequireImpl(13854, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("" + c17 + "-" + id.id);

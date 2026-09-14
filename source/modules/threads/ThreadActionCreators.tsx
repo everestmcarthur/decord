@@ -1,12 +1,12 @@
 // Module ID: 7867
 // Function ID: 7868
 // Name: ThreadActionCreators
-// Dependencies: [5, 1961, 502, 1957, 4275, 7868, 4277, 7878, 1074, 1964, 1272, 573, 4980, 1114, 4816, 7879, 7880, 7883, 7884, 1369, 1968, 2]
+// Dependencies: [5, 1961, 502, 1957, 4275, 7868, 4277, 7878, 1074, 1964, 1270, 573, 4980, 1114, 4816, 7879, 7880, 7883, 7884, 1369, 1968, 2]
 
 // Module 7867 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
@@ -699,7 +699,7 @@ export default {
       if (flag) {
         obj7.archived = false;
       }
-      const HTTP = tmp3(1272).HTTP;
+      const HTTP = tmp3(1270).HTTP;
       const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
@@ -783,7 +783,7 @@ export default {
               return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1272).HTTP;
+              const HTTP2 = tmp3(1270).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
               const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
               request.body = obj15;
@@ -820,7 +820,7 @@ export default {
                 return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1272).HTTP;
+                const HTTP = tmp3(1270).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
                 const obj22 = { flags: closure_128_1.flags | constants.PINNED };
                 request1.body = obj22;
@@ -909,8 +909,8 @@ export default {
             const obj = { value, done: true };
             return obj;
           }
-          const HTTP = tmp4(1272).HTTP;
-          const request = { url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_128_0.id), body: closure_128_1, rejectWithError: tmp4(1272).rejectWithMigratedError() };
+          const HTTP = tmp4(1270).HTTP;
+          const request = { url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_128_0.id), body: closure_128_1, rejectWithError: tmp4(1270).rejectWithMigratedError() };
           dependencyMap = 3;
           const obj6 = { value: HTTP.patch(request), done: true };
           return obj6;

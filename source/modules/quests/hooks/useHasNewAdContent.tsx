@@ -1,14 +1,14 @@
-// Module ID: 16903
-// Function ID: 16904
+// Module ID: 16905
+// Function ID: 16906
 // Name: useHasNewAdContent
-// Dependencies: [32, 15160, 7805, 5525, 1090, 11622, 504, 7801, 5532, 7491, 1943, 2]
+// Dependencies: [32, 15161, 7805, 5525, 1090, 11623, 504, 7801, 5532, 7491, 1943, 2]
 // Exports: default
 
-// Module 16903 (useHasNewAdContent)
+// Module 16905 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1090 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 15160 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 15161 */;
 import QuestStore from "QuestStore" /* 7805 */;
 
 require = fn;

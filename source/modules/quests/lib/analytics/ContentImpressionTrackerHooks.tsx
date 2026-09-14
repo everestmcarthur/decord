@@ -1,13 +1,13 @@
-// Module ID: 11619
-// Function ID: 11620
+// Module ID: 11620
+// Function ID: 11621
 // Name: ContentImpressionTrackerHooks
-// Dependencies: [19, 7805, 5532, 504, 7830, 8390, 11620, 2]
+// Dependencies: [19, 7805, 5532, 504, 7830, 8390, 11621, 2]
 // Exports: useAdContentImpressionTrackerProps, useGetQuestImpressionId, useQuestImpression, useQuestImpressionId, useQuestImpressionRef, useQuestStatusChanged
 
-// Module 11619 (ContentImpressionTrackerHooks)
+// Module 11620 (ContentImpressionTrackerHooks)
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 11620 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 11621 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7805 */;
 

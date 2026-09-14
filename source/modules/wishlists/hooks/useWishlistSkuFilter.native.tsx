@@ -1,10 +1,10 @@
-// Module ID: 10923
-// Function ID: 10924
+// Module ID: 10924
+// Function ID: 10925
 // Name: useWishlistSkuFilter
 // Dependencies: [19, 7330, 1074, 8921, 7334, 2]
 // Exports: useWishlistSkuFilter
 
-// Module 10923 (useWishlistSkuFilter)
+// Module 10924 (useWishlistSkuFilter)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

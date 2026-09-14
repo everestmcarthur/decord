@@ -1,10 +1,10 @@
-// Module ID: 11659
-// Function ID: 11660
+// Module ID: 11660
+// Function ID: 11661
 // Name: useLoadMessageContentEntries
 // Dependencies: [32, 5, 19, 4864, 1920, 9157, 8298, 7266, 8249, 38, 8256, 1894, 8246, 7405, 2]
 // Exports: default
 
-// Module 11659 (useLoadMessageContentEntries)
+// Module 11660 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
 import useAvatarColor from "useAvatarColor" /* 8249 */;

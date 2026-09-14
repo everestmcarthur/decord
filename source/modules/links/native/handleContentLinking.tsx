@@ -1,10 +1,10 @@
-// Module ID: 11714
-// Function ID: 11715
+// Module ID: 11715
+// Function ID: 11716
 // Name: handleContentLinking
-// Dependencies: [5, 5639, 1074, 4839, 7350, 1100, 11477, 2]
+// Dependencies: [5, 5639, 1074, 4839, 7350, 1100, 11478, 2]
 // Exports: default
 
-// Module 11714 (handleContentLinking)
+// Module 11715 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,15 +1,15 @@
-// Module ID: 15104
-// Function ID: 15105
+// Module ID: 15105
+// Function ID: 15106
 // Name: useBountyVideoEndAppStoreOverlay
-// Dependencies: [19, 5525, 21, 15105, 11622, 11619, 15106, 5530, 7830, 4637, 4640, 7820, 5532, 11630, 2]
+// Dependencies: [19, 5525, 21, 15106, 11623, 11620, 15107, 5530, 7830, 4637, 4640, 7820, 5532, 11631, 2]
 // Exports: BountyVideoEndAppStoreProvider, canUseBountyVideoEndAppStoreOverlay, useBountyVideoEndAppStoreContext, useBountyVideoEndAppStoreOverlay
 
-// Module 15104 (useBountyVideoEndAppStoreOverlay)
+// Module 15105 (useBountyVideoEndAppStoreOverlay)
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import QuestContent from "QuestContent" /* 5530 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15105 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,10 +27,10 @@ export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppSto
 };
 export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty) {
   if (obj.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-    const CustomAppStoreSqueezeBackExperiment = tmp(11622).CustomAppStoreSqueezeBackExperiment;
+    const CustomAppStoreSqueezeBackExperiment = tmp(11623).CustomAppStoreSqueezeBackExperiment;
     const obj2 = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
     const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj2);
-    return config.enabled && tmp6 === tmp(11622).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+    return config.enabled && tmp6 === tmp(11623).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
   } else {
     return false;
   }

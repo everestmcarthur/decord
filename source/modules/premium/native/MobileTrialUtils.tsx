@@ -1,7 +1,7 @@
 // Module ID: 7549
 // Function ID: 7550
 // Name: MobileTrialUtils
-// Dependencies: [1373, 7550, 4457, 1943, 13430, 4294, 1114, 2]
+// Dependencies: [1373, 7550, 4457, 1943, 13431, 4294, 1114, 2]
 // Exports: useNitroTrialCtaOverride, usePremiumTrialOfferPremiumType, useShouldShowPremiumTrialUserSettingsAvatarBadge
 
 // Module 7549 (MobileTrialUtils)
@@ -60,6 +60,6 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
     } else {
       return null;
     }
-    tmpResult = tmp(13430);
+    tmpResult = tmp(13431);
   }
 };

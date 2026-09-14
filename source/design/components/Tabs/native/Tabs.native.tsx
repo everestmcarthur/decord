@@ -1,10 +1,10 @@
-// Module ID: 12743
-// Function ID: 12744
+// Module ID: 12744
+// Function ID: 12745
 // Name: Tabs/Tabs
-// Dependencies: [19, 17, 2025, 21, 4373, 4636, 576, 5055, 9625, 12744, 6756, 1150, 2]
+// Dependencies: [19, 17, 2025, 21, 4373, 4636, 576, 5055, 9625, 12745, 6756, 1363, 2]
 // Exports: Tabs
 
-// Module 12743 (Tabs/Tabs)
+// Module 12744 (Tabs/Tabs)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
@@ -322,7 +322,7 @@ export const Tabs = function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12744).TabItem, obj, id);
+      return variant(state(12745).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

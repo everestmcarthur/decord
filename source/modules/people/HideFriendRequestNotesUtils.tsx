@@ -1,10 +1,10 @@
-// Module ID: 13254
-// Function ID: 13255
+// Module ID: 13255
+// Function ID: 13256
 // Name: HideFriendRequestNotesUtils
 // Dependencies: [1935, 8767, 2]
 // Exports: useHideFriendRequestNotes
 
-// Module 13254 (HideFriendRequestNotesUtils)
+// Module 13255 (HideFriendRequestNotesUtils)
 import UserSettings from "UserSettings" /* 1935 */;
 import useUserIsTeen from "useUserIsTeen" /* 8767 */;
 import size from "module_2" /* 2 */;

@@ -1,18 +1,18 @@
-// Module ID: 12491
-// Function ID: 12492
+// Module ID: 12492
+// Function ID: 12493
 // Name: SearchTabsLayoutStore
-// Dependencies: [1957, 7384, 12492, 12493, 12494, 12468, 7982, 558, 12469, 504, 573, 2]
+// Dependencies: [1957, 7384, 12493, 12494, 12495, 12469, 7982, 558, 12470, 504, 573, 2]
 
-// Module 12491 (SearchTabsLayoutStore)
+// Module 12492 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12492 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12493 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12494 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12493 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12494 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12495 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {

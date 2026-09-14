@@ -1,10 +1,10 @@
-// Module ID: 11020
-// Function ID: 11021
+// Module ID: 11021
+// Function ID: 11022
 // Name: StageChannelRichPresenceUtils
 // Dependencies: [32, 502, 1957, 1979, 5502, 5495, 1074, 2]
 // Exports: isStageActivity, packStageChannelPartyId, shouldShowActivity
 
-// Module 11020 (StageChannelRichPresenceUtils)
+// Module 11021 (StageChannelRichPresenceUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

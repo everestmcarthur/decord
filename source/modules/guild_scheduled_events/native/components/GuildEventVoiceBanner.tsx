@@ -1,9 +1,9 @@
-// Module ID: 13868
-// Function ID: 13869
+// Module ID: 13869
+// Function ID: 13870
 // Name: GuildEventVoiceBanner
 // Dependencies: [19, 17, 2011, 7629, 21, 4636, 576, 9792, 504, 9801, 9795, 4603, 9828, 4843, 9919, 5204, 9902, 5056, 1114, 2]
 
-// Module 13868 (GuildEventVoiceBanner)
+// Module 13869 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9828 */;

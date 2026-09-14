@@ -1,10 +1,10 @@
-// Module ID: 12674
-// Function ID: 12675
+// Module ID: 12675
+// Function ID: 12676
 // Name: GuildPowerupsDisabledWarning
 // Dependencies: [17, 21, 4636, 576, 8711, 4632, 2]
 // Exports: default
 
-// Module 12674 (GuildPowerupsDisabledWarning)
+// Module 12675 (GuildPowerupsDisabledWarning)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;

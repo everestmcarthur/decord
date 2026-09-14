@@ -1,24 +1,24 @@
-// Module ID: 13390
-// Function ID: 13391
+// Module ID: 13391
+// Function ID: 13392
 // Name: PrivateChannelButtons
-// Dependencies: [19, 17, 4652, 1957, 1908, 4285, 1371, 4655, 7980, 1074, 4657, 2010, 7981, 4661, 21, 1178, 4636, 576, 504, 11528, 13391, 8085, 13392, 10997, 13261, 4982, 13393, 1114, 13394, 12428, 12487, 4816, 4603, 13409, 1896, 5204, 7154, 13410, 8492, 4331, 1242, 13086, 7483, 4843, 5182, 7986, 7984, 4632, 13411, 10238, 2]
+// Dependencies: [19, 17, 4652, 1957, 1908, 4285, 1371, 4655, 7980, 1074, 4657, 2010, 7981, 4661, 21, 1176, 4636, 576, 504, 11529, 13392, 8085, 13393, 10998, 13262, 4982, 13394, 1114, 13395, 12429, 12488, 4816, 4603, 13410, 1896, 5204, 7154, 13411, 8492, 4331, 1240, 13087, 7483, 4843, 5182, 7986, 7984, 4632, 13412, 10238, 2]
 
-// Module 13390 (PrivateChannelButtons)
+// Module 13391 (PrivateChannelButtons)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import useAlertStore from "useAlertStore" /* 4982 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7154 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10997 */;
-import useSearchContext from "useSearchContext" /* 12428 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13261 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13393 */;
-import ChannelHeader from "ChannelHeader" /* 13394 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10998 */;
+import useSearchContext from "useSearchContext" /* 12429 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13262 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13394 */;
+import ChannelHeader from "ChannelHeader" /* 13395 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -41,9 +41,9 @@ let closure_18 = fn(7981).SearchEntrypointAnalyticsLocations;
 const Features = fn(4661).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const tmp4 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XSMALL];
+const tmp4 = fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.XSMALL];
 let closure_22 = tmp4;
-let obj = { direction: fn(1178).CutoutDirection.RIGHT, radius: tmp4 / 2 + 3, inset: -6 };
+let obj = { direction: fn(1176).CutoutDirection.RIGHT, radius: tmp4 / 2 + 3, inset: -6 };
 const createStyles = fn(4636);
 let closure_24 = createStyles.createStyles(() => {
   obj = { privateChannelButtonsWrapper: { flexDirection: "row", gap: 12, paddingEnd: 1 }, button: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, minHeight: nativeDefault.space.PX_32, minWidth: nativeDefault.space.PX_32, padding: nativeDefault.space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" }, disabledButton: { opacity: 0.6 }, overflowBadge: null };
@@ -87,9 +87,9 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     return isInChannelResult;
   }, items2);
   const tmp2Result = channelId(504);
-  inappropriateConversationSafetyToolsWarningForChannel = channelId(11528).useInappropriateConversationSafetyToolsWarningForChannel(channelId);
+  inappropriateConversationSafetyToolsWarningForChannel = channelId(11529).useInappropriateConversationSafetyToolsWarningForChannel(channelId);
   closure_6 = tmp7;
-  const tmp2Result6 = channelId(11528);
+  const tmp2Result6 = channelId(11529);
   const items3 = [visibleParticipants, totalParticipantCount];
   let stateFromStores2 = channelId(504).useStateFromStores(items3, () => {
     let type;
@@ -118,7 +118,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
   const tmp2Result7 = channelId(504);
   const items4 = [callParticipants];
   const stateFromStores3 = channelId(504).useStateFromStores(items4, () => callParticipants.supports(constants2.VIDEO));
-  const VideoGuardExperiment = tmp2(13391).VideoGuardExperiment;
+  const VideoGuardExperiment = tmp2(13392).VideoGuardExperiment;
   const videoEnabled = VideoGuardExperiment.useConfig({ location: "PrivateChannelButtons" }).videoEnabled;
   closure_7 = tmp10;
   const tmp2Result8 = channelId(504);
@@ -167,7 +167,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     tmp15 = callParticipants.length > 0;
   }
   closure_11 = tmp15;
-  const tmp17 = screenIndex(13392)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp17 = screenIndex(13393)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp17.application;
   const items7 = [stateFromStores];
   callback = obj9.useCallback(() => {
@@ -230,7 +230,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
       const obj2 = { settings_type: "user", destination_pane: constants2.SETTINGS_APP_DMS_MENU, source_page: "app_dm_settings", application_id: application.id };
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
       const obj4 = { userId: recipientId, channel: stateFromStores, application };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13409, dependencyMap.paths), "AppDMOptionsBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13410, dependencyMap.paths), "AppDMOptionsBottomSheet", obj4);
     }
   }, items11);
   if (inappropriateConversationSafetyToolsWarningForChannel != null) {
@@ -246,7 +246,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     if (closure_6) {
       const obj3 = { channelId, recipientId, warningId: null, warningType: null };
       ({ id: obj2.warningId, type: obj2.warningType } = inappropriateConversationSafetyToolsWarningForChannel);
-      let tmpResult = tmp(tmp2(13410).SafetyToolsButton, obj3);
+      let tmpResult = tmp(tmp2(13411).SafetyToolsButton, obj3);
     } else {
       obj = { style: button.button, onPress: callback2, accessibilityLabel: null, accessibilityRole: "button", children: null };
       const intl = util.intl;
@@ -269,7 +269,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     };
     const intl5 = tmp2(1114).intl;
     obj3.accessibilityLabel = intl5.string(tmp2(1114).t["+KSnWX"]);
-    obj3.children = closure_20(tmp2(13086).WindowLaunchIcon, { size: "sm" });
+    obj3.children = closure_20(tmp2(13087).WindowLaunchIcon, { size: "sm" });
     let tmp25Result = closure_20(tmp2(5204).PressableOpacity, obj3);
   } else if (tmp17.isAppDM) {
     let tmp43 = null;
@@ -405,7 +405,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
             if (videoEnabled) {
               let VideoDenyIcon = tmp2(10238).VideoIcon;
             } else {
-              VideoDenyIcon = tmp2(13411).VideoDenyIcon;
+              VideoDenyIcon = tmp2(13412).VideoDenyIcon;
             }
             obj15.children = tmp33(VideoDenyIcon, { size: "sm" });
             tmp33(tmp2(5204).PressableOpacity, obj15);

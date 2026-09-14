@@ -1,10 +1,10 @@
-// Module ID: 11111
-// Function ID: 11112
+// Module ID: 11112
+// Function ID: 11113
 // Name: useFavoritesGuildChannelFilter
 // Dependencies: [19, 1957, 4275, 1960, 1074, 504, 9965, 1982, 1369, 2]
 // Exports: default
 
-// Module 11111 (useFavoritesGuildChannelFilter)
+// Module 11112 (useFavoritesGuildChannelFilter)
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

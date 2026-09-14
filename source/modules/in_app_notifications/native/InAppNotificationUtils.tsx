@@ -1,13 +1,13 @@
 // Module ID: 10223
 // Function ID: 10224
 // Name: InAppNotificationUtils
-// Dependencies: [19, 10224, 1074, 12, 1256, 1151, 1090, 7405, 4816, 2]
+// Dependencies: [19, 10224, 1074, 12, 1254, 1364, 1090, 7405, 4816, 2]
 // Exports: extractMetadataFromNotification, generateInAppNotificationId, getMessagePreviewTextVariant, getNotificationDuration, isReactionMilestoneNotification, trackDismissed, useHasPreviewableMedia
 
 // Module 10223 (InAppNotificationUtils)
 import _mod12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7405 */;
 import noop from "module_19" /* 19 */;

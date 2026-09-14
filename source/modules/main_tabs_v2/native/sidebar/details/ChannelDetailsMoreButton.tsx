@@ -1,13 +1,13 @@
-// Module ID: 16841
-// Function ID: 16842
+// Module ID: 16843
+// Function ID: 16844
 // Name: ChannelDetailsMoreButton
-// Dependencies: [19, 21, 11044, 7969, 7966, 1114, 9930, 2]
+// Dependencies: [19, 21, 11045, 7969, 7966, 1114, 9930, 2]
 // Exports: default
 
-// Module 16841 (ChannelDetailsMoreButton)
+// Module 16843 (ChannelDetailsMoreButton)
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7969 */;
 import _modDef9930 from "module_9930" /* 9930 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

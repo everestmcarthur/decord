@@ -1,12 +1,12 @@
-// Module ID: 13989
-// Function ID: 13990
+// Module ID: 13990
+// Function ID: 13991
 // Name: ShareUtils
-// Dependencies: [5, 4977, 4629, 4335, 11386, 9436, 7879, 5209, 5208, 7784, 9422, 7559, 2]
+// Dependencies: [5, 4977, 4629, 4335, 11387, 9436, 7879, 5209, 5208, 7784, 9422, 7559, 2]
 // Exports: sendShareMessage, showInformationToast
 
-// Module 13989 (ShareUtils)
+// Module 13990 (ShareUtils)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import _modDef11386 from "module_11386" /* 11386 */;
+import _modDef11387 from "module_11387" /* 11387 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -119,7 +119,7 @@ const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx")
 
 export const showInformationToast = function showInformationToast(intl3) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11386 });
+  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11387 });
 };
 export const sendShareMessage = function sendShareMessage() {
   const self = this;

@@ -1,12 +1,12 @@
 // Module ID: 8710
 // Function ID: 8711
 // Name: ManualReviewActionCreators
-// Dependencies: [5, 502, 1074, 8517, 1090, 1272, 8536, 8529, 8522, 2]
+// Dependencies: [5, 502, 1074, 8517, 1090, 1270, 8536, 8529, 8522, 2]
 // Exports: handleManualReviewCta, invalidateManualReviewCache
 
 // Module 8710 (ManualReviewActionCreators)
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

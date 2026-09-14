@@ -1,14 +1,14 @@
-// Module ID: 12821
-// Function ID: 12822
+// Module ID: 12822
+// Function ID: 12823
 // Name: ContactSyncLandingOnboardingRedesign
-// Dependencies: [5, 19, 17, 4846, 21, 4636, 576, 5763, 5220, 12822, 4632, 1114, 5056, 12823, 12815, 2]
+// Dependencies: [5, 19, 17, 4846, 21, 4636, 576, 5763, 5220, 12823, 4632, 1114, 5056, 12824, 12816, 2]
 // Exports: default
 
-// Module 12821 (ContactSyncLandingOnboardingRedesign)
+// Module 12822 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 576 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12815 */;
-import _modDef12822 from "module_12822" /* 12822 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12823 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12816 */;
+import _modDef12823 from "module_12823" /* 12823 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12824 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -95,7 +95,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj3.source = _modDef12822;
+  obj3.source = _modDef12823;
   const items1 = [closure_8(closure_6, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1114).intl;

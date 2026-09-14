@@ -1,10 +1,10 @@
-// Module ID: 12671
-// Function ID: 12672
+// Module ID: 12672
+// Function ID: 12673
 // Name: useDeactivateWarningText
 // Dependencies: [19, 4556, 2015, 1979, 504, 7230, 4529, 1114, 2428, 2]
 // Exports: default
 
-// Module 12671 (useDeactivateWarningText)
+// Module 12672 (useDeactivateWarningText)
 import _modDef2428 from "module_2428" /* 2428 */;
 import Powerups from "Powerups" /* 4529 */;
 import noop from "module_19" /* 19 */;

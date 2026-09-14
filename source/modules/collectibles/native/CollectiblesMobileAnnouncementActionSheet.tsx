@@ -1,10 +1,10 @@
-// Module ID: 17057
-// Function ID: 17058
+// Module ID: 17059
+// Function ID: 17060
 // Name: CollectiblesMobileAnnouncementActionSheet
-// Dependencies: [19, 17, 1076, 7254, 1954, 21, 4636, 576, 1477, 6728, 1611, 4373, 17058, 4632, 7644, 7285, 7253, 17059, 1114, 5773, 5056, 2]
+// Dependencies: [19, 17, 1076, 7254, 1954, 21, 4636, 576, 1477, 6728, 1611, 4373, 17060, 4632, 7644, 7285, 7253, 17061, 1114, 5773, 5056, 2]
 // Exports: default
 
-// Module 17057 (CollectiblesMobileAnnouncementActionSheet)
+// Module 17059 (CollectiblesMobileAnnouncementActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -13,8 +13,8 @@ import Text_Text from "Text/Text" /* 4632 */;
 import BottomSheetModal from "BottomSheetModal" /* 6728 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
-import _modDef17058 from "module_17058" /* 17058 */;
-import _modDef17059 from "module_17059" /* 17059 */;
+import _modDef17060 from "module_17060" /* 17060 */;
+import _modDef17061 from "module_17061" /* 17061 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -47,7 +47,7 @@ function CatEarsBackdrop() {
   items1[1] = rect;
   obj4.style = items1;
   const obj5 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  obj5.source = { uri: _modDef17058 };
+  obj5.source = { uri: _modDef17060 };
   obj5.style = tmp.mascotImage;
   obj4.children = React7(React4, obj5);
   obj3.children = React7(hasOwnProperty, obj4);
@@ -120,7 +120,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const memo = noop.useMemo(() => closure_1_9(CatEarsBackdrop, {}), []);
   let obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { source: { uri: _modDef17059 }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj3 = { source: { uri: _modDef17061 }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const items3 = [closure_9(closure_4, obj3), , , ];
   const obj5 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl = markAsDismissed(1114).intl;

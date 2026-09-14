@@ -1,9 +1,9 @@
-// Module ID: 15794
-// Function ID: 15795
+// Module ID: 15796
+// Function ID: 15797
 // Name: UserSettingsSurveyChangelogOverride
 // Dependencies: [32, 19, 17, 4650, 4827, 21, 4636, 576, 7300, 7252, 7302, 4583, 7292, 6707, 5056, 4828, 4603, 504, 8390, 5768, 5686, 4632, 8198, 5054, 2]
 
-// Module 15794 (UserSettingsSurveyChangelogOverride)
+// Module 15796 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;

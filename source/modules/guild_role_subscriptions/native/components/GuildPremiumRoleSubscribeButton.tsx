@@ -1,12 +1,12 @@
-// Module ID: 17882
-// Function ID: 17883
+// Module ID: 17883
+// Function ID: 17884
 // Name: GuildPremiumRoleSubscribeButton
-// Dependencies: [19, 21, 4636, 10428, 1114, 2]
+// Dependencies: [19, 21, 4636, 10429, 1114, 2]
 // Exports: GuildPremiumRoleSubscribeButton
 
-// Module 17882 (GuildPremiumRoleSubscribeButton)
+// Module 17883 (GuildPremiumRoleSubscribeButton)
 import util from "util" /* 1114 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10428 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10429 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

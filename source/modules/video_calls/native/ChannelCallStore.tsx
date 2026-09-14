@@ -1,12 +1,12 @@
 // Module ID: 9597
 // Function ID: 9598
 // Name: ChannelCallStore
-// Dependencies: [19, 1956, 9598, 1920, 4657, 1952, 8450, 560, 1249, 573, 4837, 12, 9599, 9600, 9601, 504, 9602, 2]
+// Dependencies: [19, 1956, 9598, 1920, 4657, 1952, 8450, 560, 1247, 573, 4837, 12, 9599, 9600, 9601, 504, 9602, 2]
 // Exports: clearFocusTimer, resetChannelCallStore, resetFocus, resetFocusTimer, setFocus, setVoiceChatDrawerState, toggleFocus, useChannelCallOrientationHandlers, useIsVoiceChatFocused
 
 // Module 9597 (ChannelCallStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import DeviceOrientation from "DeviceOrientation" /* 8450 */;
 import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9599 */;
@@ -44,7 +44,7 @@ export const setFocus = function setFocus(focus) {
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1249).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1247).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 };
 export const resetFocusTimer = function resetFocusTimer() {
   timeout.stop();
@@ -75,7 +75,7 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
 };
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1249).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1247).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
   const voiceChatDrawerState = obj3().voiceChatDrawerState;

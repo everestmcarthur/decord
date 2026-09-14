@@ -1,11 +1,11 @@
 // Module ID: 9699
 // Function ID: 9700
 // Name: FramesManager
-// Dependencies: [9640, 9641, 1074, 4541, 7221, 9648, 1242, 573, 2]
+// Dependencies: [9640, 9641, 1074, 4541, 7221, 9648, 1240, 573, 2]
 
 // Module 9699 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import FramesStore from "FramesStore" /* 9640 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 

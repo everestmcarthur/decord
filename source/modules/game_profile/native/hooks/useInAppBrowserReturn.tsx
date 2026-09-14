@@ -1,7 +1,7 @@
 // Module ID: 8810
 // Function ID: 8811
 // Name: useInAppBrowserReturn
-// Dependencies: [19, 8805, 1151, 4601, 8803, 8809, 2]
+// Dependencies: [19, 8805, 1364, 4601, 8803, 8809, 2]
 // Exports: default
 
 // Module 8810 (useInAppBrowserReturn)

@@ -1,13 +1,13 @@
 // Module ID: 5206
 // Function ID: 5207
 // Name: ThemedGradient
-// Dependencies: [19, 17, 4456, 21, 4636, 4488, 4487, 4486, 1477, 5068, 4571, 576, 4491, 4455, 672, 1232, 563, 4493, 4570, 1231, 2]
+// Dependencies: [19, 17, 4456, 21, 4636, 4488, 4487, 4486, 1477, 5068, 4571, 576, 4491, 4455, 672, 1230, 563, 4493, 4570, 1229, 2]
 // Exports: CustomThemedGradient, default, validateColors
 
 // Module 5206 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4455 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
@@ -413,7 +413,7 @@ export default function ThemedGradient(overlayOpacity) {
   const customThemeDisplaySettings = useCustomThemeDisplaySettings.useCustomThemeDisplaySettings();
   if (null != gradientOverride) {
     if (tmp12) {
-      if (gradientOverride.type === tmp6(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      if (gradientOverride.type === tmp6(1229).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         const obj2 = {};
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(gradientOverride.customThemeSettings);
@@ -436,7 +436,7 @@ export default function ThemedGradient(overlayOpacity) {
         return tmp60;
       }
     }
-    if (gradientOverride.type === tmp6(1231).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+    if (gradientOverride.type === tmp6(1229).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
       const obj6 = {};
       const merged3 = Object.assign(merged);
       obj6.gradient = gradientOverride;

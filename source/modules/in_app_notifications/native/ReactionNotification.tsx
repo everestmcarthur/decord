@@ -1,14 +1,14 @@
-// Module ID: 10345
-// Function ID: 10346
+// Module ID: 10346
+// Function ID: 10347
 // Name: ReactionNotification
-// Dependencies: [19, 17, 4628, 10224, 1074, 1085, 21, 4636, 1151, 576, 1935, 10259, 4632, 1396, 10346, 7233, 1114, 7405, 10223, 10236, 10237, 10268, 11041, 1178, 5665, 12, 4869, 504, 4839, 4647, 10225, 10270, 1896, 10298, 10302, 2]
+// Dependencies: [19, 17, 4628, 10224, 1074, 1085, 21, 4636, 1364, 576, 1935, 10259, 4632, 1396, 10347, 7233, 1114, 7405, 10223, 10236, 10237, 10268, 11042, 1176, 5665, 12, 4869, 504, 4839, 4647, 10225, 10270, 1896, 10298, 10302, 2]
 // Exports: default
 
-// Module 10345 (ReactionNotification)
+// Module 10346 (ReactionNotification)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -21,8 +21,8 @@ import InAppNotificationUtils from "InAppNotificationUtils" /* 10223 */;
 import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10225 */;
 import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10236 */;
 import usePreviewableMedia from "usePreviewableMedia" /* 10259 */;
-import ForumPostReactionButton from "ForumPostReactionButton" /* 10346 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
+import ForumPostReactionButton from "ForumPostReactionButton" /* 10347 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -275,14 +275,14 @@ const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4636);
 let obj2 = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
-let PlatformUtils = fn(1151);
+let PlatformUtils = fn(1364);
 let tmp5;
 if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
 obj2.imageEmoji = { height: 16, width: 16, transform: tmp5 };
-PlatformUtils = fn(1151);
+PlatformUtils = fn(1364);
 obj2.italic = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 let obj5 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };

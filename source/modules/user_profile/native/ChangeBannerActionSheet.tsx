@@ -1,10 +1,10 @@
-// Module ID: 14679
-// Function ID: 14680
+// Module ID: 14680
+// Function ID: 14681
 // Name: ChangeBannerActionSheet
-// Dependencies: [5, 19, 17, 8277, 1074, 21, 4636, 576, 7265, 4294, 4603, 5219, 14680, 7092, 7300, 7252, 1114, 8785, 5768, 5686, 8716, 14681, 504, 8286, 8303, 8364, 1091, 8281, 14682, 14684, 4632, 1178, 14689, 2]
+// Dependencies: [5, 19, 17, 8277, 1074, 21, 4636, 576, 7265, 4294, 4603, 5219, 14681, 7092, 7300, 7252, 1114, 8785, 5768, 5686, 8716, 14682, 504, 8286, 8303, 8364, 1091, 8281, 14683, 14685, 4632, 1176, 14690, 2]
 // Exports: default
 
-// Module 14679 (ChangeBannerActionSheet)
+// Module 14680 (ChangeBannerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,7 +15,7 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 7265 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
 import Form from "Form" /* 8716 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14682 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14683 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
@@ -72,14 +72,14 @@ function ChangeBannerColorRow(user) {
   obj5.text = intl.string(require("util").t.xzNfPz);
   obj4.label = closure_9(require("Form").FormLabel, obj5);
   const obj6 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14684), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [closure_9(pendingAccentColor(14685), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj8 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj7 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result5 = require("VideoBackground");
   obj8.children = require("utils/ColorUtils").int2hex(pendingAccentColor);
   items2[1] = closure_9(require("Text/Text").Text, obj8);
   const tmp2Result6 = require("utils/ColorUtils");
-  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(14689) });
+  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(14690) });
   obj6.children = items2;
   obj4.trailing = closure_10(View, obj6);
   obj4.onPress = function handleChangeColor() {
@@ -170,8 +170,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
             const obj8 = { assetOrigin: tmp2(7092).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
-            closure_129_0(tmp2(14680).createPendingImage(obj8));
-            const obj = tmp2(14680);
+            closure_129_0(tmp2(14681).createPendingImage(obj8));
+            const obj = tmp2(14681);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -237,7 +237,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj9 = { style: tmp.upsellButton, children: null };
     const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj9.children = tmp4(tmp2(14681), obj10);
+    obj9.children = tmp4(tmp2(14682), obj10);
     tmp4Result6 = tmp4(tmp10, obj9);
   }
   items3[1] = tmp4Result6;

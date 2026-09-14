@@ -1,10 +1,10 @@
-// Module ID: 13431
-// Function ID: 13432
+// Module ID: 13432
+// Function ID: 13433
 // Name: useCheckoutPlanPriceString
-// Dependencies: [19, 7527, 1150, 7512, 2]
+// Dependencies: [19, 7527, 1363, 7512, 2]
 // Exports: useCheckoutPlan, useCheckoutPlanDiscountPrices, useCheckoutPlanPriceString
 
-// Module 13431 (useCheckoutPlanPriceString)
+// Module 13432 (useCheckoutPlanPriceString)
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7512 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,7 +44,7 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
   let memo = productId;
   const tmp2 = regularPriceString((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   const tmp = regularPriceString((orderRequired) => orderRequired.orderRequired);
-  let tmp3 = memo(1150).isIOS() && tmp;
+  let tmp3 = memo(1363).isIOS() && tmp;
   discountedPriceString = tmp3;
   const items = [tmp2, productId, tmp3];
   memo = discountedPriceString.useMemo(() => {

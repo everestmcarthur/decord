@@ -1,10 +1,10 @@
-// Module ID: 13650
-// Function ID: 13651
+// Module ID: 13651
+// Function ID: 13652
 // Name: PremiumTierCard
-// Dependencies: [19, 17, 7535, 1373, 21, 4636, 576, 5068, 1093, 4294, 13651, 13652, 8173, 9515, 10843, 10844, 5688, 2]
+// Dependencies: [19, 17, 7535, 1373, 21, 4636, 576, 5068, 1093, 4294, 13652, 13653, 8173, 9515, 10844, 10845, 5688, 2]
 // Exports: default
 
-// Module 13650 (PremiumTierCard)
+// Module 13651 (PremiumTierCard)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
@@ -44,9 +44,9 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = tmp5(13651);
+    let tmp5Result = tmp5(13652);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(13652);
+    tmp5Result = tmp5(13653);
   } else if (tmp10.TIER_2 === premiumType) {
     tmp5Result = tmp5(8173);
   }
@@ -66,9 +66,9 @@ export default function _default(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     let tmp5Result2 = tmp5(9515);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result2 = tmp5(10843);
-  } else if (tmp10.TIER_2 === premiumType) {
     tmp5Result2 = tmp5(10844);
+  } else if (tmp10.TIER_2 === premiumType) {
+    tmp5Result2 = tmp5(10845);
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result2;

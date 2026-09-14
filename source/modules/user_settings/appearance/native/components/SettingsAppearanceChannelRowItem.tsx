@@ -1,13 +1,13 @@
-// Module ID: 15375
-// Function ID: 15376
+// Module ID: 15376
+// Function ID: 15377
 // Name: SettingsAppearanceChannelRowItem
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1178, 11041, 4632, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1176, 11042, 4632, 2]
 // Exports: default
 
-// Module 15375 (SettingsAppearanceChannelRowItem)
+// Module 15376 (SettingsAppearanceChannelRowItem)
 import nativeDefault from "native" /* 576 */;
-import native2 from "native" /* 1178 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 11041 */;
+import native2 from "native" /* 1176 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 11042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,14 +25,14 @@ obj2.channelItemContent = { flexDirection: "column", flex: 1, justifyContent: "c
 let obj4 = { marginRight: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center" };
 obj2.channelItemTop = { flexDirection: "row", gap: nativeDefault.space.PX_4, justifyContent: "space-between", alignItems: "center" };
 let closure_6 = createStyles.createStyles(obj2);
-let obj6 = { direction: fn(1178).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
-const native = fn(1178);
-let num = native.getStatusSize(fn(1178).AvatarSizes.LARGE_48);
+let obj6 = { direction: fn(1176).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
+const native = fn(1176);
+let num = native.getStatusSize(fn(1176).AvatarSizes.LARGE_48);
 if (num == null) {
   num = 0;
 }
 obj6.radius = num / 2 + 4;
-obj6.imageType = fn(1178).CutoutType.CIRCULAR;
+obj6.imageType = fn(1176).CutoutType.CIRCULAR;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelRowItem.tsx");
 

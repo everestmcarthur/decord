@@ -1,12 +1,12 @@
 // Module ID: 8761
 // Function ID: 8762
 // Name: Arrow
-// Dependencies: [19, 21, 4636, 576, 1178, 8762, 2]
+// Dependencies: [19, 21, 4636, 576, 1176, 8762, 2]
 // Exports: default
 
 // Module 8761 (Arrow)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import _modDef8762 from "module_8762" /* 8762 */;
 import noop from "module_19" /* 19 */;
 

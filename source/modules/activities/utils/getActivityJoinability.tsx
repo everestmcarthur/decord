@@ -1,18 +1,18 @@
-// Module ID: 13164
-// Function ID: 13165
+// Module ID: 13165
+// Function ID: 13166
 // Name: getActivityJoinability
-// Dependencies: [1074, 11890, 11887, 9661, 9632, 7416, 13165, 1150, 11884, 11885, 11886, 2]
+// Dependencies: [1074, 11891, 11888, 9661, 9632, 7416, 13166, 1363, 11885, 11886, 11887, 2]
 // Exports: default
 
-// Module 13164 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 13165 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import hasFlagDefault from "hasFlag" /* 7416 */;
 import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9632 */;
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9661 */;
-import getPartySize from "getPartySize" /* 11884 */;
-import getIsInParty from "getIsInParty" /* 11887 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11890 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13165 */;
+import getPartySize from "getPartySize" /* 11885 */;
+import getIsInParty from "getIsInParty" /* 11888 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11891 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13166 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -106,7 +106,7 @@ export default function getActivityJoinability(arg0) {
           tmp30 = importDefault;
           tmp31 = constants;
         }
-        tmp27Result = tmp27(11886);
+        tmp27Result = tmp27(11887);
       }
       return obj.CANNOT_JOIN;
     }

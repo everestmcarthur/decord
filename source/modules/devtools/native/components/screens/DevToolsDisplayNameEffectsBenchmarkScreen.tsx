@@ -1,19 +1,19 @@
-// Module ID: 15816
-// Function ID: 15817
+// Module ID: 15818
+// Function ID: 15819
 // Name: DevToolsDisplayNameEffectsBenchmarkScreen
-// Dependencies: [32, 19, 17, 1371, 1389, 21, 1390, 11034, 1114, 11030, 2786, 4636, 576, 5054, 4632, 5056, 11027, 11028, 504, 15817, 5768, 5686, 9559, 4872, 2]
+// Dependencies: [32, 19, 17, 1371, 1389, 21, 1390, 11035, 1114, 11031, 2786, 4636, 576, 5054, 4632, 5056, 11028, 11029, 504, 15819, 5768, 5686, 9559, 4872, 2]
 // Exports: default
 
-// Module 15816 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 15818 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import types from "types" /* 11028 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 11030 */;
-import _mod11034 from "module_11034" /* 11034 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import types from "types" /* 11029 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 11031 */;
+import _mod11035 from "module_11035" /* 11035 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -118,7 +118,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod11034.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod11035.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -245,7 +245,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const StringResult = String(arg1);
         const tmp = React6;
         const tmp2 = BenchmarkRow;
-        const splitGraphemesResult = _mod11034.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod11035.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

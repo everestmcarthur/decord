@@ -1,10 +1,10 @@
-// Module ID: 16185
-// Function ID: 16186
+// Module ID: 16187
+// Function ID: 16188
 // Name: HappeningNowCardUser
-// Dependencies: [19, 17, 4676, 1371, 15379, 1074, 21, 1178, 4636, 7265, 504, 1242, 8296, 1896, 4481, 9900, 15380, 8375, 2]
+// Dependencies: [19, 17, 4676, 1371, 15380, 1074, 21, 1176, 4636, 7265, 504, 1240, 8296, 1896, 4481, 9900, 15381, 8375, 2]
 
-// Module 16185 (HappeningNowCardUser)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 16187 (HappeningNowCardUser)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
@@ -12,10 +12,10 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(15379).HappeningNowCardTrackingType;
+let closure_7 = fn(15380).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1178).AvatarSizes.LARGE;
+const LARGE = fn(1176).AvatarSizes.LARGE;
 const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);

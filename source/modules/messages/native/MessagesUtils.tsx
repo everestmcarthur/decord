@@ -1,15 +1,15 @@
-// Module ID: 11385
-// Function ID: 11386
+// Module ID: 11386
+// Function ID: 11387
 // Name: messages/MessagesUtils
-// Dependencies: [32, 5, 9615, 7697, 1957, 2021, 5494, 4857, 4685, 4275, 4651, 1371, 8037, 1074, 4786, 4861, 1894, 7400, 7866, 5138, 4263, 4335, 1114, 11386, 11387, 1885, 7865, 4287, 4604, 4605, 5650, 7867, 7869, 4816, 7292, 4781, 11, 4334, 11403, 9, 12, 1150, 1609, 11408, 1242, 11404, 7559, 5528, 4567, 11409, 11437, 7624, 2]
+// Dependencies: [32, 5, 9615, 7697, 1957, 2021, 5494, 4857, 4685, 4275, 4651, 1371, 8037, 1074, 4786, 4861, 1894, 7400, 7866, 5138, 4263, 4335, 1114, 11387, 11388, 1885, 7865, 4287, 4604, 4605, 5650, 7867, 7869, 4816, 7292, 4781, 11, 4334, 11404, 9, 12, 1363, 1609, 11409, 1240, 11405, 7559, 5528, 4567, 11410, 11438, 7624, 2]
 // Exports: canAddNewReactions, clearRows, findMessageIndex, findMessageIndexInRows, getChatRef, getLongPressSelectedMedia, getMessageAuthorMemberUserIds, getVoiceChannelIdChangedAuthorIds, getVoiceStateChannelSummaryFromVoiceStates, handleAddOrRemoveReaction, handleCopyLinkForumPost, handleFirstLayout, handleLongPressSticker, handleMediaPlayFinishedAnalytics, handleMessageVisibilityChanged, handleTapNavBar, handleTapTableView, handleToggleFollowForumPost, handleVisibleMessagesChange, isLoadingAtTop, jumpToPresent, loadMoreAfter, loadMoreBefore, maybeRescrollToMessageId, recordTimings, scrollToBottom, scrollToMessageIdWithRescroll, scrollToNewMessages, scrollToRelativeOffset, scrollToTop, scrollToTopMessage, shouldJumpToOriginalPost, startOrCancelChannelLatestMessagesLoad, syncMessageDisplay, toObscuredMedia
 
-// Module 11385 (messages/MessagesUtils)
+// Module 11386 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import Server from "Server" /* 1894 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4263 */;
@@ -28,11 +28,11 @@ import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7866 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
 import tracking_Tracking from "tracking/Tracking" /* 7869 */;
-import computeScrollData from "computeScrollData" /* 11403 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11404 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11408 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11437 */;
+import computeScrollData from "computeScrollData" /* 11404 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11405 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11409 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11438 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
@@ -393,7 +393,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = tmp36(11386);
+    tmp36Result = tmp36(11387);
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();
@@ -401,7 +401,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     if (flag) {
       if (true === !reaction.me_burst) {
         if (!tmp12Result.isPremium(currentUser)) {
-          return tmp12(11387).handleOutOfSuperReactions();
+          return tmp12(11388).handleOutOfSuperReactions();
         }
         tmp12Result = tmp12(1885);
       }
@@ -438,7 +438,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     tmp12Result10 = tmp12(4287);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result16 = tmp12(11387);
+    const tmp12Result16 = tmp12(11388);
     const obj7 = { burst: flag };
     const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj7);
   }

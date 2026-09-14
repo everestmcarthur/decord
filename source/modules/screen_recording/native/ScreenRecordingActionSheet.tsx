@@ -1,10 +1,10 @@
-// Module ID: 16031
-// Function ID: 16032
+// Module ID: 16033
+// Function ID: 16034
 // Name: ScreenRecordingActionSheet
-// Dependencies: [19, 17, 16027, 21, 4636, 576, 4632, 5056, 4603, 5204, 5761, 4626, 7300, 2]
+// Dependencies: [19, 17, 16029, 21, 4636, 576, 4632, 5056, 4603, 5204, 5761, 4626, 7300, 2]
 // Exports: default
 
-// Module 16031 (ScreenRecordingActionSheet)
+// Module 16033 (ScreenRecordingActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16027).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16029).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);

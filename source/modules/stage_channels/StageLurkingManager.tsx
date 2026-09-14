@@ -1,9 +1,9 @@
-// Module ID: 13056
-// Function ID: 13057
+// Module ID: 13057
+// Function ID: 13058
 // Name: StageLurkingManager
 // Dependencies: [1957, 4458, 1898, 573, 7424, 1369, 2]
 
-// Module 13056 (StageLurkingManager)
+// Module 13057 (StageLurkingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;

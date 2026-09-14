@@ -1,10 +1,10 @@
-// Module ID: 13888
-// Function ID: 13889
+// Module ID: 13889
+// Function ID: 13890
 // Name: ProvisionalAccountNoCallAllowed
 // Dependencies: [19, 1074, 21, 4636, 4986, 6711, 1114, 2024, 4986, 2]
 // Exports: default
 
-// Module 13888 (ProvisionalAccountNoCallAllowed)
+// Module 13889 (ProvisionalAccountNoCallAllowed)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import AlertModal from "AlertModal" /* 4986 */;

@@ -1,14 +1,14 @@
 // Module ID: 7880
 // Function ID: 7881
 // Name: ApplicationCommandActionCreators
-// Dependencies: [502, 7881, 1074, 38, 7626, 573, 1272, 11, 1894, 2]
+// Dependencies: [502, 7881, 1074, 38, 7626, 573, 1270, 11, 1894, 2]
 // Exports: fetchCommand, fetchCommands, fetchCommandsForApplication, performAutocomplete, setActiveCommand, setAppLauncherActiveCommand, setPreferredCommandId, updateApplicationGuildCommandPermissions, updateChannelState, updateOptionStates, updateOptionValidationStates, updateRegistry
 
 // Module 7880 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import Server from "Server" /* 1894 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

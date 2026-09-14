@@ -1,17 +1,17 @@
-// Module ID: 17334
-// Function ID: 17335
+// Module ID: 17336
+// Function ID: 17337
 // Name: MediaPlaybackPip
-// Dependencies: [32, 19, 17, 1957, 4857, 4285, 1371, 1074, 17197, 21, 4636, 576, 4338, 504, 4789, 8384, 4632, 17335, 5068, 7559, 7350, 4373, 4637, 1114, 9031, 5709, 4589, 1242, 14624, 4261, 17332, 8394, 8392, 17336, 2]
+// Dependencies: [32, 19, 17, 1957, 4857, 4285, 1371, 1074, 17199, 21, 4636, 576, 4338, 504, 4789, 8384, 4632, 17337, 5068, 7559, 7350, 4373, 4637, 1114, 9031, 5709, 4589, 1240, 14625, 4261, 17334, 8394, 8392, 17338, 2]
 // Exports: default
 
-// Module 17334 (MediaPlaybackPip)
+// Module 17336 (MediaPlaybackPip)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import timing from "timing" /* 4637 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7350 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14624 */;
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14625 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -93,7 +93,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [tmp13(tmp2(17335).Marquee, obj7), ];
+          const items3 = [tmp13(tmp2(17337).Marquee, obj7), ];
           const obj8 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, locations: [0, 0.1, 0.2, 0.8, 0.9, 1], colors: null, style: null };
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj8.colors = items4;
@@ -189,7 +189,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17197).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17199).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4636);

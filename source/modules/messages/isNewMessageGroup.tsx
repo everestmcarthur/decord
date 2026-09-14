@@ -1,10 +1,10 @@
-// Module ID: 12081
-// Function ID: 12082
+// Module ID: 12082
+// Function ID: 12083
 // Name: isNewMessageGroup
 // Dependencies: [1074, 1090, 7373, 11, 4318, 2]
 // Exports: isNewGroupItem
 
-// Module 12081 (isNewMessageGroup)
+// Module 12082 (isNewMessageGroup)
 import DurationsDefault from "Durations" /* 1090 */;
 import DateUtils from "DateUtils" /* 4318 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7373 */;

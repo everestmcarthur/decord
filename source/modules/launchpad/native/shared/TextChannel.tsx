@@ -1,12 +1,12 @@
-// Module ID: 17095
-// Function ID: 17096
+// Module ID: 17097
+// Function ID: 17098
 // Name: shared/TextChannel
-// Dependencies: [19, 17, 5587, 2025, 1957, 1182, 4818, 21, 4636, 16770, 576, 16439, 7372, 504, 4789, 7989, 15402, 7432, 5063, 17096, 5088, 12188, 10237, 7983, 17098, 9676, 16327, 17092, 5204, 17099, 16769, 17093, 17094, 2]
+// Dependencies: [19, 17, 5587, 2025, 1957, 1180, 4818, 21, 4636, 16772, 576, 16441, 7372, 504, 4789, 7989, 15403, 7432, 5063, 17098, 5088, 12189, 10237, 7983, 17100, 9676, 16329, 17094, 5204, 17101, 16771, 17095, 17096, 2]
 
-// Module 17095 (shared/TextChannel)
+// Module 17097 (shared/TextChannel)
 import nativeDefault from "native" /* 576 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16327 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16770 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16329 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16772 */;
 import noop from "module_19" /* 19 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -14,7 +14,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;
 const View = fn(17).View;
-const getThemedRippleConfig = fn(1182).getThemedRippleConfig;
+const getThemedRippleConfig = fn(1180).getThemedRippleConfig;
 const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -47,11 +47,11 @@ export default noop.memo(function TextChannel(subtitle) {
   let arr4;
   dependencyMap = undefined;
   const isForumLikeChannelResult = channel.isForumLikeChannel();
-  const channelUnreadBadgeState = channel(16439).useChannelUnreadBadgeState(channel, flag);
+  const channelUnreadBadgeState = channel(16441).useChannelUnreadBadgeState(channel, flag);
   ({ newChannel, unread, resolvedUnreadSetting, mentionCount } = channelUnreadBadgeState);
   ({ optInEnabled, isMentionLowImportance } = channelUnreadBadgeState);
   const tmp5 = closure_12(flag, unread);
-  let obj = channel(16439);
+  let obj = channel(16441);
   const obj2 = channel(7372);
   const items = [ActiveJoinedThreadsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ActiveJoinedThreadsStore.getNewThreadCount(channel.guild_id, channel.id));
@@ -66,18 +66,18 @@ export default noop.memo(function TextChannel(subtitle) {
   if (unread) {
     tmp12 = !flag;
   }
-  const tmp8ResultResult = arr4(15402)(channel, { unread: tmp12 });
-  const tmp8Result = arr4(15402);
+  const tmp8ResultResult = arr4(15403)(channel, { unread: tmp12 });
+  const tmp8Result = arr4(15403);
   const isChannelSpoilerGated = channel(7432).useIsChannelSpoilerGated(channel);
   const tmp2Result8 = channel(7432);
   const fontScale = channel(5063).useFontScale();
   const tmp2Result9 = channel(5063);
   const items2 = [LocaleStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => locale.locale);
-  const tmp17 = arr4(17096)();
+  const tmp17 = arr4(17098)();
   const tmp2Result10 = channel(504);
   ({ isSubscriptionGated, needSubscriptionToAccess } = arr4(5088)(channel.id));
-  arr4 = tmp8(12188)(channel);
+  arr4 = tmp8(12189)(channel);
   if (null != tmp8ResultResult) {
     if (!isChannelSpoilerGated) {
       const obj5 = { channel, message: tmp8ResultResult, color: "text-muted", muted: flag, layout: tmp2(7983).ChannelListLayoutTypes.COMPACT };
@@ -107,21 +107,21 @@ export default noop.memo(function TextChannel(subtitle) {
     const obj7 = { color: tmp17 };
     obj6.androidRippleConfig = getThemedRippleConfig(obj7);
     const tmp26 = closure_11;
-    const tmp8Result4 = tmp8(17092);
-    const merged = Object.assign(tmp2(17099).useTextChannelPressEvents(channel, flag2));
-    const tmp2Result12 = tmp2(17099);
+    const tmp8Result4 = tmp8(17094);
+    const merged = Object.assign(tmp2(17101).useTextChannelPressEvents(channel, flag2));
+    const tmp2Result12 = tmp2(17101);
     const obj8 = { channel, unread, mentionCount };
-    const merged1 = Object.assign(tmp2(16769).getChannelAccessibilityProps(obj8));
+    const merged1 = Object.assign(tmp2(16771).getChannelAccessibilityProps(obj8));
     if (selected) {
       const obj9 = { style: tmp5.selectedBorder, pointerEvents: "none" };
       selected = closure_10(View, obj9);
     }
     const items5 = [selected, ];
     const obj10 = { channel, channelCategoryName: tmp9, subtitle: result, hasActiveThreads: obj2.useHasActiveThreads(channel).hasActiveThreads, unreadBadge: null, mentionBadge: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, muted: null, channelName: null, fontScale: null, isSubscriptionGated: null, needSubscriptionToAccess: null, showGuildBadgeIcon: null, end: null };
-    const tmp2Result13 = tmp2(16769);
+    const tmp2Result13 = tmp2(16771);
     const obj11 = { unread, resolvedUnreadSetting, muted: flag };
-    obj10.unreadBadge = closure_10(tmp8(17093), obj11);
-    const tmp8Result5 = tmp8(16769);
+    obj10.unreadBadge = closure_10(tmp8(17095), obj11);
+    const tmp8Result5 = tmp8(16771);
     if (newChannel) {
       newChannel = optInEnabled;
     }
@@ -147,7 +147,7 @@ export default noop.memo(function TextChannel(subtitle) {
     }
     obj12.newPostCount = tmp40;
     obj12.locale = stateFromStores2;
-    obj10.mentionBadge = tmp8(17094)(obj12);
+    obj10.mentionBadge = tmp8(17096)(obj12);
     obj10.unread = unread;
     obj10.resolvedUnreadSetting = resolvedUnreadSetting;
     obj10.mentionCount = mentionCount;
@@ -167,5 +167,5 @@ export default noop.memo(function TextChannel(subtitle) {
     return tmp8Result4(tmp26(tmp2(5204).PressableHighlight, obj6));
   }
   const tmp18 = arr4(5088)(channel.id);
-  result = channel(17098).renderChannelSubtitle({ subtitle: subtitle.subtitle, muted: flag, channelId: channel.id, guildId: channel.guild_id });
+  result = channel(17100).renderChannelSubtitle({ subtitle: subtitle.subtitle, muted: flag, channelId: channel.id, guildId: channel.guild_id });
 });

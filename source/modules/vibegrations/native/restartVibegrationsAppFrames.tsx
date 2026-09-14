@@ -1,10 +1,10 @@
-// Module ID: 13384
-// Function ID: 13385
+// Module ID: 13385
+// Function ID: 13386
 // Name: restartVibegrationsAppFrames
 // Dependencies: [9640, 9698, 9637, 2]
 // Exports: default
 
-// Module 13384 (restartVibegrationsAppFrames)
+// Module 13385 (restartVibegrationsAppFrames)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
 import FramesStore from "FramesStore" /* 9640 */;

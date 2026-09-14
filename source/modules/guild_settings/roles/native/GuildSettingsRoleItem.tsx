@@ -1,9 +1,9 @@
-// Module ID: 17736
-// Function ID: 17737
+// Module ID: 17737
+// Function ID: 17738
 // Name: GuildSettingsRoleItem
-// Dependencies: [5, 19, 17, 1074, 21, 4636, 576, 4632, 5085, 7289, 4981, 1114, 11702, 5601, 5075, 8202, 4594, 7308, 7306, 5068, 1369, 1091, 9882, 5686, 5170, 1178, 10430, 5176, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 4636, 576, 4632, 5085, 7289, 4981, 1114, 11703, 5601, 5075, 8202, 4594, 7308, 7306, 5068, 1369, 1091, 9882, 5686, 5170, 1176, 10431, 5176, 2]
 
-// Module 17736 (GuildSettingsRoleItem)
+// Module 17737 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 576 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -139,7 +139,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11702).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11703).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {

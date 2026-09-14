@@ -1,10 +1,10 @@
-// Module ID: 17427
-// Function ID: 17428
+// Module ID: 17429
+// Function ID: 17430
 // Name: ATTManager
-// Dependencies: [7221, 7834, 1232, 2]
+// Dependencies: [7221, 7834, 1230, 2]
 
-// Module 17427 (ATTManager)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+// Module 17429 (ATTManager)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import AdUserActionCreators from "AdUserActionCreators" /* 7834 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 11717
-// Function ID: 11718
+// Module ID: 11718
+// Function ID: 11719
 // Name: GuildChannelUserList
-// Dependencies: [32, 19, 17, 7382, 1957, 2021, 1979, 2011, 1371, 1074, 21, 9965, 5600, 550, 7415, 7265, 504, 7152, 4280, 11718, 9868, 4788, 4481, 1114, 8296, 576, 7153, 10994, 2]
+// Dependencies: [32, 19, 17, 7382, 1957, 2021, 1979, 2011, 1371, 1074, 21, 9965, 5600, 550, 7415, 7265, 504, 7152, 4280, 11719, 9868, 4788, 4481, 1114, 8296, 576, 7153, 10995, 2]
 
-// Module 11717 (GuildChannelUserList)
+// Module 11718 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1114 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;

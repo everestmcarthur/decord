@@ -1,10 +1,29 @@
 // Module ID: 13047
 // Function ID: 13048
-// Dependencies: []
-// Exports: escapeStringForRegex
+// Dependencies: [12928]
+// Exports: vercelWaitUntil
 
 // Module 13047
+import _mod12928 from "module_12928" /* 12928 */;
 
-export const escapeStringForRegex = function escapeStringForRegex(str) {
-  return str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&").replace(/-/g, "\\x2d");
+require = arg1;
+const dependencyMap = arg6;
+
+export const vercelWaitUntil = function vercelWaitUntil(arg0) {
+  const obj = _mod12928.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
+  if (obj) {
+    if (obj.get) {
+      if (obj.get()) {
+        let obj1 = obj.get();
+      }
+      let waitUntil = obj1;
+      if (obj1) {
+        waitUntil = obj1.waitUntil;
+      }
+      if (waitUntil) {
+        obj1.waitUntil(arg0);
+      }
+    }
+  }
+  obj1 = {};
 };

@@ -1,14 +1,14 @@
 // Module ID: 10143
 // Function ID: 10144
 // Name: FocusedExpandedControls
-// Dependencies: [19, 17, 4658, 502, 4661, 21, 4636, 576, 1178, 10144, 10145, 8716, 504, 10146, 1114, 10115, 1150, 9211, 9243, 10081, 10147, 10132, 10148, 10149, 2]
+// Dependencies: [19, 17, 4658, 502, 4661, 21, 4636, 576, 1176, 10144, 10145, 8716, 504, 10146, 1114, 10115, 1363, 9211, 9243, 10081, 10147, 10132, 10148, 10149, 2]
 // Exports: AudioRouteButton, DeafenButton, ScreenshareButton, StreamVolumeItem
 
 // Module 10143 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Form from "Form" /* 8716 */;
 import CallsUtils from "CallsUtils" /* 9211 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9243 */;

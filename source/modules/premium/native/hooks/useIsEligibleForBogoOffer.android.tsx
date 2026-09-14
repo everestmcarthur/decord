@@ -1,13 +1,13 @@
-// Module ID: 10835
-// Function ID: 10836
+// Module ID: 10836
+// Function ID: 10837
 // Name: useIsEligibleForBogoOffer
-// Dependencies: [19, 4300, 10793, 1373, 504, 7550, 10834, 7520, 7543, 2]
+// Dependencies: [19, 4300, 10794, 1373, 504, 7550, 10835, 7520, 7543, 2]
 // Exports: useIsEligibleForBogoOffer
 
-// Module 10835 (useIsEligibleForBogoOffer)
+// Module 10836 (useIsEligibleForBogoOffer)
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 const require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
@@ -23,8 +23,8 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   const obj2 = forceUpdate(504);
   const premiumTrialOffer = forceUpdate(7550).usePremiumTrialOffer();
   const obj4 = forceUpdate(7550);
-  const premiumDiscountOffer = forceUpdate(10834).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(10834);
+  const premiumDiscountOffer = forceUpdate(10835).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(10835);
   const isPaymentsBlocked = forceUpdate(7520).useIsPaymentsBlocked();
   const obj6 = forceUpdate(7520);
   forceUpdate = forceUpdate(7543).useForceUpdate();

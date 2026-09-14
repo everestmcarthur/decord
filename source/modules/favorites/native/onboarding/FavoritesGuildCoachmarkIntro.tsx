@@ -1,18 +1,18 @@
-// Module ID: 16409
-// Function ID: 16410
+// Module ID: 16411
+// Function ID: 16412
 // Name: FavoritesGuildCoachmarkIntro
-// Dependencies: [32, 19, 16380, 1074, 1954, 21, 4373, 10361, 16404, 1114, 3236, 16410, 11261, 2]
+// Dependencies: [32, 19, 16382, 1074, 1954, 21, 4373, 10362, 16406, 1114, 3236, 16412, 11262, 2]
 // Exports: default
 
-// Module 16409 (FavoritesGuildCoachmarkIntro)
+// Module 16411 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10361 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16404 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10362 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16380 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16382 */;
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;

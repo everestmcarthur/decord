@@ -1,13 +1,13 @@
-// Module ID: 12794
-// Function ID: 12795
+// Module ID: 12795
+// Function ID: 12796
 // Name: GuildNSFW
-// Dependencies: [109, 19, 1979, 21, 504, 4847, 5601, 8529, 8531, 1114, 12795, 2]
+// Dependencies: [109, 19, 1979, 21, 504, 4847, 5601, 8529, 8531, 1114, 12796, 2]
 // Exports: default
 
-// Module 12794 (GuildNSFW)
+// Module 12795 (GuildNSFW)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
-import GatedContentDefault from "GatedContent" /* 12795 */;
+import GatedContentDefault from "GatedContent" /* 12796 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

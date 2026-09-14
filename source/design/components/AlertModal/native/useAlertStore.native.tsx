@@ -1,7 +1,7 @@
 // Module ID: 4982
 // Function ID: 4983
 // Name: useAlertStore
-// Dependencies: [32, 560, 1249, 4983, 4985, 2]
+// Dependencies: [32, 560, 1247, 4983, 4985, 2]
 // Exports: dismissAlert, dismissAlerts, openAlert
 
 // Module 4982 (useAlertStore)
@@ -28,7 +28,7 @@ export const dismissAlerts = function dismissAlerts() {
     acc[num].push(dismissable);
     return acc;
   }, items);
-  first(1249).batchUpdates(() => {
+  first(1247).batchUpdates(() => {
     obj3.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;

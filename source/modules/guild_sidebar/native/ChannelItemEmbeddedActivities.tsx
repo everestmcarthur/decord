@@ -1,10 +1,10 @@
-// Module ID: 16327
-// Function ID: 16328
+// Module ID: 16329
+// Function ID: 16330
 // Name: ChannelItemEmbeddedActivities
 // Dependencies: [19, 17, 21, 4636, 576, 7275, 4632, 2]
 // Exports: default
 
-// Module 16327 (ChannelItemEmbeddedActivities)
+// Module 16329 (ChannelItemEmbeddedActivities)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GameIcon from "GameIcon" /* 7275 */;

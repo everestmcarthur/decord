@@ -1,10 +1,10 @@
-// Module ID: 11282
-// Function ID: 11283
+// Module ID: 11283
+// Function ID: 11284
 // Name: CustomStatusPreview
-// Dependencies: [19, 17, 7311, 21, 4636, 576, 8303, 8358, 8343, 8357, 8354, 4502, 4603, 11283, 1896, 4347, 8362, 8372, 11245, 11246, 11286, 8928, 2]
+// Dependencies: [19, 17, 7311, 21, 4636, 576, 8303, 8358, 8343, 8357, 8354, 4502, 4603, 11284, 1896, 4347, 8362, 8372, 11246, 11247, 11287, 8928, 2]
 // Exports: default
 
-// Module 11282 (CustomStatusPreview)
+// Module 11283 (CustomStatusPreview)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
@@ -55,7 +55,7 @@ export default function CustomStatusPreview(user) {
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11283, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11284, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
   const obj3 = { style: null, children: null };

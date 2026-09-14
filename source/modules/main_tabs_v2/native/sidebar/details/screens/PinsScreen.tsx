@@ -1,11 +1,11 @@
-// Module ID: 16975
-// Function ID: 16976
+// Module ID: 16977
+// Function ID: 16978
 // Name: PinsScreen
-// Dependencies: [19, 17, 1957, 7982, 21, 4636, 576, 1486, 504, 12428, 16828, 2]
+// Dependencies: [19, 17, 1957, 7982, 21, 4636, 576, 1486, 504, 12429, 16830, 2]
 
-// Module 16975 (PinsScreen)
+// Module 16977 (PinsScreen)
 import nativeDefault from "native" /* 576 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 16828 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 16830 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -33,7 +33,7 @@ export default noop.memo(() => {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(12428).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(12429).useChannelDetailsSearchContext(channelId, stateFromStores);
   const obj4 = { style: closure_7().container, children: jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS }) };
   return <View style={closure_7().container}>{jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS })}</View>;
 });

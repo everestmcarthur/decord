@@ -1,7 +1,7 @@
 // Module ID: 8044
 // Function ID: 8045
 // Name: createMessageContent
-// Dependencies: [17, 4628, 4864, 4456, 5540, 8042, 8045, 4276, 8046, 7697, 4277, 7409, 1183, 502, 1957, 2021, 1979, 4285, 7940, 1371, 4629, 8037, 1074, 8048, 4789, 8049, 11, 7991, 7432, 1114, 8050, 8051, 8052, 4975, 1384, 7863, 8057, 5085, 8058, 8060, 7373, 8062, 8193, 8194, 8222, 7395, 7702, 1935, 8223, 8227, 8138, 8271, 4869, 1399, 1396, 8274, 1178, 11037, 8124, 13307, 1369, 13308, 4263, 5488, 13309, 13310, 4318, 11846, 13311, 8282, 7370, 576, 13312, 8065, 13314, 13315, 8190, 13318, 13319, 13336, 13355, 13357, 13371, 8069, 8070, 13372, 13375, 13376, 13377, 8071, 8067, 2]
+// Dependencies: [17, 4628, 4864, 4456, 5540, 8042, 8045, 4276, 8046, 7697, 4277, 7409, 1181, 502, 1957, 2021, 1979, 4285, 7940, 1371, 4629, 8037, 1074, 8048, 4789, 8049, 11, 7991, 7432, 1114, 8050, 8051, 8052, 4975, 1384, 7863, 8057, 5085, 8058, 8060, 7373, 8062, 8193, 8194, 8222, 7395, 7702, 1935, 8223, 8227, 8138, 8271, 4869, 1399, 1396, 8274, 1176, 11038, 8124, 13308, 1369, 13309, 4263, 5488, 13310, 13311, 4318, 11847, 13312, 8282, 7370, 576, 13313, 8065, 13315, 13316, 8190, 13319, 13320, 13337, 13356, 13358, 13372, 8069, 8070, 13373, 13376, 13377, 13378, 8071, 8067, 2]
 
 // Module 8044 (createMessageContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
@@ -24,7 +24,7 @@ import LurkingStore from "LurkingStore" /* 4276 */;
 import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8046 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7409 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -1103,7 +1103,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result69 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "Content Location Name", hasBailedAst: true };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "none", hasBailedAst: "URL" };
     const tmp13Result63 = tmp13(tmp3[42]);
   }
 }

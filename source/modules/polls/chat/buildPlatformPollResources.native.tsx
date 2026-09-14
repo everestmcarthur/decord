@@ -1,10 +1,10 @@
-// Module ID: 11847
-// Function ID: 11848
+// Module ID: 11848
+// Function ID: 11849
 // Name: buildPlatformPollResources
-// Dependencies: [12, 11848, 4636, 576, 8050, 7247, 5699, 1399, 2]
+// Dependencies: [12, 11849, 4636, 576, 8050, 7247, 5699, 1399, 2]
 // Exports: buildPlatformPollResources, getAvatarUrl
 
-// Module 11847 (buildPlatformPollResources)
+// Module 11848 (buildPlatformPollResources)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import _modDef5699 from "module_5699" /* 5699 */;
@@ -13,7 +13,7 @@ import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8050 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_3 = apply.mapValues(fn(11848).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(11849).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);

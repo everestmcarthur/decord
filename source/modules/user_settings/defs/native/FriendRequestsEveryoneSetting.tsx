@@ -1,19 +1,19 @@
-// Module ID: 15065
-// Function ID: 15066
+// Module ID: 15066
+// Function ID: 15067
 // Name: FriendRequestsEveryoneSetting
-// Dependencies: [19, 8079, 1074, 1935, 7098, 14913, 11601, 1114, 2]
+// Dependencies: [19, 8079, 1074, 1935, 7098, 14914, 11602, 1114, 2]
 
-// Module 15065 (FriendRequestsEveryoneSetting)
+// Module 15066 (FriendRequestsEveryoneSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

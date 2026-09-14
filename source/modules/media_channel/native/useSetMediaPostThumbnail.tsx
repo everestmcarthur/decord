@@ -1,10 +1,10 @@
-// Module ID: 11369
-// Function ID: 11370
+// Module ID: 11370
+// Function ID: 11371
 // Name: useSetMediaPostThumbnail
 // Dependencies: [19, 4977, 4976, 563, 5209, 9436, 4603, 2]
 // Exports: default
 
-// Module 11369 (useSetMediaPostThumbnail)
+// Module 11370 (useSetMediaPostThumbnail)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
 import noop from "module_19" /* 19 */;

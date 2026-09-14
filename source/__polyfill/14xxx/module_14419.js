@@ -1,39 +1,22 @@
 // Module ID: 14419
 // Function ID: 14420
-// Dependencies: [14411, 14410, 14418]
+// Dependencies: [14394]
 
 // Module 14419
-import _mod14411 from "module_14411" /* 14411 */;
+import _mod14394 from "module_14394" /* 14394 */;
 
+if (_mod14394) {
+  let fn = call.bind(call);
+} else {
+  fn = () => {
+    const apply = call.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(tmp);
+    } else {
+      applyArgumentsResult = apply(tmp, arguments);
+    }
+    return applyArgumentsResult;
+  };
+}
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod14411(toString)) {
-      const tmp4 = tmp(14418)(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
-      }
-      tmpResult = tmp(14410);
-    }
-  }
-  const valueOf = arg0.valueOf;
-  if (_mod14411(valueOf)) {
-    const tmp8 = tmp5(14418)(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = tmp5(14410);
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (tmp5(14411)(toString2)) {
-      const tmp10 = tmp5(14418)(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = tmp5(14410);
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
-};
+export default fn;

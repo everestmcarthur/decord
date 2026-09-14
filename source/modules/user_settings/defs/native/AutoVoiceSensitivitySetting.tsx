@@ -1,16 +1,16 @@
-// Module ID: 15332
-// Function ID: 15333
+// Module ID: 15333
+// Function ID: 15334
 // Name: AutoVoiceSensitivitySetting
-// Dependencies: [1908, 8079, 504, 9218, 11601, 1114, 2]
+// Dependencies: [1908, 8079, 504, 9218, 11602, 1114, 2]
 
-// Module 15332 (AutoVoiceSensitivitySetting)
+// Module 15333 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

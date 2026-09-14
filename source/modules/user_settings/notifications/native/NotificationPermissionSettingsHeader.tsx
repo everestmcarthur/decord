@@ -1,19 +1,19 @@
-// Module ID: 15569
-// Function ID: 15570
+// Module ID: 15570
+// Function ID: 15571
 // Name: NotificationPermissionSettingsHeader
-// Dependencies: [19, 17, 1074, 12539, 21, 4636, 576, 12540, 1242, 5688, 9188, 4632, 1114, 5056, 2]
+// Dependencies: [19, 17, 1074, 12540, 21, 4636, 576, 12541, 1240, 5688, 9188, 4632, 1114, 5056, 2]
 // Exports: default
 
-// Module 15569 (NotificationPermissionSettingsHeader)
+// Module 15570 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(12539);
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionLocation: closure_7, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: c10 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/user_settings/notifications/n
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(12540).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(12541).useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {

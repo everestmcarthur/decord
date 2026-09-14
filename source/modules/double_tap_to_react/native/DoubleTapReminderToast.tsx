@@ -1,15 +1,15 @@
-// Module ID: 11257
-// Function ID: 11258
+// Module ID: 11258
+// Function ID: 11259
 // Name: DoubleTapReminderToast
-// Dependencies: [19, 1954, 21, 4636, 576, 4632, 1114, 4457, 1943, 1935, 8072, 4335, 11258, 2]
+// Dependencies: [19, 1954, 21, 4636, 576, 4632, 1114, 4457, 1943, 1935, 8072, 4335, 11259, 2]
 // Exports: maybeShowDoubleTapReminderToast
 
-// Module 11257 (DoubleTapReminderToast)
+// Module 11258 (DoubleTapReminderToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import DoubleTapEmojiUpdatedToast from "DoubleTapEmojiUpdatedToast" /* 11258 */;
+import DoubleTapEmojiUpdatedToast from "DoubleTapEmojiUpdatedToast" /* 11259 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,10 +1,10 @@
-// Module ID: 12390
-// Function ID: 12391
+// Module ID: 12391
+// Function ID: 12392
 // Name: ChatInputScrimGradient
 // Dependencies: [19, 17, 21, 4455, 4338, 576, 1091, 5068, 2]
 // Exports: ChatInputScrimGradient, useChatInputFloatingOverlayStyle
 
-// Module 12390 (ChatInputScrimGradient)
+// Module 12391 (ChatInputScrimGradient)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import useToken from "useToken" /* 4338 */;

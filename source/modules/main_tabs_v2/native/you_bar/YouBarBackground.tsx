@@ -1,9 +1,9 @@
-// Module ID: 16478
-// Function ID: 16479
+// Module ID: 16480
+// Function ID: 16481
 // Name: YouBarBackground
-// Dependencies: [19, 17, 15178, 21, 4636, 576, 5745, 5068, 672, 4338, 15264, 4373, 5055, 2]
+// Dependencies: [19, 17, 15179, 21, 4636, 576, 5745, 5068, 672, 4338, 15265, 4373, 5055, 2]
 
-// Module 16478 (YouBarBackground)
+// Module 16480 (YouBarBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import useToken from "useToken" /* 4338 */;
@@ -11,7 +11,7 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import _modDef5745 from "module_5745" /* 5745 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15264 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15265 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -76,7 +76,7 @@ function YouBarAnimatedBackground(arg0) {
   return closure_6(ReanimatedRexportDefault.View, obj4);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(15178);
+const YouBarConstants = fn(15179);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);

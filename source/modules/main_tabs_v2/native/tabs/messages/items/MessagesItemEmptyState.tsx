@@ -1,15 +1,15 @@
-// Module ID: 16190
-// Function ID: 16191
+// Module ID: 16192
+// Function ID: 16193
 // Name: MessagesItemEmptyState
-// Dependencies: [19, 17, 21, 4636, 576, 4495, 16149, 4632, 1114, 5056, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4495, 16151, 4632, 1114, 5056, 2]
 
-// Module 16190 (MessagesItemEmptyState)
+// Module 16192 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import _modDef16149 from "module_16149" /* 16149 */;
+import _modDef16151 from "module_16151" /* 16151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj3.source = _modDef16149;
+  obj3.source = _modDef16151;
   obj3.style = tmp.image;
   obj2.children = timestampProducer(React4, obj3);
   const items = [timestampProducer(hasOwnProperty, obj2), , , ];

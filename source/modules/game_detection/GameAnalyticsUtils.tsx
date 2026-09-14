@@ -1,11 +1,11 @@
 // Module ID: 4765
 // Function ID: 4766
 // Name: GameAnalyticsUtils
-// Dependencies: [1931, 4766, 1150, 2]
+// Dependencies: [1931, 4766, 1363, 2]
 // Exports: getGameAnalyticsMetadata, getRunningGameAnalytics, isVerifiedGameExecutable, removeExecutablePathPrefix
 
 // Module 4765 (GameAnalyticsUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4766 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
 
@@ -25,7 +25,7 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "Array", gameId: "accessible", exe: "guild_id", distributor: "prototype", sku: "Array", gameMetadata: "isArray", rawExePath: "a" };
+    return { gameName: "call", gameId: "methodobject", exe: "count", distributor: "r", sku: "accessible", gameMetadata: "to", rawExePath: "variant" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     const id = streamApplication.id;

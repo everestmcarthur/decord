@@ -1,10 +1,10 @@
-// Module ID: 17025
-// Function ID: 17026
+// Module ID: 17027
+// Function ID: 17028
 // Name: BurstReactionAnimationContainer
-// Dependencies: [32, 19, 17, 1954, 21, 4636, 576, 7886, 4604, 4605, 573, 4373, 4637, 10753, 1943, 1178, 7928, 4632, 1114, 4347, 2]
+// Dependencies: [32, 19, 17, 1954, 21, 4636, 576, 7886, 4604, 4605, 573, 4373, 4637, 10754, 1943, 1176, 7928, 4632, 1114, 4347, 2]
 // Exports: default
 
-// Module 17025 (BurstReactionAnimationContainer)
+// Module 17027 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
@@ -127,10 +127,10 @@ function BurstReactionAnimationContainerInner() {
       obj3.children = items1;
       obj2.children = closure_1_10(closure_5, obj3);
       obj.children = closure_1_8(first(4373).View, obj2);
-      return closure_1_8(closure_0(1178).OverlayView, obj);
+      return closure_1_8(closure_0(1176).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10753), obj3);
-    let tmp11 = animationData(10753);
+    tmp8 = closure_8(animationData(10754), obj3);
+    let tmp11 = animationData(10754);
   }
   return tmp8;
 }

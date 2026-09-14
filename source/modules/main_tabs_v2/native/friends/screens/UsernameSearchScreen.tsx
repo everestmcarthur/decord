@@ -1,10 +1,10 @@
-// Module ID: 16885
-// Function ID: 16886
+// Module ID: 16887
+// Function ID: 16888
 // Name: UsernameSearchScreen
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1242, 7084, 5043, 7975, 1150, 5659, 5206, 13943, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1240, 7084, 5043, 7975, 1363, 5659, 5206, 13944, 1114, 2]
 // Exports: default
 
-// Module 16885 (UsernameSearchScreen)
+// Module 16887 (UsernameSearchScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ export default function UsernameSearchScreen(navigation) {
   let ref;
   const tmp = closure_10();
   const effect = noop.useEffect(() => {
-    ref(1242).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
+    ref(1240).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
   const insets = ref(7084)().insets;
   ref = noop.useRef(null);
@@ -69,7 +69,7 @@ export default function UsernameSearchScreen(navigation) {
   const obj4 = { style: null, children: null };
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
-  obj2 = navigation(1150);
+  obj2 = navigation(1363);
   const items2 = [closure_8(ref(5206), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
@@ -82,7 +82,7 @@ export default function UsernameSearchScreen(navigation) {
   obj7.headerText = intl.string(navigation(1114).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(13943), obj7);
+  obj5.children = closure_8(ref(13944), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

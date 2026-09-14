@@ -1,17 +1,17 @@
-// Module ID: 16125
-// Function ID: 16126
+// Module ID: 16127
+// Function ID: 16128
 // Name: MessagesItemChannel
-// Dependencies: [32, 19, 1957, 21, 10247, 576, 16126, 504, 16135, 9003, 16136, 2]
+// Dependencies: [32, 19, 1957, 21, 10247, 576, 16128, 504, 16137, 9003, 16138, 2]
 // Exports: getMessagesItemChannelSizes
 
-// Module 16125 (MessagesItemChannel)
+// Module 16127 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _mod9003 from "module_9003" /* 9003 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 16126 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16135 */;
-import _mod16136 from "module_16136" /* 16136 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 16128 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16137 */;
+import _mod16138 from "module_16138" /* 16138 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -78,7 +78,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod16136.useRecyclingState(false);
+  [tmp2, tmp3] = _mod16138.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

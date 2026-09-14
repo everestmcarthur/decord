@@ -1,14 +1,14 @@
-// Module ID: 12134
-// Function ID: 12135
+// Module ID: 12135
+// Function ID: 12136
 // Name: ForumPostUsername
-// Dependencies: [19, 17, 4628, 12130, 21, 4636, 7989, 1967, 11656, 12135, 504, 8065, 1178, 4632, 2]
+// Dependencies: [19, 17, 4628, 12131, 21, 4636, 7989, 1967, 11657, 12136, 504, 8065, 1176, 4632, 2]
 // Exports: ForumPostAuthor, ForumPostMessageAuthor
 
-// Module 12134 (ForumPostUsername)
+// Module 12135 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import ForumLayout from "ForumLayout" /* 1967 */;
 import ForumHooks from "ForumHooks" /* 7989 */;
-import useChatWidthDefault from "useChatWidth" /* 11656 */;
+import useChatWidthDefault from "useChatWidth" /* 11657 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -21,7 +21,7 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === ForumLayout.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(12135).GRID_HORIZONTAL_PADDING - num;
+  const diff = useChatWidthDefault() - tmp2(12136).GRID_HORIZONTAL_PADDING - num;
   const tmp4 = useChatWidthDefault();
   const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
@@ -46,7 +46,7 @@ function ForumPostUsername(arg0) {
         const items2 = [tmp.roleDotContainer, roleDotStyle];
         obj4.style = items2;
         const obj5 = { size: "small", color: authorColor, colors: authorColors };
-        obj4.children = timestampProducer(tmp2(1178).RoleDot, obj5);
+        obj4.children = timestampProducer(tmp2(1176).RoleDot, obj5);
         tmp23 = timestampProducer(tmp20, obj4);
       }
       const items3 = [tmp23, ];
@@ -67,7 +67,7 @@ function ForumPostUsername(arg0) {
   }
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12130).useForumChannelStore;
+const useForumChannelStore = fn(12131).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);

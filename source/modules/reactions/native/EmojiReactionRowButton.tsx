@@ -1,10 +1,10 @@
-// Module ID: 11861
-// Function ID: 11862
+// Module ID: 11862
+// Function ID: 11863
 // Name: EmojiReactionRowButton
 // Dependencies: [19, 17, 1374, 21, 4636, 576, 4488, 5204, 1114, 8883, 7233, 1396, 4292, 2]
 // Exports: EmojiPickerRowButton, EmojiReactionRowButton, getEmojiKey
 
-// Module 11861 (EmojiReactionRowButton)
+// Module 11862 (EmojiReactionRowButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import EmojiTypes from "EmojiTypes" /* 4292 */;

@@ -1,10 +1,10 @@
-// Module ID: 10865
-// Function ID: 10866
+// Module ID: 10866
+// Function ID: 10867
 // Name: useMaybeFetchCollectiblesCategoriesShared
 // Dependencies: [32, 19, 4552, 7645, 1076, 504, 7691, 7644, 2]
 // Exports: useMaybeFetchCollectiblesCategoriesShared
 
-// Module 10865 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 10866 (useMaybeFetchCollectiblesCategoriesShared)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7691 */;
 import _slicedToArray from "module_32" /* 32 */;

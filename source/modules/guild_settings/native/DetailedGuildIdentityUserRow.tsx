@@ -1,12 +1,12 @@
-// Module ID: 11073
-// Function ID: 11074
+// Module ID: 11074
+// Function ID: 11075
 // Name: DetailedGuildIdentityUserRow
-// Dependencies: [19, 17, 1371, 21, 4636, 576, 4788, 4481, 9933, 1178, 504, 8716, 5686, 2]
+// Dependencies: [19, 17, 1371, 21, 4636, 576, 4788, 4481, 9933, 1176, 504, 8716, 5686, 2]
 
-// Module 11073 (DetailedGuildIdentityUserRow)
+// Module 11074 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import DiscordTagDefault from "DiscordTag" /* 9933 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ const memoResult = noop.memo((height) => {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
       tmp8Result = tmp8(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];
@@ -71,9 +71,9 @@ export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
     const obj2 = { accessibilityLabel, disabled, leading: null, label: null, onPress: null, subLabel: null, trailing: null, accessibilityRole: null, accessibilityState: null };
     if (leading == null) {
       disabled = { source: stateFromStores.getAvatarSource(guildId), size: null };
-      SMALL = tmp(1178).AvatarSizes.SMALL;
+      SMALL = tmp(1176).AvatarSizes.SMALL;
       disabled.size = SMALL;
-      leading = tmp2(tmp(1178).Avatar, disabled);
+      leading = tmp2(tmp(1176).Avatar, disabled);
     }
     obj2.leading = leading;
     leading = closure_8;
@@ -89,8 +89,8 @@ export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
     const obj4 = { accessibilityLabel, arrow: arrow.arrow, disabled, end, icon: null, label: null, onPress: null, start: null, subLabel: null, trailing: null, accessibilityRole: null, accessibilityState: null };
     let tmp2Result2 = leading;
     if (leading == null) {
-      const obj5 = { source: stateFromStores.getAvatarSource(guildId), size: tmp(1178).AvatarSizes.SMALL };
-      tmp2Result2 = tmp2(tmp(1178).Avatar, obj5);
+      const obj5 = { source: stateFromStores.getAvatarSource(guildId), size: tmp(1176).AvatarSizes.SMALL };
+      tmp2Result2 = tmp2(tmp(1176).Avatar, obj5);
     }
     obj4.icon = tmp2Result2;
     const obj6 = { contentHeight, user: stateFromStores, guildId };

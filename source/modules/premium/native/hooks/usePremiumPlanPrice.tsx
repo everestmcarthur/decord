@@ -1,7 +1,7 @@
 // Module ID: 9494
 // Function ID: 9495
 // Name: usePremiumPlanPrice
-// Dependencies: [19, 4299, 4300, 7340, 1085, 504, 9495, 9496, 9499, 7343, 1150, 5679, 559, 7360, 7337, 2]
+// Dependencies: [19, 4299, 4300, 7340, 1085, 504, 9495, 9496, 9499, 7343, 1363, 5679, 559, 7360, 7337, 2]
 // Exports: default
 
 // Module 9494 (usePremiumPlanPrice)

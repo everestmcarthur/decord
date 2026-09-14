@@ -1,12 +1,12 @@
 // Module ID: 10254
 // Function ID: 10255
 // Name: HighlightText
-// Dependencies: [19, 1074, 21, 4636, 4486, 576, 1178, 2]
+// Dependencies: [19, 1074, 21, 4636, 4486, 576, 1176, 2]
 // Exports: default
 
 // Module 10254 (HighlightText)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

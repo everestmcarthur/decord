@@ -1,10 +1,10 @@
-// Module ID: 17887
-// Function ID: 17888
+// Module ID: 17888
+// Function ID: 17889
 // Name: components/StepsIndicator
 // Dependencies: [19, 17, 4628, 21, 4636, 576, 4373, 4637, 4632, 504, 2]
 // Exports: default
 
-// Module 17887 (components/StepsIndicator)
+// Module 17888 (components/StepsIndicator)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;

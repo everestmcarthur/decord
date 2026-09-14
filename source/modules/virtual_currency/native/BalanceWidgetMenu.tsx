@@ -1,13 +1,13 @@
-// Module ID: 15784
-// Function ID: 15785
+// Module ID: 15786
+// Function ID: 15787
 // Name: BalanceWidgetMenu
-// Dependencies: [19, 17, 1074, 1076, 1954, 5525, 21, 5204, 4632, 1114, 10753, 1943, 1242, 11896, 5528, 15785, 8975, 4603, 11235, 1896, 7285, 7644, 11234, 4457, 5072, 4636, 576, 2]
+// Dependencies: [19, 17, 1074, 1076, 1954, 5525, 21, 5204, 4632, 1114, 10754, 1943, 1240, 11897, 5528, 15787, 8975, 4603, 11236, 1896, 7285, 7644, 11235, 4457, 5072, 4636, 576, 2]
 // Exports: default
 
-// Module 15784 (BalanceWidgetMenu)
+// Module 15786 (BalanceWidgetMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,9 +15,9 @@ import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import _mod8975 from "module_8975" /* 8975 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10753 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11234 */;
-import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15785 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10754 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11235 */;
+import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15787 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ class OrbsOnboardingMenuDismissibleContent {
         function handleOnboardingPress() {
           markAsDismissed(constants2.TAKE_ACTION);
           AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
-          const obj2 = style(11896);
+          const obj2 = style(11897);
           obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: style(5528).QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         }
         let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
@@ -96,7 +96,7 @@ function BalanceWidgetMenu(style) {
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance });
       const obj2 = { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      const obj4 = str(11896);
+      const obj4 = str(11897);
       obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: str(5528).QuestContent.ORBS_BALANCE_MENU });
     };
     obj3.secondaryButtonConfig = obj5;

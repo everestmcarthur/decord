@@ -1,13 +1,13 @@
-// Module ID: 16886
-// Function ID: 16887
+// Module ID: 16888
+// Function ID: 16889
 // Name: SuggestedFriendsScreen
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 7265, 7285, 1242, 16141, 8296, 16883, 5206, 10994, 11126, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 7265, 7285, 1240, 16143, 8296, 16885, 5206, 10995, 11127, 1114, 2]
 // Exports: default
 
-// Module 16886 (SuggestedFriendsScreen)
+// Module 16888 (SuggestedFriendsScreen)
 import nativeDefault from "native" /* 576 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16883 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 16885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// Module ID: 15408
-// Function ID: 15409
+// Module ID: 15409
+// Function ID: 15410
 // Name: GameMentionsAutocompleteSetting
-// Dependencies: [8079, 11601, 1114, 1935, 2]
+// Dependencies: [8079, 11602, 1114, 1935, 2]
 
-// Module 15408 (GameMentionsAutocompleteSetting)
+// Module 15409 (GameMentionsAutocompleteSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

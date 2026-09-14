@@ -1,10 +1,10 @@
-// Module ID: 11447
-// Function ID: 11448
+// Module ID: 11448
+// Function ID: 11449
 // Name: useReactionPermissions
-// Dependencies: [32, 4276, 2021, 5494, 4275, 1074, 504, 4281, 8081, 7372, 11448, 2]
+// Dependencies: [32, 4276, 2021, 5494, 4275, 1074, 504, 4281, 8081, 7372, 11449, 2]
 // Exports: default
 
-// Module 11447 (useReactionPermissions)
+// Module 11448 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;

@@ -1,16 +1,16 @@
-// Module ID: 10762
-// Function ID: 10763
+// Module ID: 10763
+// Function ID: 10764
 // Name: UploadPreviewActionSheet
-// Dependencies: [32, 19, 17, 4977, 7254, 21, 4636, 576, 38, 5209, 1477, 1611, 5073, 4603, 5231, 10763, 4335, 6711, 5219, 11368, 11369, 7253, 6728, 5054, 4632, 1150, 8425, 10779, 5768, 5686, 11370, 11372, 1114, 5685, 11374, 9436, 5168, 11376, 5056, 4594, 2]
+// Dependencies: [32, 19, 17, 4977, 7254, 21, 4636, 576, 38, 5209, 1477, 1611, 5073, 4603, 5231, 10764, 4335, 6711, 5219, 11369, 11370, 7253, 6728, 5054, 4632, 1363, 8425, 10780, 5768, 5686, 11371, 11373, 1114, 5685, 11375, 9436, 5168, 11377, 5056, 4594, 2]
 // Exports: default
 
-// Module 10762 (UploadPreviewActionSheet)
+// Module 10763 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 5219 */;
 import ImagePickerDefault from "ImagePicker" /* 5231 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11372 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

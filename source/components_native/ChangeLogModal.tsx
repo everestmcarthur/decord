@@ -1,19 +1,19 @@
-// Module ID: 15629
-// Function ID: 15630
+// Module ID: 15630
+// Function ID: 15631
 // Name: ChangeLogModal
-// Dependencies: [19, 17, 1074, 2010, 21, 4636, 576, 4347, 1242, 8377, 15630, 5668, 8425, 1114, 5204, 9179, 10525, 1178, 8196, 1477, 8197, 1484, 5705, 4228, 8198, 4632, 4839, 7103, 2]
+// Dependencies: [19, 17, 1074, 2010, 21, 4636, 576, 4347, 1240, 8377, 15631, 5668, 8425, 1114, 5204, 9179, 10526, 1176, 8196, 1477, 8197, 1484, 5705, 4228, 8198, 4632, 4839, 7103, 2]
 // Exports: default
 
-// Module 15629 (ChangeLogModal)
+// Module 15630 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import Navigator from "Navigator" /* 7103 */;
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8196 */;
 import openMediaModal from "openMediaModal" /* 8377 */;
 import common_VideoDefault from "common/Video" /* 8425 */;
-import _modDef15630 from "module_15630" /* 15630 */;
+import _modDef15631 from "module_15631" /* 15631 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -275,7 +275,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15630, obj4), ];
+      const items = [closure_7(_modDef15631, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: tmp15(10525), onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: tmp15(10526), onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1176).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = tmp12(tmp15(9179), obj10);
     tmp12Result = tmp12(tmp18(5204).PressableOpacity, obj9);
     const tmp15Result = tmp15(9179);

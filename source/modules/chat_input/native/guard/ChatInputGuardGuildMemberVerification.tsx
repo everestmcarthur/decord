@@ -1,23 +1,23 @@
-// Module ID: 12585
-// Function ID: 12586
+// Module ID: 12586
+// Function ID: 12587
 // Name: ChatInputGuardGuildMemberVerification
-// Dependencies: [19, 17, 4628, 12091, 1074, 21, 4636, 5626, 4461, 12586, 1114, 4816, 5608, 12587, 5761, 5650, 504, 12577, 5610, 12588, 2]
+// Dependencies: [19, 17, 4628, 12092, 1074, 21, 4636, 5626, 4461, 12587, 1114, 4816, 5608, 12588, 5761, 5650, 504, 12578, 5610, 12589, 2]
 
-// Module 12585 (ChatInputGuardGuildMemberVerification)
+// Module 12586 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1114 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5608 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5650 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12577 */;
-import _modDef12586 from "module_12586" /* 12586 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12578 */;
 import _modDef12587 from "module_12587" /* 12587 */;
+import _modDef12588 from "module_12588" /* 12588 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 const LottieAnimationViewDefault = tmp14(5610);
 require = fn;
 const Image = fn(17).Image;
-const TextAreaCta = fn(12091).TextAreaCta;
+const TextAreaCta = fn(12092).TextAreaCta;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
@@ -34,7 +34,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(4461).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef12586;
+    let tmp8 = _modDef12587;
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.lk30cY);
     let fn = function _() {
@@ -43,7 +43,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       const result = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert({ guildId, canWithdraw: false });
     };
   } else if (tmp2(4461).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef12587;
+    tmp8 = _modDef12588;
     const intl2 = tmp2(1114).intl;
     stringResult = intl2.string(tmp2(1114).t["5iLvSx"]);
     fn = function _() {
@@ -72,7 +72,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     let obj2 = { style: tmp.noticeIcon, source: tmp8 };
     let tmp13Result = tmp13(Image, obj2);
   } else {
-    const obj3 = { style: tmp.lottieAnimation, source: tmp2(12588), autoPlay: !stateFromStores };
+    const obj3 = { style: tmp.lottieAnimation, source: tmp2(12589), autoPlay: !stateFromStores };
     tmp13Result = tmp13(LottieAnimationViewDefault, obj3);
     const tmp14Result = LottieAnimationViewDefault;
   }

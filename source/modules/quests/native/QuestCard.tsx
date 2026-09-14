@@ -1,9 +1,9 @@
-// Module ID: 15170
-// Function ID: 15171
+// Module ID: 15171
+// Function ID: 15172
 // Name: QuestCard
-// Dependencies: [5, 32, 19, 17, 1371, 7805, 5525, 1085, 21, 576, 4636, 4489, 4486, 4353, 5528, 7811, 11903, 11616, 1477, 11418, 15171, 9003, 7704, 7709, 7830, 504, 11423, 7826, 7801, 11428, 4571, 11176, 4338, 15198, 11619, 11325, 11326, 11330, 5532, 11629, 4603, 15200, 1896, 11904, 7655, 1114, 11896, 11646, 15204, 11409, 11425, 11426, 5063, 10247, 8809, 1150, 8962, 4632, 15205, 5688, 15244, 5668, 5068, 1093, 15230, 5672, 15211, 11899, 15245, 5054, 5056, 15248, 8202, 10309, 15231, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 7805, 5525, 1085, 21, 576, 4636, 4489, 4486, 4353, 5528, 7811, 11904, 11617, 1477, 11419, 15172, 9003, 7704, 7709, 7830, 504, 11424, 7826, 7801, 11429, 4571, 11177, 4338, 15199, 11620, 11326, 11327, 11331, 5532, 11630, 4603, 15201, 1896, 11905, 7655, 1114, 11897, 11647, 15205, 11410, 11426, 11427, 5063, 10247, 8809, 1363, 8962, 4632, 15206, 5688, 15245, 5668, 5068, 1093, 15231, 5672, 15212, 11900, 15246, 5054, 5056, 15249, 8202, 10309, 15232, 2]
 
-// Module 15170 (QuestCard)
+// Module 15171 (QuestCard)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import design_shared from "design/shared" /* 4489 */;
@@ -11,13 +11,13 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import MetricEvents from "MetricEvents" /* 7709 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11325 */;
-import AssetUtils from "AssetUtils" /* 11418 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
-import QuestUtils from "QuestUtils" /* 11896 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15198 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 15204 */;
-import VideoQuestModal from "VideoQuestModal" /* 15205 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
+import AssetUtils from "AssetUtils" /* 11419 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
+import QuestUtils from "QuestUtils" /* 11897 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15199 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 15205 */;
+import VideoQuestModal from "VideoQuestModal" /* 15206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -107,16 +107,16 @@ export const ESTIMATED_CARD_HEIGHT = 348;
 export const QuestCard = noop.memo((questContent) => {
   function trackClick(CLAIM_REWARD) {
     if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_card")) {
-      const obj2 = { type: tmp(11330).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5532).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: CLAIM_REWARD, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() };
-      tmp(11326).captureAdUserAction(obj2);
-      const tmpResult = tmp(11326);
+      const obj2 = { type: tmp(11331).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5532).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: CLAIM_REWARD, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() };
+      tmp(11327).captureAdUserAction(obj2);
+      const tmpResult = tmp(11327);
     } else {
       const obj3 = { questId: quest.id, questContent: QUEST_HOME_MOBILE, questContentCTA: CLAIM_REWARD, sourceQuestContent };
       closure_6(obj3);
     }
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15201, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
   }
   const tmp = require;
   const tmp2 = QUEST_HOME_MOBILE;
@@ -396,10 +396,10 @@ export const QuestCard = noop.memo((questContent) => {
             trackClick(AnalyticsTypes.QuestContentCTA.WATCH_VIDEO);
             if (hasWatchVideoOnMobileTasks) {
               const obj = { questId: quest.id, sourceQuestContent };
-              tmp5(15204)(obj);
+              tmp5(15205)(obj);
             } else {
               const obj2 = { questId: quest.id, questContentPosition, sourceQuestContent };
-              tmp5(4603).openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", obj2);
+              tmp5(4603).openLazy(asyncRequireImpl(15201, dependencyMap.paths), "QuestBottomSheet", obj2);
               const tmp5Result = tmp5(4603);
             }
           };
@@ -441,7 +441,7 @@ export const QuestCard = noop.memo((questContent) => {
             obj12.onPress = function onPress() {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15201, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
             };
           }
         }
@@ -485,7 +485,7 @@ export const QuestCard = noop.memo((questContent) => {
                 return obj3;
               } else {
                 logger.log("Enrolling in quest");
-                tmp2(11409);
+                tmp2(11410);
                 let obj4 = { questContent: QUEST_HOME_MOBILE, questContentCTA: null, sourceQuestContent: null };
                 if (!isMobileActivityQuest) {
                   if (!hasWatchVideoTasksResult) {
@@ -510,7 +510,7 @@ export const QuestCard = noop.memo((questContent) => {
               if (closure_128_14) {
                 if (closure_128_15) {
                   const obj = { questId: closure_128_1.id, sourceQuestContent: closure_128_4 };
-                  v1(15204)(obj);
+                  v1(15205)(obj);
                   dependencyMap = 3;
                 }
                 closure_128_32();
@@ -854,7 +854,7 @@ export const QuestCard = noop.memo((questContent) => {
     const items25 = [tmp91(tmp(tmp2[70]).Button, obj43), ];
     const obj44 = {
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15248, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15249, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
         },
       variant: "tertiary",
       text: null

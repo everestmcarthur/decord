@@ -1,18 +1,16 @@
-// Module ID: 17343
-// Function ID: 17344
+// Module ID: 17345
+// Function ID: 17346
 // Name: i18n/i18n
-// Dependencies: [17344, 17353, 17354, 17355, 17356, 17357, 17358, 17359, 17360, 17361, 17362, 17363, 17364, 17365, 17366, 17367, 17368, 17369, 17370, 17371, 17372, 17373, 17374, 17375, 17376, 17377, 17378, 17379, 17380, 17381, 568, 17385, 17386, 1338, 2]
+// Dependencies: [17346, 17355, 17356, 17357, 17358, 17359, 17360, 17361, 17362, 17363, 17364, 17365, 17366, 17367, 17368, 17369, 17370, 17371, 17372, 17373, 17374, 17375, 17376, 17377, 17378, 17379, 17380, 17381, 17382, 17383, 568, 17387, 17388, 1336, 2]
 
-// Module 17343 (i18n/i18n)
-import getSystemLocale from "getSystemLocale" /* 1338 */;
-import _modDef17344 from "module_17344" /* 17344 */;
-import _mod17385 from "module_17385" /* 17385 */;
-import parse from "parse" /* 17386 */;
+// Module 17345 (i18n/i18n)
+import getSystemLocale from "getSystemLocale" /* 1336 */;
+import _modDef17346 from "module_17346" /* 17346 */;
+import _mod17387 from "module_17387" /* 17387 */;
+import parse from "parse" /* 17388 */;
 
 require = fn;
-global.IntlMessageFormat = _modDef17344;
-const module_17353 = fn(17353);
-const module_17354 = fn(17354);
+global.IntlMessageFormat = _modDef17346;
 const module_17355 = fn(17355);
 const module_17356 = fn(17356);
 const module_17357 = fn(17357);
@@ -39,9 +37,11 @@ const module_17377 = fn(17377);
 const module_17378 = fn(17378);
 const module_17379 = fn(17379);
 const module_17380 = fn(17380);
+const module_17381 = fn(17381);
+const module_17382 = fn(17382);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(17381);
+  fn(17383);
 }
 const React2 = "en-US";
 class Provider {
@@ -139,10 +139,10 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj3);
     } else {
       try {
-        return self(17386).getMessage(tmp4, locale);
+        return self(17388).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17386).getMessage(tmp7, tmp);
+          return self(17388).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -342,5 +342,5 @@ prototype["_fetchMessages"] = function _fetchMessages(c2) {
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
-export const getSystemLocale = fn(1338).getSystemLocale;
+export const getSystemLocale = fn(1336).getSystemLocale;
 export { I18N };

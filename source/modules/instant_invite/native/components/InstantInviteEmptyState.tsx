@@ -1,7 +1,7 @@
 // Module ID: 9983
 // Function ID: 9984
 // Name: InstantInviteEmptyState
-// Dependencies: [19, 17, 9951, 21, 4636, 576, 504, 1178, 9984, 1114, 7040, 5204, 7483, 4632, 9952, 5056, 2]
+// Dependencies: [19, 17, 9951, 21, 4636, 576, 504, 1176, 9984, 1114, 7040, 5204, 7483, 4632, 9952, 5056, 2]
 // Exports: default
 
 // Module 9983 (InstantInviteEmptyState)
@@ -36,7 +36,7 @@ export default function _default(link) {
   obj3.title = intl.string(stateFromStores(1114).t.tQc0l8);
   const intl2 = stateFromStores(1114).intl;
   obj3.body = intl2.string(stateFromStores(1114).t.DXgdcD);
-  const items1 = [closure_5(stateFromStores(1178).RefreshEmptyState, obj3), , , ];
+  const items1 = [closure_5(stateFromStores(1176).RefreshEmptyState, obj3), , , ];
   const obj4 = { style: tmp.linkContainer, children: null };
   const obj5 = { accessibilityRole: "button", onPress: onCopy, editable: false, value: null, style: null, forceAccessibleContainer: true, clearButtonVisibility: null };
   const obj = stateFromStores(504);
@@ -45,7 +45,7 @@ export default function _default(link) {
   }
   obj5.value = str;
   obj5.style = tmp.inviteInput;
-  obj5.clearButtonVisibility = stateFromStores(1178).ClearButtonVisibility.NEVER;
+  obj5.clearButtonVisibility = stateFromStores(1176).ClearButtonVisibility.NEVER;
   const items2 = [closure_5(FreeFormTextInputDefault, obj5), ];
   const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl3 = tmp2(1114).intl;

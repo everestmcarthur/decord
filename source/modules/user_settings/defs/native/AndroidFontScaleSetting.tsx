@@ -1,19 +1,19 @@
-// Module ID: 15396
-// Function ID: 15397
+// Module ID: 15397
+// Function ID: 15398
 // Name: AndroidFontScaleSetting
-// Dependencies: [19, 15348, 1084, 8079, 21, 1249, 15397, 11337, 1114, 11601, 1150, 2]
+// Dependencies: [19, 15349, 1084, 8079, 21, 1247, 15398, 11338, 1114, 11602, 1363, 2]
 
-// Module 15396 (AndroidFontScaleSetting)
+// Module 15397 (AndroidFontScaleSetting)
 import util from "util" /* 1114 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11337 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15397 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11338 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useFontScaleStore = fn(15348).useFontScaleStore;
+const useFontScaleStore = fn(15349).useFontScaleStore;
 const FontScales = fn(1084).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
@@ -43,7 +43,7 @@ const slider = SettingBuilders.createSlider({
       return obj;
     }, items);
   },
-  usePredicate: fn(1150).isAndroid
+  usePredicate: fn(1363).isAndroid
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");

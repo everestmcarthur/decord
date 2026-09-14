@@ -1,7 +1,7 @@
 // Module ID: 9775
 // Function ID: 9776
 // Name: useStableSafeAreaInsets
-// Dependencies: [32, 19, 1480, 1150, 1623, 1611, 9776, 2]
+// Dependencies: [32, 19, 1480, 1363, 1623, 1611, 9776, 2]
 // Exports: default, getStableSafeAreaInsets
 
 // Module 9775 (useStableSafeAreaInsets)

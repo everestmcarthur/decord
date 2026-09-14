@@ -1,13 +1,13 @@
 // Module ID: 9859
 // Function ID: 9860
 // Name: StageChannelUpsell
-// Dependencies: [32, 19, 17, 1961, 9860, 9829, 1074, 21, 4636, 576, 5204, 1178, 7095, 9861, 4632, 1114, 5056, 4839, 9862, 1896, 4603, 2]
+// Dependencies: [32, 19, 17, 1961, 9860, 9829, 1074, 21, 4636, 576, 5204, 1176, 7095, 9861, 4632, 1114, 5056, 4839, 9862, 1896, 4603, 2]
 // Exports: default
 
 // Module 9859 (StageChannelUpsell)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;

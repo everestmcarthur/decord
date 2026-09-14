@@ -1,12 +1,12 @@
 // Module ID: 9171
 // Function ID: 9172
 // Name: RelationshipActionCreators
-// Dependencies: [32, 1371, 1074, 9172, 5634, 4980, 5603, 1114, 9173, 9174, 9175, 1272, 4481, 4488, 573, 9176, 8522, 2]
+// Dependencies: [32, 1371, 1074, 9172, 5634, 4980, 5603, 1114, 9173, 9174, 9175, 1270, 4481, 4488, 573, 9176, 8522, 2]
 
 // Module 9171 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import shared from "shared" /* 4488 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
@@ -102,15 +102,15 @@ let obj2 = {
       errorUxConfig = body.SHOW_ALWAYS;
     }
     [tmp3, tmp4] = str.split("#");
-    const HTTP = str(1272).HTTP;
+    const HTTP = str(1270).HTTP;
     const request = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     body = { username: tmp3, discriminator: parseInt(tmp4), note };
     const merged = Object.assign(captchaPayload);
     request.body = body;
     request.context = context;
     const tmp2 = _slicedToArray(str.split("#"), 2);
-    request.rejectWithError = str(1272).rejectWithMigratedError();
-    const obj3 = str(1272);
+    request.rejectWithError = str(1270).rejectWithMigratedError();
+    const obj3 = str(1270);
     return HTTP.post(request).catch((error) => {
       handleRelationshipAddError(error, errorUxConfig, str);
     });

@@ -1,25 +1,25 @@
-// Module ID: 16895
-// Function ID: 16896
+// Module ID: 16897
+// Function ID: 16898
 // Name: YouScreen
-// Dependencies: [32, 19, 17, 7723, 2025, 14777, 7738, 1371, 16465, 1074, 1076, 1954, 7311, 21, 4373, 8361, 4636, 1151, 576, 672, 4495, 563, 1114, 5204, 16498, 8346, 8894, 1250, 8303, 1611, 8343, 4571, 8359, 4497, 1477, 1935, 1484, 16896, 1396, 8363, 7046, 8307, 5207, 8318, 8330, 7285, 8340, 1943, 7491, 5668, 16897, 12096, 7259, 16900, 16901, 16902, 4347, 16910, 8337, 8324, 8353, 1091, 10779, 8928, 16912, 12026, 8304, 8902, 7485, 7644, 11247, 7578, 2]
+// Dependencies: [32, 19, 17, 7723, 2025, 14778, 7738, 1371, 16467, 1074, 1076, 1954, 7311, 21, 4373, 8361, 4636, 1364, 576, 672, 4495, 563, 1114, 5204, 16500, 8346, 8894, 1248, 8303, 1611, 8343, 4571, 8359, 4497, 1477, 1935, 1484, 16898, 1396, 8363, 7046, 8307, 5207, 8318, 8330, 7285, 8340, 1943, 7491, 5668, 16899, 12097, 7259, 16902, 16903, 16904, 4347, 16912, 8337, 8324, 8353, 1091, 10780, 8928, 16914, 12027, 8304, 8902, 7485, 7644, 11248, 7578, 2]
 // Exports: default
 
-// Module 16895 (YouScreen)
+// Module 16897 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1114 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import Pressables from "Pressables" /* 5204 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8361 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 16498 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16500 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7723 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14778 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7738 */;
 import UserStore from "UserStore" /* 1371 */;
 import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
@@ -85,8 +85,8 @@ function UnconnectedYouScreen(arg0) {
   const tmp10 = closure_23(tmp7Result);
   const obj2 = { type: null, name: null };
   const tmp7 = navigateToShop(8346);
-  obj2.type = navigateToSettings(1250).ImpressionTypes.VIEW;
-  obj2.name = navigateToSettings(1250).ImpressionNames.USER_YOU_SCREEN;
+  obj2.type = navigateToSettings(1248).ImpressionTypes.VIEW;
+  obj2.name = navigateToSettings(1248).ImpressionNames.USER_YOU_SCREEN;
   navigateToShop(8894)(obj2);
   const obj3 = navigateToShop(8303)(user.id);
   rect = tmp5(1611)();
@@ -129,7 +129,7 @@ function UnconnectedYouScreen(arg0) {
   if (!isFocused) {
     tmp28 = !tmp12Result14.useIsProfileModalTransitioning();
   }
-  tmp12Result14 = navigateToSettings(16896);
+  tmp12Result14 = navigateToSettings(16898);
   const ref2 = rect.useRef(undefined);
   const ref3 = rect.useRef(false);
   if (isFocused) {
@@ -229,7 +229,7 @@ function UnconnectedYouScreen(arg0) {
         const items = [navigateToSettings(_undefined[47]).DismissibleContent.WISHLIST_MOBILE_YOU_SCREEN_COACHMARK];
         return items;
       }, []);
-      tmp12Result20 = tmp12(1151);
+      tmp12Result20 = tmp12(1364);
       const tmpResult4 = tmp(tmp12(7491).useSelectedDismissibleContent(memo1), 2);
       closure_10 = tmp58;
       const items3 = [null != tmpResult4[0]];
@@ -260,10 +260,10 @@ function UnconnectedYouScreen(arg0) {
       let tmp63 = null != memo2;
       const tmp12Result21 = tmp12(7491);
       const obj11 = { disabled: tmp63 };
-      youSettingsCoachmark = tmp12(16897).useYouSettingsCoachmark(obj11);
+      youSettingsCoachmark = tmp12(16899).useYouSettingsCoachmark(obj11);
       let tmp65 = null != youSettingsCoachmark;
-      const tmp12Result22 = tmp12(16897);
-      const customTypingIndicatorConfig = tmp12(12096).useCustomTypingIndicatorConfig("YouScreen");
+      const tmp12Result22 = tmp12(16899);
+      const customTypingIndicatorConfig = tmp12(12097).useCustomTypingIndicatorConfig("YouScreen");
       if ("settings" === customTypingIndicatorConfig.entryPoint) {
         if (customTypingIndicatorConfig.canSet) {
           if (null != obj3) {
@@ -293,20 +293,20 @@ function UnconnectedYouScreen(arg0) {
                     const obj12 = { buttonRef: ref4, markAsDismissed: tmp57, visible: tmp58, title: null, description: null, avatarSrc: null, decorationAsset: null, renderImgComponent: null, navigateToShop: null };
                     ({ title: obj25.title, description: obj25.description, avatarSrc: obj25.avatarSrc, decorationAsset: obj25.decorationAsset, renderImgComponent: obj25.renderImgComponent } = memo2);
                     obj12.navigateToShop = callback1;
-                    tmp63 = closure_20(tmp5(16900), obj12);
+                    tmp63 = closure_20(tmp5(16902), obj12);
                   }
                   const items6 = [tmp63, , ];
                   if (tmp65) {
                     const obj13 = { buttonRef: ref5 };
                     const merged = Object.assign(youSettingsCoachmark.props);
-                    tmp65 = closure_20(tmp5(16897), obj13);
-                    const tmp5Result9 = tmp5(16897);
+                    tmp65 = closure_20(tmp5(16899), obj13);
+                    const tmp5Result9 = tmp5(16899);
                   }
                   items6[1] = tmp65;
                   let tmp80 = tmp69;
                   if (tmp69) {
                     const obj14 = { targetRef: ref5, visible: tmp69, markAsDismissed: tmp68, position: "top" };
-                    tmp80 = closure_20(tmp5(16901), obj14);
+                    tmp80 = closure_20(tmp5(16903), obj14);
                   }
                   const obj15 = { zIndex: 1, children: null };
                   items6[2] = tmp80;
@@ -359,7 +359,7 @@ function UnconnectedYouScreen(arg0) {
               obj19.style = items9;
               obj19.nativeID = nativeID;
               let tmp84Result = null != tmp5Result1Result;
-              const tmp85 = closure_20(tmp5(16902), obj16);
+              const tmp85 = closure_20(tmp5(16904), obj16);
               if (tmp84Result) {
                 const obj20 = { frame: tmp5Result1Result, profileThemeType: UserProfileThemeTypes.YOU_SCREEN, frameOrder: tmp12(8324).ProfileFrameLayerOrder.BACK, containerWidth: bound };
                 tmp84Result = tmp84(tmp5(8337), obj20);
@@ -385,7 +385,7 @@ function UnconnectedYouScreen(arg0) {
               const items14 = [sharedValue.absoluteFill, ];
               const obj28 = { backgroundColor: null };
               const tmp100 = sharedValue;
-              const tmp5Result10 = tmp5(16910);
+              const tmp5Result10 = tmp5(16912);
               const tmp95 = closure_25;
               obj28.backgroundColor = tmp12(1091).int2hex(userProfileBannerBackgroundColor);
               items14[1] = obj28;
@@ -393,7 +393,7 @@ function UnconnectedYouScreen(arg0) {
               const items15 = [closure_20(bound, obj27), , ];
               if (null == source) {
                 items15[1] = tmp101;
-                let tmp84Result6 = tmp12(1151).isIOS() && showBlur;
+                let tmp84Result6 = tmp12(1364).isIOS() && showBlur;
                 if (tmp84Result6) {
                   const obj29 = { animatedProps: blurAnimatedProps, style: tmp100.absoluteFillObject };
                   tmp84Result6 = tmp84(VisualEffectViewThemed, obj29);
@@ -428,8 +428,8 @@ function UnconnectedYouScreen(arg0) {
                 obj33.navigateToShop = navigateToShop;
                 obj33.initialTab = initialTab;
                 obj33.animateAvatar = !tmp28;
-                items16[2] = tmp84(tmp5(16912), obj33);
-                items16[3] = tmp84(tmp12(12026).TTIFirstContentfulPaint, { label: "you_screen" });
+                items16[2] = tmp84(tmp5(16914), obj33);
+                items16[3] = tmp84(tmp12(12027).TTIFirstContentfulPaint, { label: "you_screen" });
                 obj22.children = items16;
                 items10[2] = tmp89(tmp95, obj22);
                 let tmp84Result7 = null != tmp5Result1Result;
@@ -470,7 +470,7 @@ function UnconnectedYouScreen(arg0) {
                   items21[1] = dimensionStyle;
                   obj38.style = items21;
                   obj38.textStyle = tmp10.gifTagText;
-                  tmp84Result8 = tmp84(tmp12(10779).Caption, obj38);
+                  tmp84Result8 = tmp84(tmp12(10780).Caption, obj38);
                 }
                 items20[1] = tmp84Result8;
                 obj36.children = items20;
@@ -485,7 +485,7 @@ function UnconnectedYouScreen(arg0) {
         }
       }
       items5 = [];
-      const tmp12Result23 = tmp12(12096);
+      const tmp12Result23 = tmp12(12097);
     }
     bound1 = youSettingsCoachmark;
     const tmp5Result8 = tmp5(8330);
@@ -496,7 +496,7 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(16465);
+const YouConstants = fn(16467);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 let closure_17 = fn(1076).CollectiblesMobileShopScreen;

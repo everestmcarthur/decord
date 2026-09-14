@@ -1,9 +1,9 @@
-// Module ID: 12342
-// Function ID: 12343
+// Module ID: 12343
+// Function ID: 12344
 // Name: ScheduledMessageStore
 // Dependencies: [504, 573, 2]
 
-// Module 12342 (ScheduledMessageStore)
+// Module 12343 (ScheduledMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

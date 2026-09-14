@@ -1,11 +1,11 @@
 // Module ID: 5240
 // Function ID: 5241
 // Name: ImageConversionDecision
-// Dependencies: [1150, 5241, 2]
+// Dependencies: [1363, 5241, 2]
 // Exports: isHeicUTI, isPhotoKitAsset, shouldConvertToJPG, shouldForceConvertToJPG
 
 // Module 5240 (ImageConversionDecision)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5241 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// Module ID: 12186
-// Function ID: 12187
+// Module ID: 12187
+// Function ID: 12188
 // Name: useActivityShelfItem
-// Dependencies: [5, 1956, 1920, 1074, 9641, 9540, 1150, 9782, 12187, 12188, 1894, 8981, 9763, 9762, 7271, 4265, 7265, 9636, 9637, 4649, 9678, 9663, 2]
+// Dependencies: [5, 1956, 1920, 1074, 9641, 9540, 1363, 9782, 12188, 12189, 1894, 8981, 9763, 9762, 7271, 4265, 7265, 9636, 9637, 4649, 9678, 9663, 2]
 // Exports: default, getStaffReleasePhase
 
-// Module 12186 (useActivityShelfItem)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 12187 (useActivityShelfItem)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7271 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8981 */;
@@ -14,7 +14,7 @@ import canLaunchFrame from "canLaunchFrame" /* 9636 */;
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9762 */;
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9763 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9782 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12188 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
@@ -352,7 +352,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   let tmp9 = null;
   const obj2 = { applicationId: application.id, size: num, names: assetNames, format: "webp" };
   if (null != activity.activity_preview_video_asset_id) {
-    tmp9 = tmp(12187)(application.id, activity.activity_preview_video_asset_id);
+    tmp9 = tmp(12188)(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
   const tmp8 = useEmbeddedActivityBackgroundDefault({ applicationId: application.id, size: num, names: assetNames, format: "webp" });
@@ -367,7 +367,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   const tmp13 = useActivityAction({ context, applicationId: application.id });
   const tmp14 = useOnActivityItemSelected(obj4);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    const tmp4Result3 = tmp4(1150);
+    const tmp4Result3 = tmp4(1363);
     const str = activityItem.activity.client_platform_config[tmp(9540)(undefined, tmp4Result3.getOS(tmp4Result3))].release_phase;
     let replaced;
     if (STAFF_RELEASE_PHASES.includes(str)) {

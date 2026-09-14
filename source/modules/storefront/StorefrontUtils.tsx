@@ -1,7 +1,7 @@
 // Module ID: 7334
 // Function ID: 7335
 // Name: StorefrontUtils
-// Dependencies: [19, 2025, 1371, 7335, 1074, 1373, 12, 7336, 1151, 1384, 504, 7329, 7337, 4294, 7344, 2]
+// Dependencies: [19, 2025, 1371, 7335, 1074, 1373, 12, 7336, 1364, 1384, 504, 7329, 7337, 4294, 7344, 2]
 // Exports: isSlayerSkuAvailableOnThisPlatform, transformPriceSetAssignmentToStorefrontPurchaseType, transformStorefrontPricesServer, useFormatSKUPrice, useFormattedSKUPrice, useSKUOrbPrice
 
 // Module 7334 (StorefrontUtils)
@@ -261,13 +261,13 @@ export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableO
         let hasFlagResult = tmp(1384).hasFlag(num, constants3.AVAILABLE_ON_IOS);
         const tmpResult = tmp(1384);
       } else {
-        const isAndroidResult = tmp(1151).isAndroid();
+        const isAndroidResult = tmp(1364).isAndroid();
         hasFlagResult = !isAndroidResult;
         if (isAndroidResult) {
           hasFlagResult = tmp(1384).hasFlag(num, constants3.AVAILABLE_ON_ANDROID);
           const tmpResult4 = tmp(1384);
         }
-        const tmpResult3 = tmp(1151);
+        const tmpResult3 = tmp(1364);
       }
       return hasFlagResult;
     }

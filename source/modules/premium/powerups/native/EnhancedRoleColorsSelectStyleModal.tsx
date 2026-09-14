@@ -1,10 +1,10 @@
-// Module ID: 17744
-// Function ID: 17745
+// Module ID: 17745
+// Function ID: 17746
 // Name: EnhancedRoleColorsSelectStyleModal
-// Dependencies: [17, 17724, 17726, 17723, 1085, 21, 4636, 576, 4571, 5085, 17745, 1114, 8036, 7253, 7252, 4603, 8775, 2018, 8065, 13425, 4632, 2428, 2]
+// Dependencies: [17, 17725, 17727, 17724, 1085, 21, 4636, 576, 4571, 5085, 17746, 1114, 8036, 7253, 7252, 4603, 8775, 2018, 8065, 13426, 4632, 2428, 2]
 // Exports: default
 
-// Module 17744 (EnhancedRoleColorsSelectStyleModal)
+// Module 17745 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
@@ -16,11 +16,11 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
 import RowGeneratorDefault from "RowGenerator" /* 8036 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8065 */;
-import _modDef13425 from "module_13425" /* 13425 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17723 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17724 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17726 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17745 */;
+import _modDef13426 from "module_13426" /* 13426 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17724 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17725 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17727 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17746 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
@@ -120,7 +120,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef13425;
+              message.message.avatarURL = _modDef13426;
             }
           }),
 

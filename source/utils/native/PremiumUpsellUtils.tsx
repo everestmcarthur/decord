@@ -1,12 +1,12 @@
 // Module ID: 9443
 // Function ID: 9444
 // Name: PremiumUpsellUtils
-// Dependencies: [19, 1371, 1074, 1373, 21, 9444, 1114, 9445, 9446, 9447, 4294, 9448, 9449, 9450, 4981, 9452, 1896, 7550, 9492, 4502, 1242, 4603, 9522, 2]
+// Dependencies: [19, 1371, 1074, 1373, 21, 9444, 1114, 9445, 9446, 9447, 4294, 9448, 9449, 9450, 4981, 9452, 1896, 7550, 9492, 4502, 1240, 4603, 9522, 2]
 // Exports: getUpsellItems, usePremiumUpsellConfig
 
 // Module 9443 (PremiumUpsellUtils)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;

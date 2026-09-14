@@ -1,14 +1,14 @@
-// Module ID: 10451
-// Function ID: 10452
+// Module ID: 10452
+// Function ID: 10453
 // Name: EmojiPickerListComponent
-// Dependencies: [19, 5540, 5544, 10418, 1219, 21, 4636, 4373, 10452, 6728, 1608, 4289, 7173, 10441, 2]
+// Dependencies: [19, 5540, 5544, 10419, 1217, 21, 4636, 4373, 10453, 6728, 1608, 4289, 7173, 10442, 2]
 
-// Module 10451 (EmojiPickerListComponent)
+// Module 10452 (EmojiPickerListComponent)
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import PortalToNativeViewDefault from "PortalToNativeView" /* 7173 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10441 */;
-import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 10452 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10442 */;
+import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 10453 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
 
@@ -17,8 +17,8 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const EmojiCategoryTypes = fn(5544).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10418).IMAGE_SIZE;
-const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
+const IMAGE_SIZE = fn(10419).IMAGE_SIZE;
+const PADDING_VERTICAL = fn(1217).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);

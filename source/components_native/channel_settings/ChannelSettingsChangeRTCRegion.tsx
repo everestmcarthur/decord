@@ -1,10 +1,10 @@
-// Module ID: 16967
-// Function ID: 16968
+// Module ID: 16969
+// Function ID: 16970
 // Name: ChannelSettingsChangeRTCRegion
-// Dependencies: [718, 19, 1957, 16923, 21, 4636, 576, 4347, 1114, 8748, 5769, 5766, 8716, 504, 38, 2]
+// Dependencies: [718, 19, 1957, 16925, 21, 4636, 576, 4347, 1114, 8748, 5769, 5766, 8716, 504, 38, 2]
 // Exports: default
 
-// Module 16967 (ChannelSettingsChangeRTCRegion)
+// Module 16969 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -15,7 +15,7 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RegionStore from "RegionStore" /* 16923 */;
+import RegionStore from "RegionStore" /* 16925 */;
 
 require = fn;
 const jsx = fn(21).jsx;

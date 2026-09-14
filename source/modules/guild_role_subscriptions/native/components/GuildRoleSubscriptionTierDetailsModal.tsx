@@ -1,22 +1,22 @@
-// Module ID: 17885
-// Function ID: 17886
+// Module ID: 17886
+// Function ID: 17887
 // Name: GuildRoleSubscriptionTierDetailsModal
-// Dependencies: [32, 19, 15288, 1074, 21, 13985, 17857, 15310, 15295, 17840, 9946, 1114, 17846, 8716, 1178, 17886, 17849, 2]
+// Dependencies: [32, 19, 15289, 1074, 21, 13986, 17858, 15311, 15296, 17841, 9946, 1114, 17847, 8716, 1176, 17887, 17850, 2]
 // Exports: default
 
-// Module 17885 (GuildRoleSubscriptionTierDetailsModal)
+// Module 17886 (GuildRoleSubscriptionTierDetailsModal)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Form from "Form" /* 8716 */;
 import FormHeaderDefault from "FormHeader" /* 9946 */;
-import FormStylesDefault from "FormStyles" /* 13985 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15295 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17840 */;
-import FormImagePicker from "FormImagePicker" /* 17846 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17849 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17857 */;
-import FormPriceTierDefault from "FormPriceTier" /* 17886 */;
+import FormStylesDefault from "FormStyles" /* 13986 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15296 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17841 */;
+import FormImagePicker from "FormImagePicker" /* 17847 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17850 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17858 */;
+import FormPriceTierDefault from "FormPriceTier" /* 17887 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -106,7 +106,7 @@ function Content() {
   obj15.children = items;
   return tmp22(tmp23, obj15);
 }
-const GuildRoleSubscriptionsConstants = fn(15288);
+const GuildRoleSubscriptionsConstants = fn(15289);
 ({ GuildRoleSubscriptionsTierScenes: hasOwnProperty, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);

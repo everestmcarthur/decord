@@ -1,10 +1,10 @@
-// Module ID: 14721
-// Function ID: 14722
+// Module ID: 14722
+// Function ID: 14723
 // Name: UserProfileNameplateEditButton
-// Dependencies: [19, 17, 2021, 7311, 1085, 21, 4636, 576, 504, 8283, 14722, 4603, 14723, 1896, 14705, 1114, 8945, 1178, 13302, 2]
+// Dependencies: [19, 17, 2021, 7311, 1085, 21, 4636, 576, 504, 8283, 14723, 4603, 14724, 1896, 14706, 1114, 8945, 1176, 13303, 2]
 // Exports: default
 
-// Module 14721 (UserProfileNameplateEditButton)
+// Module 14722 (UserProfileNameplateEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -63,7 +63,7 @@ export default function UserProfileNameplateEditButton(user) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchNameplate = user(14722).useFetchNameplate(skuId);
+  const fetchNameplate = user(14723).useFetchNameplate(skuId);
   ({ nameplateProduct, nameplateData, nameplateRecord, isFetching } = fetchNameplate);
   if (null != guildId) {
     let nameplate3;
@@ -92,7 +92,7 @@ export default function UserProfileNameplateEditButton(user) {
     obj4.buttonText = intl5.string(tmp3(1114).t.MKDeyL);
     obj4.onPress = NOOP;
     obj4.leading = <closure_4 animating size="large" />;
-    return jsx(tmp3(14705).UserProfileEditFormButton, { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true });
+    return jsx(tmp3(14706).UserProfileEditFormButton, { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true });
   } else {
     let name;
     if (nameplateProduct != null) {
@@ -127,10 +127,10 @@ export default function UserProfileNameplateEditButton(user) {
           let tmp15Result = tmp15(closure_5, obj8);
         }
         obj6.leading = tmp15Result;
-        return tmp15(tmp3(14705).UserProfileEditFormButton, obj6);
+        return tmp15(tmp3(14706).UserProfileEditFormButton, obj6);
       }
     }
-    const obj10 = { source: guildId(13302), style: tmp.noneIcon };
-    tmp15Result = tmp15(tmp3(1178).Icon, obj10);
+    const obj10 = { source: guildId(13303), style: tmp.noneIcon };
+    tmp15Result = tmp15(tmp3(1176).Icon, obj10);
   }
 };

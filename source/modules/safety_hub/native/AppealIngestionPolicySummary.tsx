@@ -1,10 +1,10 @@
-// Module ID: 12029
-// Function ID: 12030
+// Module ID: 12030
+// Function ID: 12031
 // Name: AppealIngestionPolicySummary
 // Dependencies: [19, 17, 21, 4636, 576, 8536, 4486, 4632, 1114, 2]
 // Exports: default
 
-// Module 12029 (AppealIngestionPolicySummary)
+// Module 12030 (AppealIngestionPolicySummary)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ColorUtils from "ColorUtils" /* 4486 */;

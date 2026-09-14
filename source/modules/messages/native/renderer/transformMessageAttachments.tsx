@@ -1,10 +1,10 @@
-// Module ID: 13310
-// Function ID: 13311
+// Module ID: 13311
+// Function ID: 13312
 // Name: transformMessageAttachments
-// Dependencies: [8037, 1074, 1384, 11408, 4786, 8225, 1150, 8224, 1114, 8244, 8384, 5216, 8242, 2]
+// Dependencies: [8037, 1074, 1384, 11409, 4786, 8225, 1363, 8224, 1114, 8244, 8384, 5216, 8242, 2]
 // Exports: default
 
-// Module 13310 (transformMessageAttachments)
+// Module 13311 (transformMessageAttachments)
 import Constants from "Constants" /* 1074 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 4786 */;
@@ -12,7 +12,7 @@ import noConflictDefault from "noConflict" /* 5216 */;
 import RowGeneratorConstants from "RowGeneratorConstants" /* 8037 */;
 import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8225 */;
 import getDisplayFilenameDefault from "getDisplayFilename" /* 8384 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11408 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11409 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;
@@ -70,7 +70,7 @@ export default function transformMessageAttachments(arg0) {
             height2 = size2.height;
           }
         }
-        tmpResult7 = tmp(1150);
+        tmpResult7 = tmp(1363);
         let num4 = 0;
         if (closure_1_1) {
           num4 = 0;

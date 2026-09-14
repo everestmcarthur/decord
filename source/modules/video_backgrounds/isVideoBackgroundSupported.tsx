@@ -1,7 +1,7 @@
 // Module ID: 9236
 // Function ID: 9237
 // Name: isVideoBackgroundSupported
-// Dependencies: [1908, 4661, 1150, 9237, 2]
+// Dependencies: [1908, 4661, 1363, 9237, 2]
 // Exports: default
 
 // Module 9236 (isVideoBackgroundSupported)

@@ -1,18 +1,18 @@
-// Module ID: 16670
-// Function ID: 16671
+// Module ID: 16672
+// Function ID: 16673
 // Name: GuildSettingsModalMembersWithTabs
-// Dependencies: [32, 19, 17, 1979, 4275, 1371, 21, 4636, 576, 16310, 504, 7368, 1114, 16671, 16672, 16678, 4461, 1483, 8789, 16673, 7480, 9930, 9922, 12743, 12743, 12745, 2]
+// Dependencies: [32, 19, 17, 1979, 4275, 1371, 21, 4636, 576, 16312, 504, 7368, 1114, 16673, 16674, 16680, 4461, 1483, 8789, 16675, 7480, 9930, 9922, 12744, 12744, 12746, 2]
 
-// Module 16670 (GuildSettingsModalMembersWithTabs)
+// Module 16672 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7368 */;
 import ContextMenu from "ContextMenu" /* 8789 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16671 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16672 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16673 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16678 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16673 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16674 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16675 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16680 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

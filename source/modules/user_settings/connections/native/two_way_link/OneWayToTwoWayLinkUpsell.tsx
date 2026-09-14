@@ -1,12 +1,12 @@
-// Module ID: 15055
-// Function ID: 15056
+// Module ID: 15056
+// Function ID: 15057
 // Name: OneWayToTwoWayLinkUpsell
-// Dependencies: [19, 17, 1074, 1954, 21, 4636, 576, 5605, 1178, 10753, 4632, 5056, 1114, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4636, 576, 5605, 1176, 10754, 4632, 5056, 1114, 2]
 // Exports: OneWayToTwoWayLinkUpsell
 
-// Module 15055 (OneWayToTwoWayLinkUpsell)
+// Module 15056 (OneWayToTwoWayLinkUpsell)
 import nativeDefault from "native" /* 576 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10753 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10754 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 5605 */;
 
@@ -16,7 +16,7 @@ function OneWayToTwoWayNewTag(markAsDismissed) {
   const items = [markAsDismissed];
   const effect = noop.useEffect(() => markAsDismissed(ContentDismissActionType.UNKNOWN), items);
   const tmp = closure_8();
-  return closure_6(markAsDismissed(1178).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
+  return closure_6(markAsDismissed(1176).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
 }
 const View = fn(17).View;
 const Fonts = fn(1074).Fonts;

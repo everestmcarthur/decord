@@ -1,10 +1,10 @@
-// Module ID: 12625
-// Function ID: 12626
+// Module ID: 12626
+// Function ID: 12627
 // Name: useGuildPowerupRollbackEnabled
 // Dependencies: [4563, 4529, 2]
 // Exports: default, isGuildPowerupRollbackEnabled
 
-// Module 12625 (useGuildPowerupRollbackEnabled)
+// Module 12626 (useGuildPowerupRollbackEnabled)
 import Powerups from "Powerups" /* 4529 */;
 import FileUpload250MbPowerupExperiment from "FileUpload250MbPowerupExperiment" /* 4563 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// Module ID: 12018
-// Function ID: 12019
+// Module ID: 12019
+// Function ID: 12020
 // Name: useEmitAppealIngestionEvent
-// Dependencies: [19, 8548, 8537, 1074, 504, 12010, 12012, 1242, 2]
+// Dependencies: [19, 8548, 8537, 1074, 504, 12011, 12013, 1240, 2]
 // Exports: useEmitAppealIngestionEvent
 
-// Module 12018 (useEmitAppealIngestionEvent)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 12019 (useEmitAppealIngestionEvent)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 

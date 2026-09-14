@@ -1,11 +1,11 @@
-// Module ID: 17586
-// Function ID: 17587
+// Module ID: 17587
+// Function ID: 17588
 // Name: PushNotificationCacheManager
-// Dependencies: [12542, 1371, 4481, 7221, 9817, 2]
+// Dependencies: [12543, 1371, 4481, 7221, 9817, 2]
 
-// Module 17586 (PushNotificationCacheManager)
+// Module 17587 (PushNotificationCacheManager)
 import PushNotificationDefault from "PushNotification" /* 9817 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
 import UserStore from "UserStore" /* 1371 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 

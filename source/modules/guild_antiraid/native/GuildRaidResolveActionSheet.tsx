@@ -1,10 +1,10 @@
-// Module ID: 11990
-// Function ID: 11991
+// Module ID: 11991
+// Function ID: 11992
 // Name: GuildRaidResolveActionSheet
-// Dependencies: [32, 19, 17, 1074, 8517, 21, 4636, 576, 1114, 7621, 4603, 7300, 5659, 4632, 8716, 1178, 5056, 4816, 11961, 8522, 2]
+// Dependencies: [32, 19, 17, 1074, 8517, 21, 4636, 576, 1114, 7621, 4603, 7300, 5659, 4632, 8716, 1176, 5056, 4816, 11962, 8522, 2]
 // Exports: default
 
-// Module 11990 (GuildRaidResolveActionSheet)
+// Module 11991 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -15,7 +15,7 @@ import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5659 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import AutomodFeedback from "AutomodFeedback" /* 7621 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8522 */;
-import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11961 */;
+import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

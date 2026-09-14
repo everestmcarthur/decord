@@ -1,11 +1,11 @@
-// Module ID: 16991
-// Function ID: 16992
+// Module ID: 16993
+// Function ID: 16994
 // Name: MessageRequestPreview
-// Dependencies: [19, 17, 4285, 1074, 21, 4636, 5605, 576, 12723, 504, 1242, 1114, 7992, 4975, 1178, 2]
+// Dependencies: [19, 17, 4285, 1074, 21, 4636, 5605, 576, 12724, 504, 1240, 1114, 7992, 4975, 1176, 2]
 
-// Module 16991 (MessageRequestPreview)
+// Module 16993 (MessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import TextStyles_mod from "TextStyles" /* 5605 */;
@@ -34,10 +34,10 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(12723).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(12724).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(12723);
+  let obj = channel(12724);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
@@ -136,6 +136,6 @@ export default noop.memo(function MessageRequestPreview(channel) {
       }
     }
   }
-  let obj3 = { style: channel.style, children: jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={arg0.style}>{jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  let obj3 = { style: channel.style, children: jsx(channel(1176).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
+  return <View style={arg0.style}>{jsx(channel(1176).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });

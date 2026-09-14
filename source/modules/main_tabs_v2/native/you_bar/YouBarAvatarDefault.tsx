@@ -1,11 +1,11 @@
-// Module ID: 16481
-// Function ID: 16482
+// Module ID: 16483
+// Function ID: 16484
 // Name: YouBarAvatarDefault
-// Dependencies: [19, 17, 15178, 1074, 21, 4636, 576, 4338, 1178, 8940, 8883, 2]
+// Dependencies: [19, 17, 15179, 1074, 21, 4636, 576, 4338, 1176, 8940, 8883, 2]
 
-// Module 16481 (YouBarAvatarDefault)
+// Module 16483 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useToken from "useToken" /* 4338 */;
 import ReactionIcon from "ReactionIcon" /* 8883 */;
 import ClipView from "ClipView" /* 8940 */;
@@ -22,11 +22,11 @@ function AvatarDefault() {
   }
   const tmp7 = native.AVATAR_SIZE_MAP[hasOwnProperty];
   const result = num / 2;
-  const sum = result + tmp2(1178).STATUS_PADDING;
+  const sum = result + tmp2(1176).STATUS_PADDING;
   const diff = tmp7 - sum - num / 4 * 2;
   const point = { shape: tmp2(8940).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   const obj3 = { style: null, children: null };
-  size = { height: tmp2(1178).AVATAR_SIZE_MAP[tmp6], width: tmp2(1178).AVATAR_SIZE_MAP[tmp6], position: "relative" };
+  size = { height: tmp2(1176).AVATAR_SIZE_MAP[tmp6], width: tmp2(1176).AVATAR_SIZE_MAP[tmp6], position: "relative" };
   obj3.style = size;
   const obj4 = { cutouts: null, children: null };
   const items = [point];
@@ -87,7 +87,7 @@ function AvatarDefaultLarge() {
   return closure_1_12(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(15178);
+const YouBarConstants = fn(15179);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: metroRequire, YOU_BAR_HEIGHT: closure_7, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: c10 } = YouBarConstants);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);

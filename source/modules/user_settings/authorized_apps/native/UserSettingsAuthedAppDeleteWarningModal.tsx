@@ -1,14 +1,14 @@
-// Module ID: 12726
-// Function ID: 12727
+// Module ID: 12727
+// Function ID: 12728
 // Name: UserSettingsAuthedAppDeleteWarningModal
-// Dependencies: [21, 11661, 1114, 12727, 9589, 4986, 2]
+// Dependencies: [21, 11662, 1114, 12728, 9589, 4986, 2]
 // Exports: default
 
-// Module 12726 (UserSettingsAuthedAppDeleteWarningModal)
+// Module 12727 (UserSettingsAuthedAppDeleteWarningModal)
 import util from "util" /* 1114 */;
 import AlertModal from "AlertModal" /* 4986 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11661 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12727 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 11662 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12728 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

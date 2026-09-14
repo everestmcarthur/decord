@@ -1,7 +1,7 @@
 // Module ID: 7628
 // Function ID: 7629
 // Name: ChannelListStore
-// Dependencies: [1956, 2013, 7629, 5587, 4277, 1221, 502, 7220, 1957, 7630, 4275, 4651, 2011, 4817, 1084, 7631, 12, 1369, 4265, 11, 504, 573, 2]
+// Dependencies: [1956, 2013, 7629, 5587, 4277, 1219, 502, 7220, 1957, 7630, 4275, 4651, 2011, 4817, 1084, 7631, 12, 1369, 4265, 11, 504, 573, 2]
 
 // Module 7628 (ChannelListStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
@@ -15,7 +15,7 @@ import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7220 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

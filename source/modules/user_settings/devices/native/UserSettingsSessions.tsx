@@ -1,16 +1,16 @@
-// Module ID: 15037
-// Function ID: 15038
+// Module ID: 15038
+// Function ID: 15039
 // Name: UserSettingsSessions
-// Dependencies: [32, 19, 17, 1371, 1074, 21, 4636, 5605, 576, 14757, 504, 15038, 5054, 5768, 1114, 5686, 7226, 4632, 1369, 5204, 1178, 7095, 1483, 12393, 7093, 15039, 9008, 10193, 7061, 15040, 2]
+// Dependencies: [32, 19, 17, 1371, 1074, 21, 4636, 5605, 576, 14758, 504, 15039, 5054, 5768, 1114, 5686, 7226, 4632, 1369, 5204, 1176, 7095, 1483, 12394, 7093, 15040, 9008, 10193, 7061, 15041, 2]
 // Exports: default
 
-// Module 15037 (UserSettingsSessions)
+// Module 15038 (UserSettingsSessions)
 import nativeDefault from "native" /* 576 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
 import _modDef10193 from "module_10193" /* 10193 */;
-import _modDef12393 from "module_12393" /* 12393 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15038 */;
-import _modDef15039 from "module_15039" /* 15039 */;
+import _modDef12394 from "module_12394" /* 12394 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15039 */;
+import _modDef15040 from "module_15040" /* 15040 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -20,9 +20,9 @@ const _modDef7095 = tmp10(7095);
 require = fn;
 function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(14757).useAuthSessions();
+  let authSessions = otherSessions(14758).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(14757);
+  const obj = otherSessions(14758);
   const items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -132,11 +132,11 @@ function SessionInfo(session) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text: os, iconSource: _modDef10193, IconComponent: session(15040).VrHeadsetIcon };
+              const obj2 = { text: os, iconSource: _modDef10193, IconComponent: session(15041).VrHeadsetIcon };
               let tmp9 = session;
               let obj = obj2;
             } else {
-              obj = { text: os, iconSource: _modDef15039, IconComponent: session(9008).ScreenIcon };
+              obj = { text: os, iconSource: _modDef15040, IconComponent: session(9008).ScreenIcon };
               tmp9 = session;
             }
           }
@@ -148,8 +148,8 @@ function SessionInfo(session) {
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14757).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14757);
+        formatDateResult = tmp9(14758).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14758);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1369).isNotNullish);
@@ -163,7 +163,7 @@ function SessionInfo(session) {
         };
         obj4.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
         const obj5 = { style: tmp.logoutButton, source: _modDef7095 };
-        obj4.children = closure_10(tmp9(1178).Icon, obj5);
+        obj4.children = closure_10(tmp9(1176).Icon, obj5);
         tmp18 = closure_10(tmp9(5204).PressableOpacity, obj4);
       }
       const obj6 = { style: tmp.sessionInfo, accessible: true, children: null };
@@ -213,7 +213,7 @@ function SessionInfo(session) {
   const obj19 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1114).intl;
   obj19.text = intl.string(session(1114).t.cDHCNY);
-  obj19.iconSource = _modDef15039;
+  obj19.iconSource = _modDef15040;
   obj19.IconComponent = session(9008).ScreenIcon;
   tmp9 = session;
   obj = obj19;
@@ -222,7 +222,7 @@ function UnknownLegacySessionsInfo() {
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef12393 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef12394 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;

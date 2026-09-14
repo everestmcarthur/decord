@@ -1,14 +1,14 @@
 // Module ID: 10082
 // Function ID: 10083
 // Name: MobileGoLiveActionSheet
-// Dependencies: [32, 19, 4682, 4658, 1957, 1979, 2011, 1371, 4683, 1074, 4661, 21, 4636, 576, 1151, 4603, 10082, 1896, 1250, 504, 10083, 10088, 7265, 7285, 4373, 4778, 9218, 7061, 1114, 2234, 10089, 10091, 5670, 4632, 4337, 10093, 7253, 6728, 7226, 5768, 5766, 9443, 1093, 5769, 10094, 7955, 10099, 7303, 5056, 10081, 2]
+// Dependencies: [32, 19, 4682, 4658, 1957, 1979, 2011, 1371, 4683, 1074, 4661, 21, 4636, 576, 1364, 4603, 10082, 1896, 1248, 504, 10083, 10088, 7265, 7285, 4373, 4778, 9218, 7061, 1114, 2234, 10089, 10091, 5670, 4632, 4337, 10093, 7253, 6728, 7226, 5768, 5766, 9443, 1093, 5769, 10094, 7955, 10099, 7303, 5056, 10081, 2]
 // Exports: showMobileGoLiveActionSheet
 
 // Module 10082 (MobileGoLiveActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2234 from "module_2234" /* 2234 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
@@ -51,7 +51,7 @@ let closure_16 = createStyles.createStyles(obj);
 const MobileGoLiveActionSheet = "MobileGoLiveActionSheet";
 let items = [{ preset: ApplicationStreamPresets.PRESET_MOBILE_DEFAULT, enabled: true }, , ];
 let obj7 = { preset: ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE, enabled: null };
-const PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 obj7.enabled = !PlatformUtils.isIOS();
 items[1] = obj7;
 items[2] = { preset: ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY, enabled: true };

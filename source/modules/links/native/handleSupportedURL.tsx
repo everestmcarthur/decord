@@ -1,10 +1,10 @@
-// Module ID: 13938
-// Function ID: 13939
+// Module ID: 13939
+// Function ID: 13940
 // Name: handleSupportedURL
-// Dependencies: [109, 5, 5639, 7629, 7524, 13480, 502, 1074, 1964, 4678, 4846, 9704, 7641, 4618, 13939, 8079, 12805, 4839, 4495, 13940, 8296, 7485, 8864, 11922, 1874, 11563, 1242, 11565, 7351, 11714, 12043, 13947, 12837, 9708, 1896, 9705, 9703, 13949, 13951, 1608, 5220, 13955, 4331, 13957, 1979, 7445, 9833, 9919, 7419, 4838, 9578, 4494, 5537, 1100, 573, 5487, 1365, 9192, 13960, 13975, 1150, 13986, 9950, 12039, 13993, 4960, 13994, 7644, 7285, 9283, 7820, 5530, 11896, 11654, 10789, 14066, 5515, 9638, 8809, 8803, 4601, 2]
+// Dependencies: [109, 5, 5639, 7629, 7524, 13481, 502, 1074, 1964, 4678, 4846, 9704, 7641, 4618, 13940, 8079, 12806, 4839, 4495, 13941, 8296, 7485, 8864, 11923, 1874, 11564, 1240, 11566, 7351, 11715, 12044, 13948, 12838, 9708, 1896, 9705, 9703, 13950, 13952, 1608, 5220, 13956, 4331, 13958, 1979, 7445, 9833, 9919, 7419, 4838, 9578, 4494, 5537, 1100, 573, 5487, 1365, 9192, 13961, 13976, 1363, 13987, 9950, 12040, 13994, 4960, 13995, 7644, 7285, 9283, 7820, 5530, 11897, 11655, 10790, 14067, 5515, 9638, 8809, 8803, 4601, 2]
 // Exports: default
 
-// Module 13938 (handleSupportedURL)
+// Module 13939 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -23,18 +23,18 @@ import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9283 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 9638 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
-import BountyActionCreators from "BountyActionCreators" /* 11654 */;
-import QuestUtils from "QuestUtils" /* 11896 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11922 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 13975 */;
+import BountyActionCreators from "BountyActionCreators" /* 11655 */;
+import QuestUtils from "QuestUtils" /* 11897 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11923 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 13976 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13480 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13481 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const ApplicationUtils = tmp4(9703);
-const FamilyCenterNativeUtils = tmp3(12043);
+const FamilyCenterNativeUtils = tmp3(12044);
 require = fn;
 let closure_4 = ["code", "state"];
 fn(5639).addPostConnectionCallback;
@@ -47,7 +47,7 @@ const NativePermissionTypes = fn(4846).NativePermissionTypes;
 let closure_21 = fn(9704).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7641).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(4618).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13939).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13940).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8079).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -194,7 +194,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[28]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009417941561190702 };
+      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: -892403711 };
       const obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
       obj22.navigationSettings = obj23;
       rootNavigationRef1(inviteCode[29])(obj22);
@@ -240,7 +240,7 @@ export default function handleSupportedURL(payload) {
           pathname(() => {
             ModalActionCreatorsDefault.popAll();
             if (obj2.isMidjourneyOnboardingFlow()) {
-              tmp(12837).openCreateGuildModal((guildId) => {
+              tmp(12838).openCreateGuildModal((guildId) => {
                 if (type.type === OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE) {
                   rootNavigationRef1(inviteCode[17]).popAll();
                   const obj = rootNavigationRef1(inviteCode[17]);
@@ -256,7 +256,7 @@ export default function handleSupportedURL(payload) {
                   const tmp7 = payload(inviteCode[34])(inviteCode[33], inviteCode.paths);
                 }
               });
-              const tmpResult = tmp(12837);
+              const tmpResult = tmp(12838);
             } else {
               let obj3 = {};
               let merged = Object.assign(payload.props);
@@ -276,7 +276,7 @@ export default function handleSupportedURL(payload) {
         } else if (tmp.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13951, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13952, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[39]);
             const tmp = inviteCode;

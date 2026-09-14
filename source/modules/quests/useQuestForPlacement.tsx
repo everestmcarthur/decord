@@ -1,13 +1,13 @@
-// Module ID: 15196
-// Function ID: 15197
+// Module ID: 15197
+// Function ID: 15198
 // Name: useQuestForPlacement
-// Dependencies: [19, 7802, 7805, 1090, 11617, 11433, 11409, 504, 15197, 7803, 7801, 2]
+// Dependencies: [19, 7802, 7805, 1090, 11618, 11434, 11410, 504, 15198, 7803, 7801, 2]
 // Exports: default, useAdDecisionForPlacement, useAdRefreshLoop
 
-// Module 15196 (useQuestForPlacement)
+// Module 15197 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1090 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
-import QuestsEligibility from "QuestsEligibility" /* 11617 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
+import QuestsEligibility from "QuestsEligibility" /* 11618 */;
 import noop from "module_19" /* 19 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 7802 */;
 import QuestStore from "QuestStore" /* 7805 */;
@@ -30,16 +30,16 @@ function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {
     if ("active" === obj2.getState()) {
       if (!AdDeliveryStore.isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA)) {
         if (obj4.canRefreshAd(MOBILE_HOME_DOCK_AREA)) {
-          const currentQuests = tmp(11409).fetchCurrentQuests();
-          const tmpResult = tmp(11409);
-          const questToDeliver = tmp(11409).fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
-          const tmpResult3 = tmp(11409);
+          const currentQuests = tmp(11410).fetchCurrentQuests();
+          const tmpResult = tmp(11410);
+          const questToDeliver = tmp(11410).fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
+          const tmpResult3 = tmp(11410);
         }
       }
       obj4 = AdDeliveryStore;
     } else if (null != fetchedAt) {
-      tmp(11409).clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
-      const tmpResult4 = tmp(11409);
+      tmp(11410).clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
+      const tmpResult4 = tmp(11410);
     }
     obj2 = DiscordAppStateDefault;
   }

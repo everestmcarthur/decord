@@ -1,15 +1,15 @@
-// Module ID: 11803
-// Function ID: 11804
+// Module ID: 11804
+// Function ID: 11805
 // Name: ChannelPinActionCreators
-// Dependencies: [5, 11804, 1074, 7867, 1272, 4537, 1114, 4980, 573, 2]
+// Dependencies: [5, 11805, 1074, 7867, 1270, 4537, 1114, 4980, 573, 2]
 
-// Module 11803 (ChannelPinActionCreators)
+// Module 11804 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 11804 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 11805 */;
 
 const require = fn;
-const FetchState = fn(11804).FetchState;
+const FetchState = fn(11805).FetchState;
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
@@ -57,7 +57,7 @@ let obj = {
             obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = tmp3(1272).HTTP;
+            const HTTP = tmp3(1270).HTTP;
             const obj6 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
             HTTP.put(obj6).catch((error) => {
               const aPIError = new _private(4537).APIError(error);
@@ -175,7 +175,7 @@ let obj = {
             obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = channel(1272).HTTP;
+            const HTTP = channel(1270).HTTP;
             const obj6 = { url: closure_1_7.PIN(closure_129_0.id, closure_129_1), oldFormErrors: true, rejectWithError: true };
             HTTP.del(obj6).catch(() => {
               const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };

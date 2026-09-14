@@ -1,12 +1,12 @@
-// Module ID: 11923
-// Function ID: 11924
+// Module ID: 11924
+// Function ID: 11925
 // Name: AcceptGuildTemplateModal
-// Dependencies: [5, 32, 19, 7560, 1074, 21, 4636, 5763, 504, 5600, 11924, 7226, 11925, 5219, 11935, 11922, 5705, 7103, 2]
+// Dependencies: [5, 32, 19, 7560, 1074, 21, 4636, 5763, 504, 5600, 11925, 7226, 11926, 5219, 11936, 11923, 5705, 7103, 2]
 // Exports: default
 
-// Module 11923 (AcceptGuildTemplateModal)
+// Module 11924 (AcceptGuildTemplateModal)
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 11935 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 11936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ function ConnectedAcceptGuildTemplate(code) {
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(11924)(stateFromStores);
+  stateFromStores(11925)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -103,7 +103,7 @@ function ConnectedAcceptGuildTemplate(code) {
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(11925), {
+  obj3.children = jsx(stateFromStores(11926), {
     code,
     guildTemplate: stateFromStores,
     name,

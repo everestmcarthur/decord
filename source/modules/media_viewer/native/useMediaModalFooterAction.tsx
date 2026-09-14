@@ -1,11 +1,11 @@
-// Module ID: 11642
-// Function ID: 11643
+// Module ID: 11643
+// Function ID: 11644
 // Name: useMediaModalFooterAction
-// Dependencies: [560, 1249, 2]
+// Dependencies: [560, 1247, 2]
 // Exports: clearMediaModalFooterAction, setMediaModalFooterAction
 
-// Module 11642 (useMediaModalFooterAction)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 11643 (useMediaModalFooterAction)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

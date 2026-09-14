@@ -1,14 +1,14 @@
-// Module ID: 16794
-// Function ID: 16795
+// Module ID: 16796
+// Function ID: 16797
 // Name: PeopleScreen
-// Dependencies: [5, 19, 12494, 12468, 7982, 7981, 21, 12469, 504, 16753, 16749, 4649, 12487, 16795, 16745, 16757, 2]
+// Dependencies: [5, 19, 12495, 12469, 7982, 7981, 21, 12470, 504, 16755, 16751, 4649, 12488, 16797, 16747, 16759, 2]
 
-// Module 16794 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
+// Module 16796 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12494 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12495 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const require = globalThis.__r;
 

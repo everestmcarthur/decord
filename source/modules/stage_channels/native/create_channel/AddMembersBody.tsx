@@ -1,7 +1,7 @@
 // Module ID: 9894
 // Function ID: 9895
 // Name: AddMembersBody
-// Dependencies: [109, 32, 19, 17, 2021, 2015, 1371, 8519, 1085, 21, 4636, 576, 4280, 7084, 504, 4623, 9868, 1178, 1114, 9881, 4348, 6728, 9885, 5600, 4632, 9890, 2]
+// Dependencies: [109, 32, 19, 17, 2021, 2015, 1371, 8519, 1085, 21, 4636, 576, 4280, 7084, 504, 4623, 9868, 1176, 1114, 9881, 4348, 6728, 9885, 5600, 4632, 9890, 2]
 // Exports: default
 
 // Module 9894 (AddMembersBody)
@@ -207,10 +207,10 @@ export default function AddMembersBody(pendingAdditions) {
   items5[1] = tmp27Result;
   if (canEveryoneRoleResult) {
     const obj13 = { style: tmp3.adminWarning, children: null };
-    const obj14 = { messageType: tmp6(1178).HelpMessageTypes.WARNING, children: null };
+    const obj14 = { messageType: tmp6(1176).HelpMessageTypes.WARNING, children: null };
     const intl4 = tmp6(1114).intl;
     obj14.children = intl4.string(tmp6(1114).t["5f3HIC"]);
-    obj13.children = tmp27(tmp6(1178).HelpMessage, obj14);
+    obj13.children = tmp27(tmp6(1176).HelpMessage, obj14);
     canEveryoneRoleResult = tmp27(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -223,7 +223,7 @@ export default function AddMembersBody(pendingAdditions) {
         const intl5 = tmp6(1114).intl;
         const obj17 = { query: str };
         obj16.body = intl5.format(tmp6(1114).t.ErpIY3, obj17);
-        obj15.children = tmp27(tmp6(1178).EmptyState, obj16);
+        obj15.children = tmp27(tmp6(1176).EmptyState, obj16);
         let tmp27Result2 = tmp27(BottomSheetScrollView, obj15);
       }
       const obj18 = { children: null };

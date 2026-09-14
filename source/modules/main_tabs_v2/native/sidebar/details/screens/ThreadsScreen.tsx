@@ -1,13 +1,13 @@
-// Module ID: 16815
-// Function ID: 16816
+// Module ID: 16817
+// Function ID: 16818
 // Name: ThreadsScreen
-// Dependencies: [19, 17, 1957, 1074, 1113, 21, 4636, 576, 7372, 7084, 11355, 4647, 16816, 563, 1484, 2]
+// Dependencies: [19, 17, 1957, 1074, 1113, 21, 4636, 576, 7372, 7084, 11356, 4647, 16818, 563, 1484, 2]
 
-// Module 16815 (ThreadsScreen)
+// Module 16817 (ThreadsScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11355 */;
-import ThreadListDefault from "ThreadList" /* 16816 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11356 */;
+import ThreadListDefault from "ThreadList" /* 16818 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

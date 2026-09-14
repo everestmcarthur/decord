@@ -1,10 +1,10 @@
-// Module ID: 13991
-// Function ID: 13992
+// Module ID: 13992
+// Function ID: 13993
 // Name: ShareEmbed
 // Dependencies: [19, 17, 21, 4636, 576, 5658, 4632, 2]
 // Exports: default
 
-// Module 13991 (ShareEmbed)
+// Module 13992 (ShareEmbed)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5658 */;

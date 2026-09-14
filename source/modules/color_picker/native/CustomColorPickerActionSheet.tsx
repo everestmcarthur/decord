@@ -1,17 +1,17 @@
-// Module ID: 14683
-// Function ID: 14684
+// Module ID: 14684
+// Function ID: 14685
 // Name: CustomColorPickerActionSheet
-// Dependencies: [32, 19, 17, 21, 4636, 576, 14684, 1091, 4373, 14685, 4486, 672, 4603, 7253, 7252, 1114, 5056, 6707, 12, 14686, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 14685, 1091, 4373, 14686, 4486, 672, 4603, 7253, 7252, 1114, 5056, 6707, 12, 14687, 2]
 // Exports: default
 
-// Module 14683 (CustomColorPickerActionSheet)
+// Module 14684 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14685 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14686 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -174,7 +174,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(tmp15, obj12);
-  items3[2] = sharedValue2(tmp16(14686), {
+  items3[2] = sharedValue2(tmp16(14687), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,

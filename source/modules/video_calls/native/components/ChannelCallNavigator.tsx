@@ -1,7 +1,7 @@
 // Module ID: 9787
 // Function ID: 9788
 // Name: ChannelCallNavigator
-// Dependencies: [5, 32, 19, 17, 9788, 9598, 1074, 9704, 21, 4636, 1477, 9719, 4373, 9789, 10205, 9601, 4847, 4839, 9708, 1896, 1109, 10067, 12794, 4490, 9813, 1150, 4347, 4520, 7103, 2]
+// Dependencies: [5, 32, 19, 17, 9788, 9598, 1074, 9704, 21, 4636, 1477, 9719, 4373, 9789, 10205, 9601, 4847, 4839, 9708, 1896, 1109, 10067, 12795, 4490, 9813, 1363, 4347, 4520, 7103, 2]
 // Exports: default
 
 // Module 9787 (ChannelCallNavigator)
@@ -232,9 +232,9 @@ function MainCallScreen(channel) {
   if (isChannelContentGated) {
     let obj3 = { onReturnToSafety: id(4839).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(12794), obj3);
+    let tmp14Result2 = closure_12(id(12795), obj3);
     let tmp11 = closure_12;
-    const tmp20 = id(12794);
+    const tmp20 = id(12795);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -256,9 +256,9 @@ function MainCallScreen(channel) {
   let obj2 = isConnectedToVoiceChannel(4847);
   const tmp21 = id(4490)();
   const tmp22 = id(9813);
-  const tmp2Result = isConnectedToVoiceChannel(1150);
-  const tmp23 = isConnectedToVoiceChannel(1150).isAndroid() || !isConnectedToVoiceChannel;
-  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(1150).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4347).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }) });
+  const tmp2Result = isConnectedToVoiceChannel(1363);
+  const tmp23 = isConnectedToVoiceChannel(1363).isAndroid() || !isConnectedToVoiceChannel;
+  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(1363).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4347).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }) });
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);

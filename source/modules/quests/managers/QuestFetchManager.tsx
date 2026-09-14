@@ -1,12 +1,12 @@
-// Module ID: 17928
-// Function ID: 17929
+// Module ID: 17929
+// Function ID: 17930
 // Name: QuestFetchManager
-// Dependencies: [7805, 1090, 7221, 11617, 1232, 11409, 1150, 11433, 17929, 2]
+// Dependencies: [7805, 1090, 7221, 11618, 1230, 11410, 1363, 11434, 17930, 2]
 
-// Module 17928 (QuestFetchManager)
+// Module 17929 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1090 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import QuestsEligibility from "QuestsEligibility" /* 11617 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import QuestsEligibility from "QuestsEligibility" /* 11618 */;
 import QuestStore from "QuestStore" /* 7805 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
@@ -43,8 +43,8 @@ class QuestFetchManager extends tmp2 {
       applyArgumentsResult.hasHandledConnectionOpen = true;
       if (applyArgumentsResult.hasHandledConnectionOpen) {
         if (isEligibleForQuests) {
-          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17929).getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
-          const tmp5Result = tmp5(17929);
+          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17930).getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
+          const tmp5Result = tmp5(17930);
         }
         const _Math = Math;
         const _Math2 = Math;
@@ -68,7 +68,7 @@ class QuestFetchManager extends tmp2 {
           }, rounded + Math.floor(Math.random() * questHomeHeroJitterMs));
         }
       }
-      DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17929).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
+      DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17930).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
     };
     applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {
 
@@ -120,13 +120,13 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
     obj3.data = obj4;
     SentryUtilsDefault.addBreadcrumb(obj3);
     const tmp6 = importDefault;
-    const currentQuests = tmp(11409).fetchCurrentQuests();
-    const tmpResult = tmp(11409);
+    const currentQuests = tmp(11410).fetchCurrentQuests();
+    const tmpResult = tmp(11410);
     if (tmpResult2.isMac()) {
-      const state = tmp6(11433).getState();
-      const tmp6Result = tmp6(11433);
+      const state = tmp6(11434).getState();
+      const tmp6Result = tmp6(11434);
     }
-    tmpResult2 = tmp(1150);
+    tmpResult2 = tmp(1363);
   }
 };
 const questFetchManager = new QuestFetchManager();

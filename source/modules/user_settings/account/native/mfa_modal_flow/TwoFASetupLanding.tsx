@@ -1,16 +1,16 @@
-// Module ID: 14873
-// Function ID: 14874
+// Module ID: 14874
+// Function ID: 14875
 // Name: TwoFASetupLanding
-// Dependencies: [19, 17, 21, 4636, 14874, 14870, 7226, 14875, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 14875, 14871, 7226, 14876, 4632, 1114, 2]
 // Exports: default
 
-// Module 14873 (TwoFASetupLanding)
+// Module 14874 (TwoFASetupLanding)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14870 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 14874 */;
-import _modDef14875 from "module_14875" /* 14875 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14871 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 14875 */;
+import _modDef14876 from "module_14876" /* 14876 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function TwoFASetupLanding() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef14875, style: tmp.authIcon }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef14876, style: tmp.authIcon }), , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);

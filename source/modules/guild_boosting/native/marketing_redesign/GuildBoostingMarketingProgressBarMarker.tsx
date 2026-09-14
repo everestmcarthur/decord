@@ -1,15 +1,15 @@
-// Module ID: 13670
-// Function ID: 13671
+// Module ID: 13671
+// Function ID: 13672
 // Name: GuildBoostingMarketingProgressBarMarker
-// Dependencies: [19, 17, 1074, 21, 13671, 13672, 13673, 4636, 576, 4571, 4373, 4486, 4488, 5055, 12713, 11693, 4632, 4530, 2]
+// Dependencies: [19, 17, 1074, 21, 13672, 13673, 13674, 4636, 576, 4571, 4373, 4486, 4488, 5055, 12714, 11694, 4632, 4530, 2]
 // Exports: default
 
-// Module 13670 (GuildBoostingMarketingProgressBarMarker)
+// Module 13671 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
-import _modDef13671 from "module_13671" /* 13671 */;
 import _modDef13672 from "module_13672" /* 13672 */;
 import _modDef13673 from "module_13673" /* 13673 */;
+import _modDef13674 from "module_13674" /* 13674 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -95,7 +95,7 @@ const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const TierMarkerPositions = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
-let obj2 = { [TIER_1]: _modDef13671, [TIER_2]: _modDef13672, [TIER_3]: _modDef13673 };
+let obj2 = { [TIER_1]: _modDef13672, [TIER_2]: _modDef13673, [TIER_3]: _modDef13674 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(4636);
 let obj4 = { progressBarMarkerInnerCircle: { width: 17.5, height: 17.5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }, progressBarMarkerInnerCircleBackground: { width: "100%", height: "100%", borderRadius: 17.5, position: "absolute" }, progressBarMarkerInnerCircleIcon: { width: 16, height: 16 }, progressBarMarkerInnerCircleIconUnlocked: null };
@@ -200,7 +200,7 @@ export default function ProgressBarMarker(arg0) {
       tmp20Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp20Result) {
-      const obj8 = { source: tmp2(11693), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj8 = { source: tmp2(11694), style: tmp.progressBarMarkerUnlockedIcon };
       tmp20Result = tmp20(closure_5, obj8);
     }
     const items5 = [tmp20Result, ];

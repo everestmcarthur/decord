@@ -1,10 +1,10 @@
-// Module ID: 13343
-// Function ID: 13344
+// Module ID: 13344
+// Function ID: 13345
 // Name: GuildScheduledEventEmbed
-// Dependencies: [32, 17, 7629, 1975, 1957, 1979, 4285, 1371, 11442, 1963, 7838, 8049, 8050, 9903, 9798, 9795, 9912, 1114, 8053, 9987, 8040, 576, 9696, 4626, 9835, 4789, 9899, 9911, 13344, 9833, 1971, 2]
+// Dependencies: [32, 17, 7629, 1975, 1957, 1979, 4285, 1371, 11443, 1963, 7838, 8049, 8050, 9903, 9798, 9795, 9912, 1114, 8053, 9987, 8040, 576, 9696, 4626, 9835, 4789, 9899, 9911, 13345, 9833, 1971, 2]
 // Exports: createGuildScheduledEventInviteEmbed, createGuildScheduledEventLinkEmbed
 
-// Module 13343 (GuildScheduledEventEmbed)
+// Module 13344 (GuildScheduledEventEmbed)
 import util from "util" /* 1114 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
@@ -17,7 +17,7 @@ import GuildEventUtils from "GuildEventUtils" /* 9899 */;
 import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9903 */;
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9911 */;
 import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9912 */;
-import _modDef13344 from "module_13344" /* 13344 */;
+import _modDef13345 from "module_13345" /* 13345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7629 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -143,7 +143,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj7.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj7.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13344);
+  obj7.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13345);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = tmp7(8050).getAssetUriForEmbed(eventLocationIconSource);
@@ -196,7 +196,7 @@ let GuildScheduledEventStore = fn(7629);
 ({ isGuildEventEnded: hasOwnProperty, isGuildScheduledEventActive: metroRequire } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const getGuildIconSource = fn(1975).getGuildIconSource;
-const CodedLinkExtendedType = fn(11442).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11443).CodedLinkExtendedType;
 const constants = fn(1963).GuildScheduledEventEntityTypes;
 const InviteTypes = fn(7838).InviteTypes;
 let closure_17 = {};

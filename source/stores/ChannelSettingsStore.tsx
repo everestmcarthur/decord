@@ -1,13 +1,13 @@
 // Module ID: 8749
 // Function ID: 8750
 // Name: ChannelSettingsStore
-// Dependencies: [1961, 8498, 1385, 1957, 1074, 1113, 4287, 4289, 1966, 1967, 1272, 573, 12, 1971, 4228, 504, 2]
+// Dependencies: [1961, 8498, 1385, 1957, 1074, 1113, 4287, 4289, 1966, 1967, 1270, 573, 12, 1971, 4228, 504, 2]
 
 // Module 8749 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 1966 */;
 import ForumLayout from "ForumLayout" /* 1967 */;

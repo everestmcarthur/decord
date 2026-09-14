@@ -1,13 +1,13 @@
-// Module ID: 14861
-// Function ID: 14862
+// Module ID: 14862
+// Function ID: 14863
 // Name: SafetyHubViolationsContainer
-// Dependencies: [32, 19, 17, 8548, 8537, 1074, 21, 4636, 576, 9179, 8711, 4632, 1114, 13660, 11287, 8536, 11, 14862, 8538, 4839, 12008, 1896, 12012, 504, 1242, 12010, 2]
+// Dependencies: [32, 19, 17, 8548, 8537, 1074, 21, 4636, 576, 9179, 8711, 4632, 1114, 13661, 11288, 8536, 11, 14863, 8538, 4839, 12009, 1896, 12013, 504, 1240, 12011, 2]
 // Exports: ConnectedSafetyHubViolationsContainer
 
-// Module 14861 (SafetyHubViolationsContainer)
+// Module 14862 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -15,7 +15,7 @@ import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
 import SafetyHubModels from "SafetyHubModels" /* 8538 */;
 import WarningIcon from "WarningIcon" /* 8711 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12010 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12011 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
@@ -59,9 +59,9 @@ function SafetyHubViolationsHeader(count) {
   obj4.children = items4;
   items2[1] = closure_1_12(timestampProducer, obj4);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13660).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13661).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(11287).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(11288).ChevronSmallDownIcon;
   }
   const obj7 = { size: "md", style: null };
   const items5 = [tmp.chevron];
@@ -174,7 +174,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12008, dependencyMap.paths), { classificationId: id, source: React6.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12009, dependencyMap.paths), { classificationId: id, source: React6.StandingTab });
     },
     children: null
   };

@@ -1,14 +1,14 @@
-// Module ID: 16624
-// Function ID: 16625
+// Module ID: 16626
+// Function ID: 16627
 // Name: MainTabsChannelScreenStack
-// Dependencies: [32, 19, 17, 9640, 7967, 1074, 9641, 1085, 21, 4636, 16625, 4373, 5073, 4571, 4497, 16626, 4347, 4374, 5011, 16627, 1484, 16101, 4502, 16105, 6756, 4490, 16100, 9698, 573, 4503, 2]
+// Dependencies: [32, 19, 17, 9640, 7967, 1074, 9641, 1085, 21, 4636, 16627, 4373, 5073, 4571, 4497, 16628, 4347, 4374, 5011, 16629, 1484, 16103, 4502, 16107, 6756, 4490, 16102, 9698, 573, 4503, 2]
 
-// Module 16624 (MainTabsChannelScreenStack)
+// Module 16626 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16100 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;

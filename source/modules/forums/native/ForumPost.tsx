@@ -1,13 +1,13 @@
-// Module ID: 12129
-// Function ID: 12130
+// Module ID: 12130
+// Function ID: 12131
 // Name: ForumPost
-// Dependencies: [19, 1957, 4285, 12130, 21, 12131, 12135, 12146, 504, 38, 7407, 7989, 12149, 12150, 8001, 12156, 1967, 2]
+// Dependencies: [19, 1957, 4285, 12131, 21, 12132, 12136, 12147, 504, 38, 7407, 7989, 12150, 12151, 8001, 12157, 1967, 2]
 // Exports: ForumPostListDisabled
 
-// Module 12129 (ForumPost)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12131 */;
-import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12135 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12146 */;
+// Module 12130 (ForumPost)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12132 */;
+import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12136 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12147 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
@@ -100,7 +100,7 @@ function ConnectedForumPost(arg0) {
     return closure_6(tmp3(tmp[15]), {});
   }
 }
-const useForumChannelStore = fn(12130).useForumChannelStore;
+const useForumChannelStore = fn(12131).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -136,8 +136,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   if (loaded) {
     const obj4 = { style, children: null };
     const obj5 = { thread: stateFromStores, parentChannel: stateFromStores1, firstMessage, messageContent: tmp10, media: localDeviceMedia, hasUnreads: true, isNew: false, firstMessageLoaded: loaded, isLocalDeviceMedia: true };
-    obj4.children = closure_6(tmp4(12150), obj5);
-    tmp5 = closure_6(tmp(12149).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(12151), obj5);
+    tmp5 = closure_6(tmp(12150).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 };

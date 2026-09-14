@@ -1,7 +1,7 @@
 // Module ID: 7480
 // Function ID: 7481
 // Name: HeaderActionButton
-// Dependencies: [19, 1182, 21, 4636, 576, 4632, 5061, 5058, 5204, 2]
+// Dependencies: [19, 1180, 21, 4636, 576, 4632, 5061, 5058, 5204, 2]
 
 // Module 7480 (HeaderActionButton)
 import nativeDefault from "native" /* 576 */;
@@ -12,7 +12,7 @@ import Pressables from "Pressables" /* 5204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1180).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);

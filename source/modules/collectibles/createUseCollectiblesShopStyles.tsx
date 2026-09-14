@@ -1,10 +1,10 @@
-// Module ID: 11214
-// Function ID: 11215
+// Module ID: 11215
+// Function ID: 11216
 // Name: createUseCollectiblesShopStyles
 // Dependencies: [32, 4628, 8345, 7655, 563, 2]
 // Exports: default
 
-// Module 11214 (createUseCollectiblesShopStyles)
+// Module 11215 (createUseCollectiblesShopStyles)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import tinycolorDefault from "tinycolor" /* 7655 */;
 import _slicedToArray from "module_32" /* 32 */;

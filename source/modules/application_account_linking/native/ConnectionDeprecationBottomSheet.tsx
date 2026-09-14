@@ -1,10 +1,10 @@
-// Module ID: 17053
-// Function ID: 17054
+// Module ID: 17055
+// Function ID: 17056
 // Name: ConnectionDeprecationBottomSheet
-// Dependencies: [19, 17, 4864, 5362, 1954, 21, 4636, 576, 4347, 1611, 504, 5364, 7268, 7265, 7285, 17054, 4603, 17056, 1896, 7252, 7253, 5054, 17042, 4632, 1114, 3010, 8962, 5056, 13086, 4345, 1396, 5058, 7275, 7271, 2]
+// Dependencies: [19, 17, 4864, 5362, 1954, 21, 4636, 576, 4347, 1611, 504, 5364, 7268, 7265, 7285, 17056, 4603, 17058, 1896, 7252, 7253, 5054, 17044, 4632, 1114, 3010, 8962, 5056, 13087, 4345, 1396, 5058, 7275, 7271, 2]
 // Exports: default, useShouldShowConnectionDeprecationBottomSheet
 
-// Module 17053 (ConnectionDeprecationBottomSheet)
+// Module 17055 (ConnectionDeprecationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import themes from "themes" /* 4345 */;
@@ -12,7 +12,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603
 import IconDefault from "Icon" /* 5058 */;
 import useStartAuthorizeDefault from "useStartAuthorize" /* 7268 */;
 import GameIcon from "GameIcon" /* 7275 */;
-import AccountLinkManager from "AccountLinkManager" /* 17054 */;
+import AccountLinkManager from "AccountLinkManager" /* 17056 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;

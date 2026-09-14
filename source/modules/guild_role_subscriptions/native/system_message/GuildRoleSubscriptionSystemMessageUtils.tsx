@@ -1,10 +1,10 @@
-// Module ID: 11958
-// Function ID: 11959
+// Module ID: 11959
+// Function ID: 11960
 // Name: system_message/GuildRoleSubscriptionSystemMessageUtils
 // Dependencies: [1074, 7559, 8096, 4816, 2]
 // Exports: handleRoleSubscriptionPurchaseSystemMessageCtaClicked
 
-// Module 11958 (system_message/GuildRoleSubscriptionSystemMessageUtils)
+// Module 11959 (system_message/GuildRoleSubscriptionSystemMessageUtils)
 import Constants from "Constants" /* 1074 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;

@@ -1,12 +1,12 @@
-// Module ID: 11716
-// Function ID: 11717
+// Module ID: 11717
+// Function ID: 11718
 // Name: RoleMembersActionSheet
-// Dependencies: [19, 17, 4628, 7382, 2015, 21, 4636, 576, 11, 7232, 504, 7230, 1178, 4632, 7253, 11717, 2]
+// Dependencies: [19, 17, 4628, 7382, 2015, 21, 4636, 576, 11, 7232, 504, 7230, 1176, 4632, 7253, 11718, 2]
 // Exports: default
 
-// Module 11716 (RoleMembersActionSheet)
+// Module 11717 (RoleMembersActionSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7232 */;
 import noop from "module_19" /* 19 */;
@@ -82,9 +82,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11717), obj5);
+    obj4.children = closure_8(tmp9(11718), obj5);
     tmp16Result = tmp16(tmp3(7253).BottomSheet, obj4);
-    let tmp9Result = tmp9(11717);
+    let tmp9Result = tmp9(11718);
   }
   return tmp16Result;
 };

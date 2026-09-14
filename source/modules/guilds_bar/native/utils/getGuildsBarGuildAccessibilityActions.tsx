@@ -1,13 +1,13 @@
-// Module ID: 16434
-// Function ID: 16435
+// Module ID: 16436
+// Function ID: 16437
 // Name: getGuildsBarGuildAccessibilityActions
-// Dependencies: [1979, 5519, 1114, 9488, 4488, 16435, 5601, 2]
+// Dependencies: [1979, 5519, 1114, 9488, 4488, 16437, 5601, 2]
 // Exports: default
 
-// Module 16434 (getGuildsBarGuildAccessibilityActions)
+// Module 16436 (getGuildsBarGuildAccessibilityActions)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9488 */;
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16435 */;
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16437 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
 

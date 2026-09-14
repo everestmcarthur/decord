@@ -1,17 +1,17 @@
-// Module ID: 13579
-// Function ID: 13580
+// Module ID: 13580
+// Function ID: 13581
 // Name: Footer
-// Dependencies: [19, 17, 21, 4636, 13580, 7285, 4632, 1114, 5056, 5668, 13581, 2]
+// Dependencies: [19, 17, 21, 4636, 13581, 7285, 4632, 1114, 5056, 5668, 13582, 2]
 // Exports: default
 
-// Module 13579 (Footer)
+// Module 13580 (Footer)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13580 */;
-import _modDef13581 from "module_13581" /* 13581 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13581 */;
+import _modDef13582 from "module_13582" /* 13582 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: _modDef13581 });
+  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: _modDef13582 });
   obj.children = items2;
   return timestampProducer(View, obj);
 };

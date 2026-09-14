@@ -1,10 +1,10 @@
-// Module ID: 15798
-// Function ID: 15799
+// Module ID: 15800
+// Function ID: 15801
 // Name: DevToolsAgeVerificationScreen
 // Dependencies: [5, 19, 17, 21, 4636, 576, 8535, 8529, 4335, 8531, 1611, 5768, 5686, 7059, 5693, 2]
 // Exports: default
 
-// Module 15798 (DevToolsAgeVerificationScreen)
+// Module 15800 (DevToolsAgeVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import TableRow from "TableRow" /* 5686 */;

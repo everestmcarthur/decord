@@ -1,16 +1,16 @@
-// Module ID: 14942
-// Function ID: 14943
+// Module ID: 14943
+// Function ID: 14944
 // Name: BaseUpsellActionSheet
-// Dependencies: [19, 17, 1979, 21, 4596, 576, 4636, 504, 5665, 14940, 1114, 4632, 12747, 12497, 4603, 4335, 7253, 5056, 2]
+// Dependencies: [19, 17, 1979, 21, 4596, 576, 4636, 504, 5665, 14941, 1114, 4632, 12748, 12498, 4603, 4335, 7253, 5056, 2]
 // Exports: default
 
-// Module 14942 (BaseUpsellActionSheet)
+// Module 14943 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4596 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14940 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14941 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

@@ -1,16 +1,16 @@
-// Module ID: 16618
-// Function ID: 16619
+// Module ID: 16620
+// Function ID: 16621
 // Name: useNotificationPermissionPrompt
-// Dependencies: [19, 1950, 5358, 1951, 12538, 504, 1953, 12547, 16619, 16621, 2]
+// Dependencies: [19, 1950, 5358, 1951, 12539, 504, 1953, 12548, 16621, 16623, 2]
 // Exports: default
 
-// Module 16618 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 12547 */;
+// Module 16620 (useNotificationPermissionPrompt)
+import NotificationUtilsDefault from "NotificationUtils" /* 12548 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12538 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12539 */;
 
 const require = fn;
 const size = fn(2);
@@ -27,16 +27,16 @@ export default function useNotificationPermissionPrompt() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         if (tmp5) {
-          const permission = tmp3(12547).requestPermission();
-          tmp3(12547).shouldRequestNotification = false;
-          const tmp3Result = tmp3(12547);
+          const permission = tmp3(12548).requestPermission();
+          tmp3(12548).shouldRequestNotification = false;
+          const tmp3Result = tmp3(12548);
         }
         tmp5 = NotificationUtilsDefault.shouldRequestNotification && !PushNotificationPermissionStore.promptSeen;
       }
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(16619).useGuildOpenNudge();
-  const obj3 = stateFromStores(16619);
-  const postCallDisconnectNudge = stateFromStores(16621).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16621).useGuildOpenNudge();
+  const obj3 = stateFromStores(16621);
+  const postCallDisconnectNudge = stateFromStores(16623).usePostCallDisconnectNudge();
 };

@@ -1,17 +1,17 @@
-// Module ID: 14673
-// Function ID: 14674
+// Module ID: 14674
+// Function ID: 14675
 // Name: ProfileCustomizationSettingScreen
-// Dependencies: [5, 109, 32, 19, 17, 9337, 8277, 1084, 1074, 21, 4636, 1114, 14674, 14732, 4338, 576, 1483, 7097, 9922, 11054, 7087, 4502, 14691, 14733, 563, 4816, 9339, 5705, 7966, 1484, 12743, 12745, 2]
+// Dependencies: [5, 109, 32, 19, 17, 9337, 8277, 1084, 1074, 21, 4636, 1114, 14675, 14733, 4338, 576, 1483, 7097, 9922, 11055, 7087, 4502, 14692, 14734, 563, 4816, 9339, 5705, 7966, 1484, 12744, 12746, 2]
 
-// Module 14673 (ProfileCustomizationSettingScreen)
+// Module 14674 (ProfileCustomizationSettingScreen)
 import util from "util" /* 1114 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7087 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9339 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 11054 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14674 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14732 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 11055 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14675 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14733 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;

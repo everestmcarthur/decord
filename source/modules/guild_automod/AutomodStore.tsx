@@ -1,12 +1,12 @@
-// Module ID: 17655
-// Function ID: 17656
+// Module ID: 17656
+// Function ID: 17657
 // Name: AutomodStore
-// Dependencies: [32, 5, 19, 11992, 1074, 1244, 17656, 1249, 11997, 4537, 4259, 2]
+// Dependencies: [32, 5, 19, 11993, 1074, 1242, 17657, 1247, 11998, 4537, 4259, 2]
 // Exports: getRuleCountByTriggerType, useAutomodRulesList, useSyncAutomodRules, useSyncAutomodRulesEffect
 
-// Module 17655 (AutomodStore)
+// Module 17656 (AutomodStore)
 import _mod4259 from "module_4259" /* 4259 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 17656 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 17657 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -14,10 +14,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(11992).AutomodTriggerType;
+const AutomodTriggerType = fn(11993).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1244);
+const identity = fn(1242);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1249).batchUpdates(() => {
+      guildId(1247).batchUpdates(() => {
         obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -85,7 +85,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1249).batchUpdates(() => {
+      closure_0(1247).batchUpdates(() => {
         const obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);

@@ -1,12 +1,12 @@
-// Module ID: 10884
-// Function ID: 10885
+// Module ID: 10885
+// Function ID: 10886
 // Name: GiftingBadgeProgressBanner
-// Dependencies: [19, 17, 21, 4636, 576, 7265, 8894, 1250, 10877, 4632, 1114, 2492, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7265, 8894, 1248, 10878, 4632, 1114, 2492, 2]
 // Exports: default
 
-// Module 10884 (GiftingBadgeProgressBanner)
+// Module 10885 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 576 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
@@ -47,7 +47,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   let tmp10Result = null != nextTierIcon;
   if (tmp10Result) {
     const obj4 = { icon: nextTierIcon, size: 24 };
-    tmp10Result = tmp10(tmp2(10877), obj4);
+    tmp10Result = tmp10(tmp2(10878), obj4);
   }
   obj3.children = tmp10Result;
   const items2 = [React4(View, obj3), ];

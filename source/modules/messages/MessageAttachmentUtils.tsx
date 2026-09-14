@@ -1,10 +1,10 @@
-// Module ID: 12141
-// Function ID: 12142
+// Module ID: 12142
+// Function ID: 12143
 // Name: MessageAttachmentUtils
 // Dependencies: [4275, 1074, 7395, 7400, 7399, 8001, 563, 1935, 8389, 1114, 2]
 // Exports: getObscureReasonForAttachment, getObscureReasonForEmbed, getObscureReasonForUnfurledMediaItem, getObscuredAlt, useShouldObscure
 
-// Module 12141 (MessageAttachmentUtils)
+// Module 12142 (MessageAttachmentUtils)
 import util from "util" /* 1114 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 7399 */;

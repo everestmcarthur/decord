@@ -1,18 +1,18 @@
-// Module ID: 13943
-// Function ID: 13944
+// Module ID: 13944
+// Function ID: 13945
 // Name: AddFriendById
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 1114, 4632, 6714, 13944, 9175, 9171, 4334, 1242, 4348, 7188, 5056, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 1114, 4632, 6714, 13945, 9175, 9171, 4334, 1240, 4348, 7188, 5056, 2]
 
-// Module 13943 (AddFriendById)
+// Module 13944 (AddFriendById)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import TextField from "TextField" /* 6714 */;
 import FriendsUtils from "FriendsUtils" /* 9175 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13944 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

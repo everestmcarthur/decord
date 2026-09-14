@@ -1,13 +1,13 @@
-// Module ID: 16818
-// Function ID: 16819
+// Module ID: 16820
+// Function ID: 16821
 // Name: ThreadBrowserRowSubtext
-// Dependencies: [19, 17, 4628, 2021, 1371, 7409, 1074, 1085, 21, 4636, 576, 504, 7883, 5085, 5601, 4632, 1114, 4481, 7414, 4869, 11, 1178, 7992, 8065, 2]
+// Dependencies: [19, 17, 4628, 2021, 1371, 7409, 1074, 1085, 21, 4636, 576, 504, 7883, 5085, 5601, 4632, 1114, 4481, 7414, 4869, 11, 1176, 7992, 8065, 2]
 // Exports: ThreadSubtext
 
-// Module 16818 (ThreadBrowserRowSubtext)
+// Module 16820 (ThreadBrowserRowSubtext)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useMessageAuthorDefault from "useMessageAuthor" /* 4869 */;
@@ -130,7 +130,7 @@ function Username(usernameColor) {
   }
   if (shouldShowRoleDot) {
     const obj2 = { color: roleColor, colors: roleColors, size: "small" };
-    shouldShowRoleDot = React7(tmp3(1178).RoleDot, obj2);
+    shouldShowRoleDot = React7(tmp3(1176).RoleDot, obj2);
   }
   const items1 = [shouldShowRoleDot, ];
   let tmp10;

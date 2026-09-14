@@ -1,12 +1,12 @@
-// Module ID: 16109
-// Function ID: 16110
+// Module ID: 16111
+// Function ID: 16112
 // Name: TabsPerformanceTracker
-// Dependencies: [19, 1074, 3, 1242, 4373, 2]
+// Dependencies: [19, 1074, 3, 1240, 4373, 2]
 // Exports: trackTabPressed, useTrackTabPerformance
 
-// Module 16109 (TabsPerformanceTracker)
+// Module 16111 (TabsPerformanceTracker)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import noop from "module_19" /* 19 */;
 

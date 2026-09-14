@@ -1,13 +1,13 @@
 // Module ID: 4778
 // Function ID: 4779
 // Name: StreamActionCreators
-// Dependencies: [5, 4653, 4779, 4780, 4658, 502, 1957, 1979, 2011, 4655, 1074, 4678, 573, 4688, 38, 4781, 4792, 4837, 4838, 1272, 1090, 4829, 1250, 9238, 5492, 4649, 9311, 2]
+// Dependencies: [5, 4653, 4779, 4780, 4658, 502, 1957, 1979, 2011, 4655, 1074, 4678, 573, 4688, 38, 4781, 4792, 4837, 4838, 1270, 1090, 4829, 1248, 9238, 5492, 4649, 9311, 2]
 // Exports: changeStreamRegion, closeStream, fetchStreamPreview, joinPrivateChannelAndWatchStream, notifyStreamStart, setLayout, setStreamPaused, startStream, stopOwnStream, stopStream, toggleSelfStreamHidden, updateStreamSettings, watchStreamAndTransitionToStream
 
 // Module 4778 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import ChannelUtils from "ChannelUtils" /* 4781 */;
@@ -128,13 +128,13 @@ let closure_19 = async function _fetchStreamPreview(arg0, value) {
             const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
             DispatcherDefault.dispatch(obj7);
             c6 = 1;
-            HTTP = obj6(1272).HTTP;
+            HTTP = obj6(1270).HTTP;
             const request = { url: map1.STREAM_PREVIEW(HTTPResult), query: null, oldFormErrors: true, rejectWithError: null };
             const obj9 = { version: null };
             timestamp = Date.now();
             obj9.version = timestamp;
             request.query = obj9;
-            obj6 = obj6(1272);
+            obj6 = obj6(1270);
             result = obj6.rejectWithMigratedError();
             request.rejectWithError = result;
             value = HTTP.get(request);

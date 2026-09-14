@@ -1,10 +1,10 @@
-// Module ID: 12451
-// Function ID: 12452
+// Module ID: 12452
+// Function ID: 12453
 // Name: GuildDirectoryAddAlert
 // Dependencies: [19, 17, 21, 4636, 576, 5075, 1114, 5665, 4632, 2]
 // Exports: default
 
-// Module 12451 (GuildDirectoryAddAlert)
+// Module 12452 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

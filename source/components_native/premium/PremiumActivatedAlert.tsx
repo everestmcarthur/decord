@@ -1,10 +1,10 @@
-// Module ID: 10837
-// Function ID: 10838
+// Module ID: 10838
+// Function ID: 10839
 // Name: PremiumActivatedAlert
-// Dependencies: [19, 17, 1074, 21, 4636, 5522, 4294, 10838, 10839, 10840, 10841, 10842, 9515, 10843, 10844, 10845, 10846, 10847, 10848, 8173, 10849, 4488, 10850, 10851, 10852, 10853, 10854, 10855, 10856, 10857, 10858, 1114, 4571, 5075, 10859, 10860, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 5522, 4294, 10839, 10840, 10841, 10842, 10843, 9515, 10844, 10845, 10846, 10847, 10848, 10849, 8173, 10850, 4488, 10851, 10852, 10853, 10854, 10855, 10856, 10857, 10858, 10859, 1114, 4571, 5075, 10860, 10861, 1176, 2]
 // Exports: default
 
-// Module 10837 (PremiumActivatedAlert)
+// Module 10838 (PremiumActivatedAlert)
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import useThemeDefault from "useTheme" /* 4571 */;
@@ -107,26 +107,26 @@ export default function PremiumActivatedAlert(onClose) {
   obj6.style = tmp.alert;
   const obj7 = { style: tmp.header, source: null, children: null };
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result10 = tmp4(10838);
+    let tmp4Result10 = tmp4(10839);
   } else if (tmp7(4294).Branding.TIER_1 === premiumBranding) {
-    tmp4Result10 = tmp4(10839);
-  } else if (tmp7(4294).Branding.TIER_2 === premiumBranding) {
     tmp4Result10 = tmp4(10840);
-  } else if (tmp7(4294).Branding.BUNDLE === premiumBranding) {
+  } else if (tmp7(4294).Branding.TIER_2 === premiumBranding) {
     tmp4Result10 = tmp4(10841);
-  } else if (tmp7(4294).Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (tmp7(4294).Branding.BUNDLE === premiumBranding) {
     tmp4Result10 = tmp4(10842);
+  } else if (tmp7(4294).Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result10 = tmp4(10843);
   }
   obj7.source = tmp4Result10;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result11 = tmp4(10847);
+    let tmp4Result11 = tmp4(10848);
   } else if (tmp7(4294).Branding.TIER_1 === premiumBranding) {
-    tmp4Result11 = tmp4(10848);
+    tmp4Result11 = tmp4(10849);
   } else {
     if (tmp7(4294).Branding.BUNDLE !== premiumBranding) {
       if (tmp7(4294).Branding.TIER_2 !== premiumBranding) {
         if (tmp7(4294).Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result11 = tmp4(10849);
+          tmp4Result11 = tmp4(10850);
         }
       }
     }
@@ -135,20 +135,20 @@ export default function PremiumActivatedAlert(onClose) {
   const items = [React5(React3, { source: tmp4Result11, style: tmp9.logo }), , ];
   let tmp16Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj9 = { source: tmp4(10859), style: tmp.logoPlusPremiumGuild };
+    const obj9 = { source: tmp4(10860), style: tmp.logoPlusPremiumGuild };
     tmp16Result = tmp16(tmp17, obj9);
   }
   items[1] = tmp16Result;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     let tmp4Result12 = tmp4(9515);
   } else if (tmp7(4294).Branding.TIER_1 === premiumBranding) {
-    tmp4Result12 = tmp4(10843);
-  } else if (tmp7(4294).Branding.TIER_2 === premiumBranding) {
     tmp4Result12 = tmp4(10844);
-  } else if (tmp7(4294).Branding.BUNDLE === premiumBranding) {
+  } else if (tmp7(4294).Branding.TIER_2 === premiumBranding) {
     tmp4Result12 = tmp4(10845);
-  } else if (tmp7(4294).Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (tmp7(4294).Branding.BUNDLE === premiumBranding) {
     tmp4Result12 = tmp4(10846);
+  } else if (tmp7(4294).Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result12 = tmp4(10847);
   }
   const obj10 = { source: tmp4Result12, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -162,38 +162,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result14 = tmp4(10850);
+      let tmp4Result14 = tmp4(10851);
     } else {
-      tmp4Result14 = tmp4(10851);
+      tmp4Result14 = tmp4(10852);
     }
     tmp7Result = tmp7(4488);
   } else {
     if (tmp7(4294).Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result15 = tmp4(10852);
+        let tmp4Result15 = tmp4(10853);
       } else {
-        tmp4Result15 = tmp4(10853);
+        tmp4Result15 = tmp4(10854);
       }
       let tmp4Result18 = tmp4Result15;
       tmp7Result5 = tmp7(4488);
     } else if (tmp7(4294).Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result16 = tmp4(10854);
+        let tmp4Result16 = tmp4(10855);
       } else {
-        tmp4Result16 = tmp4(10855);
+        tmp4Result16 = tmp4(10856);
       }
       tmp4Result18 = tmp4Result16;
       tmp7Result6 = tmp7(4488);
     } else if (tmp7(4294).Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result17 = tmp4(10856);
+        let tmp4Result17 = tmp4(10857);
       } else {
-        tmp4Result17 = tmp4(10857);
+        tmp4Result17 = tmp4(10858);
       }
       tmp4Result18 = tmp4Result17;
       tmp7Result7 = tmp7(4488);
     } else if (tmp7(4294).Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result18 = tmp4(10858);
+      tmp4Result18 = tmp4(10859);
     }
     const obj12 = { source: tmp4Result18, style: tmp11.animation };
     const items3 = [tmp16(tmp4Result13, obj12), ];
@@ -214,7 +214,7 @@ export default function PremiumActivatedAlert(onClose) {
         }
       }
       obj13.children = stringResult;
-      items3[1] = tmp16(tmp7(1178).LegacyText, obj13);
+      items3[1] = tmp16(tmp7(1176).LegacyText, obj13);
       obj11.children = items3;
       items2[1] = tmp12(tmp21, obj11);
       obj6.children = items2;

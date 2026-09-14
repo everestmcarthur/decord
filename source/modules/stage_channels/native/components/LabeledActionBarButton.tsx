@@ -1,12 +1,12 @@
 // Module ID: 10139
 // Function ID: 10140
 // Name: LabeledActionBarButton
-// Dependencies: [19, 17, 1085, 21, 4636, 5522, 576, 5204, 1178, 2]
+// Dependencies: [19, 17, 1085, 21, 4636, 5522, 576, 5204, 1176, 2]
 // Exports: LabeledActionButton
 
 // Module 10139 (LabeledActionBarButton)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Pressables from "Pressables" /* 5204 */;
 import noop from "module_19" /* 19 */;
 

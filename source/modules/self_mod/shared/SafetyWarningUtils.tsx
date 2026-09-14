@@ -1,11 +1,11 @@
-// Module ID: 11503
-// Function ID: 11504
+// Module ID: 11504
+// Function ID: 11505
 // Name: SafetyWarningUtils
-// Dependencies: [1371, 1074, 1242, 2]
+// Dependencies: [1371, 1074, 1240, 2]
 // Exports: getUserIsTeen, trackCtaEvent, trackNamedViewEvent, trackViewedEvent
 
-// Module 11503 (SafetyWarningUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 11504 (SafetyWarningUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;

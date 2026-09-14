@@ -1,21 +1,21 @@
-// Module ID: 17079
-// Function ID: 17080
+// Module ID: 17081
+// Function ID: 17082
 // Name: LaunchPadWrapper
-// Dependencies: [32, 19, 17, 11597, 1074, 21, 4636, 576, 12918, 1109, 4494, 17080, 8385, 1242, 17077, 4604, 5053, 5667, 4373, 17081, 5040, 1114, 5011, 17083, 2]
+// Dependencies: [32, 19, 17, 11598, 1074, 21, 4636, 576, 12919, 1109, 4494, 17082, 8385, 1240, 17079, 4604, 5053, 5667, 4373, 17083, 5040, 1114, 5011, 17085, 2]
 // Exports: default
 
-// Module 17079 (LaunchPadWrapper)
+// Module 17081 (LaunchPadWrapper)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17077 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17079 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableOpacity: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11597).LaunchPadTypes;
+const LaunchPadTypes = fn(11598).LaunchPadTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);

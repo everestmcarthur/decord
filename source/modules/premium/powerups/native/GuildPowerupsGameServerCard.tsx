@@ -1,18 +1,18 @@
-// Module ID: 12703
-// Function ID: 12704
+// Module ID: 12704
+// Function ID: 12705
 // Name: GuildPowerupsGameServerCard
-// Dependencies: [19, 17, 4628, 4546, 21, 4636, 576, 504, 12704, 12705, 12696, 12700, 4347, 2]
+// Dependencies: [19, 17, 4628, 4546, 21, 4636, 576, 504, 12705, 12706, 12697, 12701, 4347, 2]
 // Exports: default
 
-// Module 12703 (GuildPowerupsGameServerCard)
+// Module 12704 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 576 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12704 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12705 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12705 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12706 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import GameServerStore from "GameServerStore" /* 4546 */;
 
-const GuildPowerupsPerkCardDefault = tmp5(12700);
+const GuildPowerupsPerkCardDefault = tmp5(12701);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

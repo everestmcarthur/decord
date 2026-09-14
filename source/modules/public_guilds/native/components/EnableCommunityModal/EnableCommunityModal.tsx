@@ -1,16 +1,16 @@
-// Module ID: 17778
-// Function ID: 17779
+// Module ID: 17779
+// Function ID: 17780
 // Name: EnableCommunityModal
-// Dependencies: [19, 21, 17777, 5711, 5705, 1114, 7480, 7095, 17779, 17780, 17792, 17793, 7103, 2]
+// Dependencies: [19, 21, 17778, 5711, 5705, 1114, 7480, 7095, 17780, 17781, 17793, 17794, 7103, 2]
 // Exports: default
 
-// Module 17778 (EnableCommunityModal)
+// Module 17779 (EnableCommunityModal)
 import util from "util" /* 1114 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5711 */;
 import Navigator from "Navigator" /* 7103 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17777 */;
-import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17779 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17778 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17780 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(17780), {});
+          return closure_1_4(closure_1_1(17781), {});
         }
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
@@ -54,7 +54,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(17792), {});
+          return closure_1_4(closure_1_1(17793), {});
         }
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
@@ -63,7 +63,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(17793), {});
+          return closure_1_4(closure_1_1(17794), {});
         }
       }
     };

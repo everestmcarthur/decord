@@ -1,13 +1,13 @@
-// Module ID: 12413
-// Function ID: 12414
+// Module ID: 12414
+// Function ID: 12415
 // Name: GuildOnboardingHomeActionCreators
-// Dependencies: [5, 2014, 1957, 4823, 4824, 1074, 573, 1272, 12414, 1242, 4647, 11, 2]
+// Dependencies: [5, 2014, 1957, 4823, 4824, 1074, 573, 1270, 12415, 1240, 4647, 11, 2]
 // Exports: clearNewMemberActions, completeNewMemberAction, fetchGuildHomeSettings, fetchNewMemberActions, selectHomeResourceChannel, selectNewMemberActionChannel
 
-// Module 12413 (GuildOnboardingHomeActionCreators)
+// Module 12414 (GuildOnboardingHomeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
@@ -247,8 +247,8 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
           }
           return hasItem;
         }, true);
-        tmp(1242).track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj4);
-        const tmpResult2 = tmp(1242);
+        tmp(1240).track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj4);
+        const tmpResult2 = tmp(1240);
       }
     }
     const HTTP = HTTPUtils.HTTP;

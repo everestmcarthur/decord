@@ -1,9 +1,9 @@
-// Module ID: 16725
-// Function ID: 16726
+// Module ID: 16727
+// Function ID: 16728
 // Name: ThreadCreationTitleInput
-// Dependencies: [19, 1957, 1074, 21, 16726, 7879, 7377, 1481, 1609, 504, 9434, 1114, 6707, 5667, 2]
+// Dependencies: [19, 1957, 1074, 21, 16728, 7879, 7377, 1481, 1609, 504, 9434, 1114, 6707, 5667, 2]
 
-// Module 16725 (ThreadCreationTitleInput)
+// Module 16727 (ThreadCreationTitleInput)
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7377 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
   const optional = chatInputRef.optional;
   ref = undefined;
   dependencyMap = ref;
-  let obj = chatInputRef(16726);
+  let obj = chatInputRef(16728);
   let obj2 = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];
@@ -72,7 +72,7 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
       }
     }
   }, items3);
-  const renderErrorResult = chatInputRef(16726).renderError(chatInputRef.threadNameError, { content: threadSettingsDraft.name });
+  const renderErrorResult = chatInputRef(16728).renderError(chatInputRef.threadNameError, { content: threadSettingsDraft.name });
   const items4 = [ChannelStore];
   const stateFromStores = chatInputRef(504).useStateFromStores(items4, () => ChannelStore.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";

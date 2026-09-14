@@ -1,12 +1,12 @@
 // Module ID: 9717
 // Function ID: 9718
 // Name: PopoutMenu
-// Dependencies: [32, 19, 17, 21, 4636, 576, 7240, 1178, 8716, 1477, 1611, 12, 4373, 4637, 4606, 6756, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 7240, 1176, 8716, 1477, 1611, 12, 4373, 4637, 4606, 6756, 2]
 
 // Module 9717 (PopoutMenu)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Patterns from "Patterns" /* 4606 */;
 import timing from "timing" /* 4637 */;

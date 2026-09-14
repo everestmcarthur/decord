@@ -1,15 +1,15 @@
-// Module ID: 16920
-// Function ID: 16921
+// Module ID: 16922
+// Function ID: 16923
 // Name: ChannelDetailsNavigator
-// Dependencies: [19, 17, 1957, 11047, 1074, 16750, 21, 8017, 563, 7372, 11355, 7966, 1114, 12902, 1242, 8748, 16921, 7103, 5711, 4495, 1611, 16972, 1150, 16973, 16974, 16975, 16976, 16815, 2]
+// Dependencies: [19, 17, 1957, 11048, 1074, 16752, 21, 8017, 563, 7372, 11356, 7966, 1114, 12903, 1240, 8748, 16923, 7103, 5711, 4495, 1611, 16974, 1363, 16975, 16976, 16977, 16978, 16817, 2]
 
-// Module 16920 (ChannelDetailsNavigator)
+// Module 16922 (ChannelDetailsNavigator)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11355 */;
-import _modDef12902 from "module_12902" /* 12902 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 16921 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11356 */;
+import _modDef12903 from "module_12903" /* 12903 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 16923 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -35,15 +35,15 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1114).intl;
     obj2.accessibilityLabel = intl.string(tmp(1114).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef12902;
+    obj2.source = _modDef12903;
     tmp5 = closure_9(tmp(7966).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(11047).ChannelDetailsNavigatorScreens;
+const constants = fn(11048).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SearchNavigatorScreens = fn(16750).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16752).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});
@@ -138,7 +138,7 @@ export default noop.memo((navigation) => {
             const obj2 = {};
             const merged = Object.assign(arg0);
             const obj = route(7966);
-            obj2.shouldHandleSafeArea = route(1150).isAndroid();
+            obj2.shouldHandleSafeArea = route(1363).isAndroid();
             return obj.renderHeader(obj2);
           },
           headerTitle() {

@@ -1,13 +1,13 @@
-// Module ID: 14568
-// Function ID: 14569
+// Module ID: 14569
+// Function ID: 14570
 // Name: validateOpenInviteDialog
-// Dependencies: [9640, 1957, 1979, 4275, 4541, 1074, 9641, 9684, 14556, 9904, 2]
+// Dependencies: [9640, 1957, 1979, 4275, 4541, 1074, 9641, 9684, 14557, 9904, 2]
 // Exports: validateOpenInviteDialog
 
-// Module 14568 (validateOpenInviteDialog)
+// Module 14569 (validateOpenInviteDialog)
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import canViewInviteModal from "canViewInviteModal" /* 9904 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14556 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14557 */;
 import FramesStore from "FramesStore" /* 9640 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -33,7 +33,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (constants.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "accessible" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "isArray" };
         return obj3;
       } else {
         if (tmp23.APP_CHANNEL !== type) {

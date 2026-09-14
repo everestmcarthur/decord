@@ -1,11 +1,11 @@
 // Module ID: 7253
 // Function ID: 7254
 // Name: Sheet/BottomSheet
-// Dependencies: [32, 19, 17, 7254, 21, 4636, 576, 1150, 1611, 5043, 6728, 5763, 5068, 1093, 4373, 7255, 4357, 7256, 5073, 7257, 7258, 7143, 1477, 4490, 7259, 4347, 2]
+// Dependencies: [32, 19, 17, 7254, 21, 4636, 576, 1363, 1611, 5043, 6728, 5763, 5068, 1093, 4373, 7255, 4357, 7256, 5073, 7257, 7258, 7143, 1477, 4490, 7259, 4347, 2]
 
 // Module 7253 (Sheet/BottomSheet)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;

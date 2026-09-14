@@ -1,12 +1,12 @@
-// Module ID: 13655
-// Function ID: 13656
+// Module ID: 13656
+// Function ID: 13657
 // Name: PremiumUnverifiedWarning
-// Dependencies: [19, 1371, 21, 4636, 576, 4347, 1178, 1114, 504, 2]
+// Dependencies: [19, 1371, 21, 4636, 576, 4347, 1176, 1114, 504, 2]
 
-// Module 13655 (PremiumUnverifiedWarning)
+// Module 13656 (PremiumUnverifiedWarning)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import initialize from "initialize" /* 504 */;

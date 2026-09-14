@@ -1,13 +1,13 @@
-// Module ID: 14688
-// Function ID: 14689
+// Module ID: 14689
+// Function ID: 14690
 // Name: HuePicker
-// Dependencies: [32, 19, 17, 21, 4636, 576, 6756, 14685, 4373, 5068, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 6756, 14686, 4373, 5068, 2]
 // Exports: default
 
-// Module 14688 (HuePicker)
+// Module 14689 (HuePicker)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14685 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14686 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

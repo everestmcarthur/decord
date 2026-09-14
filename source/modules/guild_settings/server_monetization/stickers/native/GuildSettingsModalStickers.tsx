@@ -1,14 +1,14 @@
-// Module ID: 17687
-// Function ID: 17688
+// Module ID: 17688
+// Function ID: 17689
 // Name: GuildSettingsModalStickers
-// Dependencies: [19, 17, 1979, 4275, 1371, 1074, 1938, 21, 1114, 17688, 9505, 13611, 4636, 576, 1611, 504, 9801, 17690, 7142, 4530, 4632, 4533, 5056, 17691, 8716, 5054, 5768, 5686, 5176, 10304, 1178, 4481, 5693, 17697, 2]
+// Dependencies: [19, 17, 1979, 4275, 1371, 1074, 1938, 21, 1114, 17689, 9505, 13612, 4636, 576, 1611, 504, 9801, 17691, 7142, 4530, 4632, 4533, 5056, 17692, 8716, 5054, 5768, 5686, 5176, 10304, 1176, 4481, 5693, 17698, 2]
 
-// Module 17687 (GuildSettingsModalStickers)
+// Module 17688 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 576 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4530 */;
 import TableRow from "TableRow" /* 5686 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17691 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17692 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -32,7 +32,7 @@ let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1114).intl;
 obj2.title = intl2.string(fn(1114).t.nzXtaS);
-obj2.IconComponent = fn(17688).BoostGemOutlineIcon;
+obj2.IconComponent = fn(17689).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1114).intl;
@@ -42,7 +42,7 @@ items[2] = obj3;
 let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1114).intl;
 obj4.title = intl4.string(fn(1114).t.BfF6ED);
-obj4.IconComponent = fn(13611).BoostTier3Icon;
+obj4.IconComponent = fn(13612).BoostTier3Icon;
 items[3] = obj4;
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles((arg0) => {
@@ -188,8 +188,8 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               let tmp16Result = null;
               if (null != user) {
                 const obj = { style: closure_1.userRow, children: null };
-                const obj6 = { user, size: tmp10(1178).AvatarSizes.XSMALL_20, guildId };
-                const items1 = [tmp9(tmp10(1178).Avatar, obj6), ];
+                const obj6 = { user, size: tmp10(1176).AvatarSizes.XSMALL_20, guildId };
+                const items1 = [tmp9(tmp10(1176).Avatar, obj6), ];
                 const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: closure_1_1(4481).getName(user) };
                 items1[1] = tmp9(tmp10(4632).Text, obj7);
                 obj.children = items1;

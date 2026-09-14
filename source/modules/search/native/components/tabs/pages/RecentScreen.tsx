@@ -1,25 +1,25 @@
-// Module ID: 16747
-// Function ID: 16748
+// Module ID: 16749
+// Function ID: 16750
 // Name: RecentScreen
-// Dependencies: [32, 5, 19, 7384, 12492, 16748, 12468, 7982, 12482, 1074, 21, 5204, 12490, 1114, 4632, 10990, 16749, 4649, 12487, 12469, 504, 1484, 16752, 12467, 14910, 8529, 8531, 16753, 16754, 16757, 2]
+// Dependencies: [32, 5, 19, 7384, 12493, 16750, 12469, 7982, 12483, 1074, 21, 5204, 12491, 1114, 4632, 10991, 16751, 4649, 12488, 12470, 504, 1484, 16754, 12468, 14911, 8529, 8531, 16755, 16756, 16759, 2]
 
-// Module 16747 (RecentScreen)
+// Module 16749 (RecentScreen)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12492 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 16748 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12493 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 16750 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 function ClearAllHistory(searchContext) {
@@ -61,7 +61,7 @@ function ViewAll(onJumpToMedia) {
 }
 const SearchConstants = fn(7982);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12482).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12483).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo((searchContext) => {

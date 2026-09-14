@@ -1,7 +1,7 @@
 // Module ID: 9497
 // Function ID: 9498
 // Name: GPlayActionCreators
-// Dependencies: [109, 5, 17, 9498, 502, 7340, 1074, 7341, 1373, 1085, 3, 7343, 7360, 4854, 573, 4307, 559, 1150, 1461, 4309, 1242, 4980, 1114, 1272, 2]
+// Dependencies: [109, 5, 17, 9498, 502, 7340, 1074, 7341, 1373, 1085, 3, 7343, 7360, 4854, 573, 4307, 559, 1363, 1461, 4309, 1240, 4980, 1114, 1270, 2]
 // Exports: downgradeSubscription, ensureSkusLoaded, loadUserCountry, purchase, sendPaymentCompleteAnalytics, subscribe, updatePendingDowngrade, verifyPurchase
 
 // Module 9497 (GPlayActionCreators)
@@ -462,11 +462,11 @@ let closure_34 = async function _verifyPurchase(arg0, value) {
           }
           if (tmp54) {
             const obj5 = { source: "verifyPurchase", sku_id: tmp74.productId };
-            _true(1242).track(constants.GIFT_INFO_OPTIONS_MISSING, obj5);
-            const obj9 = _true(1242);
+            _true(1240).track(constants.GIFT_INFO_OPTIONS_MISSING, obj5);
+            const obj9 = _true(1240);
           }
           c6 = 1;
-          const HTTP = React(1272).HTTP;
+          const HTTP = React(1270).HTTP;
           const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
           const obj6 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp53, one_time_purchase_sku_id: tmp52, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
           let load_id;
@@ -1341,7 +1341,7 @@ asyncGeneratorStep(async (arg0, value) => {
         obj9.location = "purchase";
         obj9.product_id = closure_131_0;
         obj9.error = closure_131_4.message;
-        gift_info_options(1242).track(constants.GPLAY_PURCHASE_FAILED, obj9);
+        gift_info_options(1240).track(constants.GPLAY_PURCHASE_FAILED, obj9);
         throw closure_131_4;
       } else if (arg0 === 1) {
         c8 = 3;

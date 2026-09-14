@@ -1,13 +1,13 @@
-// Module ID: 15956
-// Function ID: 15957
+// Module ID: 15958
+// Function ID: 15959
 // Name: DataAndPrivacyScreen
-// Dependencies: [19, 6696, 8079, 1074, 21, 1114, 2024, 9279, 1483, 14944, 14947, 11601, 14903, 14775, 2]
+// Dependencies: [19, 6696, 8079, 1074, 21, 1114, 2024, 9279, 1483, 14945, 14948, 11602, 14904, 14776, 2]
 // Exports: default
 
-// Module 15956 (DataAndPrivacyScreen)
+// Module 15958 (DataAndPrivacyScreen)
 import util from "util" /* 1114 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import noop from "module_19" /* 19 */;
 import ConsentStore from "ConsentStore" /* 6696 */;
 
@@ -86,10 +86,10 @@ export default function DataAndPrivacySettings() {
   items1.push(obj19);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14944).fetchConsents();
-      const obj = stackNavigation(14944);
+      const consents = stackNavigation(14945).fetchConsents();
+      const obj = stackNavigation(14945);
     }
-    const harvestStatus = stackNavigation(14947).fetchHarvestStatus();
+    const harvestStatus = stackNavigation(14948).fetchHarvestStatus();
   }, []);
   const items8 = [stackNavigation, items1];
   const obj20 = { children: null };
@@ -133,8 +133,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj21.screen = stackNavigation(14903).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(14903), obj21), closure_8(items1(14775), { node: memo })];
+  obj21.screen = stackNavigation(14904).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14904), obj21), closure_8(items1(14776), { node: memo })];
   obj20.children = items9;
   return closure_10(closure_9, obj20);
 };

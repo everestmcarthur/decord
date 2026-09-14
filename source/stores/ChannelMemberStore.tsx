@@ -1,14 +1,14 @@
 // Module ID: 7382
 // Function ID: 7383
 // Name: ChannelMemberStore
-// Dependencies: [4552, 4658, 502, 1957, 4556, 2021, 2015, 1979, 4676, 5360, 1371, 1074, 1114, 4280, 1241, 12, 1086, 504, 573, 2]
+// Dependencies: [4552, 4658, 502, 1957, 4556, 2021, 2015, 1979, 4676, 5360, 1371, 1074, 1114, 4280, 1239, 12, 1086, 504, 573, 2]
 
 // Module 7382 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
@@ -198,7 +198,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "WireType" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "accessible" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -293,7 +293,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "WireType" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "accessible" };
           let str = "";
           if (null != role) {
             str = role.name;

@@ -1,10 +1,10 @@
-// Module ID: 16358
-// Function ID: 16359
+// Module ID: 16360
+// Function ID: 16361
 // Name: useShouldRenderChannelList
 // Dependencies: [32, 19, 7579, 5358, 1074, 4494, 4495, 1109, 2]
 // Exports: useShouldRenderChannelList
 
-// Module 16358 (useShouldRenderChannelList)
+// Module 16360 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;

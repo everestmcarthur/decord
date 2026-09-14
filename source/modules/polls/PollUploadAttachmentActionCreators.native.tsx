@@ -1,13 +1,13 @@
-// Module ID: 12333
-// Function ID: 12334
+// Module ID: 12334
+// Function ID: 12335
 // Name: PollUploadAttachmentActionCreators
-// Dependencies: [5, 4977, 7931, 12334, 8322, 5219, 5209, 9436, 2]
+// Dependencies: [5, 4977, 7931, 12335, 8322, 5219, 5209, 9436, 2]
 // Exports: handlePollGifAttachmentAdd, handlePollMediaAttachmentAdd, removeAllPollUploadAttachments, removePollUploadAttachment
 
-// Module 12333 (PollUploadAttachmentActionCreators)
+// Module 12334 (PollUploadAttachmentActionCreators)
 import FileManagerUtils from "FileManagerUtils" /* 8322 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12334 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 12335 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

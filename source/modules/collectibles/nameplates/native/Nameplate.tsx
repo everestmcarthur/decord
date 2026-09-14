@@ -1,7 +1,7 @@
 // Module ID: 8945
 // Function ID: 8946
 // Name: Nameplate
-// Dependencies: [19, 4628, 21, 4636, 504, 4571, 4373, 4637, 1886, 8946, 5068, 1150, 8935, 5668, 2]
+// Dependencies: [19, 4628, 21, 4636, 504, 4571, 4373, 4637, 1886, 8946, 5068, 1363, 8935, 5668, 2]
 // Exports: default
 
 // Module 8945 (Nameplate)

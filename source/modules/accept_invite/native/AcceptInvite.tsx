@@ -1,10 +1,10 @@
-// Module ID: 12846
-// Function ID: 12847
+// Module ID: 12847
+// Function ID: 12848
 // Name: AcceptInvite
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 1369, 4338, 5662, 12847, 12850, 1396, 1430, 12855, 1477, 5688, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 1369, 4338, 5662, 12848, 12851, 1396, 1430, 12856, 1477, 5688, 2]
 // Exports: default
 
-// Module 12846 (AcceptInvite)
+// Module 12847 (AcceptInvite)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
@@ -85,12 +85,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_9(first(12847), obj2);
+    return closure_9(first(12848), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12850), obj);
+    return closure_9(first(12851), obj);
   } else {
     return closure_9(InviteResolving, {});
   }
@@ -126,7 +126,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(12855);
+    let guildSplashSource = tmp3(12856);
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

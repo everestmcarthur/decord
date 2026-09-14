@@ -1,15 +1,15 @@
-// Module ID: 16830
-// Function ID: 16831
+// Module ID: 16832
+// Function ID: 16833
 // Name: SearchTabsTransitionGroup
-// Dependencies: [19, 21, 1935, 12743, 4373, 4347, 5055, 5059, 16728, 12743, 2]
+// Dependencies: [19, 21, 1935, 12744, 4373, 4347, 5055, 5059, 16730, 12744, 2]
 // Exports: default
 
-// Module 16830 (SearchTabsTransitionGroup)
+// Module 16832 (SearchTabsTransitionGroup)
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12743 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

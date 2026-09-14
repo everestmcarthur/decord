@@ -1,12 +1,12 @@
-// Module ID: 13279
-// Function ID: 13280
+// Module ID: 13280
+// Function ID: 13281
 // Name: InlinePriceTag
-// Dependencies: [19, 17, 7340, 1076, 1074, 21, 4636, 576, 4632, 1889, 7656, 7657, 8962, 1114, 8295, 4294, 13280, 8994, 8973, 13281, 504, 8986, 1150, 8987, 8785, 2]
+// Dependencies: [19, 17, 7340, 1076, 1074, 21, 4636, 576, 4632, 1889, 7656, 7657, 8962, 1114, 8295, 4294, 13281, 8994, 8973, 13282, 504, 8986, 1363, 8987, 8785, 2]
 // Exports: default
 
-// Module 13279 (InlinePriceTag)
+// Module 13280 (InlinePriceTag)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -14,8 +14,8 @@ import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import useCurrentUser from "useCurrentUser" /* 8295 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8973 */;
 import useProductDisableState from "useProductDisableState" /* 8994 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13280 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13281 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13281 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13282 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7340 */;
 
@@ -234,7 +234,7 @@ export default function InlinePriceTag(arg0) {
         obj16.children = items4;
         obj15.children = tmp26(closure_3, obj16);
         tmp28Result5 = tmp28(tmp27, obj15);
-        tmp2Result5 = tmp2(1150);
+        tmp2Result5 = tmp2(1363);
       }
       items2[1] = tmp28Result5;
       obj10.children = items2;
@@ -266,7 +266,7 @@ export default function InlinePriceTag(arg0) {
       }
       obj21.icon = tmp28Result7;
       tmp28(tmp29, obj21);
-      tmp2Result6 = tmp2(1150);
+      tmp2Result6 = tmp2(1363);
     }
     tmp2Result4 = tmp2(7657);
   }

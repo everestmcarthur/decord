@@ -1,7 +1,7 @@
 // Module ID: 9568
 // Function ID: 9569
 // Name: BotTag
-// Dependencies: [19, 17, 1350, 21, 4636, 576, 1114, 9569, 4632, 2]
+// Dependencies: [19, 17, 1348, 21, 4636, 576, 1114, 9569, 4632, 2]
 
 // Module 9568 (BotTag)
 import nativeDefault from "native" /* 576 */;
@@ -115,7 +115,7 @@ class BotTag {
   }
 }
 const View = fn(17).View;
-const BotTagTypes = fn(1350).BotTagTypes;
+const BotTagTypes = fn(1348).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);

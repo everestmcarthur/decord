@@ -1,10 +1,10 @@
-// Module ID: 15902
-// Function ID: 15903
+// Module ID: 15904
+// Function ID: 15905
 // Name: useCollectiblesShopDeepLinkProps
 // Dependencies: [19, 7645, 7661, 504, 7656, 2]
 // Exports: useCollectiblesShopDeepLinkProps
 
-// Module 15902 (useCollectiblesShopDeepLinkProps)
+// Module 15904 (useCollectiblesShopDeepLinkProps)
 import _mod19 from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 import CollectiblesShopStore from "CollectiblesShopStore" /* 7661 */;

@@ -1,9 +1,9 @@
-// Module ID: 12208
-// Function ID: 12209
+// Module ID: 12209
+// Function ID: 12210
 // Name: PortalKeyboardBottomSheet
-// Dependencies: [32, 19, 17, 9814, 21, 1150, 4636, 576, 9031, 5043, 4373, 12209, 4347, 7256, 12210, 504, 6728, 4604, 10218, 1874, 5073, 4338, 1611, 1477, 4509, 4490, 5040, 10403, 7143, 2]
+// Dependencies: [32, 19, 17, 9814, 21, 1363, 4636, 576, 9031, 5043, 4373, 12210, 4347, 7256, 12211, 504, 6728, 4604, 10218, 1874, 5073, 4338, 1611, 1477, 4509, 4490, 5040, 10404, 7143, 2]
 
-// Module 12208 (PortalKeyboardBottomSheet)
+// Module 12209 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -44,7 +44,7 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_9 = PlatformUtils.isIOS();
 const createStyles = fn(4636);
 let obj = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };

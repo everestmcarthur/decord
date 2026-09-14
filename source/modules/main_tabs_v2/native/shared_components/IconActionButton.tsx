@@ -1,13 +1,13 @@
-// Module ID: 13383
-// Function ID: 13384
+// Module ID: 13384
+// Function ID: 13385
 // Name: IconActionButton
-// Dependencies: [19, 21, 4636, 576, 1150, 1178, 5063, 5204, 4632, 7972, 2]
+// Dependencies: [19, 21, 4636, 576, 1363, 1176, 5063, 5204, 4632, 7972, 2]
 // Exports: default
 
-// Module 13383 (IconActionButton)
+// Module 13384 (IconActionButton)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useFontScale from "useFontScale" /* 5063 */;
 import Pressables from "Pressables" /* 5204 */;
 import Badge from "Badge" /* 7972 */;
@@ -115,7 +115,7 @@ export default function IconActionButton(variant) {
   let tmp10Result2 = null;
   if (num > 0) {
     const obj3 = { style: tmp.countStyle, value: num };
-    tmp10Result2 = tmp10(tmp2(1178).Badge, obj3);
+    tmp10Result2 = tmp10(tmp2(1176).Badge, obj3);
   }
   items1[2] = tmp10Result2;
   if (badge) {

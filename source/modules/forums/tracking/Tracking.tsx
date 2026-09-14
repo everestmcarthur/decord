@@ -1,12 +1,12 @@
 // Module ID: 7869
 // Function ID: 7870
 // Name: tracking/Tracking
-// Dependencies: [1957, 4977, 7380, 7870, 1074, 4816, 7871, 1242, 7876, 1150, 7877, 2]
+// Dependencies: [1957, 4977, 7380, 7870, 1074, 4816, 7871, 1240, 7876, 1363, 7877, 2]
 // Exports: maybeTrackForumNewPostDraftCreated, trackForumAddMediaToOriginalPostClicked, trackForumChannelMediaUploaderClicked, trackForumChannelSeenBatch, trackForumCreateNewPostClick, trackForumCreateNewPostKeybindUsed, trackForumCreateNewPostStarted, trackForumEnableAutomodClicked, trackForumLayoutUpdated, trackForumMorePostsLoaded, trackForumNewPostCleared, trackForumOnboardingClicked, trackForumPostClicked, trackForumPostCreated, trackForumPostLinkCopied, trackForumPostSidebarViewed, trackForumPreviewPostClicked, trackForumScrolled, trackForumSearchCleared, trackForumSearched, trackForumSortOrderUpdated, trackForumTagFilterClicked, trackForumUpsellModalClicked, trackForumUpsellModalViewed, trackMobileForumComposerDismissed, trackMobileForumComposerOpened
 
 // Module 7869 (tracking/Tracking)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import TrackingUtils from "TrackingUtils" /* 7871 */;
 import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7876 */;

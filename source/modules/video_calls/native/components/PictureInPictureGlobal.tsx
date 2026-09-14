@@ -1,12 +1,12 @@
-// Module ID: 17022
-// Function ID: 17023
+// Module ID: 17024
+// Function ID: 17025
 // Name: PictureInPictureGlobal
-// Dependencies: [32, 19, 17, 1956, 4652, 9615, 502, 1908, 1074, 4657, 21, 4636, 1178, 576, 9620, 504, 9606, 9605, 4843, 9619, 5207, 9622, 8450, 9720, 9724, 9734, 9753, 9761, 9665, 9721, 9618, 10218, 4373, 4637, 5763, 17023, 1611, 2]
+// Dependencies: [32, 19, 17, 1956, 4652, 9615, 502, 1908, 1074, 4657, 21, 4636, 1176, 576, 9620, 504, 9606, 9605, 4843, 9619, 5207, 9622, 8450, 9720, 9724, 9734, 9753, 9761, 9665, 9721, 9618, 10218, 4373, 4637, 5763, 17025, 1611, 2]
 // Exports: default
 
-// Module 17022 (PictureInPictureGlobal)
+// Module 17024 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 576 */;
-import native2 from "native" /* 1178 */;
+import native2 from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
@@ -14,7 +14,7 @@ import NavigatorConstants from "NavigatorConstants" /* 5763 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9606 */;
 import PictureInPictureDefault from "PictureInPicture" /* 9618 */;
 import transitionToActivityDefault from "transitionToActivity" /* 9665 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17023 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -35,8 +35,8 @@ const jsxProd = fn(21);
 let c17 = 12;
 const createStyles = fn(4636);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
-const native = fn(1178);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1176);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1176).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.pip = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };

@@ -1,7 +1,7 @@
 // Module ID: 9931
 // Function ID: 9932
 // Name: EventDetailRsvpSheet
-// Dependencies: [19, 17, 4676, 1371, 1085, 21, 4636, 576, 5605, 8525, 9932, 4632, 1114, 8716, 5668, 7265, 504, 1178, 9933, 4481, 8296, 9934, 6728, 5658, 2]
+// Dependencies: [19, 17, 4676, 1371, 1085, 21, 4636, 576, 5605, 8525, 9932, 4632, 1114, 8716, 5668, 7265, 504, 1176, 9933, 4481, 8296, 9934, 6728, 5658, 2]
 
 // Module 9931 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 576 */;
@@ -243,8 +243,8 @@ const memoResult = noop.memo((eventUser) => {
   const obj3 = { DEPRECATED_style: tmp.userListRow, leading: null, label: null, onPress: null };
   let tmp7Result = null;
   if (null != stateFromStores) {
-    const obj4 = { user: stateFromStores, guildId: eventUser.guildId, isMobileOnline, isVROnline, status, size: tmp4(1178).AvatarSizes.REFRESH_MEDIUM_32, autoStatusCutout: true };
-    tmp7Result = tmp7(tmp4(1178).Avatar, obj4);
+    const obj4 = { user: stateFromStores, guildId: eventUser.guildId, isMobileOnline, isVROnline, status, size: tmp4(1176).AvatarSizes.REFRESH_MEDIUM_32, autoStatusCutout: true };
+    tmp7Result = tmp7(tmp4(1176).Avatar, obj4);
   }
   obj3.leading = tmp7Result;
   const obj6 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };

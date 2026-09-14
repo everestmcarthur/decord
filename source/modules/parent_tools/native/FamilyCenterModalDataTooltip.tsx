@@ -1,17 +1,17 @@
-// Module ID: 14980
-// Function ID: 14981
+// Module ID: 14981
+// Function ID: 14982
 // Name: FamilyCenterModalDataTooltip
-// Dependencies: [19, 17, 7641, 21, 5152, 12050, 4336, 13675, 5154, 12052, 4599, 11164, 4636, 576, 4632, 12049, 1114, 2396, 8769, 7695, 8539, 8540, 12056, 5056, 4839, 5705, 12058, 2]
+// Dependencies: [19, 17, 7641, 21, 5152, 12051, 4336, 13676, 5154, 12053, 4599, 11165, 4636, 576, 4632, 12050, 1114, 2396, 8769, 7695, 8539, 8540, 12057, 5056, 4839, 5705, 12059, 2]
 // Exports: default
 
-// Module 14980 (FamilyCenterModalDataTooltip)
+// Module 14981 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import Modal from "Modal" /* 12058 */;
+import Modal from "Modal" /* 12059 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -66,7 +66,7 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(5152).ChatIcon, [USER_CALLED]: fn(12050).PhoneIcon, [USER_ADD]: fn(4336).FriendsIcon, [GUILD_ADD]: fn(13675).ServerGridIcon, [GUILD_INTERACTION]: fn(5154).ThreadIcon, [PURCHASES]: fn(12052).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4599).ClockIcon, [GIFTS]: fn(11164).GiftIcon };
+let obj = { [USER_INTERACTION]: fn(5152).ChatIcon, [USER_CALLED]: fn(12051).PhoneIcon, [USER_ADD]: fn(4336).FriendsIcon, [GUILD_ADD]: fn(13676).ServerGridIcon, [GUILD_INTERACTION]: fn(5154).ThreadIcon, [PURCHASES]: fn(12053).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4599).ClockIcon, [GIFTS]: fn(11165).GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7641).TeenActionDisplayType);
 let createStyles = fn(4636);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };

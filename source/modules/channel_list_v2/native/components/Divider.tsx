@@ -1,10 +1,10 @@
-// Module ID: 12424
-// Function ID: 12425
+// Module ID: 12425
+// Function ID: 12426
 // Name: Divider
 // Dependencies: [19, 17, 21, 4636, 576, 2]
 // Exports: default
 
-// Module 12424 (Divider)
+// Module 12425 (Divider)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

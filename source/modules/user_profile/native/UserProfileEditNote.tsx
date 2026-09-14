@@ -1,10 +1,10 @@
-// Module ID: 13188
-// Function ID: 13189
+// Module ID: 13189
+// Function ID: 13190
 // Name: UserProfileEditNote
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 1483, 13182, 5705, 11054, 4502, 7966, 1114, 13189, 4632, 7188, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 1483, 13183, 5705, 11055, 4502, 7966, 1114, 13190, 4632, 7188, 2]
 // Exports: default
 
-// Module 13188 (UserProfileEditNote)
+// Module 13189 (UserProfileEditNote)
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ export default function UserProfileEditNote(userId) {
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(11054);
+        const tmp2 = closure_1_1(11055);
         tmp2({
           hasEdits: str !== closure_6,
           onHasEdits: closure_1_0(4502).dismissKeyboard,

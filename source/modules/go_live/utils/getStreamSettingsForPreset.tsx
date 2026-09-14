@@ -1,11 +1,11 @@
 // Module ID: 10083
 // Function ID: 10084
 // Name: getStreamSettingsForPreset
-// Dependencies: [4683, 10084, 10085, 1150, 4774, 2]
+// Dependencies: [4683, 10084, 10085, 1363, 4774, 2]
 // Exports: canStreamWithPreset, getMaxSettingsForPreset
 
 // Module 10083 (getStreamSettingsForPreset)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 10084 */;
 import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10085 */;
 import StreamSettingsConstants from "StreamSettingsConstants" /* 4683 */;
@@ -39,7 +39,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
         if (arg0 === constants.PRESET_VIDEO) {
           let tmp26 = require;
           if (PlatformUtils.isPlatformEmbedded) {
-            let tmp26Result = tmp26(1150);
+            let tmp26Result = tmp26(1363);
             if (tmp26Result.isDesktop()) {
               let str = "getStreamSettingsForPreset";
               let tmp11 = tmp4(4774)("getStreamSettingsForPreset", arg1, arg3);

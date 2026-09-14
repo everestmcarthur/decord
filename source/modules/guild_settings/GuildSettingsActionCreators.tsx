@@ -1,13 +1,13 @@
 // Module ID: 9192
 // Function ID: 9193
 // Name: GuildSettingsActionCreators
-// Dependencies: [5, 2014, 4276, 502, 2021, 1979, 9193, 1074, 3, 573, 1272, 7426, 9201, 5250, 7088, 4829, 1250, 4489, 1114, 1100, 5633, 2]
+// Dependencies: [5, 2014, 4276, 502, 2021, 1979, 9193, 1074, 3, 573, 1270, 7426, 9201, 5250, 7088, 4829, 1248, 4489, 1114, 1100, 5633, 2]
 
 // Module 9192 (GuildSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7426 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -311,7 +311,7 @@ let body = {
               closure_128_0 = undefined;
               const isLurkingResult = lurking.isLurking(tmp2);
               closure_128_0 = isLurkingResult;
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: closure_1_10.GUILD_LEAVE(tmp2), body: null, oldFormErrors: true, rejectWithError: null };
               let isCurrentUserGuestResult = isLurkingResult;
               if (!isLurkingResult) {
@@ -319,8 +319,8 @@ let body = {
               }
               const obj5 = { lurking: isCurrentUserGuestResult };
               request.body = obj5;
-              request.rejectWithError = tmp2(1272).rejectWithMigratedError();
-              const obj4 = tmp2(1272);
+              request.rejectWithError = tmp2(1270).rejectWithMigratedError();
+              const obj4 = tmp2(1270);
               tmp27 = tmp2;
               dependencyMap = 1;
               c3 = 1;
@@ -491,7 +491,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1272).HTTP;
+              const HTTP = v3(1270).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_PIN_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
@@ -543,7 +543,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1272).HTTP;
+              const HTTP = v3(1270).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;

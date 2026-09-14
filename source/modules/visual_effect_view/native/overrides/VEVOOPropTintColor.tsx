@@ -1,16 +1,16 @@
-// Module ID: 16024
-// Function ID: 16025
+// Module ID: 16026
+// Function ID: 16027
 // Name: VEVOOPropTintColor
-// Dependencies: [32, 19, 17, 5047, 21, 4636, 576, 16021, 4486, 8716, 7304, 16023, 14682, 1091, 2]
+// Dependencies: [32, 19, 17, 5047, 21, 4636, 576, 16023, 4486, 8716, 7304, 16025, 14683, 1091, 2]
 
-// Module 16024 (VEVOOPropTintColor)
+// Module 16026 (VEVOOPropTintColor)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import FormSwitch from "FormSwitch" /* 7304 */;
 import Form from "Form" /* 8716 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14682 */;
-import VEVOO from "VEVOO" /* 16021 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14683 */;
+import VEVOO from "VEVOO" /* 16023 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -127,7 +127,7 @@ export default noop.memo(function VEVOOPropTintColor() {
   const ref = noop.useRef(first1);
   const tmp14 = closure_10;
   const tmp15 = closure_9;
-  obj7.subLabel = closure_8(backgroundColor(16023), {
+  obj7.subLabel = closure_8(backgroundColor(16025), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

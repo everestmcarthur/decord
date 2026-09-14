@@ -1,12 +1,12 @@
-// Module ID: 17995
-// Function ID: 17996
+// Module ID: 17996
+// Function ID: 17997
 // Name: usePendingParentRequests
-// Dependencies: [32, 19, 7640, 1371, 7641, 504, 8768, 12046, 2]
+// Dependencies: [32, 19, 7640, 1371, 7641, 504, 8768, 12047, 2]
 // Exports: useDerivedPendingRequests, usePendingRequestListController, usePendingRequestResolution
 
-// Module 17995 (usePendingParentRequests)
+// Module 17996 (usePendingParentRequests)
 import useUserLinks from "useUserLinks" /* 8768 */;
-import useFamilyCenterActions from "useFamilyCenterActions" /* 12046 */;
+import useFamilyCenterActions from "useFamilyCenterActions" /* 12047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;

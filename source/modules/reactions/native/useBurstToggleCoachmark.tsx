@@ -1,10 +1,10 @@
-// Module ID: 11260
-// Function ID: 11261
+// Module ID: 11261
+// Function ID: 11262
 // Name: useBurstToggleCoachmark
-// Dependencies: [32, 19, 17, 1371, 1954, 21, 1943, 4636, 576, 9503, 504, 4294, 7491, 1114, 11261, 2]
+// Dependencies: [32, 19, 17, 1371, 1954, 21, 1943, 4636, 576, 9503, 504, 4294, 7491, 1114, 11262, 2]
 // Exports: default
 
-// Module 11260 (useBurstToggleCoachmark)
+// Module 11261 (useBurstToggleCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import SuperReactionIcon from "SuperReactionIcon" /* 9503 */;
@@ -60,6 +60,6 @@ export default function useBurstToggleCoachmark(targetRef) {
     return obj;
   }, items3);
   const tmpResult = first(7491);
-  const coachmark = first(11261).useCoachmark(targetRef, memo);
+  const coachmark = first(11262).useCoachmark(targetRef, memo);
   return tmp5[1];
 };

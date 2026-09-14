@@ -1,16 +1,16 @@
-// Module ID: 16736
-// Function ID: 16737
+// Module ID: 16738
+// Function ID: 16739
 // Name: SearchBarActivityIcon
-// Dependencies: [19, 17, 7384, 12468, 7982, 21, 4636, 576, 563, 12469, 4373, 4637, 7154, 1150, 2]
+// Dependencies: [19, 17, 7384, 12469, 7982, 21, 4636, 576, 563, 12470, 4373, 4637, 7154, 1363, 2]
 
-// Module 16736 (SearchBarActivityIcon)
+// Module 16738 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;

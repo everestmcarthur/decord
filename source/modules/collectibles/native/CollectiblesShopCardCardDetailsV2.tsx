@@ -1,7 +1,7 @@
 // Module ID: 8972
 // Function ID: 8973
 // Name: CollectiblesShopCardCardDetailsV2
-// Dependencies: [19, 17, 7340, 1074, 21, 4636, 576, 8891, 7656, 8973, 7657, 8975, 8986, 4632, 1114, 8962, 1150, 8987, 8785, 8295, 4294, 4338, 4486, 8989, 504, 5068, 8990, 2]
+// Dependencies: [19, 17, 7340, 1074, 21, 4636, 576, 8891, 7656, 8973, 7657, 8975, 8986, 4632, 1114, 8962, 1363, 8987, 8785, 8295, 4294, 4338, 4486, 8989, 504, 5068, 8990, 2]
 
 // Module 8972 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;

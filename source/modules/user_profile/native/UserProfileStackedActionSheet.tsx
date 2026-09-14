@@ -1,10 +1,10 @@
-// Module ID: 11285
-// Function ID: 11286
+// Module ID: 11286
+// Function ID: 11287
 // Name: UserProfileStackedActionSheet
-// Dependencies: [19, 17, 21, 4636, 576, 1611, 6728, 8716, 1150, 7253, 5204, 1114, 5709, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1611, 6728, 8716, 1363, 7253, 5204, 1114, 5709, 4632, 2]
 // Exports: UserProfileStackedActionSheetList, UserProfileStackedActionSheetSectionList, default
 
-// Module 11285 (UserProfileStackedActionSheet)
+// Module 11286 (UserProfileStackedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;

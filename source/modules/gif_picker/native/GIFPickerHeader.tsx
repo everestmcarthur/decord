@@ -1,13 +1,13 @@
-// Module ID: 10502
-// Function ID: 10503
+// Module ID: 10503
+// Function ID: 10504
 // Name: GIFPickerHeader
-// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 10497, 6723, 4373, 4637, 4640, 8202, 7155, 1114, 7153, 10495, 5204, 10503, 4632, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4636, 576, 10498, 6723, 4373, 4637, 4640, 8202, 7155, 1114, 7153, 10496, 5204, 10504, 4632, 2]
 
-// Module 10502 (GIFPickerHeader)
+// Module 10503 (GIFPickerHeader)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
-import GifProvider from "GifProvider" /* 10495 */;
+import GifProvider from "GifProvider" /* 10496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,8 +124,8 @@ const jsxProd = fn(21);
 const createStyles = fn(4636);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_8 }, headerContainer: null, header: null, favoritesSearch: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
-obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10497).GIF_PICKER_GUTTER_SPACING };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10497).GIF_PICKER_GUTTER_SPACING };
+obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10498).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10498).GIF_PICKER_GUTTER_SPACING };
 obj.header = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(6723).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.favoritesSearch = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
 let closure_10 = createStyles.createStyles(obj);
@@ -153,7 +153,7 @@ export default noop.memo(function GIFPickerHeader(arg0) {
     obj5.destination = intl5.string(tmp2(1114).t.ffgJrs);
     obj4.accessibilityLabel = intl4.formatToPlainString(tmp2(1114).t.UTypEu, obj5);
     const obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm" };
-    const items = [tmp6(tmp2(10503).ChevronLargeLeftIcon, obj6), ];
+    const items = [tmp6(tmp2(10504).ChevronLargeLeftIcon, obj6), ];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1114).intl;
       let stringResult = intl3.string(tmp2(1114).t.TsWCdW);

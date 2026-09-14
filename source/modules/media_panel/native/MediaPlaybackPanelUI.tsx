@@ -1,19 +1,19 @@
-// Module ID: 17333
-// Function ID: 17334
+// Module ID: 17335
+// Function ID: 17336
 // Name: MediaPlaybackPanelUI
-// Dependencies: [32, 19, 9788, 14625, 12403, 12402, 21, 4636, 576, 1611, 1477, 17332, 4373, 9625, 11487, 17128, 4637, 4640, 5055, 17130, 7259, 6756, 17334, 2]
+// Dependencies: [32, 19, 9788, 14626, 12404, 12403, 21, 4636, 576, 1611, 1477, 17334, 4373, 9625, 11488, 17130, 4637, 4640, 5055, 17132, 7259, 6756, 17336, 2]
 // Exports: default
 
-// Module 17333 (MediaPlaybackPanelUI)
+// Module 17335 (MediaPlaybackPanelUI)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import spring from "spring" /* 5055 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11487 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17128 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17332 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17130 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17334 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9788 */;
@@ -22,10 +22,10 @@ const require = globalThis.__r;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14625);
+const MediaPlaybackPanelConstants = fn(14626);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12403).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12402).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(12404).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(12403).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };
@@ -312,26 +312,26 @@ export default function MediaPlaybackPanelUI() {
       fn4.__workletHash = 8557652955267;
       fn4.__initData = __initData7;
       const animatedStyle3 = tmp6(4373).useAnimatedStyle(fn4);
-      const context1 = obj2.useContext(tmp2(17332));
+      const context1 = obj2.useContext(tmp2(17334));
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       const obj14 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
       const tmp6Result4 = tmp6(4373);
-      obj14.mode = tmp6(17130).MorphablePanelModes.PIP;
+      obj14.mode = tmp6(17132).MorphablePanelModes.PIP;
       obj14.pipState = pipState2;
       obj14.wrapperOffset = wrapperOffset2;
-      const tmp2Result = tmp2(17130);
+      const tmp2Result = tmp2(17132);
       const obj15 = { children: null };
       const obj16 = { style: animatedStyle, pointerEvents: "box-none", children: null };
       const obj17 = { style: tmp30, children: null };
       const View = tmp2(4373).View;
       const obj18 = { style: tmp31, children: null };
-      const obj19 = { gesture: tmp2(17130)(obj14), children: null };
+      const obj19 = { gesture: tmp2(17132)(obj14), children: null };
       const obj20 = { style: null, children: null };
       const items3 = [tmp.content, animatedStyle3];
       obj20.style = items3;
-      obj20.children = jsx(tmp2(17334), {});
+      obj20.children = jsx(tmp2(17336), {});
       obj19.children = jsx(tmp2(4373).View, { style: null, children: null });
-      obj18.children = jsx(tmp6(6756).GestureDetector, { gesture: tmp2(17130)(obj14), children: null });
+      obj18.children = jsx(tmp6(6756).GestureDetector, { gesture: tmp2(17132)(obj14), children: null });
       obj17.children = jsx(tmp2(4373).View, { style: tmp31, children: null });
       class R {
         constructor() {

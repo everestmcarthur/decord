@@ -1,10 +1,10 @@
-// Module ID: 11522
-// Function ID: 11523
+// Module ID: 11523
+// Function ID: 11524
 // Name: ConfirmBlockUserAlert
-// Dependencies: [19, 17, 1371, 11496, 21, 4636, 576, 504, 11523, 4481, 9171, 8522, 8752, 5075, 5056, 1114, 4632, 2]
+// Dependencies: [19, 17, 1371, 11497, 21, 4636, 576, 504, 11524, 4481, 9171, 8522, 8752, 5075, 5056, 1114, 4632, 2]
 // Exports: default
 
-// Module 11522 (ConfirmBlockUserAlert)
+// Module 11523 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(11496).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11497).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);

@@ -1,10 +1,10 @@
-// Module ID: 12815
-// Function ID: 12816
+// Module ID: 12816
+// Function ID: 12817
 // Name: RedesignContactSyncDiscoverabilityFooter
 // Dependencies: [1074, 21, 5768, 1114, 2024, 7303, 2]
 // Exports: default
 
-// Module 12815 (RedesignContactSyncDiscoverabilityFooter)
+// Module 12816 (RedesignContactSyncDiscoverabilityFooter)
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;

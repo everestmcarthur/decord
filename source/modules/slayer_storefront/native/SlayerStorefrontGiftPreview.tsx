@@ -1,10 +1,10 @@
-// Module ID: 11580
-// Function ID: 11581
+// Module ID: 11581
+// Function ID: 11582
 // Name: SlayerStorefrontGiftPreview
 // Dependencies: [19, 17, 21, 4636, 8952, 4632, 1114, 9589, 3460, 2]
 // Exports: default
 
-// Module 11580 (SlayerStorefrontGiftPreview)
+// Module 11581 (SlayerStorefrontGiftPreview)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8952 */;

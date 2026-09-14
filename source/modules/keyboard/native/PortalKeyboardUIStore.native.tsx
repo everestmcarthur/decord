@@ -1,7 +1,7 @@
 // Module ID: 4505
 // Function ID: 4506
 // Name: PortalKeyboardUIStore
-// Dependencies: [4506, 4508, 1256, 2]
+// Dependencies: [4506, 4508, 1254, 2]
 // Exports: closePortalKeyboard, closePortalKeyboardIfUnhandled, closePortalKeyboardRequest, handlePortalKeyboardOpen, isPortalKeyboardOpenForChannel, openPortalKeyboard, registerPortalKeyboardRenderer
 
 // Module 4505 (PortalKeyboardUIStore)
@@ -47,11 +47,11 @@ export const openPortalKeyboard = function openPortalKeyboard(type, channelId, c
   }
   if (!tmp3) {
     const obj2 = { keyboard: null, state: null };
-    const obj3 = { id: tmp5(1256).v4(), type, channelId, chatInputRef };
+    const obj3 = { id: tmp5(1254).v4(), type, channelId, chatInputRef };
     obj2.keyboard = obj3;
     obj2.state = tmp5(4508).PortalKeyboardState.REQUEST_OPEN;
     zustandStore.setState(obj2);
-    const tmp5Result = tmp5(1256);
+    const tmp5Result = tmp5(1254);
   }
 };
 export const registerPortalKeyboardRenderer = function registerPortalKeyboardRenderer(id) {

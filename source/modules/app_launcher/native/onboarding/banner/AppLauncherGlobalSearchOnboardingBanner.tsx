@@ -1,10 +1,10 @@
-// Module ID: 12245
-// Function ID: 12246
+// Module ID: 12246
+// Function ID: 12247
 // Name: AppLauncherGlobalSearchOnboardingBanner
-// Dependencies: [19, 17, 1482, 1954, 21, 4636, 576, 5187, 11269, 1114, 2]
+// Dependencies: [19, 17, 1482, 1954, 21, 4636, 576, 5187, 11270, 1114, 2]
 // Exports: default
 
-// Module 12245 (AppLauncherGlobalSearchOnboardingBanner)
+// Module 12246 (AppLauncherGlobalSearchOnboardingBanner)
 import nativeDefault from "native" /* 576 */;
 import AppsIcon from "AppsIcon" /* 5187 */;
 import noop from "module_19" /* 19 */;
@@ -62,7 +62,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(11269).Coachmark, {
+    tmp3 = jsx(markAsDismissed(11270).Coachmark, {
       renderImgComponent: function appsIcon() {
           const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
           return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;

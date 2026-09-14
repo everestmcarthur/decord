@@ -1,7 +1,7 @@
 // Module ID: 8250
 // Function ID: 8251
 // Name: useHeroColors
-// Dependencies: [32, 19, 4628, 1183, 8249, 7655, 8251, 1091, 672, 504, 2]
+// Dependencies: [32, 19, 4628, 1181, 8249, 7655, 8251, 1091, 672, 504, 2]
 // Exports: default, getHeroColors
 
 // Module 8250 (useHeroColors)
@@ -11,7 +11,7 @@ import tinycolorDefault from "tinycolor" /* 7655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 let c7 = 0.725;

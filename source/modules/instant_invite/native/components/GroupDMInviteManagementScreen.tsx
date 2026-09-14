@@ -1,15 +1,15 @@
-// Module ID: 11062
-// Function ID: 11063
+// Module ID: 11063
+// Function ID: 11064
 // Name: GroupDMInviteManagementScreen
-// Dependencies: [5, 32, 19, 17, 8498, 8749, 1074, 21, 4636, 5073, 1272, 12, 576, 11063, 7142, 1178, 11080, 11081, 1114, 5705, 1250, 7103, 2]
+// Dependencies: [5, 32, 19, 17, 8498, 8749, 1074, 21, 4636, 5073, 1270, 12, 576, 11064, 7142, 1176, 11081, 11082, 1114, 5705, 1248, 7103, 2]
 
-// Module 11062 (GroupDMInviteManagementScreen)
+// Module 11063 (GroupDMInviteManagementScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import InstantInviteDefault from "InstantInvite" /* 11063 */;
+import InstantInviteDefault from "InstantInvite" /* 11064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -123,12 +123,12 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp14 = jsx(channelId(7142).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(11080), darkSource: tmp4(11081), title: null, body: null };
+    let obj2 = { lightSource: tmp4(11081), darkSource: tmp4(11082), title: null, body: null };
     const intl = channelId(1114).intl;
     obj2.title = intl.string(channelId(1114).t["+nLJkZ"]);
     const intl2 = channelId(1114).intl;
     obj2.body = intl2.string(channelId(1114).t.F53CAc);
-    tmp14 = jsx(channelId(1178).EmptyState, { lightSource: tmp4(11080), darkSource: tmp4(11081), title: null, body: null });
+    tmp14 = jsx(channelId(1176).EmptyState, { lightSource: tmp4(11081), darkSource: tmp4(11082), title: null, body: null });
   } else {
     let obj = { style: tmp.list, data: memo, keyExtractor: callback, renderItem: tmp11, initialNumToRender: 10, windowSize: tmp7[0] };
     tmp14 = <closure_7 style={tmp.list} data={memo} keyExtractor={callback} renderItem={tmp11} initialNumToRender={10} windowSize={tmp7[0]} />;

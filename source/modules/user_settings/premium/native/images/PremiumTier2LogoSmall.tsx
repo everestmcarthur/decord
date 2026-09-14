@@ -1,10 +1,10 @@
-// Module ID: 13566
-// Function ID: 13567
+// Module ID: 13567
+// Function ID: 13568
 // Name: PremiumTier2LogoSmall
 // Dependencies: [19, 21, 4338, 576, 8574, 2]
 // Exports: default
 
-// Module 13566 (PremiumTier2LogoSmall)
+// Module 13567 (PremiumTier2LogoSmall)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import inlineStyles from "inlineStyles" /* 8574 */;

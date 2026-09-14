@@ -1,7 +1,7 @@
 // Module ID: 9929
 // Function ID: 9930
 // Name: GuildEventRecurrence
-// Dependencies: [19, 17, 1957, 1979, 7629, 21, 4636, 576, 504, 9799, 9801, 9798, 9795, 1114, 5204, 9902, 4632, 9828, 1178, 9930, 2]
+// Dependencies: [19, 17, 1957, 1979, 7629, 21, 4636, 576, 504, 9799, 9801, 9798, 9795, 1114, 5204, 9902, 4632, 9828, 1176, 9930, 2]
 // Exports: default
 
 // Module 9929 (GuildEventRecurrence)
@@ -153,8 +153,8 @@ export default function GuildEventRecurrence(recurrenceId) {
       }
     };
     obj8.style = tmp.secondarySmallButton;
-    const obj9 = { source: tmp5(9930), size: tmp2(1178).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
-    obj8.children = closure_8(tmp2(1178).Icon, obj9);
+    const obj9 = { source: tmp5(9930), size: tmp2(1176).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
+    obj8.children = closure_8(tmp2(1176).Icon, obj9);
     items6[1] = closure_8(tmp2(5204).PressableOpacity, obj8);
     obj6.children = items6;
     items5[1] = closure_9(stateFromStores1, obj6);

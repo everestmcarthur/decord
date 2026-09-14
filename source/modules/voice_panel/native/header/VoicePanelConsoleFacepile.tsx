@@ -1,13 +1,13 @@
-// Module ID: 17234
-// Function ID: 17235
+// Module ID: 17236
+// Function ID: 17237
 // Name: VoicePanelConsoleFacepile
-// Dependencies: [19, 1074, 21, 4636, 576, 9593, 1114, 9343, 1369, 5670, 1178, 2]
+// Dependencies: [19, 1074, 21, 4636, 576, 9593, 1114, 9343, 1369, 5670, 1176, 2]
 // Exports: default
 
-// Module 17234 (VoicePanelConsoleFacepile)
+// Module 17236 (VoicePanelConsoleFacepile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9343 */;

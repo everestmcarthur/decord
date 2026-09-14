@@ -1,10 +1,10 @@
-// Module ID: 12185
-// Function ID: 12186
+// Module ID: 12186
+// Function ID: 12187
 // Name: EntityBorderAppIcon
 // Dependencies: [17, 21, 576, 4636, 5668, 2]
 // Exports: default
 
-// Module 12185 (EntityBorderAppIcon)
+// Module 12186 (EntityBorderAppIcon)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;

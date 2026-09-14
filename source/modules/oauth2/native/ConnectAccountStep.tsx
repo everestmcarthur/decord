@@ -1,7 +1,7 @@
 // Module ID: 9380
 // Function ID: 9381
 // Name: ConnectAccountStep
-// Dependencies: [19, 17, 4864, 502, 1371, 21, 4636, 576, 4571, 504, 5364, 1396, 4488, 7266, 1178, 8795, 4632, 1114, 5056, 9381, 4591, 4587, 2]
+// Dependencies: [19, 17, 4864, 502, 1371, 21, 4636, 576, 4571, 504, 5364, 1396, 4488, 7266, 1176, 8795, 4632, 1114, 5056, 9381, 4591, 4587, 2]
 // Exports: ConnectedAccountCard, default
 
 // Module 9380 (ConnectAccountStep)
@@ -86,12 +86,12 @@ export default function ConnectAccountStep(clientId) {
     const obj5 = { style: tmp.container, children: null };
     const obj6 = { style: tmp.header, children: null };
     const obj8 = { style: tmp.headerIcons, children: null };
-    const obj9 = { source: applicationIconSource, size: tmp5(1178).AvatarSizes.XLARGE };
-    const items4 = [closure_8(tmp5(1178).Avatar, obj9), , ];
+    const obj9 = { source: applicationIconSource, size: tmp5(1176).AvatarSizes.XLARGE };
+    const items4 = [closure_8(tmp5(1176).Avatar, obj9), , ];
     const obj10 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
     items4[1] = closure_8(tmp5(8795).MoreHorizontalIcon, obj10);
-    const obj11 = { source: userAvatarSource, size: tmp5(1178).AvatarSizes.XLARGE };
-    items4[2] = closure_8(tmp5(1178).Avatar, obj11);
+    const obj11 = { source: userAvatarSource, size: tmp5(1176).AvatarSizes.XLARGE };
+    items4[2] = closure_8(tmp5(1176).Avatar, obj11);
     obj8.children = items4;
     const items5 = [closure_9(View, obj8), , ];
     const obj12 = { variant: "text-lg/normal", color: "text-default", children: null };
@@ -111,7 +111,7 @@ export default function ConnectAccountStep(clientId) {
     let tmp16Result = null;
     if (null != null) {
       const obj17 = { source: null, style: tmp.platformIcon, disableColor: true };
-      tmp16Result = tmp16(tmp5(1178).Icon, obj17);
+      tmp16Result = tmp16(tmp5(1176).Icon, obj17);
     }
     const items7 = [tmp16Result, , ];
     const obj18 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
@@ -165,7 +165,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     let tmp10Result = null;
     if (null != null) {
       const obj8 = { source: null, style: tmp.platformIconSmall, disableColor: true };
-      tmp10Result = tmp10(tmp11(1178).Icon, obj8);
+      tmp10Result = tmp10(tmp11(1176).Icon, obj8);
     }
     const items1 = [tmp10Result, , ];
     const obj9 = { style: tmp.cardInfo, children: null };

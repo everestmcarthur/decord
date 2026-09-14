@@ -1,10 +1,10 @@
-// Module ID: 14179
-// Function ID: 14180
+// Module ID: 14180
+// Function ID: 14181
 // Name: IconPill
 // Dependencies: [19, 17, 1085, 21, 4636, 576, 5058, 8735, 2]
 // Exports: default
 
-// Module 14179 (IconPill)
+// Module 14180 (IconPill)
 import nativeDefault from "native" /* 576 */;
 import IconDefault from "Icon" /* 5058 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8735 */;

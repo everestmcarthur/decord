@@ -1,16 +1,16 @@
-// Module ID: 16803
-// Function ID: 16804
+// Module ID: 16805
+// Function ID: 16806
 // Name: ChannelsScreen
-// Dependencies: [19, 4660, 12492, 12468, 7982, 7981, 21, 12469, 504, 16333, 16749, 1114, 4348, 16753, 12487, 16795, 16745, 16757, 2]
+// Dependencies: [19, 4660, 12493, 12469, 7982, 7981, 21, 12470, 504, 16335, 16751, 1114, 4348, 16755, 12488, 16797, 16747, 16759, 2]
 
-// Module 16803 (ChannelsScreen)
+// Module 16805 (ChannelsScreen)
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12492 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12493 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const require = globalThis.__r;
 

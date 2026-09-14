@@ -1,12 +1,12 @@
 // Module ID: 8299
 // Function ID: 8300
 // Name: UserProfileSpeedBumpActionSheet
-// Dependencies: [32, 19, 17, 1957, 2021, 1371, 8300, 1074, 21, 4636, 576, 8302, 1114, 5768, 5686, 1178, 4488, 4571, 504, 8303, 7265, 7285, 8307, 8316, 1242, 8298, 8296, 7253, 6728, 8034, 7070, 4632, 4788, 5056, 5204, 1935, 2]
+// Dependencies: [32, 19, 17, 1957, 2021, 1371, 8300, 1074, 21, 4636, 576, 8302, 1114, 5768, 5686, 1176, 4488, 4571, 504, 8303, 7265, 7285, 8307, 8316, 1240, 8298, 8296, 7253, 6728, 8034, 7070, 4632, 4788, 5056, 5204, 1935, 2]
 
 // Module 8299 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import TableRow from "TableRow" /* 5686 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;

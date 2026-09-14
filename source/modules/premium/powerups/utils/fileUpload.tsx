@@ -1,11 +1,11 @@
-// Module ID: 12627
-// Function ID: 12628
+// Module ID: 12628
+// Function ID: 12629
 // Name: fileUpload
-// Dependencies: [4525, 4526, 504, 4529, 12628, 4563, 2]
+// Dependencies: [4525, 4526, 504, 4529, 12629, 4563, 2]
 // Exports: useShouldShowFileUploadRollback
 
-// Module 12627 (fileUpload)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12628 */;
+// Module 12628 (fileUpload)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12629 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
 
 const require = globalThis.__r;

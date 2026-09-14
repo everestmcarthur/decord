@@ -1,12 +1,12 @@
 // Module ID: 7183
 // Function ID: 7184
 // Name: CodeField
-// Dependencies: [32, 19, 17, 21, 4636, 576, 1178, 6707, 1114, 5056, 4632, 5659, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 1176, 6707, 1114, 5056, 4632, 5659, 2]
 // Exports: CodeBlocks, default
 
 // Module 7183 (CodeField)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5659 */;
 import _slicedToArray from "module_32" /* 32 */;

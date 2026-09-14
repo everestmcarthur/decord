@@ -1,11 +1,11 @@
-// Module ID: 16936
-// Function ID: 16937
+// Module ID: 16938
+// Function ID: 16939
 // Name: ViewModerators
-// Dependencies: [5, 19, 2021, 2015, 1979, 1074, 8519, 21, 1242, 4603, 16937, 1896, 1483, 504, 5496, 9868, 1965, 1894, 4981, 1114, 4649, 9869, 4334, 1178, 9881, 5054, 5768, 5686, 11337, 2]
+// Dependencies: [5, 19, 2021, 2015, 1979, 1074, 8519, 21, 1240, 4603, 16939, 1896, 1483, 504, 5496, 9868, 1965, 1894, 4981, 1114, 4649, 9869, 4334, 1176, 9881, 5054, 5768, 5686, 11338, 2]
 // Exports: default, openAddModeratorsActionSheet
 
-// Module 16936 (ViewModerators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 16938 (ViewModerators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9881 */;
@@ -178,8 +178,8 @@ export default function ViewModerators(channel) {
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel: tmp, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(16937, dependencyMap.paths), "channel-add-moderators-" + tmp.id, obj3);
-            const tmp7 = asyncRequireImpl(16937, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(16939, dependencyMap.paths), "channel-add-moderators-" + tmp.id, obj3);
+            const tmp7 = asyncRequireImpl(16939, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;
@@ -210,5 +210,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(16937, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
+  obj2.openLazy(asyncRequireImpl(16939, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
 };

@@ -1,10 +1,10 @@
-// Module ID: 12251
-// Function ID: 12252
+// Module ID: 12252
+// Function ID: 12253
 // Name: useAppsInThisServer
-// Dependencies: [19, 9419, 1371, 5080, 504, 9546, 1894, 9429, 12250, 12, 9536, 2]
+// Dependencies: [19, 9419, 1371, 5080, 504, 9546, 1894, 9429, 12251, 12, 9536, 2]
 // Exports: default
 
-// Module 12251 (useAppsInThisServer)
+// Module 12252 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;

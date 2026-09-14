@@ -1,12 +1,12 @@
 // Module ID: 10072
 // Function ID: 10073
 // Name: AttachmentUrlUtils
-// Dependencies: [5, 5091, 1074, 1090, 1930, 1929, 1365, 1272, 2]
+// Dependencies: [5, 5091, 1074, 1090, 1930, 1929, 1365, 1270, 2]
 // Exports: getSignedAttachmentExpiration, isAttachmentPathUrl, isExternalProxiedAttachmentUrl, maybeRefreshAttachmentUrl, messageHasExpiredAttachmentUrl, removeSignedUrlParameters
 
 // Module 10072 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 1929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,9 +1,9 @@
-// Module ID: 11487
-// Function ID: 11488
+// Module ID: 11488
+// Function ID: 11489
 // Name: updateSharedValueIfChanged
 // Dependencies: [4373, 2]
 
-// Module 11487 (updateSharedValueIfChanged)
+// Module 11488 (updateSharedValueIfChanged)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 15230
-// Function ID: 15231
+// Module ID: 15231
+// Function ID: 15232
 // Name: QuestGameLogotype
 // Dependencies: [32, 19, 17, 21, 5059, 4636, 576, 4373, 5055, 8574, 5668, 2]
 
-// Module 15230 (QuestGameLogotype)
+// Module 15231 (QuestGameLogotype)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,16 +1,16 @@
-// Module ID: 16405
-// Function ID: 16406
+// Module ID: 16407
+// Function ID: 16408
 // Name: HomeDrawerDirectMessagesRow
-// Dependencies: [19, 17, 4676, 4285, 1074, 21, 4636, 576, 504, 4632, 1114, 16401, 4500, 4497, 2]
+// Dependencies: [19, 17, 4676, 4285, 1074, 21, 4636, 576, 504, 4632, 1114, 16403, 4500, 4497, 2]
 // Exports: default
 
-// Module 16405 (HomeDrawerDirectMessagesRow)
+// Module 16407 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4500 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16401 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16403 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;

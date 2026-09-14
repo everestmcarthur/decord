@@ -1,13 +1,13 @@
 // Module ID: 4649
 // Function ID: 4650
 // Name: ChannelActionCreators
-// Dependencies: [32, 5, 4650, 1961, 1957, 4651, 1074, 9311, 1272, 5603, 4495, 4647, 5492, 573, 8492, 1242, 1100, 4488, 1114, 7426, 4878, 2]
+// Dependencies: [32, 5, 4650, 1961, 1957, 4651, 1074, 9311, 1270, 5603, 4495, 4647, 5492, 573, 8492, 1240, 1100, 4488, 1114, 7426, 4878, 2]
 
 // Module 4649 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import shared from "shared" /* 4488 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
@@ -283,10 +283,10 @@ export default {
     closure_0 = id;
     const self = this;
     return (async () => {
-      const HTTP = tmp2(1272).HTTP;
+      const HTTP = tmp2(1270).HTTP;
       const request = { url: constants.USER_CHANNELS, body: { recipients: self._getRecipients(tmp2) }, oldFormErrors: true, rejectWithError: null };
       self._getRecipients(tmp2);
-      request.rejectWithError = tmp2(1272).rejectWithMigratedError();
+      request.rejectWithError = tmp2(1270).rejectWithMigratedError();
       closure_128_0 = await HTTP.post(request);
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -354,7 +354,7 @@ export default {
   getDMChannel(arr) {
     closure_0 = arr;
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
+      const HTTP = tmp5(1270).HTTP;
       closure_128_0 = await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp2(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -398,16 +398,16 @@ export default {
     }
     if (isChangelogChannelDefault(id)) {
       const obj = { last_changelog_id: ChangelogStore.latestChangelogId(), unread_count: ReadStateStore.getUnreadCount(id) };
-      tmp(1242).track(constants.CHANGE_LOG_DM_REMOVED, obj);
-      const tmpResult = tmp(1242);
+      tmp(1240).track(constants.CHANGE_LOG_DM_REMOVED, obj);
+      const tmpResult = tmp(1240);
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "accessible" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 });
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);
     }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "accessible" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -431,8 +431,8 @@ export default {
     closure_1 = arr3;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1272).HTTP;
-      const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
+      const HTTP = tmp5(1270).HTTP;
+      const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1270).rejectWithMigratedError() };
       closure_128_0 = await HTTP.put(request);
       body(573).dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: closure_129_0, overwrite: closure_129_1 });
       return closure_128_0;
@@ -442,8 +442,8 @@ export default {
     closure_0 = channelId;
     closure_1 = id;
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
-      closure_128_0 = await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      const HTTP = tmp5(1270).HTTP;
+      closure_128_0 = await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1270).rejectWithMigratedError() });
       tmp2(573).dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: closure_129_0, overwriteId: closure_129_1 });
       return closure_128_0;
     })();
@@ -501,7 +501,7 @@ export default {
     return (async () => {
       const name = tmp3;
       const channel2 = channel.getChannel(tmp2);
-      const HTTP = tmp2(1272).HTTP;
+      const HTTP = tmp2(1270).HTTP;
       const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
       closure_128_1 = await HTTP.patch(request);
       if (channel2 != null) {

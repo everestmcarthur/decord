@@ -1,10 +1,10 @@
-// Module ID: 10516
-// Function ID: 10517
+// Module ID: 10517
+// Function ID: 10518
 // Name: StickersActionCreators
-// Dependencies: [5, 5358, 2025, 4978, 1371, 5583, 1074, 1084, 4878, 1272, 573, 4975, 5250, 1940, 12, 4980, 1114, 2]
+// Dependencies: [5, 5358, 2025, 4978, 1371, 5583, 1074, 1084, 4878, 1270, 573, 4975, 5250, 1940, 12, 4980, 1114, 2]
 // Exports: addStickerPreview, clearStickerPreview, createGuildSticker, deleteGuildSticker, favoriteSticker, fetchGuildStickersWithCreator, fetchSticker, fetchStickerPack, fetchStickerPacks, unfavoriteSticker, updateGuildSticker
 
-// Module 10516 (StickersActionCreators)
+// Module 10517 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;

@@ -1,15 +1,15 @@
 // Module ID: 8284
 // Function ID: 8285
 // Name: UserProfileActionCreators
-// Dependencies: [5, 1371, 1074, 1373, 1109, 4488, 1114, 1242, 8285, 7784, 573, 7088, 1272, 5250, 4537, 2]
+// Dependencies: [5, 1371, 1074, 1373, 1109, 4488, 1114, 1240, 8285, 7784, 573, 7088, 1270, 5250, 4537, 2]
 // Exports: notifyUnsavedUserProfileChangesInModal, pinUserProfileBadgesOnClient, resetAllPendingChanges, resetAllTryItOutChanges, resetPendingProfileChanges, saveProfileChanges, setTryItOutAvatar, setTryItOutAvatarDecoration, setTryItOutBanner, setTryItOutCustomTypingIndicatorStyle, setTryItOutDisplayNameStyles, setTryItOutPreset, setTryItOutProfileEffect, setTryItOutThemeColors
 
 // Module 8284 (UserProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import shared from "shared" /* 4488 */;
 import InlineUploaderDefault from "InlineUploader" /* 5250 */;
 import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 7088 */;

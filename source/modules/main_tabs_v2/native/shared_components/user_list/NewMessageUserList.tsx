@@ -1,10 +1,10 @@
-// Module ID: 12495
-// Function ID: 12496
+// Module ID: 12496
+// Function ID: 12497
 // Name: NewMessageUserList
-// Dependencies: [32, 19, 17, 1957, 4285, 1371, 10988, 21, 4636, 576, 5598, 4481, 4789, 12, 10990, 1114, 4632, 10992, 10994, 11126, 12496, 2]
+// Dependencies: [32, 19, 17, 1957, 4285, 1371, 10989, 21, 4636, 576, 5598, 4481, 4789, 12, 10991, 1114, 4632, 10993, 10995, 11127, 12497, 2]
 // Exports: default, useSearchGDMNames
 
-// Module 12495 (NewMessageUserList)
+// Module 12496 (NewMessageUserList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -100,7 +100,7 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];

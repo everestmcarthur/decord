@@ -1,7 +1,7 @@
 // Module ID: 4628
 // Function ID: 4629
 // Name: AccessibilityStore
-// Dependencies: [109, 1184, 1183, 1221, 1074, 4629, 4630, 1935, 504, 510, 4488, 573, 2]
+// Dependencies: [109, 1182, 1181, 1219, 1074, 4629, 4630, 1935, 504, 510, 4488, 573, 2]
 
 // Module 4628 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
@@ -10,9 +10,9 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import shared from "shared" /* 4488 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 require = fn;
 function maybeApplyNoTextColorForLightCustomTheme() {

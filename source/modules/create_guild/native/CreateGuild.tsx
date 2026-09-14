@@ -1,10 +1,10 @@
-// Module ID: 12463
-// Function ID: 12464
+// Module ID: 12464
+// Function ID: 12465
 // Name: CreateGuild
-// Dependencies: [19, 17, 1371, 1074, 21, 4636, 576, 5043, 5052, 5054, 4632, 1114, 11928, 6707, 7303, 5056, 7042, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4636, 576, 5043, 5052, 5054, 4632, 1114, 11929, 6707, 7303, 5056, 7042, 2]
 // Exports: default
 
-// Module 12463 (CreateGuild)
+// Module 12464 (CreateGuild)
 import nativeDefault from "native" /* 576 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
 import noop from "module_19" /* 19 */;
@@ -63,7 +63,7 @@ export default function CreateGuild(arg0) {
   }
   obj4.children = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4632).Text, obj4);
-  items1[2] = closure_7(ref(11928), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[2] = closure_7(ref(11929), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj6 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1114).intl;
   obj6.label = intl3.string(isScreenReaderEnabled(1114).t.dBih7e);

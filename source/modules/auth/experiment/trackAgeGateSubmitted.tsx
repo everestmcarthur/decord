@@ -1,12 +1,12 @@
-// Module ID: 16054
-// Function ID: 16055
+// Module ID: 16056
+// Function ID: 16057
 // Name: trackAgeGateSubmitted
-// Dependencies: [1074, 1242, 4228, 2]
+// Dependencies: [1074, 1240, 4228, 2]
 // Exports: default
 
-// Module 16054 (trackAgeGateSubmitted)
+// Module 16056 (trackAgeGateSubmitted)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import size from "module_2" /* 2 */;
 

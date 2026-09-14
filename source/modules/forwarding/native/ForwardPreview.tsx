@@ -1,10 +1,10 @@
-// Module ID: 11823
-// Function ID: 11824
+// Module ID: 11824
+// Function ID: 11825
 // Name: ForwardPreview
-// Dependencies: [19, 17, 21, 4636, 576, 4571, 8243, 8036, 8775, 11824, 1894, 11825, 12, 11826, 1114, 11828, 10260, 5168, 10240, 5668, 1476, 8940, 4632, 2914, 8260, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4571, 8243, 8036, 8775, 11825, 1894, 11826, 12, 11827, 1114, 11829, 10260, 5168, 10240, 5668, 1476, 8940, 4632, 2914, 8260, 2]
 // Exports: ForwardPreview
 
-// Module 11823 (ForwardPreview)
+// Module 11824 (ForwardPreview)
 import nativeDefault from "native" /* 576 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1476 */;
 import _modDef2914 from "module_2914" /* 2914 */;
@@ -13,8 +13,8 @@ import FastImageDefault from "FastImage" /* 5668 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
 import ChatItemDefault from "ChatItem" /* 8775 */;
 import ClipViewDefault from "ClipView" /* 8940 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11824 */;
-import MosaicMediaType from "MosaicMediaType" /* 11826 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11825 */;
+import MosaicMediaType from "MosaicMediaType" /* 11827 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -94,7 +94,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num == null) {
       num = 0;
     }
-    tmp6 = tmp2(11825).CHECKPOINT_PERSONA_COLORS[num];
+    tmp6 = tmp2(11826).CHECKPOINT_PERSONA_COLORS[num];
   }
   if (tmp6 != null) {
     const primaryColor = tmp6.primaryColor;
@@ -114,7 +114,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         const intl4 = tmp2(1114).intl;
         const obj2 = { image_count: num2, video_count: num3 };
         let formatToPlainStringResult = intl4.formatToPlainString(tmp2(1114).t.Lr0Top, obj2);
-        let AttachmentIcon = tmp2(11828).ImagesIcon;
+        let AttachmentIcon = tmp2(11829).ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
@@ -190,7 +190,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       if (1 === num2) {
         let ImagesIcon = tmp2(5168).ImageIcon;
       } else {
-        ImagesIcon = tmp2(11828).ImagesIcon;
+        ImagesIcon = tmp2(11829).ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
       formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.h4pFfU, obj12);

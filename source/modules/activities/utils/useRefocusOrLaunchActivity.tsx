@@ -1,10 +1,10 @@
-// Module ID: 11651
-// Function ID: 11652
+// Module ID: 11652
+// Function ID: 11653
 // Name: useRefocusOrLaunchActivity
-// Dependencies: [5, 19, 9640, 1956, 9641, 7266, 504, 9636, 9637, 9665, 11652, 2]
+// Dependencies: [5, 19, 9640, 1956, 9641, 7266, 504, 9636, 9637, 9665, 11653, 2]
 // Exports: default
 
-// Module 11651 (useRefocusOrLaunchActivity)
+// Module 11652 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;
@@ -120,7 +120,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                 obj11.analyticsLocations = analyticsLocations;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj12 = { value: analyticsLocations(11652).launchActivityInBotDM(obj11), done: false };
+                const obj12 = { value: analyticsLocations(11653).launchActivityInBotDM(obj11), done: false };
                 return obj12;
               }
             }

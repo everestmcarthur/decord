@@ -1,10 +1,10 @@
-// Module ID: 14691
-// Function ID: 14692
+// Module ID: 14692
+// Function ID: 14693
 // Name: useUserProfileEditForm
-// Dependencies: [109, 5, 19, 8277, 7723, 1371, 1074, 504, 573, 7087, 11220, 7091, 7094, 14692, 8284, 4537, 14693, 8298, 8314, 13203, 1935, 14001, 1114, 2]
+// Dependencies: [109, 5, 19, 8277, 7723, 1371, 1074, 504, 573, 7087, 11221, 7091, 7094, 14693, 8284, 4537, 14694, 8298, 8314, 13204, 1935, 14002, 1114, 2]
 // Exports: default
 
-// Module 14691 (useUserProfileEditForm)
+// Module 14692 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -81,12 +81,12 @@ export default function useUserProfileEditForm() {
               c7 = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              const accountUpdateForUpdateRequest = pendingChanges(11220).getAccountUpdateForUpdateRequest(pendingChanges);
+              const accountUpdateForUpdateRequest = pendingChanges(11221).getAccountUpdateForUpdateRequest(pendingChanges);
               closure_131_0 = accountUpdateForUpdateRequest;
-              const obj26 = pendingChanges(11220);
-              profileChangesForUpdateRequest = pendingChanges(11220).getProfileChangesForUpdateRequest(pendingChanges);
-              const obj27 = pendingChanges(11220);
-              primaryGuildChangesForUpdateRequest = pendingChanges(11220).getPrimaryGuildChangesForUpdateRequest(pendingChanges);
+              const obj26 = pendingChanges(11221);
+              profileChangesForUpdateRequest = pendingChanges(11221).getProfileChangesForUpdateRequest(pendingChanges);
+              const obj27 = pendingChanges(11221);
+              primaryGuildChangesForUpdateRequest = pendingChanges(11221).getPrimaryGuildChangesForUpdateRequest(pendingChanges);
               closure_131_3 = true;
               closure_131_4 = false;
               const _Object = Object;
@@ -138,11 +138,11 @@ export default function useUserProfileEditForm() {
                   const obj11 = { displayOrder: closure_132_0.pendingBadgeDisplayOrder, hiddenBadges: closure_132_0.pendingBadgeHiddenBadges };
                   c6 = 3;
                   c7 = 1;
-                  const obj13 = { value: pendingChanges(14693).updateBadgeSettings(obj11), done: false };
+                  const obj13 = { value: pendingChanges(14694).updateBadgeSettings(obj11), done: false };
                   return obj13;
                 }
               }
-              const obj28 = pendingChanges(11220);
+              const obj28 = pendingChanges(11221);
             }
           }
         } else if (1 === tmp7) {
@@ -195,9 +195,9 @@ export default function useUserProfileEditForm() {
                   }
                 }
                 if (null != avatar) {
-                  const result3 = pendingChanges(14692).showGenericProfileUpdateFailureToast(closure_131_5.body.avatar);
+                  const result3 = pendingChanges(14693).showGenericProfileUpdateFailureToast(closure_131_5.body.avatar);
                   closure_131_4 = true;
-                  const obj44 = pendingChanges(14692);
+                  const obj44 = pendingChanges(14693);
                 }
               }
             }
@@ -236,9 +236,9 @@ export default function useUserProfileEditForm() {
               const aPIError = new pendingChanges(4537).APIError(closure_131_9);
               firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
               if (null != firstFieldErrorMessage) {
-                const result5 = pendingChanges(14692).showGenericProfileUpdateFailureToast(firstFieldErrorMessage);
+                const result5 = pendingChanges(14693).showGenericProfileUpdateFailureToast(firstFieldErrorMessage);
                 closure_131_4 = true;
-                const obj18 = pendingChanges(14692);
+                const obj18 = pendingChanges(14693);
               }
             }
             let tmp85 = closure_131_3;
@@ -319,8 +319,8 @@ export default function useUserProfileEditForm() {
               const obj32 = { value, done: true };
               return obj32;
             } else {
-              const result6 = pendingChanges(13203).resetPendingBadgeSettings();
-              const obj7 = pendingChanges(13203);
+              const result6 = pendingChanges(13204).resetPendingBadgeSettings();
+              const obj7 = pendingChanges(13204);
             }
           } else if (6 === tmp7) {
             c5 = 0;
@@ -360,9 +360,9 @@ export default function useUserProfileEditForm() {
                 const aPIError1 = new pendingChanges(4537).APIError(closure_131_15);
                 firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
-                  const result9 = pendingChanges(14692).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
+                  const result9 = pendingChanges(14693).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
                   closure_131_4 = true;
-                  const obj2 = pendingChanges(14692);
+                  const obj2 = pendingChanges(14693);
                 }
               }
               let tmp29 = closure_131_3;
@@ -385,8 +385,8 @@ export default function useUserProfileEditForm() {
             }
             if (!tmp140) {
               const intl = pendingChanges(1114).intl;
-              const result10 = pendingChanges(14692).showGenericProfileUpdateFailureToast(intl.string(pendingChanges(1114).t["84MExs"]));
-              const obj29 = pendingChanges(14692);
+              const result10 = pendingChanges(14693).showGenericProfileUpdateFailureToast(intl.string(pendingChanges(1114).t["84MExs"]));
+              const obj29 = pendingChanges(14693);
             }
             c7 = 3;
             const obj37 = { value: closure_131_3, done: true };
@@ -403,7 +403,7 @@ export default function useUserProfileEditForm() {
           if (undefined !== primaryGuildId) {
             c6 = 8;
             c7 = 1;
-            const obj41 = { value: pendingChanges(14001).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
+            const obj41 = { value: pendingChanges(14002).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
             return obj41;
           }
         }

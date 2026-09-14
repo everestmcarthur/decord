@@ -1,13 +1,13 @@
 // Module ID: 10302
 // Function ID: 10303
 // Name: MediaPreviewRightAccessory
-// Dependencies: [19, 17, 4628, 10224, 21, 4636, 576, 8392, 4632, 4338, 1150, 5046, 5162, 7071, 563, 7702, 10303, 10259, 8242, 8383, 1476, 5668, 7395, 7400, 8425, 10304, 1178, 8940, 2]
+// Dependencies: [19, 17, 4628, 10224, 21, 4636, 576, 8392, 4632, 4338, 1363, 5046, 5162, 7071, 563, 7702, 10303, 10259, 8242, 8383, 1476, 5668, 7395, 7400, 8425, 10304, 1176, 8940, 2]
 // Exports: MediaPreviewRightAccessory
 
 // Module 10302 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useToken from "useToken" /* 4338 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import FastImageDefault from "FastImage" /* 5668 */;

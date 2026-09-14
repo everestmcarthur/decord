@@ -1,13 +1,13 @@
-// Module ID: 16900
-// Function ID: 16901
+// Module ID: 16902
+// Function ID: 16903
 // Name: ShopCoachmark
-// Dependencies: [19, 1954, 21, 4636, 1178, 576, 1114, 11261, 2]
+// Dependencies: [19, 1954, 21, 4636, 1176, 576, 1114, 11262, 2]
 // Exports: default
 
-// Module 16900 (ShopCoachmark)
+// Module 16902 (ShopCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

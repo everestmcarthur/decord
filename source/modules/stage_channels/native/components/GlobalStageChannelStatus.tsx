@@ -1,7 +1,7 @@
 // Module ID: 9816
 // Function ID: 9817
 // Name: GlobalStageChannelStatus
-// Dependencies: [5, 32, 19, 17, 4327, 1962, 1074, 21, 1114, 4636, 576, 4789, 504, 5073, 9817, 8743, 9806, 5503, 8529, 8531, 8516, 8512, 1178, 4632, 5057, 5056, 9808, 9713, 4571, 4345, 9611, 5109, 2]
+// Dependencies: [5, 32, 19, 17, 4327, 1962, 1074, 21, 1114, 4636, 576, 4789, 504, 5073, 9817, 8743, 9806, 5503, 8529, 8531, 8516, 8512, 1176, 4632, 5057, 5056, 9808, 9713, 4571, 4345, 9611, 5109, 2]
 // Exports: default
 
 // Module 9816 (GlobalStageChannelStatus)
@@ -316,8 +316,8 @@ export default function GlobalStageChannelStatus(arg0) {
           const obj3 = { style: tmp.noticeContainer, children: null };
           const obj4 = { animated: true, barStyle: str };
           const items2 = [closure_10(tmp3(9611), obj4), , ];
-          const obj5 = { style: activeSpeakerIcon, size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(5109).getChannelIconWithGuild(channel, guild) };
-          items2[1] = closure_10(tmp8(1178).Icon, obj5);
+          const obj5 = { style: activeSpeakerIcon, size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(5109).getChannelIconWithGuild(channel, guild) };
+          items2[1] = closure_10(tmp8(1176).Icon, obj5);
           let tmp13Result = "" !== str2;
           if (tmp13Result) {
             const items3 = [tmp.topic, ];
@@ -334,7 +334,7 @@ export default function GlobalStageChannelStatus(arg0) {
             }
             items4[1] = tmp17;
             obj6.children = items4;
-            tmp13Result = tmp13(tmp8(1178).LegacyText, obj6);
+            tmp13Result = tmp13(tmp8(1176).LegacyText, obj6);
           }
           const items5 = [tmp13Result, ];
           let tmp15Result = !tmp12;
@@ -347,12 +347,12 @@ export default function GlobalStageChannelStatus(arg0) {
             items6[1] = invitedHeaderText;
             obj7.style = items6;
             obj7.children = combined;
-            tmp15Result = tmp15(tmp8(1178).LegacyText, obj7);
+            tmp15Result = tmp15(tmp8(1176).LegacyText, obj7);
           }
           const obj8 = { numberOfLines: 1, children: null };
           items5[1] = tmp15Result;
           obj8.children = items5;
-          items2[2] = closure_11(tmp8(1178).LegacyText, obj8);
+          items2[2] = closure_11(tmp8(1176).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = tmp13(View, obj3);
           tmp15 = closure_10;

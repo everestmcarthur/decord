@@ -1,7 +1,7 @@
 // Module ID: 7417
 // Function ID: 7418
 // Name: LazyLoadedThreadManager
-// Dependencies: [5358, 1961, 1957, 2011, 1074, 1964, 573, 7324, 4463, 4476, 1272, 2]
+// Dependencies: [5358, 1961, 1957, 2011, 1074, 1964, 573, 7324, 4463, 4476, 1270, 2]
 
 // Module 7417 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -63,12 +63,12 @@ function loadThread(channelId) {
         const RouteParam2 = tmp13(4476).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
-        const HTTP = tmp13(1272).HTTP;
+        const HTTP = tmp13(1270).HTTP;
         const obj3 = { url: closure_8.CHANNEL(channelId), rejectWithError: null };
         const guildIdResult = RouteParam.guildId();
-        obj3.rejectWithError = tmp13(1272).rejectWithMigratedError();
+        obj3.rejectWithError = tmp13(1270).rejectWithMigratedError();
         value = HTTP.get(obj3);
-        const tmp13Result2 = tmp13(1272);
+        const tmp13Result2 = tmp13(1270);
         const catchPromise = value.then((body) => {
           body = body.body;
           closure_11[closure_0] = { type: "LOADED" };
@@ -154,12 +154,12 @@ export default {
 
         });
       } else {
-        const HTTP = items1(1272).HTTP;
+        const HTTP = items1(1270).HTTP;
         const request = { url: closure_8.THREADS_BULK, body: null, rejectWithError: null };
         const obj2 = { thread_ids: items1 };
         request.body = obj2;
-        request.rejectWithError = items1(1272).rejectWithMigratedError();
-        const obj4 = items1(1272);
+        request.rejectWithError = items1(1270).rejectWithMigratedError();
+        const obj4 = items1(1270);
         const postResult = HTTP.post(request);
         const catchPromise = HTTP.post(request).then((result) => {
           set = new Set();

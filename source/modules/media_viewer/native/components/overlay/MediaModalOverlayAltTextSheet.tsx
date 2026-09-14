@@ -1,16 +1,16 @@
-// Module ID: 11665
-// Function ID: 11666
+// Module ID: 11666
+// Function ID: 11667
 // Name: MediaModalOverlayAltTextSheet
-// Dependencies: [19, 21, 4636, 576, 11666, 5207, 7253, 7252, 1114, 4632, 2]
+// Dependencies: [19, 21, 4636, 576, 11667, 5207, 7253, 7252, 1114, 4632, 2]
 // Exports: default
 
-// Module 11665 (MediaModalOverlayAltTextSheet)
+// Module 11666 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11666 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

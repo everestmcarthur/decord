@@ -1,10 +1,10 @@
-// Module ID: 14665
-// Function ID: 14666
+// Module ID: 14666
+// Function ID: 14667
 // Name: DevToolsLazy
-// Dependencies: [5, 19, 17, 7822, 7821, 21, 14666, 14668, 1896, 504, 1150, 16020, 2]
+// Dependencies: [5, 19, 17, 7822, 7821, 21, 14667, 14669, 1896, 504, 1363, 16022, 2]
 // Exports: default
 
-// Module 14665 (DevToolsLazy)
+// Module 14666 (DevToolsLazy)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7822 */;
@@ -16,7 +16,7 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(14666).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(14667).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
@@ -92,10 +92,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14666).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14667).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16020).default, {});
+      return jsx(tmp(16022).default, {});
     }
   }
   return null;

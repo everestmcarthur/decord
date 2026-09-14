@@ -1,12 +1,12 @@
-// Module ID: 16707
-// Function ID: 16708
+// Module ID: 16709
+// Function ID: 16710
 // Name: VibegrationsMessageAuthor
-// Dependencies: [19, 17, 1371, 21, 4636, 576, 16708, 504, 4481, 1178, 4632, 2]
+// Dependencies: [19, 17, 1371, 21, 4636, 576, 16710, 504, 4481, 1176, 4632, 2]
 // Exports: default
 
-// Module 16707 (VibegrationsMessageAuthor)
+// Module 16709 (VibegrationsMessageAuthor)
 import nativeDefault from "native" /* 576 */;
-import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16708 */;
+import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16710 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -38,8 +38,8 @@ export default function VibegrationsMessageAuthor(userId) {
   let tmp8 = null;
   if (null != stateFromStores) {
     const obj2 = { style: tmp.author, children: null };
-    const obj3 = { size: tmp3(1178).AvatarSizes.SIZE_16, user: stateFromStores, guildId: "Array" };
-    const items3 = [closure_5(tmp3(1178).Avatar, obj3), ];
+    const obj3 = { size: tmp3(1176).AvatarSizes.SIZE_16, user: stateFromStores, guildId: "Array" };
+    const items3 = [closure_5(tmp3(1176).Avatar, obj3), ];
     const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: tmp7 };
     items3[1] = closure_5(tmp3(4632).Text, obj4);
     obj2.children = items3;

@@ -1,17 +1,17 @@
-// Module ID: 16412
-// Function ID: 16413
+// Module ID: 16414
+// Function ID: 16415
 // Name: HomeDrawerGuildRow
-// Dependencies: [19, 17, 4277, 1961, 1957, 2012, 7738, 1979, 4651, 4285, 4817, 1371, 1074, 4818, 21, 4636, 504, 4500, 4497, 13419, 9188, 4632, 16413, 16414, 4789, 11, 16415, 16416, 12108, 16417, 16418, 16419, 16421, 16422, 16401, 2]
+// Dependencies: [19, 17, 4277, 1961, 1957, 2012, 7738, 1979, 4651, 4285, 4817, 1371, 1074, 4818, 21, 4636, 504, 4500, 4497, 13420, 9188, 4632, 16415, 16416, 4789, 11, 16417, 16418, 12109, 16419, 16420, 16421, 16423, 16424, 16403, 2]
 // Exports: default
 
-// Module 16412 (HomeDrawerGuildRow)
+// Module 16414 (HomeDrawerGuildRow)
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelName from "useChannelName" /* 4789 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 16417 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 16418 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 16419 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 16421 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 16422 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 16419 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 16420 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 16421 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 16423 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 16424 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -66,7 +66,7 @@ function GuildRowWrapper(guild) {
     if (memo.isMuted) {
       let tmp3Result = dependencyMap;
       if (tmp.isTemporary) {
-        tmp3Result = tmp3(13419);
+        tmp3Result = tmp3(13420);
         let BellSlashIcon = tmp3Result.BellZIcon;
       } else {
         BellSlashIcon = tmp3(9188).BellSlashIcon;

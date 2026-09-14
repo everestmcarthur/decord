@@ -1,10 +1,10 @@
-// Module ID: 11286
-// Function ID: 11287
+// Module ID: 11287
+// Function ID: 11288
 // Name: UserProfilePrimaryInfo
-// Dependencies: [19, 17, 8300, 7311, 1074, 8048, 8311, 21, 4636, 576, 11027, 11028, 9568, 5204, 11287, 4632, 11289, 7831, 4495, 11321, 1114, 11323, 8301, 11324, 7485, 1925, 4335, 8358, 11325, 11326, 11330, 5528, 1242, 7830, 1150, 11331, 11332, 11333, 1477, 8282, 9313, 4481, 2]
+// Dependencies: [19, 17, 8300, 7311, 1074, 8048, 8311, 21, 4636, 576, 11028, 11029, 9568, 5204, 11288, 4632, 11290, 7831, 4495, 11322, 1114, 11324, 8301, 11325, 7485, 1925, 4335, 8358, 11326, 11327, 11331, 5528, 1240, 7830, 1363, 11332, 11333, 11334, 1477, 8282, 9313, 4481, 2]
 // Exports: default
 
-// Module 11286 (UserProfilePrimaryInfo)
+// Module 11287 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -14,8 +14,8 @@ import GuildTagUtils from "GuildTagUtils" /* 8282 */;
 import BadgeId from "BadgeId" /* 8301 */;
 import GuildTagDefault from "GuildTag" /* 9313 */;
 import BotTagDefault from "BotTag" /* 9568 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import BadgeUtils from "BadgeUtils" /* 11332 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import BadgeUtils from "BadgeUtils" /* 11333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -295,13 +295,13 @@ function ProfileBadge(source) {
               obj.icon = source;
               ToastActionCreatorsDefault.open(obj);
               if (tmp3 === tmp5(8358).QUEST_COMPLETED_BADGE) {
-                if (tmp5Result7.shouldMigrateToAdAnalyticsInterface(tmp5(11325).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_completed_badge_toast")) {
-                  const obj2 = { type: tmp5(11330).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION, surfaceId: tmp5(5528).QuestContent.QUEST_BADGE, isTargeted: false };
-                  tmp5(11326).captureAdUserAction(obj2);
-                  const tmp5Result8 = tmp5(11326);
+                if (tmp5Result7.shouldMigrateToAdAnalyticsInterface(tmp5(11326).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_completed_badge_toast")) {
+                  const obj2 = { type: tmp5(11331).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION, surfaceId: tmp5(5528).QuestContent.QUEST_BADGE, isTargeted: false };
+                  tmp5(11327).captureAdUserAction(obj2);
+                  const tmp5Result8 = tmp5(11327);
                 } else {
                   const obj3 = {};
-                  const tmp11Result = tmp11(1242);
+                  const tmp11Result = tmp11(1240);
                   const merged = Object.assign(tmp5(7830).getContentProperties(tmp5(5528).QuestContent.QUEST_BADGE));
                   let advertisingId = null;
                   if (null != closure_5) {
@@ -309,7 +309,7 @@ function ProfileBadge(source) {
                     if (tmp5Result10.isIOS()) {
                       advertisingId = tmp19.advertisingId;
                     }
-                    tmp5Result10 = tmp5(1150);
+                    tmp5Result10 = tmp5(1363);
                   }
                   obj3.apple_advertising_id = advertisingId;
                   let advertisingId1 = null;
@@ -318,14 +318,14 @@ function ProfileBadge(source) {
                     if (tmp5Result11.isAndroid()) {
                       advertisingId1 = tmp19.advertisingId;
                     }
-                    tmp5Result11 = tmp5(1150);
+                    tmp5Result11 = tmp5(1363);
                   }
                   obj3.android_advertising_id = advertisingId1;
                   obj3.is_targeted = false;
                   tmp11Result.track(constants.QUEST_CONTENT_VIEWED, obj3);
                   const tmp5Result9 = tmp5(7830);
                 }
-                tmp5Result7 = tmp5(11325);
+                tmp5Result7 = tmp5(11326);
               }
             } else {
               const obj5 = { screen: constants2.PREMIUM_GIFTING, params: {} };

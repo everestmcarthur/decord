@@ -1,10 +1,10 @@
-// Module ID: 10445
-// Function ID: 10446
+// Module ID: 10446
+// Function ID: 10447
 // Name: SearchEmpty
-// Dependencies: [19, 17, 21, 8349, 10446, 10447, 10448, 4488, 2]
+// Dependencies: [19, 17, 21, 8349, 10447, 10448, 10449, 4488, 2]
 // Exports: SearchEmpty, getSearchEmptySource, useSearchEmptySource
 
-// Module 10445 (SearchEmpty)
+// Module 10446 (SearchEmpty)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
@@ -20,13 +20,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getSearchEmptySource = function getSearchEmptySource(theme) {
   return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_10446");
-    },
-    darker() {
       return require("module_10447");
     },
-    light() {
+    darker() {
       return require("module_10448");
+    },
+    light() {
+      return require("module_10449");
     }
   });
 };
@@ -34,13 +34,13 @@ export const useSearchEmptySource = function useSearchEmptySource() {
   const obj = shared;
   return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10446");
-    },
-    darker() {
       return require("module_10447");
     },
-    light() {
+    darker() {
       return require("module_10448");
+    },
+    light() {
+      return require("module_10449");
     }
   });
 };
@@ -49,13 +49,13 @@ export const SearchEmpty = function SearchEmpty(arg0) {
   const obj4 = {};
   const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10446");
-    },
-    darker() {
       return require("module_10447");
     },
-    light() {
+    darker() {
       return require("module_10448");
+    },
+    light() {
+      return require("module_10449");
     }
   });
   const merged = Object.assign(arg0);

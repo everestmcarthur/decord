@@ -1,17 +1,17 @@
 // Module ID: 4882
 // Function ID: 4883
-// Dependencies: [4880, 1454, 1282, 4883, 4886, 4889, 4956]
+// Dependencies: [4880, 1454, 1280, 4883, 4886, 4889, 4956]
 
 // Module 4882
-import _mod1282 from "module_1282" /* 1282 */;
+import _mod1280 from "module_1280" /* 1280 */;
 import requirePromise from "requirePromise" /* 4880 */;
 import callBind_mod from "callBind" /* 1454 */;
 
 requirePromise();
 let callBind = callBind_mod;
-let closure_2 = callBind(_mod1282("%Promise.all%"));
+let closure_2 = callBind(_mod1280("%Promise.all%"));
 let callBind = callBind_mod;
-let closure_3 = callBind(_mod1282("%Promise.reject%"));
+let closure_3 = callBind(_mod1280("%Promise.reject%"));
 
 export default function allSettled(arg0) {
   const self = this;

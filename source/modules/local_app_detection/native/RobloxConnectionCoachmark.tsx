@@ -1,13 +1,13 @@
-// Module ID: 17042
-// Function ID: 17043
+// Module ID: 17044
+// Function ID: 17045
 // Name: RobloxConnectionCoachmark
-// Dependencies: [32, 19, 17, 5362, 1371, 13800, 1074, 1954, 21, 4636, 576, 4347, 1611, 4603, 7253, 7252, 7301, 5054, 4632, 1114, 5056, 13086, 9381, 7485, 4345, 5364, 1396, 1178, 8574, 504, 13801, 5487, 4457, 1943, 2]
+// Dependencies: [32, 19, 17, 5362, 1371, 13801, 1074, 1954, 21, 4636, 576, 4347, 1611, 4603, 7253, 7252, 7301, 5054, 4632, 1114, 5056, 13087, 9381, 7485, 4345, 5364, 1396, 1176, 8574, 504, 13802, 5487, 4457, 1943, 2]
 // Exports: default, useShouldShowRobloxConnectionCoachmark
 
-// Module 17042 (RobloxConnectionCoachmark)
+// Module 17044 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
@@ -23,7 +23,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13800 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13801 */;
 
 require = fn;
 function RobloxIcon(theme) {
@@ -136,7 +136,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1114).intl;
   obj10.text = intl3.string(markAsDismissed(1114).t.ItuabN);
   const obj3 = { title: null, leading: closure_13(markAsDismissed(7301).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(13086).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj10.icon = closure_13(markAsDismissed(13087).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -161,7 +161,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13801).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13802).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

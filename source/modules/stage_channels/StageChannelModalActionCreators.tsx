@@ -1,13 +1,13 @@
 // Module ID: 8511
 // Function ID: 8512
 // Name: StageChannelModalActionCreators
-// Dependencies: [5, 4658, 1957, 1979, 4275, 2011, 1965, 8512, 7424, 5601, 13056, 13057, 5492, 4688, 4778, 13059, 2]
+// Dependencies: [5, 4658, 1957, 1979, 4275, 2011, 1965, 8512, 7424, 5601, 13057, 13058, 5492, 4688, 4778, 13060, 2]
 // Exports: connectOrLurkStage, navigateToStage, showUserProfile
 
 // Module 8511 (StageChannelModalActionCreators)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8512 */;
-import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13057 */;
+import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -168,10 +168,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(13056).initialize();
+              closure_1(13057).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(13056);
+              const obj = closure_1(13057);
             }
             return flag;
           });

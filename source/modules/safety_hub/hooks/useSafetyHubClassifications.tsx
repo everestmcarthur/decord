@@ -1,13 +1,13 @@
-// Module ID: 12010
-// Function ID: 12011
+// Module ID: 12011
+// Function ID: 12012
 // Name: useSafetyHubClassifications
-// Dependencies: [19, 8548, 8537, 504, 11, 8536, 8538, 12011, 2]
+// Dependencies: [19, 8548, 8537, 504, 11, 8536, 8538, 12012, 2]
 // Exports: useActiveSafetyHubClassifications, useExpiredSafetyHubClassifications, useSafetyHubAppealSignal, useSafetyHubClassification, useSafetyHubClassifications
 
-// Module 12010 (useSafetyHubClassifications)
+// Module 12011 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12011 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12012 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 

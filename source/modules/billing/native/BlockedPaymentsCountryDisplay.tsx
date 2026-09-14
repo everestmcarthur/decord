@@ -1,13 +1,13 @@
-// Module ID: 11568
-// Function ID: 11569
+// Module ID: 11569
+// Function ID: 11570
 // Name: BlockedPaymentsCountryDisplay
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4571, 1178, 1114, 2024, 4488, 11569, 11570, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4571, 1176, 1114, 2024, 4488, 11570, 11571, 2]
 // Exports: default
 
-// Module 11568 (BlockedPaymentsCountryDisplay)
+// Module 11569 (BlockedPaymentsCountryDisplay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import noop from "module_19" /* 19 */;
@@ -44,9 +44,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj6 = { style: tmp.image, source: null };
   const tmp8 = React4;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11569);
+    let tmp2Result = tmp2(11570);
   } else {
-    tmp2Result = tmp2(11570);
+    tmp2Result = tmp2(11571);
   }
   obj6.source = tmp2Result;
   items[2] = tmp7(tmp8, obj6);

@@ -1,15 +1,15 @@
-// Module ID: 17968
-// Function ID: 17969
+// Module ID: 17969
+// Function ID: 17970
 // Name: ApplicationStreamingManager
-// Dependencies: [19, 4682, 4683, 4661, 21, 3, 17969, 4981, 17970, 1896, 10088, 9218, 2]
+// Dependencies: [19, 4682, 4683, 4661, 21, 3, 17970, 4981, 17971, 1896, 10088, 9218, 2]
 
-// Module 17968 (ApplicationStreamingManager)
+// Module 17969 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10088 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
-import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17969 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17970 */;
 
 const require = fn;
 const ApplicationStreamPresets = fn(4683).ApplicationStreamPresets;

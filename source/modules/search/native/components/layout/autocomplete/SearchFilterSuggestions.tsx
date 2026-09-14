@@ -1,16 +1,16 @@
-// Module ID: 16737
-// Function ID: 16738
+// Module ID: 16739
+// Function ID: 16740
 // Name: SearchFilterSuggestions
-// Dependencies: [32, 19, 17, 7981, 21, 4636, 576, 16738, 5686, 4632, 4373, 5055, 5059, 4347, 16741, 12467, 2]
+// Dependencies: [32, 19, 17, 7981, 21, 4636, 576, 16740, 5686, 4632, 4373, 5055, 5059, 4347, 16743, 12468, 2]
 
-// Module 16737 (SearchFilterSuggestions)
+// Module 16739 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 16738 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 16740 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,11 +1,11 @@
-// Module ID: 16809
-// Function ID: 16810
+// Module ID: 16811
+// Function ID: 16812
 // Name: SearchHistoricalIndexingHeader
-// Dependencies: [19, 2025, 7982, 21, 4636, 12487, 5688, 4632, 1114, 2]
+// Dependencies: [19, 2025, 7982, 21, 4636, 12488, 5688, 4632, 1114, 2]
 // Exports: default
 
-// Module 16809 (SearchHistoricalIndexingHeader)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
+// Module 16811 (SearchHistoricalIndexingHeader)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 

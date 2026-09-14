@@ -1,10 +1,10 @@
-// Module ID: 15072
-// Function ID: 15073
+// Module ID: 15073
+// Function ID: 15074
 // Name: PremiumSettingScreen
 // Dependencies: [19, 21, 7097, 1483, 7093, 7516, 2]
 // Exports: default
 
-// Module 15072 (PremiumSettingScreen)
+// Module 15073 (PremiumSettingScreen)
 import useNavigation from "useNavigation" /* 1483 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7097 */;

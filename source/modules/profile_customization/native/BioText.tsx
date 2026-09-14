@@ -1,11 +1,11 @@
-// Module ID: 11341
-// Function ID: 11342
+// Module ID: 11342
+// Function ID: 11343
 // Name: BioText
-// Dependencies: [19, 17, 1074, 2010, 21, 4636, 4331, 1242, 4632, 9549, 1150, 2009, 1114, 2]
+// Dependencies: [19, 17, 1074, 2010, 21, 4636, 4331, 1240, 4632, 9549, 1363, 2009, 1114, 2]
 // Exports: default
 
-// Module 11341 (BioText)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 11342 (BioText)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import BioMarkupUtils from "BioMarkupUtils" /* 9549 */;

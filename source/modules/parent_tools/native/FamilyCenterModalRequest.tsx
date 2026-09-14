@@ -1,15 +1,15 @@
-// Module ID: 12044
-// Function ID: 12045
+// Module ID: 12045
+// Function ID: 12046
 // Name: FamilyCenterModalRequest
-// Dependencies: [5, 19, 17, 1371, 7641, 21, 4636, 576, 1483, 563, 7642, 12045, 7695, 12046, 8539, 8540, 1178, 1396, 1114, 2396, 4632, 12047, 12048, 12056, 5514, 5056, 4839, 5773, 8769, 38, 11693, 7095, 5658, 8390, 1894, 8529, 8531, 4849, 5705, 12057, 12058, 2]
+// Dependencies: [5, 19, 17, 1371, 7641, 21, 4636, 576, 1483, 563, 7642, 12046, 7695, 12047, 8539, 8540, 1176, 1396, 1114, 2396, 4632, 12048, 12049, 12057, 5514, 5056, 4839, 5773, 8769, 38, 11694, 7095, 5658, 8390, 1894, 8529, 8531, 4849, 5705, 12058, 12059, 2]
 // Exports: default
 
-// Module 12044 (FamilyCenterModalRequest)
+// Module 12045 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import Server from "Server" /* 1894 */;
 import _modDef2396 from "module_2396" /* 2396 */;
@@ -24,8 +24,8 @@ import FamilyCenterUtils from "FamilyCenterUtils" /* 7695 */;
 import ModalScreen from "ModalScreen" /* 8539 */;
 import ModalContent from "ModalContent" /* 8540 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 12045 */;
-import ModalFooter from "ModalFooter" /* 12056 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 12046 */;
+import ModalFooter from "ModalFooter" /* 12057 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -522,7 +522,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_12(navigation(5056).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_13(navigation(5514).ButtonGroup, obj9);
-  items3[1] = closure_12(navigation(12056).ModalFooter, obj8);
+  items3[1] = closure_12(navigation(12057).ModalFooter, obj8);
   obj6.children = items3;
   return closure_13(navigation(8539).ModalScreen, obj6);
 }
@@ -697,7 +697,7 @@ let result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCente
 export default function FamilyCenterRequestModal(userId) {
   userId = userId.userId;
   const linkCode = userId.linkCode;
-  const FamilyCenterConnectionPrereqExperiment = userId(12057).FamilyCenterConnectionPrereqExperiment;
+  const FamilyCenterConnectionPrereqExperiment = userId(12058).FamilyCenterConnectionPrereqExperiment;
   const items = [linkCode, userId];
   const memo = noop.useMemo(() => {
     let obj = {};
@@ -778,7 +778,7 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.TEEN_SCAN] = obj13;
     return obj;
   }, items);
-  const FamilyCenterModalRequestSections = userId(12045).FamilyCenterModalRequestSections;
+  const FamilyCenterModalRequestSections = userId(12046).FamilyCenterModalRequestSections;
   if (FamilyCenterConnectionPrereqExperiment.useConfig({ location: "FamilyCenterRequestModal" }).enabled) {
     let PREREQ_LOADING = FamilyCenterModalRequestSections.PREREQ_LOADING;
   } else {
@@ -787,7 +787,7 @@ export default function FamilyCenterRequestModal(userId) {
   let obj = { initialRouteName: PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = tmp3(1114).intl;
   obj.headerBackTitle = intl.string(userId(1114).t["13/7kX"]);
-  return closure_12(userId(12058).Modal, obj);
+  return closure_12(userId(12059).Modal, obj);
 };
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

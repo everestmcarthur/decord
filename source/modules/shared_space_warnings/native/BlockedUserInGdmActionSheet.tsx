@@ -1,19 +1,19 @@
-// Module ID: 13825
-// Function ID: 13826
+// Module ID: 13826
+// Function ID: 13827
 // Name: BlockedUserInGdmActionSheet
-// Dependencies: [19, 17, 1957, 1371, 13826, 1074, 21, 4636, 576, 4632, 4788, 1114, 504, 1369, 1178, 11955, 11041, 4596, 4591, 1242, 7300, 11507, 5768, 5686, 5056, 4603, 13827, 4649, 2]
+// Dependencies: [19, 17, 1957, 1371, 13827, 1074, 21, 4636, 576, 4632, 4788, 1114, 504, 1369, 1176, 11956, 11042, 4596, 4591, 1240, 7300, 11508, 5768, 5686, 5056, 4603, 13828, 4649, 2]
 // Exports: default
 
-// Module 13825 (BlockedUserInGdmActionSheet)
+// Module 13826 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import TableRow from "TableRow" /* 5686 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13827 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13828 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -88,15 +88,15 @@ function UserCalloutAvatars(userIds) {
       found = found[0];
       obj3.user = found;
       obj3.guildId = userIds.guildId;
-      REFRESH_MEDIUM_32 = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
+      REFRESH_MEDIUM_32 = tmp(1176).AvatarSizes.REFRESH_MEDIUM_32;
       obj3.size = REFRESH_MEDIUM_32;
-      let tmp6 = closure_11(tmp(1178).Avatar, obj3);
+      let tmp6 = closure_11(tmp(1176).Avatar, obj3);
     } else {
-      tmp6 = closure_11(tmp(11955).UserIcon, {});
+      tmp6 = closure_11(tmp(11956).UserIcon, {});
     }
   } else {
-    const obj4 = { users: found, size: tmp(1178).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(11041).FacepileGroupDMAvatar, obj4);
+    const obj4 = { users: found, size: tmp(1176).AvatarSizes.REFRESH_MEDIUM_32 };
+    return closure_11(tmp(11042).FacepileGroupDMAvatar, obj4);
   }
 }
 function BlockedUserInGDMDescription(arg0) {
@@ -138,7 +138,7 @@ function BlockedUserInGDMDescription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(13826);
+const SharedSpaceWarningConstants = fn(13827);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

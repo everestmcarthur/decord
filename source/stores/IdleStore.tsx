@@ -1,14 +1,14 @@
 // Module ID: 5491
 // Function ID: 5492
 // Name: IdleStore
-// Dependencies: [502, 1074, 4661, 1150, 1935, 1090, 573, 4257, 5492, 551, 504, 2]
+// Dependencies: [502, 1074, 4661, 1363, 1935, 1090, 573, 4257, 5492, 551, 504, 2]
 
 // Module 5491 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import DiscordNativeDefault from "DiscordNative" /* 4257 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
@@ -43,9 +43,9 @@ function checkIdleAFK() {
             tmp17 = c12;
           }
           if (!tmp17) {
-            const tmp14Result = tmp14(1150);
-            tmp17 = tmp14(1150).isAndroid() && closure_13;
-            const tmp18 = tmp14(1150).isAndroid() && closure_13;
+            const tmp14Result = tmp14(1363);
+            tmp17 = tmp14(1363).isAndroid() && closure_13;
+            const tmp18 = tmp14(1363).isAndroid() && closure_13;
           }
           if (!tmp17) {
             if (afk) {
@@ -76,7 +76,7 @@ let afk = false;
 let c11 = false;
 let c12 = false;
 let closure_13 = false;
-if (fn(1150).isPlatformEmbedded) {
+if (fn(1363).isPlatformEmbedded) {
   const importDefaultResult = DiscordNativeDefault;
   let powerMonitor1;
   if (importDefaultResult != null) {

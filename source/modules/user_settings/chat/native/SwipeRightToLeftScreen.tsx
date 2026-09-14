@@ -1,12 +1,12 @@
-// Module ID: 15560
-// Function ID: 15561
+// Module ID: 15561
+// Function ID: 15562
 // Name: SwipeRightToLeftScreen
-// Dependencies: [19, 8079, 21, 11601, 14775, 2]
+// Dependencies: [19, 8079, 21, 11602, 14776, 2]
 // Exports: default
 
-// Module 15560 (SwipeRightToLeftScreen)
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+// Module 15561 (SwipeRightToLeftScreen)
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

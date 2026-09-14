@@ -1,7 +1,7 @@
 // Module ID: 7579
 // Function ID: 7580
 // Name: CacheStore
-// Dependencies: [32, 5, 5358, 502, 2011, 4458, 1074, 3, 510, 2008, 7580, 7591, 9, 10, 2007, 7592, 7593, 7594, 7595, 7596, 7746, 7767, 504, 573, 2006, 7752, 7758, 7756, 7750, 1983, 7768, 1150, 7770, 7772, 2003, 2]
+// Dependencies: [32, 5, 5358, 502, 2011, 4458, 1074, 3, 510, 2008, 7580, 7591, 9, 10, 2007, 7592, 7593, 7594, 7595, 7596, 7746, 7767, 504, 573, 2006, 7752, 7758, 7756, 7750, 1983, 7768, 1363, 7770, 7772, 2003, 2]
 
 // Module 7579 (CacheStore)
 import LoggerDefault from "Logger" /* 3 */;
@@ -896,7 +896,7 @@ function resumeFluxAndSocket(arg0) {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     try {
-      f125332();
+      f125335();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         c2 = true;
@@ -1126,13 +1126,13 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                 c5 = 1;
                 const obj11 = {
                   value: (function dontLoadLateLazyCache() {
-                                const f125332 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                                const f125335 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
                                 const socket = closure_5.getSocket();
                                 dependencyMap = false;
                                 const Emitter = socket(504).Emitter;
                                 Emitter.batched(() => {
                                   try {
-                                    f125332();
+                                    f125335();
                                     dispatcher = dispatcher.dispatcher;
                                     if (dispatcher.hasStuffToDispatchNow()) {
                                       c2 = true;

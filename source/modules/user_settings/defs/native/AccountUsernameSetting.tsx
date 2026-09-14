@@ -1,20 +1,20 @@
-// Module ID: 14790
-// Function ID: 14791
+// Module ID: 14791
+// Function ID: 14792
 // Name: AccountUsernameSetting
-// Dependencies: [19, 1371, 8079, 1074, 21, 504, 4481, 12001, 4632, 11601, 1114, 14791, 2]
+// Dependencies: [19, 1371, 8079, 1074, 21, 504, 4481, 12002, 4632, 11602, 1114, 14792, 2]
 
-// Module 14790 (AccountUsernameSetting)
+// Module 14791 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12001 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12002 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

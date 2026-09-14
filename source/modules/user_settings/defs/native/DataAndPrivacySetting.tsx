@@ -1,16 +1,16 @@
-// Module ID: 15955
-// Function ID: 15956
+// Module ID: 15957
+// Function ID: 15958
 // Name: DataAndPrivacySetting
-// Dependencies: [19, 1074, 14944, 14947, 11601, 1114, 9341, 15956, 2]
+// Dependencies: [19, 1074, 14945, 14948, 11602, 1114, 9341, 15958, 2]
 
-// Module 15955 (DataAndPrivacySetting)
+// Module 15957 (DataAndPrivacySetting)
 import util from "util" /* 1114 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14944 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 14947 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14945 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

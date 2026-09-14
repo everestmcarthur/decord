@@ -1,23 +1,23 @@
-// Module ID: 10763
-// Function ID: 10764
+// Module ID: 10764
+// Function ID: 10765
 // Name: MediaKeyboardUtils
-// Dependencies: [5, 1185, 1957, 4977, 2011, 4976, 1607, 1074, 4846, 5209, 9436, 5217, 5219, 5220, 1242, 5231, 1150, 4615, 10764, 1109, 10789, 5052, 11355, 11356, 12, 2]
+// Dependencies: [5, 1183, 1957, 4977, 2011, 4976, 1607, 1074, 4846, 5209, 9436, 5217, 5219, 5220, 1240, 5231, 1363, 4615, 10765, 1109, 10790, 5052, 11356, 11357, 12, 2]
 // Exports: addAttachmentForCommand, addImagesFromPicker, animatedIndexThreshold, cropResultToUploadItem, getMediaKeyboardDraftType, handleCameraDialog, handleSelectGift, handleSelectThread, handleViewAllDialog, mediaNodeToUploadItem
 
-// Module 10763 (MediaKeyboardUtils)
+// Module 10764 (MediaKeyboardUtils)
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
 import Upload from "Upload" /* 5209 */;
 import uploader_UploadUtils from "uploader/UploadUtils" /* 5217 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 5219 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5220 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10764 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11355 */;
+import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10765 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11356 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
@@ -369,9 +369,9 @@ function showSimpleMediaKeyboard(channel) {
         if (result) {
           const obj4 = { type: constants2.CAMERA, channel_id: null, guild_id: null };
           ({ id: obj2.channel_id, guild_id: obj2.guild_id } = c0);
-          InteractionModal(1242).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
+          InteractionModal(1240).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
           _undefined2();
-          const obj = InteractionModal(1242);
+          const obj = InteractionModal(1240);
           const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
           let obj3 = InteractionModal(5231);
           obj7.quality = _undefined(5219).getImageCompressionQuality();
@@ -418,9 +418,9 @@ function showSimpleMediaKeyboard(channel) {
                             const items = [size1];
                             closure_1_4(items);
                             const obj3 = { camera_view: constants.FULLY_EXPANDED, camera_preview_type };
-                            camera_preview_type(1242).track(constants2.IN_APP_CAMERA_USED, obj3);
+                            camera_preview_type(1240).track(constants2.IN_APP_CAMERA_USED, obj3);
                             closure_1_3();
-                            const obj2 = camera_preview_type(1242);
+                            const obj2 = camera_preview_type(1240);
                           }
                           let str11 = str8.split("/")[1];
                           if (str11 == null) {
@@ -442,7 +442,7 @@ function showSimpleMediaKeyboard(channel) {
     },
     onPressItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      const result = channel(10764).hideMediaKeyboardActionSheet();
+      const result = channel(10765).hideMediaKeyboardActionSheet();
       handleSelectKeyboardItem(channelId, item, isIncluded);
     },
     onViewAll() {
@@ -617,7 +617,7 @@ function showSimpleMediaKeyboard(channel) {
           }
         }
       };
-      obj3 = channel(1150);
+      obj3 = channel(1363);
       resolved = InteractionModal(5220).requestPermission(constants3.PHOTOS);
     },
     onManageLimited() {
@@ -703,9 +703,9 @@ export const handleCameraDialog = function handleCameraDialog(arg0) {
     if (result) {
       const obj4 = { type: constants2.CAMERA, channel_id: null, guild_id: null };
       ({ id: obj2.channel_id, guild_id: obj2.guild_id } = c0);
-      InteractionModal(1242).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
+      InteractionModal(1240).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
       _undefined2();
-      const obj = InteractionModal(1242);
+      const obj = InteractionModal(1240);
       const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
       let obj3 = InteractionModal(5231);
       obj7.quality = _undefined(5219).getImageCompressionQuality();
@@ -752,9 +752,9 @@ export const handleCameraDialog = function handleCameraDialog(arg0) {
                         const items = [size1];
                         closure_1_4(items);
                         const obj3 = { camera_view: constants.FULLY_EXPANDED, camera_preview_type };
-                        camera_preview_type(1242).track(constants2.IN_APP_CAMERA_USED, obj3);
+                        camera_preview_type(1240).track(constants2.IN_APP_CAMERA_USED, obj3);
                         closure_1_3();
-                        const obj2 = camera_preview_type(1242);
+                        const obj2 = camera_preview_type(1240);
                       }
                       let str11 = str8.split("/")[1];
                       if (str11 == null) {

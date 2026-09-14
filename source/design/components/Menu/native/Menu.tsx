@@ -1,12 +1,12 @@
-// Module ID: 14216
-// Function ID: 14217
+// Module ID: 14217
+// Function ID: 14218
 // Name: Menu
-// Dependencies: [32, 19, 17, 1074, 21, 14206, 4636, 576, 4373, 4357, 1611, 1477, 1150, 4348, 1114, 5052, 4637, 14210, 14204, 5055, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 14207, 4636, 576, 4373, 4357, 1611, 1477, 1363, 4348, 1114, 5052, 4637, 14211, 14205, 5055, 2]
 // Exports: Menu
 
-// Module 14216 (Menu)
+// Module 14217 (Menu)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let __closure = { duration: 250, easing: fn(14206).STANDARD_EASING };
+let __closure = { duration: 250, easing: fn(14207).STANDARD_EASING };
 const createStyles = fn(4636);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};

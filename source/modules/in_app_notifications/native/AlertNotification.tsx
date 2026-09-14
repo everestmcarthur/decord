@@ -1,10 +1,10 @@
-// Module ID: 10344
-// Function ID: 10345
+// Module ID: 10345
+// Function ID: 10346
 // Name: AlertNotification
 // Dependencies: [19, 17, 21, 5665, 8940, 576, 4636, 10226, 1114, 4647, 10298, 8711, 10235, 2]
 // Exports: default
 
-// Module 10344 (AlertNotification)
+// Module 10345 (AlertNotification)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;

@@ -1,12 +1,12 @@
-// Module ID: 17034
-// Function ID: 17035
+// Module ID: 17036
+// Function ID: 17037
 // Name: VADPermission
-// Dependencies: [19, 21, 17031, 5075, 1114, 2]
+// Dependencies: [19, 21, 17033, 5075, 1114, 2]
 
-// Module 17034 (VADPermission)
+// Module 17036 (VADPermission)
 import util from "util" /* 1114 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
-import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17031 */;
+import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17033 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

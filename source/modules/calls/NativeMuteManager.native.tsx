@@ -1,9 +1,9 @@
-// Module ID: 13903
-// Function ID: 13904
+// Module ID: 13904
+// Function ID: 13905
 // Name: NativeMuteManager
 // Dependencies: [9212, 1908, 3, 1952, 573, 9218, 1910, 2]
 
-// Module 13903 (NativeMuteManager)
+// Module 13904 (NativeMuteManager)
 import LoggerDefault from "Logger" /* 3 */;
 import inject from "inject" /* 1910 */;
 import Timers from "Timers" /* 1952 */;

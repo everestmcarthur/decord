@@ -1,10 +1,10 @@
-// Module ID: 14974
-// Function ID: 14975
+// Module ID: 14975
+// Function ID: 14976
 // Name: FamilyCenterFeatureRow
-// Dependencies: [19, 17, 21, 4636, 576, 12049, 1114, 2396, 14975, 14976, 12505, 7071, 9991, 14971, 5054, 4632, 5768, 5686, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12050, 1114, 2396, 14976, 14977, 12506, 7071, 9991, 14972, 5054, 4632, 5768, 5686, 2]
 // Exports: default
 
-// Module 14974 (FamilyCenterFeatureRow)
+// Module 14975 (FamilyCenterFeatureRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
@@ -14,11 +14,11 @@ import TableRow from "TableRow" /* 5686 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
 import EyeIcon from "EyeIcon" /* 7071 */;
 import _modDef9991 from "module_9991" /* 9991 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12049 */;
-import _modDef12505 from "module_12505" /* 12505 */;
-import QrCodeIcon from "QrCodeIcon" /* 14971 */;
-import _modDef14975 from "module_14975" /* 14975 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 14976 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12050 */;
+import _modDef12506 from "module_12506" /* 12506 */;
+import QrCodeIcon from "QrCodeIcon" /* 14972 */;
+import _modDef14976 from "module_14976" /* 14976 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 14977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,13 +48,13 @@ export default function FamilyCenterFeatureRows() {
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2396["+pi4Yt"]), intl6.string(_modDef2396["1xPTwE"]));
-  obj4.icon = _modDef14975;
+  obj4.icon = _modDef14976;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2396["001l3m"]);
   obj4.description = ageSpecificText;
   const items = [obj4, , ];
-  const obj5 = { icon: _modDef12505, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef12506, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2396.yipAeP);
   obj5.description = ageSpecificText1;

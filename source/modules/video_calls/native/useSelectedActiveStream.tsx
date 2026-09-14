@@ -1,10 +1,10 @@
-// Module ID: 13881
-// Function ID: 13882
+// Module ID: 13882
+// Function ID: 13883
 // Name: useSelectedActiveStream
 // Dependencies: [4652, 4658, 504, 2]
 // Exports: default
 
-// Module 13881 (useSelectedActiveStream)
+// Module 13882 (useSelectedActiveStream)
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 

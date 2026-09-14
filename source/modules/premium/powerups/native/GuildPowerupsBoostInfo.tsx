@@ -1,17 +1,17 @@
-// Module ID: 12682
-// Function ID: 12683
+// Module ID: 12683
+// Function ID: 12684
 // Name: GuildPowerupsBoostInfo
-// Dependencies: [17, 4526, 21, 4636, 576, 7083, 12683, 9505, 4632, 2]
+// Dependencies: [17, 4526, 21, 4636, 576, 7083, 12684, 9505, 4632, 2]
 // Exports: default
 
-// Module 12682 (GuildPowerupsBoostInfo)
+// Module 12683 (GuildPowerupsBoostInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4526 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
 import BoostGemIcon from "BoostGemIcon" /* 9505 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12683 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12684 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;

@@ -1,10 +1,10 @@
-// Module ID: 17791
-// Function ID: 17792
+// Module ID: 17792
+// Function ID: 17793
 // Name: CommunityRequirementSatisfiedForm
-// Dependencies: [19, 17, 21, 4334, 17781, 5204, 2]
+// Dependencies: [19, 17, 21, 4334, 17782, 5204, 2]
 // Exports: default
 
-// Module 17791 (CommunityRequirementSatisfiedForm)
+// Module 17792 (CommunityRequirementSatisfiedForm)
 import ToastUtils from "ToastUtils" /* 4334 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/public_guilds/native/components
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  const enableCommunitySharedStyles = formSwitchDisabled(17781).useEnableCommunitySharedStyles();
+  const enableCommunitySharedStyles = formSwitchDisabled(17782).useEnableCommunitySharedStyles();
   const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children, ];
   let tmp6 = null;

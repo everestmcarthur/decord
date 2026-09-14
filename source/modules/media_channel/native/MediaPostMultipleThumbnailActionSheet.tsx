@@ -1,10 +1,10 @@
-// Module ID: 10393
-// Function ID: 10394
+// Module ID: 10394
+// Function ID: 10395
 // Name: MediaPostMultipleThumbnailActionSheet
-// Dependencies: [19, 17, 1954, 21, 4636, 576, 1611, 7253, 6728, 4632, 1114, 1178, 5056, 2]
+// Dependencies: [19, 17, 1954, 21, 4636, 576, 1611, 7253, 6728, 4632, 1114, 1176, 5056, 2]
 // Exports: default
 
-// Module 10393 (MediaPostMultipleThumbnailActionSheet)
+// Module 10394 (MediaPostMultipleThumbnailActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import noop from "module_19" /* 19 */;
@@ -46,7 +46,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1114).intl;
   obj6.children = intl.string(markAsDismissed(1114).t.ews2pj);
-  const items1 = [closure_5(markAsDismissed(4632).Text, obj6), closure_5(markAsDismissed(1178).Checkbox, { selected: true })];
+  const items1 = [closure_5(markAsDismissed(4632).Text, obj6), closure_5(markAsDismissed(1176).Checkbox, { selected: true })];
   obj5.children = items1;
   obj4.children = closure_6(View, obj5);
   const items2 = [closure_5(View, obj4), , , , , ];
@@ -54,12 +54,12 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const intl2 = markAsDismissed(1114).intl;
   obj7.children = intl2.string(markAsDismissed(1114).t.WJisip);
   items2[1] = closure_5(markAsDismissed(4632).Text, obj7);
-  items2[2] = closure_5(markAsDismissed(1178).Spacer, { size: 12 });
+  items2[2] = closure_5(markAsDismissed(1176).Spacer, { size: 12 });
   const obj8 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl3 = markAsDismissed(1114).intl;
   obj8.children = intl3.string(markAsDismissed(1114).t.X6ZH6d);
   items2[3] = closure_5(markAsDismissed(4632).Text, obj8);
-  items2[4] = closure_5(markAsDismissed(1178).Spacer, { size: 48 });
+  items2[4] = closure_5(markAsDismissed(1176).Spacer, { size: 48 });
   const obj9 = { text: null, grow: true, onPress: null };
   const intl4 = markAsDismissed(1114).intl;
   obj9.text = intl4.string(markAsDismissed(1114).t["NX+WJN"]);

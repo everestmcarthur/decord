@@ -1,14 +1,14 @@
 // Module ID: 10209
 // Function ID: 10210
 // Name: GuildIncidentsStore
-// Dependencies: [4552, 1221, 1979, 4275, 8119, 504, 573, 2]
+// Dependencies: [4552, 1219, 1979, 4275, 8119, 504, 573, 2]
 
 // Module 10209 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8119 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 

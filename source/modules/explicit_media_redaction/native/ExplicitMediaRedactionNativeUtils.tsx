@@ -1,12 +1,12 @@
-// Module ID: 14910
-// Function ID: 14911
+// Module ID: 14911
+// Function ID: 14912
 // Name: ExplicitMediaRedactionNativeUtils
-// Dependencies: [1371, 7703, 7982, 1187, 1114, 7702, 8529, 8531, 4603, 14911, 1896, 7395, 7400, 2]
+// Dependencies: [1371, 7703, 7982, 1185, 1114, 7702, 8529, 8531, 4603, 14912, 1896, 7395, 7400, 2]
 // Exports: handleSensitiveMediaFilterPress, shouldAgeVerifyForSearchMedia
 
-// Module 14910 (ExplicitMediaRedactionNativeUtils)
+// Module 14911 (ExplicitMediaRedactionNativeUtils)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
@@ -46,7 +46,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
         const obj3 = { entryPoint: tmp(8531).AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       } else {
-        require(tmp(1187).ExplicitContentRedaction.SHOW);
+        require(tmp(1185).ExplicitContentRedaction.SHOW);
       }
     };
     items.push(obj);
@@ -77,7 +77,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14911, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14912, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {

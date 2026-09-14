@@ -1,10 +1,10 @@
-// Module ID: 16344
-// Function ID: 16345
+// Module ID: 16346
+// Function ID: 16347
 // Name: GuildRoleSubscriptionTierTemplateUpsellActionSheet
 // Dependencies: [32, 19, 17, 4628, 1074, 1954, 21, 4636, 576, 5207, 563, 7253, 1114, 8425, 4632, 5056, 9192, 4603, 2]
 // Exports: default
 
-// Module 16344 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16346 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;

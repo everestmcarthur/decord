@@ -1,10 +1,10 @@
-// Module ID: 16340
-// Function ID: 16341
+// Module ID: 16342
+// Function ID: 16343
 // Name: GenericUpsellActionSheet
-// Dependencies: [19, 17, 1954, 21, 4636, 576, 8287, 7253, 5668, 7257, 4632, 1178, 5056, 2]
+// Dependencies: [19, 17, 1954, 21, 4636, 576, 8287, 7253, 5668, 7257, 4632, 1176, 5056, 2]
 // Exports: default
 
-// Module 16340 (GenericUpsellActionSheet)
+// Module 16342 (GenericUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   obj3.children = items;
   obj2.header = closure_6(View, obj3);
   const obj5 = { style: tmp.content, children: null };
-  const items1 = [closure_5(markAsDismissed(4632).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), closure_5(markAsDismissed(1178).Spacer, { size: 12 }), closure_5(markAsDismissed(4632).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), closure_5(markAsDismissed(5056).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
+  const items1 = [closure_5(markAsDismissed(4632).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), closure_5(markAsDismissed(1176).Spacer, { size: 12 }), closure_5(markAsDismissed(4632).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), closure_5(markAsDismissed(5056).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
   obj5.children = items1;
   obj2.children = closure_6(View, obj5);
   return closure_5(markAsDismissed(7253).BottomSheet, obj2);

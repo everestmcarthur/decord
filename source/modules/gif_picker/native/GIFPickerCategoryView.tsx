@@ -1,10 +1,10 @@
-// Module ID: 10511
-// Function ID: 10512
+// Module ID: 10512
+// Function ID: 10513
 // Name: GIFPickerCategoryView
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1114, 9889, 5668, 10512, 10363, 4632, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1114, 9889, 5668, 10513, 10364, 4632, 2]
 // Exports: default
 
-// Module 10511 (GIFPickerCategoryView)
+// Module 10512 (GIFPickerCategoryView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -57,12 +57,12 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const obj5 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj6 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-    let tmp10Result = tmp10(tmp3(10512).AnalyticsIcon, obj6);
+    let tmp10Result = tmp10(tmp3(10513).AnalyticsIcon, obj6);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj7 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-      tmp10Result = tmp10(tmp3(10363).StarIcon, obj7);
+      tmp10Result = tmp10(tmp3(10364).StarIcon, obj7);
     }
   }
   const items2 = [tmp10Result, React5(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];

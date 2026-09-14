@@ -1,11 +1,11 @@
 // Module ID: 8274
 // Function ID: 8275
 // Name: avatar_decorations/AvatarDecorationUtils
-// Dependencies: [1397, 1178, 4603, 8275, 1896, 2]
+// Dependencies: [1397, 1176, 4603, 8275, 1896, 2]
 // Exports: getDecorationCutoutForAvatarCutout, getDecorationSizeForAvatarSize, openAvatarDecorationActionSheet
 
 // Module 8274 (avatar_decorations/AvatarDecorationUtils)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;

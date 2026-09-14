@@ -1,11 +1,11 @@
 // Module ID: 5580
 // Function ID: 5581
 // Name: IAPEligibility
-// Dependencies: [19, 1979, 1074, 1150, 5581, 563, 2]
+// Dependencies: [19, 1979, 1074, 1363, 5581, 563, 2]
 // Exports: canUseRoleSubscriptionIAP, useCanUseRoleSubscriptionIAP
 
 // Module 5580 (IAPEligibility)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -124,7 +124,7 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
     }
     return tmp;
   }, []);
-  let memo1 = noop.useMemo(() => guildId(1150).isIOS(), []);
+  let memo1 = noop.useMemo(() => guildId(1363).isIOS(), []);
   items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {

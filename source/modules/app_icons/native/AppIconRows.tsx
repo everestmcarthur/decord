@@ -1,15 +1,15 @@
-// Module ID: 15612
-// Function ID: 15613
+// Module ID: 15613
+// Function ID: 15614
 // Name: AppIconRows
-// Dependencies: [32, 19, 17, 1371, 21, 4636, 9454, 5768, 1114, 15613, 13536, 504, 1885, 2]
+// Dependencies: [32, 19, 17, 1371, 21, 4636, 9454, 5768, 1114, 15614, 13537, 504, 1885, 2]
 // Exports: default
 
-// Module 15612 (AppIconRows)
+// Module 15613 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import AppIconTypes from "AppIconTypes" /* 9454 */;
-import AppIconUtils from "AppIconUtils" /* 13536 */;
-import AppIconRowDefault from "AppIconRow" /* 15613 */;
+import AppIconUtils from "AppIconUtils" /* 13537 */;
+import AppIconRowDefault from "AppIconRow" /* 15614 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;

@@ -1,10 +1,10 @@
-// Module ID: 11013
-// Function ID: 11014
+// Module ID: 11014
+// Function ID: 11015
 // Name: ActivityStatusText
 // Dependencies: [19, 21, 4636, 4632, 2]
 // Exports: default
 
-// Module 11013 (ActivityStatusText)
+// Module 11014 (ActivityStatusText)
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 

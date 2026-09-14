@@ -1,15 +1,15 @@
-// Module ID: 15782
-// Function ID: 15783
+// Module ID: 15784
+// Function ID: 15785
 // Name: SimpleRequestOTPActionSheet
-// Dependencies: [5, 32, 19, 17, 1371, 5591, 1074, 1373, 21, 3, 1611, 10827, 504, 11176, 7644, 1885, 9497, 11148, 4603, 4981, 7657, 5054, 4632, 5688, 5056, 10957, 1256, 10791, 7253, 10950, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 5591, 1074, 1373, 21, 3, 1611, 10828, 504, 11177, 7644, 1885, 9497, 11149, 4603, 4981, 7657, 5054, 4632, 5688, 5056, 10958, 1254, 10792, 7253, 10951, 2]
 // Exports: default
 
-// Module 15782 (SimpleRequestOTPActionSheet)
+// Module 15784 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10791 */;
-import NativePaymentContext from "NativePaymentContext" /* 10950 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10792 */;
+import NativePaymentContext from "NativePaymentContext" /* 10951 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -121,14 +121,14 @@ function GiftPurchaseSKUView(selectedSkuId) {
   [first, dependencyMap] = noop.useState(false);
   const currentUser = memo1.getCurrentUser();
   _slicedToArray = noop.useRef({});
-  const giftStyle = selectedSkuId(10827).useNativeGiftContext().giftStyle;
+  const giftStyle = selectedSkuId(10828).useNativeGiftContext().giftStyle;
   let obj = noop;
-  let obj2 = selectedSkuId(10827);
+  let obj2 = selectedSkuId(10828);
   const tmp3 = _slicedToArray;
   let items = [closure_8];
   const stateFromStores = selectedSkuId(504).useStateFromStores(items, () => SKUStore.get(selectedSkuId));
   let obj3 = selectedSkuId(504);
-  const fetchCollectiblesProduct = selectedSkuId(11176).useFetchCollectiblesProduct(selectedSkuId);
+  const fetchCollectiblesProduct = selectedSkuId(11177).useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
   let isFetching = fetchCollectiblesProduct.isFetching;
@@ -269,9 +269,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(11148)(obj6);
+  closure_8 = tmp(11149)(obj6);
   const items5 = [product];
-  let obj4 = selectedSkuId(11176);
+  let obj4 = selectedSkuId(11177);
   const obj7 = { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } };
   [tmp16, tmp17] = tmp3(obj.useMemo(() => {
     if (null == c5) {
@@ -330,7 +330,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   const obj12 = { variant: "text-md/medium", color: "text-overlay-light", children: null };
   const items8 = ["Select style: ", giftStyle];
   obj12.children = items8;
-  const items9 = [closure_11(selectedSkuId(4632).Text, obj12), closure_12(first(10957), {})];
+  const items9 = [closure_11(selectedSkuId(4632).Text, obj12), closure_12(first(10958), {})];
   obj11.children = items9;
   items7[2] = closure_11(selectedSkuId(5688).Card, obj11);
   obj8.children = items7;
@@ -357,7 +357,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         };
         const obj3 = { selectedSkuId, giftRecipientId, giftMessage: giftMessage.giftMessage };
         obj2.children = closure_12(GiftPurchaseSKUView, obj3);
-        let tmp6Result = closure_12(tmp(10827).NativeGiftContextProvider, obj2);
+        let tmp6Result = closure_12(tmp(10828).NativeGiftContextProvider, obj2);
         let tmp8 = closure_12;
       }
       const obj4 = { children: tmp6Result };

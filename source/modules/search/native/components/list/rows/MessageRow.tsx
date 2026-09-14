@@ -1,12 +1,12 @@
-// Module ID: 16781
-// Function ID: 16782
+// Module ID: 16783
+// Function ID: 16784
 // Name: MessageRow
-// Dependencies: [19, 17, 4628, 1960, 1957, 1979, 4817, 1074, 21, 4636, 576, 504, 5109, 4789, 1178, 4632, 10273, 10519, 9568, 4481, 8298, 16782, 13419, 16783, 4869, 8065, 7432, 16759, 1114, 10237, 7983, 2]
+// Dependencies: [19, 17, 4628, 1960, 1957, 1979, 4817, 1074, 21, 4636, 576, 504, 5109, 4789, 1176, 4632, 10273, 10520, 9568, 4481, 8298, 16784, 13420, 16785, 4869, 8065, 7432, 16761, 1114, 10237, 7983, 2]
 
-// Module 16781 (MessageRow)
+// Module 16783 (MessageRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import useMessageAuthorDefault from "useMessageAuthor" /* 4869 */;
@@ -17,7 +17,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
-const PollBadgeDefault = tmp5(16783);
+const PollBadgeDefault = tmp5(16785);
 require = fn;
 function GuildChannelMessageRowHeader(channel) {
   channel = channel.channel;
@@ -40,15 +40,15 @@ function GuildChannelMessageRowHeader(channel) {
   const tmp7 = useChannelNameDefault(channel);
   const tmp8 = closure_12;
   const tmp9 = closure_4;
-  const items1 = [closure_11(channel(1178).Icon, { source: channelIcon, size: channel(1178).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon }), closure_11(channel(4632).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: tmp7 }), , , ];
+  const items1 = [closure_11(channel(1176).Icon, { source: channelIcon, size: channel(1176).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon }), closure_11(channel(4632).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: tmp7 }), , , ];
   if (muted) {
-    const obj6 = { source: tmp6(10273), size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
-    muted = tmp10(tmp2(1178).Icon, obj6);
+    const obj6 = { source: tmp6(10273), size: tmp2(1176).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    muted = tmp10(tmp2(1176).Icon, obj6);
   }
   items1[2] = muted;
   if (isFavorite) {
-    const obj7 = { source: tmp6(10519), size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
-    isFavorite = tmp10(tmp2(1178).Icon, obj7);
+    const obj7 = { source: tmp6(10520), size: tmp2(1176).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    isFavorite = tmp10(tmp2(1176).Icon, obj7);
   }
   items1[3] = isFavorite;
   let isSystemDMResult = channel.isSystemDM();
@@ -79,14 +79,14 @@ function PrivateChannelMessageRowLabel(message) {
       const item = recipients.forEach((item) => message(closure_1_2[20]).getUser(item));
     }
   }, items1);
-  const searchMessageTimestamp = message(16782).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(16784).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
   const items2 = [closure_11(message(4632).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
   if (muted) {
-    const obj4 = { source: channel(10273), size: tmp4(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
-    muted = tmp9(tmp4(1178).Icon, obj4);
+    const obj4 = { source: channel(10273), size: tmp4(1176).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    muted = tmp9(tmp4(1176).Icon, obj4);
   }
   items2[1] = muted;
   let isSystemDMResult = channel.isSystemDM();
@@ -101,13 +101,13 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = tmp9(tmp4(13419).BellZIcon, obj7);
+    tmp9Result = tmp9(tmp4(13420).BellZIcon, obj7);
   }
   items3[2] = tmp9Result;
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = tmp9(channel(16783), obj8);
+    tmp9Result2 = tmp9(channel(16785), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;
@@ -127,7 +127,7 @@ function GuildChannelMessageRowLabel(arg0) {
     const tmp2Result3 = tmp2(8065);
     const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result3.useIsRoleStyleAndRoleColorsEligibleForERC(channel.guild_id, message.author.id, stateFromStores, processColorStringsArray);
     const tmp2Result = tmp2(8065);
-    const searchMessageTimestamp = tmp2(16782).useSearchMessageTimestamp(message, channel);
+    const searchMessageTimestamp = tmp2(16784).useSearchMessageTimestamp(message, channel);
     const obj3 = { style: tmp.labelContainer, children: null };
     const obj4 = { style: tmp.authorRow, children: null };
     let tmp18 = "dot" === stateFromStores;
@@ -137,7 +137,7 @@ function GuildChannelMessageRowLabel(arg0) {
     }
     if (tmp18) {
       const obj5 = { size: "small", color: colorString, colors: colorStrings };
-      tmp18 = closure_1_11(tmp2(1178).RoleDot, obj5);
+      tmp18 = closure_1_11(tmp2(1176).RoleDot, obj5);
     }
     const items1 = [tmp18, ];
     const obj6 = { variant: "text-sm/semibold", color: "interactive-text-active", lineClamp: 1, style: {}, gradientColors: null, children: null };
@@ -155,7 +155,7 @@ function GuildChannelMessageRowLabel(arg0) {
     let tmp21Result = null;
     if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
       const obj8 = { size: "xs", style: tmp.suppressNotificationsIcon };
-      tmp21Result = tmp21(tmp2(13419).BellZIcon, obj8);
+      tmp21Result = tmp21(tmp2(13420).BellZIcon, obj8);
     }
     items2[2] = tmp21Result;
     let tmp21Result2 = null;

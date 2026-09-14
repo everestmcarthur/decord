@@ -1,19 +1,19 @@
-// Module ID: 16769
-// Function ID: 16770
+// Module ID: 16771
+// Function ID: 16772
 // Name: renderChannelItem
-// Dependencies: [19, 17, 1979, 4285, 1371, 4818, 21, 9900, 1114, 4636, 576, 16770, 504, 5665, 12320, 7743, 16771, 11041, 16773, 4789, 2]
+// Dependencies: [19, 17, 1979, 4285, 1371, 4818, 21, 9900, 1114, 4636, 576, 16772, 504, 5665, 12321, 7743, 16773, 11042, 16775, 4789, 2]
 // Exports: default, getChannelAccessibilityProps
 
-// Module 16769 (renderChannelItem)
+// Module 16771 (renderChannelItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7743 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9900 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16770 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16771 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16773 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16772 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16773 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16775 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
@@ -29,7 +29,7 @@ function LaunchpadChannelIcon(channel) {
   const obj3 = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
-  const items1 = [closure_8(View, obj3), closure_8(channel(12320).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [closure_8(View, obj3), closure_8(channel(12321).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }
@@ -92,7 +92,7 @@ export default function renderChannelItem(unread) {
   obj2.style = size;
   if (channel.isGroupDM()) {
     const obj3 = { channel, size: tmp7.icon.avatarSize };
-    let tmp11Result = tmp11(tmp5(11041), obj3);
+    let tmp11Result = tmp11(tmp5(11042), obj3);
   } else {
     const obj4 = { channel };
     tmp11Result = tmp11(LaunchpadChannelIcon, obj4);

@@ -1,7 +1,7 @@
 // Module ID: 8249
 // Function ID: 8250
 // Name: useAvatarColor
-// Dependencies: [32, 5, 19, 4628, 560, 1249, 1474, 4486, 504, 7655, 2]
+// Dependencies: [32, 5, 19, 4628, 560, 1247, 1474, 4486, 504, 7655, 2]
 // Exports: default, maybeFetchColors, useAvatarColors, useHasFetchedColors
 
 // Module 8249 (useAvatarColor)

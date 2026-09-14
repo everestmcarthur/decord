@@ -1,20 +1,20 @@
-// Module ID: 14660
-// Function ID: 14661
+// Module ID: 14661
+// Function ID: 14662
 // Name: ErrorBoundary
-// Dependencies: [5, 32, 19, 17, 11558, 21, 4636, 504, 11919, 5056, 1114, 4347, 1232, 573, 1178, 9979, 4632, 2]
+// Dependencies: [5, 32, 19, 17, 11559, 21, 4636, 504, 11920, 5056, 1114, 4347, 1230, 573, 1176, 9979, 4632, 2]
 
-// Module 14660 (ErrorBoundary)
+// Module 14661 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import native from "native" /* 1176 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import AppCrash from "AppCrash" /* 9979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 
 require = fn;
 function MaybeClearBuildOverride() {

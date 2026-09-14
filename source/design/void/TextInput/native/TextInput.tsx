@@ -1,7 +1,7 @@
 // Module ID: 9887
 // Function ID: 9888
 // Name: TextInput/TextInput
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4488, 1150, 4486, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 4488, 1363, 4486, 2]
 
 // Module 9887 (TextInput/TextInput)
 import nativeDefault from "native" /* 576 */;

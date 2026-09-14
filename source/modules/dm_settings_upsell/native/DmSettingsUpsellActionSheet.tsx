@@ -1,17 +1,17 @@
-// Module ID: 17456
-// Function ID: 17457
+// Module ID: 17458
+// Function ID: 17459
 // Name: DmSettingsUpsellActionSheet
-// Dependencies: [19, 17, 1979, 21, 4636, 576, 504, 17453, 17457, 7300, 11507, 4632, 1114, 5665, 5056, 7098, 1935, 4335, 9696, 4603, 13994, 2]
+// Dependencies: [19, 17, 1979, 21, 4636, 576, 504, 17455, 17459, 7300, 11508, 4632, 1114, 5665, 5056, 7098, 1935, 4335, 9696, 4603, 13995, 2]
 // Exports: default
 
-// Module 17456 (DmSettingsUpsellActionSheet)
+// Module 17458 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13994 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 17453 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17457 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13995 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 17455 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17459 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -46,7 +46,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(11507), style: tmp.headerImage };
+    const obj4 = { source: stateFromStores(11508), style: tmp.headerImage };
     const items2 = [closure_7(closure_5, obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1114).intl;

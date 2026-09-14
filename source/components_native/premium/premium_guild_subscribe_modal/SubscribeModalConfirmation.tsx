@@ -1,23 +1,23 @@
-// Module ID: 13695
-// Function ID: 13696
+// Module ID: 13696
+// Function ID: 13697
 // Name: SubscribeModalConfirmation
-// Dependencies: [5, 19, 17, 12691, 1979, 4531, 4300, 1074, 7535, 4526, 21, 4636, 4486, 576, 504, 4530, 5678, 4632, 1114, 13696, 13697, 5056, 13706, 5068, 1093, 1242, 13661, 38, 4534, 4981, 13710, 1896, 2]
+// Dependencies: [5, 19, 17, 12692, 1979, 4531, 4300, 1074, 7535, 4526, 21, 4636, 4486, 576, 504, 4530, 5678, 4632, 1114, 13697, 13698, 5056, 13707, 5068, 1093, 1240, 13662, 38, 4534, 4981, 13711, 1896, 2]
 // Exports: default
 
-// Module 13695 (SubscribeModalConfirmation)
+// Module 13696 (SubscribeModalConfirmation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4530 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import _modDef5678 from "module_5678" /* 5678 */;
-import _modDef13696 from "module_13696" /* 13696 */;
-import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13697 */;
+import _modDef13697 from "module_13697" /* 13697 */;
+import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12691 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12692 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4531 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
@@ -54,7 +54,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_22();
   const obj = { children: null };
-  const items = [closure_1_19(timestampProducer, { style: tmp.subscribeImage, source: _modDef13696 }), , , , , ];
+  const items = [closure_1_19(timestampProducer, { style: tmp.subscribeImage, source: _modDef13697 }), , , , , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.yTlZV0);
@@ -86,8 +86,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_22();
-  const guildSubscriptionRemovalSource = prop(13706).useGuildSubscriptionRemovalSource();
-  const obj = prop(13706);
+  const guildSubscriptionRemovalSource = prop(13707).useGuildSubscriptionRemovalSource();
+  const obj = prop(13707);
   const items = [GuildStore];
   const stateFromStores = prop(504).useStateFromStores(items, () => {
     const found = prop.find((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
@@ -122,7 +122,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10.children = intl3.format(tmp2(1114).t["5zQYEz"], { guildCount: 1 });
     const items2 = [closure_19(tmp2(4632).Text, obj10), , , ];
     const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_19(onPremiumGuildSubscribe(13697), obj11);
+    items2[1] = closure_19(onPremiumGuildSubscribe(13698), obj11);
     const obj12 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl4 = tmp2(1114).intl;
     const obj13 = { slotCount: prop.length };
@@ -136,7 +136,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj14.end = tmp2(1093).HorizontalGradient.END;
     obj14.colors = Gradients.PREMIUM_GUILD;
     const obj15 = { guild };
-    obj14.children = closure_19(onPremiumGuildSubscribe(13697), obj15);
+    obj14.children = closure_19(onPremiumGuildSubscribe(13698), obj15);
     items2[3] = closure_19(onPremiumGuildSubscribe(5068), obj14);
     obj9.children = items2;
     items1[3] = closure_20(closure_7, obj9);

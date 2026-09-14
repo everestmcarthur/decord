@@ -1,7 +1,7 @@
 // Module ID: 8233
 // Function ID: 8234
 // Name: InteractionUtils
-// Dependencies: [5, 502, 8045, 1074, 11, 7867, 8234, 1894, 1272, 7559, 8235, 573, 4866, 2, 4863]
+// Dependencies: [5, 502, 8045, 1074, 11, 7867, 8234, 1894, 1270, 7559, 8235, 573, 4866, 2, 4863]
 // Exports: canRetryInteractionData, executeMessageComponentInteraction, getInteractionInitialResponseDeadlineTimestamp, getInteractionStatusViewState, getInteractionTimeoutTimestamp
 
 // Module 8233 (InteractionUtils)

@@ -1,13 +1,13 @@
-// Module ID: 16689
-// Function ID: 16690
+// Module ID: 16691
+// Function ID: 16692
 // Name: VibegrationsPlatformUtils
-// Dependencies: [1895, 13805, 9817, 2]
+// Dependencies: [1895, 13806, 9817, 2]
 
-// Module 16689 (VibegrationsPlatformUtils)
+// Module 16691 (VibegrationsPlatformUtils)
 import PushNotificationDefault from "PushNotification" /* 9817 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
-const LocalNotificationTypes = fn(13805).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13806).LocalNotificationTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 

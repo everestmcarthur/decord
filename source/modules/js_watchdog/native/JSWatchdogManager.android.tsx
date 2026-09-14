@@ -1,12 +1,12 @@
-// Module ID: 17526
-// Function ID: 17527
+// Module ID: 17527
+// Function ID: 17528
 // Name: JSWatchdogManager
-// Dependencies: [5, 1074, 3, 1090, 7221, 17527, 1232, 1242, 7578, 7574, 7564, 2]
+// Dependencies: [5, 1074, 3, 1090, 7221, 17528, 1230, 1240, 7578, 7574, 7564, 2]
 
-// Module 17526 (JSWatchdogManager)
+// Module 17527 (JSWatchdogManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7578 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -227,7 +227,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(17527)) {
+              if (null != tmp2(17528)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: self.getCurrentSessionId(), done: false };
@@ -247,7 +247,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                const obj = tmp2(17527);
+                const obj = tmp2(17528);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }

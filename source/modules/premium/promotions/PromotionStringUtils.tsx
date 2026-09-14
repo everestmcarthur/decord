@@ -1,10 +1,10 @@
-// Module ID: 13514
-// Function ID: 13515
+// Module ID: 13515
+// Function ID: 13516
 // Name: PromotionStringUtils
 // Dependencies: [4299, 1373, 504, 4294, 7337, 1114, 2024, 2]
 // Exports: getHelpArticleLinkProps, useFormatStringWithCommonPremiumParams
 
-// Module 13514 (PromotionStringUtils)
+// Module 13515 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;

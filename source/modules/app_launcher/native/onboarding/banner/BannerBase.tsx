@@ -1,10 +1,10 @@
-// Module ID: 12190
-// Function ID: 12191
+// Module ID: 12191
+// Function ID: 12192
 // Name: BannerBase
-// Dependencies: [32, 19, 17, 4628, 21, 576, 4636, 12179, 4373, 1477, 4486, 504, 5055, 5068, 5610, 12191, 4632, 2]
+// Dependencies: [32, 19, 17, 4628, 21, 576, 4636, 12180, 4373, 1477, 4486, 504, 5055, 5068, 5610, 12192, 4632, 2]
 // Exports: default
 
-// Module 12190 (BannerBase)
+// Module 12191 (BannerBase)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
@@ -22,7 +22,7 @@ const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
 const createStyles = fn(4636);
 let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12179).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12180).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -103,7 +103,7 @@ export default function BannerBase(arg0) {
   const obj9 = { style: tmp.imageContainer, children: null };
   const obj10 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   let obj6 = { bannerMeasured: sharedValue, withDelay: require("ReanimatedRexport").withDelay, withSpring: require("spring").withSpring, SPRING_CONFIG };
-  obj10.source = require("module_12191");
+  obj10.source = require("module_12192");
   obj10.autoPlay = !stateFromStores;
   const items5 = [closure_7(sharedValue(5610), obj10), image];
   obj9.children = items5;

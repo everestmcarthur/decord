@@ -1,10 +1,10 @@
-// Module ID: 16610
-// Function ID: 16611
+// Module ID: 16612
+// Function ID: 16613
 // Name: CaughtUpRow
-// Dependencies: [5, 32, 19, 17, 21, 4373, 4632, 16547, 576, 8469, 16564, 16560, 4495, 4637, 4338, 13141, 1114, 5056, 16586, 5068, 1093, 672, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4373, 4632, 16549, 576, 8469, 16566, 16562, 4495, 4637, 4338, 13142, 1114, 5056, 16588, 5068, 1093, 672, 2]
 // Exports: default
 
-// Module 16610 (CaughtUpRow)
+// Module 16612 (CaughtUpRow)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4632).Text);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -95,7 +95,7 @@ export default function ExploreServersRow(visible) {
             const obj6 = v1(8469);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(16564).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(16566).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -244,7 +244,7 @@ export default function ExploreServersRow(visible) {
   const obj9 = { children: null };
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { style: tmp.textContainer, children: null };
-  const obj12 = { style: null, children: closure_7(visible(13141).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
+  const obj12 = { style: null, children: closure_7(visible(13142).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
   const items1 = [tmp.iconWrapper, animatedStyle];
   obj12.style = items1;
   const items2 = [closure_7(sharedValue(4373).View, obj12), , ];
@@ -276,7 +276,7 @@ export default function ExploreServersRow(visible) {
   obj16.children = items6;
   items5[1] = closure_8(View, obj16);
   obj10.children = items5;
-  const items7 = [closure_8(View, obj10), closure_7(visible(16586).Separator, {}), ];
+  const items7 = [closure_8(View, obj10), closure_7(visible(16588).Separator, {}), ];
   const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
   const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
   const obj8 = visible(4338);

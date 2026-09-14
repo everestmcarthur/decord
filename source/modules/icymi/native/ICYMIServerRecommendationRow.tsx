@@ -1,10 +1,10 @@
-// Module ID: 16612
-// Function ID: 16613
+// Module ID: 16614
+// Function ID: 16615
 // Name: ICYMIServerRecommendationRow
-// Dependencies: [32, 5, 19, 17, 4628, 1979, 8453, 1074, 21, 16547, 576, 504, 1396, 1971, 8940, 5668, 5665, 8469, 4335, 1114, 5601, 4632, 5056, 16586, 7158, 2]
+// Dependencies: [32, 5, 19, 17, 4628, 1979, 8453, 1074, 21, 16549, 576, 504, 1396, 1971, 8940, 5668, 5665, 8469, 4335, 1114, 5601, 4632, 5056, 16588, 7158, 2]
 // Exports: ICYMIServerRecommendationRow
 
-// Module 16612 (ICYMIServerRecommendationRow)
+// Module 16614 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -268,7 +268,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginVertical: nativeDefault.space.PX_24 }, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
   const obj2 = { marginVertical: nativeDefault.space.PX_24 };
@@ -311,7 +311,7 @@ export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRo
     const obj6 = { discoverableGuilds: stateFromStoresArray };
     items1[2] = closure_1_14(RecommendedGuildsRow, obj6);
     obj3.children = items1;
-    const items2 = [__initData(View, obj3), closure_1_14(tmp(16586).Separator, {})];
+    const items2 = [__initData(View, obj3), closure_1_14(tmp(16588).Separator, {})];
     obj2.children = items2;
     tmp4 = __initData(value2, obj2);
   }

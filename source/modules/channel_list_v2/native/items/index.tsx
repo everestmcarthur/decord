@@ -1,12 +1,12 @@
-// Module ID: 16200
-// Function ID: 16201
+// Module ID: 16202
+// Function ID: 16203
 // Name: CategoryChannel
-// Dependencies: [2, 16201, 16208, 16226]
+// Dependencies: [2, 16203, 16210, 16228]
 
-// Module 16200 (CategoryChannel)
-import RedesignCategory from "RedesignCategory" /* 16201 */;
-import ThreadChannelDefault from "ThreadChannel" /* 16208 */;
-import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 16226 */;
+// Module 16202 (CategoryChannel)
+import RedesignCategory from "RedesignCategory" /* 16203 */;
+import ThreadChannelDefault from "ThreadChannel" /* 16210 */;
+import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 16228 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");

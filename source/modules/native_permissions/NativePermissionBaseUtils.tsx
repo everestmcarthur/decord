@@ -1,7 +1,7 @@
 // Module ID: 5224
 // Function ID: 5225
 // Name: NativePermissionBaseUtils
-// Dependencies: [5, 5225, 4846, 1074, 1242, 5226, 1114, 2]
+// Dependencies: [5, 5225, 4846, 1074, 1240, 5226, 1114, 2]
 
 // Module 5224 (NativePermissionBaseUtils)
 import util from "util" /* 1114 */;
@@ -35,7 +35,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       const error = new Error("requestAuthorization: Was provided with not a function for " + type + ".");
       throw error;
     }
-    tmp5(1242).track(constants2.PERMISSIONS_REQUESTED, { type });
+    tmp5(1240).track(constants2.PERMISSIONS_REQUESTED, { type });
     closure_128_0 = yield tmp45();
     let tmp10 = closure_128_0 === constants.AUTHORIZED;
     if (!tmp10) {

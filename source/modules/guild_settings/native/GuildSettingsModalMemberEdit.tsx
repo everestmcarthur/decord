@@ -1,10 +1,10 @@
-// Module ID: 11966
-// Function ID: 11967
+// Module ID: 11967
+// Function ID: 11968
 // Name: GuildSettingsModalMemberEdit
-// Dependencies: [19, 17, 4628, 1975, 2016, 2021, 2015, 1979, 4275, 1371, 11967, 1074, 21, 4636, 576, 4280, 12, 5685, 1178, 4632, 5686, 1114, 5768, 4347, 7480, 5705, 4481, 9568, 4263, 8716, 5054, 6707, 11968, 11969, 4334, 11974, 1483, 504, 38, 9533, 7414, 7143, 11979, 11981, 5679, 7103, 2]
+// Dependencies: [19, 17, 4628, 1975, 2016, 2021, 2015, 1979, 4275, 1371, 11968, 1074, 21, 4636, 576, 4280, 12, 5685, 1176, 4632, 5686, 1114, 5768, 4347, 7480, 5705, 4481, 9568, 4263, 8716, 5054, 6707, 11969, 11970, 4334, 11975, 1483, 504, 38, 9533, 7414, 7143, 11980, 11982, 5679, 7103, 2]
 // Exports: default
 
-// Module 11966 (GuildSettingsModalMemberEdit)
+// Module 11967 (GuildSettingsModalMemberEdit)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -16,9 +16,9 @@ import TableRow2 from "TableRow" /* 5686 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
 import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9533 */;
-import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11968 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11969 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11974 */;
+import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11969 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11970 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11975 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -26,7 +26,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 11967 */;
+import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 11968 */;
 
 require = fn;
 class GuildSettingsModalMemberEditScene {
@@ -278,7 +278,7 @@ RolesList.prototype["render"] = function render() {
         const obj3 = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
         obj3.containerStyles = closure_23.roleDot;
-        tmpResult = tmp(tmp2(1178).RoleDot, obj3);
+        tmpResult = tmp(tmp2(1176).RoleDot, obj3);
       }
       const items = [tmpResult, ];
       let tmp10;
@@ -310,7 +310,7 @@ RolesList.prototype["render"] = function render() {
         const obj3 = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
         obj3.containerStyles = closure_23.roleDot;
-        tmpResult = tmp(tmp2(1178).RoleDot, obj3);
+        tmpResult = tmp(tmp2(1176).RoleDot, obj3);
       }
       const items = [tmpResult, ];
       let tmp10;
@@ -496,7 +496,7 @@ prototype["render"] = function render() {
       const obj8 = { hasIcons: true, children: null };
       const obj9 = { icon: null, label: null };
       const obj10 = { style: tmp.avatar, user, guildId: guild.id };
-      obj9.icon = tmp18(tmp19(1178).Avatar, obj10);
+      obj9.icon = tmp18(tmp19(1176).Avatar, obj10);
       obj9.label = tmp7;
       obj8.children = tmp18(tmp19(5686).TableRow, obj9);
       const items2 = [tmp18(tmp19(5768).TableRowGroup, obj8), , , , , , ];
@@ -630,7 +630,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_19(onRemove(11979), obj);
+          return closure_2_19(onRemove(11980), obj);
         }
       },
       [closure_2_18.MEMBER_BAN]: {
@@ -642,7 +642,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_19(onRemove(11981), obj);
+          return closure_2_19(onRemove(11982), obj);
         }
       }
     };

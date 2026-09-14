@@ -1,9 +1,9 @@
-// Module ID: 16855
-// Function ID: 16856
+// Module ID: 16857
+// Function ID: 16858
 // Name: MemberVerificationScreen
-// Dependencies: [19, 17, 2012, 1979, 4459, 1074, 21, 4636, 576, 5658, 5652, 504, 5679, 4461, 5608, 1100, 4494, 1611, 5659, 16856, 2]
+// Dependencies: [19, 17, 2012, 1979, 4459, 1074, 21, 4636, 576, 5658, 5652, 504, 5679, 4461, 5608, 1100, 4494, 1611, 5659, 16858, 2]
 
-// Module 16855 (MemberVerificationScreen)
+// Module 16857 (MemberVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import router_utilsAll from "router_utils" /* 1100 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -101,7 +101,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
-const makeAuthenticated = fn(16856);
+const makeAuthenticated = fn(16858);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;

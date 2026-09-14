@@ -1,12 +1,12 @@
-// Module ID: 16872
-// Function ID: 16873
+// Module ID: 16874
+// Function ID: 16875
 // Name: useMediaKeyboardConfig
-// Dependencies: [19, 1607, 1074, 7863, 12365, 7372, 9676, 10763, 1894, 2]
+// Dependencies: [19, 1607, 1074, 7863, 12366, 7372, 9676, 10764, 1894, 2]
 // Exports: default
 
-// Module 16872 (useMediaKeyboardConfig)
+// Module 16874 (useMediaKeyboardConfig)
 import Server from "Server" /* 1894 */;
-import useUploadDisabledDefault from "useUploadDisabled" /* 12365 */;
+import useUploadDisabledDefault from "useUploadDisabled" /* 12366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default function useMediaKeyboardConfig(arg0) {
   const tmp8 = context(9676).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
   const tmp2Result3 = context(9676);
-  mediaKeyboardDraftType = context(10763).getMediaKeyboardDraftType(context.target);
+  mediaKeyboardDraftType = context(10764).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

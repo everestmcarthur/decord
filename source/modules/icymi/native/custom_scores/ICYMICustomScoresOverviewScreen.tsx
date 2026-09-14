@@ -1,10 +1,10 @@
-// Module ID: 16551
-// Function ID: 16552
+// Module ID: 16553
+// Function ID: 16554
 // Name: ICYMICustomScoresOverviewScreen
 // Dependencies: [19, 17, 1979, 5519, 8453, 21, 4636, 576, 504, 1611, 5768, 5686, 5665, 8468, 1114, 2]
 // Exports: default
 
-// Module 16551 (ICYMICustomScoresOverviewScreen)
+// Module 16553 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

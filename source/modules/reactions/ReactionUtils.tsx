@@ -1,12 +1,12 @@
 // Module ID: 4287
 // Function ID: 4288
 // Name: ReactionUtils
-// Dependencies: [502, 1074, 4288, 4289, 1114, 7865, 1935, 1242, 2]
+// Dependencies: [502, 1074, 4288, 4289, 1114, 7865, 1935, 1240, 2]
 // Exports: emojiEquals, getAccessibleEmojiDisplayName, getBurstAnalyticsSection, getReactionEmojiName, isCustomReactionEmojiId, isMeReaction, shouldApplyReaction, toReactionEmoji, updateReactionNotificationsSetting
 
 // Module 4287 (ReactionUtils)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;

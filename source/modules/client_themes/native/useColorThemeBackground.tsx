@@ -1,15 +1,15 @@
 // Module ID: 4490
 // Function ID: 4491
 // Name: useColorThemeBackground
-// Dependencies: [19, 1183, 4456, 1114, 1231, 4491, 4493, 563, 4568, 2]
+// Dependencies: [19, 1181, 4456, 1114, 1229, 4491, 4493, 563, 4568, 2]
 // Exports: default
 
 // Module 4490 (useColorThemeBackground)
 import util from "util" /* 1114 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1229 */;
 import GuildThemePresets from "GuildThemePresets" /* 4491 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
 
 const require = globalThis.__r;

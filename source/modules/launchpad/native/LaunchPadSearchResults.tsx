@@ -1,27 +1,27 @@
-// Module ID: 17091
-// Function ID: 17092
+// Module ID: 17093
+// Function ID: 17094
 // Name: LaunchPadSearchResults
-// Dependencies: [19, 17, 2025, 7738, 1979, 4818, 21, 4636, 576, 16770, 7445, 504, 5063, 17092, 5204, 16771, 17093, 5665, 16773, 17094, 9965, 17095, 17100, 17101, 17103, 16201, 4632, 1114, 1477, 16772, 7175, 2]
+// Dependencies: [19, 17, 2025, 7738, 1979, 4818, 21, 4636, 576, 16772, 7445, 504, 5063, 17094, 5204, 16773, 17095, 5665, 16775, 17096, 9965, 17097, 17102, 17103, 17105, 16203, 4632, 1114, 1477, 16774, 7175, 2]
 
-// Module 17091 (LaunchPadSearchResults)
+// Module 17093 (LaunchPadSearchResults)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GuildIconDefault from "GuildIcon" /* 5665 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
-import RedesignCategory from "RedesignCategory" /* 16201 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16770 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16771 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 16772 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16773 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17092 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17093 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17094 */;
-import shared_TextChannelDefault from "shared/TextChannel" /* 17095 */;
-import shared_DMChannelDefault from "shared/DMChannel" /* 17100 */;
-import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 17101 */;
-import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 17103 */;
+import RedesignCategory from "RedesignCategory" /* 16203 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16772 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16773 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 16774 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16775 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17094 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17095 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17096 */;
+import shared_TextChannelDefault from "shared/TextChannel" /* 17097 */;
+import shared_DMChannelDefault from "shared/DMChannel" /* 17102 */;
+import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 17103 */;
+import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 17105 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7738 */;
@@ -51,7 +51,7 @@ function renderItemJSX(result) {
       return React7(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
     } else if (tmp13(9965).AutocompleterResultTypes.HEADER === type) {
       const obj8 = { name: result.record.text, styles: tmp };
-      return tmp13(16201).renderCategoryItem(obj8);
+      return tmp13(16203).renderCategoryItem(obj8);
     } else {
       const obj = { variant: "text-sm/semibold", children: result.type };
       return React7(tmp13(4632).Text, obj);

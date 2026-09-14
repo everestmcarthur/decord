@@ -1,7 +1,7 @@
 // Module ID: 9924
 // Function ID: 9925
 // Name: SegmentedControlItem
-// Dependencies: [19, 17, 21, 4636, 576, 8385, 4373, 5055, 1150, 1114, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 8385, 4373, 5055, 1363, 1114, 4632, 2]
 // Exports: SegmentedControlItem
 
 // Module 9924 (SegmentedControlItem)

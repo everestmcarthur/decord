@@ -1,10 +1,10 @@
-// Module ID: 14077
-// Function ID: 14078
+// Module ID: 14078
+// Function ID: 14079
 // Name: PathUtils
-// Dependencies: [1150, 2]
+// Dependencies: [1363, 2]
 // Exports: pathBasename, pathFilenameWithoutExt, pathJoin
 
-// Module 14077 (PathUtils)
+// Module 14078 (PathUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PathUtils.tsx");

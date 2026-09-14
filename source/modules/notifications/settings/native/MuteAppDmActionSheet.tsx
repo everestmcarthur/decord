@@ -1,10 +1,10 @@
-// Module ID: 12728
-// Function ID: 12729
+// Module ID: 12729
+// Function ID: 12730
 // Name: MuteAppDmActionSheet
-// Dependencies: [19, 17, 21, 4636, 576, 7253, 9906, 4632, 1114, 5056, 7222, 7217, 4603, 4335, 1178, 8053, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7253, 9906, 4632, 1114, 5056, 7222, 7217, 4603, 4335, 1176, 8053, 2]
 // Exports: default
 
-// Module 12728 (MuteAppDmActionSheet)
+// Module 12729 (MuteAppDmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
@@ -60,7 +60,7 @@ export default function MuteAppDMActionSheet(channel) {
     const intl = util.intl;
     obj4.content = intl.string(util.t.EgGpkx);
     obj4.icon = function icon() {
-      const obj = { style: closure_1_0.mutedNotificationContainer, children: closure_2_4(closure_0(1178).Icon, { source: channel(8053), color: channel(576).unsafe_rawColors.WHITE, style: closure_1_0.mutedNotification }) };
+      const obj = { style: closure_1_0.mutedNotificationContainer, children: closure_2_4(closure_0(1176).Icon, { source: channel(8053), color: channel(576).unsafe_rawColors.WHITE, style: closure_1_0.mutedNotification }) };
       return closure_2_4(View, obj);
     };
     ToastActionCreatorsDefault.open(obj4);

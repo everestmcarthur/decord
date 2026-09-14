@@ -1,24 +1,24 @@
-// Module ID: 14748
-// Function ID: 14749
+// Module ID: 14749
+// Function ID: 14750
 // Name: PasskeyUpsellView
-// Dependencies: [32, 19, 17, 14744, 1074, 1954, 21, 4636, 576, 1483, 1114, 14749, 14750, 5705, 2024, 7226, 14753, 4632, 1150, 5056, 7050, 2]
+// Dependencies: [32, 19, 17, 14745, 1074, 1954, 21, 4636, 576, 1483, 1114, 14750, 14751, 5705, 2024, 7226, 14754, 4632, 1363, 5056, 7050, 2]
 // Exports: default
 
-// Module 14748 (PasskeyUpsellView)
+// Module 14749 (PasskeyUpsellView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 7050 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14749 */;
-import _modDef14753 from "module_14753" /* 14753 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14750 */;
+import _modDef14754 from "module_14754" /* 14754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const WebAuthnScreens = fn(14744).WebAuthnScreens;
+const WebAuthnScreens = fn(14745).WebAuthnScreens;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -73,15 +73,15 @@ export default function PasskeyUpsellView() {
   const obj3 = { bottom: true, style: tmp4.container, children: null };
   const obj4 = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   const obj5 = { style: tmp4.headerContainer, children: null };
-  const items1 = [closure_11(closure_6, { source: _modDef14753, style: tmp4.headerImage }), , ];
+  const items1 = [closure_11(closure_6, { source: _modDef14754, style: tmp4.headerImage }), , ];
   const obj7 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.headerText, children: null };
   let intl = navigation(1114).intl;
   obj7.children = intl.string(navigation(1114).t.CjleBl);
   items1[1] = closure_11(navigation(4632).Text, obj7);
   const obj8 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
-  const obj6 = { source: _modDef14753, style: tmp4.headerImage };
+  const obj6 = { source: _modDef14754, style: tmp4.headerImage };
   const tmp12 = closure_7;
-  const obj9 = navigation(1150);
+  const obj9 = navigation(1363);
   const intl2 = navigation(1114).intl;
   const string = intl2.string;
   const t = navigation(1114).t;
@@ -106,10 +106,10 @@ export default function PasskeyUpsellView() {
   const obj14 = { style: tmp4.row, children: null };
   const items5 = [closure_11(closure_5, { style: tmp4.circleIcon }), ];
   const obj16 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
-  isIOSResult = navigation(1150).isIOS();
+  isIOSResult = navigation(1363).isIOS();
   const obj12 = { style: tmp4.circleIcon };
   const obj15 = { style: tmp4.circleIcon };
-  const tmpResult = navigation(1150);
+  const tmpResult = navigation(1363);
   const intl4 = tmp(1114).intl;
   const string2 = intl4.string;
   const t2 = tmp(1114).t;

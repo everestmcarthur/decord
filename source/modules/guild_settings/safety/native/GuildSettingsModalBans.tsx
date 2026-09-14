@@ -1,10 +1,10 @@
-// Module ID: 17766
-// Function ID: 17767
+// Module ID: 17767
+// Function ID: 17768
 // Name: GuildSettingsModalBans
-// Dependencies: [32, 19, 17, 1979, 1371, 9193, 21, 4636, 576, 504, 7152, 1935, 5598, 5601, 9192, 5686, 1178, 5693, 1114, 7292, 4334, 7297, 7142, 17767, 7153, 8348, 7158, 7143, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 9193, 21, 4636, 576, 504, 7152, 1935, 5598, 5601, 9192, 5686, 1176, 5693, 1114, 7292, 4334, 7297, 7142, 17768, 7153, 8348, 7158, 7143, 2]
 // Exports: default
 
-// Module 17766 (GuildSettingsModalBans)
+// Module 17767 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5598 */;

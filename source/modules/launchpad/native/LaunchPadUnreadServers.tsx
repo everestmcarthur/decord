@@ -1,14 +1,14 @@
-// Module ID: 17084
-// Function ID: 17085
+// Module ID: 17086
+// Function ID: 17087
 // Name: LaunchPadUnreadServers
-// Dependencies: [19, 17, 1957, 4651, 1371, 1074, 21, 4636, 576, 7445, 17085, 504, 1178, 11041, 5668, 13160, 4649, 4647, 7971, 16201, 1477, 17090, 1114, 7175, 2]
+// Dependencies: [19, 17, 1957, 4651, 1371, 1074, 21, 4636, 576, 7445, 17087, 504, 1176, 11042, 5668, 13161, 4649, 4647, 7971, 16203, 1477, 17092, 1114, 7175, 2]
 
-// Module 17084 (LaunchPadUnreadServers)
+// Module 17086 (LaunchPadUnreadServers)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
-import isGuildSelectableDefault from "isGuildSelectable" /* 17090 */;
+import isGuildSelectableDefault from "isGuildSelectable" /* 17092 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
@@ -46,7 +46,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(17085), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
+  obj.children = closure_10(onGuildSelect(17087), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {

@@ -1,15 +1,15 @@
-// Module ID: 13583
-// Function ID: 13584
+// Module ID: 13584
+// Function ID: 13585
 // Name: PremiumManagePlan
-// Dependencies: [5, 32, 19, 17, 4295, 1371, 4296, 4299, 4300, 7497, 1895, 7340, 1074, 5684, 4618, 1373, 21, 3, 4636, 576, 1483, 5204, 5709, 4632, 1114, 7265, 13473, 7285, 504, 4347, 4488, 1093, 4960, 5679, 10791, 7507, 1242, 4294, 38, 7337, 13584, 13585, 13450, 13460, 8173, 5056, 13439, 13477, 13476, 5172, 9493, 13482, 2024, 5688, 5068, 1178, 8156, 1611, 13540, 7496, 5073, 7360, 8170, 13542, 13509, 1974, 5045, 7093, 7098, 13478, 13562, 2]
+// Dependencies: [5, 32, 19, 17, 4295, 1371, 4296, 4299, 4300, 7497, 1895, 7340, 1074, 5684, 4618, 1373, 21, 3, 4636, 576, 1483, 5204, 5709, 4632, 1114, 7265, 13474, 7285, 504, 4347, 4488, 1093, 4960, 5679, 10792, 7507, 1240, 4294, 38, 7337, 13585, 13586, 13451, 13461, 8173, 5056, 13440, 13478, 13477, 5172, 9493, 13483, 2024, 5688, 5068, 1176, 8156, 1611, 13541, 7496, 5073, 7360, 8170, 13543, 13510, 1974, 5045, 7093, 7098, 13479, 13563, 2]
 // Exports: default
 
-// Module 13583 (PremiumManagePlan)
+// Module 13584 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -27,11 +27,11 @@ import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7496 *
 import PremiumManagementUtils from "PremiumManagementUtils" /* 7507 */;
 import _modDef8156 from "module_8156" /* 8156 */;
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9493 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13439 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13478 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13509 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 13542 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13562 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13440 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13479 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13510 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 13543 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13563 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -608,8 +608,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_32();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(13540).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(13540);
+  const youBarSettingsOutsideSafeAreaTop = navigation(13541).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(13541);
   navigation = navigation(1483).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -649,7 +649,7 @@ export default function PremiumManagePlan() {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(8170).useIsInReverseTrial();
   const obj8 = navigation(8170);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13542).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13543).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(4294).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -759,9 +759,9 @@ export default function PremiumManagePlan() {
         },
       subscription: tmp10
     };
-    const items10 = [tmp29(tmp2(13439), obj17), ];
+    const items10 = [tmp29(tmp2(13440), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = tmp29(tmp2(13476), obj18);
+    items10[1] = tmp29(tmp2(13477), obj18);
     obj16.children = items10;
     tmp27Result = tmp27(tmp28, obj16);
   }

@@ -1,11 +1,11 @@
 // Module ID: 7732
 // Function ID: 7733
 // Name: UserProfilePersonalWidget
-// Dependencies: [1371, 1373, 7733, 4457, 1943, 1369, 1332, 7724, 1885, 2]
+// Dependencies: [1371, 1373, 7733, 4457, 1943, 1369, 1330, 7724, 1885, 2]
 // Exports: createDefaultCoverSection, createDefaultField, createDefaultPersonalWidget, isPersonalWidgetNew, parsePersonalWidgetSections
 
 // Module 7732 (UserProfilePersonalWidget)
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
@@ -243,7 +243,7 @@ prototype["isEqual"] = function isEqual(header) {
             if (tmp13) {
               image2 = image2.image;
               image = image.image;
-              tmp13 = _modDef1332(image2, image);
+              tmp13 = _modDef1330(image2, image);
             }
             sum = sum + 1;
             num2 = sum;
@@ -266,7 +266,7 @@ prototype["isEqual"] = function isEqual(header) {
                 tmp8 = tmp6.description === tmp7.description;
               }
               if (tmp8) {
-                tmp8 = _modDef1332(tmp6.image, tmp7.image);
+                tmp8 = _modDef1330(tmp6.image, tmp7.image);
               }
               flag2 = false;
               if (!tmp8) {

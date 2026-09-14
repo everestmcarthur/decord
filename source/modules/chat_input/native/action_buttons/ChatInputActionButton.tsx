@@ -1,9 +1,9 @@
-// Module ID: 12368
-// Function ID: 12369
+// Module ID: 12369
+// Function ID: 12370
 // Name: ChatInputActionButton
 // Dependencies: [19, 17, 21, 4636, 576, 4338, 5204, 2]
 
-// Module 12368 (ChatInputActionButton)
+// Module 12369 (ChatInputActionButton)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import noop from "module_19" /* 19 */;

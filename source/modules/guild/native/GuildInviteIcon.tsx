@@ -1,14 +1,14 @@
-// Module ID: 12788
-// Function ID: 12789
+// Module ID: 12789
+// Function ID: 12790
 // Name: GuildInviteIcon
-// Dependencies: [19, 17, 21, 4636, 576, 4347, 12789, 1114, 1396, 5668, 1925, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4347, 12790, 1114, 1396, 5668, 1925, 1176, 2]
 
-// Module 12788 (GuildInviteIcon)
+// Module 12789 (GuildInviteIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import StylesheetUtils from "StylesheetUtils" /* 12789 */;
+import StylesheetUtils from "StylesheetUtils" /* 12790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -62,7 +62,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     items2[1] = obj9;
     obj8.style = items2;
     obj8.children = acronym;
-    obj5.children = jsx(tmp2(1178).LegacyText, { numberOfLines: 1, style: null, children: null });
+    obj5.children = jsx(tmp2(1176).LegacyText, { numberOfLines: 1, style: null, children: null });
     return <View accessible accessibilityRole="image" accessibilityLabel={formatToPlainStringResult} style={null}>{null}</View>;
   }
   const obj2 = { guildName: guild.name };

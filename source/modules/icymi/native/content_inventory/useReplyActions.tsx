@@ -1,16 +1,16 @@
-// Module ID: 16601
-// Function ID: 16602
+// Module ID: 16603
+// Function ID: 16604
 // Name: useReplyActions
-// Dependencies: [5, 19, 1957, 4977, 1371, 1374, 4629, 21, 504, 8247, 9436, 4649, 16602, 4481, 7784, 7559, 16598, 4603, 4335, 1114, 14976, 8469, 11255, 7865, 16602, 1896, 2]
+// Dependencies: [5, 19, 1957, 4977, 1371, 1374, 4629, 21, 504, 8247, 9436, 4649, 16604, 4481, 7784, 7559, 16600, 4603, 4335, 1114, 14977, 8469, 11256, 7865, 16604, 1896, 2]
 // Exports: useReplyActions
 
-// Module 16601 (useReplyActions)
+// Module 16603 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8247 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -239,7 +239,7 @@ export const useReplyActions = function useReplyActions(content) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16602, tmp10.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16604, tmp10.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

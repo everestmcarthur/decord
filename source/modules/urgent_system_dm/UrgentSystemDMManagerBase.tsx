@@ -1,9 +1,9 @@
-// Module ID: 17610
-// Function ID: 17611
+// Module ID: 17611
+// Function ID: 17612
 // Name: UrgentSystemDMManagerBase
-// Dependencies: [1957, 2011, 1371, 17611, 1074, 8298, 7221, 2]
+// Dependencies: [1957, 2011, 1371, 17612, 1074, 8298, 7221, 2]
 
-// Module 17610 (UrgentSystemDMManagerBase)
+// Module 17611 (UrgentSystemDMManagerBase)
 import UserActionCreatorsAll from "UserActionCreators" /* 8298 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -53,7 +53,7 @@ function maybeClearUrgentMessage(channelId) {
     UserActionCreatorsAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
   }
 }
-const SYSTEM_USER = fn(17611).SYSTEM_USER;
+const SYSTEM_USER = fn(17612).SYSTEM_USER;
 const UserFlags = fn(1074).UserFlags;
 let c7 = false;
 const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAlert) {

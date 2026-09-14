@@ -1,10 +1,10 @@
-// Module ID: 17303
-// Function ID: 17304
+// Module ID: 17305
+// Function ID: 17306
 // Name: VoicePanelDisconnectCancelButton
-// Dependencies: [32, 19, 1956, 4658, 4844, 12402, 21, 4636, 576, 12401, 9606, 4373, 9645, 4837, 4778, 5492, 9202, 17304, 7986, 17294, 1114, 2]
+// Dependencies: [32, 19, 1956, 4658, 4844, 12403, 21, 4636, 576, 12402, 9606, 4373, 9645, 4837, 4778, 5492, 9202, 17306, 7986, 17296, 1114, 2]
 // Exports: default
 
-// Module 17303 (VoicePanelDisconnectCancelButton)
+// Module 17305 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import StreamActionCreators from "StreamActionCreators" /* 4778 */;
@@ -21,7 +21,7 @@ import VoicePanelStore from "VoicePanelStore" /* 4844 */;
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12402).VoicePanelModes;
+const VoicePanelModes = fn(12403).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
 const createStyles = fn(4636);

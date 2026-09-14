@@ -1,11 +1,11 @@
 // Module ID: 9584
 // Function ID: 9585
 // Name: trackVoiceCallTransfer
-// Dependencies: [1957, 4659, 4654, 1074, 1242, 2]
+// Dependencies: [1957, 4659, 4654, 1074, 1240, 2]
 // Exports: default
 
 // Module 9584 (trackVoiceCallTransfer)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import SessionsStore from "SessionsStore" /* 4654 */;

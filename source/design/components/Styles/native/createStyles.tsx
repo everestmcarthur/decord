@@ -1,12 +1,12 @@
 // Module ID: 4636
 // Function ID: 4637
 // Name: createStyles
-// Dependencies: [32, 17, 4628, 4456, 4347, 1150, 576, 4339, 4373, 4637, 4640, 4568, 2]
+// Dependencies: [32, 17, 4628, 4456, 4347, 1363, 576, 4339, 4373, 4637, 4640, 4568, 2]
 // Exports: createAnimatedThemedStyles, createLegacyClassComponentStyles, createNativeStyleProperties, createStyleProperties, createStyles, experimental_createToken, processColorOrThrow, useLegacyClassComponentStyles
 
 // Module 4636 (createStyles)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import SemanticColorContext from "SemanticColorContext" /* 4339 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;

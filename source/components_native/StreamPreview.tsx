@@ -1,7 +1,7 @@
 // Module ID: 10188
 // Function ID: 10189
 // Name: StreamPreview
-// Dependencies: [19, 17, 1183, 21, 4636, 576, 4347, 4488, 10189, 10190, 1114, 5204, 10191, 504, 2]
+// Dependencies: [19, 17, 1181, 21, 4636, 576, 4347, 4488, 10189, 10190, 1114, 5204, 10191, 504, 2]
 // Exports: default
 
 // Module 10188 (StreamPreview)
@@ -11,7 +11,7 @@ import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5204 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10191 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

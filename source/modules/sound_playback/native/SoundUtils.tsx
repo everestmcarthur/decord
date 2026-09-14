@@ -1,7 +1,7 @@
 // Module ID: 10036
 // Function ID: 10037
 // Name: sound_playback/SoundUtils
-// Dependencies: [17, 1608, 1150, 2]
+// Dependencies: [17, 1608, 1363, 2]
 // Exports: MobileAudioSound
 
 // Module 10036 (sound_playback/SoundUtils)

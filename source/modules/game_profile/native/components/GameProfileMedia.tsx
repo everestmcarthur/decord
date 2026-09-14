@@ -1,7 +1,7 @@
 // Module ID: 8843
 // Function ID: 8844
 // Name: GameProfileMedia
-// Dependencies: [32, 19, 17, 1085, 21, 4636, 576, 8844, 8809, 8377, 8425, 1151, 8835, 8845, 2]
+// Dependencies: [32, 19, 17, 1085, 21, 4636, 576, 8844, 8809, 8377, 8425, 1364, 8835, 8845, 2]
 // Exports: default
 
 // Module 8843 (GameProfileMedia)

@@ -1,17 +1,17 @@
-// Module ID: 16364
-// Function ID: 16365
+// Module ID: 16366
+// Function ID: 16367
 // Name: GuildsEmpty
-// Dependencies: [32, 19, 17, 502, 1979, 4458, 1074, 21, 4636, 576, 4632, 12837, 16365, 1114, 5054, 5056, 1484, 563, 8894, 1250, 1982, 4496, 5207, 15180, 2]
+// Dependencies: [32, 19, 17, 502, 1979, 4458, 1074, 21, 4636, 576, 4632, 12838, 16367, 1114, 5054, 5056, 1484, 563, 8894, 1248, 1982, 4496, 5207, 15181, 2]
 
-// Module 16364 (GuildsEmpty)
+// Module 16366 (GuildsEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12837 */;
-import _modDef16365 from "module_16365" /* 16365 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12838 */;
+import _modDef16367 from "module_16367" /* 16367 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -127,8 +127,8 @@ export default noop.memo(function GuildsEmpty(arg0) {
   selectedGuildId = tmp6;
   let obj3 = { type: null, name: null };
   let obj2 = navigation(563);
-  obj3.type = navigation(1250).ImpressionTypes.VIEW;
-  obj3.name = navigation(1250).ImpressionNames.GUILDS_EMPTY_NUX;
+  obj3.type = navigation(1248).ImpressionTypes.VIEW;
+  obj3.name = navigation(1248).ImpressionNames.GUILDS_EMPTY_NUX;
   selectedGuildId(8894)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
@@ -167,7 +167,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   }, items1);
   const tmp7 = selectedGuildId(8894);
   const isScreenLandscape = navigation(5207).useIsScreenLandscape();
-  navigation(15180);
+  navigation(15181);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

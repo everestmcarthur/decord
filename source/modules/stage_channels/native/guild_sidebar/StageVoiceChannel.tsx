@@ -1,9 +1,9 @@
-// Module ID: 16332
-// Function ID: 16333
+// Module ID: 16334
+// Function ID: 16335
 // Name: StageVoiceChannel
-// Dependencies: [19, 17, 7630, 4275, 4651, 4817, 4660, 1962, 1074, 10246, 21, 1114, 4636, 576, 504, 5498, 16333, 5512, 5506, 5138, 5650, 1874, 8511, 11044, 4789, 9601, 16211, 16322, 16216, 2]
+// Dependencies: [19, 17, 7630, 4275, 4651, 4817, 4660, 1962, 1074, 10246, 21, 1114, 4636, 576, 504, 5498, 16335, 5512, 5506, 5138, 5650, 1874, 8511, 11045, 4789, 9601, 16213, 16324, 16218, 2]
 
-// Module 16332 (StageVoiceChannel)
+// Module 16334 (StageVoiceChannel)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
@@ -11,9 +11,9 @@ import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 513
 import StageMediaHooks from "StageMediaHooks" /* 5498 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5650 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8511 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
-import ChannelItemDefault from "ChannelItem" /* 16211 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16333 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
+import ChannelItemDefault from "ChannelItem" /* 16213 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16335 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7630 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -114,12 +114,12 @@ export default noop.memo((channel) => {
     }
     obj5.enableConnectedUserLimit = hasMedia;
     obj5.voiceStates = voiceStates;
-    obj3.channelInfo = tmp12(tmp5(16322), obj5);
+    obj3.channelInfo = tmp12(tmp5(16324), obj5);
     let tmp12Result = arr3.length > 0;
     if (tmp12Result) {
       const obj6 = { style: tmp.voiceStates, children: null };
       const obj7 = { channel, collapsed, voiceStates: arr3, audienceCount: stageParticipantsCount };
-      obj6.children = tmp12(tmp5(16216), obj7);
+      obj6.children = tmp12(tmp5(16218), obj7);
       tmp12Result = tmp12(View, obj6);
     }
     obj3.children = tmp12Result;

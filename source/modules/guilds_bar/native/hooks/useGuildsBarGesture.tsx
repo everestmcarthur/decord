@@ -1,12 +1,12 @@
-// Module ID: 16379
-// Function ID: 16380
+// Module ID: 16381
+// Function ID: 16382
 // Name: useGuildsBarGesture
-// Dependencies: [5, 19, 17, 1979, 5519, 16380, 16377, 4373, 551, 4604, 4488, 12, 1232, 1114, 7175, 16115, 4338, 576, 4259, 11125, 1249, 5601, 9488, 8790, 1150, 1611, 5043, 16381, 16382, 15179, 6756, 2]
+// Dependencies: [5, 19, 17, 1979, 5519, 16382, 16379, 4373, 551, 4604, 4488, 12, 1230, 1114, 7175, 16117, 4338, 576, 4259, 11126, 1247, 5601, 9488, 8790, 1363, 1611, 5043, 16383, 16384, 15180, 6756, 2]
 // Exports: default
 
-// Module 16379 (useGuildsBarGesture)
+// Module 16381 (useGuildsBarGesture)
 import util from "util" /* 1114 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import shared from "shared" /* 4488 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
@@ -14,12 +14,12 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import FastList from "FastList" /* 7175 */;
 import ContextMenuState from "ContextMenuState" /* 8790 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16380 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16382 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -280,7 +280,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(5519).GuildsNodeType;
-const GuildsBarConstants = fn(16377);
+const GuildsBarConstants = fn(16379);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -523,7 +523,7 @@ export default function useGuildsBarGesture() {
                   if (null != node2.parentId) {
                     id1 = node2.parentId;
                   }
-                  tmp34(1249).batchUpdates(() => {
+                  tmp34(1247).batchUpdates(() => {
                     if (node.id !== id1) {
                       const obj = dropPosition(token[21]);
                       const id = tmp.id;
@@ -563,7 +563,7 @@ export default function useGuildsBarGesture() {
                   });
                   const obj7 = { type: "drag-drop", dragNode: node, overNode: node2, overState: state };
                   triggerHapticsAndAnnouncementsIfNecessary(obj7);
-                  const tmp34Result = tmp34(1249);
+                  const tmp34Result = tmp34(1247);
                 }
               }
               if (tmp16) {
@@ -966,7 +966,7 @@ export default function useGuildsBarGesture() {
         if (!isActive) {
           frameCallback.setActive(true);
         }
-        tmp66 = tmp66(1249);
+        tmp66 = tmp66(1247);
         batchUpdates = tmp66.batchUpdates;
         batchUpdates(() => {
           if (null != obj2) {

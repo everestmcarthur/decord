@@ -1,14 +1,14 @@
-// Module ID: 10464
-// Function ID: 10465
+// Module ID: 10465
+// Function ID: 10466
 // Name: EmojiActionCreators
-// Dependencies: [5, 5540, 5358, 4978, 1074, 1084, 1940, 1218, 573, 1272, 5250, 4488, 1114, 4538, 4289, 1369, 5547, 12, 4980, 2]
+// Dependencies: [5, 5540, 5358, 4978, 1074, 1084, 1940, 1216, 573, 1270, 5250, 4488, 1114, 4538, 4289, 1369, 5547, 12, 4980, 2]
 // Exports: deleteEmoji, favoriteEmoji, fetchEmoji, setDiversityColor, unfavoriteEmoji, updateEmoji, uploadEmoji
 
-// Module 10464 (EmojiActionCreators)
+// Module 10465 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import wrappers from "wrappers" /* 1218 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import wrappers from "wrappers" /* 1216 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
@@ -135,7 +135,7 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1272).HTTP;
+  const HTTP = guildId(1270).HTTP;
   const request = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: null, context: null, oldFormErrors: true, rejectWithError: null };
   const tmp3 = guildId;
   request.headers = InlineUploaderDefault.buildHeadersForMd5(originalMd5);
@@ -144,8 +144,8 @@ export const uploadEmoji = function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1272).rejectWithMigratedError();
-  const tmp3Result = tmp3(1272);
+  request.rejectWithError = tmp3(1270).rejectWithMigratedError();
+  const tmp3Result = tmp3(1270);
   return HTTP.post(request).then((body) => {
     DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
     return body.body;

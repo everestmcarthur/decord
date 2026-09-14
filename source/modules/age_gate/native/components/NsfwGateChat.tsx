@@ -1,14 +1,14 @@
-// Module ID: 12792
-// Function ID: 12793
+// Module ID: 12793
+// Function ID: 12794
 // Name: NsfwGateChat
-// Dependencies: [19, 17, 21, 4636, 576, 12793, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12794, 4632, 1114, 2]
 // Exports: default
 
-// Module 12792 (NsfwGateChat)
+// Module 12793 (NsfwGateChat)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import _modDef12793 from "module_12793" /* 12793 */;
+import _modDef12794 from "module_12794" /* 12794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ export default function NsfwGateChat() {
   const obj = { children: null };
   const items = [hasOwnProperty(React3, { style: tmp.border }), ];
   const obj3 = { style: tmp.container, children: null };
-  const items1 = [hasOwnProperty(React4, { source: _modDef12793 }), ];
+  const items1 = [hasOwnProperty(React4, { source: _modDef12794 }), ];
   const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.W4Qyxr);

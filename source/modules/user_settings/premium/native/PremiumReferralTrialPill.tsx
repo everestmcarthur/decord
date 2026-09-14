@@ -1,10 +1,10 @@
-// Module ID: 13482
-// Function ID: 13483
+// Module ID: 13483
+// Function ID: 13484
 // Name: PremiumReferralTrialPill
 // Dependencies: [17, 21, 4636, 576, 4632, 1114, 2]
 // Exports: PremiumReferralTrialPill
 
-// Module 13482 (PremiumReferralTrialPill)
+// Module 13483 (PremiumReferralTrialPill)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;

@@ -1,12 +1,12 @@
-// Module ID: 14256
-// Function ID: 14257
+// Module ID: 14257
+// Function ID: 14258
 // Name: ContextMenuPopout
-// Dependencies: [32, 19, 17, 21, 4636, 576, 8791, 4373, 4347, 7084, 1477, 1150, 5055, 8790, 6756, 4632, 14254, 5043, 5044, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 8791, 4373, 4347, 7084, 1477, 1363, 5055, 8790, 6756, 4632, 14255, 5043, 5044, 1114, 2]
 // Exports: ContextMenuPopout
 
-// Module 14256 (ContextMenuPopout)
+// Module 14257 (ContextMenuPopout)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
@@ -38,7 +38,7 @@ function ContextMenuBackdrop(onDismiss) {
   const obj3 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp.accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
   const obj2 = { withSpring: visible(5055).withSpring, visible, CONTEXT_MENU_SPRING: visible(8791).CONTEXT_MENU_SPRING };
   const tmp3 = closure_6;
-  const obj4 = visible(1150);
+  const obj4 = visible(1363);
   const intl = visible(1114).intl;
   const string = intl.string;
   const t = visible(1114).t;

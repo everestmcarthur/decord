@@ -1,10 +1,10 @@
-// Module ID: 12564
-// Function ID: 12565
+// Module ID: 12565
+// Function ID: 12566
 // Name: usePendingGameProfileReturn
 // Dependencies: [19, 1916, 8805, 1074, 504, 8803, 8809, 2]
 // Exports: default
 
-// Module 12564 (usePendingGameProfileReturn)
+// Module 12565 (usePendingGameProfileReturn)
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8803 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
 import noop from "module_19" /* 19 */;

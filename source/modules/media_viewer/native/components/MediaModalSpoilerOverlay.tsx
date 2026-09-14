@@ -1,12 +1,12 @@
-// Module ID: 13109
-// Function ID: 13110
+// Module ID: 13110
+// Function ID: 13111
 // Name: MediaModalSpoilerOverlay
-// Dependencies: [32, 19, 17, 21, 4636, 576, 1150, 4338, 13094, 4373, 5046, 5162, 4632, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 1363, 4338, 13095, 4373, 5046, 5162, 4632, 1114, 2]
 
-// Module 13109 (MediaModalSpoilerOverlay)
+// Module 13110 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13094 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13095 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4636);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -44,7 +44,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
       let str = "dark";
     } else {
       str = "light";
-      const tmpResult = tmp(1150);
+      const tmpResult = tmp(1363);
     }
     const obj4 = { blurTheme: str, android_fallbackColor: token, style: absoluteFill.absoluteFill };
     const items1 = [timestampProducer(tmp3(5046), obj4), ];

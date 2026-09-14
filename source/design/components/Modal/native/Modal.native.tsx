@@ -1,10 +1,10 @@
-// Module ID: 12058
-// Function ID: 12059
+// Module ID: 12059
+// Function ID: 12060
 // Name: Modal
 // Dependencies: [19, 21, 1611, 7103, 5763, 2]
 // Exports: Modal
 
-// Module 12058 (Modal)
+// Module 12059 (Modal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import NavigatorConstants from "NavigatorConstants" /* 5763 */;
 import Navigator from "Navigator" /* 7103 */;

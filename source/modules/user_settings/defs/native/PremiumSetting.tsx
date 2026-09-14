@@ -1,22 +1,22 @@
-// Module ID: 15069
-// Function ID: 15070
+// Module ID: 15070
+// Function ID: 15071
 // Name: PremiumSetting
-// Dependencies: [19, 1371, 4300, 1074, 21, 13481, 4294, 1114, 7520, 11566, 15070, 11601, 8785, 15072, 2]
+// Dependencies: [19, 1371, 4300, 1074, 21, 13482, 4294, 1114, 7520, 11567, 15071, 11602, 8785, 15073, 2]
 
-// Module 15069 (PremiumSetting)
+// Module 15070 (PremiumSetting)
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7520 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11566 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13481 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15070 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11567 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13482 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15071 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });

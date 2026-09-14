@@ -1,13 +1,13 @@
 // Module ID: 8294
 // Function ID: 8295
 // Name: ProductDetailsActionSheet
-// Dependencies: [32, 19, 17, 7645, 1076, 1074, 1085, 21, 3, 4636, 576, 5061, 4347, 4488, 1114, 7071, 1889, 8295, 8296, 8293, 7656, 9495, 7265, 7285, 13265, 11223, 8893, 8894, 1250, 1242, 504, 13266, 8957, 8959, 7657, 8961, 8962, 6728, 8964, 13267, 13277, 13282, 1178, 13283, 13294, 7253, 8999, 10862, 8348, 5056, 13297, 8291, 2]
+// Dependencies: [32, 19, 17, 7645, 1076, 1074, 1085, 21, 3, 4636, 576, 5061, 4347, 4488, 1114, 7071, 1889, 8295, 8296, 8293, 7656, 9495, 7265, 7285, 13266, 11224, 8893, 8894, 1248, 1240, 504, 13267, 8957, 8959, 7657, 8961, 8962, 6728, 8964, 13268, 13278, 13283, 1176, 13284, 13295, 7253, 8999, 10863, 8348, 5056, 13298, 8291, 2]
 // Exports: default
 
 // Module 8294 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
@@ -95,9 +95,9 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
   const obj = skuId(8999);
-  const getOrFetchPurchases = skuId(10862).useGetOrFetchPurchases();
+  const getOrFetchPurchases = skuId(10863).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10862);
+  const obj2 = skuId(10863);
   const ref1 = noop.useRef(null);
   const items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
@@ -139,9 +139,9 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj6.text = intl2.string(tmp(1114).t["+hivLW"]);
     obj6.onPress = retry;
     obj5.children = closure_13(tmp(5056).Button, obj6);
-    closure_13(tmp(1178).EmptyState, obj5);
+    closure_13(tmp(1176).EmptyState, obj5);
   } else {
-    closure_13(initialVariantIndex(13297), {});
+    closure_13(initialVariantIndex(13298), {});
   }
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {

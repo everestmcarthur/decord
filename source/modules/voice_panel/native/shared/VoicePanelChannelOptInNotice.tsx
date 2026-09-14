@@ -1,9 +1,9 @@
-// Module ID: 17224
-// Function ID: 17225
+// Module ID: 17226
+// Function ID: 17227
 // Name: VoicePanelChannelOptInNotice
-// Dependencies: [19, 21, 7216, 5670, 5686, 1114, 5692, 13931, 2]
+// Dependencies: [19, 21, 7216, 5670, 5686, 1114, 5692, 13932, 2]
 
-// Module 17224 (VoicePanelChannelOptInNotice)
+// Module 17226 (VoicePanelChannelOptInNotice)
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7216 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   const intl2 = channel(1114).intl;
   obj2.subLabel = intl2.string(channel(1114).t.PDUCIN);
   const tmp2 = analyticsSection(5670);
-  obj2.icon = jsx(channel(5692).TableRowIcon, { IconComponent: channel(13931).ChannelListMagnifyingGlassIcon });
+  obj2.icon = jsx(channel(5692).TableRowIcon, { IconComponent: channel(13932).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
   obj.children = jsx(channel(5686).TableRow, { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true });
   return <tmp2 style={arg0.style}>{null}</tmp2>;

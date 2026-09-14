@@ -1,23 +1,23 @@
-// Module ID: 12847
-// Function ID: 12848
+// Module ID: 12848
+// Function ID: 12849
 // Name: InviteDetails
-// Dependencies: [32, 19, 17, 12542, 1385, 1371, 1074, 12848, 21, 4636, 576, 5522, 7837, 1178, 12788, 4481, 1114, 5671, 4632, 1396, 5668, 1242, 504, 12849, 9902, 5056, 5514, 2]
+// Dependencies: [32, 19, 17, 12543, 1385, 1371, 1074, 12849, 21, 4636, 576, 5522, 7837, 1176, 12789, 4481, 1114, 5671, 4632, 1396, 5668, 1240, 504, 12850, 9902, 5056, 5514, 2]
 // Exports: default
 
-// Module 12847 (InviteDetails)
+// Module 12848 (InviteDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GuildBadgeDefault from "GuildBadge" /* 5671 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7837 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 12788 */;
-import InviteRolesListDefault from "InviteRolesList" /* 12849 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 12789 */;
+import InviteRolesListDefault from "InviteRolesList" /* 12850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -67,11 +67,11 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009417941561190702 };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: -892403711 };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
-        obj3.size = tmp4(1178).AvatarSizes.XLARGE;
-        tmp2Result = tmp2(tmp4(1178).Avatar, obj3);
+        obj3.size = tmp4(1176).AvatarSizes.XLARGE;
+        tmp2Result = tmp2(tmp4(1176).Avatar, obj3);
       }
       let tmp2Result2 = tmp2Result;
     }
@@ -286,7 +286,7 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(12848).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(12849).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(4636);

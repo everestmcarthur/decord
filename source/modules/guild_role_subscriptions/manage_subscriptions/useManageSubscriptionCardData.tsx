@@ -1,10 +1,10 @@
-// Module ID: 15306
-// Function ID: 15307
+// Module ID: 15307
+// Function ID: 15308
 // Name: useManageSubscriptionCardData
-// Dependencies: [32, 19, 1979, 4269, 1074, 4228, 7337, 1114, 15297, 504, 15295, 2]
+// Dependencies: [32, 19, 1979, 4269, 1074, 4228, 7337, 1114, 15298, 504, 15296, 2]
 // Exports: default
 
-// Module 15306 (useManageSubscriptionCardData)
+// Module 15307 (useManageSubscriptionCardData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

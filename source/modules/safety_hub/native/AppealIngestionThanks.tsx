@@ -1,13 +1,13 @@
-// Module ID: 12037
-// Function ID: 12038
+// Module ID: 12038
+// Function ID: 12039
 // Name: AppealIngestionThanks
-// Dependencies: [19, 17, 21, 4636, 12016, 7226, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 12017, 7226, 1176, 2]
 // Exports: default
 
-// Module 12037 (AppealIngestionThanks)
-import native from "native" /* 1178 */;
+// Module 12038 (AppealIngestionThanks)
+import native from "native" /* 1176 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12016 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

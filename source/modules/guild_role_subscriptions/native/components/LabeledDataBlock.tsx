@@ -1,10 +1,10 @@
-// Module ID: 15303
-// Function ID: 15304
+// Module ID: 15304
+// Function ID: 15305
 // Name: LabeledDataBlock
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 5605, 4632, 5204, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 5605, 4632, 5204, 1176, 2]
 // Exports: default
 
-// Module 15303 (LabeledDataBlock)
+// Module 15304 (LabeledDataBlock)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
@@ -35,8 +35,8 @@ export default function LabeledDataBlock(arg0) {
   let tmp4Result = null != icon;
   if (tmp4Result) {
     const obj4 = { accessibilityRole: "button", onPress: onPressIcon, children: null };
-    const obj5 = { size: tmp5(1178).Icon.Sizes.SMALL, source: icon };
-    obj4.children = tmp4(tmp5(1178).Icon, obj5);
+    const obj5 = { size: tmp5(1176).Icon.Sizes.SMALL, source: icon };
+    obj4.children = tmp4(tmp5(1176).Icon, obj5);
     tmp4Result = tmp4(tmp5(5204).PressableOpacity, obj4);
   }
   items1[1] = tmp4Result;
@@ -45,7 +45,7 @@ export default function LabeledDataBlock(arg0) {
   let tmp4Result2 = children;
   if (typeof children === "string") {
     const obj6 = { style: tmp.data, children };
-    tmp4Result2 = tmp4(tmp5(1178).LegacyText, obj6);
+    tmp4Result2 = tmp4(tmp5(1176).LegacyText, obj6);
   }
   items2[1] = tmp4Result2;
   obj.children = items2;

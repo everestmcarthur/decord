@@ -1,9 +1,9 @@
 // Module ID: 4914
 // Function ID: 4915
-// Dependencies: [1314]
+// Dependencies: [1312]
 
 // Module 4914
-import _mod1314 from "module_1314" /* 1314 */;
+import _mod1312 from "module_1312" /* 1312 */;
 
 
 export default function isFinite(num) {
@@ -12,7 +12,7 @@ export default function isFinite(num) {
     tmp = typeof num === "bigint";
   }
   if (tmp) {
-    tmp = !_mod1314(num);
+    tmp = !_mod1312(num);
   }
   if (tmp) {
     tmp = num !== Infinity;

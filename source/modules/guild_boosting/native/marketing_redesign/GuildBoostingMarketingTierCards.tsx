@@ -1,10 +1,10 @@
-// Module ID: 13674
-// Function ID: 13675
+// Module ID: 13675
+// Function ID: 13676
 // Name: GuildBoostingMarketingTierCards
-// Dependencies: [32, 19, 17, 1074, 1373, 21, 8883, 1114, 10242, 12661, 5182, 5178, 10509, 13675, 9501, 4579, 13677, 4636, 576, 13669, 5522, 4373, 4637, 4632, 4571, 4488, 5068, 5204, 4530, 13678, 13680, 4486, 1178, 13682, 13683, 5662, 12693, 2]
+// Dependencies: [32, 19, 17, 1074, 1373, 21, 8883, 1114, 10242, 12662, 5182, 5178, 10510, 13676, 9501, 4579, 13678, 4636, 576, 13670, 5522, 4373, 4637, 4632, 4571, 4488, 5068, 5204, 4530, 13679, 13681, 4486, 1176, 13683, 13684, 5662, 12694, 2]
 // Exports: default
 
-// Module 13674 (GuildBoostingMarketingTierCards)
+// Module 13675 (GuildBoostingMarketingTierCards)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -16,7 +16,7 @@ import timing from "timing" /* 4637 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import Pressables from "Pressables" /* 5204 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5662 */;
-import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13677 */;
+import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -140,7 +140,7 @@ let obj3 = {
 };
 items[2] = {
   isIncluded: true,
-  IconComponent: fn(12661).ScreenArrowIcon,
+  IconComponent: fn(12662).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
@@ -148,7 +148,7 @@ items[2] = {
 };
 let obj4 = {
   isIncluded: true,
-  IconComponent: fn(12661).ScreenArrowIcon,
+  IconComponent: fn(12662).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
@@ -197,7 +197,7 @@ let obj6 = {
 items[5] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(10509).GifIcon,
+  IconComponent: fn(10510).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -206,7 +206,7 @@ items[5] = {
 let obj7 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(10509).GifIcon,
+  IconComponent: fn(10510).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -214,7 +214,7 @@ let obj7 = {
 };
 items[6] = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -222,7 +222,7 @@ items[6] = {
 };
 let obj8 = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -252,7 +252,7 @@ let obj9 = {
 };
 items[8] = {
   isIncluded: false,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -260,7 +260,7 @@ items[8] = {
 };
 let obj10 = {
   isIncluded: false,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -348,7 +348,7 @@ let obj15 = {
 items2[2] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(12661).ScreenArrowIcon,
+  IconComponent: fn(12662).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -358,7 +358,7 @@ items2[2] = {
 let obj16 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(12661).ScreenArrowIcon,
+  IconComponent: fn(12662).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -405,7 +405,7 @@ let obj18 = {
 };
 items2[5] = {
   isIncluded: true,
-  IconComponent: fn(10509).GifIcon,
+  IconComponent: fn(10510).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -413,7 +413,7 @@ items2[5] = {
 };
 let obj19 = {
   isIncluded: true,
-  IconComponent: fn(10509).GifIcon,
+  IconComponent: fn(10510).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -421,7 +421,7 @@ let obj19 = {
 };
 items2[6] = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -429,7 +429,7 @@ items2[6] = {
 };
 let obj20 = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -462,7 +462,7 @@ let obj21 = {
 items2[8] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -471,7 +471,7 @@ items2[8] = {
 let obj22 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -560,7 +560,7 @@ const obj27 = {
 };
 items3[2] = {
   isIncluded: true,
-  IconComponent: fn(12661).ScreenArrowIcon,
+  IconComponent: fn(12662).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -569,7 +569,7 @@ items3[2] = {
 };
 const obj28 = {
   isIncluded: true,
-  IconComponent: fn(12661).ScreenArrowIcon,
+  IconComponent: fn(12662).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -621,7 +621,7 @@ const obj30 = {
 items3[5] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(10509).GifIcon,
+  IconComponent: fn(10510).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -630,7 +630,7 @@ items3[5] = {
 const obj31 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(10509).GifIcon,
+  IconComponent: fn(10510).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -638,7 +638,7 @@ const obj31 = {
 };
 items3[6] = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -646,7 +646,7 @@ items3[6] = {
 };
 const obj32 = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -678,7 +678,7 @@ const obj33 = {
 };
 items3[8] = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -686,7 +686,7 @@ items3[8] = {
 };
 const obj34 = {
   isIncluded: true,
-  IconComponent: fn(13675).ServerGridIcon,
+  IconComponent: fn(13676).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -745,7 +745,7 @@ obj37.cardFeatureExcluded = { opacity: 0.5 };
 obj37.cardFeatureExcludedCopy = { textDecorationLine: "line-through" };
 obj37.cardFeatureLast = { marginBottom: 0 };
 const obj40 = { borderRadius: nativeDefault.radii.lg, overflow: "hidden", height: "100%" };
-obj37.cardsScroller = { flex: 1, marginTop: fn(13669).PROGRESS_BAR_SPACING };
+obj37.cardsScroller = { flex: 1, marginTop: fn(13670).PROGRESS_BAR_SPACING };
 obj37.cardsScrollerContent = { alignItems: "flex-start", display: "flex", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 8, paddingTop: 16, paddingBottom: 20 };
 obj37.cardFeatureIcon = { height: 24, marginRight: 6, width: 24 };
 obj37.cardFooter = { display: "flex", flexDirection: "row", marginTop: 24 };
@@ -753,7 +753,7 @@ obj37.cardFooterIcon = { flexGrow: 0, flexShrink: 0, height: 24, marginLeft: 8, 
 const rect = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
 obj37.cardTierBadge = rect;
 obj37.cardTierBadgeCopy = { textTransform: "uppercase" };
-const obj41 = { flex: 1, marginTop: fn(13669).PROGRESS_BAR_SPACING };
+const obj41 = { flex: 1, marginTop: fn(13670).PROGRESS_BAR_SPACING };
 obj37.sparkleStar = { position: "absolute", tintColor: fn(5522).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
 obj37.sparkleStarPointed = { height: 15, width: 18 };
 obj37.sparkleStarElongated = { height: 45, width: 23 };
@@ -830,9 +830,9 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
   const obj12 = { style: tmp.cardFooter, children: null };
   const items5 = [React7(Text_Text.Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
   if (isExpanded) {
-    let ChevronLargeDownIcon = tmp7(13678).ChevronLargeUpIcon;
+    let ChevronLargeDownIcon = tmp7(13679).ChevronLargeUpIcon;
   } else {
-    ChevronLargeDownIcon = tmp7(13680).ChevronLargeDownIcon;
+    ChevronLargeDownIcon = tmp7(13681).ChevronLargeDownIcon;
   }
   const obj11 = { features: memo, isVisible: !isExpanded };
   const obj9 = { numSubscriptions: timestampProducer[tier] };
@@ -888,26 +888,26 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
       ({ gradientHighlight: arr13[0], gradientHighlightBottom: arr13[1] } = tmp);
       obj16.style = items11;
       items9[1] = tmp13(tmp2Result5, obj16);
-      const obj17 = { source: tmp2(13682), style: null };
+      const obj17 = { source: tmp2(13683), style: null };
       const items12 = [, , ];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
       obj17.style = items12;
-      items9[2] = tmp13(tmp7(1178).Icon, obj17);
-      const obj18 = { source: tmp2(13682), style: null };
+      items9[2] = tmp13(tmp7(1176).Icon, obj17);
+      const obj18 = { source: tmp2(13683), style: null };
       const items13 = [, , ];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
       obj18.style = items13;
-      items9[3] = tmp13(tmp7(1178).Icon, obj18);
-      const obj19 = { source: tmp2(13682), style: null };
+      items9[3] = tmp13(tmp7(1176).Icon, obj18);
+      const obj19 = { source: tmp2(13683), style: null };
       const items14 = [, , ];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
       obj19.style = items14;
-      items9[4] = tmp13(tmp7(1178).Icon, obj19);
-      const obj20 = { source: tmp2(13683), style: null };
+      items9[4] = tmp13(tmp7(1176).Icon, obj19);
+      const obj20 = { source: tmp2(13684), style: null };
       const items15 = [, , ];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
       obj20.style = items15;
-      items9[5] = tmp13(tmp7(1178).Icon, obj20);
+      items9[5] = tmp13(tmp7(1176).Icon, obj20);
       obj14.children = items9;
       tmp11Result = tmp11(closure_1_11, obj14);
       const tmp7Result12 = tmp7(4486);

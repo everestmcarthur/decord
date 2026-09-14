@@ -1,11 +1,11 @@
 // Module ID: 9624
 // Function ID: 9625
 // Name: useDraggablePip
-// Dependencies: [32, 9597, 9603, 4373, 4637, 1178, 9625, 6756, 5055, 2]
+// Dependencies: [32, 9597, 9603, 4373, 4637, 1176, 9625, 6756, 5055, 2]
 // Exports: useDraggablePip
 
 // Module 9624 (useDraggablePip)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import spring from "spring" /* 5055 */;

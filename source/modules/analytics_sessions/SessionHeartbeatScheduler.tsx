@@ -1,7 +1,7 @@
 // Module ID: 7564
 // Function ID: 7565
 // Name: SessionHeartbeatScheduler
-// Dependencies: [5, 5358, 502, 5491, 4659, 1074, 1090, 3, 7565, 7566, 7567, 1232, 7568, 7571, 1242, 7572, 510, 7574, 1340, 573, 504, 1256, 2]
+// Dependencies: [5, 5358, 502, 5491, 4659, 1074, 1090, 3, 7565, 7566, 7567, 1230, 7568, 7571, 1240, 7572, 510, 7574, 1338, 573, 504, 1254, 2]
 // Exports: getActiveSessionUnsafe, initSessionHeartbeatScheduler
 
 // Module 7564 (SessionHeartbeatScheduler)
@@ -9,8 +9,8 @@ import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7565 */;
 import SessionRouteUtils2 from "SessionRouteUtils" /* 7566 */;
 import MonotonicClock from "MonotonicClock" /* 7567 */;

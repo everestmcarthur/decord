@@ -1,16 +1,16 @@
-// Module ID: 14929
-// Function ID: 14930
+// Module ID: 14930
+// Function ID: 14931
 // Name: AndroidViewNsfwDmCommandsSetting
-// Dependencies: [8079, 9425, 4847, 9426, 4849, 1150, 8529, 8531, 1935, 11601, 1114, 2]
+// Dependencies: [8079, 9425, 4847, 9426, 4849, 1363, 8529, 8531, 1935, 11602, 1114, 2]
 
-// Module 14929 (AndroidViewNsfwDmCommandsSetting)
+// Module 14930 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1114 */;
 import AgeGateUtils from "AgeGateUtils" /* 4847 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9425 */;
 import useNSFWAllowed from "useNSFWAllowed" /* 9426 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -49,8 +49,8 @@ const toggle = SettingBuilders.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      shouldAgeVerifyForSettingsToggles = tmp(1150).isAndroid();
-      const tmpResult2 = tmp(1150);
+      shouldAgeVerifyForSettingsToggles = tmp(1363).isAndroid();
+      const tmpResult2 = tmp(1363);
     }
     return shouldAgeVerifyForSettingsToggles;
   }

@@ -1,10 +1,10 @@
-// Module ID: 16847
-// Function ID: 16848
+// Module ID: 16849
+// Function ID: 16850
 // Name: FavoritesEmptyState
-// Dependencies: [19, 17, 21, 4636, 576, 10352, 11108, 4603, 10356, 1896, 10355, 5773, 5054, 4632, 1114, 3236, 5056, 12882, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 10353, 11109, 4603, 10357, 1896, 10356, 5773, 5054, 4632, 1114, 3236, 5056, 12883, 2]
 // Exports: default
 
-// Module 16847 (FavoritesEmptyState)
+// Module 16849 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
@@ -52,7 +52,7 @@ export default function FavoritesEmptyState() {
     const obj6 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1114).intl;
     obj6.text = intl4.string(tmp9(3236)["6kk0gM"]);
-    obj6.icon = tmp8(tmp2(12882).PlusMediumIcon, {});
+    obj6.icon = tmp8(tmp2(12883).PlusMediumIcon, {});
     obj6.onPress = callback;
     let obj7 = obj6;
   } else {

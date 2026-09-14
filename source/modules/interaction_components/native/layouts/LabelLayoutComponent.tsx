@@ -1,10 +1,10 @@
-// Module ID: 17508
-// Function ID: 17509
+// Module ID: 17510
+// Function ID: 17511
 // Name: LabelLayoutComponent
 // Dependencies: [19, 17, 21, 8229, 1894, 6708, 2]
 // Exports: default
 
-// Module 17508 (LabelLayoutComponent)
+// Module 17510 (LabelLayoutComponent)
 import Server from "Server" /* 1894 */;
 import Input from "Input" /* 6708 */;
 import ComponentStateContext from "ComponentStateContext" /* 8229 */;

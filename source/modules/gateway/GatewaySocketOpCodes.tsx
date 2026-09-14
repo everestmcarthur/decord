@@ -1,9 +1,9 @@
-// Module ID: 13723
-// Function ID: 13724
+// Module ID: 13724
+// Function ID: 13725
 // Name: GatewaySocketOpCodes
 // Dependencies: [4686, 568, 1906, 11, 2]
 
-// Module 13723 (GatewaySocketOpCodes)
+// Module 13724 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 1906 */;
 import RTCRegionStore from "RTCRegionStore" /* 4686 */;

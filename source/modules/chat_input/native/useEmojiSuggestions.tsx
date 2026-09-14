@@ -1,10 +1,10 @@
-// Module ID: 12556
-// Function ID: 12557
+// Module ID: 12557
+// Function ID: 12558
 // Name: useEmojiSuggestions
 // Dependencies: [32, 19, 5540, 5081, 1374, 504, 5523, 2]
 // Exports: default
 
-// Module 12556 (useEmojiSuggestions)
+// Module 12557 (useEmojiSuggestions)
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

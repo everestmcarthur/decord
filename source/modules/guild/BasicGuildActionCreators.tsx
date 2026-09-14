@@ -1,12 +1,12 @@
-// Module ID: 17940
-// Function ID: 17941
+// Module ID: 17941
+// Function ID: 17942
 // Name: BasicGuildActionCreators
-// Dependencies: [5, 1979, 8059, 1074, 573, 1272, 2]
+// Dependencies: [5, 1979, 8059, 1074, 573, 1270, 2]
 // Exports: fetchBasicGuild
 
-// Module 17940 (BasicGuildActionCreators)
+// Module 17941 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import BasicGuildStore from "BasicGuildStore" /* 8059 */;

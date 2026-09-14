@@ -107,7 +107,7 @@ export const useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight
         length = items.length;
         tmp = !length;
         if (length) {
-          tmp = !items.find(/* F111315 */ function() { ... });
+          tmp = !items.find(/* F111318 */ function() { ... });
         }
         return !tmp;
       }

@@ -1,9 +1,9 @@
-// Module ID: 16437
-// Function ID: 16438
+// Module ID: 16439
+// Function ID: 16440
 // Name: GuildsBarDirectMessage
-// Dependencies: [19, 502, 5359, 1957, 7738, 4285, 1371, 1074, 21, 4636, 576, 16389, 504, 9900, 1114, 16392, 4647, 11044, 16438, 11041, 1178, 5668, 2]
+// Dependencies: [19, 502, 5359, 1957, 7738, 4285, 1371, 1074, 21, 4636, 576, 16391, 504, 9900, 1114, 16394, 4647, 11045, 16440, 11042, 1176, 5668, 2]
 
-// Module 16437 (GuildsBarDirectMessage)
+// Module 16439 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9900 */;

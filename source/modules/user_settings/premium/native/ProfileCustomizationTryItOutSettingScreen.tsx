@@ -1,12 +1,12 @@
-// Module ID: 15894
-// Function ID: 15895
+// Module ID: 15896
+// Function ID: 15897
 // Name: ProfileCustomizationTryItOutSettingScreen
-// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4636, 576, 7265, 7285, 504, 10863, 8276, 8304, 7657, 15422, 15423, 8284, 1388, 1242, 14675, 2]
+// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4636, 576, 7265, 7285, 504, 10864, 8276, 8304, 7657, 15423, 15424, 8284, 1388, 1240, 14676, 2]
 // Exports: default
 
-// Module 15894 (ProfileCustomizationTryItOutSettingScreen)
+// Module 15896 (ProfileCustomizationTryItOutSettingScreen)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8284 */;

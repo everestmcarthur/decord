@@ -1,10 +1,10 @@
-// Module ID: 13227
-// Function ID: 13228
+// Module ID: 13228
+// Function ID: 13229
 // Name: UserProfileWishlistSuggestionsGrid
-// Dependencies: [19, 17, 4628, 8903, 8300, 7311, 1074, 1076, 21, 576, 4636, 13222, 504, 13228, 8307, 13223, 7265, 5679, 1256, 13229, 8902, 4603, 7644, 7285, 5056, 12267, 1114, 13230, 4373, 4632, 8202, 5761, 13231, 2]
+// Dependencies: [19, 17, 4628, 8903, 8300, 7311, 1074, 1076, 21, 576, 4636, 13223, 504, 13229, 8307, 13224, 7265, 5679, 1254, 13230, 8902, 4603, 7644, 7285, 5056, 12268, 1114, 13231, 4373, 4632, 8202, 5761, 13232, 2]
 // Exports: default
 
-// Module 13227 (UserProfileWishlistSuggestionsGrid)
+// Module 13228 (UserProfileWishlistSuggestionsGrid)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -12,8 +12,8 @@ import useInitialValueDefault from "useInitialValue" /* 5679 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
-import useCardGridLayoutDefault from "useCardGridLayout" /* 13223 */;
-import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13228 */;
+import useCardGridLayoutDefault from "useCardGridLayout" /* 13224 */;
+import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13229 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import WishlistStore from "WishlistStore" /* 8903 */;
@@ -83,7 +83,7 @@ function WishlistSuggestionsGridContents(arg0) {
   let obj2 = trackUserProfileWishlistAction(504);
   const obj3 = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const tmp7 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[18]).v4());
-  let obj4 = trackUserProfileWishlistAction(13229);
+  let obj4 = trackUserProfileWishlistAction(13230);
   const items2 = obj4.useAddToWishlistGridItems({ userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: trackUserProfileWishlistAction(8902).WishlistFetchSource.USER_PROFILE }).items;
   const items3 = [trackUserProfileWishlistAction];
   const callback = noop.useCallback(() => {
@@ -101,7 +101,7 @@ function WishlistSuggestionsGridContents(arg0) {
   }, items3);
   if (0 === items2.length) {
     const obj6 = { style: tmp3.shopButtonContainer, children: null };
-    const obj7 = { size: "md", variant: "secondary", icon: closure_12(tmp(12267).ShopIcon, { size: "sm" }), text: null, onPress: null };
+    const obj7 = { size: "md", variant: "secondary", icon: closure_12(tmp(12268).ShopIcon, { size: "sm" }), text: null, onPress: null };
     const intl3 = tmp(1114).intl;
     obj7.text = intl3.string(tmp(1114).t.RSyoZu);
     obj7.onPress = callback;
@@ -148,9 +148,9 @@ function WishlistSuggestionsGridContents(arg0) {
     obj11.children = items4;
     const items6 = [closure_13(View, obj11), , ];
     const obj17 = { items: items2, wishlist, analyticsLocations, cardSize: useCardGridLayoutDefault(obj3).cardWidth };
-    items6[1] = closure_12(tmp6(13231), obj17);
+    items6[1] = closure_12(tmp6(13232), obj17);
     const obj18 = { style: tmp3.shopButtonContainer, children: null };
-    const obj33 = { size: "md", variant: "secondary", icon: closure_12(tmp(12267).ShopIcon, { size: "sm" }), text: null, onPress: null };
+    const obj33 = { size: "md", variant: "secondary", icon: closure_12(tmp(12268).ShopIcon, { size: "sm" }), text: null, onPress: null };
     const intl2 = tmp(1114).intl;
     obj33.text = intl2.string(tmp(1114).t.RSyoZu);
     obj33.onPress = callback;
@@ -158,7 +158,7 @@ function WishlistSuggestionsGridContents(arg0) {
     items6[2] = closure_12(View, obj18);
     obj10.children = items6;
     obj8.children = closure_13(tmp6(4373).View, obj10);
-    tmp12Result = tmp12(tmp(13230).WishlistAnalyticsProvider, obj8);
+    tmp12Result = tmp12(tmp(13231).WishlistAnalyticsProvider, obj8);
   }
   return tmp12Result;
 }

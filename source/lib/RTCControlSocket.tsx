@@ -1,16 +1,16 @@
 // Module ID: 1907
 // Function ID: 1908
 // Name: RTCControlSocket
-// Dependencies: [1347, 1908, 4661, 1090, 4694, 559, 3, 4665, 14165, 1150, 38, 2]
+// Dependencies: [1345, 1908, 4661, 1090, 4694, 559, 3, 4665, 14166, 1363, 38, 2]
 
 // Module 1907 (RTCControlSocket)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1345 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
 
@@ -78,7 +78,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     self.handleClose(false, 0, "The connection timed out after " + TimeUtils.now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
   let obj = self(4665);
-  obj2 = self(14165);
+  obj2 = self(14166);
   const webSocket = new WebSocket("" + self.url + "?v=" + obj2.getVoiceGatewayProtocolVersion({ location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) }));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";

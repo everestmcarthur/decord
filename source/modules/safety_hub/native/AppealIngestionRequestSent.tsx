@@ -1,12 +1,12 @@
-// Module ID: 12035
-// Function ID: 12036
+// Module ID: 12036
+// Function ID: 12037
 // Name: AppealIngestionRequestSent
-// Dependencies: [19, 17, 8537, 21, 4636, 12018, 1114, 12016, 12036, 4632, 12030, 2]
+// Dependencies: [19, 17, 8537, 21, 4636, 12019, 1114, 12017, 12037, 4632, 12031, 2]
 // Exports: default
 
-// Module 12035 (AppealIngestionRequestSent)
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12030 */;
-import _modDef12036 from "module_12036" /* 12036 */;
+// Module 12036 (AppealIngestionRequestSent)
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12031 */;
+import _modDef12037 from "module_12037" /* 12037 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -33,13 +33,13 @@ export default function AppealIngestionRequestSent() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  const items = [closure_7(closure_4, { source: _modDef12036, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const items = [closure_7(closure_4, { source: _modDef12037, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = require("util").intl;
   obj5.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_7(require("Text/Text").Text, obj5);
   const obj6 = { text: null, url: null, onPress: null };
-  const obj4 = { source: _modDef12036, style: tmp.checkboxPng };
+  const obj4 = { source: _modDef12037, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj6.text = intl4.string(require("util").t.PxL38B);
   obj6.url = constants.COMMUNITY_GUIDELINES;

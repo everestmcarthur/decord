@@ -1,10 +1,10 @@
-// Module ID: 10831
-// Function ID: 10832
+// Module ID: 10832
+// Function ID: 10833
 // Name: handlePremiumPurchase
-// Dependencies: [109, 5, 19, 9498, 502, 4300, 7340, 1074, 1085, 1272, 10832, 4537, 10833, 1114, 4316, 4980, 7343, 504, 7550, 10834, 10835, 10791, 10836, 7338, 4309, 9497, 1242, 2]
+// Dependencies: [109, 5, 19, 9498, 502, 4300, 7340, 1074, 1085, 1270, 10833, 4537, 10834, 1114, 4316, 4980, 7343, 504, 7550, 10835, 10836, 10792, 10837, 7338, 4309, 9497, 1240, 2]
 // Exports: useHandlePremiumPurchase
 
-// Module 10831 (handlePremiumPurchase)
+// Module 10832 (handlePremiumPurchase)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -316,8 +316,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
             billingError = new tmp(4537).BillingError(combined);
           }
           if (tmpResult.isSpendingLimitError(billingError)) {
-            const result = tmp(10833).showSpendingLimitReachedAlert();
-            const tmpResult2 = tmp(10833);
+            const result = tmp(10834).showSpendingLimitReachedAlert();
+            const tmpResult2 = tmp(10834);
           } else {
             const intl = tmp(1114).intl;
             let tmp8 = billingError.code !== tmp(4316).ErrorCodes.UNKNOWN;

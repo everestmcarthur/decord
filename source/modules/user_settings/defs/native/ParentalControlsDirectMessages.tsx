@@ -1,16 +1,16 @@
-// Module ID: 15983
-// Function ID: 15984
+// Module ID: 15985
+// Function ID: 15986
 // Name: ParentalControlsDirectMessages
-// Dependencies: [7640, 8079, 14913, 14914, 11601, 1114, 2]
+// Dependencies: [7640, 8079, 14914, 14915, 11602, 1114, 2]
 
-// Module 15983 (ParentalControlsDirectMessages)
+// Module 15985 (ParentalControlsDirectMessages)
 import util from "util" /* 1114 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14914 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14915 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -1,7 +1,7 @@
 // Module ID: 8858
 // Function ID: 8859
 // Name: GameProfileLinkAccount
-// Dependencies: [19, 17, 4864, 1371, 21, 4636, 576, 7046, 8859, 8860, 7268, 504, 8809, 1114, 5668, 1178, 4632, 5056, 8861, 2]
+// Dependencies: [19, 17, 4864, 1371, 21, 4636, 576, 7046, 8859, 8860, 7268, 504, 8809, 1114, 5668, 1176, 4632, 5056, 8861, 2]
 // Exports: default
 
 // Module 8858 (GameProfileLinkAccount)

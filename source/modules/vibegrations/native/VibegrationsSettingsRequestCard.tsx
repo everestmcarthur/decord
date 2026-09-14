@@ -1,16 +1,16 @@
-// Module ID: 16713
-// Function ID: 16714
+// Module ID: 16715
+// Function ID: 16716
 // Name: VibegrationsSettingsRequestCard
-// Dependencies: [19, 17, 16690, 21, 4636, 576, 504, 4603, 16714, 4632, 1114, 3590, 5056, 2]
+// Dependencies: [19, 17, 16692, 21, 4636, 576, 504, 4603, 16716, 4632, 1114, 3590, 5056, 2]
 // Exports: default
 
-// Module 16713 (VibegrationsSettingsRequestCard)
+// Module 16715 (VibegrationsSettingsRequestCard)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16714 */;
+import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16716 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16690 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16692 */;
 
 const VibegrationsSettingsSheetDefault = VibegrationsSettingsSheet;
 

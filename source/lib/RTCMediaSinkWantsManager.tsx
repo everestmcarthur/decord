@@ -1,17 +1,17 @@
-// Module ID: 13893
-// Function ID: 13894
+// Module ID: 13894
+// Function ID: 13895
 // Name: RTCMediaSinkWantsManager
-// Dependencies: [32, 502, 1074, 4661, 1090, 4958, 13894, 4694, 4705, 1952, 9739, 11, 12, 1150, 558, 4691, 2]
+// Dependencies: [32, 502, 1074, 4661, 1090, 4958, 13895, 4694, 4705, 1952, 9739, 11, 12, 1363, 558, 4691, 2]
 
-// Module 13893 (RTCMediaSinkWantsManager)
+// Module 13894 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9739 */;
-import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 13894 */;
+import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 13895 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;

@@ -1,10 +1,10 @@
-// Module ID: 12667
-// Function ID: 12668
+// Module ID: 12668
+// Function ID: 12669
 // Name: useGuildBoostPurchaseHandler
-// Dependencies: [5, 19, 1074, 3, 7509, 10791, 7508, 1242, 4981, 1114, 5515, 2]
+// Dependencies: [5, 19, 1074, 3, 7509, 10792, 7508, 1240, 4981, 1114, 5515, 2]
 // Exports: default
 
-// Module 12667 (useGuildBoostPurchaseHandler)
+// Module 12668 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10791).getNewAnalyticsLoadId();
+            newAnalyticsLoadId = args(10792).getNewAnalyticsLoadId();
             const obj7 = args(7508);
             c3 = 1;
             c4 = 1;

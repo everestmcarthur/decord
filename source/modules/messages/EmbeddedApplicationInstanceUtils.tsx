@@ -1,10 +1,10 @@
-// Module ID: 13356
-// Function ID: 13357
+// Module ID: 13357
+// Function ID: 13358
 // Name: EmbeddedApplicationInstanceUtils
 // Dependencies: [19, 1114, 9676, 9661, 2]
 // Exports: useJoinOrStartButtonState
 
-// Module 13356 (EmbeddedApplicationInstanceUtils)
+// Module 13357 (EmbeddedApplicationInstanceUtils)
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
 

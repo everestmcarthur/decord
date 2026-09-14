@@ -1,14 +1,14 @@
-// Module ID: 14994
-// Function ID: 14995
+// Module ID: 14995
+// Function ID: 14996
 // Name: FamilyCenterActivityGiftRow
-// Dependencies: [19, 17, 21, 4636, 576, 8290, 14982, 14991, 14993, 4481, 14992, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 8290, 14983, 14992, 14994, 4481, 14993, 4632, 2]
 // Exports: default
 
-// Module 14994 (FamilyCenterActivityGiftRow)
+// Module 14995 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 576 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8290 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 14982 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14991 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14983 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,16 +53,16 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj3.offeredAt = offeredAt;
     obj3.claimedAt = claimedAt;
     const obj4 = { style: tmp.container, children: null };
-    const giftSubtext = tmp5(14993).getGiftSubtext(obj3);
+    const giftSubtext = tmp5(14994).getGiftSubtext(obj3);
     const obj5 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    const tmp5Result = tmp5(14993);
+    const tmp5Result = tmp5(14994);
     if (product == null) {
       product = null;
     }
     obj5.product = product;
     obj5.isSubscription = isSubscription;
     obj5.subscriptionPlanId = subscriptionPlanId;
-    const items = [React4(tmp2(14992), obj5), ];
+    const items = [React4(tmp2(14993), obj5), ];
     const obj6 = { style: tmp.textContainer, children: null };
     const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
     const items1 = [React4(tmp5(4632).Text, obj7), ];

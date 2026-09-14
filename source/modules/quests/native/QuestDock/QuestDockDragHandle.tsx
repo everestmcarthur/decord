@@ -1,16 +1,16 @@
-// Module ID: 15268
-// Function ID: 15269
+// Module ID: 15269
+// Function ID: 15270
 // Name: QuestDockDragHandle
-// Dependencies: [19, 17, 5525, 15175, 21, 4636, 15176, 15177, 4373, 5055, 7176, 15174, 7257, 1114, 2]
+// Dependencies: [19, 17, 5525, 15176, 21, 4636, 15177, 15178, 4373, 5055, 7176, 15175, 7257, 1114, 2]
 
-// Module 15268 (QuestDockDragHandle)
+// Module 15269 (QuestDockDragHandle)
 import spring from "spring" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(5525).QuestDockMode;
-const QuestDockConstants = fn(15175);
+const QuestDockConstants = fn(15176);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: hasOwnProperty, QUEST_DOCK_COLLAPSED_MAX_WIDTH: metroRequire } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -47,12 +47,12 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = closure_9();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15176).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15177).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  youBarHorizontalMargin = activeQuestDockMode(15177).useYouBarHorizontalMargin();
-  const obj = activeQuestDockMode(15177);
+  youBarHorizontalMargin = activeQuestDockMode(15178).useYouBarHorizontalMargin();
+  const obj = activeQuestDockMode(15178);
   const tmp2 = activeQuestDockMode;
   const fn = function n() {
     return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
@@ -144,7 +144,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   const obj11 = { style: animatedStyle1, layout: null, children: null };
   const tmp13 = windowDimensions(7176);
   const tmp14 = closure_8;
-  obj11.layout = activeQuestDockMode(15174).dimensionsLayoutTransition;
+  obj11.layout = activeQuestDockMode(15175).dimensionsLayoutTransition;
   const obj12 = { style: null, children: null };
   const items1 = [tmp.dragHandleOverlay, animatedStyle3];
   obj12.style = items1;

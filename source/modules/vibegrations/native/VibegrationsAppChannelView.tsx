@@ -1,10 +1,10 @@
-// Module ID: 16716
-// Function ID: 16717
+// Module ID: 16718
+// Function ID: 16719
 // Name: VibegrationsAppChannelView
-// Dependencies: [32, 19, 17, 9640, 7979, 9641, 21, 4636, 576, 16105, 1877, 7347, 16717, 9698, 9637, 16718, 4632, 1114, 3590, 5056, 2]
+// Dependencies: [32, 19, 17, 9640, 7979, 9641, 21, 4636, 576, 16107, 1877, 7347, 16719, 9698, 9637, 16720, 4632, 1114, 3590, 5056, 2]
 // Exports: default
 
-// Module 16716 (VibegrationsAppChannelView)
+// Module 16718 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;

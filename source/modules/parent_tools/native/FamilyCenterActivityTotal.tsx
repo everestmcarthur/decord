@@ -1,14 +1,14 @@
-// Module ID: 14984
-// Function ID: 14985
+// Module ID: 14985
+// Function ID: 14986
 // Name: FamilyCenterActivityTotal
-// Dependencies: [19, 17, 21, 4636, 576, 14983, 7695, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 14984, 7695, 4632, 2]
 // Exports: default
 
-// Module 14984 (FamilyCenterActivityTotal)
+// Module 14985 (FamilyCenterActivityTotal)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7695 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14983 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

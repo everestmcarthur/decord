@@ -1,20 +1,20 @@
-// Module ID: 11904
-// Function ID: 11905
+// Module ID: 11905
+// Function ID: 11906
 // Name: QuestCopyHooks
-// Dependencies: [5, 32, 19, 2025, 1371, 5525, 1074, 1373, 1114, 11616, 7824, 7826, 11423, 2024, 11905, 1885, 504, 11906, 8798, 8809, 5528, 11428, 1880, 9659, 11646, 11629, 7830, 7829, 2]
+// Dependencies: [5, 32, 19, 2025, 1371, 5525, 1074, 1373, 1114, 11617, 7824, 7826, 11424, 2024, 11906, 1885, 504, 11907, 8798, 8809, 5528, 11429, 1880, 9659, 11647, 11630, 7830, 7829, 2]
 // Exports: getQuestsInstructionsToWinReward, getRewardCodeRedemptionInstructions, useModalCtaConfig, usePremiumExtendableCopy, usePrimaryCtaCopy, useQuestBarSubtitle, useQuestBarTitle, useQuestDescription, useQuestInstructionTitle
 
-// Module 11904 (QuestCopyHooks)
+// Module 11905 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8798 */;
 import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9659 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11423 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11428 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 11906 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11424 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11429 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 11907 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ const require = globalThis.__r;
 const util = v1votF6(1114);
 const utils_QuestUtils = v1votF6(7824);
 const GameProfileAnalyticUtils = tmp2(8809);
-const SponsoredQuestUtils = v1votF6(11905);
+const SponsoredQuestUtils = v1votF6(11906);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -610,7 +610,7 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
         if (tmpResult9.isSponsoredPlayQuest(quest)) {
           if (tmp10) {
             if (!tmp11) {
-              const defaultRewardNameWithArticle = tmp(11423).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+              const defaultRewardNameWithArticle = tmp(11424).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
               const intl5 = tmp(1114).intl;
               const obj9 = { rewardNameWithArticle: defaultRewardNameWithArticle, targetMinutes: questTaskDetails.targetMinutes };
               return intl5.format(tmp(1114).t["1votF6"], obj9);
@@ -628,8 +628,8 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
         if (!tmpResult11.hasAchievementInGameTask(quest)) {
           if (isQuestProgressing) {
             const obj10 = { quest, taskDetails: questTaskDetails, thirdPartyTaskDetails };
-            let contextualEntrypointHeading = tmp(11428).getContextualEntrypointHeading(obj10);
-            const tmpResult12 = tmp(11428);
+            let contextualEntrypointHeading = tmp(11429).getContextualEntrypointHeading(obj10);
+            const tmpResult12 = tmp(11429);
           } else {
             const intl2 = tmp(1114).intl;
             contextualEntrypointHeading = intl2.string(tmp(1114).t.mOrpXG);
@@ -738,7 +738,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
     }
     PLAY = constants.PLAY;
   }, items);
-  quest(11616);
+  quest(11617);
   if (constants3.PLAY === memo) {
     const features2 = quest.config.features;
     let hasItem = features2.includes(constants2.MOBILE_ACTIVITY_QUEST);
@@ -776,7 +776,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
     const intl3 = tmp2(1114).intl;
     return intl3.string(tmp2(1114).t.l7E81v);
   } else if (tmp6.WATCH_VIDEO === memo) {
-    return tmp2(11646).getVideoQuestWatchCtaText(tmp5);
+    return tmp2(11647).getVideoQuestWatchCtaText(tmp5);
   } else if (tmp6.IN_GAME === memo) {
     if (tmp2Result4.canLaunchActivity(quest)) {
       const features = quest.config.features;
@@ -850,8 +850,8 @@ export const getRewardCodeRedemptionInstructions = function getRewardCodeRedempt
       tier = claimedTier;
     }
     obj2.idx = tier;
-    rewardCodeQuestReward = tmp(11423).getRewardCodeQuestReward(obj2);
-    const tmpResult = tmp(11423);
+    rewardCodeQuestReward = tmp(11424).getRewardCodeQuestReward(obj2);
+    const tmpResult = tmp(11424);
   }
   let prop;
   const defaultReward = QuestCopyUtils.getDefaultReward(quest.config);
@@ -922,7 +922,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
           }
           obj6.impressionId = tmp5;
           obj6.sourceQuestContent = closure_128_4;
-          tmp4(11629).openGameLinkDirectly(closure_128_0, obj6);
+          tmp4(11630).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -966,7 +966,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(11428).getExternalCtaLabel(quest);
+  obj.ctaText = quest(11429).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

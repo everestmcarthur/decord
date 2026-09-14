@@ -1,14 +1,14 @@
-// Module ID: 17172
-// Function ID: 17173
+// Module ID: 17174
+// Function ID: 17175
 // Name: useSoundGrid
-// Dependencies: [32, 19, 1957, 1979, 4275, 2011, 1371, 5093, 5095, 1373, 5101, 4530, 17173, 504, 4294, 17174, 9801, 17175, 5073, 17176, 2]
+// Dependencies: [32, 19, 1957, 1979, 4275, 2011, 1371, 5093, 5095, 1373, 5101, 4530, 17175, 504, 4294, 17176, 9801, 17177, 5073, 17178, 2]
 // Exports: default, useSearchCategories
 
-// Module 17172 (useSoundGrid)
+// Module 17174 (useSoundGrid)
 import SoundboardTypes from "SoundboardTypes" /* 5101 */;
 import useManageResourcePermissions from "useManageResourcePermissions" /* 9801 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17173 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17176 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 17175 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17178 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -312,7 +312,7 @@ export default function useSoundGrid(guild_id) {
         const obj11 = { key: tmp13(5101).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
         const obj12 = { type: tmp13(5101).SoundboardSoundGridSectionType.DEFAULTS };
         obj11.categoryInfo = obj12;
-        const sortSoundsOldestToNewestCreationDate = tmp13(17173).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate = tmp13(17175).sortSoundsOldestToNewestCreationDate;
         let result1 = value7;
         if (null != sortSoundsOldestToNewestCreationDate) {
           result1 = sortSoundsOldestToNewestCreationDate(value7);
@@ -366,7 +366,7 @@ export default function useSoundGrid(guild_id) {
         const obj14 = { key: tmp13(5101).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
         const obj15 = { type: tmp13(5101).SoundboardSoundGridSectionType.DEFAULTS };
         obj14.categoryInfo = obj15;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(17173).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = tmp13(17175).sortSoundsOldestToNewestCreationDate;
         let result2 = value8;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result2 = sortSoundsOldestToNewestCreationDate2(value8);

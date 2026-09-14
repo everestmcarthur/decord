@@ -1,17 +1,17 @@
-// Module ID: 17294
-// Function ID: 17295
+// Module ID: 17296
+// Function ID: 17297
 // Name: VoicePanelAnimatedButtonWrapper
-// Dependencies: [19, 17, 12402, 21, 4636, 576, 4373, 17204, 1150, 5055, 4637, 2]
+// Dependencies: [19, 17, 12403, 21, 4636, 576, 4373, 17206, 1363, 5055, 4637, 2]
 // Exports: default
 
-// Module 17294 (VoicePanelAnimatedButtonWrapper)
+// Module 17296 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12402).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(12403).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };

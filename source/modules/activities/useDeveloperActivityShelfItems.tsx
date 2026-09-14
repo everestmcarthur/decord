@@ -1,10 +1,10 @@
-// Module ID: 12171
-// Function ID: 12172
+// Module ID: 12172
+// Function ID: 12173
 // Name: useDeveloperActivityShelfItems
 // Dependencies: [19, 8980, 1920, 504, 2]
 // Exports: useDeveloperActivityShelfItems
 
-// Module 12171 (useDeveloperActivityShelfItems)
+// Module 12172 (useDeveloperActivityShelfItems)
 import noop from "module_19" /* 19 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8980 */;
 

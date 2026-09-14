@@ -1,7 +1,7 @@
 // Module ID: 4660
 // Function ID: 4661
 // Name: SortedVoiceStateStore
-// Dependencies: [32, 1960, 1385, 502, 1957, 2021, 1371, 4655, 1074, 4481, 4271, 11, 1187, 12, 504, 1982, 573, 2]
+// Dependencies: [32, 1960, 1385, 502, 1957, 2021, 1371, 4655, 1074, 4481, 4271, 11, 1185, 12, 504, 1982, 573, 2]
 // Exports: getComparator, makeMemberAndComparator
 
 // Module 4660 (SortedVoiceStateStore)
@@ -9,7 +9,7 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import SecondaryIndexMap from "SecondaryIndexMap" /* 4271 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import _slicedToArray from "module_32" /* 32 */;

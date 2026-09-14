@@ -1,17 +1,17 @@
-// Module ID: 16216
-// Function ID: 16217
+// Module ID: 16218
+// Function ID: 16219
 // Name: VoiceUsers
-// Dependencies: [19, 17, 2021, 21, 4636, 576, 10249, 7976, 504, 16217, 10247, 1114, 12659, 4632, 9307, 16221, 7414, 16224, 2]
+// Dependencies: [19, 17, 2021, 21, 4636, 576, 10249, 7976, 504, 16219, 10247, 1114, 12660, 4632, 9307, 16223, 7414, 16226, 2]
 // Exports: default, getAudienceItemHeight
 
-// Module 16216 (VoiceUsers)
+// Module 16218 (VoiceUsers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7976 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12659 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12660 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
@@ -89,7 +89,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj5.sessionId = voiceState2.sessionId;
   obj5.channel = channel;
   obj5.isGuest = isGuest;
-  obj2.children = closure_6(tmp(16217), obj5, user.id);
+  obj2.children = closure_6(tmp(16219), obj5, user.id);
   return closure_6(tmp6, obj2);
 });
 const size = fn(2);

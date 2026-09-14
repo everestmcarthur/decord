@@ -1,7 +1,7 @@
 // Module ID: 9419
 // Function ID: 9420
 // Name: ApplicationCommandIndexStore
-// Dependencies: [32, 5, 19, 9420, 2025, 502, 1957, 2021, 1979, 1371, 9421, 5080, 1074, 3, 9422, 9423, 7624, 7625, 5601, 38, 504, 9424, 1242, 1894, 9427, 573, 9428, 9429, 1940, 9535, 7626, 5598, 2]
+// Dependencies: [32, 5, 19, 9420, 2025, 502, 1957, 2021, 1979, 1371, 9421, 5080, 1074, 3, 9422, 9423, 7624, 7625, 5601, 38, 504, 9424, 1240, 1894, 9427, 573, 9428, 9429, 1940, 9535, 7626, 5598, 2]
 // Exports: appLauncherOnlyCompareNames, getOrFetchApplicationCommandIndexForTarget, getSection, isStale, useContextIndexState, useDiscoveryState, useGuildIndexState, useUserIndexState
 
 // Module 9419 (ApplicationCommandIndexStore)
@@ -9,7 +9,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Server from "Server" /* 1894 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;

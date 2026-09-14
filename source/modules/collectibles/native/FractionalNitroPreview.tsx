@@ -1,17 +1,17 @@
-// Module ID: 13273
-// Function ID: 13274
+// Module ID: 13274
+// Function ID: 13275
 // Name: FractionalNitroPreview
-// Dependencies: [19, 17, 1074, 1373, 21, 4636, 576, 1114, 5211, 4294, 5068, 5668, 13274, 13275, 7236, 4632, 2]
+// Dependencies: [19, 17, 1074, 1373, 21, 4636, 576, 1114, 5211, 4294, 5068, 5668, 13275, 13276, 7236, 4632, 2]
 // Exports: FractionalNitroPreview
 
-// Module 13273 (FractionalNitroPreview)
+// Module 13274 (FractionalNitroPreview)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7236 */;
-import _modDef13274 from "module_13274" /* 13274 */;
-import NitroIconDefault from "NitroIcon" /* 13275 */;
+import _modDef13275 from "module_13275" /* 13275 */;
+import NitroIconDefault from "NitroIcon" /* 13276 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ export const FractionalNitroPreview = function FractionalNitroPreview() {
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef13274;
+  obj8.uri = _modDef13275;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

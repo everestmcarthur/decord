@@ -1,10 +1,10 @@
-// Module ID: 11332
-// Function ID: 11333
+// Module ID: 11333
+// Function ID: 11334
 // Name: BadgeUtils
 // Dependencies: [8300, 8301, 8310, 2]
 // Exports: getLegacyIconUrlByBadgeId, getUnhideableBadgeIds, groupCustomizableBadges
 
-// Module 11332 (BadgeUtils)
+// Module 11333 (BadgeUtils)
 import Constants from "Constants" /* 8300 */;
 import BadgeId from "BadgeId" /* 8301 */;
 import BadgeIdResolution from "BadgeIdResolution" /* 8310 */;

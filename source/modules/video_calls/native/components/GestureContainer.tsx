@@ -1,12 +1,12 @@
 // Module ID: 10150
 // Function ID: 10151
 // Name: GestureContainer
-// Dependencies: [19, 17, 9597, 9603, 21, 4636, 576, 1477, 4373, 6756, 4839, 4637, 1178, 2]
+// Dependencies: [19, 17, 9597, 9603, 21, 4636, 576, 1477, 4373, 6756, 4839, 4637, 1176, 2]
 // Exports: default
 
 // Module 10150 (GestureContainer)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -56,10 +56,10 @@ export default function GestureContainer(children) {
     ReanimatedRexport.runOnJS(ModalActionCreatorsDefault.pop)();
   };
   const onUpdateResult = Gesture.Pan().enabled(tmp2).onUpdate(S);
-  fn.__closure = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4373).runOnJS, ModalActionCreators: sharedValue(4839), withTiming: height(4637).withTiming, DECELERATED_EASING: height(1178).DECELERATED_EASING };
+  fn.__closure = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4373).runOnJS, ModalActionCreators: sharedValue(4839), withTiming: height(4637).withTiming, DECELERATED_EASING: height(1176).DECELERATED_EASING };
   fn.__workletHash = 10736744030668;
   fn.__initData = __initData;
-  let obj2 = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4373).runOnJS, ModalActionCreators: sharedValue(4839), withTiming: height(4637).withTiming, DECELERATED_EASING: height(1178).DECELERATED_EASING };
+  let obj2 = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4373).runOnJS, ModalActionCreators: sharedValue(4839), withTiming: height(4637).withTiming, DECELERATED_EASING: height(1176).DECELERATED_EASING };
   let items = [-closure_5, closure_5];
   const onEndResult = onUpdateResult.onEnd(fn);
   let items1 = [-closure_6, closure_6];

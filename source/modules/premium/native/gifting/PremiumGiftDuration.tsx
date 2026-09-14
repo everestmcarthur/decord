@@ -1,15 +1,15 @@
-// Module ID: 11179
-// Function ID: 11180
+// Module ID: 11180
+// Function ID: 11181
 // Name: PremiumGiftDuration
-// Dependencies: [19, 17, 1373, 21, 4636, 576, 10827, 5686, 8718, 10879, 4355, 4632, 1114, 2]
+// Dependencies: [19, 17, 1373, 21, 4636, 576, 10828, 5686, 8718, 10880, 4355, 4632, 1114, 2]
 // Exports: default
 
-// Module 11179 (PremiumGiftDuration)
+// Module 11180 (PremiumGiftDuration)
 import nativeDefault from "native" /* 576 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import NativeGiftContext from "NativeGiftContext" /* 10827 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10879 */;
+import NativeGiftContext from "NativeGiftContext" /* 10828 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -102,7 +102,7 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10827).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10828).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1114).intl;

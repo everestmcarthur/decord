@@ -1,10 +1,10 @@
-// Module ID: 11334
-// Function ID: 11335
+// Module ID: 11335
+// Function ID: 11336
 // Name: ClearAfterOptionsActionSheet
-// Dependencies: [32, 19, 17, 11249, 21, 4636, 576, 7253, 7252, 1114, 5766, 5769, 11335, 5056, 4603, 2]
+// Dependencies: [32, 19, 17, 11250, 21, 4636, 576, 7253, 7252, 1114, 5766, 5769, 11336, 5056, 4603, 2]
 // Exports: default
 
-// Module 11334 (ClearAfterOptionsActionSheet)
+// Module 11335 (ClearAfterOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(11249).ClearAfterOptions;
+const ClearAfterOptions = fn(11250).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
@@ -45,7 +45,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   const intl2 = util.intl;
   obj3.title = intl2.string(util.t.E45wvP);
   obj3.defaultValue = initialValue;
-  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11335)(value) }, value));
+  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11336)(value) }, value));
   const items = [closure_7(TableRadioGroup.TableRadioGroup, obj3), ];
   const obj4 = { style: tmp.buttonWrapper, children: null };
   const obj5 = {

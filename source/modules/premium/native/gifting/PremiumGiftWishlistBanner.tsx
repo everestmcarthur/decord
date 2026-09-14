@@ -1,14 +1,14 @@
-// Module ID: 10919
-// Function ID: 10920
+// Module ID: 10920
+// Function ID: 10921
 // Name: PremiumGiftWishlistBanner
-// Dependencies: [5, 19, 17, 7330, 1373, 1074, 1076, 8300, 21, 576, 4636, 8890, 8902, 10920, 10924, 7265, 7285, 1242, 8296, 10873, 10925, 4495, 4335, 1114, 7644, 11141, 4481, 4632, 11167, 11172, 2]
+// Dependencies: [5, 19, 17, 7330, 1373, 1074, 1076, 8300, 21, 576, 4636, 8890, 8902, 10921, 10925, 7265, 7285, 1240, 8296, 10874, 10926, 4495, 4335, 1114, 7644, 11142, 4481, 4632, 11168, 11173, 2]
 // Exports: PremiumGiftWishlistBanner
 
-// Module 10919 (PremiumGiftWishlistBanner)
+// Module 10920 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10924 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10925 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

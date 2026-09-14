@@ -1,19 +1,19 @@
-// Module ID: 10792
-// Function ID: 10793
+// Module ID: 10793
+// Function ID: 10794
 // Name: PremiumGiftPlanSelect
-// Dependencies: [32, 19, 17, 8309, 10793, 1373, 1074, 21, 4636, 576, 672, 1483, 1611, 1477, 10827, 5043, 5711, 504, 10873, 10871, 8301, 10790, 10875, 10878, 8006, 4373, 1178, 4637, 10884, 7285, 10885, 10919, 9611, 1114, 5761, 5668, 11173, 5068, 5763, 4632, 2]
+// Dependencies: [32, 19, 17, 8309, 10794, 1373, 1074, 21, 4636, 576, 672, 1483, 1611, 1477, 10828, 5043, 5711, 504, 10874, 10872, 8301, 10791, 10876, 10879, 8006, 4373, 1176, 4637, 10885, 7285, 10886, 10920, 9611, 1114, 5761, 5668, 11174, 5068, 5763, 4632, 2]
 // Exports: default
 
-// Module 10792 (PremiumGiftPlanSelect)
+// Module 10793 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import timing from "timing" /* 4637 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10878 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

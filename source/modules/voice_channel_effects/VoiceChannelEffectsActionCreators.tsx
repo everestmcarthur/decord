@@ -1,7 +1,7 @@
 // Module ID: 7449
 // Function ID: 7450
 // Name: VoiceChannelEffectsActionCreators
-// Dependencies: [5540, 2011, 7450, 7451, 1074, 5095, 12, 7452, 1272, 7475, 7285, 5101, 2]
+// Dependencies: [5540, 2011, 7450, 7451, 1074, 5095, 12, 7452, 1270, 7475, 7285, 5101, 2]
 // Exports: sendVoiceChannelCustomCallSoundEffect, sendVoiceChannelSoundboardEffect
 
 // Module 7449 (VoiceChannelEffectsActionCreators)
@@ -32,7 +32,7 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
     }
   }, 1000);
   obj2.animation_id = abortController(7452).sampleAnimationId(BASIC, abortController(7452).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
-  const HTTP = tmp2(1272).HTTP;
+  const HTTP = tmp2(1270).HTTP;
   const request = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj2, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
   const tmp2Result = abortController(7452);
   HTTP.post(request).then(closure_8, () => {
@@ -63,7 +63,7 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
     obj2.source_guild_id = emojiId.guildId;
   }
   let items = arg3;
-  const HTTP = tmp4(1272).HTTP;
+  const HTTP = tmp4(1270).HTTP;
   const request = {
     url: closure_7.SEND_SOUNDBOARD_SOUND(id),
     body: obj2,

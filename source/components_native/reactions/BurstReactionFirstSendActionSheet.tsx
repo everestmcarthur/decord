@@ -1,13 +1,13 @@
 // Module ID: 7925
 // Function ID: 7926
 // Name: BurstReactionFirstSendActionSheet
-// Dependencies: [19, 17, 21, 4636, 576, 4603, 7926, 1114, 7253, 7886, 7927, 7865, 1178, 4632, 5056, 4457, 1943, 7925, 1896, 573, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 4603, 7926, 1114, 7253, 7886, 7927, 7865, 1176, 4632, 5056, 4457, 1943, 7925, 1896, 573, 2]
 // Exports: default, openBurstReactionFirstSendActionSheet
 
 // Module 7925 (BurstReactionFirstSendActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;

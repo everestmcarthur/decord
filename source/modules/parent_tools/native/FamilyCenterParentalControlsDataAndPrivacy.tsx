@@ -1,14 +1,14 @@
-// Module ID: 15020
-// Function ID: 15021
+// Module ID: 15021
+// Function ID: 15022
 // Name: FamilyCenterParentalControlsDataAndPrivacy
-// Dependencies: [19, 1074, 8079, 21, 1114, 2396, 2024, 11601, 14775, 2]
+// Dependencies: [19, 1074, 8079, 21, 1114, 2396, 2024, 11602, 14776, 2]
 // Exports: default
 
-// Module 15020 (FamilyCenterParentalControlsDataAndPrivacy)
+// Module 15021 (FamilyCenterParentalControlsDataAndPrivacy)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

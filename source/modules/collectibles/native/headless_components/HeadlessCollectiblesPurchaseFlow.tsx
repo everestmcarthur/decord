@@ -1,21 +1,21 @@
-// Module ID: 13294
-// Function ID: 13295
+// Module ID: 13295
+// Function ID: 13296
 // Name: HeadlessCollectiblesPurchaseFlow
-// Dependencies: [19, 1074, 1085, 21, 9495, 8967, 11143, 1150, 4307, 10950, 10932, 4603, 8293, 13295, 2]
+// Dependencies: [19, 1074, 1085, 21, 9495, 8967, 11144, 1363, 4307, 10951, 10933, 4603, 8293, 13296, 2]
 // Exports: default
 
-// Module 13294 (HeadlessCollectiblesPurchaseFlow)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 13295 (HeadlessCollectiblesPurchaseFlow)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8293 */;
 import useProductPurchaseState from "useProductPurchaseState" /* 8967 */;
 import ACOMExperiments from "ACOMExperiments" /* 9495 */;
-import NativePaymentContext from "NativePaymentContext" /* 10950 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11143 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13295 */;
+import NativePaymentContext from "NativePaymentContext" /* 10951 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11144 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13296 */;
 import noop from "module_19" /* 19 */;
 
-const NativeCheckoutStoreProviderDefault = tmp3(10932);
+const NativeCheckoutStoreProviderDefault = tmp3(10933);
 require = fn;
 const application_id = fn(1074).COLLECTIBLES_APPLICATION_ID;
 const PaymentGateways = fn(1085).PaymentGateways;

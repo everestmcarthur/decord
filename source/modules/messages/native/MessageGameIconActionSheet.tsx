@@ -1,10 +1,10 @@
-// Module ID: 11948
-// Function ID: 11949
+// Module ID: 11949
+// Function ID: 11950
 // Name: MessageGameIconActionSheet
-// Dependencies: [19, 17, 4864, 1074, 21, 4636, 1150, 576, 504, 7253, 1178, 4632, 1114, 2024, 2]
+// Dependencies: [19, 17, 4864, 1074, 21, 4636, 1363, 576, 504, 7253, 1176, 4632, 1114, 2024, 2]
 // Exports: default
 
-// Module 11948 (MessageGameIconActionSheet)
+// Module 11949 (MessageGameIconActionSheet)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -50,7 +50,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj5 = { startExpanded: true, children: null };
     const obj6 = { uri: str };
     obj4.source = obj6;
-    const items1 = [closure_6(tmp2(1178).Icon, obj4), ];
+    const items1 = [closure_6(tmp2(1176).Icon, obj4), ];
     const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
     const obj8 = { style: tmp.timestamp, variant: "text-xs/medium", color: "text-muted", children: applicationId.messageTimestamp };
     const items2 = [closure_6(tmp2(4632).Text, obj8), ];

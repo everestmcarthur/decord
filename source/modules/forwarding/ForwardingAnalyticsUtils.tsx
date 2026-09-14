@@ -1,12 +1,12 @@
-// Module ID: 11810
-// Function ID: 11811
+// Module ID: 11811
+// Function ID: 11812
 // Name: ForwardingAnalyticsUtils
-// Dependencies: [19, 1957, 1074, 1242, 4816, 12, 2]
+// Dependencies: [19, 1957, 1074, 1240, 4816, 12, 2]
 // Exports: trackForwardCancel, trackForwardCopyLink, trackForwardSent, trackForwardStart, useTrackForwardAddRecipientOnce, useTrackForwardEditContextMessageOnce, useTrackForwardEditSearchOnce
 
-// Module 11810 (ForwardingAnalyticsUtils)
+// Module 11811 (ForwardingAnalyticsUtils)
 import _mod12 from "module_12" /* 12 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

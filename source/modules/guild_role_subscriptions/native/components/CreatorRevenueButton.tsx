@@ -1,11 +1,11 @@
-// Module ID: 10428
-// Function ID: 10429
+// Module ID: 10429
+// Function ID: 10430
 // Name: CreatorRevenueButton
-// Dependencies: [19, 21, 4636, 10429, 2]
+// Dependencies: [19, 21, 4636, 10430, 2]
 // Exports: CreatorRevenueButton
 
-// Module 10428 (CreatorRevenueButton)
-import ShinyButtonDefault from "ShinyButton" /* 10429 */;
+// Module 10429 (CreatorRevenueButton)
+import ShinyButtonDefault from "ShinyButton" /* 10430 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

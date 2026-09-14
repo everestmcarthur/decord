@@ -1,9 +1,9 @@
-// Module ID: 14164
-// Function ID: 14165
+// Module ID: 14165
+// Function ID: 14166
 // Name: DisableCameraSimulcastExperiment
 // Dependencies: [1433, 2]
 
-// Module 14164 (DisableCameraSimulcastExperiment)
+// Module 14165 (DisableCameraSimulcastExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

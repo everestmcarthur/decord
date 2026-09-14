@@ -1,12 +1,12 @@
-// Module ID: 10366
-// Function ID: 10367
+// Module ID: 10367
+// Function ID: 10368
 // Name: FavoritesGuildIntroPopover
-// Dependencies: [32, 19, 1949, 1960, 1074, 560, 1943, 10352, 504, 10367, 7491, 2]
+// Dependencies: [32, 19, 1949, 1960, 1074, 560, 1943, 10353, 504, 10368, 7491, 2]
 // Exports: hasOfferedFavoritesGuildOnboarding, isFavoritesIntroPopoverShown, resetHasOfferedFavoritesGuildOnboarding, useFavoritesIntroPopover, useIsFavoritesIntroPopoverShown
 
-// Module 10366 (FavoritesGuildIntroPopover)
+// Module 10367 (FavoritesGuildIntroPopover)
 import dismissible_content from "dismissible_content" /* 1943 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10367 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10368 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 1949 */;

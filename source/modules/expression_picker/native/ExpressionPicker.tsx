@@ -1,20 +1,20 @@
-// Module ID: 10404
-// Function ID: 10405
+// Module ID: 10405
+// Function ID: 10406
 // Name: ExpressionPicker
-// Dependencies: [19, 17, 1219, 1074, 1374, 21, 4636, 576, 10405, 10406, 9922, 1481, 1609, 4816, 10408, 10411, 5043, 9923, 10412, 10492, 10514, 2]
+// Dependencies: [19, 17, 1217, 1074, 1374, 21, 4636, 576, 10406, 10407, 9922, 1481, 1609, 4816, 10409, 10412, 5043, 9923, 10413, 10493, 10515, 2]
 
-// Module 10404 (ExpressionPicker)
+// Module 10405 (ExpressionPicker)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10406 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10408 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10407 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10409 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerConstants = fn(1219);
+const ExpressionPickerConstants = fn(1217);
 ({ ExpressionPickerViewType: hasOwnProperty, ExpressionPickerOrder: metroRequire, PADDING_HORIZONTAL } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const EmojiIntention = fn(1374).EmojiIntention;

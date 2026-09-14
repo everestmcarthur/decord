@@ -1,14 +1,14 @@
-// Module ID: 12827
-// Function ID: 12828
+// Module ID: 12828
+// Function ID: 12829
 // Name: ContactSyncSuggestions
-// Dependencies: [32, 19, 17, 1074, 12828, 21, 4636, 576, 5763, 5063, 4632, 4481, 1396, 5685, 1178, 1114, 4338, 4486, 11, 8716, 9003, 5068, 1093, 5056, 1242, 2]
+// Dependencies: [32, 19, 17, 1074, 12829, 21, 4636, 576, 5763, 5063, 4632, 4481, 1396, 5685, 1176, 1114, 4338, 4486, 11, 8716, 9003, 5068, 1093, 5056, 1240, 2]
 // Exports: default
 
-// Module 12827 (ContactSyncSuggestions)
+// Module 12828 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserUtils from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -61,7 +61,7 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SuggestedFriendSource = fn(12828).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12829).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);

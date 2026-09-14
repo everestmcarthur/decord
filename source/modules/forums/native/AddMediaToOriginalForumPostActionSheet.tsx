@@ -1,10 +1,10 @@
-// Module ID: 12127
-// Function ID: 12128
+// Module ID: 12128
+// Function ID: 12129
 // Name: AddMediaToOriginalForumPostActionSheet
-// Dependencies: [32, 5, 19, 17, 1957, 4977, 1979, 4857, 1074, 21, 4636, 576, 7941, 5260, 5215, 4603, 9440, 9436, 11, 5210, 9439, 7867, 1272, 12128, 7559, 7702, 4981, 1114, 504, 7265, 7869, 5219, 7253, 12129, 4632, 5057, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 4977, 1979, 4857, 1074, 21, 4636, 576, 7941, 5260, 5215, 4603, 9440, 9436, 11, 5210, 9439, 7867, 1270, 12129, 7559, 7702, 4981, 1114, 504, 7265, 7869, 5219, 7253, 12130, 4632, 5057, 2]
 // Exports: default
 
-// Module 12127 (AddMediaToOriginalForumPostActionSheet)
+// Module 12128 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;

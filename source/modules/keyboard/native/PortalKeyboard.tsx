@@ -1,7 +1,7 @@
 // Module ID: 4508
 // Function ID: 4509
 // Name: PortalKeyboard
-// Dependencies: [19, 21, 4494, 1150, 4509, 2]
+// Dependencies: [19, 21, 4494, 1363, 4509, 2]
 // Exports: PortalKeyboard, PortalKeyboardHost
 
 // Module 4508 (PortalKeyboard)

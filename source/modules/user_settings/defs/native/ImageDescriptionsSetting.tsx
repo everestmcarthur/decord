@@ -1,20 +1,20 @@
-// Module ID: 15547
-// Function ID: 15548
+// Module ID: 15548
+// Function ID: 15549
 // Name: ImageDescriptionsSetting
-// Dependencies: [1185, 8079, 1935, 15548, 11601, 1114, 2]
+// Dependencies: [1183, 8079, 1935, 15549, 11602, 1114, 2]
 // Exports: onImageDescriptionSettingValueChange
 
-// Module 15547 (ImageDescriptionsSetting)
+// Module 15548 (ImageDescriptionsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15548 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UserSettingsText from "UserSettingsText" /* 15549 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 
 require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   UserSettingsText.setImageDescriptions({ videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode });
 }
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

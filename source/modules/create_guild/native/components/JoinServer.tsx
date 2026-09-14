@@ -1,10 +1,10 @@
-// Module ID: 12844
-// Function ID: 12845
+// Module ID: 12845
+// Function ID: 12846
 // Name: components/JoinServer
-// Dependencies: [32, 19, 7081, 21, 4636, 5763, 1483, 5705, 12812, 7226, 7080, 1114, 8496, 2]
+// Dependencies: [32, 19, 7081, 21, 4636, 5763, 1483, 5705, 12813, 7226, 7080, 1114, 8496, 2]
 // Exports: default
 
-// Module 12844 (components/JoinServer)
+// Module 12845 (components/JoinServer)
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8496 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,10 +1,10 @@
 // Module ID: 9734
 // Function ID: 9735
 // Name: VideoRenderer
-// Dependencies: [32, 19, 17, 21, 4636, 9735, 9736, 9738, 1477, 1150, 8450, 9743, 9744, 9746, 4373, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 9735, 9736, 9738, 1477, 1363, 8450, 9743, 9744, 9746, 4373, 2]
 
 // Module 9734 (VideoRenderer)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -82,7 +82,7 @@ export default noop.memo((gestureEnabled) => {
     const layout = nativeEvent.nativeEvent.layout;
     width = layout.width;
     const height = layout.height;
-    let isAndroidResult = resizeMode(1150).isAndroid();
+    let isAndroidResult = resizeMode(1363).isAndroid();
     if (!isAndroidResult) {
       isAndroidResult = null == ref.current;
     }

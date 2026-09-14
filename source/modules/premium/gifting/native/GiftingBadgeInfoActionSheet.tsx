@@ -1,15 +1,15 @@
-// Module ID: 10876
-// Function ID: 10877
+// Module ID: 10877
+// Function ID: 10878
 // Name: GiftingBadgeInfoActionSheet
-// Dependencies: [19, 17, 4628, 8309, 1074, 21, 4636, 576, 1611, 504, 8301, 1242, 7253, 4632, 1114, 2492, 10877, 2]
+// Dependencies: [19, 17, 4628, 8309, 1074, 21, 4636, 576, 1611, 504, 8301, 1240, 7253, 4632, 1114, 2492, 10878, 2]
 // Exports: default
 
-// Module 10876 (GiftingBadgeInfoActionSheet)
+// Module 10877 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10877 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10878 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
@@ -49,7 +49,7 @@ export default function GiftingBadgeInfoActionSheet() {
   const items1 = [AccessibilityStore];
   importDefault = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = noop.useEffect(() => {
-    closure_1(1242).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
+    closure_1(1240).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
   }, []);
   let obj3 = { style: null, children: null };
   const items2 = [tmp.container, ];

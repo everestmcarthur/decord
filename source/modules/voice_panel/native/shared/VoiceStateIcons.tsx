@@ -1,11 +1,11 @@
 // Module ID: 9248
 // Function ID: 9249
 // Name: VoiceStateIcons
-// Dependencies: [19, 17, 21, 4636, 576, 9249, 9250, 9252, 9254, 9256, 1369, 1178, 8574, 9258, 9259, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 9249, 9250, 9252, 9254, 9256, 1369, 1176, 8574, 9258, 9259, 2]
 
 // Module 9248 (VoiceStateIcons)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import inlineStyles from "inlineStyles" /* 8574 */;
 import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9249 */;
 import _modDef9258 from "module_9258" /* 9258 */;
@@ -108,7 +108,7 @@ export const VideoIcon = noop.memo((state) => {
     obj.source = _modDef9258;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
-    return React4(tmp3(1178).Icon, obj);
+    return React4(tmp3(1176).Icon, obj);
   } else if (tmp3(9249).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
     const obj2 = {};
     const merged2 = Object.assign(merged);
@@ -117,7 +117,7 @@ export const VideoIcon = noop.memo((state) => {
     const obj3 = {};
     const merged3 = Object.assign(merged);
     obj3.source = _modDef9259;
-    return React4(tmp3(1178).Icon, obj3);
+    return React4(tmp3(1176).Icon, obj3);
   } else {
     tmp3(1369).assertNever(state);
   }

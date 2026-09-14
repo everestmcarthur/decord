@@ -1,10 +1,10 @@
-// Module ID: 16131
-// Function ID: 16132
+// Module ID: 16133
+// Function ID: 16134
 // Name: useRelativeTimestamp
 // Dependencies: [32, 19, 7743, 1090, 2]
 // Exports: useRelativeTimestamp
 
-// Module 16131 (useRelativeTimestamp)
+// Module 16133 (useRelativeTimestamp)
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

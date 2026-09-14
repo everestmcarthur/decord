@@ -1,13 +1,13 @@
-// Module ID: 17248
-// Function ID: 17249
+// Module ID: 17250
+// Function ID: 17251
 // Name: VoicePanelNoVideoParticipantsCard
-// Dependencies: [19, 17, 21, 4636, 576, 12401, 4837, 5670, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12402, 4837, 5670, 4632, 1114, 2]
 
-// Module 17248 (VoicePanelNoVideoParticipantsCard)
+// Module 17250 (VoicePanelNoVideoParticipantsCard)
 import nativeDefault from "native" /* 576 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12401 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12402 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

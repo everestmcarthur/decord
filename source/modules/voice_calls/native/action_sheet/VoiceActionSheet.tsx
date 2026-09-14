@@ -1,14 +1,14 @@
-// Module ID: 13853
-// Function ID: 13854
+// Module ID: 13854
+// Function ID: 13855
 // Name: VoiceActionSheet
-// Dependencies: [19, 17, 4660, 21, 4636, 7265, 7285, 504, 4494, 4843, 13854, 13855, 7300, 13865, 13868, 13869, 5046, 13872, 2]
+// Dependencies: [19, 17, 4660, 21, 4636, 7265, 7285, 504, 4494, 4843, 13855, 13856, 7300, 13866, 13869, 13870, 5046, 13873, 2]
 // Exports: default
 
-// Module 13853 (VoiceActionSheet)
+// Module 13854 (VoiceActionSheet)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13854 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13855 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
 
@@ -47,15 +47,15 @@ export default function VoiceActionSheet(channel) {
   if (obj2.requiresVoiceChannelsOnboard()) {
     let obj3 = { children: null };
     const obj4 = { channel };
-    obj3.children = closure_6(tmp2(13865), obj4);
+    obj3.children = closure_6(tmp2(13866), obj4);
     let children = closure_6(tmp5(7300).ActionSheet, obj3);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     const obj5 = { children: null };
     const obj6 = { channel };
-    const items2 = [closure_6(tmp2(13868), obj6), ];
+    const items2 = [closure_6(tmp2(13869), obj6), ];
     const obj7 = { channel };
-    items2[1] = closure_6(tmp2(13869), obj7);
+    items2[1] = closure_6(tmp2(13870), obj7);
     obj5.children = items2;
     children = closure_7(tmp5(7300).ActionSheet, obj5);
     tmp8 = closure_6;
@@ -66,7 +66,7 @@ export default function VoiceActionSheet(channel) {
     const obj10 = { blurTheme: "dark", style: tmp.visualEffectView };
     const items3 = [closure_6(tmp2(5046), obj10), ];
     const obj11 = { channel };
-    items3[1] = closure_6(tmp2(13872), obj11);
+    items3[1] = closure_6(tmp2(13873), obj11);
     obj9.children = items3;
     obj8.children = closure_7(closure_4, obj9);
     children = closure_6(tmp5(7300).ActionSheet, obj8);

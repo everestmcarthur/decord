@@ -1,17 +1,17 @@
-// Module ID: 15330
-// Function ID: 15331
+// Module ID: 15331
+// Function ID: 15332
 // Name: SettingsVoiceScreen
-// Dependencies: [19, 17, 1908, 8079, 1074, 21, 2024, 4636, 4571, 4488, 10127, 10128, 1114, 6756, 10126, 4632, 10123, 11601, 14775, 2]
+// Dependencies: [19, 17, 1908, 8079, 1074, 21, 2024, 4636, 4571, 4488, 10127, 10128, 1114, 6756, 10126, 4632, 10123, 11602, 14776, 2]
 // Exports: default
 
-// Module 15330 (SettingsVoiceScreen)
+// Module 15331 (SettingsVoiceScreen)
 import util from "util" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import KrispLogo2 from "KrispLogo" /* 10126 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;

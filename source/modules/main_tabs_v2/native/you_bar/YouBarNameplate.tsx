@@ -1,15 +1,15 @@
-// Module ID: 16479
-// Function ID: 16480
+// Module ID: 16481
+// Function ID: 16482
 // Name: YouBarNameplate
-// Dependencies: [19, 4628, 15178, 21, 4338, 576, 15264, 504, 4373, 5055, 8945, 2]
+// Dependencies: [19, 4628, 15179, 21, 4338, 576, 15265, 504, 4373, 5055, 8945, 2]
 
-// Module 16479 (YouBarNameplate)
+// Module 16481 (YouBarNameplate)
 import spring from "spring" /* 5055 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(15178).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(15179).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = { code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
 const size = fn(2);
@@ -21,7 +21,7 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
   let token;
   ({ nameplate, barWidth } = isQuestRendered);
   token = isQuestRendered(4338).useToken(token(576).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(15264)(token);
+  const tmp4 = token(15265)(token);
   dependencyMap = tmp4;
   let obj = isQuestRendered(4338);
   const tmp2 = token;

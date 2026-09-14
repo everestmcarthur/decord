@@ -1,11 +1,11 @@
 // Module ID: 8380
 // Function ID: 8381
 // Name: useVideoControls
-// Dependencies: [32, 19, 4628, 21, 560, 1249, 8381, 4636, 504, 8382, 8390, 8383, 8378, 8391, 2]
+// Dependencies: [32, 19, 4628, 21, 560, 1247, 8381, 4636, 504, 8382, 8390, 8383, 8378, 8391, 2]
 // Exports: default, initVideoStateStore, setMuted, setPausedState, setVideoStateControls, toggleMuted, tryPauseCurrentVideo, unpauseCurrentVideoIfNeeded
 
 // Module 8380 (useVideoControls)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8378 */;
 import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8381 */;
 import _slicedToArray from "module_32" /* 32 */;

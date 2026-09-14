@@ -1,10 +1,10 @@
-// Module ID: 15152
-// Function ID: 15153
+// Module ID: 15153
+// Function ID: 15154
 // Name: useFetchCollectiblesProducts
 // Dependencies: [32, 19, 5591, 7645, 1074, 563, 1889, 7644, 2]
 // Exports: useFetchCollectiblesProducts
 
-// Module 15152 (useFetchCollectiblesProducts)
+// Module 15153 (useFetchCollectiblesProducts)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import _slicedToArray from "module_32" /* 32 */;

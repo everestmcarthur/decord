@@ -1,22 +1,22 @@
-// Module ID: 12196
-// Function ID: 12197
+// Module ID: 12197
+// Function ID: 12198
 // Name: AppLauncherSearchUtils
-// Dependencies: [32, 19, 9421, 9419, 9420, 12197, 5080, 5081, 9424, 1894, 9418, 9535, 12168, 12199, 12, 9539, 504, 9374, 12198, 12200, 2]
+// Dependencies: [32, 19, 9421, 9419, 9420, 12198, 5080, 5081, 9424, 1894, 9418, 9535, 12169, 12200, 12, 9539, 504, 9374, 12199, 12201, 2]
 // Exports: bucketApplicationDescriptionContains, bucketApplicationDescriptionStartsWith, bucketApplicationNameContains, bucketApplicationNameStartsWith, bucketCommandNameContains, bucketCommandOptionNameContains, bucketCommandSectionNameContains, bucketCommandSectionNameStartsWith, bucketFullCommandNameStartsWith, bucketOptionNameStartsWithOrCommandAndOptionStartsWith, bucketRootCommandNameStartsWith, defaultApplicationBucketing, defaultCommandBucketing, defaultCommandsSort, filterApplicationAllowed, filterCommandAllowed, sortCommandsByFreceny, useApplicationCommandsInContext, useGlobalSearchResults, useLocalSearchResults
 
-// Module 12196 (AppLauncherSearchUtils)
+// Module 12197 (AppLauncherSearchUtils)
 import Server from "Server" /* 1894 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9374 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9418 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9424 */;
-import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12198 */;
-import ArraySearch from "ArraySearch" /* 12199 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12200 */;
+import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12199 */;
+import ArraySearch from "ArraySearch" /* 12200 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9421 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9420 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12197 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12198 */;
 
 const require = globalThis.__r;
 
@@ -140,7 +140,7 @@ function sortCommandsAlpha(displayName, displayName2) {
 }
 const ApplicationCommandIndexStore = fn(9419);
 ({ appLauncherOnlyCompareNames: closure_7, getSection: closure_8, useContextIndexState: closure_9, useUserIndexState: c10 } = ApplicationCommandIndexStore);
-const FetchState = fn(12197).FetchState;
+const FetchState = fn(12198).FetchState;
 const BuiltInSectionId = fn(5080).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(5081).COMMAND_SENTINEL;
 const size = fn(2);

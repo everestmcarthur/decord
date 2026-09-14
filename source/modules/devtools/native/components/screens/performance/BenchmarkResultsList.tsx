@@ -1,13 +1,13 @@
-// Module ID: 15823
-// Function ID: 15824
+// Module ID: 15825
+// Function ID: 15826
 // Name: BenchmarkResultsList
-// Dependencies: [19, 21, 5768, 5686, 15819, 2]
+// Dependencies: [19, 21, 5768, 5686, 15821, 2]
 // Exports: default
 
-// Module 15823 (BenchmarkResultsList)
+// Module 15825 (BenchmarkResultsList)
 import TableRow from "TableRow" /* 5686 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
-import startFrameMonitor from "startFrameMonitor" /* 15819 */;
+import startFrameMonitor from "startFrameMonitor" /* 15821 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

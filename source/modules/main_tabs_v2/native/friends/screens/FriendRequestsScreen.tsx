@@ -1,16 +1,16 @@
-// Module ID: 16889
-// Function ID: 16890
+// Module ID: 16891
+// Function ID: 16892
 // Name: FriendRequestsScreen
-// Dependencies: [32, 19, 17, 7741, 4285, 1371, 10988, 1074, 11002, 21, 4636, 576, 16890, 1896, 4982, 563, 7742, 1935, 16509, 7743, 11, 7265, 7285, 1242, 13193, 7271, 16891, 1332, 8296, 1114, 1483, 5768, 5686, 4632, 9922, 5206, 9923, 5204, 11126, 5773, 10994, 2]
+// Dependencies: [32, 19, 17, 7741, 4285, 1371, 10989, 1074, 11003, 21, 4636, 576, 16892, 1896, 4982, 563, 7742, 1935, 16511, 7743, 11, 7265, 7285, 1240, 13194, 7271, 16893, 1330, 8296, 1114, 1483, 5768, 5686, 4632, 9922, 5206, 9923, 5204, 11127, 5773, 10995, 2]
 // Exports: default
 
-// Module 16889 (FriendRequestsScreen)
+// Module 16891 (FriendRequestsScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import useAlertStore from "useAlertStore" /* 4982 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16509 */;
-import getPendingRelationshipIds from "getPendingRelationshipIds" /* 16891 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16511 */;
+import getPendingRelationshipIds from "getPendingRelationshipIds" /* 16893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7741 */;
@@ -27,10 +27,10 @@ function compareUserItems(user, user2) {
   return compareResult;
 }
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, AnalyticsSections: closure_11, RelationshipTypes: closure_12 } = Constants);
-let closure_13 = fn(11002).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+let closure_13 = fn(11003).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let Outgoing = { Incoming: 0, [0]: "Incoming", Outgoing: 1, [1]: "Outgoing" };
@@ -77,7 +77,7 @@ export default function FriendRequestsScreen() {
     }
   }, items1);
   const effect1 = gameRelationshipsByType1.useEffect(() => {
-    first(1242).track(outgoing.FRIEND_ADD_VIEWED, { friend_add_type: spam.FRIENDS_REQUESTS_MODAL });
+    first(1240).track(outgoing.FRIEND_ADD_VIEWED, { friend_add_type: spam.FRIENDS_REQUESTS_MODAL });
   }, []);
   let obj = analyticsLocations(563);
   const items2 = [spamIds];
@@ -88,9 +88,9 @@ export default function FriendRequestsScreen() {
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = analyticsLocations(563);
-  gameRelationshipsByType = analyticsLocations(13193).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = analyticsLocations(13193);
-  gameRelationshipsByType1 = analyticsLocations(13193).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+  gameRelationshipsByType = analyticsLocations(13194).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+  let obj3 = analyticsLocations(13194);
+  gameRelationshipsByType1 = analyticsLocations(13194).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
     const set = new Set();
@@ -109,7 +109,7 @@ export default function FriendRequestsScreen() {
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
-  let obj4 = analyticsLocations(13193);
+  let obj4 = analyticsLocations(13194);
   const items5 = [ignoredUserIds];
   const items6 = [ignoredUserIds, gameRelationshipsByType, gameRelationshipsByType1, pendingIncomingIds, pendingOutgoingIds, spamIds];
   const stateFromStores = analyticsLocations(563).useStateFromStores(items5, () => {
@@ -131,7 +131,7 @@ export default function FriendRequestsScreen() {
     const mapped5 = ignoredUserIds.map((item) => ({ user: authStore.getUser(item) }));
     obj.ignoredUsers = mapped5.filter((user) => null != user.user);
     return obj;
-  }, items6, first(1332));
+  }, items6, first(1330));
   const incoming = stateFromStores.incoming;
   const outgoing = stateFromStores.outgoing;
   const spam = stateFromStores.spam;
@@ -317,15 +317,15 @@ export default function FriendRequestsScreen() {
     const obj17 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
     WumpusCouchSpotIllustration = tmp4(5773).WumpusCouchSpotIllustration;
     obj17.illustration = WumpusCouchSpotIllustration;
-    obj16.children = tmp32(tmp2(11126), obj17);
+    obj16.children = tmp32(tmp2(11127), obj17);
     tmp32(tmp33, obj16);
-    const tmp2Result = tmp2(11126);
+    const tmp2Result = tmp2(11127);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;
     }
     const obj18 = { sections: outgoingSection, getItemProps: callback2, getSectionProps: callback1 };
-    items12[2] = tmp32(tmp4(10994).UsersFastList, obj18);
+    items12[2] = tmp32(tmp4(10995).UsersFastList, obj18);
     obj11.children = items12;
     items11[1] = tmp31(tmp33, obj11);
     obj10.children = items11;

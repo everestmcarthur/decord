@@ -1,14 +1,14 @@
-// Module ID: 17096
-// Function ID: 17097
+// Module ID: 17098
+// Function ID: 17099
 // Name: usePressUnderlayColor
-// Dependencies: [17097, 4571, 4338, 576, 4486, 4488, 2]
+// Dependencies: [17099, 4571, 4338, 576, 4486, 4488, 2]
 // Exports: default
 
-// Module 17096 (usePressUnderlayColor)
+// Module 17098 (usePressUnderlayColor)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import useThemeDefault from "useTheme" /* 4571 */;
-import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17097 */;
+import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17099 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ChannelEmojiConstants.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;

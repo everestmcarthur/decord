@@ -1,18 +1,18 @@
-// Module ID: 15442
-// Function ID: 15443
+// Module ID: 15443
+// Function ID: 15444
 // Name: CustomTypingIndicatorEditScreen
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4636, 576, 1379, 1114, 3592, 1483, 1484, 504, 4294, 7265, 1242, 12100, 1392, 4755, 4603, 15443, 1896, 15444, 8284, 8281, 7087, 4537, 14692, 9522, 12109, 4788, 4632, 15445, 5768, 5686, 2024, 5054, 5056, 8959, 8033, 15490, 10099, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4636, 576, 1379, 1114, 3592, 1483, 1484, 504, 4294, 7265, 1240, 12101, 1392, 4755, 4603, 15444, 1896, 15445, 8284, 8281, 7087, 4537, 14693, 9522, 12110, 4788, 4632, 15446, 5768, 5686, 2024, 5054, 5056, 8959, 8033, 15491, 10099, 2]
 // Exports: default
 
-// Module 15442 (CustomTypingIndicatorEditScreen)
+// Module 15443 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import user from "user" /* 1379 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12100 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -109,10 +109,10 @@ export default function CustomTypingIndicatorEditScreen() {
   }, []);
   const items5 = [memo, first3];
   const callback1 = first1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15443, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15444, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
   }, items4);
   const callback2 = first1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15444, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15445, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items5);
   first1.useRef(null);
   const callback3 = first1.useCallback(() => {

@@ -1,13 +1,13 @@
-// Module ID: 16586
-// Function ID: 16587
+// Module ID: 16588
+// Function ID: 16589
 // Name: ICYMIShared
-// Dependencies: [19, 17, 7409, 1957, 2021, 4275, 1371, 1074, 21, 8466, 9327, 5168, 10260, 16515, 7213, 7350, 7141, 7559, 4567, 16547, 1150, 576, 1178, 8940, 5665, 5063, 5204, 4632, 7743, 16587, 8795, 504, 4788, 8469, 8296, 5175, 8468, 16183, 9915, 1114, 16548, 4571, 4338, 4486, 4373, 4637, 4649, 5152, 7312, 4626, 2]
+// Dependencies: [19, 17, 7409, 1957, 2021, 4275, 1371, 1074, 21, 8466, 9327, 5168, 10260, 16517, 7213, 7350, 7141, 7559, 4567, 16549, 1363, 576, 1176, 8940, 5665, 5063, 5204, 4632, 7743, 16589, 8795, 504, 4788, 8469, 8296, 5175, 8468, 16185, 9915, 1114, 16550, 4571, 4338, 4486, 4373, 4637, 4649, 5152, 7312, 4626, 2]
 // Exports: AnnouncementContentPost, GuildEventPost, MessageContentPost, SimplePost, ThreadAsComments, navigateToPost, truncateUsername
 
-// Module 16586 (ICYMIShared)
+// Module 16588 (ICYMIShared)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Client from "Client" /* 4567 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
@@ -21,7 +21,7 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 82
 import ICYMIUtils from "ICYMIUtils" /* 8468 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
 import ClipView from "ClipView" /* 8940 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 16587 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16589 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7409 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -152,7 +152,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -579,8 +579,8 @@ export const ThreadAsComments = function ThreadAsComments(arg0) {
         if (mostRecentMessage != null) {
           author = mostRecentMessage.author;
         }
-        const obj4 = { user: author, guildId: thread.guild_id, size: tmp2(1178).AvatarSizes.XSMALL };
-        const items4 = [closure_18(tmp2(1178).Avatar, obj4), , ];
+        const obj4 = { user: author, guildId: thread.guild_id, size: tmp2(1176).AvatarSizes.XSMALL };
+        const items4 = [closure_18(tmp2(1176).Avatar, obj4), , ];
         const obj5 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp.recentCommentText, children: null };
         if (mostRecentMessage.content.length > 0) {
           let parseInlineReplyResult = MarkupUtilsDefault.parseInlineReply(mostRecentMessage.content, true);

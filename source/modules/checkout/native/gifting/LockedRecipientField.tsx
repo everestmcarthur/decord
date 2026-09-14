@@ -1,12 +1,12 @@
-// Module ID: 10984
-// Function ID: 10985
+// Module ID: 10985
+// Function ID: 10986
 // Name: LockedRecipientField
-// Dependencies: [19, 17, 21, 4636, 576, 1178, 4632, 4481, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 1176, 4632, 4481, 2]
 // Exports: default
 
-// Module 10984 (LockedRecipientField)
+// Module 10985 (LockedRecipientField)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;

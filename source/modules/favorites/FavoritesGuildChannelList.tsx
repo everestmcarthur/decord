@@ -1,11 +1,11 @@
-// Module ID: 16367
-// Function ID: 16368
+// Module ID: 16369
+// Function ID: 16370
 // Name: FavoritesGuildChannelList
-// Dependencies: [32, 19, 1956, 5358, 7629, 5587, 4277, 1961, 7220, 1957, 7630, 4275, 4651, 2011, 4817, 1960, 4274, 1970, 7637, 1085, 7631, 1187, 7417, 10352, 12, 1369, 2]
+// Dependencies: [32, 19, 1956, 5358, 7629, 5587, 4277, 1961, 7220, 1957, 7630, 4275, 4651, 2011, 4817, 1960, 4274, 1970, 7637, 1085, 7631, 1185, 7417, 10353, 12, 1369, 2]
 // Exports: useFavoritesGuildChannelList
 
-// Module 16367 (FavoritesGuildChannelList)
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+// Module 16369 (FavoritesGuildChannelList)
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7417 */;
 import ChannelListState from "ChannelListState" /* 7631 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -114,13 +114,13 @@ function computeFavoritesState(favoriteChannels, arg1) {
       continue;
     } else {
       let tmp4 = favoriteChannels;
-      if (tmp20.type === favoriteChannels(1187).FavoriteChannelType.CATEGORY) {
+      if (tmp20.type === favoriteChannels(1185).FavoriteChannelType.CATEGORY) {
         continue;
       } else {
         let tmp7 = closure_19(favoriteChannels, tmp20, channel);
         if (null != tmp20.parentId) {
           if (null != favoriteChannels[tmp20.parentId]) {
-            if (favoriteChannels[tmp20.parentId].type === tmp4(1187).FavoriteChannelType.CATEGORY) {
+            if (favoriteChannels[tmp20.parentId].type === tmp4(1185).FavoriteChannelType.CATEGORY) {
               let parentId = tmp20.parentId;
               if (!(parentId in obj2)) {
                 obj2[parentId] = [];
@@ -257,7 +257,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10352).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10353).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;

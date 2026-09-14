@@ -1,13 +1,13 @@
-// Module ID: 17414
-// Function ID: 17415
+// Module ID: 17416
+// Function ID: 17417
 // Name: AcceptInviteModal
-// Dependencies: [19, 7081, 21, 1250, 4621, 12845, 8864, 7103, 2]
+// Dependencies: [19, 7081, 21, 1248, 4621, 12846, 8864, 7103, 2]
 // Exports: default
 
-// Module 17414 (AcceptInviteModal)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+// Module 17416 (AcceptInviteModal)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4621 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12845 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12846 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

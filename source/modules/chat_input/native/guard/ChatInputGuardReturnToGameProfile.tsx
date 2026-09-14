@@ -1,14 +1,14 @@
-// Module ID: 12583
-// Function ID: 12584
+// Module ID: 12584
+// Function ID: 12585
 // Name: ChatInputGuardReturnToGameProfile
-// Dependencies: [19, 17, 21, 4636, 576, 12577, 1396, 1114, 9709, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 12578, 1396, 1114, 9709, 2]
 
-// Module 12583 (ChatInputGuardReturnToGameProfile)
+// Module 12584 (ChatInputGuardReturnToGameProfile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 9709 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12577 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12578 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

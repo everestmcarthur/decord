@@ -1,10 +1,10 @@
-// Module ID: 15654
-// Function ID: 15655
+// Module ID: 15655
+// Function ID: 15656
 // Name: UserSettingsStartupTimings
-// Dependencies: [5, 32, 19, 17, 1347, 1074, 21, 4636, 576, 4632, 4501, 1611, 10321, 504, 9, 7578, 8479, 9003, 5054, 5768, 5685, 1348, 5686, 9182, 2]
+// Dependencies: [5, 32, 19, 17, 1345, 1074, 21, 4636, 576, 4632, 4501, 1611, 10321, 504, 9, 7578, 8479, 9003, 5054, 5768, 5685, 1346, 5686, 9182, 2]
 // Exports: default
 
-// Module 15654 (UserSettingsStartupTimings)
+// Module 15655 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
@@ -16,7 +16,7 @@ import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1345 */;
 import NativeTTIManagerModule from "NativeTTIManagerModule" /* 4501 */;
 
 const require = globalThis.__r;
@@ -133,7 +133,7 @@ export default function UserSettingsStartupTimings() {
       children: React6(TableCheckboxRow.TableCheckboxRow, {
         label: "Show start times at launch",
         onPress() {
-          return closure_0(1348).setDeveloperOptionSettings({ alertStartupMetrics: !checked });
+          return closure_0(1346).setDeveloperOptionSettings({ alertStartupMetrics: !checked });
         },
         checked
       })

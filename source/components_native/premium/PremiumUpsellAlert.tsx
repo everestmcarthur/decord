@@ -1,13 +1,13 @@
 // Module ID: 9452
 // Function ID: 9453
 // Name: PremiumUpsellAlert
-// Dependencies: [32, 19, 17, 1185, 1371, 1074, 9453, 1373, 21, 4636, 576, 4347, 4632, 7550, 1114, 4294, 9444, 9445, 4571, 4488, 9480, 9481, 9482, 9483, 9433, 9484, 9485, 9486, 9487, 504, 7303, 9488, 9443, 1477, 7265, 7285, 5073, 1242, 9489, 4533, 5075, 1178, 5668, 9490, 9491, 9447, 2]
+// Dependencies: [32, 19, 17, 1183, 1371, 1074, 9453, 1373, 21, 4636, 576, 4347, 4632, 7550, 1114, 4294, 9444, 9445, 4571, 4488, 9480, 9481, 9482, 9483, 9433, 9484, 9485, 9486, 9487, 504, 7303, 9488, 9443, 1477, 7265, 7285, 5073, 1240, 9489, 4533, 5075, 1176, 5668, 9490, 9491, 9447, 2]
 
 // Module 9452 (PremiumUpsellAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -23,7 +23,7 @@ import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 94
 import _modDef9490 from "module_9490" /* 9490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

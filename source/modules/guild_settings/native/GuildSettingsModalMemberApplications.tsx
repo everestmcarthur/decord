@@ -1,15 +1,15 @@
-// Module ID: 16678
-// Function ID: 16679
+// Module ID: 16680
+// Function ID: 16681
 // Name: GuildSettingsModalMemberApplications
-// Dependencies: [19, 17, 5623, 21, 4636, 576, 4481, 4632, 16679, 1396, 5686, 1178, 1611, 16684, 4461, 16685, 504, 1114, 9003, 8348, 7143, 2]
+// Dependencies: [19, 17, 5623, 21, 4636, 576, 4481, 4632, 16681, 1396, 5686, 1176, 1611, 16686, 4461, 16687, 504, 1114, 9003, 8348, 7143, 2]
 
-// Module 16678 (GuildSettingsModalMemberApplications)
+// Module 16680 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16679 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16681 */;
 import noop from "module_19" /* 19 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5623 */;
 
@@ -57,8 +57,8 @@ let closure_12 = noop.memo((joinRequest) => {
         userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(user);
       }
       const obj2 = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
-      const obj3 = { source: userAvatarSource, size: joinRequest(1178).AvatarSizes.SMALL };
-      obj2.icon = closure_7(joinRequest(1178).Avatar, obj3);
+      const obj3 = { source: userAvatarSource, size: joinRequest(1176).AvatarSizes.SMALL };
+      obj2.icon = closure_7(joinRequest(1176).Avatar, obj3);
       const obj4 = { user };
       obj2.label = closure_7(closure_11, obj4);
       obj2.onPress = tmp;

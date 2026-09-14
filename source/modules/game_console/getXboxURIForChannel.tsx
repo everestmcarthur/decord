@@ -1,7 +1,7 @@
 // Module ID: 9591
 // Function ID: 9592
 // Name: getXboxURIForChannel
-// Dependencies: [1979, 1908, 4285, 1371, 9362, 1074, 4789, 1114, 1272, 2]
+// Dependencies: [1979, 1908, 4285, 1371, 9362, 1074, 4789, 1114, 1270, 2]
 // Exports: default
 
 // Module 9591 (getXboxURIForChannel)
@@ -42,10 +42,10 @@ export default function getXboxURIForChannel(channelId, arg1) {
   obj.nonce = nonce;
   const str = timestampProducer(obj);
   if (forQRCode) {
-    const aPIBaseURL = tmp5(1272).getAPIBaseURL();
+    const aPIBaseURL = tmp5(1270).getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
     let combined = "" + aPIBaseURL + constants.XBOX_HANDOFF + "?" + str.toString();
-    const tmp5Result = tmp5(1272);
+    const tmp5Result = tmp5(1270);
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + React5 + "?" + str.toString();

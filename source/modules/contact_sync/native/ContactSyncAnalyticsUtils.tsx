@@ -1,19 +1,19 @@
-// Module ID: 12811
-// Function ID: 12812
+// Module ID: 12812
+// Function ID: 12813
 // Name: ContactSyncAnalyticsUtils
-// Dependencies: [1371, 12806, 12807, 1074, 12809, 1242, 12812, 2]
+// Dependencies: [1371, 12807, 12808, 1074, 12810, 1240, 12813, 2]
 // Exports: trackFlowEnd, trackFlowStart, trackFlowStep
 
-// Module 12811 (ContactSyncAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12812 */;
+// Module 12812 (ContactSyncAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12813 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const getIsOnboarding = fn(12806).getIsOnboarding;
-const ContactPermissions = fn(12807).ContactPermissions;
+const getIsOnboarding = fn(12807).getIsOnboarding;
+const ContactPermissions = fn(12808).ContactPermissions;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const Steps = { INITIALIZED: "Flow Initialized", LANDING: "Landing", PERMISSION_REQUESTED: "Contacts Permission Requested", NAME_INPUT: "Name Input", SUGGESTIONS_RESULTS: "Suggestions Results", CONTACT_INVITES: "Contact Invites", ADD_PHONE_NUMBER: "Add Phone Number", VERIFY_PHONE_NUMBER: "Verify Phone Number", PASSWORD_CONFIRM: "Password Confirmation", COMPLETE: "Complete" };
 let c8 = null;

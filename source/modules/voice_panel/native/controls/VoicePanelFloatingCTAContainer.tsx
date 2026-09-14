@@ -1,19 +1,19 @@
-// Module ID: 17286
-// Function ID: 17287
+// Module ID: 17288
+// Function ID: 17289
 // Name: VoicePanelFloatingCTAContainer
-// Dependencies: [32, 19, 1957, 12402, 12405, 1085, 21, 12316, 576, 4636, 5054, 8718, 4347, 12401, 17167, 7492, 563, 17163, 17287, 4373, 12408, 11125, 5055, 7176, 10753, 2]
+// Dependencies: [32, 19, 1957, 12403, 12406, 1085, 21, 12317, 576, 4636, 5054, 8718, 4347, 12402, 17169, 7492, 563, 17165, 17289, 4373, 12409, 11126, 5055, 7176, 10754, 2]
 // Exports: getFloatingCTATotalViewHeight, renderVoicePanelFloatingCTA
 
-// Module 17286 (VoicePanelFloatingCTAContainer)
+// Module 17288 (VoicePanelFloatingCTAContainer)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import spring from "spring" /* 5055 */;
 import RowButton from "RowButton" /* 8718 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12316 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12408 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17163 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12317 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12409 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17165 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -119,8 +119,8 @@ class VoicePanelFloatingCTAContainer {
     return tmp12(tmp13, obj9);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(12402).UI_SHOW_HIDE_PHYSICS;
-let CALL_TILE_GUTTER = fn(12405).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(12403).UI_SHOW_HIDE_PHYSICS;
+let CALL_TILE_GUTTER = fn(12406).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);

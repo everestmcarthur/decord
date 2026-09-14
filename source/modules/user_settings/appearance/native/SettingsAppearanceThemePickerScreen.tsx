@@ -1,44 +1,44 @@
-// Module ID: 15351
-// Function ID: 15352
+// Module ID: 15352
+// Function ID: 15353
 // Name: SettingsAppearanceThemePickerScreen
-// Dependencies: [32, 19, 17, 4456, 1228, 1184, 1183, 1185, 1186, 1085, 21, 4636, 576, 1150, 4636, 1114, 15352, 11453, 15354, 1477, 563, 4568, 1187, 1231, 4345, 5679, 15257, 1484, 7265, 7285, 5712, 9922, 4373, 4486, 4455, 4637, 4640, 4347, 7973, 4632, 5204, 5711, 15258, 15356, 9923, 15362, 15374, 15383, 7226, 9611, 2]
+// Dependencies: [32, 19, 17, 4456, 1226, 1182, 1181, 1183, 1184, 1085, 21, 4636, 576, 1363, 4636, 1114, 15353, 11454, 15355, 1477, 563, 4568, 1185, 1229, 4345, 5679, 15258, 1484, 7265, 7285, 5712, 9922, 4373, 4486, 4455, 4637, 4640, 4347, 7973, 4632, 5204, 5711, 15259, 15357, 9923, 15363, 15375, 15384, 7226, 9611, 2]
 // Exports: default
 
-// Module 15351 (SettingsAppearanceThemePickerScreen)
+// Module 15352 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1229 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import Pressables from "Pressables" /* 5204 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 11453 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15257 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 15258 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 15352 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 15354 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 11454 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15258 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 15259 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 15353 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 15355 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1226 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ThemeConstants = fn(1186);
+const ThemeConstants = fn(1184);
 ({ SystemTheme: closure_11, SystemThemeState: closure_12 } = ThemeConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let createStyles = fn(4636);
 let obj2 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_24, marginBottom: null };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (!PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;

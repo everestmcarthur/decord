@@ -1,10 +1,10 @@
-// Module ID: 13264
-// Function ID: 13265
+// Module ID: 13265
+// Function ID: 13266
 // Name: ActionSheetBackdropToast
-// Dependencies: [19, 17, 7254, 21, 1150, 4636, 576, 1611, 1477, 5763, 4373, 4637, 4632, 2]
+// Dependencies: [19, 17, 7254, 21, 1363, 4636, 576, 1611, 1477, 5763, 4373, 4637, 4632, 2]
 // Exports: ActionSheetBackdropToast
 
-// Module 13264 (ActionSheetBackdropToast)
+// Module 13265 (ActionSheetBackdropToast)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ACTION_SHEET_START_HEIGHT_RATIO = fn(7254).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 const isInIOS = PlatformUtils.isIOS();
 const createStyles = fn(4636);
 let obj3 = { container: null, toast: null };

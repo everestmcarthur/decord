@@ -1,13 +1,13 @@
-// Module ID: 12867
-// Function ID: 12868
+// Module ID: 12868
+// Function ID: 12869
 // Name: HubEmailConnectionPinVerify
-// Dependencies: [32, 5, 19, 17, 1979, 21, 4636, 4335, 10013, 12868, 11350, 12, 12861, 1114, 4537, 7445, 12856, 12869, 4632, 7183, 2]
+// Dependencies: [32, 5, 19, 17, 1979, 21, 4636, 4335, 10013, 12869, 11351, 12, 12862, 1114, 4537, 7445, 12857, 12870, 4632, 7183, 2]
 // Exports: default
 
-// Module 12867 (HubEmailConnectionPinVerify)
+// Module 12868 (HubEmailConnectionPinVerify)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import _modDef10013 from "module_10013" /* 10013 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 12868 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 12869 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -63,7 +63,7 @@ export default function HubEmailConnectionPinVerify(email) {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(12868).terminate();
+      closure_1_1(12869).terminate();
     };
   }, items);
   const obj = require("module_12");
@@ -101,7 +101,7 @@ export default function HubEmailConnectionPinVerify(email) {
   const obj3 = { style: tmp.container, children: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  const items1 = [closure_9(closure_7, { source: require("module_12869") }), , , , , ];
+  const items1 = [closure_9(closure_7, { source: require("module_12870") }), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[13]).intl;
   obj5.children = intl.string(email(onClose[13]).t.SJ3Lxc);
@@ -114,7 +114,7 @@ export default function HubEmailConnectionPinVerify(email) {
   const intl3 = email(onClose[13]).intl;
   obj7.children = intl3.string(email(onClose[13]).t.rpWT1s);
   items1[3] = closure_9(email(onClose[18]).Text, obj7);
-  const obj4 = { source: require("module_12869") };
+  const obj4 = { source: require("module_12870") };
   const tmp8 = closure_10;
   const tmp9 = closure_6;
   items1[4] = closure_9(email(onClose[19]).CodeBlocks, {

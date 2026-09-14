@@ -1,10 +1,10 @@
-// Module ID: 11811
-// Function ID: 11812
+// Module ID: 11812
+// Function ID: 11813
 // Name: ForwardModal
-// Dependencies: [5, 32, 19, 17, 7698, 8453, 1957, 4857, 8478, 11812, 10988, 21, 4636, 576, 1477, 11113, 504, 11810, 11809, 5711, 11813, 4335, 1114, 1369, 11814, 4982, 11815, 10071, 4647, 11816, 11817, 4781, 4604, 4605, 4334, 7292, 1150, 11115, 7480, 4579, 5206, 11116, 11820, 11127, 2]
+// Dependencies: [5, 32, 19, 17, 7698, 8453, 1957, 4857, 8478, 11813, 10989, 21, 4636, 576, 1477, 11114, 504, 11811, 11810, 5711, 11814, 4335, 1114, 1369, 11815, 4982, 11816, 10071, 4647, 11817, 11818, 4781, 4604, 4605, 4334, 7292, 1363, 11116, 7480, 4579, 5206, 11117, 11821, 11128, 2]
 // Exports: default
 
-// Module 11811 (ForwardModal)
+// Module 11812 (ForwardModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -14,10 +14,10 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import ChannelUtils from "ChannelUtils" /* 4781 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
-import formatResults from "formatResults" /* 11113 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11809 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 11810 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 11813 */;
+import formatResults from "formatResults" /* 11114 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11810 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 11811 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 11814 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,8 +31,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11812).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10988).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11813).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4636);
@@ -235,7 +235,7 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[24])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(4982).openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11815), {
+                    closure_1_0(4982).openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11816), {
                       onConfirm() {
                         return closure_0(true);
                       },

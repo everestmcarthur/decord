@@ -1,7 +1,7 @@
 // Module ID: 9618
 // Function ID: 9619
 // Name: PictureInPicture
-// Dependencies: [32, 19, 17, 9597, 1074, 21, 4636, 1178, 9619, 1477, 7084, 9622, 4373, 5055, 9623, 9624, 6756, 1150, 2]
+// Dependencies: [32, 19, 17, 9597, 1074, 21, 4636, 1176, 9619, 1477, 7084, 9622, 4373, 5055, 9623, 9624, 6756, 1363, 2]
 
 // Module 9618 (PictureInPicture)
 import spring from "spring" /* 5055 */;
@@ -26,8 +26,8 @@ let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.alignItems = "baseline";
 obj.pipInnerContainer = obj4;
-const native = fn(1178);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1176);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1176).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 let closure_9 = createStyles.createStyles(obj);
 function getSpringAnimationConfig(velocity) {
   return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };

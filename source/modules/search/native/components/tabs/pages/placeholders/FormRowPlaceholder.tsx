@@ -1,13 +1,13 @@
-// Module ID: 16785
-// Function ID: 16786
+// Module ID: 16787
+// Function ID: 16788
 // Name: FormRowPlaceholder
-// Dependencies: [19, 17, 7982, 21, 4636, 576, 16753, 4373, 2]
+// Dependencies: [19, 17, 7982, 21, 4636, 576, 16755, 4373, 2]
 // Exports: default
 
-// Module 16785 (FormRowPlaceholder)
+// Module 16787 (FormRowPlaceholder)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16753 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16755 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

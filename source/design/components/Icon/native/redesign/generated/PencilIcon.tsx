@@ -1,10 +1,10 @@
-// Module ID: 10378
-// Function ID: 10379
+// Module ID: 10379
+// Function ID: 10380
 // Name: PencilIcon
 // Dependencies: [19, 21, 576, 4337, 8070, 2]
 // Exports: PencilIcon
 
-// Module 10378 (PencilIcon)
+// Module 10379 (PencilIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
 import _mod8070 from "module_8070" /* 8070 */;

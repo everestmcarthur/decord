@@ -1,12 +1,12 @@
-// Module ID: 12752
-// Function ID: 12753
+// Module ID: 12753
+// Function ID: 12754
 // Name: UserProfileConfirmRemoveGameFriend
-// Dependencies: [19, 21, 8308, 10998, 4986, 1114, 4986, 2]
+// Dependencies: [19, 21, 8308, 10999, 4986, 1114, 4986, 2]
 // Exports: default
 
-// Module 12752 (UserProfileConfirmRemoveGameFriend)
+// Module 12753 (UserProfileConfirmRemoveGameFriend)
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8308 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10998 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// Module ID: 11842
-// Function ID: 11843
+// Module ID: 11843
+// Function ID: 11844
 // Name: MessageRemindersCustomDurationModal
-// Dependencies: [32, 19, 17, 21, 4636, 576, 1611, 1874, 4603, 9847, 1896, 1114, 5712, 7966, 1150, 5705, 5204, 4632, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 1611, 1874, 4603, 9847, 1896, 1114, 5712, 7966, 1363, 5705, 5204, 4632, 2]
 
-// Module 11842 (MessageRemindersCustomDurationModal)
+// Module 11843 (MessageRemindersCustomDurationModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
@@ -104,7 +104,7 @@ export default noop.memo((onClose) => {
     num = createReminder(1611)().top;
   }
   obj3.headerStatusBarHeight = num + createReminder(576).space.PX_8;
-  obj5 = onClose(1150);
+  obj5 = onClose(1363);
   obj3.headerLeft = onClose(5705).getHeaderCloseButton(onClose);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
   obj3.headerRight = function headerRight() {

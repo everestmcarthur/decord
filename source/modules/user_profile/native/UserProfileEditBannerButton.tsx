@@ -1,16 +1,16 @@
-// Module ID: 14678
-// Function ID: 14679
+// Module ID: 14679
+// Function ID: 14680
 // Name: UserProfileEditBannerButton
-// Dependencies: [19, 17, 21, 4636, 576, 7265, 8307, 8296, 5204, 1114, 4632, 10378, 8346, 8362, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 7265, 8307, 8296, 5204, 1114, 4632, 10379, 8346, 8362, 2]
 // Exports: default
 
-// Module 14678 (UserProfileEditBannerButton)
+// Module 14679 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 576 */;
 import Pressables from "Pressables" /* 5204 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8346 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8362 */;
-import PencilIcon from "PencilIcon" /* 10378 */;
+import PencilIcon from "PencilIcon" /* 10379 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

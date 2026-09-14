@@ -1,19 +1,19 @@
-// Module ID: 11609
-// Function ID: 11610
+// Module ID: 11610
+// Function ID: 11611
 // Name: MessagesHooks
-// Dependencies: [32, 19, 17, 11441, 9615, 4978, 1979, 4676, 504, 12, 558, 7266, 1369, 7837, 11610, 11385, 11611, 2]
+// Dependencies: [32, 19, 17, 11442, 9615, 4978, 1979, 4676, 504, 12, 558, 7266, 1369, 7837, 11611, 11386, 11612, 2]
 // Exports: useChatUpdatesQueue, useFetchMessageApplications, useFetchVoiceChannelInviteStartTimes, useMessageAuthorActivities, useMessagesLifecycle, useMessagesState, useScrollState
 
-// Module 11609 (MessagesHooks)
+// Module 11610 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7266 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7837 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11611 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11612 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11441 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11442 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
@@ -112,7 +112,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
             result = VoiceChannelStartTimeStore.hasRequestedStartTimes(tmp8);
           }
           if (!result) {
-            let tmp4Result = tmp4(11610);
+            let tmp4Result = tmp4(11611);
             let channelInfo = tmp4Result.fetchChannelInfo(tmp8);
           }
         }

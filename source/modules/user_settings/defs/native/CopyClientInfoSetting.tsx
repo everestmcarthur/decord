@@ -1,10 +1,10 @@
-// Module ID: 15644
-// Function ID: 15645
+// Module ID: 15645
+// Function ID: 15646
 // Name: CopyClientInfoSetting
-// Dependencies: [11558, 21, 1364, 4603, 11919, 7292, 4334, 7300, 7252, 1114, 7302, 4583, 4615, 11601, 5619, 1935, 2]
+// Dependencies: [11559, 21, 1362, 4603, 11920, 7292, 4334, 7300, 7252, 1114, 7302, 4583, 4615, 11602, 5619, 1935, 2]
 // Exports: getClientInfoString
 
-// Module 15644 (CopyClientInfoSetting)
+// Module 15645 (CopyClientInfoSetting)
 import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import CopyIcon from "CopyIcon" /* 4583 */;
@@ -14,9 +14,9 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import ActionSheetRow from "ActionSheetRow" /* 7302 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11919 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11920 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1362 */;
 
 require = fn;
 function getClientInfo() {
@@ -143,7 +143,7 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

@@ -1,10 +1,10 @@
-// Module ID: 10398
-// Function ID: 10399
+// Module ID: 10399
+// Function ID: 10400
 // Name: RoleLabel
-// Dependencies: [19, 17, 4628, 21, 4636, 504, 1178, 8716, 2]
+// Dependencies: [19, 17, 4628, 21, 4636, 504, 1176, 8716, 2]
 // Exports: RoleLabel
 
-// Module 10398 (RoleLabel)
+// Module 10399 (RoleLabel)
 import initialize from "initialize" /* 504 */;
 import Form from "Form" /* 8716 */;
 import noop from "module_19" /* 19 */;
@@ -39,7 +39,7 @@ export const RoleLabel = function RoleLabel(color) {
   }
   if (tmp10) {
     const obj4 = { color, colors, containerStyles: tmp.roleDot };
-    tmp10 = React4(tmp2(1178).RoleDot, obj4);
+    tmp10 = React4(tmp2(1176).RoleDot, obj4);
   }
   const items1 = [tmp10, React4(Form.FormLabel, { style: {}, text: name })];
   obj3.children = items1;

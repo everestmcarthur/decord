@@ -1,10 +1,10 @@
-// Module ID: 11953
-// Function ID: 11954
+// Module ID: 11954
+// Function ID: 11955
 // Name: MentionableSelectComponentActionSheet
-// Dependencies: [19, 17, 2015, 1979, 4676, 1371, 1074, 21, 4636, 576, 7230, 8237, 11954, 4868, 1178, 7290, 7308, 9882, 11952, 9933, 4632, 11955, 1114, 2]
+// Dependencies: [19, 17, 2015, 1979, 4676, 1371, 1074, 21, 4636, 576, 7230, 8237, 11955, 4868, 1176, 7290, 7308, 9882, 11953, 9933, 4632, 11956, 1114, 2]
 // Exports: default
 
-// Module 11953 (MentionableSelectComponentActionSheet)
+// Module 11954 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 4868 */;
 import RoleIconDefault from "RoleIcon" /* 7308 */;
@@ -59,8 +59,8 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       } else {
         const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
         const status = PresenceStore.getStatus(user.id);
-        const obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: tmp(1178).AvatarSizes.XSMALL };
-        return closure_2_10(tmp(1178).Avatar, obj);
+        const obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: tmp(1176).AvatarSizes.XSMALL };
+        return closure_2_10(tmp(1176).Avatar, obj);
       }
     } else if (type.type === tmp(4868).SelectOptionType.ROLE) {
       if (null != guild) {
@@ -120,7 +120,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         if (null != tmp7) {
           const obj = { style: closure_3.roleCountContainer, children: null };
           const obj2 = { style: closure_3.roleCountText, variant: "text-sm/medium", color: "interactive-text-default", children: tmp7 };
-          const items = [closure_2_10(tmp(4632).Text, obj2), closure_2_10(tmp(11955).UserIcon, { size: "xs" })];
+          const items = [closure_2_10(tmp(4632).Text, obj2), closure_2_10(tmp(11956).UserIcon, { size: "xs" })];
           obj.children = items;
           return closure_2_11(View, obj);
         }

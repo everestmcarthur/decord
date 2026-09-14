@@ -1,12 +1,12 @@
-// Module ID: 16283
-// Function ID: 16284
+// Module ID: 16285
+// Function ID: 16286
 // Name: GuildLiveChannelNotice
-// Dependencies: [19, 17, 5499, 1962, 4658, 4275, 4660, 1963, 1085, 21, 576, 1178, 4626, 10256, 8201, 10247, 1150, 5061, 4636, 4632, 12659, 10249, 1874, 4843, 8511, 4571, 7976, 5056, 4488, 4789, 504, 1114, 5109, 9915, 9835, 9845, 9919, 5512, 5506, 5498, 9792, 5178, 16282, 11044, 5688, 2]
+// Dependencies: [19, 17, 5499, 1962, 4658, 4275, 4660, 1963, 1085, 21, 576, 1176, 4626, 10256, 8201, 10247, 1363, 5061, 4636, 4632, 12660, 10249, 1874, 4843, 8511, 4571, 7976, 5056, 4488, 4789, 504, 1114, 5109, 9915, 9835, 9845, 9919, 5512, 5506, 5498, 9792, 5178, 16284, 11045, 5688, 2]
 // Exports: getScaledLiveChannelNoticeHeight
 
-// Module 16283 (GuildLiveChannelNotice)
+// Module 16285 (GuildLiveChannelNotice)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -17,7 +17,7 @@ import MarkupRulesUtils from "MarkupRulesUtils" /* 8201 */;
 import EntityUtils from "EntityUtils" /* 9835 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9919 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
 import noop from "module_19" /* 19 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
@@ -88,7 +88,7 @@ function UserSummaryRow(arg0) {
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj3.style = items2;
       let obj4 = { size: "custom", style: max(10249).makeSizeStyle(14) };
-      const items3 = [closure_13(max(12659).HeadphonesIcon, obj4), ];
+      const items3 = [closure_13(max(12660).HeadphonesIcon, obj4), ];
       let obj6 = { variant: "text-xs/semibold", style: { marginLeft: 4 }, maxFontSizeMultiplier: 1, children: audienceCount };
       items3[1] = closure_13(max(4632).Text, obj6);
       obj3.children = items3;
@@ -100,7 +100,7 @@ function UserSummaryRow(arg0) {
     items[1] = tmp8Result;
     if (isLiveStreaming) {
       let obj7 = { style: { marginLeft: 4 } };
-      isLiveStreaming = closure_13(max(1178).LiveTag, obj7);
+      isLiveStreaming = closure_13(max(1176).LiveTag, obj7);
     }
     items[2] = isLiveStreaming;
     obj.children = items;
@@ -264,8 +264,8 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
-const XSMALL = fn(1178).AvatarSizes.XSMALL;
-const height = fn(1178).AVATAR_SIZE_MAP[XSMALL];
+const XSMALL = fn(1176).AvatarSizes.XSMALL;
+const height = fn(1176).AVATAR_SIZE_MAP[XSMALL];
 const PX_122 = nativeDefault.space.PX_12;
 let c21 = "text-xs/bold";
 let c22 = "text-md/semibold";
@@ -305,7 +305,7 @@ let closure_27 = createStyles.createStyles((height) => {
 });
 createStyles = fn(4636);
 let obj4 = { card: { padding: PX_122 }, row: { flexDirection: "row", alignItems: "center" }, infoRow: { marginTop: PX_4 }, liveNowIcon: { marginEnd: 4 }, uppercase: { textTransform: "uppercase" }, headingText: null, liveDot: null, calendarIcon: null, topic: null, button: null };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;
@@ -371,7 +371,7 @@ let closure_31 = noop.memo((arg0) => {
     items4[1] = tmp4(tmp7(4632).Text, obj8);
     obj9.children = items4;
     tmp2Result = tmp2(__initData, obj9);
-    tmp7Result = tmp7(1150);
+    tmp7Result = tmp7(1363);
   }
   const obj11 = { children: null };
   obj6.children = tmp2Result;
@@ -389,8 +389,8 @@ export default noop.memo((guild) => {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16282).useActiveEventOrStageInstanceChannel(guild.id);
-  let obj = activeEventOrStageInstanceChannel(16282);
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16284).useActiveEventOrStageInstanceChannel(guild.id);
+  let obj = activeEventOrStageInstanceChannel(16284);
   const guildActiveEvent = activeEventOrStageInstanceChannel(9792).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(9792);
   const items = [StageInstanceStore];
@@ -486,7 +486,7 @@ export const getScaledLiveChannelNoticeHeight = function getScaledLiveChannelNot
       num2 = -2;
     }
     const sum1 = tmp8 + num2;
-    tmpResult3 = tmp(1150);
+    tmpResult3 = tmp(1363);
     let num3 = 0;
     const sum2 = sum1 + tmp(10247).scaleTextLineHeight(c23, fontScale);
     if (hasButton) {

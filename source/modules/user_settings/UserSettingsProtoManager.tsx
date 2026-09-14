@@ -1,16 +1,16 @@
-// Module ID: 14542
-// Function ID: 14543
+// Module ID: 14543
+// Function ID: 14544
 // Name: UserSettingsProtoManager
-// Dependencies: [1221, 1084, 1225, 14543, 14544, 573, 12, 1940, 2]
+// Dependencies: [1219, 1084, 1223, 14544, 14545, 573, 12, 1940, 2]
 
-// Module 14542 (UserSettingsProtoManager)
+// Module 14543 (UserSettingsProtoManager)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1225 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1223 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14543 */;
-import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14544 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14544 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14545 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 require = fn;
 function handleConnectionOpen() {

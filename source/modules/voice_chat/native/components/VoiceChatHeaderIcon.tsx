@@ -1,13 +1,13 @@
 // Module ID: 10129
 // Function ID: 10130
 // Name: VoiceChatHeaderIcon
-// Dependencies: [19, 17, 4651, 1074, 21, 4636, 576, 5763, 504, 10054, 12, 4347, 5204, 1178, 2]
+// Dependencies: [19, 17, 4651, 1074, 21, 4636, 576, 5763, 504, 10054, 12, 4347, 5204, 1176, 2]
 // Exports: VoiceChatCallScreenHeaderIcon, default, useVoiceChatMentions
 
 // Module 10129 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import native2 from "native" /* 4347 */;
 import Pressables from "Pressables" /* 5204 */;
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10054 */;

@@ -1,10 +1,10 @@
-// Module ID: 16973
-// Function ID: 16974
+// Module ID: 16975
+// Function ID: 16976
 // Name: SearchNavigatorPreviewHeader
-// Dependencies: [19, 17, 21, 4636, 13394, 2]
+// Dependencies: [19, 17, 21, 4636, 13395, 2]
 
-// Module 16973 (SearchNavigatorPreviewHeader)
-import ChannelHeaderDefault from "ChannelHeader" /* 13394 */;
+// Module 16975 (SearchNavigatorPreviewHeader)
+import ChannelHeaderDefault from "ChannelHeader" /* 13395 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

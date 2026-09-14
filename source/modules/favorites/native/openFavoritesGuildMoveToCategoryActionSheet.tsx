@@ -1,10 +1,10 @@
-// Module ID: 11084
-// Function ID: 11085
+// Module ID: 11085
+// Function ID: 11086
 // Name: openFavoritesGuildMoveToCategoryActionSheet
 // Dependencies: [7298, 5155, 2]
 // Exports: default
 
-// Module 11084 (openFavoritesGuildMoveToCategoryActionSheet)
+// Module 11085 (openFavoritesGuildMoveToCategoryActionSheet)
 import FolderIcon2 from "FolderIcon" /* 5155 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7298 */;
 import size from "module_2" /* 2 */;

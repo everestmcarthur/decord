@@ -1,19 +1,19 @@
-// Module ID: 17140
-// Function ID: 17141
+// Module ID: 17142
+// Function ID: 17143
 // Name: QuestActivityButton
-// Dependencies: [19, 17, 4628, 7805, 17141, 5525, 21, 4373, 8574, 4636, 576, 11616, 504, 4839, 17142, 1896, 4603, 17143, 4637, 5610, 15212, 17144, 15084, 1114, 11648, 2]
+// Dependencies: [19, 17, 4628, 7805, 17143, 5525, 21, 4373, 8574, 4636, 576, 11617, 504, 4839, 17144, 1896, 4603, 17145, 4637, 5610, 15213, 17146, 15085, 1114, 11649, 2]
 
-// Module 17140 (QuestActivityButton)
+// Module 17142 (QuestActivityButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import timing from "timing" /* 4637 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11648 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 11649 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import QuestStore from "QuestStore" /* 7805 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17141 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17143 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function QuestActivityButtonInner(quest) {
   let sharedValue1;
   let ref;
   let confetti;
-  let obj = quest(11616);
+  let obj = quest(11617);
   let items = [sharedValue];
   const stateFromStores = quest(504).useStateFromStores(items, () => sharedValue.useReducedMotion);
   const items1 = [, ];
@@ -47,10 +47,10 @@ function QuestActivityButtonInner(quest) {
     }
     if (null == enrolledAt) {
       const obj2 = { questId: tmp.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17142, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17144, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
       const obj4 = { questId: tmp.id };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17143, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17145, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
     }
   }, items1);
   if (quest != null) {
@@ -155,21 +155,21 @@ function QuestActivityButtonInner(quest) {
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult6 = quest(4373);
-  obj6.source = quest(15212);
+  obj6.source = quest(15213);
   obj5.children = closure_9(stateFromStores(5610), obj6);
   const items6 = [closure_9(closure_4, obj5), , , ];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
   const obj8 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp20 = stateFromStores(5610);
-  obj8.icon = stateFromStores(15084);
+  obj8.icon = stateFromStores(15085);
   obj8.onPress = callback;
   const intl = tmp(1114).intl;
   obj8.accessibilityLabel = intl.string(quest(1114).t.JALI2K);
-  obj7.children = closure_9(stateFromStores(17144), obj8);
+  obj7.children = closure_9(stateFromStores(17146), obj8);
   items6[1] = closure_9(closure_4, obj7);
   const obj9 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size = { height: v32, width: v32, children: null };
-  const tmp21 = stateFromStores(17144);
+  const tmp21 = stateFromStores(17146);
   size.children = closure_9(quest(8574).Circle, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: stateFromStores(576).unsafe_rawColors.OPACITY_32, strokeWidth: 3.4, strokeDasharray: result });
   obj9.children = closure_9(quest(8574).Svg, size);
   items6[2] = closure_9(closure_4, obj9);
@@ -245,7 +245,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj2 = { questId: tmp.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17142, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17144, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

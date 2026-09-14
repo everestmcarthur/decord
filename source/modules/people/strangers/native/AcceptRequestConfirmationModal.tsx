@@ -1,10 +1,10 @@
-// Module ID: 11003
-// Function ID: 11004
+// Module ID: 11004
+// Function ID: 11005
 // Name: AcceptRequestConfirmationModal
 // Dependencies: [19, 17, 21, 4636, 576, 5075, 1114, 4980, 4632, 2]
 // Exports: default
 
-// Module 11003 (AcceptRequestConfirmationModal)
+// Module 11004 (AcceptRequestConfirmationModal)
 import nativeDefault from "native" /* 576 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;

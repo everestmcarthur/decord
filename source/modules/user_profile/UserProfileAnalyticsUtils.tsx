@@ -1,11 +1,11 @@
 // Module ID: 8308
 // Function ID: 8309
 // Name: UserProfileAnalyticsUtils
-// Dependencies: [8309, 7210, 7761, 4658, 2021, 4676, 4285, 1371, 7723, 8300, 1074, 1085, 1396, 8303, 1242, 4816, 8315, 2]
+// Dependencies: [8309, 7210, 7761, 4658, 2021, 4676, 4285, 1371, 7723, 8300, 1074, 1085, 1396, 8303, 1240, 4816, 8315, 2]
 // Exports: getActivityType, getTrackUserRelationshipProperties, getUserStatus, maybeTrackUserProfileUiViewed, trackDmProfileToggled, trackUserProfileActivityAction, trackUserProfileActivityJoined, trackUserProfileBadgeAction, trackUserProfileEditAction, trackUserProfileEditSaved, trackUserProfileWishlistAction
 
 // Module 8308 (UserProfileAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import useDisplayProfile from "useDisplayProfile" /* 8303 */;

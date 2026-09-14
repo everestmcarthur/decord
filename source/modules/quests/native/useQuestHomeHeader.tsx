@@ -1,18 +1,18 @@
-// Module ID: 15086
-// Function ID: 15087
+// Module ID: 15087
+// Function ID: 15088
 // Name: useQuestHomeHeader
-// Dependencies: [19, 17, 5525, 1074, 1076, 21, 4636, 576, 15083, 4632, 1114, 8976, 4603, 11235, 1896, 1242, 7285, 7644, 11224, 15087, 8203, 15088, 1483, 13075, 2]
+// Dependencies: [19, 17, 5525, 1074, 1076, 21, 4636, 576, 15084, 4632, 1114, 8976, 4603, 11236, 1896, 1240, 7285, 7644, 11225, 15088, 8203, 15089, 1483, 13076, 2]
 // Exports: default
 
-// Module 15086 (useQuestHomeHeader)
+// Module 15087 (useQuestHomeHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import QuestsIcon from "QuestsIcon" /* 15083 */;
+import QuestsIcon from "QuestsIcon" /* 15084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let obj2 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     let obj3 = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(tmp3(11224).BalanceWidgetPillButton, obj3);
+    isVirtualCurrencyEnabled = closure_8(tmp3(11225).BalanceWidgetPillButton, obj3);
   }
   let items = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -69,7 +69,7 @@ function FiltersButton(setSelectedSortMethod) {
   }
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15087, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15088, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_8(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;

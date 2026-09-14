@@ -1,14 +1,14 @@
-// Module ID: 14970
-// Function ID: 14971
+// Module ID: 14971
+// Function ID: 14972
 // Name: ConnectGuardianCard
-// Dependencies: [19, 17, 1371, 7641, 21, 4636, 576, 563, 7542, 14966, 14967, 7292, 4334, 1114, 2396, 5054, 9994, 4632, 5249, 5056, 9182, 5514, 2]
+// Dependencies: [19, 17, 1371, 7641, 21, 4636, 576, 563, 7542, 14967, 14968, 7292, 4334, 1114, 2396, 5054, 9994, 4632, 5249, 5056, 9182, 5514, 2]
 // Exports: ConnectGuardianCard
 
-// Module 14970 (ConnectGuardianCard)
+// Module 14971 (ConnectGuardianCard)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14967 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14968 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 

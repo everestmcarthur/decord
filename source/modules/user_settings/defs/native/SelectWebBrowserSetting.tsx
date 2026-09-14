@@ -1,14 +1,14 @@
-// Module ID: 15562
-// Function ID: 15563
+// Module ID: 15563
+// Function ID: 15564
 // Name: SelectWebBrowserSetting
-// Dependencies: [8079, 4601, 1114, 1093, 1150, 11601, 2]
+// Dependencies: [8079, 4601, 1114, 1093, 1363, 11602, 2]
 // Exports: useWebBrowserSettingOptions
 
-// Module 15562 (SelectWebBrowserSetting)
+// Module 15563 (SelectWebBrowserSetting)
 import util from "util" /* 1114 */;
 import BrowserManager from "BrowserManager" /* 4601 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function useWebBrowserSettingOptions() {
@@ -33,7 +33,7 @@ function useWebBrowserSettingOptions() {
   if (!browserManagerIsChromeInstalled) {
     return items;
   } else {
-    const tmpResult2 = tmp(1150);
+    const tmpResult2 = tmp(1363);
     const intl3 = tmp(1114).intl;
     const string = intl3.string;
     let t = tmp(1114).t;
@@ -46,7 +46,7 @@ function useWebBrowserSettingOptions() {
     CHROME = tmp(1093).WebBrowserType.CHROME;
     obj5.value = CHROME;
     t = items.push(obj5);
-    isAndroidResult = tmp(1150).isAndroid();
+    isAndroidResult = tmp(1363).isAndroid();
   }
 }
 const radio = SettingBuilders.createRadio({

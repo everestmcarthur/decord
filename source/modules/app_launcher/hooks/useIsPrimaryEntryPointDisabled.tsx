@@ -1,10 +1,10 @@
-// Module ID: 12272
-// Function ID: 12273
+// Module ID: 12273
+// Function ID: 12274
 // Name: useIsPrimaryEntryPointDisabled
-// Dependencies: [1918, 4275, 1085, 504, 9712, 12186, 9676, 9540, 1150, 1114, 2]
+// Dependencies: [1918, 4275, 1085, 504, 9712, 12187, 9676, 9540, 1363, 1114, 2]
 // Exports: default
 
-// Module 12272 (useIsPrimaryEntryPointDisabled)
+// Module 12273 (useIsPrimaryEntryPointDisabled)
 import getPlatformDefault from "getPlatform" /* 9540 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -29,8 +29,8 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   }
   const embeddedActivityLaunchability = channel(9712).useEmbeddedActivityLaunchability(id);
   let flag = false;
-  if (channel(12186).ActivityAction.LEAVE !== activityAction) {
-    if (tmp2(12186).ActivityAction.START === activityAction) {
+  if (channel(12187).ActivityAction.LEAVE !== activityAction) {
+    if (tmp2(12187).ActivityAction.START === activityAction) {
       flag = false;
       if (null != channel) {
         let isGuildVoiceResult;
@@ -52,7 +52,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
       }
     } else {
       flag = false;
-      if (tmp2(12186).ActivityAction.JOIN === activityAction) {
+      if (tmp2(12187).ActivityAction.JOIN === activityAction) {
         let isGuildVoiceResult1;
         if (channel != null) {
           isGuildVoiceResult1 = channel.isGuildVoice();
@@ -71,10 +71,10 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   }
   let disabled = flag;
   let reason;
-  if (activityAction !== channel(12186).ActivityAction.LEAVE) {
+  if (activityAction !== channel(12187).ActivityAction.LEAVE) {
     const tmp10 = application instanceof ApplicationRecord ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatformDefault;
-    tmp2(1150);
+    tmp2(1363);
     if (null != tmp10) {
       const supported_platforms = tmp10.supported_platforms;
       if (!supported_platforms.includes(tmp14)) {

@@ -1,10 +1,10 @@
-// Module ID: 17762
-// Function ID: 17763
+// Module ID: 17763
+// Function ID: 17764
 // Name: GuildSettingsModalInstantInvites
-// Dependencies: [32, 19, 17, 10209, 8498, 1957, 1979, 9193, 1074, 21, 4636, 1114, 2024, 5685, 4632, 5692, 5678, 12500, 504, 12, 8121, 8119, 4603, 11959, 1896, 4335, 11063, 7142, 1178, 17763, 7143, 2]
+// Dependencies: [32, 19, 17, 10209, 8498, 1957, 1979, 9193, 1074, 21, 4636, 1114, 2024, 5685, 4632, 5692, 5678, 12501, 504, 12, 8121, 8119, 4603, 11960, 1896, 4335, 11064, 7142, 1176, 17764, 7143, 2]
 // Exports: default
 
-// Module 17762 (GuildSettingsModalInstantInvites)
+// Module 17763 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -15,7 +15,7 @@ import _modDef5678 from "module_5678" /* 5678 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 5685 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8119 */;
 import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8121 */;
-import InstantInvite from "InstantInvite" /* 11063 */;
+import InstantInvite from "InstantInvite" /* 11064 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10209 */;
@@ -154,7 +154,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11959, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11960, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         tmp3(false);
       } catch (tmp17) {
         tmp2(false);

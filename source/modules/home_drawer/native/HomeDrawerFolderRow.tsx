@@ -1,10 +1,10 @@
-// Module ID: 16400
-// Function ID: 16401
+// Module ID: 16402
+// Function ID: 16403
 // Name: HomeDrawerFolderRow
-// Dependencies: [19, 17, 7738, 1979, 5519, 4817, 4655, 1074, 21, 4636, 504, 9188, 4632, 1114, 16401, 4500, 4497, 2]
+// Dependencies: [19, 17, 7738, 1979, 5519, 4817, 4655, 1074, 21, 4636, 504, 9188, 4632, 1114, 16403, 4500, 4497, 2]
 // Exports: default
 
-// Module 16400 (HomeDrawerFolderRow)
+// Module 16402 (HomeDrawerFolderRow)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 9188 */;

@@ -1,14 +1,14 @@
-// Module ID: 16743
-// Function ID: 16744
+// Module ID: 16745
+// Function ID: 16746
 // Name: SearchScreenLayout
-// Dependencies: [19, 17, 12468, 21, 4636, 16617, 504, 16744, 16836, 2]
+// Dependencies: [19, 17, 12469, 21, 4636, 16619, 504, 16746, 16838, 2]
 
-// Module 16743 (SearchScreenLayout)
-import AppFreezerDefault from "AppFreezer" /* 16617 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16744 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 16836 */;
+// Module 16745 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 16619 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16746 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 16838 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const require = fn;
 function SearchFreezeContainer(visible) {

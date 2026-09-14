@@ -1,10 +1,10 @@
-// Module ID: 11128
-// Function ID: 11129
+// Module ID: 11129
+// Function ID: 11130
 // Name: ModalActionButton
 // Dependencies: [19, 17, 21, 4636, 5056, 2]
 // Exports: ModalActionButton
 
-// Module 11128 (ModalActionButton)
+// Module 11129 (ModalActionButton)
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;
 

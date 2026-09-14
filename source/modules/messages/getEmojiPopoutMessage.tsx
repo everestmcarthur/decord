@@ -1,10 +1,10 @@
-// Module ID: 10467
-// Function ID: 10468
+// Module ID: 10468
+// Function ID: 10469
 // Name: getEmojiPopoutMessage
 // Dependencies: [5666, 1114, 2]
 // Exports: getEmojiPopoutData
 
-// Module 10467 (getEmojiPopoutMessage)
+// Module 10468 (getEmojiPopoutMessage)
 import util from "util" /* 1114 */;
 import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5666 */;
 import size from "module_2" /* 2 */;

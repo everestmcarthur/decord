@@ -1,9 +1,9 @@
-// Module ID: 16238
-// Function ID: 16239
+// Module ID: 16240
+// Function ID: 16241
 // Name: GuildSettingsModalChannelsStore
 // Dependencies: [109, 1961, 2012, 4275, 1074, 1982, 7215, 12, 504, 573, 2]
 
-// Module 16238 (GuildSettingsModalChannelsStore)
+// Module 16240 (GuildSettingsModalChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import getFlattedChannelListDefault from "getFlattedChannelList" /* 7215 */;

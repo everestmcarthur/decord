@@ -1,14 +1,14 @@
 // Module ID: 8886
 // Function ID: 8887
 // Name: GameProfileHttpUtils
-// Dependencies: [5, 2025, 8805, 1074, 8887, 573, 4878, 1272, 504, 559, 1090, 8878, 2]
+// Dependencies: [5, 2025, 8805, 1074, 8887, 573, 4878, 1270, 504, 559, 1090, 8878, 2]
 // Exports: getGameAnnouncements, getShopCollection
 
 // Module 8886 (GameProfileHttpUtils)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import StoreUtils from "StoreUtils" /* 4878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;

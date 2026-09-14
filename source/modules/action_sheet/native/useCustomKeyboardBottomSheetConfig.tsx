@@ -1,10 +1,10 @@
-// Module ID: 12209
-// Function ID: 12210
+// Module ID: 12210
+// Function ID: 12211
 // Name: useCustomKeyboardBottomSheetConfig
-// Dependencies: [19, 4628, 1150, 1877, 4504, 1609, 1477, 11489, 5679, 11488, 2]
+// Dependencies: [19, 4628, 1363, 1877, 4504, 1609, 1477, 11490, 5679, 11489, 2]
 // Exports: default
 
-// Module 12209 (useCustomKeyboardBottomSheetConfig)
+// Module 12210 (useCustomKeyboardBottomSheetConfig)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 

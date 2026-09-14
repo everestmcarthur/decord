@@ -1,7 +1,7 @@
 // Module ID: 7886
 // Function ID: 7887
 // Name: burst_reactions/BurstReactionEffectUtils
-// Dependencies: [5, 32, 19, 17, 4293, 7887, 1396, 1150, 7924, 2]
+// Dependencies: [5, 32, 19, 17, 4293, 7887, 1396, 1363, 7924, 2]
 // Exports: useBurstReactionAnimationSource, useSuperReactionAnimationSourceFromLocalImage
 
 // Module 7886 (burst_reactions/BurstReactionEffectUtils)

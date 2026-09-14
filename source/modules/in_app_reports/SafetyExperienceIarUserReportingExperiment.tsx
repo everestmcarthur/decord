@@ -1,10 +1,10 @@
-// Module ID: 13119
-// Function ID: 13120
+// Module ID: 13120
+// Function ID: 13121
 // Name: SafetyExperienceIarUserReportingExperiment
 // Dependencies: [4550, 2]
 // Exports: isIarUserReportingEnabled, useIsIarUserReportingEnabled
 
-// Module 13119 (SafetyExperienceIarUserReportingExperiment)
+// Module 13120 (SafetyExperienceIarUserReportingExperiment)
 import createExperiment from "module_4550" /* 4550 */;
 import size from "module_2" /* 2 */;
 

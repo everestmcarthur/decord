@@ -1,7 +1,7 @@
 // Module ID: 4986
 // Function ID: 4987
 // Name: AlertModal
-// Dependencies: [5, 32, 718, 19, 17, 1085, 21, 4636, 576, 4347, 4982, 4373, 1874, 4987, 5039, 1249, 5044, 1114, 4357, 1611, 5052, 1477, 5053, 5054, 4632, 5055, 5056, 2]
+// Dependencies: [5, 32, 718, 19, 17, 1085, 21, 4636, 576, 4347, 4982, 4373, 1874, 4987, 5039, 1247, 5044, 1114, 4357, 1611, 5052, 1477, 5053, 5054, 4632, 5055, 5056, 2]
 // Exports: showConfirmModal, useDismissModalCallback
 
 // Module 4986 (AlertModal)
@@ -41,11 +41,11 @@ function dismissTopAlert() {
     }
     tmp(4982).dismissAlert(key);
     const tmpResult = tmp(4982);
-    tmp(1249).batchUpdates(() => {
+    tmp(1247).batchUpdates(() => {
       const useAlertStore = context(context2[10]).useAlertStore;
       return useAlertStore.setState({ alerts });
     });
-    const tmpResult2 = tmp(1249);
+    const tmpResult2 = tmp(1247);
   }
 }
 function AlertModalBackdrop() {

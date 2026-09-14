@@ -773,8 +773,8 @@ const frozen2 = Object.freeze({
     }
     return str;
   },
-  DEBUG_LOG(ANDROID_APP, discord_app_logs) {
-    return "/debug-logs/" + ANDROID_APP + "/" + discord_app_logs;
+  DEBUG_LOG(ANDROID_APP, filename) {
+    return "/debug-logs/" + ANDROID_APP + "/" + filename;
   },
   DEBUG_LOGS(arg0) {
     return "/debug-logs/multi/" + arg0;
@@ -2782,8 +2782,8 @@ const obj2 = {
     }
     return str;
   },
-  DEBUG_LOG(ANDROID_APP, discord_app_logs) {
-    return "/debug-logs/" + ANDROID_APP + "/" + discord_app_logs;
+  DEBUG_LOG(ANDROID_APP, filename) {
+    return "/debug-logs/" + ANDROID_APP + "/" + filename;
   },
   DEBUG_LOGS(arg0) {
     return "/debug-logs/multi/" + arg0;

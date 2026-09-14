@@ -1,13 +1,13 @@
-// Module ID: 11451
-// Function ID: 11452
+// Module ID: 11452
+// Function ID: 11453
 // Name: ReminderNotification
-// Dependencies: [19, 17, 1957, 1979, 10224, 1074, 21, 4636, 1178, 4599, 576, 10223, 10302, 504, 1094, 10300, 10235, 10237, 7983, 38, 1114, 4839, 7962, 7963, 1242, 10298, 2]
+// Dependencies: [19, 17, 1957, 1979, 10224, 1074, 21, 4636, 1176, 4599, 576, 10223, 10302, 504, 1094, 10300, 10235, 10237, 7983, 38, 1114, 4839, 7962, 7963, 1240, 10298, 2]
 
-// Module 11451 (ReminderNotification)
+// Module 11452 (ReminderNotification)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ClockIcon from "ClockIcon" /* 4599 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import showForLaterModal from "showForLaterModal" /* 7962 */;
@@ -75,7 +75,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4636);
 let closure_13 = createStyles.createStyles({ cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 }, avatarContainer: { position: "relative" }, rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } });
-let obj3 = { direction: fn(1178).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
+let obj3 = { direction: fn(1176).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = noop.memo((message) => {
   message = message.message;
   const tmp = closure_13();

@@ -1,10 +1,10 @@
-// Module ID: 10455
-// Function ID: 10456
+// Module ID: 10456
+// Function ID: 10457
 // Name: PremiumExpressionPickerFeatureUpsell
 // Dependencies: [19, 17, 21, 4636, 576, 1611, 6726, 1093, 4373, 10094, 2]
 // Exports: default
 
-// Module 10455 (PremiumExpressionPickerFeatureUpsell)
+// Module 10456 (PremiumExpressionPickerFeatureUpsell)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6726 */;

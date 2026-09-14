@@ -1,15 +1,15 @@
-// Module ID: 14865
-// Function ID: 14866
+// Module ID: 14866
+// Function ID: 14867
 // Name: UserSettingsAccountEditPassword
-// Dependencies: [19, 17, 1950, 7486, 1371, 1074, 21, 4636, 576, 4347, 7087, 7094, 12, 1242, 7093, 7101, 14866, 4632, 1114, 5054, 6707, 5056, 7097, 504, 38, 1483, 2]
+// Dependencies: [19, 17, 1950, 7486, 1371, 1074, 21, 4636, 576, 4347, 7087, 7094, 12, 1240, 7093, 7101, 14867, 4632, 1114, 5054, 6707, 5056, 7097, 504, 38, 1483, 2]
 // Exports: default
 
-// Module 14865 (UserSettingsAccountEditPassword)
+// Module 14866 (UserSettingsAccountEditPassword)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
@@ -18,7 +18,7 @@ import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreat
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7094 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7101 */;
-import _modDef14866 from "module_14866" /* 14866 */;
+import _modDef14867 from "module_14867" /* 14867 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
 import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7486 */;
@@ -33,7 +33,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "call", password: 17091393 };
+const state = { newPassword: "call", password: 17088577 };
 const createStyles = fn(4636);
 let obj2 = { onePass: { width: 20, height: 20 }, unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 }, container: { padding: 16 }, header: { marginBottom: 20 }, requiredActionsSubtitle: { textAlign: "center", marginTop: 8 }, requiredActionsTitle: { flex: 1, textAlign: "center" }, image: { marginTop: 12, marginBottom: 16, alignSelf: "center" } };
 let closure_15 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -152,7 +152,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef14866, style: tmp.image };
+    const obj4 = { source: _modDef14867, style: tmp.image };
     const items1 = [tmp2(React4, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;

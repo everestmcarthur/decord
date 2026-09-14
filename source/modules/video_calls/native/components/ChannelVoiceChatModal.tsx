@@ -1,15 +1,15 @@
-// Module ID: 11097
-// Function ID: 11098
+// Module ID: 11098
+// Function ID: 11099
 // Name: ChannelVoiceChatModal
-// Dependencies: [19, 21, 4789, 4837, 11055, 5178, 4520, 10205, 2]
+// Dependencies: [19, 21, 4789, 4837, 11056, 5178, 4520, 10205, 2]
 // Exports: default
 
-// Module 11097 (ChannelVoiceChatModal)
+// Module 11098 (ChannelVoiceChatModal)
 import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4520 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10205 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11055 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11056 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

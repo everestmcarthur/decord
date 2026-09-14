@@ -1,22 +1,22 @@
-// Module ID: 16267
-// Function ID: 16268
+// Module ID: 16269
+// Function ID: 16270
 // Name: useGuildPowerupsCoachmark
-// Dependencies: [19, 4628, 1979, 4526, 1074, 1954, 1085, 21, 4636, 576, 504, 4571, 4545, 12642, 12624, 16268, 12608, 12650, 1114, 2428, 12652, 16269, 12649, 4529, 16265, 16270, 16271, 12680, 16272, 11261, 2]
+// Dependencies: [19, 4628, 1979, 4526, 1074, 1954, 1085, 21, 4636, 576, 504, 4571, 4545, 12643, 12625, 16270, 12609, 12651, 1114, 2428, 12653, 16271, 12650, 4529, 16267, 16272, 16273, 12681, 16274, 11262, 2]
 // Exports: default
 
-// Module 16267 (useGuildPowerupsCoachmark)
+// Module 16269 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 576 */;
-import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12649 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12650 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12652 */;
-import _modDef16269 from "module_16269" /* 16269 */;
+import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12650 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12651 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12653 */;
+import _modDef16271 from "module_16271" /* 16271 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = globalThis.__r;
 
-const _modDef16265 = tmp2(16265);
+const _modDef16267 = tmp2(16267);
 require = fn;
 const GuildPowerupsConstants = fn(4526);
 ({ GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: metroRequire, GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: closure_7, GuildPowerupType: closure_8 } = GuildPowerupsConstants);
@@ -168,7 +168,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef16269;
+              let str = _modDef16271;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(arr[0], stateFromStores1, true);
               if (str == null) {
@@ -231,7 +231,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
             const tmp4 = GuildPowerupsImageDefault;
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef16265;
+              guildPowerupBannerImage = _modDef16267;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

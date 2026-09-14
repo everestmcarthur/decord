@@ -1,7 +1,7 @@
 // Module ID: 4816
 // Function ID: 4817
 // Name: AppAnalyticsUtils
-// Dependencies: [1961, 502, 1957, 2012, 4556, 2021, 2015, 1979, 1908, 4275, 4676, 4659, 4651, 4285, 2011, 4458, 4817, 1371, 4655, 1074, 1964, 4280, 1086, 4819, 1242, 1090, 4820, 4822, 12, 2]
+// Dependencies: [1961, 502, 1957, 2012, 4556, 2021, 2015, 1979, 1908, 4275, 4676, 4659, 4651, 4285, 2011, 4458, 4817, 1371, 4655, 1074, 1964, 4280, 1086, 4819, 1240, 1090, 4820, 4822, 12, 2]
 // Exports: collectChannelAnalyticsMetadataFromId, collectStaticChannelRouteAnalyticsMetadata, collectVoiceAnalyticsMetadata, getChannelOpenedMetadata, getCustomStatusMetadata, getVoiceStateMetadata, trackWithMetadata
 
 // Module 4816 (AppAnalyticsUtils)
@@ -33,7 +33,7 @@ import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
-const AnalyticsUtilsDefault = track(1242);
+const AnalyticsUtilsDefault = track(1240);
 function collectGuildAnalyticsMetadata(guildId) {
   if (null == guildId) {
     return null;

@@ -1,14 +1,14 @@
-// Module ID: 13373
-// Function ID: 13374
+// Module ID: 13374
+// Function ID: 13375
 // Name: createMediaPostPreviewEmbedContent
-// Dependencies: [17, 4635, 1957, 1979, 4458, 1371, 11559, 4784, 4790, 1114, 8064, 8066, 576, 4786, 13374, 7702, 4849, 4785, 2]
+// Dependencies: [17, 4635, 1957, 1979, 4458, 1371, 11560, 4784, 4790, 1114, 8064, 8066, 576, 4786, 13375, 7702, 4849, 4785, 2]
 // Exports: default
 
-// Module 13373 (createMediaPostPreviewEmbedContent)
+// Module 13374 (createMediaPostPreviewEmbedContent)
 import nativeDefault from "native" /* 576 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4784 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
-import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11559 */;
+import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11560 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -89,7 +89,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
               if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
                 const obj5 = {};
                 const merged = Object.assign(mediaPostEmbedCommonData);
-                obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13374)).uri;
+                obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13375)).uri;
                 obj5.footer = formatToPartsResult;
                 obj5.ctaButtonColor = tmp11;
                 return obj5;

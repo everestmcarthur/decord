@@ -1,15 +1,15 @@
-// Module ID: 14895
-// Function ID: 14896
+// Module ID: 14896
+// Function ID: 14897
 // Name: AccountIgnoredUsersSetting
-// Dependencies: [4285, 8079, 1074, 504, 1114, 11601, 7069, 14896, 2]
+// Dependencies: [4285, 8079, 1074, 504, 1114, 11602, 7069, 14897, 2]
 
-// Module 14895 (AccountIgnoredUsersSetting)
+// Module 14896 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   IconComponent: fn(7069).EyeSlashIcon,
   useTitle() {

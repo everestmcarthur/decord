@@ -1,9 +1,9 @@
-// Module ID: 14562
-// Function ID: 14563
+// Module ID: 14563
+// Function ID: 14564
 // Name: images
 // Dependencies: [1371, 4541, 1074, 9687, 1396, 9684, 1474, 2]
 
-// Module 14562 (images)
+// Module 14563 (images)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ImageUtils from "ImageUtils" /* 1474 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;

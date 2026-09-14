@@ -1,17 +1,17 @@
-// Module ID: 11209
-// Function ID: 11210
+// Module ID: 11210
+// Function ID: 11211
 // Name: PremiumGiftingGoGoSuccessActions
-// Dependencies: [19, 10793, 1074, 1076, 21, 4636, 576, 10827, 504, 10870, 10881, 1483, 10871, 4875, 10790, 8479, 7644, 7285, 10882, 1114, 2460, 5056, 2]
+// Dependencies: [19, 10794, 1074, 1076, 21, 4636, 576, 10828, 504, 10871, 10882, 1483, 10872, 4875, 10791, 8479, 7644, 7285, 10883, 1114, 2460, 5056, 2]
 // Exports: default
 
-// Module 11209 (PremiumGiftingGoGoSuccessActions)
+// Module 11210 (PremiumGiftingGoGoSuccessActions)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import showShareActionSheet from "showShareActionSheet" /* 8479 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10790 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10791 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;

@@ -1,13 +1,13 @@
-// Module ID: 16963
-// Function ID: 16964
+// Module ID: 16965
+// Function ID: 16966
 // Name: IntegrationsSettingsEditWebhook
-// Dependencies: [19, 2012, 4275, 4285, 1371, 1074, 21, 4636, 576, 4347, 1150, 7973, 5705, 7966, 1114, 16956, 11462, 1272, 7292, 4981, 5075, 4632, 8716, 5054, 16964, 1396, 6707, 5768, 5686, 4789, 1178, 5109, 1483, 7143, 2]
+// Dependencies: [19, 2012, 4275, 4285, 1371, 1074, 21, 4636, 576, 4347, 1363, 7973, 5705, 7966, 1114, 16958, 11463, 1270, 7292, 4981, 5075, 4632, 8716, 5054, 16966, 1396, 6707, 5768, 5686, 4789, 1176, 5109, 1483, 7143, 2]
 // Exports: default
 
-// Module 16963 (IntegrationsSettingsEditWebhook)
+// Module 16965 (IntegrationsSettingsEditWebhook)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
@@ -16,14 +16,14 @@ import NavScrim from "NavScrim" /* 7143 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
 import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7973 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11462 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16956 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11463 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16958 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const IconLabelBlockDefault = tmp8(16964);
+const IconLabelBlockDefault = tmp8(16966);
 require = fn;
 let closure_3 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1074);
@@ -270,11 +270,11 @@ prototype["render"] = function render() {
   const tmp7 = closure_12;
   obj7.label = webhookId(4789).computeChannelName(channel, UserStore, RelationshipStore);
   obj7.onPress = self.handleChannelChange;
-  const obj8 = { size: webhookId(1178).Icon.Sizes.CUSTOM, source: null, style: null };
+  const obj8 = { size: webhookId(1176).Icon.Sizes.CUSTOM, source: null, style: null };
   const tmp3Result = webhookId(4789);
   obj8.source = webhookId(5109).getChannelIcon(channel);
   obj8.style = tmp.channelIcon;
-  obj7.icon = closure_11(webhookId(1178).Icon, obj8);
+  obj7.icon = closure_11(webhookId(1176).Icon, obj8);
   obj6.children = closure_11(webhookId(5686).TableRow, obj7);
   items1[2] = closure_11(webhookId(5768).TableRowGroup, obj6);
   let tmp2Result4 = null;
@@ -283,14 +283,14 @@ prototype["render"] = function render() {
     const intl5 = tmp3(1114).intl;
     obj9.title = intl5.string(tmp3(1114).t.SFdvF1);
     const obj10 = { label: null, onPress: null, trailing: null };
-    const aPIBaseURL = tmp3(1272).getAPIBaseURL(false);
+    const aPIBaseURL = tmp3(1270).getAPIBaseURL(false);
     const _HermesInternal = HermesInternal;
     obj10.label = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj10.onPress = self.handleCopyUrl;
     obj10.trailing = tmp2Result;
     obj9.children = tmp2(tmp3(5686).TableRow, obj10);
     tmp2Result4 = tmp2(tmp3(5768).TableRowGroup, obj9);
-    const tmp3Result4 = tmp3(1272);
+    const tmp3Result4 = tmp3(1270);
   }
   items1[3] = tmp2Result4;
   const obj11 = { hasIcons: false, children: null };

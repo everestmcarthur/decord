@@ -1,12 +1,12 @@
 // Module ID: 10195
 // Function ID: 10196
 // Name: ParticipantTitle
-// Dependencies: [19, 21, 4636, 576, 1178, 10177, 2]
+// Dependencies: [19, 21, 4636, 576, 1176, 10177, 2]
 // Exports: default
 
 // Module 10195 (ParticipantTitle)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import getParticipantTitleDefault from "getParticipantTitle" /* 10177 */;
 import noop from "module_19" /* 19 */;
 

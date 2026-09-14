@@ -1,10 +1,10 @@
-// Module ID: 13126
-// Function ID: 13127
+// Module ID: 13127
+// Function ID: 13128
 // Name: UserProfileTextButtonGroup
 // Dependencies: [19, 17, 7311, 21, 4636, 1477, 2]
 // Exports: default
 
-// Module 13126 (UserProfileTextButtonGroup)
+// Module 13127 (UserProfileTextButtonGroup)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import noop from "module_19" /* 19 */;
 

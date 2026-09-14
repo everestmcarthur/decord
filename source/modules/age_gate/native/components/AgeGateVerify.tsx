@@ -1,10 +1,10 @@
-// Module ID: 17423
-// Function ID: 17424
+// Module ID: 17425
+// Function ID: 17426
 // Name: AgeGateVerify
 // Dependencies: [19, 17, 21, 4636, 576, 4847, 7226, 5773, 4632, 5056, 8529, 8531, 2]
 // Exports: default
 
-// Module 17423 (AgeGateVerify)
+// Module 17425 (AgeGateVerify)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AgeGateUtils from "AgeGateUtils" /* 4847 */;

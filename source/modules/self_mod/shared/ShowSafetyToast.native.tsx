@@ -1,10 +1,10 @@
-// Module ID: 11543
-// Function ID: 11544
+// Module ID: 11544
+// Function ID: 11545
 // Name: ShowSafetyToast
 // Dependencies: [4335, 9531, 9532, 2]
 // Exports: showSafetyToast
 
-// Module 11543 (ShowSafetyToast)
+// Module 11544 (ShowSafetyToast)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import _modDef9531 from "module_9531" /* 9531 */;
 import ShieldIcon from "ShieldIcon" /* 9532 */;

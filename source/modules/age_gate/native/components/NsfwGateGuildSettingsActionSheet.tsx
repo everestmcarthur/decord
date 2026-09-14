@@ -1,13 +1,13 @@
-// Module ID: 13995
-// Function ID: 13996
+// Module ID: 13996
+// Function ID: 13997
 // Name: NsfwGateGuildSettingsActionSheet
-// Dependencies: [19, 21, 13996, 7300, 7252, 7302, 1114, 4603, 7222, 13997, 2]
+// Dependencies: [19, 21, 13997, 7300, 7252, 7302, 1114, 4603, 7222, 13998, 2]
 // Exports: default
 
-// Module 13995 (NsfwGateGuildSettingsActionSheet)
+// Module 13996 (NsfwGateGuildSettingsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 13997 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 13998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/age_gate/native/components/Ns
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  const messageRequestPrivacyOption = guild(13996).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13997).useMessageRequestPrivacyOption({ guild });
   const obj2 = { header: closure_3(guild(7252).BottomSheetTitleHeader, { title: guild.name }), children: null };
   const obj4 = { hasIcons: false, children: null };
   const obj5 = { label: null, onPress: null };
@@ -28,7 +28,7 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  const items = [closure_3(guild(7302).ActionSheetRow, obj5), closure_3(guild(13997).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
+  const items = [closure_3(guild(7302).ActionSheetRow, obj5), closure_3(guild(13998).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
   const obj6 = { variant: "danger", label: null, onPress: null };
   const intl2 = guild(1114).intl;
   obj6.label = intl2.string(guild(1114).t.J2TBi3);

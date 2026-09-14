@@ -1,19 +1,19 @@
-// Module ID: 16642
-// Function ID: 16643
+// Module ID: 16644
+// Function ID: 16645
 // Name: Elements
-// Dependencies: [32, 19, 17, 4299, 21, 4636, 576, 4632, 1114, 5204, 1178, 16643, 9496, 15310, 563, 9499, 7337, 2]
+// Dependencies: [32, 19, 17, 4299, 21, 4636, 576, 4632, 1114, 5204, 1176, 16645, 9496, 15311, 563, 9499, 7337, 2]
 // Exports: ArrowButton, TruncatedText, useFormattedSubscriptionPlan
 
-// Module 16642 (Elements)
+// Module 16644 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import NativePaymentHooksDefault from "NativePaymentHooks" /* 9496 */;
 import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9499 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
-import _modDef16643 from "module_16643" /* 16643 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
+import _modDef16645 from "module_16645" /* 16645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;
@@ -105,7 +105,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16643, style: tmp.arrowButtonIcon })];
+  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16645, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
 };

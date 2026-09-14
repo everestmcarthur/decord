@@ -1,11 +1,11 @@
 // Module ID: 8360
 // Function ID: 8361
 // Name: UserProfileOverscrollBanner
-// Dependencies: [19, 17, 21, 4373, 8361, 8362, 1150, 2]
+// Dependencies: [19, 17, 21, 4373, 8361, 8362, 1363, 2]
 // Exports: default
 
 // Module 8360 (UserProfileOverscrollBanner)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8361 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8362 */;
 import noop from "module_19" /* 19 */;

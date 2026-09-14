@@ -1,14 +1,14 @@
-// Module ID: 11323
-// Function ID: 11324
+// Module ID: 11324
+// Function ID: 11325
 // Name: TieredTenureBadgeCoachmark
-// Dependencies: [32, 19, 17, 1074, 1954, 21, 4636, 11292, 5668, 7736, 1943, 7491, 1114, 7485, 11261, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 21, 4636, 11293, 5668, 7736, 1943, 7491, 1114, 7485, 11262, 2]
 // Exports: default
 
-// Module 11323 (TieredTenureBadgeCoachmark)
+// Module 11324 (TieredTenureBadgeCoachmark)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11292 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -88,6 +88,6 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     return obj;
   }, items2);
   const tmpResult3 = tieredTenureBadgeData(7491);
-  const coachmark = tieredTenureBadgeData(11261).useCoachmark(targetRef, memo);
+  const coachmark = tieredTenureBadgeData(11262).useCoachmark(targetRef, memo);
   return null;
 };

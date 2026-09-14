@@ -1,18 +1,18 @@
-// Module ID: 16842
-// Function ID: 16843
+// Module ID: 16844
+// Function ID: 16845
 // Name: ChannelNameHeader
-// Dependencies: [19, 17, 1957, 1979, 4275, 4676, 1371, 1074, 21, 4636, 576, 504, 1178, 4789, 1483, 4647, 5204, 4632, 1114, 4781, 3526, 11041, 5109, 11027, 7265, 8296, 2]
+// Dependencies: [19, 17, 1957, 1979, 4275, 4676, 1371, 1074, 21, 4636, 576, 504, 1176, 4789, 1483, 4647, 5204, 4632, 1114, 4781, 3526, 11042, 5109, 11028, 7265, 8296, 2]
 
-// Module 16842 (ChannelNameHeader)
+// Module 16844 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import _modDef3526 from "module_3526" /* 3526 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import ChannelUtils from "ChannelUtils" /* 4781 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -50,7 +50,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1178).AvatarSizes.NORMAL, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1176).AvatarSizes.NORMAL, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();
@@ -63,7 +63,7 @@ function DirectMessageIcon(channel) {
     obj2.isMobileOnline = tmp5;
     obj2.isVROnline = tmp6;
     obj2.statusStyle = tmp.statusStyle;
-    tmp9Result = closure_12(tmp2(1178).Avatar, obj2);
+    tmp9Result = closure_12(tmp2(1176).Avatar, obj2);
   }
   return tmp9Result;
 }

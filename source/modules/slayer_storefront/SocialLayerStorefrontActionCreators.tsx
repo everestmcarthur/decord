@@ -1,10 +1,10 @@
-// Module ID: 10926
-// Function ID: 10927
+// Module ID: 10927
+// Function ID: 10928
 // Name: SocialLayerStorefrontActionCreators
-// Dependencies: [5, 8912, 7331, 1074, 1090, 573, 7329, 8979, 1272, 1925, 559, 2]
+// Dependencies: [5, 8912, 7331, 1074, 1090, 573, 7329, 8979, 1270, 1925, 559, 2]
 // Exports: fetchSocialLayerSKUPurchaseEligibility, fetchSocialLayerStorefront, fetchSocialLayerStorefrontAnnouncement, fetchSocialLayerStorefrontById, fetchSocialLayerStorefrontConfig, fetchSocialLayerStorefrontEntries, fetchSocialLayerStorefrontForApplication, fetchSocialLayerStorefrontLaunchAnnouncement, fetchSocialLayerStorefrontSku, fetchSocialLayerStorefrontSkuForApplication, setSocialLayerStorefrontState
 
-// Module 10926 (SocialLayerStorefrontActionCreators)
+// Module 10927 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;

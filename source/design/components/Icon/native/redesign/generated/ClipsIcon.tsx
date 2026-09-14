@@ -1,13 +1,13 @@
-// Module ID: 15061
-// Function ID: 15062
+// Module ID: 15062
+// Function ID: 15063
 // Name: ClipsIcon
-// Dependencies: [19, 21, 576, 4337, 15062, 2]
+// Dependencies: [19, 21, 576, 4337, 15063, 2]
 // Exports: ClipsIcon
 
-// Module 15061 (ClipsIcon)
+// Module 15062 (ClipsIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod15062 from "module_15062" /* 15062 */;
+import _mod15063 from "module_15063" /* 15063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ClipsIcon = function ClipsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15062, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15063, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

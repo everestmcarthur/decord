@@ -1,7 +1,7 @@
 // Module ID: 7936
 // Function ID: 7937
 // Name: MessageQueue
-// Dependencies: [109, 4635, 502, 4685, 1074, 4629, 1090, 7937, 3, 4816, 7938, 7562, 1272, 1894, 38, 5208, 5210, 5215, 2]
+// Dependencies: [109, 4635, 502, 4685, 1074, 4629, 1090, 7937, 3, 4816, 7938, 7562, 1270, 1894, 38, 5208, 5210, 5215, 2]
 // Exports: getFailedMessageId, isMessageDataCommand, isMessageDataEdit, isMessageDataSend
 
 // Module 7936 (MessageQueue)
@@ -225,7 +225,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
       const result = requests.set(nonce.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
-    const HTTP = tmp5(1272).HTTP;
+    const HTTP = tmp5(1270).HTTP;
     const request = { url: closure_1_10.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
@@ -269,7 +269,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
       const result = requests.set(message.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
-    const HTTP = tmp5(1272).HTTP;
+    const HTTP = tmp5(1270).HTTP;
     const request = { url: closure_1_10.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;

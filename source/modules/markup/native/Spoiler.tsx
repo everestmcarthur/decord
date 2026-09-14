@@ -1,7 +1,7 @@
 // Module ID: 10255
 // Function ID: 10256
 // Name: Spoiler
-// Dependencies: [19, 17, 1074, 10246, 21, 4636, 1150, 576, 4347, 1178, 2]
+// Dependencies: [19, 17, 1074, 10246, 21, 4636, 1363, 576, 4347, 1176, 2]
 
 // Module 10255 (Spoiler)
 import nativeDefault from "native" /* 576 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const EMOJI_CHAT_SIZE = fn(1074).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";

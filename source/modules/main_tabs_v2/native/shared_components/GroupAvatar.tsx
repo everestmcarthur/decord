@@ -1,10 +1,10 @@
-// Module ID: 13169
-// Function ID: 13170
+// Module ID: 13170
+// Function ID: 13171
 // Name: GroupAvatar
 // Dependencies: [19, 17, 4628, 21, 4636, 576, 4488, 5667, 563, 4373, 4637, 5055, 7083, 4632, 5668, 2]
 // Exports: default
 
-// Module 13169 (GroupAvatar)
+// Module 13170 (GroupAvatar)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import timing from "timing" /* 4637 */;

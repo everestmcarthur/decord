@@ -1,22 +1,22 @@
-// Module ID: 17869
-// Function ID: 17870
+// Module ID: 17870
+// Function ID: 17871
 // Name: GuildRoleSubscriptionBenefitEditorModal
-// Dependencies: [5, 32, 19, 17, 4285, 1371, 17868, 15288, 1074, 21, 4636, 576, 5605, 13985, 5204, 4594, 1178, 1114, 1611, 17870, 4789, 8716, 17872, 9946, 17873, 2]
+// Dependencies: [5, 32, 19, 17, 4285, 1371, 17869, 15289, 1074, 21, 4636, 576, 5605, 13986, 5204, 4594, 1176, 1114, 1611, 17871, 4789, 8716, 17873, 9946, 17874, 2]
 
-// Module 17869 (GuildRoleSubscriptionBenefitEditorModal)
+// Module 17870 (GuildRoleSubscriptionBenefitEditorModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import TrashIcon from "TrashIcon" /* 4594 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import Pressables from "Pressables" /* 5204 */;
-import FormStylesDefault from "FormStyles" /* 13985 */;
+import FormStylesDefault from "FormStyles" /* 13986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 17868 */;
+import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 17869 */;
 import TextStyles from "TextStyles" /* 5605 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ function DeleteButton(onDelete) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(15288);
+const GuildRoleSubscriptionsConstants = fn(15289);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -145,7 +145,7 @@ export default noop.forwardRef((benefitType) => {
     return arg1;
   };
   const tmp = closure_15();
-  const tmp4 = value(13985)();
+  const tmp4 = value(13986)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
   dependencyMap = tmp6;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
@@ -204,14 +204,14 @@ export default noop.forwardRef((benefitType) => {
               closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
             }
       };
-      let tmp25 = closure_13(tmp2(17870), obj);
+      let tmp25 = closure_13(tmp2(17871), obj);
       let tmp26 = closure_13;
     } else {
       let obj2 = { style: tmp4.textInput, showTopContainer: false, multiline: false, maxLength: maxLength2, value, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
       const intl9 = tmp20(1114).intl;
       obj2.placeholder = intl9.string(tmp20(1114).t["kV54/Y"]);
       obj2.onChange = tmp6;
-      obj2.clearButtonVisibility = tmp20(1178).ClearButtonVisibility.WITH_CONTENT;
+      obj2.clearButtonVisibility = tmp20(1176).ClearButtonVisibility.WITH_CONTENT;
       tmp25 = closure_13(tmp20(8716).FormInput, obj2);
       tmp26 = closure_13;
     }
@@ -232,7 +232,7 @@ export default noop.forwardRef((benefitType) => {
         },
       listingId: benefitType.listingId
     };
-    const items = [tmp26(tmp2(17872), obj4), ];
+    const items = [tmp26(tmp2(17873), obj4), ];
     let obj5 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp.scrollContainer, ];
     const obj6 = { paddingBottom: value(1611)().bottom + 32 + 16 };
@@ -252,7 +252,7 @@ export default noop.forwardRef((benefitType) => {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp26(tmp2(17873), obj9);
+    items2[3] = tmp26(tmp2(17874), obj9);
     const obj11 = { style: tmp4.header, children: null };
     const tmp28 = first2;
     const tmp29 = closure_6;

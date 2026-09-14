@@ -1,7 +1,7 @@
 // Module ID: 7505
 // Function ID: 7506
 // Name: GuildBoostingSubscribeButton
-// Dependencies: [5, 19, 17, 4531, 1074, 5517, 1373, 21, 7506, 4839, 5515, 13661, 1483, 7265, 563, 1379, 12667, 5056, 1114, 5176, 2]
+// Dependencies: [5, 19, 17, 4531, 1074, 5517, 1373, 21, 7506, 4839, 5515, 13662, 1483, 7265, 563, 1379, 12668, 5056, 1114, 5176, 2]
 // Exports: default
 
 // Module 7505 (GuildBoostingSubscribeButton)

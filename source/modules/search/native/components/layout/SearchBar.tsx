@@ -1,21 +1,21 @@
-// Module ID: 16735
-// Function ID: 16736
+// Module ID: 16737
+// Function ID: 16738
 // Name: layout/SearchBar
-// Dependencies: [19, 17, 1957, 1979, 4285, 1371, 12468, 7982, 7981, 1074, 21, 4636, 1114, 4789, 504, 5063, 12467, 12490, 4348, 12487, 12470, 9885, 16736, 2]
+// Dependencies: [19, 17, 1957, 1979, 4285, 1371, 12469, 7982, 7981, 1074, 21, 4636, 1114, 4789, 504, 5063, 12468, 12491, 4348, 12488, 12471, 9885, 16738, 2]
 
-// Module 16735 (layout/SearchBar)
+// Module 16737 (layout/SearchBar)
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import useChannelName from "useChannelName" /* 4789 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
@@ -204,7 +204,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       const tmp2 = importDefault;
       const result = SearchPlatformUtilsDefault.syncAutocompleteDebounced(tmp);
       if (!obj.isAutocompleteVisible(tmp)) {
-        const tmp2Result = tmp2(12467);
+        const tmp2Result = tmp2(12468);
         if (isInitialSearchQueryResult) {
           const initialMessages = tmp2Result.fetchInitialMessages(tmp);
         } else {
@@ -238,7 +238,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       const result1 = SearchPlatformUtilsDefault.syncAutocompleteDebounced(tmp);
       const queryString = obj.getQueryString(tmp);
       if (queryString !== searchResultsQuery) {
-        const tmp6Result = tmp6(12467);
+        const tmp6Result = tmp6(12468);
         if (tmp11) {
           const initialMessages = tmp6Result.fetchInitialMessages(tmp);
         } else {

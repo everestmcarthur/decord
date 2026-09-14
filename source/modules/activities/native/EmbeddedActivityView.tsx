@@ -1,7 +1,7 @@
 // Module ID: 9765
 // Function ID: 9766
 // Name: EmbeddedActivityView
-// Dependencies: [109, 32, 19, 17, 1956, 1920, 1350, 21, 4636, 9764, 1477, 573, 9766, 9767, 9769, 9762, 504, 9771, 9645, 9772, 9780, 2]
+// Dependencies: [109, 32, 19, 17, 1956, 1920, 1348, 21, 4636, 9764, 1477, 573, 9766, 9767, 9769, 9762, 504, 9771, 9645, 9772, 9780, 2]
 
 // Module 9765 (EmbeddedActivityView)
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -115,7 +115,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_7, View: closure_8 } = get_ActivityIndicator);
 const Constants = fn(1920);
 ({ ActivityLayoutMode: c10, ActivityScreenOrientation: closure_11 } = Constants);
-fn(1350).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
+fn(1348).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4636);

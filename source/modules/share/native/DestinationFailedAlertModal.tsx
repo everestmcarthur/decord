@@ -1,17 +1,17 @@
-// Module ID: 11832
-// Function ID: 11833
+// Module ID: 11833
+// Function ID: 11834
 // Name: DestinationFailedAlertModal
-// Dependencies: [19, 17, 1957, 1979, 4676, 4285, 1371, 1085, 21, 4636, 576, 4789, 11041, 1178, 4632, 504, 4481, 11133, 4986, 4986, 1114, 2]
+// Dependencies: [19, 17, 1957, 1979, 4676, 4285, 1371, 1085, 21, 4636, 576, 4789, 11042, 1176, 4632, 504, 4481, 11134, 4986, 4986, 1114, 2]
 // Exports: default
 
-// Module 11832 (DestinationFailedAlertModal)
+// Module 11833 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import AlertModal from "AlertModal" /* 4986 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -44,7 +44,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 219.75, avatarDecoration: null, autoStatusCutout: "\u{1F468}\u{1F3FF}\u200D\u{1F3EB}" };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 200.75, avatarDecoration: null, autoStatusCutout: "\u{1F9D1}\u{1F3FE}\u200D\u{1F3EB}" };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -52,9 +52,9 @@ function FailedUserRow(user) {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1178).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1176).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1178).Avatar, obj4), ];
+    const items2 = [closure_10(tmp2(1176).Avatar, obj4), ];
     const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
@@ -80,7 +80,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11133).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11133).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4632).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(11134).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11134).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4632).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }

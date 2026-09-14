@@ -1,14 +1,14 @@
-// Module ID: 17019
-// Function ID: 17020
+// Module ID: 17021
+// Function ID: 17022
 // Name: SettingsOverviewScreen
-// Dependencies: [19, 8079, 21, 1114, 1369, 15572, 4294, 11601, 14776, 2]
+// Dependencies: [19, 8079, 21, 1114, 1369, 15573, 4294, 11602, 14777, 2]
 // Exports: default
 
-// Module 17019 (SettingsOverviewScreen)
+// Module 17021 (SettingsOverviewScreen)
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15572 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -99,5 +99,5 @@ export default function SettingsOverviewScreen() {
     obj4.sections = items1;
     return SettingBuilders.createList(obj4);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14776).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14777).SearchableSettingsList, { node });
 };

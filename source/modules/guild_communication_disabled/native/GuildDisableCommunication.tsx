@@ -1,12 +1,12 @@
-// Module ID: 11971
-// Function ID: 11972
+// Module ID: 11972
+// Function ID: 11973
 // Name: GuildDisableCommunication
-// Dependencies: [5, 32, 19, 17, 2023, 1074, 21, 1114, 4636, 576, 7084, 11280, 5073, 1242, 11972, 4335, 4788, 9696, 4632, 5766, 5769, 7188, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 2023, 1074, 21, 1114, 4636, 576, 7084, 11281, 5073, 1240, 11973, 4335, 4788, 9696, 4632, 5766, 5769, 7188, 5056, 2]
 
-// Module 11971 (GuildDisableCommunication)
+// Module 11972 (GuildDisableCommunication)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import useMountEffectDefault from "useMountEffect" /* 5073 */;
@@ -14,7 +14,7 @@ import TableRadioGroup from "TableRadioGroup" /* 5766 */;
 import TableRadioRow from "TableRadioRow" /* 5769 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
 import TextArea from "TextArea" /* 7188 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11280 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11281 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -119,7 +119,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(11972);
+            const obj4 = tmp4(11973);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };

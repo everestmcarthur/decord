@@ -1,9 +1,9 @@
-// Module ID: 15211
-// Function ID: 15212
+// Module ID: 15212
+// Function ID: 15213
 // Name: QuestProgressIndicator
-// Dependencies: [19, 17, 4628, 21, 4373, 8574, 4636, 576, 504, 4637, 5204, 1114, 5610, 15212, 11899, 2]
+// Dependencies: [19, 17, 4628, 21, 4373, 8574, 4636, 576, 504, 4637, 5204, 1114, 5610, 15213, 11900, 2]
 
-// Module 15211 (QuestProgressIndicator)
+// Module 15212 (QuestProgressIndicator)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;

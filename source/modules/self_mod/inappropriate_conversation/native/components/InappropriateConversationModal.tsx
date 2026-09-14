@@ -1,10 +1,10 @@
-// Module ID: 15811
-// Function ID: 15812
+// Module ID: 15813
+// Function ID: 15814
 // Name: InappropriateConversationModal
-// Dependencies: [32, 19, 17, 1371, 11496, 21, 4636, 576, 504, 4481, 1483, 5773, 4632, 1114, 5056, 11503, 15812, 11509, 5705, 11527, 4839, 11504, 7103, 2]
+// Dependencies: [32, 19, 17, 1371, 11497, 21, 4636, 576, 504, 4481, 1483, 5773, 4632, 1114, 5056, 11504, 15814, 11510, 5705, 11528, 4839, 11505, 7103, 2]
 // Exports: default
 
-// Module 15811 (InappropriateConversationModal)
+// Module 15813 (InappropriateConversationModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -14,10 +14,10 @@ import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import native from "native" /* 5773 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11504 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11509 */;
-import TakeActionScreenDefault from "TakeActionScreen" /* 15812 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11505 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11510 */;
+import TakeActionScreenDefault from "TakeActionScreen" /* 15814 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -137,7 +137,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
 const useState = fn(19).useState;
 get_ActivityIndicator = fn(17);
 ({ Linking: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(11496);
+const Constants = fn(11497);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_9, CRISIS_TEXT_LINE_URL: c10, TAKEOVER_MODAL_KEY: closure_11, getInappropriateConversationsSafetyTips: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

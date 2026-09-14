@@ -1,10 +1,10 @@
-// Module ID: 16510
-// Function ID: 16511
+// Module ID: 16512
+// Function ID: 16513
 // Name: useGetOrFetchNotificationCenterItemApplications
 // Dependencies: [19, 7742, 7271, 2]
 // Exports: useGetOrFetchNotificationCenterItemsApplications
 
-// Module 16510 (useGetOrFetchNotificationCenterItemApplications)
+// Module 16512 (useGetOrFetchNotificationCenterItemApplications)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7271 */;
 import noop from "module_19" /* 19 */;
 

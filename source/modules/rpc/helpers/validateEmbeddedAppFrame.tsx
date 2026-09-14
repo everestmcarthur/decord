@@ -1,15 +1,15 @@
-// Module ID: 14550
-// Function ID: 14551
+// Module ID: 14551
+// Function ID: 14552
 // Name: validateEmbeddedAppFrame
-// Dependencies: [9640, 14551, 4541, 1074, 9641, 9689, 8981, 9684, 2]
+// Dependencies: [9640, 14552, 4541, 1074, 9641, 9689, 8981, 9684, 2]
 // Exports: tryValidateEmbeddedAppFrame
 
-// Module 14550 (validateEmbeddedAppFrame)
+// Module 14551 (validateEmbeddedAppFrame)
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8981 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import RPCHelpers from "RPCHelpers" /* 9689 */;
 import FramesStore from "FramesStore" /* 9640 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14551 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14552 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {

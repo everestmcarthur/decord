@@ -1,7 +1,7 @@
 // Module ID: 10235
 // Function ID: 10236
 // Name: MessagePreviewText
-// Dependencies: [19, 17, 1957, 10224, 1085, 21, 4636, 1151, 576, 10236, 10237, 10223, 4632, 5668, 10259, 4869, 10267, 10268, 1095, 7405, 1114, 7983, 2]
+// Dependencies: [19, 17, 1957, 10224, 1085, 21, 4636, 1364, 576, 10236, 10237, 10223, 4632, 5668, 10259, 4869, 10267, 10268, 1095, 7405, 1114, 7983, 2]
 // Exports: default
 
 // Module 10235 (MessagePreviewText)
@@ -140,7 +140,7 @@ const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let createStyles = fn(4636);
-const PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
 createStyles = fn(4636);

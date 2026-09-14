@@ -1,16 +1,16 @@
-// Module ID: 11133
-// Function ID: 11134
+// Module ID: 11134
+// Function ID: 11135
 // Name: GuildIconWithChannelType
-// Dependencies: [19, 17, 21, 5665, 4636, 576, 5109, 11134, 8940, 1178, 2]
+// Dependencies: [19, 17, 21, 5665, 4636, 576, 5109, 11135, 8940, 1176, 2]
 // Exports: GuildIconWithChannelType
 
-// Module 11133 (GuildIconWithChannelType)
+// Module 11134 (GuildIconWithChannelType)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import GuildIcon from "GuildIcon" /* 5665 */;
 import ClipView from "ClipView" /* 8940 */;
-import Pile from "Pile" /* 11134 */;
+import Pile from "Pile" /* 11135 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

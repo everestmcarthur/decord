@@ -1,11 +1,11 @@
-// Module ID: 17400
-// Function ID: 17401
+// Module ID: 17402
+// Function ID: 17403
 // Name: useCaptchaModalEffects
-// Dependencies: [19, 1074, 5073, 11410, 1242, 2]
+// Dependencies: [19, 1074, 5073, 11411, 1240, 2]
 // Exports: default
 
-// Module 17400 (useCaptchaModalEffects)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 17402 (useCaptchaModalEffects)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

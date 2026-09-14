@@ -1,10 +1,10 @@
-// Module ID: 16951
-// Function ID: 16952
+// Module ID: 16953
+// Function ID: 16954
 // Name: ChannelSettingsIntegrationsOverview
-// Dependencies: [19, 1961, 1957, 1074, 21, 1483, 7271, 5768, 1114, 5686, 1178, 1396, 4636, 576, 504, 8716, 5054, 16838, 16952, 2]
+// Dependencies: [19, 1961, 1957, 1074, 21, 1483, 7271, 5768, 1114, 5686, 1176, 1396, 4636, 576, 504, 8716, 5054, 16840, 16954, 2]
 // Exports: default
 
-// Module 16951 (ChannelSettingsIntegrationsOverview)
+// Module 16953 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -32,8 +32,8 @@ function LinkedLobbyFormSection(channel) {
     const obj5 = { source: null, size: null };
     ({ id: obj7.id, icon: obj7.icon } = getOrFetchApplication);
     obj5.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null });
-    obj5.size = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
-    obj4.icon = closure_6(tmp(1178).Avatar, obj5);
+    obj5.size = tmp(1176).AvatarSizes.REFRESH_MEDIUM_32;
+    obj4.icon = closure_6(tmp(1176).Avatar, obj5);
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
@@ -71,7 +71,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
       obj6.label = intl.string(tmp(1114).t.jp25Id);
       const intl2 = tmp(1114).intl;
       obj6.subLabel = intl2.string(tmp(1114).t.mKIOkI);
-      obj6.icon = tmp6(tmp(16838).WebhookIcon, {});
+      obj6.icon = tmp6(tmp(16840).WebhookIcon, {});
       obj6.onPress = function onPress() {
         return closure_1.push(ChannelSettingsSections.WEBHOOKS);
       };
@@ -83,7 +83,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
         obj7.label = intl3.string(tmp(1114).t.OrV60r);
         const intl4 = tmp(1114).intl;
         obj7.subLabel = intl4.string(tmp(1114).t.rQREJl);
-        obj7.icon = tmp6(tmp(16952).ChannelsFollowedIcon, {});
+        obj7.icon = tmp6(tmp(16954).ChannelsFollowedIcon, {});
         obj7.onPress = function onPress() {
           return closure_1.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
         };

@@ -1,10 +1,10 @@
-// Module ID: 12817
-// Function ID: 12818
+// Module ID: 12818
+// Function ID: 12819
 // Name: NewUserPermissionsOnboarding
 // Dependencies: [19, 17, 21, 4636, 5763, 576, 4632, 5056, 1114, 2]
 // Exports: default
 
-// Module 12817 (NewUserPermissionsOnboarding)
+// Module 12818 (NewUserPermissionsOnboarding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;

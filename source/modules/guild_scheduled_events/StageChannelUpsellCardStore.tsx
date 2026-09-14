@@ -1,15 +1,15 @@
 // Module ID: 9860
 // Function ID: 9861
 // Name: StageChannelUpsellCardStore
-// Dependencies: [1963, 1244, 510, 1249, 4259, 2]
+// Dependencies: [1963, 1242, 510, 1247, 4259, 2]
 // Exports: useStageChannelUpsellCardStore
 
 // Module 9860 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
 import _mod4259 from "module_4259" /* 4259 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

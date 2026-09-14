@@ -1,10 +1,10 @@
-// Module ID: 14729
-// Function ID: 14730
+// Module ID: 14730
+// Function ID: 14731
 // Name: UserPrimaryGuildListBottomSheet
-// Dependencies: [19, 17, 8048, 21, 4636, 1150, 576, 8282, 4355, 5686, 4603, 1114, 5665, 9313, 5770, 12, 7253, 4632, 9003, 8716, 2]
+// Dependencies: [19, 17, 8048, 21, 4636, 1363, 576, 8282, 4355, 5686, 4603, 1114, 5665, 9313, 5770, 12, 7253, 4632, 9003, 8716, 2]
 // Exports: default
 
-// Module 14729 (UserPrimaryGuildListBottomSheet)
+// Module 14730 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
 let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 18;
 if (PlatformUtils.isAndroid()) {
   num = 16;

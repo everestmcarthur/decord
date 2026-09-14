@@ -1,14 +1,14 @@
-// Module ID: 11880
-// Function ID: 11881
+// Module ID: 11881
+// Function ID: 11882
 // Name: SpotifyActionCreators
-// Dependencies: [11879, 8458, 1074, 1952, 1272, 573, 1090, 1150, 8807, 2]
+// Dependencies: [11880, 8458, 1074, 1952, 1270, 573, 1090, 1363, 8807, 2]
 // Exports: fetchIsSpotifyProtocolRegistered, getAccessToken, getDevices, getProfile, pause, play, setActiveDevice, subscribePlayerStateNotifications
 
-// Module 11880 (SpotifyActionCreators)
+// Module 11881 (SpotifyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import GameUtilsDefault from "GameUtils" /* 8807 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11879 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11880 */;
 
 const require = globalThis.__r;
 
@@ -325,7 +325,7 @@ const SpotifyConstants = fn(8458);
 ({ SPOTIFY_APP_PROTOCOL: closure_4, SpotifyEndpoints: hasOwnProperty } = SpotifyConstants);
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, PlatformTypes: closure_8 } = Constants);
-const SpotifyAPI = { get: apiRequest.bind(null, fn(1272).HTTP.get), put: apiRequest.bind(null, fn(1272).HTTP.put) };
+const SpotifyAPI = { get: apiRequest.bind(null, fn(1270).HTTP.get), put: apiRequest.bind(null, fn(1270).HTTP.put) };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyActionCreators.tsx");
 

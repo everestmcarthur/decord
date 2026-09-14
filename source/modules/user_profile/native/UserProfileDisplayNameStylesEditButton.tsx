@@ -1,18 +1,18 @@
-// Module ID: 14701
-// Function ID: 14702
+// Module ID: 14702
+// Function ID: 14703
 // Name: UserProfileDisplayNameStylesEditButton
-// Dependencies: [32, 19, 17, 1074, 1954, 21, 4636, 576, 1483, 9306, 7491, 1943, 8283, 4870, 11030, 1390, 1242, 1114, 14702, 1178, 13302, 11027, 14703, 14705, 2786, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 21, 4636, 576, 1483, 9306, 7491, 1943, 8283, 4870, 11031, 1390, 1240, 1114, 14703, 1176, 13303, 11028, 14704, 14706, 2786, 2]
 // Exports: default
 
-// Module 14701 (UserProfileDisplayNameStylesEditButton)
+// Module 14702 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import _modDef13302 from "module_13302" /* 13302 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14702 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14703 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import _modDef13303 from "module_13303" /* 13303 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14703 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14704 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -97,8 +97,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef13302, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef13302, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef13303, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef13303, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

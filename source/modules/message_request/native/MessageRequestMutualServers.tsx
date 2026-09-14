@@ -1,10 +1,10 @@
-// Module ID: 16992
-// Function ID: 16993
+// Module ID: 16994
+// Function ID: 16995
 // Name: MessageRequestMutualServers
-// Dependencies: [19, 17, 21, 4636, 5665, 16993, 1114, 12747, 4632, 5204, 2]
+// Dependencies: [19, 17, 21, 4636, 5665, 16995, 1114, 12748, 4632, 5204, 2]
 // Exports: default
 
-// Module 16992 (MessageRequestMutualServers)
+// Module 16994 (MessageRequestMutualServers)
 import GuildIconDefault from "GuildIcon" /* 5665 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  const mutualGuildsForMessageRequests = iconSize(16993).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = iconSize(16995).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1114).intl;
@@ -45,7 +45,7 @@ export default function MessageRequestMutualServers(textVariant) {
   let tmp9 = length > 0;
   if (tmp9) {
     const obj4 = { size: iconSize, names: substr.map((name) => name.name), children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)) };
-    tmp9 = closure_4(tmp4(12747).GuildIconPile, obj4);
+    tmp9 = closure_4(tmp4(12748).GuildIconPile, obj4);
   }
   const items1 = [tmp9, ];
   const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };

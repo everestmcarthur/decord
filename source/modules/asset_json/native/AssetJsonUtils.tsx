@@ -1,7 +1,7 @@
 // Module ID: 1118
 // Function ID: 1119
 // Name: AssetJsonUtils
-// Dependencies: [5, 17, 1119, 1121, 1122, 1123, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1149, 1150, 1152, 2]
+// Dependencies: [5, 17, 1119, 1121, 1122, 1123, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1149, 1150, 2]
 
 // Module 1118 (AssetJsonUtils)
 import _mod1119 from "module_1119" /* 1119 */;
@@ -39,7 +39,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 require = fn;
 function loadJsonAsset() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -47,7 +47,7 @@ function loadJsonAsset() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _loadJsonAsset(arg0, value) {
+let closure_7 = async function _loadJsonAsset(arg0, value) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -84,7 +84,6 @@ let closure_8 = async function _loadJsonAsset(arg0, value) {
           let uri;
           closure_130_3 = undefined;
           closure_130_4 = undefined;
-          closure_130_5 = undefined;
           c4 = 1;
           c5 = 1;
           return { value: "PX_16", done: true };
@@ -95,78 +94,58 @@ let closure_8 = async function _loadJsonAsset(arg0, value) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          if (null != closure_131_6[closure_130_0]) {
+          if (null != closure_131_5[closure_130_0]) {
             if (closure_130_1) {
               c5 = 3;
-              const obj7 = { value: closure_131_6[closure_130_0], done: true };
-              return obj7;
+              const obj6 = { value: closure_131_5[closure_130_0], done: true };
+              return obj6;
             }
           }
           uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
-          if (obj4.isAndroid()) {
-            const obj5 = closure_131_1(closure_131_2[33]);
-            let asset;
-            if (obj5 != null) {
-              asset = obj5.readAsset(uri, "utf8");
-            }
-            let asset1 = asset;
-          } else {
-            const DCDFileManager = closure_131_5.DCDFileManager;
-            asset1 = DCDFileManager.readAsset(uri, "utf8");
-          }
-          closure_130_3 = asset1;
-          if (null == closure_130_3) {
-            const _Error = Error;
-            const error = new Error("RTNFileManager doesn't exist?");
-            throw error;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            const obj8 = { value: closure_130_3, done: false };
-            return obj8;
-          }
-          obj4 = closure_131_0(closure_131_2[32]);
+          c4 = 2;
+          c5 = 1;
+          const obj7 = { value: closure_131_1(closure_131_2[32]).readAsset(uri, "utf8"), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
-        closure_130_4 = value;
-        if (null == closure_130_4) {
+        closure_130_3 = value;
+        if (null == closure_130_3) {
           c5 = 3;
           return { value: null, done: true };
         } else {
-          if (null != closure_131_6[closure_130_0]) {
+          if (null != closure_131_5[closure_130_0]) {
             if (closure_130_1) {
               c5 = 3;
-              const obj10 = { value: closure_131_6[closure_130_0], done: true };
-              return obj10;
+              const obj9 = { value: closure_131_5[closure_130_0], done: true };
+              return obj9;
             }
           }
           const _JSON = JSON;
-          closure_130_5 = JSON.parse(closure_130_4);
-          closure_131_6[closure_130_0] = closure_130_5;
+          closure_130_4 = JSON.parse(closure_130_3);
+          closure_131_5[closure_130_0] = closure_130_4;
           c5 = 3;
-          const obj = { value: closure_130_5, done: true };
+          const obj = { value: closure_130_4, done: true };
           return obj;
         }
       }
-    } catch (tmp49) {
+    } catch (tmp31) {
       c5 = tmp;
-      throw tmp49;
+      throw tmp31;
     }
   }
 };
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, NativeModules: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = {};
+const Image = fn(17).Image;
+let closure_5 = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/asset_json/native/AssetJsonUtils.tsx");
 

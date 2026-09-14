@@ -1,18 +1,18 @@
-// Module ID: 12532
-// Function ID: 12533
+// Module ID: 12533
+// Function ID: 12534
 // Name: ApplicationCommandBar
-// Dependencies: [32, 19, 17, 2021, 21, 4636, 576, 5522, 5204, 1114, 1178, 504, 12360, 5668, 4632, 8716, 8390, 12533, 2]
+// Dependencies: [32, 19, 17, 2021, 21, 4636, 576, 5522, 5204, 1114, 1176, 504, 12361, 5668, 4632, 8716, 8390, 12534, 2]
 // Exports: default
 
-// Module 12532 (ApplicationCommandBar)
+// Module 12533 (ApplicationCommandBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import usePreviousDefault from "usePrevious" /* 8390 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12360 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12533 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12361 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12534 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;

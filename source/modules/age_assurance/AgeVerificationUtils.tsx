@@ -1,7 +1,7 @@
 // Module ID: 4849
 // Function ID: 4850
 // Name: AgeVerificationUtils
-// Dependencies: [5, 32, 19, 4850, 4851, 502, 4857, 1371, 8571, 8530, 1074, 1098, 8517, 8531, 5505, 1894, 504, 5504, 8554, 12057, 573, 8529, 8522, 8535, 8390, 1114, 2946, 13852, 2]
+// Dependencies: [5, 32, 19, 4850, 4851, 502, 4857, 1371, 8571, 8530, 1074, 1098, 8517, 8531, 5505, 1894, 504, 5504, 8554, 12058, 573, 8529, 8522, 8535, 8390, 1114, 2946, 13853, 2]
 // Exports: ageGateSourceHasLightboxBackdrop, getAgeVerificationGetStartedSubtitle, getAgeVerificationGetStartedTitle, isAgeVerificationMessageWithConnectToTeenCta, isAgeVerificationMessageWithManualReviewCta, isAgeVerificationMessageWithRetryCta, isAgeVerified, isAssignedByDiscord, isFullscreenAgeVerificationEntryPoint, isVerifiedAdult, isVerifiedTeen, maybePerformReactiveCheck, shouldShowTiggerPawtect, useInitiateAgeVerification, useInitiateAgeVerificationV2, useIsAgeVerified, useIsAssignedByDiscord, useIsExplicitlyVerifiedAdult, useIsVerifiedAdult, useIsVerifiedTeen, useMaybePerformReactiveCheckForSource, useShouldShowTiggerPawtect, useShowAssignedAgeGroupSettings, useWatchAgeVerificationStatusChange
 
 // Module 4849 (AgeVerificationUtils)
@@ -15,8 +15,8 @@ import AgeGatedFeature from "AgeGatedFeature" /* 5505 */;
 import usePreviousDefault from "usePrevious" /* 8390 */;
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8535 */;
 import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8554 */;
-import FamilyCenterConnectionPrereqExperiment2 from "FamilyCenterConnectionPrereqExperiment" /* 12057 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13852 */;
+import FamilyCenterConnectionPrereqExperiment2 from "FamilyCenterConnectionPrereqExperiment" /* 12058 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,12 +1,12 @@
-// Module ID: 17071
-// Function ID: 17072
+// Module ID: 17073
+// Function ID: 17074
 // Name: Toast
-// Dependencies: [32, 19, 17, 21, 4636, 576, 4338, 1178, 4632, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 4338, 1176, 4632, 2]
 // Exports: default
 
-// Module 17071 (Toast)
+// Module 17073 (Toast)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useToken from "useToken" /* 4338 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _slicedToArray from "module_32" /* 32 */;

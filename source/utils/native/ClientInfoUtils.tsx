@@ -1,11 +1,11 @@
-// Module ID: 1364
-// Function ID: 1365
+// Module ID: 1362
+// Function ID: 1363
 // Name: ClientInfoUtils
-// Dependencies: [1344, 2]
+// Dependencies: [1342, 2]
 // Exports: getBuildNumberLabel, getConstants
 
-// Module 1364 (ClientInfoUtils)
-import NativeClientInfoModuleDefault from "NativeClientInfoModule" /* 1344 */;
+// Module 1362 (ClientInfoUtils)
+import NativeClientInfoModuleDefault from "NativeClientInfoModule" /* 1342 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
@@ -15,10 +15,10 @@ export const getConstants = function getConstants() {
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];
-  let str = "6411";
-  if (items.includes("6411")) {
+  let str = "6417";
+  if (items.includes("6417")) {
     const _HermesInternal = HermesInternal;
-    str = "dev (" + "6411" + ")";
+    str = "dev (" + "6417" + ")";
   }
   return str;
 };

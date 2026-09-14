@@ -1,10 +1,10 @@
-// Module ID: 15018
-// Function ID: 15019
+// Module ID: 15019
+// Function ID: 15020
 // Name: UserSettingsFamilyCenterParentalControls
-// Dependencies: [32, 19, 17, 1074, 7641, 21, 4636, 576, 1483, 7265, 7285, 7097, 7696, 14982, 15000, 1114, 2396, 7966, 15019, 15020, 9922, 7642, 7226, 15021, 9923, 12745, 2]
+// Dependencies: [32, 19, 17, 1074, 7641, 21, 4636, 576, 1483, 7265, 7285, 7097, 7696, 14983, 15001, 1114, 2396, 7966, 15020, 15021, 9922, 7642, 7226, 15022, 9923, 12746, 2]
 // Exports: default
 
-// Module 15018 (UserSettingsFamilyCenterParentalControls)
+// Module 15019 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;

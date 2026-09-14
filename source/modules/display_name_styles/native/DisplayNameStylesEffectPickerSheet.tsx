@@ -1,18 +1,18 @@
-// Module ID: 15428
-// Function ID: 15429
+// Module ID: 15429
+// Function ID: 15430
 // Name: DisplayNameStylesEffectPickerSheet
-// Dependencies: [32, 19, 17, 21, 4636, 576, 8287, 15423, 15424, 4604, 4603, 7253, 7252, 1114, 2786, 5056, 5054, 11030, 11027, 11028, 2]
+// Dependencies: [32, 19, 17, 21, 4636, 576, 8287, 15424, 15425, 4604, 4603, 7253, 7252, 1114, 2786, 5056, 5054, 11031, 11028, 11029, 2]
 // Exports: default
 
-// Module 15428 (DisplayNameStylesEffectPickerSheet)
+// Module 15429 (DisplayNameStylesEffectPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import types from "types" /* 11028 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 11030 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import types from "types" /* 11029 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 11031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -78,9 +78,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   closure_5 = undefined;
   const tmp = closure_9();
   let obj = userId(8287);
-  const visibleEffectOrder = userId(15423).useVisibleEffectOrder();
-  const obj2 = userId(15423);
-  const displayNameStylesNewEffects = userId(15424).useDisplayNameStylesNewEffects(visibleEffectOrder);
+  const visibleEffectOrder = userId(15424).useVisibleEffectOrder();
+  const obj2 = userId(15424);
+  const displayNameStylesNewEffects = userId(15425).useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;

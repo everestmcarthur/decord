@@ -1,11 +1,11 @@
 // Module ID: 5511
 // Function ID: 5512
 // Name: StageBoostingActionSheet
-// Dependencies: [19, 4628, 1979, 4275, 5495, 1074, 1373, 21, 504, 1965, 1114, 4603, 1242, 5512, 5506, 5073, 5514, 5056, 5515, 10358, 5773, 5668, 8715, 2]
+// Dependencies: [19, 4628, 1979, 4275, 5495, 1074, 1373, 21, 504, 1965, 1114, 4603, 1240, 5512, 5506, 5073, 5514, 5056, 5515, 10359, 5773, 5668, 8715, 2]
 // Exports: default
 
 // Module 5511 (StageBoostingActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5515 */;
@@ -158,6 +158,6 @@ export default function StageBoostingActionSheet(channel) {
     }
     obj8.illustration = tmp24Result2;
     obj8.actions = tmp24Result;
-    return tmp24(tmp(10358).PromoSheet, obj8);
+    return tmp24(tmp(10359).PromoSheet, obj8);
   }
 };

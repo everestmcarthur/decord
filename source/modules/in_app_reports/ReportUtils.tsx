@@ -1,13 +1,13 @@
 // Module ID: 8756
 // Function ID: 8757
 // Name: in_app_reports/ReportUtils
-// Dependencies: [5, 19, 4635, 1074, 8517, 1272, 8755, 8522, 573, 38, 8753, 4816, 2]
+// Dependencies: [5, 19, 4635, 1074, 8517, 1270, 8755, 8522, 573, 38, 8753, 4816, 2]
 // Exports: areRequiredElementsUnfilled, fetchUrfCapabilities, getDsaExperiment, getModeratorReportEndpointSafely, getReportMenuForModeratorReport, getUnauthenticatedReportMenu, sendUnauthenticatedReportPincode, showInAppReportsFeedbackModal, submitHeadlessReport, submitReport, submitReportSecondLook, submitUnauthenticatedReport, trackCloseReportModalAnalytics, useTrackSettingsUpsellsAction, verifyUnauthenticatedReport
 
 // Module 8756 (in_app_reports/ReportUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8522 */;
 import MenuTypes from "MenuTypes" /* 8753 */;
@@ -219,7 +219,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "Array", message_id: "call", stage_instance_id: "split", guild_id: "useMemo", guild_scheduled_event_id: "disabled", user_id: "o", email_token: "isArray", application_id: "isArray", entrypoint: "isArray", widget_id: "accessibilityRole" };
+  let obj2 = { channel_id: "min", message_id: "call", stage_instance_id: "right", guild_id: "w", guild_scheduled_event_id: "substring_i", user_id: "enabled", email_token: "c", application_id: "memo", entrypoint: "applicationId", widget_id: "substring_i" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -431,7 +431,7 @@ export const submitReport = function submitReport(language, name, arr) {
       }, {});
       let tmp15 = null;
       if (name.name === tmp4(8753).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "justifyContent", message_id: "call", guild_id: "window" };
+        let obj2 = { channel_id: "test", message_id: "call", guild_id: "intl" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -442,7 +442,7 @@ export const submitReport = function submitReport(language, name, arr) {
         tmp15 = obj4;
       }
       obj4 = tmp15;
-      const HTTP2 = tmp4(1272).HTTP;
+      const HTTP2 = tmp4(1270).HTTP;
       const REPORT_TO_MOD2 = tmp4(8755).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
@@ -479,7 +479,7 @@ export const submitReport = function submitReport(language, name, arr) {
         throw error;
       }
     } else {
-      const HTTP = tmp4(1272).HTTP;
+      const HTTP = tmp4(1270).HTTP;
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;

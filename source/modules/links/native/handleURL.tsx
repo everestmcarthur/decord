@@ -1,7 +1,7 @@
 // Module ID: 4326
 // Function ID: 4327
 // Name: handleURL
-// Dependencies: [5, 17, 4327, 1074, 3, 4328, 4330, 4331, 4332, 4333, 4334, 1114, 4601, 1150, 4603, 1367, 4616, 13938, 2]
+// Dependencies: [5, 17, 4327, 1074, 3, 4328, 4330, 4331, 4332, 4333, 4334, 1114, 4601, 1363, 4603, 1367, 4616, 13939, 2]
 // Exports: default
 
 // Module 4326 (handleURL)
@@ -85,8 +85,8 @@ let closure_9 = async function _handleURL(arg0, value) {
                   if (browserManagerSelectedBrowser !== tmp5.IN_APP) {
                     SAFARI = browserManagerSelectedBrowser;
                   } else {
-                    tmp8(1150).isIOS() ? tmp5.SAFARI : tmp5.CHROME;
-                    const tmp8Result = tmp8(1150);
+                    tmp8(1363).isIOS() ? tmp5.SAFARI : tmp5.CHROME;
+                    const tmp8Result = tmp8(1363);
                   }
                 }
                 const obj3 = closure_0(4601);
@@ -99,7 +99,7 @@ let closure_9 = async function _handleURL(arg0, value) {
                   closure_2_0(4334).presentFailedToast("" + intl.string(closure_2_0(1114).t.HryVrx) + " " + closure_1_0);
                 });
                 const obj7 = closure_0(4601);
-                let isIOSResult = closure_0(1150).isIOS();
+                let isIOSResult = closure_0(1363).isIOS();
                 if (isIOSResult) {
                   isIOSResult = open.isOpen();
                 }
@@ -107,7 +107,7 @@ let closure_9 = async function _handleURL(arg0, value) {
                   closure_1(4603).hideAllActionSheets();
                   const tmpResult = closure_1(4603);
                 }
-                const obj8 = closure_0(1150);
+                const obj8 = closure_0(1363);
               } else if (tmp5.CHROME === SAFARI) {
                 const result1 = closure_0(4601).browserManagerOpenUrl(closure_1_0, tmp5.CHROME);
                 result1.catch(() => {

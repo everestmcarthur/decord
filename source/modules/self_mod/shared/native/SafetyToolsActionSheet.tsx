@@ -1,10 +1,10 @@
-// Module ID: 11525
-// Function ID: 11526
+// Module ID: 11526
+// Function ID: 11527
 // Name: SafetyToolsActionSheet
-// Dependencies: [19, 17, 4285, 11496, 21, 4636, 576, 11523, 11526, 11527, 504, 11503, 7312, 1114, 8901, 8900, 4603, 11531, 1896, 4331, 7072, 7070, 7071, 7069, 9171, 11534, 6717, 8522, 4981, 11521, 8788, 8787, 8752, 10042, 10041, 4839, 11535, 11539, 11540, 11541, 9531, 9532, 11542, 11532, 5768, 5686, 5692, 2]
+// Dependencies: [19, 17, 4285, 11497, 21, 4636, 576, 11524, 11527, 11528, 504, 11504, 7312, 1114, 8901, 8900, 4603, 11532, 1896, 4331, 7072, 7070, 7071, 7069, 9171, 11535, 6717, 8522, 4981, 11522, 8788, 8787, 8752, 10042, 10041, 4839, 11536, 11540, 11541, 11542, 9531, 9532, 11543, 11533, 5768, 5686, 5692, 2]
 // Exports: default
 
-// Module 11525 (SafetyToolsActionSheet)
+// Module 11526 (SafetyToolsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
@@ -18,16 +18,16 @@ import _modDef9531 from "module_9531" /* 9531 */;
 import ShieldIcon from "ShieldIcon" /* 9532 */;
 import MusicIcon from "MusicIcon" /* 10041 */;
 import _modDef10042 from "module_10042" /* 10042 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
-import _modDef11534 from "module_11534" /* 11534 */;
-import _modDef11539 from "module_11539" /* 11539 */;
-import EducationIcon from "EducationIcon" /* 11540 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
+import _modDef11535 from "module_11535" /* 11535 */;
+import _modDef11540 from "module_11540" /* 11540 */;
+import EducationIcon from "EducationIcon" /* 11541 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11496);
+const Constants = fn(11497);
 ({ ACTION_SHEET_CONTEXT_MOBILE: metroRequire, getSafetyToolsActionSheetKey: closure_7, THROUGHLINE_URL: closure_8, NOFILTR_URL: closure_9, VIBING_WUMPUS_MODAL_KEY: c10 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
@@ -159,7 +159,7 @@ export default function SafetyToolsActionSheet(channelId) {
     const obj7 = { label: string2Result, subLabel: null, icon: null, IconComponent: null, onPress: null };
     const intl10 = tmp(1114).intl;
     obj7.subLabel = intl10.string(util.t.Lj37az);
-    obj7.icon = _modDef11534;
+    obj7.icon = _modDef11535;
     obj7.IconComponent = CircleXIcon.CircleXIcon;
     obj7.onPress = function onPress() {
       if (stateFromStores) {
@@ -222,7 +222,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj10.label = intl15.string(util.t["7LgVmt"]);
     const intl16 = tmp(1114).intl;
     obj10.subLabel = intl16.string(util.t.pwoRjc);
-    obj10.icon = _modDef11539;
+    obj10.icon = _modDef11540;
     obj10.IconComponent = EducationIcon.EducationIcon;
     obj10.trailing = tmp4;
     obj10.onPress = function onPress() {

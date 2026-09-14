@@ -1,10 +1,10 @@
-// Module ID: 14855
-// Function ID: 14856
+// Module ID: 14856
+// Function ID: 14857
 // Name: useAvailableAgeVerificationMethods
 // Dependencies: [32, 19, 8555, 573, 8556, 2]
 // Exports: useAvailableAgeVerificationMethods
 
-// Module 14855 (useAvailableAgeVerificationMethods)
+// Module 14856 (useAvailableAgeVerificationMethods)
 import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8555 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,10 +1,10 @@
-// Module ID: 17746
-// Function ID: 17747
+// Module ID: 17747
+// Function ID: 17748
 // Name: InRolePromptNotice
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 1384, 17747, 1178, 9755, 4632, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 1384, 17748, 1176, 9755, 4632, 1114, 2]
 // Exports: default
 
-// Module 17746 (InRolePromptNotice)
+// Module 17747 (InRolePromptNotice)
 import nativeDefault from "native" /* 576 */;
 import _modDef9755 from "module_9755" /* 9755 */;
 import noop from "module_19" /* 19 */;
@@ -31,8 +31,8 @@ export default function InRolePromptNotice(role) {
     return null;
   } else {
     const obj2 = { style: string.promptRow, children: null };
-    const tmpResult = tmp(17747);
-    let Icon = tmp(1178).Icon;
+    const tmpResult = tmp(17748);
+    let Icon = tmp(1176).Icon;
     if (isRolePowerfulResult) {
       const obj3 = { style: string.icon, source: _modDef9755, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       const items = [tmp6(Icon, obj3), ];
@@ -55,6 +55,6 @@ export default function InRolePromptNotice(role) {
       obj2.children = items1;
       tmp4Result = tmp4(tmp5, obj2);
     }
-    isRolePowerfulResult = tmp(17747).isRolePowerful(role);
+    isRolePowerfulResult = tmp(17748).isRolePowerful(role);
   }
 };

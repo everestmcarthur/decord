@@ -1,15 +1,15 @@
-// Module ID: 14888
-// Function ID: 14889
+// Module ID: 14889
+// Function ID: 14890
 // Name: AccountBlockedUsersSetting
-// Dependencies: [4285, 8079, 1074, 504, 1114, 11601, 8033, 14889, 2]
+// Dependencies: [4285, 8079, 1074, 504, 1114, 11602, 8033, 14890, 2]
 
-// Module 14888 (AccountBlockedUsersSetting)
+// Module 14889 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

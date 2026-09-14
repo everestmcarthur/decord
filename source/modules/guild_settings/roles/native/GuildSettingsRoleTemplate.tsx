@@ -1,13 +1,13 @@
-// Module ID: 17727
-// Function ID: 17728
+// Module ID: 17728
+// Function ID: 17729
 // Name: GuildSettingsRoleTemplate
-// Dependencies: [32, 19, 17, 4628, 1979, 17723, 1074, 21, 4636, 576, 7046, 1477, 5043, 4373, 1242, 4816, 8396, 5204, 4632, 10885, 1178, 11693, 5056, 1114, 2]
+// Dependencies: [32, 19, 17, 4628, 1979, 17724, 1074, 21, 4636, 576, 7046, 1477, 5043, 4373, 1240, 4816, 8396, 5204, 4632, 10886, 1176, 11694, 5056, 1114, 2]
 // Exports: default
 
-// Module 17727 (GuildSettingsRoleTemplate)
+// Module 17728 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -15,8 +15,8 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7046 */;
 import _modDef8396 from "module_8396" /* 8396 */;
-import PaginationDefault from "Pagination" /* 10885 */;
-import _modDef11693 from "module_11693" /* 11693 */;
+import PaginationDefault from "Pagination" /* 10886 */;
+import _modDef11694 from "module_11694" /* 11694 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -27,7 +27,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17723);
+const GuildSettingsRoleConstants = fn(17724);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
@@ -208,7 +208,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: closure_3.templateContent, children: null };
-          const items = [closure_3_14(native.Icon, { source: _modDef11693, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
+          const items = [closure_3_14(native.Icon, { source: _modDef11694, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
           obj.children = items;
           return __initData(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

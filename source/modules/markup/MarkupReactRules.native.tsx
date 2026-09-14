@@ -1,7 +1,7 @@
 // Module ID: 4627
 // Function ID: 4628
 // Name: MarkupReactRules
-// Dependencies: [19, 17, 4628, 1957, 2015, 1979, 1074, 1964, 1085, 21, 4631, 4632, 4636, 576, 4647, 4790, 4495, 4839, 8296, 4980, 1114, 7292, 4334, 5665, 1178, 1365, 8488, 4331, 11743, 11713, 8201, 504, 4486, 8065, 4603, 11716, 1896, 11, 1935, 5668, 11694, 13928, 11345, 5077, 10255, 13929, 13931, 4579, 5079, 1150, 5109, 13933, 10257, 2]
+// Dependencies: [19, 17, 4628, 1957, 2015, 1979, 1074, 1964, 1085, 21, 4631, 4632, 4636, 576, 4647, 4790, 4495, 4839, 8296, 4980, 1114, 7292, 4334, 5665, 1176, 1365, 8488, 4331, 11744, 11714, 8201, 504, 4486, 8065, 4603, 11717, 1896, 11, 1935, 5668, 11695, 13929, 11346, 5077, 10255, 13930, 13932, 4579, 5079, 1363, 5109, 13934, 10257, 2]
 // Exports: default, plainMentionRenderer, plainSpoilerRenderer
 
 // Module 4627 (MarkupReactRules)
@@ -27,8 +27,8 @@ import MarkupRulesUtils from "MarkupRulesUtils" /* 8201 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import SpoilerDefault from "Spoiler" /* 10255 */;
 import TimestampDefault from "Timestamp" /* 10257 */;
-import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 11345 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11713 */;
+import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 11346 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11714 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -94,7 +94,7 @@ function MarkupLink(arg0) {
             return LinkingDefault.openURL(formatResult);
           },
         trusted() {
-            return node(11743).isLinkTrusted(formatResult);
+            return node(11744).isLinkTrusted(formatResult);
           }
       };
       node(8488).handleClick(obj);
@@ -206,13 +206,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           const obj3 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = tmp);
-          obj5.openLazy(asyncRequireImpl(11716, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
+          obj5.openLazy(asyncRequireImpl(11717, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != tmp.guildId) {
           const obj2 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(11716, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(11717, dependencyMap.paths);
           const obj8 = { guildId: tmp.guildId, roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(tmp.guildId), channelId: tmp.channelId };
           obj2.openLazy(tmp12, "RoleMembersActionSheet", obj8, "stack");
         }
@@ -471,9 +471,9 @@ function MarkupChannelMention(state) {
       size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj5.style = size;
-    obj5.source = node(11694);
-    obj5.size = tmp3(1178).Icon.Sizes.CUSTOM;
-    closure_15(tmp3(1178).ThemedIcon, obj5);
+    obj5.source = node(11695);
+    obj5.size = tmp3(1176).Icon.Sizes.CUSTOM;
+    closure_15(tmp3(1176).ThemedIcon, obj5);
   }
 }
 function MarkupAttachmentLink(state) {
@@ -490,17 +490,17 @@ function MarkupAttachmentLink(state) {
     str2 = "text-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13928), size: null };
+  const obj2 = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13929), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
-    let SMALL = tmp3(1178).Icon.Sizes.EXTRA_SMALL_10;
+    let SMALL = tmp3(1176).Icon.Sizes.EXTRA_SMALL_10;
   } else if (fontScale < 1.25) {
-    SMALL = tmp3(1178).Icon.Sizes.EXTRA_SMALL;
+    SMALL = tmp3(1176).Icon.Sizes.EXTRA_SMALL;
   } else {
-    SMALL = tmp3(1178).Icon.Sizes.SMALL;
+    SMALL = tmp3(1176).Icon.Sizes.SMALL;
   }
   obj2.size = SMALL;
-  const items = [closure_15(state(1178).ThemedIcon, obj2), state(8201).smartOutput(node, output, state)];
+  const items = [closure_15(state(1176).ThemedIcon, obj2), state(8201).smartOutput(node, output, state)];
   obj.children = items;
   const tmp2Result = closure_16(state(4632).Text, obj, state.key);
   let tmp5Result = tmp2Result;
@@ -768,7 +768,7 @@ export default function createRules(styles) {
         closure_0 = channelId;
         let obj = MarkupRulesUtils;
         if (obj.isStaticRouteIconType(channelId.channelId)) {
-          let SignPostIcon = tmp(13929).SignPostIcon;
+          let SignPostIcon = tmp(13930).SignPostIcon;
           channelId = channelId.channelId;
           if (constants.GUILD_HOME !== channelId) {
             if (tmp4.SERVER_GUIDE !== channelId) {
@@ -779,7 +779,7 @@ export default function createRules(styles) {
                   }
                 }
               }
-              SignPostIcon = tmp(13931).ChannelListMagnifyingGlassIcon;
+              SignPostIcon = tmp(13932).ChannelListMagnifyingGlassIcon;
             }
             obj2 = { accessibilityRole: "button", style: obj.staticRouteLink, color: null, onPress: null, children: null };
             textColor = undefined;
@@ -808,7 +808,7 @@ export default function createRules(styles) {
             obj2.children = items;
             return value2(MarkupText, obj2, textColor.key);
           }
-          SignPostIcon = tmp(13929).SignPostIcon;
+          SignPostIcon = tmp(13930).SignPostIcon;
         } else {
           return null;
         }
@@ -863,7 +863,7 @@ export default function createRules(styles) {
     },
     [closure_0(closure_2[43]).AST_KEY.GUILD]: {
       react(icon, output, textColor) {
-        obj = obj(1150);
+        obj = obj(1363);
         let num = 2;
         if (!obj.isAndroid()) {
           let num3 = 0;
@@ -922,11 +922,11 @@ export default function createRules(styles) {
         obj.source = obj2.getChannelMentionIcon(str);
         const fontScale = closure_1_4.getFontScale();
         if (fontScale < 1) {
-          let SMALL = tmp2(1178).Icon.Sizes.EXTRA_SMALL_10;
+          let SMALL = tmp2(1176).Icon.Sizes.EXTRA_SMALL_10;
         } else if (fontScale < 1.25) {
-          SMALL = tmp2(1178).Icon.Sizes.EXTRA_SMALL;
+          SMALL = tmp2(1176).Icon.Sizes.EXTRA_SMALL;
         } else {
-          SMALL = tmp2(1178).Icon.Sizes.SMALL;
+          SMALL = tmp2(1176).Icon.Sizes.SMALL;
         }
         obj.size = SMALL;
         obj.style = { top: 1 };
@@ -937,9 +937,9 @@ export default function createRules(styles) {
         const obj3 = { color: textColor, children: null };
         const tmp6 = closure_1_16;
         const tmp7 = MarkupText;
-        const tmpResult = closure_1_15(obj(1178).ThemedIcon, obj);
-        const items = [closure_1_15(closure_1_6, { style: { paddingEnd: num }, children: closure_1_15(obj(1178).ThemedIcon, obj) }), ];
-        const obj4 = { style: { paddingEnd: num }, children: closure_1_15(obj(1178).ThemedIcon, obj) };
+        const tmpResult = closure_1_15(obj(1176).ThemedIcon, obj);
+        const items = [closure_1_15(closure_1_6, { style: { paddingEnd: num }, children: closure_1_15(obj(1176).ThemedIcon, obj) }), ];
+        const obj4 = { style: { paddingEnd: num }, children: closure_1_15(obj(1176).ThemedIcon, obj) };
         items[1] = obj(8201).smartOutput(iconType, output, textColor);
         obj3.children = items;
         return tmp6(tmp7, obj3, textColor.key);
@@ -953,7 +953,7 @@ export default function createRules(styles) {
     },
     [closure_0(closure_2[43]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_15(obj2(13933), { node, state }, state.key);
+        return closure_1_15(obj2(13934), { node, state }, state.key);
       }
     },
     [closure_0(closure_2[43]).AST_KEY.TIMESTAMP]: {
@@ -1164,4 +1164,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(13933).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(13934).createFetchingGameMentionRule;

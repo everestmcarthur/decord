@@ -1,12 +1,12 @@
-// Module ID: 13306
-// Function ID: 13307
+// Module ID: 13307
+// Function ID: 13308
 // Name: AvatarGrid
-// Dependencies: [19, 17, 4628, 4676, 21, 4636, 576, 504, 1178, 8363, 2]
+// Dependencies: [19, 17, 4628, 4676, 21, 4636, 576, 504, 1176, 8363, 2]
 // Exports: default
 
-// Module 13306 (AvatarGrid)
+// Module 13307 (AvatarGrid)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
@@ -43,7 +43,7 @@ function GridAvatar(user) {
     obj5 = { user, guildId };
     const merged1 = Object.assign(obj3);
   }
-  return closure_5(user(1178).Avatar, obj5);
+  return closure_5(user(1176).Avatar, obj5);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

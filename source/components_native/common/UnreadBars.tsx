@@ -1,17 +1,17 @@
-// Module ID: 16451
-// Function ID: 16452
+// Module ID: 16453
+// Function ID: 16454
 // Name: UnreadBars
-// Dependencies: [19, 17, 4628, 1074, 21, 4636, 5605, 576, 4486, 4347, 4604, 4605, 1178, 1114, 504, 12552, 2]
+// Dependencies: [19, 17, 4628, 1074, 21, 4636, 5605, 576, 4486, 4347, 4604, 4605, 1176, 1114, 504, 12553, 2]
 // Exports: default
 
-// Module 16451 (UnreadBars)
+// Module 16453 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
-import TransitionGroup from "TransitionGroup" /* 12552 */;
+import TransitionGroup from "TransitionGroup" /* 12553 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import TextStyles from "TextStyles" /* 5605 */;

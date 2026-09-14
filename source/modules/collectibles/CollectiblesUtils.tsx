@@ -1,13 +1,13 @@
 // Module ID: 7657
 // Function ID: 7658
 // Name: CollectiblesUtils
-// Dependencies: [7650, 1887, 7651, 7652, 7658, 1076, 1074, 1085, 4294, 1377, 1379, 7337, 1150, 1889, 12, 1114, 7656, 2]
+// Dependencies: [7650, 1887, 7651, 7652, 7658, 1076, 1074, 1085, 4294, 1377, 1379, 7337, 1363, 1889, 12, 1114, 7656, 2]
 // Exports: canActionOnProduct, extendVariantsProducts, extractPriceByPurchaseTypes, getAnalyticsShopDiscountSource, getAssetDisplayConfig, getAssetForAvatarDecorationProduct, getAvatarDecorations, getAvatarDecorationsFromCategories, getAvatarDecorationsFromPurchases, getBundleItemsPriceSum, getCollectibleTypeLabel, getCollectiblesItemTypeForDisplay, getCollectiblesPrice, getCollectiblesProductPriceComparisons, getDaysRemaining, getDefaultPriceSetAssignmentPurchaseType, getFormattedPriceForCollectiblesProduct, getLogoSize, getNameplates, getNameplatesFromCategories, getNameplatesFromPurchases, getPriceForCollectiblesProduct, getProductDiscount, getProductTypeNameForLogging, getProductsFromCategories, getProfileEffects, getProfileEffectsFromCategories, getProfileEffectsFromPurchases, getProfileFrames, getProfileFramesFromCategories, getProfileFramesFromPurchases, getShopDiscountSource, getStrikeThroughPriceAmountForCollectiblesProduct, groupProfileEffects, isBundleProduct, isCollectiblesGiftCode, isFreeCollectiblesProduct, isPremiumCollectiblesProduct, isPremiumCollectiblesPurchase, isProductNew, removeRewardProductsFilter, shouldHideGiftingForCurrency, shouldShowLimitedTimeBadge, sortProductsByPrice
 
 // Module 7657 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1085 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import NameplateRecord from "NameplateRecord" /* 1887 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
@@ -287,7 +287,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      const tmpResult = tmp(1150);
+      const tmpResult = tmp(1363);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
@@ -396,7 +396,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        const tmpResult = tmp(1150);
+        const tmpResult = tmp(1363);
       }
       DEFAULT = constants3.DEFAULT;
       obj = require("PlatformUtils");
@@ -776,10 +776,10 @@ export const getStrikeThroughPriceAmountForCollectiblesProduct = function getStr
           return acc + num;
         }, 0);
       } else {
-        const tmp2Result2 = tmp2(1150);
+        const tmp2Result2 = tmp2(1363);
       }
       DEFAULT = constants3.DEFAULT;
-      tmp2Result = tmp2(1150);
+      tmp2Result = tmp2(1363);
     }
   } else if (!c5) {
     const tmp5 = stateFromStores.prices[arg2 ? tmp16.MOBILE_PREMIUM_TIER_2 : tmp16.PREMIUM_TIER_2];

@@ -1,10 +1,10 @@
-// Module ID: 11036
-// Function ID: 11037
+// Module ID: 11037
+// Function ID: 11038
 // Name: LeaderboardWinnerBadge
-// Dependencies: [19, 17, 2021, 21, 4636, 504, 11037, 8842, 576, 2]
+// Dependencies: [19, 17, 2021, 21, 4636, 504, 11038, 8842, 576, 2]
 // Exports: default
 
-// Module 11036 (LeaderboardWinnerBadge)
+// Module 11037 (LeaderboardWinnerBadge)
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
@@ -32,11 +32,11 @@ export default function LeaderboardWinnerBadge(guildId) {
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
-    const obj2 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(11037).getLeaderboardWinnerBadgeText(stateFromStores), children: null };
+    const obj2 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(11038).getLeaderboardWinnerBadgeText(stateFromStores), children: null };
     const obj3 = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
     obj2.children = jsx(tmp2(8842).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
-    tmp5 = <View style={tmp.container} accessible accessibilityLabel={tmp2(11037).getLeaderboardWinnerBadgeText(stateFromStores)}>{null}</View>;
-    const tmp2Result = tmp2(11037);
+    tmp5 = <View style={tmp.container} accessible accessibilityLabel={tmp2(11038).getLeaderboardWinnerBadgeText(stateFromStores)}>{null}</View>;
+    const tmp2Result = tmp2(11038);
   }
   return tmp5;
 };

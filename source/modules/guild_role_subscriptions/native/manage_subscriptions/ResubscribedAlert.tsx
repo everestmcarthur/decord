@@ -1,16 +1,16 @@
-// Module ID: 15301
-// Function ID: 15302
+// Module ID: 15302
+// Function ID: 15303
 // Name: ResubscribedAlert
-// Dependencies: [19, 17, 21, 4636, 576, 5075, 1114, 15302, 1178, 4632, 2]
+// Dependencies: [19, 17, 21, 4636, 576, 5075, 1114, 15303, 1176, 4632, 2]
 // Exports: default
 
-// Module 15301 (ResubscribedAlert)
+// Module 15302 (ResubscribedAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
-import _modDef15302 from "module_15302" /* 15302 */;
+import _modDef15303 from "module_15303" /* 15303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ResubscribedAlert(onClose) {
   obj.style = tmp.container;
   const obj2 = { style: tmp.body, children: null };
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(React4, { source: _modDef15302, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
+  const items = [hasOwnProperty(React4, { source: _modDef15303, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
   const obj4 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.oPV2cy);

@@ -1,9 +1,9 @@
-// Module ID: 12894
-// Function ID: 12895
+// Module ID: 12895
+// Function ID: 12896
 // Name: ForumPlatformHooks
 // Dependencies: [19, 4495, 4494, 8004, 2]
 
-// Module 12894 (ForumPlatformHooks)
+// Module 12895 (ForumPlatformHooks)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 8004 */;

@@ -1,7 +1,7 @@
 // Module ID: 4777
 // Function ID: 4778
 // Name: VoiceEngineStreamingManager
-// Dependencies: [5, 17, 4658, 1957, 2011, 1074, 1920, 3, 1952, 1935, 573, 1272, 1898, 1910, 38, 4778, 4837, 4688, 1477, 10081, 9817, 1114, 2]
+// Dependencies: [5, 17, 4658, 1957, 2011, 1074, 1920, 3, 1952, 1935, 573, 1270, 1898, 1910, 38, 4778, 4837, 4688, 1477, 10081, 9817, 1114, 2]
 
 // Module 4777 (VoiceEngineStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;

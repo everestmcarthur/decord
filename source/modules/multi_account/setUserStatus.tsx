@@ -1,7 +1,7 @@
 // Module ID: 10220
 // Function ID: 10221
 // Name: setUserStatus
-// Dependencies: [5, 7218, 5360, 1074, 4481, 1114, 10221, 1940, 1218, 4489, 1242, 2]
+// Dependencies: [5, 7218, 5360, 1074, 4481, 1114, 10221, 1940, 1216, 4489, 1240, 2]
 // Exports: default
 
 // Module 10220 (setUserStatus)
@@ -23,7 +23,7 @@ let closure_7 = async function _setUserStatus() {
   closure_129_5 = str;
   const PreloadedUserSettingsActionCreators = closure_130_0(closure_130_2[7]).PreloadedUserSettingsActionCreators;
   await PreloadedUserSettingsActionCreators.updateAsync("status", async (statusCreatedAtMs) => {
-    const StringValue = value(1218).StringValue;
+    const StringValue = value(1216).StringValue;
     statusCreatedAtMs.status = StringValue.create({ value });
     statusCreatedAtMs.statusExpiresAtMs = statusExpiresAtMs;
     if (closure_1_1 === value) {
@@ -32,7 +32,7 @@ let closure_7 = async function _setUserStatus() {
       }
       statusCreatedAtMs.statusCreatedAtMs = statusCreatedAtMs;
     }
-    const UInt64Value = value(1218).UInt64Value;
+    const UInt64Value = value(1216).UInt64Value;
     statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
   }, closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION);
   closure_129_6 = (function getStatusUpdateAnnouncement(DND, arg1) {

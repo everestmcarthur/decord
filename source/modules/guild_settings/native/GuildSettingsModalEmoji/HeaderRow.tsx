@@ -1,17 +1,17 @@
-// Module ID: 17682
-// Function ID: 17683
+// Module ID: 17683
+// Function ID: 17684
 // Name: HeaderRow
-// Dependencies: [5, 32, 19, 17, 17676, 1074, 1374, 21, 4636, 576, 9801, 10464, 1242, 1114, 1256, 5219, 5056, 4632, 504, 2]
+// Dependencies: [5, 32, 19, 17, 17677, 1074, 1374, 21, 4636, 576, 9801, 10465, 1240, 1114, 1254, 5219, 5056, 4632, 504, 2]
 // Exports: ConnectedHeaderRow
 
-// Module 17682 (HeaderRow)
+// Module 17683 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17676 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17677 */;
 
 require = fn;
 function HeaderRow(guild) {
@@ -91,10 +91,10 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  let obj = closure_1_0(10464);
+                  let obj = closure_1_0(10465);
                   let obj2 = { guildId: image.id, image, name: combined, roles, originalMd5 };
-                  const uploadEmojiResult = closure_1_0(10464).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 });
-                  closure_1_0(10464).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 }).then(() => closure_2_1(1242).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id })).catch((error) => {
+                  const uploadEmojiResult = closure_1_0(10465).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 });
+                  closure_1_0(10465).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 }).then(() => closure_2_1(1240).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id })).catch((error) => {
                     const body = error.body;
                     if (null == body) {
                       if (null != undefined) {

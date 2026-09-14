@@ -1,16 +1,16 @@
-// Module ID: 16273
-// Function ID: 16274
+// Module ID: 16275
+// Function ID: 16276
 // Name: ServerPreviewBannerControls
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 7445, 8202, 5710, 1114, 16274, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 7445, 8202, 5710, 1114, 16276, 2]
 // Exports: default
 
-// Module 16273 (ServerPreviewBannerControls)
+// Module 16275 (ServerPreviewBannerControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef5710 from "module_5710" /* 5710 */;
 import transitionToGuild from "transitionToGuild" /* 7445 */;
 import IconButton from "IconButton" /* 8202 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 16274 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 16276 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

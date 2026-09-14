@@ -1,12 +1,12 @@
 // Module ID: 8002
 // Function ID: 8003
 // Name: ForumActionCreators
-// Dependencies: [5, 1074, 4980, 1114, 573, 1272, 7867, 8003, 8004, 8005, 7869, 2]
+// Dependencies: [5, 1074, 4980, 1114, 573, 1270, 7867, 8003, 8004, 8005, 7869, 2]
 
 // Module 8002 (ForumActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 8003 */;
 import ForumChannelSeenManager from "ForumChannelSeenManager" /* 8004 */;
 import AnalyticsFeedItemSeenManager from "AnalyticsFeedItemSeenManager" /* 8005 */;
@@ -175,8 +175,8 @@ export default {
     closure_1 = arg1;
     return (async () => {
       await v1(7867).unarchiveThreadIfNecessary(tmp4);
-      const HTTP = tmp4(1272).HTTP;
-      const request = { url: closure_1_5.CHANNEL(closure_128_0), body: { applied_tags: closure_128_1 }, rejectWithError: tmp4(1272).rejectWithMigratedError() };
+      const HTTP = tmp4(1270).HTTP;
+      const request = { url: closure_1_5.CHANNEL(closure_128_0), body: { applied_tags: closure_128_1 }, rejectWithError: tmp4(1270).rejectWithMigratedError() };
       return HTTP.patch(request);
     })();
   },

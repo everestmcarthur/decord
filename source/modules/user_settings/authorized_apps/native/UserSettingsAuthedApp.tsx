@@ -1,10 +1,10 @@
-// Module ID: 15030
-// Function ID: 15031
+// Module ID: 15031
+// Function ID: 15032
 // Name: UserSettingsAuthedApp
-// Dependencies: [19, 17, 1956, 7210, 1957, 4285, 4817, 2025, 1074, 11047, 11515, 21, 4636, 576, 4591, 4632, 1483, 1484, 1114, 7273, 9645, 9372, 504, 12727, 1396, 4982, 12726, 4603, 11516, 1896, 1250, 9171, 8522, 7093, 7098, 8488, 4495, 7222, 7217, 11, 12185, 9549, 5768, 7303, 5686, 2]
+// Dependencies: [19, 17, 1956, 7210, 1957, 4285, 4817, 2025, 1074, 11048, 11516, 21, 4636, 576, 4591, 4632, 1483, 1484, 1114, 7273, 9645, 9372, 504, 12728, 1396, 4982, 12727, 4603, 11517, 1896, 1248, 9171, 8522, 7093, 7098, 8488, 4495, 7222, 7217, 11, 12186, 9549, 5768, 7303, 5686, 2]
 // Exports: default, handleDeleteApp
 
-// Module 15030 (UserSettingsAuthedApp)
+// Module 15031 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Link from "Link" /* 1484 */;
@@ -19,7 +19,7 @@ import NotificationSettingsModalActionCreatorsDefault from "NotificationSettings
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7273 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8488 */;
 import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9645 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12726 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12727 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
@@ -59,8 +59,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(11047).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11515).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(11048).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11516).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4636);

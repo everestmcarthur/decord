@@ -1,7 +1,7 @@
 // Module ID: 5525
 // Function ID: 5526
 // Name: QuestConstants
-// Dependencies: [5526, 1090, 5527, 1272, 5528, 5532, 5533, 12, 2, 5534]
+// Dependencies: [5526, 1090, 5527, 1270, 5528, 5532, 5533, 12, 2, 5534]
 // Exports: getQuestHomeFilterOptionItem
 
 // Module 5525 (QuestConstants)
@@ -12,7 +12,7 @@ import QuestTypes from "QuestTypes" /* 5528 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5533 */;
 import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5534 */;
-import HTTPUtils_mod from "HTTPUtils" /* 1272 */;
+import HTTPUtils_mod from "HTTPUtils" /* 1270 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

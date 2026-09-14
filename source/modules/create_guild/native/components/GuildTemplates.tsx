@@ -1,17 +1,17 @@
-// Module ID: 12839
-// Function ID: 12840
+// Module ID: 12840
+// Function ID: 12841
 // Name: GuildTemplates
-// Dependencies: [32, 19, 17, 12836, 7081, 1074, 21, 4636, 5763, 576, 4632, 1114, 1483, 1611, 5056, 12812, 1242, 12453, 12840, 7226, 5768, 2]
+// Dependencies: [32, 19, 17, 12837, 7081, 1074, 21, 4636, 5763, 576, 4632, 1114, 1483, 1611, 5056, 12813, 1240, 12454, 12841, 7226, 5768, 2]
 // Exports: default
 
-// Module 12839 (GuildTemplates)
+// Module 12840 (GuildTemplates)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 12453 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12812 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 12840 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 12454 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12813 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 12841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -92,7 +92,7 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12836);
+let CreateGuildConstants = fn(12837);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
 CreateGuildConstants = fn(7081);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);

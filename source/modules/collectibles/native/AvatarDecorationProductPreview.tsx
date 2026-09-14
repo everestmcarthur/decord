@@ -1,10 +1,10 @@
-// Module ID: 13271
-// Function ID: 13272
+// Module ID: 13272
+// Function ID: 13273
 // Name: AvatarDecorationProductPreview
-// Dependencies: [19, 17, 21, 4636, 8295, 8288, 1114, 1178, 2]
+// Dependencies: [19, 17, 21, 4636, 8295, 8288, 1114, 1176, 2]
 // Exports: default
 
-// Module 13271 (AvatarDecorationProductPreview)
+// Module 13272 (AvatarDecorationProductPreview)
 import useShopProductItems from "useShopProductItems" /* 8288 */;
 import useCurrentUser from "useCurrentUser" /* 8295 */;
 import noop from "module_19" /* 19 */;
@@ -27,8 +27,8 @@ export default function AvatarDecorationProductPreview(product) {
     const intl = tmp2(1114).intl;
     const obj4 = { a11y_text: firstAvatarDecoration.label };
     obj3.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t.Do2lxE, obj4);
-    const obj5 = { user: currentUser, guildId: "r", size: tmp2(1178).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
-    obj3.children = jsx(tmp2(1178).Avatar, { user: currentUser, guildId: "r", size: tmp2(1178).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
+    const obj5 = { user: currentUser, guildId: "r", size: tmp2(1176).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
+    obj3.children = jsx(tmp2(1176).Avatar, { user: currentUser, guildId: "r", size: tmp2(1176).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
     tmp5 = <View style={tmp.fullSizePreview} pointerEvents="box-none" accessibilityLabel={null} accessibilityRole="image" accessible>{null}</View>;
   }
   return tmp5;

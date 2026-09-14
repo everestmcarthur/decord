@@ -1,7 +1,7 @@
 // Module ID: 5711
 // Function ID: 5712
 // Name: useNavigatorBackPressHandler
-// Dependencies: [19, 17, 1484, 1150, 2]
+// Dependencies: [19, 17, 1484, 1363, 2]
 // Exports: useNavigatorBackPressHandler
 
 // Module 5711 (useNavigatorBackPressHandler)

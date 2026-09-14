@@ -1,10 +1,10 @@
-// Module ID: 13063
-// Function ID: 13064
+// Module ID: 13064
+// Function ID: 13065
 // Name: VoicePanelSpoilerAlert
 // Dependencies: [19, 21, 4986, 4986, 1114, 5601, 5492, 2]
 // Exports: default
 
-// Module 13063 (VoicePanelSpoilerAlert)
+// Module 13064 (VoicePanelSpoilerAlert)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import noop from "module_19" /* 19 */;

@@ -1,22 +1,22 @@
-// Module ID: 11508
-// Function ID: 11509
+// Module ID: 11509
+// Function ID: 11510
 // Name: MoreTipsModal
-// Dependencies: [19, 17, 11046, 1074, 21, 4636, 576, 11509, 4632, 1114, 11510, 7480, 4839, 7095, 1178, 1611, 563, 11503, 7704, 7709, 7103, 2]
+// Dependencies: [19, 17, 11047, 1074, 21, 4636, 576, 11510, 4632, 1114, 11511, 7480, 4839, 7095, 1176, 1611, 563, 11504, 7704, 7709, 7103, 2]
 // Exports: default
 
-// Module 11508 (MoreTipsModal)
+// Module 11509 (MoreTipsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import _modDef7095 from "module_7095" /* 7095 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11509 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11510 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11510 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11511 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11046 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11047 */;
 
 const MetricEvents = tmp(7709);
 require = fn;

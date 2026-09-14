@@ -1,10 +1,10 @@
-// Module ID: 11114
-// Function ID: 11115
+// Module ID: 11115
+// Function ID: 11116
 // Name: ShareConstants
 // Dependencies: [9965, 2]
 // Exports: isAllowedType
 
-// Module 11114 (ShareConstants)
+// Module 11115 (ShareConstants)
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
 import size from "module_2" /* 2 */;
 

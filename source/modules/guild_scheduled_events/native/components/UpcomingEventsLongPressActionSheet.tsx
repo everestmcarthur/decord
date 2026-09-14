@@ -1,10 +1,10 @@
-// Module ID: 12504
-// Function ID: 12505
+// Module ID: 12505
+// Function ID: 12506
 // Name: UpcomingEventsLongPressActionSheet
-// Dependencies: [19, 17, 1979, 4817, 4818, 21, 4636, 504, 7300, 7252, 5665, 1114, 8716, 1178, 12505, 7213, 4603, 12506, 12507, 7222, 7217, 2]
+// Dependencies: [19, 17, 1979, 4817, 4818, 21, 4636, 504, 7300, 7252, 5665, 1114, 8716, 1176, 12506, 7213, 4603, 12507, 12508, 7222, 7217, 2]
 // Exports: default
 
-// Module 12504 (UpcomingEventsLongPressActionSheet)
+// Module 12505 (UpcomingEventsLongPressActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
@@ -45,7 +45,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const items2 = [closure_7(guildId(7252).BottomSheetTitleHeader, obj3), , ];
   const obj6 = { leading: null, label: null, onPress: null };
   const tmp9 = stateFromStores1(5665);
-  obj6.leading = closure_7(guildId(1178).Icon, { source: stateFromStores1(12505) });
+  obj6.leading = closure_7(guildId(1176).Icon, { source: stateFromStores1(12506) });
   const obj8 = { text: null };
   const intl2 = guildId(1114).intl;
   obj8.text = intl2.string(guildId(1114).t.e6RscS);
@@ -56,8 +56,8 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   };
   items2[1] = closure_7(guildId(8716).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(12505) };
-  obj9.leading = closure_7(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12506 : 12507) });
+  const obj7 = { source: stateFromStores1(12506) };
+  obj9.leading = closure_7(guildId(1176).Icon, { source: tmp8(stateFromStores1 ? 12507 : 12508) });
   const intl3 = tmp2(1114).intl;
   const string = intl3.string;
   const t = tmp2(1114).t;

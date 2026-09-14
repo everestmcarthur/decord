@@ -1,14 +1,14 @@
-// Module ID: 16362
-// Function ID: 16363
+// Module ID: 16364
+// Function ID: 16365
 // Name: OneColumnGuildUpsellList
-// Dependencies: [32, 19, 15707, 21, 4636, 8894, 1250, 1484, 504, 7265, 7285, 16363, 9003, 2]
+// Dependencies: [32, 19, 15709, 21, 4636, 8894, 1248, 1484, 504, 7265, 7285, 16365, 9003, 2]
 // Exports: OneColumnGuildUpsellList
 
-// Module 16362 (OneColumnGuildUpsellList)
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16363 */;
+// Module 16364 (OneColumnGuildUpsellList)
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16365 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15707 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15709 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

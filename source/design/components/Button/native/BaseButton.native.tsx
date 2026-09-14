@@ -1,7 +1,7 @@
 // Module ID: 5064
 // Function ID: 5065
 // Name: Button/BaseButton
-// Dependencies: [109, 19, 17, 5065, 1074, 21, 4347, 4636, 5062, 4373, 1369, 1150, 2]
+// Dependencies: [109, 19, 17, 5065, 1074, 21, 4347, 4636, 5062, 4373, 1369, 1363, 2]
 
 // Module 5064 (Button/BaseButton)
 import native from "native" /* 4347 */;
@@ -128,8 +128,8 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     obj7.ref = ref;
     let isAndroidResult = accessible;
     if (accessible == null) {
-      isAndroidResult = tmp4(1150).isAndroid();
-      const tmp4Result2 = tmp4(1150);
+      isAndroidResult = tmp4(1363).isAndroid();
+      const tmp4Result2 = tmp4(1363);
     }
     obj7.accessible = !isAndroidResult;
     obj7.accessibilityRole = "none";

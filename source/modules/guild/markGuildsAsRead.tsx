@@ -1,13 +1,13 @@
-// Module ID: 14047
-// Function ID: 14048
+// Module ID: 14048
+// Function ID: 14049
 // Name: markGuildsAsRead
-// Dependencies: [7203, 5587, 1957, 2012, 4651, 1074, 4818, 12, 11, 1242, 7213, 2]
+// Dependencies: [7203, 5587, 1957, 2012, 4651, 1074, 4818, 12, 11, 1240, 7213, 2]
 // Exports: default
 
-// Module 14047 (markGuildsAsRead)
+// Module 14048 (markGuildsAsRead)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7203 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

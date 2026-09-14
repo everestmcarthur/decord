@@ -1,16 +1,16 @@
-// Module ID: 11175
-// Function ID: 11176
+// Module ID: 11176
+// Function ID: 11177
 // Name: GiftingSKUCardsGrid
-// Dependencies: [19, 17, 7650, 1887, 21, 4636, 576, 8295, 4355, 11176, 5204, 8951, 8937, 8922, 4632, 1114, 2]
+// Dependencies: [19, 17, 7650, 1887, 21, 4636, 576, 8295, 4355, 11177, 5204, 8951, 8937, 8922, 4632, 1114, 2]
 // Exports: default
 
-// Module 11175 (GiftingSKUCardsGrid)
+// Module 11176 (GiftingSKUCardsGrid)
 import nativeDefault from "native" /* 576 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import useCurrentUser from "useCurrentUser" /* 8295 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8937 */;
 import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8951 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11176 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

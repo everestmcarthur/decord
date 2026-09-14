@@ -1,10 +1,10 @@
-// Module ID: 12247
-// Function ID: 12248
+// Module ID: 12248
+// Function ID: 12249
 // Name: useFetchDeveloperActivityShelfItems
 // Dependencies: [19, 8980, 9632, 1935, 504, 9634, 2]
 // Exports: useFetchDeveloperActivityShelfItems
 
-// Module 12247 (useFetchDeveloperActivityShelfItems)
+// Module 12248 (useFetchDeveloperActivityShelfItems)
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9634 */;
 import noop from "module_19" /* 19 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8980 */;

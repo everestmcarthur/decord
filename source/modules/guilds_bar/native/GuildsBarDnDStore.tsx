@@ -1,15 +1,15 @@
-// Module ID: 16380
-// Function ID: 16381
+// Module ID: 16382
+// Function ID: 16383
 // Name: GuildsBarDnDStore
-// Dependencies: [5519, 1244, 4373, 1249, 1232, 4259, 2]
+// Dependencies: [5519, 1242, 4373, 1247, 1230, 4259, 2]
 // Exports: useFolderBGHeightOffset, useItemDragState
 
-// Module 16380 (GuildsBarDnDStore)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 16382 (GuildsBarDnDStore)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import _mod4259 from "module_4259" /* 4259 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "actor", scrollPosition: "entertainer", windowSize: "rock", setStateShallow: "rockstar", dropStart: "singer", dropComplete: "star" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 12, scrollPosition: 12, windowSize: null, setStateShallow: null, dropStart: 0, dropComplete: "No Output Devices" };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -37,7 +37,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (tmp[key10006] === arg0[key10006]) {
         continue;
       } else {
-        obj = closure_0(1249);
+        obj = closure_0(1247);
         let batchUpdatesResult = obj.batchUpdates(() => {
           const merged = Object.assign(closure_1);
           const merged1 = Object.assign(closure_0);
@@ -51,7 +51,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     ({ dropSpecs, gestureState } = gestureState());
     const tmp = gestureState();
     let obj2 = { category: "GuildsBarGesture", message: "dropStart started", data: null };
-    const obj = closure_1(1232);
+    const obj = closure_1(1230);
     obj2.data = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
@@ -59,7 +59,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1249).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "accessible" }));
+      dropSpecs(1247).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

@@ -1,15 +1,15 @@
-// Module ID: 13987
-// Function ID: 13988
+// Module ID: 13988
+// Function ID: 13989
 // Name: ShareScreen
-// Dependencies: [5, 32, 19, 17, 1961, 1957, 4275, 1074, 11812, 10988, 21, 4636, 576, 1150, 1114, 13988, 11113, 1369, 13989, 4879, 1242, 10071, 4647, 8480, 11832, 1896, 4982, 13990, 13991, 5712, 7966, 1608, 5705, 11116, 13992, 2]
+// Dependencies: [5, 32, 19, 17, 1961, 1957, 4275, 1074, 11813, 10989, 21, 4636, 576, 1363, 1114, 13989, 11114, 1369, 13990, 4879, 1240, 10071, 4647, 8480, 11833, 1896, 4982, 13991, 13992, 5712, 7966, 1608, 5705, 11117, 13993, 2]
 // Exports: default
 
-// Module 13987 (ShareScreen)
+// Module 13988 (ShareScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 13990 */;
-import ShareEmbedDefault from "ShareEmbed" /* 13991 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 13991 */;
+import ShareEmbedDefault from "ShareEmbed" /* 13992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -36,19 +36,19 @@ const ChannelRecord = fn(1961);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11812).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10988).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11813).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4636);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null };
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
 obj2.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;

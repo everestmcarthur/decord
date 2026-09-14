@@ -1,22 +1,22 @@
-// Module ID: 16186
-// Function ID: 16187
+// Module ID: 16188
+// Function ID: 16189
 // Name: HappeningNowActions
-// Dependencies: [19, 17, 2012, 1979, 2011, 15379, 1074, 21, 4636, 576, 1242, 9867, 16187, 1114, 9192, 16188, 9950, 16189, 12437, 12902, 15380, 4632, 2]
+// Dependencies: [19, 17, 2012, 1979, 2011, 15380, 1074, 21, 4636, 576, 1240, 9867, 16189, 1114, 9192, 16190, 9950, 16191, 12438, 12903, 15381, 4632, 2]
 // Exports: HappeningNowCardCreateChannel, HappeningNowCardCustomizeGuild, HappeningNowCardInvite, HappeningNowStudentHubAddServer
 
-// Module 16186 (HappeningNowActions)
+// Module 16188 (HappeningNowActions)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9867 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12437 */;
-import _modDef12902 from "module_12902" /* 12902 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 15380 */;
-import _modDef16187 from "module_16187" /* 16187 */;
-import _modDef16188 from "module_16188" /* 16188 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12438 */;
+import _modDef12903 from "module_12903" /* 12903 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 15381 */;
 import _modDef16189 from "module_16189" /* 16189 */;
+import _modDef16190 from "module_16190" /* 16190 */;
+import _modDef16191 from "module_16191" /* 16191 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -25,7 +25,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15379);
+const HappeningNowConstants = fn(15380);
 ({ HappeningNowCardTrackingType: closure_9, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
@@ -65,7 +65,7 @@ export const HappeningNowCardCreateChannel = function HappeningNowCardCreateChan
     const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
     CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
   }, items);
-  obj.imageSource = _modDef16187;
+  obj.imageSource = _modDef16189;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t["fUYU+j"]);
@@ -85,7 +85,7 @@ export const HappeningNowCardCustomizeGuild = function HappeningNowCardCustomize
     const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
     GuildSettingsActionCreatorsDefault.open(guildId);
   }, items);
-  obj.imageSource = _modDef16188;
+  obj.imageSource = _modDef16190;
   obj.onPress = callback;
   obj.panelVariant = flag;
   return closure_12(closure_15, obj);
@@ -109,7 +109,7 @@ export const HappeningNowCardInvite = function HappeningNowCardInvite(guildId) {
       const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
     }
   }, items);
-  obj.imageSource = _modDef16189;
+  obj.imageSource = _modDef16191;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t.VINpSK);
@@ -136,7 +136,7 @@ export const HappeningNowStudentHubAddServer = function HappeningNowStudentHubAd
       GuildDirectoryAddModalActionCreatorsDefault.open(obj6);
     }
   }, items);
-  obj.imageSource = _modDef12902;
+  obj.imageSource = _modDef12903;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t.emRpdS);

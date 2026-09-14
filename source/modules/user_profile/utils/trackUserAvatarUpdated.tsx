@@ -1,12 +1,12 @@
 // Module ID: 7091
 // Function ID: 7092
 // Name: trackUserAvatarUpdated
-// Dependencies: [1074, 7092, 1242, 1396, 2]
+// Dependencies: [1074, 7092, 1240, 1396, 2]
 // Exports: trackUserAvatarUpdated
 
 // Module 7091 (trackUserAvatarUpdated)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7092 */;
 import size from "module_2" /* 2 */;

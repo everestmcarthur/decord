@@ -1,13 +1,13 @@
 // Module ID: 9969
 // Function ID: 9970
 // Name: UserSearchManager
-// Dependencies: [1961, 1385, 1957, 2021, 4285, 1371, 1074, 4481, 1384, 1256, 7221, 9970, 1369, 1232, 12, 11, 2]
+// Dependencies: [1961, 1385, 1957, 2021, 4285, 1371, 1074, 4481, 1384, 1254, 7221, 9970, 1369, 1230, 12, 11, 2]
 
 // Module 9969 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1074 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
@@ -956,7 +956,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(1256).v4();
+    obj._uuid = obj(1254).v4();
     obj._callback = parseUserResults;
     obj._limit = num;
     obj._currentQuery = null;

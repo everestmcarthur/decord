@@ -1,19 +1,19 @@
-// Module ID: 16168
-// Function ID: 16169
+// Module ID: 16170
+// Function ID: 16171
 // Name: HappeningNowCardActivity
-// Dependencies: [19, 17, 1962, 1371, 15379, 1074, 1085, 21, 16169, 16170, 4636, 576, 7265, 504, 7271, 1242, 9666, 1896, 8296, 16164, 4788, 16171, 15380, 16165, 1178, 16174, 11019, 16175, 10041, 13132, 8831, 5178, 9352, 1114, 4486, 1150, 10188, 5668, 16166, 16177, 10191, 8256, 16179, 8364, 2]
+// Dependencies: [19, 17, 1962, 1371, 15380, 1074, 1085, 21, 16171, 16172, 4636, 576, 7265, 504, 7271, 1240, 9666, 1896, 8296, 16166, 4788, 16173, 15381, 16167, 1176, 16176, 11020, 16177, 10041, 13133, 8831, 5178, 9352, 1114, 4486, 1363, 10188, 5668, 16168, 16179, 10191, 8256, 16181, 8364, 2]
 
-// Module 16168 (HappeningNowCardActivity)
+// Module 16170 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10191 */;
-import useLiveStageData from "useLiveStageData" /* 16166 */;
-import _modDef16169 from "module_16169" /* 16169 */;
-import _modDef16170 from "module_16170" /* 16170 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16177 */;
+import useLiveStageData from "useLiveStageData" /* 16168 */;
+import _modDef16171 from "module_16171" /* 16171 */;
+import _modDef16172 from "module_16172" /* 16172 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16179 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -129,14 +129,14 @@ function IconOrPreview(arg0) {
       let obj3 = { style: memo, children: null };
       const obj8 = { stream, children: null, style: null, ctaText: null, disabled: true };
       ({ cardImageStreamLive: obj13.style, stageStreamLiveText: obj13.textStyle } = tmp);
-      obj8.children = closure_11(tmp28(1178).LiveTag, { style: null, textStyle: null, allowFontScaling: false });
+      obj8.children = closure_11(tmp28(1176).LiveTag, { style: null, textStyle: null, allowFontScaling: false });
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1114).intl;
       obj8.ctaText = intl5.string(tmp28(1114).t["7Xq/nV"]);
       obj3.children = closure_11(tmp2(10188), obj8);
       return closure_11(closure_4, obj3);
     } else {
-      if (tmp2(11019)(activity)) {
+      if (tmp2(11020)(activity)) {
         const intl4 = tmp28(1114).intl;
         let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
       } else {
@@ -147,7 +147,7 @@ function IconOrPreview(arg0) {
         if (type === constants2.LISTENING) {
           const intl3 = tmp28(1114).intl;
           stringResult = intl3.string(tmp28(1114).t.kUEnxN);
-        } else if (tmp2(13132)(activity)) {
+        } else if (tmp2(13133)(activity)) {
           const intl2 = tmp28(1114).intl;
           stringResult = intl2.string(tmp28(1114).t.T0uYK9);
         } else {
@@ -179,7 +179,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result2 = items[userId % items.length];
     } else {
-      tmp2Result2 = tmp2(16179);
+      tmp2Result2 = tmp2(16181);
     }
   }
 }
@@ -201,14 +201,14 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15379);
+const HappeningNowConstants = fn(15380);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1074);
 ({ ActivityTypes: closure_9, AnalyticEvents: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16169, _modDef16170];
+let items = [_modDef16171, _modDef16172];
 const createStyles = fn(4636);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };

@@ -1,13 +1,13 @@
-// Module ID: 11484
-// Function ID: 11485
+// Module ID: 11485
+// Function ID: 11486
 // Name: ChatViewWrapperAnimatedKeyboard
-// Dependencies: [19, 17, 21, 4373, 4640, 11485, 4637, 5660, 11490, 11492, 7259, 11493, 2]
+// Dependencies: [19, 17, 21, 4373, 4640, 11486, 4637, 5660, 11491, 11493, 7259, 11494, 2]
 // Exports: default
 
-// Module 11484 (ChatViewWrapperAnimatedKeyboard)
+// Module 11485 (ChatViewWrapperAnimatedKeyboard)
 import timing from "timing" /* 4637 */;
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5660 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11490 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

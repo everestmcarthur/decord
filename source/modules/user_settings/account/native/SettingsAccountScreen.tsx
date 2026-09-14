@@ -1,9 +1,9 @@
-// Module ID: 14742
-// Function ID: 14743
+// Module ID: 14743
+// Function ID: 14744
 // Name: SettingsAccountScreen
-// Dependencies: [32, 19, 17, 14743, 8079, 14744, 21, 4636, 576, 1483, 5688, 5668, 14745, 4632, 1114, 5056, 4839, 14746, 1896, 504, 14767, 7052, 6698, 5768, 14768, 11601, 14772, 14775, 5073, 12011, 2]
+// Dependencies: [32, 19, 17, 14744, 8079, 14745, 21, 4636, 576, 1483, 5688, 5668, 14746, 4632, 1114, 5056, 4839, 14747, 1896, 504, 14768, 7052, 6698, 5768, 14769, 11602, 14773, 14776, 5073, 12012, 2]
 
-// Module 14742 (SettingsAccountScreen)
+// Module 14743 (SettingsAccountScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -13,13 +13,13 @@ import FastImageDefault from "FastImage" /* 5668 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6698 */;
 import MFAUtils from "MFAUtils" /* 7052 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12011 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14768 */;
-import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14772 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12012 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14769 */;
+import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14773 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 14743 */;
+import WebAuthnStore from "WebAuthnStore" /* 14744 */;
 
 require = fn;
 function PasswordlessUpsell() {
@@ -31,7 +31,7 @@ function PasswordlessUpsell() {
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("module_14745");
+  obj6.source = require("module_14746");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
   const items = [closure_10(View, obj5), ];
@@ -50,7 +50,7 @@ function PasswordlessUpsell() {
   const intl3 = require("util").intl;
   obj12.text = intl3.string(require("util").t.piGf5c);
   obj12.onPress = function onPress() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14746, dependencyMap.paths), { navigation, initialRouteName: WebAuthnScreens.REGISTER, showNav: true });
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14747, dependencyMap.paths), { navigation, initialRouteName: WebAuthnScreens.REGISTER, showNav: true });
   };
   const items2 = [closure_10(require("components/Button/Button").Button, obj12), closure_10(View, {})];
   obj11.children = items2;
@@ -72,7 +72,7 @@ function AccountTwoFALabel() {
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(14767).useIsUserVerified();
+  const isUserVerified = first(14768).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -142,7 +142,7 @@ function AccountSecurityPage() {
 }
 const View = fn(17).View;
 const MobileUserSettings = fn(8079).MobileUserSettings;
-const WebAuthnScreens = fn(14744).WebAuthnScreens;
+const WebAuthnScreens = fn(14745).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4636);

@@ -1,21 +1,21 @@
-// Module ID: 12870
-// Function ID: 12871
+// Module ID: 12871
+// Function ID: 12872
 // Name: HubEmailConnectionGuildSelectSearch
-// Dependencies: [5, 32, 19, 17, 12848, 21, 4636, 576, 12871, 4632, 1114, 1483, 5598, 1611, 12861, 4537, 5705, 7479, 1178, 12866, 2]
+// Dependencies: [5, 32, 19, 17, 12849, 21, 4636, 576, 12872, 4632, 1114, 1483, 5598, 1611, 12862, 4537, 5705, 7479, 1176, 12867, 2]
 // Exports: default
 
-// Module 12870 (HubEmailConnectionGuildSelectSearch)
+// Module 12871 (HubEmailConnectionGuildSelectSearch)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import SearchBarNavDefault from "SearchBarNav" /* 7479 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 12861 */;
-import _modDef12871 from "module_12871" /* 12871 */;
+import HubActionCreatorsDefault from "HubActionCreators" /* 12862 */;
+import _modDef12872 from "module_12872" /* 12872 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ require = fn;
 function EmptyState() {
   const tmp = closure_13();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const items = [closure_1_10(React5, { style: tmp.emptyStateImage, source: _modDef12871 }), ];
+  const items = [closure_1_10(React5, { style: tmp.emptyStateImage, source: _modDef12872 }), ];
   const obj3 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["6HXiuE"]);
@@ -36,7 +36,7 @@ function EmptyState() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12848).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12849).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4636);

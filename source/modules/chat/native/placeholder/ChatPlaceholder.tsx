@@ -1,12 +1,12 @@
-// Module ID: 12767
-// Function ID: 12768
+// Module ID: 12768
+// Function ID: 12769
 // Name: ChatPlaceholder
-// Dependencies: [19, 17, 9615, 21, 4636, 576, 1611, 7084, 1477, 12768, 12769, 12770, 4373, 2]
+// Dependencies: [19, 17, 9615, 21, 4636, 576, 1611, 7084, 1477, 12769, 12770, 12771, 4373, 2]
 
-// Module 12767 (ChatPlaceholder)
+// Module 12768 (ChatPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12769 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12770 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12770 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12771 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

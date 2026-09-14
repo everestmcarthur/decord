@@ -1,15 +1,15 @@
-// Module ID: 11919
-// Function ID: 11920
+// Module ID: 11920
+// Function ID: 11921
 // Name: build_overrides/BuildOverrideUtils
-// Dependencies: [5, 11558, 1150, 11920, 11921, 4981, 1362, 2]
+// Dependencies: [5, 11559, 1363, 11921, 11922, 4981, 1360, 2]
 // Exports: refreshBuildOverride, setBuildOverrideForId, setBuildOverrideFromLink, toggleOverride
 
-// Module 11919 (build_overrides/BuildOverrideUtils)
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1362 */;
-import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 11920 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 11921 */;
+// Module 11920 (build_overrides/BuildOverrideUtils)
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1360 */;
+import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 11921 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 11922 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 
 require = fn;
 function setBuildOverrideForBranch(id) {
@@ -319,7 +319,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0, value) {
     }
   }
 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let str = "discord_ios";
 if (PlatformUtils.isAndroid()) {
   str = "discord_android";

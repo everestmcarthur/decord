@@ -1,10 +1,10 @@
-// Module ID: 15324
-// Function ID: 15325
+// Module ID: 15325
+// Function ID: 15326
 // Name: useEmojiByIdOrName
 // Dependencies: [5540, 504, 2]
 // Exports: default, useEmojiByIdOrName
 
-// Module 15324 (useEmojiByIdOrName)
+// Module 15325 (useEmojiByIdOrName)
 import EmojiStore from "EmojiStore" /* 5540 */;
 
 const require = fn;

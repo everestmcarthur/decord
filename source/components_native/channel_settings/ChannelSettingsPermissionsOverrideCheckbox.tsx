@@ -1,9 +1,9 @@
-// Module ID: 16948
-// Function ID: 16949
+// Module ID: 16950
+// Function ID: 16951
 // Name: ChannelSettingsPermissionsOverrideCheckbox
-// Dependencies: [19, 17, 21, 576, 4636, 4280, 1114, 8033, 8922, 16949, 4355, 2]
+// Dependencies: [19, 17, 21, 576, 4636, 4280, 1114, 8033, 8922, 16951, 4355, 2]
 
-// Module 16948 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 16950 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 576 */;
 import PermissionUtils from "PermissionUtils" /* 4280 */;
 import noop from "module_19" /* 19 */;

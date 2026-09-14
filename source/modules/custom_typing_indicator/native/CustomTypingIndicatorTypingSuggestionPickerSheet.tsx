@@ -1,10 +1,10 @@
-// Module ID: 15443
-// Function ID: 15444
+// Module ID: 15444
+// Function ID: 15445
 // Name: CustomTypingIndicatorTypingSuggestionPickerSheet
-// Dependencies: [32, 19, 21, 4636, 576, 7300, 7252, 1114, 3592, 5766, 12100, 5769, 2]
+// Dependencies: [32, 19, 21, 4636, 576, 7300, 7252, 1114, 3592, 5766, 12101, 5769, 2]
 // Exports: default
 
-// Module 15443 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 15444 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3592 from "module_3592" /* 3592 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -39,11 +39,11 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(12100).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(12101).getCustomTypingIndicatorSuggestionPresets();
   obj3.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1114).intl;
-    obj.label = intl.string(onChange(12100).getCustomTypingIndicatorSuggestionMessage(value));
+    obj.label = intl.string(onChange(12101).getCustomTypingIndicatorSuggestionMessage(value));
     return jsx(onChange(5769).TableRadioRow, { value, label: null }, value);
   });
   obj.children = jsx(onChange(5766).TableRadioGroup, {

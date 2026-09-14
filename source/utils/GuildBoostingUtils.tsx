@@ -1,12 +1,12 @@
 // Module ID: 4530
 // Function ID: 4531
 // Name: GuildBoostingUtils
-// Dependencies: [1979, 1371, 4531, 4300, 1074, 1374, 1373, 4308, 4532, 1114, 1369, 4533, 2024, 12, 4228, 4534, 3074, 4294, 1232, 4545, 4561, 2]
+// Dependencies: [1979, 1371, 4531, 4300, 1074, 1374, 1373, 4308, 4532, 1114, 1369, 4533, 2024, 12, 4228, 4534, 3074, 4294, 1230, 4545, 4561, 2]
 // Exports: appliedGuildBoostsRequiredForPerks, boostedGuildTierToAnalyticsObjectType, generateBlockGuildSubscriptionPurchasesNode, getAppliedGuildBoostMonths, getAvailableGuildBoostSlots, getAvailableSoundboardSoundCount, getAvailableStickerSlotCount, getGracePeriodEndingDate, getGuildBoostingProgressBarFillFactor, getIncrementalSoundboardSoundCountForTier, getIncrementalStickerCountForTier, getMaxEmojiSlots, getMaxSoundboardSlots, getNextGuildTierFromGuild, getNextPremiumTierForSubscriberCount, getNextTier, getNumberOfAppliedBoostsNeededForTier, getShortenedTierName, getTheoreticalPremiumTierForSubscriberCount, getTierName, getTiers, getTotalSoundboardSoundCountForTier, getTotalStickerCountForTier, getUserLevel, isAppliedGuildBoostActive, isGuildBoostSlotCanceled, isGuildBoostedAtLeast, isInGracePeriod, isTierUnlocked
 
 // Module 4530 (GuildBoostingUtils)
 import util from "util" /* 1114 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import PremiumUtilsAll from "PremiumUtils" /* 4294 */;

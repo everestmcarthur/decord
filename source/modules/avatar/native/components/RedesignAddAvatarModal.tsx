@@ -1,12 +1,12 @@
-// Module ID: 17565
-// Function ID: 17566
+// Module ID: 17566
+// Function ID: 17567
 // Name: RedesignAddAvatarModal
-// Dependencies: [5, 32, 19, 17, 8277, 1074, 21, 4636, 576, 1611, 504, 14680, 17550, 8286, 8364, 5219, 8281, 8283, 4632, 1114, 17559, 5056, 17547, 2]
+// Dependencies: [5, 32, 19, 17, 8277, 1074, 21, 4636, 576, 1611, 504, 14681, 17551, 8286, 8364, 5219, 8281, 8283, 4632, 1114, 17560, 5056, 17548, 2]
 // Exports: default
 
-// Module 17565 (RedesignAddAvatarModal)
+// Module 17566 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 576 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17547 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17548 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -87,7 +87,7 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14680);
+              const obj = tmp2(14681);
               obj11.description = tmp2(8286).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8286);

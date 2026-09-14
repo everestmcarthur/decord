@@ -1,14 +1,14 @@
-// Module ID: 14273
-// Function ID: 14274
+// Module ID: 14274
+// Function ID: 14275
 // Name: defaultMessageProxy
-// Dependencies: [1155, 1117, 14274, 2]
+// Dependencies: [1153, 1117, 14275, 2]
 
-// Module 14273 (defaultMessageProxy)
-import _modDef14274 from "module_14274" /* 14274 */;
-import module_1155 from "module_1155" /* 1155 */;
+// Module 14274 (defaultMessageProxy)
+import _modDef14275 from "module_14275" /* 14275 */;
+import module_1153 from "module_1153" /* 1153 */;
 import messagesProxy from "module_1117" /* 1117 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("intl/defaultMessageProxy.tsx");
 
-export const _defaultMessages = module_1155.chainMessagesObjects(messagesProxy, _modDef14274);
+export const _defaultMessages = module_1153.chainMessagesObjects(messagesProxy, _modDef14275);

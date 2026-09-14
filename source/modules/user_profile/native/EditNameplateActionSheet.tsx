@@ -1,14 +1,14 @@
-// Module ID: 14723
-// Function ID: 14724
+// Module ID: 14724
+// Function ID: 14725
 // Name: EditNameplateActionSheet
-// Dependencies: [32, 19, 17, 7660, 1887, 2021, 1074, 21, 4636, 576, 8287, 7265, 7285, 1242, 8281, 8288, 7253, 4632, 1114, 8289, 10862, 504, 14724, 8283, 14725, 13304, 13305, 8290, 8944, 5068, 11353, 2]
+// Dependencies: [32, 19, 17, 7660, 1887, 2021, 1074, 21, 4636, 576, 8287, 7265, 7285, 1240, 8281, 8288, 7253, 4632, 1114, 8289, 10863, 504, 14725, 8283, 14726, 13305, 13306, 8290, 8944, 5068, 11354, 2]
 // Exports: default
 
-// Module 14723 (EditNameplateActionSheet)
+// Module 14724 (EditNameplateActionSheet)
 import nativeDefault from "native" /* 576 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
 import useShopProductItems from "useShopProductItems" /* 8288 */;
-import EditNameplateSection from "EditNameplateSection" /* 14725 */;
+import EditNameplateSection from "EditNameplateSection" /* 14726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
@@ -137,7 +137,7 @@ function NameplateActionSheetPreview(arg0) {
   obj4.colors = items2;
   items1[2] = closure_10(purchase(5068), obj4);
   obj3.children = items1;
-  const items3 = [closure_11(View, obj3), closure_10(tmp10(11353).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
+  const items3 = [closure_11(View, obj3), closure_10(tmp10(11354).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
   const obj5 = { style: tmp.nameplateGradientContainer, children: null };
   const items4 = [closure_10(tmp10(8944).NameplateDummyUserPreview, { width: 140 }), closure_10(tmp10(8944).NameplateDummyUserPreview, { width: 100 }), ];
   const obj6 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };
@@ -181,7 +181,7 @@ export default function EditNameplateActionSheet(arg0) {
   const analyticsLocations = first(7265)(first(7285).EDIT_NAMEPLATE_SHEET).analyticsLocations;
   const items = [first, guildId];
   const callback = obj2.useCallback(() => {
-    const obj = first(1242);
+    const obj = first(1240);
     obj.track(constants.OPEN_POPOUT, { type: first(7285).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
   }, []);
   const callback1 = obj2.useCallback((arg0) => {

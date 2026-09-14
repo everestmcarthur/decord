@@ -1,19 +1,19 @@
-// Module ID: 15067
-// Function ID: 15068
+// Module ID: 15068
+// Function ID: 15069
 // Name: FriendRequestsMutualGuildsSetting
-// Dependencies: [19, 8079, 1074, 14913, 1935, 7098, 1384, 11601, 1114, 2]
+// Dependencies: [19, 8079, 1074, 14914, 1935, 7098, 1384, 11602, 1114, 2]
 
-// Module 15067 (FriendRequestsMutualGuildsSetting)
+// Module 15068 (FriendRequestsMutualGuildsSetting)
 import util from "util" /* 1114 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1074).FriendSourceFlags;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

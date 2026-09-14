@@ -1,11 +1,11 @@
-// Module ID: 11391
-// Function ID: 11392
+// Module ID: 11392
+// Function ID: 11393
 // Name: SlideoutButton
-// Dependencies: [19, 17, 1074, 21, 4636, 4486, 576, 5204, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4636, 4486, 576, 5204, 1176, 2]
 
-// Module 11391 (SlideoutButton)
+// Module 11392 (SlideoutButton)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Pressables from "Pressables" /* 5204 */;
 import noop from "module_19" /* 19 */;
 

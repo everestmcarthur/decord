@@ -1,10 +1,10 @@
-// Module ID: 16099
-// Function ID: 16100
+// Module ID: 16101
+// Function ID: 16102
 // Name: PanelsNavigationUtils
-// Dependencies: [4495, 4494, 1488, 1256, 2]
+// Dependencies: [4495, 4494, 1488, 1254, 2]
 // Exports: convertLandscapeToPortraitScreens, convertPortraitToLandscapeScreens
 
-// Module 16099 (PanelsNavigationUtils)
+// Module 16101 (PanelsNavigationUtils)
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import size from "module_2" /* 2 */;
 
@@ -106,8 +106,8 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
               }
               if (channelId == null) {
                 const _HermesInternal = HermesInternal;
-                channelId = "channel-" + tmp(1256).v4();
-                const tmpResult8 = tmp(1256);
+                channelId = "channel-" + tmp(1254).v4();
+                const tmpResult8 = tmp(1254);
               }
               const obj3 = { name: "channel", key: channelId, params: null };
               const params = coerceGuildsRouteResult.params;

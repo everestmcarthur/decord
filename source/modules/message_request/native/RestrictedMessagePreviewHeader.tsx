@@ -1,10 +1,10 @@
-// Module ID: 17009
-// Function ID: 17010
+// Module ID: 17011
+// Function ID: 17012
 // Name: RestrictedMessagePreviewHeader
-// Dependencies: [19, 17, 12572, 21, 4636, 576, 7265, 4481, 8296, 7292, 4334, 4603, 12730, 1896, 8308, 7445, 4839, 5204, 1114, 1178, 4632, 16992, 5665, 17010, 2]
+// Dependencies: [19, 17, 12573, 21, 4636, 576, 7265, 4481, 8296, 7292, 4334, 4603, 12731, 1896, 8308, 7445, 4839, 5204, 1114, 1176, 4632, 16994, 5665, 17012, 2]
 // Exports: default
 
-// Module 17009 (RestrictedMessagePreviewHeader)
+// Module 17011 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -15,7 +15,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(12572).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(12573).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
@@ -47,7 +47,7 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12730, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12731, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
         const result = channel(8308).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });

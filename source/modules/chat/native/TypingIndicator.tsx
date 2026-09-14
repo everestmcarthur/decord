@@ -1,21 +1,21 @@
-// Module ID: 12093
-// Function ID: 12094
+// Module ID: 12094
+// Function ID: 12095
 // Name: TypingIndicator
-// Dependencies: [19, 17, 9615, 4635, 5542, 7789, 12094, 1371, 1074, 21, 12095, 504, 4636, 576, 12096, 12097, 12108, 12100, 4788, 1242, 4373, 4338, 4347, 5055, 5059, 12109, 1178, 4632, 12112, 2]
+// Dependencies: [19, 17, 9615, 4635, 5542, 7789, 12095, 1371, 1074, 21, 12096, 504, 4636, 576, 12097, 12098, 12109, 12101, 4788, 1240, 4373, 4338, 4347, 5055, 5059, 12110, 1176, 4632, 12113, 2]
 // Exports: hasTypingIndicatorContent, useTypingUserIdsForDisplay
 
-// Module 12093 (TypingIndicator)
+// Module 12094 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import native from "native" /* 4347 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12100 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12101 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5542 */;
-import TypingStore from "TypingStore" /* 12094 */;
+import TypingStore from "TypingStore" /* 12095 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

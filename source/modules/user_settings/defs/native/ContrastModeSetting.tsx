@@ -1,20 +1,20 @@
-// Module ID: 15497
-// Function ID: 15498
+// Module ID: 15498
+// Function ID: 15499
 // Name: ContrastModeSetting
-// Dependencies: [19, 4628, 8079, 21, 14525, 15397, 11337, 11601, 1114, 1178, 2]
+// Dependencies: [19, 4628, 8079, 21, 14526, 15398, 11338, 11602, 1114, 1176, 2]
 
-// Module 15497 (ContrastModeSetting)
+// Module 15498 (ContrastModeSetting)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11337 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14525 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15397 */;
+import native from "native" /* 1176 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11338 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14526 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15398 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;

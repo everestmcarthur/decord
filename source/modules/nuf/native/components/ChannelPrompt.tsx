@@ -1,10 +1,10 @@
-// Module ID: 12874
-// Function ID: 12875
+// Module ID: 12875
+// Function ID: 12876
 // Name: ChannelPrompt
 // Dependencies: [5, 32, 19, 17, 2012, 1979, 21, 4636, 5763, 504, 1483, 5705, 1114, 4649, 4537, 7226, 5665, 1396, 4632, 6706, 5056, 7042, 2]
 // Exports: default
 
-// Module 12874 (ChannelPrompt)
+// Module 12875 (ChannelPrompt)
 import util from "util" /* 1114 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

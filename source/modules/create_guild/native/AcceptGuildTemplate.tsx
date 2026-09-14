@@ -1,23 +1,23 @@
-// Module ID: 11925
-// Function ID: 11926
+// Module ID: 11926
+// Function ID: 11927
 // Name: AcceptGuildTemplate
-// Dependencies: [19, 17, 1961, 2016, 1074, 7429, 21, 4636, 576, 5605, 5658, 1178, 11926, 1114, 7082, 38, 1611, 2017, 4632, 11928, 6706, 5056, 8722, 12, 9843, 11933, 11934, 11078, 1091, 2]
+// Dependencies: [19, 17, 1961, 2016, 1074, 7429, 21, 4636, 576, 5605, 5658, 1176, 11927, 1114, 7082, 38, 1611, 2017, 4632, 11929, 6706, 5056, 8722, 12, 9843, 11934, 11935, 11079, 1091, 2]
 // Exports: default
 
-// Module 11925 (AcceptGuildTemplate)
+// Module 11926 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2017 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5658 */;
 import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6706 */;
-import RolePillDefault from "RolePill" /* 11078 */;
-import InvalidLink from "InvalidLink" /* 11926 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 11928 */;
+import RolePillDefault from "RolePill" /* 11079 */;
+import InvalidLink from "InvalidLink" /* 11927 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 11929 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 5605 */;
 
@@ -87,7 +87,7 @@ function GuildTemplateResolved(guildTemplate) {
   const intl7 = tmp2(1114).intl;
   const items3 = [intl7.string(guildTemplate(1114).t["8tvIiN"]), ": "];
   obj15.children = items3;
-  const items4 = [closure_12(guildTemplate(1178).LegacyText, obj15), ];
+  const items4 = [closure_12(guildTemplate(1176).LegacyText, obj15), ];
   const intl8 = tmp2(1114).intl;
   items4[1] = intl8.string(guildTemplate(1114).t.de7DpI);
   obj14.children = items4;
@@ -150,9 +150,9 @@ function Channels(channels) {
       if (isGuildVocalChannelType(type)) {
         let tmp10Result = tmp10(9843);
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = tmp10(11933);
-      } else {
         tmp10Result = tmp10(11934);
+      } else {
+        tmp10Result = tmp10(11935);
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];

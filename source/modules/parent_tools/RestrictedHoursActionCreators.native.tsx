@@ -1,10 +1,10 @@
-// Module ID: 17405
-// Function ID: 17406
+// Module ID: 17407
+// Function ID: 17408
 // Name: RestrictedHoursActionCreators
-// Dependencies: [5, 4839, 17406, 1896, 2]
+// Dependencies: [5, 4839, 17408, 1896, 2]
 // Exports: openRestrictedHoursModal
 
-// Module 17405 (RestrictedHoursActionCreators)
+// Module 17407 (RestrictedHoursActionCreators)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

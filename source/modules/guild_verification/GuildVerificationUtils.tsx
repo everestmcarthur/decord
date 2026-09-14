@@ -1,10 +1,10 @@
-// Module ID: 13065
-// Function ID: 13066
+// Module ID: 13066
+// Function ID: 13067
 // Name: GuildVerificationUtils
 // Dependencies: [4459, 1074, 4461, 5606, 5650, 2]
 // Exports: inviteGuildHasPendingMemberDisabledVerification, openVerificationModalOrTransitionToApplication
 
-// Module 13065 (GuildVerificationUtils)
+// Module 13066 (GuildVerificationUtils)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 import transitionToMemberVerification from "transitionToMemberVerification" /* 5606 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5650 */;

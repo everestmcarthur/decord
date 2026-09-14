@@ -1,7 +1,7 @@
 // Module ID: 10313
 // Function ID: 10314
 // Name: BugReporterModal
-// Dependencies: [5, 32, 19, 17, 1371, 10312, 21, 4636, 576, 672, 1090, 4839, 1483, 504, 1114, 5705, 5209, 4335, 7095, 10314, 559, 10315, 9696, 7480, 5769, 5668, 1396, 5231, 5054, 4632, 5688, 10324, 5204, 1178, 5056, 6707, 5768, 5686, 4603, 10339, 1896, 5766, 7188, 1348, 10342, 10304, 7103, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 10312, 21, 4636, 576, 672, 1090, 4839, 1483, 504, 1114, 5705, 5209, 4335, 7095, 10314, 559, 10315, 9696, 7480, 5769, 5668, 1396, 5231, 5054, 4632, 5688, 10325, 5204, 1176, 5056, 6707, 5768, 5686, 4603, 10340, 1896, 5766, 7188, 1346, 10343, 10304, 7103, 2]
 // Exports: default
 
 // Module 10313 (BugReporterModal)
@@ -773,7 +773,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10339, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10340, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;

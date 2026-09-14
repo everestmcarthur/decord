@@ -1,16 +1,16 @@
-// Module ID: 13502
-// Function ID: 13503
+// Module ID: 13503
+// Function ID: 13504
 // Name: PillText
-// Dependencies: [1074, 21, 4636, 576, 13503, 5068, 4632, 2]
+// Dependencies: [1074, 21, 4636, 576, 13504, 5068, 4632, 2]
 // Exports: default
 
-// Module 13502 (PillText)
+// Module 13503 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13503 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13504 */;
 import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 

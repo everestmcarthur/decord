@@ -1,11 +1,11 @@
 // Module ID: 9369
 // Function ID: 9370
 // Name: disclosures
-// Dependencies: [5, 1074, 1272, 9370, 1114, 2]
+// Dependencies: [5, 1074, 1270, 9370, 1114, 2]
 // Exports: ackDisclosures, getDisclosures, getTextForDisclosure
 
 // Module 9369 (disclosures)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import applications from "applications" /* 9370 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

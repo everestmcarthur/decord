@@ -1,12 +1,12 @@
 // Module ID: 9958
 // Function ID: 9959
 // Name: InstantInviteActionSheet
-// Dependencies: [32, 19, 17, 1962, 9951, 1979, 4275, 7838, 1074, 21, 4636, 576, 9959, 1611, 7265, 7285, 7271, 504, 4621, 7861, 9950, 4603, 8296, 9960, 1187, 9962, 7253, 7252, 1114, 1178, 9979, 9983, 9985, 7153, 9977, 10021, 10022, 2]
+// Dependencies: [32, 19, 17, 1962, 9951, 1979, 4275, 7838, 1074, 21, 4636, 576, 9959, 1611, 7265, 7285, 7271, 504, 4621, 7861, 9950, 4603, 8296, 9960, 1185, 9962, 7253, 7252, 1114, 1176, 9979, 9983, 9985, 7153, 9977, 10021, 10022, 2]
 // Exports: default
 
 // Module 9958 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 576 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4621 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;

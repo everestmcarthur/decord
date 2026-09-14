@@ -1,11 +1,11 @@
 // Module ID: 4939
 // Function ID: 4940
 // Name: DefineOwnProperty
-// Dependencies: [1456, 4924, 1316, 1306]
+// Dependencies: [1456, 4924, 1314, 1304]
 
 // Module 4939 (DefineOwnProperty)
-import flag2 from "flag" /* 1306 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import flag2 from "flag" /* 1304 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 import _mod4924 from "module_4924" /* 4924 */;
 import flag_mod from "module_1456" /* 1456 */;
 

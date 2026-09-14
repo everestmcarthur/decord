@@ -1,7 +1,7 @@
 // Module ID: 5062
 // Function ID: 5063
 // Name: ButtonHooks
-// Dependencies: [19, 4636, 4347, 576, 4488, 4338, 4373, 5055, 5059, 5061, 5063, 5058, 4632, 1150, 2]
+// Dependencies: [19, 4636, 4347, 576, 4488, 4338, 4373, 5055, 5059, 5061, 5063, 5058, 4632, 1363, 2]
 // Exports: useButtonPillStyles, useButtonPressAnimationProps, useButtonScaleStyles, useButtonTextColorStyles, useForegroundColor, useGradientPillStyles, useIconSizeStyles, useIconTintStyles, useProfileThemedButtonStyles
 
 // Module 5062 (ButtonHooks)
@@ -616,7 +616,7 @@ export const useIconSizeStyles = (arg0) => {
       if (fontScale > 1) {
         const tmpResult5 = tmp(5061);
         const tmp13 = tmp(4632).TextStyleSheet[tmpResult5.getButtonDefaultTextVariant(tmpResult5, tmp5)];
-        const tmp9 = tmp(1150).isAndroid() ? tmp13.fontSize : tmp13.lineHeight;
+        const tmp9 = tmp(1363).isAndroid() ? tmp13.fontSize : tmp13.lineHeight;
         width = iconSize;
         if (null != iconSize) {
           width = iconSize;
@@ -626,7 +626,7 @@ export const useIconSizeStyles = (arg0) => {
             width = Math.max(iconSize, tmp9 * Math.min(tmp8, BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER));
           }
         }
-        const tmpResult6 = tmp(1150);
+        const tmpResult6 = tmp(1363);
       }
     }
     return { width, height: width };

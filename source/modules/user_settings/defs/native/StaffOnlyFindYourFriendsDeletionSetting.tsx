@@ -1,9 +1,9 @@
-// Module ID: 14930
-// Function ID: 14931
+// Module ID: 14931
+// Function ID: 14932
 // Name: StaffOnlyFindYourFriendsDeletionSetting
-// Dependencies: [5, 17, 8079, 21, 1244, 1249, 4259, 12809, 1326, 4335, 11601, 14931, 2]
+// Dependencies: [5, 17, 8079, 21, 1242, 1247, 4259, 12810, 1324, 4335, 11602, 14932, 2]
 
-// Module 14930 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 14931 (StaffOnlyFindYourFriendsDeletionSetting)
 import _mod4259 from "module_4259" /* 4259 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -97,9 +97,9 @@ let closure_8 = async function _onFindYourFriendsDeletionPress(arg0, value) {
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const identity = fn(1244);
+const identity = fn(1242);
 let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
@@ -118,7 +118,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14931).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14932).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
     if (closure_6((isLoading) => isLoading.isLoading, _mod4259.shallow)) {

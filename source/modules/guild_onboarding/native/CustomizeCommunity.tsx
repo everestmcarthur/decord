@@ -1,10 +1,10 @@
-// Module ID: 11679
-// Function ID: 11680
+// Module ID: 11680
+// Function ID: 11681
 // Name: CustomizeCommunity
-// Dependencies: [19, 17, 5540, 1979, 4651, 4458, 7203, 7204, 1074, 1374, 4818, 21, 4636, 576, 5605, 4345, 4571, 504, 11680, 11681, 1178, 1114, 4632, 7209, 7228, 7263, 7285, 1611, 11682, 7202, 7213, 7208, 7233, 1396, 1369, 4338, 4373, 4637, 11683, 4603, 7238, 1896, 5204, 7261, 7229, 2]
+// Dependencies: [19, 17, 5540, 1979, 4651, 4458, 7203, 7204, 1074, 1374, 4818, 21, 4636, 576, 5605, 4345, 4571, 504, 11681, 11682, 1176, 1114, 4632, 7209, 7228, 7263, 7285, 1611, 11683, 7202, 7213, 7208, 7233, 1396, 1369, 4338, 4373, 4637, 11684, 4603, 7238, 1896, 5204, 7261, 7229, 2]
 // Exports: default
 
-// Module 11679 (CustomizeCommunity)
+// Module 11680 (CustomizeCommunity)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -37,11 +37,11 @@ function EmptyCustomizeCommunity(setTab) {
   importDefault = setTab(504).useStateFromStores(items, () => guildId.getGuildId());
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj2 = setTab(504);
-  const items1 = [closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11680 : 11681) }), , ];
+  const items1 = [closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11681 : 11682) }), , ];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1114).intl;
   obj5.children = intl.string(setTab(1114).t.leKHQz);
-  items1[1] = closure_16(setTab(1178).LegacyText, obj5);
+  items1[1] = closure_16(setTab(1176).LegacyText, obj5);
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl2 = tmp2(1114).intl;
   obj6.children = intl2.format(setTab(1114).t["jH+ktB"], {
@@ -478,7 +478,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11682)(guildId);
+  const tmp7 = stateFromStores(11683)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

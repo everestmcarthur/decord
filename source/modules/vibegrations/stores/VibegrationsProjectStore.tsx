@@ -1,10 +1,10 @@
-// Module ID: 16688
-// Function ID: 16689
+// Module ID: 16690
+// Function ID: 16691
 // Name: VibegrationsProjectStore
 // Dependencies: [32, 1371, 7348, 504, 573, 2]
 // Exports: canPublishProject, canRemixProject
 
-// Module 16688 (VibegrationsProjectStore)
+// Module 16690 (VibegrationsProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import VibegrationsTypes from "VibegrationsTypes" /* 7348 */;

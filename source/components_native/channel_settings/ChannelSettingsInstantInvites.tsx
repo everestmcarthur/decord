@@ -1,13 +1,13 @@
-// Module ID: 16932
-// Function ID: 16933
+// Module ID: 16934
+// Function ID: 16935
 // Name: ChannelSettingsInstantInvites
-// Dependencies: [32, 19, 17, 8749, 1957, 1074, 21, 4636, 576, 1611, 504, 8748, 11063, 1178, 11080, 11081, 1114, 7142, 16933, 7158, 2]
+// Dependencies: [32, 19, 17, 8749, 1957, 1074, 21, 4636, 576, 1611, 504, 8748, 11064, 1176, 11081, 11082, 1114, 7142, 16935, 7158, 2]
 // Exports: default
 
-// Module 16932 (ChannelSettingsInstantInvites)
+// Module 16934 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import InstantInvite from "InstantInvite" /* 11063 */;
+import InstantInvite from "InstantInvite" /* 11064 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelSettingsStore from "ChannelSettingsStore" /* 8749 */;
@@ -17,9 +17,9 @@ const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7158);
-const _modDef11080 = tmp2(11080);
 const _modDef11081 = tmp2(11081);
-const InstantInviteSelfMeasurerDefault = tmp2(16933);
+const _modDef11082 = tmp2(11082);
+const InstantInviteSelfMeasurerDefault = tmp2(16935);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
@@ -109,12 +109,12 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef11080, darkSource: _modDef11081, title: null, body: null };
+      const obj5 = { lightSource: _modDef11081, darkSource: _modDef11082, title: null, body: null };
       const intl = tmpResult(1114).intl;
       obj5.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
       const intl2 = tmpResult(1114).intl;
       obj5.body = intl2.string(tmpResult(1114).t.F53CAc);
-      return closure_9(tmpResult(1178).EmptyState, obj5);
+      return closure_9(tmpResult(1176).EmptyState, obj5);
     }
   }
   if (!loading) {
