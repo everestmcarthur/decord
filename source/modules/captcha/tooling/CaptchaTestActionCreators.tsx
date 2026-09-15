@@ -1,11 +1,11 @@
-// Module ID: 15776
-// Function ID: 15777
+// Module ID: 15787
+// Function ID: 15788
 // Name: CaptchaTestActionCreators
-// Dependencies: [5, 1074, 1270, 2]
+// Dependencies: [5, 1074, 1271, 2]
 // Exports: testCaptcha
 
-// Module 15776 (CaptchaTestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+// Module 15787 (CaptchaTestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

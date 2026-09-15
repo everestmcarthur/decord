@@ -1,19 +1,19 @@
-// Module ID: 12345
-// Function ID: 12346
+// Module ID: 12349
+// Function ID: 12350
 // Name: ForLaterCardHeader
-// Dependencies: [17, 1979, 21, 4636, 576, 7312, 504, 5665, 11042, 1176, 5152, 4789, 5109, 1114, 4632, 2]
+// Dependencies: [17, 1980, 21, 4639, 576, 7316, 504, 5669, 11046, 1177, 5155, 4792, 5112, 1115, 4635, 2]
 // Exports: ForLaterCardHeader
 
-// Module 12345 (ForLaterCardHeader)
+// Module 12349 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4789 */;
-import GuildIconDefault from "GuildIcon" /* 5665 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7312 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import useChannelNameDefault from "useChannelName" /* 4792 */;
+import GuildIconDefault from "GuildIcon" /* 5669 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7316 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11046 */;
+import GuildStore from "GuildStore" /* 1980 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4636 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 function HeaderIcon(channel) {
@@ -22,7 +22,7 @@ function HeaderIcon(channel) {
   const items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(5665).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(5669).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -30,10 +30,10 @@ function HeaderIcon(channel) {
       isGroupDMResult = channel.isGroupDM();
     }
     if (isGroupDMResult) {
-      const obj3 = { channel, size: tmp2(1176).AvatarSizes.XSMALL };
+      const obj3 = { channel, size: tmp2(1177).AvatarSizes.XSMALL };
       tmp6Result = tmp6(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: tmp6(tmp2(5152).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: tmp6(tmp2(5155).ChatIcon, { size: "xxs" }) };
       tmp6Result = tmp6(View, obj4);
     }
   }
@@ -46,16 +46,16 @@ function ChannelName(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
   const obj = channel(504);
-  const channelIconComponentWithGuild = channel(5109).getChannelIconComponentWithGuild(channel, stateFromStores);
+  const channelIconComponentWithGuild = channel(5112).getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     isPrivateResult = null == channelIconComponentWithGuild;
   }
   let formatToPlainStringResult = tmp5;
   if (channel.isDM()) {
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1115).intl;
     const obj3 = { username: tmp5 };
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.smD7XV, obj3);
+    formatToPlainStringResult = intl.formatToPlainString(tmp2(1115).t.smD7XV, obj3);
   }
   const obj4 = { style: tmp.channelNameContainer, children: null };
   let tmp12 = null;
@@ -63,7 +63,7 @@ function ChannelName(channel) {
     const obj5 = { style: tmp.channelTypeIcon, size: "xxs" };
     tmp12 = closure_5(channelIconComponentWithGuild, obj5);
   }
-  const items1 = [tmp12, closure_5(channel(4632).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, closure_5(channel(4635).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj4.children = items1;
   return closure_6(View, obj4);
 }

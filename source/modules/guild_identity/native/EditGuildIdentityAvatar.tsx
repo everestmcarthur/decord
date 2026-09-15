@@ -1,22 +1,22 @@
-// Module ID: 14741
-// Function ID: 14742
+// Module ID: 14751
+// Function ID: 14752
 // Name: EditGuildIdentityAvatar
-// Dependencies: [19, 2021, 1371, 1074, 1373, 21, 4636, 504, 7265, 7285, 8276, 14697, 8286, 4294, 8283, 9443, 4603, 14698, 1896, 14699, 14699, 8274, 5204, 1114, 8373, 14700, 2]
+// Dependencies: [19, 2022, 1372, 1074, 1374, 21, 4639, 504, 7269, 7289, 8279, 14707, 8289, 4297, 8286, 9445, 4606, 14708, 1897, 14709, 14709, 8277, 5207, 1115, 8376, 14710, 2]
 // Exports: default
 
-// Module 14741 (EditGuildIdentityAvatar)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+// Module 14751 (EditGuildIdentityAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticsSections: metroRequire, AnalyticsObjects: closure_7, UpsellTypes: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");

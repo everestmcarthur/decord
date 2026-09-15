@@ -1,15 +1,15 @@
-// Module ID: 13261
-// Function ID: 13262
+// Module ID: 13266
+// Function ID: 13267
 // Name: usePrivateChannelCall
-// Dependencies: [5, 19, 1957, 504, 1114, 10998, 4649, 2]
+// Dependencies: [5, 19, 1958, 504, 1115, 11002, 4652, 2]
 // Exports: default
 
-// Module 13261 (usePrivateChannelCall)
-import util from "util" /* 1114 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10998 */;
+// Module 13266 (usePrivateChannelCall)
+import util from "util" /* 1115 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 11002 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = globalThis.__r;
 
@@ -42,9 +42,9 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
       tmp10 = tmp6;
     }
     const obj3 = { text: stringResult, accessibilityHint: null, inCall: false };
-    const intl2 = tmp10(1114).intl;
+    const intl2 = tmp10(1115).intl;
     const string2 = intl2.string;
-    const t2 = tmp10(1114).t;
+    const t2 = tmp10(1115).t;
     if (closure_1) {
       let string2Result = string2(t2.oCqlGG);
     } else {
@@ -87,7 +87,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             if (null == channel) {
               dependencyMap = 1;
               c3 = 1;
-              const obj7 = { value: tmp3(4649).ensurePrivateChannel(tmp32), done: false };
+              const obj7 = { value: tmp3(4652).ensurePrivateChannel(tmp32), done: false };
               return obj7;
             }
             tmp32 = closure_0;
@@ -108,8 +108,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(10998)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(10998)(channel, closure_129_1);
+          tmp3(11002)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(11002)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();

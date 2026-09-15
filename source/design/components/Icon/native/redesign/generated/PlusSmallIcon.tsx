@@ -1,13 +1,13 @@
-// Module ID: 8992
-// Function ID: 8993
+// Module ID: 8995
+// Function ID: 8996
 // Name: PlusSmallIcon
-// Dependencies: [19, 21, 576, 4337, 8993, 2]
+// Dependencies: [19, 21, 576, 4340, 8996, 2]
 // Exports: PlusSmallIcon
 
-// Module 8992 (PlusSmallIcon)
+// Module 8995 (PlusSmallIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod8993 from "module_8993" /* 8993 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod8996 from "module_8996" /* 8996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PlusSmallIcon = function PlusSmallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8993, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8996, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

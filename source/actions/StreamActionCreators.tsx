@@ -1,31 +1,31 @@
-// Module ID: 4778
-// Function ID: 4779
+// Module ID: 4781
+// Function ID: 4782
 // Name: StreamActionCreators
-// Dependencies: [5, 4653, 4779, 4780, 4658, 502, 1957, 1979, 2011, 4655, 1074, 4678, 573, 4688, 38, 4781, 4792, 4837, 4838, 1270, 1090, 4829, 1248, 9238, 5492, 4649, 9311, 2]
+// Dependencies: [5, 4656, 4782, 4783, 4661, 502, 1958, 1980, 2012, 4658, 1074, 4681, 573, 4691, 38, 4784, 4795, 4840, 4841, 1271, 1091, 4832, 1249, 9241, 5496, 4652, 9314, 2]
 // Exports: changeStreamRegion, closeStream, fetchStreamPreview, joinPrivateChannelAndWatchStream, notifyStreamStart, setLayout, setStreamPaused, startStream, stopOwnStream, stopStream, toggleSelfStreamHidden, updateStreamSettings, watchStreamAndTransitionToStream
 
-// Module 4778 (StreamActionCreators)
+// Module 4781 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
-import ChannelUtils from "ChannelUtils" /* 4781 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
-import transitionToStreamDefault from "transitionToStream" /* 4838 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9238 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9311 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4652 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4691 */;
+import ChannelUtils from "ChannelUtils" /* 4784 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4832 */;
+import transitionToStreamDefault from "transitionToStream" /* 4841 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5496 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 9241 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9314 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 4653 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 4779 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4780 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import GameConsoleStore from "GameConsoleStore" /* 4656 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 4782 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4783 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
 const require = globalThis.__r;
 
@@ -48,8 +48,8 @@ function watchStream(stream, forceMultiple) {
       const obj4 = { type: "STREAM_WATCH", streamKey: encodeStreamKeyResult, allowMultiple: forceMultiple };
       DispatcherDefault.dispatch(obj4);
       if (null != guildId) {
-        const result = tmp12(4792).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
-        const tmp12Result = tmp12(4792);
+        const result = tmp12(4795).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(4795);
       }
       let forceFocus;
       if (forceMultiple != null) {
@@ -67,8 +67,8 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = tmp18(4837).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4837);
+        const participant = tmp18(4840).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4840);
       }
     } else {
       const channel = ChannelStore.getChannel(channelId);
@@ -128,13 +128,13 @@ let closure_19 = async function _fetchStreamPreview(arg0, value) {
             const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
             DispatcherDefault.dispatch(obj7);
             c6 = 1;
-            HTTP = obj6(1270).HTTP;
+            HTTP = obj6(1271).HTTP;
             const request = { url: map1.STREAM_PREVIEW(HTTPResult), query: null, oldFormErrors: true, rejectWithError: null };
             const obj9 = { version: null };
             timestamp = Date.now();
             obj9.version = timestamp;
             request.query = obj9;
-            obj6 = obj6(1270);
+            obj6 = obj6(1271);
             result = obj6.rejectWithMigratedError();
             request.rejectWithError = result;
             value = HTTP.get(request);
@@ -194,7 +194,7 @@ let closure_20 = async function _notifyStreamStart(arg0, arg1) {
 };
 const Constants = fn(1074);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(4678).StreamTypes;
+const StreamTypes = fn(4681).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -340,7 +340,7 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(4838)(tmp);
+          closure_1(4841)(tmp);
         }
       } else {
         channel = channel.getChannel(channelId);
@@ -348,8 +348,8 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
         const isInChannelResult = inChannel.isInChannel(channelId);
         let isChannelFullResult = !isInChannelResult;
         if (!isInChannelResult) {
-          isChannelFullResult = closure_0(4781).isChannelFull(channel, tmp7, GuildStore);
-          const obj = closure_0(4781);
+          isChannelFullResult = closure_0(4784).isChannelFull(channel, tmp7, GuildStore);
+          const obj = closure_0(4784);
         }
         tmp7 = inChannel;
       }

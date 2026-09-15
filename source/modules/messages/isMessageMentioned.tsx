@@ -1,13 +1,13 @@
-// Module ID: 4874
-// Function ID: 4875
+// Module ID: 4877
+// Function ID: 4878
 // Name: isMessageMentioned
-// Dependencies: [1957, 2021, 1979, 2]
+// Dependencies: [1958, 2022, 1980, 2]
 // Exports: default, isRawMessageMentioned
 
-// Module 4874 (isMessageMentioned)
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
+// Module 4877 (isMessageMentioned)
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);

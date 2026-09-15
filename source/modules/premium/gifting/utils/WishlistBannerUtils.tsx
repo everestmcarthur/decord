@@ -1,12 +1,12 @@
-// Module ID: 10925
-// Function ID: 10926
+// Module ID: 10929
+// Function ID: 10930
 // Name: WishlistBannerUtils
-// Dependencies: [19, 1114, 8902, 7329, 2]
+// Dependencies: [19, 1115, 8905, 7333, 2]
 // Exports: getBannerMode, useWishlistBannerConfig
 
-// Module 10925 (WishlistBannerUtils)
+// Module 10929 (WishlistBannerUtils)
 import _mod19 from "module_19" /* 19 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

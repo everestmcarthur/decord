@@ -1,13 +1,13 @@
-// Module ID: 6558
-// Function ID: 6559
+// Module ID: 6562
+// Function ID: 6563
 // Name: ShopIllocon
-// Dependencies: [21, 5668, 6559, 2]
+// Dependencies: [21, 5672, 6563, 2]
 // Exports: ShopIllocon
 
-// Module 6558 (ShopIllocon)
+// Module 6562 (ShopIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6559 from "module_6559" /* 6559 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6563 from "module_6563" /* 6563 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const ShopIllocon = function ShopIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6559 };
+  const obj2 = { uri: _modDef6563 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

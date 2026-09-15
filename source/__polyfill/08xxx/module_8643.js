@@ -1,18 +1,16 @@
 // Module ID: 8643
 // Function ID: 8644
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8644, 8589, 8588]
+// Dependencies: [41, 42, 93, 95, 98, 8593, 8616]
 
 // Module 8643
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8588 from "module_8588" /* 8588 */;
-import _modDef8644 from "module_8644" /* 8644 */;
+import _modDef8616 from "module_8616" /* 8616 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const ForeignObject = fn;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,16 +30,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class ForeignObject {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = closure_3(this, ForeignObject);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ForeignObject);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -54,29 +50,18 @@ class ForeignObject {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ForeignObject, _modDef8588);
+_inherits(FeTurbulence, _modDef8616);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(ForeignObject(8589).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeTurbulence(8593).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

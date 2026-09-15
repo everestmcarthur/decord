@@ -1,13 +1,13 @@
-// Module ID: 13385
-// Function ID: 13386
+// Module ID: 13390
+// Function ID: 13391
 // Name: restartVibegrationsAppFrames
-// Dependencies: [9640, 9698, 9637, 2]
+// Dependencies: [9642, 9700, 9639, 2]
 // Exports: default
 
-// Module 13385 (restartVibegrationsAppFrames)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import FramesStore from "FramesStore" /* 9640 */;
+// Module 13390 (restartVibegrationsAppFrames)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9639 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9700 */;
+import FramesStore from "FramesStore" /* 9642 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/restartVibegrationsAppFrames.tsx");

@@ -1,20 +1,20 @@
-// Module ID: 13988
-// Function ID: 13989
+// Module ID: 13993
+// Function ID: 13994
 // Name: ShareScreen
-// Dependencies: [5, 32, 19, 17, 1961, 1957, 4275, 1074, 11813, 10989, 21, 4636, 576, 1363, 1114, 13989, 11114, 1369, 13990, 4879, 1240, 10071, 4647, 8480, 11833, 1896, 4982, 13991, 13992, 5712, 7966, 1608, 5705, 11117, 13993, 2]
+// Dependencies: [5, 32, 19, 17, 1962, 1958, 4278, 1074, 11817, 10993, 21, 4639, 576, 1364, 1115, 13994, 11118, 1370, 13995, 4882, 1241, 10073, 4650, 8483, 11837, 1897, 4985, 13996, 13997, 5716, 7969, 1609, 5709, 11121, 13998, 2]
 // Exports: default
 
-// Module 13988 (ShareScreen)
+// Module 13993 (ShareScreen)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import HeaderShared from "HeaderShared" /* 7966 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 13991 */;
-import ShareEmbedDefault from "ShareEmbed" /* 13992 */;
+import util from "util" /* 1115 */;
+import HeaderShared from "HeaderShared" /* 7969 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 13996 */;
+import ShareEmbedDefault from "ShareEmbed" /* 13997 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -32,23 +32,23 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11813).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10989).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11817).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10993).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null };
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 let num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
 obj2.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 let num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;

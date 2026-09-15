@@ -1,20 +1,20 @@
-// Module ID: 16183
-// Function ID: 16184
+// Module ID: 16196
+// Function ID: 16197
 // Name: HappeningNowCardVoice
-// Dependencies: [19, 17, 7761, 1371, 4655, 15380, 1074, 21, 4636, 1240, 9666, 1896, 16166, 15381, 5182, 13170, 16176, 8178, 504, 12, 1369, 4788, 1114, 2]
+// Dependencies: [19, 17, 7764, 1372, 4658, 15390, 1074, 21, 4639, 1241, 9668, 1897, 16179, 15391, 5185, 13175, 16189, 8181, 504, 12, 1370, 4791, 1115, 2]
 // Exports: useVoiceChannelUsers
 
-// Module 16183 (HappeningNowCardVoice)
+// Module 16196 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
-import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7764 */;
+import UserStore from "UserStore" /* 1372 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
 const require = globalThis.__r;
 
@@ -38,11 +38,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15380).HappeningNowCardTrackingType;
+let closure_8 = fn(15390).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");

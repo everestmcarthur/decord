@@ -1,24 +1,24 @@
-// Module ID: 17240
-// Function ID: 17241
+// Module ID: 17278
+// Function ID: 17279
 // Name: VoicePanelHeaderChatButton
-// Dependencies: [19, 1074, 21, 4636, 576, 1109, 17241, 5670, 17146, 5152, 1114, 2]
+// Dependencies: [19, 1074, 21, 4639, 576, 1110, 17279, 5674, 17184, 5155, 1115, 2]
 // Exports: default
 
-// Module 17240 (VoicePanelHeaderChatButton)
+// Module 17278 (VoicePanelHeaderChatButton)
 import nativeDefault from "native" /* 576 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import util from "util" /* 1114 */;
-import ChatIcon from "ChatIcon" /* 5152 */;
-import NativeViewDefault from "NativeView" /* 5670 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17146 */;
-import useChatBadgeDefault from "useChatBadge" /* 17241 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+import util from "util" /* 1115 */;
+import ChatIcon from "ChatIcon" /* 5155 */;
+import NativeViewDefault from "NativeView" /* 5674 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17184 */;
+import useChatBadgeDefault from "useChatBadge" /* 17279 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;
@@ -50,9 +50,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj4.style = items1;
-    obj3.children = tmp8(tmp3(5670), obj4);
-    tmp8Result = tmp8(tmp3(5670), obj3);
-    const tmp3Result = tmp3(5670);
+    obj3.children = tmp8(tmp3(5674), obj4);
+    tmp8Result = tmp8(tmp3(5674), obj3);
+    const tmp3Result = tmp3(5674);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

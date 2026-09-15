@@ -1,20 +1,20 @@
-// Module ID: 10988
-// Function ID: 10989
+// Module ID: 10992
+// Function ID: 10993
 // Name: UnifiedGiftModalRecipientSelectScreen
-// Dependencies: [19, 17, 10989, 21, 4636, 576, 1483, 10990, 10956, 2]
+// Dependencies: [19, 17, 10993, 21, 4639, 576, 1484, 10994, 10960, 2]
 // Exports: default
 
-// Module 10988 (UnifiedGiftModalRecipientSelectScreen)
+// Module 10992 (UnifiedGiftModalRecipientSelectScreen)
 import nativeDefault from "native" /* 576 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10956 */;
-import SearchableUserListDefault from "SearchableUserList" /* 10990 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10960 */;
+import SearchableUserListDefault from "SearchableUserList" /* 10994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10989).UserRowModes;
+const UserRowModes = fn(10993).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/checkout/native/gifting/Unifi
 
 export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   setRecipientUser = setRecipientUser.setRecipientUser;
-  importDefault = setRecipientUser(1483).useNavigation();
+  importDefault = setRecipientUser(1484).useNavigation();
   const obj2 = {
     style: closure_6().container,
     children: jsx(SearchableUserListDefault, {

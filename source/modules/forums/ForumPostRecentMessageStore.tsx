@@ -1,16 +1,16 @@
-// Module ID: 7411
-// Function ID: 7412
+// Module ID: 7415
+// Function ID: 7416
 // Name: ForumPostRecentMessageStore
-// Dependencies: [1957, 1371, 11, 4859, 1369, 504, 573, 2]
+// Dependencies: [1958, 1372, 11, 4862, 1370, 504, 573, 2]
 
-// Module 7411 (ForumPostRecentMessageStore)
+// Module 7415 (ForumPostRecentMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4862 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function handleLoadThreadsSuccess(arg0) {

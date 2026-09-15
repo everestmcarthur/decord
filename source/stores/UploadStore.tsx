@@ -1,12 +1,12 @@
-// Module ID: 7940
-// Function ID: 7941
+// Module ID: 7943
+// Function ID: 7944
 // Name: UploadStore
-// Dependencies: [4857, 504, 573, 2]
+// Dependencies: [4860, 504, 573, 2]
 
-// Module 7940 (UploadStore)
+// Module 7943 (UploadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageStore from "MessageStore" /* 4857 */;
+import MessageStore from "MessageStore" /* 4860 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

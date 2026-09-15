@@ -1,9 +1,9 @@
 // Module ID: 10849
 // Function ID: 10850
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 10849
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 179.5, height: 70, scales: [2, 3], hash: "894749452230f66f12adff4cbc7b37d2", name: "img_logo_nitro_classic", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 106, height: 80, scales: [2, 3], hash: "f9a535d371ee710b8f1909e45896c667", name: "img_wumpus_nitro_rev", type: "png" });

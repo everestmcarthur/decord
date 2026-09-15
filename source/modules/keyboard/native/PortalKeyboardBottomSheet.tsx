@@ -1,20 +1,20 @@
-// Module ID: 12209
-// Function ID: 12210
+// Module ID: 12213
+// Function ID: 12214
 // Name: PortalKeyboardBottomSheet
-// Dependencies: [32, 19, 17, 9814, 21, 1363, 4636, 576, 9031, 5043, 4373, 12210, 4347, 7256, 12211, 504, 6728, 4604, 10218, 1874, 5073, 4338, 1611, 1477, 4509, 4490, 5040, 10404, 7143, 2]
+// Dependencies: [32, 19, 17, 9816, 21, 1364, 4639, 576, 9034, 5046, 4376, 12214, 4350, 7260, 12215, 504, 6732, 4607, 10220, 1875, 5076, 4341, 1612, 1478, 4512, 4493, 5043, 10406, 7147, 2]
 
-// Module 12209 (PortalKeyboardBottomSheet)
+// Module 12213 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
-import BottomSheetModal from "BottomSheetModal" /* 6728 */;
-import native from "native" /* 9031 */;
-import isChannelFocused from "isChannelFocused" /* 10218 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5046 */;
+import BottomSheetModal from "BottomSheetModal" /* 6732 */;
+import native from "native" /* 9034 */;
+import isChannelFocused from "isChannelFocused" /* 10220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9814 */;
+import NativeMenuStore from "NativeMenuStore" /* 9816 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -44,11 +44,11 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(9031).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(9031).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(9034).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(9034).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };

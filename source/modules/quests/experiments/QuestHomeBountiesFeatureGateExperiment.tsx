@@ -1,10 +1,10 @@
-// Module ID: 11654
-// Function ID: 11655
+// Module ID: 11658
+// Function ID: 11659
 // Name: QuestHomeBountiesFeatureGateExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 
-// Module 11654 (QuestHomeBountiesFeatureGateExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11658 (QuestHomeBountiesFeatureGateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-quest-home-bounties-feature-gate", kind: "user", defaultConfig: { enabled: false }, variations: null };

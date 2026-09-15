@@ -1,17 +1,17 @@
-// Module ID: 15326
-// Function ID: 15327
+// Module ID: 15336
+// Function ID: 15337
 // Name: GuildRoleSubscriptionBenefitRow
-// Dependencies: [19, 17, 1957, 21, 4636, 4289, 15324, 1176, 4632, 504, 4789, 1114, 5109, 2]
+// Dependencies: [19, 17, 1958, 21, 4639, 4292, 15334, 1177, 4635, 504, 4792, 1115, 5112, 2]
 // Exports: ChannelBenefitRow, IntangibleBenefitRow
 
-// Module 15326 (GuildRoleSubscriptionBenefitRow)
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import EmojiIconDefault from "EmojiIcon" /* 15324 */;
+// Module 15336 (GuildRoleSubscriptionBenefitRow)
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import EmojiIconDefault from "EmojiIcon" /* 15334 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
-const UnicodeEmojisDefault = tmp5(4289);
+const UnicodeEmojisDefault = tmp5(4292);
 require = fn;
 function BenefitRow(description) {
   description = description.description;
@@ -35,7 +35,7 @@ function BenefitRow(description) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
@@ -48,18 +48,18 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   const stateFromStores = benefit(504).useStateFromStores(items, () => ChannelStore.getChannel(benefit.ref_id), items1);
   const obj = benefit(504);
   const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = benefit(1114).intl;
-  obj2.children = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
-  let tmp8 = closure_5(benefit(4632).Text, obj2);
+  const intl = benefit(1115).intl;
+  obj2.children = "[" + intl.string(benefit(1115).t.bz1PZX) + "]";
+  let tmp8 = closure_5(benefit(4635).Text, obj2);
   if (null != stateFromStores) {
     const obj3 = { style: tmp.channelTitle, children: null };
-    const obj4 = { style: tmp.channelIcon, size: tmp2(1176).Icon.Sizes.CUSTOM, source: tmp2(5109).getChannelIcon(stateFromStores) };
-    const items2 = [tmp7(tmp2(1176).Icon, obj4), ];
+    const obj4 = { style: tmp.channelIcon, size: tmp2(1177).Icon.Sizes.CUSTOM, source: tmp2(5112).getChannelIcon(stateFromStores) };
+    const items2 = [tmp7(tmp2(1177).Icon, obj4), ];
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    items2[1] = tmp7(tmp2(4632).Text, obj5);
+    items2[1] = tmp7(tmp2(4635).Text, obj5);
     obj3.children = items2;
     tmp8 = closure_6(View, obj3);
-    const tmp2Result = tmp2(5109);
+    const tmp2Result = tmp2(5112);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

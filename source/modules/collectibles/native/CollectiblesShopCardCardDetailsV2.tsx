@@ -1,31 +1,31 @@
-// Module ID: 8972
-// Function ID: 8973
+// Module ID: 8975
+// Function ID: 8976
 // Name: CollectiblesShopCardCardDetailsV2
-// Dependencies: [19, 17, 7340, 1074, 21, 4636, 576, 8891, 7656, 8973, 7657, 8975, 8986, 4632, 1114, 8962, 1363, 8987, 8785, 8295, 4294, 4338, 4486, 8989, 504, 5068, 8990, 2]
+// Dependencies: [19, 17, 7344, 1074, 21, 4639, 576, 8894, 7660, 8976, 7661, 8978, 8989, 4635, 1115, 8965, 1364, 8990, 8788, 8298, 4297, 4341, 4489, 8992, 504, 5071, 8993, 2]
 
-// Module 8972 (CollectiblesShopCardCardDetailsV2)
+// Module 8975 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import useToken from "useToken" /* 4338 */;
-import ColorUtils from "ColorUtils" /* 4486 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
-import useCurrentUser from "useCurrentUser" /* 8295 */;
-import getProductName from "getProductName" /* 8989 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import useToken from "useToken" /* 4341 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7660 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7661 */;
+import useCurrentUser from "useCurrentUser" /* 8298 */;
+import getProductName from "getProductName" /* 8992 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7340 */;
+import IAPStore from "IAPStore" /* 7344 */;
 
-const CollectiblesShopCardVariantsDefault = tmp4(8990);
+const CollectiblesShopCardVariantsDefault = tmp4(8993);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { regularMetadataContainer: null, assetName: null, priceVariantsContainer: null, priceDescription: null, text: null, discountPercentage: null, wheelIcon: null, androidTextPadding: null };
 let size = { position: "absolute", height: "45%", width: "100%", padding: 10, flex: 1, bottom: 0, overflow: "hidden", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "flex-end" };
 obj.regularMetadataContainer = size;

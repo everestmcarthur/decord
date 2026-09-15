@@ -1,13 +1,13 @@
-// Module ID: 12689
-// Function ID: 12690
+// Module ID: 12694
+// Function ID: 12695
 // Name: useGameServerGetExpiringEntitlements
-// Dependencies: [19, 4546, 504, 12623, 2]
+// Dependencies: [19, 4549, 504, 12628, 2]
 // Exports: default
 
-// Module 12689 (useGameServerGetExpiringEntitlements)
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12623 */;
+// Module 12694 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12628 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 4546 */;
+import GameServerStore from "GameServerStore" /* 4549 */;
 
 const require = globalThis.__r;
 

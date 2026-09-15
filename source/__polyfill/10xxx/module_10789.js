@@ -1,9 +1,9 @@
 // Module ID: 10789
 // Function ID: 10790
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 10789
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 200, height: 80, scales: [2, 3], hash: "e341a934511095337dabafab8c60034b", name: "empty_photos", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 200, height: 72, scales: [2, 3], hash: "86035f94bc8c78da758eed4788f623cf", name: "empty_castle", type: "png" });

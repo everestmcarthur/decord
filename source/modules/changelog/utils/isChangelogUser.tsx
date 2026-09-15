@@ -1,11 +1,11 @@
-// Module ID: 2009
-// Function ID: 2010
+// Module ID: 2010
+// Function ID: 2011
 // Name: isChangelogUser
-// Dependencies: [2010, 2]
+// Dependencies: [2011, 2]
 // Exports: default
 
-// Module 2009 (isChangelogUser)
-import ChangelogConstants from "ChangelogConstants" /* 2010 */;
+// Module 2010 (isChangelogUser)
+import ChangelogConstants from "ChangelogConstants" /* 2011 */;
 import size from "module_2" /* 2 */;
 
 const SYSTEM_UPDATES_USER_ID = ChangelogConstants.SYSTEM_UPDATES_USER_ID;

@@ -1,12 +1,12 @@
-// Module ID: 7858
-// Function ID: 7859
+// Module ID: 7861
+// Function ID: 7862
 // Name: ForegroundServiceManager
-// Dependencies: [17, 7859, 1330, 1898, 2]
+// Dependencies: [17, 7862, 1331, 1899, 2]
 
-// Module 7858 (ForegroundServiceManager)
+// Module 7861 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7859 */;
-import LifecycleManager from "LifecycleManager" /* 1898 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7862 */;
+import LifecycleManager from "LifecycleManager" /* 1899 */;
 import size from "module_2" /* 2 */;
 
 let obj = importDefault;
@@ -76,7 +76,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const result = serviceNotifications.set(arg0, usesGateway);
       self.handleChange();
     }
-    tmp16 = obj(1330);
+    tmp16 = obj(1331);
   }
 };
 prototype["removeServiceHandler"] = function removeServiceHandler(arg0) {

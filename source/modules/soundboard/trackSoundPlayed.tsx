@@ -1,19 +1,19 @@
-// Module ID: 7475
-// Function ID: 7476
+// Module ID: 7479
+// Function ID: 7480
 // Name: trackSoundPlayed
-// Dependencies: [1915, 1957, 4659, 2011, 5095, 1074, 1373, 1240, 2]
+// Dependencies: [1916, 1958, 4662, 2012, 5098, 1074, 1374, 1241, 2]
 // Exports: default
 
-// Module 7475 (trackSoundPlayed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import RunningGameStore from "RunningGameStore" /* 1915 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+// Module 7479 (trackSoundPlayed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import RunningGameStore from "RunningGameStore" /* 1916 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
-const DEFAULT_SOUND_GUILD_ID = fn(5095).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5098).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: closure_9 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");

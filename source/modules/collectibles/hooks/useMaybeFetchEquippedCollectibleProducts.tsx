@@ -1,13 +1,13 @@
-// Module ID: 8332
-// Function ID: 8333
+// Module ID: 8335
+// Function ID: 8336
 // Name: useMaybeFetchEquippedCollectibleProducts
-// Dependencies: [19, 1371, 504, 8303, 8333, 8334, 8335, 2]
+// Dependencies: [19, 1372, 504, 8306, 8336, 8337, 8338, 2]
 // Exports: default
 
-// Module 8332 (useMaybeFetchEquippedCollectibleProducts)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8335 */;
+// Module 8335 (useMaybeFetchEquippedCollectibleProducts)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8338 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {

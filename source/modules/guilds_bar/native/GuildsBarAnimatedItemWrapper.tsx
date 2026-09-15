@@ -1,15 +1,15 @@
-// Module ID: 16391
-// Function ID: 16392
+// Module ID: 16404
+// Function ID: 16405
 // Name: GuildsBarAnimatedItemWrapper
-// Dependencies: [19, 5065, 16379, 21, 4636, 576, 4338, 4347, 5055, 4373, 7176, 16392, 16117, 16122, 1114, 4348, 16393, 5670, 8940, 2]
+// Dependencies: [19, 5068, 16392, 21, 4639, 576, 4341, 4350, 5058, 4376, 7180, 16405, 16130, 16135, 1115, 4351, 16406, 5674, 8943, 2]
 // Exports: default, useGuildsBarAnimatedWrapperStyles
 
-// Module 16391 (GuildsBarAnimatedItemWrapper)
+// Module 16404 (GuildsBarAnimatedItemWrapper)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import useToken from "useToken" /* 4338 */;
-import native from "native" /* 4347 */;
-import spring from "spring" /* 5055 */;
+import util from "util" /* 1115 */;
+import useToken from "useToken" /* 4341 */;
+import native from "native" /* 4350 */;
+import spring from "spring" /* 5058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -128,14 +128,14 @@ class UnreadIndicator {
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return React6(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5065).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16379);
+const IOS_POINTER_STYLE = fn(5068).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(16392);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -148,7 +148,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(4636);
+createStyles = fn(4639);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };
@@ -324,7 +324,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(4348).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(4351).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(tmp3 ? t.CUnsOR : t.jsudFd));
         tmp.current = tmp3;
         const stringResult = intl.string(tmp3 ? t.CUnsOR : t.jsudFd);

@@ -1,13 +1,13 @@
-// Module ID: 12702
-// Function ID: 12703
+// Module ID: 12707
+// Function ID: 12708
 // Name: GuildPowerupsMultiPerkCard
-// Dependencies: [19, 4628, 21, 12679, 504, 12703, 12676, 12701, 2]
+// Dependencies: [19, 4631, 21, 12684, 504, 12708, 12681, 12706, 2]
 // Exports: default
 
-// Module 12702 (GuildPowerupsMultiPerkCard)
-import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12676 */;
+// Module 12707 (GuildPowerupsMultiPerkCard)
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12681 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -17,10 +17,10 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
-  let badge = listing(12679)(guildId, listing);
+  let badge = listing(12684)(guildId, listing);
   const items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  costDecorator = listing(12703)({ guildId, powerups: listing.powerups });
+  costDecorator = listing(12708)({ guildId, powerups: listing.powerups });
   const items1 = [guildId, listing];
   let tmp5 = null;
   if (null != costDecorator) {
@@ -36,7 +36,7 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
       obj5.onPress = tmp4;
       badge = badge.badge;
       obj5.badge = badge;
-      jsx(listing(12701), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
+      jsx(listing(12706), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
     }
   }
   return tmp5;

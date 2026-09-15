@@ -1,8 +1,8 @@
-// Module ID: 6287
-// Function ID: 6288
+// Module ID: 6291
+// Function ID: 6292
 // Dependencies: [2]
 
-// Module 6287
+// Module 6291
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HdStreamAbstractUI-2x.png.js");

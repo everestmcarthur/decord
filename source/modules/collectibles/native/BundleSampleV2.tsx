@@ -1,18 +1,18 @@
-// Module ID: 8924
-// Function ID: 8925
+// Module ID: 8927
+// Function ID: 8928
 // Name: BundleSampleV2
-// Dependencies: [19, 17, 8925, 21, 5668, 4636, 576, 38, 1889, 1886, 8926, 8937, 8944, 1176, 2]
+// Dependencies: [19, 17, 8928, 21, 5672, 4639, 576, 38, 1890, 1887, 8929, 8940, 8947, 1177, 2]
 // Exports: default
 
-// Module 8924 (BundleSampleV2)
+// Module 8927 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import utils from "utils" /* 1886 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8926 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8937 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8944 */;
+import utils from "utils" /* 1887 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8929 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8940 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8947 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -124,10 +124,10 @@ function BundleSampleV2Composed(arg0) {
       let AvatarSizes = dependencyMap;
       let obj6 = { width: tmp8.nameplatePreviewWidth, avatarSize: null, nameplate: null };
       if ("large" === size) {
-        AvatarSizes = tmp23(1176).AvatarSizes;
+        AvatarSizes = tmp23(1177).AvatarSizes;
         let XSMALL_20 = AvatarSizes.NORMAL;
       } else {
-        XSMALL_20 = tmp23(1176).AvatarSizes.XSMALL_20;
+        XSMALL_20 = tmp23(1177).AvatarSizes.XSMALL_20;
       }
       obj6.avatarSize = XSMALL_20;
       obj6.nameplate = nameplateData;
@@ -146,7 +146,7 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(8925).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(8928).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
@@ -174,7 +174,7 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

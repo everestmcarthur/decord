@@ -1,14 +1,14 @@
-// Module ID: 7498
-// Function ID: 7499
+// Module ID: 7502
+// Function ID: 7503
 // Name: EntitlementRecord
-// Dependencies: [1386, 5592, 1385, 1074, 4294, 7499, 2]
+// Dependencies: [1387, 5596, 1386, 1074, 4297, 7503, 2]
 
-// Module 7498 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7499 */;
-import Record from "Record" /* 1386 */;
-import SKURecord from "SKURecord" /* 5592 */;
-import UserRecord from "UserRecord" /* 1385 */;
+// Module 7502 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7503 */;
+import Record from "Record" /* 1387 */;
+import SKURecord from "SKURecord" /* 5596 */;
+import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
 const EntitlementTypes = fn(1074).EntitlementTypes;

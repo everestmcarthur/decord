@@ -1,14 +1,14 @@
-// Module ID: 9295
-// Function ID: 9296
+// Module ID: 9298
+// Function ID: 9299
 // Name: SecureFramesStreamVerificationBottomSheet
-// Dependencies: [19, 4675, 1074, 21, 504, 9290, 8479, 9296, 1114, 9279, 2]
+// Dependencies: [19, 4678, 1074, 21, 504, 9293, 8482, 9299, 1115, 9282, 2]
 // Exports: default
 
-// Module 9295 (SecureFramesStreamVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8479 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9290 */;
+// Module 9298 (SecureFramesStreamVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8482 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9293 */;
 import noop from "module_19" /* 19 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4678 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;
@@ -36,15 +36,15 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1114).intl;
-  obj2.title = intl.string(channelId(1114).t.QogHld);
-  const intl2 = channelId(1114).intl;
-  obj2.subtitle = intl2.string(channelId(1114).t.qODBkW);
-  const intl3 = channelId(1114).intl;
+  const intl = channelId(1115).intl;
+  obj2.title = intl.string(channelId(1115).t.QogHld);
+  const intl2 = channelId(1115).intl;
+  obj2.subtitle = intl2.string(channelId(1115).t.qODBkW);
+  const intl3 = channelId(1115).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(9296);
-  obj3.helpArticle = channelId(9279).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1114).t["H3+ktv"], obj3);
+  const tmp3 = streamKey(9299);
+  obj3.helpArticle = channelId(9282).getSecureFramesHelpdeskArticle();
+  obj2.footer = intl3.format(channelId(1115).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

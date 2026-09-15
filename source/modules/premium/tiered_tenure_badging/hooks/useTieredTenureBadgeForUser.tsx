@@ -1,11 +1,11 @@
-// Module ID: 11320
-// Function ID: 11321
+// Module ID: 11324
+// Function ID: 11325
 // Name: useTieredTenureBadgeForUser
-// Dependencies: [7723, 504, 7736, 2]
+// Dependencies: [7726, 504, 7739, 2]
 // Exports: useTieredTenureBadgeForUser
 
-// Module 11320 (useTieredTenureBadgeForUser)
-import UserProfileStore from "UserProfileStore" /* 7723 */;
+// Module 11324 (useTieredTenureBadgeForUser)
+import UserProfileStore from "UserProfileStore" /* 7726 */;
 
 const require = globalThis.__r;
 

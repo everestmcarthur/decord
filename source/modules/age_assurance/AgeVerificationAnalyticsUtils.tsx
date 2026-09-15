@@ -1,12 +1,12 @@
-// Module ID: 8531
-// Function ID: 8532
+// Module ID: 8534
+// Function ID: 8535
 // Name: AgeVerificationAnalyticsUtils
-// Dependencies: [1957, 1074, 1240, 2]
+// Dependencies: [1958, 1074, 1241, 2]
 // Exports: trackAgeVerificationDmClicked, trackAgeVerificationModalClicked, trackAgeVerificationModalViewed, trackAgeVerificationToastViewed, trackNsfwSpaceWarningModalClicked, trackNsfwSpaceWarningModalViewed
 
-// Module 8531 (AgeVerificationAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+// Module 8534 (AgeVerificationAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

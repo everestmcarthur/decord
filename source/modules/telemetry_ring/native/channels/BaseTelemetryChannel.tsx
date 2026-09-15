@@ -1,9 +1,9 @@
-// Module ID: 1902
-// Function ID: 1903
+// Module ID: 1903
+// Function ID: 1904
 // Name: BaseTelemetryChannel
 // Dependencies: [2]
 
-// Module 1902 (BaseTelemetryChannel)
+// Module 1903 (BaseTelemetryChannel)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");

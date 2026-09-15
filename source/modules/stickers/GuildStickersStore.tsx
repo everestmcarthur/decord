@@ -1,13 +1,13 @@
-// Module ID: 5584
-// Function ID: 5585
+// Module ID: 5588
+// Function ID: 5589
 // Name: GuildStickersStore
-// Dependencies: [32, 1973, 1980, 1979, 5349, 4289, 1983, 2]
+// Dependencies: [32, 1974, 1981, 1980, 5353, 4292, 1984, 2]
 
-// Module 5584 (GuildStickersStore)
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
-import StickersTypes from "StickersTypes" /* 5349 */;
+// Module 5588 (GuildStickersStore)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
+import StickersTypes from "StickersTypes" /* 5353 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
 function parseServerGuildSticker(item10023) {
@@ -27,12 +27,12 @@ function parseServerGuildStickers(stickers) {
 }
 function deriveStickerMetadata(arg0, tags) {
   const items = [];
-  const obj = { type: items(5349).StickerMetadataTypes.STICKER_NAME, value: null };
+  const obj = { type: items(5353).StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = tags.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != tags.tags) {
-    const obj2 = { type: tmp(5349).StickerMetadataTypes.TAG, value: null };
+    const obj2 = { type: tmp(5353).StickerMetadataTypes.TAG, value: null };
     const trimmed1 = str.trim();
     obj2.value = trimmed1.toLocaleLowerCase();
     items.push(obj2);
@@ -45,13 +45,13 @@ function deriveStickerMetadata(arg0, tags) {
         tmp5 = "" !== toLocaleLowerCaseResult;
       }
       if (tmp5) {
-        const obj3 = { type: tmp(5349).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
+        const obj3 = { type: tmp(5353).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
         items.push(obj3);
       }
     }
     const byName = UnicodeEmojisDefault.getByName(str);
     if (null != byName) {
-      const obj4 = { type: tmp(5349).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
+      const obj4 = { type: tmp(5353).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
       items.push(obj4);
       byName.forEachDiversity((surrogates) => items.push({ type: StickersTypes.StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }
@@ -82,8 +82,8 @@ function syncStickers(id, stickers, setPartition) {
     }
   }
 }
-const TypeTag = fn(1973).TypeTag;
-const LibdiscoreStore = fn(1980).LibdiscoreStore;
+const TypeTag = fn(1974).TypeTag;
+const LibdiscoreStore = fn(1981).LibdiscoreStore;
 class GuildStickersStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -129,7 +129,7 @@ prototype["stateWrapper"] = function stateWrapper() {
   return this.database;
 };
 GuildStickersStore.displayName = "GuildStickersStore";
-const LibdiscoreBatchStoreRefactorExperiment = fn(1983).LibdiscoreBatchStoreRefactorExperiment;
+const LibdiscoreBatchStoreRefactorExperiment = fn(1984).LibdiscoreBatchStoreRefactorExperiment;
 const guildStickersStore = new GuildStickersStore({
   LOGOUT(arg0, clear) {
     return clear.clear();

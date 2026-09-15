@@ -1,12 +1,12 @@
-// Module ID: 14041
-// Function ID: 14042
+// Module ID: 14046
+// Function ID: 14047
 // Name: GuildBadgeWiltedFlower
-// Dependencies: [19, 21, 14005, 8574, 2]
+// Dependencies: [19, 21, 14010, 8577, 2]
 // Exports: GuildBadgeWiltedFlower
 
-// Module 14041 (GuildBadgeWiltedFlower)
-import inlineStyles from "inlineStyles" /* 8574 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14005 */;
+// Module 14046 (GuildBadgeWiltedFlower)
+import inlineStyles from "inlineStyles" /* 8577 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

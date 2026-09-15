@@ -1,23 +1,23 @@
-// Module ID: 11224
-// Function ID: 11225
+// Module ID: 11228
+// Function ID: 11229
 // Name: usePreviewCollectiblesProduct
-// Dependencies: [32, 19, 8277, 7650, 1887, 7651, 7652, 8288, 11223, 1889, 8281, 2]
+// Dependencies: [32, 19, 8280, 7654, 1888, 7655, 7656, 8291, 11227, 1890, 8284, 2]
 // Exports: usePreviewCollectibleProduct
 
-// Module 11224 (usePreviewCollectiblesProduct)
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
-import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11223 */;
+// Module 11228 (usePreviewCollectiblesProduct)
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8284 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11227 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8280 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isAvatarDecorationRecord = fn(7650).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1887).isNameplateRecord;
-const isProfileEffectRecord = fn(7651).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7652).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7654).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1888).isNameplateRecord;
+const isProfileEffectRecord = fn(7655).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7656).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
 
@@ -33,10 +33,10 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    product = product(11223).currentPreviewGeneration();
+    product = product(11227).currentPreviewGeneration();
     const pendingChanges = firstAvatarDecoration.getPendingChanges();
     dependencyMap = { avatarDecoration: pendingChanges.pendingAvatarDecoration, profileEffect: pendingChanges.pendingProfileEffect, nameplate: pendingChanges.pendingNameplate, profileFrame: pendingChanges.pendingProfileFrame };
-    if (product.type === product(1889).CollectiblesItemType.BUNDLE) {
+    if (product.type === product(1890).CollectiblesItemType.BUNDLE) {
       const obj3 = {};
       if (null != firstAvatarDecoration) {
         obj3.avatarDecoration = firstAvatarDecoration;
@@ -64,26 +64,26 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
           obj3.nameplate = tmp12;
         }
       }
-      obj = obj(8281);
+      obj = obj(8284);
       obj.setPendingChanges(obj3);
     } else {
       const first = closure_2(product.items, 1)[0];
       if (firstNameplate(first)) {
         const obj4 = { avatarDecoration: first };
-        obj(8281).setPendingChanges(obj4);
-        const objResult = obj(8281);
+        obj(8284).setPendingChanges(obj4);
+        const objResult = obj(8284);
       } else if (isProfileEffectRecord(first)) {
         const obj5 = { profileEffect: first };
-        obj(8281).setPendingChanges(obj5);
-        const objResult4 = obj(8281);
+        obj(8284).setPendingChanges(obj5);
+        const objResult4 = obj(8284);
       } else if (firstProfileFrame(first)) {
         const obj6 = { nameplate: first };
-        obj(8281).setPendingChanges(obj6);
-        const objResult5 = obj(8281);
+        obj(8284).setPendingChanges(obj6);
+        const objResult5 = obj(8284);
       } else if (isProfileFrameRecord(first)) {
         const obj7 = { profileFrame: first };
-        obj(8281).setPendingChanges(obj7);
-        const objResult6 = obj(8281);
+        obj(8284).setPendingChanges(obj7);
+        const objResult6 = obj(8284);
       }
       return () => {
         let tmp = closure_1;

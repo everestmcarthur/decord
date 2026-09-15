@@ -1,16 +1,16 @@
-// Module ID: 10880
-// Function ID: 10881
+// Module ID: 10884
+// Function ID: 10885
 // Name: usePremiumProductPricingString
-// Dependencies: [7340, 1373, 4294, 7343, 504, 2]
+// Dependencies: [7344, 1374, 4297, 7347, 504, 2]
 // Exports: default
 
-// Module 10880 (usePremiumProductPricingString)
-import IAPStore from "IAPStore" /* 7340 */;
+// Module 10884 (usePremiumProductPricingString)
+import IAPStore from "IAPStore" /* 7344 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PRICE_PLACEHOLDER = fn(1373).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1374).PRICE_PLACEHOLDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 

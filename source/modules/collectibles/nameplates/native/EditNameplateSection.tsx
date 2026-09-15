@@ -1,24 +1,24 @@
-// Module ID: 14726
-// Function ID: 14727
+// Module ID: 14736
+// Function ID: 14737
 // Name: EditNameplateSection
-// Dependencies: [19, 17, 1887, 21, 4636, 13301, 14725, 13302, 7285, 1886, 8945, 2]
+// Dependencies: [19, 17, 1888, 21, 4639, 13306, 14735, 13307, 7289, 1887, 8948, 2]
 
-// Module 14726 (EditNameplateSection)
-import utils from "utils" /* 1886 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13301 */;
-import useNameplateSections from "useNameplateSections" /* 14725 */;
+// Module 14736 (EditNameplateSection)
+import utils from "utils" /* 1887 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13306 */;
+import useNameplateSections from "useNameplateSections" /* 14735 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isNameplateRecord = fn(1887).isNameplateRecord;
+const isNameplateRecord = fn(1888).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13301).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13301).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13301).GUTTER_SIZE };
+const createStyles = fn(4639);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13306).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13306).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13306).GUTTER_SIZE };
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
@@ -36,10 +36,10 @@ const memoResult = noop.memo((arg0) => {
   obj2.children = substr.map((nameplate, index) => {
     if (nameplate === useNameplateSections.NONE_ITEM) {
       const obj2 = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return timestampProducer(tmp(13302).EditCollectiblesListItemNone, obj2, "none");
-    } else if (nameplate === tmp(14725).SHOP_ITEM) {
+      return timestampProducer(tmp(13307).EditCollectiblesListItemNone, obj2, "none");
+    } else if (nameplate === tmp(14735).SHOP_ITEM) {
       const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
-      return timestampProducer(tmp(13302).EditCollectiblesListItemShop, obj3, "shop");
+      return timestampProducer(tmp(13307).EditCollectiblesListItemShop, obj3, "shop");
     } else if (isNameplateRecord(nameplate)) {
       const obj4 = { nameplate, isSelected: closure_1_0 === nameplate.skuId, setSelectedNameplate, size: width };
       return timestampProducer(memoResult1, obj4, nameplate.skuId);
@@ -69,8 +69,8 @@ const memoResult1 = noop.memo((nameplate) => {
   const obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
   obj2.style = items2;
-  obj.children = closure_6(setSelectedNameplate(8945), obj2);
-  return closure_6(nameplate(13302).EditCollectiblesListItemProduct, obj);
+  obj.children = closure_6(setSelectedNameplate(8948), obj2);
+  return closure_6(nameplate(13307).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

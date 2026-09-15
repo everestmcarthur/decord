@@ -1,26 +1,64 @@
 // Module ID: 12946
 // Function ID: 12947
-// Dependencies: [12945, 12947]
-// Exports: getAsyncContextStrategy, setAsyncContextStrategy
+// Dependencies: [12933]
+// Exports: dateTimestampInSeconds, timestampInSeconds
 
 // Module 12946
-import _mod12945 from "module_12945" /* 12945 */;
-import _mod12947 from "module_12947" /* 12947 */;
+import _mod12933 from "module_12933" /* 12933 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {
-  const sentryCarrier = _mod12945.getSentryCarrier(arg0);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12947.getStackAsyncContextStrategy();
-    const tmpResult = _mod12947;
+function dateTimestampInSeconds() {
+  return Date.now() / 1000;
+}
+let timeOrigin;
+const _performance = _mod12933.GLOBAL_OBJ.performance;
+let fn = dateTimestampInSeconds;
+if (_performance) {
+  fn = dateTimestampInSeconds;
+  if (_performance.now) {
+    const _Date = Date;
+    const timestamp = Date.now();
+    timeOrigin = timestamp - _performance.now();
+    if (null != _performance.timeOrigin) {
+      timeOrigin = _performance.timeOrigin;
+    }
+    fn = () => (timeOrigin + _performance.now()) / 1000;
   }
-  return acs;
-};
-export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12945.getMainCarrier();
-  _mod12945.getSentryCarrier(mainCarrier).acs = acs;
-};
+}
+const _performance2 = _mod12933.GLOBAL_OBJ.performance;
+if (_performance2) {
+  if (_performance2.now) {
+    const nowResult = _performance2.now();
+    const _Date2 = Date;
+    const timestamp1 = Date.now();
+    let num2 = 3600000;
+    if (_performance2.timeOrigin) {
+      const _Math = Math;
+      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
+    }
+    let timeOrigin2 = _performance2.timing;
+    if (timeOrigin2) {
+      timeOrigin2 = _performance2.timing.navigationStart;
+    }
+    let num3 = 3600000;
+    if (typeof timeOrigin2 === "number") {
+      const _Math2 = Math;
+      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
+    }
+    if (!tmp6) {
+      if (num3 >= 3600000) {
+        exports._browserPerformanceTimeOriginMode = "dateNow";
+      }
+    }
+    if (num2 <= num3) {
+      exports._browserPerformanceTimeOriginMode = "timeOrigin";
+      timeOrigin2 = _performance2.timeOrigin;
+    } else {
+      exports._browserPerformanceTimeOriginMode = "navigationStart";
+    }
+    tmp6 = num2 < 3600000;
+  }
+}
+
+export const _browserPerformanceTimeOriginMode = "none";
+export { dateTimestampInSeconds };
+export const timestampInSeconds = fn;

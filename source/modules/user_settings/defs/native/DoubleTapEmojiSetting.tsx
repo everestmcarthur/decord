@@ -1,15 +1,15 @@
-// Module ID: 15981
-// Function ID: 15982
+// Module ID: 15994
+// Function ID: 15995
 // Name: DoubleTapEmojiSetting
-// Dependencies: [5, 19, 8079, 1074, 1374, 21, 4636, 576, 1935, 8072, 1396, 7233, 11256, 1240, 7285, 11259, 11602, 1114, 2]
+// Dependencies: [5, 19, 8082, 1074, 1375, 21, 4639, 576, 1936, 8075, 1397, 7237, 11260, 1241, 7289, 11263, 11606, 1115, 2]
 
-// Module 15981 (DoubleTapEmojiSetting)
+// Module 15994 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import EmojiDefault from "Emoji" /* 7233 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8072 */;
+import util from "util" /* 1115 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import EmojiDefault from "Emoji" /* 7237 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8075 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,19 +34,19 @@ function SettingsEmoji(emoji) {
   return tmp4(EmojiDefault, obj3);
 }
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const EmojiIntention = fn(1374).EmojiIntention;
+const EmojiIntention = fn(1375).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8079).MobileUserSettings.CHAT,
+  parent: fn(8082).MobileUserSettings.CHAT,
   useTrailing: function useDoubleTapEmojiSettingTrailing() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.useSetting();

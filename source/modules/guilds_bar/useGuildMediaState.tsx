@@ -1,24 +1,24 @@
-// Module ID: 16428
-// Function ID: 16429
+// Module ID: 16441
+// Function ID: 16442
 // Name: useGuildMediaState
-// Dependencies: [1956, 1962, 1961, 4658, 502, 1957, 1979, 4275, 4285, 2011, 4817, 4655, 1074, 1094, 504, 13798, 9792, 4265, 13799, 9676, 11, 5497, 2]
+// Dependencies: [1957, 1963, 1962, 4661, 502, 1958, 1980, 4278, 4288, 2012, 4820, 4658, 1074, 1095, 504, 13803, 9794, 4268, 13804, 9678, 11, 5501, 2]
 // Exports: default
 
-// Module 16428 (useGuildMediaState)
+// Module 16441 (useGuildMediaState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ChannelTypes from "ChannelTypes" /* 1094 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13799 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import ChannelTypes from "ChannelTypes" /* 1095 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13804 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import StageInstanceStore from "StageInstanceStore" /* 1963 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ function canConnectToChannel(type, arg1) {
   }
   return canBasicChannelResult;
 }
-const isVoiceChannel = fn(1961).isVoiceChannel;
+const isVoiceChannel = fn(1962).isVoiceChannel;
 const BasicPermissions = fn(1074).BasicPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/useGuildMediaState.tsx");

@@ -1,9 +1,9 @@
 // Module ID: 11072
 // Function ID: 11073
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 11072
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "c6de0a8018201efe397c6bc1961474a0", name: "ic_minus_circle_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1cda1329ef5dd669ec53160c74e5d945", name: "ArrowSmallRightIcon", type: "png" });

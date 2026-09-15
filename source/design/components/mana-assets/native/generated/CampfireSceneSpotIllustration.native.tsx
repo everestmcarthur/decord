@@ -1,13 +1,13 @@
-// Module ID: 5924
-// Function ID: 5925
+// Module ID: 5928
+// Function ID: 5929
 // Name: CampfireSceneSpotIllustration
-// Dependencies: [21, 5668, 5925, 2]
+// Dependencies: [21, 5672, 5929, 2]
 // Exports: CampfireSceneSpotIllustration
 
-// Module 5924 (CampfireSceneSpotIllustration)
+// Module 5928 (CampfireSceneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5925 from "module_5925" /* 5925 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5929 from "module_5929" /* 5929 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const CampfireSceneSpotIllustration = function CampfireSceneSpotIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5925 };
+  const obj2 = { uri: _modDef5929 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

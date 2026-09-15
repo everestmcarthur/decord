@@ -1,12 +1,12 @@
-// Module ID: 7506
-// Function ID: 7507
+// Module ID: 7510
+// Function ID: 7511
 // Name: GuildBoostPurchasingUtils
-// Dependencies: [5, 4300, 1074, 1373, 4981, 1114, 1240, 4960, 7507, 7512, 7343, 7513, 7514, 4294, 2]
+// Dependencies: [5, 4303, 1074, 1374, 4984, 1115, 1241, 4963, 7511, 7516, 7347, 7517, 7518, 4297, 2]
 // Exports: launchGuildBoostFlowOrAlert
 
-// Module 7506 (GuildBoostPurchasingUtils)
+// Module 7510 (GuildBoostPurchasingUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
 
 const require = fn;
 let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
@@ -67,12 +67,12 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
             if (null != externalManagementMessage) {
               (function alertUnableToManageSub(body, source) {
                 const obj2 = { title: null, body: null };
-                const intl = closure_1_0(1114).intl;
-                obj2.title = intl.string(closure_1_0(1114).t["8P7MX0"]);
+                const intl = closure_1_0(1115).intl;
+                obj2.title = intl.string(closure_1_0(1115).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(4981).show(obj2);
-                const obj = closure_1_1(4981);
-                closure_1_1(1240).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
+                closure_1_1(4984).show(obj2);
+                const obj = closure_1_1(4984);
+                closure_1_1(1241).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {
               closure_130_8 = null;
@@ -141,10 +141,10 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(4294).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(4294);
-                      num3 = numPremiumGuildSubscriptions + c1(4294).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(4294);
+                      const numPremiumGuildSubscriptions = closure_0(4297).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(4297);
+                      num3 = numPremiumGuildSubscriptions + c1(4297).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(4297);
                     }
                     tmp = sum > num3;
                   }
@@ -172,7 +172,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
 };
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, PremiumTypes: closure_8, SubscriptionIntervalTypes: closure_9 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");

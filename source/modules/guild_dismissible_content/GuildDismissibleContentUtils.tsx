@@ -1,19 +1,19 @@
-// Module ID: 12624
-// Function ID: 12625
+// Module ID: 12629
+// Function ID: 12630
 // Name: GuildDismissibleContentUtils
-// Dependencies: [1219, 1074, 1954, 1084, 1942, 504, 1940, 1240, 1943, 2]
+// Dependencies: [1220, 1074, 1955, 1084, 1943, 504, 1941, 1241, 1944, 2]
 // Exports: isContentDismissed, markContentAsDismissed, unmarkContentAsDismissed, useIsContentDismissed
 
-// Module 12624 (GuildDismissibleContentUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+// Module 12629 (GuildDismissibleContentUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1943 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const UserSettingsDelay = fn(1084).UserSettingsDelay;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");

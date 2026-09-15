@@ -1,8 +1,8 @@
-// Module ID: 6309
-// Function ID: 6310
+// Module ID: 6313
+// Function ID: 6314
 // Dependencies: [2]
 
-// Module 6309
+// Module 6313
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/IceCreamIllocon-2x.png.js");

@@ -1,17 +1,17 @@
-// Module ID: 12591
-// Function ID: 12592
+// Module ID: 12596
+// Function ID: 12597
 // Name: ChatInputGuardGuildCommunicationDisabled
-// Dependencies: [19, 2023, 21, 12592, 12578, 11984, 1114, 2]
+// Dependencies: [19, 2024, 21, 12597, 12583, 11988, 1115, 2]
 
-// Module 12591 (ChatInputGuardGuildCommunicationDisabled)
-import util from "util" /* 1114 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11984 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12578 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12592 */;
+// Module 12596 (ChatInputGuardGuildCommunicationDisabled)
+import util from "util" /* 1115 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11988 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12583 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const link = fn(2023).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const link = fn(2024).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx");
@@ -29,9 +29,9 @@ export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMembe
   }
   const obj2 = { type: "simple-action", icon: null, message: null, subtext: null, countdown: null };
   obj2.icon = jsx(ClockWarningIcon.ClockWarningIcon, {});
-  const intl = tmp(1114).intl;
+  const intl = tmp(1115).intl;
   obj2.message = intl.string(util.t.VSpdzK);
-  const intl2 = tmp(1114).intl;
+  const intl2 = tmp(1115).intl;
   obj2.subtext = intl2.format(util.t["4ZwD5G"], { link });
   obj2.countdown = date;
   return jsx(ChatInputGuardDefault, { type: "simple-action", icon: null, message: null, subtext: null, countdown: null });

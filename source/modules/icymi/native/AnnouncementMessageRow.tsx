@@ -1,29 +1,29 @@
-// Module ID: 16586
-// Function ID: 16587
+// Module ID: 16599
+// Function ID: 16600
 // Name: AnnouncementMessageRow
-// Dependencies: [19, 17, 1957, 1979, 4285, 4817, 1371, 16587, 21, 16549, 576, 504, 5601, 8469, 11045, 11787, 16588, 8468, 16590, 1114, 11, 5204, 9900, 16592, 16596, 2]
+// Dependencies: [19, 17, 1958, 1980, 4288, 4820, 1372, 16600, 21, 16562, 576, 504, 5605, 8472, 11049, 11791, 16601, 8471, 16603, 1115, 11, 5207, 9902, 16605, 16609, 2]
 // Exports: default
 
-// Module 16586 (AnnouncementMessageRow)
+// Module 16599 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11787 */;
-import ICYMIShared from "ICYMIShared" /* 16588 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11049 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11791 */;
+import ICYMIShared from "ICYMIShared" /* 16601 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(16587).ITEM_PADDING;
+const ITEM_PADDING = fn(16600).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16549);
+const createICYMIStyles = fn(16562);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;

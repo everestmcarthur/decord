@@ -1,20 +1,21 @@
 // Module ID: 5306
 // Function ID: 5307
-// Dependencies: [5303]
+// Dependencies: [5307]
 
 // Module 5306
-import findOffsets from "findOffsets" /* 5303 */;
+import findOffsets from "findOffsets" /* 5307 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
 export default {
-  isAvifFile(getUint32) {
+  isHeicFile(getUint32) {
     if (getUint32) {
       try {
         let parseBoxResult = findOffsets.parseBox(getUint32, 0);
         if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
+          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
         }
         return parseBoxResult;
       } catch (err) {
@@ -24,7 +25,7 @@ export default {
       return false;
     }
   },
-  findAvifOffsets(byteLength) {
+  findHeicOffsets(byteLength) {
     return findOffsets.findOffsets(byteLength);
   }
 };

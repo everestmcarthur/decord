@@ -1,16 +1,16 @@
-// Module ID: 9665
-// Function ID: 9666
+// Module ID: 9667
+// Function ID: 9668
 // Name: transitionToActivity
-// Dependencies: [9597, 1956, 9635, 9598, 4265, 4494, 9596, 9658, 9666, 4837, 9606, 4603, 9634, 2]
+// Dependencies: [9599, 1957, 9637, 9600, 4268, 4497, 9598, 9660, 9668, 4840, 9608, 4606, 9636, 2]
 // Exports: default
 
-// Module 9665 (transitionToActivity)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9596 */;
-import ChannelCallStore from "ChannelCallStore" /* 9597 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 9598 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9635 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+// Module 9667 (transitionToActivity)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4268 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9598 */;
+import ChannelCallStore from "ChannelCallStore" /* 9599 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 9600 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9637 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 import size from "module_2" /* 2 */;
 
 const setVoiceChatDrawerState = ChannelCallStore.setVoiceChatDrawerState;
@@ -21,30 +21,30 @@ let result = size.fileFinishedImporting("modules/activities/utils/transitionToAc
 export default function transitionToActivity(arg0, _location) {
   const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
-    const isModalOpenResult = tmp(4494).isModalOpen(ChannelCallModalDefault);
+    const isModalOpenResult = tmp(4497).isModalOpen(ChannelCallModalDefault);
     let tmp4 = !isModalOpenResult;
     if (!isModalOpenResult) {
-      tmp4 = tmp15(9658)(embeddedActivityLocationChannelId);
+      tmp4 = tmp15(9660)(embeddedActivityLocationChannelId);
     }
     if (tmp4) {
-      tmp15(9666)(embeddedActivityLocationChannelId);
+      tmp15(9668)(embeddedActivityLocationChannelId);
     }
     const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(_location);
     if (null != selfEmbeddedActivityForLocation) {
-      if (tmp15(9658)(embeddedActivityLocationChannelId)) {
-        const tmp15Result = tmp15(4837);
+      if (tmp15(9660)(embeddedActivityLocationChannelId)) {
+        const tmp15Result = tmp15(4840);
         ({ applicationId: obj5.applicationId, compositeInstanceId: obj5.instanceId } = selfEmbeddedActivityForLocation);
-        const participant = tmp15Result.selectParticipant(embeddedActivityLocationChannelId, tmp(9606).getEmbeddedActivityParticipantId({ applicationId: null, instanceId: null }));
+        const participant = tmp15Result.selectParticipant(embeddedActivityLocationChannelId, tmp(9608).getEmbeddedActivityParticipantId({ applicationId: null, instanceId: null }));
         const obj2 = { applicationId: null, instanceId: null };
-        const tmpResult3 = tmp(9606);
-        tmp15(4603).hideActionSheet();
+        const tmpResult3 = tmp(9608);
+        tmp15(4606).hideActionSheet();
         setVoiceChatDrawerState(embeddedActivityLocationChannelId, VoiceChatDrawerState.CLOSED);
-        const tmp15Result2 = tmp15(4603);
+        const tmp15Result2 = tmp15(4606);
       } else {
-        const result = tmp(9634).updateActivityPanelMode(ActivityPanelModes.PANEL);
-        const tmpResult4 = tmp(9634);
+        const result = tmp(9636).updateActivityPanelMode(ActivityPanelModes.PANEL);
+        const tmpResult4 = tmp(9636);
       }
     }
-    const tmpResult = tmp(4494);
+    const tmpResult = tmp(4497);
   }
 };

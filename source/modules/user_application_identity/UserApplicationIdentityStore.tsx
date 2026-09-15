@@ -1,9 +1,9 @@
-// Module ID: 9152
-// Function ID: 9153
+// Module ID: 9155
+// Function ID: 9156
 // Name: UserApplicationIdentityStore
 // Dependencies: [504, 573, 2]
 
-// Module 9152 (UserApplicationIdentityStore)
+// Module 9155 (UserApplicationIdentityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

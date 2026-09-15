@@ -1,13 +1,13 @@
-// Module ID: 17126
-// Function ID: 17127
+// Module ID: 17164
+// Function ID: 17165
 // Name: ActivityPanelStateContext
-// Dependencies: [19, 9635, 7177, 2]
+// Dependencies: [19, 9637, 7181, 2]
 
-// Module 17126 (ActivityPanelStateContext)
+// Module 17164 (ActivityPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = {
-  mode: fn(9635).ActivityPanelModes.PANEL,
+  mode: fn(9637).ActivityPanelModes.PANEL,
   setMode() {
     const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;
@@ -18,11 +18,11 @@ const obj = {
   wrapperOffset: null,
   useActivityWebViewLock: null
 };
-let ReanimatedHelperTypes = fn(7177);
+let ReanimatedHelperTypes = fn(7181);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
-ReanimatedHelperTypes = fn(7177);
+ReanimatedHelperTypes = fn(7181);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-ReanimatedHelperTypes = fn(7177);
+ReanimatedHelperTypes = fn(7181);
 obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
 obj.useActivityWebViewLock = function useActivityWebViewLock() {
   return true;

@@ -1,11 +1,11 @@
-// Module ID: 8514
-// Function ID: 8515
+// Module ID: 8517
+// Function ID: 8518
 // Name: useStateChannelIsLive
-// Dependencies: [1962, 504, 2]
+// Dependencies: [1963, 504, 2]
 // Exports: default
 
-// Module 8514 (useStateChannelIsLive)
-import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+// Module 8517 (useStateChannelIsLive)
+import StageInstanceStore from "StageInstanceStore" /* 1963 */;
 
 const require = globalThis.__r;
 

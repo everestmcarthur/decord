@@ -1,15 +1,15 @@
-// Module ID: 16331
-// Function ID: 16332
+// Module ID: 16344
+// Function ID: 16345
 // Name: FavoritesGuildCoachmarkMenuItem
-// Dependencies: [19, 1960, 1074, 1954, 21, 10369, 7259, 504, 1114, 3236, 11262, 2]
+// Dependencies: [19, 1961, 1074, 1955, 21, 10371, 7263, 504, 1115, 3237, 11266, 2]
 // Exports: default
 
-// Module 16331 (FavoritesGuildCoachmarkMenuItem)
-import util from "util" /* 1114 */;
-import _modDef3236 from "module_3236" /* 3236 */;
-import LayerScope from "LayerScope" /* 7259 */;
+// Module 16344 (FavoritesGuildCoachmarkMenuItem)
+import util from "util" /* 1115 */;
+import _modDef3237 from "module_3237" /* 3237 */;
+import LayerScope from "LayerScope" /* 7263 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 1960 */;
+import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 require = fn;
 function FavoritesGuildCoachmarkMenuItemContent(arg0) {
@@ -34,9 +34,9 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M15 2V1H9v1h6ZM9 3V2H5v1h4Z", onButtonPress: "#fff" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "DESKTOP", onButtonPress: "M7 2v1h2V2H7ZM9 1v1h4V1H9ZM13 2v1h1V2h-1ZM14 3v1h1V3h-1ZM15 4v5h1V4h-1ZM14 9v2h1V9h-1ZM13 11v1h1v-1h-1ZM11 12v1h2v-1h-2ZM9 13v1h2v-1H9ZM7 14v1h2v-1H7Z" };
     const intl = util.intl;
-    const tmp4 = _modDef3236;
+    const tmp4 = _modDef3237;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = tmp3;
@@ -45,11 +45,11 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       tmp6 = tmp3;
     }
     obj.title = intl.string(TWuDTt);
-    const intl2 = tmp(1114).intl;
-    obj.description = intl2.string(tmp6(3236).Ztl9ht);
+    const intl2 = tmp(1115).intl;
+    obj.description = intl2.string(tmp6(3237).Ztl9ht);
     obj.onDismiss = onDismiss;
-    const intl3 = tmp(1114).intl;
-    obj.buttonLabel = intl3.string(tmp6(3236)["+h9aza"]);
+    const intl3 = tmp(1115).intl;
+    obj.buttonLabel = intl3.string(tmp6(3237)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);
@@ -57,7 +57,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   const coachmark = stateFromStores(markPopoverAsDismissed[10]).useCoachmark(targetRef, memo);
   return null;
 }
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [, , ];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1074).ChannelTypes);

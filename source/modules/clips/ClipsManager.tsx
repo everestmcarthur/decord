@@ -1,34 +1,34 @@
-// Module ID: 17920
-// Function ID: 17921
+// Module ID: 17958
+// Function ID: 17959
 // Name: clips/ClipsManager
-// Dependencies: [5, 4681, 502, 1908, 4659, 4675, 1914, 5213, 1074, 4678, 7221, 13765, 4691, 4688, 1240, 1935, 573, 13766, 4257, 1363, 13764, 2]
+// Dependencies: [5, 4684, 502, 1909, 4662, 4678, 1915, 5216, 1074, 4681, 7225, 13770, 4694, 4691, 1241, 1936, 573, 13771, 4260, 1364, 13769, 2]
 
-// Module 17920 (clips/ClipsManager)
+// Module 17958 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import DiscordNativeDefault from "DiscordNative" /* 4257 */;
-import StreamKeyUtilsAll from "StreamKeyUtils" /* 4688 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import isClipsEnabled from "isClipsEnabled" /* 13764 */;
-import ClipsExperiment from "ClipsExperiment" /* 13765 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13766 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import DiscordNativeDefault from "DiscordNative" /* 4260 */;
+import StreamKeyUtilsAll from "StreamKeyUtils" /* 4691 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
+import isClipsEnabled from "isClipsEnabled" /* 13769 */;
+import ClipsExperiment from "ClipsExperiment" /* 13770 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13771 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
-import ClipsStore from "ClipsStore" /* 1914 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4678 */;
+import ClipsStore from "ClipsStore" /* 1915 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(4681).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5213);
+const getSystemAnalyticsInfo = fn(4684).getSystemAnalyticsInfo;
+const ClipsConstants = fn(5216);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = ClipsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);
-const StreamTypes = fn(4678).StreamTypes;
+const StreamTypes = fn(4681).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -87,10 +87,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
       const id = AuthenticationStore.getId();
-      if (tmp(4691).MediaEngineContextTypes.DEFAULT === context) {
+      if (tmp(4694).MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
-      } else if (tmp(4691).MediaEngineContextTypes.STREAM === context) {
+      } else if (tmp(4694).MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
             const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
@@ -98,7 +98,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
               self.applyStreamRecording(id, rTCConnection);
             }
           }
-          tmpResult = tmp(4688);
+          tmpResult = tmp(4691);
         }
       }
     }

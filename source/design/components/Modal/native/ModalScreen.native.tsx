@@ -1,17 +1,17 @@
-// Module ID: 8539
-// Function ID: 8540
+// Module ID: 8542
+// Function ID: 8543
 // Name: ModalScreen
-// Dependencies: [19, 17, 21, 4636, 576, 7084, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 7088, 2]
 // Exports: ModalScreen
 
-// Module 8539 (ModalScreen)
+// Module 8542 (ModalScreen)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7088 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

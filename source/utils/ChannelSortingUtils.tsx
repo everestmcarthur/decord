@@ -1,14 +1,14 @@
-// Module ID: 16244
-// Function ID: 16245
+// Module ID: 16257
+// Function ID: 16258
 // Name: ChannelSortingUtils
-// Dependencies: [1961, 1074, 12546, 7215, 2]
+// Dependencies: [1962, 1074, 12551, 7219, 2]
 // Exports: areTypesInSameSection, getDnDUpdates, getDropData
 
-// Module 16244 (ChannelSortingUtils)
+// Module 16257 (ChannelSortingUtils)
 import Constants from "Constants" /* 1074 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7215 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12546 */;
-import ChannelRecord from "ChannelRecord" /* 1961 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7219 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12551 */;
+import ChannelRecord from "ChannelRecord" /* 1962 */;
 import size from "module_2" /* 2 */;
 
 function getFirstChannelOfType(arg0, arg1, arg2, arr) {

@@ -1,23 +1,23 @@
-// Module ID: 14911
-// Function ID: 14912
+// Module ID: 14921
+// Function ID: 14922
 // Name: ExplicitMediaRedactionNativeUtils
-// Dependencies: [1371, 7703, 7982, 1185, 1114, 7702, 8529, 8531, 4603, 14912, 1896, 7395, 7400, 2]
+// Dependencies: [1372, 7706, 7985, 1186, 1115, 7705, 8532, 8534, 4606, 14922, 1897, 7399, 7404, 2]
 // Exports: handleSensitiveMediaFilterPress, shouldAgeVerifyForSearchMedia
 
-// Module 14911 (ExplicitMediaRedactionNativeUtils)
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 14921 (ExplicitMediaRedactionNativeUtils)
+import util from "util" /* 1115 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7399 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8532 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(7703).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(7982).SearchMediaTypes;
+let closure_4 = fn(7706).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(7985).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
 
@@ -43,10 +43,10 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     obj.label = intl.string(util.t["5k5OFp"]);
     obj.onPress = function onPress() {
       if (obj.shouldAgeVerifyForExplicitMedia()) {
-        const obj3 = { entryPoint: tmp(8531).AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
+        const obj3 = { entryPoint: tmp(8534).AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       } else {
-        require(tmp(1185).ExplicitContentRedaction.SHOW);
+        require(tmp(1186).ExplicitContentRedaction.SHOW);
       }
     };
     items.push(obj);
@@ -77,7 +77,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14912, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14922, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {
@@ -88,27 +88,27 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
       return false;
     } else {
       if (media.type === SearchMediaTypes.ATTACHMENT) {
-        const obj2 = { type: tmp4(7400).ObscuredMediaTypes.Attachment, media: media.attachment };
+        const obj2 = { type: tmp4(7404).ObscuredMediaTypes.Attachment, media: media.attachment };
         let tmp = obj2;
       } else if (media.type === tmp8.EMBED) {
-        const obj = { type: tmp4(7400).ObscuredMediaTypes.Embed, media: media.embed };
+        const obj = { type: tmp4(7404).ObscuredMediaTypes.Embed, media: media.embed };
         tmp = obj;
       } else {
         tmp = null;
         if (media.type === tmp8.COMPONENT) {
-          const obj3 = { type: tmp4(7400).ObscuredMediaTypes.GenericMedia, media: media.unfurledMediaItem };
+          const obj3 = { type: tmp4(7404).ObscuredMediaTypes.GenericMedia, media: media.unfurledMediaItem };
           tmp = obj3;
         }
       }
       let tmp2 = null != tmp;
       if (tmp2) {
-        let result = tmp4(7395).isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
+        let result = tmp4(7399).isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
         if (result) {
-          result = tmp4(7702).shouldAgeVerifyForExplicitMedia();
-          const tmp4Result2 = tmp4(7702);
+          result = tmp4(7705).shouldAgeVerifyForExplicitMedia();
+          const tmp4Result2 = tmp4(7705);
         }
         tmp2 = result;
-        const tmp4Result = tmp4(7395);
+        const tmp4Result = tmp4(7399);
       }
       return tmp2;
     }

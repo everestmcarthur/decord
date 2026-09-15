@@ -1,18 +1,18 @@
-// Module ID: 9836
-// Function ID: 9837
+// Module ID: 9838
+// Function ID: 9839
 // Name: GuildEventRsvpUtils
-// Dependencies: [502, 7629, 1963, 1114, 9799, 9798, 9795, 2]
+// Dependencies: [502, 7633, 1964, 1115, 9801, 9800, 9797, 2]
 // Exports: getExistingRsvp, getResponseOptions, handleRsvp
 
-// Module 9836 (GuildEventRsvpUtils)
-import util from "util" /* 1114 */;
-import useEventSchedule from "useEventSchedule" /* 9798 */;
-import useEventException from "useEventException" /* 9799 */;
+// Module 9838 (GuildEventRsvpUtils)
+import util from "util" /* 1115 */;
+import useEventSchedule from "useEventSchedule" /* 9800 */;
+import useEventException from "useEventException" /* 9801 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7633 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(1963);
+const GuildScheduledEventsConstants = fn(1964);
 ({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } = GuildScheduledEventsConstants);
 const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
 const size = fn(2);
@@ -51,13 +51,13 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
         scheduled_start_time1 = guildScheduledEvent.scheduled_start_time;
       }
       const date = new Date(scheduled_start_time1);
-      recurrenceStatus = tmp33(9795).getRecurrenceStatus(eventException, obj5.getEventSchedule(guildScheduledEvent, recurrenceId).startTime, date);
-      const tmp33Result = tmp33(9795);
+      recurrenceStatus = tmp33(9797).getRecurrenceStatus(eventException, obj5.getEventSchedule(guildScheduledEvent, recurrenceId).startTime, date);
+      const tmp33Result = tmp33(9797);
     }
     if (null == recurrenceStatus) {
       if (recurrenceId == null) {
-        recurrenceId = tmp33(9795).getNextRecurrenceIdInEvent(guildScheduledEvent);
-        const tmp33Result2 = tmp33(9795);
+        recurrenceId = tmp33(9797).getNextRecurrenceIdInEvent(guildScheduledEvent);
+        const tmp33Result2 = tmp33(9797);
       }
       let tmp12 = recurrenceId;
     } else {

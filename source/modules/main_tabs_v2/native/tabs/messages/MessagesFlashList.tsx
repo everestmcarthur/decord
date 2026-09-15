@@ -1,18 +1,18 @@
-// Module ID: 16198
-// Function ID: 16199
+// Module ID: 16211
+// Function ID: 16212
 // Name: MessagesFlashList
-// Dependencies: [32, 19, 21, 16153, 16127, 16193, 16194, 16139, 16137, 16142, 16154, 16192, 16195, 9003, 2]
+// Dependencies: [32, 19, 21, 16166, 16140, 16206, 16207, 16152, 16150, 16155, 16167, 16205, 16208, 9006, 2]
 
-// Module 16198 (MessagesFlashList)
-import MessagesItemChannel from "MessagesItemChannel" /* 16127 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16137 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16139 */;
-import useMessagesData from "useMessagesData" /* 16142 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 16154 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16192 */;
-import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16193 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16194 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16195 */;
+// Module 16211 (MessagesFlashList)
+import MessagesItemChannel from "MessagesItemChannel" /* 16140 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16150 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16152 */;
+import useMessagesData from "useMessagesData" /* 16155 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 16167 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16205 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16206 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16207 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

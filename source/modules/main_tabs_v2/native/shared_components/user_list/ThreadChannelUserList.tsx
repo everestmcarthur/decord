@@ -1,16 +1,16 @@
-// Module ID: 16800
-// Function ID: 16801
+// Module ID: 16838
+// Function ID: 16839
 // Name: ThreadChannelUserList
-// Dependencies: [19, 1957, 2021, 1979, 1371, 1074, 21, 7265, 504, 16801, 7152, 550, 7415, 4481, 8296, 10995, 2]
+// Dependencies: [19, 1958, 2022, 1980, 1372, 1074, 21, 7269, 504, 16839, 7156, 550, 7419, 4484, 8299, 10999, 2]
 
-// Module 16800 (ThreadChannelUserList)
+// Module 16838 (ThreadChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;

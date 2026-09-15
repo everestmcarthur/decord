@@ -1,13 +1,13 @@
-// Module ID: 9001
-// Function ID: 9002
+// Module ID: 9004
+// Function ID: 9005
 // Name: CollectiblesShopManager
-// Dependencies: [9000, 8336, 8335, 9002, 573, 2]
+// Dependencies: [9003, 8339, 8338, 9005, 573, 2]
 
-// Module 9001 (CollectiblesShopManager)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8335 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9002 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9000 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8336 */;
+// Module 9004 (CollectiblesShopManager)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8338 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9005 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9003 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8339 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 
 require = fn;

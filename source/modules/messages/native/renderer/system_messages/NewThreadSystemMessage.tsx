@@ -1,18 +1,18 @@
-// Module ID: 8115
-// Function ID: 8116
+// Module ID: 8118
+// Function ID: 8119
 // Name: NewThreadSystemMessage
-// Dependencies: [1957, 4285, 1371, 8064, 1114, 8066, 4789, 8068, 2]
+// Dependencies: [1958, 4288, 1372, 8067, 1115, 8069, 4792, 8071, 2]
 // Exports: createNewThreadSystemMessage
 
-// Module 8115 (NewThreadSystemMessage)
-import util from "util" /* 1114 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 8118 (NewThreadSystemMessage)
+import util from "util" /* 1115 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
-const createCommonMessageDefault = tmp7(8068);
+const createCommonMessageDefault = tmp7(8071);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
@@ -26,11 +26,11 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   const channel = ChannelStore.getChannel(channel_id);
-  const intl = tmp(1114).intl;
+  const intl = tmp(1115).intl;
   const obj2 = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4789).computeChannelName(channel, UserStore, RelationshipStore);
-    const tmpResult = tmp(4789);
+    let content = tmp(4792).computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = tmp(4792);
   } else {
     content = message.content;
   }

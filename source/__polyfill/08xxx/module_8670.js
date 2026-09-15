@@ -1,17 +1,18 @@
 // Module ID: 8670
 // Function ID: 8671
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8671, 8587, 8598]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8671, 8592, 8601]
 
 // Module 8670
-import _modDef8598 from "module_8598" /* 8598 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8601 from "module_8601" /* 8601 */;
+import _modDef8671 from "module_8671" /* 8671 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Symbol = importDefault;
+const Rect = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,15 +32,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Symbol {
+class Rect {
   constructor() {
     self = this;
-    tmp = c2(this, Symbol);
-    tmp2 = closure_4;
-    obj = closure_4(Symbol);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Rect);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Rect);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,29 +54,28 @@ class Symbol {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Symbol, _modDef8598);
+_inherits(Rect, _modDef8601);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const obj2 = {
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign({ name: props.id });
-    const merged1 = Object.assign(Symbol(8587)(props));
-    obj2.children = props.children;
-    return jsx(Symbol(8671), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(Rect(8592).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+const importDefaultResultResult = _createClass(Rect, items);
+importDefaultResultResult.displayName = "Rect";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
 export default importDefaultResultResult;

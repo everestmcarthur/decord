@@ -1,13 +1,13 @@
-// Module ID: 11622
-// Function ID: 11623
+// Module ID: 11626
+// Function ID: 11627
 // Name: IosAttributionEligibility
-// Dependencies: [11623, 1363, 7801, 11625, 2]
+// Dependencies: [11627, 1364, 7804, 11629, 2]
 // Exports: getIosAttributionClickFramework, isCampaignIosAttributionEnabled, isIosAttributionEligible
 
-// Module 11622 (IosAttributionEligibility)
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import QuestDataUtils from "QuestDataUtils" /* 7801 */;
-import apexExperiment from "apexExperiment" /* 11623 */;
+// Module 11626 (IosAttributionEligibility)
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import QuestDataUtils from "QuestDataUtils" /* 7804 */;
+import apexExperiment from "apexExperiment" /* 11627 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
@@ -33,24 +33,24 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    enabled = tmp(1363).isIOS();
-    const tmpResult = tmp(1363);
+    enabled = tmp(1364).isIOS();
+    const tmpResult = tmp(1364);
   }
   let activeIosAttributionFramework = null;
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      const adContext = tmp(7801).getAdContext(sourceQuestContent, adContentId);
+      const adContext = tmp(7804).getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
         prop = adContext.is_campaign_ios_attribution_enabled;
       }
       activeIosAttributionFramework = null;
       if (true === prop) {
-        activeIosAttributionFramework = tmp(11625).getActiveIosAttributionFramework();
-        const tmpResult4 = tmp(11625);
+        activeIosAttributionFramework = tmp(11629).getActiveIosAttributionFramework();
+        const tmpResult4 = tmp(11629);
       }
-      const tmpResult3 = tmp(7801);
+      const tmpResult3 = tmp(7804);
     }
   }
   return activeIosAttributionFramework;

@@ -1,14 +1,14 @@
-// Module ID: 9191
-// Function ID: 9192
+// Module ID: 9194
+// Function ID: 9195
 // Name: InAppReportsLeaveGuildElement
-// Dependencies: [32, 19, 1074, 21, 9192, 4816, 9180, 1114, 4981, 5075, 9202, 2]
+// Dependencies: [32, 19, 1074, 21, 9195, 4819, 9183, 1115, 4984, 5078, 9205, 2]
 // Exports: default
 
-// Module 9191 (InAppReportsLeaveGuildElement)
-import util from "util" /* 1114 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
-import common_AlertDefault from "common/Alert" /* 5075 */;
+// Module 9194 (InAppReportsLeaveGuildElement)
+import util from "util" /* 1115 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import common_AlertDefault from "common/Alert" /* 5078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,9 +60,9 @@ export default function LeaveGuildElement(guild) {
       name = guild.name;
     }
     obj2.body = intl2.formatToPlainString(util.t.TB1og8, { name });
-    const intl3 = tmp3(1114).intl;
+    const intl3 = tmp3(1115).intl;
     obj2.confirmText = intl3.string(util.t.p89ACt);
-    const intl4 = tmp3(1114).intl;
+    const intl4 = tmp3(1115).intl;
     obj2.cancelText = intl4.string(util.t.gm1Vej);
     obj2.onConfirm = onConfirm;
     obj2.confirmColor = common_AlertDefault.Colors.RED;

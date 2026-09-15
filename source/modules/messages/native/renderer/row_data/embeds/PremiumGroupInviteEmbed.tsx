@@ -1,16 +1,16 @@
-// Module ID: 8152
-// Function ID: 8153
+// Module ID: 8155
+// Function ID: 8156
 // Name: PremiumGroupInviteEmbed
-// Dependencies: [4308, 4636, 576, 8050, 8153, 8154, 1114, 3074, 2]
+// Dependencies: [4311, 4639, 576, 8053, 8156, 8157, 1115, 3075, 2]
 // Exports: createPremiumGroupInviteEmbed
 
-// Module 8152 (PremiumGroupInviteEmbed)
+// Module 8155 (PremiumGroupInviteEmbed)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4636 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8050 */;
-import _modDef8153 from "module_8153" /* 8153 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8154 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4308 */;
+import createStyles from "createStyles" /* 4639 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8053 */;
+import _modDef8156 from "module_8156" /* 8156 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8157 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4311 */;
 import size from "module_2" /* 2 */;
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: closure_4 } = PremiumGroupConstants);
@@ -23,19 +23,19 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createStyles.createNativeStyleProperties(obj2)(theme));
     const tmp9 = createStyles.createNativeStyleProperties(obj2)(theme);
     const author = message.author;
-    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8153);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
     const obj3 = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
     const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj3);
     if (null != premiumGroupInviteEmbedText) {
       ({ header, body } = premiumGroupInviteEmbedText);
-      const intl = tmp6(1114).intl;
+      const intl = tmp6(1115).intl;
       const obj = { learnMoreLinkOnClick: null };
       const obj5 = { action: "bindOpenUrl", url, linkColor: linkTextColor };
       obj.learnMoreLinkOnClick = obj5;
       const obj8 = { headerText: header, headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, headerImageUrl: assetUriForEmbed, betaPillText: null, betaPillTextColor: null, betaPillBackgroundColor: null, bodyText: null, bodyTextColor: null, learnMoreLink: null };
-      const intl2 = tmp6(1114).intl;
-      const formatToPartsResult = intl.formatToParts(tmp8(3074)["9VTnfI"], obj);
-      obj8.betaPillText = intl2.string(tmp6(1114).t.oW0eUd).toUpperCase();
+      const intl2 = tmp6(1115).intl;
+      const formatToPartsResult = intl.formatToParts(tmp8(3075)["9VTnfI"], obj);
+      obj8.betaPillText = intl2.string(tmp6(1115).t.oW0eUd).toUpperCase();
       obj8.betaPillTextColor = betaPillTextColor;
       obj8.betaPillBackgroundColor = betaPillBackgroundColor;
       obj8.bodyText = body;

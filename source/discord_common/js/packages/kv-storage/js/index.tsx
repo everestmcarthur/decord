@@ -1,9 +1,9 @@
-// Module ID: 1987
-// Function ID: 1988
-// Dependencies: [1988, 2, 1990, 1994, 1997, 1998, 1999, 2000, 2001, 2002, 1991, 1993]
+// Module ID: 1988
+// Function ID: 1989
+// Dependencies: [1989, 2, 1991, 1995, 1998, 1999, 2000, 2001, 2002, 2003, 1992, 1994]
 
-// Module 1987
-import "module_1988";
+// Module 1988
+import "module_1989";
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

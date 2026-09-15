@@ -1,23 +1,23 @@
-// Module ID: 10353
-// Function ID: 10354
+// Module ID: 10355
+// Function ID: 10356
 // Name: FavoritesHooks
-// Dependencies: [4458, 1371, 1960, 1970, 1373, 10354, 10355, 504, 1885, 11, 1185, 1982, 2]
+// Dependencies: [4461, 1372, 1961, 1971, 1374, 10356, 10357, 504, 1886, 11, 1186, 1983, 2]
 // Exports: getFavoritesAccess, getFavoritesCategories, useFavorite, useFavoritedChannelIds, useFavorites, useFavoritesAwareChannel, useFavoritesLimitUpsell, useIsFavoritesGuildSelected
 
-// Module 10353 (FavoritesHooks)
+// Module 10355 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1885 */;
-import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10355 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import UserStore from "UserStore" /* 1371 */;
-import FavoriteStore from "FavoriteStore" /* 1960 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1886 */;
+import FavoritesUtils from "FavoritesUtils" /* 1983 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10357 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import UserStore from "UserStore" /* 1372 */;
+import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 const require = globalThis.__r;
 
-const FavoritesLimits = tmp(10354);
+const FavoritesLimits = tmp(10356);
 require = fn;
 function useFavoritesAccess(FavoritesGuildActionSheet) {
   let str = FavoritesGuildActionSheet;
@@ -50,8 +50,8 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
   } else if (isPremiumExactlyResult) {
   }
 }
-const MAX_FAVORITE_CHANNELS = fn(1970).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1373).PremiumTypes;
+const MAX_FAVORITE_CHANNELS = fn(1971).MAX_FAVORITE_CHANNELS;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 

@@ -1,12 +1,12 @@
-// Module ID: 10935
-// Function ID: 10936
+// Module ID: 10939
+// Function ID: 10940
 // Name: useCreateSubscriptionParams
-// Dependencies: [19, 10936, 1254, 2]
+// Dependencies: [19, 10940, 1255, 2]
 // Exports: default
 
-// Module 10935 (useCreateSubscriptionParams)
-import v1 from "v1" /* 1254 */;
-import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10936 */;
+// Module 10939 (useCreateSubscriptionParams)
+import v1 from "v1" /* 1255 */;
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,15 +1,15 @@
-// Module ID: 5188
-// Function ID: 5189
+// Module ID: 5191
+// Function ID: 5192
 // Name: useGameMentionData
-// Dependencies: [1916, 5189, 1371, 5192, 504, 558, 2]
+// Dependencies: [1917, 5192, 1372, 5195, 504, 558, 2]
 // Exports: getGameMentionData, useGameMentionData
 
-// Module 5188 (useGameMentionData)
+// Module 5191 (useGameMentionData)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5192 */;
-import GameStore from "GameStore" /* 1916 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5189 */;
-import UserStore from "UserStore" /* 1371 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5195 */;
+import GameStore from "GameStore" /* 1917 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5192 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 

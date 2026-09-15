@@ -1,13 +1,13 @@
-// Module ID: 1994
-// Function ID: 1995
+// Module ID: 1995
+// Function ID: 1996
 // Name: Database
-// Dependencies: [5, 1995, 1993, 1996, 10, 2]
+// Dependencies: [5, 1996, 1994, 1997, 10, 2]
 
-// Module 1994 (Database)
+// Module 1995 (Database)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import TableId from "TableId" /* 1993 */;
-import Host2 from "Host" /* 1995 */;
-import Runtime2 from "Runtime" /* 1996 */;
+import TableId from "TableId" /* 1994 */;
+import Host2 from "Host" /* 1996 */;
+import Runtime2 from "Runtime" /* 1997 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -47,9 +47,9 @@ Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
     const obj = Object.create(tmp.prototype);
     obj.raw = openSyncUnsafeResult;
     obj.name = openSyncUnsafeResult.name;
-    obj.lastState = tmp2(1993).DatabaseState.Open;
+    obj.lastState = tmp2(1994).DatabaseState.Open;
     obj.handle = openSyncUnsafeResult.handle;
-    const Runtime = tmp2(1996).Runtime;
+    const Runtime = tmp2(1997).Runtime;
     obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
       if (obj.handle === arg0) {
         tmp.lastState = lastState;

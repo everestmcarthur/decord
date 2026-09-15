@@ -1,21 +1,21 @@
 // Module ID: 4149
 // Function ID: 4150
-// Dependencies: [3729, 3725, 3726]
+// Dependencies: [3732, 3728, 3729]
 // Exports: default
 
 // Module 4149
-import module_3729_mod from "module_3729" /* 3729 */;
-import _typeof_mod from "module_3725" /* 3725 */;
-import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3732_mod from "module_3732" /* 3732 */;
+import _typeof_mod from "module_3728" /* 3728 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
-let module_3729 = module_3729_mod;
-if (!module_3729) {
-  const obj = { default: module_3729 };
+let module_3732 = module_3732_mod;
+if (!module_3732) {
+  const obj = { default: module_3732 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3729;
+  tmp3 = module_3732;
 }
-module_3729 = tmp3;
+module_3732 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -33,10 +33,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setSeconds(module_3729, arg1) {
+export default function setMilliseconds(module_3732, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_3729);
-  defaultResult1.setSeconds(module_3729.default(arg1));
+  const defaultResult1 = _typeof.default(module_3732);
+  defaultResult1.setMilliseconds(module_3732.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

@@ -1,8 +1,8 @@
-// Module ID: 5947
-// Function ID: 5948
+// Module ID: 5951
+// Function ID: 5952
 // Dependencies: [2]
 
-// Module 5947
+// Module 5951
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestOrbSpotIllustration-2x.png.js");

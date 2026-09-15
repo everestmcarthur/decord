@@ -1,25 +1,25 @@
-// Module ID: 15052
-// Function ID: 15053
+// Module ID: 15062
+// Function ID: 15063
 // Name: ConnectedApplicationIdentity
-// Dependencies: [5, 32, 19, 17, 21, 4636, 15053, 1114, 1176, 4632, 9589, 4980, 15031, 5075, 1396, 5058, 9153, 5054, 5204, 7095, 5686, 5768, 7303, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4639, 15063, 1115, 1177, 4635, 9591, 4983, 15041, 5078, 1397, 5061, 9156, 5057, 5207, 7099, 5690, 5772, 7307, 2]
 // Exports: default
 
-// Module 15052 (ConnectedApplicationIdentity)
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import Icon from "Icon" /* 5058 */;
-import common_AlertDefault from "common/Alert" /* 5075 */;
-import InfoBoxDefault from "InfoBox" /* 9589 */;
+// Module 15062 (ConnectedApplicationIdentity)
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import Icon from "Icon" /* 5061 */;
+import common_AlertDefault from "common/Alert" /* 5078 */;
+import InfoBoxDefault from "InfoBox" /* 9591 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const IconDefault = tmp(5058);
+const IconDefault = tmp(5061);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

@@ -1,16 +1,16 @@
-// Module ID: 8786
-// Function ID: 8787
+// Module ID: 8789
+// Function ID: 8790
 // Name: UserProfileWidgetReportButton
-// Dependencies: [19, 17, 21, 1114, 8787, 8752, 8789, 8795, 576, 2]
+// Dependencies: [19, 17, 21, 1115, 8790, 8755, 8792, 8798, 576, 2]
 // Exports: default
 
-// Module 8786 (UserProfileWidgetReportButton)
+// Module 8789 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import ReportModals from "ReportModals" /* 8752 */;
-import FlagIcon from "FlagIcon" /* 8787 */;
-import ContextMenu from "ContextMenu" /* 8789 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8795 */;
+import util from "util" /* 1115 */;
+import ReportModals from "ReportModals" /* 8755 */;
+import FlagIcon from "FlagIcon" /* 8790 */;
+import ContextMenu from "ContextMenu" /* 8792 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8798 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

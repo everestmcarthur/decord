@@ -1,16 +1,16 @@
-// Module ID: 17310
-// Function ID: 17311
+// Module ID: 17348
+// Function ID: 17349
 // Name: useSoundboardConfig
-// Dependencies: [19, 1957, 1908, 17148, 504, 4457, 1943, 17170, 7478, 1114, 2]
+// Dependencies: [19, 1958, 1909, 17186, 504, 4460, 1944, 17208, 7482, 1115, 2]
 // Exports: default
 
-// Module 17310 (useSoundboardConfig)
-import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7478 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17148 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17170 */;
+// Module 17348 (useSoundboardConfig)
+import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7482 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17186 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17208 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
 const require = globalThis.__r;
 
@@ -52,8 +52,8 @@ export default function useSoundboardConfig(arg0, analyticsSource) {
   obj3.disabled = tmp8;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1114).intl;
-    stringResult = intl.string(tmp3(1114).t.X1lQli);
+    const intl = tmp3(1115).intl;
+    stringResult = intl.string(tmp3(1115).t.X1lQli);
   }
   obj3.disabledAccessibilityHint = stringResult;
   obj3.showIndicator = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);

@@ -1,18 +1,18 @@
-// Module ID: 8896
-// Function ID: 8897
+// Module ID: 8899
+// Function ID: 8900
 // Name: useWishlistNUXActionSheet
-// Dependencies: [19, 7723, 502, 1954, 504, 4457, 1943, 1945, 4603, 8897, 1896, 2]
+// Dependencies: [19, 7726, 502, 1955, 504, 4460, 1944, 1946, 4606, 8900, 1897, 2]
 // Exports: default, useHasNeverWishlisted
 
-// Module 8896 (useWishlistNUXActionSheet)
+// Module 8899 (useWishlistNUXActionSheet)
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7723 */;
+import UserProfileStore from "UserProfileStore" /* 7726 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
@@ -37,7 +37,7 @@ export default function useWishlistNUXActionSheet() {
   }
   let obj3 = require("initialize");
   if (stateFromStores1) {
-    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1943).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
+    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1944).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
   }
   tmpResult = require("DismissibleContentUnsafeUtils");
   return {

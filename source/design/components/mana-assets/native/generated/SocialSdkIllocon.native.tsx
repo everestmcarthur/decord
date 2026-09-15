@@ -1,13 +1,13 @@
-// Module ID: 6574
-// Function ID: 6575
+// Module ID: 6578
+// Function ID: 6579
 // Name: SocialSdkIllocon
-// Dependencies: [21, 5668, 6575, 2]
+// Dependencies: [21, 5672, 6579, 2]
 // Exports: SocialSdkIllocon
 
-// Module 6574 (SocialSdkIllocon)
+// Module 6578 (SocialSdkIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6575 from "module_6575" /* 6575 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6579 from "module_6579" /* 6579 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const SocialSdkIllocon = function SocialSdkIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6575 };
+  const obj2 = { uri: _modDef6579 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

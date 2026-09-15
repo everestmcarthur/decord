@@ -1,18 +1,18 @@
-// Module ID: 10756
-// Function ID: 10757
+// Module ID: 10760
+// Function ID: 10761
 // Name: AppliedForumTag
-// Dependencies: [19, 17, 5540, 1374, 21, 4636, 576, 504, 10757, 1114, 7233, 1396, 4632, 2]
+// Dependencies: [19, 17, 5544, 1375, 21, 4639, 576, 504, 10761, 1115, 7237, 1397, 4635, 2]
 // Exports: AppliedForumTagPill
 
-// Module 10756 (AppliedForumTag)
+// Module 10760 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import EmojiDefault from "Emoji" /* 7233 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10757 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import EmojiDefault from "Emoji" /* 7237 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10761 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5540 */;
+import EmojiStore from "EmojiStore" /* 5544 */;
 
 require = fn;
 class AppliedForumTag {
@@ -66,8 +66,8 @@ class AppliedForumTag {
                 const obj6 = { id: null, animated: null, size: null };
                 ({ id: obj5.id, animated: obj5.animated } = tmp14);
                 obj6.size = EMOJI_URL_BASE_SIZE;
-                emojiURL = tmp12(1396).getEmojiURL(obj6);
-                const tmp12Result = tmp12(1396);
+                emojiURL = tmp12(1397).getEmojiURL(obj6);
+                const tmp12Result = tmp12(1397);
               }
               obj4.src = emojiURL;
               if (str == null) {
@@ -87,10 +87,10 @@ class AppliedForumTag {
   }
 }
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { pill: { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 }, disableEndMargin: { marginRight: 0 }, emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 }, textEmoji: { fontSize: 10, marginRight: 4 }, tagName: { flexShrink: 1 }, container: { display: "flex", flexDirection: "row", alignItems: "center" } };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

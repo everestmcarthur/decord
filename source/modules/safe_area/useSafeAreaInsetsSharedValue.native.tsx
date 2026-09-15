@@ -1,16 +1,16 @@
-// Module ID: 11487
-// Function ID: 11488
+// Module ID: 11491
+// Function ID: 11492
 // Name: useSafeAreaInsetsSharedValue
-// Dependencies: [4373, 1611, 9776, 11488, 1624, 1480, 2]
+// Dependencies: [4376, 1612, 9778, 11492, 1625, 1481, 2]
 // Exports: default
 
-// Module 11487 (useSafeAreaInsetsSharedValue)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
-import AppEntryKey from "AppEntryKey" /* 1624 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9776 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
-import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1611 */;
+// Module 11491 (useSafeAreaInsetsSharedValue)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
+import AppEntryKey from "AppEntryKey" /* 1625 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9778 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11492 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4376 */;
+import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1612 */;
 import size from "module_2" /* 2 */;
 
 let obj = { main: null, share: null };

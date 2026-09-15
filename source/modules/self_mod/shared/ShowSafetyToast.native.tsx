@@ -1,13 +1,13 @@
-// Module ID: 11544
-// Function ID: 11545
+// Module ID: 11548
+// Function ID: 11549
 // Name: ShowSafetyToast
-// Dependencies: [4335, 9531, 9532, 2]
+// Dependencies: [4338, 9533, 9534, 2]
 // Exports: showSafetyToast
 
-// Module 11544 (ShowSafetyToast)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import _modDef9531 from "module_9531" /* 9531 */;
-import ShieldIcon from "ShieldIcon" /* 9532 */;
+// Module 11548 (ShowSafetyToast)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import _modDef9533 from "module_9533" /* 9533 */;
+import ShieldIcon from "ShieldIcon" /* 9534 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToa
 export const showSafetyToast = function showSafetyToast(arg0) {
   ({ id, text } = arg0);
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: id, icon: _modDef9531, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: text });
+  obj.open({ key: id, icon: _modDef9533, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: text });
 };

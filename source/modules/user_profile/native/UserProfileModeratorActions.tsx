@@ -1,34 +1,34 @@
-// Module ID: 13179
-// Function ID: 13180
+// Module ID: 13184
+// Function ID: 13185
 // Name: UserProfileModeratorActions
-// Dependencies: [19, 5502, 1957, 2012, 2021, 1979, 4275, 4655, 1074, 4262, 21, 4636, 576, 5686, 8307, 4603, 11008, 504, 7372, 11966, 1965, 9533, 4789, 4783, 4781, 4280, 1114, 10047, 8516, 10049, 8716, 5182, 11464, 1896, 5601, 7483, 4839, 11967, 1384, 11870, 4263, 11984, 11970, 9256, 10134, 9252, 12660, 7986, 4577, 11986, 9563, 11988, 13180, 12750, 7867, 7310, 5768, 2]
+// Dependencies: [19, 5506, 1958, 2013, 2022, 1980, 4278, 4658, 1074, 4265, 21, 4639, 576, 5690, 8310, 4606, 11012, 504, 7376, 11970, 1966, 9535, 4792, 4786, 4784, 4283, 1115, 10049, 8519, 10051, 8719, 5185, 11468, 1897, 5605, 7487, 4842, 11971, 1385, 11874, 4266, 11988, 11974, 9259, 10136, 9255, 12665, 7989, 4580, 11990, 9565, 11992, 13185, 12755, 7870, 7314, 5772, 2]
 // Exports: default
 
-// Module 13179 (UserProfileModeratorActions)
+// Module 13184 (UserProfileModeratorActions)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import FlagUtils from "FlagUtils" /* 1384 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import TableRow from "TableRow" /* 5686 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8516 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 11966 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11970 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 11986 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 11988 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12750 */;
+import util from "util" /* 1115 */;
+import FlagUtils from "FlagUtils" /* 1385 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
+import TableRow from "TableRow" /* 5690 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8519 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 11970 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11974 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 11990 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 11992 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12755 */;
 import noop from "module_19" /* 19 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5506 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
-const StageChannelPermissions = tmp(1965);
+const StageChannelPermissions = tmp(1966);
 require = fn;
 function ModeratorActionRow(isDestructive) {
   ({ label, sublabel } = isDestructive);
@@ -46,12 +46,12 @@ function ModeratorActionRow(isDestructive) {
   obj.accessibilityLabel = combined;
   return jsx(TableRow.TableRow, { label, subLabel: sublabel, icon: jsx(TableRow.TableRow.Icon, { IconComponent: icon, variant: str }), arrow: null != hint, variant: str, disabled, onPress, accessibilityLabel: null, accessibilityRole: "button" });
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
-let GuildMemberFlags = fn(4262).GuildMemberFlags;
+let GuildMemberFlags = fn(4265).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -308,7 +308,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11464, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11468, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(<ModeratorActionRow key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
       }
@@ -337,7 +337,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11967, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11971, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -345,7 +345,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(4839).pop();
+              guildId(4842).pop();
             }
           });
         };

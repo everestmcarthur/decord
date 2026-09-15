@@ -1,9 +1,9 @@
-// Module ID: 7937
-// Function ID: 7938
+// Module ID: 7940
+// Function ID: 7941
 // Name: Queue
 // Dependencies: [3, 8, 2]
 
-// Module 7937 (Queue)
+// Module 7940 (Queue)
 import LoggerDefault from "Logger" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 

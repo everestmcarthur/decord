@@ -1,0 +1,9 @@
+// Module ID: 2850
+// Function ID: 2851
+// Dependencies: [1121]
+
+// Module 2850
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_remediation_feedback", scales: [1], hash: "c191c06432eabca1ed0bf003746fd75e", name: "SelfRemediationFeedback.compiled.messages", type: "jsona" });

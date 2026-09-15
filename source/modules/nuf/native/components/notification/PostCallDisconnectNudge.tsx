@@ -1,23 +1,23 @@
-// Module ID: 16623
-// Function ID: 16624
+// Module ID: 16636
+// Function ID: 16637
 // Name: PostCallDisconnectNudge
-// Dependencies: [32, 19, 2011, 4655, 12539, 12540, 21, 16622, 1114, 15568, 12541, 504, 7491, 1943, 12542, 4603, 16623, 1896, 2]
+// Dependencies: [32, 19, 2012, 4658, 12544, 12545, 21, 16635, 1115, 15578, 12546, 504, 7495, 1944, 12547, 4606, 16636, 1897, 2]
 // Exports: default, usePostCallDisconnectNudge
 
-// Module 16623 (PostCallDisconnectNudge)
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16622 */;
+// Module 16636 (PostCallDisconnectNudge)
+import util from "util" /* 1115 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12547 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
 require = fn;
-const PermissionPromptType = fn(12539).PermissionPromptType;
-const NotificationPermissionConstants = fn(12540);
+const PermissionPromptType = fn(12544).PermissionPromptType;
+const NotificationPermissionConstants = fn(12545);
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: closure_9 } = NotificationPermissionConstants);
 const jsx = fn(21).jsx;
 let c11 = "post-call-disconnect-nudge-key";
@@ -40,10 +40,10 @@ export default function PostCallDisconnectNudge(arg0) {
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(15568);
+  let obj = stateFromStores1(15578);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(12541).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(12541);
+  const canSeePushNotificationNudge = stateFromStores(12546).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(12546);
   const items = [VoiceStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
   let obj3 = stateFromStores(504);
@@ -74,11 +74,11 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (!obj.useConfig({ location: "usePostCallDisconnectNudge" }).inHoldout) {
       prop = null;
       if (canSeePushNotificationNudge) {
-        prop = tmp2(1943).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
+        prop = tmp2(1944).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
       }
     }
   }
-  const tmp6Result = tmp6(stateFromStores(7491).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  const tmp6Result = tmp6(stateFromStores(7495).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
   first = tmp6Result[0];
   markAsDismissed = tmp12;
   const items3 = [first, tmp6Result[1]];
@@ -86,7 +86,7 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (null != first) {
       const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET);
       const obj3 = { markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16623, dependencyMap.paths), c11, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16636, dependencyMap.paths), c11, obj3);
     }
   }, items3);
 };

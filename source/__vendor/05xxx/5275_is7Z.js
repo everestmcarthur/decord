@@ -1,0 +1,40 @@
+// Module ID: 5275
+// Function ID: 5276
+// Name: is7Z
+// Dependencies: [5270, 5271]
+// Exports: is7Z, isLZH, isRAR, isZIP
+
+// Module 5275 (is7Z)
+import _mod5270 from "module_5270" /* 5270 */;
+import _mod5271 from "module_5271" /* 5271 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export const is7Z = function is7Z(fileChunk) {
+  fileChunk = _mod5270.getFileChunk(fileChunk);
+  const FileTypes = _mod5271.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "_7z");
+};
+export const isLZH = function isLZH(fileChunk) {
+  fileChunk = _mod5270.getFileChunk(fileChunk);
+  const FileTypes = _mod5271.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "lzh");
+};
+export const isRAR = function isRAR(fileChunk) {
+  fileChunk = _mod5270.getFileChunk(fileChunk);
+  const FileTypes = _mod5271.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "rar");
+};
+export const isZIP = function isZIP(fileChunk, chunkSize) {
+  let num;
+  if (null != chunkSize) {
+    num = chunkSize.chunkSize;
+  }
+  if (!num) {
+    num = 64;
+  }
+  fileChunk = _mod5270.getFileChunk(fileChunk, num);
+  const FileTypes = _mod5271.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "zip");
+};

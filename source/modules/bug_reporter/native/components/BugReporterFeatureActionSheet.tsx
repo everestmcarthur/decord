@@ -1,14 +1,14 @@
-// Module ID: 10340
-// Function ID: 10341
+// Module ID: 10342
+// Function ID: 10343
 // Name: BugReporterFeatureActionSheet
-// Dependencies: [32, 19, 17, 21, 4636, 576, 4632, 5769, 10315, 4603, 7084, 12, 5598, 7152, 10341, 7253, 7252, 1114, 7153, 7158, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 4635, 5773, 10317, 4606, 7088, 12, 5602, 7156, 10343, 7257, 7256, 1115, 7157, 7162, 2]
 // Exports: default
 
-// Module 10340 (BugReporterFeatureActionSheet)
+// Module 10342 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Text_Text from "Text/Text" /* 4632 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Text_Text from "Text/Text" /* 4635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -35,16 +35,16 @@ let closure_10 = noop.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(10315).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(10315);
-  const featureId = item(10315).getFeatureId(item);
-  const obj3 = item(10315);
-  obj.legacyCompat_selected = featureId === item(10315).getFeatureId(feature);
+  const obj = { start, end, value: item(10317).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(10317);
+  const featureId = item(10317).getFeatureId(item);
+  const obj3 = item(10317);
+  obj.legacyCompat_selected = featureId === item(10317).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(5769).TableRadioRow, obj);
+  return closure_6(item(5773).TableRadioRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

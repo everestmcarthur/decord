@@ -1,9 +1,9 @@
 // Module ID: 9508
 // Function ID: 9509
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 9508
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26d707b294c340a6d911d79614dfcf77", name: "UserSquareIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "30bd17a4fc8d423d981d2ea586a3ca6e", name: "BoostGemIcon", type: "png" });

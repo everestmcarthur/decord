@@ -1,14 +1,14 @@
-// Module ID: 16349
-// Function ID: 16350
+// Module ID: 16362
+// Function ID: 16363
 // Name: useIsGuildEligibleForRoleSubscriptionsUpsell
-// Dependencies: [1975, 1979, 1371, 1074, 504, 7364, 2]
+// Dependencies: [1976, 1980, 1372, 1074, 504, 7368, 2]
 // Exports: default
 
-// Module 16349 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16362 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1074 */;
-import GuildRecord from "GuildRecord" /* 1975 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildRecord from "GuildRecord" /* 1976 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

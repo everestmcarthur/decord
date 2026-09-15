@@ -1,12 +1,12 @@
-// Module ID: 11411
-// Function ID: 11412
+// Module ID: 11415
+// Function ID: 11416
 // Name: SharedCaptchaUtils
-// Dependencies: [11412, 11413, 2]
+// Dependencies: [11416, 11417, 2]
 // Exports: emitCaptchaDistributionMetric, extractCaptchaPropsFromResponse
 
-// Module 11411 (SharedCaptchaUtils)
-import CaptchaConstants from "CaptchaConstants" /* 11413 */;
-import CaptchaStore from "CaptchaStore" /* 11412 */;
+// Module 11415 (SharedCaptchaUtils)
+import CaptchaConstants from "CaptchaConstants" /* 11417 */;
+import CaptchaStore from "CaptchaStore" /* 11416 */;
 import size from "module_2" /* 2 */;
 
 ({ incrementCaptchaServeVolume: closure_0, flushCaptchaServeVolume: closure_1, isCaptchaStoreVolumeEmpty: c2 } = CaptchaStore);

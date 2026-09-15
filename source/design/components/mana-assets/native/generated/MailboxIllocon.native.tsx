@@ -1,13 +1,13 @@
-// Module ID: 6332
-// Function ID: 6333
+// Module ID: 6336
+// Function ID: 6337
 // Name: MailboxIllocon
-// Dependencies: [21, 5668, 6333, 2]
+// Dependencies: [21, 5672, 6337, 2]
 // Exports: MailboxIllocon
 
-// Module 6332 (MailboxIllocon)
+// Module 6336 (MailboxIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6333 from "module_6333" /* 6333 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6337 from "module_6337" /* 6337 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const MailboxIllocon = function MailboxIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6333 };
+  const obj2 = { uri: _modDef6337 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

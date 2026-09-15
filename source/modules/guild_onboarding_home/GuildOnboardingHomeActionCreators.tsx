@@ -1,19 +1,19 @@
-// Module ID: 12414
-// Function ID: 12415
+// Module ID: 12419
+// Function ID: 12420
 // Name: GuildOnboardingHomeActionCreators
-// Dependencies: [5, 2014, 1957, 4823, 4824, 1074, 573, 1270, 12415, 1240, 4647, 11, 2]
+// Dependencies: [5, 2015, 1958, 4826, 4827, 1074, 573, 1271, 12420, 1241, 4650, 11, 2]
 // Exports: clearNewMemberActions, completeNewMemberAction, fetchGuildHomeSettings, fetchNewMemberActions, selectHomeResourceChannel, selectNewMemberActionChannel
 
-// Module 12414 (GuildOnboardingHomeActionCreators)
+// Module 12419 (GuildOnboardingHomeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import transitionToChannel from "transitionToChannel" /* 4647 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import transitionToChannel from "transitionToChannel" /* 4650 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 2014 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4824 */;
+import ImpersonateStore from "ImpersonateStore" /* 2015 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4826 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4827 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings(guildId) {
@@ -247,8 +247,8 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
           }
           return hasItem;
         }, true);
-        tmp(1240).track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj4);
-        const tmpResult2 = tmp(1240);
+        tmp(1241).track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj4);
+        const tmpResult2 = tmp(1241);
       }
     }
     const HTTP = HTTPUtils.HTTP;

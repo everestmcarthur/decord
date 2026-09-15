@@ -1,13 +1,13 @@
-// Module ID: 5169
-// Function ID: 5170
+// Module ID: 5172
+// Function ID: 5173
 // Name: ForumIcon
-// Dependencies: [19, 21, 576, 4337, 5130, 2]
+// Dependencies: [19, 21, 576, 4340, 5133, 2]
 // Exports: ForumIcon
 
-// Module 5169 (ForumIcon)
+// Module 5172 (ForumIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod5130 from "module_5130" /* 5130 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod5133 from "module_5133" /* 5133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ForumIcon = function ForumIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5130, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5133, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

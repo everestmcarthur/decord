@@ -1,11 +1,11 @@
-// Module ID: 15793
-// Function ID: 15794
+// Module ID: 15804
+// Function ID: 15805
 // Name: DevToolsGuildPowerupsConstants
-// Dependencies: [1943, 2]
+// Dependencies: [1944, 2]
 // Exports: getGuildDCString, getUserDCString
 
-// Module 15793 (DevToolsGuildPowerupsConstants)
-import dismissible_content from "dismissible_content" /* 1943 */;
+// Module 15804 (DevToolsGuildPowerupsConstants)
+import dismissible_content from "dismissible_content" /* 1944 */;
 import size from "module_2" /* 2 */;
 
 const items = [dismissible_content.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION, dismissible_content.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE];
@@ -21,15 +21,15 @@ export const VANITY_URL_POWERUP_DCS = items3;
 export const getGuildDCString = function getGuildDCString(arg0) {
   if (dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK === arg0) {
     return "GUILD_POWERUP_LEVEL_1_COACHMARK";
-  } else if (tmp(1943).DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK === arg0) {
+  } else if (tmp(1944).DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK === arg0) {
     return "GUILD_POWERUP_LEVEL_2_COACHMARK";
-  } else if (tmp(1943).DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK === arg0) {
+  } else if (tmp(1944).DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK === arg0) {
     return "GUILD_POWERUP_LEVEL_3_COACHMARK";
-  } else if (tmp(1943).DismissibleGuildContent.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK === arg0) {
+  } else if (tmp(1944).DismissibleGuildContent.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK === arg0) {
     return "GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK";
-  } else if (tmp(1943).DismissibleGuildContent.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK === arg0) {
+  } else if (tmp(1944).DismissibleGuildContent.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK === arg0) {
     return "GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK";
-  } else if (tmp(1943).DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE === arg0) {
+  } else if (tmp(1944).DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE === arg0) {
     return "ADOPT_CLAN_IDENTITY_NOTICE";
   } else {
     const _String = String;

@@ -1,14 +1,14 @@
-// Module ID: 12090
-// Function ID: 12091
+// Module ID: 12094
+// Function ID: 12095
 // Name: VoiceMessagesUIStore
-// Dependencies: [12091, 560, 4373, 1247, 5055, 2]
+// Dependencies: [12095, 560, 4376, 1248, 5058, 2]
 // Exports: addVoiceMessageWave, hideVoiceMessagesTooltip, resetVoiceMessageState, setIsUsingHoldGesture, setIsVoiceMessageButtonMounted, setSavedVoiceMessageUploadData, setShowRecordingOverlay, setVoiceMessageAnimationState, setVoiceMessageRecordingId, setVoiceMessageRecordingState, setVoiceMessageStartTimeMillis, showVoiceMessagesTooltip
 
-// Module 12090 (VoiceMessagesUIStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 12091 */;
+// Module 12094 (VoiceMessagesUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 12095 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_560.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "M11 1v1h-1v1H9v1H8v1H7v2H6v1h2v2h1V9h2V8h1V7h1V6h1V5h1V1h-4Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: 0.833, savedVoiceMessageUploadData: 0.875, isVoiceMessageButtonMounted: 0.805, isUsingHoldGesture: 0.371 };
   const items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = ReanimatedRexport.makeMutable(items);
@@ -68,12 +68,12 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5055);
+    obj = waveformVersion(5058);
     const result = currWaveHeight.set(obj.withSpring(arg0 / closure_3));
   }
   const items = [arg0, waveformVersion];
   waveform.push(items);
-  waveformVersion(1247).batchUpdates(() => {
+  waveformVersion(1248).batchUpdates(() => {
     obj = { waveformVersion: waveformVersion + 1 };
     obj.setState(obj);
   });

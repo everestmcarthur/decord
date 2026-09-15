@@ -1,13 +1,13 @@
-// Module ID: 5814
-// Function ID: 5815
+// Module ID: 5818
+// Function ID: 5819
 // Name: ActivatedGem3dIllustration
-// Dependencies: [21, 5668, 5815, 2]
+// Dependencies: [21, 5672, 5819, 2]
 // Exports: ActivatedGem3dIllustration
 
-// Module 5814 (ActivatedGem3dIllustration)
+// Module 5818 (ActivatedGem3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5815 from "module_5815" /* 5815 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5819 from "module_5819" /* 5819 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ActivatedGem3dIllustration = function ActivatedGem3dIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5815 };
+  const obj2 = { uri: _modDef5819 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

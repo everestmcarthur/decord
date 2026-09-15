@@ -1,18 +1,18 @@
-// Module ID: 11962
-// Function ID: 11963
+// Module ID: 11966
+// Function ID: 11967
 // Name: GuildAntiRaidActionCreators
-// Dependencies: [5, 1979, 8120, 1074, 1240, 4816, 9192, 4228, 1270, 10230, 2]
+// Dependencies: [5, 1980, 8123, 1074, 1241, 4819, 9195, 4231, 1271, 10232, 2]
 // Exports: handleReportRaid, handleResolveRaid, setGuildIncidentActions, setGuildRaidAlerts, trackReportRaidViewed
 
-// Module 11962 (GuildAntiRaidActionCreators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10230 */;
+// Module 11966 (GuildAntiRaidActionCreators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -95,9 +95,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef4228();
-    toISOStringResult = _modDef4228().add(tmp8, "hours").toISOString();
-    _modDef4228().add(tmp8, "hours");
+    _modDef4231();
+    toISOStringResult = _modDef4231().add(tmp8, "hours").toISOString();
+    _modDef4231().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -246,7 +246,7 @@ let closure_12 = async function _handleReportRaid(arg0, value) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8120).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8123).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

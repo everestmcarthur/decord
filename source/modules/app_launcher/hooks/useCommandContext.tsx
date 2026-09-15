@@ -1,12 +1,12 @@
-// Module ID: 12158
-// Function ID: 12159
+// Module ID: 12162
+// Function ID: 12163
 // Name: useCommandContext
-// Dependencies: [19, 1979, 2]
+// Dependencies: [19, 1980, 2]
 // Exports: getCommandContext, useCommandContext
 
-// Module 12158 (useCommandContext)
+// Module 12162 (useCommandContext)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");

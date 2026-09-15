@@ -1,16 +1,16 @@
-// Module ID: 11175
-// Function ID: 11176
+// Module ID: 11179
+// Function ID: 11180
 // Name: GiftingSKUSelectScreen
-// Dependencies: [32, 19, 17, 21, 4636, 576, 1611, 4632, 1114, 11176, 5056, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 1612, 4635, 1115, 11180, 5059, 2]
 // Exports: default
 
-// Module 11175 (GiftingSKUSelectScreen)
+// Module 11179 (GiftingSKUSelectScreen)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11176 */;
+import util from "util" /* 1115 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11180 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };

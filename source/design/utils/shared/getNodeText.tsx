@@ -1,10 +1,10 @@
-// Module ID: 4341
-// Function ID: 4342
+// Module ID: 4344
+// Function ID: 4345
 // Name: getNodeText
-// Dependencies: [2, 4342]
+// Dependencies: [2, 4345]
 
-// Module 4341 (getNodeText)
-import utils_getNodeText from "utils/getNodeText" /* 4342 */;
+// Module 4344 (getNodeText)
+import utils_getNodeText from "utils/getNodeText" /* 4345 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/shared/getNodeText.tsx");

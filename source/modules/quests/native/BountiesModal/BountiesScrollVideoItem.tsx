@@ -1,21 +1,21 @@
-// Module ID: 15103
-// Function ID: 15104
+// Module ID: 15113
+// Function ID: 15114
 // Name: BountiesScrollVideoItem
-// Dependencies: [5, 32, 19, 17, 8977, 7804, 5525, 21, 15104, 504, 15105, 15107, 11655, 15108, 15109, 15110, 15112, 11623, 11620, 11630, 5532, 5530, 7830, 15113, 11908, 15131, 2]
+// Dependencies: [5, 32, 19, 17, 8980, 7807, 5529, 21, 15114, 504, 15115, 15117, 11659, 15118, 15119, 15120, 15122, 11627, 11624, 11634, 5536, 5534, 7833, 15123, 11912, 15141, 2]
 // Exports: BountiesScrollVideoItem
 
-// Module 15103 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 5530 */;
-import AdCreativeType from "AdCreativeType" /* 5532 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11908 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15104 */;
+// Module 15113 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 5534 */;
+import AdCreativeType from "AdCreativeType" /* 5536 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7833 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11634 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11912 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8977 */;
-import BountyStore from "BountyStore" /* 7804 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8980 */;
+import BountyStore from "BountyStore" /* 7807 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -347,7 +347,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj7);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5525);
+const QuestConstants = fn(5529);
 ({ BOUNTY_ORB_AMOUNT: closure_9, QuestsExperimentLocations: c10 } = QuestConstants);
 const jsx = fn(21).jsx;
 let size = fn(2);
@@ -380,10 +380,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return softDownloadCapsEnabled(bounty(11908).BillableAdPlacementImpressionTrackerNative, {
+  return softDownloadCapsEnabled(bounty(11912).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5532).AdCreativeType.BOUNTY,
-    questContent: bounty(5530).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5536).AdCreativeType.BOUNTY,
+    questContent: bounty(5534).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

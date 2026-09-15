@@ -1,12 +1,12 @@
-// Module ID: 17001
-// Function ID: 17002
+// Module ID: 17039
+// Function ID: 17040
 // Name: MessageRequestEmpty
-// Dependencies: [19, 21, 1176, 17002, 2]
+// Dependencies: [19, 21, 1177, 17040, 2]
 // Exports: default
 
-// Module 17001 (MessageRequestEmpty)
-import native from "native" /* 1176 */;
-import Pending from "Pending" /* 17002 */;
+// Module 17039 (MessageRequestEmpty)
+import native from "native" /* 1177 */;
+import Pending from "Pending" /* 17040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

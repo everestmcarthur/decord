@@ -1,0 +1,9 @@
+// Module ID: 14850
+// Function ID: 14851
+// Dependencies: [1121]
+
+// Module 14850
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/tiny_bronco", scales: [1], hash: "35c64d699c4390efa8a41f9c45023348", name: "TinyBronco.compiled.messages", type: "jsona" });

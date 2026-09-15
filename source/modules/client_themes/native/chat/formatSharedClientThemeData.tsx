@@ -1,14 +1,14 @@
-// Module ID: 13312
-// Function ID: 13313
+// Module ID: 13317
+// Function ID: 13318
 // Name: formatSharedClientThemeData
-// Dependencies: [17, 8156, 1114, 2626, 2]
+// Dependencies: [17, 8159, 1115, 2627, 2]
 // Exports: formatSharedClientThemeData
 
-// Module 13312 (formatSharedClientThemeData)
+// Module 13317 (formatSharedClientThemeData)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1114 */;
-import _modDef2626 from "module_2626" /* 2626 */;
-import _modDef8156 from "module_8156" /* 8156 */;
+import util from "util" /* 1115 */;
+import _modDef2627 from "module_2627" /* 2627 */;
+import _modDef8159 from "module_8159" /* 8159 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -25,14 +25,14 @@ export const formatSharedClientThemeData = function formatSharedClientThemeData(
       str2 = ensureAvatarSourceResult.uri;
     }
     obj.createdByAvatarUrl = str2;
-    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8156).uri;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8159).uri;
     const intl = util.intl;
     obj.previewLabel = intl.string(util.t.SKNnqq);
     const intl2 = util.intl;
-    obj.previewHeading = intl2.string(_modDef2626.yl1iMm);
+    obj.previewHeading = intl2.string(_modDef2627.yl1iMm);
     const intl3 = util.intl;
     const _HermesInternal = HermesInternal;
-    obj.createdByLabel = "" + intl3.format(_modDef2626.fQPSEf, { username: "__USERNAME__" });
+    obj.createdByLabel = "" + intl3.format(_modDef2627.fQPSEf, { username: "__USERNAME__" });
     return obj;
   }
 };

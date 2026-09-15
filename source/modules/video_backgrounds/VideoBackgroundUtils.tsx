@@ -1,15 +1,15 @@
-// Module ID: 9226
-// Function ID: 9227
+// Module ID: 9229
+// Function ID: 9230
 // Name: VideoBackgroundUtils
-// Dependencies: [1957, 4659, 7090, 1074, 1396, 4816, 1240, 2]
+// Dependencies: [1958, 4662, 7094, 1074, 1397, 4819, 1241, 2]
 // Exports: getEffectAnalyticsType, getVideoBackgroundOptionFromProto, getVideoBackgroundProtoFromOption, isCustomBackgroundOption, isDefaultBackgroundOption, trackBackgroundOptionAdded, trackBackgroundOptionDeleted, trackBackgroundOptionUpdated
 
-// Module 9226 (VideoBackgroundUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import AvatarUtils from "AvatarUtils" /* 1396 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+// Module 9229 (VideoBackgroundUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import AvatarUtils from "AvatarUtils" /* 1397 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
 
 require = fn;
 function isAnimatedBackgroundOption(type) {
@@ -36,8 +36,8 @@ function isAnimatedBackgroundOption(type) {
     if (hasItem) {
       let isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(type.asset);
       if (!isAnimatedIconHashResult) {
-        isAnimatedIconHashResult = tmp6(1396).isVideoAssetHash(type.asset);
-        const tmp6Result = tmp6(1396);
+        isAnimatedIconHashResult = tmp6(1397).isVideoAssetHash(type.asset);
+        const tmp6Result = tmp6(1397);
       }
       hasItem = isAnimatedIconHashResult;
       tmp6 = require;
@@ -97,7 +97,7 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(7090);
+const VideoBackgroundConstants = fn(7094);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -170,7 +170,7 @@ export const trackBackgroundOptionDeleted = function trackBackgroundOptionDelete
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "r" };
+    let obj = { oneofKind: "Array" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {

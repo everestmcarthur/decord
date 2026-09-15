@@ -1,12 +1,12 @@
-// Module ID: 14633
-// Function ID: 14634
+// Module ID: 14643
+// Function ID: 14644
 // Name: ICYMIManager
-// Dependencies: [8469, 1090, 1898, 573, 8470, 2]
+// Dependencies: [8472, 1091, 1899, 573, 8473, 2]
 
-// Module 14633 (ICYMIManager)
+// Module 14643 (ICYMIManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import LifecycleManager from "LifecycleManager" /* 1898 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
+import LifecycleManager from "LifecycleManager" /* 1899 */;
 
 const require = fn;
 let closure_3 = null;
@@ -56,7 +56,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
           }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
         }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
       }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-    }, 15 * tmp2(1090).Millis.MINUTE);
+    }, 15 * tmp2(1091).Millis.MINUTE);
     const guildChannelScores = ICYMIActionCreatorsDefault.getGuildChannelScores();
     const tmp2Result = ICYMIActionCreatorsDefault;
     const recommendedGuilds = ICYMIActionCreatorsDefault.getRecommendedGuilds();

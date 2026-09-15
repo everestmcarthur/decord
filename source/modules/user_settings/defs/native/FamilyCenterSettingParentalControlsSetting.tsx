@@ -1,14 +1,14 @@
-// Module ID: 15018
-// Function ID: 15019
+// Module ID: 15028
+// Function ID: 15029
 // Name: FamilyCenterSettingParentalControlsSetting
-// Dependencies: [8079, 1074, 11602, 1114, 2396, 15019, 2]
+// Dependencies: [8082, 1074, 11606, 1115, 2397, 15029, 2]
 
-// Module 15018 (FamilyCenterSettingParentalControlsSetting)
+// Module 15028 (FamilyCenterSettingParentalControlsSetting)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import _modDef2396 from "module_2396" /* 2396 */;
-import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+import util from "util" /* 1115 */;
+import _modDef2397 from "module_2397" /* 2397 */;
+import SettingsConstants from "SettingsConstants" /* 8082 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2396.ahKIJO);
+    return intl.string(_modDef2397.ahKIJO);
   },
   parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER,
   unsearchable: true,

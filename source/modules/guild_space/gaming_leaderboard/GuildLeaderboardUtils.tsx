@@ -1,11 +1,11 @@
-// Module ID: 11038
-// Function ID: 11039
+// Module ID: 11042
+// Function ID: 11043
 // Name: GuildLeaderboardUtils
-// Dependencies: [32, 11039, 1114, 2]
+// Dependencies: [32, 11043, 1115, 2]
 // Exports: decodeWinnerData, encodeWinnerData, getLeaderboardWinnerBadgeText
 
-// Module 11038 (GuildLeaderboardUtils)
-import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy" /* 11039 */;
+// Module 11042 (GuildLeaderboardUtils)
+import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy" /* 11043 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -18,14 +18,14 @@ export const getLeaderboardWinnerBadgeText = function getLeaderboardWinnerBadgeT
   const winningStreak = prop.winningStreak;
   if (null != winningStreak) {
     if (winningStreak > 1) {
-      const intl2 = tmp(1114).intl;
+      const intl2 = tmp(1115).intl;
       const obj2 = { streakCount: winningStreak, statName: name };
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.owAd83, obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(tmp(1115).t.owAd83, obj2);
     }
     return formatToPlainStringResult;
   }
-  const intl = tmp(1114).intl;
-  formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.So4gmj, { statName: name });
+  const intl = tmp(1115).intl;
+  formatToPlainStringResult = intl.formatToPlainString(tmp(1115).t.So4gmj, { statName: name });
 };
 export const encodeWinnerData = function encodeWinnerData(prop) {
   let num = prop.winningStat;

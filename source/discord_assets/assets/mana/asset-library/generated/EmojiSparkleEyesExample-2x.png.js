@@ -1,8 +1,8 @@
-// Module ID: 6057
-// Function ID: 6058
+// Module ID: 6061
+// Function ID: 6062
 // Dependencies: [2]
 
-// Module 6057
+// Module 6061
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiSparkleEyesExample-2x.png.js");

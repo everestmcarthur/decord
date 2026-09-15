@@ -1,14 +1,14 @@
-// Module ID: 10920
-// Function ID: 10921
+// Module ID: 10924
+// Function ID: 10925
 // Name: PremiumGiftWishlistBanner
-// Dependencies: [5, 19, 17, 7330, 1373, 1074, 1076, 8300, 21, 576, 4636, 8890, 8902, 10921, 10925, 7265, 7285, 1240, 8296, 10874, 10926, 4495, 4335, 1114, 7644, 11142, 4481, 4632, 11168, 11173, 2]
+// Dependencies: [5, 19, 17, 7334, 1374, 1074, 1076, 8303, 21, 576, 4639, 8893, 8905, 10925, 10929, 7269, 7289, 1241, 8299, 10878, 10930, 4498, 4338, 1115, 7648, 11146, 4484, 4635, 11172, 11177, 2]
 // Exports: PremiumGiftWishlistBanner
 
-// Module 10920 (PremiumGiftWishlistBanner)
+// Module 10924 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10925 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8299 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,17 +17,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_7 = fn(7330).WishlistRecommendationReason;
-const PremiumConstants = fn(1373);
+let closure_7 = fn(7334).WishlistRecommendationReason;
+const PremiumConstants = fn(1374);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1076).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8300).UserProfileSections;
+const UserProfileSections = fn(8303).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };

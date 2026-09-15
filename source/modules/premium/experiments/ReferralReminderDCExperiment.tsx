@@ -1,11 +1,11 @@
-// Module ID: 8171
-// Function ID: 8172
+// Module ID: 8174
+// Function ID: 8175
 // Name: ReferralReminderDCExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 // Exports: useIsReferralReminderDCExperimentEnabled
 
-// Module 8171 (ReferralReminderDCExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 8174 (ReferralReminderDCExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-referral-reminder-dc", kind: "user", defaultConfig: { enabled: false }, variations: null };

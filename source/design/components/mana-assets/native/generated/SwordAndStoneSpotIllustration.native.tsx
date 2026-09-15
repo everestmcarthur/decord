@@ -1,13 +1,13 @@
-// Module ID: 6634
-// Function ID: 6635
+// Module ID: 6638
+// Function ID: 6639
 // Name: SwordAndStoneSpotIllustration
-// Dependencies: [21, 5668, 6635, 2]
+// Dependencies: [21, 5672, 6639, 2]
 // Exports: SwordAndStoneSpotIllustration
 
-// Module 6634 (SwordAndStoneSpotIllustration)
+// Module 6638 (SwordAndStoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6635 from "module_6635" /* 6635 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6639 from "module_6639" /* 6639 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SwordAndStoneSpotIllustration = function SwordAndStoneSpotIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6635 };
+  const obj2 = { uri: _modDef6639 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

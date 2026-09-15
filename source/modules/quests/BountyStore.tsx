@@ -1,12 +1,12 @@
-// Module ID: 7804
-// Function ID: 7805
+// Module ID: 7807
+// Function ID: 7808
 // Name: BountyStore
-// Dependencies: [5532, 504, 573, 2]
+// Dependencies: [5536, 504, 573, 2]
 
-// Module 7804 (BountyStore)
+// Module 7807 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AdCreativeType from "AdCreativeType" /* 5532 */;
+import AdCreativeType from "AdCreativeType" /* 5536 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {
@@ -75,8 +75,8 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   }
   return value2;
 };
-prototype["getBountyVideoProgress"] = function getBountyVideoProgress(bountyId) {
-  value = map.get(bountyId);
+prototype["getBountyVideoProgress"] = function getBountyVideoProgress(id) {
+  value = map.get(id);
   if (value == null) {
     value = null;
   }

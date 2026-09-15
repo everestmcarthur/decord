@@ -1,21 +1,21 @@
-// Module ID: 17571
-// Function ID: 17572
+// Module ID: 17609
+// Function ID: 17610
 // Name: NotificationPermissionManager
-// Dependencies: [5, 17, 4277, 502, 1957, 4817, 12539, 12540, 1074, 4846, 4603, 17572, 1896, 1248, 4228, 12542, 10214, 1240, 1363, 7221, 15568, 1093, 2]
+// Dependencies: [5, 17, 4280, 502, 1958, 4820, 12544, 12545, 1074, 4849, 4606, 17610, 1897, 1249, 4231, 12547, 10216, 1241, 1364, 7225, 15578, 1094, 2]
 
-// Module 17571 (NotificationPermissionManager)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
+// Module 17609 (NotificationPermissionManager)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12547 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12539 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12544 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 require = fn;
 function haveNotSeenPromptSince(arg0, arg1) {
@@ -24,8 +24,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = _modDef4228().diff(tmp, "days") >= 1;
-      const obj = _modDef4228();
+      tmp4 = _modDef4231().diff(tmp, "days") >= 1;
+      const obj = _modDef4231();
     }
     tmp2 = tmp4;
   }
@@ -92,7 +92,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(17572, dependencyMap.paths), closure_2_11, obj3);
+    obj2.openLazy(asyncRequireImpl(17610, dependencyMap.paths), closure_2_11, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -169,12 +169,12 @@ let closure_26 = async function _logNotificationPermissionStatus2(arg0, value) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(12539).PermissionPromptType;
-const NotificationPermissionConstants = fn(12540);
+const PermissionPromptType = fn(12544).PermissionPromptType;
+const NotificationPermissionConstants = fn(12545);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = Constants);
-let closure_16 = fn(4846).NotificationAuthorizationStatus;
+let closure_16 = fn(4849).NotificationAuthorizationStatus;
 const items = [, ];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
 let c23 = null;
@@ -597,8 +597,8 @@ class NotificationPermissionManager extends tmp4 {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                closure_129_1 = closure_130_1.previousAppState === applyArgumentsResult(1093).AppStates.BACKGROUND;
-                closure_129_2 = state === applyArgumentsResult(1093).AppStates.ACTIVE;
+                closure_129_1 = closure_130_1.previousAppState === applyArgumentsResult(1094).AppStates.BACKGROUND;
+                closure_129_2 = state === applyArgumentsResult(1094).AppStates.ACTIVE;
                 let tmp7 = closure_129_1;
                 if (closure_129_1) {
                   tmp7 = closure_129_2;
@@ -632,7 +632,7 @@ class NotificationPermissionManager extends tmp4 {
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
-            if (state === applyArgumentsResult(1093).AppStates.ACTIVE) {
+            if (state === applyArgumentsResult(1094).AppStates.ACTIVE) {
               c3 = 3;
               c4 = 1;
               const obj7 = { value: _logNotificationPermissionStatus(), done: false };

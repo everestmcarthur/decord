@@ -1,27 +1,27 @@
-// Module ID: 10369
-// Function ID: 10370
+// Module ID: 10371
+// Function ID: 10372
 // Name: FavoritesDismissibleContent
-// Dependencies: [32, 19, 1954, 1943, 7492, 10355, 10353, 10368, 7491, 10367, 2]
+// Dependencies: [32, 19, 1955, 1944, 7496, 10357, 10355, 10370, 7495, 10369, 2]
 // Exports: useFavoritesBetaTagDismissibleContent, useFavoritesMenuItemPopoverDismissibleContent, useShouldRenderFavoritesMenuItemPopover
 
-// Module 10369 (FavoritesDismissibleContent)
-import dismissible_content from "dismissible_content" /* 1943 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7492 */;
-import FavoritesHooks from "FavoritesHooks" /* 10353 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10355 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10367 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10368 */;
+// Module 10371 (FavoritesDismissibleContent)
+import dismissible_content from "dismissible_content" /* 1944 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7495 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7496 */;
+import FavoritesHooks from "FavoritesHooks" /* 10355 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10357 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10369 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-let items = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
-const items1 = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
-const items2 = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+let items = [fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(1944).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(1944).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+const items1 = [fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const items2 = [fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
 
@@ -39,12 +39,12 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
     if (set) {
       if (tmp4) {
         if (!isFavoritesGuildSelected) {
-          if (first === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
-            let items = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (first === tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
+            let items = [tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
           }
           const obj4 = { shouldShowPopover: null, markPopoverAsDismissed: null };
           [tmp11, tmp12] = tmp8(items);
-          obj4.shouldShowPopover = tmp11 === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          obj4.shouldShowPopover = tmp11 === tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           obj4.markPopoverAsDismissed = tmp12;
           return obj4;
         }
@@ -78,10 +78,10 @@ export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTa
   useSelectedDismissibleContent;
   if (obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium) {
     if (arg0) {
-      const items = [tmp(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
+      const items = [tmp(1944).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
     }
     [tmp9, require] = tmp4([]);
-    const tmp10 = tmp9 === tmp(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
+    const tmp10 = tmp9 === tmp(1944).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
     closure_1 = tmp10;
     const obj2 = {
       shouldShowBetaTag: tmp10,

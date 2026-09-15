@@ -1,24 +1,24 @@
-// Module ID: 17083
-// Function ID: 17084
+// Module ID: 17121
+// Function ID: 17122
 // Name: LaunchPadPullTab
-// Dependencies: [19, 17, 11598, 12092, 21, 4636, 576, 16803, 4373, 12163, 17084, 5055, 1114, 17026, 13932, 2]
+// Dependencies: [19, 17, 11602, 12096, 21, 4639, 576, 16841, 4376, 12167, 17122, 5058, 1115, 17064, 13937, 2]
 
-// Module 17083 (LaunchPadPullTab)
+// Module 17121 (LaunchPadPullTab)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12163 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11598);
+const LaunchPadConstants = fn(11602);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_7, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: c10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12092).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12096).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = { position: "absolute", right: 0, width: LAUNCH_PAD_PULL_TAB_WIDTH, height: LAUNCH_PAD_PULL_TAB_HEIGHT, borderTopLeftRadius: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS, borderBottomLeftRadius: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS, borderWidth: 1, borderTopWidth: 1, borderColor: "rgba(0, 0, 0, 0.08)" };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

@@ -1,13 +1,13 @@
-// Module ID: 13380
-// Function ID: 13381
+// Module ID: 13385
+// Function ID: 13386
 // Name: Loading
-// Dependencies: [8037, 4636, 576, 2]
+// Dependencies: [8040, 4639, 576, 2]
 // Exports: generateLoadingRowData
 
-// Module 13380 (Loading)
+// Module 13385 (Loading)
 import nativeDefault from "native" /* 576 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8037 */;
-import createStyles from "createStyles" /* 4636 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8040 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 ({ LoadingType: closure_0, RowType: closure_1, SeparatorAction: c2 } = RowGeneratorConstants);

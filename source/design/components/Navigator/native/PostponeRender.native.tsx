@@ -1,14 +1,14 @@
-// Module ID: 7140
-// Function ID: 7141
+// Module ID: 7144
+// Function ID: 7145
 // Name: PostponeRender
-// Dependencies: [32, 19, 17, 21, 4636, 576, 5073, 7141, 7142, 5659, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 5076, 7145, 7146, 5663, 2]
 // Exports: PostponeRender
 
-// Module 7140 (PostponeRender)
+// Module 7144 (PostponeRender)
 import nativeDefault from "native" /* 576 */;
-import useMountEffectDefault from "useMountEffect" /* 5073 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5659 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7141 */;
+import useMountEffectDefault from "useMountEffect" /* 5076 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5663 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { view: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -47,7 +47,7 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7142).SceneLoadingIndicator, {});
+    children = jsx(first(7146).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

@@ -1,13 +1,13 @@
-// Module ID: 6688
-// Function ID: 6689
+// Module ID: 6692
+// Function ID: 6693
 // Name: WumpusMahjongSpotIllustration
-// Dependencies: [21, 5668, 6689, 2]
+// Dependencies: [21, 5672, 6693, 2]
 // Exports: WumpusMahjongSpotIllustration
 
-// Module 6688 (WumpusMahjongSpotIllustration)
+// Module 6692 (WumpusMahjongSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6689 from "module_6689" /* 6689 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6693 from "module_6693" /* 6693 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const WumpusMahjongSpotIllustration = function WumpusMahjongSpotIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6689 };
+  const obj2 = { uri: _modDef6693 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

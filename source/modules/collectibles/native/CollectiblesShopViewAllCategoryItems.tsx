@@ -1,14 +1,14 @@
-// Module ID: 15938
-// Function ID: 15939
+// Module ID: 15951
+// Function ID: 15952
 // Name: CollectiblesShopViewAllCategoryItems
-// Dependencies: [19, 17, 1076, 1074, 21, 4636, 576, 11214, 7265, 7285, 1611, 15156, 4373, 5055, 1240, 7692, 8893, 10951, 15939, 15940, 15919, 1114, 2]
+// Dependencies: [19, 17, 1076, 1074, 21, 4639, 576, 11218, 7269, 7289, 1612, 15166, 4376, 5058, 1241, 7696, 8896, 10955, 15952, 15953, 15932, 1115, 2]
 
-// Module 15938 (CollectiblesShopViewAllCategoryItems)
+// Module 15951 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import spring from "spring" /* 5055 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7692 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import spring from "spring" /* 5058 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7696 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

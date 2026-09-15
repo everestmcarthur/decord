@@ -1,9 +1,9 @@
-// Module ID: 8882
-// Function ID: 8883
+// Module ID: 8885
+// Function ID: 8886
 // Name: ImageWithThumbhashPlaceholderNativeComponent
 // Dependencies: [65, 2]
 
-// Module 8882 (ImageWithThumbhashPlaceholderNativeComponent)
+// Module 8885 (ImageWithThumbhashPlaceholderNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 9199
-// Function ID: 9200
+// Module ID: 9202
+// Function ID: 9203
 // Name: getDefaultGuildSettingsSection
 // Dependencies: [1074, 2]
 // Exports: getDefaultGuildSettingsSection
 
-// Module 9199 (getDefaultGuildSettingsSection)
+// Module 9202 (getDefaultGuildSettingsSection)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

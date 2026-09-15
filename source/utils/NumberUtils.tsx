@@ -1,11 +1,11 @@
-// Module ID: 1880
-// Function ID: 1881
+// Module ID: 1881
+// Function ID: 1882
 // Name: NumberUtils
-// Dependencies: [1114, 2]
+// Dependencies: [1115, 2]
 // Exports: formatPercent, humanizeValue, parseInteger, shortenAndLocalizeNumber
 
-// Module 1880 (NumberUtils)
-import util from "util" /* 1114 */;
+// Module 1881 (NumberUtils)
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 1000000;

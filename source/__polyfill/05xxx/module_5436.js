@@ -1,9 +1,9 @@
 // Module ID: 5436
 // Function ID: 5437
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 5436
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "a7079fa45817ad0281dfe779b5383d9a", name: "img_account_sync_playstation_light", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "18792494d95a201efe70aee5f49c4a4a", name: "img_account_sync_github_light", type: "svg" });

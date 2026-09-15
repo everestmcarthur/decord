@@ -1,18 +1,18 @@
-// Module ID: 11346
-// Function ID: 11347
+// Module ID: 11350
+// Function ID: 11351
 // Name: MarkupReactCommandRule
-// Dependencies: [19, 1957, 1482, 5080, 5081, 21, 7626, 4495, 4603, 1609, 4981, 1114, 1176, 11347, 4334, 7292, 1935, 10758, 7297, 11349, 4632, 4502, 11351, 8201, 2]
+// Dependencies: [19, 1958, 1483, 5083, 5084, 21, 7630, 4498, 4606, 1610, 4984, 1115, 1177, 11351, 4337, 7296, 1936, 10762, 7301, 11353, 4635, 4505, 11355, 8204, 2]
 // Exports: default
 
-// Module 11346 (MarkupReactCommandRule)
-import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import ToastUtils from "ToastUtils" /* 4334 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ClipboardUtils from "ClipboardUtils" /* 7292 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11351 */;
+// Module 11350 (MarkupReactCommandRule)
+import KeyboardTypes from "KeyboardTypes" /* 1610 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ClipboardUtils from "ClipboardUtils" /* 7296 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11355 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 function handleTapCommandMention(channelId) {
@@ -116,9 +116,9 @@ function handleLongPressCommandMention(arg0, arg1) {
   const DeveloperMode = require("UserSettings").DeveloperMode;
   if (DeveloperMode.getSetting()) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
-    const intl2 = tmp(1114).intl;
-    obj2.label = intl2.string(tmp(1114).t.oJ1Muw);
-    obj2.IconComponent = tmp(10758).IdIcon;
+    const intl2 = tmp(1115).intl;
+    obj2.label = intl2.string(tmp(1115).t.oJ1Muw);
+    obj2.IconComponent = tmp(10762).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -127,10 +127,10 @@ function handleLongPressCommandMention(arg0, arg1) {
   }
   const result = require("showSimpleActionSheet").showSimpleActionSheet({ key: "LongPressCommandMention", options: items, hasIcons: true });
 }
-const AppLauncherNativeConstants = fn(1482);
+const AppLauncherNativeConstants = fn(1483);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: metroRequire } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5080).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(5081).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5083).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(5084).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");
@@ -138,7 +138,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(11349).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(11353).AppLauncherContext);
   dependencyMap = closure_6();
   const obj = {
     style,
@@ -186,9 +186,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null
   };
-  const items = ["/", node(8201).smartOutput(node, output, state)];
+  const items = ["/", node(8204).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(4632).Text, {
+  return jsxs(node(4635).Text, {
     style,
     variant: "text-md/bold",
     onPress() {

@@ -1,50 +1,50 @@
-// Module ID: 11897
-// Function ID: 11898
+// Module ID: 11901
+// Function ID: 11902
 // Name: QuestUtils
-// Dependencies: [5, 19, 11898, 5525, 1074, 21, 4603, 11899, 1896, 11902, 11424, 11909, 11917, 7811, 11410, 5528, 4335, 1114, 5678, 5702, 11618, 7824, 9638, 4495, 7485, 1363, 4331, 576, 11918, 9352, 4982, 4986, 1484, 2]
+// Dependencies: [5, 19, 11902, 5529, 1074, 21, 4606, 11903, 1897, 11906, 11428, 11913, 11921, 7814, 11414, 5532, 4338, 1115, 5682, 5706, 11622, 7827, 9640, 4498, 7489, 1364, 4334, 576, 11922, 9355, 4985, 4989, 1485, 2]
 // Exports: dismissOverlayScreens, getPrimaryCtaIcon, handleRewardClaimThenView, isHeroVideoSupported, openDiscordQuestsFAQ, openQuestHome, openRewardDetailsBottomSheet, showQuestUnavailableAlert
 
-// Module 11897 (QuestUtils)
+// Module 11901 (QuestUtils)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Link from "Link" /* 1484 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import useAlertStore from "useAlertStore" /* 4982 */;
-import AlertModal from "AlertModal" /* 4986 */;
-import QuestTypes from "QuestTypes" /* 5528 */;
-import openUserSettings from "openUserSettings" /* 7485 */;
-import getQuestLogger from "getQuestLogger" /* 7811 */;
-import QuestActionCreators from "QuestActionCreators" /* 11410 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11424 */;
+import util from "util" /* 1115 */;
+import Link from "Link" /* 1485 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import useAlertStore from "useAlertStore" /* 4985 */;
+import AlertModal from "AlertModal" /* 4989 */;
+import QuestTypes from "QuestTypes" /* 5532 */;
+import openUserSettings from "openUserSettings" /* 7489 */;
+import getQuestLogger from "getQuestLogger" /* 7814 */;
+import QuestActionCreators from "QuestActionCreators" /* 11414 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11428 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11898 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11902 */;
 
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11902, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11906, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(11902, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(tmp(1897)(11906, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
-      const result = tmp(11909).openQuestOrbsRewardModal(obj3);
-      const tmpResult3 = tmp(11909);
+      const result = tmp(11913).openQuestOrbsRewardModal(obj3);
+      const tmpResult3 = tmp(11913);
     } else {
       const obj4 = { quest, product, onSuccess };
-      const result1 = tmp(11917).openQuestCollectibleRewardModal(obj4);
-      const tmpResult4 = tmp(11917);
+      const result1 = tmp(11921).openQuestCollectibleRewardModal(obj4);
+      const tmpResult4 = tmp(11921);
     }
-    tmpResult = tmp(11424);
+    tmpResult = tmp(11428);
   }
 }
 let closure_15 = async function _handleRewardClaim(arg0, value) {
@@ -238,7 +238,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0, value) {
     }
   }
 };
-const QuestConstants = fn(5525);
+const QuestConstants = fn(5529);
 ({ QuestsExperimentLocations: hasOwnProperty, QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: metroRequire, QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: closure_7, QuestVariants: closure_8 } = QuestConstants);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
@@ -247,7 +247,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11899, dependencyMap.paths), React5, { questId: questId.questId });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11903, dependencyMap.paths), React5, { questId: questId.questId });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView() {
@@ -336,10 +336,10 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
       const features2 = quest.config.features;
       if (features2.includes(tmp3.CLOUD_GAMING_ACTIVITY)) {
         const obj3 = { size: "sm", style: obj2, color: nativeDefault.colors.WHITE };
-        let tmp5Result = tmp5(tmp(11918).CloudIcon, obj3);
+        let tmp5Result = tmp5(tmp(11922).CloudIcon, obj3);
       } else {
         const obj4 = { size: "sm", style: obj2, color: nativeDefault.colors.WHITE };
-        tmp5Result = tmp5(tmp(9352).GameControllerIcon, obj4);
+        tmp5Result = tmp5(tmp(9355).GameControllerIcon, obj4);
       }
       return tmp5Result;
     }

@@ -1,13 +1,13 @@
-// Module ID: 6348
-// Function ID: 6349
+// Module ID: 6352
+// Function ID: 6353
 // Name: MoonIllocon
-// Dependencies: [21, 5668, 6349, 2]
+// Dependencies: [21, 5672, 6353, 2]
 // Exports: MoonIllocon
 
-// Module 6348 (MoonIllocon)
+// Module 6352 (MoonIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6349 from "module_6349" /* 6349 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6353 from "module_6353" /* 6353 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const MoonIllocon = function MoonIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6349 };
+  const obj2 = { uri: _modDef6353 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

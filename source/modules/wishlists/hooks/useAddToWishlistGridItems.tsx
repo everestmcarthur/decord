@@ -1,15 +1,15 @@
-// Module ID: 13230
-// Function ID: 13231
+// Module ID: 13235
+// Function ID: 13236
 // Name: useAddToWishlistGridItems
-// Dependencies: [19, 1373, 10921, 13205, 2]
+// Dependencies: [19, 1374, 10925, 13210, 2]
 // Exports: useAddToWishlistGridItems
 
-// Module 13230 (useAddToWishlistGridItems)
-import WishlistUtils from "WishlistUtils" /* 13205 */;
+// Module 13235 (useAddToWishlistGridItems)
+import WishlistUtils from "WishlistUtils" /* 13210 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1374).PremiumSubscriptionSKUs;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 

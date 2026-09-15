@@ -1,23 +1,23 @@
-// Module ID: 10934
-// Function ID: 10935
+// Module ID: 10938
+// Function ID: 10939
 // Name: hooks/NativePaymentHooks
-// Dependencies: [5, 32, 19, 7342, 4299, 4300, 7340, 1074, 3, 504, 7522, 10884, 4309, 10935, 5679, 1240, 10937, 7343, 38, 4960, 10939, 10940, 2]
+// Dependencies: [5, 32, 19, 7346, 4302, 4303, 7344, 1074, 3, 504, 7526, 10888, 4312, 10939, 5683, 1241, 10941, 7347, 38, 4963, 10943, 10944, 2]
 // Exports: useCancelSubscription, useCreateSubscription, useGoogleSkuIds, useMobileStoreFront, useResubscribeSubscription
 
-// Module 10934 (hooks/NativePaymentHooks)
+// Module 10938 (hooks/NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
-import BillingUtils from "BillingUtils" /* 4309 */;
-import ProductIds from "ProductIds" /* 7343 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 7522 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10937 */;
+import BillingUtils from "BillingUtils" /* 4312 */;
+import ProductIds from "ProductIds" /* 7347 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7526 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GenericIAPStore from "GenericIAPStore" /* 7342 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import IAPStore from "IAPStore" /* 7340 */;
+import GenericIAPStore from "GenericIAPStore" /* 7346 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4302 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import IAPStore from "IAPStore" /* 7344 */;
 
 require = fn;
 function useNativeIAPPayments() {
@@ -48,7 +48,7 @@ function useNativeIAPPayments() {
   if (nativePaymentsConnected) {
     nativePaymentsConnected = null != storeFront;
   }
-  storeFront(10884)(() => {
+  storeFront(10888)(() => {
     let tmp = nativePaymentsConnected;
     if (!nativePaymentsConnected) {
       tmp = c15;
@@ -169,8 +169,8 @@ function useCancelSubscription(arg0, arg1) {
     closure_1(38)(memo, "Cannot update subscription");
     closure_1(38)(nativePaymentsConnected, "Cannot connect to IAP API");
     closure_1(38)(null != closure_6, "Subscription not found");
-    closure_128_0 = yield tmp2(7522).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
-    yield tmp2(4960).fetchSubscriptions();
+    closure_128_0 = yield tmp2(7526).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
+    yield tmp2(4963).fetchSubscriptions();
     return closure_128_0;
   }), items3);
   return obj2;
@@ -203,8 +203,8 @@ function useResubscribeSubscription(arg0) {
     nativePaymentsConnected(38)(nativePaymentsConnected, "Cannot connect to IAP API");
     nativePaymentsConnected(38)(null != closure_5, "Subscription not found");
     nativePaymentsConnected(38)(null != stateFromStores, "Subscription not found");
-    closure_128_0 = yield tmp2(7522).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
-    yield tmp2(4960).fetchSubscriptions();
+    closure_128_0 = yield tmp2(7526).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
+    yield tmp2(4963).fetchSubscriptions();
     return closure_128_0;
   }), items3);
   return obj2;

@@ -1,13 +1,13 @@
-// Module ID: 8334
-// Function ID: 8335
+// Module ID: 8337
+// Function ID: 8338
 // Name: useNameplate
-// Dependencies: [19, 2021, 504, 1886, 2]
+// Dependencies: [19, 2022, 504, 1887, 2]
 // Exports: useNameplate
 
-// Module 8334 (useNameplate)
-import utils from "utils" /* 1886 */;
+// Module 8337 (useNameplate)
+import utils from "utils" /* 1887 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
 require = fn;
 const size = fn(2);

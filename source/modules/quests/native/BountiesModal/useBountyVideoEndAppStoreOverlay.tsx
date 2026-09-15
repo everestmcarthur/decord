@@ -1,19 +1,19 @@
-// Module ID: 15105
-// Function ID: 15106
+// Module ID: 15115
+// Function ID: 15116
 // Name: useBountyVideoEndAppStoreOverlay
-// Dependencies: [19, 5525, 21, 15106, 11623, 11620, 15107, 5530, 7830, 4637, 4640, 7820, 5532, 11631, 2]
+// Dependencies: [19, 5529, 21, 15116, 11627, 11624, 15117, 5534, 7833, 4640, 4643, 7823, 5536, 11635, 2]
 // Exports: BountyVideoEndAppStoreProvider, canUseBountyVideoEndAppStoreOverlay, useBountyVideoEndAppStoreContext, useBountyVideoEndAppStoreOverlay
 
-// Module 15105 (useBountyVideoEndAppStoreOverlay)
-import timing from "timing" /* 4637 */;
-import timingPresets from "timingPresets" /* 4640 */;
-import QuestContent from "QuestContent" /* 5530 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15106 */;
+// Module 15115 (useBountyVideoEndAppStoreOverlay)
+import timing from "timing" /* 4640 */;
+import timingPresets from "timingPresets" /* 4643 */;
+import QuestContent from "QuestContent" /* 5534 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7833 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5529).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(null);
 const size = fn(2);
@@ -27,10 +27,10 @@ export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppSto
 };
 export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty) {
   if (obj.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-    const CustomAppStoreSqueezeBackExperiment = tmp(11623).CustomAppStoreSqueezeBackExperiment;
+    const CustomAppStoreSqueezeBackExperiment = tmp(11627).CustomAppStoreSqueezeBackExperiment;
     const obj2 = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
     const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj2);
-    return config.enabled && tmp6 === tmp(11623).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+    return config.enabled && tmp6 === tmp(11627).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
   } else {
     return false;
   }

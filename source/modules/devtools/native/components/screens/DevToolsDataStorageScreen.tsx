@@ -1,19 +1,19 @@
-// Module ID: 15702
-// Function ID: 15703
+// Module ID: 15713
+// Function ID: 15714
 // Name: DevToolsDataStorageScreen
-// Dependencies: [32, 19, 17, 505, 502, 21, 4636, 576, 5686, 1986, 4335, 504, 2003, 1484, 7084, 7152, 10341, 10996, 7153, 4603, 4632, 7158, 7300, 7252, 7302, 2]
+// Dependencies: [32, 19, 17, 505, 502, 21, 4639, 576, 5690, 1987, 4338, 504, 2004, 1485, 7088, 7156, 10343, 11000, 7157, 4606, 4635, 7162, 7304, 7256, 7306, 2]
 // Exports: default
 
-// Module 15702 (DevToolsDataStorageScreen)
+// Module 15713 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import Link from "Link" /* 1484 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 2003 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import TableRow from "TableRow" /* 5686 */;
+import Link from "Link" /* 1485 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 2004 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import TableRow from "TableRow" /* 5690 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -22,10 +22,10 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7252).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(7256).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7302).ActionSheetRow, {
+    children: jsx(store(7306).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -36,9 +36,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       }
     })
   };
-  obj.children = jsx(store(7302).ActionSheetRow.Group, {
+  obj.children = jsx(store(7306).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7302).ActionSheetRow, {
+    children: jsx(store(7306).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -49,12 +49,12 @@ function DevToolsPersistedStoresActionSheet(store) {
       }
     })
   });
-  return jsx(store(7300).ActionSheet, { header: jsx(store(7252).BottomSheetTitleHeader, { title: store.getName() }), children: null });
+  return jsx(store(7304).ActionSheet, { header: jsx(store(7256).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 }
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, sectionHeader: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.sectionHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };

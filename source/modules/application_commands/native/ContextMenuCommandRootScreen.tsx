@@ -1,25 +1,25 @@
-// Module ID: 16983
-// Function ID: 16984
+// Module ID: 17021
+// Function ID: 17022
 // Name: ContextMenuCommandRootScreen
-// Dependencies: [32, 19, 17, 1979, 5080, 21, 4636, 576, 504, 9546, 9427, 9541, 7084, 7152, 10247, 1114, 4632, 16984, 7153, 7158, 2]
+// Dependencies: [32, 19, 17, 1980, 5083, 21, 4639, 576, 504, 9548, 9430, 9543, 7088, 7156, 10249, 1115, 4635, 17022, 7157, 7162, 2]
 // Exports: default
 
-// Module 16983 (ContextMenuCommandRootScreen)
+// Module 17021 (ContextMenuCommandRootScreen)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import executeCommandDefault from "executeCommand" /* 9541 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import executeCommandDefault from "executeCommand" /* 9543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(5080);
+const ApplicationCommandConstants = fn(5083);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionHeader = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

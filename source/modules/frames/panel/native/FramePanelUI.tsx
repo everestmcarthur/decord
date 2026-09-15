@@ -1,21 +1,21 @@
-// Module ID: 17153
-// Function ID: 17154
+// Module ID: 17191
+// Function ID: 17192
 // Name: FramePanelUI
-// Dependencies: [19, 21, 17154, 17155, 17158, 17127, 17152, 2]
+// Dependencies: [19, 21, 17192, 17193, 17196, 17165, 17190, 2]
 // Exports: default
 
-// Module 17153 (FramePanelUI)
-import ActivityPanelUI from "ActivityPanelUI" /* 17127 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17152 */;
-import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17158 */;
+// Module 17191 (FramePanelUI)
+import ActivityPanelUI from "ActivityPanelUI" /* 17165 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17190 */;
+import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17154;
+    let tmp4 = 17192;
   } else {
-    tmp4 = 17155;
+    tmp4 = 17193;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

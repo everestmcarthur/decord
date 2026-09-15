@@ -1,24 +1,24 @@
-// Module ID: 10533
-// Function ID: 10534
+// Module ID: 10536
+// Function ID: 10537
 // Name: StickerDetailActionSheet
-// Dependencies: [5, 32, 19, 17, 1979, 1371, 5583, 10402, 1074, 7254, 21, 4636, 1363, 576, 10516, 10364, 10370, 4603, 4632, 1114, 10517, 4335, 504, 1477, 1240, 10530, 5056, 10532, 10518, 10523, 4294, 7291, 1935, 4975, 10534, 1896, 4816, 5601, 10535, 7485, 10304, 8795, 10099, 10536, 8716, 10471, 7253, 2]
+// Dependencies: [5, 32, 19, 17, 1980, 1372, 5587, 10404, 1074, 7258, 21, 4639, 1364, 576, 10519, 10366, 10372, 4606, 4635, 1115, 10520, 4338, 504, 1478, 1241, 10533, 5059, 10535, 10521, 10526, 4297, 7295, 1936, 4978, 10537, 1897, 4819, 5605, 10538, 7489, 10306, 8798, 10101, 10539, 8719, 10474, 7257, 2]
 
-// Module 10533 (StickerDetailActionSheet)
+// Module 10536 (StickerDetailActionSheet)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import openUserSettings from "openUserSettings" /* 7485 */;
-import StickersHooks from "StickersHooks" /* 10516 */;
-import StickersActionCreators from "StickersActionCreators" /* 10517 */;
-import openStickersPremiumUpsellAlertDefault from "openStickersPremiumUpsellAlert" /* 10536 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
+import openUserSettings from "openUserSettings" /* 7489 */;
+import StickersHooks from "StickersHooks" /* 10519 */;
+import StickersActionCreators from "StickersActionCreators" /* 10520 */;
+import openStickersPremiumUpsellAlertDefault from "openStickersPremiumUpsellAlert" /* 10539 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
-import StickersStore from "StickersStore" /* 5583 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
+import StickersStore from "StickersStore" /* 5587 */;
 
 require = fn;
 function StandardStickerDetail(chatInputRef) {
@@ -146,7 +146,7 @@ function UnavailableStickerDetail(arg0) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10534, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(10537, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), , ];
@@ -190,15 +190,15 @@ function UnavailableStickerDetail(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(10402);
+const StickerPickerConstants = fn(10404);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_15, AnalyticsSections: closure_16, AnalyticEvents: closure_17, GuildFeatures: closure_18, UserSettingsSections: closure_19 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7258).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4636);
-const PlatformUtils = fn(1363);
+const createStyles = fn(4639);
+const PlatformUtils = fn(1364);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -266,9 +266,9 @@ function GuildStickerDetail(sticker) {
       style = obj;
     }
     if (arg0) {
-      let StarOutlineIcon = tmp9(10364).StarIcon;
+      let StarOutlineIcon = tmp9(10366).StarIcon;
     } else {
-      StarOutlineIcon = tmp9(10370).StarOutlineIcon;
+      StarOutlineIcon = tmp9(10372).StarOutlineIcon;
     }
     return __initData(StarOutlineIcon, { style });
   }, items1);
@@ -299,8 +299,8 @@ function GuildStickerDetail(sticker) {
           },
         content
       };
-      tmp(4335).open(obj3);
-      const tmpResult = tmp(4335);
+      tmp(4338).open(obj3);
+      const tmpResult = tmp(4338);
     } else {
       obj2.favoriteSticker(sticker);
       const obj4 = {
@@ -310,8 +310,8 @@ function GuildStickerDetail(sticker) {
           },
         content
       };
-      tmp(4335).open(obj4);
-      const tmpResult2 = tmp(4335);
+      tmp(4338).open(obj4);
+      const tmpResult2 = tmp(4338);
     }
   }, items2);
   if (tidaWebformEnabled) {
@@ -325,7 +325,7 @@ function GuildStickerDetail(sticker) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10534, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(10537, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items3);
   analyticsLocation = obj.useMemo(() => {
@@ -629,7 +629,7 @@ export default noop.memo(function StickerDetailActionSheet(chatInputRef) {
     const obj3 = { startExpanded: true, children: null };
     const obj4 = { style: tmp.content, children: tmp6Result };
     obj3.children = tmp6(timestampProducer, obj4);
-    return tmp6(tmp2(7253).BottomSheet, obj3);
+    return tmp6(tmp2(7257).BottomSheet, obj3);
   }
   tmp6Result = tmp6Result2;
   if (null != first) {
@@ -641,9 +641,9 @@ export default noop.memo(function StickerDetailActionSheet(chatInputRef) {
         const obj6 = { sticker: first, channel };
         tmp6Result2 = tmp6(GuildStickerDetail, obj6);
       }
-      tmp2Result2 = tmp2(4975);
+      tmp2Result2 = tmp2(4978);
     }
     tmp6Result = tmp6Result2;
-    tmp2Result = tmp2(4975);
+    tmp2Result = tmp2(4978);
   }
 });

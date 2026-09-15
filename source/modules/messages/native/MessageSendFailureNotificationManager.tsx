@@ -1,18 +1,18 @@
-// Module ID: 17932
-// Function ID: 17933
+// Module ID: 17970
+// Function ID: 17971
 // Name: MessageSendFailureNotificationManager
-// Dependencies: [2011, 4458, 1371, 1895, 1074, 13806, 10223, 10225, 9817, 1114, 7221, 2]
+// Dependencies: [2012, 4461, 1372, 1896, 1074, 13811, 10225, 10227, 9819, 1115, 7225, 2]
 
-// Module 17932 (MessageSendFailureNotificationManager)
-import util from "util" /* 1114 */;
-import PushNotificationDefault from "PushNotification" /* 9817 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10223 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10225 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import UserStore from "UserStore" /* 1371 */;
-import AppStateStore from "AppStateStore" /* 1895 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+// Module 17970 (MessageSendFailureNotificationManager)
+import util from "util" /* 1115 */;
+import PushNotificationDefault from "PushNotification" /* 9819 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10225 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10227 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import UserStore from "UserStore" /* 1372 */;
+import AppStateStore from "AppStateStore" /* 1896 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -79,7 +79,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1074);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(13806).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13811).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

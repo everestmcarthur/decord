@@ -1,12 +1,12 @@
-// Module ID: 8221
-// Function ID: 8222
+// Module ID: 8224
+// Function ID: 8225
 // Name: transformNativeMarkupLink
-// Dependencies: [5077, 5083, 2]
+// Dependencies: [5080, 5086, 2]
 // Exports: transformNativeLink
 
-// Module 8221 (transformNativeMarkupLink)
-import MarkupTypes from "MarkupTypes" /* 5077 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5083 */;
+// Module 8224 (transformNativeMarkupLink)
+import MarkupTypes from "MarkupTypes" /* 5080 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5086 */;
 import size from "module_2" /* 2 */;
 
 function stripCredentialsForDisplay(url) {
@@ -34,7 +34,7 @@ export const transformNativeLink = function transformNativeLink(value, channelId
       }
       return obj;
     }
-    obj = { type: MarkupTypes.AST_KEY.LINK, content: null, target: null, title: "Array" };
+    obj = { type: MarkupTypes.AST_KEY.LINK, content: null, target: null, title: "a" };
     const obj3 = { type: MarkupTypes.AST_KEY.TEXT, content: stripCredentialsForDisplay(url) };
     const items = [obj3];
     obj.content = items;

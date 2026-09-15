@@ -1,9 +1,9 @@
-// Module ID: 1996
-// Function ID: 1997
+// Module ID: 1997
+// Function ID: 1998
 // Name: Runtime
-// Dependencies: [4, 1988, 2]
+// Dependencies: [4, 1989, 2]
 
-// Module 1996 (Runtime)
+// Module 1997 (Runtime)
 import logger_Logger from "logger/Logger" /* 4 */;
 import size from "module_2" /* 2 */;
 
@@ -97,7 +97,7 @@ prototype["completeOperation"] = function completeOperation(value, timings, nowR
 prototype["initialize"] = function initialize() {
   const self = this;
   if (!this.initialized) {
-    const KV_RAW = self(1988).KV_RAW;
+    const KV_RAW = self(1989).KV_RAW;
     const obj = {
       status(handle) {
           return self.onStatus(handle);

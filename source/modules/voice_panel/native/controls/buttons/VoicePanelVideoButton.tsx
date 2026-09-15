@@ -1,24 +1,24 @@
-// Module ID: 17307
-// Function ID: 17308
+// Module ID: 17345
+// Function ID: 17346
 // Name: VoicePanelVideoButton
-// Dependencies: [19, 17, 9616, 1957, 1979, 1908, 4275, 4661, 21, 12402, 17295, 504, 7828, 13392, 4982, 13394, 1114, 17308, 9211, 9715, 17296, 13412, 4347, 10238, 13177, 2]
+// Dependencies: [19, 17, 9618, 1958, 1980, 1909, 4278, 4664, 21, 12406, 17333, 504, 7831, 13397, 4985, 13399, 1115, 17346, 9214, 9717, 17334, 13417, 4350, 10240, 13182, 2]
 // Exports: default
 
-// Module 17307 (VoicePanelVideoButton)
-import util from "util" /* 1114 */;
-import native from "native" /* 4347 */;
-import useAlertStore from "useAlertStore" /* 4982 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7828 */;
-import CallsUtils from "CallsUtils" /* 9211 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9715 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13394 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17308 */;
+// Module 17345 (VoicePanelVideoButton)
+import util from "util" /* 1115 */;
+import native from "native" /* 4350 */;
+import useAlertStore from "useAlertStore" /* 4985 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7831 */;
+import CallsUtils from "CallsUtils" /* 9214 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9717 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13399 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17346 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9616 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9618 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function VideoButtonRive(arg0) {
@@ -31,16 +31,16 @@ function VideoButtonRive(arg0) {
   }
   obj2.defaultViewModelInstance = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10238).VideoIcon;
+    let VideoSlashIcon = tmp3(10240).VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(13177).VideoSlashIcon;
+    VideoSlashIcon = tmp3(13182).VideoSlashIcon;
   }
   obj2.fallback = <VideoSlashIcon color={color} />;
   obj.children = jsx(native.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
   return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 }
 const View = fn(17).View;
-const Features = fn(4661).Features;
+const Features = fn(4664).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");

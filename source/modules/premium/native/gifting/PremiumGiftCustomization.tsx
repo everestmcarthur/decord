@@ -1,22 +1,22 @@
-// Module ID: 11178
-// Function ID: 11179
+// Module ID: 11182
+// Function ID: 11183
 // Name: PremiumGiftCustomization
-// Dependencies: [32, 19, 17, 1373, 21, 4636, 576, 1483, 10828, 11179, 1114, 10958, 11180, 4632, 10985, 10987, 11181, 2]
+// Dependencies: [32, 19, 17, 1374, 21, 4639, 576, 1484, 10832, 11183, 1115, 10962, 11184, 4635, 10989, 10991, 11185, 2]
 // Exports: default
 
-// Module 11178 (PremiumGiftCustomization)
+// Module 11182 (PremiumGiftCustomization)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollViewContainer: null, senderHeaderTitle: null };
 const obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollViewContainer = { paddingBottom: nativeDefault.space.PX_24 };

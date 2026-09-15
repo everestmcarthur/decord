@@ -1,14 +1,14 @@
-// Module ID: 9291
-// Function ID: 9292
+// Module ID: 9294
+// Function ID: 9295
 // Name: useIsSecureFramesKeyInconsistent
-// Dependencies: [19, 4659, 4675, 504, 9279, 2]
+// Dependencies: [19, 4662, 4678, 504, 9282, 2]
 // Exports: useAlertIfSecureFramesKeyInconsistent, useIsSecureFramesKeyInconsistent
 
-// Module 9291 (useIsSecureFramesKeyInconsistent)
-import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
+// Module 9294 (useIsSecureFramesKeyInconsistent)
+import SecureFramesUtils from "SecureFramesUtils" /* 9282 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4678 */;
 
 require = fn;
 const size = fn(2);

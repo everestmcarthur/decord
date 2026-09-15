@@ -1,27 +1,27 @@
-// Module ID: 15438
-// Function ID: 15439
+// Module ID: 15448
+// Function ID: 15449
 // Name: DisplayNameStylesColorPickerSheet
-// Dependencies: [32, 19, 17, 1389, 1074, 21, 4636, 576, 8287, 11032, 4604, 4603, 14683, 1240, 7253, 7252, 1114, 2786, 5056, 12, 1091, 1390, 15436, 2]
+// Dependencies: [32, 19, 17, 1390, 1074, 21, 4639, 576, 8290, 11036, 4607, 4606, 14693, 1241, 7257, 7256, 1115, 2787, 5059, 12, 1092, 1391, 15446, 2]
 // Exports: default
 
-// Module 15438 (DisplayNameStylesColorPickerSheet)
+// Module 15448 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14683 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
+const getColorPresetsForEffect = fn(1390).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, presetGrid: null, presetRow: null, presetColor: null, presetColorSelected: null, buttonsContainer: null, button: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

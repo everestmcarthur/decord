@@ -1,20 +1,20 @@
-// Module ID: 8151
-// Function ID: 8152
+// Module ID: 8154
+// Function ID: 8155
 // Name: PremiumGroupInviteSystemMessage
-// Dependencies: [502, 1957, 4636, 576, 8152, 8068, 8050, 8156, 2]
+// Dependencies: [502, 1958, 4639, 576, 8155, 8071, 8053, 8159, 2]
 // Exports: createPremiumGroupInviteSystemMessage
 
-// Module 8151 (PremiumGroupInviteSystemMessage)
+// Module 8154 (PremiumGroupInviteSystemMessage)
 import nativeDefault from "native" /* 576 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
-import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 8152 */;
-import _modDef8156 from "module_8156" /* 8156 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 8155 */;
+import _modDef8159 from "module_8159" /* 8159 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
-const renderer_EmbedUtils = tmp3(8050);
+const renderer_EmbedUtils = tmp3(8053);
 require = fn;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
@@ -31,7 +31,7 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     const merged = Object.assign(createCommonMessageDefault(message));
     obj3.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = closure_5(theme);
-    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8159);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj3;
   }

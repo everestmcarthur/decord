@@ -1,14 +1,14 @@
-// Module ID: 5498
-// Function ID: 5499
+// Module ID: 5502
+// Function ID: 5503
 // Name: StageMediaHooks
-// Dependencies: [1979, 4655, 5499, 504, 5506, 2]
+// Dependencies: [1980, 4658, 5503, 504, 5510, 2]
 // Exports: getStageHasMedia, getStageHasStream, isStageVideoEnabled, useIsStageVideoEnabled, useStageHasMedia, useStageHasStream
 
-// Module 5498 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5506 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
+// Module 5502 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5510 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5503 */;
 
 const require = globalThis.__r;
 

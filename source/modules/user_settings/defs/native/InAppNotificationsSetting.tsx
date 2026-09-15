@@ -1,19 +1,19 @@
-// Module ID: 15572
-// Function ID: 15573
+// Module ID: 15582
+// Function ID: 15583
 // Name: InAppNotificationsSetting
-// Dependencies: [8079, 1074, 1935, 10219, 1114, 2722, 1240, 11602, 14539, 15573, 2]
+// Dependencies: [8082, 1074, 1936, 10221, 1115, 2723, 1241, 11606, 14548, 15583, 2]
 
-// Module 15572 (InAppNotificationsSetting)
+// Module 15582 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import _modDef2722 from "module_2722" /* 2722 */;
-import SettingsConstants from "SettingsConstants" /* 8079 */;
-import FocusModeUtils from "FocusModeUtils" /* 10219 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14539 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15573 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11602 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import _modDef2723 from "module_2723" /* 2723 */;
+import SettingsConstants from "SettingsConstants" /* 8082 */;
+import FocusModeUtils from "FocusModeUtils" /* 10221 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14548 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15583 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -45,8 +45,8 @@ obj2.useTitle = function useTitle() {
 obj2.useDescription = function useInAppNotificationsDescription() {
   let stringResult;
   if (obj.useFocusModeEnabled()) {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t.cIRG0s);
+    const intl = tmp(1115).intl;
+    stringResult = intl.string(tmp(1115).t.cIRG0s);
   }
   return stringResult;
 };
@@ -60,7 +60,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2722.sH5mu9);
+  return intl.string(_modDef2723.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
@@ -69,7 +69,7 @@ obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   if (focusModeEnabled) {
     let stringResult = string(util.t.cIRG0s);
   } else {
-    stringResult = string(_modDef2722["T/zMdV"]);
+    stringResult = string(_modDef2723["T/zMdV"]);
   }
   return stringResult;
 };

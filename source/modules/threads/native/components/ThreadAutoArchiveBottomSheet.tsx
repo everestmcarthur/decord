@@ -1,16 +1,16 @@
-// Module ID: 16930
-// Function ID: 16931
+// Module ID: 16968
+// Function ID: 16969
 // Name: ThreadAutoArchiveBottomSheet
-// Dependencies: [19, 1964, 21, 9435, 5766, 1114, 5769, 2]
+// Dependencies: [19, 1965, 21, 9438, 5770, 1115, 5773, 2]
 
-// Module 16930 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 5769 */;
+// Module 16968 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 5773 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(1964).ChannelFlags;
+const ChannelFlags = fn(1965).ChannelFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
@@ -26,7 +26,7 @@ export const AutoArchiveDurationOptions = noop.memo((channel) => {
   }
   _require = hasFlagResult;
   const obj2 = { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null };
-  const intl = tmp(1114).intl;
+  const intl = tmp(1115).intl;
   obj2.accessibilityLabel = intl.string(require("util").t.H4mGfI);
   obj2.onChange = onSelectDuration;
   obj2.children = autoArchiveOptions.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, disabled, label: value.label }, value.value));

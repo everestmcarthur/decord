@@ -1,23 +1,23 @@
-// Module ID: 15995
-// Function ID: 15996
+// Module ID: 16008
+// Function ID: 16009
 // Name: ParentalControlsUseDataToCustomizeDiscordSetting
-// Dependencies: [7640, 8079, 1074, 14914, 7642, 11602, 1114, 2]
+// Dependencies: [7644, 8082, 1074, 14924, 7646, 11606, 1115, 2]
 
-// Module 15995 (ParentalControlsUseDataToCustomizeDiscordSetting)
-import util from "util" /* 1114 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7642 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+// Module 16008 (ParentalControlsUseDataToCustomizeDiscordSetting)
+import util from "util" /* 1115 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14924 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8079).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8082).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
   },

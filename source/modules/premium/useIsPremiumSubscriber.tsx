@@ -1,15 +1,15 @@
-// Module ID: 11291
-// Function ID: 11292
+// Module ID: 11295
+// Function ID: 11296
 // Name: useIsPremiumSubscriber
-// Dependencies: [1371, 1373, 504, 1885, 2]
+// Dependencies: [1372, 1374, 504, 1886, 2]
 // Exports: useIsPremiumSubscriber
 
-// Module 11291 (useIsPremiumSubscriber)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 11295 (useIsPremiumSubscriber)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
 

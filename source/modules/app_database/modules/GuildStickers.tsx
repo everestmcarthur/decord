@@ -1,11 +1,11 @@
-// Module ID: 5586
-// Function ID: 5587
+// Module ID: 5590
+// Function ID: 5591
 // Name: GuildStickers
-// Dependencies: [5, 3, 1986, 2]
+// Dependencies: [5, 3, 1987, 2]
 
-// Module 5586 (GuildStickers)
+// Module 5590 (GuildStickers)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = new LoggerDefault("GuildStickers");

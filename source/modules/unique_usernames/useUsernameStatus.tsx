@@ -1,11 +1,11 @@
-// Module ID: 14794
-// Function ID: 14795
+// Module ID: 14804
+// Function ID: 14805
 // Name: useUsernameStatus
-// Dependencies: [32, 19, 14795, 2]
+// Dependencies: [32, 19, 14805, 2]
 // Exports: useUsernameStatus
 
-// Module 14794 (useUsernameStatus)
-import useUsernameLiveCheck from "useUsernameLiveCheck" /* 14795 */;
+// Module 14804 (useUsernameStatus)
+import useUsernameLiveCheck from "useUsernameLiveCheck" /* 14805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

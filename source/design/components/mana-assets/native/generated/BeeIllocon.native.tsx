@@ -1,13 +1,13 @@
-// Module ID: 5894
-// Function ID: 5895
+// Module ID: 5898
+// Function ID: 5899
 // Name: BeeIllocon
-// Dependencies: [21, 5668, 5895, 2]
+// Dependencies: [21, 5672, 5899, 2]
 // Exports: BeeIllocon
 
-// Module 5894 (BeeIllocon)
+// Module 5898 (BeeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5895 from "module_5895" /* 5895 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5899 from "module_5899" /* 5899 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BeeIllocon = function BeeIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5895 };
+  const obj2 = { uri: _modDef5899 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

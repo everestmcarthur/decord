@@ -1,13 +1,13 @@
-// Module ID: 7335
-// Function ID: 7336
+// Module ID: 7339
+// Function ID: 7340
 // Name: SKUPricesStore
-// Dependencies: [2025, 504, 1369, 573, 2]
+// Dependencies: [2026, 504, 1370, 573, 2]
 
-// Module 7335 (SKUPricesStore)
+// Module 7339 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
 
 require = fn;
 function resetStoreState() {

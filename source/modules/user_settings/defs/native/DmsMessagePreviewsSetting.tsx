@@ -1,23 +1,23 @@
-// Module ID: 15402
-// Function ID: 15403
+// Module ID: 15412
+// Function ID: 15413
 // Name: DmsMessagePreviewsSetting
-// Dependencies: [19, 8079, 15403, 1935, 1114, 7983, 11602, 2]
+// Dependencies: [19, 8082, 15413, 1936, 1115, 7986, 11606, 2]
 
-// Module 15402 (DmsMessagePreviewsSetting)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
-import useMessagePreviews from "useMessagePreviews" /* 15403 */;
+// Module 15412 (DmsMessagePreviewsSetting)
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7986 */;
+import useMessagePreviews from "useMessagePreviews" /* 15413 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(8079).MobileUserSettings.APPEARANCE,
+  parent: fn(8082).MobileUserSettings.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
     return useMessagePreviews.useMessagePreviewSetting();
   },

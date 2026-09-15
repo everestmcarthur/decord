@@ -1,25 +1,25 @@
-// Module ID: 12528
-// Function ID: 12529
+// Module ID: 12533
+// Function ID: 12534
 // Name: ApplicationCommandsCategories
-// Dependencies: [19, 17, 2021, 12525, 21, 4636, 576, 504, 12361, 5668, 5204, 1114, 4604, 4605, 2]
+// Dependencies: [19, 17, 2022, 12530, 21, 4639, 576, 504, 12365, 5672, 5207, 1115, 4607, 4608, 2]
 // Exports: default
 
-// Module 12528 (ApplicationCommandsCategories)
+// Module 12533 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12361 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4608 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12365 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12525);
+const ApplicationCommandsCategoriesConstants = fn(12530);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, categoryImage: null, fadedItem: { opacity: 0.5 }, activeItem: null, item: null };
 let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj.categoryImage = size;
@@ -58,9 +58,9 @@ let closure_10 = noop.memo((section) => {
     accessibilityLabel: null,
     children: null
   };
-  const intl = tmp2(1114).intl;
+  const intl = tmp2(1115).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1114).t;
+  const t = tmp2(1115).t;
   if (active) {
     const obj4 = { applicationName: section.name };
     let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj4);
@@ -71,7 +71,7 @@ let closure_10 = noop.memo((section) => {
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5204).PressableOpacity, {
+  return jsx(section(5207).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },

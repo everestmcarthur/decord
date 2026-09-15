@@ -1,16 +1,16 @@
-// Module ID: 16620
-// Function ID: 16621
+// Module ID: 16633
+// Function ID: 16634
 // Name: useNotificationPermissionPrompt
-// Dependencies: [19, 1950, 5358, 1951, 12539, 504, 1953, 12548, 16621, 16623, 2]
+// Dependencies: [19, 1951, 5362, 1952, 12544, 504, 1954, 12553, 16634, 16636, 2]
 // Exports: default
 
-// Module 16620 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 12548 */;
+// Module 16633 (useNotificationPermissionPrompt)
+import NotificationUtilsDefault from "NotificationUtils" /* 12553 */;
 import noop from "module_19" /* 19 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12539 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1951 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12544 */;
 
 const require = fn;
 const size = fn(2);
@@ -27,16 +27,16 @@ export default function useNotificationPermissionPrompt() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         if (tmp5) {
-          const permission = tmp3(12548).requestPermission();
-          tmp3(12548).shouldRequestNotification = false;
-          const tmp3Result = tmp3(12548);
+          const permission = tmp3(12553).requestPermission();
+          tmp3(12553).shouldRequestNotification = false;
+          const tmp3Result = tmp3(12553);
         }
         tmp5 = NotificationUtilsDefault.shouldRequestNotification && !PushNotificationPermissionStore.promptSeen;
       }
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(16621).useGuildOpenNudge();
-  const obj3 = stateFromStores(16621);
-  const postCallDisconnectNudge = stateFromStores(16623).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16634).useGuildOpenNudge();
+  const obj3 = stateFromStores(16634);
+  const postCallDisconnectNudge = stateFromStores(16636).usePostCallDisconnectNudge();
 };

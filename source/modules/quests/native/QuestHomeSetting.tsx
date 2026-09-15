@@ -1,23 +1,23 @@
-// Module ID: 15086
-// Function ID: 15087
+// Module ID: 15096
+// Function ID: 15097
 // Name: QuestHomeSetting
-// Dependencies: [32, 19, 11898, 5525, 21, 4636, 576, 1483, 4259, 7093, 15087, 15091, 2]
+// Dependencies: [32, 19, 11902, 5529, 21, 4639, 576, 1484, 4262, 7097, 15097, 15101, 2]
 // Exports: default
 
-// Module 15086 (QuestHomeSetting)
+// Module 15096 (QuestHomeSetting)
 import nativeDefault from "native" /* 576 */;
-import _mod4259 from "module_4259" /* 4259 */;
-import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15087 */;
-import QuestHomeDefault from "QuestHome" /* 15091 */;
+import _mod4262 from "module_4262" /* 4262 */;
+import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15097 */;
+import QuestHomeDefault from "QuestHome" /* 15101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11898 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11902 */;
 
 require = fn;
-const QuestConstants = fn(5525);
+const QuestConstants = fn(5529);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = [];
@@ -84,7 +84,7 @@ export default function QuestHomeSetting() {
       }
       closure_1_1(found);
     }
-  }, { equalityFn: _mod4259.shallow, fireImmediately: true }), []);
+  }, { equalityFn: _mod4262.shallow, fireImmediately: true }), []);
   let navigation;
   const tmp5 = _slicedToArray(noop.useState(() => {
     const str = QuestHomeNavigationStore.getField("filter");
@@ -100,7 +100,7 @@ export default function QuestHomeSetting() {
     }
     return found;
   }), 2);
-  navigation = navigation(1483).useNavigation();
+  navigation = navigation(1484).useNavigation();
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp10[1];
   const items = [navigation];

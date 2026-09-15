@@ -1,9 +1,16 @@
 // Module ID: 14114
 // Function ID: 14115
-// Dependencies: [14103]
+// Dependencies: [14107]
 
 // Module 14114
-import _mod14103 from "module_14103" /* 14103 */;
+import _mod14107 from "module_14107" /* 14107 */;
 
 
-export default (arg0, arg1) => new _mod14103(arg0, arg1).minor;
+export default (arg0, arg1) => {
+  const tmp = _mod14107(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
+  }
+  return version;
+};

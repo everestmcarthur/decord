@@ -1,11 +1,11 @@
-// Module ID: 5546
-// Function ID: 5547
+// Module ID: 5550
+// Function ID: 5551
 // Name: GuildEmojis
-// Dependencies: [5, 3, 1986, 2]
+// Dependencies: [5, 3, 1987, 2]
 
-// Module 5546 (GuildEmojis)
+// Module 5550 (GuildEmojis)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = new LoggerDefault("GuildEmojis");

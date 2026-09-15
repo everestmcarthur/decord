@@ -1,14 +1,14 @@
-// Module ID: 8708
-// Function ID: 8709
+// Module ID: 8711
+// Function ID: 8712
 // Name: ManualReviewDecidedTeenAlertModal
-// Dependencies: [19, 21, 4986, 1114, 2978, 4632, 8529, 2024, 4986, 2]
+// Dependencies: [19, 21, 4989, 1115, 2979, 4635, 8532, 2025, 4989, 2]
 // Exports: default
 
-// Module 8708 (ManualReviewDecidedTeenAlertModal)
-import util from "util" /* 1114 */;
-import _modDef2978 from "module_2978" /* 2978 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import AlertModal from "AlertModal" /* 4986 */;
+// Module 8711 (ManualReviewDecidedTeenAlertModal)
+import util from "util" /* 1115 */;
+import _modDef2979 from "module_2979" /* 2979 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import AlertModal from "AlertModal" /* 4989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,17 +19,17 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/ManualRe
 export default function ManualReviewDecidedTeenAlertModal() {
   let obj = { title: null, content: null, actions: null };
   let intl = util.intl;
-  obj.title = intl.string(_modDef2978.AA3xYb);
+  obj.title = intl.string(_modDef2979.AA3xYb);
   const intl2 = util.intl;
-  obj.content = intl2.format(_modDef2978["2+f8w1"], {
+  obj.content = intl2.format(_modDef2979["2+f8w1"], {
     contentAndSettingsHook(children, arg1) {
       return jsx(Text_Text.Text, {
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8529);
-          const intl = closure_1_0(1114).intl;
-          return obj.openUrl(closure_1_1(2024).getArticleURL(intl.string(closure_1_1(2978).agiNYw)));
+          const obj = closure_1_1(8532);
+          const intl = closure_1_0(1115).intl;
+          return obj.openUrl(closure_1_1(2025).getArticleURL(intl.string(closure_1_1(2979).agiNYw)));
         },
         children
       }, arg1);

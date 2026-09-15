@@ -1,9 +1,9 @@
 // Module ID: 13640
 // Function ID: 13641
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 13640
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 200, height: 90, scales: [1], hash: "d354a91b7a8b3b1cf9e4de447250911f", name: "yearly_upsell_wumpus", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 64, height: 64, scales: [1], hash: "e56e37c53edc4951356b726ba43f79c4", name: "img_wumpus_nitro_classic_boost", type: "png" });

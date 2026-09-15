@@ -1,14 +1,14 @@
-// Module ID: 7392
-// Function ID: 7393
+// Module ID: 7396
+// Function ID: 7397
 // Name: ReportUtils
-// Dependencies: [1957, 4556, 4275, 1371, 1074, 2]
+// Dependencies: [1958, 4559, 4278, 1372, 1074, 2]
 // Exports: canDeleteAndReportMessage, canReportAndDeleteInChannel, canReportMessage, canReportUser
 
-// Module 7392 (ReportUtils)
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 7396 (ReportUtils)
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const Constants = fn(1074);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty, MessageTypesSets: metroRequire } = Constants);

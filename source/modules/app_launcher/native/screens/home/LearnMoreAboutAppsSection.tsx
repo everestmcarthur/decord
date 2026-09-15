@@ -1,18 +1,18 @@
-// Module ID: 12225
-// Function ID: 12226
+// Module ID: 12229
+// Function ID: 12230
 // Name: LearnMoreAboutAppsSection
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 4331, 2024, 1114, 12226, 9539, 4632, 5204, 2]
+// Dependencies: [19, 17, 1074, 21, 4639, 576, 4334, 2025, 1115, 12230, 9541, 4635, 5207, 2]
 // Exports: default
 
-// Module 12225 (LearnMoreAboutAppsSection)
+// Module 12229 (LearnMoreAboutAppsSection)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12226 */;
+import util from "util" /* 1115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9541 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 }, body: { textAlign: "center" }, divider: null, linkButton: null };
 const obj3 = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
 obj2.divider = { height: nativeDefault.space.PX_16 };

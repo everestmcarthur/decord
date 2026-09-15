@@ -1,22 +1,22 @@
-// Module ID: 12381
-// Function ID: 12382
+// Module ID: 12385
+// Function ID: 12386
 // Name: chat_input/ChatInputNativeComponent
-// Dependencies: [19, 4456, 21, 4636, 576, 1114, 4571, 4488, 4486, 1363, 12161, 12119, 2]
+// Dependencies: [19, 4459, 21, 4639, 576, 1115, 4574, 4491, 4489, 1364, 12165, 12123, 2]
 
-// Module 12381 (chat_input/ChatInputNativeComponent)
+// Module 12385 (chat_input/ChatInputNativeComponent)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import ColorUtils from "ColorUtils" /* 4486 */;
-import shared from "shared" /* 4488 */;
-import useTheme from "useTheme" /* 4571 */;
-import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12119 */;
+import util from "util" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import shared from "shared" /* 4491 */;
+import useTheme from "useTheme" /* 4574 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12123 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4459 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };
@@ -60,8 +60,8 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     num2 = 1;
   }
   const tmp4Result4 = PlatformUtils;
-  const tmp13 = tmp9(12161)(onMaxHeightChanged);
-  return jsx(ChatInputNativeComponent.default, { accessible, accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: "default", markAsSpoilerTitle, maxHeight: tmp9(12161)(onMaxHeightChanged), onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset });
+  const tmp13 = tmp9(12165)(onMaxHeightChanged);
+  return jsx(ChatInputNativeComponent.default, { accessible, accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: "default", markAsSpoilerTitle, maxHeight: tmp9(12165)(onMaxHeightChanged), onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset });
 });
 forwardRefResult.displayName = "ChatInputNativeComponent";
 const size = fn(2);

@@ -1,10 +1,10 @@
-// Module ID: 7788
-// Function ID: 7789
+// Module ID: 7791
+// Function ID: 7792
 // Name: SlateUtils
 // Dependencies: [2]
 // Exports: createEmptyState, createState, toRichValue, voidToOptionValue
 
-// Module 7788 (SlateUtils)
+// Module 7791 (SlateUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_text_area/slate/SlateUtils.tsx");

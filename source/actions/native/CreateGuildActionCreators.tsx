@@ -1,11 +1,11 @@
-// Module ID: 12874
-// Function ID: 12875
+// Module ID: 12879
+// Function ID: 12880
 // Name: CreateGuildActionCreators
-// Dependencies: [2012, 1074, 9950, 2]
+// Dependencies: [2013, 1074, 9952, 2]
 // Exports: showInstantInviteModal
 
-// Module 12874 (CreateGuildActionCreators)
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+// Module 12879 (CreateGuildActionCreators)
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 
 const require = fn;
 const InstantInviteSources = fn(1074).InstantInviteSources;

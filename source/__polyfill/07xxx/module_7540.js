@@ -1,9 +1,9 @@
 // Module ID: 7540
 // Function ID: 7541
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 7540
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 81, height: 20, scales: [2, 3], hash: "18e5c4ae4dc618d5509942d43522b6eb", name: "img_logo_nitro_tier_2_horizontal_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 397, height: 97, scales: [2, 3], hash: "a6c610e7cf3af335e6671966e6802c47", name: "img_clouds_header_tier_0", type: "png" });

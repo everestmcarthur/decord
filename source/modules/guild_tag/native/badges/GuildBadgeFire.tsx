@@ -1,12 +1,12 @@
-// Module ID: 14014
-// Function ID: 14015
+// Module ID: 14019
+// Function ID: 14020
 // Name: GuildBadgeFire
-// Dependencies: [19, 21, 14005, 8574, 2]
+// Dependencies: [19, 21, 14010, 8577, 2]
 // Exports: GuildBadgeFire
 
-// Module 14014 (GuildBadgeFire)
-import inlineStyles from "inlineStyles" /* 8574 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14005 */;
+// Module 14019 (GuildBadgeFire)
+import inlineStyles from "inlineStyles" /* 8577 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

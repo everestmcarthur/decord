@@ -1,23 +1,23 @@
-// Module ID: 11606
-// Function ID: 11607
+// Module ID: 11610
+// Function ID: 11611
 // Name: ActivitiesActionCreators
-// Dependencies: [5, 1957, 1074, 4629, 573, 1270, 7784, 7559, 4816, 11607, 11608, 4649, 2]
+// Dependencies: [5, 1958, 1074, 4632, 573, 1271, 7787, 7563, 4819, 11611, 11612, 4652, 2]
 
-// Module 11606 (ActivitiesActionCreators)
+// Module 11610 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import getActivitySessionKey from "getActivitySessionKey" /* 11607 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4652 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import getActivitySessionKey from "getActivitySessionKey" /* 11611 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = globalThis.__r;
 
-const RichPresenceInviteBarActionCreators = tmp8(11608);
+const RichPresenceInviteBarActionCreators = tmp8(11612);
 require = fn;
 const Constants = fn(1074);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(4629).MessageSendLocation;
+const MessageSendLocation = fn(4632).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -127,8 +127,8 @@ export default {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1270).HTTP;
-      const request = { url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2), retries: 3, query: obj4, rejectWithError: tmp4(1270).rejectWithMigratedError() };
+      const HTTP = tmp4(1271).HTTP;
+      const request = { url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2), retries: 3, query: obj4, rejectWithError: tmp4(1271).rejectWithMigratedError() };
       closure_128_0 = await HTTP.get(request);
       return { secret: closure_128_0.body.secret, joinUrl: closure_128_0.body.join_url };
     })();
@@ -137,8 +137,8 @@ export default {
     closure_0 = items;
     return (async () => {
       const mapped = v3.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
-      const HTTP = v3(1270).HTTP;
-      const request = { url: constants.USER_ACTIVITY_SUBSCRIBE, body: { subscriptions: mapped }, retries: 1, rejectWithError: v3(1270).rejectWithMigratedError() };
+      const HTTP = v3(1271).HTTP;
+      const request = { url: constants.USER_ACTIVITY_SUBSCRIBE, body: { subscriptions: mapped }, retries: 1, rejectWithError: v3(1271).rejectWithMigratedError() };
       await HTTP.post(request);
       return arg1.body;
     })();

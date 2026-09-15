@@ -1,15 +1,15 @@
-// Module ID: 11980
-// Function ID: 11981
+// Module ID: 11984
+// Function ID: 11985
 // Name: KickConfirm
-// Dependencies: [32, 19, 17, 1979, 1371, 21, 4636, 576, 7084, 11281, 504, 5601, 11981, 4632, 1114, 4481, 7188, 5056, 2]
+// Dependencies: [32, 19, 17, 1980, 1372, 21, 4639, 576, 7088, 11285, 504, 5605, 11985, 4635, 1115, 4484, 7192, 5059, 2]
 
-// Module 11980 (KickConfirm)
+// Module 11984 (KickConfirm)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.iconLabelBlock = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };

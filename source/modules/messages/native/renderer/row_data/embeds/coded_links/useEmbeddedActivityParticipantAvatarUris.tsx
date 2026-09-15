@@ -1,14 +1,14 @@
-// Module ID: 13347
-// Function ID: 13348
+// Module ID: 13352
+// Function ID: 13353
 // Name: useEmbeddedActivityParticipantAvatarUris
-// Dependencies: [19, 1956, 1371, 1369, 563, 2]
+// Dependencies: [19, 1957, 1372, 1370, 563, 2]
 // Exports: default, getEmbeddedActivityParticipantAvatarUris
 
-// Module 13347 (useEmbeddedActivityParticipantAvatarUris)
-import GlobalUtils from "GlobalUtils" /* 1369 */;
+// Module 13352 (useEmbeddedActivityParticipantAvatarUris)
+import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import UserStore from "UserStore" /* 1371 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);

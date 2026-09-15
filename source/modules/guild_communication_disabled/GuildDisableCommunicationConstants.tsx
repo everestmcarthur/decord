@@ -1,12 +1,12 @@
-// Module ID: 2023
-// Function ID: 2024
+// Module ID: 2024
+// Function ID: 2025
 // Name: GuildDisableCommunicationConstants
-// Dependencies: [1074, 1114, 2024, 2]
+// Dependencies: [1074, 1115, 2025, 2]
 // Exports: getDisableCommunicationDurationOptions
 
-// Module 2023 (GuildDisableCommunicationConstants)
-import util from "util" /* 1114 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;
+// Module 2024 (GuildDisableCommunicationConstants)
+import util from "util" /* 1115 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2025 */;
 
 require = fn;
 function getFriendlyDurationString(arg0) {

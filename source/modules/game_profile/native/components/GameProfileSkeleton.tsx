@@ -1,14 +1,14 @@
-// Module ID: 8860
-// Function ID: 8861
+// Module ID: 8863
+// Function ID: 8864
 // Name: GameProfileSkeleton
-// Dependencies: [19, 17, 4628, 21, 4636, 576, 504, 4373, 4637, 2]
+// Dependencies: [19, 17, 4631, 21, 4639, 576, 504, 4376, 4640, 2]
 // Exports: GameProfileSkeletonButton, GameProfileSkeletonContainer
 
-// Module 8860 (GameProfileSkeleton)
+// Module 8863 (GameProfileSkeleton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
 class GameProfileSkeletonPlaceholder {
@@ -23,7 +23,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED }, button: null, buttonSm: null, buttonMd: null };
 let obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
@@ -62,9 +62,9 @@ export const GameProfileSkeletonContainer = function GameProfileSkeletonContaine
       const result = set(0.1);
     } else {
       const result1 = set(0.05);
-      const tmpResult = tmp(4373);
-      const tmpResult3 = tmp(4373);
-      const result2 = obj2.set(tmpResult.withDelay(num, tmpResult3.withRepeat(tmp(4637).withTiming(0.1, { duration: 650 }), -1, true)));
+      const tmpResult = tmp(4376);
+      const tmpResult3 = tmp(4376);
+      const result2 = obj2.set(tmpResult.withDelay(num, tmpResult3.withRepeat(tmp(4640).withTiming(0.1, { duration: 650 }), -1, true)));
       return () => num(sharedValue[7]).cancelAnimation(closure_1_2);
     }
     obj2 = sharedValue;

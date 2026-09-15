@@ -1,13 +1,9 @@
 // Module ID: 4932
 // Function ID: 4933
-// Dependencies: []
+// Dependencies: [1290]
 
 // Module 4932
+import _mod1290 from "module_1290" /* 1290 */;
 
-export default function isPropertyKey(str) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    tmp = typeof str === "symbol";
-  }
-  return tmp;
-};
+
+export default _mod1290.setPrototypeOf || null;

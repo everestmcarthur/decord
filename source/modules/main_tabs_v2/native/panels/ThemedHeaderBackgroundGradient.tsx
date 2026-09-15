@@ -1,21 +1,21 @@
-// Module ID: 16625
-// Function ID: 16626
+// Module ID: 16638
+// Function ID: 16639
 // Name: ThemedHeaderBackgroundGradient
-// Dependencies: [19, 17, 21, 4636, 576, 1611, 4338, 1091, 5068, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 1612, 4341, 1092, 5071, 2]
 
-// Module 16625 (ThemedHeaderBackgroundGradient)
+// Module 16638 (ThemedHeaderBackgroundGradient)
 import nativeDefault from "native" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useToken from "useToken" /* 4338 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import useToken from "useToken" /* 4341 */;
 import noop from "module_19" /* 19 */;
 
-const LinearGradientDefault = tmp4(5068);
+const LinearGradientDefault = tmp4(5071);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, top: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");

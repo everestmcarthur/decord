@@ -1,21 +1,21 @@
-// Module ID: 7868
-// Function ID: 7869
+// Module ID: 7871
+// Function ID: 7872
 // Name: ArchivedThreadsStore
-// Dependencies: [32, 1961, 1957, 4651, 4277, 1966, 7869, 12, 1968, 11, 7410, 504, 573, 2]
+// Dependencies: [32, 1962, 1958, 4654, 4280, 1967, 7872, 12, 1969, 11, 7414, 504, 573, 2]
 
-// Module 7868 (ArchivedThreadsStore)
+// Module 7871 (ArchivedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 1966 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 1968 */;
-import ForumUtils from "ForumUtils" /* 7410 */;
-import tracking_Tracking from "tracking/Tracking" /* 7869 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 1967 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 1969 */;
+import ForumUtils from "ForumUtils" /* 7414 */;
+import tracking_Tracking from "tracking/Tracking" /* 7872 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import ReadStateStore from "ReadStateStore" /* 4651 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import ReadStateStore from "ReadStateStore" /* 4654 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
 
 require = fn;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
@@ -59,7 +59,7 @@ function resortListState(value) {
           if (true !== someResult) {
             return false;
           }
-        } else if (tmp20(1968).ThreadSearchTagSetting.MATCH_ALL === tmp19) {
+        } else if (tmp20(1969).ThreadSearchTagSetting.MATCH_ALL === tmp19) {
           const values = size.values();
           const iter = values[Symbol.iterator]();
           while (iter !== undefined) {
@@ -110,14 +110,14 @@ function resortListState(value) {
     const mapped = sorted.map((id) => id.id);
     const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
-  } else if (sortOrder === sortOrder(1966).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(1967).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(1961).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(1962).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

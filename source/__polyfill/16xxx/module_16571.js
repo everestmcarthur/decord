@@ -1,9 +1,9 @@
 // Module ID: 16571
 // Function ID: 16572
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 16571
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/icymi/native/images", width: 77, height: 95.5, scales: [2, 3], hash: "ebbb7db0461de915440e3bdd6a8249c9", name: "flash", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/icymi/native/images", width: 24.5, height: 24, scales: [2, 3], hash: "684bf0782561b9ed2466dcb8144cf582", name: "emoji-neutral", type: "png" });

@@ -1,9 +1,9 @@
-// Module ID: 1980
-// Function ID: 1981
+// Module ID: 1981
+// Function ID: 1982
 // Name: LibdiscoreStore
-// Dependencies: [3, 504, 573, 1981, 2]
+// Dependencies: [3, 504, 573, 1982, 2]
 
-// Module 1980 (LibdiscoreStore)
+// Module 1981 (LibdiscoreStore)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

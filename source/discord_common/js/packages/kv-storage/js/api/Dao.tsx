@@ -1,11 +1,11 @@
-// Module ID: 1990
-// Function ID: 1991
+// Module ID: 1991
+// Function ID: 1992
 // Name: Dao
-// Dependencies: [1991, 1993, 2]
+// Dependencies: [1992, 1994, 2]
 
-// Module 1990 (Dao)
-import Table from "Table" /* 1991 */;
-import TableId from "TableId" /* 1993 */;
+// Module 1991 (Dao)
+import Table from "Table" /* 1992 */;
+import TableId from "TableId" /* 1994 */;
 import size from "module_2" /* 2 */;
 
 let Dao;

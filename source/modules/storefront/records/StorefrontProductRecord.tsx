@@ -1,11 +1,11 @@
-// Module ID: 7665
-// Function ID: 7666
+// Module ID: 7669
+// Function ID: 7670
 // Name: StorefrontProductRecord
-// Dependencies: [7664, 5592, 2]
+// Dependencies: [7668, 5596, 2]
 
-// Module 7665 (StorefrontProductRecord)
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7664 */;
-import SKURecord from "SKURecord" /* 5592 */;
+// Module 7669 (StorefrontProductRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7668 */;
+import SKURecord from "SKURecord" /* 5596 */;
 
 const prototype = function StorefrontProductRecord(arg0) {
   ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge } = arg0);

@@ -1,14 +1,14 @@
-// Module ID: 4601
-// Function ID: 4602
+// Module ID: 4604
+// Function ID: 4605
 // Name: BrowserManager
-// Dependencies: [17, 560, 1363, 4602, 1093, 4331, 1369, 2]
+// Dependencies: [17, 560, 1364, 4605, 1094, 4334, 1370, 2]
 // Exports: browserManagerCloseBrowser, browserManagerOpenUrl, browserManagerSelectBrowser, getBrowserManagerIsChromeInstalled, getBrowserManagerSelectedBrowser, getIsInAppBrowserOpen, openPlayStoreInlineInstall, subscribeToIsInAppBrowserOpen, useBrowserManagerIsChromeInstalled, useBrowserManagerSelectedBrowser, useBrowserManagerSupportsInAppBrowser, useIsInAppBrowserOpen
 
-// Module 4601 (BrowserManager)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4602 */;
+// Module 4604 (BrowserManager)
+import ConstantsIOS from "ConstantsIOS" /* 1094 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4605 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
@@ -76,11 +76,11 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href, CHROME
     selectedBrowser = state.getState().selectedBrowser;
   }
   if (selectedBrowser !== ConstantsIOS.WebBrowserType.SAFARI) {
-    if (selectedBrowser !== tmp2(1093).WebBrowserType.CHROME) {
-      if (selectedBrowser === tmp2(1093).WebBrowserType.IN_APP) {
-        let tmp2Result = tmp2(1363);
+    if (selectedBrowser !== tmp2(1094).WebBrowserType.CHROME) {
+      if (selectedBrowser === tmp2(1094).WebBrowserType.IN_APP) {
+        let tmp2Result = tmp2(1364);
       }
-      if (tmp2(1093).WebBrowserType.IN_APP === selectedBrowser) {
+      if (tmp2(1094).WebBrowserType.IN_APP === selectedBrowser) {
         if (tmp2Result4.isAndroid()) {
           let openInAppURLResult = NativeBrowserManagerModuleDefault.openInAppURL(href);
         } else {
@@ -127,7 +127,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href, CHROME
             tmp3 = dependencyMap;
           }
         });
-      } else if (tmp2(1093).WebBrowserType.CHROME === selectedBrowser) {
+      } else if (tmp2(1094).WebBrowserType.CHROME === selectedBrowser) {
         if (tmp2Result5.isAndroid()) {
           let openInChromeURLResult = NativeBrowserManagerModuleDefault.openInChromeURL(href);
         } else {
@@ -135,7 +135,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href, CHROME
         }
         return openInChromeURLResult;
       } else {
-        return tmp2(1369).assertNever(selectedBrowser);
+        return tmp2(1370).assertNever(selectedBrowser);
       }
     }
   }
@@ -144,12 +144,12 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href, CHROME
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
   if (obj.isAndroid()) {
-    if (tmp(1093).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4602).BrowserType.SAFARI);
-    } else if (tmp(1093).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4602).BrowserType.IN_APP);
-    } else if (tmp(1093).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4602).BrowserType.CHROME);
+    if (tmp(1094).WebBrowserType.SAFARI === selectedBrowser) {
+      const browser = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4605).BrowserType.SAFARI);
+    } else if (tmp(1094).WebBrowserType.IN_APP === selectedBrowser) {
+      const browser1 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4605).BrowserType.IN_APP);
+    } else if (tmp(1094).WebBrowserType.CHROME === selectedBrowser) {
+      const browser2 = NativeBrowserManagerModuleDefault.selectBrowser(tmp(4605).BrowserType.CHROME);
     }
   } else {
     BrowserManager = NativeModules.BrowserManager;

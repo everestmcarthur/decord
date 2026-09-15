@@ -1,24 +1,24 @@
-// Module ID: 17184
-// Function ID: 17185
+// Module ID: 17222
+// Function ID: 17223
 // Name: useSoundboardSoundLock
-// Dependencies: [19, 1371, 5095, 504, 7447, 4294, 17185, 7952, 7955, 4335, 10199, 1114, 2]
+// Dependencies: [19, 1372, 5098, 504, 7451, 4297, 17223, 7955, 7958, 4338, 10201, 1115, 2]
 // Exports: useSoundboardSoundLock
 
-// Module 17184 (useSoundboardSoundLock)
-import util from "util" /* 1114 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7952 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7955 */;
-import _modDef10199 from "module_10199" /* 10199 */;
-import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17185 */;
+// Module 17222 (useSoundboardSoundLock)
+import util from "util" /* 1115 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7955 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7958 */;
+import _modDef10201 from "module_10201" /* 10201 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17223 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5095).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5098).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
@@ -45,11 +45,11 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
     const obj4 = { isLocked: tmp4, lockedAccessibilityHint: undefined, onLockedPress: tmp8 };
     return obj4;
   } else if (tmp6) {
-    const intl2 = tmp(1114).intl;
-    BARTXV = tmp(1114).t.BARTXV;
+    const intl2 = tmp(1115).intl;
+    BARTXV = tmp(1115).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!sound.available) {
-    let intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t.MDOXJR);
+    let intl = tmp(1115).intl;
+    stringResult = intl.string(tmp(1115).t.MDOXJR);
   }
 };

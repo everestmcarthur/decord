@@ -1,22 +1,22 @@
-// Module ID: 14696
-// Function ID: 14697
+// Module ID: 14706
+// Function ID: 14707
 // Name: EditUserProfileAvatar
-// Dependencies: [19, 4628, 21, 4636, 7265, 7285, 4294, 8276, 8286, 14697, 4603, 14698, 1896, 14699, 14699, 8274, 8283, 504, 4373, 4637, 8373, 5204, 1114, 14700, 1176, 2]
+// Dependencies: [19, 4631, 21, 4639, 7269, 7289, 4297, 8279, 8289, 14707, 4606, 14708, 1897, 14709, 14709, 8277, 8286, 504, 4376, 4640, 8376, 5207, 1115, 14710, 1177, 2]
 // Exports: default
 
-// Module 14696 (EditUserProfileAvatar)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import timing from "timing" /* 4637 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8283 */;
+// Module 14706 (EditUserProfileAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import timing from "timing" /* 4640 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8286 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ editIcon: { position: "absolute", right: -3 } });
 let __initData = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
 let size = fn(2);
@@ -90,7 +90,7 @@ export default function EditUserProfileAvatar(user) {
       showRemoveAvatar: null
     };
     let obj = ActionSheetActionCreatorsDefault;
-    const tmp = asyncRequireImpl(14698, dependencyMap.paths);
+    const tmp = asyncRequireImpl(14708, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp, "Change Avatar", obj2);
   }, items);

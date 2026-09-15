@@ -1,22 +1,22 @@
-// Module ID: 11005
-// Function ID: 11006
+// Module ID: 11009
+// Function ID: 11010
 // Name: ActivityStatus
-// Dependencies: [19, 17, 4676, 4285, 1371, 11006, 1074, 21, 4636, 504, 11007, 11008, 11009, 11010, 11015, 11016, 11022, 11024, 11014, 2]
+// Dependencies: [19, 17, 4679, 4288, 1372, 11010, 1074, 21, 4639, 504, 11011, 11012, 11013, 11014, 11019, 11020, 11026, 11028, 11018, 2]
 // Exports: default
 
-// Module 11005 (ActivityStatus)
+// Module 11009 (ActivityStatus)
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4676 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import PresenceStore from "PresenceStore" /* 4679 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 const View = fn(17).View;
-const DOT_UNICODE = fn(11006).DOT_UNICODE;
+const DOT_UNICODE = fn(11010).DOT_UNICODE;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_13 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
@@ -43,7 +43,7 @@ export default function ActivityStatus(guildId) {
   const items1 = [PresenceStore];
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
   const obj2 = userId(504);
-  const voiceChannel = stateFromStores1(11008)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(11012)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = noop.useMemo(() => {
     let found;
@@ -73,13 +73,13 @@ export default function ActivityStatus(guildId) {
     }
     arr = stateFromStores1;
   }, items2);
-  const tmp6 = stateFromStores1(11007)(userId);
+  const tmp6 = stateFromStores1(11011)(userId);
   let state;
   if (memo != null) {
     state = memo.state;
   }
-  const gameMentionsAsPlainText = userId(11009).useGameMentionsAsPlainText(state);
-  const obj3 = userId(11009);
+  const gameMentionsAsPlainText = userId(11013).useGameMentionsAsPlainText(state);
+  const obj3 = userId(11013);
   const items3 = [RelationshipStore];
   if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
@@ -95,7 +95,7 @@ export default function ActivityStatus(guildId) {
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(11015));
+        found = stateFromStores1.find(tmp5(11019));
       }
       const obj4 = { game: found, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
       const items4 = [tmp.icon, iconStyle];
@@ -104,8 +104,8 @@ export default function ActivityStatus(guildId) {
       obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
       obj4.hideIcon = tmp12;
       obj4.hideText = tmp13;
-      let tmp18Result = closure_10(tmp5(11010), obj4);
-      const tmp5Result = tmp5(11010);
+      let tmp18Result = closure_10(tmp5(11014), obj4);
+      const tmp5Result = tmp5(11014);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -122,7 +122,7 @@ export default function ActivityStatus(guildId) {
         obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
         obj5.hideIcon = tmp12;
         obj5.hideText = tmp13;
-        tmp18Result = closure_10(tmp5(11016), obj5);
+        tmp18Result = closure_10(tmp5(11020), obj5);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
@@ -133,7 +133,7 @@ export default function ActivityStatus(guildId) {
           obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
           obj6.hideIcon = tmp12;
           obj6.hideText = tmp13;
-          tmp18Result = closure_10(tmp5(11022), obj6);
+          tmp18Result = closure_10(tmp5(11026), obj6);
         }
       }
     }
@@ -147,13 +147,13 @@ export default function ActivityStatus(guildId) {
         }
         if (tmp25) {
           const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-          tmp25 = closure_10(tmp5(11024), obj7);
+          tmp25 = closure_10(tmp5(11028), obj7);
         }
         const items7 = [tmp25, ];
         let tmp27 = null != memo.state;
         if (tmp27) {
           const obj8 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, children: gameMentionsAsPlainText };
-          tmp27 = closure_10(tmp5(11014), obj8);
+          tmp27 = closure_10(tmp5(11018), obj8);
         }
         const obj9 = { children: null };
         items7[1] = tmp27;
@@ -170,7 +170,7 @@ export default function ActivityStatus(guildId) {
     }
     if (tmp31) {
       const obj11 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DOT_UNICODE };
-      tmp31 = closure_10(tmp5(11014), obj11);
+      tmp31 = closure_10(tmp5(11018), obj11);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;

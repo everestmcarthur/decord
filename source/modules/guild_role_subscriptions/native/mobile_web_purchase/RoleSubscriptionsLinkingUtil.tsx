@@ -1,9 +1,9 @@
-// Module ID: 7418
-// Function ID: 7419
+// Module ID: 7422
+// Function ID: 7423
 // Name: RoleSubscriptionsLinkingUtil
-// Dependencies: [5, 1074, 1964, 7419, 1896, 3, 2]
+// Dependencies: [5, 1074, 1965, 7423, 1897, 3, 2]
 
-// Module 7418 (RoleSubscriptionsLinkingUtil)
+// Module 7422 (RoleSubscriptionsLinkingUtil)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -288,7 +288,7 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
 };
 const Constants = fn(1074);
 ({ RelativeMarketingURLs: closure_4, Routes: hasOwnProperty } = Constants);
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
 

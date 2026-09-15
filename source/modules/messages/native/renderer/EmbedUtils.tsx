@@ -1,10 +1,10 @@
-// Module ID: 8050
-// Function ID: 8051
+// Module ID: 8053
+// Function ID: 8054
 // Name: renderer/EmbedUtils
 // Dependencies: [17, 2]
 // Exports: getAssetUriForEmbed, shouldPlayVideoInline
 
-// Module 8050 (renderer/EmbedUtils)
+// Module 8053 (renderer/EmbedUtils)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

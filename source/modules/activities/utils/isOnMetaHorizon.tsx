@@ -1,12 +1,12 @@
-// Module ID: 13149
-// Function ID: 13150
+// Module ID: 13154
+// Function ID: 13155
 // Name: isOnMetaHorizon
-// Dependencies: [1920, 1074, 2]
+// Dependencies: [1921, 1074, 2]
 // Exports: default
 
-// Module 13149 (isOnMetaHorizon)
+// Module 13154 (isOnMetaHorizon)
 import Constants from "Constants" /* 1074 */;
-import Constants2 from "Constants" /* 1920 */;
+import Constants2 from "Constants" /* 1921 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = Constants2.META_PRESENCE_APPLICATION_ID;

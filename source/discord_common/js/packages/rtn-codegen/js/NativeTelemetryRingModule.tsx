@@ -1,9 +1,9 @@
-// Module ID: 1904
-// Function ID: 1905
+// Module ID: 1905
+// Function ID: 1906
 // Name: NativeTelemetryRingModule
 // Dependencies: [17, 2]
 
-// Module 1904 (NativeTelemetryRingModule)
+// Module 1905 (NativeTelemetryRingModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

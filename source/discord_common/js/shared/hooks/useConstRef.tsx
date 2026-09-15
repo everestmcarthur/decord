@@ -1,10 +1,10 @@
-// Module ID: 7799
-// Function ID: 7800
+// Module ID: 7802
+// Function ID: 7803
 // Name: useConstRef
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 7799 (useConstRef)
+// Module 7802 (useConstRef)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

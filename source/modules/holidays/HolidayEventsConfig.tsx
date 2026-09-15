@@ -1,13 +1,13 @@
-// Module ID: 17496
-// Function ID: 17497
+// Module ID: 17534
+// Function ID: 17535
 // Name: HolidayEventsConfig
-// Dependencies: [10034, 17497, 1114, 17498, 17499, 1943, 2]
+// Dependencies: [10036, 17535, 1115, 17536, 17537, 1944, 2]
 
-// Module 17496 (HolidayEventsConfig)
-import util from "util" /* 1114 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17497 */;
-import _modDef17498 from "module_17498" /* 17498 */;
-import _modDef17499 from "module_17499" /* 17499 */;
+// Module 17534 (HolidayEventsConfig)
+import util from "util" /* 1115 */;
+import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17535 */;
+import _modDef17536 from "module_17536" /* 17536 */;
+import _modDef17537 from "module_17537" /* 17537 */;
 
 require = fn;
 const obj = {
@@ -21,10 +21,10 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(10034).Soundpacks.HALLOWEEN,
-  soundpackLabel: fn(1114).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef17498, webmLight: _modDef17499 },
-  coachmarkDismissibleContent: fn(1943).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025,
+  soundpack: fn(10036).Soundpacks.HALLOWEEN,
+  soundpackLabel: fn(1115).t["+LasFV"],
+  appSpinnerSources: { webmDark: _modDef17536, webmLight: _modDef17537 },
+  coachmarkDismissibleContent: fn(1944).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025,
   coachmarkBackgroundColor: "#1170ed",
   getLoadingTips() {
     const intl = util.intl;

@@ -1,13 +1,13 @@
-// Module ID: 6034
-// Function ID: 6035
+// Module ID: 6038
+// Function ID: 6039
 // Name: DoorwaySpotIllustration
-// Dependencies: [21, 5668, 6035, 2]
+// Dependencies: [21, 5672, 6039, 2]
 // Exports: DoorwaySpotIllustration
 
-// Module 6034 (DoorwaySpotIllustration)
+// Module 6038 (DoorwaySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6035 from "module_6035" /* 6035 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6039 from "module_6039" /* 6039 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DoorwaySpotIllustration = function DoorwaySpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6035 };
+  const obj2 = { uri: _modDef6039 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

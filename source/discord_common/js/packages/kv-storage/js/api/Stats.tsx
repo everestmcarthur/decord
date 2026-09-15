@@ -1,10 +1,10 @@
-// Module ID: 2002
-// Function ID: 2003
+// Module ID: 2003
+// Function ID: 2004
 // Name: api/Stats
-// Dependencies: [1995, 2]
+// Dependencies: [1996, 2]
 
-// Module 2002 (api/Stats)
-import Host2 from "Host" /* 1995 */;
+// Module 2003 (api/Stats)
+import Host2 from "Host" /* 1996 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Stats.tsx");

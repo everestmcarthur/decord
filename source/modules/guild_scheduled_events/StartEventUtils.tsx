@@ -1,13 +1,13 @@
-// Module ID: 9941
-// Function ID: 9942
+// Module ID: 9943
+// Function ID: 9944
 // Name: StartEventUtils
-// Dependencies: [5, 1961, 1957, 1979, 1963, 1074, 9866, 38, 8524, 9833, 2]
+// Dependencies: [5, 1962, 1958, 1980, 1964, 1074, 9868, 38, 8527, 9835, 2]
 // Exports: preStartEventActions, setEventAsActive
 
-// Module 9941 (StartEventUtils)
+// Module 9943 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -244,8 +244,8 @@ let closure_14 = async function _setEventAsActive(arg0, value) {
   closure_130_1 = flag;
   return "PX_16";
 };
-let closure_4 = fn(1961).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(1963);
+let closure_4 = fn(1962).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(1964);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);

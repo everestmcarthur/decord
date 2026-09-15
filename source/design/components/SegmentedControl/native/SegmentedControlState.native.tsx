@@ -1,11 +1,11 @@
-// Module ID: 9922
-// Function ID: 9923
+// Module ID: 9924
+// Function ID: 9925
 // Name: SegmentedControlState
-// Dependencies: [19, 576, 4357, 4373, 4604, 5043, 2]
+// Dependencies: [19, 576, 4360, 4376, 4607, 5046, 2]
 // Exports: useSegmentedControlState
 
-// Module 9922 (SegmentedControlState)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
+// Module 9924 (SegmentedControlState)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

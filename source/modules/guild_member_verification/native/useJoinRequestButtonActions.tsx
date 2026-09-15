@@ -1,16 +1,16 @@
-// Module ID: 12763
-// Function ID: 12764
+// Module ID: 12768
+// Function ID: 12769
 // Name: useJoinRequestButtonActions
-// Dependencies: [5, 32, 19, 1957, 1074, 21, 4335, 1114, 7350, 4603, 5622, 4461, 4596, 576, 12764, 1896, 2]
+// Dependencies: [5, 32, 19, 1958, 1074, 21, 4338, 1115, 7354, 4606, 5626, 4464, 4599, 576, 12769, 1897, 2]
 // Exports: useJoinRequestButtonActions
 
-// Module 12763 (useJoinRequestButtonActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+// Module 12768 (useJoinRequestButtonActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
@@ -226,7 +226,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             const intl = tmp4(tmp44[7]).intl;
             obj10.content = intl.string(tmp4(tmp44[7]).t.WXHcq5);
             obj10.icon = function icon() {
-              return closure_1_8(closure_1_0(4596).CircleCheckIcon, { color: closure_1_1(576).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: closure_1_1(576).colors.STATUS_POSITIVE_TEXT });
+              return closure_1_8(closure_1_0(4599).CircleCheckIcon, { color: closure_1_1(576).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: closure_1_1(576).colors.STATUS_POSITIVE_TEXT });
             };
             tmp42(tmp44[6]).open(obj10);
             c3 = 1;
@@ -269,8 +269,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12764, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(12764, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12769, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(12769, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

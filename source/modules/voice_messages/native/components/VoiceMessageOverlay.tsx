@@ -1,22 +1,22 @@
-// Module ID: 12775
-// Function ID: 12776
+// Module ID: 12780
+// Function ID: 12781
 // Name: VoiceMessageOverlay
-// Dependencies: [32, 19, 17, 4628, 1957, 12090, 12091, 1074, 12092, 21, 4373, 1176, 4632, 12, 8574, 4636, 576, 5522, 504, 4338, 5667, 1114, 4637, 5149, 10378, 12776, 7084, 12537, 5043, 5052, 1109, 12004, 9769, 12391, 12777, 8202, 4595, 12386, 12369, 4581, 10134, 2]
+// Dependencies: [32, 19, 17, 4631, 1958, 12094, 12095, 1074, 12096, 21, 4376, 1177, 4635, 12, 8577, 4639, 576, 5526, 504, 4341, 5671, 1115, 4640, 5152, 10380, 12781, 7088, 12542, 5046, 5055, 1110, 12008, 9771, 12395, 12782, 8205, 4598, 12390, 12373, 4584, 10136, 2]
 
-// Module 12775 (VoiceMessageOverlay)
+// Module 12780 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 576 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import util from "util" /* 1114 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
-import LegacyTokens from "LegacyTokens" /* 5522 */;
-import useRefValueDefault from "useRefValue" /* 5667 */;
-import inlineStyles from "inlineStyles" /* 8574 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+import util from "util" /* 1115 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5055 */;
+import LegacyTokens from "LegacyTokens" /* 5526 */;
+import useRefValueDefault from "useRefValue" /* 5671 */;
+import inlineStyles from "inlineStyles" /* 8577 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 import apply from "module_12" /* 12 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
@@ -235,20 +235,20 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12090).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12091).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12094).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12095).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12092).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12096).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1176).Icon);
+let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1177).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4632).Text);
+let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4635).Text);
 let closure_18 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c19 = 68;
 let c20 = 56;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { innerContainer: { flexDirection: "row", alignItems: "flex-end", paddingTop: 8, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL, paddingBottom: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM }, contentContainer: { position: "absolute", bottom: 0, width: "100%", alignItems: "center", overflow: "hidden" }, contentContainerFloating: { justifyContent: "flex-end", overflow: "visible" }, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
   const size = { width: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
@@ -412,9 +412,9 @@ let closure_44 = noop.memo((channelId) => {
       const result = ref.set(timing.withTiming(1, obj2));
       const _performance = performance;
       if (performance.now() - _undefined.current < 500) {
-        const obj3 = { easing: tmp2(4373).Easing.quad, duration: 250 };
-        const result1 = sharedValue.set(tmp2(4637).withTiming(1, obj3));
-        const tmp2Result = tmp2(4637);
+        const obj3 = { easing: tmp2(4376).Easing.quad, duration: 250 };
+        const result1 = sharedValue.set(tmp2(4640).withTiming(1, obj3));
+        const tmp2Result = tmp2(4640);
       }
     }
   }, items2);

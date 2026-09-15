@@ -1,14 +1,14 @@
-// Module ID: 12075
-// Function ID: 12076
+// Module ID: 12079
+// Function ID: 12080
 // Name: joinOrStartActivityInChannel
-// Dependencies: [5, 1956, 1957, 2011, 9665, 9634, 9644, 2]
+// Dependencies: [5, 1957, 1958, 2012, 9667, 9636, 9646, 2]
 // Exports: joinOrStartActivityInChannel
 
-// Module 12075 (joinOrStartActivityInChannel)
+// Module 12079 (joinOrStartActivityInChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 const require = fn;
 let closure_7 = async function _joinOrStartActivityInChannel(arg0, value) {

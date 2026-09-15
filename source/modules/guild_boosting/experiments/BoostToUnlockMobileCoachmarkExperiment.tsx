@@ -1,10 +1,10 @@
-// Module ID: 12632
-// Function ID: 12633
+// Module ID: 12637
+// Function ID: 12638
 // Name: BoostToUnlockMobileCoachmarkExperiment
-// Dependencies: [1434, 2]
+// Dependencies: [1435, 2]
 
-// Module 12632 (BoostToUnlockMobileCoachmarkExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
+// Module 12637 (BoostToUnlockMobileCoachmarkExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");

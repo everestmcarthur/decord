@@ -1,12 +1,12 @@
-// Module ID: 16710
-// Function ID: 16711
+// Module ID: 16733
+// Function ID: 16734
 // Name: vibegrationsMessageAuthors
-// Dependencies: [1371, 8298, 2]
+// Dependencies: [1372, 8301, 2]
 // Exports: requestMessageAuthor, resolveMessageAuthor
 
-// Module 16710 (vibegrationsMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 8298 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 16733 (vibegrationsMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8301 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const set = new Set();
 const map = new Map();

@@ -1,11 +1,11 @@
-// Module ID: 7056
-// Function ID: 7057
+// Module ID: 7060
+// Function ID: 7061
 // Name: useWithPostLoginRouting
-// Dependencies: [5, 32, 19, 502, 1074, 504, 1114, 7057, 6694, 2]
+// Dependencies: [5, 32, 19, 502, 1074, 504, 1115, 7061, 6698, 2]
 // Exports: default
 
-// Module 7056 (useWithPostLoginRouting)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
+// Module 7060 (useWithPostLoginRouting)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

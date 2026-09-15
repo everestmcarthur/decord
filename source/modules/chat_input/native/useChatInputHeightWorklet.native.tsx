@@ -1,12 +1,12 @@
-// Module ID: 12160
-// Function ID: 12161
+// Module ID: 12164
+// Function ID: 12165
 // Name: useChatInputHeightWorklet
-// Dependencies: [19, 1363, 4373, 12161, 12162, 12163, 2]
+// Dependencies: [19, 1364, 4376, 12165, 12166, 12167, 2]
 // Exports: default, getIsChatInputHeightWorkletEnabled
 
-// Module 12160 (useChatInputHeightWorklet)
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import useChatInputMaxHeight from "useChatInputMaxHeight" /* 12161 */;
+// Module 12164 (useChatInputHeightWorklet)
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import useChatInputMaxHeight from "useChatInputMaxHeight" /* 12165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

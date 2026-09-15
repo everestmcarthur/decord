@@ -1,11 +1,11 @@
-// Module ID: 11332
-// Function ID: 11333
+// Module ID: 11336
+// Function ID: 11337
 // Name: BadgeManagementExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 // Exports: useIsBadgeManagementEnabled
 
-// Module 11332 (BadgeManagementExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11336 (BadgeManagementExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-badge-management", kind: "user", defaultConfig: { enabled: false, tenureBadgeHideable: false }, variations: null };

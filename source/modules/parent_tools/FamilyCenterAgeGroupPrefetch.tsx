@@ -1,27 +1,22 @@
-// Module ID: 15571
-// Function ID: 15572
+// Module ID: 15581
+// Function ID: 15582
 // Name: FamilyCenterAgeGroupPrefetch
-// Dependencies: [7640, 7642, 2]
-// Exports: prefetchFamilyCenterAgeGroupWhen
+// Dependencies: [7644, 7646, 2]
+// Exports: prefetchFamilyCenterAgeGroup
 
-// Module 15571 (FamilyCenterAgeGroupPrefetch)
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7642 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+// Module 15581 (FamilyCenterAgeGroupPrefetch)
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
 
-export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled) {
-  let tmp = isFamilyCenterV3Enabled;
-  if (isFamilyCenterV3Enabled) {
-    tmp = null == FamilyCenterStore.getAgeGroup();
-  }
-  if (tmp) {
-    if (!FamilyCenterStore.isLoading()) {
+export const prefetchFamilyCenterAgeGroup = function prefetchFamilyCenterAgeGroup() {
+  if (null == FamilyCenterStore.getAgeGroup()) {
+    if (!obj.isLoading()) {
       if (obj.canRefetch()) {
         FamilyCenterActionCreatorsDefault.initialPageLoad();
       }
     }
-    obj = FamilyCenterStore;
   }
 };

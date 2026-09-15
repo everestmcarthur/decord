@@ -1,11 +1,11 @@
-// Module ID: 17539
-// Function ID: 17540
+// Module ID: 17577
+// Function ID: 17578
 // Name: MessageQueueManager
-// Dependencies: [7221, 7936, 2]
+// Dependencies: [7225, 7939, 2]
 
-// Module 17539 (MessageQueueManager)
-import MessageQueueDefault from "MessageQueue" /* 7936 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+// Module 17577 (MessageQueueManager)
+import MessageQueueDefault from "MessageQueue" /* 7939 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 class MessageQueueManager extends tmp2 {
   constructor() {

@@ -1,17 +1,17 @@
-// Module ID: 8150
-// Function ID: 8151
+// Module ID: 8153
+// Function ID: 8154
 // Name: JoinRequestNotificationSystemMessage
-// Dependencies: [5623, 4459, 1979, 1371, 1074, 1114, 11, 8068, 2]
+// Dependencies: [5627, 4462, 1980, 1372, 1074, 1115, 11, 8071, 2]
 // Exports: createJoinRequestNotificationSystemMessage
 
-// Module 8150 (JoinRequestNotificationSystemMessage)
+// Module 8153 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1114 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5623 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
+import util from "util" /* 1115 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5627 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const MessageTypes = fn(1074).MessageTypes;

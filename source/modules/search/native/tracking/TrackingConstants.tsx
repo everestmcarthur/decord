@@ -1,10 +1,10 @@
-// Module ID: 7981
-// Function ID: 7982
+// Module ID: 7984
+// Function ID: 7985
 // Name: TrackingConstants
-// Dependencies: [7982, 2]
+// Dependencies: [7985, 2]
 
-// Module 7981 (TrackingConstants)
-import SearchConstants from "SearchConstants" /* 7982 */;
+// Module 7984 (TrackingConstants)
+import SearchConstants from "SearchConstants" /* 7985 */;
 import size from "module_2" /* 2 */;
 
 ({ SearchHistoryItemTypes, SearchTabs } = SearchConstants);

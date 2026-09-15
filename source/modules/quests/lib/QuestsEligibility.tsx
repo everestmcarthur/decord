@@ -1,11 +1,11 @@
-// Module ID: 11618
-// Function ID: 11619
+// Module ID: 11622
+// Function ID: 11623
 // Name: QuestsEligibility
-// Dependencies: [1608, 2]
+// Dependencies: [1609, 2]
 // Exports: getIsEligibleForQuests
 
-// Module 11618 (QuestsEligibility)
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+// Module 11622 (QuestsEligibility)
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");

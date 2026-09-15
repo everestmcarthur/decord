@@ -1,19 +1,19 @@
-// Module ID: 10793
-// Function ID: 10794
+// Module ID: 10797
+// Function ID: 10798
 // Name: PremiumGiftPlanSelect
-// Dependencies: [32, 19, 17, 8309, 10794, 1373, 1074, 21, 4636, 576, 672, 1483, 1611, 1477, 10828, 5043, 5711, 504, 10874, 10872, 8301, 10791, 10876, 10879, 8006, 4373, 1176, 4637, 10885, 7285, 10886, 10920, 9611, 1114, 5761, 5668, 11174, 5068, 5763, 4632, 2]
+// Dependencies: [32, 19, 17, 8312, 10798, 1374, 1074, 21, 4639, 576, 672, 1484, 1612, 1478, 10832, 5046, 5715, 504, 10878, 10876, 8304, 10795, 10880, 10883, 8009, 4376, 1177, 4640, 10889, 7289, 10890, 10924, 9613, 1115, 5765, 5672, 11178, 5071, 5767, 4635, 2]
 // Exports: default
 
-// Module 10793 (PremiumGiftPlanSelect)
+// Module 10797 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import native from "native" /* 1176 */;
-import timing from "timing" /* 4637 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10879 */;
+import native from "native" /* 1177 */;
+import timing from "timing" /* 4640 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8312 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,9 +22,9 @@ const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [, ];
-({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1373).PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1374).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };

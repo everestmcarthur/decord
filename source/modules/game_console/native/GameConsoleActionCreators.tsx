@@ -1,11 +1,11 @@
-// Module ID: 9585
-// Function ID: 9586
+// Module ID: 9587
+// Function ID: 9588
 // Name: game_console/GameConsoleActionCreators
-// Dependencies: [5, 9578, 4980, 1114, 2]
+// Dependencies: [5, 9580, 4983, 1115, 2]
 // Exports: transferToPlaystationWithAlert
 
-// Module 9585 (game_console/GameConsoleActionCreators)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9578 */;
+// Module 9587 (game_console/GameConsoleActionCreators)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9580 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

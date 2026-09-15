@@ -1,13 +1,13 @@
-// Module ID: 1901
-// Function ID: 1902
+// Module ID: 1902
+// Function ID: 1903
 // Name: BaseTelemetryExportChannel
-// Dependencies: [5, 1902, 3, 510, 2]
+// Dependencies: [5, 1903, 3, 510, 2]
 
-// Module 1901 (BaseTelemetryExportChannel)
+// Module 1902 (BaseTelemetryExportChannel)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1902 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1903 */;
 
 require = fn;
 class BaseTelemetryExportChannel extends tmp2 {

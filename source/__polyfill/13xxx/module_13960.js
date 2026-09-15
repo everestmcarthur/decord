@@ -1,9 +1,9 @@
 // Module ID: 13960
 // Function ID: 13961
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 13960
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/build_overrides/native/images", width: 60, height: 46, scales: [2, 3], hash: "cca9165d24749fb9aec98d0d9c04f23f", name: "code-illustration-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 108, scales: [1, 2, 3], hash: "3ec4fb1a4fcdb736c4c87e7591f26daf", name: "img_remote_auth_succeeded", type: "png" });

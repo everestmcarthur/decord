@@ -1,14 +1,14 @@
-// Module ID: 13097
-// Function ID: 13098
+// Module ID: 13102
+// Function ID: 13103
 // Name: MediaViewerOverlayButtonFavoriteGIF
-// Dependencies: [19, 21, 10499, 10495, 4335, 1114, 10510, 10497, 1220, 8383, 8487, 10364, 576, 10370, 2]
+// Dependencies: [19, 21, 10502, 10498, 4338, 1115, 10513, 10500, 1221, 8386, 8490, 10366, 576, 10372, 2]
 
-// Module 13097 (MediaViewerOverlayButtonFavoriteGIF)
-import util from "util" /* 1114 */;
-import frecency_user_settings from "frecency_user_settings" /* 1220 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10495 */;
-import GifIcon from "GifIcon" /* 10510 */;
+// Module 13102 (MediaViewerOverlayButtonFavoriteGIF)
+import util from "util" /* 1115 */;
+import frecency_user_settings from "frecency_user_settings" /* 1221 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10498 */;
+import GifIcon from "GifIcon" /* 10513 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,8 +32,8 @@ export default noop.memo(function GIFFavButton(source) {
   items[7] = uri;
   const callback = noop.useCallback(() => {
     if (isFavoriteGIF) {
-      tmp(10495).removeFavoriteGIF(uri);
-      const tmpResult = tmp(10495);
+      tmp(10498).removeFavoriteGIF(uri);
+      const tmpResult = tmp(10498);
       const obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
       const intl2 = util.intl;
       obj.content = intl2.string(util.t.in1rga);
@@ -41,9 +41,9 @@ export default noop.memo(function GIFFavButton(source) {
       ToastActionCreatorsDefault.open(obj);
     } else {
       ({ embedProviderName: obj2.providerName, thumbnail: obj2.thumbnail } = source);
-      const gIFThumbnailForFavorite = tmp(10497).getGIFThumbnailForFavorite({ providerName: null, thumbnail: null });
+      const gIFThumbnailForFavorite = tmp(10500).getGIFThumbnailForFavorite({ providerName: null, thumbnail: null });
       const obj6 = { providerName: null, thumbnail: null };
-      const tmpResult2 = tmp(10497);
+      const tmpResult2 = tmp(10500);
       const size = { url: uri, src: source.uri, gifSrc: gIFThumbnailForFavorite, width: null, height: null, format: null };
       ({ width: obj4.width, height: obj4.height } = source);
       const GIFType = frecency_user_settings.GIFType;

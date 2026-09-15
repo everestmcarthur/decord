@@ -1,17 +1,17 @@
-// Module ID: 1949
-// Function ID: 1950
+// Module ID: 1950
+// Function ID: 1951
 // Name: DismissibleContentShownStateStore
-// Dependencies: [1950, 1951, 1074, 1242, 1948, 1952, 1247, 504, 1953, 573, 2]
+// Dependencies: [1951, 1952, 1074, 1243, 1949, 1953, 1248, 504, 1954, 573, 2]
 // Exports: addCandidateContent, default, getCurrentFatigableWinner, getCurrentlyShownCounts, getLastShownDismissibleContent, isAnyContentShown, isContentShown, isInCooldown, isPostConnectionOpen, isStateInCooldown, removeCandidateContent, reset, resetFatigueCooldown, useIsAnyContentShown, useIsContentShown
 
-// Module 1949 (DismissibleContentShownStateStore)
+// Module 1950 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
-import isActionRequiredDefault from "isActionRequired" /* 1953 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1949 */;
+import isActionRequiredDefault from "isActionRequired" /* 1954 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1951 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
 
 const require = globalThis.__r;
 
@@ -167,7 +167,7 @@ function withUpdateWinner(candidates, arg1) {
   }
 }
 const NOOP = fn(1074).NOOP;
-const identity = fn(1242);
+const identity = fn(1243);
 let closure_6 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
@@ -177,7 +177,7 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
   return obj;
 });
 let closure_7 = false;
-const batchInvocationManager = new fn(1952).BatchInvocationManager((arg0) => {
+const batchInvocationManager = new fn(1953).BatchInvocationManager((arg0) => {
   const resolved = Promise.resolve(arg0);
   return resolved.then((result) => {
     closure_0 = result;

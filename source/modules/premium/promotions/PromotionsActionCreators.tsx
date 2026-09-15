@@ -1,19 +1,19 @@
-// Module ID: 13506
-// Function ID: 13507
+// Module ID: 13511
+// Function ID: 13512
 // Name: PromotionsActionCreators
-// Dependencies: [5, 2025, 10795, 1371, 10794, 1373, 1074, 573, 13507, 1270, 7503, 1940, 1216, 13508, 2]
+// Dependencies: [5, 2026, 10799, 1372, 10798, 1374, 1074, 573, 13512, 1271, 7507, 1941, 1217, 13513, 2]
 // Exports: addClaimedOutboundPromotionCode, clearActivePromotions, dismissOutboundPromotionNotice, fetchActiveBogoPromotion, fetchClaimedOutboundPromotionCodes, maybeFetchActivePromotions
 
-// Module 13506 (PromotionsActionCreators)
+// Module 13511 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import wrappers from "wrappers" /* 1216 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13507 */;
+import wrappers from "wrappers" /* 1217 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13512 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import PromotionRecord from "PromotionRecord" /* 10795 */;
-import UserStore from "UserStore" /* 1371 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import PromotionRecord from "PromotionRecord" /* 10799 */;
+import UserStore from "UserStore" /* 1372 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -87,11 +87,11 @@ function dismissOutboundPromotionNotice() {
   DispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
-    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(1940).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(1941).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("userContent", async (arg0) => {
       const StringValue = wrappers.StringValue;
       arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
-    }, lastDismissedOutboundPromotionStartDate(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, lastDismissedOutboundPromotionStartDate(1941).UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function fetchActiveBogoPromotion() {
@@ -212,7 +212,7 @@ let closure_13 = async function _fetchClaimedOutboundPromotionCodes() {
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
   DispatcherDefault.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode });
 }
-let closure_8 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_8 = fn(1374).PREMIUM_SUBSCRIPTION_APPLICATION;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionsActionCreators.tsx");

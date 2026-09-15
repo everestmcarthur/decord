@@ -1,10 +1,10 @@
-// Module ID: 8365
-// Function ID: 8366
+// Module ID: 8368
+// Function ID: 8369
 // Name: useGetIsMounted
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 8365 (useGetIsMounted)
+// Module 8368 (useGetIsMounted)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

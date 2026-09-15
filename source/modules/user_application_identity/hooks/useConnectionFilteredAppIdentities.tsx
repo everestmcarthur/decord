@@ -1,16 +1,16 @@
-// Module ID: 13219
-// Function ID: 13220
+// Module ID: 13224
+// Function ID: 13225
 // Name: useConnectionFilteredAppIdentities
-// Dependencies: [19, 1921, 9153, 2]
+// Dependencies: [19, 1922, 9156, 2]
 // Exports: default
 
-// Module 13219 (useConnectionFilteredAppIdentities)
+// Module 13224 (useConnectionFilteredAppIdentities)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(1921).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
+let closure_3 = fn(1922).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");
 

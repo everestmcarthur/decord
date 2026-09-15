@@ -1,9 +1,9 @@
 // Module ID: 6775
 // Function ID: 6776
-// Dependencies: [19]
+// Dependencies: [6776]
 
 // Module 6775
-import noop from "module_19" /* 19 */;
+import _modDef6776 from "module_6776" /* 6776 */;
 
 
-export default noop.createContext(false);
+export default _modDef6776;

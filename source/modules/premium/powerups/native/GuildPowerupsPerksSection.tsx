@@ -1,20 +1,20 @@
-// Module ID: 12699
-// Function ID: 12700
+// Module ID: 12704
+// Function ID: 12705
 // Name: GuildPowerupsPerksSection
-// Dependencies: [17, 21, 4636, 576, 12682, 1114, 2428, 12700, 12702, 12704, 2]
+// Dependencies: [17, 21, 4639, 576, 12687, 1115, 2429, 12705, 12707, 12709, 2]
 // Exports: default
 
-// Module 12699 (GuildPowerupsPerksSection)
+// Module 12704 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import _modDef2428 from "module_2428" /* 2428 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12682 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12700 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12702 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12704 */;
+import util from "util" /* 1115 */;
+import _modDef2429 from "module_2429" /* 2429 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12687 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12705 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12707 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12709 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4636 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -29,9 +29,9 @@ export default function GuildPowerupPerksSection(arg0) {
   let obj2 = { title: null, description: null };
   const tmp = closure_7();
   const intl = util.intl;
-  obj2.title = intl.string(_modDef2428.TV3Vm8);
+  obj2.title = intl.string(_modDef2429.TV3Vm8);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2428.STx9hp);
+  obj2.description = intl2.string(_modDef2429.STx9hp);
   const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2), ];
   items[1] = closure_4(View, {
     style: tmp.container,

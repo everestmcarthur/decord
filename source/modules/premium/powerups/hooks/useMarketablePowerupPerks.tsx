@@ -1,19 +1,19 @@
-// Module ID: 13665
-// Function ID: 13666
+// Module ID: 13670
+// Function ID: 13671
 // Name: useMarketablePowerupPerks
-// Dependencies: [19, 4525, 4526, 4529, 504, 12706, 2]
+// Dependencies: [19, 4528, 4529, 4532, 504, 12711, 2]
 // Exports: default
 
-// Module 13665 (useMarketablePowerupPerks)
+// Module 13670 (useMarketablePowerupPerks)
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4526);
+const GuildPowerupsConstants = fn(4529);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
-let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4529).VANITY_URL_POWERUP_SKU_ID];
+let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4532).VANITY_URL_POWERUP_SKU_ID];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
@@ -32,7 +32,7 @@ export default function useMarketablePowerupPerks(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12706)(arg0);
+  let tmp2 = stateFromStores(12711)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => {

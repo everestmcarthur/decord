@@ -1,12 +1,12 @@
-// Module ID: 11884
-// Function ID: 11885
+// Module ID: 11888
+// Function ID: 11889
 // Name: isInviteActive
-// Dependencies: [1090, 11, 2]
+// Dependencies: [1091, 11, 2]
 // Exports: default
 
-// Module 11884 (isInviteActive)
+// Module 11888 (isInviteActive)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1091 */;
 
 const result = 2 * DurationsDefault.Millis.HOUR;
 let c2 = result;

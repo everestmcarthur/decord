@@ -1,26 +1,26 @@
-// Module ID: 11491
-// Function ID: 11492
+// Module ID: 11495
+// Function ID: 11496
 // Name: useChannelSafeAreaBottomStyles
-// Dependencies: [19, 5358, 4276, 1957, 1908, 4659, 1074, 1964, 4636, 576, 11492, 5088, 4504, 563, 1609, 1363, 4338, 7975, 2]
+// Dependencies: [19, 5362, 4279, 1958, 1909, 4662, 1074, 1965, 4639, 576, 11496, 5091, 4507, 563, 1610, 1364, 4341, 7978, 2]
 // Exports: default
 
-// Module 11491 (useChannelSafeAreaBottomStyles)
+// Module 11495 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 576 */;
-import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
-import LurkingStore from "LurkingStore" /* 4276 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
+import LurkingStore from "LurkingStore" /* 4279 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const InputModes = fn(1074).InputModes;
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;
@@ -62,19 +62,19 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
                 if (tmp10Result.isAndroid()) {
                   let VOICE = constants.EXPRESSION_PICKER;
                 }
-                tmp10Result = tmp10(1363);
+                tmp10Result = tmp10(1364);
               }
               if (noop === KeyboardTypes.KeyboardTypes.MEDIA) {
                 if (tmp10Result3.isAndroid()) {
                   VOICE = constants.MEDIA;
                 }
-                tmp10Result3 = tmp10(1363);
+                tmp10Result3 = tmp10(1364);
               }
               if (noop === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
                 if (tmp10Result4.isAndroid()) {
                   VOICE = constants.APPS;
                 }
-                tmp10Result4 = tmp10(1363);
+                tmp10Result4 = tmp10(1364);
               }
               let isDirectoryResult;
               if (channel != null) {

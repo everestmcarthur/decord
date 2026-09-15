@@ -1,16 +1,16 @@
-// Module ID: 11822
-// Function ID: 11823
+// Module ID: 11826
+// Function ID: 11827
 // Name: useShareChatInputActions
-// Dependencies: [32, 19, 1374, 11256, 2]
+// Dependencies: [32, 19, 1375, 11260, 2]
 // Exports: useShareChatInputActions
 
-// Module 11822 (useShareChatInputActions)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
+// Module 11826 (useShareChatInputActions)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiIntention = fn(1374).EmojiIntention;
+const EmojiIntention = fn(1375).EmojiIntention;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
 

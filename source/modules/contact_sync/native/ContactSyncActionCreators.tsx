@@ -1,11 +1,11 @@
-// Module ID: 12814
-// Function ID: 12815
+// Module ID: 12819
+// Function ID: 12820
 // Name: ContactSyncActionCreators
-// Dependencies: [5, 5362, 1074, 1935, 1384, 1240, 12810, 5487, 2]
+// Dependencies: [5, 5366, 1074, 1936, 1385, 1241, 12815, 5491, 2]
 
-// Module 12814 (ContactSyncActionCreators)
+// Module 12819 (ContactSyncActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5366 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ let closure_8 = async function _updateDiscoverability(arg0, value) {
           closure_131_0 = phone;
           const email = closure_0.email;
           closure_131_1 = email;
-          const FriendDiscoverySettings2 = React(1935).FriendDiscoverySettings;
+          const FriendDiscoverySettings2 = React(1936).FriendDiscoverySettings;
           const setting = FriendDiscoverySettings2.getSetting();
           closure_131_2 = setting;
           localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
@@ -55,15 +55,15 @@ let closure_8 = async function _updateDiscoverability(arg0, value) {
           closure_131_3 = name;
           let setFlagResult = setting;
           if (null != phone) {
-            setFlagResult = React(1384).setFlag(setting, constants.FIND_BY_PHONE, phone);
-            const obj5 = React(1384);
+            setFlagResult = React(1385).setFlag(setting, constants.FIND_BY_PHONE, phone);
+            const obj5 = React(1385);
           }
           let setFlagResult1 = setFlagResult;
           if (null != email) {
-            setFlagResult1 = React(1384).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
-            const obj6 = React(1384);
+            setFlagResult1 = React(1385).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
+            const obj6 = React(1385);
           }
-          const FriendDiscoverySettings = React(1935).FriendDiscoverySettings;
+          const FriendDiscoverySettings = React(1936).FriendDiscoverySettings;
           c5 = 1;
           c6 = 1;
           const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };

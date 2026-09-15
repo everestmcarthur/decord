@@ -1,17 +1,17 @@
-// Module ID: 11719
-// Function ID: 11720
+// Module ID: 11723
+// Function ID: 11724
 // Name: useMemberListAction
-// Dependencies: [32, 19, 17, 1957, 4275, 4285, 1371, 10342, 1074, 21, 4636, 563, 9868, 7152, 11720, 11729, 11730, 1114, 10160, 10161, 4457, 1943, 11732, 11737, 7483, 11738, 1874, 9950, 8718, 2]
+// Dependencies: [32, 19, 17, 1958, 4278, 4288, 1372, 10344, 1074, 21, 4639, 563, 9870, 7156, 11724, 11733, 11734, 1115, 10162, 10163, 4460, 1944, 11736, 11741, 7487, 11742, 1875, 9952, 8721, 2]
 // Exports: default
 
-// Module 11719 (useMemberListAction)
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11720 */;
+// Module 11723 (useMemberListAction)
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
@@ -21,8 +21,8 @@ const Constants = fn(1074);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
 let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
-const createStyles = fn(4636);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10342).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+const createStyles = fn(4639);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10344).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 

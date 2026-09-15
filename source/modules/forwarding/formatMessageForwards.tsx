@@ -1,19 +1,19 @@
-// Module ID: 8058
-// Function ID: 8059
+// Module ID: 8061
+// Function ID: 8062
 // Name: formatMessageForwards
-// Dependencies: [8059, 1957, 1979, 4275, 4285, 1371, 1396, 1114, 4318, 4789, 7405, 2]
+// Dependencies: [8062, 1958, 1980, 4278, 4288, 1372, 1397, 1115, 4321, 4792, 7409, 2]
 // Exports: maybeCreateSingleForwardForMessage
 
-// Module 8058 (formatMessageForwards)
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import DateUtils from "DateUtils" /* 4318 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7405 */;
-import BasicGuildStore from "BasicGuildStore" /* 8059 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 8061 (formatMessageForwards)
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import DateUtils from "DateUtils" /* 4321 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7409 */;
+import BasicGuildStore from "BasicGuildStore" /* 8062 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 class MessageForward {
@@ -77,9 +77,9 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, UserS
           ({ id: obj22.id, icon: obj22.icon } = guild);
           obj8.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
           obj8.timestampLabel = result;
-          const intl3 = tmp3(1114).intl;
+          const intl3 = tmp3(1115).intl;
           const obj10 = { origin: guild.name, timestamp: result };
-          obj8.accessibilityLabel = intl3.formatToPlainString(tmp3(1114).t["+l04BN"], obj10);
+          obj8.accessibilityLabel = intl3.formatToPlainString(tmp3(1115).t["+l04BN"], obj10);
           obj7.footerInfo = obj8;
           const obj9 = { id: null, size: 16, icon: null, canAnimate: false };
         }
@@ -87,12 +87,12 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, UserS
       } else {
         if (obj2.can(channel1.accessPermissions, channel1)) {
           const obj11 = { snapshotIndex, footerInfo: null };
-          const tmp3Result = tmp3(4789);
+          const tmp3Result = tmp3(4792);
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj12 = { originLabel: channelName, timestampLabel: result, accessibilityLabel: null };
-          const intl = tmp3(1114).intl;
+          const intl = tmp3(1115).intl;
           const obj13 = { origin: channelName, timestamp: result };
-          obj12.accessibilityLabel = intl.formatToPlainString(tmp3(1114).t["+l04BN"], obj13);
+          obj12.accessibilityLabel = intl.formatToPlainString(tmp3(1115).t["+l04BN"], obj13);
           obj11.footerInfo = obj12;
           let obj14 = obj11;
         } else {
@@ -124,9 +124,9 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, UserS
       ({ id: obj18.id, icon: obj18.icon } = guild1);
       obj20.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
       obj20.timestampLabel = result;
-      const intl2 = tmp3(1114).intl;
+      const intl2 = tmp3(1115).intl;
       const obj38 = { origin: guild1.name, timestamp: result };
-      obj20.accessibilityLabel = intl2.formatToPlainString(tmp3(1114).t["+l04BN"], obj38);
+      obj20.accessibilityLabel = intl2.formatToPlainString(tmp3(1115).t["+l04BN"], obj38);
       obj19.footerInfo = obj20;
       const obj23 = { id: null, size: 16, icon: null, canAnimate: false };
     }

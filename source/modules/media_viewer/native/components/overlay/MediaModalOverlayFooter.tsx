@@ -1,16 +1,16 @@
-// Module ID: 13102
-// Function ID: 13103
+// Module ID: 13107
+// Function ID: 13108
 // Name: MediaModalOverlayFooter
-// Dependencies: [32, 19, 17, 21, 4636, 576, 4373, 11667, 4637, 1176, 13103, 6756, 4374, 7226, 7257, 13104, 13094, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 4376, 11671, 4640, 1177, 13108, 6760, 4377, 7230, 7261, 13109, 13099, 2]
 // Exports: MediaModalOverlayFooter
 
-// Module 13102 (MediaModalOverlayFooter)
+// Module 13107 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11667 */;
+import native from "native" /* 1177 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11671 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +18,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "w" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(4639);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "Error" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "Array" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {

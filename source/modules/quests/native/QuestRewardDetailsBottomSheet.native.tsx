@@ -1,18 +1,18 @@
-// Module ID: 11899
-// Function ID: 11900
+// Module ID: 11903
+// Function ID: 11904
 // Name: QuestRewardDetailsBottomSheet
-// Dependencies: [19, 17, 1371, 21, 4636, 576, 11897, 4603, 11617, 11424, 7810, 1114, 504, 7253, 5054, 11900, 4632, 2]
+// Dependencies: [19, 17, 1372, 21, 4639, 576, 11901, 4606, 11621, 11428, 7813, 1115, 504, 7257, 5057, 11904, 4635, 2]
 // Exports: default
 
-// Module 11899 (QuestRewardDetailsBottomSheet)
+// Module 11903 (QuestRewardDetailsBottomSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7810 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11424 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
-import QuestUtils from "QuestUtils" /* 11897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7813 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11428 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11621 */;
+import QuestUtils from "QuestUtils" /* 11901 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function QuestRewardDetailsBottomSheet(quest) {
@@ -24,12 +24,12 @@ function QuestRewardDetailsBottomSheet(quest) {
   const memo1 = noop.useMemo(() => {
     const type = QuestRewardUtils.getQuestPrimaryReward(quest).type;
     if (QuestRewardTypes.QuestRewardTypes.COLLECTIBLE === type) {
-      const intl2 = tmp(1114).intl;
-      const t = tmp(1114).t;
+      const intl2 = tmp(1115).intl;
+      const t = tmp(1115).t;
       return intl2.string(memo ? t["66YyBJ"] : t.ABD2CN);
-    } else if (tmp(7810).QuestRewardTypes.FRACTIONAL_PREMIUM === type) {
-      const intl = tmp(1114).intl;
-      return intl.string(tmp(1114).t.maMtqM);
+    } else if (tmp(7813).QuestRewardTypes.FRACTIONAL_PREMIUM === type) {
+      const intl = tmp(1115).intl;
+      return intl.string(tmp(1115).t.maMtqM);
     } else {
       return null;
     }
@@ -38,38 +38,38 @@ function QuestRewardDetailsBottomSheet(quest) {
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(11424).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(11428).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [closure_6(memo(11900), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(11904), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
-  let intl = quest(1114).intl;
-  obj6.children = intl.string(quest(1114).t["jyYgZ+"]);
-  const items4 = [closure_6(quest(4632).Text, obj6), closure_6(quest(4632).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
+  let intl = quest(1115).intl;
+  obj6.children = intl.string(quest(1115).t["jyYgZ+"]);
+  const items4 = [closure_6(quest(4635).Text, obj6), closure_6(quest(4635).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
   obj5.children = items4;
-  items3[1] = closure_7(quest(5054).Stack, obj5);
+  items3[1] = closure_7(quest(5057).Stack, obj5);
   obj4.children = items3;
-  const items5 = [closure_7(quest(5054).Stack, obj4), ];
+  const items5 = [closure_7(quest(5057).Stack, obj4), ];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
     const obj7 = { children: null };
     const obj8 = { style: tmp.separator };
     const items6 = [tmp8(View, obj8), ];
     const obj9 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-    items6[1] = tmp8(tmp4(4632).Text, obj9);
+    items6[1] = tmp8(tmp4(4635).Text, obj9);
     obj7.children = items6;
     tmp9Result = tmp9(closure_8, obj7);
   }
-  const obj2 = quest(11424);
+  const obj2 = quest(11428);
   items5[1] = tmp9Result;
   obj3.children = items5;
-  return closure_6(quest(7253).BottomSheet, { startExpanded: true, children: closure_7(quest(5054).Stack, obj3) });
+  return closure_6(quest(7257).BottomSheet, { startExpanded: true, children: closure_7(quest(5057).Stack, obj3) });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { wrapper: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, rewardDetailsCopy: { flexShrink: 1 }, separator: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
 obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_STRONG };

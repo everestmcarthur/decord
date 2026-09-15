@@ -1,17 +1,17 @@
-// Module ID: 7497
-// Function ID: 7498
+// Module ID: 7501
+// Function ID: 7502
 // Name: EntitlementStore
-// Dependencies: [7498, 7500, 5591, 1074, 1373, 504, 12, 7502, 1077, 573, 2]
+// Dependencies: [7502, 7504, 5595, 1074, 1374, 504, 12, 7506, 1077, 573, 2]
 
-// Module 7497 (EntitlementStore)
+// Module 7501 (EntitlementStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7502 */;
-import EntitlementRecord from "EntitlementRecord" /* 7498 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7500 */;
-import SKUStore from "SKUStore" /* 5591 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7506 */;
+import EntitlementRecord from "EntitlementRecord" /* 7502 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7504 */;
+import SKUStore from "SKUStore" /* 5595 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -51,7 +51,7 @@ function handleEntitlementUpdate(entitlement) {
 }
 const Constants = fn(1074);
 ({ EntitlementSourceTypes: metroRequire, EntitlementTypes: closure_7 } = Constants);
-let closure_8 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_8 = fn(1374).PREMIUM_SUBSCRIPTION_APPLICATION;
 const dependencyMap = {};
 let closure_10 = {};
 const dependencyMap2 = {};

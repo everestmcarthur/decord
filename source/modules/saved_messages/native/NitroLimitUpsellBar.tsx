@@ -1,19 +1,19 @@
-// Module ID: 12351
-// Function ID: 12352
+// Module ID: 12355
+// Function ID: 12356
 // Name: NitroLimitUpsellBar
-// Dependencies: [17, 21, 4636, 576, 8711, 10093, 4632, 1114, 10099, 5056, 2]
+// Dependencies: [17, 21, 4639, 576, 8714, 10095, 4635, 1115, 10101, 5059, 2]
 // Exports: default
 
-// Module 12351 (NitroLimitUpsellBar)
+// Module 12355 (NitroLimitUpsellBar)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import WarningIcon from "WarningIcon" /* 8711 */;
-import _modDef10093 from "module_10093" /* 10093 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10099 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import WarningIcon from "WarningIcon" /* 8714 */;
+import _modDef10095 from "module_10095" /* 10095 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10101 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4636 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
@@ -32,7 +32,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = tmp4(WarningIcon.WarningIcon, obj2);
     let tmp9 = tmp4;
   } else {
-    const obj3 = { source: _modDef10093, style: tmp.icon };
+    const obj3 = { source: _modDef10095, style: tmp.icon };
     tmp4Result = tmp4(React3, obj3);
     tmp9 = tmp4;
   }
@@ -47,10 +47,10 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   if (isAtLimit) {
     let Button = NitroUpsellButtonDefault;
   } else {
-    Button = tmp12(5056).Button;
+    Button = tmp12(5059).Button;
   }
   const obj6 = { size: "sm", text: null, onPress: null, loading: null };
-  const intl2 = tmp12(1114).intl;
+  const intl2 = tmp12(1115).intl;
   obj6.text = intl2.string(util.t["8x0jKT"]);
   obj6.onPress = onPress;
   obj6.loading = loading;

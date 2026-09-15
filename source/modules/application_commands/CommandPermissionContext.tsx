@@ -1,21 +1,21 @@
-// Module ID: 9424
-// Function ID: 9425
+// Module ID: 9427
+// Function ID: 9428
 // Name: CommandPermissionContext
-// Dependencies: [19, 2014, 1961, 1975, 502, 1957, 2021, 1979, 4275, 1371, 1074, 9425, 504, 1086, 1894, 2]
+// Dependencies: [19, 2015, 1962, 1976, 502, 1958, 2022, 1980, 4278, 1372, 1074, 9428, 504, 1086, 1895, 2]
 // Exports: buildPermissionContext, computeCommandContextType, getContextGuildId, usePermissionContext
 
-// Module 9424 (CommandPermissionContext)
+// Module 9427 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import Server from "Server" /* 1894 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9425 */;
+import Server from "Server" /* 1895 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9428 */;
 import noop from "module_19" /* 19 */;
-import ImpersonateStore from "ImpersonateStore" /* 2014 */;
+import ImpersonateStore from "ImpersonateStore" /* 2015 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
@@ -59,8 +59,8 @@ function computePermissions(isPrivate, arg1) {
   obj2.computedPermissions = deserializer.deserialize(0);
   return obj2;
 }
-const ChannelRecordBase = fn(1961).ChannelRecordBase;
-const isGuildNSFW = fn(1975).isGuildNSFW;
+const ChannelRecordBase = fn(1962).ChannelRecordBase;
+const isGuildNSFW = fn(1976).isGuildNSFW;
 const Constants = fn(1074);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);

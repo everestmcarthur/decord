@@ -1,14 +1,14 @@
-// Module ID: 10316
-// Function ID: 10317
+// Module ID: 10318
+// Function ID: 10319
 // Name: DebugUploadManager
-// Dependencies: [5, 1957, 3, 17, 4537, 9239, 10317, 10318, 7, 10319, 10320, 1349, 4501, 10321, 10322, 10323, 10324, 2]
+// Dependencies: [5, 1958, 3, 17, 4540, 9242, 10319, 10320, 7, 10321, 10322, 1350, 4504, 10323, 10324, 10325, 10326, 2]
 // Exports: uploadDebugLogFiles
 
-// Module 10316 (DebugUploadManager)
+// Module 10318 (DebugUploadManager)
 import LoggerDefault from "Logger" /* 3 */;
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = fn;
 let closure_9 = async function _uploadDebugLogFiles(arg0, value) {

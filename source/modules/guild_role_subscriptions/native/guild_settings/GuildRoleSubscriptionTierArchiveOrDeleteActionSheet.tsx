@@ -1,21 +1,21 @@
-// Module ID: 17853
-// Function ID: 17854
+// Module ID: 17891
+// Function ID: 17892
 // Name: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet
-// Dependencies: [19, 17, 21, 4636, 576, 1611, 38, 17854, 7253, 6728, 4632, 1176, 5056, 4603, 1114, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 1612, 38, 17892, 7257, 6732, 4635, 1177, 5059, 4606, 1115, 2]
 // Exports: default
 
-// Module 17853 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 17891 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import BottomSheetModal from "BottomSheetModal" /* 6728 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17854 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import BottomSheetModal from "BottomSheetModal" /* 6732 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17892 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 }, cancel: { alignSelf: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -57,7 +57,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
     children: null
   };
   const obj6 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-  const intl = tmp6(1114).intl;
+  const intl = tmp6(1115).intl;
   obj6.children = intl.string(util.t["ETE/oC"]);
   obj5.children = hasOwnProperty(Text_Text.Text, obj6);
   items[6] = hasOwnProperty(React3, obj5);

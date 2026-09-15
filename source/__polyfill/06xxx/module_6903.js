@@ -1,30 +1,14 @@
 // Module ID: 6903
 // Function ID: 6904
-// Dependencies: [19]
-// Exports: useStableCallback
+// Dependencies: []
+// Exports: clamp
 
 // Module 6903
-import noop from "module_19" /* 19 */;
-
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
-
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, tmp);
-    }
-    return applyResult;
-  }, []);
+const fn = function n(arg0, arg1, arg2) {
+  return Math.min(Math.max(arg1, arg0), arg2);
 };
+fn.__closure = {};
+fn.__workletHash = 4405247003092;
+fn.__initData = { code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}" };
+
+export const clamp = fn;

@@ -1,22 +1,22 @@
-// Module ID: 17482
-// Function ID: 17483
+// Module ID: 17520
+// Function ID: 17521
 // Name: FrecencyUserSettingsManager
-// Dependencies: [5, 9421, 9420, 5540, 5093, 5582, 5590, 1219, 1084, 1348, 1090, 7221, 1940, 1220, 1221, 12, 2]
+// Dependencies: [5, 9424, 9423, 5544, 5096, 5586, 5594, 1220, 1084, 1349, 1091, 7225, 1941, 1221, 1222, 12, 2]
 
-// Module 17482 (FrecencyUserSettingsManager)
-import DurationsDefault from "Durations" /* 1090 */;
-import frecency_user_settings from "frecency_user_settings" /* 1220 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1221 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
+// Module 17520 (FrecencyUserSettingsManager)
+import DurationsDefault from "Durations" /* 1091 */;
+import frecency_user_settings from "frecency_user_settings" /* 1221 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9421 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9420 */;
-import EmojiStore from "EmojiStore" /* 5540 */;
-import SoundboardStore from "SoundboardStore" /* 5093 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 5582 */;
-import FrecencyStore from "FrecencyStore" /* 5590 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9424 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9423 */;
+import EmojiStore from "EmojiStore" /* 5544 */;
+import SoundboardStore from "SoundboardStore" /* 5096 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 5586 */;
+import FrecencyStore from "FrecencyStore" /* 5594 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -145,9 +145,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(5590).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(5594).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1348).FREQUENCY_ITEM_LIMIT;
+const FREQUENCY_ITEM_LIMIT = fn(1349).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

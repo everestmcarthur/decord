@@ -1,14 +1,14 @@
-// Module ID: 17309
-// Function ID: 17310
+// Module ID: 17347
+// Function ID: 17348
 // Name: VoicePanelSoundboardButton
-// Dependencies: [19, 21, 4636, 576, 12402, 17295, 17310, 17296, 1114, 5670, 12658, 2]
+// Dependencies: [19, 21, 4639, 576, 12406, 17333, 17348, 17334, 1115, 5674, 12663, 2]
 // Exports: default
 
-// Module 17309 (VoicePanelSoundboardButton)
+// Module 17347 (VoicePanelSoundboardButton)
 import nativeDefault from "native" /* 576 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12402 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17295 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17310 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12406 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17333 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17348 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -16,7 +16,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -38,23 +38,23 @@ export default function SoundboardButton(arg0) {
   let tmp8 = null;
   if (visible) {
     const element = { onPress: handlePress, disabled, props, accessibilityLabel: null, accessibilityHint: null, children: null };
-    const intl = tmp4(1114).intl;
-    element.accessibilityLabel = intl.string(tmp4(1114).t["6EJvHt"]);
+    const intl = tmp4(1115).intl;
+    element.accessibilityLabel = intl.string(tmp4(1115).t["6EJvHt"]);
     element.accessibilityHint = disabledAccessibilityHint;
     const obj2 = { style: null };
     const items = [tmp3.circle, ];
     const obj3 = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
     items[1] = obj3;
     obj2.style = items;
-    const items1 = [React4(tmp(5670), obj2), ];
+    const items1 = [React4(tmp(5674), obj2), ];
     const obj4 = { style: tmp3.iconContainer, children: null };
-    const tmpResult = tmp(17296);
+    const tmpResult = tmp(17334);
     const obj5 = { color };
-    obj4.children = React4(tmp4(12658).SoundboardIcon, obj5);
-    items1[1] = React4(tmp(5670), obj4);
+    obj4.children = React4(tmp4(12663).SoundboardIcon, obj5);
+    items1[1] = React4(tmp(5674), obj4);
     element.children = items1;
     tmp8 = hasOwnProperty(tmpResult, element);
-    const tmpResult2 = tmp(5670);
+    const tmpResult2 = tmp(5674);
   }
   return tmp8;
 };

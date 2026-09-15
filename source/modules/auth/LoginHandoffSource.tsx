@@ -1,13 +1,13 @@
-// Module ID: 7423
-// Function ID: 7424
+// Module ID: 7427
+// Function ID: 7428
 // Name: LoginHandoffSource
-// Dependencies: [1964, 1084, 4790, 5535, 2]
+// Dependencies: [1965, 1084, 4793, 5539, 2]
 // Exports: getLoginHandoffSourceFromRedirectTo
 
-// Module 7423 (LoginHandoffSource)
+// Module 7427 (LoginHandoffSource)
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
-import ChannelConstants from "ChannelConstants" /* 1964 */;
-import LinkUtils from "LinkUtils" /* 4790 */;
+import ChannelConstants from "ChannelConstants" /* 1965 */;
+import LinkUtils from "LinkUtils" /* 4793 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

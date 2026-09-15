@@ -1,12 +1,12 @@
-// Module ID: 11650
-// Function ID: 11651
+// Module ID: 11654
+// Function ID: 11655
 // Name: getApplicationIdsForGame
-// Dependencies: [4864, 1916, 2]
+// Dependencies: [4867, 1917, 2]
 // Exports: default
 
-// Module 11650 (getApplicationIdsForGame)
-import ApplicationStore from "ApplicationStore" /* 4864 */;
-import GameStore from "GameStore" /* 1916 */;
+// Module 11654 (getApplicationIdsForGame)
+import ApplicationStore from "ApplicationStore" /* 4867 */;
+import GameStore from "GameStore" /* 1917 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/utils/getApplicationIdsForGame.tsx");

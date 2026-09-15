@@ -1,15 +1,15 @@
-// Module ID: 9860
-// Function ID: 9861
+// Module ID: 9862
+// Function ID: 9863
 // Name: StageChannelUpsellCardStore
-// Dependencies: [1963, 1242, 510, 1247, 4259, 2]
+// Dependencies: [1964, 1243, 510, 1248, 4262, 2]
 // Exports: useStageChannelUpsellCardStore
 
-// Module 9860 (StageChannelUpsellCardStore)
+// Module 9862 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
-import _mod4259 from "module_4259" /* 4259 */;
-import identity from "module_1242" /* 1242 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1964 */;
+import _mod4262 from "module_4262" /* 4262 */;
+import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -34,5 +34,5 @@ export const useStageChannelUpsellCardStore = function useStageChannelUpsellCard
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, _mod4259.shallow);
+  }, _mod4262.shallow);
 };

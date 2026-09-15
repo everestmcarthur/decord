@@ -1,9 +1,9 @@
 // Module ID: 10042
 // Function ID: 10043
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 10042
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d1dac949a0f852ec9c729a240d5758b0", name: "MusicIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "44d2aa5379438547523c3d419e9ade52", name: "MusicSlashIcon", type: "png" });

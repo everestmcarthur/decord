@@ -1,11 +1,11 @@
-// Module ID: 16350
-// Function ID: 16351
+// Module ID: 16363
+// Function ID: 16364
 // Name: useIsEligibleForTierTemplateUpsell
-// Dependencies: [1979, 1074, 504, 13981, 7363, 2]
+// Dependencies: [1980, 1074, 504, 13986, 7367, 2]
 // Exports: default
 
-// Module 16350 (useIsEligibleForTierTemplateUpsell)
-import GuildStore from "GuildStore" /* 1979 */;
+// Module 16363 (useIsEligibleForTierTemplateUpsell)
+import GuildStore from "GuildStore" /* 1980 */;
 
 const require = globalThis.__r;
 

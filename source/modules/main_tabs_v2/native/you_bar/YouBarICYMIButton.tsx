@@ -1,21 +1,21 @@
-// Module ID: 16487
-// Function ID: 16488
+// Module ID: 16500
+// Function ID: 16501
 // Name: YouBarICYMIButton
-// Dependencies: [19, 15179, 21, 4636, 576, 16488, 16489, 13142, 4495, 1114, 2]
+// Dependencies: [19, 15189, 21, 4639, 576, 16501, 16502, 13147, 4498, 1115, 2]
 
-// Module 16487 (YouBarICYMIButton)
+// Module 16500 (YouBarICYMIButton)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import FlashIcon from "FlashIcon" /* 13142 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16488 */;
-import YouBarButtonDefault from "YouBarButton" /* 16489 */;
+import util from "util" /* 1115 */;
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import FlashIcon from "FlashIcon" /* 13147 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16501 */;
+import YouBarButtonDefault from "YouBarButton" /* 16502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(15179).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(15189).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -42,7 +42,7 @@ export default noop.memo(function YouBarICYMIButton(hasNameplate) {
       rootNavigationRef.navigate("icymi", obj2);
     }
   };
-  const intl = tmp5(1114).intl;
+  const intl = tmp5(1115).intl;
   obj.accessibilityLabel = intl.string(util.t["jnXV/V"]);
   return jsx(YouBarButtonDefault, { hasNameplate, icon: null, hasBadge: null, badgeStyle: null, onPress: null, accessibilityLabel: null });
 });

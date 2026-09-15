@@ -1,16 +1,16 @@
-// Module ID: 11261
-// Function ID: 11262
+// Module ID: 11265
+// Function ID: 11266
 // Name: useBurstToggleCoachmark
-// Dependencies: [32, 19, 17, 1371, 1954, 21, 1943, 4636, 576, 9503, 504, 4294, 7491, 1114, 11262, 2]
+// Dependencies: [32, 19, 17, 1372, 1955, 21, 1944, 4639, 576, 9505, 504, 4297, 7495, 1115, 11266, 2]
 // Exports: default
 
-// Module 11261 (useBurstToggleCoachmark)
+// Module 11265 (useBurstToggleCoachmark)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9503 */;
+import util from "util" /* 1115 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function EducationCoachmarkImg() {
@@ -18,10 +18,10 @@ function EducationCoachmarkImg() {
   return <View style={closure_10().upsellImageContainer}>{jsx(SuperReactionIcon.SuperReactionIcon, { color: nativeDefault.colors.WHITE, size: "md" })}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_9 = fn(1943).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(4636);
+let closure_9 = fn(1944).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+const createStyles = fn(4639);
 let obj2 = { upsellImageContainer: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, height: 40, width: 40, display: "flex", alignItems: "center", justifyContent: "center" };
 obj2.upsellImageContainer = size;
@@ -39,8 +39,8 @@ export default function useBurstToggleCoachmark(targetRef) {
   } else {
     items2 = [];
   }
-  obj2 = first(4294);
-  const tmp5 = _slicedToArray(first(7491).useSelectedDismissibleContent(items2), 2);
+  obj2 = first(4297);
+  const tmp5 = _slicedToArray(first(7495).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -59,7 +59,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(7491);
-  const coachmark = first(11262).useCoachmark(targetRef, memo);
+  const tmpResult = first(7495);
+  const coachmark = first(11266).useCoachmark(targetRef, memo);
   return tmp5[1];
 };

@@ -1,17 +1,17 @@
-// Module ID: 10086
-// Function ID: 10087
+// Module ID: 10088
+// Function ID: 10089
 // Name: GoLiveAutoQualityExperiment
-// Dependencies: [1234, 4682, 4683, 1434, 504, 510, 4778, 2]
+// Dependencies: [1235, 4685, 4686, 1435, 504, 510, 4781, 2]
 // Exports: getGoLiveAutoQualityExperimentConfig, maybeMigrateToAutoQuality, useGoLiveAutoQualityExperimentConfig
 
-// Module 10086 (GoLiveAutoQualityExperiment)
+// Module 10088 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
-import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4685 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1435 */;
 
 require = fn;
-const ApplicationStreamPresets = fn(4683).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(4686).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -51,10 +51,10 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
       if (state.preset !== ApplicationStreamPresets.PRESET_CUSTOM) {
         const obj = { preset: tmp9.PRESET_AUTO, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
         ({ resolution: obj2.resolution, fps: obj2.frameRate, soundshareEnabled: obj2.soundshareEnabled } = state);
-        tmp(4778).updateStreamSettings(obj);
+        tmp(4781).updateStreamSettings(obj);
         const Storage2 = tmp(510).Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);
-        const tmpResult = tmp(4778);
+        const tmpResult = tmp(4781);
       }
     }
   }

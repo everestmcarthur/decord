@@ -1,13 +1,13 @@
-// Module ID: 5886
-// Function ID: 5887
+// Module ID: 5890
+// Function ID: 5891
 // Name: BadgePacksAbstractUI
-// Dependencies: [21, 5668, 5887, 2]
+// Dependencies: [21, 5672, 5891, 2]
 // Exports: BadgePacksAbstractUI
 
-// Module 5886 (BadgePacksAbstractUI)
+// Module 5890 (BadgePacksAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5887 from "module_5887" /* 5887 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5891 from "module_5891" /* 5891 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const BadgePacksAbstractUI = function BadgePacksAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5887 };
+  const obj2 = { uri: _modDef5891 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

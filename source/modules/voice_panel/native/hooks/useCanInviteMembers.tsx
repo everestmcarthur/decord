@@ -1,12 +1,12 @@
-// Module ID: 17213
-// Function ID: 17214
+// Module ID: 17251
+// Function ID: 17252
 // Name: useCanInviteMembers
-// Dependencies: [1957, 4275, 1085, 563, 2]
+// Dependencies: [1958, 4278, 1085, 563, 2]
 // Exports: useCanInviteMembers
 
-// Module 17213 (useCanInviteMembers)
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+// Module 17251 (useCanInviteMembers)
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 const require = globalThis.__r;
 

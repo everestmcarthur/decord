@@ -1,10 +1,10 @@
-// Module ID: 7377
-// Function ID: 7378
+// Module ID: 7381
+// Function ID: 7382
 // Name: sanitizeThreadName
 // Dependencies: [2]
 // Exports: default
 
-// Module 7377 (sanitizeThreadName)
+// Module 7381 (sanitizeThreadName)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");

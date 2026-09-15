@@ -1,21 +1,21 @@
-// Module ID: 11116
-// Function ID: 11117
+// Module ID: 11120
+// Function ID: 11121
 // Name: SearchableDestinationListHeader
-// Dependencies: [19, 21, 4636, 576, 1611, 5712, 7966, 5705, 1363, 7046, 2]
+// Dependencies: [19, 21, 4639, 576, 1612, 5716, 7969, 5709, 1364, 7050, 2]
 // Exports: default
 
-// Module 11116 (SearchableDestinationListHeader)
+// Module 11120 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import _mod5712 from "module_5712" /* 5712 */;
-import HeaderShared from "HeaderShared" /* 7966 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import NavigatorHeader from "NavigatorHeader" /* 5709 */;
+import _mod5716 from "module_5716" /* 5716 */;
+import HeaderShared from "HeaderShared" /* 7969 */;
 import noop from "module_19" /* 19 */;
 
-const useIsWindowLarge = tmp5(7046);
+const useIsWindowLarge = tmp5(7050);
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 const obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -51,5 +51,5 @@ export default function SearchableDestinationListHeader(arg0) {
     const tmp5Result = useIsWindowLarge;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return tmp4(_mod5712.Header, obj);
+  return tmp4(_mod5716.Header, obj);
 };

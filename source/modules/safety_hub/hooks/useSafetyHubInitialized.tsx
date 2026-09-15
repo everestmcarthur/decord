@@ -1,12 +1,12 @@
-// Module ID: 12041
-// Function ID: 12042
+// Module ID: 12045
+// Function ID: 12046
 // Name: useSafetyHubInitialized
-// Dependencies: [8548, 504, 2]
+// Dependencies: [8551, 504, 2]
 // Exports: useSafetyHubInitialized
 
-// Module 12041 (useSafetyHubInitialized)
+// Module 12045 (useSafetyHubInitialized)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 8548 */;
+import SafetyHubStore from "SafetyHubStore" /* 8551 */;
 
 require = fn;
 const size = fn(2);

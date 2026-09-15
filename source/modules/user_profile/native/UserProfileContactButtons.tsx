@@ -1,21 +1,21 @@
-// Module ID: 13258
-// Function ID: 13259
+// Module ID: 13263
+// Function ID: 13264
 // Name: UserProfileContactButtons
-// Dependencies: [19, 17, 4285, 1074, 21, 4636, 576, 5056, 7265, 8307, 13194, 504, 4481, 13259, 4573, 1114, 12750, 9171, 11351, 4603, 4839, 4649, 13261, 8202, 5152, 7984, 13262, 2]
+// Dependencies: [19, 17, 4288, 1074, 21, 4639, 576, 5059, 7269, 8310, 13199, 504, 4484, 13264, 4576, 1115, 12755, 9174, 11355, 4606, 4842, 4652, 13266, 8205, 5155, 7987, 13267, 2]
 // Exports: default
 
-// Module 13258 (UserProfileContactButtons)
+// Module 13263 (UserProfileContactButtons)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11351 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12750 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13262 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4652 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9174 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11355 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12755 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13267 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 require = fn;
 function FlatFriendButton(label) {
@@ -42,19 +42,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8307).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8310).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7265)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7269)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8307);
+  let obj = user(8310);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13194).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13194);
+  const gameFriendsForUser = user(13199).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13199);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(4481).useName(user);
+  userDisplayName = tmp(4484).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -63,21 +63,21 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13259).UserClockIcon;
+          let UserPlusIcon = tmp3(13264).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4573).UserPlusIcon;
+          UserPlusIcon = tmp3(4576).UserPlusIcon;
         }
-        const intl = tmp3(1114).intl;
+        const intl = tmp3(1115).intl;
         const string = intl.string;
-        const t = tmp3(1114).t;
+        const t = tmp3(1115).t;
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
           let stringResult = string(t["fMm5q/"]);
         } else {
           stringResult = string(t["7815ae"]);
         }
-        const intl2 = tmp3(1114).intl;
+        const intl2 = tmp3(1115).intl;
         const string2 = intl2.string;
-        const t2 = tmp3(1114).t;
+        const t2 = tmp3(1115).t;
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
           let string2Result = string2(t2.H0Ql7N);
         } else {
@@ -116,7 +116,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, flexGrow: { flex: 1 }, iconButtonGroup: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.iconButtonGroup = { flexDirection: "row", gap: nativeDefault.space.PX_12 };

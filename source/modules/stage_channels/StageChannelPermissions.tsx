@@ -1,9 +1,9 @@
-// Module ID: 1965
-// Function ID: 1966
+// Module ID: 1966
+// Function ID: 1967
 // Name: StageChannelPermissions
 // Dependencies: [1074, 1086, 2]
 
-// Module 1965 (StageChannelPermissions)
+// Module 1966 (StageChannelPermissions)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1086 */;
 import "BigFlagUtils";

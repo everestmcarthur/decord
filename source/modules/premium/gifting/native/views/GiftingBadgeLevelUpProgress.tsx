@@ -1,23 +1,23 @@
-// Module ID: 11167
-// Function ID: 11168
+// Module ID: 11171
+// Function ID: 11172
 // Name: GiftingBadgeLevelUpProgress
-// Dependencies: [19, 17, 8309, 21, 4636, 576, 10878, 4632, 1114, 2492, 2]
+// Dependencies: [19, 17, 8312, 21, 4639, 576, 10882, 4635, 1115, 2493, 2]
 // Exports: default
 
-// Module 11167 (GiftingBadgeLevelUpProgress)
+// Module 11171 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import _modDef2492 from "module_2492" /* 2492 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10878 */;
+import util from "util" /* 1115 */;
+import _modDef2493 from "module_2493" /* 2493 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10882 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8309).getSingleRequirementThreshold;
+let closure_4 = fn(8312).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
 obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -71,7 +71,7 @@ export default function GiftingBadgeLevelUpProgress(style) {
   const obj8 = { style: tmp.labels, children: null };
   const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj9.children = intl.format(_modDef2492.iIpfQe, { count: progress, threshold: tmp2 });
+  obj9.children = intl.format(_modDef2493.iIpfQe, { count: progress, threshold: tmp2 });
   obj8.children = hasOwnProperty(Text_Text.Text, obj9);
   items3[1] = hasOwnProperty(View, obj8);
   obj.children = items3;

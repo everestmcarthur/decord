@@ -1,16 +1,16 @@
-// Module ID: 16739
-// Function ID: 16740
+// Module ID: 16777
+// Function ID: 16778
 // Name: SearchFilterSuggestions
-// Dependencies: [32, 19, 17, 7981, 21, 4636, 576, 16740, 5686, 4632, 4373, 5055, 5059, 4347, 16743, 12468, 2]
+// Dependencies: [32, 19, 17, 7984, 21, 4639, 576, 16778, 5690, 4635, 4376, 5058, 5062, 4350, 16781, 12473, 2]
 
-// Module 16739 (SearchFilterSuggestions)
+// Module 16777 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4347 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import springPresets from "springPresets" /* 5059 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 16740 */;
+import native from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import springPresets from "springPresets" /* 5062 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12473 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 16778 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -92,9 +92,9 @@ function AnimatedEnterExitContainer(children) {
   return jsx(cleanUp(sharedValue[10]).View, { style, children: children.children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(7981).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(7984).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };

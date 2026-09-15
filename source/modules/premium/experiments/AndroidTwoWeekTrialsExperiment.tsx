@@ -1,11 +1,11 @@
-// Module ID: 13431
-// Function ID: 13432
+// Module ID: 13436
+// Function ID: 13437
 // Name: AndroidTwoWeekTrialsExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 // Exports: isAndroidTwoWeekTrialsExperimentEnabled, isAndroidTwoWeekTrialsTrialCTAEnabled
 
-// Module 13431 (AndroidTwoWeekTrialsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13436 (AndroidTwoWeekTrialsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: null };

@@ -1,17 +1,27 @@
 // Module ID: 4713
 // Function ID: 4714
-// Dependencies: [545, 4714, 4715]
+// Dependencies: []
 
 // Module 4713
-import _mod545 from "module_545" /* 545 */;
 
-
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      tmp3(4714)(tmp3(4715)(arg0));
-      const tmp = tmp3(4714);
+export default function initCloneArray(arg0) {
+  let length = arg0.length;
+  const constructor = new arg0.constructor(length);
+  if (length) {
+    length = typeof arg0[0] === "string";
+  }
+  if (!length) {
+    if (length) {
+      ({ index: tmp.index, input: tmp.input } = arg0);
     }
-    return {};
+    return constructor;
+  } else {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = tmp2("index");
+    } else {
+      callResult = call(arg0, "index");
+    }
+    tmp2 = hasOwnProperty;
   }
 };

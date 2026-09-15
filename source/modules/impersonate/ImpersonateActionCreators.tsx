@@ -1,24 +1,24 @@
-// Module ID: 5633
-// Function ID: 5634
+// Module ID: 5637
+// Function ID: 5638
 // Name: ImpersonateActionCreators
-// Dependencies: [1957, 2012, 2021, 2015, 4275, 2011, 4817, 2014, 1074, 1964, 1240, 4816, 2020, 573, 1100, 2]
+// Dependencies: [1958, 2013, 2022, 2016, 4278, 2012, 4820, 2015, 1074, 1965, 1241, 4819, 2021, 573, 1101, 2]
 // Exports: startImpersonating, stopImpersonating, updateImpersonatedChannels, updateImpersonatedData, updateImpersonatedRoles
 
-// Module 5633 (ImpersonateActionCreators)
+// Module 5637 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 2020 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import ImpersonateStore from "ImpersonateStore" /* 2014 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 2021 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import ImpersonateStore from "ImpersonateStore" /* 2015 */;
 
-const router_utils = tmp2(1100);
+const router_utils = tmp2(1101);
 require = fn;
 function updateImpersonating(guildId, type) {
   const data = ImpersonateStore.getData(guildId);
@@ -42,8 +42,8 @@ function updateImpersonating(guildId, type) {
       if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
         if (null != defaultChannel) {
-          tmp7(1100).transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
-          const tmp7Result = tmp7(1100);
+          tmp7(1101).transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
+          const tmp7Result = tmp7(1101);
         }
       }
     }
@@ -51,7 +51,7 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1074);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+const isStaticChannelRoute = fn(1965).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 

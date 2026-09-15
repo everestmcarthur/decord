@@ -1,12 +1,12 @@
-// Module ID: 16580
-// Function ID: 16581
+// Module ID: 16593
+// Function ID: 16594
 // Name: ICYMIPopularGuildsStore
-// Dependencies: [1979, 1971, 7444, 504, 573, 2]
+// Dependencies: [1980, 1972, 7448, 504, 573, 2]
 
-// Module 16580 (ICYMIPopularGuildsStore)
+// Module 16593 (ICYMIPopularGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 const require = fn;
 let closure_3 = [];

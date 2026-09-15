@@ -1,22 +1,22 @@
-// Module ID: 12030
-// Function ID: 12031
+// Module ID: 12034
+// Function ID: 12035
 // Name: AppealIngestionPolicySummary
-// Dependencies: [19, 17, 21, 4636, 576, 8536, 4486, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 8539, 4489, 4635, 1115, 2]
 // Exports: default
 
-// Module 12030 (AppealIngestionPolicySummary)
+// Module 12034 (AppealIngestionPolicySummary)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import ColorUtils from "ColorUtils" /* 4486 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
+import util from "util" /* 1115 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8539 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, userContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.userContainer = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 18 };
@@ -35,7 +35,7 @@ export default function AppealIngestionPolicySummary(classification) {
   const obj2 = { style: tmp.policy, children: null };
   const tmp2Result = ColorUtils;
   const obj3 = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = tmp2(1115).intl;
   obj3.children = intl.string(util.t.xsdcxh);
   const items = [React3(Text_Text.Text, obj3), ];
   const obj4 = { style: null, children: React3(Text_Text.Text, { variant: "text-md/semibold", children: capitalizeTextResult }) };

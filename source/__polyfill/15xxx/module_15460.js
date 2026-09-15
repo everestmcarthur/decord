@@ -1,9 +1,9 @@
 // Module ID: 15460
 // Function ID: 15461
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 15460
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "581f8c52f7fbe4b74bb81eae47db1969", name: "EmojiFaceWithMonocleIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fdba56ceeef89e2b55cea1d13fce45dd", name: "EmojiColdFaceIcon", type: "png" });

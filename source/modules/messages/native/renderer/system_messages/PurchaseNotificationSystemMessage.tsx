@@ -1,12 +1,12 @@
-// Module ID: 8128
-// Function ID: 8129
+// Module ID: 8131
+// Function ID: 8132
 // Name: PurchaseNotificationSystemMessage
-// Dependencies: [1894, 8129, 2]
+// Dependencies: [1895, 8132, 2]
 // Exports: createPurchaseNotificationSystemMessage
 
-// Module 8128 (PurchaseNotificationSystemMessage)
-import Server from "Server" /* 1894 */;
-import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8129 */;
+// Module 8131 (PurchaseNotificationSystemMessage)
+import Server from "Server" /* 1895 */;
+import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8132 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");

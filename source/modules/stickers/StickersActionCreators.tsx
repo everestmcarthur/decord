@@ -1,20 +1,20 @@
-// Module ID: 10517
-// Function ID: 10518
+// Module ID: 10520
+// Function ID: 10521
 // Name: StickersActionCreators
-// Dependencies: [5, 5358, 2025, 4978, 1371, 5583, 1074, 1084, 4878, 1270, 573, 4975, 5250, 1940, 12, 4980, 1114, 2]
+// Dependencies: [5, 5362, 2026, 4981, 1372, 5587, 1074, 1084, 4881, 1271, 573, 4978, 5253, 1941, 12, 4983, 1115, 2]
 // Exports: addStickerPreview, clearStickerPreview, createGuildSticker, deleteGuildSticker, favoriteSticker, fetchGuildStickersWithCreator, fetchSticker, fetchStickerPack, fetchStickerPacks, unfavoriteSticker, updateGuildSticker
 
-// Module 10517 (StickersActionCreators)
+// Module 10520 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import InlineUploaderDefault from "InlineUploader" /* 5250 */;
+import util from "util" /* 1115 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import InlineUploaderDefault from "InlineUploader" /* 5253 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
-import UserStore from "UserStore" /* 1371 */;
-import StickersStore from "StickersStore" /* 5583 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4981 */;
+import UserStore from "UserStore" /* 1372 */;
+import StickersStore from "StickersStore" /* 5587 */;
 
 const require = globalThis.__r;
 

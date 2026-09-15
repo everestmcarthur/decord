@@ -1,17 +1,17 @@
-// Module ID: 12131
-// Function ID: 12132
+// Module ID: 12135
+// Function ID: 12136
 // Name: ForumChannelStore
-// Dependencies: [1957, 1967, 1966, 1968, 1247, 38, 7874, 560, 504, 2]
+// Dependencies: [1958, 1968, 1967, 1969, 1248, 38, 7877, 560, 504, 2]
 // Exports: useForumChannelStore, useForumChannelStoreApi
 
-// Module 12131 (ForumChannelStore)
+// Module 12135 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7874 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7877 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = fn;
 let set = new Set();
-let obj = { layoutType: fn(1967).ForumLayout.LIST, sortOrder: fn(1966).ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: fn(1968).ThreadSearchTagSetting.MATCH_SOME };
+let obj = { layoutType: fn(1968).ForumLayout.LIST, sortOrder: fn(1967).ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: fn(1969).ThreadSearchTagSetting.MATCH_SOME };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);
   obj.channelStates = {};

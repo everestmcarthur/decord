@@ -1,21 +1,21 @@
-// Module ID: 8834
-// Function ID: 8835
+// Module ID: 8837
+// Function ID: 8838
 // Name: ObscuredSurface
-// Dependencies: [19, 17, 21, 4636, 576, 8835, 5162, 4632, 1114, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 8838, 5165, 4635, 1115, 2]
 // Exports: default
 
-// Module 8834 (ObscuredSurface)
+// Module 8837 (ObscuredSurface)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5162 */;
-import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8835 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5165 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, warning: null };
 let obj3 = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj2.warning = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
@@ -38,14 +38,14 @@ export default function ObscuredSurface(obscured) {
     const obj6 = { size: "lg", color: nativeDefault.colors.TEXT_DEFAULT };
     const items1 = [React4(ImageWarningIcon.ImageWarningIcon, obj6), , ];
     if (heading == null) {
-      const intl = tmp4(1114).intl;
-      heading = intl.string(tmp4(1114).t.xC8Saf);
+      const intl = tmp4(1115).intl;
+      heading = intl.string(tmp4(1115).t.xC8Saf);
     }
     const obj7 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
     items1[1] = React4(Text_Text.Text, obj7);
     if (description == null) {
-      const intl2 = tmp4(1114).intl;
-      description = intl2.string(tmp4(1114).t["0fc/DG"]);
+      const intl2 = tmp4(1115).intl;
+      description = intl2.string(tmp4(1115).t["0fc/DG"]);
     }
     const obj8 = { variant: "text-sm/normal", color: "text-muted", children: description };
     items1[2] = React4(Text_Text.Text, obj8);

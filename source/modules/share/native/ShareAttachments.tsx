@@ -1,18 +1,18 @@
-// Module ID: 13991
-// Function ID: 13992
+// Module ID: 13996
+// Function ID: 13997
 // Name: ShareAttachments
-// Dependencies: [19, 17, 21, 4373, 5068, 1176, 4636, 576, 4637, 4486, 1114, 10325, 5219, 2]
+// Dependencies: [19, 17, 21, 4376, 5071, 1177, 4639, 576, 4640, 4489, 1115, 10327, 5222, 2]
 // Exports: default
 
-// Module 13991 (ShareAttachments)
+// Module 13996 (ShareAttachments)
 import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4486 */;
-import timing from "timing" /* 4637 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5219 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10325 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import timing from "timing" /* 4640 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5222 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10327 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 
 const require = globalThis.__r;
 
@@ -21,8 +21,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1176).STANDARD_EASING };
-const createStyles = fn(4636);
+let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1177).STANDARD_EASING };
+const createStyles = fn(4639);
 let obj2 = { containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 }, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };

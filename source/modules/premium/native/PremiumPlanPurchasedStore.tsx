@@ -1,19 +1,19 @@
-// Module ID: 7524
-// Function ID: 7525
+// Module ID: 7528
+// Function ID: 7529
 // Name: PremiumPlanPurchasedStore
-// Dependencies: [4327, 1373, 560, 1247, 7525, 7285, 2]
+// Dependencies: [4330, 1374, 560, 1248, 7529, 7289, 2]
 // Exports: handleMobileWebCheckoutStatus, reset, setInitiatedPurchaseFromNewFlow, setMobileWebRedirectCheckoutStatus, setPaymentSuccess, showOldPaymentFlowSuccess
 
-// Module 7524 (PremiumPlanPurchasedStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
-import ActionSheetStore from "ActionSheetStore" /* 4327 */;
+// Module 7528 (PremiumPlanPurchasedStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7529 */;
+import ActionSheetStore from "ActionSheetStore" /* 4330 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
@@ -84,6 +84,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessible", onPaymentDismiss: "skuId" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessible", onPaymentDismiss: "useRef" });
   });
 };

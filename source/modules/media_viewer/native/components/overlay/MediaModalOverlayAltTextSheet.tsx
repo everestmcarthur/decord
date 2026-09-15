@@ -1,21 +1,21 @@
-// Module ID: 11666
-// Function ID: 11667
+// Module ID: 11670
+// Function ID: 11671
 // Name: MediaModalOverlayAltTextSheet
-// Dependencies: [19, 21, 4636, 576, 11667, 5207, 7253, 7252, 1114, 4632, 2]
+// Dependencies: [19, 21, 4639, 576, 11671, 5210, 7257, 7256, 1115, 4635, 2]
 // Exports: default
 
-// Module 11666 (MediaModalOverlayAltTextSheet)
+// Module 11670 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11667 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7256 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11671 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,7 +30,7 @@ export default function MediaViewerAltTextSheet(children) {
   }
   const obj3 = { header: null, contentStyles: null, children: null };
   const obj4 = { title: null };
-  const intl = tmp2(1114).intl;
+  const intl = tmp2(1115).intl;
   obj4.title = intl.string(util.t.J3IOO1);
   obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];

@@ -1,13 +1,13 @@
-// Module ID: 4864
-// Function ID: 4865
+// Module ID: 4867
+// Function ID: 4868
 // Name: ApplicationStore
-// Dependencies: [32, 1918, 504, 573, 2]
+// Dependencies: [32, 1919, 504, 573, 2]
 
-// Module 4864 (ApplicationStore)
+// Module 4867 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 
 function addApplication(fromServer) {
   value = map.get(fromServer.id);

@@ -1,19 +1,19 @@
-// Module ID: 17617
-// Function ID: 17618
+// Module ID: 17655
+// Function ID: 17656
 // Name: MobileGameCommunitiesManager
-// Dependencies: [13801, 15709, 16362, 7221, 15710, 16363, 13804, 13802, 2]
+// Dependencies: [13806, 15720, 16375, 7225, 15721, 16376, 13809, 13807, 2]
 
-// Module 17617 (MobileGameCommunitiesManager)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13802 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13804 */;
-import GameCommunityConfig from "GameCommunityConfig" /* 15710 */;
-import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16363 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13801 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15709 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+// Module 17655 (MobileGameCommunitiesManager)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13807 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13809 */;
+import GameCommunityConfig from "GameCommunityConfig" /* 15721 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16376 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13806 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15720 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 require = fn;
-let closure_5 = fn(16362).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_5 = fn(16375).MAX_DISPLAYED_UPSELL_GUILDS;
 class MobileGameCommunitiesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,17 +1,17 @@
-// Module ID: 15929
-// Function ID: 15930
+// Module ID: 15942
+// Function ID: 15943
 // Name: ShelfBlock
-// Dependencies: [19, 17, 7645, 1076, 1074, 21, 4636, 576, 1483, 8893, 15910, 7265, 7285, 504, 15154, 15156, 7644, 8890, 4632, 5056, 1114, 7259, 9003, 2]
+// Dependencies: [19, 17, 7649, 1076, 1074, 21, 4639, 576, 1484, 8896, 15923, 7269, 7289, 504, 15164, 15166, 7648, 8893, 4635, 5059, 1115, 7263, 9006, 2]
 // Exports: default
 
-// Module 15929 (ShelfBlock)
+// Module 15942 (ShelfBlock)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8890 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8893 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7648 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8893 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8896 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7649 */;
 
 require = fn;
 function ListEdgeSpacer() {
@@ -26,7 +26,7 @@ let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, containerWithBackground: null, backgroundImage: null, header: null, headingWrapper: null, listEdgeSpacer: null, listItemSeparator: null };
 let obj3 = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.containerWithBackground = { marginTop: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, overflow: "hidden" };

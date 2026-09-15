@@ -1,24 +1,24 @@
-// Module ID: 17511
-// Function ID: 17512
+// Module ID: 17549
+// Function ID: 17550
 // Name: FileUploadActionComponent
-// Dependencies: [5, 19, 17, 1957, 4977, 1074, 21, 4636, 4533, 5686, 15626, 1114, 4861, 4596, 10325, 8202, 5761, 8229, 38, 504, 12288, 5260, 5215, 17512, 1894, 4980, 5219, 12127, 9436, 10765, 1874, 10764, 5217, 5054, 576, 5768, 2]
+// Dependencies: [5, 19, 17, 1958, 4980, 1074, 21, 4639, 4536, 5690, 15636, 1115, 4864, 4599, 10327, 8205, 5765, 8232, 38, 504, 12292, 5264, 5218, 17550, 1895, 4983, 5222, 12131, 9439, 10769, 1875, 10768, 5220, 5057, 576, 5772, 2]
 // Exports: default
 
-// Module 17511 (FileUploadActionComponent)
-import util from "util" /* 1114 */;
-import FileSizeUtils from "FileSizeUtils" /* 4533 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4596 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4861 */;
-import TableRow from "TableRow" /* 5686 */;
-import XSmallIcon from "XSmallIcon" /* 5761 */;
-import IconButton from "IconButton" /* 8202 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import AttachmentPreview from "AttachmentPreview" /* 10325 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10764 */;
-import FileUpIcon from "FileUpIcon" /* 15626 */;
+// Module 17549 (FileUploadActionComponent)
+import util from "util" /* 1115 */;
+import FileSizeUtils from "FileSizeUtils" /* 4536 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4599 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4864 */;
+import TableRow from "TableRow" /* 5690 */;
+import XSmallIcon from "XSmallIcon" /* 5765 */;
+import IconButton from "IconButton" /* 8205 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9439 */;
+import AttachmentPreview from "AttachmentPreview" /* 10327 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10768 */;
+import FileUpIcon from "FileUpIcon" /* 15636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
@@ -56,8 +56,8 @@ function File(upload) {
   obj.icon = React7(AttachmentPreviewDefault, size);
   let filename = upload.filename;
   if (filename == null) {
-    const intl = tmp3(1114).intl;
-    filename = intl.string(tmp3(1114).t.ZMirp0);
+    const intl = tmp3(1115).intl;
+    filename = intl.string(tmp3(1115).t.ZMirp0);
   }
   obj.label = filename;
   const obj4 = {
@@ -69,17 +69,17 @@ function File(upload) {
     },
     accessibilityLabel: null
   };
-  const intl2 = tmp3(1114).intl;
+  const intl2 = tmp3(1115).intl;
   obj4.accessibilityLabel = intl2.string(util.t.N86XcP);
   obj.trailing = React7(IconButton.IconButton, obj4);
   return React7(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(4977).DraftType;
+const DraftType = fn(4980).DraftType;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -266,7 +266,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10765).hideMediaKeyboardActionSheet();
+        return InteractionModal(10769).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveKestrelLimit,
       onSelectFiles(arg0) {
@@ -298,7 +298,7 @@ export default function FileUploadActionComponent(maxValues) {
             item = item.item;
             const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
             if (item.isIncluded) {
-              const found = currentUploads.find((item) => InteractionModal(5217).doesImageMatchUpload(item.node.image, item));
+              const found = currentUploads.find((item) => InteractionModal(5220).doesImageMatchUpload(item.node.image, item));
               if (null != found) {
                 callback1(found.id);
               }
@@ -317,8 +317,8 @@ export default function FileUploadActionComponent(maxValues) {
             obj.handleViewAllDialog(obj2);
           },
         onManageLimited() {
-            obj = InteractionModal(10764);
-            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10765).hideMediaKeyboardActionSheet, onRestoreKeyboard });
+            obj = InteractionModal(10768);
+            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10769).hideMediaKeyboardActionSheet, onRestoreKeyboard });
           },
         onClose: tmp4(tmp5[29]).hideMediaKeyboardActionSheet,
         onBack: tmp4(tmp5[29]).hideMediaKeyboardActionSheet

@@ -1,12 +1,12 @@
-// Module ID: 8220
-// Function ID: 8221
+// Module ID: 8223
+// Function ID: 8224
 // Name: transformNativeMarkupMentionLink
-// Dependencies: [5087, 8219, 5077, 2]
+// Dependencies: [5090, 8222, 5080, 2]
 // Exports: transformNativeMentionLink
 
-// Module 8220 (transformNativeMarkupMentionLink)
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5087 */;
-import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8219 */;
+// Module 8223 (transformNativeMarkupMentionLink)
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5090 */;
+import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8222 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMentionLink.tsx");
@@ -26,15 +26,15 @@ export const transformNativeMentionLink = function transformNativeMentionLink(va
         const _HermesInternal = HermesInternal;
         const obj2 = { type: null, content: null, attachmentUrl: null, attachmentName: null };
         const combined = "https://" + domain + "/" + str + "/" + channel_id.toString() + "/" + attachment_id.toString() + "/" + value.name;
-        obj2.type = tmp(5077).AST_KEY.ATTACHMENT_LINK;
-        const obj3 = { type: tmp(5077).AST_KEY.TEXT, content: value.name };
+        obj2.type = tmp(5080).AST_KEY.ATTACHMENT_LINK;
+        const obj3 = { type: tmp(5080).AST_KEY.TEXT, content: value.name };
         const items = [obj3];
         obj2.content = items;
         obj2.attachmentUrl = combined;
         obj2.attachmentName = value.name;
         return obj2;
       } else {
-        const obj4 = { type: tmp(5077).AST_KEY.TEXT, content: "" };
+        const obj4 = { type: tmp(5080).AST_KEY.TEXT, content: "" };
         return obj4;
       }
     }
@@ -57,10 +57,10 @@ export const transformNativeMentionLink = function transformNativeMentionLink(va
   const combined1 = "https://" + value2.domain + "/channels/" + str12 + "/" + str17 + str13;
   const channel = MarkupChannelMentionRule.getChannel(str17, null);
   if (null == channel) {
-    const tmpResult4 = tmp(5087);
+    const tmpResult4 = tmp(5090);
     let handleUnknownChannelResult = tmpResult4.handleUnknownChannel(str12, str17, str18, guildIdFromChannelId, combined1);
   } else {
-    const tmpResult5 = tmp(5087);
+    const tmpResult5 = tmp(5090);
     handleUnknownChannelResult = tmpResult5.parseChannel(channel, str18, guildIdFromChannelId, combined1);
   }
   const tmpResult = MarkupChannelMentionRule;

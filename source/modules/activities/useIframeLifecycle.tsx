@@ -1,11 +1,11 @@
-// Module ID: 9774
-// Function ID: 9775
+// Module ID: 9776
+// Function ID: 9777
 // Name: useIframeLifecycle
-// Dependencies: [19, 1074, 1109, 2]
+// Dependencies: [19, 1074, 1110, 2]
 // Exports: default
 
-// Module 9774 (useIframeLifecycle)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+// Module 9776 (useIframeLifecycle)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

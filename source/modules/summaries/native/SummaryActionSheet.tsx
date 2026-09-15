@@ -1,24 +1,24 @@
-// Module ID: 11782
-// Function ID: 11783
+// Module ID: 11786
+// Function ID: 11787
 // Name: SummaryActionSheet
-// Dependencies: [19, 17, 1957, 4857, 11479, 1074, 21, 4603, 11782, 1896, 4636, 576, 7372, 11755, 4334, 1114, 4781, 8479, 7867, 7879, 4494, 11, 1100, 7253, 7226, 11783, 4632, 11785, 9987, 11786, 8053, 2]
+// Dependencies: [19, 17, 1958, 4860, 11483, 1074, 21, 4606, 11786, 1897, 4639, 576, 7376, 11759, 4337, 1115, 4784, 8482, 7870, 7882, 4497, 11, 1101, 7257, 7230, 11787, 4635, 11789, 9989, 11790, 8056, 2]
 // Exports: default, openSummaryDividerActionSheet
 
-// Module 11782 (SummaryActionSheet)
+// Module 11786 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import router_utils from "router_utils" /* 1100 */;
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastUtils from "ToastUtils" /* 4334 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ChannelUtils from "ChannelUtils" /* 4781 */;
-import showShareActionSheet from "showShareActionSheet" /* 8479 */;
+import router_utils from "router_utils" /* 1101 */;
+import util from "util" /* 1115 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ChannelUtils from "ChannelUtils" /* 4784 */;
+import showShareActionSheet from "showShareActionSheet" /* 8482 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4857 */;
-import SummaryStore from "SummaryStore" /* 11479 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MessageStore from "MessageStore" /* 4860 */;
+import SummaryStore from "SummaryStore" /* 11483 */;
 
 require = fn;
 const View = fn(17).View;
@@ -26,7 +26,7 @@ const Constants = fn(1074);
 ({ AnalyticsSections: closure_8, MessageFlags: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { summaryContainer: { padding: 16, margin: 16, marginBottom: 24, justifyContent: "center", alignItems: "center" }, summaryContent: { textAlign: "center" }, summaryIconContainer: { marginBottom: 8, borderRadius: nativeDefault.radii.round, border: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, summaryIcon: null, summaryTopic: null, divider: null, actionsContainer: null };
 let size = { margin: 8, width: 20, height: 20, tintColor: nativeDefault.colors.WHITE };
 obj2.summaryIcon = size;
@@ -74,8 +74,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = tmp4.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(11755, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(11755, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(11759, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(11759, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -99,15 +99,15 @@ export default function SummaryActionSheet(summary) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (null != channel) {
       if (null != message) {
-        const result = tmp(7867).openThreadCreationForMobile(tmp4, summary.startId, constants.SUMMARY_ACTION_SHEET);
-        const tmpResult = tmp(7867);
+        const result = tmp(7870).openThreadCreationForMobile(tmp4, summary.startId, constants.SUMMARY_ACTION_SHEET);
+        const tmpResult = tmp(7870);
         const obj3 = { name: summary.topic };
-        tmp(7879).changeThreadSettings(tmp4.id, obj3);
+        tmp(7882).changeThreadSettings(tmp4.id, obj3);
         const tmp11 = require;
-        const tmpResult4 = tmp(7879);
+        const tmpResult4 = tmp(7882);
         const obj6 = NavigationRouteUtils;
         if (!obj6.navigateToCreateThread(tmp4.guild_id, tmpResult5.castMessageIdAsChannelId(tmp5.id))) {
-          const tmp11Result = tmp11(1100);
+          const tmp11Result = tmp11(1101);
           tmp11Result.transitionToGuild(tmp4.guild_id, tmp(11).castMessageIdAsChannelId(tmp5.id));
           const tmpResult6 = tmp(11);
         }
@@ -188,7 +188,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(11782, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(11782, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11786, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(11786, dependencyMap.paths);
   }
 };

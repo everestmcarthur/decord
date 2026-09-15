@@ -1,12 +1,12 @@
-// Module ID: 14588
-// Function ID: 14589
+// Module ID: 14598
+// Function ID: 14599
 // Name: StoreListingRecord
-// Dependencies: [1386, 1385, 14589, 2]
+// Dependencies: [1387, 1386, 14599, 2]
 
-// Module 14588 (StoreListingRecord)
-import GameStoreAsset from "GameStoreAsset" /* 14589 */;
-import Record from "Record" /* 1386 */;
-import UserRecord from "UserRecord" /* 1385 */;
+// Module 14598 (StoreListingRecord)
+import GameStoreAsset from "GameStoreAsset" /* 14599 */;
+import Record from "Record" /* 1387 */;
+import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
 let StoreListingRecord;

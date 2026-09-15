@@ -1,11 +1,11 @@
-// Module ID: 7796
-// Function ID: 7797
+// Module ID: 7799
+// Function ID: 7800
 // Name: appMessageEmbedTracking
-// Dependencies: [19, 1074, 1240, 7797, 7798, 2]
+// Dependencies: [19, 1074, 1241, 7800, 7801, 2]
 // Exports: trackAppEmbedClick, trackAppEmbedLinkSent, trackAppEmbedViewed, useTrackAppEmbedViewed
 
-// Module 7796 (appMessageEmbedTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+// Module 7799 (appMessageEmbedTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

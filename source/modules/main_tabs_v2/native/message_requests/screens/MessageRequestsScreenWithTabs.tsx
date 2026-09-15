@@ -1,17 +1,17 @@
-// Module ID: 16989
-// Function ID: 16990
+// Module ID: 17027
+// Function ID: 17028
 // Name: MessageRequestsScreenWithTabs
-// Dependencies: [32, 19, 17, 21, 4636, 576, 9922, 1114, 16990, 17006, 9923, 12746, 12027, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 9924, 1115, 17028, 17044, 9925, 12751, 12031, 2]
 
-// Module 16989 (MessageRequestsScreenWithTabs)
+// Module 17027 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import SegmentedControlState from "SegmentedControlState" /* 9922 */;
-import SegmentedControl from "SegmentedControl" /* 9923 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12027 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 12746 */;
-import MessageRequestListDefault from "MessageRequestList" /* 16990 */;
-import SpamMessageListDefault from "SpamMessageList" /* 17006 */;
+import util from "util" /* 1115 */;
+import SegmentedControlState from "SegmentedControlState" /* 9924 */;
+import SegmentedControl from "SegmentedControl" /* 9925 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12031 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 12751 */;
+import MessageRequestListDefault from "MessageRequestList" /* 17028 */;
+import SpamMessageListDefault from "SpamMessageList" /* 17044 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };

@@ -1,16 +1,16 @@
-// Module ID: 11637
-// Function ID: 11638
+// Module ID: 11641
+// Function ID: 11642
 // Name: AppStoreOverlayStatsCarousel
-// Dependencies: [19, 17, 21, 4636, 576, 11638, 1114, 11639, 4632, 1363, 6756, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 11642, 1115, 11643, 4635, 1364, 6760, 2]
 // Exports: default
 
-// Module 11637 (AppStoreOverlayStatsCarousel)
+// Module 11641 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11638 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11639 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11642 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11643 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,11 +30,11 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = AppStoreOverlayStatCardUtils.formatAppStoreRatingValue(stat.rating, util.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      result1 = tmp9(11638).formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
-      const tmp9Result = tmp9(11638);
+      result1 = tmp9(11642).formatAppStoreRatingCount(stat.ratingCount, tmp9(1115).intl.currentLocale);
+      const tmp9Result = tmp9(11642);
     }
     const appStoreStarFillAmounts = AppStoreOverlayStatCardUtils.getAppStoreStarFillAmounts(stat.rating, num);
-    const intl = tmp9(1114).intl;
+    const intl = tmp9(1115).intl;
     const obj4 = { label: stat.label, rating: result, maxRating: num, ratingCount: null };
     let num2 = stat.ratingCount;
     if (num2 == null) {
@@ -90,7 +90,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const obj8 = { style: tmp.secondaryRow, children: null };
     if (null == secondaryContent) {
       const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: secondaryText };
-      secondaryContent = tmp23(tmp20(4632).Text, obj9);
+      secondaryContent = tmp23(tmp20(4635).Text, obj9);
     }
     obj8.children = secondaryContent;
     tmp23Result = tmp23(hasOwnProperty, obj8);
@@ -101,13 +101,13 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const obj10 = { style: items, onPress: onRatingPress, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityHint: null, children: null };
     let stringResult;
     if (tmp20Result.isIOS()) {
-      const intl2 = tmp20(1114).intl;
-      stringResult = intl2.string(tmp20(1114).t.quJD0Y);
+      const intl2 = tmp20(1115).intl;
+      stringResult = intl2.string(tmp20(1115).t.quJD0Y);
     }
     obj10.accessibilityHint = stringResult;
     obj10.children = tmp18Result;
     let tmp23Result2 = tmp23(React3, obj10);
-    tmp20Result = tmp20(1363);
+    tmp20Result = tmp20(1364);
   } else {
     const obj11 = { style: items, accessible: true, accessibilityRole: "text", accessibilityLabel, children: tmp18Result };
     tmp23Result2 = tmp23(hasOwnProperty, obj11);
@@ -118,7 +118,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };

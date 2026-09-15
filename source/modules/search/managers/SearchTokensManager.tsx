@@ -1,12 +1,12 @@
-// Module ID: 17596
-// Function ID: 17597
+// Module ID: 17634
+// Function ID: 17635
 // Name: SearchTokensManager
-// Dependencies: [2026, 7221, 12470, 2]
+// Dependencies: [2027, 7225, 12475, 2]
 
-// Module 17596 (SearchTokensManager)
-import IntlLoaderStore from "IntlLoaderStore" /* 2026 */;
-import SearchUtils from "SearchUtils" /* 12470 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+// Module 17634 (SearchTokensManager)
+import IntlLoaderStore from "IntlLoaderStore" /* 2027 */;
+import SearchUtils from "SearchUtils" /* 12475 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = IntlLoaderStore.subscribeToIntlLoadingSuccess;

@@ -1,18 +1,18 @@
-// Module ID: 5641
-// Function ID: 5642
+// Module ID: 5645
+// Function ID: 5646
 // Name: Spellchecker
-// Dependencies: [5, 32, 2025, 3, 4257, 5642, 5643, 5644, 5645, 1369, 12, 1928, 2]
+// Dependencies: [5, 32, 2026, 3, 4260, 5646, 5647, 5648, 5649, 1370, 12, 1929, 2]
 // Exports: install
 
-// Module 5641 (Spellchecker)
+// Module 5645 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
-import DOMUtils from "DOMUtils" /* 1928 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 5642 */;
-import _mod5643 from "module_5643" /* 5643 */;
+import DOMUtils from "DOMUtils" /* 1929 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 5646 */;
+import _mod5647 from "module_5647" /* 5647 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import DiscordNative from "DiscordNative" /* 4257 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import DiscordNative from "DiscordNative" /* 4260 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -62,7 +62,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod5643;
+      obj = _mod5647;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -225,7 +225,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod5643.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod5647.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -250,7 +250,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     }
     logger.error("" + str2 + " is not a valid locale.");
   });
-  const arr = Array.from(new Set(mapped.filter(mapped1(1369).isNotNullish)));
+  const arr = Array.from(new Set(mapped.filter(mapped1(1370).isNotNullish)));
   if (0 !== arr.length) {
     mapped1 = arr.map((item) => {
       let tmp = self.rawLocaleByNormalized[item];
@@ -307,9 +307,9 @@ let closure_9 = apply.debounce((detectLanguage, hasAttribute) => {
             textContent = hasAttribute.textContent;
           }
         }
-        tmp2Result2 = tmp2(1928);
+        tmp2Result2 = tmp2(1929);
       }
-      tmp2Result = tmp2(1928);
+      tmp2Result = tmp2(1929);
     }
     textContent = hasAttribute.value;
     obj = DOMUtils;

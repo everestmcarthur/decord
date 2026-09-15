@@ -1,15 +1,15 @@
-// Module ID: 17082
-// Function ID: 17083
+// Module ID: 17120
+// Function ID: 17121
 // Name: useLaunchPadAnimatedStyles
-// Dependencies: [11598, 1363, 4636, 16803, 12163, 1611, 4373, 5055, 2]
+// Dependencies: [11602, 1364, 4639, 16841, 12167, 1612, 4376, 5058, 2]
 // Exports: default
 
-// Module 17082 (useLaunchPadAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11598 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import createStyles from "createStyles" /* 4636 */;
+// Module 17120 (useLaunchPadAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11602 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 let LAUNCH_PAD_SPRING_CONFIG = LaunchPadConstants.LAUNCH_PAD_SPRING_CONFIG;

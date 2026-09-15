@@ -1,28 +1,28 @@
-// Module ID: 13549
-// Function ID: 13550
+// Module ID: 13554
+// Function ID: 13555
 // Name: PremiumBogoPromotionUtilsCommon
-// Dependencies: [5, 1371, 4300, 7553, 7497, 10794, 1373, 1074, 4228, 4294, 1363, 4877, 7520, 13550, 13551, 563, 7550, 8165, 13552, 13553, 4960, 13506, 2]
+// Dependencies: [5, 1372, 4303, 7557, 7501, 10798, 1374, 1074, 4231, 4297, 1364, 4880, 7524, 13555, 13556, 563, 7554, 8168, 13557, 13558, 4963, 13511, 2]
 // Exports: maybeFetchActiveBogoPromotion, useIsEligibleForBogoPromotion
 
-// Module 13549 (PremiumBogoPromotionUtilsCommon)
+// Module 13554 (PremiumBogoPromotionUtilsCommon)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 4877 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7520 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7550 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8165 */;
-import PromotionsHooks from "PromotionsHooks" /* 13550 */;
-import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13551 */;
-import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13552 */;
-import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13553 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 4880 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7524 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7554 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8168 */;
+import PromotionsHooks from "PromotionsHooks" /* 13555 */;
+import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13556 */;
+import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13557 */;
+import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13558 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import UserOfferStore from "UserOfferStore" /* 7553 */;
-import EntitlementStore from "EntitlementStore" /* 7497 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
+import UserStore from "UserStore" /* 1372 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import UserOfferStore from "UserOfferStore" /* 7557 */;
+import EntitlementStore from "EntitlementStore" /* 7501 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
 
 require = fn;
 function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
@@ -33,11 +33,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt = mostRecentSubscription.endedAt;
         if (null != endedAt) {
           if (mostRecentSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj = _modDef4228();
+            const obj = _modDef4231();
             if (subtractResult.isBefore(endedAt)) {
               return false;
             }
-            subtractResult = _modDef4228().subtract(10, "days");
+            subtractResult = _modDef4231().subtract(10, "days");
           }
         }
       }
@@ -47,11 +47,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt2 = previousPremiumSubscription.endedAt;
         if (null != endedAt2) {
           if (previousPremiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj3 = _modDef4228();
+            const obj3 = _modDef4231();
             if (subtractResult1.isBefore(endedAt2)) {
               return false;
             }
-            subtractResult1 = _modDef4228().subtract(10, "days");
+            subtractResult1 = _modDef4231().subtract(10, "days");
           }
         }
       }
@@ -313,7 +313,7 @@ let closure_16 = async function _maybeFetchActiveBogoPromotion(arg0, value) {
     }
   }
 };
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PurchasedFlags: closure_9, PremiumTypes: c10 } = PremiumConstants);
 const Constants = fn(1074);
 ({ PaymentGateways: closure_11, SubscriptionStatusTypes: closure_12 } = Constants);
@@ -349,11 +349,11 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdateDefault({ delay: num2 });
-  const isMobile = tmp(4877).isMobile;
+  const isMobile = tmp(4880).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
-    isAndroidResult = tmp(1363).isAndroid();
-    const tmpResult = tmp(1363);
+    isAndroidResult = tmp(1364).isAndroid();
+    const tmpResult = tmp(1364);
   }
   const tmp14 = isUserEligibleBasedOnCurrentOrPreviousSubs({ experimentEnabled: bogoPromotionGateEnabled, premiumSubscription, mostRecentSubscription, previousPremiumSubscription });
   let bogoMarketingMaterialsEnabled = BOGOPromotionMarketingMaterialsExperiments.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");

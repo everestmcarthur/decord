@@ -1,18 +1,18 @@
-// Module ID: 12653
-// Function ID: 12654
+// Module ID: 12658
+// Function ID: 12659
 // Name: GuildPowerupsImage
-// Dependencies: [4628, 21, 4636, 504, 1364, 8936, 5668, 2]
+// Dependencies: [4631, 21, 4639, 504, 1365, 8939, 5672, 2]
 // Exports: default
 
-// Module 12653 (GuildPowerupsImage)
+// Module 12658 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8936 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8939 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");

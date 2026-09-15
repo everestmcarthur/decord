@@ -1,9 +1,9 @@
 // Module ID: 8398
 // Function ID: 8399
-// Dependencies: [8399]
+// Dependencies: [1121]
 
 // Module 8398
-import _mod8399 from "module_8399" /* 8399 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default _mod8399.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "50acfdf084b8dccbfa3fd235ea0ab8ff", name: "PauseIcon", type: "png" });

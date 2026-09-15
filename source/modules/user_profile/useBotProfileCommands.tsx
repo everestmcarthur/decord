@@ -1,11 +1,11 @@
-// Module ID: 11344
-// Function ID: 11345
+// Module ID: 11348
+// Function ID: 11349
 // Name: useBotProfileCommands
-// Dependencies: [19, 9546, 1894, 2]
+// Dependencies: [19, 9548, 1895, 2]
 // Exports: default
 
-// Module 11344 (useBotProfileCommands)
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9546 */;
+// Module 11348 (useBotProfileCommands)
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9548 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

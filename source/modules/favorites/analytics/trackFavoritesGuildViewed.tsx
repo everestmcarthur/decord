@@ -1,20 +1,20 @@
-// Module ID: 16853
-// Function ID: 16854
+// Module ID: 16891
+// Function ID: 16892
 // Name: trackFavoritesGuildViewed
-// Dependencies: [1371, 1960, 1074, 1373, 10353, 1885, 1240, 10362, 2]
+// Dependencies: [1372, 1961, 1074, 1374, 10355, 1886, 1241, 10364, 2]
 // Exports: default
 
-// Module 16853 (trackFavoritesGuildViewed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1885 */;
-import FavoritesHooks from "FavoritesHooks" /* 10353 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10362 */;
-import UserStore from "UserStore" /* 1371 */;
-import FavoriteStore from "FavoriteStore" /* 1960 */;
+// Module 16891 (trackFavoritesGuildViewed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1886 */;
+import FavoritesHooks from "FavoritesHooks" /* 10355 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10364 */;
+import UserStore from "UserStore" /* 1372 */;
+import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");
 

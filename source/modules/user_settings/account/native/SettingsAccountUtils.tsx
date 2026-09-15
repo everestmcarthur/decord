@@ -1,13 +1,13 @@
-// Module ID: 14768
-// Function ID: 14769
+// Module ID: 14778
+// Function ID: 14779
 // Name: SettingsAccountUtils
-// Dependencies: [502, 1371, 563, 2]
+// Dependencies: [502, 1372, 563, 2]
 // Exports: useIs2FAEnabled, useIsTOTPEnabled, useIsUserVerified
 
-// Module 14768 (SettingsAccountUtils)
+// Module 14778 (SettingsAccountUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);

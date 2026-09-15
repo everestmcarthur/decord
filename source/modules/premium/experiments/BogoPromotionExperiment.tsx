@@ -1,11 +1,11 @@
-// Module ID: 13551
-// Function ID: 13552
+// Module ID: 13556
+// Function ID: 13557
 // Name: BogoPromotionExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 // Exports: getBogoPromotionGateEnabled, useBogoPromotionGateEnabled
 
-// Module 13551 (BogoPromotionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13556 (BogoPromotionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-gate-v2", kind: "user", defaultConfig: false, variations: { 1: true } });

@@ -1,17 +1,17 @@
-// Module ID: 11821
-// Function ID: 11822
+// Module ID: 11825
+// Function ID: 11826
 // Name: ForwardMessageFooter
-// Dependencies: [32, 19, 4977, 21, 11811, 11814, 504, 7879, 11822, 1114, 11823, 11824, 5056, 11831, 2]
+// Dependencies: [32, 19, 4980, 21, 11815, 11818, 504, 7882, 11826, 1115, 11827, 11828, 5059, 11835, 2]
 // Exports: ForwardMessageFooter
 
-// Module 11821 (ForwardMessageFooter)
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
+// Module 11825 (ForwardMessageFooter)
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7882 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DraftStore from "DraftStore" /* 4977 */;
+import DraftStore from "DraftStore" /* 4980 */;
 
 const require = fn;
-const DraftType = fn(4977).DraftType;
+const DraftType = fn(4980).DraftType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");

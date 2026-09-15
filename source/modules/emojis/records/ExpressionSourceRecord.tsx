@@ -1,15 +1,15 @@
-// Module ID: 5666
-// Function ID: 5667
+// Module ID: 5670
+// Function ID: 5671
 // Name: ExpressionSourceRecord
-// Dependencies: [5, 1386, 1074, 1270, 1396, 1974, 1971, 2]
+// Dependencies: [5, 1387, 1074, 1271, 1397, 1975, 1972, 2]
 
-// Module 5666 (ExpressionSourceRecord)
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
-import SetUtils from "SetUtils" /* 1974 */;
+// Module 5670 (ExpressionSourceRecord)
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
+import SetUtils from "SetUtils" /* 1975 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import Record from "Record" /* 1386 */;
+import Record from "Record" /* 1387 */;
 
 require = fn;
 function getEmojiSourceData() {
@@ -80,7 +80,7 @@ prototype["getIconSource"] = function getIconSource(size, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  return self(1396).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1397).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;

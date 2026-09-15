@@ -1,16 +1,16 @@
-// Module ID: 8904
-// Function ID: 8905
+// Module ID: 8907
+// Function ID: 8908
 // Name: WishlistRecord
-// Dependencies: [1386, 1918, 8905, 8906, 8907, 8908, 1074, 2]
+// Dependencies: [1387, 1919, 8908, 8909, 8910, 8911, 1074, 2]
 // Exports: getWishlistProductLines, getWishlistSkuIds, wishlistHasSkuId
 
-// Module 8904 (WishlistRecord)
-import Record from "Record" /* 1386 */;
-import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8905 */;
-import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 8906 */;
-import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 8907 */;
-import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 8908 */;
+// Module 8907 (WishlistRecord)
+import Record from "Record" /* 1387 */;
+import ApplicationRecord from "ApplicationRecord" /* 1919 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8908 */;
+import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 8909 */;
+import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 8910 */;
+import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 8911 */;
 
 const SKUProductLines = fn(1074).SKUProductLines;
 const prototype = function WishlistRecord(arg0) {

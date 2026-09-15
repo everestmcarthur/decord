@@ -1,13 +1,13 @@
-// Module ID: 5956
-// Function ID: 5957
+// Module ID: 5960
+// Function ID: 5961
 // Name: ClydeCoinsSpotIllustration
-// Dependencies: [21, 5668, 5957, 2]
+// Dependencies: [21, 5672, 5961, 2]
 // Exports: ClydeCoinsSpotIllustration
 
-// Module 5956 (ClydeCoinsSpotIllustration)
+// Module 5960 (ClydeCoinsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5957 from "module_5957" /* 5957 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5961 from "module_5961" /* 5961 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ClydeCoinsSpotIllustration = function ClydeCoinsSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5957 };
+  const obj2 = { uri: _modDef5961 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

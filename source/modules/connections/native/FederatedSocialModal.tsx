@@ -1,29 +1,29 @@
-// Module ID: 9412
-// Function ID: 9413
+// Module ID: 9415
+// Function ID: 9416
 // Name: FederatedSocialModal
-// Dependencies: [5, 32, 19, 1074, 21, 4636, 5364, 1114, 5487, 4331, 9413, 7226, 4632, 6706, 1176, 5056, 5705, 7103, 2]
+// Dependencies: [5, 32, 19, 1074, 21, 4639, 5368, 1115, 5491, 4334, 9416, 7230, 4635, 6710, 1177, 5059, 5709, 7107, 2]
 // Exports: default
 
-// Module 9412 (FederatedSocialModal)
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import PlatformsDefault from "Platforms" /* 5364 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import FederatedSocialUtils from "FederatedSocialUtils" /* 9413 */;
+// Module 9415 (FederatedSocialModal)
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import PlatformsDefault from "Platforms" /* 5368 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
+import FederatedSocialUtils from "FederatedSocialUtils" /* 9416 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const FreeFormInputGroupDefault = tmp6(6706);
+const FreeFormInputGroupDefault = tmp6(6710);
 require = fn;
 const WebBrowserType = fn(1074).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");

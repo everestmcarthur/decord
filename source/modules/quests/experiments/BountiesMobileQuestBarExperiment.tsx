@@ -1,10 +1,10 @@
-// Module ID: 11417
-// Function ID: 11418
+// Module ID: 11421
+// Function ID: 11422
 // Name: BountiesMobileQuestBarExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 
-// Module 11417 (BountiesMobileQuestBarExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11421 (BountiesMobileQuestBarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-bounties-mobile-quest-bar", kind: "user", defaultConfig: { enabled: false }, variations: null };

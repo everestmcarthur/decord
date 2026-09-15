@@ -1,17 +1,17 @@
-// Module ID: 9225
-// Function ID: 9226
+// Module ID: 9228
+// Function ID: 9229
 // Name: VideoBackgroundStore
-// Dependencies: [1219, 1908, 2011, 1371, 9226, 4691, 504, 573, 2]
+// Dependencies: [1220, 1909, 2012, 1372, 9229, 4694, 504, 573, 2]
 
-// Module 9225 (VideoBackgroundStore)
+// Module 9228 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9226 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserStore from "UserStore" /* 1371 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9229 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function handleSyncedStoresUpdate() {

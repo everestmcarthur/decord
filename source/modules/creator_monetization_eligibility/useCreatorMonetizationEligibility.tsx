@@ -1,16 +1,16 @@
-// Module ID: 17829
-// Function ID: 17830
+// Module ID: 17867
+// Function ID: 17868
 // Name: useCreatorMonetizationEligibility
-// Dependencies: [5, 32, 19, 17799, 17802, 4538, 2]
+// Dependencies: [5, 32, 19, 17837, 17840, 4541, 2]
 // Exports: default
 
-// Module 17829 (useCreatorMonetizationEligibility)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 17802 */;
+// Module 17867 (useCreatorMonetizationEligibility)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 17840 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_6 = fn(17799).CreatorMonetizationApplicationState;
+let closure_6 = fn(17837).CreatorMonetizationApplicationState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
@@ -63,7 +63,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = closure_3;
-            const tmp45 = new closure_0(4538)(closure_129_1);
+            const tmp45 = new closure_0(4541)(closure_129_1);
             tmp4(tmp45);
             c4 = 0;
             closure_1(false);

@@ -1,14 +1,14 @@
-// Module ID: 16639
-// Function ID: 16640
+// Module ID: 16652
+// Function ID: 16653
 // Name: useTrackRoleSubscriptionUpsellAnalytics
-// Dependencies: [19, 4269, 1074, 15297, 16640, 504, 7265, 1100, 1240, 4816, 2]
+// Dependencies: [19, 4272, 1074, 15307, 16653, 504, 7269, 1101, 1241, 4819, 2]
 // Exports: default
 
-// Module 16639 (useTrackRoleSubscriptionUpsellAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
+// Module 16652 (useTrackRoleSubscriptionUpsellAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4269 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4272 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

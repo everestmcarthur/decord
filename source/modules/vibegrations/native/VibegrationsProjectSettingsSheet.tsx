@@ -1,18 +1,18 @@
-// Module ID: 16706
-// Function ID: 16707
+// Module ID: 16726
+// Function ID: 16727
 // Name: VibegrationsProjectSettingsSheet
-// Dependencies: [5, 32, 19, 17, 2015, 16690, 1074, 21, 4636, 576, 504, 7348, 4603, 1114, 3590, 7300, 4632, 7252, 9848, 7153, 6728, 5768, 5685, 7347, 16697, 6707, 5686, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 2016, 16703, 1074, 21, 4639, 576, 504, 7352, 4606, 1115, 3591, 7304, 4635, 7256, 9850, 7157, 5772, 5689, 7351, 16710, 6711, 5690, 5059, 2]
 // Exports: default
 
-// Module 16706 (VibegrationsProjectSettingsSheet)
+// Module 16726 (VibegrationsProjectSettingsSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4603 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7348 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4606 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16690 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16703 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -82,15 +82,15 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   let intl = guildId(onSave[13]).intl;
   const tmp7 = stateFromStoresArray(first.useState(""), 2);
   let obj2 = { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES };
-  const obj3 = { scrollable: true, startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
+  const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[13]).intl;
-  obj3.dismissAccessibilityLabel = intl2.string(require("module_3590")["9yHiDe"]);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_3590").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES });
+  obj3.dismissAccessibilityLabel = intl2.string(require("module_3591")["9yHiDe"]);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_3591").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES });
   const tmp12 = closure_11;
-  obj3.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3590").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
+  obj3.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3591").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
   const obj5 = { title: null, trailing: null };
   const intl3 = guildId(onSave[13]).intl;
-  obj5.title = intl3.string(require("module_3590").fqvhf0);
+  obj5.title = intl3.string(require("module_3591").fqvhf0);
   const obj6 = { label: null, onPress: null };
   const intl4 = guildId(onSave[13]).intl;
   obj6.label = intl4.string(guildId(onSave[13]).t.i4jeWR);
@@ -104,14 +104,14 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   obj7.placeholder = intl6.string(guildId(onSave[13]).t.Sojqsr);
   obj7.onChange = tmp8;
   const items4 = [closure_10(guildId(onSave[19]).SearchField, obj7), ];
-  const obj8 = { keyboardShouldPersistTaps: "handled", contentContainerStyle: tmp.roleListContent, children: null };
+  const obj8 = { style: tmp.roleListContent, children: null };
   if (0 === memo.length) {
     const obj9 = { style: tmp.roleListEmpty, children: null };
     const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
     const intl7 = tmp2(tmp3[13]).intl;
     obj10.children = intl7.string(tmp2(tmp3[13]).t.V6nAfF);
     obj9.children = tmp13(tmp2(tmp3[16]).Text, obj10);
-    let tmp13Result = tmp13(closure_6, obj9);
+    let tmp13Result = tmp13(tmp14, obj9);
   } else {
     const obj11 = {
       hasIcons: false,
@@ -144,19 +144,19 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
           if (tmp3) {
             const intl = guildId(onSave[13]).intl;
             const obj4 = { max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_3590").VPUL05, obj4);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_3591").VPUL05, obj4);
           }
           obj2.accessibilityHint = formatToPlainStringResult;
           obj2.onPress = function onPress(arg0) {
             return closure_8(id.id, arg0);
           };
-          return closure_1_10(guildId(onSave[22]).TableCheckboxRow, obj2, children.id);
+          return closure_1_10(guildId(onSave[21]).TableCheckboxRow, obj2, children.id);
         })
     };
-    tmp13Result = tmp13(tmp2(tmp3[21]).TableRowGroup, obj11);
+    tmp13Result = tmp13(tmp2(tmp3[20]).TableRowGroup, obj11);
   }
   obj8.children = tmp13Result;
-  items4[1] = closure_10(guildId(onSave[20]).BottomSheetScrollView, obj8);
+  items4[1] = closure_10(closure_6, obj8);
   obj3.children = items4;
   return tmp12(guildId(onSave[15]).ActionSheet, obj3);
 }
@@ -166,7 +166,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsProjectSettingsSheet = "VibegrationsProjectSettingsSheet";
 VibegrationsCollaboratorRolesSheet = "VibegrationsCollaboratorRolesSheet";
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -177,7 +177,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let closure_15 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -255,7 +255,7 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     const tmp2Result3 = tmp2(tmp3[11]);
   }
   const tmp5Result8 = _slicedToArray(first1.useState(false), 2);
-  const vibegrationsProjectAccessSettings = first2(stateFromStores[23]).getVibegrationsProjectAccessSettings(first1);
+  const vibegrationsProjectAccessSettings = first2(stateFromStores[22]).getVibegrationsProjectAccessSettings(first1);
   isPublic = vibegrationsProjectAccessSettings.isPublic;
   let tmp22 = null != stateFromStores;
   if (tmp22) {
@@ -377,7 +377,7 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
                     c3 = 2;
                     v3 = 3;
                     c4 = 1;
-                    const obj7 = { value: tmp4(tmp55[24]).updateProjectSettings(first2, obj5), done: false };
+                    const obj7 = { value: tmp4(tmp55[23]).updateProjectSettings(first2, obj5), done: false };
                     return obj7;
                   } else {
                     const intl = tmp4(tmp55[13]).intl;
@@ -431,7 +431,7 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
       }
     }
   }), items3);
-  let obj3 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
+  let obj3 = { startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   let intl = tmp2(tmp3[13]).intl;
   obj3.dismissAccessibilityLabel = intl.string(guildId(stateFromStores[14]).UYmwNU);
   let obj4 = { title: null };
@@ -445,7 +445,7 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
   obj6.value = str2;
   obj6.onChange = callback;
   obj6.isDisabled = first3;
-  const items4 = [closure_10(first2(stateFromStores[25]).TextInput, obj6), , , , , , ];
+  const items4 = [closure_10(first2(stateFromStores[24]).TextInput, obj6), , , , , , ];
   let tmp31Result = null;
   if (null != tmp15) {
     let obj7 = { accessibilityRole: "alert", children: null };
@@ -467,8 +467,8 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     obj10.onPress = function onPress(arg0) {
       return closure_19(VibegrationsTypes.VibegrationsProjectFlags.SHAREABLE, arg0);
     };
-    obj9.children = tmp31(tmp2(tmp3[22]).TableCheckboxRow, obj10);
-    tmp31Result5 = tmp31(tmp2(tmp3[21]).TableRowGroup, obj9);
+    obj9.children = tmp31(tmp2(tmp3[21]).TableCheckboxRow, obj10);
+    tmp31Result5 = tmp31(tmp2(tmp3[20]).TableRowGroup, obj9);
   }
   items4[2] = tmp31Result5;
   let tmp31Result6 = null;
@@ -484,8 +484,8 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     obj12.onPress = function onPress(arg0) {
       return closure_19(VibegrationsTypes.VibegrationsProjectFlags.PUBLIC, arg0);
     };
-    obj11.children = tmp31(tmp2(tmp3[22]).TableCheckboxRow, obj12);
-    tmp31Result6 = tmp31(tmp2(tmp3[21]).TableRowGroup, obj11);
+    obj11.children = tmp31(tmp2(tmp3[21]).TableCheckboxRow, obj12);
+    tmp31Result6 = tmp31(tmp2(tmp3[20]).TableRowGroup, obj11);
   }
   items4[3] = tmp31Result6;
   let tmp31Result7 = null;
@@ -508,8 +508,8 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     const obj14 = { hasIcons: false, children: null };
     obj13.accessibilityHint = stringResult;
     obj13.onPress = callback2;
-    obj14.children = tmp31(tmp2(tmp3[26]).TableRow, obj13);
-    tmp31Result7 = tmp31(tmp2(tmp3[21]).TableRowGroup, obj14);
+    obj14.children = tmp31(tmp2(tmp3[25]).TableRow, obj13);
+    tmp31Result7 = tmp31(tmp2(tmp3[20]).TableRowGroup, obj14);
   }
   items4[4] = tmp31Result7;
   let tmp31Result8 = null;
@@ -533,13 +533,11 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
   if (!tmp42) {
     tmp42 = first3;
   }
-  const obj18 = { children: null };
   obj17.disabled = tmp42;
   obj17.onPress = callback3;
-  items4[6] = closure_10(first2(stateFromStores[27]).Button, obj17);
+  items4[6] = closure_10(first2(stateFromStores[26]).Button, obj17);
   obj5.children = items4;
-  obj18.children = c11(closure_6, obj5);
-  obj3.children = closure_10(first2(stateFromStores[20]).BottomSheetScrollView, obj18);
+  obj3.children = c11(closure_6, obj5);
   return closure_10(first2(stateFromStores[15]).ActionSheet, obj3);
 };
 export const VIBEGRATIONS_PROJECT_SETTINGS_SHEET_KEY = "VibegrationsProjectSettingsSheet";

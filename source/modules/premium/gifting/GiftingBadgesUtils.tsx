@@ -1,17 +1,17 @@
-// Module ID: 13658
-// Function ID: 13659
+// Module ID: 13663
+// Function ID: 13664
 // Name: GiftingBadgesUtils
-// Dependencies: [8309, 1371, 10872, 13659, 13660, 504, 4457, 1943, 2]
+// Dependencies: [8312, 1372, 10876, 13664, 13665, 504, 4460, 1944, 2]
 // Exports: getGiftingBadgeProgressPercent, getGiftingBadgeTierIconUrl, getIsGiftingBadgesDesktopEnabled, useIsEligibleToShowGiftingBadgeCoachmark, useIsGiftingBadgeComplexArtEnabled, useIsGiftingBadgesDesktopEnabled
 
-// Module 13658 (GiftingBadgesUtils)
+// Module 13663 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10872 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13659 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 13660 */;
-import UserStore from "UserStore" /* 1371 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8312 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10876 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13664 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 13665 */;
+import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = BadgeDirectoryStore.getSingleRequirementThreshold;
@@ -111,7 +111,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     return flag;
   });
   const tmpResult = initialize;
-  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(tmp(1943).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(tmp(1944).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;
   }

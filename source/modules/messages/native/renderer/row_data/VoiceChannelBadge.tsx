@@ -1,15 +1,15 @@
-// Module ID: 13313
-// Function ID: 13314
+// Module ID: 13318
+// Function ID: 13319
 // Name: VoiceChannelBadge
-// Dependencies: [17, 1957, 4275, 4655, 1074, 13314, 5109, 4847, 2]
+// Dependencies: [17, 1958, 4278, 4658, 1074, 13319, 5112, 4850, 2]
 // Exports: createVoiceChannelBadge
 
-// Module 13313 (VoiceChannelBadge)
+// Module 13318 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -28,16 +28,16 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
-          const assetSource = Image.resolveAssetSource(tmp(5109).getChannelIcon(channel));
+          const assetSource = Image.resolveAssetSource(tmp(5112).getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            let result = tmp(4847).shouldAgeVerifyForAgeGate();
+            let result = tmp(4850).shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4847).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult4 = tmp(4847);
+              result = tmp(4850).shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult4 = tmp(4850);
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
@@ -50,9 +50,9 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
                 return obj2;
               }
             }
-            const tmpResult3 = tmp(4847);
+            const tmpResult3 = tmp(4850);
           }
-          const tmpResult = tmp(5109);
+          const tmpResult = tmp(5112);
         }
       }
     }

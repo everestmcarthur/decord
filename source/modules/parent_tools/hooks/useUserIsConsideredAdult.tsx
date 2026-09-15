@@ -1,12 +1,12 @@
-// Module ID: 12008
-// Function ID: 12009
+// Module ID: 12012
+// Function ID: 12013
 // Name: useUserIsConsideredAdult
-// Dependencies: [1371, 504, 2]
+// Dependencies: [1372, 504, 2]
 // Exports: default
 
-// Module 12008 (useUserIsConsideredAdult)
+// Module 12012 (useUserIsConsideredAdult)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);

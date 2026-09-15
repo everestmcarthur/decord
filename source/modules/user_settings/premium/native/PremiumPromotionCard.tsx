@@ -1,23 +1,23 @@
-// Module ID: 13557
-// Function ID: 13558
+// Module ID: 13562
+// Function ID: 13563
 // Name: PremiumPromotionCard
-// Dependencies: [19, 17, 4628, 1074, 1373, 21, 4636, 576, 504, 7265, 7525, 5668, 4632, 1114, 2024, 5056, 8785, 2]
+// Dependencies: [19, 17, 4631, 1074, 1374, 21, 4639, 576, 504, 7269, 7529, 5672, 4635, 1115, 2025, 5059, 8788, 2]
 // Exports: default
 
-// Module 13557 (PremiumPromotionCard)
+// Module 13562 (PremiumPromotionCard)
 import nativeDefault from "native" /* 576 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7529 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: metroRequire, AnalyticsPages: closure_7, AnalyticsSections: closure_8, HelpdeskArticles: closure_9 } = Constants);
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { width: "100%" }, card: { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, marginBottom: nativeDefault.space.PX_24, overflow: "hidden" }, image: null, nitroWheelIcon: null };
 let size = { alignSelf: "center", marginBottom: nativeDefault.space.PX_24, borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.none, borderBottomLeftRadius: nativeDefault.radii.none, width: "110%", height: 95 };
 obj2.image = size;

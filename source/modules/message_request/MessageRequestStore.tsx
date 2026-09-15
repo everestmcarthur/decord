@@ -1,10 +1,10 @@
-// Module ID: 7322
-// Function ID: 7323
+// Module ID: 7326
+// Function ID: 7327
 // Name: MessageRequestStore
-// Dependencies: [1957, 1073, 2]
+// Dependencies: [1958, 1073, 2]
 
-// Module 7322 (MessageRequestStore)
-import ChannelStore from "ChannelStore" /* 1957 */;
+// Module 7326 (MessageRequestStore)
+import ChannelStore from "ChannelStore" /* 1958 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
 
 function processChannel(isMessageRequest) {

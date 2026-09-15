@@ -1,35 +1,16 @@
 // Module ID: 13001
 // Function ID: 13002
-// Dependencies: [12933, 12954, 12983]
+// Dependencies: []
+// Exports: parameterize
 
 // Module 13001
-import setupIntegration from "module_12983" /* 12983 */;
 
-const weakMap = new WeakMap();
-
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function() {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(12933).getOriginalFunction(this);
-        const obj = closure_1_0(12933);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {
-    }
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
-  }
-}));
+export const parameterize = function parameterize(join) {
+  const substr = [...arguments].slice();
+  const items = [join, ...substr];
+  const string = new String(String.raw.apply(items));
+  const str = join.join("\0");
+  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
+  string.__sentry_template_values__ = substr;
+  return string;
+};

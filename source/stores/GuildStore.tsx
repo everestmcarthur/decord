@@ -1,17 +1,17 @@
-// Module ID: 1979
-// Function ID: 1980
+// Module ID: 1980
+// Function ID: 1981
 // Name: GuildStore
-// Dependencies: [1972, 1980, 1975, 502, 1970, 1974, 1982, 11, 1971, 1983, 2]
+// Dependencies: [1973, 1981, 1976, 502, 1971, 1975, 1983, 11, 1972, 1984, 2]
 
-// Module 1979 (GuildStore)
+// Module 1980 (GuildStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FavoritesConstants from "FavoritesConstants" /* 1970 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 1971 */;
-import SetUtils from "SetUtils" /* 1974 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 1980 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 1983 */;
-import PlainRecord from "PlainRecord" /* 1972 */;
-import GuildRecord from "GuildRecord" /* 1975 */;
+import FavoritesConstants from "FavoritesConstants" /* 1971 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 1972 */;
+import SetUtils from "SetUtils" /* 1975 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 1981 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 1984 */;
+import PlainRecord from "PlainRecord" /* 1973 */;
+import GuildRecord from "GuildRecord" /* 1976 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 

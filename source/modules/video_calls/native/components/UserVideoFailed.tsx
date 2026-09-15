@@ -1,21 +1,21 @@
-// Module ID: 17252
-// Function ID: 17253
+// Module ID: 17290
+// Function ID: 17291
 // Name: UserVideoFailed
-// Dependencies: [17, 1074, 21, 4636, 576, 9239, 9731, 4632, 1114, 5056, 9742, 4691, 9218, 2]
+// Dependencies: [17, 1074, 21, 4639, 576, 9242, 9733, 4635, 1115, 5059, 9744, 4694, 9221, 2]
 // Exports: default
 
-// Module 17252 (UserVideoFailed)
+// Module 17290 (UserVideoFailed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
-import AVError from "AVError" /* 9239 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9742 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9221 */;
+import AVError from "AVError" /* 9242 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9744 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4636 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -37,26 +37,26 @@ export default function UserVideoFailed(arg0) {
   let tmp9 = !removeSplashImage;
   if (!removeSplashImage) {
     const obj3 = { style: tmp2.placeholderImage };
-    tmp9 = closure_5(tmp3(9731).StreamFailed, obj3);
+    tmp9 = closure_5(tmp3(9733).StreamFailed, obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp9, ];
   const obj5 = { variant: "text-md/semibold", color: "text-strong", children: null };
-  const intl = tmp3(1114).intl;
+  const intl = tmp3(1115).intl;
   obj5.children = intl.string(util.t["z+mxvo"]);
   items1[1] = closure_5(Text_Text.Text, obj5);
   obj4.children = items1;
   const items2 = [closure_7(closure_6, obj4), , ];
   const obj6 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
-  const intl2 = tmp3(1114).intl;
+  const intl2 = tmp3(1115).intl;
   obj6.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: AVError.getErrorInfo(avError).errorCode });
   items2[1] = closure_5(Text_Text.Text, obj6);
   const obj7 = { style: tmp2.button, children: null };
   let tmp11Result = !removeRetryButton;
   if (!removeRetryButton) {
     const obj8 = { variant: "secondary", text: null, onPress: null };
-    const intl3 = tmp3(1114).intl;
-    obj8.text = intl3.string(tmp3(1114).t["hxmQ/e"]);
+    const intl3 = tmp3(1115).intl;
+    obj8.text = intl3.string(tmp3(1115).t["hxmQ/e"]);
     obj8.onPress = function onPress() {
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_1_0);
       AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
@@ -64,7 +64,7 @@ export default function UserVideoFailed(arg0) {
         AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     };
-    tmp11Result = tmp11(tmp3(5056).Button, obj8);
+    tmp11Result = tmp11(tmp3(5059).Button, obj8);
   }
   obj7.children = tmp11Result;
   items2[2] = closure_5(View, obj7);

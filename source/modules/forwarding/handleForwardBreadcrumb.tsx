@@ -1,14 +1,14 @@
-// Module ID: 12061
-// Function ID: 12062
+// Module ID: 12065
+// Function ID: 12066
 // Name: handleForwardBreadcrumb
-// Dependencies: [5, 1957, 1979, 1074, 7444, 5601, 1240, 7350, 2]
+// Dependencies: [5, 1958, 1980, 1074, 7448, 5605, 1241, 7354, 2]
 // Exports: default
 
-// Module 12061 (handleForwardBreadcrumb)
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7444 */;
+// Module 12065 (handleForwardBreadcrumb)
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7448 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
 let closure_9 = async function _handleForwardBreadcrumb(arg0) {

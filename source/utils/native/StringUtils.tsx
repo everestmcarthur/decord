@@ -1,10 +1,10 @@
-// Module ID: 11035
-// Function ID: 11036
-// Dependencies: [11034, 2]
+// Module ID: 11039
+// Function ID: 11040
+// Dependencies: [11038, 2]
 // Exports: splitGraphemes
 
-// Module 11035
-import rawDefault from "raw" /* 11034 */;
+// Module 11039
+import rawDefault from "raw" /* 11038 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");

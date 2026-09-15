@@ -1,11 +1,11 @@
-// Module ID: 5190
-// Function ID: 5191
+// Module ID: 5193
+// Function ID: 5194
 // Name: GameAutocompleteUtils
-// Dependencies: [5191, 2]
+// Dependencies: [5194, 2]
 // Exports: isGameAutocompleteResultAllowedInGameWidgets, normalizeGameAutocompleteQuery, shouldSuppressAutocompleteFetch
 
-// Module 5190 (GameAutocompleteUtils)
-import GameWidgetLimits from "GameWidgetLimits" /* 5191 */;
+// Module 5193 (GameAutocompleteUtils)
+import GameWidgetLimits from "GameWidgetLimits" /* 5194 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");

@@ -1,17 +1,17 @@
-// Module ID: 14755
-// Function ID: 14756
+// Module ID: 14765
+// Function ID: 14766
 // Name: PasskeyUpsellPromoModal
-// Dependencies: [19, 14745, 21, 14748, 1114, 12059, 2]
+// Dependencies: [19, 14755, 21, 14758, 1115, 12063, 2]
 // Exports: default
 
-// Module 14755 (PasskeyUpsellPromoModal)
-import util from "util" /* 1114 */;
-import Modal from "Modal" /* 12059 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 14748 */;
+// Module 14765 (PasskeyUpsellPromoModal)
+import util from "util" /* 1115 */;
+import Modal from "Modal" /* 12063 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const WebAuthnScreens = fn(14745).WebAuthnScreens;
+const WebAuthnScreens = fn(14755).WebAuthnScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");

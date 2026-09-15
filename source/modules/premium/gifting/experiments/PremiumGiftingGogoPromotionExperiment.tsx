@@ -1,10 +1,10 @@
-// Module ID: 10869
-// Function ID: 10870
+// Module ID: 10873
+// Function ID: 10874
 // Name: PremiumGiftingGogoPromotionExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 
-// Module 10869 (PremiumGiftingGogoPromotionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 10873 (PremiumGiftingGogoPromotionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-premium-gifting-gogo-promotion", kind: "user", defaultConfig: { enabled: false }, variations: null };

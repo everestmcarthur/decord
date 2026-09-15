@@ -1,14 +1,14 @@
-// Module ID: 13268
-// Function ID: 13269
+// Module ID: 13273
+// Function ID: 13274
 // Name: ProductDetailsActionSheetPreview
-// Dependencies: [32, 19, 17, 21, 4636, 576, 1889, 13269, 13271, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 1890, 13274, 13276, 2]
 // Exports: default
 
-// Module 13268 (ProductDetailsActionSheetPreview)
+// Module 13273 (ProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 576 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13269 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13271 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13274 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13276 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const noop = fn(19);
 ({ useCallback: closure_4, useState: hasOwnProperty } = noop);
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { previewContainer: { flex: 1 }, previewDivider: { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: nativeDefault.space.PX_16, flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

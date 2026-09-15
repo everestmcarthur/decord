@@ -1,21 +1,21 @@
-// Module ID: 17462
-// Function ID: 17463
+// Module ID: 17500
+// Function ID: 17501
 // Name: KvBackgroundManager
-// Dependencies: [32, 5, 12543, 7581, 7582, 1090, 3, 7221, 17463, 7857, 1363, 1986, 1987, 2003, 2]
+// Dependencies: [32, 5, 12548, 7585, 7586, 1091, 3, 7225, 17501, 7860, 1364, 1987, 1988, 2004, 2]
 
-// Module 17462 (KvBackgroundManager)
+// Module 17500 (KvBackgroundManager)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 17463 */;
+import DurationsDefault from "Durations" /* 1091 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 17501 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12543 */;
-import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7581 */;
-import FileSystemStore from "FileSystemStore" /* 7582 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+import MultiAccountStore from "MultiAccountStore" /* 12548 */;
+import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7585 */;
+import FileSystemStore from "FileSystemStore" /* 7586 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 let require = fn;
-let SaveableChannelsStore = fn(7581);
+let SaveableChannelsStore = fn(7585);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } = SaveableChannelsStore);
 let SaveableChannelsStore = SaveableChannelsStore_mod;
 let closure_10 = 5 * DurationsDefault.Millis.MINUTE;
@@ -67,12 +67,12 @@ class KvBackgroundManager extends tmp4 {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      prefix = v1(1986).channels(prefix);
-                      const obj5 = v1(1986);
+                      prefix = v1(1987).channels(prefix);
+                      const obj5 = v1(1987);
                       const obj6 = prefix;
-                      closure_1 = v1(1986).messages(prefix);
-                      const obj7 = v1(1986);
-                      closure_2 = v1(1986).channelsTemp(prefix);
+                      closure_1 = v1(1987).messages(prefix);
+                      const obj7 = v1(1987);
+                      closure_2 = v1(1987).channelsTemp(prefix);
                       if (closure_1_8.canEvictOrphans()) {
                         v1 = 1;
                         c0 = 1;
@@ -96,7 +96,7 @@ class KvBackgroundManager extends tmp4 {
                         };
                         return obj4;
                       }
-                      const obj8 = v1(1986);
+                      const obj8 = v1(1987);
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
@@ -153,7 +153,7 @@ class KvBackgroundManager extends tmp4 {
                                     let tmp10 = new.target;
                                     let tmp11 = new.target;
                                     let flag = true;
-                                    let table = new c0(1987).Table(items, tmp5, closure_1_0, true);
+                                    let table = new c0(1988).Table(items, tmp5, closure_1_0, true);
                                     let upgradeTransactionResult = table.upgradeTransaction(arg0);
                                     let deleteResult = upgradeTransactionResult.delete();
                                     continue;

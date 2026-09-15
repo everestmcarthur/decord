@@ -1,28 +1,28 @@
-// Module ID: 16200
-// Function ID: 16201
+// Module ID: 16213
+// Function ID: 16214
 // Name: RedesignChannelList
-// Dependencies: [32, 19, 17, 4628, 7628, 16118, 1979, 2011, 4660, 1074, 21, 1486, 4494, 11352, 16201, 16202, 16229, 16277, 15180, 16117, 16278, 16230, 16280, 7639, 504, 7638, 16281, 16285, 7631, 16286, 11126, 16105, 15181, 11663, 7259, 16148, 16338, 16351, 7175, 16354, 16356, 16360, 16361, 16366, 1982, 16368, 10423, 16376, 12027, 2]
+// Dependencies: [32, 19, 17, 4631, 7632, 16131, 1980, 2012, 4663, 1074, 21, 1487, 4497, 11356, 16214, 16215, 16242, 16290, 15190, 16130, 16291, 16243, 16293, 7643, 504, 7642, 16294, 16298, 7635, 16299, 11130, 16118, 15191, 11667, 7263, 16161, 16351, 16364, 7179, 16367, 16369, 16373, 16374, 16379, 1983, 16381, 10425, 16389, 12031, 2]
 
-// Module 16200 (RedesignChannelList)
-import ChannelListState from "ChannelListState" /* 7631 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12027 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16117 */;
-import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16230 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16277 */;
-import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16278 */;
-import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16286 */;
-import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16361 */;
-import GuildsEmptyDefault from "GuildsEmpty" /* 16366 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16376 */;
+// Module 16213 (RedesignChannelList)
+import ChannelListState from "ChannelListState" /* 7635 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11130 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12031 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16130 */;
+import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16243 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16290 */;
+import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16291 */;
+import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16299 */;
+import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16374 */;
+import GuildsEmptyDefault from "GuildsEmpty" /* 16379 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16389 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ChannelListStore from "ChannelListStore" /* 7628 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16118 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import ChannelListStore from "ChannelListStore" /* 7632 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16131 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4663 */;
 
 require = fn;
 function GuildChannels(guild) {
@@ -70,7 +70,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_14(tmp2(16368).default, obj4);
+          return closure_14(tmp2(16381).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -85,7 +85,7 @@ function ChannelsWrapper(selectedGuildId) {
           }
           return tmp6Result;
         }
-        tmp2Result = tmp2(1982);
+        tmp2Result = tmp2(1983);
       }
     }
     const obj7 = { style: merged.style, selectedGuildId };

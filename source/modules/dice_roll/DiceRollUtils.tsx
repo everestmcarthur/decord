@@ -1,11 +1,11 @@
-// Module ID: 12514
-// Function ID: 12515
+// Module ID: 12519
+// Function ID: 12520
 // Name: DiceRollUtils
-// Dependencies: [1114, 2]
+// Dependencies: [1115, 2]
 // Exports: getBarText
 
-// Module 12514 (DiceRollUtils)
-import util from "util" /* 1114 */;
+// Module 12519 (DiceRollUtils)
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");

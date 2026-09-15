@@ -1,21 +1,21 @@
-// Module ID: 14789
-// Function ID: 14790
+// Module ID: 14799
+// Function ID: 14800
 // Name: SettingSearchBar
-// Dependencies: [19, 17, 14778, 21, 4636, 576, 1874, 7100, 7153, 2]
+// Dependencies: [19, 17, 14788, 21, 4639, 576, 1875, 7104, 7157, 2]
 // Exports: default
 
-// Module 14789 (SettingSearchBar)
+// Module 14799 (SettingSearchBar)
 import nativeDefault from "native" /* 576 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import Tracking from "Tracking" /* 7100 */;
-import SearchField from "SearchField" /* 7153 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
+import Tracking from "Tracking" /* 7104 */;
+import SearchField from "SearchField" /* 7157 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14778 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14788 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { container: { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// Module ID: 8336
-// Function ID: 8337
+// Module ID: 8339
+// Function ID: 8340
 // Name: StorefrontProductStore
 // Dependencies: [504, 573, 2]
 
-// Module 8336 (StorefrontProductStore)
+// Module 8339 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

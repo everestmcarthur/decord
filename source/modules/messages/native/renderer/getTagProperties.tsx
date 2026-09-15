@@ -1,13 +1,13 @@
-// Module ID: 8138
-// Function ID: 8139
+// Module ID: 8141
+// Function ID: 8142
 // Name: getTagProperties
-// Dependencies: [17, 4629, 8139, 1114, 8141, 8143, 2]
+// Dependencies: [17, 4632, 8142, 1115, 8144, 8146, 2]
 // Exports: default
 
-// Module 8138 (getTagProperties)
+// Module 8141 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
-import MessageConstants from "MessageConstants" /* 4629 */;
-import isCrosspostDefault from "isCrosspost" /* 8141 */;
+import MessageConstants from "MessageConstants" /* 4632 */;
+import isCrosspostDefault from "isCrosspost" /* 8144 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -25,22 +25,22 @@ export default function getTagProperties(arg0) {
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspostDefault(message)) {
-        const intl2 = tmp2(1114).intl;
-        let stringResult = intl2.string(tmp2(1114).t.PuJGuM);
+        const intl2 = tmp2(1115).intl;
+        let stringResult = intl2.string(tmp2(1115).t.PuJGuM);
         let SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.BOT_TAG_SERVER_TYPE;
         let flag = isVerifiedBotResult;
       } else {
         flag = isVerifiedBotResult;
         stringResult = null;
         if (message.author.bot) {
-          const intl = tmp2(1114).intl;
+          const intl = tmp2(1115).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(8143)).uri;
+            uri = Image.resolveAssetSource(tmp4(8146)).uri;
           }
           flag = isVerifiedBotResult;
-          stringResult = intl.string(tmp2(1114).t["9RNkeF"]);
-          const stringResult1 = intl.string(tmp2(1114).t["9RNkeF"]);
+          stringResult = intl.string(tmp2(1115).t["9RNkeF"]);
+          const stringResult1 = intl.string(tmp2(1115).t["9RNkeF"]);
           const tmp5 = uri;
         }
       }
@@ -61,18 +61,18 @@ export default function getTagProperties(arg0) {
       }
       let stringResult2 = null;
       if (tmp18) {
-        const intl6 = tmp2(1114).intl;
-        stringResult2 = intl6.string(tmp2(1114).t.fyE8sH);
+        const intl6 = tmp2(1115).intl;
+        stringResult2 = intl6.string(tmp2(1115).t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "HermesInternal", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: null, opTagBackgroundColor: "133f082cc6a7642a4a6e08e490a58839" };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "accessible", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "r", opTagBackgroundColor: "ip" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {
       if (!tmp2Result.isPublicSystemMessage(message)) {
         if (!isSystemDM) {
-          const intl4 = tmp2(1114).intl;
+          const intl4 = tmp2(1115).intl;
           const string = intl4.string;
-          const t = tmp2(1114).t;
+          const t = tmp2(1115).t;
           if (tmp14) {
             let stringResult3 = string(t["39trQT"]);
           } else if (flag) {
@@ -83,13 +83,13 @@ export default function getTagProperties(arg0) {
           tmp14 = isCrosspostDefault(message);
         }
       }
-      const intl5 = tmp2(1114).intl;
-      stringResult3 = intl5.string(tmp2(1114).t["7s687k"]);
-      tmp2Result = tmp2(8139);
+      const intl5 = tmp2(1115).intl;
+      stringResult3 = intl5.string(tmp2(1115).t["7s687k"]);
+      tmp2Result = tmp2(8142);
     }
   }
-  const intl3 = tmp2(1114).intl;
-  stringResult = intl3.string(tmp2(1114).t.lKQ7Wt);
+  const intl3 = tmp2(1115).intl;
+  stringResult = intl3.string(tmp2(1115).t.lKQ7Wt);
   SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.SYSTEM_DM_TAG_SYSTEM_TYPE;
   flag = true;
 };

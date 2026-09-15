@@ -1,11 +1,11 @@
-// Module ID: 7050
-// Function ID: 7051
+// Module ID: 7054
+// Function ID: 7055
 // Name: NativeCeremonies
-// Dependencies: [5, 17, 3, 6698, 1114, 1363, 7051, 7052, 1608, 2]
+// Dependencies: [5, 17, 3, 6702, 1115, 1364, 7055, 7056, 1609, 2]
 
-// Module 7050 (NativeCeremonies)
+// Module 7054 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1115 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -131,7 +131,7 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(1363).isAndroid();
+  let isAndroidResult = authenticatePasskey(1364).isAndroid();
   if (isAndroidResult) {
     const DCDSecurityKeyManager = tmp.DCDSecurityKeyManager;
     authenticatePasskey = undefined;

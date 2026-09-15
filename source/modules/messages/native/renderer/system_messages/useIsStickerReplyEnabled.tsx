@@ -1,14 +1,14 @@
-// Module ID: 8101
-// Function ID: 8102
+// Module ID: 8104
+// Function ID: 8105
 // Name: useIsStickerReplyEnabled
-// Dependencies: [2021, 4275, 1371, 1074, 7372, 2]
+// Dependencies: [2022, 4278, 1372, 1074, 7376, 2]
 // Exports: computeIsStickerReplyEnabled
 
-// Module 8101 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7372 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 8104 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7376 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;

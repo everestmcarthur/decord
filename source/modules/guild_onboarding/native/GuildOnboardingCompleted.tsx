@@ -1,21 +1,21 @@
-// Module ID: 7286
-// Function ID: 7287
+// Module ID: 7290
+// Function ID: 7291
 // Name: GuildOnboardingCompleted
-// Dependencies: [19, 17, 4628, 2015, 1979, 1371, 7203, 21, 4636, 576, 1483, 504, 7230, 4347, 7287, 1396, 1878, 1369, 5043, 4373, 4637, 5668, 7226, 4632, 1114, 1176, 7288, 5665, 4228, 7313, 5056, 2]
+// Dependencies: [19, 17, 4631, 2016, 1980, 1372, 7207, 21, 4639, 576, 1484, 504, 7234, 4350, 7291, 1397, 1879, 1370, 5046, 4376, 4640, 5672, 7230, 4635, 1115, 1177, 7292, 5669, 4231, 7317, 5059, 2]
 // Exports: default
 
-// Module 7286 (GuildOnboardingCompleted)
+// Module 7290 (GuildOnboardingCompleted)
 import nativeDefault from "native" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import UserProfileRolesCard from "UserProfileRolesCard" /* 7288 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import UserProfileRolesCard from "UserProfileRolesCard" /* 7292 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7203 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7207 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 400;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, backgroundImage: { position: "absolute", width: "100%", height: "100%" }, title: {}, subtitle: { marginTop: 16 }, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.card = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -172,7 +172,7 @@ export default function GuildOnboardingCompleted(guildId) {
       num = tmp4;
     }
     const obj14 = { duration: num, easing: null };
-    const Easing3 = tmp(4373).Easing;
+    const Easing3 = tmp(4376).Easing;
     obj14.easing = Easing3.out(ReanimatedRexport.Easing.ease);
     const obj15 = { opacity: withSequenceResult, transform: null };
     const obj16 = { rotate: null };

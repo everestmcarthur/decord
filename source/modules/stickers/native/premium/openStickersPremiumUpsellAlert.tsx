@@ -1,13 +1,13 @@
-// Module ID: 10536
-// Function ID: 10537
+// Module ID: 10539
+// Function ID: 10540
 // Name: openStickersPremiumUpsellAlert
-// Dependencies: [5, 19, 1074, 21, 1240, 7360, 4960, 4981, 10537, 1896, 2]
+// Dependencies: [5, 19, 1074, 21, 1241, 7364, 4963, 4984, 10540, 1897, 2]
 // Exports: default
 
-// Module 10536 (openStickersPremiumUpsellAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4960 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
+// Module 10539 (openStickersPremiumUpsellAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4963 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

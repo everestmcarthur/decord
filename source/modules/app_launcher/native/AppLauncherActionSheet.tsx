@@ -1,18 +1,18 @@
-// Module ID: 16873
-// Function ID: 16874
+// Module ID: 16911
+// Function ID: 16912
 // Name: AppLauncherActionSheet
-// Dependencies: [32, 19, 1482, 21, 4373, 11349, 9539, 11350, 7253, 12212, 12326, 7255, 2]
+// Dependencies: [32, 19, 1483, 21, 4376, 11353, 9541, 11354, 7257, 12216, 12330, 7259, 2]
 // Exports: useAppLauncherActionSheet
 
-// Module 16873 (AppLauncherActionSheet)
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 7255 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import AppLauncherContext from "AppLauncherContext" /* 11349 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11350 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12212 */;
-import getAppDMApplication from "getAppDMApplication" /* 12326 */;
+// Module 16911 (AppLauncherActionSheet)
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 7259 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9541 */;
+import AppLauncherContext from "AppLauncherContext" /* 11353 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11354 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12216 */;
+import getAppDMApplication from "getAppDMApplication" /* 12330 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -137,7 +137,7 @@ function AppLauncherActionSheet(arg0) {
   })} entrypoint={TEXT} keyboardCloseReasonRef={ref2} width={defaultAppLauncherWidth} overrideParams={null} />;
   return jsx(Sheet_BottomSheet.BottomSheet, { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null });
 }
-const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");

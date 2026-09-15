@@ -1,13 +1,13 @@
-// Module ID: 7413
-// Function ID: 7414
+// Module ID: 7417
+// Function ID: 7418
 // Name: GameActionCreators
-// Dependencies: [5, 1916, 1074, 1270, 573, 1952, 12, 2]
+// Dependencies: [5, 1917, 1074, 1271, 573, 1953, 12, 2]
 // Exports: fetchGamesWithSupplementalData
 
-// Module 7413 (GameActionCreators)
+// Module 7417 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameStore from "GameStore" /* 1916 */;
+import GameStore from "GameStore" /* 1917 */;
 
 function requestGames() {
   const self = this;
@@ -141,7 +141,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-const batchInvocationManager = new fn(1952).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(1953).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

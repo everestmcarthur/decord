@@ -1,19 +1,19 @@
-// Module ID: 17632
-// Function ID: 17633
+// Module ID: 17670
+// Function ID: 17671
 // Name: GuildSettingsModal
-// Dependencies: [32, 19, 1979, 9193, 1074, 21, 16241, 9192, 1248, 1114, 5705, 17633, 17645, 17649, 17650, 17660, 17675, 17676, 17688, 17700, 17702, 16956, 16965, 17710, 17714, 17716, 16967, 16242, 17717, 17718, 17738, 17759, 17763, 17766, 11967, 11980, 11982, 17767, 17772, 17773, 17795, 17835, 17836, 17852, 17891, 17895, 17896, 17899, 17907, 1611, 5679, 504, 7103, 2]
+// Dependencies: [32, 19, 1980, 9196, 1074, 21, 16254, 9195, 1249, 1115, 5709, 17671, 17683, 17687, 17688, 17698, 17713, 17714, 17726, 17738, 17740, 16994, 17003, 17748, 17752, 17754, 17005, 16255, 17755, 17756, 17776, 17797, 17801, 17804, 11971, 11984, 11986, 17805, 17810, 17811, 17833, 17873, 17874, 17890, 17929, 17933, 17934, 17937, 17945, 1612, 5683, 504, 7107, 2]
 // Exports: default
 
-// Module 17632 (GuildSettingsModal)
-import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
-import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16241 */;
+// Module 17670 (GuildSettingsModal)
+import util from "util" /* 1115 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
+import NavigatorHeader from "NavigatorHeader" /* 5709 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9196 */;
 
 const require = globalThis.__r;
 

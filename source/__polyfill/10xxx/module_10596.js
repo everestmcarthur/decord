@@ -1,15 +1,16 @@
 // Module ID: 10596
 // Function ID: 10597
-// Dependencies: [41, 42, 93, 95, 98, 10580]
+// Dependencies: [41, 42, 93, 95, 98, 10564, 10567, 10568, 10584]
 
 // Module 10596
-import Filter from "Filter" /* 10580 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10584 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENMergeRelativeAfterDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,62 +30,60 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-class ENUnlikelyFormatFilter {
+class ENMergeRelativeAfterDateRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENUnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(ENUnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(ENMergeRelativeAfterDateRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENUnlikelyFormatFilter;
-_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "isValid",
-  value: function isValid(text, text2) {
-    closure_0 = text2;
-    const str2 = text2.text.trim();
-    if (str2 === str3.trim()) {
-      return true;
-    } else {
-      if ("may" === str2.toLowerCase()) {
-        const str5 = text.text.substring(0, text2.index);
-        if (!str6.match(/\b(in)$/i)) {
-          text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
-          });
-          return false;
-        }
-        str6 = text.text.substring(0, text2.index).trim();
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, arg1, text) {
+    let match = str.match(/^\s*$/i);
+    if (match) {
+      let tmp4 = null != text.text.match(/^[+-]/i);
+      if (!tmp4) {
+        tmp4 = null != text.text.match(/^-/i);
       }
-      const formatted = str2.toLowerCase();
-      const endsWithResult = formatted.endsWith("the second");
-      let flag2 = !endsWithResult;
-      if (endsWithResult) {
-        flag2 = false;
-        if (str9.trim().length > 0) {
-          text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
-          });
-          flag2 = false;
-        }
-        str9 = text.text.substring(text2.index + text2.text.length);
-      }
-      return flag2;
+      match = tmp4;
+      str = text.text;
     }
-    str3 = text.text;
+    return match;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text, arg3) {
+      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10564).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/^-/i)) {
+        reverseDurationResult = tmp(10567).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = tmp(10568).ParsingComponents;
+      const ReferenceWithTimezone = tmp(10568).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      ({ reference, index } = start);
+      return new ENMergeRelativeAfterDateRefiner(10568).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
+    }
+  }
+];
 
-export default _createClass(ENUnlikelyFormatFilter, items);
+export default _createClass(ENMergeRelativeAfterDateRefiner, items);

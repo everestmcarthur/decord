@@ -1,21 +1,21 @@
-// Module ID: 11672
-// Function ID: 11673
+// Module ID: 11676
+// Function ID: 11677
 // Name: useScrollHandlers
-// Dependencies: [19, 9615, 3, 5043, 11120, 1247, 11405, 11407, 5528, 2]
+// Dependencies: [19, 9617, 3, 5046, 11124, 1248, 11409, 11411, 5532, 2]
 // Exports: default
 
-// Module 11672 (useScrollHandlers)
+// Module 11676 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11120 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11405 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11407 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5046 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11124 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11409 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11411 */;
 import noop from "module_19" /* 19 */;
 
-const QuestTypes = tmp(5528);
+const QuestTypes = tmp(5532);
 require = fn;
-const useChatBottomManagerUIStore = fn(9615);
+const useChatBottomManagerUIStore = fn(9617);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const size = fn(2);

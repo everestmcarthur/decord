@@ -1,38 +1,38 @@
-// Module ID: 16702
-// Function ID: 16703
+// Module ID: 16723
+// Function ID: 16724
 // Name: VibegrationsPublishNotesSheet
-// Dependencies: [5, 32, 19, 17, 2012, 1979, 4285, 1371, 1074, 4629, 21, 4636, 576, 7084, 504, 7347, 9433, 510, 4603, 11464, 1114, 3590, 1100, 7784, 7559, 7300, 7252, 4632, 7188, 4789, 5056, 2]
+// Dependencies: [5, 32, 19, 17, 2013, 1980, 4288, 1372, 1074, 4632, 21, 4639, 576, 7088, 504, 7351, 9436, 510, 4606, 11468, 1115, 3591, 1101, 7787, 7563, 7304, 7256, 4635, 7192, 4792, 5059, 2]
 // Exports: default
 
-// Module 16702 (VibegrationsPublishNotesSheet)
+// Module 16723 (VibegrationsPublishNotesSheet)
 import Storage3 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 576 */;
-import router_utils from "router_utils" /* 1100 */;
-import util from "util" /* 1114 */;
-import _modDef3590 from "module_3590" /* 3590 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4603 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7347 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11464 */;
+import router_utils from "router_utils" /* 1101 */;
+import util from "util" /* 1115 */;
+import _modDef3591 from "module_3591" /* 3591 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4606 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7351 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11468 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_9 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4629).MessageSendLocation;
+const MessageSendLocation = fn(4632).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
 let closure_18 = "<#" + "9".repeat(20) + ">";
 const VibegrationsPatchNotesLastChannels = "VibegrationsPatchNotesLastChannels";
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -209,7 +209,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3590.IcSdnu);
+    obj4.title = intl.string(_modDef3591.IcSdnu);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -272,8 +272,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + tmp30 + tmp38;
                 }
-                const parsed = tmp3(7784).parse(found, combined);
-                const tmp35Result = tmp3(7559);
+                const parsed = tmp3(7787).parse(found, combined);
+                const tmp35Result = tmp3(7563);
                 const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;

@@ -1,19 +1,19 @@
-// Module ID: 14982
-// Function ID: 14983
+// Module ID: 14992
+// Function ID: 14993
 // Name: FamilyCenterUsernameHeader
-// Dependencies: [19, 17, 21, 4636, 4481, 4632, 2]
+// Dependencies: [19, 17, 21, 4639, 4484, 4635, 2]
 // Exports: default
 
-// Module 14982 (FamilyCenterUsernameHeader)
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import Text_Text from "Text/Text" /* 4632 */;
+// Module 14992 (FamilyCenterUsernameHeader)
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import Text_Text from "Text/Text" /* 4635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterUsernameHeader.tsx");

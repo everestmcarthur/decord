@@ -1,26 +1,35 @@
 // Module ID: 14414
 // Function ID: 14415
-// Dependencies: [14412, 14386]
+// Dependencies: [14399, 14395, 14415]
 
 // Module 14414
-import _mod14386 from "module_14386" /* 14386 */;
-import _mod14412 from "module_14412" /* 14412 */;
+import _mod14395 from "module_14395" /* 14395 */;
+import _mod14399 from "module_14399" /* 14399 */;
 
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod14399(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod14395.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = tmp2(14415);
+      }
+      if (tmp2Result) {
+        tmp2Result = tmp2(14415) < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
+}
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14386[arg0];
-    let tmp8;
-    if (_mod14412(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod14386[arg0];
-    if (tmp3) {
-      tmp3 = tmp(14386)[arg0][arg1];
-    }
-    tmp = require;
-  }
-  return tmp3;
-};
+export default prop;

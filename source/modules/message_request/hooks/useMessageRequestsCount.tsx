@@ -1,12 +1,12 @@
-// Module ID: 16999
-// Function ID: 17000
+// Module ID: 17037
+// Function ID: 17038
 // Name: useMessageRequestsCount
-// Dependencies: [7322, 504, 2]
+// Dependencies: [7326, 504, 2]
 // Exports: useMessageRequestsCount
 
-// Module 16999 (useMessageRequestsCount)
+// Module 17037 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
-import MessageRequestStore from "MessageRequestStore" /* 7322 */;
+import MessageRequestStore from "MessageRequestStore" /* 7326 */;
 
 require = fn;
 const size = fn(2);

@@ -1,17 +1,17 @@
-// Module ID: 7527
-// Function ID: 7528
+// Module ID: 7531
+// Function ID: 7532
 // Name: NativeCheckoutStore
-// Dependencies: [5, 32, 19, 7528, 7531, 4259, 1242, 7532, 12, 4309, 7533, 2]
+// Dependencies: [5, 32, 19, 7532, 7535, 4262, 1243, 7536, 12, 4312, 7537, 2]
 // Exports: createNativeStore, useNativeCheckoutStore, useNativeCheckoutStoreOrNull
 
-// Module 7527 (NativeCheckoutStore)
-import _mod1242 from "module_1242" /* 1242 */;
-import _mod4259 from "module_4259" /* 4259 */;
-import ContextUtilsDefault from "ContextUtils" /* 7531 */;
+// Module 7531 (NativeCheckoutStore)
+import _mod1243 from "module_1243" /* 1243 */;
+import _mod4262 from "module_4262" /* 4262 */;
+import ContextUtilsDefault from "ContextUtils" /* 7535 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 7528 */;
+import OrderRecord from "OrderRecord" /* 7532 */;
 
 const require = globalThis.__r;
 
@@ -24,25 +24,25 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0, shallow) {
   if (shallow === undefined) {
-    shallow = _mod4259.shallow;
+    shallow = _mod4262.shallow;
   }
   const tmp3 = closure_6();
-  return _mod1242.useStoreWithEqualityFn(tmp3, arg0, shallow);
+  return _mod1243.useStoreWithEqualityFn(tmp3, arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0, shallow) {
   if (shallow === undefined) {
-    shallow = _mod4259.shallow;
+    shallow = _mod4262.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
   if ("unset_context" !== context) {
-    storeWithEqualityFn = _mod1242.useStoreWithEqualityFn(context, arg0, shallow);
+    storeWithEqualityFn = _mod1243.useStoreWithEqualityFn(context, arg0, shallow);
   }
   return storeWithEqualityFn;
 };
 export const createNativeStore = function createNativeStore(arg0) {
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, analyticsFields: asyncGeneratorStep, paymentGateway: noop, orderRequired: OrderRecord, onOrderRetryCancellation: closure_6, initialSubscriptionFacet: context } = arg0);
-  return _mod1242.createWithEqualityFn((arg0, arg1) => {
+  return _mod1243.createWithEqualityFn((arg0, arg1) => {
     closure_0 = arg0;
     checkoutInitParameters = arg1;
     function runPatchOrderLineItems() {
@@ -489,5 +489,5 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = onOrderRetryCancellation;
     return obj;
-  }, _mod4259.shallow);
+  }, _mod4262.shallow);
 };

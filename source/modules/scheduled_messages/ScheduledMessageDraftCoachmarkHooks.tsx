@@ -1,20 +1,20 @@
-// Module ID: 12116
-// Function ID: 12117
+// Module ID: 12120
+// Function ID: 12121
 // Name: ScheduledMessageDraftCoachmarkHooks
-// Dependencies: [32, 19, 5358, 4977, 1954, 1943, 4457, 504, 1945, 2]
+// Dependencies: [32, 19, 5362, 4980, 1955, 1944, 4460, 504, 1946, 2]
 // Exports: useScheduledMessageDraftCoachmarkState
 
-// Module 12116 (ScheduledMessageDraftCoachmarkHooks)
-import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+// Module 12120 (ScheduledMessageDraftCoachmarkHooks)
+import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
-import DraftStore from "DraftStore" /* 4977 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
+import DraftStore from "DraftStore" /* 4980 */;
 
 require = fn;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-let closure_7 = fn(1943).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+let closure_7 = fn(1944).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");
 
@@ -25,9 +25,9 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   let connected;
   let isCoachmarkVisible;
-  let result = channel(4457).useIsDismissibleContentDismissed_UNSAFE(closure_7);
+  let result = channel(4460).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
-  let obj = channel(4457);
+  let obj = channel(4460);
   const items = [isCoachmarkVisible];
   const stateFromStores = channel(504).useStateFromStores(items, () => null != DraftStore.getScheduledMessage(channel.id));
   let obj2 = channel(504);

@@ -1,10 +1,10 @@
-// Module ID: 14489
-// Function ID: 14490
+// Module ID: 14498
+// Function ID: 14499
 // Name: MemoryExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 
-// Module 14489 (MemoryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 14498 (MemoryExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-12-shadow-node-spike", kind: "user", defaultConfig: { enabled: false }, variations: null };

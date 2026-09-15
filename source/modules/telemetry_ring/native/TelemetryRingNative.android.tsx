@@ -1,10 +1,10 @@
-// Module ID: 1903
-// Function ID: 1904
+// Module ID: 1904
+// Function ID: 1905
 // Name: TelemetryRingNative
-// Dependencies: [1904, 2]
+// Dependencies: [1905, 2]
 
-// Module 1903 (TelemetryRingNative)
-import NativeTelemetryRingModuleDefault from "NativeTelemetryRingModule" /* 1904 */;
+// Module 1904 (TelemetryRingNative)
+import NativeTelemetryRingModuleDefault from "NativeTelemetryRingModule" /* 1905 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");

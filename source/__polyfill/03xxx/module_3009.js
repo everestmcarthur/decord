@@ -1,9 +1,9 @@
 // Module ID: 3009
 // Function ID: 3010
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 3009
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_assurance", scales: [1], hash: "bc80a0362bac16907b2128fc118c23be", name: "ManualReview.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNl", scales: [1], hash: "f60e1c1ff41bee68139dcddae755648a", name: "zh-TW.messages.f60e1c1ff41bee68139dcddae755648a.compiled.messages", type: "jsona" });

@@ -1,10 +1,10 @@
-// Module ID: 12616
-// Function ID: 12617
+// Module ID: 12621
+// Function ID: 12622
 // Name: productToGameServerGame
 // Dependencies: [2]
 // Exports: productToGameServerGame
 
-// Module 12616 (productToGameServerGame)
+// Module 12621 (productToGameServerGame)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");

@@ -1,12 +1,12 @@
-// Module ID: 13110
-// Function ID: 13111
+// Module ID: 13115
+// Function ID: 13116
 // Name: MediaModalSpoilerOverlay
-// Dependencies: [32, 19, 17, 21, 4636, 576, 1363, 4338, 13095, 4373, 5046, 5162, 4632, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4639, 576, 1364, 4341, 13100, 4376, 5049, 5165, 4635, 1115, 2]
 
-// Module 13110 (MediaModalSpoilerOverlay)
+// Module 13115 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4338 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13095 */;
+import useToken from "useToken" /* 4341 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13100 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,10 +15,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -44,36 +44,36 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
       let str = "dark";
     } else {
       str = "light";
-      const tmpResult = tmp(1363);
+      const tmpResult = tmp(1364);
     }
     const obj4 = { blurTheme: str, android_fallbackColor: token, style: absoluteFill.absoluteFill };
-    const items1 = [timestampProducer(tmp3(5046), obj4), ];
+    const items1 = [timestampProducer(tmp3(5049), obj4), ];
     let obj5 = { style: items2.spoilerOverlayContainer, children: null };
     const obj6 = { style: null, children: null };
     if (source.obscure) {
       obj6.style = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(5162).ImageWarningIcon, { size: "lg", color: "white" }), ];
+      items2 = [tmp9(tmp(5165).ImageWarningIcon, { size: "lg", color: "white" }), ];
       const obj7 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
-      const intl2 = tmp(1114).intl;
-      stringResult = intl2.string(tmp(1114).t.SpxcUR);
+      const intl2 = tmp(1115).intl;
+      stringResult = intl2.string(tmp(1115).t.SpxcUR);
       obj7.children = stringResult;
-      items2[1] = tmp9(tmp(4632).Text, obj7);
+      items2[1] = tmp9(tmp(4635).Text, obj7);
       obj6.children = items2;
       let tmp9Result = tmp7(tmp11, obj6);
     } else {
       obj6.style = items2.spoilerOverlayBackground;
       const obj8 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
-      const intl = tmp(1114).intl;
-      obj8.children = intl.string(tmp(1114).t["F+x38C"]).toUpperCase();
-      obj6.children = tmp9(tmp(4632).Text, obj8);
+      const intl = tmp(1115).intl;
+      obj8.children = intl.string(tmp(1115).t["F+x38C"]).toUpperCase();
+      obj6.children = tmp9(tmp(4635).Text, obj8);
       tmp9Result = tmp9(tmp11, obj6);
-      const str2 = intl.string(tmp(1114).t["F+x38C"]);
+      const str2 = intl.string(tmp(1115).t["F+x38C"]);
     }
     obj5.children = tmp9Result;
     obj5 = tmp9(tmp11, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    React5(tmp3(4373).View, obj3);
-    const tmp3Result = tmp3(5046);
+    React5(tmp3(4376).View, obj3);
+    const tmp3Result = tmp3(5049);
   }
 });

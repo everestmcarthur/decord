@@ -1,13 +1,13 @@
-// Module ID: 1916
-// Function ID: 1917
+// Module ID: 1917
+// Function ID: 1918
 // Name: GameStore
-// Dependencies: [1917, 504, 1365, 573, 2]
+// Dependencies: [1918, 504, 1366, 573, 2]
 
-// Module 1916 (GameStore)
+// Module 1917 (GameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import URLUtilsDefault from "URLUtils" /* 1365 */;
-import GameRecord from "GameRecord" /* 1917 */;
+import URLUtilsDefault from "URLUtils" /* 1366 */;
+import GameRecord from "GameRecord" /* 1918 */;
 
 function createGamesFromMessage(referenced_message) {
   closure_0 = false;

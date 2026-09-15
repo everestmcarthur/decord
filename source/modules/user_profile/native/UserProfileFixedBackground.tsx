@@ -1,13 +1,13 @@
-// Module ID: 8353
-// Function ID: 8354
+// Module ID: 8356
+// Function ID: 8357
 // Name: UserProfileFixedBackground
-// Dependencies: [32, 19, 17, 21, 4347, 8354, 8355, 5068, 2]
+// Dependencies: [32, 19, 17, 21, 4350, 8357, 8358, 5071, 2]
 
-// Module 8353 (UserProfileFixedBackground)
-import native from "native" /* 4347 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import useUserProfileColors from "useUserProfileColors" /* 8354 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8355 */;
+// Module 8356 (UserProfileFixedBackground)
+import native from "native" /* 4350 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
+import useUserProfileColors from "useUserProfileColors" /* 8357 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

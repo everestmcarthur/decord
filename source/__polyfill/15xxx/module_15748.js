@@ -1,9 +1,9 @@
 // Module ID: 15748
 // Function ID: 15749
-// Dependencies: [1120]
+// Dependencies: [1121]
 
 // Module 15748
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "aa6654f8bc64e9c09fd740f0157dd47b", name: "ClipboardCheckIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "6bdaa502cba91b47ad61952eaeb744a8", name: "th.messages.6bdaa502cba91b47ad61952eaeb744a8.compiled.messages", type: "jsona" });

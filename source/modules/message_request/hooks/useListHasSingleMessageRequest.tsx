@@ -1,13 +1,13 @@
-// Module ID: 16998
-// Function ID: 16999
+// Module ID: 17036
+// Function ID: 17037
 // Name: useListHasSingleMessageRequest
-// Dependencies: [19, 7322, 7323, 16999, 504, 5667, 17000, 2]
+// Dependencies: [19, 7326, 7327, 17037, 504, 5671, 17038, 2]
 // Exports: useListHasSingleMessageRequest, useListHasSingleSpamMessageRequest
 
-// Module 16998 (useListHasSingleMessageRequest)
+// Module 17036 (useListHasSingleMessageRequest)
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 7322 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7323 */;
+import MessageRequestStore from "MessageRequestStore" /* 7326 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7327 */;
 
 const require = fn;
 const size = fn(2);

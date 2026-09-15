@@ -1,18 +1,18 @@
-// Module ID: 11218
-// Function ID: 11219
+// Module ID: 11222
+// Function ID: 11223
 // Name: useHandleUseNow
-// Dependencies: [19, 11219, 4603, 4839, 4495, 4335, 1114, 11220, 11223, 9336, 2]
+// Dependencies: [19, 11223, 4606, 4842, 4498, 4338, 1115, 11224, 11227, 9339, 2]
 // Exports: useHandleUseNow
 
-// Module 11218 (useHandleUseNow)
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11223 */;
+// Module 11222 (useHandleUseNow)
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RootNavigatorScreen = fn(11219).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11223).RootNavigatorScreen;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 

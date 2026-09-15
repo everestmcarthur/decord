@@ -1,13 +1,13 @@
-// Module ID: 9017
-// Function ID: 9018
+// Module ID: 9020
+// Function ID: 9021
 // Name: YoutubeNeutralIcon
-// Dependencies: [19, 21, 576, 4337, 9018, 2]
+// Dependencies: [19, 21, 576, 4340, 9021, 2]
 // Exports: YoutubeNeutralIcon
 
-// Module 9017 (YoutubeNeutralIcon)
+// Module 9020 (YoutubeNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod9018 from "module_9018" /* 9018 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod9021 from "module_9021" /* 9021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const YoutubeNeutralIcon = function YoutubeNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9018, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9021, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

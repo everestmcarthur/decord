@@ -1,21 +1,21 @@
 // Module ID: 4408
 // Function ID: 4409
-// Dependencies: [32, 4393, 4406]
-// Exports: useRiveString
+// Dependencies: [32, 4396, 4409]
+// Exports: useRiveNumber
 
 // Module 4408
-import c from "c" /* 4393 */;
-import _mod4406 from "module_4406" /* 4406 */;
+import c from "c" /* 4396 */;
+import _mod4409 from "module_4409" /* 4409 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export const useRiveString = function useRiveString(LVL, instance) {
+export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4406.useRiveProperty(instance, LVL, getStringProperty);
+  [tmp3, tmp4, tmp5] = _mod4409.useRiveProperty(instance, AnimationState, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

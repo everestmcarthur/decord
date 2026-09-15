@@ -1,22 +1,22 @@
-// Module ID: 9659
-// Function ID: 9660
+// Module ID: 9661
+// Function ID: 9662
 // Name: isActivitySupportedOnClientPlatform
-// Dependencies: [1363, 1894, 2]
+// Dependencies: [1364, 1895, 2]
 // Exports: default
 
-// Module 9659 (isActivitySupportedOnClientPlatform)
+// Module 9661 (isActivitySupportedOnClientPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
   if (obj.isIOS()) {
-    let IOS = tmp(1894).EmbeddedActivitySupportedPlatforms.IOS;
+    let IOS = tmp(1895).EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    const tmpResult = tmp(1363);
-    const EmbeddedActivitySupportedPlatforms = tmp(1894).EmbeddedActivitySupportedPlatforms;
-    IOS = tmp(1363).isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
-    const isAndroidResult = tmp(1363).isAndroid();
+    const tmpResult = tmp(1364);
+    const EmbeddedActivitySupportedPlatforms = tmp(1895).EmbeddedActivitySupportedPlatforms;
+    IOS = tmp(1364).isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
+    const isAndroidResult = tmp(1364).isAndroid();
   }
   let flag;
   if (arr != null) {

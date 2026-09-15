@@ -1,18 +1,18 @@
-// Module ID: 10883
-// Function ID: 10884
+// Module ID: 10887
+// Function ID: 10888
 // Name: PremiumGiftPromotionDetails
-// Dependencies: [32, 19, 17, 4628, 21, 576, 4636, 4632, 504, 8935, 1364, 10884, 5668, 1889, 8898, 2]
+// Dependencies: [32, 19, 17, 4631, 21, 576, 4639, 4635, 504, 8938, 1365, 10888, 5672, 1890, 8901, 2]
 // Exports: PremiumGiftPromotionCollectibleRewardDetails, default
 
-// Module 10883 (PremiumGiftPromotionDetails)
+// Module 10887 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import SKUPreview from "SKUPreview" /* 8898 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import SKUPreview from "SKUPreview" /* 8901 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
@@ -106,7 +106,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
@@ -114,7 +114,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1 };
   return obj;
 });
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;
@@ -164,7 +164,7 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
       let rounded = Math.floor(1.2 * tmp10);
     } else {
       rounded = tmp10;
-      if (memo.item.type === tmp8(1889).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(1890).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * tmp10);
       }

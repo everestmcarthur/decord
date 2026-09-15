@@ -1,11 +1,11 @@
-// Module ID: 11251
-// Function ID: 11252
+// Module ID: 11255
+// Function ID: 11256
 // Name: getRandomCustomStatusPrompt
-// Dependencies: [11250, 1114, 2]
+// Dependencies: [11254, 1115, 2]
 // Exports: default
 
-// Module 11251 (getRandomCustomStatusPrompt)
-import Constants from "Constants" /* 11250 */;
+// Module 11255 (getRandomCustomStatusPrompt)
+import Constants from "Constants" /* 11254 */;
 import size from "module_2" /* 2 */;
 
 ({ CustomStatusPrompts: c2, CustomStatusPromptValues: c3 } = Constants);
@@ -20,8 +20,8 @@ export default function getRandomCustomStatusPrompt(size) {
       const obj = {
         value: constants.ADD_STATUS,
         label() {
-              const intl = size(1114).intl;
-              return intl.string(size(1114).t.Vq4UmS);
+              const intl = size(1115).intl;
+              return intl.string(size(1115).t.Vq4UmS);
             }
       };
       let tmp3 = obj;

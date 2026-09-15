@@ -1,15 +1,15 @@
-// Module ID: 13546
-// Function ID: 13547
+// Module ID: 13551
+// Function ID: 13552
 // Name: PremiumMarketingPage
-// Dependencies: [32, 19, 17, 1074, 1954, 1373, 21, 4636, 576, 5522, 13539, 13540, 1483, 7265, 13541, 1611, 13547, 4373, 13505, 10871, 4457, 1943, 1945, 13548, 1114, 12416, 4294, 7496, 13549, 7101, 1240, 13554, 4632, 13557, 13511, 9492, 13558, 13563, 13580, 13583, 2]
+// Dependencies: [32, 19, 17, 1074, 1955, 1374, 21, 4639, 576, 5526, 13544, 13545, 1484, 7269, 13546, 1612, 13552, 4376, 13510, 10875, 4460, 1944, 1946, 13553, 1115, 12421, 4297, 7500, 13554, 7105, 1241, 13559, 4635, 13562, 13516, 9494, 13563, 13568, 13585, 13588, 2]
 // Exports: default
 
-// Module 13546 (PremiumMarketingPage)
+// Module 13551 (PremiumMarketingPage)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,20 +17,20 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-let FractionalPremiumStates = fn(1373).FractionalPremiumStates;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+let FractionalPremiumStates = fn(1374).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: { tintColor: nativeDefault.colors.TEXT_DEFAULT }, backButton: null, sectionWithTopMargin: { marginTop: 48 }, sectionWithPadding: { paddingHorizontal: 12 }, sectionWidth: { maxWidth: 464 }, accountCreditContainer: { width: "100%" }, accountCreditContainerWithSpacing: { marginTop: 24, marginBottom: 20 }, themedBackground: null, backButtonBackground: null, promotionCardHeader: null };
 let obj4 = { transform: null, position: "absolute", left: 16 };
 let items = [{ scaleX: -1 }];
 obj4.transform = items;
 obj2.backButton = obj4;
 let obj3 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj2.themedBackground = { backgroundColor: fn(5522).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj5 = { backgroundColor: fn(5522).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-obj2.backButtonBackground = { backgroundColor: fn(5522).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+obj2.themedBackground = { backgroundColor: fn(5526).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj5 = { backgroundColor: fn(5526).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+obj2.backButtonBackground = { backgroundColor: fn(5526).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 obj2.promotionCardHeader = { marginBottom: 16, marginHorizontal: "auto", textAlign: "center" };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

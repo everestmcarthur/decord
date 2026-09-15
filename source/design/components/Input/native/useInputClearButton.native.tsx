@@ -1,12 +1,12 @@
-// Module ID: 6716
-// Function ID: 6717
+// Module ID: 6720
+// Function ID: 6721
 // Name: useInputClearButton
-// Dependencies: [19, 17, 21, 6717, 1114, 2]
+// Dependencies: [19, 17, 21, 6721, 1115, 2]
 // Exports: useInputClearButton, useInputClearButtonConfig
 
-// Module 6716 (useInputClearButton)
-import util from "util" /* 1114 */;
-import CircleXIcon from "CircleXIcon" /* 6717 */;
+// Module 6720 (useInputClearButton)
+import util from "util" /* 1115 */;
+import CircleXIcon from "CircleXIcon" /* 6721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

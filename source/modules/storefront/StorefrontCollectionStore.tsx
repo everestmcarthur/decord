@@ -1,9 +1,9 @@
-// Module ID: 9000
-// Function ID: 9001
+// Module ID: 9003
+// Function ID: 9004
 // Name: StorefrontCollectionStore
 // Dependencies: [504, 573, 2]
 
-// Module 9000 (StorefrontCollectionStore)
+// Module 9003 (StorefrontCollectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,24 +1,24 @@
-// Module ID: 12010
-// Function ID: 12011
+// Module ID: 12014
+// Function ID: 12015
 // Name: ClassificationDetail
-// Dependencies: [19, 17, 2025, 8548, 8537, 1074, 21, 4636, 576, 4632, 8538, 1114, 504, 2978, 9179, 4331, 9532, 5056, 12011, 12013, 8547, 8531, 1240, 12014, 7704, 7709, 12016, 7226, 12021, 8536, 2]
+// Dependencies: [19, 17, 2026, 8551, 8540, 1074, 21, 4639, 576, 4635, 8541, 1115, 504, 2979, 9182, 4334, 9534, 5059, 12015, 12017, 8550, 8534, 1241, 12018, 7707, 7712, 12020, 7230, 12025, 8539, 2]
 // Exports: default
 
-// Module 12010 (ClassificationDetail)
+// Module 12014 (ClassificationDetail)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import _modDef2978 from "module_2978" /* 2978 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import MetricEvents from "MetricEvents" /* 7709 */;
-import SafetyHubModels from "SafetyHubModels" /* 8538 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import _modDef2979 from "module_2979" /* 2979 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import MetricEvents from "MetricEvents" /* 7712 */;
+import SafetyHubModels from "SafetyHubModels" /* 8541 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9182 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import SafetyHubStore from "SafetyHubStore" /* 8548 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import SafetyHubStore from "SafetyHubStore" /* 8551 */;
 
 require = fn;
 function ClassificationHeader(classificationTypeText) {
@@ -43,8 +43,8 @@ function ClassificationHeader(classificationTypeText) {
       let X1ngSd = require;
       let obj = dependencyMap;
       if (member_type === SafetyHubModels.MemberType.OWNER) {
-        const intl3 = X1ngSd(1114).intl;
-        X1ngSd = X1ngSd(1114).t.X1ngSd;
+        const intl3 = X1ngSd(1115).intl;
+        X1ngSd = X1ngSd(1115).t.X1ngSd;
         obj = {};
         const merged = Object.assign(obj2);
         tmp3 = tmp2 == tmp3;
@@ -55,7 +55,7 @@ function ClassificationHeader(classificationTypeText) {
         obj.guildName = obj2;
         let formatResult = intl3.format(X1ngSd, obj);
       } else {
-        const intl2 = X1ngSd(1114).intl;
+        const intl2 = X1ngSd(1115).intl;
         const obj4 = {};
         const merged1 = Object.assign(obj2);
         let name;
@@ -63,14 +63,14 @@ function ClassificationHeader(classificationTypeText) {
           name = tmp2.name;
         }
         obj4.guildName = name;
-        formatResult = intl2.format(X1ngSd(1114).t.rmpEPD, obj4);
+        formatResult = intl2.format(X1ngSd(1115).t.rmpEPD, obj4);
       }
     } else {
       const intl = util.intl;
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(4632).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(4635).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 }
 function ClassificationActionsTaken(arg0) {
@@ -82,9 +82,9 @@ function ClassificationActionsTaken(arg0) {
   if (0 !== found.length) {
     const obj2 = { style: tmp4.sectionContainer, children: null };
     const obj3 = { variant: "eyebrow", color: "text-muted", children: null };
-    const intl = tmp(1114).intl;
-    obj3.children = intl.string(tmp(1114).t["O2nYk+"]);
-    const items1 = [map1(tmp(4632).Text, obj3), ];
+    const intl = tmp(1115).intl;
+    obj3.children = intl.string(tmp(1115).t["O2nYk+"]);
+    const items1 = [map1(tmp(4635).Text, obj3), ];
     const obj4 = { style: null, children: null };
     const items2 = [tmp4.actionsTaken];
     obj4.style = items2;
@@ -93,12 +93,12 @@ function ClassificationActionsTaken(arg0) {
     if (null != classificationExpiration) {
       const obj5 = { style: tmp4.classificationActionDescription, children: null };
       const obj6 = { variant: "text-xs/normal", children: [" ", "\u2022"] };
-      const items4 = [tmp6(tmp(4632).Text, obj6), ];
+      const items4 = [tmp6(tmp(4635).Text, obj6), ];
       const obj7 = { variant: "text-xs/normal", children: null };
-      const intl2 = tmp(1114).intl;
+      const intl2 = tmp(1115).intl;
       const obj8 = { expirationDate: classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" }) };
-      obj7.children = intl2.format(tmp(1114).t.TByIjT, obj8);
-      items4[1] = tmp8(tmp(4632).Text, obj7);
+      obj7.children = intl2.format(tmp(1115).t.TByIjT, obj8);
+      items4[1] = tmp8(tmp(4635).Text, obj7);
       obj5.children = items4;
       tmp6Result = tmp6(tmp7, obj5, "expiration");
     }
@@ -127,7 +127,7 @@ function ManualReviewDecidedUnderageActionsTaken() {
   const items2 = [closure_1_14(Text_Text.Text, { variant: "text-xs/normal", children: [" ", "\u2022"] }), ];
   const obj5 = { variant: "text-xs/normal", children: null };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef2978.rn3Gto);
+  obj5.children = intl2.string(_modDef2979.rn3Gto);
   items2[1] = map1(Text_Text.Text, obj5);
   obj4.children = items2;
   obj3.children = closure_1_14(React4, obj4);
@@ -156,7 +156,7 @@ function ManualReviewDecidedUnderageGuidance(arg0) {
   const items = [map1(Text_Text.Text, obj2), ];
   const obj3 = { variant: "text-sm/normal", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef2978.vPOpia, { tosLink, communityGuidelinesLink });
+  obj3.children = intl2.format(_modDef2979.vPOpia, { tosLink, communityGuidelinesLink });
   items[1] = map1(Text_Text.Text, obj3);
   obj.children = items;
   return closure_1_14(React4, obj);
@@ -202,13 +202,13 @@ function ClassificationPolicyCard(classificationDescription) {
   obj2.style = items;
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(9532).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  obj3.children = closure_13(policyExplainerLink(9534).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
   const items1 = [closure_13(closure_4, obj3), ];
   const obj5 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj6 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = policyExplainerLink(1114).intl;
-  obj6.children = intl.format(policyExplainerLink(1114).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj5.children = closure_13(policyExplainerLink(4632).Text, obj6);
+  const intl = policyExplainerLink(1115).intl;
+  obj6.children = intl.format(policyExplainerLink(1115).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
+  obj5.children = closure_13(policyExplainerLink(4635).Text, obj6);
   items1[1] = closure_13(closure_4, obj5);
   obj2.children = items1;
   obj.children = closure_14(tmp2, obj2);
@@ -261,7 +261,7 @@ function ManualReviewDecidedUnderageFooter() {
   const obj = { style: tmp.expressiveModalV2LetUsKnowContainer, children: null };
   const obj2 = { variant: "text-sm/normal", color: "text-strong", style: tmp.expressiveModalV2LetUsKnowText, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2978["yV/t/V"]);
+  obj2.children = intl.string(_modDef2979["yV/t/V"]);
   obj.children = map1(Text_Text.Text, obj2);
   return map1(React4, obj);
 }
@@ -282,12 +282,12 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8537);
+const SafetyHubConstants = fn(8540);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, expressiveModalV2LetUsKnowContainer: null, expressiveModalV2LetUsKnowText: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, redirectButtonWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.container = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };
@@ -434,21 +434,21 @@ export default function ConnectedClassificationDetail(classificationId) {
         ({ isDsaEligible: obj2.is_dsa_eligible, violationType: obj2.violation_type } = safetyHubClassification);
         AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_HUB_ACTION, obj3);
         if (hasItem1) {
-          tmp(12014).openV2(tmp3, onClose);
-          const tmpResult = tmp(12014);
+          tmp(12018).openV2(tmp3, onClose);
+          const tmpResult = tmp(12018);
         } else if (hasItem) {
-          tmp(12014).open(tmp3, onClose);
-          const tmpResult5 = tmp(12014);
+          tmp(12018).open(tmp3, onClose);
+          const tmpResult5 = tmp(12018);
         } else if (isAppealEligible) {
           const obj4 = { name: MetricEvents.MetricEvents.APPEAL_INGESTION_VIEW };
-          tmp(7704).increment(obj4);
-          const tmpResult6 = tmp(7704);
+          tmp(7707).increment(obj4);
+          const tmpResult6 = tmp(7707);
           const obj5 = { classificationId: tmp3 };
-          tmp(12016).open(obj5);
-          const tmpResult7 = tmp(12016);
+          tmp(12020).open(obj5);
+          const tmpResult7 = tmp(12020);
         } else {
-          tmp(4331).openURL(constants.APPEALS_LINK);
-          const tmpResult8 = tmp(4331);
+          tmp(4334).openURL(constants.APPEALS_LINK);
+          const tmpResult8 = tmp(4334);
         }
       }
       const obj9 = { actions: classification.actions, classificationExpiration: tmp(tmp2[29]).getClassificationExpiration(classification) };

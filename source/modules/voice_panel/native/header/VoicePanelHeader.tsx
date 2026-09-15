@@ -1,31 +1,31 @@
-// Module ID: 17211
-// Function ID: 17212
+// Module ID: 17249
+// Function ID: 17250
 // Name: VoicePanelHeader
-// Dependencies: [32, 19, 17, 4652, 4552, 10029, 502, 1957, 1908, 4285, 5500, 1371, 12403, 12406, 12401, 4657, 1085, 21, 4636, 576, 4373, 5055, 7176, 5045, 5670, 12402, 10162, 504, 10031, 17146, 1114, 10040, 10042, 10043, 5043, 17148, 17212, 4789, 4338, 12407, 4637, 17213, 17168, 17214, 5711, 17215, 9218, 9299, 9260, 4347, 16625, 17216, 11289, 17218, 9341, 1094, 17229, 10160, 17239, 17240, 2]
+// Dependencies: [32, 19, 17, 4655, 4555, 10031, 502, 1958, 1909, 4288, 5504, 1372, 12407, 12410, 12405, 4660, 1085, 21, 4639, 576, 4376, 5058, 7180, 5048, 5674, 12406, 10164, 504, 10033, 17184, 1115, 10042, 10044, 10045, 5046, 17186, 17250, 4792, 4341, 12411, 4640, 17251, 17206, 17252, 5715, 17253, 9221, 9302, 9263, 4350, 16638, 17254, 11293, 17256, 9344, 1095, 17267, 10162, 17277, 17278, 2]
 
-// Module 17211 (VoicePanelHeader)
+// Module 17249 (VoicePanelHeader)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 10043 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10162 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12407 */;
-import useStableParticipant from "useStableParticipant" /* 17215 */;
+import util from "util" /* 1115 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 10045 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10164 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12411 */;
+import useStableParticipant from "useStableParticipant" /* 17253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
-import ExperimentStore from "ExperimentStore" /* 4552 */;
-import StageMusicStore from "StageMusicStore" /* 10029 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4655 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
+import StageMusicStore from "StageMusicStore" /* 10031 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import SpeakingStore from "SpeakingStore" /* 5500 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import SpeakingStore from "SpeakingStore" /* 5504 */;
+import UserStore from "UserStore" /* 1372 */;
 
-const spring = tmp3(5055);
+const spring = tmp3(5058);
 require = fn;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
@@ -41,9 +41,9 @@ function MusicMuteButton(channelId) {
   if (obj2.useShowStageMusicMuteButton(channelId)) {
     tmp6 = null;
     if (speaker) {
-      const intl = tmp4(1114).intl;
+      const intl = tmp4(1115).intl;
       const string = intl.string;
-      const t = tmp4(1114).t;
+      const t = tmp4(1115).t;
       if (stateFromStores) {
         let stringResult = string(t.ScHlfl);
       } else {
@@ -51,30 +51,30 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: tmp(stateFromStores ? 10040 : 10042),
+        icon: tmp(stateFromStores ? 10042 : 10044),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }
       };
-      closure_23(tmp(17146), obj3);
-      const tmpResult = tmp(17146);
+      closure_23(tmp(17184), obj3);
+      const tmpResult = tmp(17184);
     }
   }
   return tmp6;
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12403);
+const VoicePanelConstants = fn(12407);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12406).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
-const ParticipantTypes = fn(4657).ParticipantTypes;
+const EDGE_GUTTER = fn(12410).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12405).VoicePanelControlsModes;
+const ParticipantTypes = fn(4660).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%", paddingBottom: EDGE_GUTTER, overflow: "hidden" }, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -496,27 +496,27 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
               if (null != tmp6) {
                 if ("back" === facing) {
                   if ("front" === tmp6) {
-                    const intl3 = tmp10(1114).intl;
-                    let stringResult = intl3.string(tmp10(1114).t["/R1SBx"]);
+                    const intl3 = tmp10(1115).intl;
+                    let stringResult = intl3.string(tmp10(1115).t["/R1SBx"]);
                   }
                 }
                 if ("front" === facing) {
                   if ("back" === tmp6) {
-                    const intl2 = tmp10(1114).intl;
-                    stringResult = intl2.string(tmp10(1114).t["7YZ/Si"]);
+                    const intl2 = tmp10(1115).intl;
+                    stringResult = intl2.string(tmp10(1115).t["7YZ/Si"]);
                   }
                 }
-                const intl = tmp10(1114).intl;
-                stringResult = intl.string(tmp10(1114).t["t9eQ/g"]);
+                const intl = tmp10(1115).intl;
+                stringResult = intl.string(tmp10(1115).t["t9eQ/g"]);
               }
               return stringResult;
             }
-            const intl4 = tmp10(1114).intl;
-            stringResult = intl4.string(tmp10(1114).t["t9eQ/g"]);
+            const intl4 = tmp10(1115).intl;
+            stringResult = intl4.string(tmp10(1115).t["t9eQ/g"]);
           }
           obj2 = MediaEngineStore;
         }
-        tmp10Result = tmp10(17215);
+        tmp10Result = tmp10(17253);
       }
       obj3 = useStableParticipant;
     }

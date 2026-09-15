@@ -1,9 +1,9 @@
-// Module ID: 2020
-// Function ID: 2021
+// Module ID: 2021
+// Function ID: 2022
 // Name: ImpersonateTypes
 // Dependencies: [2]
 
-// Module 2020 (ImpersonateTypes)
+// Module 2021 (ImpersonateTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/impersonate/ImpersonateTypes.tsx");

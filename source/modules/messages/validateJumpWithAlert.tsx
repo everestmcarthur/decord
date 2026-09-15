@@ -1,16 +1,16 @@
-// Module ID: 13418
-// Function ID: 13419
+// Module ID: 13423
+// Function ID: 13424
 // Name: validateJumpWithAlert
-// Dependencies: [1957, 4275, 4285, 1074, 4980, 1114, 7610, 2]
+// Dependencies: [1958, 4278, 4288, 1074, 4983, 1115, 7614, 2]
 // Exports: default
 
-// Module 13418 (validateJumpWithAlert)
-import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import isSpam from "isSpam" /* 7610 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
+// Module 13423 (validateJumpWithAlert)
+import util from "util" /* 1115 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import isSpam from "isSpam" /* 7614 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;
@@ -50,27 +50,27 @@ export default function validateJumpWithAlert(author, onConfirm) {
       if (!isPrivateResult) {
         if (!PermissionStore.can(Permissions.MODERATE_MEMBERS, channel)) {
           const obj9 = { title: null, body: null, confirmText: null };
-          const intl = tmp(1114).intl;
-          obj9.title = intl.string(tmp(1114).t["6vJKFk"]);
-          const intl2 = tmp(1114).intl;
+          const intl = tmp(1115).intl;
+          obj9.title = intl.string(tmp(1115).t["6vJKFk"]);
+          const intl2 = tmp(1115).intl;
           const obj11 = { name: author.author.username };
-          obj9.body = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj11);
-          const intl3 = tmp(1114).intl;
-          obj9.confirmText = intl3.string(tmp(1114).t.BddRzS);
+          obj9.body = intl2.formatToPlainString(tmp(1115).t.zKNgPF, obj11);
+          const intl3 = tmp(1115).intl;
+          obj9.confirmText = intl3.string(tmp(1115).t.BddRzS);
           AlertActionCreatorsDefault.show(obj9);
         }
         return false;
       }
       const obj12 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl4 = tmp(1114).intl;
-      obj12.title = intl4.string(tmp(1114).t["cZcG+P"]);
-      const intl5 = tmp(1114).intl;
+      const intl4 = tmp(1115).intl;
+      obj12.title = intl4.string(tmp(1115).t["cZcG+P"]);
+      const intl5 = tmp(1115).intl;
       const obj14 = { name: author.author.username };
-      obj12.body = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj14);
-      const intl6 = tmp(1114).intl;
-      obj12.confirmText = intl6.string(tmp(1114).t["+TSRGD"]);
-      const intl7 = tmp(1114).intl;
-      obj12.cancelText = intl7.string(tmp(1114).t["ETE/oC"]);
+      obj12.body = intl5.formatToPlainString(tmp(1115).t["1YTWty"], obj14);
+      const intl6 = tmp(1115).intl;
+      obj12.confirmText = intl6.string(tmp(1115).t["+TSRGD"]);
+      const intl7 = tmp(1115).intl;
+      obj12.cancelText = intl7.string(tmp(1115).t["ETE/oC"]);
       obj12.onConfirm = onConfirm;
       AlertActionCreatorsDefault.show(obj12);
     } else {

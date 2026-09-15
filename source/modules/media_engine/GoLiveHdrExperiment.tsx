@@ -1,11 +1,11 @@
-// Module ID: 14087
-// Function ID: 14088
+// Module ID: 14092
+// Function ID: 14093
 // Name: GoLiveHdrExperiment
-// Dependencies: [1433, 2]
+// Dependencies: [1434, 2]
 // Exports: getGoLiveHdrConfig
 
-// Module 14087 (GoLiveHdrExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 14092 (GoLiveHdrExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };

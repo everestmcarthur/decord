@@ -1,11 +1,11 @@
-// Module ID: 1999
-// Function ID: 2000
+// Module ID: 2000
+// Function ID: 2001
 // Name: GuildEntityDao
-// Dependencies: [1991, 1993, 2]
+// Dependencies: [1992, 1994, 2]
 
-// Module 1999 (GuildEntityDao)
-import Table from "Table" /* 1991 */;
-import TableId from "TableId" /* 1993 */;
+// Module 2000 (GuildEntityDao)
+import Table from "Table" /* 1992 */;
+import TableId from "TableId" /* 1994 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

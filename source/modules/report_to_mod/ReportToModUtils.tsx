@@ -1,26 +1,26 @@
-// Module ID: 7379
-// Function ID: 7380
+// Module ID: 7383
+// Function ID: 7384
 // Name: ReportToModUtils
-// Dependencies: [7380, 1957, 1979, 4857, 1371, 7391, 7392, 7369, 7393, 7368, 1086, 4280, 7394, 7395, 7398, 7406, 2]
+// Dependencies: [7384, 1958, 1980, 4860, 1372, 7395, 7396, 7373, 7397, 7372, 1086, 4283, 7398, 7399, 7402, 7410, 2]
 // Exports: canAccessReportsChannel, canReportMessageToMods, getReportToModChannelId, isModeratorReportChannel, isModeratorReportChannelId, isModeratorReportMessage, isModeratorReportOrPostChannel, isModeratorReportOrPostChannelId, isModeratorReportPostChannel, isModeratorReportPostChannelId, isModeratorReportThreadStarterMessage, isSafeToTransitionToReportForCurrentUser, isUserAuthorOfReportedMessage, sortedModeratorReportTags
 
-// Module 7379 (ReportToModUtils)
+// Module 7383 (ReportToModUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7368 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7369 */;
-import ReportUtils from "ReportUtils" /* 7392 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7393 */;
-import SelfModUtils from "SelfModUtils" /* 7394 */;
-import ForumChannelTypes from "ForumChannelTypes" /* 7406 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7380 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import MessageStore from "MessageStore" /* 4857 */;
-import UserStore from "UserStore" /* 1371 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7372 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7373 */;
+import ReportUtils from "ReportUtils" /* 7396 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7397 */;
+import SelfModUtils from "SelfModUtils" /* 7398 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 7410 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7384 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import MessageStore from "MessageStore" /* 4860 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const ReportToModPermissions = fn(7391).ReportToModPermissions;
+const ReportToModPermissions = fn(7395).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
@@ -183,8 +183,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(7395).messageHasObscurableMediaForBitmask(firstMessage, tmp10(7398).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(7395);
+          tmp9 = !tmp10(7399).messageHasObscurableMediaForBitmask(firstMessage, tmp10(7402).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(7399);
         }
         return tmp9;
       } else {

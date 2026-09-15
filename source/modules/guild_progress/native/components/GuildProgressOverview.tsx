@@ -1,20 +1,20 @@
-// Module ID: 14063
-// Function ID: 14064
+// Module ID: 14068
+// Function ID: 14069
 // Name: GuildProgressOverview
-// Dependencies: [19, 17, 1074, 21, 4636, 576, 12604, 12607, 7297, 1114, 5204, 1176, 4632, 10069, 14064, 2]
+// Dependencies: [19, 17, 1074, 21, 4639, 576, 12609, 12612, 7301, 1115, 5207, 1177, 4635, 10071, 14069, 2]
 // Exports: default
 
-// Module 14063 (GuildProgressOverview)
+// Module 14068 (GuildProgressOverview)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7297 */;
-import _modDef10069 from "module_10069" /* 10069 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12604 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12607 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 14064 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7301 */;
+import _modDef10071 from "module_10071" /* 10071 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12609 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12612 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 14069 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
 const React5 = createStyles.createStyles(obj2);
 const size = fn(2);

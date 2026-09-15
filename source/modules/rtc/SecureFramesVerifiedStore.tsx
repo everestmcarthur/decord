@@ -1,18 +1,18 @@
-// Module ID: 9261
-// Function ID: 9262
+// Module ID: 9264
+// Function ID: 9265
 // Name: SecureFramesVerifiedStore
-// Dependencies: [502, 4659, 4675, 9262, 9263, 1074, 9279, 4688, 4691, 504, 573, 2]
+// Dependencies: [502, 4662, 4678, 9265, 9266, 1074, 9282, 4691, 4694, 504, 573, 2]
 
-// Module 9261 (SecureFramesVerifiedStore)
+// Module 9264 (SecureFramesVerifiedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9282 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
-import TransientKeyStore from "TransientKeyStore" /* 9262 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9263 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4678 */;
+import TransientKeyStore from "TransientKeyStore" /* 9265 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9266 */;
 
 require = fn;
 function computeCallVerification() {
@@ -123,7 +123,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(DispatcherDefaul
           tmp6 = computeCallVerification();
         }
         return tmp6;
-      } else if (tmp10(4691).MediaEngineContextTypes.DEFAULT === context) {
+      } else if (tmp10(4694).MediaEngineContextTypes.DEFAULT === context) {
         map.clear();
         map1.clear();
         c10 = false;

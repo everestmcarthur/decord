@@ -1,12 +1,12 @@
-// Module ID: 11825
-// Function ID: 11826
+// Module ID: 11829
+// Function ID: 11830
 // Name: ForwardPreviewUtils
-// Dependencies: [4275, 504, 4973, 2]
+// Dependencies: [4278, 504, 4976, 2]
 // Exports: useForwardPreviewContent
 
-// Module 11825 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 4973 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+// Module 11829 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 4976 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 const size = fn(2);

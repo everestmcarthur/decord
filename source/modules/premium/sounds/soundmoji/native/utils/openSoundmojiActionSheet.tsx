@@ -1,18 +1,18 @@
-// Module ID: 12063
-// Function ID: 12064
+// Module ID: 12067
+// Function ID: 12068
 // Name: openSoundmojiActionSheet
-// Dependencies: [5098, 4603, 12064, 1896, 2]
+// Dependencies: [5101, 4606, 12068, 1897, 2]
 // Exports: default
 
-// Module 12063 (openSoundmojiActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+// Module 12067 (openSoundmojiActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/native/utils/openSoundmojiActionSheet.tsx");
 
 export default function openSoundmojiActionSheet(arg0) {
   if (obj.getSoundmojiRenderingExperiment({ location: "openSoundmojiActionSheet" })) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12064, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12068, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
   }
 };

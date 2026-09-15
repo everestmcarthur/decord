@@ -1,12 +1,12 @@
-// Module ID: 16865
-// Function ID: 16866
+// Module ID: 16903
+// Function ID: 16904
 // Name: getFriendStatusCounts
-// Dependencies: [4676, 4285, 1074, 2]
+// Dependencies: [4679, 4288, 1074, 2]
 // Exports: default
 
-// Module 16865 (getFriendStatusCounts)
-import PresenceStore from "PresenceStore" /* 4676 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
+// Module 16903 (getFriendStatusCounts)
+import PresenceStore from "PresenceStore" /* 4679 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 const StatusTypes = fn(1074).StatusTypes;
 const size = fn(2);

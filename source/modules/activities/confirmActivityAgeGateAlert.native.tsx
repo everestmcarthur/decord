@@ -1,16 +1,16 @@
-// Module ID: 9671
-// Function ID: 9672
+// Module ID: 9673
+// Function ID: 9674
 // Name: confirmActivityAgeGateAlert
-// Dependencies: [19, 17, 21, 4636, 576, 9672, 4632, 1114, 4980, 1176, 2]
+// Dependencies: [19, 17, 21, 4639, 576, 9674, 4635, 1115, 4983, 1177, 2]
 // Exports: confirmActivityAgeGateAlert
 
-// Module 9671 (confirmActivityAgeGateAlert)
+// Module 9673 (confirmActivityAgeGateAlert)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9672 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9674 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function ConfirmActivityGateContent(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

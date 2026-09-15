@@ -1,13 +1,13 @@
-// Module ID: 11870
-// Function ID: 11871
+// Module ID: 11874
+// Function ID: 11875
 // Name: StampIcon
-// Dependencies: [19, 21, 576, 4337, 11871, 2]
+// Dependencies: [19, 21, 576, 4340, 11875, 2]
 // Exports: StampIcon
 
-// Module 11870 (StampIcon)
+// Module 11874 (StampIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod11871 from "module_11871" /* 11871 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod11875 from "module_11875" /* 11875 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const StampIcon = function StampIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11871, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11875, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

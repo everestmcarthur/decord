@@ -1,10 +1,10 @@
-// Module ID: 11700
-// Function ID: 11701
+// Module ID: 11704
+// Function ID: 11705
 // Name: GuildRoleConnectionsModal
-// Dependencies: [19, 21, 1114, 7480, 7095, 11701, 7103, 2]
+// Dependencies: [19, 21, 1115, 7484, 7099, 11705, 7107, 2]
 
-// Module 11700 (GuildRoleConnectionsModal)
-import util from "util" /* 1114 */;
+// Module 11704 (GuildRoleConnectionsModal)
+import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,16 +27,16 @@ export default noop.memo((guildId) => {
       return null;
     };
     obj2.headerRight = function headerRight() {
-      const obj = { source: onClose(7095), onPress, accessibilityLabel: null };
-      const intl = guildId(1114).intl;
-      obj.accessibilityLabel = intl.string(guildId(1114).t.cpT0Cq);
-      return jsx(guildId(7480).HeaderActionButton, { source: onClose(7095), onPress, accessibilityLabel: null });
+      const obj = { source: onClose(7099), onPress, accessibilityLabel: null };
+      const intl = guildId(1115).intl;
+      obj.accessibilityLabel = intl.string(guildId(1115).t.cpT0Cq);
+      return jsx(guildId(7484).HeaderActionButton, { source: onClose(7099), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
-      return jsx(onClose(11701), { guildId, onCloseModal });
+      return jsx(onClose(11705), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;
   }, items);
-  return jsx(guildId(7103).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(7107).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });
