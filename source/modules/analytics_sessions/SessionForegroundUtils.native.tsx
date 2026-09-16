@@ -1,10 +1,10 @@
-// Module ID: 7569
-// Function ID: 7570
+// Module ID: 7572
+// Function ID: 7573
 // Name: SessionForegroundUtils
 // Dependencies: [17, 2]
 // Exports: isForegrounded
 
-// Module 7569 (SessionForegroundUtils)
+// Module 7572 (SessionForegroundUtils)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

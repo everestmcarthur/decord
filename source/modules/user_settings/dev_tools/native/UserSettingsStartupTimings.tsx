@@ -1,23 +1,23 @@
-// Module ID: 15665
-// Function ID: 15666
+// Module ID: 15682
+// Function ID: 15683
 // Name: UserSettingsStartupTimings
-// Dependencies: [5, 32, 19, 17, 1346, 1074, 21, 4639, 576, 4635, 4504, 1612, 10323, 504, 9, 7582, 8482, 9006, 5057, 5772, 5689, 1347, 5690, 9185, 2]
+// Dependencies: [5, 32, 19, 17, 1346, 1074, 21, 4638, 576, 4634, 4502, 1612, 10331, 504, 9, 7585, 8491, 9017, 5058, 5773, 5690, 1347, 5691, 9196, 2]
 // Exports: default
 
-// Module 15665 (UserSettingsStartupTimings)
+// Module 15682 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5689 */;
-import TableRow from "TableRow" /* 5690 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import ShareIcon from "ShareIcon" /* 9185 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10323 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5690 */;
+import TableRow from "TableRow" /* 5691 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import ShareIcon from "ShareIcon" /* 9196 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
-import NativeTTIManagerModule from "NativeTTIManagerModule" /* 4504 */;
+import NativeTTIManagerModule from "NativeTTIManagerModule" /* 4502 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, code: { fontFamily: fn(1074).Fonts.CODE_BOLD }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.border = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -97,7 +97,7 @@ export default function UserSettingsStartupTimings() {
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(4504).getAppFirstVisibleTimestamp(), done: false };
+            const obj5 = { value: tmp5(4502).getAppFirstVisibleTimestamp(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -109,9 +109,9 @@ export default function UserSettingsStartupTimings() {
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(10323)(closure_128_0);
+          closure_128_1 = tmp5(10331)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8491).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -261,6 +261,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(9006).FlashList, obj5);
+  obj4.children = closure_8(tmp10(9017).FlashList, obj5);
   return closure_8(checked, obj4);
 };

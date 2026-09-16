@@ -1,21 +1,21 @@
-// Module ID: 7213
-// Function ID: 7214
+// Module ID: 7216
+// Function ID: 7217
 // Name: GuildOnboardingUtils
-// Dependencies: [1958, 5366, 2013, 1980, 4278, 7208, 1074, 4265, 504, 1385, 5146, 7209, 4283, 1370, 558, 1926, 7214, 2]
+// Dependencies: [1958, 5367, 2013, 1980, 4276, 7211, 1074, 4263, 504, 1385, 5147, 7212, 4281, 1370, 558, 1926, 7217, 2]
 // Exports: getApplicationConnectionState, getChannelCoverageForOnboarding, getChattableDefaultChannels, getMinimumSetOfDefaultChannelIds, getProviderConnectionState, getSelectedChannelIds, getSelectedRoleIds, isBlockedByOnboarding, isChattableChannelId, isGuildOnboardingSettingsAvailable, showRulesInOnboarding, useChannelCoverageForOnboarding, useChattableDefaultChannels, useGuildOnboardingSettingsAvailable, useIsChattableChannel
 
-// Module 7213 (GuildOnboardingUtils)
+// Module 7216 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5146 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7209 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4281 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5147 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7212 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5366 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5367 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 const require = globalThis.__r;
 
@@ -83,10 +83,10 @@ function areStatesEqual(arg0, arg1) {
   return tmp;
 }
 let closure_7 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7208).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7211).OnboardingConnectionType;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4263).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");

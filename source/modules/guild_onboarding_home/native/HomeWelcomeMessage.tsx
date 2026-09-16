@@ -1,22 +1,22 @@
-// Module ID: 16677
-// Function ID: 16678
+// Module ID: 16697
+// Function ID: 16698
 // Name: HomeWelcomeMessage
-// Dependencies: [19, 17, 1980, 1372, 4826, 21, 4639, 576, 563, 8306, 8346, 7418, 8307, 4484, 4350, 1092, 8376, 1177, 11250, 4635, 4791, 9885, 2]
+// Dependencies: [19, 17, 1980, 1372, 4825, 21, 4638, 576, 563, 8315, 8355, 7421, 8316, 4482, 4348, 1092, 8385, 1177, 11264, 4634, 4790, 9893, 2]
 // Exports: default
 
-// Module 16677 (HomeWelcomeMessage)
+// Module 16697 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 576 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8307 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8316 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4826 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4825 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { relativeContainer: { position: "relative" }, welcomeContainer: { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" }, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
 let obj3 = { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
 obj2.welcomeContent = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };

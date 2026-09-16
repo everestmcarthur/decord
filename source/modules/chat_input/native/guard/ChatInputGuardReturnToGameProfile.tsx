@@ -1,20 +1,20 @@
-// Module ID: 12589
-// Function ID: 12590
+// Module ID: 12597
+// Function ID: 12598
 // Name: ChatInputGuardReturnToGameProfile
-// Dependencies: [19, 17, 21, 4639, 576, 12583, 1397, 1115, 9711, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 12591, 1397, 1115, 9722, 2]
 
-// Module 12589 (ChatInputGuardReturnToGameProfile)
+// Module 12597 (ChatInputGuardReturnToGameProfile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 9711 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12583 */;
+import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 9722 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12591 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { icon: null };
 let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
 obj.icon = size;

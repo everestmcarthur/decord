@@ -1,8 +1,8 @@
-// Module ID: 6037
-// Function ID: 6038
+// Module ID: 6038
+// Function ID: 6039
 // Dependencies: [2]
 
-// Module 6037
+// Module 6038
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DollarSignIllocon-2x.png.js");

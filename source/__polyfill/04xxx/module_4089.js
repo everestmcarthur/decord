@@ -1,11 +1,11 @@
 // Module ID: 4089
 // Function ID: 4090
-// Dependencies: [4081, 3729]
+// Dependencies: [4081, 3727]
 // Exports: default
 
 // Module 4089
 import module_4081_mod from "module_4081" /* 4081 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
 let module_4081 = module_4081_mod;
 if (!module_4081) {
@@ -24,8 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
+export default function isThisYear(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4081.default(Date.now(), arg0);
+  return module_4081.default(arg0, Date.now());
 };
 export default exports.default;

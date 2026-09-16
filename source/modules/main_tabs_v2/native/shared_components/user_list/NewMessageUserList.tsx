@@ -1,20 +1,20 @@
-// Module ID: 12501
-// Function ID: 12502
+// Module ID: 12509
+// Function ID: 12510
 // Name: NewMessageUserList
-// Dependencies: [32, 19, 17, 1958, 4288, 1372, 10993, 21, 4639, 576, 5602, 4484, 4792, 12, 10995, 1115, 4635, 10997, 10999, 11131, 12502, 2]
+// Dependencies: [32, 19, 17, 1958, 4286, 1372, 11006, 21, 4638, 576, 5603, 4482, 4791, 12, 11008, 1115, 4634, 11010, 11012, 11145, 12510, 2]
 // Exports: default, useSearchGDMNames
 
-// Module 12501 (NewMessageUserList)
+// Module 12509 (NewMessageUserList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import useChannelName from "useChannelName" /* 4792 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5602 */;
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import useChannelName from "useChannelName" /* 4791 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -31,14 +31,14 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         obj.return();
         return 1;
       } else {
-        let tmp19Result = tmp19(4484);
+        let tmp19Result = tmp19(4482);
         let globalName = tmp19Result.getGlobalName(tmp4);
         let toLocaleLowerCaseResult1;
         if (globalName != null) {
           toLocaleLowerCaseResult1 = globalName.toLocaleLowerCase();
         }
         if (null != toLocaleLowerCaseResult1) {
-          if (tmp19(5602)(trimmed1, tmp7)) {
+          if (tmp19(5603)(trimmed1, tmp7)) {
             obj.return();
             return 1;
           }
@@ -49,7 +49,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
           toLocaleLowerCaseResult2 = nickname.toLocaleLowerCase();
         }
         if (null != toLocaleLowerCaseResult2) {
-          if (tmp19(5602)(trimmed1, tmp12)) {
+          if (tmp19(5603)(trimmed1, tmp12)) {
             obj.return();
             return 1;
           }
@@ -100,11 +100,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10993).UserRowModes;
+const UserRowModes = fn(11006).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

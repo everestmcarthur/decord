@@ -1,14 +1,14 @@
-// Module ID: 12174
-// Function ID: 12175
+// Module ID: 12182
+// Function ID: 12183
 // Name: useActivityShelfData
-// Dependencies: [19, 1372, 8985, 1957, 504, 7275, 1370, 9542, 1364, 9538, 2]
+// Dependencies: [19, 1372, 8996, 1957, 504, 7278, 1370, 9553, 1364, 9549, 2]
 // Exports: useActivityShelfData
 
-// Module 12174 (useActivityShelfData)
+// Module 12182 (useActivityShelfData)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import TestModeStore from "TestModeStore" /* 8985 */;
+import TestModeStore from "TestModeStore" /* 8996 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 
 const require = globalThis.__r;
@@ -78,7 +78,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(9542);
+      const tmp = stateFromStores(9553);
       return supported_platforms.includes(tmp(guildId(1364).getOS()));
     });
     const found1 = found.filter((activity) => {

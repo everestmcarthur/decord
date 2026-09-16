@@ -1,13 +1,13 @@
-// Module ID: 6454
-// Function ID: 6455
+// Module ID: 6457
+// Function ID: 6458
 // Name: PortalSpotIllustration
-// Dependencies: [21, 5672, 6455, 2]
+// Dependencies: [21, 5673, 6458, 2]
 // Exports: PortalSpotIllustration
 
-// Module 6454 (PortalSpotIllustration)
+// Module 6457 (PortalSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6455 from "module_6455" /* 6455 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6458 from "module_6458" /* 6458 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PortalSpotIllustration = function PortalSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6455 };
+  const obj2 = { uri: _modDef6458 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

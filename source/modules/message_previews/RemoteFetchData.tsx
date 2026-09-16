@@ -1,9 +1,9 @@
-// Module ID: 15416
-// Function ID: 15417
+// Module ID: 15432
+// Function ID: 15433
 // Name: RemoteFetchData
 // Dependencies: [5, 2]
 
-// Module 15416 (RemoteFetchData)
+// Module 15432 (RemoteFetchData)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };

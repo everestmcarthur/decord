@@ -1,17 +1,17 @@
-// Module ID: 17269
-// Function ID: 17270
+// Module ID: 17325
+// Function ID: 17326
 // Name: StageChannelAudioStore
-// Dependencies: [17, 9215, 1958, 4662, 17270, 9216, 504, 573, 2]
+// Dependencies: [17, 9226, 1958, 4661, 17326, 9227, 504, 573, 2]
 
-// Module 17269 (StageChannelAudioStore)
+// Module 17325 (StageChannelAudioStore)
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9216 */;
-import DefaultAudioRouteExperimentDefault from "DefaultAudioRouteExperiment" /* 17270 */;
-import AudioRouteStore from "AudioRouteStore" /* 9215 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9227 */;
+import DefaultAudioRouteExperimentDefault from "DefaultAudioRouteExperiment" /* 17326 */;
+import AudioRouteStore from "AudioRouteStore" /* 9226 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged() {
@@ -19,9 +19,9 @@ function handleAudioRouteChanged() {
     const currentRouteType = AudioRouteStore.getCurrentRouteType();
     let flag2 = currentRouteType !== VoiceCallTypes.RouteTypes.UNKNOWN;
     if (flag2) {
-      if (currentRouteType !== tmp3(9216).RouteTypes.SPEAKER) {
-        if (currentRouteType !== tmp3(9216).RouteTypes.BLUETOOTH) {
-          if (currentRouteType !== tmp3(9216).RouteTypes.WIRED) {
+      if (currentRouteType !== tmp3(9227).RouteTypes.SPEAKER) {
+        if (currentRouteType !== tmp3(9227).RouteTypes.BLUETOOTH) {
+          if (currentRouteType !== tmp3(9227).RouteTypes.WIRED) {
             const AudioRoutePicker = NativeModules.AudioRoutePicker;
             if (AudioRoutePicker != null) {
               AudioRoutePicker.toggleSpeaker(true);

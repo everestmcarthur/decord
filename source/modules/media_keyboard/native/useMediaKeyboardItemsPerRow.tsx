@@ -1,11 +1,11 @@
-// Module ID: 10780
-// Function ID: 10781
+// Module ID: 10788
+// Function ID: 10789
 // Name: useMediaKeyboardItemsPerRow
-// Dependencies: [19, 4501, 2]
+// Dependencies: [19, 4499, 2]
 // Exports: useMediaKeyboardItemsPerRow
 
-// Module 10780 (useMediaKeyboardItemsPerRow)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4501 */;
+// Module 10788 (useMediaKeyboardItemsPerRow)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4499 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;
@@ -19,11 +19,11 @@ export const useMediaKeyboardItemsPerRow = function useMediaKeyboardItemsPerRow(
   let itemsPerRow = 8;
   if (useWindowSizeClassifier.WindowSizeClassifier.XLARGE !== tmp2) {
     itemsPerRow = 6;
-    if (tmp3(4501).WindowSizeClassifier.LARGE !== tmp2) {
+    if (tmp3(4499).WindowSizeClassifier.LARGE !== tmp2) {
       itemsPerRow = 4;
-      if (tmp3(4501).WindowSizeClassifier.NORMAL !== tmp2) {
+      if (tmp3(4499).WindowSizeClassifier.NORMAL !== tmp2) {
         itemsPerRow = 3;
-        if (tmp3(4501).WindowSizeClassifier.SMALL !== tmp2) {
+        if (tmp3(4499).WindowSizeClassifier.SMALL !== tmp2) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp2);

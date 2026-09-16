@@ -1,14 +1,14 @@
-// Module ID: 7884
-// Function ID: 7885
+// Module ID: 7893
+// Function ID: 7894
 // Name: ApplicationCommandAutocompleteStore
-// Dependencies: [7885, 1074, 1364, 1895, 4819, 504, 573, 2]
+// Dependencies: [7894, 1074, 1364, 1895, 4818, 504, 573, 2]
 
-// Module 7884 (ApplicationCommandAutocompleteStore)
+// Module 7893 (ApplicationCommandAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1895 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7885 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4818 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7894 */;
 
 require = fn;
 function handleInit() {
@@ -65,7 +65,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
     const _Map = Map;
     map = new Map();
     obj3.optionNameToAutocompleteQueries = map;
@@ -89,7 +89,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
     const _Map = Map;
     map = new Map();
     obj3.optionNameToAutocompleteQueries = map;
@@ -119,7 +119,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
     const _Map = Map;
     map = new Map();
     obj3.optionNameToAutocompleteQueries = map;
@@ -143,7 +143,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
     const _Map = Map;
     map = new Map();
     obj3.optionNameToAutocompleteQueries = map;
@@ -173,7 +173,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
       if (activeCommand != null) {
         id = activeCommand.id;
       }
-      const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+      const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
       const _Map = Map;
       map = new Map();
       obj3.optionNameToAutocompleteQueries = map;
@@ -242,7 +242,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         if (activeCommand != null) {
           id = activeCommand.id;
         }
-        const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+        const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
         const _Map = Map;
         map = new Map();
         obj3.optionNameToAutocompleteQueries = map;
@@ -350,7 +350,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
           if (activeCommand != null) {
             id = activeCommand.id;
           }
-          const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
+          const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "accessible" };
           const _Map = Map;
           map = new Map();
           obj3.optionNameToAutocompleteQueries = map;

@@ -1,33 +1,33 @@
-// Module ID: 16952
-// Function ID: 16953
+// Module ID: 17009
+// Function ID: 17010
 // Name: YouScreenUserProfileContent
-// Dependencies: [32, 19, 17, 1950, 5364, 7726, 8303, 7315, 1955, 14687, 21, 16945, 16479, 1364, 8375, 8360, 13200, 8800, 13201, 8310, 9309, 11336, 16953, 12101, 1944, 7495, 13132, 5059, 10381, 576, 1115, 16954, 16955, 16941, 1485, 8306, 11249, 8361, 504, 8346, 8357, 13081, 16956, 9164, 13211, 13212, 13213, 11255, 16957, 13216, 15797, 13134, 11345, 8725, 13222, 16959, 13187, 13227, 13233, 9924, 4376, 7263, 11251, 11291, 9902, 12749, 12751, 2]
+// Dependencies: [32, 19, 17, 1950, 5365, 7729, 8312, 7318, 1955, 14703, 21, 17002, 16499, 1364, 8384, 8369, 13211, 8809, 13212, 8319, 9320, 11344, 17010, 12109, 1944, 7498, 13143, 5060, 10389, 576, 1115, 17011, 17012, 16998, 1485, 8315, 11263, 8370, 504, 8355, 8366, 13089, 17013, 9175, 13222, 13223, 13224, 11269, 17014, 13227, 15815, 13145, 11353, 8734, 13233, 17016, 13198, 13238, 13244, 9932, 4374, 7266, 11265, 11305, 9910, 12757, 12759, 2]
 // Exports: default
 
-// Module 16952 (YouScreenUserProfileContent)
+// Module 17009 (YouScreenUserProfileContent)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8360 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8375 */;
-import FormDividerDefault from "FormDivider" /* 8725 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8800 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11255 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11345 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 13134 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 13187 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13200 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13201 */;
-import UserProfileConnections from "UserProfileConnections" /* 13222 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13227 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13233 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16479 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16945 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16957 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 16959 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8369 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8384 */;
+import FormDividerDefault from "FormDivider" /* 8734 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8809 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11269 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11353 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 13145 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 13198 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13211 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13212 */;
+import UserProfileConnections from "UserProfileConnections" /* 13233 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13238 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13244 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16499 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 17002 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17014 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17016 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5364 */;
-import UserProfileStore from "UserProfileStore" /* 7726 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5365 */;
+import UserProfileStore from "UserProfileStore" /* 7729 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
@@ -156,10 +156,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(1950).useIsContentShown;
-let UserProfileSections = fn(8303).UserProfileSections;
-const UserProfileThemeTypes = fn(7315).UserProfileThemeTypes;
+let UserProfileSections = fn(8312).UserProfileSections;
+const UserProfileThemeTypes = fn(7318).UserProfileThemeTypes;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-let closure_13 = fn(14687).UserProfileEditAutoFocusElement;
+let closure_13 = fn(14703).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -277,13 +277,12 @@ export default function YouScreenUserProfileContent(user) {
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj4 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
-      tmp3Result = tmp3(tmp4(13216), obj4);
+      tmp3Result = tmp3(tmp4(13227), obj4);
     }
     items2[1] = tmp3Result;
     let tmp3Result2 = enabled;
     if (enabled) {
-      const obj5 = { style: items };
-      tmp3Result2 = tmp3(tmp4(15797), obj5);
+      tmp3Result2 = tmp3(tmp4(15815), {});
     }
     items2[2] = tmp3Result2;
     items2[3] = closure_2_14(UserProfileActivityDefault, { user, currentUser: user, style: items });
@@ -291,7 +290,7 @@ export default function YouScreenUserProfileContent(user) {
     items2[5] = closure_2_14(FormDividerDefault, {});
     items2[6] = closure_2_14(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
     items2[7] = closure_2_14(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
-    items2[8] = closure_2_14(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends, style: items });
+    items2[8] = closure_2_14(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
     items2[9] = closure_2_14(UserProfileNoteDefault, { userId: user.id });
     obj2.children = items2;
     return __initData(timestampProducer, obj2);

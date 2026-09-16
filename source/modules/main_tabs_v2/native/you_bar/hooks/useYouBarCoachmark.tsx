@@ -1,15 +1,15 @@
-// Module ID: 16474
-// Function ID: 16475
+// Module ID: 16494
+// Function ID: 16495
 // Name: useYouBarCoachmark
-// Dependencies: [32, 19, 4461, 1955, 1115, 1944, 4376, 13218, 14814, 1485, 504, 13794, 4668, 7495, 16475, 11266, 2]
+// Dependencies: [32, 19, 4459, 1955, 1115, 1944, 4374, 13229, 14830, 1485, 504, 13803, 4667, 7498, 16495, 11280, 2]
 // Exports: useYouBarCoachmark
 
-// Module 16474 (useYouBarCoachmark)
+// Module 16494 (useYouBarCoachmark)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 
 require = fn;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;

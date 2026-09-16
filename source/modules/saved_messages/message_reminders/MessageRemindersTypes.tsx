@@ -1,18 +1,18 @@
-// Module ID: 11846
-// Function ID: 11847
+// Module ID: 11854
+// Function ID: 11855
 // Name: MessageRemindersTypes
-// Dependencies: [4231, 1115, 2]
+// Dependencies: [4229, 1115, 2]
 
-// Module 11846 (MessageRemindersTypes)
+// Module 11854 (MessageRemindersTypes)
 import util from "util" /* 1115 */;
-import _modDef4231 from "module_4231" /* 4231 */;
+import _modDef4229 from "module_4229" /* 4229 */;
 import size from "module_2" /* 2 */;
 
 const items = [
   {
     getDueAt() {
-      const obj = _modDef4231();
-      return _modDef4231().add(30, "minutes").toDate();
+      const obj = _modDef4229();
+      return _modDef4229().add(30, "minutes").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -21,8 +21,8 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4231();
-      return _modDef4231().add(1, "hour").toDate();
+      const obj = _modDef4229();
+      return _modDef4229().add(1, "hour").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -31,8 +31,8 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4231();
-      return _modDef4231().add(4, "hour").toDate();
+      const obj = _modDef4229();
+      return _modDef4229().add(4, "hour").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -41,9 +41,9 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4231();
-      const addResult = _modDef4231().startOf("day").add(9, "hours");
-      const startOfResult = _modDef4231().startOf("day");
+      const obj = _modDef4229();
+      const addResult = _modDef4229().startOf("day").add(9, "hours");
+      const startOfResult = _modDef4229().startOf("day");
       if (obj4.hour() >= 9) {
         let toDateResult = addResult.add(1, "day").toDate();
         const addResult1 = addResult.add(1, "day");
@@ -65,23 +65,23 @@ const items = [
   },
   {
     getDueAt() {
-      const dayResult = _modDef4231().day();
+      const dayResult = _modDef4229().day();
       if (0 === dayResult) {
         let num3 = 1;
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = tmp(4231)();
-          const startOfResult = tmp(4231)().startOf("day");
+          const obj2 = tmp(4229)();
+          const startOfResult = tmp(4229)().startOf("day");
           num3 = 8;
-          const addResult = tmp(4231)().startOf("day").add(9, "hours");
+          const addResult = tmp(4229)().startOf("day").add(9, "hours");
         }
       }
-      const obj = _modDef4231();
-      const obj5 = _modDef4231();
-      const dayResult1 = _modDef4231().day(num3);
-      const startOfResult1 = _modDef4231().day(num3).startOf("day");
-      return _modDef4231().day(num3).startOf("day").add(9, "hours").toDate();
+      const obj = _modDef4229();
+      const obj5 = _modDef4229();
+      const dayResult1 = _modDef4229().day(num3);
+      const startOfResult1 = _modDef4229().day(num3).startOf("day");
+      return _modDef4229().day(num3).startOf("day").add(9, "hours").toDate();
     },
     getLabel() {
       const intl = util.intl;

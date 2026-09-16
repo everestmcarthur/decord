@@ -1,24 +1,17 @@
 // Module ID: 4734
 // Function ID: 4735
-// Dependencies: [523]
+// Dependencies: [539, 540, 4735]
 
 // Module 4734
-import _mod523 from "module_523" /* 523 */;
+import _process from "_process" /* 539 */;
+import baseUnary from "baseUnary" /* 540 */;
+import baseIsSet from "baseIsSet" /* 4735 */;
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
+const tmp = _process && _process.isSet;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsSet;
 }
 
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = tmp.call;
-    Object(typeof call === "unknown" ? tmp() : call(arg0));
-  } else {
-    return {};
-  }
-};
+export default _module;

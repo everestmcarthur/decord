@@ -1,9 +1,9 @@
-// Module ID: 7768
-// Function ID: 7769
+// Module ID: 7771
+// Function ID: 7772
 // Name: FriendSuggestionActionCreators
 // Dependencies: [5, 1074, 1271, 573, 2]
 
-// Module 7768 (FriendSuggestionActionCreators)
+// Module 7771 (FriendSuggestionActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

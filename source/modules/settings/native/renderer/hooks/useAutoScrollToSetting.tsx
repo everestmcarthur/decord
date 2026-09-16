@@ -1,17 +1,17 @@
-// Module ID: 14794
-// Function ID: 14795
+// Module ID: 14810
+// Function ID: 14811
 // Name: useAutoScrollToSetting
-// Dependencies: [19, 14788, 11607, 14682, 14790, 1484, 2]
+// Dependencies: [19, 14804, 11615, 14698, 14806, 1484, 2]
 // Exports: useAutoScrollToSearchResultSetting
 
-// Module 14794 (useAutoScrollToSetting)
+// Module 14810 (useAutoScrollToSetting)
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14788 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14804 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const NodeType = fn(11607).NodeType;
+const NodeType = fn(11615).NodeType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
@@ -27,14 +27,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14682).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14790).getInitialScrollIndex(current, memo);
+    if (tmp(14698).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14806).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14790);
+      const tmpResult = tmp(14806);
     }
   }
   const items = [memo, flag, ref, navigation, current];

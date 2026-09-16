@@ -1,16 +1,16 @@
-// Module ID: 9263
-// Function ID: 9264
+// Module ID: 9274
+// Function ID: 9275
 // Name: useIsSecureFramesVerified
-// Dependencies: [502, 4662, 9264, 9265, 9266, 9302, 504, 9305, 4691, 2]
+// Dependencies: [502, 4661, 9275, 9276, 9277, 9313, 504, 9316, 4690, 2]
 // Exports: useIsCallSecureFramesVerified, useIsStreamSecureFramesVerified, useIsUserSecureFramesVerified
 
-// Module 9263 (useIsSecureFramesVerified)
-import StreamKeyUtils from "StreamKeyUtils" /* 4691 */;
+// Module 9274 (useIsSecureFramesVerified)
+import StreamKeyUtils from "StreamKeyUtils" /* 4690 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
-import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9264 */;
-import TransientKeyStore from "TransientKeyStore" /* 9265 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9266 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
+import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9275 */;
+import TransientKeyStore from "TransientKeyStore" /* 9276 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9277 */;
 
 require = fn;
 const size = fn(2);

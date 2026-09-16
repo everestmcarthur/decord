@@ -1,13 +1,13 @@
-// Module ID: 8470
-// Function ID: 8471
+// Module ID: 8479
+// Function ID: 8480
 // Name: ICYMIUnreadStateStore
-// Dependencies: [1091, 8469, 8471, 504, 573, 2]
+// Dependencies: [1091, 8478, 8480, 504, 573, 2]
 
-// Module 8470 (ICYMIUnreadStateStore)
+// Module 8479 (ICYMIUnreadStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import ICYMITypes from "ICYMITypes" /* 8469 */;
+import ICYMITypes from "ICYMITypes" /* 8478 */;
 
 require = fn;
 let closure_2 = 7 * DurationsDefault.Millis.DAY;
@@ -71,7 +71,7 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
           result = null != prop;
         }
         if (!result) {
-          let tmp3Result = tmp3(8471);
+          let tmp3Result = tmp3(8480);
           result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
         }
         if (!result) {

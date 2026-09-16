@@ -1,19 +1,19 @@
-// Module ID: 17811
-// Function ID: 17812
+// Module ID: 17867
+// Function ID: 17868
 // Name: GuildSettingsModalCommunityIntro
-// Dependencies: [19, 17, 1980, 4278, 9196, 1074, 21, 4639, 576, 10516, 1115, 4635, 16530, 4594, 1484, 504, 573, 9195, 17812, 2025, 5059, 17816, 4337, 7147, 2]
+// Dependencies: [19, 17, 1980, 4276, 9207, 1074, 21, 4638, 576, 10524, 1115, 4634, 16550, 4592, 1484, 504, 573, 9206, 17868, 2025, 5060, 17872, 4335, 7150, 2]
 // Exports: default
 
-// Module 17811 (GuildSettingsModalCommunityIntro)
+// Module 17867 (GuildSettingsModalCommunityIntro)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4337 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17816 */;
+import ToastUtils from "ToastUtils" /* 4335 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17872 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9196 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9207 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: c10, GuildFeatures: closure_11, GuildSettingsSections: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" }, featureIcon: null, featureDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 obj2.featureIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };

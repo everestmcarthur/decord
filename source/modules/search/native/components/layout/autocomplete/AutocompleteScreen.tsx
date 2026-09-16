@@ -1,25 +1,25 @@
-// Module ID: 16876
-// Function ID: 16877
+// Module ID: 16933
+// Function ID: 16934
 // Name: AutocompleteScreen
-// Dependencies: [32, 19, 1958, 4288, 1372, 12477, 12474, 7985, 1074, 21, 504, 16793, 12473, 12496, 12493, 4484, 4792, 12475, 16877, 12481, 12476, 16835, 16785, 1115, 16797, 2]
+// Dependencies: [32, 19, 1958, 4286, 1372, 12485, 12482, 7994, 1074, 21, 504, 16850, 12481, 12504, 12501, 4482, 4791, 12483, 16934, 12489, 12484, 16892, 16842, 1115, 16854, 2]
 
-// Module 16876 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import useChannelName from "useChannelName" /* 4792 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12473 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12493 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12496 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16877 */;
+// Module 16933 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import useChannelName from "useChannelName" /* 4791 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12481 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12501 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12504 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16934 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12477 */;
-import SearchQueryStore from "SearchQueryStore" /* 12474 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12485 */;
+import SearchQueryStore from "SearchQueryStore" /* 12482 */;
 
 require = fn;
-const SearchConstants = fn(7985);
+const SearchConstants = fn(7994);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1074);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
@@ -206,17 +206,17 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
               }
               if (tmp22) {
                 const element = { type: constants.GENERIC, props: null };
-                const obj2 = { text, icon: tmp(16877).getSearchFilterHasIcon(text), onPress: callback1 };
+                const obj2 = { text, icon: tmp(16934).getSearchFilterHasIcon(text), onPress: callback1 };
                 element.props = obj2;
                 items.push(element);
-                const tmpResult3 = tmp(16877);
+                const tmpResult3 = tmp(16934);
               }
               if (tmp27) {
                 const element1 = { type: constants.GENERIC, props: null };
-                const obj3 = { text, icon: tmp(16877).getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
+                const obj3 = { text, icon: tmp(16934).getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
                 element1.props = obj3;
                 items.push(element1);
-                const tmpResult4 = tmp(16877);
+                const tmpResult4 = tmp(16934);
               }
             });
           }

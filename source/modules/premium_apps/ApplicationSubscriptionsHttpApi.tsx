@@ -1,12 +1,12 @@
-// Module ID: 9670
-// Function ID: 9671
+// Module ID: 9681
+// Function ID: 9682
 // Name: ApplicationSubscriptionsHttpApi
-// Dependencies: [5, 1074, 1271, 573, 4541, 2]
+// Dependencies: [5, 1074, 1271, 573, 4539, 2]
 // Exports: fetchApplication, fetchEligibleApplicationSubscriptionGuilds, getApplicationSubscriptionGroupListingsForApplication, getEntitlementsForGuild, getSubscriptionGroupForSubscriptionPlan
 
-// Module 9670 (ApplicationSubscriptionsHttpApi)
+// Module 9681 (ApplicationSubscriptionsHttpApi)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import APIErrorDefault from "APIError" /* 4541 */;
+import APIErrorDefault from "APIError" /* 4539 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

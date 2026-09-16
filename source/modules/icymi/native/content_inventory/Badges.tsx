@@ -1,17 +1,17 @@
-// Module ID: 13144
-// Function ID: 13145
+// Module ID: 13155
+// Function ID: 13156
 // Name: Badges
-// Dependencies: [19, 17, 2026, 21, 576, 4639, 13142, 8255, 4635, 504, 9355, 11739, 13145, 1115, 13147, 13149, 9330, 10310, 8845, 1091, 2]
+// Dependencies: [19, 17, 2026, 21, 576, 4638, 13153, 8264, 4634, 504, 9366, 11747, 13156, 1115, 13158, 13160, 9341, 10318, 8855, 1091, 2]
 // Exports: BadgesContainer, CustomStatusTimestampBadge, GameTimestampBadge, MarathonBadge, NewGameBadge, ResurrectedBadge, StreakBadge, TopGameBadge, TrendingBadge
 
-// Module 13144 (Badges)
+// Module 13155 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import utils from "utils" /* 8255 */;
-import GameControllerIcon from "GameControllerIcon" /* 9355 */;
-import TimerIcon from "TimerIcon" /* 11739 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import utils from "utils" /* 8264 */;
+import GameControllerIcon from "GameControllerIcon" /* 9366 */;
+import TimerIcon from "TimerIcon" /* 11747 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 
@@ -38,9 +38,9 @@ function ContentTimestamp(entry) {
     const obj2 = { entry };
     let tmp6Result = tmp6(ActiveTimestamp, obj2);
   } else {
-    const obj3 = { variant: "text-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: tmp(8255).formatEndedTimestamp(entry, tmp5) };
-    tmp6Result = tmp6(tmp(4635).Text, obj3);
-    const tmpResult = tmp(8255);
+    const obj3 = { variant: "text-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: tmp(8264).formatEndedTimestamp(entry, tmp5) };
+    tmp6Result = tmp6(tmp(4634).Text, obj3);
+    const tmpResult = tmp(8264);
   }
   return tmp6Result;
 }
@@ -59,7 +59,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -103,12 +103,12 @@ export const MarathonBadge = function MarathonBadge(entry) {
     } else {
       icon = obj[noop.useContext(noop, closure_11)].icon;
     }
-    tmpResult = tmp(8255);
-    const marathonDescription = tmp(8255).getMarathonDescription(entry);
+    tmpResult = tmp(8264);
+    const marathonDescription = tmp(8264).getMarathonDescription(entry);
     const text = marathonDescription.text;
     let tmp7 = null;
     if (null != text) {
-      const obj2 = { Icon: tmp(11739).TimerIcon, iconColor: icon, text, accessibilityLabel: tmp6 };
+      const obj2 = { Icon: tmp(11747).TimerIcon, iconColor: icon, text, accessibilityLabel: tmp6 };
       tmp7 = timestampProducer(BaseBadge, obj2);
     }
     return tmp7;
@@ -119,7 +119,7 @@ export const MarathonBadge = function MarathonBadge(entry) {
 export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
-    const obj2 = { Icon: tmp(13145).NewUserIcon, text: null, iconColor: null };
+    const obj2 = { Icon: tmp(13156).NewUserIcon, text: null, iconColor: null };
     const intl = tmp(1115).intl;
     obj2.text = intl.string(tmp(1115).t.keY6mW);
     obj2.iconColor = nativeDefault.colors.STATUS_POSITIVE;
@@ -134,7 +134,7 @@ export const StreakBadge = function StreakBadge(entry) {
   if (null != streakCount) {
     tmp4 = null;
     if (streakCount >= 2) {
-      const obj2 = { Icon: tmp(13147).FlashIcon, text: null, iconColor: null, accessibilityLabel: null };
+      const obj2 = { Icon: tmp(13158).FlashIcon, text: null, iconColor: null, accessibilityLabel: null };
       const intl = tmp(1115).intl;
       const obj3 = { days: streakCount };
       obj2.text = intl.formatToPlainString(tmp(1115).t["Klie/P"], obj3);
@@ -153,8 +153,8 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(13149).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
-      const obj2 = { Icon: tmp(9330).FireIcon, text: null, iconColor: null };
+    if (trendingType !== tmp(13160).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+      const obj2 = { Icon: tmp(9341).FireIcon, text: null, iconColor: null };
       const intl = tmp(1115).intl;
       obj2.text = intl.string(tmp(1115).t.TsWCdW);
       obj2.iconColor = obj[noop.useContext(noop, closure_11)].icon;
@@ -167,7 +167,7 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   obj = utils;
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
-    const obj2 = { Icon: tmp(10310).RetryIcon, text: null, iconColor: null };
+    const obj2 = { Icon: tmp(10318).RetryIcon, text: null, iconColor: null };
     const intl = tmp(1115).intl;
     obj2.text = intl.string(tmp(1115).t.adnLsB);
     obj2.iconColor = obj[noop.useContext(noop, closure_11)].icon;
@@ -181,7 +181,7 @@ export const TopGameBadge = function TopGameBadge(entry) {
   if (null == entryDuration) {
     return null;
   } else {
-    const obj2 = { Icon: tmp(8845).TrophyIcon, text: null, iconColor: null };
+    const obj2 = { Icon: tmp(8855).TrophyIcon, text: null, iconColor: null };
     const obj3 = { children: null };
     const intl = tmp(1115).intl;
     const items = [intl.string(tmp(1115).t["/50eHi"]), ": ", ];

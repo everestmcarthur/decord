@@ -1,9 +1,9 @@
-// Module ID: 16486
-// Function ID: 16487
+// Module ID: 16506
+// Function ID: 16507
 // Name: ManageAccountsConstants
 // Dependencies: [1074, 2]
 
-// Module 16486 (ManageAccountsConstants)
+// Module 16506 (ManageAccountsConstants)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

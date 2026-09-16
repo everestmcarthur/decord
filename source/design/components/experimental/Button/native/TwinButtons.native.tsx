@@ -1,12 +1,12 @@
-// Module ID: 9036
-// Function ID: 9037
+// Module ID: 9047
+// Function ID: 9048
 // Name: TwinButtons
-// Dependencies: [19, 17, 21, 4639, 576, 5066, 5059, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 5067, 5060, 2]
 // Exports: TwinButtons
 
-// Module 9036 (TwinButtons)
+// Module 9047 (TwinButtons)
 import nativeDefault from "native" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_6 = createStyles.createStyles((arg0) => {
   let str = "row";
   if (arg0) {

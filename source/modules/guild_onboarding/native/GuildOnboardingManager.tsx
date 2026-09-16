@@ -1,18 +1,18 @@
-// Module ID: 17525
-// Function ID: 17526
+// Module ID: 17581
+// Function ID: 17582
 // Name: GuildOnboardingManager
-// Dependencies: [2022, 1980, 4461, 1074, 4265, 7225, 7202, 1385, 2]
+// Dependencies: [2022, 1980, 4459, 1074, 4263, 7228, 7205, 1385, 2]
 
-// Module 17525 (GuildOnboardingManager)
-import doGuildOnboardingDefault from "doGuildOnboarding" /* 7202 */;
+// Module 17581 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 7205 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
 
 let require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4263).GuildMemberFlags;
 let guildId = null;
 const channelId = null;
 const prototype = function GuildOnboardingManager() {
@@ -59,7 +59,7 @@ const prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7202).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(7205).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);

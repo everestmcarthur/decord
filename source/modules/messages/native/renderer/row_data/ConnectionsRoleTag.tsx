@@ -1,10 +1,10 @@
-// Module ID: 13320
-// Function ID: 13321
+// Module ID: 13331
+// Function ID: 13332
 // Name: ConnectionsRoleTag
 // Dependencies: [17, 1074, 576, 1092, 2]
 // Exports: createConnectionsRoleTag
 
-// Module 13320 (ConnectionsRoleTag)
+// Module 13331 (ConnectionsRoleTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;

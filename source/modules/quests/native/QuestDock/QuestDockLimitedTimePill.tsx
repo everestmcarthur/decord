@@ -1,23 +1,23 @@
-// Module ID: 15296
-// Function ID: 15297
+// Module ID: 15312
+// Function ID: 15313
 // Name: QuestDockLimitedTimePill
-// Dependencies: [19, 17, 21, 4639, 576, 11739, 4635, 1115, 2]
+// Dependencies: [19, 17, 21, 576, 4638, 11747, 4634, 1115, 2]
 
-// Module 15296 (QuestDockLimitedTimePill)
+// Module 15312 (QuestDockLimitedTimePill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import TimerIcon from "TimerIcon" /* 11739 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import TimerIcon from "TimerIcon" /* 11747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
-let obj = { pill: { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 }, text: { textTransform: "uppercase" } };
+const createStyles = fn(4638);
+let obj = { pill: { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj);
-let obj3 = { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 };
+let obj3 = { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockLimitedTimePill.tsx");
 

@@ -1,17 +1,17 @@
-// Module ID: 5061
-// Function ID: 5062
+// Module ID: 5062
+// Function ID: 5063
 // Name: Icon
-// Dependencies: [19, 17, 21, 4639, 576, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 2]
 // Exports: getIconSize, getIconStyle
 
-// Module 5061 (Icon)
+// Module 5062 (Icon)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 const IconSizes = { EXTRA_SMALL_10: "extraSmall10", EXTRA_SMALL: "extraSmall", SMALL: "small", SMALL_20: "small20", MEDIUM: "medium", LARGE: "large", CUSTOM: "custom", REFRESH_SMALL_16: "refreshSmall16", SMALL_14: "small14" };
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_5 = createStyles.createStyles(() => {
   obj = { iconColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
   return obj;

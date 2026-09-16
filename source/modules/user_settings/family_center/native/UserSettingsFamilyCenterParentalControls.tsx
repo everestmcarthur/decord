@@ -1,14 +1,14 @@
-// Module ID: 15029
-// Function ID: 15030
+// Module ID: 15045
+// Function ID: 15046
 // Name: UserSettingsFamilyCenterParentalControls
-// Dependencies: [32, 19, 17, 1074, 7645, 21, 4639, 576, 1484, 7269, 7289, 7101, 14993, 15011, 1115, 2397, 7969, 15030, 15031, 9924, 7646, 7230, 15032, 9925, 12751, 2]
+// Dependencies: [32, 19, 17, 1074, 7648, 21, 4638, 576, 1484, 7272, 7292, 7104, 15009, 15027, 1115, 2397, 7978, 15046, 15047, 9932, 7649, 7233, 15048, 9933, 12759, 2]
 // Exports: default
 
-// Module 15029 (UserSettingsFamilyCenterParentalControls)
+// Module 15045 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,10 +18,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const FamilyCenterSubPages = fn(7645).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7648).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };

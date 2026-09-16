@@ -1,26 +1,26 @@
-// Module ID: 15509
-// Function ID: 15510
+// Module ID: 15525
+// Function ID: 15526
 // Name: ReduceSaturationSetting
-// Dependencies: [19, 4631, 8082, 21, 14535, 15408, 11342, 11606, 1115, 1177, 2]
+// Dependencies: [19, 4630, 8091, 21, 14553, 15424, 11350, 11614, 1115, 1177, 2]
 
-// Module 15509 (ReduceSaturationSetting)
+// Module 15525 (ReduceSaturationSetting)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11342 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14535 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15408 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11350 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14553 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15424 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["5PWWCY"]);
   },
-  parent: fn(8082).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8091).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

@@ -1,18 +1,18 @@
-// Module ID: 11296
-// Function ID: 11297
+// Module ID: 11310
+// Function ID: 11311
 // Name: TieredTenureBadgeActionSheet
-// Dependencies: [19, 17, 1372, 1374, 1074, 21, 4639, 576, 11297, 7739, 11322, 5672, 4635, 1115, 11323, 504, 1886, 8897, 1249, 1612, 7489, 4606, 8299, 10098, 10101, 7257, 6732, 2]
+// Dependencies: [19, 17, 1372, 1374, 1074, 21, 4638, 576, 11311, 7742, 11336, 5673, 4634, 1115, 11337, 504, 1886, 8908, 1249, 1612, 7492, 4605, 8308, 10106, 10109, 7260, 6735, 2]
 // Exports: default
 
-// Module 11296 (TieredTenureBadgeActionSheet)
+// Module 11310 (TieredTenureBadgeActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import openUserSettings from "openUserSettings" /* 7489 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7739 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8299 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11297 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import openUserSettings from "openUserSettings" /* 7492 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7742 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8308 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11311 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11336 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -46,9 +46,9 @@ function TieredTenureBadgeItem(arg0) {
     const obj4 = { style: tmp.badgeName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1115).intl;
     obj4.children = intl.string(tieredTenureBadgeData.nameUnformatted);
-    items1[1] = closure_1_10(tmp2(4635).Text, obj4);
+    items1[1] = closure_1_10(tmp2(4634).Text, obj4);
     const obj5 = { style: tmp.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp7 };
-    items1[2] = closure_1_10(tmp2(4635).Text, obj5);
+    items1[2] = closure_1_10(tmp2(4634).Text, obj5);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
@@ -60,7 +60,7 @@ function TieredTenureBadgeItem(arg0) {
       const date = new Date(premiumSince);
       obj7.date = date;
       obj6.children = intl2.formatToPlainString(tmp2(1115).t.Hu4jfi, obj7);
-      isUsersBadge = tmp11(tmp2(4635).Text, obj6);
+      isUsersBadge = tmp11(tmp2(4634).Text, obj6);
     }
     items1[3] = isUsersBadge;
     obj2.children = items1;
@@ -77,7 +77,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm }, badgeName: { marginTop: 8 }, badgeRequirement: { marginTop: 4 }, badgePremiumSince: { width: 90, marginTop: 4, textAlign: "center" }, footer: { marginHorizontal: 24 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

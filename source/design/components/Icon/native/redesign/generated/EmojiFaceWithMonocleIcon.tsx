@@ -1,13 +1,13 @@
-// Module ID: 15469
-// Function ID: 15470
+// Module ID: 15485
+// Function ID: 15486
 // Name: EmojiFaceWithMonocleIcon
-// Dependencies: [19, 21, 576, 4340, 15470, 2]
+// Dependencies: [19, 21, 576, 4338, 15486, 2]
 // Exports: EmojiFaceWithMonocleIcon
 
-// Module 15469 (EmojiFaceWithMonocleIcon)
+// Module 15485 (EmojiFaceWithMonocleIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15470 from "module_15470" /* 15470 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod15486 from "module_15486" /* 15486 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiFaceWithMonocleIcon = function EmojiFaceWithMonocleIcon(color)
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15470, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15486, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

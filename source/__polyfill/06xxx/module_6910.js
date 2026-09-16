@@ -1,49 +1,30 @@
 // Module ID: 6910
 // Function ID: 6911
-// Dependencies: [19, 1637]
-// Exports: useReactiveSharedValue
+// Dependencies: [19]
+// Exports: useStableCallback
 
 // Module 6910
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export const useReactiveSharedValue = (current) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = current;
-  if (current) {
-    tmp3 = typeof current === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in current;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = current;
-      if (typeof current === "object") {
-        const obj2 = {};
-        const merged = Object.assign(current);
-        let mutable = require("cancelAnimation").makeMutable(obj2);
-        let obj = require("cancelAnimation");
-      } else {
-        mutable = require("cancelAnimation").makeMutable(current);
-        const obj3 = require("cancelAnimation");
-      }
-      tmp2.current = mutable;
-    } else if (tmp.current !== current) {
-      tmp2.current.value = current;
-    }
-  }
-  closure_2(() => () => {
-    if (ref.current) {
-      ref(dependencyMap[1]).cancelAnimation(tmp.current);
-      const obj = ref(dependencyMap[1]);
-    }
+export const useStableCallback = function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  framebus(() => () => {
+    ref.current = undefined;
   }, []);
-  current = tmp2.current;
-  return current;
+  return React(() => {
+    const items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, tmp);
+    }
+    return applyResult;
+  }, []);
 };

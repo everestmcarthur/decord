@@ -1,17 +1,17 @@
-// Module ID: 11263
-// Function ID: 11264
+// Module ID: 11277
+// Function ID: 11278
 // Name: DoubleTapEmojiUpdatedToast
-// Dependencies: [19, 4631, 1375, 21, 4639, 576, 1364, 504, 1397, 7237, 4635, 1115, 5046, 4351, 4338, 2]
+// Dependencies: [19, 4630, 1375, 21, 4638, 576, 1364, 504, 1397, 7240, 4634, 1115, 5045, 4349, 4336, 2]
 // Exports: showDoubleTapEmojiUpdatedToast
 
-// Module 11263 (DoubleTapEmojiUpdatedToast)
+// Module 11277 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 class ToastEmoji {
@@ -62,7 +62,7 @@ function ToastText(emoji) {
 }
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 }, toastEmojiCustom: { width: 24, height: 24 }, toastEmojiText: null, toastText: null };
 let PlatformUtils = fn(1364);
 let num = 16;
@@ -88,7 +88,7 @@ export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4351).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4349).AccessibilityAnnouncer;
     const intl = tmp(1115).intl;
     const obj3 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1115).t.nKY0Fl, obj3));

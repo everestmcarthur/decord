@@ -1,14 +1,14 @@
-// Module ID: 6696
-// Function ID: 6697
+// Module ID: 6699
+// Function ID: 6700
 // Name: ResendEmail
-// Dependencies: [32, 19, 17, 1952, 1372, 1074, 21, 4639, 1484, 504, 38, 6697, 5706, 5777, 4635, 1115, 5059, 6698, 4338, 2]
+// Dependencies: [32, 19, 17, 1952, 1372, 1074, 21, 4638, 1484, 504, 38, 6700, 5707, 5778, 4634, 1115, 5060, 6701, 4336, 2]
 // Exports: default
 
-// Module 6696 (ResendEmail)
+// Module 6699 (ResendEmail)
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5706 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6698 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5707 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6701 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const VerificationModalScenes = fn(1074).VerificationModalScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
@@ -39,9 +39,9 @@ export default function ResendEmail() {
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items1, () => action.getAction());
   let obj3 = navigation(504);
-  const result = verified(6697).isEmailReverification(stateFromStores1);
+  const result = verified(6700).isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
-  const obj4 = verified(6697);
+  const obj4 = verified(6700);
   [tmp10, dependencyMap] = noop.useState(false);
   _slicedToArray = noop.useRef(verified);
   const items2 = [verified];
@@ -62,11 +62,11 @@ export default function ResendEmail() {
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(5777).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(5778).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1115).intl;
   obj6.children = intl.string(navigation(1115).t.fUtddV);
-  items4[1] = closure_9(navigation(4635).Text, obj6);
+  items4[1] = closure_9(navigation(4634).Text, obj6);
   const obj7 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1115).intl;
   if (tmp10) {
@@ -76,7 +76,7 @@ export default function ResendEmail() {
     formatResult = intl2.string(tmp2(1115).t.tSXg8O);
   }
   obj7.children = formatResult;
-  items4[2] = closure_9(navigation(4635).Text, obj7);
+  items4[2] = closure_9(navigation(4634).Text, obj7);
   const obj9 = { style: tmp.resend, children: null };
   const obj10 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1115).intl;
@@ -89,7 +89,7 @@ export default function ResendEmail() {
     obj3.content = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open(obj3);
   };
-  obj9.children = closure_9(navigation(5059).Button, obj10);
+  obj9.children = closure_9(navigation(5060).Button, obj10);
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: null };
@@ -97,7 +97,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1115).intl;
     obj12.text = intl4.string(tmp2(1115).t.Vm8akB);
     obj12.onPress = callback;
-    obj11.children = tmp16(tmp2(5059).Button, obj12);
+    obj11.children = tmp16(tmp2(5060).Button, obj12);
     tmp16Result = tmp16(tmp15, obj11);
   }
   items4[4] = tmp16Result;

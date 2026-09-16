@@ -1,18 +1,18 @@
-// Module ID: 16413
-// Function ID: 16414
+// Module ID: 16433
+// Function ID: 16434
 // Name: InvitesDisabledBadge
-// Dependencies: [19, 17, 21, 4639, 576, 1177, 12860, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 1177, 12868, 2]
 
-// Module 16413 (InvitesDisabledBadge)
+// Module 16433 (InvitesDisabledBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef12860 from "module_12860" /* 12860 */;
+import _modDef12868 from "module_12868" /* 12868 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 }, pauseBackground: null, pauseRing: null };
 let size = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, padding: fn(1177).BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
 obj.pauseBackground = size;
@@ -27,7 +27,7 @@ export default noop.memo(function InvitesDisabledBadge(style) {
   const obj = { style: null, children: null };
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
-  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12860 }) };
-  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12860 })}</View>;
+  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12868 }) };
+  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12868 })}</View>;
   return <View style={null}>{null}</View>;
 });

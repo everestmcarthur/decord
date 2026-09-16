@@ -1,12 +1,12 @@
-// Module ID: 17897
-// Function ID: 17898
+// Module ID: 17953
+// Function ID: 17954
 // Name: RoleTierEditScenesModal
-// Dependencies: [32, 19, 17884, 15299, 21, 4639, 38, 7484, 7099, 1115, 17898, 17883, 17899, 17919, 17922, 17924, 1612, 4842, 5683, 7107, 17926, 2]
+// Dependencies: [32, 19, 17940, 15315, 21, 4638, 38, 7487, 7102, 1115, 17954, 17939, 17955, 17975, 17978, 17980, 1612, 4841, 5684, 7110, 17982, 2]
 // Exports: default
 
-// Module 17897 (RoleTierEditScenesModal)
+// Module 17953 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,12 +25,12 @@ function orderify(scene, arg1) {
   }
   return obj2;
 }
-const RoleTierEditStore = fn(17884);
+const RoleTierEditStore = fn(17940);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-let closure_7 = fn(15299).GuildRoleSubscriptionsTierScenes;
+let closure_7 = fn(15315).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");

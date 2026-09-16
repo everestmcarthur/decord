@@ -1,19 +1,19 @@
-// Module ID: 6726
-// Function ID: 6727
+// Module ID: 6729
+// Function ID: 6730
 // Name: InputFieldContainer
-// Dependencies: [19, 17, 21, 576, 4341, 4639, 6727, 4635, 4376, 5058, 2]
+// Dependencies: [19, 17, 21, 576, 4339, 4638, 6730, 4634, 4374, 5059, 2]
 // Exports: InputFieldContainer
 
-// Module 6726 (InputFieldContainer)
+// Module 6729 (InputFieldContainer)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4341 */;
-import spring from "spring" /* 5058 */;
-import InputTypes from "InputTypes" /* 6727 */;
+import useToken from "useToken" /* 4339 */;
+import spring from "spring" /* 5059 */;
+import InputTypes from "InputTypes" /* 6730 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const Text_Text = tmp(4635);
+const Text_Text = tmp(4634);
 require = fn;
 function useInputStyles(size) {
   let str = size.size;
@@ -60,7 +60,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -144,7 +144,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4639);
+createStyles = fn(4638);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 const __initData = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
 const size = fn(2);

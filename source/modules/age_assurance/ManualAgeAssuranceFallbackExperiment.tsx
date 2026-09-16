@@ -1,11 +1,11 @@
-// Module ID: 8557
-// Function ID: 8558
+// Module ID: 8566
+// Function ID: 8567
 // Name: ManualAgeAssuranceFallbackExperiment
-// Dependencies: [8551, 1434, 8539, 2]
+// Dependencies: [8560, 1434, 8548, 2]
 // Exports: isManualAgeAssuranceFallbackEnabled
 
-// Module 8557 (ManualAgeAssuranceFallbackExperiment)
-import SafetyHubStore from "SafetyHubStore" /* 8551 */;
+// Module 8566 (ManualAgeAssuranceFallbackExperiment)
+import SafetyHubStore from "SafetyHubStore" /* 8560 */;
 
 const require = fn;
 const ApexExperiment = fn(1434);

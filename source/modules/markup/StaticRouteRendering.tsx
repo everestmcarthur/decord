@@ -1,10 +1,10 @@
-// Module ID: 5107
-// Function ID: 5108
+// Module ID: 5108
+// Function ID: 5109
 // Name: StaticRouteRendering
 // Dependencies: [2016, 1115, 2]
 // Exports: staticRouteToItemString, staticRouteToTranslation
 
-// Module 5107 (StaticRouteRendering)
+// Module 5108 (StaticRouteRendering)
 import util from "util" /* 1115 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 

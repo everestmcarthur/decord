@@ -1,13 +1,13 @@
-// Module ID: 6682
-// Function ID: 6683
+// Module ID: 6685
+// Function ID: 6686
 // Name: WizardHatAndBookSpotIllustration
-// Dependencies: [21, 5672, 6683, 2]
+// Dependencies: [21, 5673, 6686, 2]
 // Exports: WizardHatAndBookSpotIllustration
 
-// Module 6682 (WizardHatAndBookSpotIllustration)
+// Module 6685 (WizardHatAndBookSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6683 from "module_6683" /* 6683 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6686 from "module_6686" /* 6686 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const WizardHatAndBookSpotIllustration = function WizardHatAndBookSpotIll
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6683 };
+  const obj2 = { uri: _modDef6686 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

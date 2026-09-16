@@ -1,29 +1,29 @@
-// Module ID: 11595
-// Function ID: 11596
+// Module ID: 11603
+// Function ID: 11604
 // Name: LocalActivityStore
-// Dependencies: [32, 1957, 4867, 1916, 11596, 5365, 1220, 4661, 1958, 1932, 11598, 2012, 4657, 1074, 1936, 11249, 12, 11599, 4769, 1331, 11600, 1385, 504, 573, 2]
+// Dependencies: [32, 1957, 4866, 1916, 11604, 5366, 1220, 4660, 1958, 1932, 11606, 2012, 4656, 1074, 1936, 11263, 12, 11607, 4768, 1331, 11608, 1385, 504, 573, 2]
 
-// Module 11595 (LocalActivityStore)
+// Module 11603 (LocalActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1331 from "module_1331" /* 1331 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11600 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStore from "ApplicationStore" /* 4867 */;
+import ApplicationStore from "ApplicationStore" /* 4866 */;
 import RunningGameStore from "RunningGameStore" /* 1916 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11596 */;
-import SpotifyStore from "SpotifyStore" /* 5365 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11604 */;
+import SpotifyStore from "SpotifyStore" /* 5366 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4660 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import DetectableGameStore from "DetectableGameStore" /* 1932 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11598 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11606 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SessionsStore from "SessionsStore" /* 4657 */;
+import SessionsStore from "SessionsStore" /* 4656 */;
 
 require = fn;
 function updateActivities() {
@@ -45,8 +45,8 @@ function updateActivities() {
     tmp4 = tmp5;
   }
   if (tmp4) {
-    items.push(tmp(11249).getActivityFromCustomStatus(setting));
-    const tmpResult = tmp(11249);
+    items.push(tmp(11263).getActivityFromCustomStatus(setting));
+    const tmpResult = tmp(11263);
   }
   const items1 = [...FirstPartyRichPresenceStore.getActivities()];
   items.push.apply(items1);
@@ -120,7 +120,7 @@ function updateActivities() {
     let hasItem = set.has(tmp26.name);
     if (!hasItem) {
       const items2 = [];
-      const tmpResult3 = tmp(11599);
+      const tmpResult3 = tmp(11607);
       HermesBuiltin.arraySpread(SessionsStore.getRemoteActivities(), HermesBuiltin.arraySpread(items, 0));
       hasItem = tmpResult3.doesGameHaveRichPresence(tmp26, items2);
       const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
@@ -148,9 +148,9 @@ function updateActivities() {
           }
           const obj3 = { start: start2 };
           obj2.timestamps = obj3;
-          const merged1 = Object.assign(tmp(4769).maybeAddAdditionalGameMetadata(tmp26));
+          const merged1 = Object.assign(tmp(4768).maybeAddAdditionalGameMetadata(tmp26));
           items.push(obj2);
-          const tmpResult4 = tmp(4769);
+          const tmpResult4 = tmp(4768);
         }
       }
     }
@@ -347,7 +347,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
           num2 = 0;
         }
         let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
-        let tmp13Result = tmp13(11600);
+        let tmp13Result = tmp13(11608);
         let activityFlags = obj2.computeActivityFlags(tmp15, hasFlagResult, tmp10.platform === constants2.EMBEDDED, tmp13Result.isContextlessEmbeddedActivity(tmp10), tmp11);
         if (activityFlags !== tmp12) {
           items = [tmp8, , ];

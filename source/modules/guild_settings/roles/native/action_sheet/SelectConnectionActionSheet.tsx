@@ -1,21 +1,21 @@
-// Module ID: 17793
-// Function ID: 17794
+// Module ID: 17849
+// Function ID: 17850
 // Name: SelectConnectionActionSheet
-// Dependencies: [32, 19, 17, 21, 11697, 5690, 1177, 4574, 7256, 1115, 7610, 1397, 4491, 4606, 9924, 7304, 9925, 6732, 7230, 5772, 2]
+// Dependencies: [32, 19, 17, 21, 11705, 5691, 1177, 4572, 7259, 1115, 7613, 1397, 4489, 4605, 9932, 7307, 9933, 6735, 7233, 5773, 2]
 // Exports: default
 
-// Module 17793 (SelectConnectionActionSheet)
+// Module 17849 (SelectConnectionActionSheet)
 import util from "util" /* 1115 */;
-import useThemeDefault from "useTheme" /* 4574 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import BottomSheetModal from "BottomSheetModal" /* 6732 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7256 */;
-import ActionSheet from "ActionSheet" /* 7304 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7610 */;
-import SegmentedControlState from "SegmentedControlState" /* 9924 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11697 */;
+import useThemeDefault from "useTheme" /* 4572 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import BottomSheetModal from "BottomSheetModal" /* 6735 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7233 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7259 */;
+import ActionSheet from "ActionSheet" /* 7307 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7613 */;
+import SegmentedControlState from "SegmentedControlState" /* 9932 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ function IdentityApplicationRow(arg0) {
     }
     obj3.subLabel = description;
     obj3.onPress = onPress;
-    return timestampProducer(tmp(5690).TableRow, obj3);
+    return timestampProducer(tmp(5691).TableRow, obj3);
   }
 }
 const View = fn(17).View;
@@ -173,7 +173,7 @@ export default function SelectConnectionActionSheet(arg0) {
   if (num > 0) {
     const obj4 = { children: null };
     const obj5 = { state: segmentedControlState };
-    obj4.children = tmp2(tmp3(9925).SegmentedControl, obj5);
+    obj4.children = tmp2(tmp3(9933).SegmentedControl, obj5);
     let tmp2Result = tmp2(closure_5, obj4);
   } else {
     tmp2Result = null;

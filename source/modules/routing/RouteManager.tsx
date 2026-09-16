@@ -1,11 +1,11 @@
-// Module ID: 12924
-// Function ID: 12925
+// Module ID: 12932
+// Function ID: 12933
 // Name: RouteManager
-// Dependencies: [5362, 12925, 1074, 1101, 12926, 12927, 2]
+// Dependencies: [5363, 12933, 1074, 1101, 12934, 12935, 2]
 
-// Module 12924 (RouteManager)
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
-import KeybindRouterStore from "KeybindRouterStore" /* 12925 */;
+// Module 12932 (RouteManager)
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
+import KeybindRouterStore from "KeybindRouterStore" /* 12933 */;
 
 let obj2 = fn;
 const Routes = fn(1074).Routes;
@@ -36,7 +36,7 @@ class RouteManager {
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(12926);
+          obj = obj2(12934);
           if (!obj.convertRouteToNavigation(pathname)) {
             tmp2(1101).replaceWith(Routes.ME);
           }
@@ -99,7 +99,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
       obj2 = obj2(1101);
       let tmp9Result = tmp9(location, REPLACE);
       if (null != tmp9Result) {
-        let tmp11Result = tmp11(12927);
+        let tmp11Result = tmp11(12935);
         let obj3 = { message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route", data: null };
         let obj4 = { replacePath: tmp9Result.path, previousPath: obj2.getHistory().location.pathname };
         obj3.data = obj4;
@@ -194,7 +194,7 @@ obj2.handleConnectionChange = function handleConnectionChange() {
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(12926);
+      obj = obj2(12934);
       if (!obj.convertRouteToNavigation(pathname)) {
         tmp2(1101).replaceWith(Routes.ME);
       }

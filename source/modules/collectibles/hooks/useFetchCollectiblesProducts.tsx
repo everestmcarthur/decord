@@ -1,15 +1,15 @@
-// Module ID: 15163
-// Function ID: 15164
+// Module ID: 15179
+// Function ID: 15180
 // Name: useFetchCollectiblesProducts
-// Dependencies: [32, 19, 5595, 7649, 1074, 563, 1890, 7648, 2]
+// Dependencies: [32, 19, 5596, 7652, 1074, 563, 1890, 7651, 2]
 // Exports: useFetchCollectiblesProducts
 
-// Module 15163 (useFetchCollectiblesProducts)
+// Module 15179 (useFetchCollectiblesProducts)
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7648 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7651 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 5595 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7649 */;
+import SKUStore from "SKUStore" /* 5596 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7652 */;
 
 const require = globalThis.__r;
 

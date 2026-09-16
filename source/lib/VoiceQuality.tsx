@@ -1,16 +1,16 @@
-// Module ID: 13910
-// Function ID: 13911
+// Module ID: 13923
+// Function ID: 13924
 // Name: VoiceQuality
-// Dependencies: [32, 7847, 4697, 13911, 7853, 4694, 12, 4668, 2]
+// Dependencies: [32, 7856, 4696, 13924, 7862, 4693, 12, 4667, 2]
 
-// Module 13910 (VoiceQuality)
+// Module 13923 (VoiceQuality)
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
-import Histogram from "Histogram" /* 7847 */;
-import SystemResourcesDefault from "SystemResources" /* 7853 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13911 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4693 */;
+import Histogram from "Histogram" /* 7856 */;
+import SystemResourcesDefault from "SystemResources" /* 7862 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13924 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4697 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4696 */;
 
 require = fn;
 const VoiceQualityEvent = { InputDeviceSampleRateChanged: "input-device-sample-rate-changed" };
@@ -106,12 +106,12 @@ class VoiceQuality extends tmp2 {
       let outboundStats = rtp;
       if (null != rtp) {
         const networkQuality = outboundStats.networkQuality;
-        const result = networkQuality.incrementNetworkStats(outboundStats(4668).now());
+        const result = networkQuality.incrementNetworkStats(outboundStats(4667).now());
         const systemResources = outboundStats.systemResources;
         systemResources.takeSample();
         const duration4 = outboundStats.duration;
         duration4.connected = duration4.connected + 1;
-        const obj2 = outboundStats(4668);
+        const obj2 = outboundStats(4667);
         const tmp7 = importDefault;
         let num = 0;
         const reduced = _modDef12.reduce(outboundStats.inboundStats, (packetsReceived, packetsReceived2) => {

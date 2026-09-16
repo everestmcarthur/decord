@@ -1,18 +1,18 @@
-// Module ID: 10259
-// Function ID: 10260
+// Module ID: 10267
+// Function ID: 10268
 // Name: Timestamp
-// Dependencies: [19, 21, 4639, 576, 10260, 1177, 4338, 2]
+// Dependencies: [19, 21, 4638, 576, 10268, 1177, 4336, 2]
 // Exports: default
 
-// Module 10259 (Timestamp)
+// Module 10267 (Timestamp)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
-import useFormattedTimestampDefault from "useFormattedTimestamp" /* 10260 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 10268 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

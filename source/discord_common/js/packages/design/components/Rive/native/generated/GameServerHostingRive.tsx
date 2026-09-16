@@ -1,11 +1,11 @@
-// Module ID: 4444
-// Function ID: 4445
+// Module ID: 4442
+// Function ID: 4443
 // Name: GameServerHostingRive
-// Dependencies: [109, 19, 21, 4370, 4445, 4425, 2]
+// Dependencies: [109, 19, 21, 4368, 4443, 4423, 2]
 
-// Module 4444 (GameServerHostingRive)
-import BaseRive from "BaseRive" /* 4370 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4425 */;
+// Module 4442 (GameServerHostingRive)
+import BaseRive from "BaseRive" /* 4368 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4423 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
 // Module ID: 1946
 // Function ID: 1947
 // Name: DismissibleContentUtils
-// Dependencies: [32, 5, 1220, 1947, 1948, 1950, 1955, 1074, 1945, 1956, 11, 1941, 4482, 504, 1944, 573, 10368, 1241, 1949, 2]
+// Dependencies: [32, 5, 1220, 1947, 1948, 1950, 1955, 1074, 1945, 1956, 11, 1941, 4480, 504, 1944, 573, 10376, 1241, 1949, 2]
 // Exports: UNSAFE_addGuildDismissedContent, UNSAFE_addSnowflakeBoundGuildDismissedContent, UNSAFE_addTimeRecurringGuildDismissedContent, UNSAFE_isSingleUseGuildDismissibleContentDismissed, UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed, UNSAFE_isTimeRecurringGuildDismissibleContentDismissed, UNSAFE_removeGuildDismissedContent, UNSAFE_removeSnowflakeBoundGuildDismissedContent, UNSAFE_removeTimeRecurringGuildDismissedContent, getDismissedRecurringDismissibleContentState, getGuildNextNumTimesDismissed, isDismissibleContentBlockedByOverlay, isTimeRecurringDismissibleContentDismissed, isTimeRecurringSnowflakeBoundDismissibleContentDismissed, isVersionedDismissibleContentDismissed, markLatestVersionDismissibleContentAsDismissed, markSnowflakeBoundDismissibleContentAsDismissed, markTimeRecurringDismissibleContentAsDismissed, requestMarkDismissibleContentAsShown, useIsSingleUseGuildDismissibleContentDismissed
 
 // Module 1946 (DismissibleContentUtils)
@@ -12,8 +12,8 @@ import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /*
 import dismissible_content from "dismissible_content" /* 1944 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 1945 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1949 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4482 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10368 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4480 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
@@ -438,7 +438,7 @@ const DismissibleContentShownStateStore = fn(1950);
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(1944).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(1944).DismissibleContent.ACCOUNT_LINK_PROMPT, fn(1944).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
+let items = [fn(1944).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(1944).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");

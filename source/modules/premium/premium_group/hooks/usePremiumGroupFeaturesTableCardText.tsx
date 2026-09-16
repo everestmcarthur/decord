@@ -1,17 +1,17 @@
-// Module ID: 13578
-// Function ID: 13579
+// Module ID: 13590
+// Function ID: 13591
 // Name: usePremiumGroupFeaturesTableCardText
-// Dependencies: [4303, 4311, 1115, 3075, 1380, 8157, 13579, 504, 2]
+// Dependencies: [4301, 4309, 1115, 3075, 1380, 8166, 13591, 504, 2]
 // Exports: default
 
-// Module 13578 (usePremiumGroupFeaturesTableCardText)
+// Module 13590 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import user from "user" /* 1380 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13579 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13591 */;
+import SubscriptionStore from "SubscriptionStore" /* 4301 */;
 
 require = fn;
-const PremiumGroupConstants = fn(4311);
+const PremiumGroupConstants = fn(4309);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
@@ -25,8 +25,8 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     return null;
   } else {
     if (arg0 === tmp(1380).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8157).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8157);
+      let priceString = tmp(8166).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(8166);
     } else {
       priceString = null;
       if (null != tmp4) {

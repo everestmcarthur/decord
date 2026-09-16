@@ -1,11 +1,10 @@
 // Module ID: 4042
 // Function ID: 4043
-// Dependencies: [4036, 4034]
+// Dependencies: [4034, 4035, 4032]
 
 // Module 4042
-import Parser2 from "Parser" /* 4034 */;
+import Parser2 from "Parser" /* 4032 */;
 
-let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -31,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(StandAloneQuarterParser, Parser) {
+function _setPrototypeOf(StandAloneMonthParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneQuarterParser, Parser) {
-      StandAloneQuarterParser.__proto__ = Parser;
-      return StandAloneQuarterParser;
+    _setPrototypeOf = function _setPrototypeOf(StandAloneMonthParser, Parser) {
+      StandAloneMonthParser.__proto__ = Parser;
+      return StandAloneMonthParser;
     };
   }
-  return _setPrototypeOf(StandAloneQuarterParser, Parser);
+  return _setPrototypeOf(StandAloneMonthParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -59,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class StandAloneQuarterParser {
+class StandAloneMonthParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -95,10 +94,10 @@ class StandAloneQuarterParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 120, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 120;
-          applyResult.priority = 120;
+          num3 = 110;
+          applyResult.priority = 110;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -109,7 +108,7 @@ class StandAloneQuarterParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["Y", "R", "Q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
+          items1 = ["Y", "R", "q", "Q", "M", "w", "I", "D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -133,7 +132,7 @@ class StandAloneQuarterParser {
     }
   }
 }
-closure_1 = StandAloneQuarterParser;
+let dependencyMap = StandAloneMonthParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-StandAloneQuarterParser.prototype = Object.create(prototype, { constructor: { value: StandAloneQuarterParser, writable: true, configurable: true } });
+StandAloneMonthParser.prototype = Object.create(prototype, { constructor: { value: StandAloneMonthParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(StandAloneQuarterParser, Parser);
+  _setPrototypeOf(StandAloneMonthParser, Parser);
 }
 let num = 0;
-closure_1 = (function _isNativeReflectConstruct() {
+dependencyMap = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -209,20 +208,22 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("q" !== arg1) {
-      if ("qq" !== arg1) {
-        if ("qo" === arg1) {
-          return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
-        } else if ("qqq" === arg1) {
-          return ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
-        } else if ("qqqqq" === arg1) {
-          return ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
-        } else {
-          return ordinalNumber.quarter(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
-        }
-      }
+    function valueCallback(arg0) {
+      return arg0 - 1;
     }
-    return _createSuperInternal(closure_1[0]).parseNDigits(arg1.length, arg0);
+    if ("L" === arg1) {
+      return _createSuperInternal(4034).mapValue(_createSuperInternal(4034).parseNumericPattern(_createSuperInternal(4035).numericPatterns.month, arg0), valueCallback);
+    } else if ("LL" === arg1) {
+      return _createSuperInternal(4034).mapValue(_createSuperInternal(4034).parseNDigits(2, arg0), valueCallback);
+    } else if ("Lo" === arg1) {
+      return _createSuperInternal(4034).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
+    } else if ("LLL" === arg1) {
+      return ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
+    } else if ("LLLLL" === arg1) {
+      return ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
+    } else {
+      return ordinalNumber.month(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
+    }
   }
 };
 let items = [
@@ -230,9 +231,9 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
+      let tmp = arg1 >= 0;
       if (tmp) {
-        tmp = arg1 <= 4;
+        tmp = arg1 <= 11;
       }
       return tmp;
     }
@@ -240,7 +241,7 @@ let items = [
   {
     key: "set",
     value: function set(setUTCMonth, arg1, arg2) {
-      setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
+      setUTCMonth.setUTCMonth(arg2, 1);
       setUTCMonth.setUTCHours(0, 0, 0, 0);
       return setUTCMonth;
     }
@@ -264,4 +265,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { StandAloneQuarterParser };
+export { StandAloneMonthParser };

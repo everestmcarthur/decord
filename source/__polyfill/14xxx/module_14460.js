@@ -1,12 +1,9 @@
 // Module ID: 14460
 // Function ID: 14461
-// Dependencies: [14439, 14438]
+// Dependencies: [14461]
 
 // Module 14460
-import _mod14438 from "module_14438" /* 14438 */;
-import _mod14439 from "module_14439" /* 14439 */;
+import _mod14461 from "module_14461" /* 14461 */;
 
 
-export default Object.keys || (function keys(arg0) {
-  return _mod14439(arg0, _mod14438);
-});
+export default (arg0) => _mod14461(arg0.length);

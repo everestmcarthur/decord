@@ -1,23 +1,23 @@
-// Module ID: 15981
-// Function ID: 15982
+// Module ID: 16001
+// Function ID: 16002
 // Name: SafetyGuildSettingDirectMessages
-// Dependencies: [1980, 15975, 8082, 11607, 14924, 15982, 1936, 4983, 1115, 5078, 7102, 15983, 11606, 2]
+// Dependencies: [1980, 15995, 8091, 11615, 14940, 16002, 1936, 4982, 1115, 5079, 7105, 16003, 11614, 2]
 
-// Module 15981 (SafetyGuildSettingDirectMessages)
+// Module 16001 (SafetyGuildSettingDirectMessages)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
-import common_AlertDefault from "common/Alert" /* 5078 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14924 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15982 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15983 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4982 */;
+import common_AlertDefault from "common/Alert" /* 5079 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14940 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16002 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 16003 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15975);
+const UserSettingsSafetySelectedGuildStore = fn(15995);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11607).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11606);
+let closure_6 = fn(11615).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11614);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -55,7 +55,7 @@ const toggle = SettingBuilders.createToggle({
       return stringResult;
     }
   },
-  parent: fn(8082).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8091).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;

@@ -1,18 +1,18 @@
-// Module ID: 16208
-// Function ID: 16209
+// Module ID: 16228
+// Function ID: 16229
 // Name: MessagesItemAddFriendsWidget
-// Dependencies: [5, 19, 17, 1074, 21, 13389, 576, 4639, 8499, 4337, 1115, 9952, 7864, 4498, 5207, 4635, 13948, 16209, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 13400, 576, 4638, 8508, 4335, 1115, 9960, 7873, 4496, 5208, 4634, 13961, 16229, 2]
 
-// Module 16208 (MessagesItemAddFriendsWidget)
+// Module 16228 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Pressables from "Pressables" /* 5207 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8499 */;
-import IconActionButtonDefault from "IconActionButton" /* 13389 */;
-import _modDef13948 from "module_13948" /* 13948 */;
-import _modDef16209 from "module_16209" /* 16209 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Pressables from "Pressables" /* 5208 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8508 */;
+import IconActionButtonDefault from "IconActionButton" /* 13400 */;
+import _modDef13961 from "module_13961" /* 13961 */;
+import _modDef16229 from "module_16229" /* 16229 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -225,8 +225,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13389).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4639);
+const sum = fn(13400).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4638);
 let obj = { container: { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, title: null, actions: null, actionIcon: null };
 let obj3 = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
 obj.title = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.md, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
@@ -263,12 +263,12 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.children = React5(Text_Text.Text, obj3);
   const items = [React5(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef13948, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef13961, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef16209;
+  obj6.source = _modDef16229;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

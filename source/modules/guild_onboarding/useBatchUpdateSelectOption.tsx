@@ -1,18 +1,18 @@
-// Module ID: 11688
-// Function ID: 11689
+// Module ID: 11696
+// Function ID: 11697
 // Name: useBatchUpdateSelectOption
-// Dependencies: [19, 4820, 7207, 1084, 573, 12, 1370, 11689, 504, 7212, 1385, 2]
+// Dependencies: [19, 4819, 7210, 1084, 573, 12, 1370, 11697, 504, 7215, 1385, 2]
 // Exports: default
 
-// Module 11688 (useBatchUpdateSelectOption)
+// Module 11696 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7212 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11689 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7215 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11697 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7207 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7210 */;
 
 const require = globalThis.__r;
 

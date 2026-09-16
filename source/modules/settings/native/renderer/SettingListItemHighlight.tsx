@@ -1,19 +1,19 @@
-// Module ID: 14793
-// Function ID: 14794
+// Module ID: 14809
+// Function ID: 14810
 // Name: SettingListItemHighlight
-// Dependencies: [19, 17, 14788, 21, 4639, 576, 4376, 4640, 2]
+// Dependencies: [19, 17, 14804, 21, 4638, 576, 4374, 4639, 2]
 
-// Module 14793 (SettingListItemHighlight)
+// Module 14809 (SettingListItemHighlight)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4640 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import timing from "timing" /* 4639 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14788 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14804 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 const __initData = { code: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},'respect-motion-settings',function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}" };

@@ -1,12 +1,12 @@
-// Module ID: 8349
-// Function ID: 8350
+// Module ID: 8358
+// Function ID: 8359
 // Name: useUserProfileBannerHeight
-// Dependencies: [7315, 1478, 2]
+// Dependencies: [7318, 1478, 2]
 // Exports: default
 
-// Module 8349 (useUserProfileBannerHeight)
+// Module 8358 (useUserProfileBannerHeight)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import Constants from "Constants" /* 7315 */;
+import Constants from "Constants" /* 7318 */;
 import size from "module_2" /* 2 */;
 
 const BANNER_ASPECT_RATIO = Constants.BANNER_ASPECT_RATIO;

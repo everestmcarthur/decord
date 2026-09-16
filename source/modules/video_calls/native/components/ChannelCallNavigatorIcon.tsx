@@ -1,13 +1,13 @@
-// Module ID: 10056
-// Function ID: 10057
+// Module ID: 10064
+// Function ID: 10065
 // Name: ChannelCallNavigatorIcon
-// Dependencies: [19, 17, 9599, 1074, 21, 4639, 576, 5207, 4491, 5049, 1177, 2]
+// Dependencies: [19, 17, 9610, 1074, 21, 4638, 576, 5208, 4489, 5048, 1177, 2]
 // Exports: default
 
-// Module 10056 (ChannelCallNavigatorIcon)
+// Module 10064 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5049 */;
-import Pressables from "Pressables" /* 5207 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5048 */;
+import Pressables from "Pressables" /* 5208 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(9599).resetFocusTimer;
+const resetFocusTimer = fn(9610).resetFocusTimer;
 const Constants = fn(1074);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { pressableContainer: { marginHorizontal: 4 }, pressable: { borderRadius: nativeDefault.radii.lg }, container: null, text: null, disabled: null, iconColor: null };
 let size = { flexDirection: "row", height: 32, width: 32, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = size;

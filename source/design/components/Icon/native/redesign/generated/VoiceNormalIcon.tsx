@@ -1,13 +1,13 @@
-// Module ID: 5185
-// Function ID: 5186
+// Module ID: 5186
+// Function ID: 5187
 // Name: VoiceNormalIcon
-// Dependencies: [19, 21, 576, 4340, 5122, 2]
+// Dependencies: [19, 21, 576, 4338, 5123, 2]
 // Exports: VoiceNormalIcon
 
-// Module 5185 (VoiceNormalIcon)
+// Module 5186 (VoiceNormalIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod5122 from "module_5122" /* 5122 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod5123 from "module_5123" /* 5123 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const VoiceNormalIcon = function VoiceNormalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5122, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5123, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

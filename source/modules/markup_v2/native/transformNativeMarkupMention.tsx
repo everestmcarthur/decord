@@ -1,14 +1,14 @@
-// Module ID: 8222
-// Function ID: 8223
+// Module ID: 8231
+// Function ID: 8232
 // Name: transformNativeMarkupMention
-// Dependencies: [5111, 5082, 5080, 5090, 2]
+// Dependencies: [5112, 5083, 5081, 5091, 2]
 // Exports: applyChannelMentionIcons, transformNativeMention
 
-// Module 8222 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 5080 */;
-import MarkupRules from "MarkupRules" /* 5082 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5090 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 5111 */;
+// Module 8231 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 5081 */;
+import MarkupRules from "MarkupRules" /* 5083 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5091 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 5112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -30,18 +30,18 @@ export const transformNativeMention = function transformNativeMention(value, all
     obj4.id = str1;
     return MarkupRules.hydrateUserMention(obj4, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "accessible", everyoneOrHere: 1758339011332018700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "accessible", everyoneOrHere: 1758339659463359000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "accessible", everyoneOrHere: "NETWORK" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "accessible", everyoneOrHere: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003135211834177868 }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {
     const str16 = value.value.toString();
     if (allowGameMentions.allowGameMentions) {
-      let hydrateGameMentionResult = tmp21(5111).hydrateGameMention(str16, allowGameMentions);
-      const tmp21Result = tmp21(5111);
+      let hydrateGameMentionResult = tmp21(5112).hydrateGameMention(str16, allowGameMentions);
+      const tmp21Result = tmp21(5112);
     } else {
-      hydrateGameMentionResult = { type: tmp21(5080).AST_KEY.TEXT, content: null };
+      hydrateGameMentionResult = { type: tmp21(5081).AST_KEY.TEXT, content: null };
       const _HermesInternal = HermesInternal;
       hydrateGameMentionResult.content = "<@$" + str16 + ">";
     }
@@ -53,11 +53,11 @@ export const transformNativeMention = function transformNativeMention(value, all
     const guildIdFromChannelId = MarkupChannelMentionRule.getGuildIdFromChannelId(allowGameMentions.channelId);
     const channel = MarkupChannelMentionRule.getChannel(str17, allowGameMentions.mentionChannels);
     if (null == channel) {
-      const tmp4Result = tmp4(5090);
+      const tmp4Result = tmp4(5091);
       let handleUnknownChannelResult = tmp4Result.handleUnknownChannel(null, str17, null, guildIdFromChannelId);
     } else {
-      handleUnknownChannelResult = tmp4(5090).parseChannel(channel, null, guildIdFromChannelId);
-      const tmp4Result4 = tmp4(5090);
+      handleUnknownChannelResult = tmp4(5091).parseChannel(channel, null, guildIdFromChannelId);
+      const tmp4Result4 = tmp4(5091);
     }
     const obj5 = {};
     const merged = Object.assign(handleUnknownChannelResult);

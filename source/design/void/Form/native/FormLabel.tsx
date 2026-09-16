@@ -1,11 +1,11 @@
-// Module ID: 7246
-// Function ID: 7247
+// Module ID: 7249
+// Function ID: 7250
 // Name: FormLabel
-// Dependencies: [19, 21, 4635, 2]
+// Dependencies: [19, 21, 4634, 2]
 // Exports: default
 
-// Module 7246 (FormLabel)
-import Text_Text from "Text/Text" /* 4635 */;
+// Module 7249 (FormLabel)
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

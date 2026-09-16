@@ -1,13 +1,13 @@
-// Module ID: 8487
-// Function ID: 8488
+// Module ID: 8496
+// Function ID: 8497
 // Name: showSharePreparingModal
-// Dependencies: [8485, 4842, 8488, 1897, 2]
+// Dependencies: [8494, 4841, 8497, 1897, 2]
 // Exports: showSharePreparingModal
 
-// Module 8487 (showSharePreparingModal)
+// Module 8496 (showSharePreparingModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8485 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8494 */;
 import size from "module_2" /* 2 */;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
@@ -23,27 +23,27 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(4842).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(4841).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(4842);
+          const obj = _true(4841);
         }
       }
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8488, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8497, dependencyMap.paths), {
       onCancel() {
         if (!_true) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(4842).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(4841).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(4842);
+          const obj = _true(4841);
         }
       }
     }, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (_true) {
-        _true(4842).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(4842);
+        _true(4841).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(4841);
       }
     });
   }, 1000);

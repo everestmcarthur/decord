@@ -1,9 +1,9 @@
-// Module ID: 13903
-// Function ID: 13904
+// Module ID: 13916
+// Function ID: 13917
 // Name: VideoStabilizationExperiment
 // Dependencies: [1435, 2]
 
-// Module 13903 (VideoStabilizationExperiment)
+// Module 13916 (VideoStabilizationExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2026-05-ios-video-stabilization", defaultConfig: { mode: "off" }, variations: null };

@@ -1,12 +1,12 @@
-// Module ID: 12214
-// Function ID: 12215
+// Module ID: 12222
+// Function ID: 12223
 // Name: useCustomKeyboardBottomSheetConfig
-// Dependencies: [19, 4631, 1364, 1878, 4507, 1610, 1478, 11494, 5683, 11493, 2]
+// Dependencies: [19, 4630, 1364, 1878, 4506, 1610, 1478, 11502, 5684, 11501, 2]
 // Exports: default
 
-// Module 12214 (useCustomKeyboardBottomSheetConfig)
+// Module 12222 (useCustomKeyboardBottomSheetConfig)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 const require = globalThis.__r;
 
@@ -39,12 +39,12 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
       if (!AccessibilityStore.useReducedMotion) {
         let obj3 = obj;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          const keyboardTypePrevious = tmp(4507).getKeyboardTypePrevious();
+          const keyboardTypePrevious = tmp(4506).getKeyboardTypePrevious();
           obj3 = obj;
           if (keyboardTypePrevious === tmp(1610).KeyboardTypes.SYSTEM) {
             obj3 = { animateOnMount: true };
           }
-          const tmpResult2 = tmp(4507);
+          const tmpResult2 = tmp(4506);
         }
         tmp3 = obj3;
         tmpResult = tmp(1878);
@@ -71,12 +71,12 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
       if (!AccessibilityStore.useReducedMotion) {
         let obj3 = obj;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          const keyboardTypePrevious = tmp(4507).getKeyboardTypePrevious();
+          const keyboardTypePrevious = tmp(4506).getKeyboardTypePrevious();
           obj3 = obj;
           if (keyboardTypePrevious === tmp(1610).KeyboardTypes.SYSTEM) {
             obj3 = { animateOnMount: true };
           }
-          const tmpResult2 = tmp(4507);
+          const tmpResult2 = tmp(4506);
         }
         tmp3 = obj3;
         tmpResult = tmp(1878);

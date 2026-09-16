@@ -1,0 +1,19 @@
+// Module ID: 7723
+// Function ID: 7724
+// Name: baseIndexOf
+// Dependencies: [7724, 4674, 7725]
+
+// Module 7723 (baseIndexOf)
+import baseFindIndex from "baseFindIndex" /* 4674 */;
+import strictIndexOf from "strictIndexOf" /* 7724 */;
+import baseIsNaN from "baseIsNaN" /* 7725 */;
+
+
+export default function baseIndexOf(arg0, arg1, arg2) {
+  if (arg1 == arg1) {
+    let tmp3Result = strictIndexOf(arg0, arg1, arg2);
+  } else {
+    tmp3Result = baseFindIndex(arg0, baseIsNaN, arg2);
+  }
+  return tmp3Result;
+};

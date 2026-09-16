@@ -1,16 +1,16 @@
-// Module ID: 11020
-// Function ID: 11021
+// Module ID: 11033
+// Function ID: 11034
 // Name: PresenceActivityStatus
-// Dependencies: [19, 1074, 21, 7844, 9355, 5190, 10043, 11016, 11021, 11015, 11018, 2]
+// Dependencies: [19, 1074, 21, 7853, 9366, 5191, 10051, 11029, 11034, 11028, 11031, 2]
 // Exports: default
 
-// Module 11020 (PresenceActivityStatus)
-import AppsIcon2 from "AppsIcon" /* 5190 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7844 */;
-import GameControllerIcon from "GameControllerIcon" /* 9355 */;
-import MusicIcon from "MusicIcon" /* 10043 */;
-import TvIcon from "TvIcon" /* 11016 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11021 */;
+// Module 11033 (PresenceActivityStatus)
+import AppsIcon2 from "AppsIcon" /* 5191 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7853 */;
+import GameControllerIcon from "GameControllerIcon" /* 9366 */;
+import MusicIcon from "MusicIcon" /* 10051 */;
+import TvIcon from "TvIcon" /* 11029 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11034 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,13 +58,13 @@ export default function PresenceActivityStatus(hideText) {
   }
   if (tmp12) {
     const obj = { icon: AppsIcon, style: iconStyle };
-    tmp12 = React4(tmp(11015), obj);
+    tmp12 = React4(tmp(11028), obj);
   }
   const children = [tmp12, ];
   let tmp15 = !flag;
   if (!flag) {
     const obj2 = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };
-    tmp15 = React4(tmp(11018), obj2);
+    tmp15 = React4(tmp(11031), obj2);
   }
   children[1] = tmp15;
   return timestampProducer(hasOwnProperty, { children });

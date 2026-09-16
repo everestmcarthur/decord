@@ -1,23 +1,23 @@
-// Module ID: 15349
-// Function ID: 15350
+// Module ID: 15365
+// Function ID: 15366
 // Name: NoiseSuppressionKrispSetting
-// Dependencies: [1909, 8082, 10124, 10125, 1115, 504, 11606, 2]
+// Dependencies: [1909, 8091, 10132, 10133, 1115, 504, 11614, 2]
 
-// Module 15349 (NoiseSuppressionKrispSetting)
+// Module 15365 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10124 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10125 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10132 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10133 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8082).MobileUserSettings.VOICE,
+  parent: fn(8091).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },

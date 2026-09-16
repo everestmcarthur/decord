@@ -1,16 +1,16 @@
-// Module ID: 16249
-// Function ID: 16250
+// Module ID: 16269
+// Function ID: 16270
 // Name: useFavoritesGuildResetAction
-// Dependencies: [19, 4461, 1074, 1936, 10355, 1983, 1101, 10354, 1115, 3237, 2]
+// Dependencies: [19, 4459, 1074, 1936, 10363, 1983, 1101, 10362, 1115, 3237, 2]
 // Exports: default
 
-// Module 16249 (useFavoritesGuildResetAction)
+// Module 16269 (useFavoritesGuildResetAction)
 import UserSettings from "UserSettings" /* 1936 */;
 import FavoritesUtils from "FavoritesUtils" /* 1983 */;
 import _modDef3237 from "module_3237" /* 3237 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10354 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10362 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 
 require = fn;
 const Routes = fn(1074).Routes;

@@ -1,13 +1,13 @@
-// Module ID: 5950
-// Function ID: 5951
+// Module ID: 5951
+// Function ID: 5952
 // Name: ChestOrbSpotIllustration
-// Dependencies: [21, 5672, 5951, 2]
+// Dependencies: [21, 5673, 5952, 2]
 // Exports: ChestOrbSpotIllustration
 
-// Module 5950 (ChestOrbSpotIllustration)
+// Module 5951 (ChestOrbSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5951 from "module_5951" /* 5951 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5952 from "module_5952" /* 5952 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ChestOrbSpotIllustration = function ChestOrbSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5951 };
+  const obj2 = { uri: _modDef5952 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

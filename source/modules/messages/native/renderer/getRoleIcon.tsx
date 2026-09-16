@@ -1,11 +1,11 @@
-// Module ID: 8127
-// Function ID: 8128
+// Module ID: 8136
+// Function ID: 8137
 // Name: getRoleIcon
-// Dependencies: [7293, 1115, 2]
+// Dependencies: [7296, 1115, 2]
 // Exports: getRoleIcon
 
-// Module 8127 (getRoleIcon)
-import useRoleIconProps from "useRoleIconProps" /* 7293 */;
+// Module 8136 (getRoleIcon)
+import useRoleIconProps from "useRoleIconProps" /* 7296 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/getRoleIcon.tsx");

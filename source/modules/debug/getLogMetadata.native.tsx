@@ -1,12 +1,12 @@
-// Module ID: 10325
-// Function ID: 10326
+// Module ID: 10333
+// Function ID: 10334
 // Name: getLogMetadata
-// Dependencies: [1363, 4618, 2]
+// Dependencies: [1363, 4617, 2]
 // Exports: default
 
-// Module 10325 (getLogMetadata)
+// Module 10333 (getLogMetadata)
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1363 */;
-import DeviceUtils from "DeviceUtils" /* 4618 */;
+import DeviceUtils from "DeviceUtils" /* 4617 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");

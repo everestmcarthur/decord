@@ -1,10 +1,10 @@
-// Module ID: 7961
-// Function ID: 7962
+// Module ID: 7970
+// Function ID: 7971
 // Name: hasForLaterPremiumType
 // Dependencies: [1372, 1374, 1886, 504, 2]
 // Exports: default, useHasForLaterPremiumType
 
-// Module 7961 (hasForLaterPremiumType)
+// Module 7970 (hasForLaterPremiumType)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
 import UserStore from "UserStore" /* 1372 */;

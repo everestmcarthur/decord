@@ -1,20 +1,20 @@
-// Module ID: 11538
-// Function ID: 11539
+// Module ID: 11546
+// Function ID: 11547
 // Name: SafetyToolsActionSheetHeader
-// Dependencies: [19, 17, 21, 4639, 576, 11529, 5709, 4635, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 11537, 5710, 4634, 2]
 // Exports: default
 
-// Module 11538 (SafetyToolsActionSheetHeader)
+// Module 11546 (SafetyToolsActionSheetHeader)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5709 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11529 */;
+import NavigatorHeader from "NavigatorHeader" /* 5710 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11537 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

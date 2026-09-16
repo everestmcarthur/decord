@@ -1,19 +1,19 @@
-// Module ID: 11650
-// Function ID: 11651
+// Module ID: 11658
+// Function ID: 11659
 // Name: VideoQuestUtils
-// Dependencies: [4688, 7808, 7810, 1074, 7804, 11414, 7829, 1115, 7823, 4497, 2, 11651]
+// Dependencies: [4687, 7811, 7813, 1074, 7807, 11422, 7832, 1115, 7826, 4495, 2, 11659]
 // Exports: computeMaxSeekableTime, formatVideoProgressRatio, getVideoOrientation, getVideoQuestEndCardCtaText, getVideoQuestModalKey, getVideoQuestProgressRemainingAccessibilityLabel, handleVideoQuestModalClose, isVideoQuestProgressing, sendVideoProgress
 
-// Module 11650 (VideoQuestUtils)
+// Module 11658 (VideoQuestUtils)
 import util from "util" /* 1115 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import QuestDataUtils from "QuestDataUtils" /* 7804 */;
-import AnalyticsActions from "AnalyticsActions" /* 7823 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7829 */;
-import QuestActionCreators from "QuestActionCreators" /* 11414 */;
-import NetworkStore from "NetworkStore" /* 4688 */;
-import QuestStore from "QuestStore" /* 7808 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7810 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
+import QuestDataUtils from "QuestDataUtils" /* 7807 */;
+import AnalyticsActions from "AnalyticsActions" /* 7826 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7832 */;
+import QuestActionCreators from "QuestActionCreators" /* 11422 */;
+import NetworkStore from "NetworkStore" /* 4687 */;
+import QuestStore from "QuestStore" /* 7811 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7813 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -21,7 +21,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(11651).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(11659).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -65,7 +65,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel = function getVide
     const intl5 = tmp(1115).intl;
     return intl5.string(tmp(1115).t["ij5E/5"]);
   } else {
-    const remainingTaskTime = tmp(7829).getRemainingTaskTime(questTaskDetails);
+    const remainingTaskTime = tmp(7832).getRemainingTaskTime(questTaskDetails);
     ({ minutes, seconds } = remainingTaskTime);
     if (minutes > 0) {
       if (seconds > 0) {
@@ -86,7 +86,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel = function getVide
       const obj3 = { count: seconds };
       formatToPlainStringResult = intl.formatToPlainString(tmp(1115).t["0BZpdi"], obj3);
     }
-    const tmpResult = tmp(7829);
+    const tmpResult = tmp(7832);
   }
 };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(maxVideoProgressSeconds, current) {
@@ -157,8 +157,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(11414).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(11414);
+        tmp6(11422).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = tmp6(11422);
       }
       tmp6 = require;
     }

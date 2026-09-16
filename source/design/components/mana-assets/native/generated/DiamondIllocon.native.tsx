@@ -1,13 +1,13 @@
-// Module ID: 6008
-// Function ID: 6009
+// Module ID: 6009
+// Function ID: 6010
 // Name: DiamondIllocon
-// Dependencies: [21, 5672, 6009, 2]
+// Dependencies: [21, 5673, 6010, 2]
 // Exports: DiamondIllocon
 
-// Module 6008 (DiamondIllocon)
+// Module 6009 (DiamondIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6009 from "module_6009" /* 6009 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6010 from "module_6010" /* 6010 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const DiamondIllocon = function DiamondIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6009 };
+  const obj2 = { uri: _modDef6010 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

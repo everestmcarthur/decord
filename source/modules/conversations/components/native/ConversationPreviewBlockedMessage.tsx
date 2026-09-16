@@ -1,13 +1,13 @@
-// Module ID: 8035
-// Function ID: 8036
+// Module ID: 8044
+// Function ID: 8045
 // Name: ConversationPreviewBlockedMessage
-// Dependencies: [19, 21, 5057, 576, 8036, 7073, 4635, 1115, 2]
+// Dependencies: [19, 21, 5058, 576, 8045, 7076, 4634, 1115, 2]
 // Exports: default
 
-// Module 8035 (ConversationPreviewBlockedMessage)
+// Module 8044 (ConversationPreviewBlockedMessage)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,9 +19,9 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 export default function ConversationPreviewBlockedMessage(reason) {
   const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(8036).DenyIcon;
+    let EyeSlashIcon = tmp2(8045).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(7073).EyeSlashIcon;
+    EyeSlashIcon = tmp2(7076).EyeSlashIcon;
   }
   const items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED }), ];
   const intl = tmp2(1115).intl;

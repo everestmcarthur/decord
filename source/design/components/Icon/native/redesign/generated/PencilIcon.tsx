@@ -1,13 +1,13 @@
-// Module ID: 10381
-// Function ID: 10382
+// Module ID: 10389
+// Function ID: 10390
 // Name: PencilIcon
-// Dependencies: [19, 21, 576, 4340, 8073, 2]
+// Dependencies: [19, 21, 576, 4338, 8082, 2]
 // Exports: PencilIcon
 
-// Module 10381 (PencilIcon)
+// Module 10389 (PencilIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8073 from "module_8073" /* 8073 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod8082 from "module_8082" /* 8082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PencilIcon = function PencilIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8073, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8082, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

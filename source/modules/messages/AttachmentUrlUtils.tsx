@@ -1,10 +1,10 @@
-// Module ID: 10074
-// Function ID: 10075
+// Module ID: 10082
+// Function ID: 10083
 // Name: AttachmentUrlUtils
-// Dependencies: [5, 5094, 1074, 1091, 1931, 1930, 1366, 1271, 2]
+// Dependencies: [5, 5095, 1074, 1091, 1931, 1930, 1366, 1271, 2]
 // Exports: getSignedAttachmentExpiration, isAttachmentPathUrl, isExternalProxiedAttachmentUrl, maybeRefreshAttachmentUrl, messageHasExpiredAttachmentUrl, removeSignedUrlParameters
 
-// Module 10074 (AttachmentUrlUtils)
+// Module 10082 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
@@ -302,7 +302,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl(arg0, value) {
     }
   }
 };
-const ATTACHMENT_PATH_PREFIXES = fn(5094).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(5095).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1074).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];

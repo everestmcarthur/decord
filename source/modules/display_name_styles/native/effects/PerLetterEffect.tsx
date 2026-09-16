@@ -1,17 +1,17 @@
-// Module ID: 11037
-// Function ID: 11038
+// Module ID: 11050
+// Function ID: 11051
 // Name: PerLetterEffect
-// Dependencies: [19, 17, 21, 4639, 11038, 11039, 4635, 2]
+// Dependencies: [19, 17, 21, 4638, 11051, 11052, 4634, 2]
 // Exports: default
 
-// Module 11037 (PerLetterEffect)
+// Module 11050 (PerLetterEffect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Text: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles({ container: { overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
@@ -25,10 +25,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(11038)();
+    const regex = colors(11051)();
     closure_1 = 0;
-    let obj = name(11039);
-    return name(11039).splitGraphemes(regex).map((children, index) => {
+    let obj = name(11052);
+    return name(11052).splitGraphemes(regex).map((children, index) => {
       regex.lastIndex = 0;
       const tmp = regex.test(children) || 0 === children.trim().length;
       let tmp2;
@@ -61,6 +61,6 @@ export default function PerLetterEffect(name) {
   const items2 = [textStyle, { lineHeight: "Array" }];
   obj2.style = items2;
   obj2.children = memo;
-  obj.children = jsx(name(4635).Text, {});
+  obj.children = jsx(name(4634).Text, {});
   return <closure_4 style={null}>{null}</closure_4>;
 };

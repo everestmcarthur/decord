@@ -1,12 +1,12 @@
-// Module ID: 12783
-// Function ID: 12784
+// Module ID: 12791
+// Function ID: 12792
 // Name: ChatViewPopups
-// Dependencies: [19, 12784, 12788, 12796, 2]
+// Dependencies: [19, 12792, 12796, 12804, 2]
 
-// Module 12783 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12784 */;
-import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12788 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12796 */;
+// Module 12791 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12792 */;
+import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12796 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12804 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,16 +1,16 @@
-// Module ID: 14883
-// Function ID: 14884
+// Module ID: 14899
+// Function ID: 14900
 // Name: TwoFASetupModalHeader
-// Dependencies: [19, 17, 21, 4639, 576, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 2]
 
-// Module 14883 (TwoFASetupModalHeader)
+// Module 14899 (TwoFASetupModalHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" }, circleIcon: null, horizontalLine: null, filledCircle: null };
 let size = { width: 14, height: 14, borderRadius: 7, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.circleIcon = size;

@@ -1,13 +1,13 @@
-// Module ID: 9958
-// Function ID: 9959
+// Module ID: 9966
+// Function ID: 9967
 // Name: CreateInviteModalActionCreators
-// Dependencies: [9953, 1074, 573, 1241, 8499, 1115, 2]
+// Dependencies: [9961, 1074, 573, 1241, 8508, 1115, 2]
 
-// Module 9958 (CreateInviteModalActionCreators)
+// Module 9966 (CreateInviteModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8499 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9953 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8508 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9961 */;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

@@ -1,9 +1,9 @@
-// Module ID: 8008
-// Function ID: 8009
+// Module ID: 8017
+// Function ID: 8018
 // Name: AnalyticsFeedItemSeenManager
 // Dependencies: [5, 38, 573, 2]
 
-// Module 8008 (AnalyticsFeedItemSeenManager)
+// Module 8017 (AnalyticsFeedItemSeenManager)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

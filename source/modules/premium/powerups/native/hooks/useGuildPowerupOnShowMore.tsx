@@ -1,11 +1,11 @@
-// Module ID: 12702
-// Function ID: 12703
+// Module ID: 12710
+// Function ID: 12711
 // Name: useGuildPowerupOnShowMore
-// Dependencies: [19, 12652, 2]
+// Dependencies: [19, 12660, 2]
 // Exports: default
 
-// Module 12702 (useGuildPowerupOnShowMore)
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12652 */;
+// Module 12710 (useGuildPowerupOnShowMore)
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12660 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

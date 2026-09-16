@@ -1,13 +1,13 @@
-// Module ID: 5705
-// Function ID: 5706
+// Module ID: 5706
+// Function ID: 5707
 // Name: IdentityVerificationField
-// Dependencies: [19, 17, 21, 4639, 576, 4635, 1115, 4590, 5059, 4464, 5706, 4842, 7149, 1897, 7152, 7188, 7065, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 4634, 1115, 4588, 5060, 4462, 5707, 4841, 7152, 1897, 7155, 7191, 7068, 2]
 // Exports: default
 
-// Module 5705 (IdentityVerificationField)
+// Module 5706 (IdentityVerificationField)
 import nativeDefault from "native" /* 576 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4462 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ function BaseIdentityVerificationField(icon) {
     const obj4 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
     const intl2 = tmp7(1115).intl;
     obj4.accessibilityLabel = intl2.string(tmp7(1115).t.g62IJl);
-    obj4.children = tmp6(tmp7(4590).CheckmarkLargeIcon, { color: "status-positive" });
+    obj4.children = tmp6(tmp7(4588).CheckmarkLargeIcon, { color: "status-positive" });
     let obj5 = obj4;
   } else {
     obj5 = { style: tmp.ctaButton, children: null };
@@ -40,7 +40,7 @@ function BaseIdentityVerificationField(icon) {
     const intl = tmp7(1115).intl;
     obj6.text = intl.string(tmp7(1115).t["13ofGu"]);
     obj6.onPress = onPress;
-    obj5.children = tmp6(tmp7(5059).Button, obj6);
+    obj5.children = tmp6(tmp7(5060).Button, obj6);
   }
   items[2] = React4(View, obj5);
   obj.children = items;
@@ -49,7 +49,7 @@ function BaseIdentityVerificationField(icon) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, icon: { marginLeft: 4, marginRight: 8 }, label: { flex: 1, marginLeft: 4, lineHeight: 20 }, verifiedContainer: { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" }, ctaButton: { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -68,7 +68,7 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4464).UserVerificationFieldPlatforms.PHONE === platform) {
+    if (tmp(4462).UserVerificationFieldPlatforms.PHONE === platform) {
       const intl2 = tmp(1115).intl;
       const string = intl2.string;
       const t = tmp(1115).t;
@@ -82,19 +82,19 @@ export default function IdentityVerificationField(arg0) {
       const intl = tmp(1115).intl;
       stringResult1 = intl.string(tmp(1115).t.mhv8BM);
     }
-    if (tmp(4464).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(7188).EnvelopeIcon;
-    } else if (tmp(4464).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(7065).MobilePhoneIcon;
+    if (tmp(4462).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(7191).EnvelopeIcon;
+    } else if (tmp(4462).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(7068).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(7188).EnvelopeIcon;
+      EnvelopeIcon = tmp(7191).EnvelopeIcon;
     }
-    if (tmp(4464).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4462).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         require("EmailVerificationModalActionCreators").open();
       };
     } else {
-      fn = tmp(4464).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+      fn = tmp(4462).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
         const obj2 = { reason: null };
         const obj = require("ModalActionCreators");
         obj2.reason = require("PhoneActionCreators").ChangePhoneReason.GUILD_PHONE_REQUIRED;

@@ -1,13 +1,13 @@
-// Module ID: 6498
-// Function ID: 6499
+// Module ID: 6501
+// Function ID: 6502
 // Name: SafetyBookletEmailSpotIllustration
-// Dependencies: [21, 5672, 6499, 2]
+// Dependencies: [21, 5673, 6502, 2]
 // Exports: SafetyBookletEmailSpotIllustration
 
-// Module 6498 (SafetyBookletEmailSpotIllustration)
+// Module 6501 (SafetyBookletEmailSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6499 from "module_6499" /* 6499 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6502 from "module_6502" /* 6502 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SafetyBookletEmailSpotIllustration = function SafetyBookletEmailSpo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6499 };
+  const obj2 = { uri: _modDef6502 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

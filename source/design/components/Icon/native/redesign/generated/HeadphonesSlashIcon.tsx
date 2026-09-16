@@ -1,13 +1,13 @@
-// Module ID: 9255
-// Function ID: 9256
+// Module ID: 9266
+// Function ID: 9267
 // Name: HeadphonesSlashIcon
-// Dependencies: [19, 21, 576, 4340, 9256, 2]
+// Dependencies: [19, 21, 576, 4338, 9267, 2]
 // Exports: HeadphonesSlashIcon
 
-// Module 9255 (HeadphonesSlashIcon)
+// Module 9266 (HeadphonesSlashIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod9256 from "module_9256" /* 9256 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod9267 from "module_9267" /* 9267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const HeadphonesSlashIcon = function HeadphonesSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9256, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9267, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

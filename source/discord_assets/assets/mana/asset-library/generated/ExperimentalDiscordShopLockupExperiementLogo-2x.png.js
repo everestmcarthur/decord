@@ -1,11 +1,11 @@
-// Module ID: 6079
-// Function ID: 6080
+// Module ID: 6080
+// Function ID: 6081
 // Dependencies: [2]
 
-// Module 6079
+// Module 6080
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/192f29aeac0dfd24c4495e23ecba46e404e12988340975803b27d57b250c1e48.png";
-export const metadata = { fileBytes: 2127 };
+export default "https://cdn.discordapp.com/assets/content/576708c222a843488ebad147378ee6fdc96f8d8a1fc46ffed5172e4f298711bf.png";
+export const metadata = { fileBytes: 2095 };

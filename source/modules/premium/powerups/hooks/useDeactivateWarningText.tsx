@@ -1,14 +1,14 @@
-// Module ID: 12677
-// Function ID: 12678
+// Module ID: 12685
+// Function ID: 12686
 // Name: useDeactivateWarningText
-// Dependencies: [19, 4559, 2016, 1980, 504, 7234, 4532, 1115, 2429, 2]
+// Dependencies: [19, 4557, 2016, 1980, 504, 7237, 4530, 1115, 2429, 2]
 // Exports: default
 
-// Module 12677 (useDeactivateWarningText)
+// Module 12685 (useDeactivateWarningText)
 import _modDef2429 from "module_2429" /* 2429 */;
-import Powerups from "Powerups" /* 4532 */;
+import Powerups from "Powerups" /* 4530 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4557 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -78,7 +78,7 @@ export default function useDeactivateWarningText(arg0, skuId) {
         formatToPlainStringResult = intl4.formatToPlainString(_modDef2429.cavtEo, obj3);
       }
     } else {
-      if (tmp2(4532).VANITY_URL_POWERUP_SKU_ID === skuId) {
+      if (tmp2(4530).VANITY_URL_POWERUP_SKU_ID === skuId) {
         const intl3 = tmp2(1115).intl;
         const string = intl3.string;
         const tmp11 = _modDef2429;
@@ -92,10 +92,10 @@ export default function useDeactivateWarningText(arg0, skuId) {
         let tmp7 = tmp13;
         let formatToPlainStringResult1 = stringResult;
       } else {
-        if (tmp2(4532).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID !== skuId) {
-          if (tmp2(4532).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID !== skuId) {
-            if (tmp2(4532).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
-              if (tmp2(4532).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
+        if (tmp2(4530).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID !== skuId) {
+          if (tmp2(4530).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID !== skuId) {
+            if (tmp2(4530).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
+              if (tmp2(4530).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
                 const intl = tmp2(1115).intl;
                 const obj = { perk: tmp.title, memberCount: null };
                 let num = stateFromStores;
@@ -113,11 +113,11 @@ export default function useDeactivateWarningText(arg0, skuId) {
         formatToPlainStringResult1 = intl2.string(_modDef2429.Vf2ZcR);
         tmp7 = importDefault;
       }
-      const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === tmp2(4532).VANITY_URL_POWERUP_SKU_ID };
+      const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === tmp2(4530).VANITY_URL_POWERUP_SKU_ID };
       const items = [obj4];
       let tmp20 = stateFromStores1;
       if (stateFromStores1) {
-        tmp20 = tmp.skuId === tmp2(4532).GUILD_POWERUP_LEVEL_3_SKU_ID;
+        tmp20 = tmp.skuId === tmp2(4530).GUILD_POWERUP_LEVEL_3_SKU_ID;
       }
       if (tmp20) {
         const obj5 = { text: null, critical: true };

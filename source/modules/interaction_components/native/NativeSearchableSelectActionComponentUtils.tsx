@@ -1,15 +1,15 @@
-// Module ID: 8242
-// Function ID: 8243
+// Module ID: 8251
+// Function ID: 8252
 // Name: NativeSearchableSelectActionComponentUtils
-// Dependencies: [1958, 2016, 1980, 1372, 1074, 4871, 1370, 1400, 7294, 8243, 1092, 576, 8244, 5112, 2]
+// Dependencies: [1958, 2016, 1980, 1372, 1074, 4870, 1370, 1400, 7297, 8252, 1092, 576, 8253, 5113, 2]
 // Exports: getChannelIconData, transformSearchableSelectOptions
 
-// Module 8242 (NativeSearchableSelectActionComponentUtils)
+// Module 8251 (NativeSearchableSelectActionComponentUtils)
 import nativeDefault from "native" /* 576 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4871 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5112 */;
-import _modDef8243 from "module_8243" /* 8243 */;
-import _modDef8244 from "module_8244" /* 8244 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4870 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5113 */;
+import _modDef8252 from "module_8252" /* 8252 */;
+import _modDef8253 from "module_8253" /* 8253 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
@@ -39,7 +39,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         const tmpResult = tmp(1400);
       }
       return tmp34;
-    } else if (tmp(4871).SelectOptionType.ROLE === type) {
+    } else if (tmp(4870).SelectOptionType.ROLE === type) {
       let role = null;
       if (null != closure_1) {
         role = GuildRoleStore.getRole(tmp14.id, type.value);
@@ -50,13 +50,13 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         if (null != tmp14) {
           let roleIconData = null;
           if (tmpResult7.canGuildUseRoleIcons(tmp14, role)) {
-            roleIconData = tmp(7294).getRoleIconData(role);
-            const tmpResult8 = tmp(7294);
+            roleIconData = tmp(7297).getRoleIconData(role);
+            const tmpResult8 = tmp(7297);
           }
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = tmp(1400).ensureAvatarSource(_modDef8243).uri;
+            obj2.iconSrc = tmp(1400).ensureAvatarSource(_modDef8252).uri;
             if (null != role.colorString) {
               let hex2intResult = tmp(1092).hex2int(role.colorString);
               const tmpResult10 = tmp(1092);
@@ -82,11 +82,11 @@ export const transformSearchableSelectOptions = function transformSearchableSele
               tmp18 = obj5;
             }
           }
-          tmpResult7 = tmp(7294);
+          tmpResult7 = tmp(7297);
         }
       }
       return tmp18;
-    } else if (tmp(4871).SelectOptionType.CHANNEL === type) {
+    } else if (tmp(4870).SelectOptionType.CHANNEL === type) {
       const channel = ChannelStore.getChannel(type.value);
       if (null == channel) {
         return type;
@@ -96,10 +96,10 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         let tmpResult11 = tmp(1400);
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8244;
+          let channelIconWithGuild = _modDef8253;
         } else {
-          channelIconWithGuild = tmp(5112).getChannelIconWithGuild(channel, tmp4);
-          const tmpResult12 = tmp(5112);
+          channelIconWithGuild = tmp(5113).getChannelIconWithGuild(channel, tmp4);
+          const tmpResult12 = tmp(5113);
         }
         obj6.iconSrc = hex2int(channelIconWithGuild).uri;
         tmpResult11 = tmp(1092);
@@ -115,7 +115,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8244;
+    let channelIconWithGuild = _modDef8253;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

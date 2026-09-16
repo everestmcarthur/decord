@@ -1,13 +1,13 @@
-// Module ID: 11553
-// Function ID: 11554
+// Module ID: 11561
+// Function ID: 11562
 // Name: ArrowLargeUpIcon
-// Dependencies: [19, 21, 576, 4340, 11554, 2]
+// Dependencies: [19, 21, 576, 4338, 11562, 2]
 // Exports: ArrowLargeUpIcon
 
-// Module 11553 (ArrowLargeUpIcon)
+// Module 11561 (ArrowLargeUpIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod11554 from "module_11554" /* 11554 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod11562 from "module_11562" /* 11562 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ArrowLargeUpIcon = function ArrowLargeUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11554, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11562, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

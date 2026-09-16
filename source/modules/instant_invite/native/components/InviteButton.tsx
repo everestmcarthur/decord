@@ -1,18 +1,18 @@
-// Module ID: 10028
-// Function ID: 10029
+// Module ID: 10036
+// Function ID: 10037
 // Name: InviteButton
-// Dependencies: [19, 17, 7841, 21, 4639, 1115, 5059, 2]
+// Dependencies: [19, 17, 7850, 21, 4638, 1115, 5060, 2]
 
-// Module 10028 (InviteButton)
+// Module 10036 (InviteButton)
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7841).InviteSendStates;
+const InviteSendStates = fn(7850).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");

@@ -1,20 +1,20 @@
-// Module ID: 5685
-// Function ID: 5686
+// Module ID: 5686
+// Function ID: 5687
 // Name: TermsField
-// Dependencies: [19, 17, 21, 4639, 5686, 5689, 1115, 2]
+// Dependencies: [19, 17, 21, 4638, 5687, 5690, 1115, 2]
 // Exports: default
 
-// Module 5685 (TermsField)
+// Module 5686 (TermsField)
 import util from "util" /* 1115 */;
-import TermsFieldListDefault from "TermsFieldList" /* 5686 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5689 */;
+import TermsFieldListDefault from "TermsFieldList" /* 5687 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5690 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");

@@ -1,11 +1,11 @@
-// Module ID: 9652
-// Function ID: 9653
+// Module ID: 9663
+// Function ID: 9664
 // Name: getShelfItemData
-// Dependencies: [4867, 2]
+// Dependencies: [4866, 2]
 // Exports: default
 
-// Module 9652 (getShelfItemData)
-import ApplicationStore from "ApplicationStore" /* 4867 */;
+// Module 9663 (getShelfItemData)
+import ApplicationStore from "ApplicationStore" /* 4866 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getShelfItemData.tsx");

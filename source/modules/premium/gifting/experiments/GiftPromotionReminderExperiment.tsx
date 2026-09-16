@@ -1,9 +1,9 @@
-// Module ID: 10874
-// Function ID: 10875
+// Module ID: 10882
+// Function ID: 10883
 // Name: GiftPromotionReminderExperiment
 // Dependencies: [1434, 2]
 
-// Module 10874 (GiftPromotionReminderExperiment)
+// Module 10882 (GiftPromotionReminderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

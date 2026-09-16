@@ -1,18 +1,18 @@
-// Module ID: 10393
-// Function ID: 10394
+// Module ID: 10401
+// Function ID: 10402
 // Name: autocompleter/AutocompleteUtils
-// Dependencies: [19, 17, 1962, 2013, 4288, 1372, 1074, 10394, 5084, 21, 4639, 576, 4792, 5106, 5527, 4484, 8725, 2]
+// Dependencies: [19, 17, 1962, 2013, 4286, 1372, 1074, 10402, 5085, 21, 4638, 576, 4791, 5107, 5528, 4482, 8734, 2]
 // Exports: findAutoInsertOnSpaceToken, findWordStart, getAutocompleteResultText, getItemLayout, getItemSeparator, getMentionTextWithUser, getPrefix, getQuery, isSingleLineRun, isSpaceJustTypedAtCaret, isUnbrokenRun, isWhitespaceSeparatingBoundary
 
-// Module 10393 (autocompleter/AutocompleteUtils)
+// Module 10401 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import useChannelName from "useChannelName" /* 4792 */;
-import TimestampUtils from "TimestampUtils" /* 5106 */;
-import FormDividerDefault from "FormDivider" /* 8725 */;
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import useChannelName from "useChannelName" /* 4791 */;
+import TimestampUtils from "TimestampUtils" /* 5107 */;
+import FormDividerDefault from "FormDivider" /* 8734 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -23,13 +23,13 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(1962).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10394);
+const ApplicationCommandsConstants = fn(10402);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5084);
+const ChannelAutocompleteConstants = fn(5085);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const re19 = /[\r\n]/;

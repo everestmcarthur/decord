@@ -1,24 +1,24 @@
-// Module ID: 16012
-// Function ID: 16013
+// Module ID: 16032
+// Function ID: 16033
 // Name: ActivityPrivacyDefaultSharingSetting
-// Dependencies: [19, 8082, 1186, 1115, 1936, 16013, 14951, 4606, 16014, 1897, 11606, 2]
+// Dependencies: [19, 8091, 1186, 1115, 1936, 16033, 14967, 4605, 16034, 1897, 11614, 2]
 
-// Module 16012 (ActivityPrivacyDefaultSharingSetting)
+// Module 16032 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16013 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16033 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8082).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8091).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
@@ -54,16 +54,16 @@ const radio = SettingBuilders.createRadio({
     const DefaultGuildsActivityRestrictedV22 = UserSettings.DefaultGuildsActivityRestrictedV2;
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      const affectedGuilds = tmp2(14951).computeAffectedGuilds(setting, NumberResult);
+      const affectedGuilds = tmp2(14967).computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        const activityRestrictionSettingName = tmp2(14951).getActivityRestrictionSettingName(NumberResult);
-        const tmp2Result2 = tmp2(14951);
+        const activityRestrictionSettingName = tmp2(14967).getActivityRestrictionSettingName(NumberResult);
+        const tmp2Result2 = tmp2(14967);
         const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj2.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(tmp2(1897)(16014, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(tmp2(1897)(16034, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
       }
-      const tmp2Result = tmp2(14951);
+      const tmp2Result = tmp2(14967);
     }
   }
 });

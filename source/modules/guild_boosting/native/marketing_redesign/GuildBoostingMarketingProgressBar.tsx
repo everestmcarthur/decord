@@ -1,18 +1,18 @@
-// Module ID: 13675
-// Function ID: 13676
+// Module ID: 13684
+// Function ID: 13685
 // Name: GuildBoostingMarketingProgressBar
-// Dependencies: [32, 19, 17, 4631, 1074, 21, 4639, 13676, 576, 4574, 563, 4376, 4533, 5058, 5071, 4491, 2]
+// Dependencies: [32, 19, 17, 4630, 1074, 21, 4638, 13685, 576, 4572, 563, 4374, 4531, 5059, 5072, 4489, 2]
 // Exports: default
 
-// Module 13675 (GuildBoostingMarketingProgressBar)
+// Module 13684 (GuildBoostingMarketingProgressBar)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4533 */;
-import spring from "spring" /* 5058 */;
-import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 13676 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4531 */;
+import spring from "spring" /* 5059 */;
+import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 13685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 const GuildBoostingMarketingProgressBarMarkerDefault = GuildBoostingMarketingProgressBarMarker;
 
@@ -21,10 +21,10 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
-let obj2 = { progressBarContainer: { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13676).MARKER_DIMENSIONS / 2 + 34 }, progressBar: { height: 54, maxWidth: 660, width: "100%" }, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
-let obj3 = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13676).MARKER_DIMENSIONS / 2 + 34 };
-obj2.progressBarScrubber = { height: 8, top: fn(13676).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13676).MARKER_DIMENSIONS / 2 + 2 };
+const createStyles = fn(4638);
+let obj2 = { progressBarContainer: { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13685).MARKER_DIMENSIONS / 2 + 34 }, progressBar: { height: 54, maxWidth: 660, width: "100%" }, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
+let obj3 = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13685).MARKER_DIMENSIONS / 2 + 34 };
+obj2.progressBarScrubber = { height: 8, top: fn(13685).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13685).MARKER_DIMENSIONS / 2 + 2 };
 let size = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: nativeDefault.colors.SPINE_DEFAULT };
 obj2.progressBarTrack = size;
 obj2.progressBarFill = { borderRadius: 8, position: "absolute", height: "100%", left: 0, zIndex: 1 };

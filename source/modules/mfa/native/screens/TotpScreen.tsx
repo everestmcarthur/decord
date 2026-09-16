@@ -1,11 +1,11 @@
-// Module ID: 15776
-// Function ID: 15777
+// Module ID: 15794
+// Function ID: 15795
 // Name: TotpScreen
-// Dependencies: [5, 32, 19, 21, 15777, 15772, 1115, 15778, 15775, 2]
+// Dependencies: [5, 32, 19, 21, 15795, 15790, 1115, 15796, 15793, 2]
 // Exports: default
 
-// Module 15776 (TotpScreen)
-import MFA from "MFA" /* 15777 */;
+// Module 15794 (TotpScreen)
+import MFA from "MFA" /* 15795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

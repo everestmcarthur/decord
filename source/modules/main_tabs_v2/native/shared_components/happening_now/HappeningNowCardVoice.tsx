@@ -1,20 +1,20 @@
-// Module ID: 16196
-// Function ID: 16197
+// Module ID: 16216
+// Function ID: 16217
 // Name: HappeningNowCardVoice
-// Dependencies: [19, 17, 7764, 1372, 4658, 15390, 1074, 21, 4639, 1241, 9668, 1897, 16179, 15391, 5185, 13175, 16189, 8181, 504, 12, 1370, 4791, 1115, 2]
+// Dependencies: [19, 17, 7767, 1372, 4657, 15406, 1074, 21, 4638, 1241, 9679, 1897, 16199, 15407, 5186, 13186, 16209, 8190, 504, 12, 1370, 4790, 1115, 2]
 // Exports: useVoiceChannelUsers
 
-// Module 16196 (HappeningNowCardVoice)
+// Module 16216 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4790 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7764 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7767 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import VoiceStateStore from "VoiceStateStore" /* 4657 */;
 
 const require = globalThis.__r;
 
@@ -38,11 +38,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15390).HappeningNowCardTrackingType;
+let closure_8 = fn(15406).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");

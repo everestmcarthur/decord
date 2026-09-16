@@ -1,13 +1,13 @@
-// Module ID: 15042
-// Function ID: 15043
+// Module ID: 15058
+// Function ID: 15059
 // Name: AuthorizedAppPermissionsSetting
-// Dependencies: [8082, 1074, 11606, 1115, 15043, 2]
+// Dependencies: [8091, 1074, 11614, 1115, 15059, 2]
 
-// Module 15042 (AuthorizedAppPermissionsSetting)
+// Module 15058 (AuthorizedAppPermissionsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8082 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import SettingsConstants from "SettingsConstants" /* 8091 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,16 +1,16 @@
-// Module ID: 10156
-// Function ID: 10157
+// Module ID: 10164
+// Function ID: 10165
 // Name: SingleStream
-// Dependencies: [19, 9599, 21, 9726, 9736, 4840, 2]
+// Dependencies: [19, 9610, 21, 9737, 9744, 4839, 2]
 // Exports: default
 
-// Module 10156 (SingleStream)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4840 */;
-import StreamTileDefault from "StreamTile" /* 9726 */;
+// Module 10164 (SingleStream)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4839 */;
+import StreamTileDefault from "StreamTile" /* 9737 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(9599);
+const ChannelCallStore = fn(9610);
 ({ toggleFocus: c3, resetFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(9736).ResizeMode.CONTAIN,
+    resizeMode: channel(9744).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },
@@ -33,7 +33,7 @@ export default function SingleStream(channel) {
   };
   return jsx(StreamTileDefault, {
     gestureEnabled: true,
-    resizeMode: channel(9736).ResizeMode.CONTAIN,
+    resizeMode: channel(9744).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },

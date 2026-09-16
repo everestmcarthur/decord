@@ -1,11 +1,11 @@
-// Module ID: 6051
-// Function ID: 6052
+// Module ID: 6052
+// Function ID: 6053
 // Dependencies: [2]
 
-// Module 6051
+// Module 6052
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiDistrustExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/93527d2928590c21f9b15e713a4280627f40f07ef2ae2d30c47f8e98d1cad879.png";
-export const metadata = { fileBytes: 4278 };
+export default "https://cdn.discordapp.com/assets/content/14c5f11b9a7f65b62989537daced06cfee43018155cc37b14ca5e4e6c8dcaf93.png";
+export const metadata = { fileBytes: 4296 };

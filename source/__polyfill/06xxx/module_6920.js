@@ -1,0 +1,15 @@
+// Module ID: 6920
+// Function ID: 6921
+// Dependencies: [17]
+
+// Module 6920
+import _mod17 from "module_17" /* 17 */;
+
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
+
+export const styles = StyleSheet.create(obj);

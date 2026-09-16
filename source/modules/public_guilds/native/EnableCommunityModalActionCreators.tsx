@@ -1,11 +1,11 @@
-// Module ID: 17816
-// Function ID: 17817
+// Module ID: 17872
+// Function ID: 17873
 // Name: EnableCommunityModalActionCreators
-// Dependencies: [4842, 17817, 1897, 2]
+// Dependencies: [4841, 17873, 1897, 2]
 
-// Module 17816 (EnableCommunityModalActionCreators)
+// Module 17872 (EnableCommunityModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
 import size from "module_2" /* 2 */;
 
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/public_guilds/native/EnableCo
 
 export default {
   open() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17817, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17873, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(ENABLED_COMMUNITY_MODAL_KEY);

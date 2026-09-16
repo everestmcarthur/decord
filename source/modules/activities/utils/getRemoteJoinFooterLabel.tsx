@@ -1,10 +1,10 @@
-// Module ID: 13366
-// Function ID: 13367
+// Module ID: 13377
+// Function ID: 13378
 // Name: getRemoteJoinFooterLabel
 // Dependencies: [1074, 1115, 2]
 // Exports: getRemoteJoinFooterLabel
 
-// Module 13366 (getRemoteJoinFooterLabel)
+// Module 13377 (getRemoteJoinFooterLabel)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;

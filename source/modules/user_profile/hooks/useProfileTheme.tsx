@@ -1,19 +1,19 @@
-// Module ID: 8346
-// Function ID: 8347
+// Module ID: 8355
+// Function ID: 8356
 // Name: useProfileTheme
-// Dependencies: [32, 4631, 8347, 1074, 4574, 504, 575, 8252, 1092, 8348, 4491, 2]
+// Dependencies: [32, 4630, 8356, 1074, 4572, 504, 575, 8261, 1092, 8357, 4489, 2]
 // Exports: default
 
-// Module 8346 (useProfileTheme)
+// Module 8355 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 575 */;
-import useThemeDefault from "useTheme" /* 4574 */;
-import useAvatarColor from "useAvatarColor" /* 8252 */;
+import useThemeDefault from "useTheme" /* 4572 */;
+import useAvatarColor from "useAvatarColor" /* 8261 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(8347).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8356).useEffectiveThemeOverride;
 const ThemeTypes = fn(1074).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
@@ -76,19 +76,19 @@ export default function useProfileTheme(arg0) {
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8348).getProfileTheme(first);
+        let profileTheme = tmp4(8357).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result10 = tmp4(8348);
+        const tmp4Result10 = tmp4(8357);
       }
     }
     if (tmp16 !== ThemeTypes.ASH) {
       let isThemeLightResult = tmp16 === tmp18.ASH;
       if (isThemeLightResult) {
-        isThemeLightResult = tmp4(4491).isThemeLight(tmp2);
-        const tmp4Result11 = tmp4(4491);
+        isThemeLightResult = tmp4(4489).isThemeLight(tmp2);
+        const tmp4Result11 = tmp4(4489);
       }
       let DARK = tmp16;
       if (isThemeLightResult) {
@@ -96,7 +96,7 @@ export default function useProfileTheme(arg0) {
       }
     } else {
       DARK = tmp2;
-      const tmp4Result12 = tmp4(4491);
+      const tmp4Result12 = tmp4(4489);
     }
     const obj3 = { theme: DARK, primaryColor: first, secondaryColor: hex2intResult };
     return obj3;

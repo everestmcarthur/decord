@@ -1,16 +1,16 @@
-// Module ID: 14264
-// Function ID: 14265
+// Module ID: 14282
+// Function ID: 14283
 // Name: ContextMenuItem
-// Dependencies: [19, 17, 21, 4376, 4639, 8794, 576, 8793, 5058, 5062, 5061, 4635, 2]
+// Dependencies: [19, 17, 21, 4374, 4638, 8803, 576, 8802, 5059, 5063, 5062, 4634, 2]
 // Exports: ContextMenuItem
 
-// Module 14264 (ContextMenuItem)
+// Module 14282 (ContextMenuItem)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5058 */;
-import springPresets from "springPresets" /* 5062 */;
-import ContextMenuState from "ContextMenuState" /* 8793 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8794 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4374 */;
+import spring from "spring" /* 5059 */;
+import springPresets from "springPresets" /* 5063 */;
+import ContextMenuState from "ContextMenuState" /* 8802 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8803 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -19,7 +19,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
   const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
@@ -82,15 +82,15 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
         const measureResult = ReanimatedRexport2.measure(animatedRef);
         if (null != measureResult) {
           ({ pageX, pageY, width, height } = measureResult);
-          const result = index * tmp2(8793).INDEX_BOUNDS_OFFSET;
+          const result = index * tmp2(8802).INDEX_BOUNDS_OFFSET;
           value = itemMeasurements.get();
-          value[result + tmp2(8793).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
+          value[result + tmp2(8802).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
           const value4 = itemMeasurements.get();
-          value4[result + tmp2(8793).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
+          value4[result + tmp2(8802).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
           const value5 = itemMeasurements.get();
-          value5[result + tmp2(8793).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+          value5[result + tmp2(8802).INDEX_BOUNDS_WIDTH_OFFSET] = width;
           const value6 = itemMeasurements.get();
-          value6[result + tmp2(8793).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          value6[result + tmp2(8802).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         }
       }
     }

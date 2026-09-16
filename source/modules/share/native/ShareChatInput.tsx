@@ -1,24 +1,24 @@
-// Module ID: 11835
-// Function ID: 11836
+// Module ID: 11843
+// Function ID: 11844
 // Name: ShareChatInput
-// Dependencies: [32, 19, 17, 1074, 21, 4639, 576, 1364, 9436, 8727, 1115, 5207, 8886, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4638, 576, 1364, 9447, 8736, 1115, 5208, 8897, 2]
 // Exports: default
 
-// Module 11835 (ShareChatInput)
+// Module 11843 (ShareChatInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Pressables from "Pressables" /* 5207 */;
-import ReactionIcon from "ReactionIcon" /* 8886 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9436 */;
+import Pressables from "Pressables" /* 5208 */;
+import ReactionIcon from "ReactionIcon" /* 8897 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const FormInputDefault = tmp2(8727);
+const FormInputDefault = tmp2(8736);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };

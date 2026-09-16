@@ -1,22 +1,22 @@
-// Module ID: 15993
-// Function ID: 15994
+// Module ID: 16013
+// Function ID: 16014
 // Name: InGameDMsSetting
-// Dependencies: [19, 8082, 1936, 1186, 1115, 11606, 2]
+// Dependencies: [19, 8091, 1936, 1186, 1115, 11614, 2]
 
-// Module 15993 (InGameDMsSetting)
+// Module 16013 (InGameDMsSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 1936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(8082).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(8091).MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL, label: null };

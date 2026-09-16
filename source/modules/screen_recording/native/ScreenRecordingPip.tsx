@@ -1,14 +1,14 @@
-// Module ID: 16041
-// Function ID: 16042
+// Module ID: 16061
+// Function ID: 16062
 // Name: ScreenRecordingPip
-// Dependencies: [32, 19, 17, 16042, 21, 4639, 576, 4376, 11491, 12167, 6760, 5058, 5062, 4606, 16046, 1897, 16036, 5207, 4635, 5059, 4590, 16047, 2]
+// Dependencies: [32, 19, 17, 16062, 21, 4638, 576, 4374, 11499, 12175, 6763, 5059, 5063, 4605, 16066, 1897, 16056, 5208, 4634, 5060, 4588, 16067, 2]
 // Exports: default
 
-// Module 16041 (ScreenRecordingPip)
+// Module 16061 (ScreenRecordingPip)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5058 */;
-import springPresets from "springPresets" /* 5062 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import spring from "spring" /* 5059 */;
+import springPresets from "springPresets" /* 5063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -205,11 +205,11 @@ function ScreenRecordingPip(surveyConfig) {
   }
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16042).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16062).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { widgetContainer: { position: "absolute" }, widget: null, stepText: null, stopButton: null, doneButton: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: 100, width: 100, gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

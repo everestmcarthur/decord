@@ -1,18 +1,18 @@
-// Module ID: 13170
-// Function ID: 13171
+// Module ID: 13181
+// Function ID: 13182
 // Name: getActivityJoinability
-// Dependencies: [1074, 11895, 11892, 9663, 9634, 7420, 13171, 1364, 11889, 11890, 11891, 2]
+// Dependencies: [1074, 11903, 11900, 9674, 9645, 7423, 13182, 1364, 11897, 11898, 11899, 2]
 // Exports: default
 
-// Module 13170 (getActivityJoinability)
+// Module 13181 (getActivityJoinability)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import hasFlagDefault from "hasFlag" /* 7420 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9634 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9663 */;
-import getPartySize from "getPartySize" /* 11889 */;
-import getIsInParty from "getIsInParty" /* 11892 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11895 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13171 */;
+import hasFlagDefault from "hasFlag" /* 7423 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9645 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9674 */;
+import getPartySize from "getPartySize" /* 11897 */;
+import getIsInParty from "getIsInParty" /* 11900 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11903 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13182 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -72,7 +72,7 @@ export default function getActivityJoinability(arg0) {
               return obj.CAN_JOIN;
             }
           }
-          if (tmp30(7420)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
+          if (tmp30(7423)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
             const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
             if (null != channel) {
               if (VoiceStateStore.isInChannel(channel.id, user.id)) {
@@ -106,7 +106,7 @@ export default function getActivityJoinability(arg0) {
           tmp30 = importDefault;
           tmp31 = constants;
         }
-        tmp27Result = tmp27(11891);
+        tmp27Result = tmp27(11899);
       }
       return obj.CANNOT_JOIN;
     }

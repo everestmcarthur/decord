@@ -1,11 +1,11 @@
-// Module ID: 16360
-// Function ID: 16361
+// Module ID: 16380
+// Function ID: 16381
 // Name: useCanSeeNUFChannelsForGuild
-// Dependencies: [2022, 1980, 1372, 1074, 4265, 504, 4484, 1385, 2]
+// Dependencies: [2022, 1980, 1372, 1074, 4263, 504, 4482, 1385, 2]
 // Exports: useCanSeeNUFChannelsForGuild
 
-// Module 16360 (useCanSeeNUFChannelsForGuild)
-import UserUtils from "UserUtils" /* 4484 */;
+// Module 16380 (useCanSeeNUFChannelsForGuild)
+import UserUtils from "UserUtils" /* 4482 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4263).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
 

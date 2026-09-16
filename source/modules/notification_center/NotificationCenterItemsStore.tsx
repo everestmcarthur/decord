@@ -1,17 +1,17 @@
-// Module ID: 7744
-// Function ID: 7745
+// Module ID: 7747
+// Function ID: 7748
 // Name: NotificationCenterItemsStore
-// Dependencies: [4555, 7633, 4289, 4288, 1372, 1074, 7745, 4862, 7746, 11, 504, 573, 2]
+// Dependencies: [4553, 7636, 4287, 4286, 1372, 1074, 7748, 4861, 7749, 11, 504, 573, 2]
 
-// Module 7744 (NotificationCenterItemsStore)
+// Module 7747 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7745 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7746 */;
-import ExperimentStore from "ExperimentStore" /* 4555 */;
-import MessageRecord from "MessageRecord" /* 4289 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7748 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7749 */;
+import ExperimentStore from "ExperimentStore" /* 4553 */;
+import MessageRecord from "MessageRecord" /* 4287 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function _validate(id) {
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(7745).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === tmp(7748).NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -31,8 +31,8 @@ function toNotificationCenterItem(item_enum) {
   obj.kind = "notification-center-item";
   let messageRecord;
   if (null != item_enum.message) {
-    messageRecord = tmp(4862).createMessageRecord(item_enum.message);
-    const tmpResult = tmp(4862);
+    messageRecord = tmp(4861).createMessageRecord(item_enum.message);
+    const tmpResult = tmp(4861);
   }
   obj.message = messageRecord;
   let id;
@@ -47,7 +47,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(7745).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === tmp(7748).NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -57,8 +57,8 @@ function handleAddItem(type) {
     obj.kind = "notification-center-item";
     let messageRecord;
     if (null != item2.message) {
-      messageRecord = tmp(4862).createMessageRecord(item2.message);
-      const tmpResult = tmp(4862);
+      messageRecord = tmp(4861).createMessageRecord(item2.message);
+      const tmpResult = tmp(4861);
     }
     obj.message = messageRecord;
     let id;
@@ -157,7 +157,7 @@ function handleRelationshipAddOrUpdate(relationship) {
         tmp4 = id === tmp3;
       }
       if (!tmp4) {
-        let tmp7 = type.type === tmp(7745).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
+        let tmp7 = type.type === tmp(7748).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp7) {
           const other_user2 = type.other_user;
           let id1;
@@ -169,7 +169,7 @@ function handleRelationshipAddOrUpdate(relationship) {
         tmp4 = tmp7;
       }
       if (!tmp4) {
-        let tmp10 = type.type === tmp(7745).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+        let tmp10 = type.type === tmp(7748).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
         if (tmp10) {
           const other_user3 = type.other_user;
           let id2;
@@ -181,7 +181,7 @@ function handleRelationshipAddOrUpdate(relationship) {
         tmp4 = tmp10;
       }
       if (!tmp4) {
-        let tmp13 = type.type === tmp(7745).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+        let tmp13 = type.type === tmp(7748).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp13) {
           const other_user4 = type.other_user;
           let id3;
@@ -196,9 +196,9 @@ function handleRelationshipAddOrUpdate(relationship) {
     });
   }
 }
-const isGuildEventEnded = fn(7633).isGuildEventEnded;
+const isGuildEventEnded = fn(7636).isGuildEventEnded;
 const RelationshipTypes = fn(1074).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "151", notifCenterTabFocused: "BG" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -370,7 +370,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "151", notifCenterTabFocused: "BG" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -496,7 +496,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "151", notifCenterTabFocused: "BG" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -552,7 +552,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7746);
+        obj = id(7749);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -646,7 +646,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "151", notifCenterTabFocused: "BG" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

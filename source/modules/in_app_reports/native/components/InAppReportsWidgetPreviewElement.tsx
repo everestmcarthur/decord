@@ -1,22 +1,22 @@
-// Module ID: 8783
-// Function ID: 8784
+// Module ID: 8792
+// Function ID: 8793
 // Name: InAppReportsWidgetPreviewElement
-// Dependencies: [19, 17, 21, 4639, 576, 7086, 8360, 7735, 8784, 7728, 8800, 4635, 1115, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 7089, 8369, 7738, 8793, 7731, 8809, 4634, 1115, 2]
 // Exports: default
 
-// Module 8783 (InAppReportsWidgetPreviewElement)
+// Module 8792 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 576 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7086 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7735 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8360 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8784 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7089 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7738 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8369 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8793 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -41,16 +41,16 @@ export default function WidgetPreview(arg0) {
         const obj3 = { userId, widget, disableInteraction: true, cardStyle: null };
         const items1 = [tmp5.card, tmp.card];
         obj3.cardStyle = items1;
-        tmp6 = React4(tmp2(8800).WidgetSection, obj3);
+        tmp6 = React4(tmp2(8809).WidgetSection, obj3);
       }
     }
-    tmp2Result = tmp2(7728);
+    tmp2Result = tmp2(7731);
   }
   if (null === tmp6) {
     return null;
   } else {
     const obj4 = { style: tmp.container, children: null };
-    let Text = tmp2(4635).Text;
+    let Text = tmp2(4634).Text;
     if (null != typeConsolidationEyebrow.style) {
       const items2 = [tmp.title, typeConsolidationEyebrow.style];
       let title = items2;

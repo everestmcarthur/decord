@@ -1,12 +1,12 @@
-// Module ID: 14049
-// Function ID: 14050
+// Module ID: 14062
+// Function ID: 14063
 // Name: GuildBadgeCaterpillar
-// Dependencies: [19, 21, 14010, 8577, 2]
+// Dependencies: [19, 21, 14023, 8586, 2]
 // Exports: GuildBadgeCaterpillar
 
-// Module 14049 (GuildBadgeCaterpillar)
-import inlineStyles from "inlineStyles" /* 8577 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14010 */;
+// Module 14062 (GuildBadgeCaterpillar)
+import inlineStyles from "inlineStyles" /* 8586 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14023 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

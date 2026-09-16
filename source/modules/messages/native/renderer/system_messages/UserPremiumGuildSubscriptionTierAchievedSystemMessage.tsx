@@ -1,15 +1,15 @@
-// Module ID: 8112
-// Function ID: 8113
+// Module ID: 8121
+// Function ID: 8122
 // Name: UserPremiumGuildSubscriptionTierAchievedSystemMessage
-// Dependencies: [1958, 1980, 8110, 8111, 8067, 8069, 1115, 4533, 8071, 2]
+// Dependencies: [1958, 1980, 8119, 8120, 8076, 8078, 1115, 4531, 8080, 2]
 // Exports: createUserPremiumGuildSubscriptionTierAchievedSystemMessage
 
-// Module 8112 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
-import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8110 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8111 */;
+// Module 8121 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
+import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8119 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8120 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -33,14 +33,14 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
       const tmp16 = formatUsernameOnClickDefault(obj);
       if (tmp13 > 1) {
         const intl2 = tmp14(1115).intl;
-        const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: tmp14(4533).getTierName(TIER_1), numSubscriptions: tmp13 };
+        const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: tmp14(4531).getTierName(TIER_1), numSubscriptions: tmp13 };
         let formatToPartsResult = intl2.formatToParts(tmp14(1115).t.GjNvr7, obj2);
-        const tmp14Result = tmp14(4533);
+        const tmp14Result = tmp14(4531);
       } else {
         const intl = tmp14(1115).intl;
-        const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: tmp14(4533).getTierName(TIER_1) };
+        const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: tmp14(4531).getTierName(TIER_1) };
         formatToPartsResult = intl.formatToParts(tmp14(1115).t.oAYAP7, obj3);
-        const tmp14Result2 = tmp14(4533);
+        const tmp14Result2 = tmp14(4531);
       }
       const obj4 = { content: formatToPartsResult };
       const merged = Object.assign(createCommonMessageDefault(message));

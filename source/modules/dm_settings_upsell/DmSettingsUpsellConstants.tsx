@@ -1,9 +1,9 @@
-// Module ID: 17495
-// Function ID: 17496
+// Module ID: 17551
+// Function ID: 17552
 // Name: DmSettingsUpsellConstants
 // Dependencies: [2]
 
-// Module 17495 (DmSettingsUpsellConstants)
+// Module 17551 (DmSettingsUpsellConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellConstants.tsx");

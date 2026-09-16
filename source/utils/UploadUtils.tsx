@@ -1,13 +1,13 @@
-// Module ID: 5213
-// Function ID: 5214
+// Module ID: 5214
+// Function ID: 5215
 // Name: UploadUtils
-// Dependencies: [5214, 5215, 5212, 2]
+// Dependencies: [5215, 5216, 5213, 2]
 // Exports: getAttachmentPayload, getFile, getFileContentLength, getFileData, getMaxTotalAttachmentSize
 
-// Module 5213 (UploadUtils)
-import Upload from "Upload" /* 5212 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5214 */;
-import clipPayloadUtils from "clipPayloadUtils" /* 5215 */;
+// Module 5214 (UploadUtils)
+import Upload from "Upload" /* 5213 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5215 */;
+import clipPayloadUtils from "clipPayloadUtils" /* 5216 */;
 import size from "module_2" /* 2 */;
 
 const items = [

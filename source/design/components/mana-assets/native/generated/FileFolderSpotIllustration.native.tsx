@@ -1,13 +1,13 @@
-// Module ID: 6096
-// Function ID: 6097
+// Module ID: 6097
+// Function ID: 6098
 // Name: FileFolderSpotIllustration
-// Dependencies: [21, 5672, 6097, 2]
+// Dependencies: [21, 5673, 6098, 2]
 // Exports: FileFolderSpotIllustration
 
-// Module 6096 (FileFolderSpotIllustration)
+// Module 6097 (FileFolderSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6097 from "module_6097" /* 6097 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6098 from "module_6098" /* 6098 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const FileFolderSpotIllustration = function FileFolderSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6097 };
+  const obj2 = { uri: _modDef6098 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

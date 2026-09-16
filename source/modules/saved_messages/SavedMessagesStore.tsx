@@ -1,14 +1,14 @@
-// Module ID: 11794
-// Function ID: 11795
+// Module ID: 11802
+// Function ID: 11803
 // Name: SavedMessagesStore
-// Dependencies: [1372, 4274, 7966, 4862, 504, 573, 2]
+// Dependencies: [1372, 4272, 7975, 4861, 504, 573, 2]
 // Exports: getComparator
 
-// Module 11794 (SavedMessagesStore)
+// Module 11802 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4862 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7966 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7975 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -95,12 +95,12 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4274).SecondaryIndexMap((saveData) => {
+const secondaryIndexMap = new fn(4272).SecondaryIndexMap((saveData) => {
   const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
-    let BOOKMARK = tmp(7966).SavedMessageSortTypes.REMINDER;
+    let BOOKMARK = tmp(7975).SavedMessageSortTypes.REMINDER;
   } else {
-    BOOKMARK = tmp(7966).SavedMessageSortTypes.BOOKMARK;
+    BOOKMARK = tmp(7975).SavedMessageSortTypes.BOOKMARK;
   }
   items[1] = BOOKMARK;
   return items;

@@ -1,21 +1,21 @@
-// Module ID: 17297
-// Function ID: 17298
+// Module ID: 17353
+// Function ID: 17354
 // Name: ActivityShelfItemSummary
-// Dependencies: [32, 19, 17, 21, 4639, 576, 4489, 17298, 10185, 1177, 5069, 4635, 4376, 5075, 2]
+// Dependencies: [32, 19, 17, 21, 4638, 576, 4487, 17354, 10193, 1177, 5070, 4634, 4374, 5076, 2]
 // Exports: default
 
-// Module 17297 (ActivityShelfItemSummary)
+// Module 17353 (ActivityShelfItemSummary)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import ButtonPill from "ButtonPill" /* 5069 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10185 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17298 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4374 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import ButtonPill from "ButtonPill" /* 5070 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10193 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17354 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ButtonEllipsis = tmp2(5075);
+const ButtonEllipsis = tmp2(5076);
 require = fn;
 function ParticipantsSummary(arg0) {
   ({ applicationId, channelId } = arg0);
@@ -29,10 +29,10 @@ function ParticipantsSummary(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
-const ColorUtils = fn(4489);
+const ColorUtils = fn(4487);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

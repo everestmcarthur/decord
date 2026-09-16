@@ -1,16 +1,16 @@
-// Module ID: 18081
-// Function ID: 18082
+// Module ID: 18137
+// Function ID: 18138
 // Name: TTITestAction
-// Dependencies: [5, 17380, 4555, 5643, 502, 1958, 1980, 3, 4504, 10324, 17564, 573, 1358, 1363, 1241, 6698, 8499, 4650, 15670, 1187, 2]
+// Dependencies: [5, 17436, 4553, 5644, 502, 1958, 1980, 3, 4502, 10332, 17620, 573, 1358, 1363, 1241, 6701, 8508, 4649, 15688, 1187, 2]
 
-// Module 18081 (TTITestAction)
+// Module 18137 (TTITestAction)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4504 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17564 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4502 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17620 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4555 */;
+import ExperimentStore from "ExperimentStore" /* 4553 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
@@ -592,13 +592,13 @@ let closure_19 = async function _apiLogin(arg0, value) {
         const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(573);
-          const f126625 = () => {
+          const f127151 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f126625(arg0);
+            return f127151(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -608,7 +608,7 @@ let closure_19 = async function _apiLogin(arg0, value) {
           continue;
         }
         closure_1_20(password(573), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6698).login({ login, password });
+        password(6701).login({ login, password });
       });
       c6 = 1;
       c7 = 1;
@@ -626,12 +626,12 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f126625(arg0);
+    return f127151(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(17380).applicationReady;
-fn(5643).addPostConnectionCallback;
+const applicationReady = fn(17436).applicationReady;
+fn(5644).addPostConnectionCallback;
 const logger = new LoggerDefault("TTITestAction");
 let obj = {
   "setup-test": setupTTITest,
@@ -640,34 +640,34 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(10324).resetComponentProfiler();
+    const result = closure_0(10332).resetComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "reset-component-profiler" });
-    obj = closure_0(10324);
+    obj = closure_0(10332);
     const obj2 = { type: "response", status: "success", message: "reset-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(10324).pauseComponentProfiler();
+    const result = closure_0(10332).pauseComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "pause-component-profiler" });
-    obj = closure_0(10324);
+    obj = closure_0(10332);
     const obj2 = { type: "response", status: "success", message: "pause-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(10324).resumeComponentProfiler();
+    const result = closure_0(10332).resumeComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "resume-component-profiler" });
-    obj = closure_0(10324);
+    obj = closure_0(10332);
     const obj2 = { type: "response", status: "success", message: "resume-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: closure_0(10324).dumpStats() };
+    obj = { stats: closure_0(10332).dumpStats() };
     const merged = Object.assign(obj);
     const json = JSON.stringify({ type: "response", status: "success", message: "dump-component-profiler-stats" });
-    const obj2 = closure_0(10324);
+    const obj2 = closure_0(10332);
     const obj3 = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
@@ -757,7 +757,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, value) => {
           const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
           const obj5 = { getConstants: closure_0(1363).getConstants };
           obj4.ClientInfoUtils = obj5;
-          const obj6 = { resetComponentProfiler: closure_0(10324).resetComponentProfiler, resumeComponentProfiler: closure_0(10324).resumeComponentProfiler, pauseComponentProfiler: closure_0(10324).pauseComponentProfiler, dumpStats: closure_0(10324).dumpStats };
+          const obj6 = { resetComponentProfiler: closure_0(10332).resetComponentProfiler, resumeComponentProfiler: closure_0(10332).resumeComponentProfiler, pauseComponentProfiler: closure_0(10332).pauseComponentProfiler, dumpStats: closure_0(10332).dumpStats };
           obj4.ComponentProfiler = obj6;
           obj4.Dispatcher = DispatcherDefault;
           obj4.ExperimentStore = ExperimentStore;

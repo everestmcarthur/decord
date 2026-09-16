@@ -1,14 +1,15 @@
 // Module ID: 5737
 // Function ID: 5738
-// Dependencies: [17]
-// Exports: getDefaultHeaderHeight
+// Dependencies: []
+// Exports: getDefaultSidebarWidth
 
 // Module 5737
-import get_ActivityIndicator from "module_17" /* 17 */;
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
-
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
+export const getDefaultSidebarWidth = (width) => {
+  width = width.width;
+  let num = 360;
+  if (width - 56 <= 360) {
+    num = width - 56;
+  }
+  return num;
 };

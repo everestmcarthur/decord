@@ -1,13 +1,13 @@
-// Module ID: 5258
-// Function ID: 5259
+// Module ID: 5259
+// Function ID: 5260
 // Name: CloudUploaderUtils
-// Dependencies: [2026, 502, 1346, 5213, 12, 1241, 2]
+// Dependencies: [2026, 502, 1346, 5214, 12, 1241, 2]
 // Exports: getUploadPayload, prepareMessagePayload
 
-// Module 5258 (CloudUploaderUtils)
+// Module 5259 (CloudUploaderUtils)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UploadUtils from "UploadUtils" /* 5213 */;
+import UploadUtils from "UploadUtils" /* 5214 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;

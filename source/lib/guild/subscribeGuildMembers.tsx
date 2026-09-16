@@ -1,10 +1,10 @@
-// Module ID: 7418
-// Function ID: 7419
+// Module ID: 7421
+// Function ID: 7422
 // Name: subscribeGuildMembers
-// Dependencies: [109, 19, 21, 12, 7419, 558, 1231, 2]
+// Dependencies: [109, 19, 21, 12, 7422, 558, 1231, 2]
 // Exports: default, useSubscribeGuildMembers
 
-// Module 7418 (subscribeGuildMembers)
+// Module 7421 (subscribeGuildMembers)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -51,10 +51,10 @@ export default function subscribeGuildMembers(arg0) {
         }
         if (!isEqualResult) {
           if (null != self._subscriptions) {
-            const item = tmp(12).forEach(self._subscriptions, (userIds, guildId) => displayName(7419).unsubscribeMembers(guildId, userIds));
+            const item = tmp(12).forEach(self._subscriptions, (userIds, guildId) => displayName(7422).unsubscribeMembers(guildId, userIds));
             const tmpResult3 = tmp(12);
           }
-          const item1 = tmp(12).forEach(tmp4, (userIds, guildId) => displayName(7419).subscribeMembers(guildId, userIds));
+          const item1 = tmp(12).forEach(tmp4, (userIds, guildId) => displayName(7422).subscribeMembers(guildId, userIds));
           self._subscriptions = tmp4;
           const tmpResult4 = tmp(12);
         }
@@ -101,7 +101,7 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
         reason(1231).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1231);
       }
-      closure_0(7419).subscribeMembers(guildId, userIds);
+      closure_0(7422).subscribeMembers(guildId, userIds);
     });
     return () => {
       const item = reason(12).forEach(memo, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));

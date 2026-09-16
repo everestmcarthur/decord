@@ -1,10 +1,10 @@
-// Module ID: 5206
-// Function ID: 5207
+// Module ID: 5207
+// Function ID: 5208
 // Name: MarkupInvisibleUnicode
 // Dependencies: [2]
 // Exports: stripLeadingInvisibleUnicode
 
-// Module 5206 (MarkupInvisibleUnicode)
+// Module 5207 (MarkupInvisibleUnicode)
 import size from "module_2" /* 2 */;
 
 const re0 = /^[\u200B-\u200D\uFEFF\u180E\u061C]+/;

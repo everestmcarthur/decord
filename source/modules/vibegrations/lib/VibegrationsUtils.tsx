@@ -1,16 +1,16 @@
-// Module ID: 7351
-// Function ID: 7352
+// Module ID: 7354
+// Function ID: 7355
 // Name: VibegrationsUtils
-// Dependencies: [2013, 1980, 4278, 4461, 1074, 7352, 7353, 504, 2]
+// Dependencies: [2013, 1980, 4276, 4459, 1074, 7355, 7356, 504, 2]
 // Exports: canAccessVibegrations, canStartVibegrationsProject, eligibleVibegrationsGuilds, findVibegrationChannelId, getVibegrationsProjectAccessSettings, isVibegrationsChannelCandidate, isVibegrationsGuildEligible, isVibegrationsProjectInGuild, resolveVibegrationsWorkspaceGuildId, useCanAccessVibegrations, useIsVibegrationsChannelCandidate, vibegrationsSettingChannels, vibegrationsSettingsGuildId, vibegrationsTopicForApp
 
-// Module 7351 (VibegrationsUtils)
-import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
-import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 7353 */;
+// Module 7354 (VibegrationsUtils)
+import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
+import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 7356 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -105,8 +105,8 @@ export const findVibegrationChannelId = function findVibegrationChannelId(guildI
   }
   return null;
 };
-export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, location) {
-  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location });
+export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, VibegrationsRemixSheet) {
+  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: VibegrationsRemixSheet });
   if (result) {
     const features = guildId.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);

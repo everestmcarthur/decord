@@ -1,12 +1,12 @@
-// Module ID: 10869
-// Function ID: 10870
-// Dependencies: [4638, 504, 10870, 2]
+// Module ID: 10877
+// Function ID: 10878
+// Dependencies: [4637, 504, 10878, 2]
 // Exports: default
 
-// Module 10869
+// Module 10877
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10870 */;
-import DevSettingsStore from "DevSettingsStore" /* 4638 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10878 */;
+import DevSettingsStore from "DevSettingsStore" /* 4637 */;
 
 require = fn;
 const size = fn(2);

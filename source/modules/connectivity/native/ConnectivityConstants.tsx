@@ -1,9 +1,9 @@
-// Module ID: 9812
-// Function ID: 9813
+// Module ID: 9820
+// Function ID: 9821
 // Name: ConnectivityConstants
 // Dependencies: [2]
 
-// Module 9812 (ConnectivityConstants)
+// Module 9820 (ConnectivityConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/connectivity/native/ConnectivityConstants.tsx");

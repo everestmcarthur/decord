@@ -1,19 +1,19 @@
-// Module ID: 15122
-// Function ID: 15123
+// Module ID: 15138
+// Function ID: 15139
 // Name: useBountyPauseAppStoreSheet
-// Dependencies: [19, 5529, 1074, 11627, 11624, 15116, 1110, 15114, 5534, 7833, 11634, 7823, 5536, 2]
+// Dependencies: [19, 5530, 1074, 11635, 11632, 15132, 1110, 15130, 5535, 7836, 11642, 7826, 5537, 2]
 // Exports: useBountyPauseAppStoreSheet
 
-// Module 15122 (useBountyPauseAppStoreSheet)
+// Module 15138 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import AdCreativeType from "AdCreativeType" /* 5536 */;
-import AnalyticsActions from "AnalyticsActions" /* 7823 */;
-import apexExperiment from "apexExperiment" /* 11627 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15116 */;
+import AdCreativeType from "AdCreativeType" /* 5537 */;
+import AnalyticsActions from "AnalyticsActions" /* 7826 */;
+import apexExperiment from "apexExperiment" /* 11635 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15132 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5529).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5530).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -64,12 +64,16 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
           if (directAppStoreLinkFromCta == null) {
             url = tmp7.cta.url;
           }
-          const obj3 = { link: url, directLink: directAppStoreLinkFromCta, inlineStoreParams: null, allowExternalOpen: false, trackOverlayEvent: null };
+          const obj3 = { link: url, directLink: directAppStoreLinkFromCta, inlineStoreParams: null, allowExternalOpen: false, trackOverlayEvent: null, trackOverlaySurfaceClick: null };
           const tmp2Result3 = tmp2(tmp3[10]);
           obj3.inlineStoreParams = tmp2(tmp3[10]).getInlineStoreParamsFromCta(trackingCtx.cta);
           obj3.trackOverlayEvent = function trackOverlayEvent(event, inlineStoreAppId, overlayVariant, timeSpentMs, overlaySurface) {
             trackingCtx = AnalyticsActions;
             return trackingCtx.trackAdContentAppStoreOverlayEvent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, inlineStoreAppId, overlayVariant, event, timeSpentMs, overlaySurface });
+          };
+          obj3.trackOverlaySurfaceClick = function trackOverlaySurfaceClick(overlaySurface) {
+            trackingCtx = AnalyticsActions;
+            return trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
           };
           const tmp2Result4 = tmp2(tmp3[10]);
           tmp2Result3.openAppStoreOrUrl(obj3).then((result) => {

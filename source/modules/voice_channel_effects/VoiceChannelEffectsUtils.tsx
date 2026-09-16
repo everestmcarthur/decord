@@ -1,17 +1,14 @@
-// Module ID: 7456
-// Function ID: 7457
+// Module ID: 7459
+// Function ID: 7460
 // Name: VoiceChannelEffectsUtils
-// Dependencies: [1372, 7455, 7457, 7458, 7459, 7460, 7461, 7462, 7463, 7464, 7465, 7466, 7467, 7468, 7469, 7470, 7471, 7472, 7473, 7474, 7475, 7476, 7477, 7478, 12, 1431, 1397, 4292, 4296, 1115, 2]
+// Dependencies: [1372, 7458, 7460, 7461, 7462, 7463, 7464, 7465, 7466, 7467, 7468, 7469, 7470, 7471, 7472, 7473, 7474, 7475, 7476, 7477, 7478, 7479, 7480, 7481, 12, 1431, 1397, 4290, 4294, 1115, 2]
 // Exports: getEffectAnnouncement, getEffectUrl, sampleAnimationId
 
-// Module 7456 (VoiceChannelEffectsUtils)
+// Module 7459 (VoiceChannelEffectsUtils)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import _modDef7457 from "module_7457" /* 7457 */;
-import _modDef7458 from "module_7458" /* 7458 */;
-import _modDef7459 from "module_7459" /* 7459 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4290 */;
 import _modDef7460 from "module_7460" /* 7460 */;
 import _modDef7461 from "module_7461" /* 7461 */;
 import _modDef7462 from "module_7462" /* 7462 */;
@@ -31,14 +28,17 @@ import _modDef7475 from "module_7475" /* 7475 */;
 import _modDef7476 from "module_7476" /* 7476 */;
 import _modDef7477 from "module_7477" /* 7477 */;
 import _modDef7478 from "module_7478" /* 7478 */;
+import _modDef7479 from "module_7479" /* 7479 */;
+import _modDef7480 from "module_7480" /* 7480 */;
+import _modDef7481 from "module_7481" /* 7481 */;
 import UserStore from "UserStore" /* 1372 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(7455);
+const VoiceChannelEffectsConstants = fn(7458);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7457];
-const items1 = [_modDef7458, _modDef7459, _modDef7460, _modDef7461, _modDef7462, _modDef7463, _modDef7464, _modDef7465, _modDef7466, _modDef7467, _modDef7468, _modDef7469, _modDef7470, _modDef7471, _modDef7472, _modDef7473, _modDef7474, _modDef7475, _modDef7476, _modDef7477, _modDef7478];
+const items = [_modDef7460];
+const items1 = [_modDef7461, _modDef7462, _modDef7463, _modDef7464, _modDef7465, _modDef7466, _modDef7467, _modDef7468, _modDef7469, _modDef7470, _modDef7471, _modDef7472, _modDef7473, _modDef7474, _modDef7475, _modDef7476, _modDef7477, _modDef7478, _modDef7479, _modDef7480, _modDef7481];
 const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
@@ -98,8 +98,8 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     const byName = UnicodeEmojisDefault.getByName(result);
     let str = "";
     if (null != byName) {
-      str = tmp2(4296).getURL(byName.surrogates);
-      const tmp2Result = tmp2(4296);
+      str = tmp2(4294).getURL(byName.surrogates);
+      const tmp2Result = tmp2(4294);
     }
     return str;
   }

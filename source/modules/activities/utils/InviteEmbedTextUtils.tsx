@@ -1,13 +1,13 @@
-// Module ID: 13368
-// Function ID: 13369
+// Module ID: 13379
+// Function ID: 13380
 // Name: InviteEmbedTextUtils
-// Dependencies: [1372, 1074, 1115, 2883, 4791, 2]
+// Dependencies: [1372, 1074, 1115, 2883, 4790, 2]
 // Exports: getDeadGameInviteText, getHeaderText, getPartyText, getRequestToStreamText
 
-// Module 13368 (InviteEmbedTextUtils)
+// Module 13379 (InviteEmbedTextUtils)
 import util from "util" /* 1115 */;
 import _modDef2883 from "module_2883" /* 2883 */;
-import NicknameUtils from "NicknameUtils" /* 4791 */;
+import NicknameUtils from "NicknameUtils" /* 4790 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

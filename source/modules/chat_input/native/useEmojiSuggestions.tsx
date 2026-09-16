@@ -1,14 +1,14 @@
-// Module ID: 12562
-// Function ID: 12563
+// Module ID: 12570
+// Function ID: 12571
 // Name: useEmojiSuggestions
-// Dependencies: [32, 19, 5544, 5084, 1375, 504, 5527, 2]
+// Dependencies: [32, 19, 5545, 5085, 1375, 504, 5528, 2]
 // Exports: default
 
-// Module 12562 (useEmojiSuggestions)
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5527 */;
+// Module 12570 (useEmojiSuggestions)
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5544 */;
+import EmojiStore from "EmojiStore" /* 5545 */;
 
 const require = fn;
 function findWordSpan(text, selectionStart, selectionEnd) {
@@ -49,8 +49,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5544).LoadState;
-const EMOJI_SENTINEL = fn(5084).EMOJI_SENTINEL;
+const LoadState = fn(5545).LoadState;
+const EMOJI_SENTINEL = fn(5085).EMOJI_SENTINEL;
 const EmojiIntention = fn(1375).EmojiIntention;
 const re9 = /(\S+)\s$/;
 let closure_10 = { unlockedEmojis: [], lockedEmojis: [], queryStart: 0, queryEnd: 0 };

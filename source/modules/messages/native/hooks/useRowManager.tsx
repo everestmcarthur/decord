@@ -1,13 +1,13 @@
-// Module ID: 12084
-// Function ID: 12085
+// Module ID: 12092
+// Function ID: 12093
 // Name: useRowManager
-// Dependencies: [9, 12085, 4570, 11409, 1364, 11408, 2]
+// Dependencies: [9, 12093, 4568, 11417, 1364, 11416, 2]
 // Exports: default
 
-// Module 12084 (useRowManager)
-import Client from "Client" /* 4570 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11409 */;
-import createChannelStreamDefault from "createChannelStream" /* 12085 */;
+// Module 12092 (useRowManager)
+import Client from "Client" /* 4568 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11417 */;
+import createChannelStreamDefault from "createChannelStream" /* 12093 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

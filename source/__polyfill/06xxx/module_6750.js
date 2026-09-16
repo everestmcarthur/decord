@@ -1,19 +1,20 @@
 // Module ID: 6750
 // Function ID: 6751
-// Dependencies: []
-// Exports: normalizeSnapPoint
+// Dependencies: [19, 6746]
+// Exports: useBottomSheetModalInternal
 
 // Module 6750
-const fn = function n(str, arg1) {
-  let result = str;
-  if (typeof str === "string") {
-    const _Number = Number;
-    result = Number(str.split("%")[0]) * arg1 / 100;
-  }
-  return Math.max(0, arg1 - result);
-};
-fn.__closure = {};
-fn.__workletHash = 14612470006791;
-fn.__initData = { code: "function pnpm_normalizeSnapPointTs1(snapPoint,containerHeight){let normalizedSnapPoint=snapPoint;if(typeof normalizedSnapPoint==='string'){normalizedSnapPoint=Number(normalizedSnapPoint.split('%')[0])*containerHeight/100;}return Math.max(0,containerHeight-normalizedSnapPoint);}" };
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 6746 */;
 
-export const normalizeSnapPoint = fn;
+const useContext = _mod19.useContext;
+
+export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
+};

@@ -1,22 +1,22 @@
-// Module ID: 15903
-// Function ID: 15904
+// Module ID: 15921
+// Function ID: 15922
 // Name: UserSettingsDesignSystemFormPrimitives
-// Dependencies: [32, 19, 17, 1074, 21, 4639, 4635, 5770, 5773, 5772, 7307, 9561, 5689, 5690, 14276, 10118, 5185, 5057, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4638, 4634, 5771, 5774, 5773, 7310, 9572, 5690, 5691, 14294, 10126, 5186, 5058, 2]
 // Exports: default
 
-// Module 15903 (UserSettingsDesignSystemFormPrimitives)
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5185 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5689 */;
-import TableRow from "TableRow" /* 5690 */;
-import TableRadioGroup from "TableRadioGroup" /* 5770 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import TableRadioRow from "TableRadioRow" /* 5773 */;
-import TableSwitchRow from "TableSwitchRow" /* 7307 */;
-import Checkbox from "Checkbox" /* 9561 */;
-import VoiceXIcon from "VoiceXIcon" /* 10118 */;
-import Slider from "Slider" /* 14276 */;
+// Module 15921 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5186 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5690 */;
+import TableRow from "TableRow" /* 5691 */;
+import TableRadioGroup from "TableRadioGroup" /* 5771 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import TableRadioRow from "TableRadioRow" /* 5774 */;
+import TableSwitchRow from "TableSwitchRow" /* 7310 */;
+import Checkbox from "Checkbox" /* 9572 */;
+import VoiceXIcon from "VoiceXIcon" /* 10126 */;
+import Slider from "Slider" /* 14294 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -127,7 +127,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");

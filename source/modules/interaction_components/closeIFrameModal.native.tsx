@@ -1,13 +1,13 @@
-// Module ID: 17557
-// Function ID: 17558
+// Module ID: 17613
+// Function ID: 17614
 // Name: closeIFrameModal
-// Dependencies: [17555, 4842, 573, 2]
+// Dependencies: [17611, 4841, 573, 2]
 // Exports: default
 
-// Module 17557 (closeIFrameModal)
+// Module 17613 (closeIFrameModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import InteractionIframeConstants from "InteractionIframeConstants" /* 17555 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import InteractionIframeConstants from "InteractionIframeConstants" /* 17611 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = InteractionIframeConstants.INTERACTION_IFRAME_MODAL_KEY;

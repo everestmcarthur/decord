@@ -1,8 +1,8 @@
-// Module ID: 6221
-// Function ID: 6222
+// Module ID: 6222
+// Function ID: 6223
 // Dependencies: [2]
 
-// Module 6221
+// Module 6222
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel3Illocon-2x.png.js");

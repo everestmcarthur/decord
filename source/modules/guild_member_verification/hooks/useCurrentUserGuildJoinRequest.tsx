@@ -1,11 +1,11 @@
-// Module ID: 5630
-// Function ID: 5631
+// Module ID: 5631
+// Function ID: 5632
 // Name: useCurrentUserGuildJoinRequest
-// Dependencies: [4462, 504, 2]
+// Dependencies: [4460, 504, 2]
 // Exports: useCurrentUserGuildJoinRequest
 
-// Module 5630 (useCurrentUserGuildJoinRequest)
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
+// Module 5631 (useCurrentUserGuildJoinRequest)
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4460 */;
 
 const require = globalThis.__r;
 

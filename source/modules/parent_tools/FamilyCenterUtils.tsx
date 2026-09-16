@@ -1,18 +1,18 @@
-// Module ID: 7699
-// Function ID: 7700
+// Module ID: 7702
+// Function ID: 7703
 // Name: FamilyCenterUtils
-// Dependencies: [7644, 7645, 1115, 2397, 4231, 7646, 2]
+// Dependencies: [7647, 7648, 1115, 2397, 4229, 7649, 2]
 // Exports: displayTypeFromString, formatLinkTimestamp, formatTotalTime, formatUserActivityTimestamp, getActivityTypeTextConfigs, getActivityWindowTimestampFormatter, getEmptyActivityFormatter, getFailureCodeForAPIError, getOrFetchLinkedUsers, getSortedActivityTypeConfigs, getTopUserOrGuildDescription, hasActiveParentLinks, isGift, isGuildAction, isParentallyControlled, isPurchase, isUserAction
 
-// Module 7699 (FamilyCenterUtils)
+// Module 7702 (FamilyCenterUtils)
 import util from "util" /* 1115 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
+import _modDef4229 from "module_4229" /* 4229 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7649 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7645);
+const FamilyCenterConstants = fn(7648);
 ({ ACTION_TO_TEXT: closure_4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty, FamilyCenterFailureCode: metroRequire, TeenActionDisplayType: closure_7, UserLinkStatus: closure_8, UserLinkType: closure_9 } = FamilyCenterConstants);
 let c10 = 86400;
 let c11 = 172800;
@@ -49,10 +49,10 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  const diffResult = _modDef4231().diff(_modDef4231(time), "s");
+  const diffResult = _modDef4229().diff(_modDef4229(time), "s");
   const tmp3 = timestampFormatter();
-  const obj = _modDef4231();
-  _modDef4231(time).format("LL");
+  const obj = _modDef4229();
+  _modDef4229(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -71,9 +71,9 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  const diffResult = _modDef4231().diff(_modDef4231(arg0), "s");
+  const diffResult = _modDef4229().diff(_modDef4229(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef4231(arg0);
+  _modDef4229(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {

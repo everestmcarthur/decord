@@ -1,10 +1,10 @@
-// Module ID: 9643
-// Function ID: 9644
+// Module ID: 9654
+// Function ID: 9655
 // Name: FramesConstants
 // Dependencies: [1074, 2]
 // Exports: asLaunched, getChannelIdForSurface, getFrameIntentForSurface, getFrameSurfaceForChannel, getPipOrientationLockStateForFrame, isLaunched, makeFrameId
 
-// Module 9643 (FramesConstants)
+// Module 9654 (FramesConstants)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

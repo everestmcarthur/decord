@@ -1,10 +1,10 @@
-// Module ID: 5046
-// Function ID: 5047
+// Module ID: 5045
+// Function ID: 5046
 // Name: useIsScreenReaderEnabled
 // Dependencies: [17, 510, 560, 1248, 2]
 // Exports: addScreenReaderEnabledListener, getIsScreenReaderEnabled, useIsScreenReaderEnabled
 
-// Module 5046 (useIsScreenReaderEnabled)
+// Module 5045 (useIsScreenReaderEnabled)
 import _mod17 from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

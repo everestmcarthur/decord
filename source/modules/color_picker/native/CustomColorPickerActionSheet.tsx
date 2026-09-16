@@ -1,17 +1,17 @@
-// Module ID: 14694
-// Function ID: 14695
+// Module ID: 14710
+// Function ID: 14711
 // Name: CustomColorPickerActionSheet
-// Dependencies: [32, 19, 17, 21, 4639, 576, 14695, 1092, 4376, 14696, 4489, 672, 4606, 7257, 7256, 1115, 5059, 6711, 12, 14697, 2]
+// Dependencies: [32, 19, 17, 21, 4638, 576, 14711, 1092, 4374, 14712, 4487, 672, 4605, 7260, 7259, 1115, 5060, 6714, 12, 14713, 2]
 // Exports: default
 
-// Module 14694 (CustomColorPickerActionSheet)
+// Module 14710 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import ColorUtils from "ColorUtils" /* 4489 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14696 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import ColorUtils from "ColorUtils" /* 4487 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14712 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "#000000";
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, suggestedColor: null, suggestedColorsContainer: null };
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.suggestedColor = { minWidth: 32, height: 32, borderRadius: nativeDefault.radii.xs };
@@ -92,11 +92,11 @@ export default function CustomColorPickerActionSheet(arg0) {
     }
   }, items);
   let int2hsvResult = onSelect(1092).int2hsv(color);
-  sharedValue = onSelect(4376).useSharedValue(h);
-  const obj4 = onSelect(4376);
-  const sharedValue1 = onSelect(4376).useSharedValue(s);
-  const obj6 = onSelect(4376);
-  const sharedValue2 = onSelect(4376).useSharedValue(v);
+  sharedValue = onSelect(4374).useSharedValue(h);
+  const obj4 = onSelect(4374);
+  const sharedValue1 = onSelect(4374).useSharedValue(s);
+  const obj6 = onSelect(4374);
+  const sharedValue2 = onSelect(4374).useSharedValue(v);
   let combined;
   if (suggestedColors != null) {
     const mapped = suggestedColors.map((item) => onSelect(1092).hex2int(item));
@@ -126,8 +126,8 @@ export default function CustomColorPickerActionSheet(arg0) {
   const intl2 = tmp2(1115).intl;
   obj9.text = intl2.string(onSelect(1115).t.XqMe3N);
   obj9.onPress = callback1;
-  obj7.trailing = sharedValue2(onSelect(5059).Button, obj9);
-  obj5.header = sharedValue2(onSelect(7256).BottomSheetTitleHeader, obj7);
+  obj7.trailing = sharedValue2(onSelect(5060).Button, obj9);
+  obj5.header = sharedValue2(onSelect(7259).BottomSheetTitleHeader, obj7);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
   const intl3 = tmp2(1115).intl;
@@ -150,9 +150,9 @@ export default function CustomColorPickerActionSheet(arg0) {
       const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
   };
-  const items3 = [sharedValue2(onSelect(6711).TextInput, obj11), , ];
+  const items3 = [sharedValue2(onSelect(6714).TextInput, obj11), , ];
   const obj12 = { suggestedColors: null, onSelect: null, color: null };
-  const obj8 = onSelect(4376);
+  const obj8 = onSelect(4374);
   const tmp13 = updateInputHexValueFromHsv;
   const tmp14 = sharedValue1;
   const tmp15 = SuggestedColors;
@@ -174,7 +174,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(tmp15, obj12);
-  items3[2] = sharedValue2(tmp16(14697), {
+  items3[2] = sharedValue2(tmp16(14713), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,
@@ -188,5 +188,5 @@ export default function CustomColorPickerActionSheet(arg0) {
   });
   obj10.children = items3;
   obj5.children = tmp13(tmp14, obj10);
-  return sharedValue2(onSelect(7257).BottomSheet, obj5);
+  return sharedValue2(onSelect(7260).BottomSheet, obj5);
 };

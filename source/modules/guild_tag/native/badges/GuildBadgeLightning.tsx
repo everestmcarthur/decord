@@ -1,12 +1,12 @@
-// Module ID: 14016
-// Function ID: 14017
+// Module ID: 14029
+// Function ID: 14030
 // Name: GuildBadgeLightning
-// Dependencies: [19, 21, 14010, 8577, 2]
+// Dependencies: [19, 21, 14023, 8586, 2]
 // Exports: GuildBadgeLightning
 
-// Module 14016 (GuildBadgeLightning)
-import inlineStyles from "inlineStyles" /* 8577 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14010 */;
+// Module 14029 (GuildBadgeLightning)
+import inlineStyles from "inlineStyles" /* 8586 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14023 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,18 +1,14 @@
 // Module ID: 5738
 // Function ID: 5739
-// Dependencies: []
-// Exports: getHeaderTitle
+// Dependencies: [17]
+// Exports: getDefaultHeaderHeight
 
 // Module 5738
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-export const getHeaderTitle = function getHeaderTitle(options, name) {
-  if (typeof options.headerTitle === "string") {
-    let title = options.headerTitle;
-  } else {
-    title = name;
-    if (undefined !== options.title) {
-      title = options.title;
-    }
-  }
-  return title;
+({ PixelRatio, Platform } = get_ActivityIndicator);
+
+export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
+  ({ width, height } = layout);
+  return 64 + headerStatusBarHeight;
 };

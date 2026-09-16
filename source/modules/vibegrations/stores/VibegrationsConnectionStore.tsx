@@ -1,24 +1,24 @@
-// Module ID: 16705
-// Function ID: 16706
+// Module ID: 16725
+// Function ID: 16726
 // Name: VibegrationsConnectionStore
-// Dependencies: [32, 5, 1372, 16702, 16703, 573, 16706, 16707, 16704, 16709, 1115, 3591, 16710, 16712, 559, 7858, 16713, 16714, 504, 2]
+// Dependencies: [32, 5, 1372, 16722, 16723, 573, 16726, 16727, 16724, 16729, 1115, 3591, 16730, 16732, 559, 7867, 16733, 16734, 504, 2]
 // Exports: closeConnection, createDatabaseRestorePoint, deleteStagedAttachment, draftPatchNotes, ensureConnection, exportProjectArchive, fetchDatabaseRestorePoints, fetchDatabaseRestoreWindow, fetchProjectMcpConnection, fetchSourceHistory, forceCompaction, getPreviewScreenshotUrl, interruptTurn, isAttachmentAvailable, publishProject, remixProjectWorkspace, requestDebugStatus, requestExternalAuthorizeUrl, requestProjectRebuild, resetHistoryPaging, restoreDatabaseToPoint, restoreDatabaseToTimestamp, restoreSourceHistoryEntry, sendModelSettings, sendUserMessage, stageModelSettings, submitProjectSecrets, submitProjectSettings, uploadAttachment
 
-// Module 16705 (VibegrationsConnectionStore)
+// Module 16725 (VibegrationsConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import createNonce from "createNonce" /* 7858 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16704 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16706 */;
-import vibegrationsPreviewClaims from "vibegrationsPreviewClaims" /* 16709 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16710 */;
-import VibegrationsWebSocket from "VibegrationsWebSocket" /* 16712 */;
+import createNonce from "createNonce" /* 7867 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16724 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16726 */;
+import vibegrationsPreviewClaims from "vibegrationsPreviewClaims" /* 16729 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16730 */;
+import VibegrationsWebSocket from "VibegrationsWebSocket" /* 16732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16702 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16703 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16722 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
 
 require = fn;
 function rejectPendingPublish(pendingPublish, arg1) {
@@ -849,11 +849,11 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            const result3 = attachment_id(16704).beginPreviewOperation(projectId);
-            const obj18 = attachment_id(16704);
+            const result3 = attachment_id(16724).beginPreviewOperation(projectId);
+            const obj18 = attachment_id(16724);
           } else {
-            attachment_id(16704).endPreviewOperation(projectId);
-            const obj17 = attachment_id(16704);
+            attachment_id(16724).endPreviewOperation(projectId);
+            const obj17 = attachment_id(16724);
           }
         } else if ("model_settings" === type.type) {
           const obj96 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId, settings: null, choices: null };
@@ -980,9 +980,9 @@ function handleEvent(projectId, pendingEvents, type) {
                     value.add(combined);
                     ({ location: obj3.location, code: obj3.code } = tmp2);
                     ({ message: obj3.message, source: obj3.details } = historical);
-                    const result1 = pendingEvents(16706).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
+                    const result1 = pendingEvents(16726).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
                     const obj = { location: null, code: null, message: null, details: null };
-                    obj2 = pendingEvents(16706);
+                    obj2 = pendingEvents(16726);
                   }
                   obj4 = map6;
                 }
@@ -2806,27 +2806,27 @@ function closeAllConnections() {
   map5.clear();
   map8.clear();
 }
-const getOlderHistoryCursor = fn(16702).getOlderHistoryCursor;
+const getOlderHistoryCursor = fn(16722).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let set = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let value = { location: "connection", code: fn(16706).VibegrationErrorCodes.SEND_FAILED };
-let obj2 = { location: "agent", code: fn(16706).VibegrationErrorCodes.AGENT_ERROR };
+let value = { location: "connection", code: fn(16726).VibegrationErrorCodes.SEND_FAILED };
+let obj2 = { location: "agent", code: fn(16726).VibegrationErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
-let obj3 = { build_error: { location: "build", code: fn(16706).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj4 = { location: "build", code: fn(16706).VibegrationErrorCodes.BUILD_FAILED };
-obj3.healthcheck_failed = { location: "healthcheck", code: fn(16706).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-let obj5 = { location: "healthcheck", code: fn(16706).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-obj3.error = { location: "agent", code: fn(16706).VibegrationErrorCodes.AGENT_ERROR };
+let obj3 = { build_error: { location: "build", code: fn(16726).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj4 = { location: "build", code: fn(16726).VibegrationErrorCodes.BUILD_FAILED };
+obj3.healthcheck_failed = { location: "healthcheck", code: fn(16726).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+let obj5 = { location: "healthcheck", code: fn(16726).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+obj3.error = { location: "agent", code: fn(16726).VibegrationErrorCodes.AGENT_ERROR };
 let obj7 = { web: null, preview: null };
-let obj6 = { location: "agent", code: fn(16706).VibegrationErrorCodes.AGENT_ERROR };
-obj7.web = { location: "runtime_frame", code: fn(16706).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-let obj8 = { location: "runtime_frame", code: fn(16706).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-obj7.preview = { location: "runtime_worker", code: fn(16706).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
+let obj6 = { location: "agent", code: fn(16726).VibegrationErrorCodes.AGENT_ERROR };
+obj7.web = { location: "runtime_frame", code: fn(16726).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+let obj8 = { location: "runtime_frame", code: fn(16726).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+obj7.preview = { location: "runtime_worker", code: fn(16726).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();

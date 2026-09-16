@@ -1,10 +1,10 @@
-// Module ID: 15919
-// Function ID: 15920
+// Module ID: 15939
+// Function ID: 15940
 // Name: useScrollToInitialIndexOnce
 // Dependencies: [19, 2]
 // Exports: useScrollToInitialIndexOnce
 
-// Module 15919 (useScrollToInitialIndexOnce)
+// Module 15939 (useScrollToInitialIndexOnce)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

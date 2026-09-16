@@ -1,58 +1,13 @@
-// Module ID: 7890
-// Function ID: 7891
+// Module ID: 7899
+// Function ID: 7900
 // Name: getBurstAnimation
-// Dependencies: [5, 7891, 7892, 7893, 7894, 7895, 7896, 7897, 7898, 7899, 7900, 7901, 7902, 7903, 7904, 7905, 7906, 7907, 7908, 7909, 7910, 7911, 7912, 7913, 7914, 7915, 7916, 7917, 7918, 7919, 7920, 7921, 7922, 7923, 7924, 7925, 7926, 7927, 2]
+// Dependencies: [5, 7900, 7901, 7902, 7903, 7904, 7905, 7906, 7907, 7908, 7909, 7910, 7911, 7912, 7913, 7914, 7915, 7916, 7917, 7918, 7919, 7920, 7921, 7922, 7923, 7924, 7925, 7926, 7927, 7928, 7929, 7930, 7931, 7932, 7933, 7934, 7935, 7936, 2]
 // Exports: getBurstAnimation
 
-// Module 7890 (getBurstAnimation)
+// Module 7899 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(7891);
-    }
-  },
-  {
-    load() {
-      return closure_0(7892);
-    }
-  },
-  {
-    load() {
-      return closure_0(7893);
-    }
-  },
-  {
-    load() {
-      return closure_0(7894);
-    }
-  },
-  {
-    load() {
-      return closure_0(7895);
-    }
-  },
-  {
-    load() {
-      return closure_0(7896);
-    }
-  },
-  {
-    load() {
-      return closure_0(7897);
-    }
-  },
-  {
-    load() {
-      return closure_0(7898);
-    }
-  },
-  {
-    load() {
-      return closure_0(7899);
-    }
-  },
   {
     load() {
       return closure_0(7900);
@@ -97,9 +52,7 @@ const items = [
     load() {
       return closure_0(7908);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(7909);
@@ -144,7 +97,9 @@ const items1 = [
     load() {
       return closure_0(7917);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(7918);
@@ -188,6 +143,51 @@ const items1 = [
   {
     load() {
       return closure_0(7926);
+    }
+  },
+  {
+    load() {
+      return closure_0(7927);
+    }
+  },
+  {
+    load() {
+      return closure_0(7928);
+    }
+  },
+  {
+    load() {
+      return closure_0(7929);
+    }
+  },
+  {
+    load() {
+      return closure_0(7930);
+    }
+  },
+  {
+    load() {
+      return closure_0(7931);
+    }
+  },
+  {
+    load() {
+      return closure_0(7932);
+    }
+  },
+  {
+    load() {
+      return closure_0(7933);
+    }
+  },
+  {
+    load() {
+      return closure_0(7934);
+    }
+  },
+  {
+    load() {
+      return closure_0(7935);
     }
   }
 ];

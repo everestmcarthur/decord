@@ -1,13 +1,13 @@
-// Module ID: 8572
-// Function ID: 8573
+// Module ID: 8581
+// Function ID: 8582
 // Name: ShowExpressiveModalSubtitleAltFlag
-// Dependencies: [8551, 1434, 8539, 504, 2]
+// Dependencies: [8560, 1434, 8548, 504, 2]
 // Exports: shouldShowExpressiveModalSubtitleAlt, useShouldShowExpressiveModalSubtitleAlt
 
-// Module 8572 (ShowExpressiveModalSubtitleAltFlag)
+// Module 8581 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8539 */;
-import SafetyHubStore from "SafetyHubStore" /* 8551 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8548 */;
+import SafetyHubStore from "SafetyHubStore" /* 8560 */;
 
 require = fn;
 const ApexExperiment = fn(1434);

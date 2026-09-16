@@ -1,10 +1,10 @@
-// Module ID: 12456
-// Function ID: 12457
+// Module ID: 12464
+// Function ID: 12465
 // Name: directory_channels/GuildDirectoryUtils
-// Dependencies: [5, 19, 21, 12451, 4984, 12457, 1897, 2]
+// Dependencies: [5, 19, 21, 12459, 4983, 12465, 1897, 2]
 // Exports: onAddDirectoryGuildEntry
 
-// Module 12456 (directory_channels/GuildDirectoryUtils)
+// Module 12464 (directory_channels/GuildDirectoryUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

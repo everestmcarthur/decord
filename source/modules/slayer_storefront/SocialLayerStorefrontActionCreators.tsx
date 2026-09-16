@@ -1,16 +1,16 @@
-// Module ID: 10931
-// Function ID: 10932
+// Module ID: 10944
+// Function ID: 10945
 // Name: SocialLayerStorefrontActionCreators
-// Dependencies: [5, 8915, 7335, 1074, 1091, 573, 7333, 8982, 1271, 1926, 559, 2]
+// Dependencies: [5, 8926, 7338, 1074, 1091, 573, 7336, 8993, 1271, 1926, 559, 2]
 // Exports: fetchSocialLayerSKUPurchaseEligibility, fetchSocialLayerStorefront, fetchSocialLayerStorefrontAnnouncement, fetchSocialLayerStorefrontById, fetchSocialLayerStorefrontConfig, fetchSocialLayerStorefrontEntries, fetchSocialLayerStorefrontForApplication, fetchSocialLayerStorefrontLaunchAnnouncement, fetchSocialLayerStorefrontSku, fetchSocialLayerStorefrontSkuForApplication, setSocialLayerStorefrontState
 
-// Module 10931 (SocialLayerStorefrontActionCreators)
+// Module 10944 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8915 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7335 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8926 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7338 */;
 
 const require = globalThis.__r;
 

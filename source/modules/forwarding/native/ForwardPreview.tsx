@@ -1,20 +1,20 @@
-// Module ID: 11828
-// Function ID: 11829
+// Module ID: 11836
+// Function ID: 11837
 // Name: ForwardPreview
-// Dependencies: [19, 17, 21, 4639, 576, 4574, 8246, 8039, 8778, 11829, 1895, 11830, 12, 11831, 1115, 11833, 10262, 5171, 10242, 5672, 1477, 8943, 4635, 2915, 8263, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 4572, 8255, 8048, 8787, 11837, 1895, 11838, 12, 11839, 1115, 11841, 10270, 5172, 10250, 5673, 1477, 8954, 4634, 2915, 8272, 2]
 // Exports: ForwardPreview
 
-// Module 11828 (ForwardPreview)
+// Module 11836 (ForwardPreview)
 import nativeDefault from "native" /* 576 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1477 */;
 import _modDef2915 from "module_2915" /* 2915 */;
-import useThemeDefault from "useTheme" /* 4574 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8246 */;
-import ChatItemDefault from "ChatItem" /* 8778 */;
-import ClipViewDefault from "ClipView" /* 8943 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11829 */;
-import MosaicMediaType from "MosaicMediaType" /* 11831 */;
+import useThemeDefault from "useTheme" /* 4572 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8255 */;
+import ChatItemDefault from "ChatItem" /* 8787 */;
+import ClipViewDefault from "ClipView" /* 8954 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11837 */;
+import MosaicMediaType from "MosaicMediaType" /* 11839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(4639).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(4638).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -45,7 +45,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(4639);
+  let obj = attachmentCount(4638);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -55,7 +55,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;
@@ -94,7 +94,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num == null) {
       num = 0;
     }
-    tmp6 = tmp2(11830).CHECKPOINT_PERSONA_COLORS[num];
+    tmp6 = tmp2(11838).CHECKPOINT_PERSONA_COLORS[num];
   }
   if (tmp6 != null) {
     const primaryColor = tmp6.primaryColor;
@@ -114,7 +114,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         const intl4 = tmp2(1115).intl;
         const obj2 = { image_count: num2, video_count: num3 };
         let formatToPlainStringResult = intl4.formatToPlainString(tmp2(1115).t.Lr0Top, obj2);
-        let AttachmentIcon = tmp2(11833).ImagesIcon;
+        let AttachmentIcon = tmp2(11841).ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
@@ -131,7 +131,7 @@ export const ForwardPreview = function ForwardPreview(message) {
           size.height = v56;
           const items1 = [hasOwnProperty(FastImageDefault, size), ];
           const obj5 = { style: tmp.playIcon, size: "md", color: "white" };
-          items1[1] = hasOwnProperty(tmp2(10262).CirclePlayIcon, obj5);
+          items1[1] = hasOwnProperty(tmp2(10270).CirclePlayIcon, obj5);
           obj3.children = items1;
           let tmp7 = timestampProducer(View, obj3);
           let tmp8 = AttachmentIcon;
@@ -183,14 +183,14 @@ export const ForwardPreview = function ForwardPreview(message) {
       const intl3 = tmp2(1115).intl;
       const obj11 = { count: num3 };
       formatToPlainStringResult = intl3.formatToPlainString(tmp2(1115).t.SJ6pPX, obj11);
-      AttachmentIcon = tmp2(10262).CirclePlayIcon;
+      AttachmentIcon = tmp2(10270).CirclePlayIcon;
     } else if (num2 > 0) {
       const intl2 = tmp2(1115).intl;
       const obj12 = { count: num2 };
       if (1 === num2) {
-        let ImagesIcon = tmp2(5171).ImageIcon;
+        let ImagesIcon = tmp2(5172).ImageIcon;
       } else {
-        ImagesIcon = tmp2(11833).ImagesIcon;
+        ImagesIcon = tmp2(11841).ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
       formatToPlainStringResult = intl2.formatToPlainString(tmp2(1115).t.h4pFfU, obj12);
@@ -199,7 +199,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const intl = tmp2(1115).intl;
       const obj13 = { count: length };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1115).t["89ihS8"], obj13);
-      AttachmentIcon = tmp2(10242).AttachmentIcon;
+      AttachmentIcon = tmp2(10250).AttachmentIcon;
     }
     const tmp2Result = tmp2(12);
   } else {
@@ -211,7 +211,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   if (attachments.length > 1) {
     tmp33 = tmp7;
     if (null != tmp7) {
-      const size3 = { shape: tmp2(8943).CutoutShape.RoundedRect, x: 28, y: 28, width: 32, height: 32, cornerRadius: 12 };
+      const size3 = { shape: tmp2(8954).CutoutShape.RoundedRect, x: 28, y: 28, width: 32, height: 32, cornerRadius: 12 };
       const obj15 = { style: tmp.attachmentPreviewOverflow, children: null };
       const obj16 = { cutouts: null, children: null };
       const items2 = [size3];
@@ -221,7 +221,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj17 = { style: tmp.overflowCount, variant: "text-xs/semibold", color: "text-default", children: null };
       const items4 = ["+", length - 1];
       obj17.children = items4;
-      items3[1] = timestampProducer(tmp2(4635).Text, obj17);
+      items3[1] = timestampProducer(tmp2(4634).Text, obj17);
       obj15.children = items3;
       tmp33 = timestampProducer(View, obj15);
     }
@@ -234,7 +234,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     const obj22 = { variant: "text-md/medium", children: null };
     const intl5 = tmp2(1115).intl;
     obj22.children = intl5.string(_modDef2915.goiR2u);
-    tmp36Result = tmp36(tmp2(4635).Text, obj22);
+    tmp36Result = tmp36(tmp2(4634).Text, obj22);
   }
   const items6 = [tmp36Result, , ];
   let tmp36Result5 = hasContent;
@@ -268,7 +268,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         str3 = "text-sm/medium";
       }
       const obj26 = { variant: str3, color: "text-muted", children: tmp9 };
-      tmp36Result7 = tmp36(tmp2(4635).Text, obj26);
+      tmp36Result7 = tmp36(tmp2(4634).Text, obj26);
     }
     items7[1] = tmp36Result7;
     obj24.children = items7;
@@ -291,11 +291,11 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num5 == null) {
       num5 = 0;
     }
-    const obj29 = { uri: tmp2(8263).getCardAssetUrl(num5) };
+    const obj29 = { uri: tmp2(8272).getCardAssetUrl(num5) };
     size4.source = obj29;
     obj27.children = tmp36(tmp46, size4);
     tmp36Result8 = tmp36(tmp35, obj27);
-    const tmp2Result2 = tmp2(8263);
+    const tmp2Result2 = tmp2(8272);
   }
   items5[3] = tmp36Result8;
   obj19.children = items5;

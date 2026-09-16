@@ -1,12 +1,12 @@
-// Module ID: 16397
-// Function ID: 16398
+// Module ID: 16417
+// Function ID: 16418
 // Name: GuildsBarFolderMenuItems
-// Dependencies: [5, 5523, 1074, 7188, 1115, 14053, 1897, 7487, 16398, 2]
+// Dependencies: [5, 5524, 1074, 7191, 1115, 14066, 1897, 7490, 16418, 2]
 // Exports: getGuildFolderMenuItems
 
-// Module 16397 (GuildsBarFolderMenuItems)
+// Module 16417 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SortedGuildStore from "SortedGuildStore" /* 5523 */;
+import SortedGuildStore from "SortedGuildStore" /* 5524 */;
 
 const require = globalThis.__r;
 

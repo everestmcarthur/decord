@@ -1,13 +1,13 @@
-// Module ID: 6670
-// Function ID: 6671
+// Module ID: 6673
+// Function ID: 6674
 // Name: WaterIllocon
-// Dependencies: [21, 5672, 6671, 2]
+// Dependencies: [21, 5673, 6674, 2]
 // Exports: WaterIllocon
 
-// Module 6670 (WaterIllocon)
+// Module 6673 (WaterIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6671 from "module_6671" /* 6671 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6674 from "module_6674" /* 6674 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const WaterIllocon = function WaterIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6671 };
+  const obj2 = { uri: _modDef6674 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

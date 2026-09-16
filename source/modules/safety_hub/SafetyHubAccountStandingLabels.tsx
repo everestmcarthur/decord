@@ -1,11 +1,11 @@
-// Module ID: 14863
-// Function ID: 14864
+// Module ID: 14879
+// Function ID: 14880
 // Name: SafetyHubAccountStandingLabels
-// Dependencies: [8541, 1115, 2]
+// Dependencies: [8550, 1115, 2]
 
-// Module 14863 (SafetyHubAccountStandingLabels)
+// Module 14879 (SafetyHubAccountStandingLabels)
 import util from "util" /* 1115 */;
-import SafetyHubModels from "SafetyHubModels" /* 8541 */;
+import SafetyHubModels from "SafetyHubModels" /* 8550 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

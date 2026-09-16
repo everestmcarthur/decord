@@ -1,13 +1,13 @@
-// Module ID: 6476
-// Function ID: 6477
+// Module ID: 6479
+// Function ID: 6480
 // Name: PurchaseDiscountSpotIllustration
-// Dependencies: [21, 5672, 6477, 2]
+// Dependencies: [21, 5673, 6480, 2]
 // Exports: PurchaseDiscountSpotIllustration
 
-// Module 6476 (PurchaseDiscountSpotIllustration)
+// Module 6479 (PurchaseDiscountSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6477 from "module_6477" /* 6477 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6480 from "module_6480" /* 6480 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PurchaseDiscountSpotIllustration = function PurchaseDiscountSpotIll
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6477 };
+  const obj2 = { uri: _modDef6480 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

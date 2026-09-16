@@ -1,10 +1,10 @@
-// Module ID: 15778
-// Function ID: 15779
+// Module ID: 15796
+// Function ID: 15797
 // Name: ClipboardCopyInput
-// Dependencies: [5, 19, 17, 1896, 1074, 21, 4639, 504, 7069, 7145, 7296, 6711, 2]
+// Dependencies: [5, 19, 17, 1896, 1074, 21, 4638, 504, 7072, 7148, 7299, 6714, 2]
 // Exports: default
 
-// Module 15778 (ClipboardCopyInput)
+// Module 15796 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1896 */;
@@ -15,7 +15,7 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");

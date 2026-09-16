@@ -1,10 +1,10 @@
-// Module ID: 10872
-// Function ID: 10873
+// Module ID: 10880
+// Function ID: 10881
 // Name: useFetchSummer2026GogoPromoEligibility
 // Dependencies: [32, 19, 1074, 1271, 2]
 // Exports: useFetchSummer2026GogoPromoEligibility
 
-// Module 10872 (useFetchSummer2026GogoPromoEligibility)
+// Module 10880 (useFetchSummer2026GogoPromoEligibility)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

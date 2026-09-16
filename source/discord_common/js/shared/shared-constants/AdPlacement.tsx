@@ -1,9 +1,9 @@
-// Module ID: 5535
-// Function ID: 5536
+// Module ID: 5536
+// Function ID: 5537
 // Name: AdPlacement
 // Dependencies: [2]
 
-// Module 5535 (AdPlacement)
+// Module 5536 (AdPlacement)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AdPlacement.tsx");

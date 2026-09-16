@@ -1,18 +1,18 @@
-// Module ID: 17172
-// Function ID: 17173
+// Module ID: 17228
+// Function ID: 17229
 // Name: ActivityPanelFocusedView
-// Dependencies: [19, 17, 4631, 1958, 1957, 1921, 9637, 17167, 1074, 12407, 21, 4639, 576, 1612, 504, 1478, 17162, 16841, 4376, 4350, 4640, 5058, 5043, 4268, 17164, 17173, 9636, 9767, 2]
+// Dependencies: [19, 17, 4630, 1958, 1957, 1921, 9648, 17223, 1074, 12415, 21, 4638, 576, 1612, 504, 1478, 17218, 16898, 4374, 4348, 4639, 5059, 5042, 4266, 17220, 17229, 9647, 9775, 2]
 // Exports: useBaseActivityPanelFocusedView
 
-// Module 17172 (ActivityPanelFocusedView)
+// Module 17228 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4350 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5058 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9767 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17164 */;
+import native from "native" /* 4348 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import spring from "spring" /* 5059 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9775 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17220 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 
@@ -101,7 +101,7 @@ class BaseActivityPanelFocusedView {
       }
       let num6 = 1;
       if (stateFromStores) {
-        const tmp9Result = tmp9(4640);
+        const tmp9Result = tmp9(4639);
         let str2 = "animate-always";
         if (obj.get()) {
           str2 = "animate-always";
@@ -127,7 +127,7 @@ class BaseActivityPanelFocusedView {
         size.borderTopEndRadius = num;
         return size;
       } else {
-        const tmp9Result2 = tmp9(5058);
+        const tmp9Result2 = tmp9(5059);
         if (!wrapperOffset.get().gestureActive) {
           let tmp21 = React7;
           tmp9Result2.withSpring(height, tmp21, "animate-always", transitionComplete);
@@ -225,16 +225,16 @@ class BaseActivityPanelFocusedView {
   }
 }
 const ActivityLayoutMode = fn(1921).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9637);
+const ActivityPanelConstants = fn(9648);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17167);
+const ActivityPanelNativeConstants = fn(17223);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(12407).IS_IOS;
+const IS_IOS = fn(12415).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

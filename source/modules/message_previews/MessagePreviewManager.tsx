@@ -1,19 +1,19 @@
-// Module ID: 15415
-// Function ID: 15416
+// Module ID: 15431
+// Function ID: 15432
 // Name: MessagePreviewManager
-// Dependencies: [32, 5, 5362, 1962, 502, 1958, 13813, 1074, 3, 7225, 12, 1987, 573, 1271, 15416, 2]
+// Dependencies: [32, 5, 5363, 1962, 502, 1958, 13826, 1074, 3, 7228, 12, 1987, 573, 1271, 15432, 2]
 
-// Module 15415 (MessagePreviewManager)
+// Module 15431 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 15416 */;
+import RemoteFetchData from "RemoteFetchData" /* 15432 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13813 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13826 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
 
 require = fn;
 const isThread = fn(1962).isThread;

@@ -1,12 +1,12 @@
-// Module ID: 8427
-// Function ID: 8428
+// Module ID: 8436
+// Function ID: 8437
 // Name: MediaModalWebVideoFile
-// Dependencies: [32, 19, 21, 8418, 8393, 8382, 8384, 2]
+// Dependencies: [32, 19, 21, 8427, 8402, 8391, 8393, 2]
 // Exports: createWebFileVideoControls
 
-// Module 8427 (MediaModalWebVideoFile)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8382 */;
-import MediaModalWebView from "MediaModalWebView" /* 8418 */;
+// Module 8436 (MediaModalWebVideoFile)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8391 */;
+import MediaModalWebView from "MediaModalWebView" /* 8427 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

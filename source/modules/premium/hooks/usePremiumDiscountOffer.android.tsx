@@ -1,14 +1,14 @@
-// Module ID: 8168
-// Function ID: 8169
+// Module ID: 8177
+// Function ID: 8178
 // Name: usePremiumDiscountOffer
-// Dependencies: [7344, 1374, 8169, 7347, 563, 2]
+// Dependencies: [7347, 1374, 8178, 7350, 563, 2]
 // Exports: usePremiumDiscountOffer, usePremiumGroupDiscountOffer
 
-// Module 8168 (usePremiumDiscountOffer)
+// Module 8177 (usePremiumDiscountOffer)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ProductIds from "ProductIds" /* 7347 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8169 */;
-import IAPStore from "IAPStore" /* 7344 */;
+import ProductIds from "ProductIds" /* 7350 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8178 */;
+import IAPStore from "IAPStore" /* 7347 */;
 
 require = fn;
 const PremiumConstants = fn(1374);

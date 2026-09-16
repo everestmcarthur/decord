@@ -1,21 +1,21 @@
-// Module ID: 5637
-// Function ID: 5638
+// Module ID: 5638
+// Function ID: 5639
 // Name: ImpersonateActionCreators
-// Dependencies: [1958, 2013, 2022, 2016, 4278, 2012, 4820, 2015, 1074, 1965, 1241, 4819, 2021, 573, 1101, 2]
+// Dependencies: [1958, 2013, 2022, 2016, 4276, 2012, 4819, 2015, 1074, 1965, 1241, 4818, 2021, 573, 1101, 2]
 // Exports: startImpersonating, stopImpersonating, updateImpersonatedChannels, updateImpersonatedData, updateImpersonatedRoles
 
-// Module 5637 (ImpersonateActionCreators)
+// Module 5638 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ImpersonateTypes from "ImpersonateTypes" /* 2021 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4818 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
 
 const router_utils = tmp2(1101);

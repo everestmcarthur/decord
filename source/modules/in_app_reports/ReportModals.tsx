@@ -1,18 +1,18 @@
-// Module ID: 8755
-// Function ID: 8756
+// Module ID: 8764
+// Function ID: 8765
 // Name: ReportModals
-// Dependencies: [5, 1963, 4289, 1386, 1074, 8756, 8757, 8759, 1972, 4819, 2]
+// Dependencies: [5, 1963, 4287, 1386, 1074, 8765, 8766, 8768, 1972, 4818, 2]
 // Exports: showReportModalForApp, showReportModalForFirstDM, showReportModalForGuild, showReportModalForGuildDirectoryEntry, showReportModalForGuildScheduledEvent, showReportModalForInappropriateConversationSafetyAlert, showReportModalForMessage, showReportModalForStageChannel, showReportModalForUser, showReportModalForWidget, showReportToModMessageModal, showStaffTestReportModalForGuild, showStaffTestReportModalForMessage, showStaffTestReportModalForUser, showUnauthenticatedReportModalForGuild, showUnauthenticatedReportModalForMessage, showUnauthenticatedReportModalForTida, showUnauthenticatedReportModalForUser, submitHamReportForFirstDM, submitReportForInappropriateConversationSafetyAlert
 
-// Module 8755 (ReportModals)
+// Module 8764 (ReportModals)
 import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
-import MenuTypes from "MenuTypes" /* 8756 */;
-import showReportModal from "showReportModal" /* 8757 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8759 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4818 */;
+import MenuTypes from "MenuTypes" /* 8765 */;
+import showReportModal from "showReportModal" /* 8766 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8768 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import StageInstanceStore from "StageInstanceStore" /* 1963 */;
-import MessageRecord from "MessageRecord" /* 4289 */;
+import MessageRecord from "MessageRecord" /* 4287 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;

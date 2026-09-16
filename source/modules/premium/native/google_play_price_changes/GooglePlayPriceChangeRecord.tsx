@@ -1,9 +1,9 @@
-// Module ID: 4305
-// Function ID: 4306
+// Module ID: 4303
+// Function ID: 4304
 // Name: GooglePlayPriceChangeRecord
 // Dependencies: [1387, 2]
 
-// Module 4305 (GooglePlayPriceChangeRecord)
+// Module 4303 (GooglePlayPriceChangeRecord)
 import Record from "Record" /* 1387 */;
 
 const GooglePlayPriceChangeMode = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };

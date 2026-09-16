@@ -1,14 +1,14 @@
-// Module ID: 8362
-// Function ID: 8363
+// Module ID: 8371
+// Function ID: 8372
 // Name: useUserProfileOverscrollStyles
-// Dependencies: [32, 19, 4631, 1478, 504, 4376, 2]
+// Dependencies: [32, 19, 4630, 1478, 504, 4374, 2]
 // Exports: default
 
-// Module 8362 (useUserProfileOverscrollStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+// Module 8371 (useUserProfileOverscrollStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 let __initData = { code: "function useUserProfileOverscrollStylesTsx1(){const{position}=this.__closure;return position.get()<=0;}" };

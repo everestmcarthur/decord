@@ -1,16 +1,16 @@
-// Module ID: 15895
-// Function ID: 15896
+// Module ID: 15913
+// Function ID: 15914
 // Name: UserSettingsDesignSystemBackdrop
-// Dependencies: [32, 19, 17, 21, 4639, 5692, 5057, 4635, 5059, 4376, 5058, 5062, 5042, 5047, 2]
+// Dependencies: [32, 19, 17, 21, 4638, 5693, 5058, 4634, 5060, 4374, 5059, 5063, 5041, 5046, 2]
 // Exports: default
 
-// Module 15895 (UserSettingsDesignSystemBackdrop)
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import spring from "spring" /* 5058 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import springPresets from "springPresets" /* 5062 */;
-import Card from "Card" /* 5692 */;
+// Module 15913 (UserSettingsDesignSystemBackdrop)
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import spring from "spring" /* 5059 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import springPresets from "springPresets" /* 5063 */;
+import Card from "Card" /* 5693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,7 +39,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -66,8 +66,8 @@ export default function UserSettingsDesignSystemBackdrop() {
     }
     return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
   };
-  let obj = showBackdrop(4376);
-  fn.__closure = { withSpring: showBackdrop(5058).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5062).SUBTLE_SPRING };
+  let obj = showBackdrop(4374);
+  fn.__closure = { withSpring: showBackdrop(5059).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5063).SUBTLE_SPRING };
   fn.__workletHash = 1929832617927;
   fn.__initData = __initData;
   const obj3 = { contentContainerStyle: tmp.container, children: null };
@@ -75,24 +75,24 @@ export default function UserSettingsDesignSystemBackdrop() {
   const obj4 = { spacing: 24, children: null };
   const items = [closure_6(BackdropCard, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(BackdropCard, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(BackdropCard, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
   obj4.children = items;
-  const items1 = [closure_7(showBackdrop(5057).Stack, obj4), ];
+  const items1 = [closure_7(showBackdrop(5058).Stack, obj4), ];
   if (showBackdrop) {
     function handleClose() {
       closure_1(false);
     }
     const obj5 = { onDismiss: handleClose, children: null };
     const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    const items2 = [tmp13(tmp8(5047).Backdrop, obj6), ];
+    const items2 = [tmp13(tmp8(5046).Backdrop, obj6), ];
     const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj8 = { children: null };
     const obj9 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
-    obj8.children = tmp11(tmp8(4635).Text, obj9);
-    obj7.children = tmp13(tmp8(5692).Card, obj8);
+    obj8.children = tmp11(tmp8(4634).Text, obj9);
+    obj7.children = tmp13(tmp8(5693).Card, obj8);
     items2[1] = tmp13(closure_5, obj7);
     obj5.children = items2;
-    showBackdrop = tmp11(tmp8(5042).Dialog, obj5);
+    showBackdrop = tmp11(tmp8(5041).Dialog, obj5);
   }
   items1[1] = showBackdrop;
   obj3.children = items1;

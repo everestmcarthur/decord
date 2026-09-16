@@ -1,13 +1,13 @@
-// Module ID: 11886
-// Function ID: 11887
+// Module ID: 11894
+// Function ID: 11895
 // Name: UserActivityActionCreators
-// Dependencies: [5, 4679, 1074, 573, 11883, 1271, 2]
+// Dependencies: [5, 4678, 1074, 573, 11891, 1271, 2]
 // Exports: getMetadata, play, sync
 
-// Module 11886 (UserActivityActionCreators)
+// Module 11894 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PresenceStore from "PresenceStore" /* 4679 */;
+import PresenceStore from "PresenceStore" /* 4678 */;
 
 const require = globalThis.__r;
 

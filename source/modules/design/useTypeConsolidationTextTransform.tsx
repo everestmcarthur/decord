@@ -1,10 +1,10 @@
-// Module ID: 7086
-// Function ID: 7087
+// Module ID: 7089
+// Function ID: 7090
 // Name: useTypeConsolidationTextTransform
-// Dependencies: [7087, 2]
+// Dependencies: [7090, 2]
 // Exports: useTypeConsolidationEyebrow, useTypeConsolidationTextTransform
 
-// Module 7086 (useTypeConsolidationTextTransform)
+// Module 7089 (useTypeConsolidationTextTransform)
 import size from "module_2" /* 2 */;
 
 const style = { textTransform: "none" };

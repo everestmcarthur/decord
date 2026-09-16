@@ -1,30 +1,30 @@
-// Module ID: 9636
-// Function ID: 9637
+// Module ID: 9647
+// Function ID: 9648
 // Name: EmbeddedActivitiesActionCreators
-// Dependencies: [5, 9422, 4867, 4655, 4782, 1919, 502, 1958, 1980, 4278, 1372, 4658, 1957, 1921, 9637, 1074, 1349, 1955, 7841, 9638, 7858, 9639, 9655, 9656, 9657, 573, 9702, 9659, 4541, 4868, 8984, 9678, 9703, 1895, 9704, 9671, 9543, 1241, 9669, 9714, 9664, 4983, 1115, 9660, 9677, 1249, 4832, 4268, 9608, 4840, 1271, 1370, 8499, 7563, 4652, 7787, 1946, 1944, 2]
+// Dependencies: [5, 9433, 4866, 4654, 4781, 1919, 502, 1958, 1980, 4276, 1372, 4657, 1957, 1921, 9648, 1074, 1349, 1955, 7850, 9649, 7867, 9650, 9666, 9667, 9668, 573, 9713, 9670, 4539, 4867, 8995, 9689, 9714, 1895, 9715, 9682, 9554, 1241, 9680, 9725, 9675, 4982, 1115, 9671, 9688, 1249, 4831, 4266, 9619, 4839, 1271, 1370, 8508, 7566, 4651, 7790, 1946, 1944, 2]
 // Exports: consumeRequestToReactToSeriousThermalState, dismissNewActivityIndicator, disregardSeriousThermalState, fetchDeveloperApplications, fetchShelf, maybeDisconnectFromCurrentActivity, openActivityPopoutWindow, refreshProxyTicket, requestRespondToSeriousThermalState, runPrimaryAppCommandOrJoinEmbeddedActivity, sendEmbeddedActivityInvite, sendEmbeddedActivityInviteUser, updateActivityPanelMode, updateActivityPopoutWindowLayout, updateFocusedActivityLayout, uploadImageAttachment, validateTestMode
 
-// Module 9636 (EmbeddedActivitiesActionCreators)
+// Module 9647 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4268 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4266 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4867 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4655 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 4782 */;
+import ApplicationStore from "ApplicationStore" /* 4866 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 4781 */;
 import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import VoiceStateStore from "VoiceStateStore" /* 4657 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 
-const ChannelRTCActionCreatorsDefault = tmp2(4840);
-const ChannelRTCParticipants = tmp6(9608);
+const ChannelRTCActionCreatorsDefault = tmp2(4839);
+const ChannelRTCParticipants = tmp6(9619);
 require = fn;
 let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0, value) {
   if (c17 === 2) {
@@ -279,9 +279,9 @@ let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants2.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const obj = closure_1_0(8984);
-                const hasApplicationFlagResult = closure_1_0(8984).hasApplicationFlag(application, constants.EMBEDDED);
-                const result = closure_1_0(9678).isActivityInTextSupportedForChannel(type);
+                const obj = closure_1_0(8995);
+                const hasApplicationFlagResult = closure_1_0(8995).hasApplicationFlag(application, constants.EMBEDDED);
+                const result = closure_1_0(9689).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = hasApplicationFlagResult;
                 }
@@ -582,25 +582,25 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0, value) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new tmp3(4541)(obj3);
+                              const tmp21 = new tmp3(4539)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in tmp3(4868).ReasonCodes) {
-                            const tmp14 = new tmp3(4868)(error_reason_code);
+                          if (error_reason_code in tmp3(4867).ReasonCodes) {
+                            const tmp14 = new tmp3(4867)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
                         const obj = nonce(1241);
-                        const tmp3Result = nonce(4868);
-                        closure_1_1(new nonce(4868)(nonce(4868).ReasonCodes.UNKNOWN));
+                        const tmp3Result = nonce(4867);
+                        closure_1_1(new nonce(4867)(nonce(4867).ReasonCodes.UNKNOWN));
                       }
                     };
                   }
                 };
-                nonce(9543)(obj);
+                nonce(9554)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1303,10 +1303,10 @@ let closure_38 = async function _sendEmbeddedActivityInviteUser() {
     } else {
       let content;
       if (null != closure_1_5) {
-        content = closure_1(7787).parse(channel, tmp2).content;
-        const obj = closure_1(7787);
+        content = closure_1(7790).parse(channel, tmp2).content;
+        const obj = closure_1(7790);
       }
-      const obj2 = closure_1(7563);
+      const obj2 = closure_1(7566);
       obj2.sendInvite(result, code.code, closure_1_3, closure_1_4, content);
     }
   });
@@ -1533,14 +1533,14 @@ let closure_42 = async function _refreshProxyTicket(applicationId, arg1) {
     }
   })();
 };
-let closure_4 = fn(9422).getOrFetchApplicationCommandIndexForTarget;
+let closure_4 = fn(9433).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(1921).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
-const ActivityPanelModes = fn(9637).ActivityPanelModes;
+const ActivityPanelModes = fn(9648).ActivityPanelModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, AnalyticsGameOpenTypes: closure_19, ApplicationFlags: closure_20, ChannelTypes: closure_21, Endpoints: closure_22, PopoutWindowKeys: closure_23 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1349).INSTALL_LESS_APP_IDS;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-const InviteTargetTypes = fn(7841).InviteTargetTypes;
+const InviteTargetTypes = fn(7850).InviteTargetTypes;
 let closure_28 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_30 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER" };
 const size = fn(2);

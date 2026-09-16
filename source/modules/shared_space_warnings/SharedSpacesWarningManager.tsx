@@ -1,19 +1,19 @@
-// Module ID: 13828
-// Function ID: 13829
+// Module ID: 13841
+// Function ID: 13842
 // Name: SharedSpacesWarningManager
-// Dependencies: [1958, 4662, 4288, 13829, 13827, 1091, 13830, 1094, 13834, 7225, 2]
+// Dependencies: [1958, 4661, 4286, 13842, 13840, 1091, 13843, 1094, 13847, 7228, 2]
 // Exports: userBlockedWarningInCooldown, voiceBlockedWarningInCooldownForUsers
 
-// Module 13828 (SharedSpacesWarningManager)
+// Module 13841 (SharedSpacesWarningManager)
 import DurationsDefault from "Durations" /* 1091 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13830 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13834 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13843 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13847 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13827 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13840 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
 
 require = fn;
 function handleChannelSelect(channelId) {
@@ -94,7 +94,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(13829);
+const SharedSpacesWarningStore = fn(13842);
 ({ getChannelDismissTimestamp: hasOwnProperty, getUserDismissTimestamp: metroRequire, getGlobalDismissTimestamp: closure_7, isBlockedWarningQueued: closure_8, dequeueBlockWarning: closure_9 } = SharedSpacesWarningStore);
 let closure_11 = 3 * DurationsDefault.Millis.DAY;
 let closure_12 = 2 * DurationsDefault.Millis.DAY;

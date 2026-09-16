@@ -1,12 +1,12 @@
-// Module ID: 11059
-// Function ID: 11060
+// Module ID: 11072
+// Function ID: 11073
 // Name: maybeShowDiscardChangesAlert
-// Dependencies: [4984, 1115, 2]
+// Dependencies: [4983, 1115, 2]
 // Exports: default, showDiscardChangesAlert
 
-// Module 11059 (maybeShowDiscardChangesAlert)
+// Module 11072 (maybeShowDiscardChangesAlert)
 import util from "util" /* 1115 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -36,8 +36,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     obj2.onCancel = function onCancel() {
       onConfirm(dependencyMap[0]).close();
     };
-    let showResult = onConfirm(4984).show(obj2);
-    const obj = onConfirm(4984);
+    let showResult = onConfirm(4983).show(obj2);
+    const obj = onConfirm(4983);
   } else {
     showResult = onConfirm();
   }

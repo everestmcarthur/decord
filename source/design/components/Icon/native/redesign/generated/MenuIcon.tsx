@@ -1,13 +1,13 @@
-// Module ID: 15944
-// Function ID: 15945
+// Module ID: 15964
+// Function ID: 15965
 // Name: MenuIcon
-// Dependencies: [19, 21, 576, 4340, 15945, 2]
+// Dependencies: [19, 21, 576, 4338, 15965, 2]
 // Exports: MenuIcon
 
-// Module 15944 (MenuIcon)
+// Module 15964 (MenuIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15945 from "module_15945" /* 15945 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod15965 from "module_15965" /* 15965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const MenuIcon = function MenuIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15945, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15965, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

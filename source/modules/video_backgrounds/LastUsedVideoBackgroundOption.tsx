@@ -1,12 +1,12 @@
-// Module ID: 9232
-// Function ID: 9233
+// Module ID: 9243
+// Function ID: 9244
 // Name: LastUsedVideoBackgroundOption
-// Dependencies: [19, 1220, 1372, 9229, 4297, 504, 2]
+// Dependencies: [19, 1220, 1372, 9240, 4295, 504, 2]
 // Exports: getLastUsedVideoBackgroundOption, useLastUsedVideoBackgroundOption
 
-// Module 9232 (LastUsedVideoBackgroundOption)
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9229 */;
+// Module 9243 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9240 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -57,7 +57,7 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
           let tmp9 = videoBackgroundOptionFromProto;
         } else {
           tmp9 = null;
-          const tmp4Result = tmp4(9229);
+          const tmp4Result = tmp4(9240);
         }
         let tmp8 = tmp9;
       } else {

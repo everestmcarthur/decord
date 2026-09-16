@@ -1,9 +1,9 @@
-// Module ID: 9749
-// Function ID: 9750
+// Module ID: 9757
+// Function ID: 9758
 // Name: VideoRendererNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 9749 (VideoRendererNativeComponent)
+// Module 9757 (VideoRendererNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

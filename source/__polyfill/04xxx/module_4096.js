@@ -1,31 +1,40 @@
 // Module ID: 4096
 // Function ID: 4097
-// Dependencies: [3728, 3729]
+// Dependencies: [3907, 4097, 3727]
 // Exports: default
 
 // Module 4096
-import _typeof_mod from "module_3728" /* 3728 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import module_3907_mod from "module_3907" /* 3907 */;
+import subDays_mod from "subDays" /* 4097 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3907 = module_3907_mod;
+if (!module_3907) {
+  const obj = { default: module_3907 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3907;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_3907 = tmp3;
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj2 = { default: subDays };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = subDays;
 }
-requiredArgs = tmp5;
+subDays = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isWednesday(arg0) {
+export default function isYesterday(arg0) {
   requiredArgs.default(1, arguments);
-  return 3 === _typeof.default(arg0).getDay();
+  return module_3907.default(arg0, subDays.default(Date.now(), 1));
 };
 export default exports.default;

@@ -1,13 +1,13 @@
-// Module ID: 13098
-// Function ID: 13099
+// Module ID: 13106
+// Function ID: 13107
 // Name: useOverlayLayoutDriver
-// Dependencies: [19, 4376, 8414, 4640, 1177, 2]
+// Dependencies: [19, 4374, 8423, 4639, 1177, 2]
 // Exports: useFooterLayoutAnimation, useHeaderLayoutAnimation, useOverlayLayoutDriver
 
-// Module 13098 (useOverlayLayoutDriver)
+// Module 13106 (useOverlayLayoutDriver)
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4640 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import timing from "timing" /* 4639 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,9 +19,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(4376).useSharedValue(0);
-  let obj = sharedValue(4376);
-  const mediaViewerDimensions = sharedValue(8414).useMediaViewerDimensions();
+  sharedValue = sharedValue(4374).useSharedValue(0);
+  let obj = sharedValue(4374);
+  const mediaViewerDimensions = sharedValue(8423).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {

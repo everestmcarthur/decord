@@ -1,28 +1,28 @@
-// Module ID: 11144
-// Function ID: 11145
+// Module ID: 11158
+// Function ID: 11159
 // Name: SocialLayerStorefrontPoductPurchaseSuccessModal
-// Dependencies: [32, 718, 19, 17, 4631, 5595, 7336, 1074, 21, 4639, 576, 4376, 5058, 4640, 4607, 1478, 504, 5210, 7333, 4635, 5059, 1115, 5071, 7230, 5716, 5765, 8955, 7275, 7272, 11145, 7289, 1241, 5076, 10930, 3461, 8864, 4484, 2]
+// Dependencies: [32, 718, 19, 17, 4630, 5596, 7339, 1074, 21, 4638, 576, 4374, 5059, 4639, 4606, 1478, 504, 5211, 7336, 4634, 5060, 1115, 5072, 7233, 5717, 5766, 8966, 7278, 7275, 11159, 7292, 1241, 5077, 10943, 3461, 8875, 4482, 2]
 // Exports: SocialLayerStorefrontProductGiftPurchaseSuccessModal, SocialLayerStorefrontProductSelfPurchaseSuccessModal
 
-// Module 11144 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 11158 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import _modDef3461 from "module_3461" /* 3461 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import HapticUtils from "HapticUtils" /* 4607 */;
-import timing from "timing" /* 4640 */;
-import spring from "spring" /* 5058 */;
-import XSmallIcon from "XSmallIcon" /* 5765 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7333 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10930 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import HapticUtils from "HapticUtils" /* 4606 */;
+import timing from "timing" /* 4639 */;
+import spring from "spring" /* 5059 */;
+import XSmallIcon from "XSmallIcon" /* 5766 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7336 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
-import SKUStore from "SKUStore" /* 5595 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import SKUStore from "SKUStore" /* 5596 */;
 
 const require = globalThis.__r;
 
@@ -311,12 +311,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const numDays = fn(7336).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+const numDays = fn(7339).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HorizontalGradient: map1, VerticalGradient: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -351,7 +351,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 let obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_17 = createStyles.createStyles(obj2);
-createStyles = fn(4639);
+createStyles = fn(4638);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };

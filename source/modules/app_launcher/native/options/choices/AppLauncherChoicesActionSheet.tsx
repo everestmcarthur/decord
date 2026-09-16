@@ -1,22 +1,22 @@
-// Module ID: 12299
-// Function ID: 12300
+// Module ID: 12307
+// Function ID: 12308
 // Name: AppLauncherChoicesActionSheet
-// Dependencies: [32, 19, 17, 1483, 21, 4639, 576, 9006, 1612, 1364, 5527, 8719, 4606, 7050, 12300, 12301, 2]
+// Dependencies: [32, 19, 17, 1483, 21, 4638, 576, 9017, 1612, 1364, 5528, 8728, 4605, 7053, 12308, 12309, 2]
 // Exports: default
 
-// Module 12299 (AppLauncherChoicesActionSheet)
+// Module 12307 (AppLauncherChoicesActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5527 */;
-import Form from "Form" /* 8719 */;
-import _mod9006 from "module_9006" /* 9006 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5528 */;
+import Form from "Form" /* 8728 */;
+import _mod9017 from "module_9017" /* 9017 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod9006;
+  const tmp3 = _mod9017;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -32,7 +32,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1483).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { listItemContainer: { overflow: "hidden" }, listItem: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
@@ -135,11 +135,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_7(tmp3(12301).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_7(tmp3(12309).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_7(tmp3(12301).AppLauncherListEmptyState, {});
+    let tmp20 = closure_7(tmp3(12309).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -156,5 +156,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_8(option(12300).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_8(option(12308).AppLauncherCommandOptionActionSheet, obj2);
 };

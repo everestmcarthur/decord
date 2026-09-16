@@ -1,16 +1,16 @@
-// Module ID: 13542
-// Function ID: 13543
+// Module ID: 13554
+// Function ID: 13555
 // Name: AppIconUtils
-// Dependencies: [32, 5, 19, 17, 9455, 1074, 1374, 3, 1364, 13543, 9456, 5076, 573, 1241, 4338, 1115, 7489, 1609, 2]
+// Dependencies: [32, 5, 19, 17, 9466, 1074, 1374, 3, 1364, 13555, 9467, 5077, 573, 1241, 4336, 1115, 7492, 1609, 2]
 // Exports: isAppIconsSupported, navigateToAppIconSettings, setAppIcon, useAppIcons, useCurrentAppIcon
 
-// Module 13542 (AppIconUtils)
+// Module 13554 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import useMountEffectDefault from "useMountEffect" /* 5076 */;
-import openUserSettings from "openUserSettings" /* 7489 */;
-import AppIconTypes from "AppIconTypes" /* 9456 */;
+import useMountEffectDefault from "useMountEffect" /* 5077 */;
+import openUserSettings from "openUserSettings" /* 7492 */;
+import AppIconTypes from "AppIconTypes" /* 9467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -136,7 +136,7 @@ let closure_16 = async function _setAppIcon(arg0, arg1) {
   }
   return arg1;
 };
-const AppIconConstants = fn(9455);
+const AppIconConstants = fn(9466);
 ({ getDefaultIcon: metroRequire, getOfficialAlternateIcons: closure_7, getLimitedAlternateIcons: closure_8 } = AppIconConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
@@ -144,7 +144,7 @@ const PremiumTypes = fn(1374).PremiumTypes;
 let closure_12 = new LoggerDefault("AppIconUtils");
 const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
-  let DCDIconManager = fn(13543).default;
+  let DCDIconManager = fn(13555).default;
 } else {
   DCDIconManager = fn(17).NativeModules.DCDIconManager;
 }

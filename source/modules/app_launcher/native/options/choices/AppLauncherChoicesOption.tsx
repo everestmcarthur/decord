@@ -1,20 +1,20 @@
-// Module ID: 12298
-// Function ID: 12299
+// Module ID: 12306
+// Function ID: 12307
 // Name: AppLauncherChoicesOption
-// Dependencies: [32, 19, 21, 4639, 576, 1875, 4606, 12299, 1897, 12303, 8719, 4635, 2]
+// Dependencies: [32, 19, 21, 4638, 576, 1875, 4605, 12307, 1897, 12311, 8728, 4634, 2]
 // Exports: default
 
-// Module 12298 (AppLauncherChoicesOption)
+// Module 12306 (AppLauncherChoicesOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,7 +67,7 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj3.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12299, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
+    obj2.openLazy(asyncRequireImpl(12307, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
   let tmp = closure_6();
   const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);

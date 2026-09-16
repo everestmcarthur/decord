@@ -1,22 +1,22 @@
-// Module ID: 16430
-// Function ID: 16431
+// Module ID: 16450
+// Function ID: 16451
 // Name: HomeDrawerGuildVoiceState
-// Dependencies: [19, 17, 2013, 4288, 4820, 4663, 1074, 21, 4639, 576, 13163, 1177, 4635, 1115, 10193, 5672, 5071, 16429, 504, 12, 13804, 2]
+// Dependencies: [19, 17, 2013, 4286, 4819, 4662, 1074, 21, 4638, 576, 13174, 1177, 4634, 1115, 10201, 5673, 5072, 16449, 504, 12, 13813, 2]
 // Exports: GuildVoiceState, useVoiceUsers
 
-// Module 16430 (HomeDrawerGuildVoiceState)
+// Module 16450 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10193 */;
-import AvatarPile from "AvatarPile" /* 13163 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10201 */;
+import AvatarPile from "AvatarPile" /* 13174 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4663 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4662 */;
 
 const require = globalThis.__r;
 
@@ -50,7 +50,7 @@ const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -61,7 +61,7 @@ obj2.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, 
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
 obj2.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4639);
+createStyles = fn(4638);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;
@@ -100,11 +100,11 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       const obj6 = { style: tmp.streamPreview, source: null };
       const obj7 = { uri: previewUrl };
       obj6.source = obj7;
-      const items1 = [tmp7(tmp3(5672), obj6), , , , ];
+      const items1 = [tmp7(tmp3(5673), obj6), , , , ];
       const obj8 = { colors: ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"], start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: tmp.streamPreviewDarkGradient, pointerEvents: "none" };
-      items1[1] = tmp7(tmp3(5071), obj8);
+      items1[1] = tmp7(tmp3(5072), obj8);
       const obj9 = { colors: ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"], start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, style: tmp.streamPreviewGradient, pointerEvents: "none" };
-      items1[2] = tmp7(tmp3(5071), obj9);
+      items1[2] = tmp7(tmp3(5072), obj9);
       const obj10 = { style: tmp.streamPreviewBorder, pointerEvents: "none" };
       items1[3] = tmp7(tmp8, obj10);
       items1[4] = tmp7(LiveTag, {});

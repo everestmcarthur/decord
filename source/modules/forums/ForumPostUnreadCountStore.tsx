@@ -1,15 +1,15 @@
-// Module ID: 7993
-// Function ID: 7994
+// Module ID: 8002
+// Function ID: 8003
 // Name: ForumPostUnreadCountStore
-// Dependencies: [5592, 1958, 4654, 504, 38, 573, 2]
+// Dependencies: [5593, 1958, 4653, 504, 38, 573, 2]
 
-// Module 7993 (ForumPostUnreadCountStore)
+// Module 8002 (ForumPostUnreadCountStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5592 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5593 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4654 */;
+import ReadStateStore from "ReadStateStore" /* 4653 */;
 
 const dependencyMap = {};
 let set = new Set();

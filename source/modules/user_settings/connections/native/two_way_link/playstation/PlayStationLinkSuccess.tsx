@@ -1,16 +1,16 @@
-// Module ID: 9395
-// Function ID: 9396
+// Module ID: 9406
+// Function ID: 9407
 // Name: PlayStationLinkSuccess
-// Dependencies: [19, 17, 21, 4639, 9358, 9396, 4635, 1115, 7230, 5059, 2]
+// Dependencies: [19, 17, 21, 4638, 9369, 9407, 4634, 1115, 7233, 5060, 2]
 // Exports: PlayStationLinkSuccess
 
-// Module 9395 (PlayStationLinkSuccess)
+// Module 9406 (PlayStationLinkSuccess)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9358 */;
-import _modDef9396 from "module_9396" /* 9396 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7233 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9369 */;
+import _modDef9407 from "module_9407" /* 9407 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
@@ -28,7 +28,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9396 }), []), style: tmp.image }), , ];
+  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9407 }), []), style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.e6SOl0);

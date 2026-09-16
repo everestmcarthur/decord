@@ -1,9 +1,9 @@
-// Module ID: 13583
-// Function ID: 13584
+// Module ID: 13595
+// Function ID: 13596
 // Name: SubscriptionGroupMemberRecord
 // Dependencies: [1387, 1386, 2]
 
-// Module 13583 (SubscriptionGroupMemberRecord)
+// Module 13595 (SubscriptionGroupMemberRecord)
 import Record from "Record" /* 1387 */;
 import UserRecord from "UserRecord" /* 1386 */;
 

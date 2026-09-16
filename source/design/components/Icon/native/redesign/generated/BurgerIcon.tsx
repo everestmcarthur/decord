@@ -1,13 +1,13 @@
-// Module ID: 15703
-// Function ID: 15704
+// Module ID: 15721
+// Function ID: 15722
 // Name: BurgerIcon
-// Dependencies: [19, 21, 576, 4340, 15704, 2]
+// Dependencies: [19, 21, 576, 4338, 15722, 2]
 // Exports: BurgerIcon
 
-// Module 15703 (BurgerIcon)
+// Module 15721 (BurgerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15704 from "module_15704" /* 15704 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod15722 from "module_15722" /* 15722 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const BurgerIcon = function BurgerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15704, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15722, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

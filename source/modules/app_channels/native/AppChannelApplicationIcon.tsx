@@ -1,17 +1,17 @@
-// Module ID: 9877
-// Function ID: 9878
+// Module ID: 9885
+// Function ID: 9886
 // Name: AppChannelApplicationIcon
-// Dependencies: [19, 21, 4639, 576, 5672, 1397, 2]
+// Dependencies: [19, 21, 4638, 576, 5673, 1397, 2]
 // Exports: default
 
-// Module 9877 (AppChannelApplicationIcon)
+// Module 9885 (AppChannelApplicationIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 5672 */;
+import FastImageDefault from "FastImage" /* 5673 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.md };
 obj2.icon = size;

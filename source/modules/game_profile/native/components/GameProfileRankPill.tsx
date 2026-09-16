@@ -1,21 +1,21 @@
-// Module ID: 8844
-// Function ID: 8845
+// Module ID: 8854
+// Function ID: 8855
 // Name: GameProfileRankPill
-// Dependencies: [19, 17, 21, 4639, 576, 8845, 4635, 1115, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 8855, 4634, 1115, 2]
 // Exports: default
 
-// Module 8844 (GameProfileRankPill)
+// Module 8854 (GameProfileRankPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import TrophyIcon from "TrophyIcon" /* 8845 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import TrophyIcon from "TrophyIcon" /* 8855 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.gameRankPill = { flexDirection: "row", backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, alignItems: "center", gap: nativeDefault.space.PX_4 };

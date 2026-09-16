@@ -1,12 +1,12 @@
-// Module ID: 10532
-// Function ID: 10533
+// Module ID: 10540
+// Function ID: 10541
 // Name: StickerPackInformationPopout
-// Dependencies: [19, 17, 21, 4639, 576, 4978, 1115, 4635, 5207, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 4977, 1115, 4634, 5208, 2]
 // Exports: default, doesStickerPackHavePopoutInformation
 
-// Module 10532 (StickerPackInformationPopout)
+// Module 10540 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, FlatList: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { informationContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "90%", marginHorizontal: "5%", padding: 16, borderRadius: nativeDefault.radii.xs, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.25, shadowRadius: 5 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }, informationHeader: { lineHeight: 20 }, informationContentContainer: { flexDirection: "row" }, informationContent: { lineHeight: 20 }, informationContentDescription: { flex: 1, marginLeft: 5 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

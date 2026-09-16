@@ -1,19 +1,19 @@
-// Module ID: 8004
-// Function ID: 8005
+// Module ID: 8013
+// Function ID: 8014
 // Name: ForumPostMediaUtils
-// Dependencies: [19, 7413, 1958, 4860, 1372, 1074, 4789, 1936, 1385, 1366, 1370, 4864, 1895, 4870, 11, 2]
+// Dependencies: [19, 7416, 1958, 4859, 1372, 1074, 4788, 1936, 1385, 1366, 1370, 4863, 1895, 4869, 11, 2]
 // Exports: getEmbedColor, isValidImageAttachment, isValidVideoAttachment, messageContainsGifOrVideo, shouldShowAddMediaToOriginalPostModal, useFindFirstMediaProperties, useFirstMediaIsEmbed, useForumPostComponentsMedia, useForumPostMediaThumbnail
 
-// Module 8004 (ForumPostMediaUtils)
+// Module 8013 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4789 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4788 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7413 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7416 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4860 */;
+import MessageStore from "MessageStore" /* 4859 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -225,10 +225,10 @@ function useForumPostMediaProperties(firstResult, flag) {
     if (tmp4) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4864);
-        const flattenComponentsResult = tmp(4864).flattenComponents(components);
-        const arr = Array.from(tmp(4864).flattenComponents(components).values());
-        items1 = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const tmpResult = tmp(4863);
+        const flattenComponentsResult = tmp(4863).flattenComponents(components);
+        const arr = Array.from(tmp(4863).flattenComponents(components).values());
+        items1 = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -303,7 +303,7 @@ function useForumPostMediaProperties(firstResult, flag) {
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -447,10 +447,10 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
     if (tmp3) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4864);
-        const flattenComponentsResult = tmp(4864).flattenComponents(components);
-        const arr = Array.from(tmp(4864).flattenComponents(components).values());
-        let found = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const tmpResult = tmp(4863);
+        const flattenComponentsResult = tmp(4863).flattenComponents(components);
+        const arr = Array.from(tmp(4863).flattenComponents(components).values());
+        let found = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -525,7 +525,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -646,10 +646,10 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4864);
-        const flattenComponentsResult = tmp(4864).flattenComponents(components);
-        const arr = Array.from(tmp(4864).flattenComponents(components).values());
-        items = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const tmpResult = tmp(4863);
+        const flattenComponentsResult = tmp(4863).flattenComponents(components);
+        const arr = Array.from(tmp(4863).flattenComponents(components).values());
+        items = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -724,7 +724,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -826,10 +826,10 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        let tmpResult = tmp(4864);
-        const flattenComponentsResult = tmp(4864).flattenComponents(components);
-        const arr = Array.from(tmp(4864).flattenComponents(components).values());
-        items = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        let tmpResult = tmp(4863);
+        const flattenComponentsResult = tmp(4863).flattenComponents(components);
+        const arr = Array.from(tmp(4863).flattenComponents(components).values());
+        items = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);
@@ -904,7 +904,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4864).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4863).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (require("Server").ComponentType.THUMBNAIL === type) {
             ({ media, spoiler } = type);

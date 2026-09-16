@@ -1,28 +1,28 @@
-// Module ID: 7582
-// Function ID: 7583
+// Module ID: 7585
+// Function ID: 7586
 // Name: TTIAnalyticsUtils
-// Dependencies: [5, 7583, 4555, 1182, 502, 1958, 1346, 1074, 7776, 1965, 21, 4618, 7777, 1255, 1363, 4498, 4497, 10, 1231, 1241, 7778, 4504, 7780, 9, 1091, 1358, 7781, 4984, 5078, 1897, 2]
+// Dependencies: [5, 7586, 4553, 1182, 502, 1958, 1346, 1074, 7779, 1965, 21, 4617, 7780, 1255, 1363, 4496, 4495, 10, 1231, 1241, 7781, 4502, 7783, 9, 1091, 1358, 7784, 4983, 5079, 1897, 2]
 // Exports: currentLoadId, getLastTrackedAppUiViewed2Properties, trackAppLaunchCompleted, trackAppOpened, trackAppUIViewed
 
-// Module 7582 (TTIAnalyticsUtils)
+// Module 7585 (TTIAnalyticsUtils)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4504 */;
-import DeviceUtils from "DeviceUtils" /* 4618 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7777 */;
-import AppStartInfo2 from "AppStartInfo" /* 7778 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4502 */;
+import DeviceUtils from "DeviceUtils" /* 4617 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7780 */;
+import AppStartInfo2 from "AppStartInfo" /* 7781 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7583 */;
-import ExperimentStore from "ExperimentStore" /* 4555 */;
+import CacheStore from "CacheStore" /* 7586 */;
+import ExperimentStore from "ExperimentStore" /* 4553 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
 
-const NavigationRouteUtils = tmp(4497);
+const NavigationRouteUtils = tmp(4495);
 require = fn;
 function getDeviceMetadata() {
   if (null == obj) {
@@ -577,7 +577,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0, value) {
   }
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7776).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7779).ACCEPT_INVITE_MODAL_KEY;
 const StaticChannelRoutes = fn(1965).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1255);

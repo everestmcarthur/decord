@@ -1,10 +1,10 @@
-// Module ID: 4456
-// Function ID: 4457
+// Module ID: 4454
+// Function ID: 4455
 // Name: Colors
 // Dependencies: [32, 672, 2]
 // Exports: brightenColor, darkenColor, getContrastingColor, setColorOpacity
 
-// Module 4456 (Colors)
+// Module 4454 (Colors)
 import _modDef672 from "module_672" /* 672 */;
 import _slicedToArray from "module_32" /* 32 */;
 

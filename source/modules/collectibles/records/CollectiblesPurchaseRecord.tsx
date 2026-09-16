@@ -1,14 +1,14 @@
-// Module ID: 7676
-// Function ID: 7677
+// Module ID: 7679
+// Function ID: 7680
 // Name: CollectiblesPurchaseRecord
-// Dependencies: [7652, 7653, 7651, 1076, 1074, 5598, 2]
+// Dependencies: [7655, 7656, 7654, 1076, 1074, 5599, 2]
 
-// Module 7676 (CollectiblesPurchaseRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5598 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7652 */;
+// Module 7679 (CollectiblesPurchaseRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5599 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7655 */;
 
-let closure_3 = fn(7653).createCollectiblesItemsFromServerResponse;
-const fromServer = fn(7651).CollectiblesVariantProductRecord;
+let closure_3 = fn(7656).createCollectiblesItemsFromServerResponse;
+const fromServer = fn(7654).CollectiblesVariantProductRecord;
 let closure_5 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const PREMIUM_TYPE_NONE = fn(1074).PREMIUM_TYPE_NONE;
 const prototype = function CollectiblesPurchaseRecord(arg0) {

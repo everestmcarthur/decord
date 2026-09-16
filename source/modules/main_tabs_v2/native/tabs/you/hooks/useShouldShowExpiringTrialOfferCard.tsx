@@ -1,15 +1,15 @@
-// Module ID: 16956
-// Function ID: 16957
+// Module ID: 17013
+// Function ID: 17014
 // Name: useShouldShowExpiringTrialOfferCard
-// Dependencies: [13817, 1074, 1374, 1091, 563, 7554, 7546, 2]
+// Dependencies: [13830, 1074, 1374, 1091, 563, 7557, 7549, 2]
 // Exports: useShouldShowExpiringTrialOfferCard
 
-// Module 16956 (useShouldShowExpiringTrialOfferCard)
+// Module 17013 (useShouldShowExpiringTrialOfferCard)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import useCountdownDefault from "useCountdown" /* 7546 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7554 */;
-import NoticeStore from "NoticeStore" /* 13817 */;
+import useCountdownDefault from "useCountdown" /* 7549 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7557 */;
+import NoticeStore from "NoticeStore" /* 13830 */;
 
 require = fn;
 const NoticeTypes = fn(1074).NoticeTypes;

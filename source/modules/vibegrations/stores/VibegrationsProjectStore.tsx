@@ -1,13 +1,13 @@
-// Module ID: 16703
-// Function ID: 16704
+// Module ID: 16723
+// Function ID: 16724
 // Name: VibegrationsProjectStore
-// Dependencies: [32, 1372, 7352, 504, 573, 2]
+// Dependencies: [32, 1372, 7355, 504, 573, 2]
 // Exports: canPublishProject, canRemixProject
 
-// Module 16703 (VibegrationsProjectStore)
+// Module 16723 (VibegrationsProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -115,8 +115,8 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
   }
   return value;
 };
-prototype["getLogs"] = function getLogs(arg0) {
-  value = map4.get(arg0);
+prototype["getLogs"] = function getLogs(projectId) {
+  value = map4.get(projectId);
   if (value == null) {
     value = closure_11;
   }
@@ -151,8 +151,8 @@ prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
     return num2;
   }
 };
-prototype["getTrace"] = function getTrace(arg0) {
-  value = map7.get(arg0);
+prototype["getTrace"] = function getTrace(projectId) {
+  value = map7.get(projectId);
   if (value == null) {
     value = closure_16;
   }

@@ -1,14 +1,23 @@
 // Module ID: 14451
 // Function ID: 14452
-// Dependencies: [14398, 14449, 14432]
+// Dependencies: []
 
 // Module 14451
-import _mod14398 from "module_14398" /* 14398 */;
-import _mod14432 from "module_14432" /* 14432 */;
-import _mod14449 from "module_14449" /* 14449 */;
-
-
-export default _mod14398 ? ((arg0, arg1, arg2) => _mod14449.f(arg0, arg1, _mod14432(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+let propertyIsEnumerable = {}.propertyIsEnumerable;
+if (!getOwnPropertyDescriptor) {
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
+  }
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
+}

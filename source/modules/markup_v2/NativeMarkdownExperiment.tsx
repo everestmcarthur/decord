@@ -1,10 +1,10 @@
-// Module ID: 8198
-// Function ID: 8199
+// Module ID: 8207
+// Function ID: 8208
 // Name: NativeMarkdownExperiment
 // Dependencies: [1434, 2]
 // Exports: useNativeMarkdown
 
-// Module 8198 (NativeMarkdownExperiment)
+// Module 8207 (NativeMarkdownExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 14558
-// Function ID: 14559
+// Module ID: 14576
+// Function ID: 14577
 // Name: FrameVisibilityStore
 // Dependencies: [2]
 
-// Module 14558 (FrameVisibilityStore)
+// Module 14576 (FrameVisibilityStore)
 import size from "module_2" /* 2 */;
 
 class FrameVisibilityStore {

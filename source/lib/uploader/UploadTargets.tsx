@@ -1,14 +1,14 @@
-// Module ID: 5259
-// Function ID: 5260
+// Module ID: 5260
+// Function ID: 5261
 // Name: UploadTargets
-// Dependencies: [1958, 1074, 5218, 5213, 5260, 5262, 2]
+// Dependencies: [1958, 1074, 5219, 5214, 5261, 5263, 2]
 // Exports: getUploadTarget
 
-// Module 5259 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 5213 */;
-import FileUtilsAll from "FileUtils" /* 5218 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 5260 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 5262 */;
+// Module 5260 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 5214 */;
+import FileUtilsAll from "FileUtils" /* 5219 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 5261 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 5263 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;

@@ -1,16 +1,16 @@
-// Module ID: 8383
-// Function ID: 8384
+// Module ID: 8392
+// Function ID: 8393
 // Name: useVideoControls
-// Dependencies: [32, 19, 4631, 21, 560, 1248, 8384, 4639, 504, 8385, 8393, 8386, 8381, 8394, 2]
+// Dependencies: [32, 19, 4630, 21, 560, 1248, 8393, 4638, 504, 8394, 8402, 8395, 8390, 8403, 2]
 // Exports: default, initVideoStateStore, setMuted, setPausedState, setVideoStateControls, toggleMuted, tryPauseCurrentVideo, unpauseCurrentVideoIfNeeded
 
-// Module 8383 (useVideoControls)
+// Module 8392 (useVideoControls)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8381 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8384 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8390 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj4 = module_560.create(() => ({ controls: "PX_16", paused: true }));
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");

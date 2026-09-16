@@ -1,13 +1,13 @@
-// Module ID: 12727
-// Function ID: 12728
+// Module ID: 12735
+// Function ID: 12736
 // Name: useDMMessageToReport
-// Dependencies: [12728, 12585, 12729, 2]
+// Dependencies: [12736, 12593, 12737, 2]
 // Exports: useDMMessageToReport
 
-// Module 12727 (useDMMessageToReport)
-import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12585 */;
-import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12728 */;
-import useMessageRequestPreview from "useMessageRequestPreview" /* 12729 */;
+// Module 12735 (useDMMessageToReport)
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12593 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12736 */;
+import useMessageRequestPreview from "useMessageRequestPreview" /* 12737 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");

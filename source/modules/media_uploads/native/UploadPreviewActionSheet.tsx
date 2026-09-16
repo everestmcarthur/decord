@@ -1,27 +1,27 @@
-// Module ID: 10767
-// Function ID: 10768
+// Module ID: 10775
+// Function ID: 10776
 // Name: UploadPreviewActionSheet
-// Dependencies: [32, 19, 17, 4980, 7258, 21, 4639, 576, 38, 5212, 1478, 1612, 5076, 4606, 5234, 10768, 4338, 6715, 5222, 11373, 11374, 7257, 6732, 5057, 4635, 1364, 8428, 10784, 5772, 5690, 11375, 11377, 1115, 5689, 11379, 9439, 5171, 11381, 5059, 4597, 2]
+// Dependencies: [32, 19, 17, 4979, 7261, 21, 4638, 576, 38, 5213, 1478, 1612, 5077, 4605, 5235, 10776, 4336, 6718, 5223, 11381, 11382, 7260, 6735, 5058, 4634, 1364, 8437, 10792, 5773, 5691, 11383, 11385, 1115, 5690, 11387, 9450, 5172, 11389, 5060, 4595, 2]
 // Exports: default
 
-// Module 10767 (UploadPreviewActionSheet)
+// Module 10775 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5222 */;
-import ImagePickerDefault from "ImagePicker" /* 5234 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9439 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11377 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5223 */;
+import ImagePickerDefault from "ImagePicker" /* 5235 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9450 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(4980).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(7258).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(4979).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(7261).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };
@@ -112,9 +112,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((error) => {
       if ("E_PICKER_CANCELLED" !== error.code) {
-        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6715).CircleErrorIcon, content: error.message };
-        onEdit(4338).open(obj2);
-        const obj = onEdit(4338);
+        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6718).CircleErrorIcon, content: error.message };
+        onEdit(4336).open(obj2);
+        const obj = onEdit(4336);
       }
     });
   }, items3);

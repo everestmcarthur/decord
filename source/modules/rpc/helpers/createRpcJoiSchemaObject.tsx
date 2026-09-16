@@ -1,10 +1,10 @@
-// Module ID: 9689
-// Function ID: 9690
+// Module ID: 9700
+// Function ID: 9701
 // Name: createRpcJoiSchemaObject
 // Dependencies: [2]
 // Exports: default
 
-// Module 9689 (createRpcJoiSchemaObject)
+// Module 9700 (createRpcJoiSchemaObject)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/createRpcJoiSchemaObject.tsx");

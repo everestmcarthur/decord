@@ -1,13 +1,13 @@
-// Module ID: 6576
-// Function ID: 6577
+// Module ID: 6579
+// Function ID: 6580
 // Name: SocialMediaSpotIllustration
-// Dependencies: [21, 5672, 6577, 2]
+// Dependencies: [21, 5673, 6580, 2]
 // Exports: SocialMediaSpotIllustration
 
-// Module 6576 (SocialMediaSpotIllustration)
+// Module 6579 (SocialMediaSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6577 from "module_6577" /* 6577 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6580 from "module_6580" /* 6580 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SocialMediaSpotIllustration = function SocialMediaSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6577 };
+  const obj2 = { uri: _modDef6580 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

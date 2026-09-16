@@ -1,24 +1,24 @@
-// Module ID: 14557
-// Function ID: 14558
+// Module ID: 14575
+// Function ID: 14576
 // Name: VibegrationsVoiceSessionCoordinator
-// Dependencies: [14558, 9642, 502, 1909, 4662, 1372, 4658, 1074, 4664, 9686, 13920, 1255, 9221, 14559, 14560, 2]
+// Dependencies: [14576, 9653, 502, 1909, 4661, 1372, 4657, 1074, 4663, 9697, 13933, 1255, 9232, 14577, 14578, 2]
 
-// Module 14557 (VibegrationsVoiceSessionCoordinator)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9221 */;
-import RPCErrorDefault from "RPCError" /* 9686 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13920 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14560 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 14558 */;
-import FramesStore from "FramesStore" /* 9642 */;
+// Module 14575 (VibegrationsVoiceSessionCoordinator)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9232 */;
+import RPCErrorDefault from "RPCError" /* 9697 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13933 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14578 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 14576 */;
+import FramesStore from "FramesStore" /* 9653 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import VoiceStateStore from "VoiceStateStore" /* 4657 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4664);
+const Constants = fn(4663);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -294,7 +294,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               obj.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14559).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14577).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
             obj = set;

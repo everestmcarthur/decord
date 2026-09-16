@@ -1,30 +1,30 @@
-// Module ID: 16771
-// Function ID: 16772
+// Module ID: 16828
+// Function ID: 16829
 // Name: ChannelDetails
-// Dependencies: [19, 17, 12474, 1958, 7983, 11052, 21, 576, 4639, 504, 12434, 16772, 7269, 7289, 1484, 16768, 5046, 7050, 1612, 1364, 4618, 7582, 12496, 12473, 4376, 4640, 4643, 5058, 12482, 4505, 6760, 16773, 16783, 16880, 16882, 16883, 16884, 5014, 2]
+// Dependencies: [19, 17, 12482, 1958, 7992, 11065, 21, 576, 4638, 504, 12442, 16829, 7272, 7292, 1484, 16825, 5045, 7053, 1612, 1364, 4617, 7585, 12504, 12481, 4374, 4639, 4642, 5059, 12490, 4504, 6763, 16830, 16840, 16937, 16939, 16940, 16941, 5013, 2]
 
-// Module 16771 (ChannelDetails)
+// Module 16828 (ChannelDetails)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4640 */;
-import timingPresets from "timingPresets" /* 4643 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12473 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12482 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12496 */;
+import timing from "timing" /* 4639 */;
+import timingPresets from "timingPresets" /* 4642 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12481 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12490 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12504 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12474 */;
+import SearchQueryStore from "SearchQueryStore" /* 12482 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(7983);
+const ChannelDetailsStore = fn(7992);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(11052);
+const ChannelDetailsConstants = fn(11065);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -176,8 +176,8 @@ export default noop.memo(function ChannelDetails(channelId) {
         const merged = Object.assign(closure_2_10);
         const range = { min: 0, max: value };
         obj3.clamp = range;
-        withSpringResult = tmp3(5058).withSpring(num3, obj3);
-        const tmp3Result = tmp3(5058);
+        withSpringResult = tmp3(5059).withSpring(num3, obj3);
+        const tmp3Result = tmp3(5059);
       }
     }
     obj.height = withSpringResult;

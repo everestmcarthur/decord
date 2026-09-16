@@ -1,13 +1,13 @@
-// Module ID: 15627
-// Function ID: 15628
+// Module ID: 15644
+// Function ID: 15645
 // Name: DeveloperModeSetting
-// Dependencies: [8082, 11606, 1115, 1936, 2]
+// Dependencies: [8091, 11614, 1115, 1936, 2]
 
-// Module 15627 (DeveloperModeSetting)
+// Module 15644 (DeveloperModeSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8082 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import SettingsConstants from "SettingsConstants" /* 8091 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

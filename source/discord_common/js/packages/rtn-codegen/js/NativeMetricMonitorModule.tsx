@@ -1,9 +1,9 @@
-// Module ID: 7710
-// Function ID: 7711
+// Module ID: 7713
+// Function ID: 7714
 // Name: NativeMetricMonitorModule
 // Dependencies: [17, 2]
 
-// Module 7710 (NativeMetricMonitorModule)
+// Module 7713 (NativeMetricMonitorModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

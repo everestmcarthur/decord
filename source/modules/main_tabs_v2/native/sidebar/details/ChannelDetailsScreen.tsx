@@ -1,12 +1,12 @@
-// Module ID: 17012
-// Function ID: 17013
+// Module ID: 17069
+// Function ID: 17070
 // Name: ChannelDetailsScreen
-// Dependencies: [19, 21, 1485, 4502, 16771, 2]
+// Dependencies: [19, 21, 1485, 4500, 16828, 2]
 
-// Module 17012 (ChannelDetailsScreen)
+// Module 17069 (ChannelDetailsScreen)
 import Link from "Link" /* 1485 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4502 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 16771 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4500 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 16828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

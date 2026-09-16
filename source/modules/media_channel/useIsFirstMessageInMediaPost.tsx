@@ -1,10 +1,10 @@
-// Module ID: 8050
-// Function ID: 8051
+// Module ID: 8059
+// Function ID: 8060
 // Name: useIsFirstMessageInMediaPost
 // Dependencies: [1958, 563, 11, 2]
 // Exports: isFirstMessageIdInMediaPost, isFirstMessageInMediaPost, useIsFirstMessageInMediaPost
 
-// Module 8050 (useIsFirstMessageInMediaPost)
+// Module 8059 (useIsFirstMessageInMediaPost)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 

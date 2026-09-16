@@ -1,13 +1,13 @@
-// Module ID: 5982
-// Function ID: 5983
+// Module ID: 5983
+// Function ID: 5984
 // Name: CouchSpotIllustration
-// Dependencies: [21, 5672, 5983, 2]
+// Dependencies: [21, 5673, 5984, 2]
 // Exports: CouchSpotIllustration
 
-// Module 5982 (CouchSpotIllustration)
+// Module 5983 (CouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5983 from "module_5983" /* 5983 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5984 from "module_5984" /* 5984 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const CouchSpotIllustration = function CouchSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5983 };
+  const obj2 = { uri: _modDef5984 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

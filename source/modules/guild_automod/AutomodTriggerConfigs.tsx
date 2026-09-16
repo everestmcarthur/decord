@@ -1,16 +1,16 @@
-// Module ID: 17696
-// Function ID: 17697
+// Module ID: 17752
+// Function ID: 17753
 // Name: AutomodTriggerConfigs
-// Dependencies: [19, 11997, 1115, 16986, 10230, 2]
+// Dependencies: [19, 12005, 1115, 17043, 10238, 2]
 // Exports: checkTriggerTypeForFlag, getAvailableActionTypes, getDefaultTriggerMetadataForTriggerType, useAvailableTriggerTypes, validateRuleByTriggerConfigOrThrow
 
-// Module 17696 (AutomodTriggerConfigs)
+// Module 17752 (AutomodTriggerConfigs)
 import util from "util" /* 1115 */;
-import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10230 */;
+import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(11997);
+const Constants = fn(12005);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -218,7 +218,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16986).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(17043).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return noop.useMemo(() => {
     const keys = Object.keys(obj12);

@@ -1,21 +1,21 @@
-// Module ID: 10117
-// Function ID: 10118
+// Module ID: 10125
+// Function ID: 10126
 // Name: VolumeSlider
-// Dependencies: [19, 17, 4664, 21, 1364, 4639, 576, 4341, 10118, 8399, 5099, 1115, 5185, 2]
+// Dependencies: [19, 17, 4663, 21, 1364, 4638, 576, 4339, 10126, 8408, 5100, 1115, 5186, 2]
 // Exports: default
 
-// Module 10117 (VolumeSlider)
+// Module 10125 (VolumeSlider)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4341 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5099 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5185 */;
-import _modDef8399 from "module_8399" /* 8399 */;
-import VoiceXIcon from "VoiceXIcon" /* 10118 */;
+import useToken from "useToken" /* 4339 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5100 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5186 */;
+import _modDef8408 from "module_8408" /* 8408 */;
+import VoiceXIcon from "VoiceXIcon" /* 10126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4664).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(4663).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PlatformUtils = fn(1364);
@@ -23,7 +23,7 @@ let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles({ volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
@@ -53,7 +53,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   const obj3 = { style: tmp4.leftIcon };
   const tmp8 = closure_6;
   const tmp9 = View;
-  const tmp7Result = _modDef8399;
+  const tmp7Result = _modDef8408;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

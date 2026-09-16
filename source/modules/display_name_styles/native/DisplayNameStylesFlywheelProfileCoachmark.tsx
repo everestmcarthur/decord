@@ -1,11 +1,11 @@
-// Module ID: 16954
-// Function ID: 16955
+// Module ID: 17011
+// Function ID: 17012
 // Name: DisplayNameStylesFlywheelProfileCoachmark
-// Dependencies: [19, 17, 1372, 1955, 21, 4639, 504, 4297, 1115, 2787, 11266, 5777, 2]
+// Dependencies: [19, 17, 1372, 1955, 21, 4638, 504, 4295, 1115, 2787, 11280, 5778, 2]
 // Exports: default
 
-// Module 16954 (DisplayNameStylesFlywheelProfileCoachmark)
-import native from "native" /* 5777 */;
+// Module 17011 (DisplayNameStylesFlywheelProfileCoachmark)
+import native from "native" /* 5778 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -16,7 +16,7 @@ function CoachmarkImage() {
 const View = fn(17).View;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
@@ -31,7 +31,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(4297).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(4295).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1115).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2787);
@@ -65,7 +65,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(4297);
-  const coachmark = visible(11266).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(4295);
+  const coachmark = visible(11280).useCoachmark(visible.targetRef, memo);
   return null;
 };

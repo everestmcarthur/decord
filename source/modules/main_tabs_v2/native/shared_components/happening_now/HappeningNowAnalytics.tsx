@@ -1,10 +1,10 @@
-// Module ID: 16169
-// Function ID: 16170
+// Module ID: 16189
+// Function ID: 16190
 // Name: HappeningNowAnalytics
 // Dependencies: [32, 502, 11, 2]
 // Exports: getAffinityProperties
 
-// Module 16169 (HappeningNowAnalytics)
+// Module 16189 (HappeningNowAnalytics)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

@@ -1,12 +1,12 @@
-// Module ID: 10124
-// Function ID: 10125
+// Module ID: 10132
+// Function ID: 10133
 // Name: UserSettingsVoiceUtils
-// Dependencies: [1909, 1074, 9221, 10125, 504, 2]
+// Dependencies: [1909, 1074, 9232, 10133, 504, 2]
 // Exports: getSelectedNoiseSuppressionOption, handleAutomaticGainControlChange, handleEchoCancellationChange, handleNoiseSuppressionChange, useSelectedNoiseSuppressionOption
 
-// Module 10124 (UserSettingsVoiceUtils)
+// Module 10132 (UserSettingsVoiceUtils)
 import initialize from "initialize" /* 504 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9221 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9232 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// Module ID: 4502
-// Function ID: 4503
+// Module ID: 4500
+// Function ID: 4501
 // Name: useBaseAppContainerDimensions
 // Dependencies: [19, 1478, 1612, 2]
 // Exports: default, getBaseAppContainerDimensions
 
-// Module 4502 (useBaseAppContainerDimensions)
+// Module 4500 (useBaseAppContainerDimensions)
 import useWindowDimensions from "useWindowDimensions" /* 1478 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1612 */;
 import noop from "module_19" /* 19 */;

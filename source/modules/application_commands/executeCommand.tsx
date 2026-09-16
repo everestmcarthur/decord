@@ -1,23 +1,23 @@
-// Module ID: 9543
-// Function ID: 9544
+// Module ID: 9554
+// Function ID: 9555
 // Name: executeCommand
-// Dependencies: [5, 5544, 2026, 1980, 4979, 1372, 7885, 1074, 4632, 7630, 573, 7870, 7628, 1895, 9544, 9546, 38, 9547, 4819, 7883, 9439, 4292, 1370, 7858, 8237, 7939, 8236, 9548, 8301, 7857, 7563, 5218, 5213, 1115, 7947, 2]
+// Dependencies: [5, 5545, 2026, 1980, 4978, 1372, 7894, 1074, 4631, 7633, 573, 7879, 7631, 1895, 9555, 9557, 38, 9558, 4818, 7892, 9450, 4290, 1370, 7867, 8246, 7948, 8245, 9559, 8310, 7866, 7566, 5219, 5214, 1115, 7956, 2]
 // Exports: default, retryCommandMessage
 
-// Module 9543 (executeCommand)
-import UploadUtils from "UploadUtils" /* 5213 */;
-import FileUtils from "FileUtils" /* 5218 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
-import MessageQueue from "MessageQueue" /* 7939 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8237 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9548 */;
+// Module 9554 (executeCommand)
+import UploadUtils from "UploadUtils" /* 5214 */;
+import FileUtils from "FileUtils" /* 5219 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7633 */;
+import MessageQueue from "MessageQueue" /* 7948 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8246 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9559 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5544 */;
+import EmojiStore from "EmojiStore" /* 5545 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4979 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4978 */;
 import UserStore from "UserStore" /* 1372 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7885 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7894 */;
 
 const MessageQueueDefault = MessageQueue;
 
@@ -719,8 +719,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message = { applicationId, channelId: id, guildId: id1, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(7858).createNonce();
-      let obj2 = onMessageSuccess(7858);
+      nonce = onMessageSuccess(7867).createNonce();
+      let obj2 = onMessageSuccess(7867);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -781,8 +781,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
     const tmp10 = onMessageSuccess;
-    const obj10 = { type: tmp10(7939).MessageDataType.COMMAND, message };
-    message(7939).enqueue(obj10, (ok) => {
+    const obj10 = { type: tmp10(7948).MessageDataType.COMMAND, message };
+    message(7948).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -796,7 +796,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
         closure_1();
       }
     });
-    const obj6 = message(7939);
+    const obj6 = message(7948);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -873,7 +873,7 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
                     c6 = 1;
                     c7 = 2;
                     c8 = 1;
-                    const obj9 = { value: tmp65(8301).getUser(cachedApplicationSection.botId), done: false };
+                    const obj9 = { value: tmp65(8310).getUser(cachedApplicationSection.botId), done: false };
                     return obj9;
                   }
                 }
@@ -963,25 +963,25 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
 };
 function getAnalyticsLocationFromCommandOrigin(arg0) {
   if (ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.APP_LAUNCHER;
-  } else if (tmp(7630).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
-  } else if (tmp(7630).CommandOrigin.IMAGE_RECS_MENU === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
-  } else if (tmp(7630).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
-  } else if (tmp(7630).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
-  } else if (tmp(7630).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
-  } else if (tmp(7630).CommandOrigin.MINI_SHELF === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
-  } else if (tmp(7630).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
-  } else if (tmp(7630).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
-    return tmp(7630).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+    return tmp(7633).ApplicationCommandTriggerLocations.APP_LAUNCHER;
+  } else if (tmp(7633).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+  } else if (tmp(7633).CommandOrigin.IMAGE_RECS_MENU === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
+  } else if (tmp(7633).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
+  } else if (tmp(7633).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
+  } else if (tmp(7633).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
+  } else if (tmp(7633).CommandOrigin.MINI_SHELF === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
+  } else if (tmp(7633).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
+  } else if (tmp(7633).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
+    return tmp(7633).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
   } else {
-    return tmp(7630).ApplicationCommandTriggerLocations.SLASH_UI;
+    return tmp(7633).ApplicationCommandTriggerLocations.SLASH_UI;
   }
 }
 function getMaxAndTotalFileSize() {
@@ -1127,8 +1127,8 @@ let closure_24 = async function _stageAttachments(arg0, value) {
             }
             const intl = closure_0(1115).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8237);
-            obj2.maxSize = closure_0(5218).sizeString(dependencyMap);
+            const obj = closure_2(8246);
+            obj2.maxSize = closure_0(5219).sizeString(dependencyMap);
             obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1115).t.fxEKdS, obj2));
           };
           closure_132_3 = FileUtils.maxFileSize(closure_2);
@@ -1222,7 +1222,7 @@ let closure_24 = async function _stageAttachments(arg0, value) {
 };
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, AnalyticEvents: closure_12, MessageTypes: map1, NON_USER_BOT_DISCRIMINATOR: closure_14 } = Constants);
-let closure_15 = fn(4632).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4631).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

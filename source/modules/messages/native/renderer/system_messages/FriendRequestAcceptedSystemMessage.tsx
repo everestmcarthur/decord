@@ -1,14 +1,14 @@
-// Module ID: 8182
-// Function ID: 8183
+// Module ID: 8191
+// Function ID: 8192
 // Name: FriendRequestAcceptedSystemMessage
-// Dependencies: [1958, 1372, 8067, 8069, 4639, 576, 1115, 8053, 8183, 8071, 2]
+// Dependencies: [1958, 1372, 8076, 8078, 4638, 576, 1115, 8062, 8192, 8080, 2]
 // Exports: createFriendRequestAcceptedSystemMessage
 
-// Module 8182 (FriendRequestAcceptedSystemMessage)
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8053 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
-import _modDef8183 from "module_8183" /* 8183 */;
+// Module 8191 (FriendRequestAcceptedSystemMessage)
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8062 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
+import _modDef8192 from "module_8192" /* 8192 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -53,8 +53,8 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
                 obj4.formattedNote = obj5;
                 formatToParts2Result = formatToParts2(t1.bNrwDM, obj4);
               }
-              const baseTextColor = tmp15(4639).createNativeStyleProperties(obj3)(message.theme).baseTextColor;
-              const tmp15Result = tmp15(4639);
+              const baseTextColor = tmp15(4638).createNativeStyleProperties(obj3)(message.theme).baseTextColor;
+              const tmp15Result = tmp15(4638);
             }
           }
           const intl = tmp15(1115).intl;
@@ -66,9 +66,9 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
             formatToPartsResult = formatToParts(t.hyPOTm, obj2);
           }
           const obj6 = { content: formatToPartsResult, iconUrl: null, textColor: null };
-          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8183);
+          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8192);
           obj6.textColor = undefined;
-          const merged1 = Object.assign(tmp17(8071)(message));
+          const merged1 = Object.assign(tmp17(8080)(message));
           return obj6;
         }
       }

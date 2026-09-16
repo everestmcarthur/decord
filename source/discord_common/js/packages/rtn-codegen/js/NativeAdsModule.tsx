@@ -1,9 +1,9 @@
-// Module ID: 7838
-// Function ID: 7839
+// Module ID: 7847
+// Function ID: 7848
 // Name: NativeAdsModule
 // Dependencies: [17, 2]
 
-// Module 7838 (NativeAdsModule)
+// Module 7847 (NativeAdsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

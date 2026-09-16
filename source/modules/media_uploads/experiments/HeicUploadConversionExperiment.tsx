@@ -1,9 +1,9 @@
-// Module ID: 5256
-// Function ID: 5257
+// Module ID: 5257
+// Function ID: 5258
 // Name: HeicUploadConversionExperiment
 // Dependencies: [1434, 2]
 
-// Module 5256 (HeicUploadConversionExperiment)
+// Module 5257 (HeicUploadConversionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

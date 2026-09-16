@@ -1,13 +1,13 @@
-// Module ID: 7867
-// Function ID: 7868
+// Module ID: 7876
+// Function ID: 7877
 // Name: MessageReactionsStore
-// Dependencies: [4279, 1386, 1958, 1372, 7868, 504, 7869, 573, 2]
+// Dependencies: [4277, 1386, 1958, 1372, 7877, 504, 7878, 573, 2]
 
-// Module 7867 (MessageReactionsStore)
+// Module 7876 (MessageReactionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7869 */;
-import LurkingStore from "LurkingStore" /* 4279 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7878 */;
+import LurkingStore from "LurkingStore" /* 4277 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -34,7 +34,7 @@ function handleReaction(userId) {
   }
 }
 const dependencyMap = {};
-const items = [fn(7868).ReactionTypes.NORMAL, fn(7868).ReactionTypes.BURST];
+const items = [fn(7877).ReactionTypes.NORMAL, fn(7877).ReactionTypes.BURST];
 const prototype = function Reaction() {
   const obj = Object.create(new.target.prototype);
   obj.fetched = false;

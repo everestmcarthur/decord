@@ -1,18 +1,18 @@
-// Module ID: 16768
-// Function ID: 16769
+// Module ID: 16825
+// Function ID: 16826
 // Name: SwipeForMemberListWrapper
-// Dependencies: [32, 19, 17, 7983, 7970, 1074, 21, 3, 4639, 576, 4819, 16120, 4500, 4376, 5076, 4574, 7145, 4505, 11661, 1110, 16116, 8388, 12924, 4498, 4497, 5056, 1485, 16641, 6760, 16769, 16770, 16637, 5209, 7263, 16771, 2]
+// Dependencies: [32, 19, 17, 7992, 7979, 1074, 21, 3, 4638, 576, 4818, 16140, 4498, 4374, 5077, 4572, 7148, 4504, 11669, 1110, 16136, 8397, 12932, 4496, 4495, 5055, 1485, 16661, 6763, 16826, 16827, 16657, 5210, 7266, 16828, 2]
 // Exports: default
 
-// Module 16768 (SwipeForMemberListWrapper)
+// Module 16825 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import useChatLayout from "useChatLayout" /* 4500 */;
-import ChatInputUtils from "ChatInputUtils" /* 4505 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import useChatLayout from "useChatLayout" /* 4498 */;
+import ChatInputUtils from "ChatInputUtils" /* 4504 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4818 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,16 +20,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7983);
+const ChannelDetailsStore = fn(7992);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(7970).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(7979).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let context = noop.createContext(undefined);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -200,8 +200,8 @@ export default function _default(channelId) {
       const tmp23Result = useChatLayout;
       let coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
       if (tmp3) {
-        coerceChannelRouteResult = tmp23(4497).coerceGuildsRoute(currentRoute);
-        const tmp23Result4 = tmp23(4497);
+        coerceChannelRouteResult = tmp23(4495).coerceGuildsRoute(currentRoute);
+        const tmp23Result4 = tmp23(4495);
       }
       const obj3 = { route: coerceChannelRouteResult, channelId: gesture, currentRoute, isChatLockedOpen, routeParams: null };
       let params1;

@@ -1,9 +1,9 @@
-// Module ID: 7698
-// Function ID: 7699
+// Module ID: 7701
+// Function ID: 7702
 // Name: CollectiblesMarketingPlatform
 // Dependencies: [2]
 
-// Module 7698 (CollectiblesMarketingPlatform)
+// Module 7701 (CollectiblesMarketingPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingPlatform.tsx");

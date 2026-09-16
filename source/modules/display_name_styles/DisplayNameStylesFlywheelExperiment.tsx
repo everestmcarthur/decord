@@ -1,10 +1,10 @@
-// Module ID: 9309
-// Function ID: 9310
+// Module ID: 9320
+// Function ID: 9321
 // Name: DisplayNameStylesFlywheelExperiment
 // Dependencies: [1434, 2]
 // Exports: useIsDisplayNameStylesFlywheelSettersEnabled, useIsDisplayNameStylesFlywheelViewersEnabled
 
-// Module 9309 (DisplayNameStylesFlywheelExperiment)
+// Module 9320 (DisplayNameStylesFlywheelExperiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

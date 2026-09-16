@@ -1,13 +1,13 @@
-// Module ID: 5189
-// Function ID: 5190
+// Module ID: 5190
+// Function ID: 5191
 // Name: AppsLockIcon
-// Dependencies: [19, 21, 576, 4340, 5153, 2]
+// Dependencies: [19, 21, 576, 4338, 5154, 2]
 // Exports: AppsLockIcon
 
-// Module 5189 (AppsLockIcon)
+// Module 5190 (AppsLockIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod5153 from "module_5153" /* 5153 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod5154 from "module_5154" /* 5154 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const AppsLockIcon = function AppsLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5153, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5154, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,9 +1,9 @@
-// Module ID: 8062
-// Function ID: 8063
+// Module ID: 8071
+// Function ID: 8072
 // Name: BasicGuildStore
 // Dependencies: [504, 573, 2]
 
-// Module 8062 (BasicGuildStore)
+// Module 8071 (BasicGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

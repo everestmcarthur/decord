@@ -1,9 +1,9 @@
-// Module ID: 12587
-// Function ID: 12588
+// Module ID: 12595
+// Function ID: 12596
 // Name: QuarantineConstants
 // Dependencies: [2]
 
-// Module 12587 (QuarantineConstants)
+// Module 12595 (QuarantineConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quarantine/QuarantineConstants.tsx");

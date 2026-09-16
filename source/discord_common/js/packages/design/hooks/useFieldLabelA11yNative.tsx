@@ -1,11 +1,11 @@
-// Module ID: 4359
-// Function ID: 4360
+// Module ID: 4357
+// Function ID: 4358
 // Name: useFieldLabelA11yNative
-// Dependencies: [19, 17, 4345, 2]
+// Dependencies: [19, 17, 4343, 2]
 // Exports: useFieldLabelA11yNative
 
-// Module 4359 (useFieldLabelA11yNative)
-import utils_getNodeText from "utils/getNodeText" /* 4345 */;
+// Module 4357 (useFieldLabelA11yNative)
+import utils_getNodeText from "utils/getNodeText" /* 4343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

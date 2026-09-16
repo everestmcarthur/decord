@@ -1,12 +1,12 @@
-// Module ID: 7510
-// Function ID: 7511
+// Module ID: 7513
+// Function ID: 7514
 // Name: GuildBoostPurchasingUtils
-// Dependencies: [5, 4303, 1074, 1374, 4984, 1115, 1241, 4963, 7511, 7516, 7347, 7517, 7518, 4297, 2]
+// Dependencies: [5, 4301, 1074, 1374, 4983, 1115, 1241, 4962, 7514, 7519, 7350, 7520, 7521, 4295, 2]
 // Exports: launchGuildBoostFlowOrAlert
 
-// Module 7510 (GuildBoostPurchasingUtils)
+// Module 7513 (GuildBoostPurchasingUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import SubscriptionStore from "SubscriptionStore" /* 4301 */;
 
 const require = fn;
 let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
@@ -70,8 +70,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
                 const intl = closure_1_0(1115).intl;
                 obj2.title = intl.string(closure_1_0(1115).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(4984).show(obj2);
-                const obj = closure_1_1(4984);
+                closure_1_1(4983).show(obj2);
+                const obj = closure_1_1(4983);
                 closure_1_1(1241).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {
@@ -141,10 +141,10 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(4297).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(4297);
-                      num3 = numPremiumGuildSubscriptions + c1(4297).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(4297);
+                      const numPremiumGuildSubscriptions = closure_0(4295).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(4295);
+                      num3 = numPremiumGuildSubscriptions + c1(4295).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(4295);
                     }
                     tmp = sum > num3;
                   }

@@ -1,10 +1,10 @@
-// Module ID: 12532
-// Function ID: 12533
+// Module ID: 12540
+// Function ID: 12541
 // Name: ApplicationCommandDiscoveryManager
 // Dependencies: [560, 1248, 2]
 // Exports: updateInitialSectionId
 
-// Module 12532 (ApplicationCommandDiscoveryManager)
+// Module 12540 (ApplicationCommandDiscoveryManager)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

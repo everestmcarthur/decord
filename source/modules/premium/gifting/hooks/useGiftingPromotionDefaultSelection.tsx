@@ -1,10 +1,10 @@
-// Module ID: 11183
-// Function ID: 11184
+// Module ID: 11197
+// Function ID: 11198
 // Name: useGiftingPromotionDefaultSelection
 // Dependencies: [2]
 // Exports: useGiftingPromotionDefaultSelectionV2
 
-// Module 11183 (useGiftingPromotionDefaultSelection)
+// Module 11197 (useGiftingPromotionDefaultSelection)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");

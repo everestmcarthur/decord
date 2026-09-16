@@ -1,16 +1,16 @@
-// Module ID: 17981
-// Function ID: 17982
+// Module ID: 18037
+// Function ID: 18038
 // Name: GlobalDiscoveryServersFeaturedSearchManager
-// Dependencies: [5, 13799, 9198, 1074, 7225, 17982, 573, 1271, 1472, 17983, 7448, 2]
+// Dependencies: [5, 13808, 9209, 1074, 7228, 18038, 573, 1271, 1472, 18039, 7451, 2]
 
-// Module 17981 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13799 */;
+// Module 18037 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = fn(9198).DISCOVERY_ALL_CATEGORIES_ID;
+let closure_6 = fn(9209).DISCOVERY_ALL_CATEGORIES_ID;
 const Endpoints = fn(1074).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

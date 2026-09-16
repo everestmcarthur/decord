@@ -1,12 +1,12 @@
-// Module ID: 16066
-// Function ID: 16067
+// Module ID: 16086
+// Function ID: 16087
 // Name: useIdentityRegistrationStep
-// Dependencies: [5, 32, 19, 16056, 16057, 1074, 1484, 16053, 1115, 16067, 11415, 7053, 16064, 1094, 16055, 1485, 7068, 7062, 8497, 2]
+// Dependencies: [5, 32, 19, 16076, 16077, 1074, 1484, 16073, 1115, 16087, 11423, 7056, 16084, 1094, 16075, 1485, 7071, 7065, 8506, 2]
 // Exports: useIdentityRegistrationStep
 
-// Module 16066 (useIdentityRegistrationStep)
+// Module 16086 (useIdentityRegistrationStep)
 import util from "util" /* 1115 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7068 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7071 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,9 +14,9 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(16056);
+const RegistrationUIStore = fn(16076);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(16057);
+const RegistrationConstants = fn(16077);
 ({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const AbortCodes = fn(1074).AbortCodes;
 const size = fn(2);

@@ -1,13 +1,13 @@
-// Module ID: 13414
-// Function ID: 13415
+// Module ID: 13425
+// Function ID: 13426
 // Name: ChannelMemberCountStore
-// Dependencies: [5362, 1958, 11, 504, 573, 2]
+// Dependencies: [5363, 1958, 11, 504, 573, 2]
 
-// Module 13414 (ChannelMemberCountStore)
+// Module 13425 (ChannelMemberCountStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 let closure_4 = Object.freeze({ online: null, total: null });

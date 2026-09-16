@@ -1,14 +1,14 @@
-// Module ID: 17834
-// Function ID: 17835
+// Module ID: 17890
+// Function ID: 17891
 // Name: useGuildApplication
-// Dependencies: [5, 32, 19, 4867, 504, 7270, 4540, 2]
+// Dependencies: [5, 32, 19, 4866, 504, 7273, 4538, 2]
 // Exports: default
 
-// Module 17834 (useGuildApplication)
+// Module 17890 (useGuildApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4867 */;
+import ApplicationStore from "ApplicationStore" /* 4866 */;
 
 const require = globalThis.__r;
 

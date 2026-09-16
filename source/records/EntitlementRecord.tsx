@@ -1,13 +1,13 @@
-// Module ID: 7502
-// Function ID: 7503
+// Module ID: 7505
+// Function ID: 7506
 // Name: EntitlementRecord
-// Dependencies: [1387, 5596, 1386, 1074, 4297, 7503, 2]
+// Dependencies: [1387, 5597, 1386, 1074, 4295, 7506, 2]
 
-// Module 7502 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7503 */;
+// Module 7505 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7506 */;
 import Record from "Record" /* 1387 */;
-import SKURecord from "SKURecord" /* 5596 */;
+import SKURecord from "SKURecord" /* 5597 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;

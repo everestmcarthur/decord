@@ -1,11 +1,11 @@
-// Module ID: 7687
-// Function ID: 7688
+// Module ID: 7690
+// Function ID: 7691
 // Name: RewardHeroBlockRecord
-// Dependencies: [7679, 7661, 2]
+// Dependencies: [7682, 7664, 2]
 
-// Module 7687 (RewardHeroBlockRecord)
-import CollectiblesUtils from "CollectiblesUtils" /* 7661 */;
-import ShopBlockType from "ShopBlockType" /* 7679 */;
+// Module 7690 (RewardHeroBlockRecord)
+import CollectiblesUtils from "CollectiblesUtils" /* 7664 */;
+import ShopBlockType from "ShopBlockType" /* 7682 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function RewardHeroBlockRecord(unpublished_at) {

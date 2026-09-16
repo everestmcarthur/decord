@@ -1,21 +1,21 @@
-// Module ID: 12437
-// Function ID: 12438
+// Module ID: 12445
+// Function ID: 12446
 // Name: GuildDirectorySearch
-// Dependencies: [32, 19, 17, 1980, 12438, 1074, 21, 4639, 576, 7086, 12441, 4635, 1115, 1177, 504, 12442, 12443, 1612, 12470, 12471, 5709, 7483, 12451, 12435, 1241, 2]
+// Dependencies: [32, 19, 17, 1980, 12446, 1074, 21, 4638, 576, 7089, 12449, 4634, 1115, 1177, 504, 12450, 12451, 1612, 12478, 12479, 5710, 7486, 12459, 12443, 1241, 2]
 // Exports: default
 
-// Module 12437 (GuildDirectorySearch)
+// Module 12445 (GuildDirectorySearch)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12435 */;
-import _modDef12441 from "module_12441" /* 12441 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12443 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12451 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12443 */;
+import _modDef12449 from "module_12449" /* 12449 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12451 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12438 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12446 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ function DefaultState() {
   importDefault = require("useTypeConsolidationTextTransform").useTypeConsolidationTextTransform("GuildDirectorySearch");
   const obj2 = { style: tmp.emptyWrapper, children: null };
   let obj = require("useTypeConsolidationTextTransform");
-  let items = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12441 }), ];
+  let items = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12449 }), ];
   const obj4 = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = require("util").intl;
   obj4.children = intl.format(require("util").t.aYLd8O, {
@@ -47,7 +47,7 @@ function EmptyState(channel) {
   const items = [GuildStore];
   importDefault = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.getGuildId()));
   const obj = channel(504);
-  const canCreateOrAddGuildInDirectory = channel(12442).useCanCreateOrAddGuildInDirectory(channel);
+  const canCreateOrAddGuildInDirectory = channel(12450).useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1115).intl;
   if (canCreateOrAddGuildInDirectory) {
     const obj3 = {
@@ -60,13 +60,13 @@ function EmptyState(channel) {
     formatResult = intl.string(tmp2(1115).t.vYyEnv);
   }
   const obj4 = { style: tmp.emptyWrapper, children: null };
-  const obj2 = channel(12442);
-  const items1 = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12441 }), , ];
+  const obj2 = channel(12450);
+  const items1 = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12449 }), , ];
   const obj6 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1115).intl;
   obj6.children = intl2.string(channel(1115).t["6HXiuE"]);
-  items1[1] = closure_12(channel(4635).Text, obj6);
-  items1[2] = closure_12(channel(4635).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = closure_12(channel(4634).Text, obj6);
+  items1[2] = closure_12(channel(4634).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj4.children = items1;
   return closure_13(closure_6, obj4);
 }
@@ -76,7 +76,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { flex: { flex: 1, height: "100%" }, fauxHeader: { paddingHorizontal: 0 }, scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateText: { textAlign: "center" }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, proTip: null };
 let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.proTip = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.unsafe_rawColors.GREEN_360, textTransform: "uppercase" };

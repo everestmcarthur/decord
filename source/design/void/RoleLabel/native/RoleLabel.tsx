@@ -1,20 +1,20 @@
-// Module ID: 10401
-// Function ID: 10402
+// Module ID: 10409
+// Function ID: 10410
 // Name: RoleLabel
-// Dependencies: [19, 17, 4631, 21, 4639, 504, 1177, 8719, 2]
+// Dependencies: [19, 17, 4630, 21, 4638, 504, 1177, 8728, 2]
 // Exports: RoleLabel
 
-// Module 10401 (RoleLabel)
+// Module 10409 (RoleLabel)
 import initialize from "initialize" /* 504 */;
-import Form from "Form" /* 8719 */;
+import Form from "Form" /* 8728 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row" }, roleDot: { marginRight: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");

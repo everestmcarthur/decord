@@ -1,12 +1,12 @@
-// Module ID: 8692
-// Function ID: 8693
+// Module ID: 8701
+// Function ID: 8702
 // Name: AppStoreAgeSignalAttestation
-// Dependencies: [5, 8693, 1364, 8694, 2]
+// Dependencies: [5, 8702, 1364, 8703, 2]
 // Exports: getAgeSignalChallenge, getAgeSignalIntegrityToken, warmAgeSignalAttestation
 
-// Module 8692 (AppStoreAgeSignalAttestation)
+// Module 8701 (AppStoreAgeSignalAttestation)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 8693 */;
+import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 8702 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

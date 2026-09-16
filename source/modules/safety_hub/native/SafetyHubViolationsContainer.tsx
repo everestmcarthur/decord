@@ -1,24 +1,24 @@
-// Module ID: 14872
-// Function ID: 14873
+// Module ID: 14888
+// Function ID: 14889
 // Name: SafetyHubViolationsContainer
-// Dependencies: [32, 19, 17, 8551, 8540, 1074, 21, 4639, 576, 9182, 8714, 4635, 1115, 13666, 11292, 8539, 11, 14873, 8541, 4842, 12013, 1897, 12017, 504, 1241, 12015, 2]
+// Dependencies: [32, 19, 17, 8560, 8549, 1074, 21, 4638, 576, 9193, 8723, 4634, 1115, 13675, 11306, 8548, 11, 14889, 8550, 4841, 12021, 1897, 12025, 504, 1241, 12023, 2]
 // Exports: ConnectedSafetyHubViolationsContainer
 
-// Module 14872 (SafetyHubViolationsContainer)
+// Module 14888 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8539 */;
-import SafetyHubModels from "SafetyHubModels" /* 8541 */;
-import WarningIcon from "WarningIcon" /* 8714 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9182 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12015 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8548 */;
+import SafetyHubModels from "SafetyHubModels" /* 8550 */;
+import WarningIcon from "WarningIcon" /* 8723 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9193 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12023 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8551 */;
+import SafetyHubStore from "SafetyHubStore" /* 8560 */;
 
 require = fn;
 function SafetyHubViolationsHeader(count) {
@@ -59,9 +59,9 @@ function SafetyHubViolationsHeader(count) {
   obj4.children = items4;
   items2[1] = closure_1_12(timestampProducer, obj4);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13666).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13675).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(11292).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(11306).ChevronSmallDownIcon;
   }
   const obj7 = { size: "md", style: null };
   const items5 = [tmp.chevron];
@@ -174,7 +174,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12013, dependencyMap.paths), { classificationId: id, source: React6.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12021, dependencyMap.paths), { classificationId: id, source: React6.StandingTab });
     },
     children: null
   };
@@ -337,12 +337,12 @@ class SafetyHubViolationsContainer {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8540);
+const SafetyHubConstants = fn(8549);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { connectedContainer: { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 }, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
 let obj3 = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
 obj2.container = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };

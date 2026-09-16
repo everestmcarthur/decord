@@ -1,9 +1,9 @@
-// Module ID: 14782
-// Function ID: 14783
+// Module ID: 14798
+// Function ID: 14799
 // Name: TinyBroncoGate
 // Dependencies: [2]
 
-// Module 14782 (TinyBroncoGate)
+// Module 14798 (TinyBroncoGate)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoGate.tsx");

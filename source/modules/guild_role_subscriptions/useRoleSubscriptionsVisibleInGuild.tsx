@@ -1,12 +1,12 @@
-// Module ID: 7357
-// Function ID: 7358
+// Module ID: 7360
+// Function ID: 7361
 // Name: useRoleSubscriptionsVisibleInGuild
-// Dependencies: [2015, 1980, 1074, 7358, 7359, 504, 7360, 7365, 2]
+// Dependencies: [2015, 1980, 1074, 7361, 7362, 504, 7363, 7368, 2]
 // Exports: areRoleSubscriptionsVisibleInGuild, useRoleSubscriptionsVisibleInGuild, useShowRoleSubscriptionsInChannelList
 
-// Module 7357 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7358 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7359 */;
+// Module 7360 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7361 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7362 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -89,7 +89,7 @@ export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscri
     tmp5 = stateFromStores;
   }
   const obj2 = require("CreatorMonetizationRestrictionsHooks");
-  const guildEligibleForGuildProducts = tmp3(7365).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp3(7368).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {

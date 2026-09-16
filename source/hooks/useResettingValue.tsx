@@ -1,11 +1,11 @@
-// Module ID: 13651
-// Function ID: 13652
+// Module ID: 13663
+// Function ID: 13664
 // Name: useResettingValue
-// Dependencies: [32, 19, 5683, 1953, 2]
+// Dependencies: [32, 19, 5684, 1953, 2]
 // Exports: default
 
-// Module 13651 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 5683 */;
+// Module 13663 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 5684 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;

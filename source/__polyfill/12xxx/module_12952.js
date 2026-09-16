@@ -1,239 +1,83 @@
 // Module ID: 12952
 // Function ID: 12953
-// Dependencies: [41, 42, 12953, 12939, 12950, 12958]
-// Exports: getStackAsyncContextStrategy
+// Dependencies: [12953, 12950]
+// Exports: extractTraceparentData, generateSentryTraceHeader, propagationContextFromHeaders
 
 // Module 12952
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import generatePropagationContext from "generatePropagationContext" /* 12950 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12953 */;
 
-let AsyncContextStack = require;
-function withScope(arg0) {
-  const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-  const obj = AsyncContextStack(12950);
-  const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = tmp(12958).getDefaultCurrentScope();
-    const tmpResult = tmp(12958);
-    stack = new _moduleResult(defaultCurrentScope, tmp(12958).getDefaultIsolationScope());
-    const tmpResult2 = tmp(12958);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(arg0);
-}
-function withSetScope(scope, arg1) {
-  closure_1 = arg1;
-  const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-  const obj = AsyncContextStack(12950);
-  const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = tmp(12958).getDefaultCurrentScope();
-    const tmpResult = tmp(12958);
-    stack = new _moduleResult(defaultCurrentScope, tmp(12958).getDefaultIsolationScope());
-    const tmpResult2 = tmp(12958);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    stack.getStackTop().scope = scope;
-    return closure_1(scope);
-  });
-}
-function withIsolationScope(arg0) {
-  AsyncContextStack = arg0;
-  const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-  const obj = AsyncContextStack(12950);
-  const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = tmp(12958).getDefaultCurrentScope();
-    const tmpResult = tmp(12958);
-    stack = new closure_3(defaultCurrentScope, tmp(12958).getDefaultIsolationScope());
-    const tmpResult2 = tmp(12958);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-    const obj = AsyncContextStack(12950);
-    const tmp = closure_0;
-    const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-    let stack = sentryCarrier.stack;
-    if (!stack) {
-      const defaultCurrentScope = tmp2(12958).getDefaultCurrentScope();
-      const tmp2Result = tmp2(12958);
-      stack = new closure_2_3(defaultCurrentScope, tmp2(12958).getDefaultIsolationScope());
-      const tmp2Result2 = tmp2(12958);
-    }
-    sentryCarrier.stack = stack;
-    return tmp(stack.getIsolationScope());
-  });
-}
-class AsyncContextStack {
-  constructor(arg0, arg1) {
-    self = this;
-    scope = global;
-    tmp2 = c2(this, AsyncContextStack);
-    if (!global) {
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      tmp5 = new.target;
-      tmp6 = new.target;
-      scope = new closure_0(closure_1[2]).Scope();
-    }
-    scope1 = require;
-    if (!require) {
-      tmp8 = closure_0;
-      tmp9 = closure_1;
-      tmp10 = new.target;
-      tmp11 = new.target;
-      scope1 = new closure_0(closure_1[2]).Scope();
-    }
-    items = [];
-    items[0] = { scope };
-    self._stack = items;
-    self._isolationScope = scope1;
-    return;
-  }
-}
-const entry = {
-  key: "withScope",
-  value: function withScope(fn) {
-    const self = this;
-    try {
-      const promise = fn(tmp);
-      if (obj2.isThenable(promise)) {
-        let nextPromise = promise.then((result) => {
-          self._popScope();
-          return result;
-        }, (arg0) => {
-          self._popScope();
-          throw arg0;
-        });
-      } else {
-        self._popScope();
-        nextPromise = promise;
+require = arg1;
+const dependencyMap = arg6;
+const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+
+export const TRACEPARENT_REGEXP = regExp;
+export const extractTraceparentData = function extractTraceparentData(str) {
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
       }
-      return nextPromise;
-    } catch (tmp9) {
-      obj._popScope();
-      throw tmp9;
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      return obj;
     }
   }
 };
-let items = [
-  entry,
-  {
-    key: "getClient",
-    value: function getClient() {
-      return this.getStackTop().client;
+export const generateSentryTraceHeader = function generateSentryTraceHeader() {
+  let traceId = arg0;
+  if (arg0 === undefined) {
+    traceId = generatePropagationContext.generateTraceId();
+  }
+  let spanId = arg1;
+  if (arg1 === undefined) {
+    spanId = generatePropagationContext.generateSpanId();
+  }
+  let str = "";
+  if (undefined !== arg2) {
+    let str2 = "-0";
+    if (arg2) {
+      str2 = "-1";
     }
-  },
-  {
-    key: "getScope",
-    value: function getScope() {
-      return this.getStackTop().scope;
-    }
-  },
-  {
-    key: "getIsolationScope",
-    value: function getIsolationScope() {
-      return this._isolationScope;
-    }
-  },
-  {
-    key: "getStackTop",
-    value: function getStackTop() {
-      return this._stack[this._stack.length - 1];
-    }
-  },
-  {
-    key: "_pushScope",
-    value: function _pushScope() {
-      const scope = this.getScope();
-      const cloneResult = scope.clone();
-      const _stack = this._stack;
-      _stack.push({ client: this.getClient(), scope: cloneResult });
-      return cloneResult;
-    }
-  },
-  {
-    key: "_popScope",
-    value: function _popScope() {
-      let arr = this._stack.length > 1;
-      if (arr) {
-        const _stack = this._stack;
-        arr = _stack.pop();
+    str = str2;
+  }
+  return "" + traceId + "-" + spanId + str;
+};
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, arg1) {
+  let tmp;
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
       }
-      return arr;
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      tmp = obj;
     }
   }
-];
-const _moduleResult = _createClass(AsyncContextStack, items);
-let c3 = _moduleResult;
-
-export const AsyncContextStack = _moduleResult;
-export function getStackAsyncContextStrategy() {
-  return {
-    withIsolationScope,
-    withScope,
-    withSetScope,
-    withSetIsolationScope(arg0, arg1) {
-      closure_0 = arg1;
-      let mainCarrier = closure_0(12950).getMainCarrier();
-      let obj = closure_0(12950);
-      let sentryCarrier = closure_0(12950).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        let defaultCurrentScope = tmp(12958).getDefaultCurrentScope();
-        const tmpResult = tmp(12958);
-        stack = new closure_3(defaultCurrentScope, tmp(12958).getDefaultIsolationScope());
-        const tmpResult2 = tmp(12958);
+  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(arg1);
+  if (tmp) {
+    if (tmp.traceId) {
+      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
+      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
+      obj3.spanId = tmp4(12950).generateSpanId();
+      obj3.sampled = parentSampled;
+      if (!result) {
+        result = {};
       }
-      sentryCarrier.stack = stack;
-      return stack.withScope(() => {
-        const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-        const obj = AsyncContextStack(12950);
-        const tmp = closure_0;
-        const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-        let stack = sentryCarrier.stack;
-        if (!stack) {
-          const defaultCurrentScope = tmp2(12958).getDefaultCurrentScope();
-          const tmp2Result = tmp2(12958);
-          stack = new closure_2_3(defaultCurrentScope, tmp2(12958).getDefaultIsolationScope());
-          const tmp2Result2 = tmp2(12958);
-        }
-        sentryCarrier.stack = stack;
-        return tmp(stack.getIsolationScope());
-      });
-    },
-    getCurrentScope() {
-      const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-      const obj = AsyncContextStack(12950);
-      const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = tmp(12958).getDefaultCurrentScope();
-        const tmpResult = tmp(12958);
-        stack = new closure_1_3(defaultCurrentScope, tmp(12958).getDefaultIsolationScope());
-        const tmpResult2 = tmp(12958);
-      }
-      sentryCarrier.stack = stack;
-      return stack.getScope();
-    },
-    getIsolationScope() {
-      const mainCarrier = AsyncContextStack(12950).getMainCarrier();
-      const obj = AsyncContextStack(12950);
-      const sentryCarrier = AsyncContextStack(12950).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = tmp(12958).getDefaultCurrentScope();
-        const tmpResult = tmp(12958);
-        stack = new closure_1_3(defaultCurrentScope, tmp(12958).getDefaultIsolationScope());
-        const tmpResult2 = tmp(12958);
-      }
-      sentryCarrier.stack = stack;
-      return stack.getIsolationScope();
+      obj3.dsc = result;
+      return obj3;
     }
-  };
-}
+  }
+  const obj4 = { traceId: null, spanId: null };
+  obj4.traceId = generatePropagationContext.generateTraceId();
+  const tmp4Result3 = generatePropagationContext;
+  obj4.spanId = generatePropagationContext.generateSpanId();
+  return obj4;
+};

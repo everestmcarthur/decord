@@ -1,16 +1,16 @@
-// Module ID: 13768
-// Function ID: 13769
+// Module ID: 13777
+// Function ID: 13778
 // Name: LocalVoiceStateManager
-// Dependencies: [1958, 1909, 4689, 1074, 13766, 1936, 1385, 13769, 2]
+// Dependencies: [1958, 1909, 4688, 1074, 13775, 1936, 1385, 13778, 2]
 
-// Module 13768 (LocalVoiceStateManager)
+// Module 13777 (LocalVoiceStateManager)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import isClipsEnabled from "isClipsEnabled" /* 13769 */;
+import isClipsEnabled from "isClipsEnabled" /* 13778 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCRegionStore from "RTCRegionStore" /* 4689 */;
-import StateManager from "StateManager" /* 13766 */;
+import RTCRegionStore from "RTCRegionStore" /* 4688 */;
+import StateManager from "StateManager" /* 13775 */;
 
 require = fn;
 const Constants = fn(1074);

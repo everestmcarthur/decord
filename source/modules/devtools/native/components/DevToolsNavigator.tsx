@@ -1,22 +1,23 @@
-// Module ID: 14679
-// Function ID: 14680
+// Module ID: 14695
+// Function ID: 14696
 // Name: DevToolsNavigator
-// Dependencies: [19, 17, 21, 8020, 7107, 14680, 7969, 15845, 9565, 4635, 576, 15678, 14790, 4606, 4842, 2]
+// Dependencies: [19, 17, 21, 8029, 7110, 14696, 7978, 15863, 9576, 4634, 576, 15696, 14806, 4605, 4841, 4503, 2]
 // Exports: navigateToDevTools
 
-// Module 14679 (DevToolsNavigator)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import HeaderShared from "HeaderShared" /* 7969 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 14680 */;
-import DevToolsContentDefault from "DevToolsContent" /* 15845 */;
+// Module 14695 (DevToolsNavigator)
+import Types from "Types" /* 4503 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import HeaderShared from "HeaderShared" /* 7978 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 14696 */;
+import DevToolsContentDefault from "DevToolsContent" /* 15863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(8020);
+const NativeStackNavigator = fn(8029);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo((screenKey) => {
   let str = screenKey.screenKey;
@@ -56,9 +57,9 @@ let closure_8 = noop.memo((screenKey) => {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(9565).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_4(closure_1_0(9576).HammerIcon, { size: "sm" }), ];
             const obj2 = { style: { marginLeft: closure_1_1(576).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-            items[1] = closure_1_4(closure_1_0(4635).Text, obj2);
+            items[1] = closure_1_4(closure_1_0(4634).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -69,8 +70,8 @@ let closure_8 = noop.memo((screenKey) => {
   ,
 
   ];
-  let merged = Object.assign(tmp(15678).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15678).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15696).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15696).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;
@@ -89,9 +90,9 @@ let closure_8 = noop.memo((screenKey) => {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(9565).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_4(closure_1_0(9576).HammerIcon, { size: "sm" }), ];
           const obj2 = { style: { marginLeft: closure_1_1(576).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-          items[1] = closure_1_4(closure_1_0(4635).Text, obj2);
+          items[1] = closure_1_4(closure_1_0(4634).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },
@@ -132,5 +133,7 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
     obj = {};
   }
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(() => Promise.resolve(closure_1_8), { screenKey: obj.screenKey }, "DevToolsNavigator");
+  const obj3 = ModalActionCreatorsDefault;
+  const obj4 = { screenKey: obj.screenKey };
+  obj3.pushLazy(() => Promise.resolve(closure_1_8), obj4, "DevToolsNavigator", { trigger: Types.ModalOpenTrigger.USER_INTERACTION });
 };

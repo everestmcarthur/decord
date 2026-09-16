@@ -1,10 +1,10 @@
-// Module ID: 14178
-// Function ID: 14179
+// Module ID: 14191
+// Function ID: 14192
 // Name: Checkbox/Checkbox
-// Dependencies: [19, 17, 21, 14179, 14180, 2]
+// Dependencies: [19, 17, 21, 14192, 14193, 2]
 // Exports: default
 
-// Module 14178 (Checkbox/Checkbox)
+// Module 14191 (Checkbox/Checkbox)
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
@@ -15,10 +15,10 @@ const result = size.fileFinishedImporting("design/void/Checkbox/native/Checkbox.
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj.source = tmp3(14179);
+    obj.source = tmp3(14192);
     let tmp5 = obj;
   } else {
-    obj.source = tmp3(14180);
+    obj.source = tmp3(14193);
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

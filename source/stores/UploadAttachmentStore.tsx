@@ -1,15 +1,15 @@
-// Module ID: 4979
-// Function ID: 4980
+// Module ID: 4978
+// Function ID: 4979
 // Name: UploadAttachmentStore
-// Dependencies: [4980, 1074, 4983, 1115, 12, 5211, 5220, 504, 573, 2]
+// Dependencies: [4979, 1074, 4982, 1115, 12, 5212, 5221, 504, 573, 2]
 
-// Module 4979 (UploadAttachmentStore)
+// Module 4978 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import DraftStore from "DraftStore" /* 4980 */;
-import CloudUpload from "CloudUpload" /* 5211 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5220 */;
+import DraftStore from "DraftStore" /* 4979 */;
+import CloudUpload from "CloudUpload" /* 5212 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5221 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

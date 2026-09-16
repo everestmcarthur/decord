@@ -1,13 +1,13 @@
-// Module ID: 10549
-// Function ID: 10550
+// Module ID: 10557
+// Function ID: 10558
 // Name: StickerPickerPremiumSearchUpsell
-// Dependencies: [19, 1074, 1374, 21, 4639, 576, 7269, 9445, 10097, 7958, 10098, 1241, 4297, 10445, 1115, 8788, 2]
+// Dependencies: [19, 1074, 1374, 21, 4638, 576, 7272, 9456, 10105, 7967, 10106, 1241, 4295, 10453, 1115, 8797, 2]
 // Exports: default
 
-// Module 10549 (StickerPickerPremiumSearchUpsell)
+// Module 10557 (StickerPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import PremiumUtils from "PremiumUtils" /* 4297 */;
+import PremiumUtils from "PremiumUtils" /* 4295 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const Constants = fn(1074);
 const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { nitroIcon: { marginRight: nativeDefault.space.PX_8, alignSelf: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

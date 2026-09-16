@@ -1,17 +1,17 @@
-// Module ID: 16719
-// Function ID: 16720
+// Module ID: 16741
+// Function ID: 16742
 // Name: VibegrationsEffortPicker
-// Dependencies: [109, 32, 19, 17, 21, 16716, 1115, 3591, 5057, 576, 5770, 5773, 16717, 4635, 5772, 5690, 7307, 7304, 7256, 2]
+// Dependencies: [109, 32, 19, 17, 21, 16737, 1115, 3591, 5058, 576, 5771, 5774, 16738, 4634, 5773, 5691, 7310, 7307, 7259, 2]
 // Exports: VibegrationsEffortPickerSheet, describeVibegrationsEffort
 
-// Module 16719 (VibegrationsEffortPicker)
+// Module 16741 (VibegrationsEffortPicker)
 import util from "util" /* 1115 */;
 import _modDef3591 from "module_3591" /* 3591 */;
-import TableRadioRow from "TableRadioRow" /* 5773 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7256 */;
-import ActionSheet from "ActionSheet" /* 7304 */;
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16716 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16717 */;
+import TableRadioRow from "TableRadioRow" /* 5774 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7259 */;
+import ActionSheet from "ActionSheet" /* 7307 */;
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16737 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16738 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -57,10 +57,10 @@ class VibegrationsEffortPicker {
       onChange(arg0) {
             const tmp3 = VibegrationsEffortPresets.VIBEGRATIONS_EFFORT_PRESETS[Number(undefined, arg0)];
             if (null != tmp3) {
-              const result = tmp(16716).vibegrationsPresetTier(tmp3);
+              const result = tmp(16737).vibegrationsPresetTier(tmp3);
               const tmp15 = _objectWithoutProperties(result, closure_3);
               const tmp16 = closure_1_3;
-              const tmpResult = tmp(16716);
+              const tmpResult = tmp(16737);
               let tmp7 = tmp15;
               if (true === result.fast) {
                 model = result.model;
@@ -78,8 +78,8 @@ class VibegrationsEffortPicker {
                   tmp7 = obj;
                 }
               }
-              tmp16(tmp(16716).vibegrationsSettingsForTier(tmp7));
-              const tmpResult2 = tmp(16716);
+              tmp16(tmp(16737).vibegrationsSettingsForTier(tmp7));
+              const tmpResult2 = tmp(16737);
             }
           },
       title: null,

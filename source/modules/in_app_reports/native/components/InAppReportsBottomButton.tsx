@@ -1,10 +1,10 @@
-// Module ID: 9212
-// Function ID: 9213
+// Module ID: 9223
+// Function ID: 9224
 // Name: InAppReportsBottomButton
-// Dependencies: [19, 17, 1085, 21, 4639, 576, 1115, 2529, 4635, 5059, 1177, 2]
+// Dependencies: [19, 17, 1085, 21, 4638, 576, 1115, 2529, 4634, 5060, 1177, 2]
 // Exports: default
 
-// Module 9212 (InAppReportsBottomButton)
+// Module 9223 (InAppReportsBottomButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2529 from "module_2529" /* 2529 */;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 }, paddingHorizontal: { paddingHorizontal: 16 }, divider: { height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 16 }, descriptionText: { lineHeight: 16, textAlign: "center", marginBottom: 12 }, errorText: null };
 let obj3 = { height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
 obj2.errorText = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
@@ -67,7 +67,7 @@ export default function InAppReportsBottomButton(button) {
       let tmp14Result = null;
       if (null != tmp3) {
         const obj4 = { style: tmp.descriptionText, variant: "text-xs/medium", color: "text-default", children: tmp3 };
-        tmp14Result = tmp14(tmp17(4635).Text, obj4);
+        tmp14Result = tmp14(tmp17(4634).Text, obj4);
       }
       const items1 = [tmp14Result, , ];
       const obj5 = {
@@ -78,7 +78,7 @@ export default function InAppReportsBottomButton(button) {
         text: stringResult2,
         variant: str2
       };
-      items1[1] = React4(tmp17(5059).Button, obj5);
+      items1[1] = React4(tmp17(5060).Button, obj5);
       let tmp14Result2 = null;
       if (hasError) {
         const obj6 = { style: tmp.errorText, children: string2Result };

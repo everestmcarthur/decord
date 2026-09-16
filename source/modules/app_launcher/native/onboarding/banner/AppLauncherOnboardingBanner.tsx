@@ -1,14 +1,14 @@
-// Module ID: 12182
-// Function ID: 12183
+// Module ID: 12190
+// Function ID: 12191
 // Name: AppLauncherOnboardingBanner
-// Dependencies: [19, 21, 1944, 12183, 12197, 12199, 2]
+// Dependencies: [19, 21, 1944, 12191, 12205, 12207, 2]
 // Exports: default
 
-// Module 12182 (AppLauncherOnboardingBanner)
+// Module 12190 (AppLauncherOnboardingBanner)
 import dismissible_content from "dismissible_content" /* 1944 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 12183 */;
-import AppsBannerDefault from "AppsBanner" /* 12197 */;
-import BotsBannerDefault from "BotsBanner" /* 12199 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 12191 */;
+import AppsBannerDefault from "AppsBanner" /* 12205 */;
+import BotsBannerDefault from "BotsBanner" /* 12207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,13 +1,10 @@
 // Module ID: 14418
 // Function ID: 14419
-// Dependencies: [14402, 14419]
+// Dependencies: [14419, 14423]
 
 // Module 14418
-import _mod14402 from "module_14402" /* 14402 */;
 import _mod14419 from "module_14419" /* 14419 */;
+import _mod14423 from "module_14423" /* 14423 */;
 
-let closure_2 = _mod14402({}.hasOwnProperty);
 
-export default Object.hasOwn || (function hasOwn(arg0, arg1) {
-  return closure_2(_mod14419(arg0), arg1);
-});
+export default (arg0) => _mod14419(_mod14423(arg0));

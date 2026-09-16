@@ -1,13 +1,13 @@
-// Module ID: 15701
-// Function ID: 15702
+// Module ID: 15719
+// Function ID: 15720
 // Name: InventoryIcon
-// Dependencies: [19, 21, 576, 4340, 15702, 2]
+// Dependencies: [19, 21, 576, 4338, 15720, 2]
 // Exports: InventoryIcon
 
-// Module 15701 (InventoryIcon)
+// Module 15719 (InventoryIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15702 from "module_15702" /* 15702 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod15720 from "module_15720" /* 15720 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const InventoryIcon = function InventoryIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15702, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15720, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

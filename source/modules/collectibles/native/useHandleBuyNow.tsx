@@ -1,10 +1,10 @@
-// Module ID: 13302
-// Function ID: 13303
+// Module ID: 13313
+// Function ID: 13314
 // Name: useHandleBuyNow
-// Dependencies: [5, 32, 19, 1074, 3, 11153, 7648, 4606, 11216, 1609, 7423, 4312, 4338, 1115, 2]
+// Dependencies: [5, 32, 19, 1074, 3, 11167, 7651, 4605, 11230, 1609, 7426, 4310, 4336, 1115, 2]
 // Exports: default, useHandleBuyNow
 
-// Module 13302 (useHandleBuyNow)
+// Module 13313 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -46,7 +46,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7648).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7651).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -58,10 +58,10 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_5(false);
-          v1(4606).hideAllActionSheets();
-          const obj = v1(4606);
+          v1(4605).hideAllActionSheets();
+          const obj = v1(4605);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_3 };
-          v1(11216).open(obj8);
+          v1(11230).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

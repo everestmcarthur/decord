@@ -1,14 +1,14 @@
-// Module ID: 15253
-// Function ID: 15254
+// Module ID: 15269
+// Function ID: 15270
 // Name: QuestBottomSheetTaskSelect
-// Dependencies: [19, 5529, 21, 5772, 5690, 9011, 1115, 9355, 2]
+// Dependencies: [19, 5530, 21, 5773, 5691, 9022, 1115, 9366, 2]
 // Exports: default
 
-// Module 15253 (QuestBottomSheetTaskSelect)
+// Module 15269 (QuestBottomSheetTaskSelect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const QuestTaskPlatform = fn(5529).QuestTaskPlatform;
+const QuestTaskPlatform = fn(5530).QuestTaskPlatform;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   const obj = { hasIcons: true, children: null };
-  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9011).ScreenIcon, {}), label: null, onPress: null };
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9022).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1115).intl;
   obj2.label = intl.string(onTaskSelect(1115).t["QXc01+"]);
   obj2.onPress = function onPress() {
@@ -27,8 +27,8 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  const items = [closure_3(onTaskSelect(5690).TableRow, obj2), ];
-  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(9355).GameControllerIcon, {}), label: null, onPress: null };
+  const items = [closure_3(onTaskSelect(5691).TableRow, obj2), ];
+  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(9366).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1115).intl;
   obj3.label = intl2.string(onTaskSelect(1115).t["8lAfuB"]);
   obj3.onPress = function onPress() {
@@ -38,7 +38,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = closure_3(onTaskSelect(5690).TableRow, obj3);
+  items[1] = closure_3(onTaskSelect(5691).TableRow, obj3);
   obj.children = items;
-  return closure_4(onTaskSelect(5772).TableRowGroup, obj);
+  return closure_4(onTaskSelect(5773).TableRowGroup, obj);
 };

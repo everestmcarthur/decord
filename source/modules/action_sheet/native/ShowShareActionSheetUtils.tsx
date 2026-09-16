@@ -1,15 +1,15 @@
-// Module ID: 8484
-// Function ID: 8485
+// Module ID: 8493
+// Function ID: 8494
 // Name: ShowShareActionSheetUtils
-// Dependencies: [1074, 8485, 1241, 8486, 1366, 1364, 5653, 2]
+// Dependencies: [1074, 8494, 1241, 8495, 1366, 1364, 5654, 2]
 // Exports: getMediaShareParams, resolveShareFileExtension, trackAppClickInNativeShareSheet
 
-// Module 8484 (ShowShareActionSheetUtils)
+// Module 8493 (ShowShareActionSheetUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 5653 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8485 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 5654 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8494 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -33,7 +33,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            const decideFileExtensionResult = tmp(5653).decideFileExtension(videoURI, contentType, true);
+            const decideFileExtensionResult = tmp(5654).decideFileExtension(videoURI, contentType, true);
             const obj3 = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
             let tmp11;
             if (null != decideFileExtensionResult) {
@@ -44,7 +44,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj3.mediaStagingOptions = tmp11;
             return obj3;
           } else {
-            const decideFileExtensionResult1 = tmp(5653).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = tmp(5654).decideFileExtension(source.uri, contentType, true);
             const obj5 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
             let tmp6;
             if (null != decideFileExtensionResult1) {

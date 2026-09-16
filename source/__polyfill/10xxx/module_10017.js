@@ -1,9 +1,7 @@
 // Module ID: 10017
 // Function ID: 10018
-// Dependencies: [1121]
+// Dependencies: []
 
 // Module 10017
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "032ba055130436392254ce3ba39e9456", name: "gmail", type: "png" });
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

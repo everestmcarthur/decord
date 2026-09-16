@@ -1,14 +1,14 @@
-// Module ID: 8134
-// Function ID: 8135
+// Module ID: 8143
+// Function ID: 8144
 // Name: StageEndSystemMessage
-// Dependencies: [8067, 1115, 8069, 8071, 2]
+// Dependencies: [8076, 1115, 8078, 8080, 2]
 // Exports: createStageEndSystemMessage
 
-// Module 8134 (StageEndSystemMessage)
+// Module 8143 (StageEndSystemMessage)
 import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageEndSystemMessage.tsx");

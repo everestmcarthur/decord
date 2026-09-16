@@ -1,32 +1,31 @@
 // Module ID: 6914
 // Function ID: 6915
-// Dependencies: [19, 21, 6737, 1637, 6733, 6743]
-// Exports: default
+// Dependencies: [19, 6758]
+// Exports: useBoundingClientRect
 
 // Module 6914
-import cancelAnimation from "cancelAnimation" /* 1637 */;
-import value2 from "value2" /* 6733 */;
-import _mod6737 from "module_6737" /* 6737 */;
-import BottomSheetContext from "BottomSheetContext" /* 6743 */;
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
+const useLayoutEffect = _mod19.useLayoutEffect;
 
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod6737.useGestureEventsHandlersDefault;
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (tmp.current) {
+          if (typeof tmp.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof tmp.current.getBoundingClientRect === "function") {
+              const current2 = tmp.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = tmp.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
+      }
+    });
   }
-  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod6737.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod6737.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const gestureHandler1 = _mod6737.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
 };

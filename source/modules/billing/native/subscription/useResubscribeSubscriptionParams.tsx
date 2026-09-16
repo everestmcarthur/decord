@@ -1,12 +1,12 @@
-// Module ID: 10944
-// Function ID: 10945
+// Module ID: 10957
+// Function ID: 10958
 // Name: useResubscribeSubscriptionParams
-// Dependencies: [19, 10940, 1255, 2]
+// Dependencies: [19, 10953, 1255, 2]
 // Exports: default
 
-// Module 10944 (useResubscribeSubscriptionParams)
+// Module 10957 (useResubscribeSubscriptionParams)
 import v1 from "v1" /* 1255 */;
-import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10940 */;
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10953 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

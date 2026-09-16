@@ -1,13 +1,13 @@
-// Module ID: 8775
-// Function ID: 8776
+// Module ID: 8784
+// Function ID: 8785
 // Name: InAppReportsTextLineElement
-// Dependencies: [5, 32, 19, 17, 21, 4639, 576, 5683, 5079, 1364, 4618, 4334, 4635, 5059, 1115, 7296, 4337, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4638, 576, 5684, 5080, 1364, 4617, 4332, 4634, 5060, 1115, 7299, 4335, 2]
 // Exports: default
 
-// Module 8775 (InAppReportsTextLineElement)
+// Module 8784 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4337 */;
-import ClipboardUtils from "ClipboardUtils" /* 7296 */;
+import ToastUtils from "ToastUtils" /* 4335 */;
+import ClipboardUtils from "ClipboardUtils" /* 7299 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, Linking: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, description: { marginBottom: 16 }, trailingButtonContainer: { paddingHorizontal: 8 }, smsInfoContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, smsNumberContainer: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8 }, smsNumberContainerSuccess: null, startButtonContainer: null };
 let obj3 = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8 };
 obj2.smsNumberContainerSuccess = { borderColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };

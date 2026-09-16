@@ -1,16 +1,16 @@
-// Module ID: 13389
-// Function ID: 13390
+// Module ID: 13400
+// Function ID: 13401
 // Name: IconActionButton
-// Dependencies: [19, 21, 4639, 576, 1364, 1177, 5066, 5207, 4635, 7975, 2]
+// Dependencies: [19, 21, 4638, 576, 1364, 1177, 5067, 5208, 4634, 7984, 2]
 // Exports: default
 
-// Module 13389 (IconActionButton)
+// Module 13400 (IconActionButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useFontScale from "useFontScale" /* 5066 */;
-import Pressables from "Pressables" /* 5207 */;
-import Badge from "Badge" /* 7975 */;
+import useFontScale from "useFontScale" /* 5067 */;
+import Pressables from "Pressables" /* 5208 */;
+import Badge from "Badge" /* 7984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ class ButtonBadge {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const timestampProducer = createStyles.createStyles(() => {
   const obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -109,7 +109,7 @@ export default function IconActionButton(variant) {
   const items1 = [React4(closure_7, { IconComponent, color, source }), , , ];
   if (tmp10Result) {
     const obj2 = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
-    tmp10Result = tmp10(tmp2(4635).Text, obj2);
+    tmp10Result = tmp10(tmp2(4634).Text, obj2);
   }
   items1[1] = tmp10Result;
   let tmp10Result2 = null;

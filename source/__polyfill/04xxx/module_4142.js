@@ -1,21 +1,21 @@
 // Module ID: 4142
 // Function ID: 4143
-// Dependencies: [3732, 3728, 3729]
+// Dependencies: [3730, 3726, 3727]
 // Exports: default
 
 // Module 4142
-import module_3732_mod from "module_3732" /* 3732 */;
-import _typeof_mod from "module_3728" /* 3728 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import module_3730_mod from "module_3730" /* 3730 */;
+import _typeof_mod from "module_3726" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj = { default: module_3732 };
+let module_3730 = module_3730_mod;
+if (!module_3730) {
+  const obj = { default: module_3730 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3732;
+  tmp3 = module_3730;
 }
-module_3732 = tmp3;
+module_3730 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -33,10 +33,11 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setDate(module_3732, arg1) {
+export default function setDayOfYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_3732);
-  defaultResult1.setDate(module_3732.default(arg1));
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_3730.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

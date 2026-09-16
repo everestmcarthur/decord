@@ -1,13 +1,13 @@
-// Module ID: 6248
-// Function ID: 6249
+// Module ID: 6249
+// Function ID: 6250
 // Name: GiftCardStack3dIllustration
-// Dependencies: [21, 5672, 6249, 2]
+// Dependencies: [21, 5673, 6250, 2]
 // Exports: GiftCardStack3dIllustration
 
-// Module 6248 (GiftCardStack3dIllustration)
+// Module 6249 (GiftCardStack3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6249 from "module_6249" /* 6249 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6250 from "module_6250" /* 6250 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GiftCardStack3dIllustration = function GiftCardStack3dIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6249 };
+  const obj2 = { uri: _modDef6250 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

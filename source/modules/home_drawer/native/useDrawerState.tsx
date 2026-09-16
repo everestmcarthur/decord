@@ -1,11 +1,11 @@
-// Module ID: 16135
-// Function ID: 16136
+// Module ID: 16155
+// Function ID: 16156
 // Name: useDrawerState
-// Dependencies: [32, 19, 1485, 4497, 2]
+// Dependencies: [32, 19, 1485, 4495, 2]
 // Exports: useDrawerOpen
 
-// Module 16135 (useDrawerState)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
+// Module 16155 (useDrawerState)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

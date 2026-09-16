@@ -1,27 +1,27 @@
-// Module ID: 11142
-// Function ID: 11143
+// Module ID: 11156
+// Function ID: 11157
 // Name: SocialLayerStorefrontGiftPurchaseSection
-// Dependencies: [32, 19, 17, 7531, 1372, 1074, 1374, 21, 4639, 576, 7088, 7275, 504, 1241, 11143, 10947, 1364, 573, 10930, 1115, 10953, 4635, 5059, 2]
+// Dependencies: [32, 19, 17, 7534, 1372, 1074, 1374, 21, 4638, 576, 7091, 7278, 504, 1241, 11157, 10960, 1364, 573, 10943, 1115, 10966, 4634, 5060, 2]
 // Exports: default
 
-// Module 11142 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 11156 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10930 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7531).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7534).useNativeCheckoutStore;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const GiftingOrigin = fn(1374).GiftingOrigin;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { container: null, legalCopy: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);

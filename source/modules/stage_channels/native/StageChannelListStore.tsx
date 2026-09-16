@@ -1,11 +1,11 @@
-// Module ID: 10176
-// Function ID: 10177
+// Module ID: 10184
+// Function ID: 10185
 // Name: StageChannelListStore
-// Dependencies: [32, 19, 1243, 1248, 4262, 2]
+// Dependencies: [32, 19, 1243, 1248, 4260, 2]
 // Exports: useActiveSpeakerPillScrollHandler, useActiveSpeakerPillState
 
-// Module 10176 (StageChannelListStore)
-import _mod4262 from "module_4262" /* 4262 */;
+// Module 10184 (StageChannelListStore)
+import _mod4260 from "module_4260" /* 4260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillSc
     const items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _mod4262.shallow), 2);
+  }, _mod4260.shallow), 2);
   const first = tmp[0];
   closure_1 = tmp3;
   let items = [tmp[1]];
@@ -55,5 +55,5 @@ export const useActiveSpeakerPillState = function useActiveSpeakerPillState() {
     const items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod4262.shallow);
+  }, _mod4260.shallow);
 };

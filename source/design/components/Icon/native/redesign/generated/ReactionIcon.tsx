@@ -1,13 +1,13 @@
-// Module ID: 8886
-// Function ID: 8887
+// Module ID: 8897
+// Function ID: 8898
 // Name: ReactionIcon
-// Dependencies: [19, 21, 576, 4340, 8887, 2]
+// Dependencies: [19, 21, 576, 4338, 8898, 2]
 // Exports: ReactionIcon
 
-// Module 8886 (ReactionIcon)
+// Module 8897 (ReactionIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8887 from "module_8887" /* 8887 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod8898 from "module_8898" /* 8898 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ReactionIcon = function ReactionIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8887, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8898, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

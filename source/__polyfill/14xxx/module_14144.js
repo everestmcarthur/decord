@@ -1,20 +1,9 @@
 // Module ID: 14144
 // Function ID: 14145
-// Dependencies: [14137]
+// Dependencies: [14135]
 
 // Module 14144
-import _mod14137 from "module_14137" /* 14137 */;
+import _mod14135 from "module_14135" /* 14135 */;
 
 
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod14137(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
-  } catch (err) {
-    return null;
-  }
-};
+export default (arg0, arg1, arg2) => 0 !== _mod14135(arg0, arg1, arg2);

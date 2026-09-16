@@ -1,12 +1,12 @@
-// Module ID: 15827
-// Function ID: 15828
+// Module ID: 15845
+// Function ID: 15846
 // Name: DevToolsPerformanceTestingScreen
-// Dependencies: [19, 17, 21, 4639, 576, 1484, 1612, 5772, 15678, 5690, 14679, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 1484, 1612, 5773, 15696, 5691, 14695, 2]
 
-// Module 15827 (DevToolsPerformanceTestingScreen)
+// Module 15845 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14679 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14695 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj);
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
@@ -31,9 +31,9 @@ export default noop.memo(function DevToolsPerformanceTestingScreen() {
   const entries = Object.entries(require("DevToolsScreens").PerformanceTestingScreens);
   obj4.children = entries.map((item) => {
     [tmp, ] = item;
-    return jsx(screenKey(5690).TableRow, {
+    return jsx(screenKey(5691).TableRow, {
       label: tmp2,
-      icon: jsx(screenKey(5690).TableRow.Icon, { IconComponent: tmp3 }),
+      icon: jsx(screenKey(5691).TableRow.Icon, { IconComponent: tmp3 }),
       arrow: true,
       onPress() {
         if (null != screenKey.push) {

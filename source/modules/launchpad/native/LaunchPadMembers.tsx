@@ -1,13 +1,13 @@
-// Module ID: 17144
-// Function ID: 17145
+// Module ID: 17200
+// Function ID: 17201
 // Name: LaunchPadMembers
-// Dependencies: [19, 17, 1958, 2012, 21, 4639, 563, 12320, 16838, 11722, 4635, 1115, 2]
+// Dependencies: [19, 17, 1958, 2012, 21, 4638, 563, 12328, 16895, 11730, 4634, 1115, 2]
 
-// Module 17144 (LaunchPadMembers)
+// Module 17200 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 11722 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12320 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 16838 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11730 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12328 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 16895 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
@@ -15,7 +15,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
@@ -43,7 +43,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: "add" };
+    return { channelId: "call", type: "lj" };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };
@@ -69,7 +69,7 @@ export default noop.memo(function LaunchPadMembers() {
     const obj18 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
     const intl = tmp2(1115).intl;
     obj18.children = intl.string(tmp2(1115).t["+7wtJq"]);
-    obj17.children = jsx(tmp2(4635).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    obj17.children = jsx(tmp2(4634).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
     tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;

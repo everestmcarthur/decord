@@ -1,13 +1,13 @@
-// Module ID: 16442
-// Function ID: 16443
+// Module ID: 16462
+// Function ID: 16463
 // Name: GuildMediaStateShadowCompare
-// Dependencies: [13802, 4, 1231, 509, 2]
+// Dependencies: [13811, 4, 1231, 509, 2]
 // Exports: compareGuildMediaState
 
-// Module 16442 (GuildMediaStateShadowCompare)
+// Module 16462 (GuildMediaStateShadowCompare)
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import GuildMediaStateStore from "GuildMediaStateStore" /* 13802 */;
+import GuildMediaStateStore from "GuildMediaStateStore" /* 13811 */;
 
 const logger = new fn(4).Logger("GuildMediaStateShadowCompare");
 let closure_5 = ["audio", "video", "screenshare", "liveStage", "activeEvent", "activity", "isCurrentUserConnected"];

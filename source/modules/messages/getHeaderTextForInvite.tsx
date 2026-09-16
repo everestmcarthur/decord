@@ -1,10 +1,10 @@
-// Module ID: 13346
-// Function ID: 13347
+// Module ID: 13357
+// Function ID: 13358
 // Name: getHeaderTextForInvite
 // Dependencies: [1115, 2]
 // Exports: getHeaderTextForInvite
 
-// Module 13346 (getHeaderTextForInvite)
+// Module 13357 (getHeaderTextForInvite)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

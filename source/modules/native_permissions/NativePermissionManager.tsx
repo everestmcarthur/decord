@@ -1,14 +1,14 @@
-// Module ID: 5224
-// Function ID: 5225
+// Module ID: 5225
+// Function ID: 5226
 // Name: NativePermissionManager
-// Dependencies: [4849, 1074, 1899, 1364, 5225, 573, 5223, 2]
+// Dependencies: [4848, 1074, 1899, 1364, 5226, 573, 5224, 2]
 
-// Module 5224 (NativePermissionManager)
+// Module 5225 (NativePermissionManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 4849 */;
-import NativePermissionUtils from "NativePermissionUtils" /* 5223 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 4848 */;
+import NativePermissionUtils from "NativePermissionUtils" /* 5224 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ prototype["isEnabled"] = function isEnabled() {
     const tmpResult = tmp(1364);
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5225).ProcessArgs;
+    const ProcessArgs = tmp(5226).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

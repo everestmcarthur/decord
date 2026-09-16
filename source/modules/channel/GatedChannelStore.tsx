@@ -1,13 +1,13 @@
 // Module ID: 2014
 // Function ID: 2015
 // Name: GatedChannelStore
-// Dependencies: [2015, 1962, 2017, 1958, 2022, 2016, 1980, 1372, 1074, 4269, 4270, 4271, 504, 573, 2]
+// Dependencies: [2015, 1962, 2017, 1958, 2022, 2016, 1980, 1372, 1074, 4267, 4268, 4269, 504, 573, 2]
 
 // Module 2014 (GatedChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4269 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4270 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4267 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 4268 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;

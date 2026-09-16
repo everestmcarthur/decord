@@ -1,13 +1,13 @@
-// Module ID: 9503
-// Function ID: 9504
+// Module ID: 9514
+// Function ID: 9515
 // Name: UploadIcon
-// Dependencies: [19, 21, 576, 4340, 9504, 2]
+// Dependencies: [19, 21, 576, 4338, 9515, 2]
 // Exports: UploadIcon
 
-// Module 9503 (UploadIcon)
+// Module 9514 (UploadIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod9504 from "module_9504" /* 9504 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod9515 from "module_9515" /* 9515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const UploadIcon = function UploadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9504, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9515, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

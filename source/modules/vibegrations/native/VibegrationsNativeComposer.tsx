@@ -1,21 +1,21 @@
-// Module ID: 16754
-// Function ID: 16755
+// Module ID: 16790
+// Function ID: 16791
 // Name: VibegrationsNativeComposer
-// Dependencies: [5, 32, 19, 17, 16755, 16705, 1074, 21, 4639, 576, 1115, 3591, 7352, 16710, 5234, 11361, 4635, 5207, 6721, 8792, 12373, 11087, 8727, 16047, 4584, 2]
+// Dependencies: [5, 32, 19, 17, 16791, 16725, 1074, 21, 4638, 576, 1115, 3591, 7355, 16730, 5235, 11369, 4634, 5208, 6724, 8801, 12381, 11101, 8736, 16067, 4582, 2]
 // Exports: default
 
-// Module 16754 (VibegrationsNativeComposer)
+// Module 16790 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3591 from "module_3591" /* 3591 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 11087 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12373 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16710 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 11101 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12381 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16730 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16755 */;
+import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16791 */;
 
 const require = globalThis.__r;
 
@@ -29,11 +29,11 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16705);
+const VibegrationsConnectionStore = fn(16725);
 ({ deleteStagedAttachment: closure_9, uploadAttachmentBytes: c10 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -264,7 +264,7 @@ export default function VibegrationsNativeComposer(projectId) {
       if (map.length > diff) {
         let intl = tmp16(1115).intl;
         let obj = { count: null };
-        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7352).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7355).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         _undefined3(intl.formatToPlainString(_modDef3591.DlX57a, obj));
         const _Math = Math;
@@ -354,10 +354,10 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj4;
           } else {
             closure_128_0 = undefined;
-            const obj5 = { mediaType: "any", selectionLimit: tmp2(7352).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            const obj5 = { mediaType: "any", selectionLimit: tmp2(7355).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5234).launchImageLibraryAsync(obj5), done: false };
+            const obj6 = { value: tmp5(5235).launchImageLibraryAsync(obj5), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

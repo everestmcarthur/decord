@@ -1,10 +1,10 @@
-// Module ID: 13683
-// Function ID: 13684
+// Module ID: 13692
+// Function ID: 13693
 // Name: ServerBoostStreamQualityMarketingExperiment
 // Dependencies: [1435, 2]
 // Exports: getServerBoostStreamQualityMarketingResolution
 
-// Module 13683 (ServerBoostStreamQualityMarketingExperiment)
+// Module 13692 (ServerBoostStreamQualityMarketingExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { name: "2026-04-server-boost-copy-1440p", kind: "user", defaultConfig: { streamQualityMarketingResolution: "1080p" }, variations: null };

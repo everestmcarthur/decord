@@ -1,24 +1,24 @@
-// Module ID: 11527
-// Function ID: 11528
+// Module ID: 11535
+// Function ID: 11536
 // Name: ConfirmBlockUserAlert
-// Dependencies: [19, 17, 1372, 11501, 21, 4639, 576, 504, 11528, 4484, 9174, 8525, 8755, 5078, 5059, 1115, 4635, 2]
+// Dependencies: [19, 17, 1372, 11509, 21, 4638, 576, 504, 11536, 4482, 9185, 8534, 8764, 5079, 5060, 1115, 4634, 2]
 // Exports: default
 
-// Module 11527 (ConfirmBlockUserAlert)
+// Module 11535 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import ReportModals from "ReportModals" /* 8755 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9174 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import ReportModals from "ReportModals" /* 8764 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9185 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(11501).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11509).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };

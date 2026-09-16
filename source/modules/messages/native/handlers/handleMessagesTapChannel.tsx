@@ -1,17 +1,17 @@
-// Module ID: 11682
-// Function ID: 11683
+// Module ID: 11690
+// Function ID: 11691
 // Name: handleMessagesTapChannel
-// Dependencies: [5, 1962, 1976, 1958, 2022, 2016, 1980, 4278, 1074, 1965, 7208, 7204, 7448, 8496, 8204, 4842, 11683, 1897, 7354, 4606, 11696, 11704, 1370, 4793, 4846, 5496, 2]
+// Dependencies: [5, 1962, 1976, 1958, 2022, 2016, 1980, 4276, 1074, 1965, 7211, 7207, 7451, 8505, 8213, 4841, 11691, 1897, 7357, 4605, 11704, 11712, 1370, 4792, 4845, 5497, 2]
 // Exports: handleMessagesTapChannel
 
-// Module 11682 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7448 */;
+// Module 11690 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -368,8 +368,8 @@ const isGuildLurker = fn(1976).isGuildLurker;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
 const StaticChannelRoute = fn(1965).StaticChannelRoute;
-const GuildOnboardingTab = fn(7208).GuildOnboardingTab;
-let closure_18 = fn(7204).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(7211).GuildOnboardingTab;
+let closure_18 = fn(7207).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

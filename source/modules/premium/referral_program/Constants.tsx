@@ -1,13 +1,13 @@
-// Module ID: 13526
-// Function ID: 13527
+// Module ID: 13537
+// Function ID: 13538
 // Name: Constants
 // Dependencies: [2]
 
-// Module 13526 (Constants)
+// Module 13537 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/referral_program/Constants.tsx");
 
 export const REFERRAL_TRIAL_OFFER_EXPIRATION_DAYS = 10;
 export const REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE = 30;
-export const REFERRAL_INCENTIVE_ORBS_PER_CONVERSION = 500;
+export const REFERRAL_INCENTIVE_ORBS_PER_CONVERSION = 5000;

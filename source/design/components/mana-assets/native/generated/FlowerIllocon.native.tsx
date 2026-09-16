@@ -1,13 +1,13 @@
-// Module ID: 6106
-// Function ID: 6107
+// Module ID: 6107
+// Function ID: 6108
 // Name: FlowerIllocon
-// Dependencies: [21, 5672, 6107, 2]
+// Dependencies: [21, 5673, 6108, 2]
 // Exports: FlowerIllocon
 
-// Module 6106 (FlowerIllocon)
+// Module 6107 (FlowerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6107 from "module_6107" /* 6107 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6108 from "module_6108" /* 6108 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const FlowerIllocon = function FlowerIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6107 };
+  const obj2 = { uri: _modDef6108 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

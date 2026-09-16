@@ -1,28 +1,28 @@
-// Module ID: 14731
-// Function ID: 14732
+// Module ID: 14747
+// Function ID: 14748
 // Name: EditProfileFrameSection
-// Dependencies: [19, 17, 7656, 8341, 21, 576, 4639, 13306, 14730, 13307, 7289, 8952, 2]
+// Dependencies: [19, 17, 7659, 8350, 21, 576, 4638, 13317, 14746, 13318, 7292, 8963, 2]
 
-// Module 14731 (EditProfileFrameSection)
+// Module 14747 (EditProfileFrameSection)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8952 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13306 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13307 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 14730 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8963 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13317 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13318 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14746 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7656).isProfileFrameRecord;
-let closure_6 = fn(8341).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(7659).isProfileFrameRecord;
+let closure_6 = fn(8350).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4639);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13306).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13306).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13306).GUTTER_SIZE };
+const createStyles = fn(4638);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13317).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13317).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13317).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
@@ -40,10 +40,10 @@ const memoResult = noop.memo((arg0) => {
   obj2.children = substr.map((profileFrame, index) => {
     if (profileFrame === useProfileFrameSections.NONE_ITEM) {
       const obj2 = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return React5(tmp(13307).EditCollectiblesListItemNone, obj2, "none");
-    } else if (profileFrame === tmp(14730).SHOP_ITEM) {
+      return React5(tmp(13318).EditCollectiblesListItemNone, obj2, "none");
+    } else if (profileFrame === tmp(14746).SHOP_ITEM) {
       const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_PROFILE_FRAME_SHEET };
-      return React5(tmp(13307).EditCollectiblesListItemShop, obj3, "shop");
+      return React5(tmp(13318).EditCollectiblesListItemShop, obj3, "shop");
     } else if (isProfileFrameRecord(profileFrame)) {
       const obj4 = { profileFrame, isSelected: closure_1_0 === profileFrame.skuId, setSelectedProfileFrame, size: width };
       return React5(memoResult1, obj4, profileFrame.skuId);

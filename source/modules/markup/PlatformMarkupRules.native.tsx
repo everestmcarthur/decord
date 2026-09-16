@@ -1,21 +1,21 @@
-// Module ID: 5111
-// Function ID: 5112
+// Module ID: 5112
+// Function ID: 5113
 // Name: PlatformMarkupRules
-// Dependencies: [17, 5112, 5191, 1925, 1115, 4292, 4336, 5206, 5089, 1397, 5090, 5093, 2]
+// Dependencies: [17, 5113, 5192, 1925, 1115, 4290, 4334, 5207, 5090, 1397, 5091, 5094, 2]
 // Exports: decorateWithIcon, hydrateGameMention
 
-// Module 5111 (PlatformMarkupRules)
+// Module 5112 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1925 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import _modDef4336 from "module_4336" /* 4336 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5089 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5090 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5093 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5112 */;
-import useGameMentionData from "useGameMentionData" /* 5191 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5206 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4290 */;
+import _modDef4334 from "module_4334" /* 4334 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5090 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5091 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5094 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5113 */;
+import useGameMentionData from "useGameMentionData" /* 5192 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5207 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -54,7 +54,7 @@ let obj = {
   silentPrefix: null
 };
 let obj2 = {};
-let merged = Object.assign(_modDef4336.defaultRules.escape);
+let merged = Object.assign(_modDef4334.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;

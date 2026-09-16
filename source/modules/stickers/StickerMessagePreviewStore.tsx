@@ -1,12 +1,12 @@
-// Module ID: 5352
-// Function ID: 5353
+// Module ID: 5353
+// Function ID: 5354
 // Name: StickerMessagePreviewStore
-// Dependencies: [4980, 504, 573, 2]
+// Dependencies: [4979, 504, 573, 2]
 
-// Module 5352 (StickerMessagePreviewStore)
+// Module 5353 (StickerMessagePreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DraftStore from "DraftStore" /* 4980 */;
+import DraftStore from "DraftStore" /* 4979 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;

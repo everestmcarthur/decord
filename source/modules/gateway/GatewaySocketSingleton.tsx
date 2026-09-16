@@ -1,19 +1,19 @@
-// Module ID: 13723
-// Function ID: 13724
+// Module ID: 13732
+// Function ID: 13733
 // Name: GatewaySocketSingleton
-// Dependencies: [13724, 502, 3, 13725, 13765, 13768, 11438, 1241, 7862, 1364, 4260, 1462, 573, 2]
+// Dependencies: [13733, 502, 3, 13734, 13774, 13777, 11446, 1241, 7871, 1364, 4258, 1462, 573, 2]
 
-// Module 13723 (GatewaySocketSingleton)
+// Module 13732 (GatewaySocketSingleton)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import DiscordNativeDefault from "DiscordNative" /* 4260 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7862 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11438 */;
-import GatewaySocketDefault from "GatewaySocket" /* 13725 */;
-import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13765 */;
-import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13768 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13724 */;
+import DiscordNativeDefault from "DiscordNative" /* 4258 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7871 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11446 */;
+import GatewaySocketDefault from "GatewaySocket" /* 13734 */;
+import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13774 */;
+import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13777 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13733 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import NetworkUtils_mod from "NetworkUtils" /* 1462 */;
 

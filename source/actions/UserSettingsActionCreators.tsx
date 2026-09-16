@@ -1,16 +1,16 @@
-// Module ID: 9490
-// Function ID: 9491
+// Module ID: 9501
+// Function ID: 9502
 // Name: UserSettingsActionCreators
-// Dependencies: [5, 4459, 1183, 1182, 1074, 1185, 1941, 1186, 1217, 573, 4488, 1936, 2]
+// Dependencies: [5, 4457, 1183, 1182, 1074, 1185, 1941, 1186, 1217, 573, 4486, 1936, 2]
 // Exports: saveClientTheme, saveGuildFolders
 
-// Module 9490 (UserSettingsActionCreators)
+// Module 9501 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import wrappers from "wrappers" /* 1217 */;
 import UserSettings from "UserSettings" /* 1936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4459 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4457 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 

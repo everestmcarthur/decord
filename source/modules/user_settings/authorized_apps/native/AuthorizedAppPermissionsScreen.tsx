@@ -1,12 +1,12 @@
-// Module ID: 15043
-// Function ID: 15044
+// Module ID: 15059
+// Function ID: 15060
 // Name: AuthorizedAppPermissionsScreen
-// Dependencies: [19, 21, 7101, 15044, 2]
+// Dependencies: [19, 21, 7104, 15060, 2]
 // Exports: default
 
-// Module 15043 (AuthorizedAppPermissionsScreen)
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7101 */;
-import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 15044 */;
+// Module 15059 (AuthorizedAppPermissionsScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7104 */;
+import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 15060 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

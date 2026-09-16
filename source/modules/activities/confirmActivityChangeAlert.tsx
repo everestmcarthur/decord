@@ -1,14 +1,14 @@
-// Module ID: 9672
-// Function ID: 9673
+// Module ID: 9683
+// Function ID: 9684
 // Name: confirmActivityChangeAlert
-// Dependencies: [4288, 1372, 4792, 4983, 1115, 1926, 2]
+// Dependencies: [4286, 1372, 4791, 4982, 1115, 1926, 2]
 // Exports: default
 
-// Module 9672 (confirmActivityChangeAlert)
+// Module 9683 (confirmActivityChangeAlert)
 import util from "util" /* 1115 */;
-import useChannelName from "useChannelName" /* 4792 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import useChannelName from "useChannelName" /* 4791 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4982 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

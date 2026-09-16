@@ -1,10 +1,10 @@
-// Module ID: 16707
-// Function ID: 16708
+// Module ID: 16727
+// Function ID: 16728
 // Name: VibegrationsWorkerTickets
-// Dependencies: [5, 1074, 1271, 16708, 2]
+// Dependencies: [5, 1074, 1271, 16728, 2]
 // Exports: mintRemixTicket, mintWorkerTicket
 
-// Module 16707 (VibegrationsWorkerTickets)
+// Module 16727 (VibegrationsWorkerTickets)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

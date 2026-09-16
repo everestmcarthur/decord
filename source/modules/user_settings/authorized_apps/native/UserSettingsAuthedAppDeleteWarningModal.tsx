@@ -1,14 +1,14 @@
-// Module ID: 12732
-// Function ID: 12733
+// Module ID: 12740
+// Function ID: 12741
 // Name: UserSettingsAuthedAppDeleteWarningModal
-// Dependencies: [21, 11666, 1115, 12733, 9591, 4989, 2]
+// Dependencies: [21, 11674, 1115, 12741, 9602, 4988, 2]
 // Exports: default
 
-// Module 12732 (UserSettingsAuthedAppDeleteWarningModal)
+// Module 12740 (UserSettingsAuthedAppDeleteWarningModal)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 4989 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11666 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12733 */;
+import AlertModal from "AlertModal" /* 4988 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 11674 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12741 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -42,17 +42,17 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     const intl3 = tmp(1115).intl;
     const obj6 = { applicationName: application.name };
     obj5.children = intl3.format(tmp(1115).t.KRnERi, obj6);
-    tmp9 = React3(tmp8(9591), obj5);
-    const tmp8Result = tmp8(9591);
+    tmp9 = React3(tmp8(9602), obj5);
+    const tmp8Result = tmp8(9602);
   }
   const items = [tmp9, ];
   let tmp12 = result;
   if (result) {
-    const obj7 = { look: tmp(9591).InfoBoxLooks.WARNING, children: null };
+    const obj7 = { look: tmp(9602).InfoBoxLooks.WARNING, children: null };
     const intl4 = tmp(1115).intl;
     obj7.children = intl4.string(tmp(1115).t.LY35Zy);
-    tmp12 = React3(tmp8(9591), obj7);
-    const tmp8Result2 = tmp8(9591);
+    tmp12 = React3(tmp8(9602), obj7);
+    const tmp8Result2 = tmp8(9602);
   }
   items[1] = tmp12;
   const obj8 = { title: formatToPlainStringResult, content: formatToPlainStringResult1, extraContent: hasOwnProperty(React4, { children: items }), actions: null };

@@ -1,9 +1,9 @@
-// Module ID: 5244
-// Function ID: 5245
+// Module ID: 5245
+// Function ID: 5246
 // Name: IosImageTypesManager
 // Dependencies: [32, 17, 3, 1899, 2]
 
-// Module 5244 (IosImageTypesManager)
+// Module 5245 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;

@@ -1,10 +1,10 @@
-// Module ID: 4660
-// Function ID: 4661
+// Module ID: 4659
+// Function ID: 4660
 // Name: CallConstants
 // Dependencies: [2]
 // Exports: isActivityParticipant, isStreamParticipant, isUserParticipant
 
-// Module 4660 (CallConstants)
+// Module 4659 (CallConstants)
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };

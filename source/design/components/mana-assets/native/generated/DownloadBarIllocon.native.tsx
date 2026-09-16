@@ -1,13 +1,13 @@
-// Module ID: 6042
-// Function ID: 6043
+// Module ID: 6043
+// Function ID: 6044
 // Name: DownloadBarIllocon
-// Dependencies: [21, 5672, 6043, 2]
+// Dependencies: [21, 5673, 6044, 2]
 // Exports: DownloadBarIllocon
 
-// Module 6042 (DownloadBarIllocon)
+// Module 6043 (DownloadBarIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6043 from "module_6043" /* 6043 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6044 from "module_6044" /* 6044 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const DownloadBarIllocon = function DownloadBarIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6043 };
+  const obj2 = { uri: _modDef6044 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

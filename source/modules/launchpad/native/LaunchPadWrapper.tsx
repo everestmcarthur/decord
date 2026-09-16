@@ -1,26 +1,26 @@
-// Module ID: 17119
-// Function ID: 17120
+// Module ID: 17175
+// Function ID: 17176
 // Name: LaunchPadWrapper
-// Dependencies: [32, 19, 17, 11602, 1074, 21, 4639, 576, 12924, 1110, 4497, 17120, 8388, 1241, 17117, 4607, 5056, 5671, 4376, 17121, 5043, 1115, 5014, 17123, 2]
+// Dependencies: [32, 19, 17, 11610, 1074, 21, 4638, 576, 12932, 1110, 4495, 17176, 8397, 1241, 17173, 4606, 5055, 5672, 4374, 17177, 5042, 1115, 5013, 17179, 2]
 // Exports: default
 
-// Module 17119 (LaunchPadWrapper)
+// Module 17175 (LaunchPadWrapper)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17117 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableOpacity: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11602).LaunchPadTypes;
+const LaunchPadTypes = fn(11610).LaunchPadTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;
@@ -70,8 +70,8 @@ export default function LaunchPadWrapper(launchPadType) {
       if (!isModalOpen) {
         const result = LaunchPadPullTabCache.setLaunchPadPullTabExclusionRect();
         if (closure_3) {
-          const result1 = tmp2(4607).triggerHapticFeedback(tmp2(4607).HapticFeedbackTypes.IMPACT_LIGHT);
-          const tmp2Result = tmp2(4607);
+          const result1 = tmp2(4606).triggerHapticFeedback(tmp2(4606).HapticFeedbackTypes.IMPACT_LIGHT);
+          const tmp2Result = tmp2(4606);
         }
       }
     }

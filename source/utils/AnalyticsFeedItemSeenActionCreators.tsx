@@ -1,10 +1,10 @@
-// Module ID: 8006
-// Function ID: 8007
+// Module ID: 8015
+// Function ID: 8016
 // Name: AnalyticsFeedItemSeenActionCreators
 // Dependencies: [573, 2]
 // Exports: flushAnalyticsFeedItems, markAnalyticsFeedItemSeen, markAnalyticsFeedItemUnseen
 
-// Module 8006 (AnalyticsFeedItemSeenActionCreators)
+// Module 8015 (AnalyticsFeedItemSeenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

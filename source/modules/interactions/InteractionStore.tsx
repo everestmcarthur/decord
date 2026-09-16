@@ -1,15 +1,15 @@
-// Module ID: 8048
-// Function ID: 8049
+// Module ID: 8057
+// Function ID: 8058
 // Name: InteractionStore
-// Dependencies: [32, 502, 1958, 1091, 4869, 1895, 7563, 504, 573, 2]
+// Dependencies: [32, 502, 1958, 1091, 4868, 1895, 7566, 504, 573, 2]
 
-// Module 8048 (InteractionStore)
+// Module 8057 (InteractionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import Server from "Server" /* 1895 */;
-import InteractionTypes from "InteractionTypes" /* 4869 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7563 */;
+import InteractionTypes from "InteractionTypes" /* 4868 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -144,7 +144,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
     } else {
       if (null != dependencyMap[nonce]) {
         if (tmp3.state === InteractionTypes.InteractionState.QUEUED) {
-          tmp3.state = tmp4(4869).InteractionState.CREATED;
+          tmp3.state = tmp4(4868).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);

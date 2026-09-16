@@ -1,14 +1,15 @@
-// Module ID: 4842
-// Function ID: 4843
+// Module ID: 4841
+// Function ID: 4842
 // Name: ModalActionCreators
-// Dependencies: [1074, 4843, 4497, 4844, 573, 4498, 4845, 2]
+// Dependencies: [1074, 4842, 4495, 4843, 4503, 573, 4496, 4844, 2]
 
-// Module 4842 (ModalActionCreators)
+// Module 4841 (ModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import uniqueIdDefault from "uniqueId" /* 4843 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 4844 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
+import Types from "Types" /* 4503 */;
+import uniqueIdDefault from "uniqueId" /* 4842 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 4843 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -28,8 +29,8 @@ export default {
     }
     const obj = NavigationRouteUtils;
     const merged = Object.assign(arg3);
-    obj.pushModal({ modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) });
-    const obj2 = { modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) };
+    obj.pushModal({ modal: getDeprecatedModalDataDefault(modal, {}, props, tmp), trigger: Types.ModalOpenTrigger.AUTOMATIC });
+    const obj2 = { modal: getDeprecatedModalDataDefault(modal, {}, props, tmp), trigger: Types.ModalOpenTrigger.AUTOMATIC };
     const element = { type: "MODAL_PUSH", modal, props, key: tmp, appContext: APP };
     DispatcherDefault.dispatch(element);
     return tmp;
@@ -58,7 +59,7 @@ export default {
     const obj = require("RootNavigationRef");
     return new Promise((arg0) => {
       closure_0 = arg0;
-      return promise(merged[6]).enqueue(() => closure_0(self.pushLazy(closure_1, closure_2, closure_3, closure_0)));
+      return promise(merged[7]).enqueue(() => closure_0(self.pushLazy(closure_1, closure_2, closure_3, closure_0)));
     });
   },
   updateAnimation(key, SLIDE_IN_OUT) {

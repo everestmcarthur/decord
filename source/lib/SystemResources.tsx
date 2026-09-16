@@ -1,12 +1,12 @@
-// Module ID: 7853
-// Function ID: 7854
+// Module ID: 7862
+// Function ID: 7863
 // Name: SystemResources
-// Dependencies: [5, 7847, 1358, 7854, 2]
+// Dependencies: [5, 7856, 1358, 7863, 2]
 
-// Module 7853 (SystemResources)
+// Module 7862 (SystemResources)
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import Histogram from "Histogram" /* 7847 */;
-import DeviceState from "DeviceState" /* 7854 */;
+import Histogram from "Histogram" /* 7856 */;
+import DeviceState from "DeviceState" /* 7863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

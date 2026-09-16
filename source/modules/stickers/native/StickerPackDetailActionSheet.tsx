@@ -1,23 +1,23 @@
-// Module ID: 10527
-// Function ID: 10528
+// Module ID: 10535
+// Function ID: 10536
 // Name: StickerPackDetailActionSheet
-// Dependencies: [32, 19, 10404, 1074, 7258, 21, 4639, 1478, 1612, 12, 1241, 7257, 10528, 10532, 7261, 6732, 10533, 5207, 10306, 2]
+// Dependencies: [32, 19, 10412, 1074, 7261, 21, 4638, 1478, 1612, 12, 1241, 7260, 10536, 10540, 7264, 6735, 10541, 5208, 10314, 2]
 
-// Module 10527 (StickerPackDetailActionSheet)
+// Module 10535 (StickerPackDetailActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10533 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(10404);
+const StickerPickerConstants = fn(10412);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(7258).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7261).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4639);
-let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "channel" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
+const createStyles = fn(4638);
+let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "call" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPackDetailActionSheet.tsx");
 

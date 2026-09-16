@@ -1,19 +1,19 @@
-// Module ID: 16724
-// Function ID: 16725
+// Module ID: 16755
+// Function ID: 16756
 // Name: VibegrationsModelSettingsSheet
-// Dependencies: [19, 17, 16705, 21, 504, 7304, 7256, 1115, 3591, 5057, 576, 16719, 4635, 2]
+// Dependencies: [19, 17, 16725, 21, 504, 7307, 7259, 1115, 3591, 5058, 576, 16741, 4634, 2]
 // Exports: default
 
-// Module 16724 (VibegrationsModelSettingsSheet)
+// Module 16755 (VibegrationsModelSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3591 from "module_3591" /* 3591 */;
-import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16719 */;
+import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16741 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16705 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16725 */;
 
 const require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(16705).sendModelSettings;
+const sendModelSettings = fn(16725).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     const obj5 = { title: null };
     const intl = tmp(1115).intl;
     obj5.title = intl.string(_modDef3591["2NWMqY"]);
-    obj4.header = closure_7(tmp(7256).BottomSheetTitleHeader, obj5);
+    obj4.header = closure_7(tmp(7259).BottomSheetTitleHeader, obj5);
     const obj6 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
     const obj7 = { settings, choices, disabled: tmp5, onChange: tmp6 };
     const items6 = [closure_7(VibegrationsEffortPickerDefault, obj7), ];
@@ -55,11 +55,11 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     }
     const obj8 = { children: null };
     const obj9 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-    items6[1] = closure_7(tmp(4635).Text, obj9);
+    items6[1] = closure_7(tmp(4634).Text, obj9);
     obj6.children = items6;
-    obj8.children = closure_8(tmp(5057).Stack, obj6);
+    obj8.children = closure_8(tmp(5058).Stack, obj6);
     obj4.children = closure_7(View, obj8);
-    return closure_7(tmp(7304).ActionSheet, obj4);
+    return closure_7(tmp(7307).ActionSheet, obj4);
   }
   const obj3 = projectId(504);
 };

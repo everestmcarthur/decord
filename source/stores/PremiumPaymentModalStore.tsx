@@ -1,12 +1,12 @@
-// Module ID: 4879
-// Function ID: 4880
+// Module ID: 4878
+// Function ID: 4879
 // Name: PremiumPaymentModalStore
-// Dependencies: [4540, 504, 573, 2]
+// Dependencies: [4538, 504, 573, 2]
 
-// Module 4879 (PremiumPaymentModalStore)
+// Module 4878 (PremiumPaymentModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4540 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4538 */;
 
 require = fn;
 function handleSubscribeFailure(error) {

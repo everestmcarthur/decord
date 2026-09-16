@@ -1,19 +1,19 @@
-// Module ID: 15640
-// Function ID: 15641
+// Module ID: 15657
+// Function ID: 15658
 // Name: ChangeLogModal
-// Dependencies: [19, 17, 1074, 2011, 21, 4639, 576, 4350, 1241, 8380, 15641, 5672, 8428, 1115, 5207, 9182, 10529, 1177, 8199, 1478, 8200, 1485, 5709, 4231, 8201, 4635, 4842, 7107, 2]
+// Dependencies: [19, 17, 1074, 2011, 21, 4638, 576, 4348, 1241, 8389, 15658, 5673, 8437, 1115, 5208, 9193, 10537, 1177, 8208, 1478, 8209, 1485, 5710, 4229, 8210, 4634, 4841, 7110, 2]
 // Exports: default
 
-// Module 15640 (ChangeLogModal)
+// Module 15657 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import NavigatorHeader from "NavigatorHeader" /* 5709 */;
-import Navigator from "Navigator" /* 7107 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8199 */;
-import openMediaModal from "openMediaModal" /* 8380 */;
-import common_VideoDefault from "common/Video" /* 8428 */;
-import _modDef15641 from "module_15641" /* 15641 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import NavigatorHeader from "NavigatorHeader" /* 5710 */;
+import Navigator from "Navigator" /* 7110 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8208 */;
+import openMediaModal from "openMediaModal" /* 8389 */;
+import common_VideoDefault from "common/Video" /* 8437 */;
+import _modDef15658 from "module_15658" /* 15658 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -138,14 +138,14 @@ const CHANGELOG_MODAL_KEY = fn(2011).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj2 = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: { borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, videoOverlay: { position: "absolute", width: "100%", height: "100%" }, playButton: null, playIcon: null, empty: null };
 let size = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
 obj2.playButton = size;
 obj2.playIcon = { width: 21, height: 21 };
 obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
-createStyles = fn(4639);
+createStyles = fn(4638);
 let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 let size1 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj4.bulletPoint = size1;
@@ -173,7 +173,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React6(View, obj);
 };
-ListItem.contextType = fn(4350).ThemeContext;
+ListItem.contextType = fn(4348).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -275,7 +275,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15641, obj4), ];
+      const items = [closure_7(_modDef15658, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -283,8 +283,8 @@ prototype["renderVideo"] = function renderVideo() {
         const _HermesInternal = HermesInternal;
         obj6.uri = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
         obj5.source = obj6;
-        tmp6Result = tmp6(tmp7(5672), obj5);
-        const tmp7Result = tmp7(5672);
+        tmp6Result = tmp6(tmp7(5673), obj5);
+        const tmp7Result = tmp7(5673);
       }
       items[1] = tmp6Result;
       obj3.children = items;
@@ -308,10 +308,10 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: tmp15(10529), onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1177).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
-    obj9.children = tmp12(tmp15(9182), obj10);
-    tmp12Result = tmp12(tmp18(5207).PressableOpacity, obj9);
-    const tmp15Result = tmp15(9182);
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: tmp15(10537), onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1177).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    obj9.children = tmp12(tmp15(9193), obj10);
+    tmp12Result = tmp12(tmp18(5208).PressableOpacity, obj9);
+    const tmp15Result = tmp15(9193);
   }
   items1[1] = tmp12Result;
   obj8.children = items1;
@@ -325,7 +325,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4350).ThemeContext;
+ChangeLog.contextType = fn(4348).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

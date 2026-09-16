@@ -1,10 +1,10 @@
-// Module ID: 13140
-// Function ID: 13141
+// Module ID: 13151
+// Function ID: 13152
 // Name: UserProfileActivityCardBadges
-// Dependencies: [19, 17, 1074, 21, 13141, 2]
+// Dependencies: [19, 17, 1074, 21, 13152, 2]
 // Exports: default
 
-// Module 13140 (UserProfileActivityCardBadges)
+// Module 13151 (UserProfileActivityCardBadges)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -17,13 +17,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityCardBadges(activity) {
   activity = activity.activity;
   if (activity.type === ActivityTypes.PLAYING) {
-    const items = [activity(13141).PartyBadge, activity(13141).TimestampBadge];
+    const items = [activity(13152).PartyBadge, activity(13152).TimestampBadge];
     let items3 = items;
   } else if (activity.type === tmp.LISTENING) {
-    const items1 = [activity(13141).TimestampBadge];
+    const items1 = [activity(13152).TimestampBadge];
     items3 = items1;
   } else if (activity.type === tmp.WATCHING) {
-    const items2 = [activity(13141).TimestampBadge, activity(13141).EpisodeBadge];
+    const items2 = [activity(13152).TimestampBadge, activity(13152).EpisodeBadge];
     items3 = items2;
   } else {
     items3 = [];

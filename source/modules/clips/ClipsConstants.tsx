@@ -1,10 +1,10 @@
-// Module ID: 5216
-// Function ID: 5217
+// Module ID: 5217
+// Function ID: 5218
 // Name: ClipsConstants
 // Dependencies: [1091, 3, 2]
 // Exports: CLIP_NAME_TEMPLATE, getClipCropAspectRatio, getClipCropBounds
 
-// Module 5216 (ClipsConstants)
+// Module 5217 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 8033
-// Function ID: 8034
+// Module ID: 8042
+// Function ID: 8043
 // Name: ConversationListItem
-// Dependencies: [19, 17, 7701, 7703, 1074, 21, 4639, 576, 1484, 504, 8014, 8030, 8016, 5692, 4635, 1115, 5749, 5071, 8034, 8035, 8038, 2]
+// Dependencies: [19, 17, 7704, 7706, 1074, 21, 4638, 576, 1484, 504, 8023, 8039, 8025, 5693, 4634, 1115, 5750, 5072, 8043, 8044, 8047, 2]
 
-// Module 8033 (ConversationListItem)
+// Module 8042 (ConversationListItem)
 import nativeDefault from "native" /* 576 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 8014 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8016 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8030 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 8035 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 8038 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 8023 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8025 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8039 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 8044 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 8047 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7701 */;
+import ConversationsStore from "ConversationsStore" /* 7704 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -92,13 +92,13 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7703).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7706).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { card: { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 }, title: { flexShrink: 1, minWidth: 0 }, timestamp: { flexShrink: 0 }, headerContainer: null, previewsMask: null, previews: null, maskColumn: null, maskOpaque: null, maskFade: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 };
 obj.headerContainer = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };

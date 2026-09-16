@@ -1,17 +1,17 @@
-// Module ID: 7831
-// Function ID: 7832
+// Module ID: 7834
+// Function ID: 7835
 // Name: StreamPermissionUtils
-// Dependencies: [4656, 1962, 2013, 1980, 4278, 4658, 1074, 5501, 4784, 4850, 504, 2]
+// Dependencies: [4655, 1962, 2013, 1980, 4276, 4657, 1074, 5502, 4783, 4849, 504, 2]
 // Exports: getStreamEligibleChannels, useCanWatchStream
 
-// Module 7831 (StreamPermissionUtils)
-import ChannelUtils from "ChannelUtils" /* 4784 */;
-import AgeGateUtils from "AgeGateUtils" /* 4850 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5501 */;
-import GameConsoleStore from "GameConsoleStore" /* 4656 */;
+// Module 7834 (StreamPermissionUtils)
+import ChannelUtils from "ChannelUtils" /* 4783 */;
+import AgeGateUtils from "AgeGateUtils" /* 4849 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5502 */;
+import GameConsoleStore from "GameConsoleStore" /* 4655 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import VoiceStateStore from "VoiceStateStore" /* 4657 */;
 
 const require = globalThis.__r;
 

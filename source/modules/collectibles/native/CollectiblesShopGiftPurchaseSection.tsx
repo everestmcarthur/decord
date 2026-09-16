@@ -1,30 +1,30 @@
-// Module ID: 11152
-// Function ID: 11153
+// Module ID: 11166
+// Function ID: 11167
 // Name: CollectiblesShopGiftPurchaseSection
-// Dependencies: [5, 32, 19, 17, 8312, 7531, 1074, 1374, 21, 4639, 576, 7088, 10876, 504, 8304, 7269, 11143, 1241, 11153, 573, 4842, 4984, 11154, 1897, 1364, 10889, 4635, 1115, 5059, 2]
+// Dependencies: [5, 32, 19, 17, 8321, 7534, 1074, 1374, 21, 4638, 576, 7091, 10884, 504, 8313, 10888, 7272, 11157, 1241, 11167, 573, 4841, 4983, 11168, 1897, 1364, 10902, 4634, 1115, 5060, 2]
 // Exports: default
 
-// Module 11152 (CollectiblesShopGiftPurchaseSection)
+// Module 11166 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8312 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8321 */;
 
 let require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7531).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7534).useNativeCheckoutStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
 const PremiumConstants = fn(1374);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -43,11 +43,14 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
   noop = undefined;
+  closure_6 = undefined;
   closure_7 = undefined;
   let awaitSync;
+  let onPurchaseError;
   closure_10 = undefined;
   const tmp3 = closure_15(giftOptions(giftingOrigin[11])().insets.bottom);
   const GiftingBadgeExperiment = require("GiftingBadgeExperiment").GiftingBadgeExperiment;
+  let enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftPurchaseSection" }).enabled;
   const items = [closure_7];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = { nextTier: closure_7.getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), giftsToNextTier: closure_7.getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), badgeProgress: null };
@@ -59,19 +62,27 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     obj.badgeProgress = current;
     return obj;
   });
-  ({ nextTier, badgeProgress: c3 } = stateFromStoresObject);
+  ({ nextTier, badgeProgress: c3, giftsToNextTier } = stateFromStoresObject);
+  if (enabled) {
+    enabled = null != nextTier;
+  }
   let obj = require("initialize");
-  let tmp = giftOptions;
-  [tmp7, c4] = noop.useState(false);
+  let str = "-DISABLED";
+  if (enabled) {
+    str = "";
+  }
+  const isGiftingBadgeComplexArtEnabled = require("GiftingBadgesUtils").useIsGiftingBadgeComplexArtEnabled(`CollectiblesShopGiftPurchaseSection${str}`);
+  const tmp4Result = require("GiftingBadgesUtils");
+  [tmp9, c4] = noop.useState(false);
   noop = noop.useRef(false);
-  const tmp8 = awaitSync((analyticsFields) => analyticsFields.analyticsFields);
-  closure_6 = tmp8;
-  const tmp9 = awaitSync((orderRecord) => orderRecord.orderRecord);
-  const tmp10 = awaitSync((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
-  closure_7 = tmp10;
-  awaitSync = giftOptions(giftingOrigin[16])(tmp9, giftOptions).awaitSync;
-  const items1 = [tmp8, tmp10];
-  const onPurchaseError = noop.useCallback(() => {
+  const tmp10 = awaitSync((analyticsFields) => analyticsFields.analyticsFields);
+  closure_6 = tmp10;
+  const tmp11 = awaitSync((orderRecord) => orderRecord.orderRecord);
+  const tmp12 = awaitSync((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
+  closure_7 = tmp12;
+  awaitSync = tmp(tmp2[17])(tmp11, giftOptions).awaitSync;
+  const items1 = [tmp10, tmp12];
+  onPurchaseError = noop.useCallback(() => {
     if (ref.current) {
       tmp.current = false;
       AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_FAILED, closure_6);
@@ -79,14 +90,14 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     }
     _undefined(false);
   }, items1);
-  let obj2 = { product, analyticsLocations: giftOptions(giftingOrigin[15])().analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null, giftParams: null };
+  let obj2 = { product, analyticsLocations: giftOptions(giftingOrigin[16])().analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null, giftParams: null };
   let id;
-  const tmp6 = _slicedToArray(noop.useState(false), 2);
-  if (tmp9 != null) {
-    id = tmp9.id;
+  const tmp8 = _slicedToArray(noop.useState(false), 2);
+  if (tmp11 != null) {
+    id = tmp11.id;
   }
   obj2.orderId = id;
-  obj2.analyticsData = tmp8;
+  obj2.analyticsData = tmp10;
   obj2.onPurchaseComplete = function onPurchaseComplete() {
     let tmp2 = null == giftOptions.recipient_id;
     if (!tmp2) {
@@ -103,7 +114,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     tmp = giftOptions;
     actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return product(giftingOrigin[23])(giftingOrigin[22], giftingOrigin.paths).then((result) => {
+        return product(giftingOrigin[24])(giftingOrigin[23], giftingOrigin.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             let STANDARD_BOX = gift_style.gift_style;
@@ -118,7 +129,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     });
     const obj4 = {
       importer() {
-        return product(giftingOrigin[23])(giftingOrigin[22], giftingOrigin.paths).then((result) => {
+        return product(giftingOrigin[24])(giftingOrigin[23], giftingOrigin.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             let STANDARD_BOX = gift_style.gift_style;
@@ -140,36 +151,35 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
 
   };
   obj2.giftParams = { isGift: true, options: giftOptions };
-  closure_10 = giftOptions(giftingOrigin[18])(obj2);
+  closure_10 = giftOptions(giftingOrigin[19])(obj2);
   let obj3 = { style: tmp3.container, children: null };
-  let tmp17Result = null;
-  if (GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftPurchaseSection" }).enabled) {
-    tmp17Result = null;
-    if (null != nextTier) {
-      let obj4 = { giftsToNextTier: stateFromStoresObject.giftsToNextTier, nextTierName: null, nextTierIcon: null };
-      let str = nextTier.name;
-      if (str == null) {
-        str = "";
-      }
-      obj4.nextTierName = str;
-      obj4.nextTierIcon = nextTier.simple_icon_url;
-      tmp17Result = closure_13(tmp(tmp2[25]), obj4);
-      const tmpResult = tmp(tmp2[25]);
+  let tmp19Result = null;
+  if (enabled) {
+    let obj4 = { giftsToNextTier, nextTierName: null, nextTierIcon: null };
+    let str2 = nextTier.name;
+    if (str2 == null) {
+      str2 = "";
     }
+    obj4.nextTierName = str2;
+    const tmp19 = closure_13;
+    const tmpResult2 = tmp(tmp2[26]);
+    obj4.nextTierIcon = tmp4(tmp2[15]).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+    tmp19Result = tmp19(tmpResult2, obj4);
+    const tmp4Result2 = tmp4(tmp2[15]);
   }
-  const items2 = [tmp17Result, , ];
+  const items2 = [tmp19Result, , ];
   const obj5 = { variant: "text-xs/normal", style: tmp3.disclaimer, children: null };
-  const intl = tmp4(tmp2[27]).intl;
-  const obj7 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
-  const intl2 = tmp4(tmp2[27]).intl;
-  obj7.buyButtonLabel = intl2.string(require("util").t.ouo4FK);
-  ({ PAID_TERMS: obj6.paidServiceTermURL, PAID_TERMS_VIRTUAL_GOODS: obj6.virtualGoodsURL } = closure_10);
-  obj5.children = intl.format(require("util").t.rsEdd2, obj7);
+  const intl = tmp4(tmp2[28]).intl;
+  let obj6 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
+  const intl2 = tmp4(tmp2[28]).intl;
+  obj6.buyButtonLabel = intl2.string(require("util").t.ouo4FK);
+  ({ PAID_TERMS: obj8.paidServiceTermURL, PAID_TERMS_VIRTUAL_GOODS: obj8.virtualGoodsURL } = closure_10);
+  obj5.children = intl.format(require("util").t.rsEdd2, obj6);
   items2[1] = closure_13(require("Text/Text").Text, obj5);
-  const obj13 = { disabled: disabled.isPurchaseDisabled, loading: tmp7, variant: "active", text: null, onPress: null };
-  const intl3 = tmp4(tmp2[27]).intl;
-  obj13.text = intl3.string(require("util").t.ouo4FK);
-  obj13.onPress = asyncGeneratorStep(async (arg0, value) => {
+  const obj7 = { disabled: disabled.isPurchaseDisabled, loading: tmp9, variant: "active", text: null, onPress: null };
+  const intl3 = tmp4(tmp2[28]).intl;
+  obj7.text = intl3.string(require("util").t.ouo4FK);
+  obj7.onPress = asyncGeneratorStep(async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -224,7 +234,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       }
     }
   });
-  items2[2] = closure_13(require("components/Button/Button").Button, obj13);
+  items2[2] = closure_13(require("components/Button/Button").Button, obj7);
   obj3.children = items2;
   return closure_14(closure_6, obj3);
 };

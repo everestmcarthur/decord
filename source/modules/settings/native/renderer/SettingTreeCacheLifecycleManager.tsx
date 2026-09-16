@@ -1,10 +1,10 @@
-// Module ID: 17637
-// Function ID: 17638
+// Module ID: 17693
+// Function ID: 17694
 // Name: SettingTreeCacheLifecycleManager
-// Dependencies: [7225, 14791, 2]
+// Dependencies: [7228, 14807, 2]
 
-// Module 17637 (SettingTreeCacheLifecycleManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
+// Module 17693 (SettingTreeCacheLifecycleManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
 
 const prototype = function SettingTreeManagerLifecycleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

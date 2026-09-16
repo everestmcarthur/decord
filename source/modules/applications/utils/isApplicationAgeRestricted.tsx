@@ -1,13 +1,13 @@
-// Module ID: 9538
-// Function ID: 9539
+// Module ID: 9549
+// Function ID: 9550
 // Name: isApplicationAgeRestricted
-// Dependencies: [4867, 9539, 5196, 2]
+// Dependencies: [4866, 9550, 5197, 2]
 // Exports: default
 
-// Module 9538 (isApplicationAgeRestricted)
-import utils from "utils" /* 5196 */;
-import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 9539 */;
-import ApplicationStore from "ApplicationStore" /* 4867 */;
+// Module 9549 (isApplicationAgeRestricted)
+import utils from "utils" /* 5197 */;
+import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 9550 */;
+import ApplicationStore from "ApplicationStore" /* 4866 */;
 
 require = fn;
 const size = fn(2);

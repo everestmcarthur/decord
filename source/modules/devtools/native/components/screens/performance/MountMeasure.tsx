@@ -1,11 +1,11 @@
-// Module ID: 15838
-// Function ID: 15839
+// Module ID: 15856
+// Function ID: 15857
 // Name: MountMeasure
-// Dependencies: [19, 17, 21, 5076, 2]
+// Dependencies: [19, 17, 21, 5077, 2]
 // Exports: default
 
-// Module 15838 (MountMeasure)
-import useMountEffect from "useMountEffect" /* 5076 */;
+// Module 15856 (MountMeasure)
+import useMountEffect from "useMountEffect" /* 5077 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

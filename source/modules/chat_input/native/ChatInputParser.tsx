@@ -1,10 +1,10 @@
-// Module ID: 12126
-// Function ID: 12127
+// Module ID: 12134
+// Function ID: 12135
 // Name: ChatInputParser
 // Dependencies: [17, 12, 2]
 // Exports: convertToNativeStyle
 
-// Module 12126 (ChatInputParser)
+// Module 12134 (ChatInputParser)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;

@@ -1,13 +1,13 @@
-// Module ID: 6198
-// Function ID: 6199
+// Module ID: 6199
+// Function ID: 6200
 // Name: GameTrophySpotIllustration
-// Dependencies: [21, 5672, 6199, 2]
+// Dependencies: [21, 5673, 6200, 2]
 // Exports: GameTrophySpotIllustration
 
-// Module 6198 (GameTrophySpotIllustration)
+// Module 6199 (GameTrophySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6199 from "module_6199" /* 6199 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6200 from "module_6200" /* 6200 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GameTrophySpotIllustration = function GameTrophySpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6199 };
+  const obj2 = { uri: _modDef6200 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

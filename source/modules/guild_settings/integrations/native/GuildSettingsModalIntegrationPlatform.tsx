@@ -1,22 +1,22 @@
-// Module ID: 17752
-// Function ID: 17753
+// Module ID: 17808
+// Function ID: 17809
 // Name: GuildSettingsModalIntegrationPlatform
-// Dependencies: [19, 17, 9196, 1074, 21, 4639, 576, 17713, 17753, 5368, 1397, 4491, 5772, 5690, 7307, 1115, 9195, 4984, 5078, 4341, 1484, 504, 4574, 5709, 7484, 7489, 2025, 8719, 5057, 4635, 7147, 2]
+// Dependencies: [19, 17, 9207, 1074, 21, 4638, 576, 17769, 17809, 5369, 1397, 4489, 5773, 5691, 7310, 1115, 9206, 4983, 5079, 4339, 1484, 504, 4572, 5710, 7487, 7492, 2025, 8728, 5058, 4634, 7150, 2]
 // Exports: default
 
-// Module 17752 (GuildSettingsModalIntegrationPlatform)
+// Module 17808 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
-import common_AlertDefault from "common/Alert" /* 5078 */;
-import PlatformsDefault from "Platforms" /* 5368 */;
-import NavigatorHeader from "NavigatorHeader" /* 5709 */;
-import HeaderActionButton from "HeaderActionButton" /* 7484 */;
-import openUserSettings from "openUserSettings" /* 7489 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17713 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
+import common_AlertDefault from "common/Alert" /* 5079 */;
+import PlatformsDefault from "Platforms" /* 5369 */;
+import NavigatorHeader from "NavigatorHeader" /* 5710 */;
+import HeaderActionButton from "HeaderActionButton" /* 7487 */;
+import openUserSettings from "openUserSettings" /* 7492 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9206 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17769 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9196 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9207 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8, PlatformTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { form: { paddingTop: nativeDefault.space.PX_16 }, trailingWrapper: { flexDirection: "row", alignItems: "center" }, platformIcon: { width: 24, height: 24 } };
 let closure_14 = createStyles.createStyles(obj2);
 const Component = noop.Component;
@@ -98,14 +98,14 @@ IntegrationItem.prototype["render"] = function render() {
   const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = GuildSettingsModalIntegrations.SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(17753).IntegrationTypes.YOUTUBE === type) {
+    if (tmp(17809).IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(17753).IntegrationTypes.TWITCH === type) {
+    } else if (tmp(17809).IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       combined = "twitch.tv/" + integration.name;
     }
@@ -139,7 +139,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [closure_1_11(tmp(5690).TableRow, obj2), ];
+      const items = [closure_1_11(tmp(5691).TableRow, obj2), ];
       const obj5 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj5.value = Boolean(self.state.enabled);
@@ -147,19 +147,19 @@ IntegrationItem.prototype["render"] = function render() {
       obj5.onValueChange = self.handleToggleEnabled;
       const intl = tmp(1115).intl;
       obj5.label = intl.string(tmp(1115).t.vQC6vR);
-      items[1] = closure_1_11(tmp(7307).TableSwitchRow, obj5);
+      items[1] = closure_1_11(tmp(7310).TableSwitchRow, obj5);
       obj4.children = items;
-      return closure_1_12(tmp(5772).TableRowGroup, obj4);
+      return closure_1_12(tmp(5773).TableRowGroup, obj4);
     } else {
       const tmp12 = closure_1_11;
       const tmp13 = React4;
       const tmpResult = tmp(1397);
-      const tmpResult2 = tmp(4491);
+      const tmpResult2 = tmp(4489);
       const icon = { source: null, style: null };
-      icon.source = tmpResult.makeSource(tmp(4491).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
+      icon.source = tmpResult.makeSource(tmp(4489).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon.style = styles.platformIcon;
       tmp12(tmp13, icon);
-      const tmp14 = tmp(4491).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
+      const tmp14 = tmp(4489).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
     return null;
@@ -179,17 +179,17 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       GuildSettingsActionCreatorsDefault.saveGuild(tmp.id, obj2);
     }
   }
-  const token = platformType(4341).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(4339).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
   dependencyMap = tmp5;
-  let obj = platformType(4341);
+  let obj = platformType(4339);
   const navigation = platformType(1484).useNavigation();
   let obj2 = platformType(1484);
   const items = [guild];
   const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({ guild: guild.getGuild(), submitting: guild.isSubmitting(), hasChanges: guild.hasChanges() }));
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  const theme = closeGuildSettings(4574)();
+  const theme = closeGuildSettings(4572)();
   const obj4 = platformType(504);
   const items1 = [guild];
   const stateFromStores = platformType(504).useStateFromStores(items1, () => guild.getProps().integrations);
@@ -204,7 +204,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5368).get(platformType);
+    value = tmp3(5369).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -264,10 +264,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const obj11 = { children: null };
     const items2 = [mapped, ];
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_11(tmp(4635).Text, obj12);
+    items2[1] = closure_11(tmp(4634).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_12(tmp(5057).Stack, obj9);
-    const items3 = [closure_11(tmp(8719).Form, obj8), closure_11(tmp(7147).NavScrim, {})];
+    obj8.children = closure_12(tmp(5058).Stack, obj9);
+    const items3 = [closure_11(tmp(8728).Form, obj8), closure_11(tmp(7150).NavScrim, {})];
     obj11.children = items3;
     return closure_12(closure_13, obj11);
   }

@@ -1,12 +1,12 @@
-// Module ID: 13509
-// Function ID: 13510
+// Module ID: 13520
+// Function ID: 13521
 // Name: usePremiumPrimaryGradientColors
-// Dependencies: [4341, 576, 2]
+// Dependencies: [4339, 576, 2]
 // Exports: default
 
-// Module 13509 (usePremiumPrimaryGradientColors)
+// Module 13520 (usePremiumPrimaryGradientColors)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4341 */;
+import useToken from "useToken" /* 4339 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");

@@ -1,13 +1,13 @@
-// Module ID: 16644
-// Function ID: 16645
+// Module ID: 16664
+// Function ID: 16665
 // Name: useComponentRenderSpan
-// Dependencies: [19, 3, 16645, 16646, 16647, 2]
+// Dependencies: [19, 3, 16665, 16666, 16667, 2]
 // Exports: useComponentRenderSpan
 
-// Module 16644 (useComponentRenderSpan)
+// Module 16664 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 16645 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16646 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 16665 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16666 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

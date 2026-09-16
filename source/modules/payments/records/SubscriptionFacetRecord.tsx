@@ -1,9 +1,9 @@
-// Module ID: 7534
-// Function ID: 7535
+// Module ID: 7537
+// Function ID: 7538
 // Name: SubscriptionFacetRecord
 // Dependencies: [1387, 2]
 
-// Module 7534 (SubscriptionFacetRecord)
+// Module 7537 (SubscriptionFacetRecord)
 import Record from "Record" /* 1387 */;
 
 const prototype = function SubscriptionFacetRecord(subscriptionId) {

@@ -1,12 +1,12 @@
-// Module ID: 11979
-// Function ID: 11980
+// Module ID: 11987
+// Function ID: 11988
 // Name: TransferOwnershipModalActionCreators
-// Dependencies: [4842, 11980, 1897, 573, 2]
+// Dependencies: [4841, 11988, 1897, 573, 2]
 
-// Module 11979 (TransferOwnershipModalActionCreators)
+// Module 11987 (TransferOwnershipModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
 import size from "module_2" /* 2 */;
 
 const TRANSFER_OWNERSHIP_MODAL_KEY = "TRANSFER_OWNERSHIP_MODAL_KEY";
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/safety/native/
 
 export default {
   open(guild, toUser) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11980, dependencyMap.paths), { guild, toUser }, TRANSFER_OWNERSHIP_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11988, dependencyMap.paths), { guild, toUser }, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
     DispatcherDefault.wait(() => {

@@ -1,19 +1,19 @@
-// Module ID: 12224
-// Function ID: 12225
+// Module ID: 12232
+// Function ID: 12233
 // Name: PlaceholderAppRow
-// Dependencies: [19, 17, 21, 4639, 576, 12188, 5690, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 12196, 5691, 2]
 // Exports: default
 
-// Module 12224 (PlaceholderAppRow)
+// Module 12232 (PlaceholderAppRow)
 import nativeDefault from "native" /* 576 */;
-import TableRow from "TableRow" /* 5690 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12188 */;
+import TableRow from "TableRow" /* 5691 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj2.loadingAppIcon = size;

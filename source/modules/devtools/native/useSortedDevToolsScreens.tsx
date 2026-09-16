@@ -1,15 +1,15 @@
-// Module ID: 15846
-// Function ID: 15847
+// Module ID: 15864
+// Function ID: 15865
 // Name: useSortedDevToolsScreens
-// Dependencies: [32, 7824, 15678, 15674, 504, 2]
+// Dependencies: [32, 7827, 15696, 15692, 504, 2]
 // Exports: default, updateSortOrder
 
-// Module 15846 (useSortedDevToolsScreens)
+// Module 15864 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 15674 */;
-import DevToolsScreens from "DevToolsScreens" /* 15678 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 15692 */;
+import DevToolsScreens from "DevToolsScreens" /* 15696 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7824 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7827 */;
 
 require = fn;
 function getSortedDevToolsScreens() {

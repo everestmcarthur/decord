@@ -1,19 +1,19 @@
-// Module ID: 14817
-// Function ID: 14818
+// Module ID: 14833
+// Function ID: 14834
 // Name: SettingsAgeGroupScreen
-// Dependencies: [19, 17, 8082, 1074, 21, 4639, 576, 8532, 2025, 4635, 1115, 2947, 14779, 11606, 14818, 14786, 2]
+// Dependencies: [19, 17, 8091, 1074, 21, 4638, 576, 8541, 2025, 4634, 1115, 2947, 14795, 11614, 14834, 14802, 2]
 // Exports: default
 
-// Module 14817 (SettingsAgeGroupScreen)
+// Module 14833 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
 import _modDef2947 from "module_2947" /* 2947 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8532 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
-import SettingLayoutDefault from "SettingLayout" /* 14786 */;
-import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 14818 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8541 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingLayoutDefault from "SettingLayout" /* 14802 */;
+import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 14834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,18 +35,18 @@ function SettingsAgeGroupHeader() {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8082).MobileUserSettings;
+const MobileUserSettings = fn(8091).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14779).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14795).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

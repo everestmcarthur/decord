@@ -1,14 +1,14 @@
-// Module ID: 17959
-// Function ID: 17960
+// Module ID: 18015
+// Function ID: 18016
 // Name: MidjourneyOnboardingManager
-// Dependencies: [5, 13954, 1074, 7225, 13953, 7354, 2]
+// Dependencies: [5, 13967, 1074, 7228, 13966, 7357, 2]
 
-// Module 17959 (MidjourneyOnboardingManager)
+// Module 18015 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(13954).MIDJOURNEY_GUILD_ID;
+const MIDJOURNEY_GUILD_ID = fn(13967).MIDJOURNEY_GUILD_ID;
 const Routes = fn(1074).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
@@ -47,20 +47,20 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp21(13953).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj4 = { value: tmp21(13966).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(13953);
+            obj6 = tmp2(13966);
             tmp21 = tmp2;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          v1(7354)(Routes.CHANNEL(null, closure_128_0.id));
-          const tmp9 = v1(7354);
+          v1(7357)(Routes.CHANNEL(null, closure_128_0.id));
+          const tmp9 = v1(7357);
         }
         dependencyMap = 3;
         const obj = { value, done: true };

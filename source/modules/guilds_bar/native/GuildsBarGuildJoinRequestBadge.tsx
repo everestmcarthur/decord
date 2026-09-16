@@ -1,27 +1,27 @@
-// Module ID: 16409
-// Function ID: 16410
+// Module ID: 16429
+// Function ID: 16430
 // Name: GuildsBarGuildJoinRequestBadge
-// Dependencies: [19, 17, 21, 4639, 576, 5526, 4464, 16410, 16411, 16412, 12424, 5672, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 5527, 4462, 16430, 16431, 16432, 12432, 5673, 2]
 // Exports: default
 
-// Module 16409 (GuildsBarGuildJoinRequestBadge)
+// Module 16429 (GuildsBarGuildJoinRequestBadge)
 import nativeDefault from "native" /* 576 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef12424 from "module_12424" /* 12424 */;
-import _modDef16410 from "module_16410" /* 16410 */;
-import _modDef16411 from "module_16411" /* 16411 */;
-import _modDef16412 from "module_16412" /* 16412 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4462 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef12432 from "module_12432" /* 12432 */;
+import _modDef16430 from "module_16430" /* 16430 */;
+import _modDef16431 from "module_16431" /* 16431 */;
+import _modDef16432 from "module_16432" /* 16432 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(5526).DARK_1_LIGHT_08 };
+const size1 = { height: 16, width: 16, opacity: fn(5527).DARK_1_LIGHT_08 };
 obj2.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -31,15 +31,15 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef16410;
-  } else if (tmp2(4464).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef16411;
-  } else if (tmp2(4464).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef16412;
+    let tmp4 = _modDef16430;
+  } else if (tmp2(4462).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
+    tmp4 = _modDef16431;
+  } else if (tmp2(4462).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
+    tmp4 = _modDef16432;
   } else {
     tmp4 = null;
-    if (tmp2(4464).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef12424;
+    if (tmp2(4462).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
+      tmp4 = _modDef12432;
     }
   }
   let tmp9 = null;

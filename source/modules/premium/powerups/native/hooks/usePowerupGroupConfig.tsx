@@ -1,16 +1,16 @@
-// Module ID: 12684
-// Function ID: 12685
+// Module ID: 12692
+// Function ID: 12693
 // Name: usePowerupGroupConfig
-// Dependencies: [19, 1980, 504, 8285, 1115, 2429, 12685, 12686, 1370, 2]
+// Dependencies: [19, 1980, 504, 8294, 1115, 2429, 12693, 12694, 1370, 2]
 // Exports: default
 
-// Module 12684 (usePowerupGroupConfig)
+// Module 12692 (usePowerupGroupConfig)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef2429 from "module_2429" /* 2429 */;
-import GuildTagUtils from "GuildTagUtils" /* 8285 */;
-import _modDef12685 from "module_12685" /* 12685 */;
-import _modDef12686 from "module_12686" /* 12686 */;
+import GuildTagUtils from "GuildTagUtils" /* 8294 */;
+import _modDef12693 from "module_12693" /* 12693 */;
+import _modDef12694 from "module_12694" /* 12694 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -40,7 +40,7 @@ export default function usePowerupGroupConfig(arg0, arg1) {
       obj2.title = intl.string(_modDef2429.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2429.GJiSmP);
-      const obj3 = { staticUrl: _modDef12685, animatedUrl: _modDef12686 };
+      const obj3 = { staticUrl: _modDef12693, animatedUrl: _modDef12694 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

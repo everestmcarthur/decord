@@ -1,17 +1,17 @@
-// Module ID: 13508
-// Function ID: 13509
+// Module ID: 13519
+// Function ID: 13520
 // Name: PillText
-// Dependencies: [1074, 21, 4639, 576, 13509, 5071, 4635, 2]
+// Dependencies: [1074, 21, 4638, 576, 13520, 5072, 4634, 2]
 // Exports: default
 
-// Module 13508 (PillText)
+// Module 13519 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import LinearGradientDefault from "LinearGradient" /* 5071 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13509 */;
-import createStyles from "createStyles" /* 4639 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import LinearGradientDefault from "LinearGradient" /* 5072 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13520 */;
+import createStyles from "createStyles" /* 4638 */;
 import size from "module_2" /* 2 */;
 
 const HorizontalGradient = Constants.HorizontalGradient;

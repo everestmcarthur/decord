@@ -1,11 +1,11 @@
-// Module ID: 4438
-// Function ID: 4439
+// Module ID: 4436
+// Function ID: 4437
 // Name: CheckpointIntroRive
-// Dependencies: [109, 19, 21, 4370, 4439, 4425, 2]
+// Dependencies: [109, 19, 21, 4368, 4437, 4423, 2]
 
-// Module 4438 (CheckpointIntroRive)
-import BaseRive from "BaseRive" /* 4370 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4425 */;
+// Module 4436 (CheckpointIntroRive)
+import BaseRive from "BaseRive" /* 4368 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4423 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,48 @@
 // Module ID: 4935
 // Function ID: 4936
-// Dependencies: []
+// Dependencies: [4936, 4937]
 
 // Module 4935
+import _mod4936 from "module_4936" /* 4936 */;
+import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 4937 */;
 
-export default function isPropertyKey(str) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    tmp = typeof str === "symbol";
+const tmp = _mod4936("%Reflect.construct%", true);
+let closure_0 = tmp;
+try {
+  const obj = {
+    () => {
+
+      }
+  };
+  DefinePropertyOrThrow({}, "", obj);
+  let tmp4 = DefinePropertyOrThrow;
+  if (tmp4) {
+    if (tmp) {
+      let closure_1 = {};
+      const obj2 = {};
+      const obj3 = {
+        () => {
+                throw closure_1;
+              },
+        "[[Enumerable]]": true
+      };
+      tmp4(obj2, "length", obj3);
+      module.exports = function IsConstructor(arg0) {
+        try {
+          closure_0(arg0, obj2);
+        } catch (tmp5) {
+          return tmp5 === closure_1;
+        }
+      };
+    }
   }
-  return tmp;
-};
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
+    }
+    return prototype;
+  };
+} catch (err) {
+  tmp4 = null;
+}

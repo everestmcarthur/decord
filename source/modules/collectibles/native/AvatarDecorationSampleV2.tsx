@@ -1,14 +1,14 @@
-// Module ID: 8940
-// Function ID: 8941
+// Module ID: 8951
+// Function ID: 8952
 // Name: AvatarDecorationSampleV2
-// Dependencies: [19, 17, 21, 4639, 576, 38, 1890, 8941, 8942, 2]
+// Dependencies: [19, 17, 21, 4638, 576, 38, 1890, 8952, 8953, 2]
 // Exports: default
 
-// Module 8940 (AvatarDecorationSampleV2)
+// Module 8951 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8942 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8953 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.8333333333333334;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -45,7 +45,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = tmp2(8941);
+    avatarSource = tmp2(8952);
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

@@ -1,11 +1,11 @@
-// Module ID: 16643
-// Function ID: 16644
+// Module ID: 16663
+// Function ID: 16664
 // Name: NavTTIView
-// Dependencies: [109, 19, 17, 21, 16644, 16648, 2]
+// Dependencies: [109, 19, 17, 21, 16664, 16668, 2]
 // Exports: NavTTIView
 
-// Module 16643 (NavTTIView)
-import useComponentRenderSpan from "useComponentRenderSpan" /* 16644 */;
+// Module 16663 (NavTTIView)
+import useComponentRenderSpan from "useComponentRenderSpan" /* 16664 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

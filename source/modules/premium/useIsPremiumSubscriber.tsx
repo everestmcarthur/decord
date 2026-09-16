@@ -1,10 +1,10 @@
-// Module ID: 11295
-// Function ID: 11296
+// Module ID: 11309
+// Function ID: 11310
 // Name: useIsPremiumSubscriber
 // Dependencies: [1372, 1374, 504, 1886, 2]
 // Exports: useIsPremiumSubscriber
 
-// Module 11295 (useIsPremiumSubscriber)
+// Module 11309 (useIsPremiumSubscriber)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
 import UserStore from "UserStore" /* 1372 */;
 

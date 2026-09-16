@@ -1,10 +1,10 @@
-// Module ID: 14092
-// Function ID: 14093
+// Module ID: 14105
+// Function ID: 14106
 // Name: GoLiveHdrExperiment
 // Dependencies: [1434, 2]
 // Exports: getGoLiveHdrConfig
 
-// Module 14092 (GoLiveHdrExperiment)
+// Module 14105 (GoLiveHdrExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 13487
-// Function ID: 13488
+// Module ID: 13498
+// Function ID: 13499
 // Name: MobileNitroManageSubscriptionsSettingsExperiment
 // Dependencies: [1434, 2]
 // Exports: getMobileNitroManageSubscriptionsSettingsExperiment, useMobileNitroManageSubscriptionsSettingsExperiment
 
-// Module 13487 (MobileNitroManageSubscriptionsSettingsExperiment)
+// Module 13498 (MobileNitroManageSubscriptionsSettingsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

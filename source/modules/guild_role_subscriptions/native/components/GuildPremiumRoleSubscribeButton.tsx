@@ -1,17 +1,17 @@
-// Module ID: 17921
-// Function ID: 17922
+// Module ID: 17977
+// Function ID: 17978
 // Name: GuildPremiumRoleSubscribeButton
-// Dependencies: [19, 21, 4639, 10431, 1115, 2]
+// Dependencies: [19, 21, 4638, 10439, 1115, 2]
 // Exports: GuildPremiumRoleSubscribeButton
 
-// Module 17921 (GuildPremiumRoleSubscribeButton)
+// Module 17977 (GuildPremiumRoleSubscribeButton)
 import util from "util" /* 1115 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10431 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10439 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_3 = createStyles.createStyles({ crButton: { marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");

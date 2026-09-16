@@ -1,11 +1,11 @@
-// Module ID: 12765
-// Function ID: 12766
+// Module ID: 12773
+// Function ID: 12774
 // Name: useProvisionalAccountApplication
-// Dependencies: [7763, 504, 7275, 2]
+// Dependencies: [7766, 504, 7278, 2]
 // Exports: default
 
-// Module 12765 (useProvisionalAccountApplication)
-import GameRelationshipStore from "GameRelationshipStore" /* 7763 */;
+// Module 12773 (useProvisionalAccountApplication)
+import GameRelationshipStore from "GameRelationshipStore" /* 7766 */;
 
 const require = globalThis.__r;
 

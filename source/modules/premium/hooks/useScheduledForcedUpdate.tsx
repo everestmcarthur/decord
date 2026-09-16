@@ -1,11 +1,11 @@
-// Module ID: 13557
-// Function ID: 13558
+// Module ID: 13569
+// Function ID: 13570
 // Name: useScheduledForcedUpdate
-// Dependencies: [19, 7547, 2]
+// Dependencies: [19, 7550, 2]
 // Exports: default
 
-// Module 13557 (useScheduledForcedUpdate)
-import areHookInputsEqual from "areHookInputsEqual" /* 7547 */;
+// Module 13569 (useScheduledForcedUpdate)
+import areHookInputsEqual from "areHookInputsEqual" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

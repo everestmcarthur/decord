@@ -1,11 +1,11 @@
 // Module ID: 4002
 // Function ID: 4003
-// Dependencies: [3728, 3729]
+// Dependencies: [3726, 3727]
 // Exports: default
 
 // Module 4002
-import _typeof_mod from "module_3728" /* 3728 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _typeof_mod from "module_3726" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,8 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getMilliseconds(arg0) {
+export default function getMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMilliseconds();
+  return _typeof.default(arg0).getMonth();
 };
 export default exports.default;

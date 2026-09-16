@@ -1,29 +1,29 @@
-// Module ID: 9415
-// Function ID: 9416
+// Module ID: 9426
+// Function ID: 9427
 // Name: FederatedSocialModal
-// Dependencies: [5, 32, 19, 1074, 21, 4639, 5368, 1115, 5491, 4334, 9416, 7230, 4635, 6710, 1177, 5059, 5709, 7107, 2]
+// Dependencies: [5, 32, 19, 1074, 21, 4638, 5369, 1115, 5492, 4332, 9427, 7233, 4634, 6713, 1177, 5060, 5710, 7110, 2]
 // Exports: default
 
-// Module 9415 (FederatedSocialModal)
+// Module 9426 (FederatedSocialModal)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import PlatformsDefault from "Platforms" /* 5368 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
-import FederatedSocialUtils from "FederatedSocialUtils" /* 9416 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import PlatformsDefault from "Platforms" /* 5369 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7233 */;
+import FederatedSocialUtils from "FederatedSocialUtils" /* 9427 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const FreeFormInputGroupDefault = tmp6(6710);
+const FreeFormInputGroupDefault = tmp6(6713);
 require = fn;
 const WebBrowserType = fn(1074).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");

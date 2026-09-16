@@ -1,12 +1,12 @@
-// Module ID: 7592
-// Function ID: 7593
+// Module ID: 7595
+// Function ID: 7596
 // Name: isLimitedChannel
-// Dependencies: [1958, 4559, 1074, 2]
+// Dependencies: [1958, 4557, 1074, 2]
 // Exports: isLimitedChannel, isLimitedChannelId
 
-// Module 7592 (isLimitedChannel)
+// Module 7595 (isLimitedChannel)
 import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4557 */;
 
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);

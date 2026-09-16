@@ -1,17 +1,17 @@
-// Module ID: 7936
-// Function ID: 7937
+// Module ID: 7945
+// Function ID: 7946
 // Name: PoggermodeStore
-// Dependencies: [502, 2012, 7783, 7784, 1074, 4274, 1953, 7937, 1110, 504, 573, 2]
+// Dependencies: [502, 2012, 7786, 7787, 1074, 4272, 1953, 7946, 1110, 504, 573, 2]
 // Exports: getComboId, isComboing, shouldTrackMessage
 
-// Module 7936 (PoggermodeStore)
+// Module 7945 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 7937 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 7946 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7783 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7786 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -86,16 +86,16 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7784);
+const PoggermodeConstants = fn(7787);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(4274).SecondaryIndexMap((arg0) => {
+const secondaryIndexMap = new fn(4272).SecondaryIndexMap((arg0) => {
   const items = [, ];
   ({ userId: arr[0], channelId: arr[1] } = arg0);
   return items;
 }, (channelId) => "" + channelId.channelId + "-" + channelId.userId);
-const secondaryIndexMap1 = new fn(4274).SecondaryIndexMap((combo) => {
+const secondaryIndexMap1 = new fn(4272).SecondaryIndexMap((combo) => {
   const items = [, , ];
   ({ messageId: arr[0], channelId: arr[1] } = combo);
   items[2] = combo.combo.userId;

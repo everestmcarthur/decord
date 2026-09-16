@@ -1,17 +1,17 @@
-// Module ID: 9793
-// Function ID: 9794
+// Module ID: 9801
+// Function ID: 9802
 // Name: ModeratorStartStageView
-// Dependencies: [32, 19, 1980, 21, 504, 9794, 9802, 9803, 9805, 9806, 9797, 9807, 1115, 9829, 10030, 2]
+// Dependencies: [32, 19, 1980, 21, 504, 9802, 9810, 9811, 9813, 9814, 9805, 9815, 1115, 9837, 10038, 2]
 // Exports: default
 
-// Module 9793 (ModeratorStartStageView)
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9802 */;
-import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9805 */;
+// Module 9801 (ModeratorStartStageView)
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9810 */;
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9813 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
-const StageViewWithPromptsDefault = tmp5(9807);
+const StageViewWithPromptsDefault = tmp5(9815);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -25,14 +25,14 @@ export default function ModeratorStartStageView(channel) {
   const items1 = [guild_id];
   const stateFromStores = guild_id(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
   const obj = guild_id(504);
-  const first = _slicedToArray(guild_id(9794).useGuildChannelScheduledEvents(channel.id), 1)[0];
-  const obj2 = guild_id(9794);
-  const obj3 = guild_id(9803);
-  const canManageGuildEventResult = guild_id(9803).useManageResourcePermissions(channel).canManageGuildEvent(first);
+  const first = _slicedToArray(guild_id(9802).useGuildChannelScheduledEvents(channel.id), 1)[0];
+  const obj2 = guild_id(9802);
+  const obj3 = guild_id(9811);
+  const canManageGuildEventResult = guild_id(9811).useManageResourcePermissions(channel).canManageGuildEvent(first);
   const tmp7 = useCanCreateAnEventDefault(guild_id);
-  const isLive = guild_id(9806).useStageChannelStartEvent(channel.id).isLive;
-  const obj4 = guild_id(9806);
-  const nextRecurrenceIdInEvent = guild_id(9797).getNextRecurrenceIdInEvent(first);
+  const isLive = guild_id(9814).useStageChannelStartEvent(channel.id).isLive;
+  const obj4 = guild_id(9814);
+  const nextRecurrenceIdInEvent = guild_id(9805).getNextRecurrenceIdInEvent(first);
   let tmp10Result6 = null;
   if (null != stateFromStores) {
     const obj6 = { title: null, body: null, children: null };
@@ -45,25 +45,25 @@ export default function ModeratorStartStageView(channel) {
       tmp10Result = null;
       if (null != first) {
         const obj7 = { channel, event: first, isLive, guild: stateFromStores, recurrenceId: nextRecurrenceIdInEvent };
-        tmp10Result = tmp10(tmp(9829).StartEventPrompt, obj7);
+        tmp10Result = tmp10(tmp(9837).StartEventPrompt, obj7);
       }
     }
     const items2 = [tmp10Result, , , ];
     let tmp10Result4 = null;
     if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
       const obj8 = { channel, isLive };
-      tmp10Result4 = tmp10(tmp(10030).StartStagePrompt, obj8);
+      tmp10Result4 = tmp10(tmp(10038).StartStagePrompt, obj8);
     }
     items2[1] = tmp10Result4;
     let tmp10Result5 = null;
     if (tmp7) {
       const obj9 = { channel, isLive, guild: stateFromStores };
-      tmp10Result5 = tmp10(tmp(9829).ScheduleEventPrompt, obj9);
+      tmp10Result5 = tmp10(tmp(9837).ScheduleEventPrompt, obj9);
     }
     const obj10 = { children: null };
     items2[2] = tmp10Result5;
     const obj11 = { onContinue: channel.onSkip };
-    items2[3] = closure_5(tmp(10030).ContinueToStagePrompt, obj11);
+    items2[3] = closure_5(tmp(10038).ContinueToStagePrompt, obj11);
     obj10.children = items2;
     obj6.children = closure_7(closure_6, obj10);
     tmp10Result6 = tmp10(StageViewWithPromptsDefault, obj6);

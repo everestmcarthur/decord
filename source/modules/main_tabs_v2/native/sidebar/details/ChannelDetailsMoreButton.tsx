@@ -1,13 +1,13 @@
-// Module ID: 16881
-// Function ID: 16882
+// Module ID: 16938
+// Function ID: 16939
 // Name: ChannelDetailsMoreButton
-// Dependencies: [19, 21, 11049, 7972, 7969, 1115, 9932, 2]
+// Dependencies: [19, 21, 11062, 7981, 7978, 1115, 9940, 2]
 // Exports: default
 
-// Module 16881 (ChannelDetailsMoreButton)
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7972 */;
-import _modDef9932 from "module_9932" /* 9932 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11049 */;
+// Module 16938 (ChannelDetailsMoreButton)
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7981 */;
+import _modDef9940 from "module_9940" /* 9940 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,9 +25,9 @@ export default function MoreButton(channel) {
       let obj2 = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1115).intl;
       obj2.accessibilityLabel = intl.string(channel(1115).t["UKOtz+"]);
-      obj2.source = _modDef9932;
+      obj2.source = _modDef9940;
       obj2.onPress = tmp;
-      obj.children = jsx(channel(7969).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.children = jsx(channel(7978).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
     } else {
       tmp2 = null;

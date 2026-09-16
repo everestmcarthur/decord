@@ -1,13 +1,13 @@
-// Module ID: 6296
-// Function ID: 6297
+// Module ID: 6297
+// Function ID: 6298
 // Name: HeadsetSpotIllustration
-// Dependencies: [21, 5672, 6297, 2]
+// Dependencies: [21, 5673, 6298, 2]
 // Exports: HeadsetSpotIllustration
 
-// Module 6296 (HeadsetSpotIllustration)
+// Module 6297 (HeadsetSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6297 from "module_6297" /* 6297 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6298 from "module_6298" /* 6298 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const HeadsetSpotIllustration = function HeadsetSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6297 };
+  const obj2 = { uri: _modDef6298 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

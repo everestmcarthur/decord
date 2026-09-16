@@ -1,10 +1,10 @@
-// Module ID: 11612
-// Function ID: 11613
+// Module ID: 11620
+// Function ID: 11621
 // Name: RichPresenceInviteBarActionCreators
 // Dependencies: [573, 2]
 // Exports: dismissSession, markChannelInvited
 
-// Module 11612 (RichPresenceInviteBarActionCreators)
+// Module 11620 (RichPresenceInviteBarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

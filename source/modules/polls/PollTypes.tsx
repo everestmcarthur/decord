@@ -1,9 +1,9 @@
-// Module ID: 12340
-// Function ID: 12341
+// Module ID: 12348
+// Function ID: 12349
 // Name: PollTypes
 // Dependencies: [2]
 
-// Module 12340 (PollTypes)
+// Module 12348 (PollTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/PollTypes.tsx");

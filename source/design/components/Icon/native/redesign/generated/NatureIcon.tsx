@@ -1,13 +1,13 @@
-// Module ID: 10482
-// Function ID: 10483
+// Module ID: 10490
+// Function ID: 10491
 // Name: NatureIcon
-// Dependencies: [19, 21, 576, 4340, 10483, 2]
+// Dependencies: [19, 21, 576, 4338, 10491, 2]
 // Exports: NatureIcon
 
-// Module 10482 (NatureIcon)
+// Module 10490 (NatureIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod10483 from "module_10483" /* 10483 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod10491 from "module_10491" /* 10491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const NatureIcon = function NatureIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10483, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10491, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

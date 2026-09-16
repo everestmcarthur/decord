@@ -1,18 +1,18 @@
-// Module ID: 7566
-// Function ID: 7567
+// Module ID: 7569
+// Function ID: 7570
 // Name: NetStats
-// Dependencies: [5, 17, 5362, 7567, 1980, 1074, 3, 1464, 1463, 7581, 1091, 510, 573, 4504, 7568, 7582, 9, 2]
+// Dependencies: [5, 17, 5363, 7570, 1980, 1074, 3, 1464, 1463, 7584, 1091, 510, 573, 4502, 7571, 7585, 9, 2]
 // Exports: getSignalStrength, isSlowNetwork
 
-// Module 7566 (NetStats)
+// Module 7569 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import configure from "configure" /* 1464 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4504 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 7581 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4502 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 7584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5362 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7567 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7570 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import NetworkUtils_mod from "utils/NetworkUtils" /* 1463 */;
 import Dispatcher_mod from "Dispatcher" /* 573 */;

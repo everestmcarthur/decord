@@ -1,35 +1,35 @@
-// Module ID: 12847
-// Function ID: 12848
+// Module ID: 12855
+// Function ID: 12856
 // Name: CreationIntent
-// Dependencies: [19, 17, 7085, 1074, 21, 4639, 5767, 576, 1484, 5046, 5055, 12818, 1241, 7230, 4635, 1115, 5772, 12459, 5777, 2]
+// Dependencies: [19, 17, 7088, 1074, 21, 4638, 5768, 576, 1484, 5045, 5054, 12826, 1241, 7233, 4634, 1115, 5773, 12467, 5778, 2]
 // Exports: default
 
-// Module 12847 (CreationIntent)
+// Module 12855 (CreationIntent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import useNavigation from "useNavigation" /* 1484 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5046 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5055 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import native from "native" /* 5777 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12818 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5045 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5054 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import native from "native" /* 5778 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7233 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12826 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7085);
+const CreateGuildConstants = fn(7088);
 ({ CreateGuildModalStates: metroRequire, GuildTemplateTriggers: closure_7, NUXGuildTemplatesAnalytics: closure_8 } = CreateGuildConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsLocations: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4639);
-let obj2 = { contentContainer: { flex: 1, marginTop: fn(5767).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
-let obj3 = { flex: 1, marginTop: fn(5767).NAV_BAR_HEIGHT };
+const createStyles = fn(4638);
+let obj2 = { contentContainer: { flex: 1, marginTop: fn(5768).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
+let obj3 = { flex: 1, marginTop: fn(5768).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
 obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
@@ -114,7 +114,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), , ];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(12459);
+  const tmp13 = trigger(12467);
   const obj9 = { Icon: null, message: null, onPress: null };
   const tmp14 = native;
   if (closure_14) {
@@ -125,16 +125,16 @@ export default function CreationIntent(arg0) {
       onPress(false);
     };
     const items4 = [tmp8(tmp13, obj9), ];
-    const obj10 = { Icon: tmp2(5777).WorldIllocon, message: null, onPress: null };
+    const obj10 = { Icon: tmp2(5778).WorldIllocon, message: null, onPress: null };
     const intl6 = tmp2(1115).intl;
     obj10.message = intl6.string(tmp2(1115).t.h9Q1lG);
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = tmp8(tmp12(12459), obj10);
+    items4[1] = tmp8(tmp12(12467), obj10);
     obj8.children = items4;
     let tmp16 = obj8;
-    const tmp12Result = tmp12(12459);
+    const tmp12Result = tmp12(12467);
   } else {
     obj9.Icon = tmp14.WorldIllocon;
     const intl3 = tmp2(1115).intl;
@@ -143,16 +143,16 @@ export default function CreationIntent(arg0) {
       onPress(true);
     };
     const items5 = [tmp8(tmp13, obj9), ];
-    const obj11 = { Icon: tmp2(5777).ChairIllocon, message: null, onPress: null };
+    const obj11 = { Icon: tmp2(5778).ChairIllocon, message: null, onPress: null };
     const intl4 = tmp2(1115).intl;
     obj11.message = intl4.string(tmp2(1115).t.uE7zcu);
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = tmp8(tmp12(12459), obj11);
+    items5[1] = tmp8(tmp12(12467), obj11);
     obj8.children = items5;
     tmp16 = obj8;
-    const tmp12Result2 = tmp12(12459);
+    const tmp12Result2 = tmp12(12467);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp16);
   items3[1] = closure_11(ref, obj7);

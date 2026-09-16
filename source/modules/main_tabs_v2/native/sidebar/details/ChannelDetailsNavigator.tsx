@@ -1,15 +1,15 @@
-// Module ID: 16960
-// Function ID: 16961
+// Module ID: 17017
+// Function ID: 17018
 // Name: ChannelDetailsNavigator
-// Dependencies: [19, 17, 1958, 11052, 1074, 16790, 21, 8020, 563, 7376, 11360, 7969, 1115, 12908, 1241, 8751, 16961, 7107, 5715, 4498, 1612, 17012, 1364, 17013, 17014, 17015, 17016, 16855, 2]
+// Dependencies: [19, 17, 1958, 11065, 1074, 16847, 21, 8029, 563, 7379, 11368, 7978, 1115, 12916, 1241, 8760, 17018, 7110, 5716, 4496, 1612, 17069, 1364, 17070, 17071, 17072, 17073, 16912, 2]
 
-// Module 16960 (ChannelDetailsNavigator)
+// Module 17017 (ChannelDetailsNavigator)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HeaderShared from "HeaderShared" /* 7969 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11360 */;
-import _modDef12908 from "module_12908" /* 12908 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 16961 */;
+import HeaderShared from "HeaderShared" /* 7978 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11368 */;
+import _modDef12916 from "module_12916" /* 12916 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 17018 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -28,26 +28,26 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(7376).useCanStartThread(channel);
+  const canStartThread = channel(7379).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1115).intl;
     obj2.accessibilityLabel = intl.string(tmp(1115).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef12908;
-    tmp5 = closure_9(tmp(7969).HeaderIconButton, obj2);
+    obj2.source = _modDef12916;
+    tmp5 = closure_9(tmp(7978).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(11052).ChannelDetailsNavigatorScreens;
+const constants = fn(11065).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SearchNavigatorScreens = fn(16790).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16847).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});
-const NativeStackNavigator = fn(8020);
+const NativeStackNavigator = fn(8029);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
@@ -137,7 +137,7 @@ export default noop.memo((navigation) => {
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(7969);
+            const obj = route(7978);
             obj2.shouldHandleSafeArea = route(1364).isAndroid();
             return obj.renderHeader(obj2);
           },
@@ -161,11 +161,11 @@ export default noop.memo((navigation) => {
         const intl = util.intl;
         obj.title = intl.string(util.t["mp1N/2"]);
         if (DETAILS === navigation.route.name) {
-          let renderModalCloseImage = tmp(7969).getRenderModalCloseImage(navigation);
-          const tmpResult = tmp(7969);
+          let renderModalCloseImage = tmp(7978).getRenderModalCloseImage(navigation);
+          const tmpResult = tmp(7978);
         } else {
-          renderModalCloseImage = tmp(7969).getRenderModalBackImage(navigation);
-          const tmpResult2 = tmp(7969);
+          renderModalCloseImage = tmp(7978).getRenderModalBackImage(navigation);
+          const tmpResult2 = tmp(7978);
         }
         obj.headerLeft = renderModalCloseImage;
         return obj;
@@ -183,11 +183,11 @@ export default noop.memo((navigation) => {
         const intl = util.intl;
         obj.title = intl.string(util.t.w4m945);
         if (DETAILS === navigation.route.name) {
-          let renderModalCloseImage = tmp(7969).getRenderModalCloseImage(navigation);
-          const tmpResult = tmp(7969);
+          let renderModalCloseImage = tmp(7978).getRenderModalCloseImage(navigation);
+          const tmpResult = tmp(7978);
         } else {
-          renderModalCloseImage = tmp(7969).getRenderModalBackImage(navigation);
-          const tmpResult2 = tmp(7969);
+          renderModalCloseImage = tmp(7978).getRenderModalBackImage(navigation);
+          const tmpResult2 = tmp(7978);
         }
         obj.headerLeft = renderModalCloseImage;
         return obj;
@@ -208,11 +208,11 @@ export default noop.memo((navigation) => {
     const intl = util.intl;
     obj.title = intl.string(util.t.B2panI);
     if (DETAILS === route.name) {
-      let renderModalCloseImage = tmp(7969).getRenderModalCloseImage(navigation);
-      const tmpResult = tmp(7969);
+      let renderModalCloseImage = tmp(7978).getRenderModalCloseImage(navigation);
+      const tmpResult = tmp(7978);
     } else {
-      renderModalCloseImage = tmp(7969).getRenderModalBackImage(navigation);
-      const tmpResult2 = tmp(7969);
+      renderModalCloseImage = tmp(7978).getRenderModalBackImage(navigation);
+      const tmpResult2 = tmp(7978);
     }
     obj.headerLeft = renderModalCloseImage;
     obj.headerRight = function headerRight() {

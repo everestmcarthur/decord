@@ -1,18 +1,18 @@
-// Module ID: 11853
-// Function ID: 11854
+// Module ID: 11861
+// Function ID: 11862
 // Name: PollStyles
-// Dependencies: [4824, 11854, 11855, 2]
+// Dependencies: [4823, 11862, 11863, 2]
 
-// Module 11853 (PollStyles)
-import _mod4824 from "module_4824" /* 4824 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11854 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11855 */;
+// Module 11861 (PollStyles)
+import _mod4823 from "module_4823" /* 4823 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11862 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11863 */;
 import size from "module_2" /* 2 */;
 
 function normal(border, arg1) {
   closure_0 = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _mod4824.match(arg1);
+  const match = _mod4823.match(arg1);
   obj.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
   obj.answerBackground = border.colors.BACKGROUND_MOD_MUTED;
   obj.answerFill = border.colors.BACKGROUND_MOD_SUBTLE;
@@ -25,7 +25,7 @@ function normalVote(colors, arg1) {
   if (typeof normal === "function") {
     const obj = {};
     const obj2 = { border: colors.colors.BORDER_SUBTLE, borderWidth: 1, fill: colors.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-    const match = _mod4824.match(arg1);
+    const match = _mod4823.match(arg1);
     obj2.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
     obj2.answerBackground = colors.colors.BACKGROUND_MOD_MUTED;
     obj2.answerFill = colors.colors.BACKGROUND_MOD_SUBTLE;

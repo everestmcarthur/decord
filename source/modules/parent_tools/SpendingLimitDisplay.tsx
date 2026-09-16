@@ -1,16 +1,16 @@
-// Module ID: 15009
-// Function ID: 15010
+// Module ID: 15025
+// Function ID: 15026
 // Name: SpendingLimitDisplay
-// Dependencies: [1220, 7644, 1374, 504, 14927, 7341, 7342, 1115, 2397, 2]
+// Dependencies: [1220, 7647, 1374, 504, 14943, 7344, 7345, 1115, 2397, 2]
 // Exports: useSpendingLimitDisplayState, useSpendingLimitFromUserSettings
 
-// Module 15009 (SpendingLimitDisplay)
+// Module 15025 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import PriceUtils from "PriceUtils" /* 7341 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14927 */;
+import PriceUtils from "PriceUtils" /* 7344 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14943 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
 
 require = fn;
 function getSpendingLimitDisplayState(amount, arg1) {
@@ -26,7 +26,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
       const obj2 = { kind: "spent", monthlyText: formatRateResult };
       return obj2;
     } else {
-      let num = tmp5(7342).CurrencyExponents[amount.currency];
+      let num = tmp5(7345).CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
@@ -34,10 +34,10 @@ function getSpendingLimitDisplayState(amount, arg1) {
       if (diff <= 10 * 10 ** num) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = tmp5(1115).intl;
-        const obj4 = { amount: tmp5(7341).formatPrice(diff, currency) };
+        const obj4 = { amount: tmp5(7344).formatPrice(diff, currency) };
         obj3.remainingText = intl.formatToPlainString(_modDef2397["+Q+bU1"], obj4);
         let obj = obj3;
-        const tmp5Result = tmp5(7341);
+        const tmp5Result = tmp5(7344);
       } else {
         obj = { kind: "on", monthlyText: formatRateResult };
       }

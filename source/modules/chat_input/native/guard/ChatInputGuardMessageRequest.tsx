@@ -1,10 +1,10 @@
-// Module ID: 12574
-// Function ID: 12575
+// Module ID: 12582
+// Function ID: 12583
 // Name: ChatInputGuardMessageRequest
-// Dependencies: [5, 19, 1372, 21, 1484, 12575, 504, 12577, 4338, 1115, 5682, 4650, 12583, 2]
+// Dependencies: [5, 19, 1372, 21, 1484, 12583, 504, 12585, 4336, 1115, 5683, 4649, 12591, 2]
 
-// Module 12574 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 12583 */;
+// Module 12582 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 12591 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -118,12 +118,12 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   };
   importDefault = channel(1484).useNavigation();
   let obj = channel(1484);
-  const isMessageRequestRestrictedViewer = channel(12575).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(12575);
+  const isMessageRequestRestrictedViewer = channel(12583).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(12583);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(12577).useMessageRequestActions({
+  const messageRequestActions = channel(12585).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
@@ -151,7 +151,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(12577);
+  let obj4 = channel(12585);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

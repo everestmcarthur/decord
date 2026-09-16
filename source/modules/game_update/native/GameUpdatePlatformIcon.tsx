@@ -1,11 +1,11 @@
-// Module ID: 9010
-// Function ID: 9011
+// Module ID: 9021
+// Function ID: 9022
 // Name: GameUpdatePlatformIcon
-// Dependencies: [19, 21, 8463, 9011, 8834, 9013, 9015, 7065, 8570, 2]
+// Dependencies: [19, 21, 8472, 9022, 8843, 9024, 9026, 7068, 8579, 2]
 // Exports: GameUpdatePlatformIcon
 
-// Module 9010 (GameUpdatePlatformIcon)
-import PlatformType from "PlatformType" /* 8463 */;
+// Module 9021 (GameUpdatePlatformIcon)
+import PlatformType from "PlatformType" /* 8472 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,22 +21,22 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
   color = color.color;
   if (PlatformType.PlatformType.DESKTOP === platform) {
     const obj2 = { size, color };
-    return jsx(tmp(9011).ScreenIcon, { size, color });
-  } else if (tmp(8463).PlatformType.XBOX === platform) {
+    return jsx(tmp(9022).ScreenIcon, { size, color });
+  } else if (tmp(8472).PlatformType.XBOX === platform) {
     const obj3 = { size, color };
-    return jsx(tmp(8834).XboxNeutralIcon, { size, color });
-  } else if (tmp(8463).PlatformType.PLAYSTATION === platform) {
+    return jsx(tmp(8843).XboxNeutralIcon, { size, color });
+  } else if (tmp(8472).PlatformType.PLAYSTATION === platform) {
     const obj4 = { size, color };
-    return jsx(tmp(9013).PlaystationNeutralIcon, { size, color });
-  } else if (tmp(8463).PlatformType.NINTENDO === platform) {
+    return jsx(tmp(9024).PlaystationNeutralIcon, { size, color });
+  } else if (tmp(8472).PlatformType.NINTENDO === platform) {
     const obj5 = { size, color };
-    return jsx(tmp(9015).NintendoSwitchNeutralIcon, { size, color });
-  } else if (tmp(8463).PlatformType.ANDROID === platform) {
+    return jsx(tmp(9026).NintendoSwitchNeutralIcon, { size, color });
+  } else if (tmp(8472).PlatformType.ANDROID === platform) {
     const obj6 = { size, color };
-    return jsx(tmp(7065).MobilePhoneIcon, { size, color });
-  } else if (tmp(8463).PlatformType.IOS === platform) {
+    return jsx(tmp(7068).MobilePhoneIcon, { size, color });
+  } else if (tmp(8472).PlatformType.IOS === platform) {
     const obj = { size, color };
-    return jsx(tmp(8570).AppleNeutralIcon, { size, color });
+    return jsx(tmp(8579).AppleNeutralIcon, { size, color });
   } else {
     return null;
   }

@@ -1,26 +1,26 @@
-// Module ID: 11640
-// Function ID: 11641
+// Module ID: 11648
+// Function ID: 11649
 // Name: AppStoreOverlayBody
-// Dependencies: [19, 17, 1074, 7258, 21, 4639, 576, 5672, 4635, 11641, 1115, 11644, 11649, 1612, 4341, 672, 5071, 5059, 2]
+// Dependencies: [19, 17, 1074, 7261, 21, 4638, 576, 5673, 4634, 11649, 1115, 11652, 11657, 1612, 4339, 672, 5072, 5060, 2]
 // Exports: AppStoreOverlayBody, AppStoreOverlayFooter
 
-// Module 11640 (AppStoreOverlayBody)
+// Module 11648 (AppStoreOverlayBody)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 11641 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 11644 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11649 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 11649 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 11652 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1074).VerticalGradient;
-let closure_6 = fn(7258).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(7261).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, containerWithHeader: { paddingTop: 110 }, iconContainer: null, icon: null, textBlock: null, mediaSection: null, header: null, footer: null, footerGradient: null };
 let size = { width: 84, height: 84, borderRadius: nativeDefault.radii.xl, overflow: "hidden", borderWidth: 6, borderColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.iconContainer = size;
@@ -83,7 +83,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
   }
   if (tmp16Result) {
     const obj10 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-    tmp16Result = tmp16(tmp17(4635).Text, obj10);
+    tmp16Result = tmp16(tmp17(4634).Text, obj10);
   }
   items3[1] = tmp16Result;
   obj8.children = items3;
@@ -106,7 +106,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
     const obj13 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp17(1115).intl;
     obj13.children = intl.string(tmp17(1115).t["EV1W/L"]);
-    const items4 = [tmp16(tmp17(4635).Text, obj13), ];
+    const items4 = [tmp16(tmp17(4634).Text, obj13), ];
     const obj14 = { media: metadata.media, onGetGamePress: onMediaGetGamePress };
     items4[1] = tmp16(AppStoreOverlayMediaCarouselDefault, obj14);
     obj12.children = items4;
@@ -133,7 +133,7 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   ({ onInstallPress, onLayout } = arg0);
   const tmp = closure_10();
   const bottom = token(1612)().bottom;
-  token = bottom(4341).useToken(token(576).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = bottom(4339).useToken(token(576).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   const items1 = [bottom];
   const memo = noop.useMemo(() => {
@@ -143,13 +143,13 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   }, items);
   const obj2 = { style: tmp.footer, onLayout, children: null };
   const memo1 = noop.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_6) }), items1);
-  const items2 = [closure_7(token(5071), { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END }), ];
+  const items2 = [closure_7(token(5072), { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END }), ];
   const obj4 = { style: memo1, children: null };
   const obj5 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1115).intl;
   obj5.text = intl.string(bottom(1115).t.lwQdjB);
   obj5.onPress = onInstallPress;
-  obj4.children = closure_7(bottom(5059).Button, obj5);
+  obj4.children = closure_7(bottom(5060).Button, obj5);
   items2[1] = closure_7(View, obj4);
   obj2.children = items2;
   return closure_8(View, obj2);

@@ -1,13 +1,13 @@
-// Module ID: 5878
-// Function ID: 5879
+// Module ID: 5879
+// Function ID: 5880
 // Name: AvatarNellyExample
-// Dependencies: [21, 5672, 5879, 2]
+// Dependencies: [21, 5673, 5880, 2]
 // Exports: AvatarNellyExample
 
-// Module 5878 (AvatarNellyExample)
+// Module 5879 (AvatarNellyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5879 from "module_5879" /* 5879 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5880 from "module_5880" /* 5880 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarNellyExample = function AvatarNellyExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5879 };
+  const obj2 = { uri: _modDef5880 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

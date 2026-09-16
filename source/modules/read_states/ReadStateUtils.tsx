@@ -1,17 +1,17 @@
-// Module ID: 9977
-// Function ID: 9978
+// Module ID: 9985
+// Function ID: 9986
 // Name: ReadStateUtils
-// Dependencies: [4654, 4820, 4821, 504, 2]
+// Dependencies: [4653, 4819, 4820, 504, 2]
 // Exports: getHasImportantUnread, useHasImportantUnread
 
-// Module 9977 (ReadStateUtils)
-import ReadStateStore from "ReadStateStore" /* 4654 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+// Module 9985 (ReadStateUtils)
+import ReadStateStore from "ReadStateStore" /* 4653 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(4821).UnreadSetting;
+const UnreadSetting = fn(4820).UnreadSetting;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 

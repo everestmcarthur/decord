@@ -1,10 +1,10 @@
-// Module ID: 16174
-// Function ID: 16175
+// Module ID: 16194
+// Function ID: 16195
 // Name: isActivityPermanentCustomStatus
 // Dependencies: [1074, 2]
 // Exports: isActivityPermanentCustomStatus
 
-// Module 16174 (isActivityPermanentCustomStatus)
+// Module 16194 (isActivityPermanentCustomStatus)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

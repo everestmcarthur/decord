@@ -1,11 +1,11 @@
-// Module ID: 8335
-// Function ID: 8336
+// Module ID: 8344
+// Function ID: 8345
 // Name: useMaybeFetchEquippedCollectibleProducts
-// Dependencies: [19, 1372, 504, 8306, 8336, 8337, 8338, 2]
+// Dependencies: [19, 1372, 504, 8315, 8345, 8346, 8347, 2]
 // Exports: default
 
-// Module 8335 (useMaybeFetchEquippedCollectibleProducts)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8338 */;
+// Module 8344 (useMaybeFetchEquippedCollectibleProducts)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8347 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

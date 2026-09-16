@@ -1,17 +1,17 @@
-// Module ID: 4964
-// Function ID: 4965
+// Module ID: 4963
+// Function ID: 4964
 // Name: BillingSharedActionCreators
-// Dependencies: [5, 4301, 4965, 1074, 1271, 4319, 573, 1115, 1241, 4540, 4312, 2]
+// Dependencies: [5, 4299, 4964, 1074, 1271, 4317, 573, 1115, 1241, 4538, 4310, 2]
 // Exports: createPaymentSource, dispatchConfirmationError, popupBridgeState, validatePaymentSourceBillingAddress
 
-// Module 4964 (BillingSharedActionCreators)
+// Module 4963 (BillingSharedActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4540 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 4301 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 4299 */;
 
 require = fn;
 let closure_8 = async function _validatePaymentSourceBillingAddress(arg0, value) {
@@ -233,7 +233,7 @@ let closure_10 = async function _createPaymentSource(arg0, value) {
     }
   }
 };
-const StripeErrorTypes = fn(4965).StripeErrorTypes;
+const StripeErrorTypes = fn(4964).StripeErrorTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -319,8 +319,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
     const merged2 = Object.assign(tmp12);
     const merged3 = Object.assign(obj.extra);
     obj9.extra = obj14;
-    const result = tmp15(4312).captureBillingException(error1, obj9);
-    const tmp15Result = tmp15(4312);
+    const result = tmp15(4310).captureBillingException(error1, obj9);
+    const tmp15Result = tmp15(4310);
   }
   return error1;
 };

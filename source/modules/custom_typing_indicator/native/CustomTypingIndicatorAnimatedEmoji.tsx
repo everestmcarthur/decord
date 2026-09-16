@@ -1,10 +1,10 @@
-// Module ID: 12116
-// Function ID: 12117
+// Module ID: 12124
+// Function ID: 12125
 // Name: CustomTypingIndicatorAnimatedEmoji
-// Dependencies: [32, 19, 1896, 1074, 21, 4639, 4360, 1936, 4376, 504, 1380, 4640, 7237, 1397, 2]
+// Dependencies: [32, 19, 1896, 1074, 21, 4638, 4358, 1936, 4374, 504, 1380, 4639, 7240, 1397, 2]
 // Exports: default
 
-// Module 12116 (CustomTypingIndicatorAnimatedEmoji)
+// Module 12124 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ require = fn;
 const AppStates = fn(1074).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles((fontSize) => ({ textEmoji: { fontSize }, imageEmoji: { width: fontSize, height: fontSize } }));
 let __initData = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}" };
 const size = fn(2);
@@ -70,40 +70,40 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
           const result3 = index * c8;
           const result4 = c8 * (emojiCount - 1);
           if (tmp5(1380).TypingIndicatorAnimation.PULSE === tmp4) {
-            const tmp5Result = tmp5(4376);
-            const tmp5Result15 = tmp5(4376);
-            const tmp5Result16 = tmp5(4376);
+            const tmp5Result = tmp5(4374);
+            const tmp5Result15 = tmp5(4374);
+            const tmp5Result16 = tmp5(4374);
             const obj4 = { duration: tmp8 };
-            const tmp5Result17 = tmp5(4640);
-            const withTimingResult = tmp5(4640).withTiming(1.16, obj4);
+            const tmp5Result17 = tmp5(4639);
+            const withTimingResult = tmp5(4639).withTiming(1.16, obj4);
             const obj5 = { duration: tmp8 };
-            const tmp5Result18 = tmp5(4640);
-            const withTimingResult1 = tmp5(4640).withTiming(1, obj5);
+            const tmp5Result18 = tmp5(4639);
+            const withTimingResult1 = tmp5(4639).withTiming(1, obj5);
             const obj6 = { duration: result4 };
-            const result5 = sharedValue.set(tmp5Result.withDelay(result3, tmp5Result15.withRepeat(tmp5Result16.withSequence(withTimingResult, withTimingResult1, tmp5(4640).withTiming(1, obj6)), -1)));
-            const tmp5Result19 = tmp5(4640);
+            const result5 = sharedValue.set(tmp5Result.withDelay(result3, tmp5Result15.withRepeat(tmp5Result16.withSequence(withTimingResult, withTimingResult1, tmp5(4639).withTiming(1, obj6)), -1)));
+            const tmp5Result19 = tmp5(4639);
           } else if (tmp5(1380).TypingIndicatorAnimation.RING === tmp4) {
-            const tmp5Result20 = tmp5(4376);
-            const tmp5Result21 = tmp5(4376);
+            const tmp5Result20 = tmp5(4374);
+            const tmp5Result21 = tmp5(4374);
             const _Math = Math;
             const obj7 = { duration: 1600, easing: null };
             const result6 = 2 * Math.PI;
-            obj7.easing = tmp5(4376).Easing.linear;
-            const result7 = sharedValue1.set(tmp5Result20.withDelay(result3, tmp5Result21.withRepeat(tmp5(4640).withTiming(result6, obj7), -1)));
-            const tmp5Result22 = tmp5(4640);
+            obj7.easing = tmp5(4374).Easing.linear;
+            const result7 = sharedValue1.set(tmp5Result20.withDelay(result3, tmp5Result21.withRepeat(tmp5(4639).withTiming(result6, obj7), -1)));
+            const tmp5Result22 = tmp5(4639);
           } else if (tmp5(1380).TypingIndicatorAnimation.WAVE === tmp4) {
-            const tmp5Result23 = tmp5(4376);
-            const tmp5Result24 = tmp5(4376);
-            const tmp5Result25 = tmp5(4376);
+            const tmp5Result23 = tmp5(4374);
+            const tmp5Result24 = tmp5(4374);
+            const tmp5Result25 = tmp5(4374);
             const obj8 = { duration: tmp8 };
-            const tmp5Result26 = tmp5(4640);
-            const withTimingResult2 = tmp5(4640).withTiming(-0.12 * num, obj8);
+            const tmp5Result26 = tmp5(4639);
+            const withTimingResult2 = tmp5(4639).withTiming(-0.12 * num, obj8);
             const obj9 = { duration: tmp8 };
-            const tmp5Result27 = tmp5(4640);
-            const withTimingResult3 = tmp5(4640).withTiming(0, obj9);
+            const tmp5Result27 = tmp5(4639);
+            const withTimingResult3 = tmp5(4639).withTiming(0, obj9);
             const obj10 = { duration: result4 };
-            const result8 = sharedValue2.set(tmp5Result23.withDelay(result3, tmp5Result24.withRepeat(tmp5Result25.withSequence(withTimingResult2, withTimingResult3, tmp5(4640).withTiming(0, obj10)), -1)));
-            const tmp5Result28 = tmp5(4640);
+            const result8 = sharedValue2.set(tmp5Result23.withDelay(result3, tmp5Result24.withRepeat(tmp5Result25.withSequence(withTimingResult2, withTimingResult3, tmp5(4639).withTiming(0, obj10)), -1)));
+            const tmp5Result28 = tmp5(4639);
           }
           return () => {
             index(num[8]).cancelAnimation(sharedValue);

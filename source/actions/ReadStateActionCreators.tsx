@@ -1,14 +1,14 @@
-// Module ID: 7217
-// Function ID: 7218
+// Module ID: 7220
+// Function ID: 7221
 // Name: ReadStateActionCreators
-// Dependencies: [5591, 1962, 1958, 7218, 1372, 1074, 573, 11, 2]
+// Dependencies: [5592, 1962, 1958, 7221, 1372, 1074, 573, 11, 2]
 // Exports: ackChannel, ackGuildFeature, ackUserFeature, bulkAck, clearOldestUnreadMessageId, disableAutomaticAck, enableAutomaticAck, localAck, registerVisibleInlineChannel, unregisterVisibleInlineChannel
 
-// Module 7217 (ReadStateActionCreators)
+// Module 7220 (ReadStateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5591 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5592 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7218 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7221 */;
 import UserStore from "UserStore" /* 1372 */;
 
 function ack(channelId, location, arg2, arg3, messageId) {

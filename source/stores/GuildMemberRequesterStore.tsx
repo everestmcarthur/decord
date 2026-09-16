@@ -1,12 +1,12 @@
-// Module ID: 5511
-// Function ID: 5512
+// Module ID: 5512
+// Function ID: 5513
 // Name: GuildMemberRequesterStore
-// Dependencies: [1958, 2022, 5512, 573, 504, 2]
+// Dependencies: [1958, 2022, 5513, 573, 504, 2]
 
-// Module 5511 (GuildMemberRequesterStore)
+// Module 5512 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5512 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5513 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
@@ -112,6 +112,22 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     return false;
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
+  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(arg0) {
+    ({ messages, guildId: importDefault } = arg0);
+    const item = messages.forEach((item) => {
+      ({ author, mentions } = item);
+      if (null != author) {
+        closure_4.request(guild_id, author.id);
+      }
+      if (mentions != null) {
+        item = mentions.forEach((id) => {
+          navigation.request(guild_id, id.id);
+          return false;
+        });
+      }
+    });
+    return false;
+  },
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
   LOCAL_MESSAGES_LOADED: handleLoadMessages,
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,

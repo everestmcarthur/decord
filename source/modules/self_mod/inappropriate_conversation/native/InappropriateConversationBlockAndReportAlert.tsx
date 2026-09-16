@@ -1,10 +1,10 @@
-// Module ID: 11526
-// Function ID: 11527
+// Module ID: 11534
+// Function ID: 11535
 // Name: InappropriateConversationBlockAndReportAlert
-// Dependencies: [19, 21, 11508, 11527, 1115, 2]
+// Dependencies: [19, 21, 11516, 11535, 1115, 2]
 
-// Module 11526 (InappropriateConversationBlockAndReportAlert)
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11508 */;
+// Module 11534 (InappropriateConversationBlockAndReportAlert)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11516 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

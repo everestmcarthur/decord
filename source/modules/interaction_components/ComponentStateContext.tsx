@@ -1,24 +1,24 @@
-// Module ID: 8232
-// Function ID: 8233
+// Module ID: 8241
+// Function ID: 8242
 // Name: ComponentStateContext
-// Dependencies: [32, 19, 8048, 4279, 1958, 2022, 5498, 1372, 8233, 21, 1895, 4871, 4869, 504, 8084, 7376, 8235, 8236, 573, 5076, 4864, 2]
+// Dependencies: [32, 19, 8057, 4277, 1958, 2022, 5499, 1372, 8242, 21, 1895, 4870, 4868, 504, 8093, 7379, 8244, 8245, 573, 5077, 4863, 2]
 // Exports: ComponentStateContextProvider, useComponentContainerId, useComponentError, useComponentState, useComponentStateContext
 
-// Module 8232 (ComponentStateContext)
+// Module 8241 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1895 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4871 */;
-import useMountEffectDefault from "useMountEffect" /* 5076 */;
-import InteractionUtils from "InteractionUtils" /* 8236 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4870 */;
+import useMountEffectDefault from "useMountEffect" /* 5077 */;
+import InteractionUtils from "InteractionUtils" /* 8245 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 8048 */;
-import LurkingStore from "LurkingStore" /* 4279 */;
+import InteractionStore from "InteractionStore" /* 8057 */;
+import LurkingStore from "LurkingStore" /* 4277 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5498 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5499 */;
 import UserStore from "UserStore" /* 1372 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8233 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8242 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -51,7 +51,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   let LOADING = InteractionComponentTypes.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4869).InteractionState.FAILED;
+    tmp3 = interaction.state !== tmp(4868).InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -59,16 +59,16 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4871).ActionComponentState.DISABLED;
+      DISABLED = tmp(4870).ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
     if (interaction.data.interactionType !== tmp(1895).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4871).ActionComponentState.DISABLED;
+        LOADING = tmp(4870).ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4871).ActionComponentState.LOADING;
+    LOADING = tmp(4870).ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
@@ -134,11 +134,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8084);
-  const isThreadModerator = channel(7376).useIsThreadModerator(channel);
-  const tmpResult = channel(7376);
+  const obj5 = channel(8093);
+  const isThreadModerator = channel(7379).useIsThreadModerator(channel);
+  const tmpResult = channel(7379);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7376).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7379).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }

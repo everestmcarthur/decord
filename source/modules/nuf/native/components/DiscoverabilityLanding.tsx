@@ -1,24 +1,24 @@
-// Module ID: 12883
-// Function ID: 12884
+// Module ID: 12891
+// Function ID: 12892
 // Name: DiscoverabilityLanding
-// Dependencies: [19, 17, 12812, 1074, 21, 4639, 576, 5609, 1612, 4606, 12884, 1897, 5767, 5672, 12885, 4635, 1115, 8719, 12839, 5059, 2]
+// Dependencies: [19, 17, 12820, 1074, 21, 4638, 576, 5610, 1612, 4605, 12892, 1897, 5768, 5673, 12893, 4634, 1115, 8728, 12847, 5060, 2]
 // Exports: default
 
-// Module 12883 (DiscoverabilityLanding)
+// Module 12891 (DiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5609 */;
+import TextStyles from "TextStyles" /* 5610 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(12812).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12820).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerContainer: { flexGrow: 0, justifyContent: "center", marginBottom: 24 }, header: { paddingHorizontal: 16, alignItems: "center" }, image: { width: "100%", marginHorizontal: 0 }, button: { flexGrow: 0, marginHorizontal: 16, marginBottom: 24 }, title: { textAlign: "center", marginTop: 16 }, subtitle: { textAlign: "center", marginTop: 8 }, formRow: null, formText: null, footerContainer: null, info: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.formRow = { paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -38,7 +38,7 @@ export default function DiscoverabilityLanding(onNext) {
   const allowPhone = tmp2.allowPhone;
   const items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12884, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12892, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
   }, items);
   const obj = { style: tmp.container, contentContainerStyle: { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 }, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };

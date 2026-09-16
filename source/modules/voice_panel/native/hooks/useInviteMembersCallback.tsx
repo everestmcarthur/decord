@@ -1,12 +1,12 @@
-// Module ID: 17206
-// Function ID: 17207
+// Module ID: 17262
+// Function ID: 17263
 // Name: useInviteMembersCallback
-// Dependencies: [19, 1958, 1074, 11724, 9952, 2]
+// Dependencies: [19, 1958, 1074, 11732, 9960, 2]
 // Exports: useInviteMembersCallback
 
-// Module 17206 (useInviteMembersCallback)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9952 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11724 */;
+// Module 17262 (useInviteMembersCallback)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9960 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11732 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 6068
-// Function ID: 6069
+// Module ID: 6069
+// Function ID: 6070
 // Name: EmojiWumpSweatExample
-// Dependencies: [21, 5672, 6069, 2]
+// Dependencies: [21, 5673, 6070, 2]
 // Exports: EmojiWumpSweatExample
 
-// Module 6068 (EmojiWumpSweatExample)
+// Module 6069 (EmojiWumpSweatExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6069 from "module_6069" /* 6069 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6070 from "module_6070" /* 6070 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiWumpSweatExample = function EmojiWumpSweatExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6069 };
+  const obj2 = { uri: _modDef6070 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

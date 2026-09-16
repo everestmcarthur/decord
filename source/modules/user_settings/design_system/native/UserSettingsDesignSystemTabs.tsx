@@ -1,12 +1,12 @@
-// Module ID: 15879
-// Function ID: 15880
+// Module ID: 15897
+// Function ID: 15898
 // Name: UserSettingsDesignSystemTabs
-// Dependencies: [32, 19, 17, 21, 4639, 576, 4635, 4341, 4489, 9924, 5057, 12749, 12894, 12751, 5059, 7307, 2]
+// Dependencies: [32, 19, 17, 21, 4638, 576, 4634, 4339, 4487, 9932, 5058, 12757, 12902, 12759, 5060, 7310, 2]
 // Exports: default
 
-// Module 15879 (UserSettingsDesignSystemTabs)
+// Module 15897 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -86,7 +86,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp20Result = tmp20(tmp18(12894), obj5);
+    tmp20Result = tmp20(tmp18(12902), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };

@@ -1,12 +1,12 @@
-// Module ID: 16986
-// Function ID: 16987
+// Module ID: 17043
+// Function ID: 17044
 // Name: guild_automod/PermissionUtils
-// Dependencies: [1980, 4278, 1074, 504, 2]
+// Dependencies: [1980, 4276, 1074, 504, 2]
 // Exports: canCurrentUserManageAutomod, canCurrentUserManageMessageFilters, useCanCurrentUserManageAutomod, useIsUserProfileRuleEnabled
 
-// Module 16986 (guild_automod/PermissionUtils)
+// Module 17043 (guild_automod/PermissionUtils)
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 const require = globalThis.__r;
 

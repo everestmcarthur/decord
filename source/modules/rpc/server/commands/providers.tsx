@@ -1,15 +1,15 @@
-// Module ID: 14589
-// Function ID: 14590
+// Module ID: 14607
+// Function ID: 14608
 // Name: providers
-// Dependencies: [5, 5366, 4544, 1074, 1921, 1085, 9689, 9691, 5368, 9686, 573, 1110, 9384, 5491, 2]
+// Dependencies: [5, 5367, 4542, 1074, 1921, 1085, 9700, 9702, 5369, 9697, 573, 1110, 9395, 5492, 2]
 
-// Module 14589 (providers)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9689 */;
+// Module 14607 (providers)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9700 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5366 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5367 */;
 
 const require = fn;
-let Constants = fn(4544);
+let Constants = fn(4542);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1074);
 ({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
@@ -39,16 +39,16 @@ obj2 = {
     let obj = require("RPCHelpers");
     let obj2 = require("RPCHelpers");
     const validateApplicationResult = require("RPCHelpers").validateApplication(socket.application);
-    value = connection_redirect(5368).get(provider);
+    value = connection_redirect(5369).get(provider);
     dependencyMap = value;
     if (null == value) {
       const obj4 = { errorCode: constants2.INVALID_PROVIDER };
       const _HermesInternal = HermesInternal;
-      const tmp4Result1 = new tmp4(9686)(obj4, "Platform not found for provider \"" + provider + "\"");
+      const tmp4Result1 = new tmp4(9697)(obj4, "Platform not found for provider \"" + provider + "\"");
       throw tmp4Result1;
     } else if (provider !== constants.AMAZON_MUSIC) {
       let obj5 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp22 = new tmp4(9686)(obj5, "Command not available for this application");
+      const tmp22 = new tmp4(9697)(obj5, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
       _require = asyncGeneratorStep(async (arg0, successRedirect) => {
@@ -108,9 +108,9 @@ obj2 = {
                     closure_130_3 = handleConnectionsUpdate;
                     function handleConnectionsCallbackError() {
                       const obj = { errorCode: closure_3_9.OAUTH2_ERROR };
-                      const tmp = connection_redirect(9686);
-                      successRedirect(new connection_redirect(9686)({ errorCode: closure_3_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + closure_0 + "\" failed"));
-                      const tmp2 = new connection_redirect(9686)({ errorCode: closure_3_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + closure_0 + "\" failed");
+                      const tmp = connection_redirect(9697);
+                      successRedirect(new connection_redirect(9697)({ errorCode: closure_3_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + closure_0 + "\" failed"));
+                      const tmp2 = new connection_redirect(9697)({ errorCode: closure_3_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + closure_0 + "\" failed");
                       connection_redirect(573).unsubscribe("USER_CONNECTIONS_UPDATE", closure_1_3);
                       const ComponentDispatch = closure_0(1110).ComponentDispatch;
                       ComponentDispatch.unsubscribe(constants2.CONNECTIONS_CALLBACK_ERROR, closure_1_4);
@@ -180,10 +180,10 @@ obj2 = {
       return promise;
     } else {
       let obj6 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp10 = new tmp4(9686)(obj6, "Command not available for this application");
+      const tmp10 = new tmp4(9697)(obj6, "Command not available for this application");
       throw tmp10;
     }
-    let obj3 = connection_redirect(5368);
+    let obj3 = connection_redirect(5369);
   }
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE];

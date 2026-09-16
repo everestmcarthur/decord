@@ -1,11 +1,11 @@
-// Module ID: 7334
-// Function ID: 7335
+// Module ID: 7337
+// Function ID: 7338
 // Name: WishlistRecommendationRecord
-// Dependencies: [1387, 5596, 1919, 2]
+// Dependencies: [1387, 5597, 1919, 2]
 
-// Module 7334 (WishlistRecommendationRecord)
+// Module 7337 (WishlistRecommendationRecord)
 import Record from "Record" /* 1387 */;
-import SKURecord from "SKURecord" /* 5596 */;
+import SKURecord from "SKURecord" /* 5597 */;
 import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 
 const prototype = function WishlistRecommendationRecord(skus) {

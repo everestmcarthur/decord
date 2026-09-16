@@ -1,10 +1,10 @@
-// Module ID: 11460
-// Function ID: 11461
+// Module ID: 11468
+// Function ID: 11469
 // Name: MessageRequestNotification
-// Dependencies: [19, 21, 1115, 10227, 4498, 10300, 1177, 10237, 2]
+// Dependencies: [19, 21, 1115, 10235, 4496, 10308, 1177, 10245, 2]
 // Exports: default
 
-// Module 11460 (MessageRequestNotification)
+// Module 11468 (MessageRequestNotification)
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,9 +25,9 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(10227).clearNotification();
-    const obj = numMutualGuilds(10227);
-    const rootNavigationRef = author(4498).getRootNavigationRef();
+    numMutualGuilds(10235).clearNotification();
+    const obj = numMutualGuilds(10235);
+    const rootNavigationRef = author(4496).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
@@ -36,8 +36,8 @@ export default function MessageRequestInAppNotification(notification) {
   const obj3 = { text: null };
   let intl = author(1115).intl;
   obj3.text = intl.string(author(1115).t["Bx4/Lf"]);
-  obj.children = jsx(author(10237).SystemMessageText, { text: null });
+  obj.children = jsx(author(10245).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(10300).NotificationPressable, { icon: jsx(author(1177).Avatar, { user: author, size: author(1177).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(10308).NotificationPressable, { icon: jsx(author(1177).Avatar, { user: author, size: author(1177).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
 };

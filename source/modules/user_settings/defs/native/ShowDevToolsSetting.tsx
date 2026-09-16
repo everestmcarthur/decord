@@ -1,14 +1,14 @@
-// Module ID: 15677
-// Function ID: 15678
+// Module ID: 15695
+// Function ID: 15696
 // Name: ShowDevToolsSetting
-// Dependencies: [15678, 11606, 15675, 14679, 14942, 2]
+// Dependencies: [15696, 11614, 15693, 14695, 14958, 2]
 
-// Module 15677 (ShowDevToolsSetting)
-import DevToolsNavigator from "DevToolsNavigator" /* 14679 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14942 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15675 */;
-import DevToolsScreens from "DevToolsScreens" /* 15678 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+// Module 15695 (ShowDevToolsSetting)
+import DevToolsNavigator from "DevToolsNavigator" /* 14695 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14958 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 15693 */;
+import DevToolsScreens from "DevToolsScreens" /* 15696 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

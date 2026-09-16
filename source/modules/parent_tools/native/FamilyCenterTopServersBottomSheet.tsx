@@ -1,18 +1,18 @@
-// Module ID: 14998
-// Function ID: 14999
+// Module ID: 15014
+// Function ID: 15015
 // Name: FamilyCenterTopServersBottomSheet
-// Dependencies: [7644, 21, 4639, 576, 504, 7699, 5690, 5669, 7304, 4635, 1115, 2397, 5772, 2]
+// Dependencies: [7647, 21, 4638, 576, 504, 7702, 5691, 5670, 7307, 4634, 1115, 2397, 5773, 2]
 // Exports: default
 
-// Module 14998 (FamilyCenterTopServersBottomSheet)
+// Module 15014 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import GuildIconDefault from "GuildIcon" /* 5669 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import ActionSheet from "ActionSheet" /* 7304 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import GuildIconDefault from "GuildIcon" /* 5670 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import ActionSheet from "ActionSheet" /* 7307 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -23,17 +23,17 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7699).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7702).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(5690).TableRow, obj2);
+    return closure_4(tmp2(5691).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { header: { textAlign: "center" }, guildIcon: { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

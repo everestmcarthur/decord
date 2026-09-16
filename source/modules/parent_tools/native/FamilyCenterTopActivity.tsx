@@ -1,17 +1,17 @@
-// Module ID: 14996
-// Function ID: 14997
+// Module ID: 15012
+// Function ID: 15013
 // Name: FamilyCenterTopActivity
-// Dependencies: [19, 17, 1372, 7644, 21, 4639, 576, 563, 4606, 14997, 1897, 14998, 9182, 1115, 2397, 4635, 1177, 5669, 2]
+// Dependencies: [19, 17, 1372, 7647, 21, 4638, 576, 563, 4605, 15013, 1897, 15014, 9193, 1115, 2397, 4634, 1177, 5670, 2]
 // Exports: default
 
-// Module 14996 (FamilyCenterTopActivity)
+// Module 15012 (FamilyCenterTopActivity)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import GuildIcon from "GuildIcon" /* 5669 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import GuildIcon from "GuildIcon" /* 5670 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, section: { flex: 1 }, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
 let obj3 = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj2.avatarList = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, flexWrap: "wrap", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };
@@ -43,7 +43,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14997, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15013, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
   }, items2);
   if (0 !== stateFromStores.length) {
     const obj3 = { style: tmp.container, children: null };

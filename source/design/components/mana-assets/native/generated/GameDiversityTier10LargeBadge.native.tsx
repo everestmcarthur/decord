@@ -1,13 +1,13 @@
-// Module ID: 6154
-// Function ID: 6155
+// Module ID: 6155
+// Function ID: 6156
 // Name: GameDiversityTier10LargeBadge
-// Dependencies: [21, 5672, 6155, 2]
+// Dependencies: [21, 5673, 6156, 2]
 // Exports: GameDiversityTier10LargeBadge
 
-// Module 6154 (GameDiversityTier10LargeBadge)
+// Module 6155 (GameDiversityTier10LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6155 from "module_6155" /* 6155 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6156 from "module_6156" /* 6156 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GameDiversityTier10LargeBadge = function GameDiversityTier10LargeBa
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6155 };
+  const obj2 = { uri: _modDef6156 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

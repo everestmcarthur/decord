@@ -1,16 +1,16 @@
-// Module ID: 15865
-// Function ID: 15866
+// Module ID: 15883
+// Function ID: 15884
 // Name: UserSettingsDesignSystemButtonGroup
-// Dependencies: [19, 17, 21, 4639, 5057, 4635, 5518, 5059, 8205, 7488, 2]
+// Dependencies: [19, 17, 21, 4638, 5058, 4634, 5519, 5060, 8214, 7491, 2]
 // Exports: default
 
-// Module 15865 (UserSettingsDesignSystemButtonGroup)
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import ButtonGroup from "ButtonGroup" /* 5518 */;
-import _modDef7488 from "module_7488" /* 7488 */;
-import IconButton from "IconButton" /* 8205 */;
+// Module 15883 (UserSettingsDesignSystemButtonGroup)
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import ButtonGroup from "ButtonGroup" /* 5519 */;
+import _modDef7491 from "module_7491" /* 7491 */;
+import IconButton from "IconButton" /* 8214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 64 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx");
@@ -60,7 +60,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7488,
+      icon: _modDef7491,
       onPress() {
 
       }
@@ -70,7 +70,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7488,
+    icon: _modDef7491,
     onPress() {
 
     }
@@ -92,7 +92,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7488,
+    icon: _modDef7491,
     onPress() {
 
     }
@@ -120,7 +120,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7488,
+    icon: _modDef7491,
     onPress() {
 
     }
@@ -136,7 +136,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef7488,
+    icon: _modDef7491,
     onPress() {
 
     }

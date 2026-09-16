@@ -1,17 +1,17 @@
-// Module ID: 11605
-// Function ID: 11606
+// Module ID: 11613
+// Function ID: 11614
 // Name: ChatGestureSettings
-// Dependencies: [8082, 1074, 1186, 1115, 1241, 1936, 11606, 2]
+// Dependencies: [8091, 1074, 1186, 1115, 1241, 1936, 11614, 2]
 // Exports: getSwipeToReplySettingValue, useSwipeToReplySettingValue
 
-// Module 11605 (ChatGestureSettings)
+// Module 11613 (ChatGestureSettings)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8082 */;
+import SettingsConstants from "SettingsConstants" /* 8091 */;
 import Constants from "Constants" /* 1074 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 function useSwipeToReplySettingValue() {

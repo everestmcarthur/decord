@@ -1,10 +1,10 @@
-// Module ID: 10458
-// Function ID: 10459
+// Module ID: 10466
+// Function ID: 10467
 // Name: useEmojiPickerViewableItemsCallback
-// Dependencies: [19, 1372, 504, 4297, 12, 2]
+// Dependencies: [19, 1372, 504, 4295, 12, 2]
 // Exports: default
 
-// Module 10458 (useEmojiPickerViewableItemsCallback)
+// Module 10466 (useEmojiPickerViewableItemsCallback)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

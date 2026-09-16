@@ -1,15 +1,9 @@
 // Module ID: 4931
 // Function ID: 4932
-// Dependencies: []
+// Dependencies: [1290]
 
 // Module 4931
-let setPrototypeOf = typeof Reflect !== "undefined";
-if (typeof Reflect !== "undefined") {
-  const _Reflect = Reflect;
-  setPrototypeOf = Reflect.setPrototypeOf;
-}
-if (!setPrototypeOf) {
-  setPrototypeOf = null;
-}
+import _mod1290 from "module_1290" /* 1290 */;
 
-export default setPrototypeOf;
+
+export default _mod1290.setPrototypeOf || null;

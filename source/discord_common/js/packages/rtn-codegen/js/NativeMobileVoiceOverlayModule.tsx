@@ -1,9 +1,9 @@
-// Module ID: 14634
-// Function ID: 14635
+// Module ID: 14652
+// Function ID: 14653
 // Name: NativeMobileVoiceOverlayModule
 // Dependencies: [17, 2]
 
-// Module 14634 (NativeMobileVoiceOverlayModule)
+// Module 14652 (NativeMobileVoiceOverlayModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

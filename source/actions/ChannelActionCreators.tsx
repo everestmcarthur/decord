@@ -1,26 +1,26 @@
-// Module ID: 4652
-// Function ID: 4653
+// Module ID: 4651
+// Function ID: 4652
 // Name: ChannelActionCreators
-// Dependencies: [32, 5, 4653, 1962, 1958, 4654, 1074, 9314, 1271, 5607, 4498, 4650, 5496, 573, 8495, 1241, 1101, 4491, 1115, 7430, 4881, 2]
+// Dependencies: [32, 5, 4652, 1962, 1958, 4653, 1074, 9325, 1271, 5608, 4496, 4649, 5497, 573, 8504, 1241, 1101, 4489, 1115, 7433, 4880, 2]
 
-// Module 4652 (ChannelActionCreators)
+// Module 4651 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import shared from "shared" /* 4491 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5496 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8495 */;
+import shared from "shared" /* 4489 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5497 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 4653 */;
+import ChangelogStore from "ChangelogStore" /* 4652 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4654 */;
+import ReadStateStore from "ReadStateStore" /* 4653 */;
 
 const require = globalThis.__r;
 
-const transitionToChannel = tmp5(4650);
+const transitionToChannel = tmp5(4649);
 require = fn;
 let closure_6 = fn(1962).createChannelRecordFromServer;
 const Constants = fn(1074);
@@ -266,9 +266,9 @@ export default {
           fn();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4650).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp6(4649).transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4650);
+          const tmp6Result = tmp6(4649);
         } else {
           const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(channel.id);
           tmp3 = channel;
@@ -518,8 +518,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7430).checkGuildTemplateDirty(closure_128_2);
-        name(7430);
+        const result = name(7433).checkGuildTemplateDirty(closure_128_2);
+        name(7433);
       }
       return closure_128_1;
     })();

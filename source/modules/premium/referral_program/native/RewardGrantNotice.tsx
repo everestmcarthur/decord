@@ -1,16 +1,16 @@
-// Module ID: 13540
-// Function ID: 13541
+// Module ID: 13552
+// Function ID: 13553
 // Name: RewardGrantNotice
-// Dependencies: [19, 17, 13526, 21, 4639, 576, 13528, 11229, 4635, 1115, 7240, 2]
+// Dependencies: [19, 17, 13537, 21, 4638, 576, 13539, 11243, 4634, 1115, 7243, 2]
 // Exports: default
 
-// Module 13540 (RewardGrantNotice)
+// Module 13552 (RewardGrantNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7240 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 11229 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13528 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7243 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 11243 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13539 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,11 +40,11 @@ function DiscountGrantNotice(nRewardsGranted) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const Constants = fn(13526);
+const Constants = fn(13537);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" }, orbsPillContainer: null, balancePillOverride: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
 obj2.orbsPillContainer = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
@@ -61,7 +61,7 @@ export default function RewardGrantNotice(arg0) {
     if (referralRewardType === PremiumReferralIncentivesExperiment.ReferralRewardType.ORBS) {
       const obj2 = { nRewardsGranted };
       let tmp3 = timestampProducer(OrbsGrantNotice, obj2);
-    } else if (referralRewardType === tmp(13528).ReferralRewardType.DISCOUNT) {
+    } else if (referralRewardType === tmp(13539).ReferralRewardType.DISCOUNT) {
       const obj = { nRewardsGranted };
       tmp3 = timestampProducer(DiscountGrantNotice, obj);
     }

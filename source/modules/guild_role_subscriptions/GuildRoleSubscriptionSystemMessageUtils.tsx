@@ -1,14 +1,14 @@
-// Module ID: 8099
-// Function ID: 8100
+// Module ID: 8108
+// Function ID: 8109
 // Name: GuildRoleSubscriptionSystemMessageUtils
-// Dependencies: [1980, 1372, 8100, 1074, 11, 1115, 7358, 4819, 2]
+// Dependencies: [1980, 1372, 8109, 1074, 11, 1115, 7361, 4818, 2]
 // Exports: getRoleSubscriptionPurchaseStickerCTA, getRoleSubscriptionPurchaseSystemMessageAstFormattedContent, getRoleSubscriptionPurchaseSystemMessageContentMobile, getRoleSubscriptionPurchaseSystemMessageEventProperties, getRoleSubscriptionPurchaseSystemMessageFormattedContent, isEligibleForRoleSubscriptionPurchaseSystemMessageSettings, pickRoleSubscriptionPurchaseSticker, trackRoleSubscriptionPurchaseMessageTierClick
 
-// Module 8099 (GuildRoleSubscriptionSystemMessageUtils)
+// Module 8108 (GuildRoleSubscriptionSystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7358 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4818 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7361 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -61,7 +61,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8100);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8109);
 ({ getJoinButtonLabels: hasOwnProperty, getRenewButtonLabels: metroRequire, STICKERS: closure_7 } = GuildRoleSubscriptionSystemMessageConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);

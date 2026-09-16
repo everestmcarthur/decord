@@ -1,14 +1,14 @@
-// Module ID: 8712
-// Function ID: 8713
+// Module ID: 8721
+// Function ID: 8722
 // Name: ManualReviewFallbackAlertModal
-// Dependencies: [19, 21, 4989, 1115, 2979, 4989, 8713, 2]
+// Dependencies: [19, 21, 4988, 1115, 2979, 4988, 8722, 2]
 // Exports: default
 
-// Module 8712 (ManualReviewFallbackAlertModal)
+// Module 8721 (ManualReviewFallbackAlertModal)
 import util from "util" /* 1115 */;
 import _modDef2979 from "module_2979" /* 2979 */;
-import AlertModal from "AlertModal" /* 4989 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8713 */;
+import AlertModal from "AlertModal" /* 4988 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8722 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

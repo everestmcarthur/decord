@@ -1,9 +1,9 @@
-// Module ID: 12564
-// Function ID: 12565
+// Module ID: 12572
+// Function ID: 12573
 // Name: ChatInputCharCounter
-// Dependencies: [32, 19, 1372, 1074, 1374, 21, 4639, 504, 4297, 9436, 9445, 4338, 1115, 5207, 4635, 8788, 2]
+// Dependencies: [32, 19, 1372, 1074, 1374, 21, 4638, 504, 4295, 9447, 9456, 4336, 1115, 5208, 4634, 8797, 2]
 
-// Module 12564 (ChatInputCharCounter)
+// Module 12572 (ChatInputCharCounter)
 import util from "util" /* 1115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const UpsellTypes = fn(1074).UpsellTypes;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_10 = createStyles.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
 const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
@@ -24,7 +24,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   const stateFromStores = analyticsLocations(504).useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   let obj = analyticsLocations(504);
   [tmp6, c2] = noop.useState(0);
-  const tmp7 = stateFromStores(9436)();
+  const tmp7 = stateFromStores(9447)();
   _slicedToArray = tmp7;
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     onMessageLengthChanged(length) {
@@ -38,9 +38,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
     let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = "-" + tmp6;
-    const items2 = [closure_8(tmp2(4635).Text, obj3), closure_8(tmp2(8788).NitroWheelIcon, { size: "sm" })];
+    const items2 = [closure_8(tmp2(4634).Text, obj3), closure_8(tmp2(8797).NitroWheelIcon, { size: "sm" })];
     obj2.children = items2;
-    tmp10 = closure_9(tmp2(5207).PressableOpacity, obj2);
+    tmp10 = closure_9(tmp2(5208).PressableOpacity, obj2);
   }
   return tmp10;
 });

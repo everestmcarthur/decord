@@ -1,10 +1,10 @@
-// Module ID: 9176
-// Function ID: 9177
+// Module ID: 9187
+// Function ID: 9188
 // Name: ClaimAccountModalActionCreators
 // Dependencies: [2]
 // Exports: openClaimAccountModal, openNewUserAgeGateModal
 
-// Module 9176 (ClaimAccountModalActionCreators)
+// Module 9187 (ClaimAccountModalActionCreators)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");

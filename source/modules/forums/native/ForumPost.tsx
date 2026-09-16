@@ -1,16 +1,16 @@
-// Module ID: 12134
-// Function ID: 12135
+// Module ID: 12142
+// Function ID: 12143
 // Name: ForumPost
-// Dependencies: [19, 1958, 4288, 12135, 21, 12136, 12140, 12151, 504, 38, 7411, 7992, 12154, 12155, 8004, 12161, 1968, 2]
+// Dependencies: [19, 1958, 4286, 12143, 21, 12144, 12148, 12159, 504, 38, 7414, 8001, 12162, 12163, 8013, 12169, 1968, 2]
 // Exports: ForumPostListDisabled
 
-// Module 12134 (ForumPost)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12136 */;
-import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12140 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12151 */;
+// Module 12142 (ForumPost)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12144 */;
+import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12148 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12159 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 
 const require = fn;
 function ForumPostGrid(arg0) {
@@ -100,7 +100,7 @@ function ConnectedForumPost(arg0) {
     return closure_6(tmp3(tmp[15]), {});
   }
 }
-const useForumChannelStore = fn(12135).useForumChannelStore;
+const useForumChannelStore = fn(12143).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -130,14 +130,14 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = threadId(504).useStateFromStores(items1, () => ChannelStore.getChannel(stateFromStores.parent_id));
   const obj2 = threadId(504);
-  const firstForumPostMessage = threadId(7411).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(7414).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(7992);
+  threadId(8001);
   if (loaded) {
     const obj4 = { style, children: null };
     const obj5 = { thread: stateFromStores, parentChannel: stateFromStores1, firstMessage, messageContent: tmp10, media: localDeviceMedia, hasUnreads: true, isNew: false, firstMessageLoaded: loaded, isLocalDeviceMedia: true };
-    obj4.children = closure_6(tmp4(12155), obj5);
-    tmp5 = closure_6(tmp(12154).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(12163), obj5);
+    tmp5 = closure_6(tmp(12162).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 };

@@ -1,13 +1,13 @@
-// Module ID: 16527
-// Function ID: 16528
+// Module ID: 16547
+// Function ID: 16548
 // Name: ForYouMentionPlaceholder
-// Dependencies: [19, 17, 4631, 21, 4639, 576, 504, 4376, 4640, 2]
+// Dependencies: [19, 17, 4630, 21, 4638, 576, 504, 4374, 4639, 2]
 // Exports: ForYouMentionPlaceholder
 
-// Module 16527 (ForYouMentionPlaceholder)
+// Module 16547 (ForYouMentionPlaceholder)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 }, placeholderImage: null, placeholderText: null, placeholderTextContainer: null, placeholderBody: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: 52, width: 52, borderRadius: 26, marginEnd: 12 };
 obj2.placeholderImage = size;

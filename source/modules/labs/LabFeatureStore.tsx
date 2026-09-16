@@ -1,12 +1,12 @@
-// Module ID: 8474
-// Function ID: 8475
+// Module ID: 8483
+// Function ID: 8484
 // Name: LabFeatureStore
-// Dependencies: [504, 8475, 573, 2]
+// Dependencies: [504, 8484, 573, 2]
 
-// Module 8474 (LabFeatureStore)
+// Module 8483 (LabFeatureStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LabFeaturesDefault from "LabFeatures" /* 8475 */;
+import LabFeaturesDefault from "LabFeatures" /* 8484 */;
 
 let toggleStates = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

@@ -1,21 +1,21 @@
-// Module ID: 12085
-// Function ID: 12086
+// Module ID: 12093
+// Function ID: 12094
 // Name: createChannelStream
-// Dependencies: [11566, 7786, 7943, 8040, 1074, 11, 12086, 12087, 1115, 4321, 8083, 11880, 7376, 2]
+// Dependencies: [11574, 7789, 7952, 8049, 1074, 11, 12094, 12095, 1115, 4319, 8092, 11888, 7379, 2]
 // Exports: default
 
-// Module 12085 (createChannelStream)
+// Module 12093 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 12086 */;
-import tryInjectMessage from "tryInjectMessage" /* 12087 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11566 */;
-import EditMessageStore from "EditMessageStore" /* 7786 */;
-import UploadStore from "UploadStore" /* 7943 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 12094 */;
+import tryInjectMessage from "tryInjectMessage" /* 12095 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11574 */;
+import EditMessageStore from "EditMessageStore" /* 7789 */;
+import UploadStore from "UploadStore" /* 7952 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8040);
+const RowGeneratorConstants = fn(8049);
 ({ Changeset: metroRequire, LoadingType: closure_7, RowType: closure_8, SeparatorType: closure_9 } = RowGeneratorConstants);
 const MessageFlags = fn(1074).MessageFlags;
 const size = fn(2);

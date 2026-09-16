@@ -1,11 +1,11 @@
-// Module ID: 6459
-// Function ID: 6460
+// Module ID: 6462
+// Function ID: 6463
 // Dependencies: [2]
 
-// Module 6459
+// Module 6462
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PotionSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/9f62893bec244fa012b6d6f0410225444d821e4f540651a2c42c3c45b552d97d.png";
-export const metadata = { fileBytes: 16001 };
+export default "https://cdn.discordapp.com/assets/content/d025ab82495c93a786a8a9cb21822d24cb602f09416128793e20991119eafe0b.png";
+export const metadata = { fileBytes: 15937 };

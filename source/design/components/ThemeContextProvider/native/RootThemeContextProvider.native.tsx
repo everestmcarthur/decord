@@ -1,11 +1,11 @@
-// Module ID: 10206
-// Function ID: 10207
+// Module ID: 10214
+// Function ID: 10215
 // Name: ThemeContextProvider/RootThemeContextProvider
-// Dependencies: [19, 1085, 21, 4350, 2]
+// Dependencies: [19, 1085, 21, 4348, 2]
 // Exports: DisableCustomTheme, RootThemeContextProvider
 
-// Module 10206 (ThemeContextProvider/RootThemeContextProvider)
-import native from "native" /* 4350 */;
+// Module 10214 (ThemeContextProvider/RootThemeContextProvider)
+import native from "native" /* 4348 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 };
 export const DisableCustomTheme = function DisableCustomTheme(children) {
-  themeContext = themeContext(4350).useThemeContext();
+  themeContext = themeContext(4348).useThemeContext();
   const items = [themeContext];
   const memo = noop.useMemo(() => {
     const obj2 = {};
@@ -71,5 +71,5 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
     obj2.gradient = null;
     return native.createThemedContext(obj2);
   }, items);
-  return jsx(themeContext(4350).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4348).ThemeContext.Provider, { value: memo, children: children.children });
 };

@@ -1,23 +1,23 @@
-// Module ID: 5519
-// Function ID: 5520
+// Module ID: 5520
+// Function ID: 5521
 // Name: actions/BoostingActionCreators
-// Dependencies: [4842, 5520, 1897, 2]
+// Dependencies: [4841, 5521, 1897, 2]
 // Exports: closeApplyBoostModal, openApplyBoostModal, openTransferModal
 
-// Module 5519 (actions/BoostingActionCreators)
+// Module 5520 (actions/BoostingActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
 import size from "module_2" /* 2 */;
 
 const PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY = "PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY";
 const result = size.fileFinishedImporting("actions/native/BoostingActionCreators.tsx");
 
 export const openApplyBoostModal = function openApplyBoostModal(guildId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5520, dependencyMap.paths), { guildId }, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5521, dependencyMap.paths), { guildId }, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
 };
 export const openTransferModal = function openTransferModal(arg0) {
   ({ guildBoostSlots, guildId, intent, onResult } = arg0);
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5520, dependencyMap.paths), { guildId, guildBoostSlots, intent, onResult }, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5521, dependencyMap.paths), { guildId, guildBoostSlots, intent, onResult }, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
 };
 export const closeApplyBoostModal = function closeApplyBoostModal() {
   ModalActionCreatorsDefault.popWithKey(PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);

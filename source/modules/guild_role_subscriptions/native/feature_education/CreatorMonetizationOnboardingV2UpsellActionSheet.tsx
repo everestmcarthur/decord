@@ -1,17 +1,17 @@
-// Module ID: 16357
-// Function ID: 16358
+// Module ID: 16377
+// Function ID: 16378
 // Name: CreatorMonetizationOnboardingV2UpsellActionSheet
-// Dependencies: [19, 17, 1074, 1955, 21, 4639, 7257, 4635, 1115, 5672, 16358, 5059, 9195, 2]
+// Dependencies: [19, 17, 1074, 1955, 21, 4638, 7260, 4634, 1115, 5673, 16378, 5060, 9206, 2]
 // Exports: default
 
-// Module 16357 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 16377 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
-import _modDef16358 from "module_16358" /* 16358 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9206 */;
+import _modDef16378 from "module_16378" /* 16378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");
@@ -44,7 +44,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16358 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16378 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress() {

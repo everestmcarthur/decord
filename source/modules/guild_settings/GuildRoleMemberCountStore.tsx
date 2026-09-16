@@ -1,9 +1,9 @@
-// Module ID: 7235
-// Function ID: 7236
+// Module ID: 7238
+// Function ID: 7239
 // Name: GuildRoleMemberCountStore
 // Dependencies: [504, 573, 2]
 
-// Module 7235 (GuildRoleMemberCountStore)
+// Module 7238 (GuildRoleMemberCountStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

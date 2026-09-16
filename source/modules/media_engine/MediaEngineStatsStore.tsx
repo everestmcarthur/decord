@@ -1,14 +1,14 @@
-// Module ID: 4677
-// Function ID: 4678
+// Module ID: 4676
+// Function ID: 4677
 // Name: MediaEngineStatsStore
-// Dependencies: [502, 4678, 4691, 504, 573, 2]
+// Dependencies: [502, 4677, 4690, 504, 573, 2]
 
-// Module 4677 (MediaEngineStatsStore)
+// Module 4676 (MediaEngineStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4691 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4690 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4678 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4677 */;
 
 require = fn;
 function updateAveragedStatsHelper(minVersion, arg1, arg2, arr, arr2) {

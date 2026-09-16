@@ -1,12 +1,12 @@
-// Module ID: 9630
-// Function ID: 9631
+// Module ID: 9641
+// Function ID: 9642
 // Name: useBottomVoiceControlsSheetWidth
-// Dependencies: [9600, 1478, 2]
+// Dependencies: [9611, 1478, 2]
 // Exports: default
 
-// Module 9630 (useBottomVoiceControlsSheetWidth)
+// Module 9641 (useBottomVoiceControlsSheetWidth)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 9600 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 9611 */;
 import size from "module_2" /* 2 */;
 
 ({ BOX_MODE_ACTIONSHEET_WIDTH: c2, BOX_MODE_THRESHOLD_WIDTH: c3 } = ChannelCallConstants);

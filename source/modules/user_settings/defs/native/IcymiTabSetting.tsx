@@ -1,16 +1,16 @@
-// Module ID: 15630
-// Function ID: 15631
+// Module ID: 15647
+// Function ID: 15648
 // Name: IcymiTabSetting
-// Dependencies: [8082, 8476, 8473, 8472, 15631, 11606, 1115, 2]
+// Dependencies: [8091, 8485, 8482, 8481, 15648, 11614, 1115, 2]
 
-// Module 15630 (IcymiTabSetting)
+// Module 15647 (IcymiTabSetting)
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8082 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8473 */;
-import useLabFeatureDefault from "useLabFeature" /* 8476 */;
-import LabFeatureActions from "LabFeatureActions" /* 15631 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import SettingsConstants from "SettingsConstants" /* 8091 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8481 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8482 */;
+import useLabFeatureDefault from "useLabFeature" /* 8485 */;
+import LabFeatureActions from "LabFeatureActions" /* 15648 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

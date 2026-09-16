@@ -1,9 +1,9 @@
-// Module ID: 12387
-// Function ID: 12388
+// Module ID: 12395
+// Function ID: 12396
 // Name: ChatInputCover
-// Dependencies: [19, 17, 21, 5046, 1610, 2]
+// Dependencies: [19, 17, 21, 5045, 1610, 2]
 
-// Module 12387 (ChatInputCover)
+// Module 12395 (ChatInputCover)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

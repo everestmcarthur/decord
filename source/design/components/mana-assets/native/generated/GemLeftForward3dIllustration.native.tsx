@@ -1,13 +1,13 @@
-// Module ID: 6208
-// Function ID: 6209
+// Module ID: 6209
+// Function ID: 6210
 // Name: GemLeftForward3dIllustration
-// Dependencies: [21, 5672, 6209, 2]
+// Dependencies: [21, 5673, 6210, 2]
 // Exports: GemLeftForward3dIllustration
 
-// Module 6208 (GemLeftForward3dIllustration)
+// Module 6209 (GemLeftForward3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6209 from "module_6209" /* 6209 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6210 from "module_6210" /* 6210 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GemLeftForward3dIllustration = function GemLeftForward3dIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6209 };
+  const obj2 = { uri: _modDef6210 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

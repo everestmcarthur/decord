@@ -1,35 +1,17 @@
 // Module ID: 14414
 // Function ID: 14415
-// Dependencies: [14399, 14395, 14415]
+// Dependencies: [14413]
 
 // Module 14414
-import _mod14395 from "module_14395" /* 14395 */;
-import _mod14399 from "module_14399" /* 14399 */;
+import _mod14413 from "module_14413" /* 14413 */;
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod14399(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod14395.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
-    }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = tmp2(14415);
-      }
-      if (tmp2Result) {
-        tmp2Result = tmp2(14415) < 41;
-      }
-      tmp5 = tmp2Result;
-    }
-    return tmp5;
-  });
-}
 
-export default prop;
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod14413, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod14413[tmp2] = tmp;
+  }
+};

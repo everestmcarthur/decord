@@ -1,18 +1,18 @@
-// Module ID: 10760
-// Function ID: 10761
+// Module ID: 10768
+// Function ID: 10769
 // Name: AppliedForumTag
-// Dependencies: [19, 17, 5544, 1375, 21, 4639, 576, 504, 10761, 1115, 7237, 1397, 4635, 2]
+// Dependencies: [19, 17, 5545, 1375, 21, 4638, 576, 504, 10769, 1115, 7240, 1397, 4634, 2]
 // Exports: AppliedForumTagPill
 
-// Module 10760 (AppliedForumTag)
+// Module 10768 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import EmojiDefault from "Emoji" /* 7237 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10761 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import EmojiDefault from "Emoji" /* 7240 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10769 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5544 */;
+import EmojiStore from "EmojiStore" /* 5545 */;
 
 require = fn;
 class AppliedForumTag {
@@ -90,7 +90,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { pill: { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 }, disableEndMargin: { marginRight: 0 }, emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 }, textEmoji: { fontSize: 10, marginRight: 4 }, tagName: { flexShrink: 1 }, container: { display: "flex", flexDirection: "row", alignItems: "center" } };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

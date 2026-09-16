@@ -1,9 +1,15 @@
 // Module ID: 6756
 // Function ID: 6757
-// Dependencies: [17]
+// Dependencies: []
+// Exports: enableLogging, print
 
 // Module 6756
-import _mod17 from "module_17" /* 17 */;
+function print() {
 
+}
+const frozen = Object.freeze(print);
 
-export const findNodeHandle = _mod17.findNodeHandle;
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+};

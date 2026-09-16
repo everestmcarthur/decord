@@ -1,14 +1,14 @@
-// Module ID: 17054
-// Function ID: 17055
+// Module ID: 17111
+// Function ID: 17112
 // Name: RestrictedBlockedMessageGroup
-// Dependencies: [32, 19, 17, 21, 4639, 17052, 576, 5207, 4635, 1115, 2]
+// Dependencies: [32, 19, 17, 21, 4638, 17109, 576, 5208, 4634, 1115, 2]
 // Exports: default
 
-// Module 17054 (RestrictedBlockedMessageGroup)
+// Module 17111 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Pressables from "Pressables" /* 5207 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Pressables from "Pressables" /* 5208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +18,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
-let obj2 = { toggle: { marginLeft: fn(17052).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+const createStyles = fn(4638);
+let obj2 = { toggle: { marginLeft: fn(17109).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");

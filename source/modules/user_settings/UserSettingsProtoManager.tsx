@@ -1,15 +1,15 @@
-// Module ID: 14552
-// Function ID: 14553
+// Module ID: 14570
+// Function ID: 14571
 // Name: UserSettingsProtoManager
-// Dependencies: [1220, 1084, 1224, 14553, 14554, 573, 12, 1941, 2]
+// Dependencies: [1220, 1084, 1224, 14571, 14572, 573, 12, 1941, 2]
 
-// Module 14552 (UserSettingsProtoManager)
+// Module 14570 (UserSettingsProtoManager)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1224 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1941 */;
-import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14553 */;
-import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14554 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14571 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14572 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 require = fn;

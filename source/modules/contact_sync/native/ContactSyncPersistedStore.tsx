@@ -1,10 +1,10 @@
-// Module ID: 12814
-// Function ID: 12815
+// Module ID: 12822
+// Function ID: 12823
 // Name: ContactSyncPersistedStore
 // Dependencies: [510, 1248, 573, 560, 2]
 // Exports: clearDismissState, deleteStoredContacts, dismissDMListCTA, dismissUpsellCTA, setDMListCTAFirstSeenDate, setStoredContacts
 
-// Module 12814 (ContactSyncPersistedStore)
+// Module 12822 (ContactSyncPersistedStore)
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
