@@ -1,24 +1,24 @@
-// Module ID: 9968
-// Function ID: 9969
+// Module ID: 9979
+// Function ID: 9980
 // Name: InstantInviteActionSheet
-// Dependencies: [32, 19, 17, 1963, 9961, 1980, 4276, 7850, 1074, 21, 4638, 576, 9969, 1612, 7272, 7292, 7278, 504, 4623, 7873, 9960, 4605, 8308, 9970, 1186, 9972, 7260, 7259, 1115, 1177, 9989, 9993, 9995, 7160, 9987, 10031, 10032, 2]
+// Dependencies: [32, 19, 17, 1963, 9972, 1980, 4278, 7856, 1074, 21, 4640, 576, 9980, 1612, 7276, 7296, 7282, 504, 4625, 7879, 9971, 4607, 8327, 9981, 1186, 9983, 7264, 7263, 1115, 1177, 10000, 10004, 10006, 7164, 9998, 10042, 10043, 2]
 // Exports: default
 
-// Module 9968 (InstantInviteActionSheet)
+// Module 9979 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4623 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9960 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9969 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9970 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4625 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8327 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9971 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9980 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1963 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9961 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9972 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function Loading() {
@@ -39,11 +39,11 @@ function Loading() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7850).InviteTargetTypes;
+const InviteTargetTypes = fn(7856).InviteTargetTypes;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;
@@ -214,7 +214,7 @@ export default function InstantInviteActionSheet(channel) {
       const obj12 = { contentContainerStyle: tmp.shareApps, onItemPressed: callback1 };
       const items10 = [tmp24(tmp2(tmp3[32]), obj12), ];
       const obj13 = { style: tmp.searchAndShareContainer, children: null };
-      const obj14 = { size: "md", isRound: true, onChange: tmp7(tmp3[34]).searchInviteSuggestions, placeholder: null };
+      const obj14 = { size: "md", round: true, onChange: tmp7(tmp3[34]).searchInviteSuggestions, placeholder: null };
       if (null != targetApplicationId) {
         const intl5 = tmp7(tmp3[28]).intl;
         let stringResult = intl5.string(tmp7(tmp3[28]).t.iI1gMg);

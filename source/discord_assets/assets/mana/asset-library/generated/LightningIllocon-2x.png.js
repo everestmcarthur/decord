@@ -1,8 +1,8 @@
-// Module ID: 6330
-// Function ID: 6331
+// Module ID: 6332
+// Function ID: 6333
 // Dependencies: [2]
 
-// Module 6330
+// Module 6332
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LightningIllocon-2x.png.js");

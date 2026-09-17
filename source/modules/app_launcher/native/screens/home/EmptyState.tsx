@@ -1,23 +1,23 @@
-// Module ID: 12253
-// Function ID: 12254
+// Module ID: 12262
+// Function ID: 12263
 // Name: home/EmptyState
-// Dependencies: [19, 17, 21, 4638, 576, 12193, 9552, 12254, 4634, 1115, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 12202, 9563, 12263, 4636, 1115, 2]
 // Exports: default
 
-// Module 12253 (home/EmptyState)
+// Module 12262 (home/EmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9552 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12193 */;
-import HomeEmptyStateDefault from "HomeEmptyState" /* 12254 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9563 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12202 */;
+import HomeEmptyStateDefault from "HomeEmptyState" /* 12263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

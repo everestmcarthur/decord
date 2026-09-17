@@ -1,12 +1,12 @@
-// Module ID: 8016
-// Function ID: 8017
+// Module ID: 8022
+// Function ID: 8023
 // Name: ForumChannelSeenManager
-// Dependencies: [8017, 8015, 7881, 7883, 2]
+// Dependencies: [8023, 8021, 7887, 7889, 2]
 // Exports: getForumPostSeenManagerId, markForumPostItemAsSeen, markForumPostItemAsUnseen
 
-// Module 8016 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 8015 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 8017 */;
+// Module 8022 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 8021 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 8023 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

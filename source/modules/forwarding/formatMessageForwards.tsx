@@ -1,18 +1,18 @@
-// Module ID: 8070
-// Function ID: 8071
+// Module ID: 8090
+// Function ID: 8091
 // Name: formatMessageForwards
-// Dependencies: [8071, 1958, 1980, 4276, 4286, 1372, 1397, 1115, 4319, 4791, 7412, 2]
+// Dependencies: [8091, 1958, 1980, 4278, 4288, 1372, 1397, 1115, 4321, 4793, 7416, 2]
 // Exports: maybeCreateSingleForwardForMessage
 
-// Module 8070 (formatMessageForwards)
+// Module 8090 (formatMessageForwards)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import DateUtils from "DateUtils" /* 4319 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7412 */;
-import BasicGuildStore from "BasicGuildStore" /* 8071 */;
+import DateUtils from "DateUtils" /* 4321 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7416 */;
+import BasicGuildStore from "BasicGuildStore" /* 8091 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -87,7 +87,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, UserS
       } else {
         if (obj2.can(channel1.accessPermissions, channel1)) {
           const obj11 = { snapshotIndex, footerInfo: null };
-          const tmp3Result = tmp3(4791);
+          const tmp3Result = tmp3(4793);
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj12 = { originLabel: channelName, timestampLabel: result, accessibilityLabel: null };
           const intl = tmp3(1115).intl;

@@ -1,13 +1,13 @@
-// Module ID: 6343
-// Function ID: 6344
+// Module ID: 6345
+// Function ID: 6346
 // Name: MemberRolesAbstractUI
-// Dependencies: [21, 5673, 6344, 2]
+// Dependencies: [21, 5675, 6346, 2]
 // Exports: MemberRolesAbstractUI
 
-// Module 6343 (MemberRolesAbstractUI)
+// Module 6345 (MemberRolesAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6344 from "module_6344" /* 6344 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6346 from "module_6346" /* 6346 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const MemberRolesAbstractUI = function MemberRolesAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6344 };
+  const obj2 = { uri: _modDef6346 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

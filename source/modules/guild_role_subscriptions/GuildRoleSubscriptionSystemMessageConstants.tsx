@@ -1,12 +1,12 @@
-// Module ID: 8109
-// Function ID: 8110
+// Module ID: 8129
+// Function ID: 8130
 // Name: GuildRoleSubscriptionSystemMessageConstants
-// Dependencies: [1115, 5354, 2]
+// Dependencies: [1115, 5356, 2]
 // Exports: getJoinButtonLabels, getRenewButtonLabels
 
-// Module 8109 (GuildRoleSubscriptionSystemMessageConstants)
+// Module 8129 (GuildRoleSubscriptionSystemMessageConstants)
 import util from "util" /* 1115 */;
-import StickersTypes from "StickersTypes" /* 5354 */;
+import StickersTypes from "StickersTypes" /* 5356 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ id: "781323471249604648", format_type: StickersTypes.StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" }, , , , ];

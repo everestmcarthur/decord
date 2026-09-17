@@ -1,18 +1,18 @@
-// Module ID: 12237
-// Function ID: 12238
+// Module ID: 12246
+// Function ID: 12247
 // Name: LearnMoreAboutAppsSection
-// Dependencies: [19, 17, 1074, 21, 4638, 576, 4332, 2025, 1115, 12238, 9552, 4634, 5208, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 576, 4334, 2025, 1115, 12247, 9563, 4636, 5210, 2]
 // Exports: default
 
-// Module 12237 (LearnMoreAboutAppsSection)
+// Module 12246 (LearnMoreAboutAppsSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import LinkingDefault from "Linking" /* 4332 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import Pressables from "Pressables" /* 5208 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9552 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12238 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import Pressables from "Pressables" /* 5210 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9563 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 }, body: { textAlign: "center" }, divider: null, linkButton: null };
 const obj3 = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
 obj2.divider = { height: nativeDefault.space.PX_16 };

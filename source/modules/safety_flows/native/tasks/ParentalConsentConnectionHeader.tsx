@@ -1,17 +1,17 @@
-// Module ID: 18088
-// Function ID: 18089
+// Module ID: 18152
+// Function ID: 18153
 // Name: ParentalConsentConnectionHeader
-// Dependencies: [19, 17, 1372, 21, 4638, 5768, 576, 1612, 504, 4634, 6701, 1115, 2691, 2]
+// Dependencies: [19, 17, 1372, 21, 4640, 5770, 576, 1612, 504, 4636, 6703, 1115, 2691, 2]
 // Exports: ParentalConsentConnectionNavbar
 
-// Module 18088 (ParentalConsentConnectionHeader)
+// Module 18152 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import _modDef2691 from "module_2691" /* 2691 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6701 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6703 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -19,9 +19,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
-let obj2 = { row: { height: fn(5768).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
-let obj3 = { height: fn(5768).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+const createStyles = fn(4640);
+let obj2 = { row: { height: fn(5770).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
+let obj3 = { height: fn(5770).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

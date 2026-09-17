@@ -1,15 +1,15 @@
-// Module ID: 8162
-// Function ID: 8163
+// Module ID: 8182
+// Function ID: 8183
 // Name: JoinRequestNotificationSystemMessage
-// Dependencies: [5628, 4460, 1980, 1372, 1074, 1115, 11, 8080, 2]
+// Dependencies: [5630, 4462, 1980, 1372, 1074, 1115, 11, 8100, 2]
 // Exports: createJoinRequestNotificationSystemMessage
 
-// Module 8162 (JoinRequestNotificationSystemMessage)
+// Module 8182 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5628 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4460 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8100 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5630 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
 

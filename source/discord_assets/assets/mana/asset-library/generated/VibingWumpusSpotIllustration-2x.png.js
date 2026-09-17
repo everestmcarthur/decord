@@ -1,8 +1,8 @@
-// Module ID: 6664
-// Function ID: 6665
+// Module ID: 6666
+// Function ID: 6667
 // Dependencies: [2]
 
-// Module 6664
+// Module 6666
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VibingWumpusSpotIllustration-2x.png.js");

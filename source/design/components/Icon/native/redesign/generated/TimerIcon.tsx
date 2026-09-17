@@ -1,13 +1,13 @@
-// Module ID: 11747
-// Function ID: 11748
+// Module ID: 11755
+// Function ID: 11756
 // Name: TimerIcon
-// Dependencies: [19, 21, 576, 4338, 11748, 2]
+// Dependencies: [19, 21, 576, 4340, 11756, 2]
 // Exports: TimerIcon
 
-// Module 11747 (TimerIcon)
+// Module 11755 (TimerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod11748 from "module_11748" /* 11748 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod11756 from "module_11756" /* 11756 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const TimerIcon = function TimerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11748, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11756, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

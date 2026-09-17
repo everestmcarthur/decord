@@ -1,12 +1,12 @@
-// Module ID: 9301
-// Function ID: 9302
+// Module ID: 9312
+// Function ID: 9313
 // Name: useReadableSecureFramesFingerprint
-// Dependencies: [19, 206, 9278, 2]
+// Dependencies: [19, 206, 9289, 2]
 // Exports: useReadableSecureFramesFingerprint
 
-// Module 9301 (useReadableSecureFramesFingerprint)
+// Module 9312 (useReadableSecureFramesFingerprint)
 import byteLengthDefault from "byteLength" /* 206 */;
-import _mod9278 from "module_9278" /* 9278 */;
+import _mod9289 from "module_9289" /* 9289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
     if (null != fingerprintBase64) {
       if ("" !== tmp) {
         const toByteArrayResult = byteLengthDefault.toByteArray(tmp);
-        const str5 = _mod9278.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+        const str5 = _mod9289.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
         if (null == str5) {
           return null;
         } else {

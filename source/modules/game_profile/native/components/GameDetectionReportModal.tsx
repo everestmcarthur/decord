@@ -1,15 +1,15 @@
-// Module ID: 9041
-// Function ID: 9042
+// Module ID: 9056
+// Function ID: 9057
 // Name: GameDetectionReportModal
-// Dependencies: [32, 19, 17, 21, 4638, 576, 1484, 8821, 9042, 4841, 1115, 7487, 5766, 5710, 4634, 5771, 5774, 6714, 5060, 7195, 7110, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 576, 1484, 8833, 9057, 4843, 1115, 7491, 5768, 5712, 4636, 5773, 5776, 6717, 5062, 7199, 7114, 2]
 // Exports: default
 
-// Module 9041 (GameDetectionReportModal)
+// Module 9056 (GameDetectionReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import NavigatorHeader from "NavigatorHeader" /* 5710 */;
-import Navigator from "Navigator" /* 7110 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8821 */;
+import NavigatorHeader from "NavigatorHeader" /* 5712 */;
+import Navigator from "Navigator" /* 7114 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -125,7 +125,7 @@ function ReportContent(applicationId) {
           }, 100);
         },
       hasIcons: null,
-      children: 0
+      children: ""
     };
     const obj7 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[10]).intl;
@@ -228,7 +228,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

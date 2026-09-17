@@ -1,13 +1,13 @@
-// Module ID: 9160
-// Function ID: 9161
+// Module ID: 9171
+// Function ID: 9172
 // Name: UserProfileApplicationWidgetTopContainedLayout
-// Dependencies: [19, 17, 21, 4638, 576, 9069, 9156, 9157, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 9080, 9167, 9168, 2]
 // Exports: default
 
-// Module 9160 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 9171 (UserProfileApplicationWidgetTopContainedLayout)
 import nativeDefault from "native" /* 576 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9069 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9156 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9080 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, text: null, imageContainer: null, image: null, imageSkeleton: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj2.text = { flex: 1, gap: nativeDefault.space.PX_4 };
@@ -58,7 +58,7 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
     let tmp12Result = tmp12(tmp11, obj7);
   } else {
     const obj10 = { style: tmp.imageSkeleton };
-    tmp12Result = tmp12(tmp2(9157).ImageSkeleton, obj10);
+    tmp12Result = tmp12(tmp2(9168).ImageSkeleton, obj10);
   }
   const obj11 = { children: null };
   items3[1] = tmp12Result;

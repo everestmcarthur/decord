@@ -1,9 +1,9 @@
-// Module ID: 8494
-// Function ID: 8495
+// Module ID: 8513
+// Function ID: 8514
 // Name: SharePreparingModalConstants
 // Dependencies: [2]
 
-// Module 8494 (SharePreparingModalConstants)
+// Module 8513 (SharePreparingModalConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/SharePreparingModalConstants.tsx");

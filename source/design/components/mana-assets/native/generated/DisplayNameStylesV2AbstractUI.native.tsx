@@ -1,13 +1,13 @@
-// Module ID: 6033
-// Function ID: 6034
+// Module ID: 6035
+// Function ID: 6036
 // Name: DisplayNameStylesV2AbstractUI
-// Dependencies: [21, 5673, 6034, 2]
+// Dependencies: [21, 5675, 6036, 2]
 // Exports: DisplayNameStylesV2AbstractUI
 
-// Module 6033 (DisplayNameStylesV2AbstractUI)
+// Module 6035 (DisplayNameStylesV2AbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6034 from "module_6034" /* 6034 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6036 from "module_6036" /* 6036 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DisplayNameStylesV2AbstractUI = function DisplayNameStylesV2Abstrac
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6034 };
+  const obj2 = { uri: _modDef6036 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

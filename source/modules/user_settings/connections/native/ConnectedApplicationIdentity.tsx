@@ -1,25 +1,25 @@
-// Module ID: 15078
-// Function ID: 15079
+// Module ID: 15086
+// Function ID: 15087
 // Name: ConnectedApplicationIdentity
-// Dependencies: [5, 32, 19, 17, 21, 4638, 15079, 1115, 1177, 4634, 9602, 4982, 15057, 5079, 1397, 5062, 9167, 5058, 5208, 7102, 5691, 5773, 7310, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4640, 15087, 1115, 1177, 4636, 9613, 4984, 15065, 5081, 1397, 5064, 9178, 5060, 5210, 7106, 5693, 5775, 7314, 2]
 // Exports: default
 
-// Module 15078 (ConnectedApplicationIdentity)
+// Module 15086 (ConnectedApplicationIdentity)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4982 */;
-import Icon from "Icon" /* 5062 */;
-import common_AlertDefault from "common/Alert" /* 5079 */;
-import InfoBoxDefault from "InfoBox" /* 9602 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
+import Icon from "Icon" /* 5064 */;
+import common_AlertDefault from "common/Alert" /* 5081 */;
+import InfoBoxDefault from "InfoBox" /* 9613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const IconDefault = tmp(5062);
+const IconDefault = tmp(5064);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

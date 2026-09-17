@@ -1,25 +1,25 @@
-// Module ID: 15825
-// Function ID: 15826
+// Module ID: 15842
+// Function ID: 15843
 // Name: UserSettingsSurveyChangelogOverride
-// Dependencies: [32, 19, 17, 4652, 4829, 21, 4638, 576, 7307, 7259, 7309, 4584, 7299, 6714, 5060, 4830, 4605, 504, 8402, 5773, 5691, 4634, 8210, 5058, 2]
+// Dependencies: [32, 19, 17, 4654, 4831, 21, 4640, 576, 7311, 7263, 7313, 4586, 7303, 6717, 5062, 4832, 4607, 504, 8421, 5775, 5693, 4636, 8230, 5060, 2]
 
-// Module 15825 (UserSettingsSurveyChangelogOverride)
+// Module 15842 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import SurveyActionCreatorsAll from "SurveyActionCreators" /* 4830 */;
-import Stack_Stack from "Stack/Stack" /* 5058 */;
-import TableRow from "TableRow" /* 5691 */;
-import TableRowGroup from "TableRowGroup" /* 5773 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7259 */;
-import ActionSheet from "ActionSheet" /* 7307 */;
-import ActionSheetRow from "ActionSheetRow" /* 7309 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8210 */;
-import usePreviousDefault from "usePrevious" /* 8402 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import SurveyActionCreatorsAll from "SurveyActionCreators" /* 4832 */;
+import Stack_Stack from "Stack/Stack" /* 5060 */;
+import TableRow from "TableRow" /* 5693 */;
+import TableRowGroup from "TableRowGroup" /* 5775 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7263 */;
+import ActionSheet from "ActionSheet" /* 7311 */;
+import ActionSheetRow from "ActionSheetRow" /* 7313 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8230 */;
+import usePreviousDefault from "usePrevious" /* 8421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChangelogStore from "ChangelogStore" /* 4652 */;
-import SurveyStore from "SurveyStore" /* 4829 */;
+import ChangelogStore from "ChangelogStore" /* 4654 */;
+import SurveyStore from "SurveyStore" /* 4831 */;
 
 require = fn;
 function SurveyOverrideInfoActionSheet(survey) {
@@ -35,7 +35,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       str = JSON.stringify(tmp2);
     }
     obj.subLabel = str;
-    obj.icon = closure_9(closure_0(4584).CopyIcon, {});
+    obj.icon = closure_9(closure_0(4586).CopyIcon, {});
     obj.onPress = function onPress() {
       let str = "null";
       if (null != closure_1_0) {
@@ -44,7 +44,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       }
       require("ClipboardUtils").copy(str);
     };
-    return closure_9(closure_0(7309).ActionSheetRow, obj, tmp);
+    return closure_9(closure_0(7313).ActionSheetRow, obj, tmp);
   });
   obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React7(ActionSheet.ActionSheet, obj);
@@ -58,8 +58,8 @@ function SurveyOverrideActionSheet() {
     return surveyOverride;
   }), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7259).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
-  const items = [closure_9(first(6714).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
+  let obj = { header: closure_9(first(7263).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  const items = [closure_9(first(6717).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], clearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -82,9 +82,9 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5060).Button, obj2);
+  items[1] = closure_9(first(5062).Button, obj2);
   obj.children = items;
-  return closure_10(first(7307).ActionSheet, obj);
+  return closure_10(first(7311).ActionSheet, obj);
 }
 function SurveyInfo() {
   const items = [SurveyStore];
@@ -126,8 +126,8 @@ function ChangelogOverrideDebuggingActionSheet() {
 function ChangelogOverrideActionSheet() {
   const tmp = _slicedToArray(noop.useState(() => ChangelogStore.overrideId()), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7259).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
-  const items = [closure_9(first(6714).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
+  let obj = { header: closure_9(first(7263).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  const items = [closure_9(first(6717).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], clearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";
@@ -150,9 +150,9 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5060).Button, obj2);
+  items[1] = closure_9(first(5062).Button, obj2);
   obj.children = items;
-  return closure_10(first(7307).ActionSheet, obj);
+  return closure_10(first(7311).ActionSheet, obj);
 }
 function ChangelogInfo() {
   const obj = { title: "Changelog", hasIcons: false, children: null };
@@ -179,7 +179,7 @@ function ChangelogInfo() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { scrollView: { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

@@ -1,8 +1,8 @@
-// Module ID: 6334
-// Function ID: 6335
+// Module ID: 6336
+// Function ID: 6337
 // Dependencies: [2]
 
-// Module 6334
+// Module 6336
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LongMessageSpotIllustration-2x.png.js");

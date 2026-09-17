@@ -1,15 +1,15 @@
-// Module ID: 16811
-// Function ID: 16812
+// Module ID: 16850
+// Function ID: 16851
 // Name: VibegrationsDebugAnalytics
-// Dependencies: [19, 21, 16800, 1115, 3591, 16798, 16797, 2]
+// Dependencies: [19, 21, 16839, 1115, 3593, 16837, 16836, 2]
 // Exports: VibegrationsDebugAgentAnalyticsRows, VibegrationsDebugWorkerAnalyticsSection
 
-// Module 16811 (VibegrationsDebugAnalytics)
+// Module 16850 (VibegrationsDebugAnalytics)
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16797 */;
-import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16798 */;
-import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives" /* 16800 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16836 */;
+import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16837 */;
+import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives" /* 16839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,9 +23,9 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
   if ("ok" !== analytics.status) {
     const obj2 = { label: null, value: null, hint: null };
     const intl4 = util.intl;
-    obj2.label = intl4.string(_modDef3591.H6PMwW);
+    obj2.label = intl4.string(_modDef3593.H6PMwW);
     const intl5 = util.intl;
-    obj2.value = intl5.string(_modDef3591.TLOZ8J);
+    obj2.value = intl5.string(_modDef3593.TLOZ8J);
     obj2.hint = VibegrationsDebugLabels.analyticsUnavailableReason(analytics);
     return React3(VibegrationsDebugPrimitives.DebugStatRow, obj2);
   } else {
@@ -37,15 +37,15 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
     if (null == found) {
       const obj3 = { label: null, value: "\u2014", hint: null };
       const intl2 = util.intl;
-      obj3.label = intl2.string(_modDef3591.H6PMwW);
+      obj3.label = intl2.string(_modDef3593.H6PMwW);
       const intl3 = util.intl;
-      obj3.hint = intl3.string(_modDef3591.uAzxdh);
+      obj3.hint = intl3.string(_modDef3593.uAzxdh);
       return React3(VibegrationsDebugPrimitives.DebugStatRow, obj3);
     } else {
       const analyticsMemoryValueResult = VibegrationsDebugLabels.analyticsMemoryValue(found);
       const obj4 = { label: null, value: null };
       const intl6 = util.intl;
-      obj4.label = intl6.string(_modDef3591.awAqRi);
+      obj4.label = intl6.string(_modDef3593.awAqRi);
       const tmp15 = hasOwnProperty;
       const tmp16 = React4;
       const tmp17 = React3;
@@ -56,9 +56,9 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
       if (null != analyticsMemoryValueResult) {
         const obj = { label: null, value: null };
         const intl = tmp12(1115).intl;
-        obj.label = intl.string(tmp18(3591).WdGviA);
+        obj.label = intl.string(tmp18(3593).WdGviA);
         obj.value = analyticsMemoryValueResult;
-        tmp17Result = tmp17(tmp12(16800).DebugStatRow, obj);
+        tmp17Result = tmp17(tmp12(16839).DebugStatRow, obj);
       }
       const obj7 = { children: null };
       items[1] = tmp17Result;
@@ -70,12 +70,12 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
 export const VibegrationsDebugWorkerAnalyticsSection = function VibegrationsDebugWorkerAnalyticsSection(analytics) {
   analytics = analytics.analytics;
   let intl = util.intl;
-  const stringResult = intl.string(_modDef3591.Pgvj3h);
+  const stringResult = intl.string(_modDef3593.Pgvj3h);
   if ("ok" !== analytics.status) {
     let obj2 = { title: stringResult, children: null };
-    let obj3 = { children: tmp(16798).analyticsUnavailableReason(analytics) };
-    obj2.children = React3(tmp(16800).DebugNote, obj3);
-    return React3(tmp(16800).DebugSection, obj2);
+    let obj3 = { children: tmp(16837).analyticsUnavailableReason(analytics) };
+    obj2.children = React3(tmp(16839).DebugNote, obj3);
+    return React3(tmp(16839).DebugSection, obj2);
   } else {
     let items = analytics.objects;
     if (items == null) {
@@ -90,15 +90,15 @@ export const VibegrationsDebugWorkerAnalyticsSection = function VibegrationsDebu
     if (0 === found.length) {
       const obj4 = { children: null };
       const intl2 = tmp(1115).intl;
-      obj4.children = intl2.string(_modDef3591.uAzxdh);
-      let mapped1 = tmp5(tmp(16800).DebugNote, obj4);
+      obj4.children = intl2.string(_modDef3593.uAzxdh);
+      let mapped1 = tmp5(tmp(16839).DebugNote, obj4);
     } else {
       mapped1 = found.map((label) => {
         const object = label.object;
         const obj = { label: label.label, value: null, hint: null };
         const intl = util.intl;
         const obj2 = { cpu: VibegrationsDebugFormat.formatMs(object.cpu_ms) };
-        obj.value = intl.formatToPlainString(_modDef3591.AnRynJ, obj2);
+        obj.value = intl.formatToPlainString(_modDef3593.AnRynJ, obj2);
         const tmp = closure_1_3;
         const analyticsMemoryValueResult = VibegrationsDebugLabels.analyticsMemoryValue(object);
         obj.hint = analyticsMemoryValueResult;
@@ -106,6 +106,6 @@ export const VibegrationsDebugWorkerAnalyticsSection = function VibegrationsDebu
       });
     }
     obj.children = mapped1;
-    return React3(tmp(16800).DebugSection, obj);
+    return React3(tmp(16839).DebugSection, obj);
   }
 };

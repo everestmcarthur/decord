@@ -1,29 +1,29 @@
-// Module ID: 16705
-// Function ID: 16706
+// Module ID: 16735
+// Function ID: 16736
 // Name: GuildSettingsModalMembersWithTabs
-// Dependencies: [32, 19, 17, 1980, 4276, 1372, 21, 4638, 576, 16345, 504, 7375, 1115, 16706, 16707, 16713, 4462, 1484, 8801, 16708, 7487, 9940, 9932, 12757, 12757, 12759, 2]
+// Dependencies: [32, 19, 17, 1980, 4278, 1372, 21, 4640, 576, 16375, 504, 7379, 1115, 16736, 16737, 16743, 4464, 1484, 8052, 16738, 7491, 9951, 9943, 12765, 12765, 12767, 2]
 
-// Module 16705 (GuildSettingsModalMembersWithTabs)
+// Module 16735 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4462 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7375 */;
-import ContextMenu from "ContextMenu" /* 8801 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16706 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16707 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16708 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16713 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7379 */;
+import ContextMenu from "ContextMenu" /* 8052 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16736 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16737 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16738 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { flex: 1 }, tabContainer: { marginTop: 12, minHeight: 32 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -116,12 +116,12 @@ export default noop.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9940), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9951), accessibilityLabel: null, ref: null };
         const intl = guildId(1115).intl;
         obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(7487).HeaderActionButton, obj);
+        return closure_1_9(guildId(7491).HeaderActionButton, obj);
       }
     });
   }, items5);

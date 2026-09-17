@@ -1,18 +1,18 @@
-// Module ID: 12251
-// Function ID: 12252
+// Module ID: 12260
+// Function ID: 12261
 // Name: search/EmptyState
-// Dependencies: [19, 17, 21, 4638, 12193, 9552, 1115, 4349, 4634, 2]
+// Dependencies: [19, 17, 21, 4640, 12202, 9563, 1115, 4351, 4636, 2]
 // Exports: default
 
-// Module 12251 (search/EmptyState)
+// Module 12260 (search/EmptyState)
 import util from "util" /* 1115 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4349 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", justifyContent: "center", alignItems: "center" }, textContainer: { justifyContent: "center", width: "100%" }, text: { marginTop: 16, textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
@@ -23,7 +23,7 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(12193).useLogAppLauncherEmptyStateView(flag(9552).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = flag(12202).useLogAppLauncherEmptyStateView(flag(9563).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;
@@ -49,7 +49,7 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(4634).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
+  obj3.children = jsx(flag(4636).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
   obj2.children = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.container}>{null}</View>;
 };

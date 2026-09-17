@@ -1,9 +1,9 @@
-// Module ID: 11035
-// Function ID: 11036
+// Module ID: 11043
+// Function ID: 11044
 // Name: StatusDisplayTypes
 // Dependencies: [2]
 
-// Module 11035 (StatusDisplayTypes)
+// Module 11043 (StatusDisplayTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx");

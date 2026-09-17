@@ -1,13 +1,13 @@
-// Module ID: 15218
-// Function ID: 15219
+// Module ID: 15223
+// Function ID: 15224
 // Name: UnsendIcon
-// Dependencies: [19, 21, 576, 4338, 15219, 2]
+// Dependencies: [19, 21, 576, 4340, 15224, 2]
 // Exports: UnsendIcon
 
-// Module 15218 (UnsendIcon)
+// Module 15223 (UnsendIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod15219 from "module_15219" /* 15219 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod15224 from "module_15224" /* 15224 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const UnsendIcon = function UnsendIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15219, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15224, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

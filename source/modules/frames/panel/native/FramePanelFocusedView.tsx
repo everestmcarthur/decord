@@ -1,20 +1,20 @@
-// Module ID: 17249
-// Function ID: 17250
+// Module ID: 17289
+// Function ID: 17290
 // Name: FramePanelFocusedView
-// Dependencies: [19, 9653, 9654, 9648, 21, 504, 17228, 17246, 17250, 9650, 16815, 2]
+// Dependencies: [19, 9664, 9665, 9659, 21, 504, 17268, 17286, 17290, 9661, 16854, 2]
 
-// Module 17249 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9650 */;
-import FrameViewDefault from "FrameView" /* 16815 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17228 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17246 */;
+// Module 17289 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9661 */;
+import FrameViewDefault from "FrameView" /* 16854 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17268 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17286 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9653 */;
+import FramesStore from "FramesStore" /* 9664 */;
 
 require = fn;
-const FramesConstants = fn(9654);
+const FramesConstants = fn(9665);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
-const ActivityPanelModes = fn(9648).ActivityPanelModes;
+const ActivityPanelModes = fn(9659).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");

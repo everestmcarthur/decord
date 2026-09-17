@@ -1,9 +1,9 @@
-// Module ID: 13822
-// Function ID: 13823
+// Module ID: 13830
+// Function ID: 13831
 // Name: GameCommunityUpsellExperiment
 // Dependencies: [1434, 2]
 
-// Module 13822 (GameCommunityUpsellExperiment)
+// Module 13830 (GameCommunityUpsellExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

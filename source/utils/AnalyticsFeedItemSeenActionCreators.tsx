@@ -1,10 +1,10 @@
-// Module ID: 8015
-// Function ID: 8016
+// Module ID: 8021
+// Function ID: 8022
 // Name: AnalyticsFeedItemSeenActionCreators
 // Dependencies: [573, 2]
 // Exports: flushAnalyticsFeedItems, markAnalyticsFeedItemSeen, markAnalyticsFeedItemUnseen
 
-// Module 8015 (AnalyticsFeedItemSeenActionCreators)
+// Module 8021 (AnalyticsFeedItemSeenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

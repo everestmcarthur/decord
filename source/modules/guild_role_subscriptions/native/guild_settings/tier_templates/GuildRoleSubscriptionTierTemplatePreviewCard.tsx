@@ -1,24 +1,24 @@
-// Module ID: 17994
-// Function ID: 17995
+// Module ID: 18058
+// Function ID: 18059
 // Name: GuildRoleSubscriptionTierTemplatePreviewCard
-// Dependencies: [19, 17, 1074, 21, 4638, 576, 7089, 4634, 4605, 17995, 1897, 17999, 1177, 17998, 1115, 7268, 1484, 15337, 18000, 1241, 4818, 15343, 17996, 10486, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 576, 7093, 4636, 4607, 18059, 1897, 18063, 1177, 18062, 1115, 7272, 1484, 15342, 18064, 1241, 4820, 15348, 18060, 10494, 2]
 // Exports: default
 
-// Module 17994 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 18058 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7089 */;
-import _modDef7268 from "module_7268" /* 7268 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17998 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 18000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7093 */;
+import _modDef7272 from "module_7272" /* 7272 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 18062 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 18064 */;
 import noop from "module_19" /* 19 */;
 
-const AppAnalyticsUtils = tmp(4818);
+const AppAnalyticsUtils = tmp(4820);
 require = fn;
 function ContentHeader(arg0) {
   ({ count, title } = arg0);
@@ -64,7 +64,7 @@ function ViewEntireTemplateFooter() {
   obj2.children = items;
   const items1 = [closure_1_10(timestampProducer, obj2), ];
   const obj5 = { children: null };
-  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7268, style: null };
+  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7272, style: null };
   const obj7 = { transform: null };
   const items2 = [{ rotate: "180deg" }];
   obj7.transform = items2;
@@ -80,7 +80,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, separator: null, contentContainer: null, contentHeader: null, viewEntireTemplateFooter: null, viewEntireTemplateFooterUnderline: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_SUBTLE };
@@ -139,7 +139,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate: tmp, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17999, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18063, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       tmp(selectedTemplate, arg1);
     }
@@ -149,7 +149,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17995, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18059, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };

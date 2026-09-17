@@ -1,24 +1,27 @@
 // Module ID: 7032
 // Function ID: 7033
-// Dependencies: [19, 6984]
-// Exports: useMappingHelper
+// Dependencies: []
+// Exports: useDataMultiplier
 
 // Module 7032
-import _mod19 from "module_19" /* 19 */;
-import _mod6984 from "module_6984" /* 6984 */;
 
-_mod19.useCallback;
-
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod6984.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
+export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
+  const array = new Array(arg1);
+  let flag = false;
+  if (typeof arg0[0] === "object") {
+    flag = true;
+  }
+  for (let num = 0; num < arg1; num = num + 1) {
+    let tmp3 = arg0[num % tmp];
+    if (flag) {
+      let obj = {};
+      let merged = Object.assign(tmp3);
+      let tmp5 = obj;
+    } else {
+      tmp5 = tmp3;
     }
-    return tmp;
-  }, items);
-  return obj2;
+    array[num] = tmp5;
+  }
+  const items = [array];
+  return items;
 };

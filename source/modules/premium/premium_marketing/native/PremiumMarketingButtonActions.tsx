@@ -1,14 +1,14 @@
-// Module ID: 13528
-// Function ID: 13529
+// Module ID: 13536
+// Function ID: 13537
 // Name: PremiumMarketingButtonActions
-// Dependencies: [10806, 1374, 1074, 10813, 13529, 7532, 7350, 13530, 7492, 2]
+// Dependencies: [10814, 1374, 1074, 10821, 13537, 7536, 7354, 13538, 7496, 2]
 // Exports: getButtonActionHandler
 
-// Module 13528 (PremiumMarketingButtonActions)
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7532 */;
-import cta_button from "cta_button" /* 10813 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 13529 */;
-import PromotionsStore from "PromotionsStore" /* 10806 */;
+// Module 13536 (PremiumMarketingButtonActions)
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7536 */;
+import cta_button from "cta_button" /* 10821 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 13537 */;
+import PromotionsStore from "PromotionsStore" /* 10814 */;
 
 const require = globalThis.__r;
 
@@ -28,21 +28,21 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
         navigateToSocialLayerStorefrontDefault(obj);
       }
     };
-  } else if (tmp(10813).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
+  } else if (tmp(10821).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
     return () => {
       const obj = { analyticsLocation: { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: React5.TIER_1 }, analyticsLocations, premiumType: PremiumTypes.TIER_1, onPaymentSuccess, onPaymentDismiss };
       return openPremiumPlanSelectionActionSheetDefault(obj);
     };
   } else {
-    if (tmp(10813).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
-      if (tmp(10813).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
-        if (tmp(10813).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
+    if (tmp(10821).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
+      if (tmp(10821).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
+        if (tmp(10821).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
           return () => {
             const obj = { analyticsLocation: { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: React5.BUY }, analyticsLocations, onPaymentSuccess, onPaymentDismiss };
             return openPremiumPlanSelectionActionSheetDefault(obj);
           };
         } else {
-          const OPEN_MARKETING_PAGE = tmp(10813).ButtonAction.OPEN_MARKETING_PAGE;
+          const OPEN_MARKETING_PAGE = tmp(10821).ButtonAction.OPEN_MARKETING_PAGE;
           return () => require("openUserSettings").openUserSettings({ screen: constants3.PREMIUM });
         }
       }
@@ -67,8 +67,8 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
             isSuccess = length.length > 0;
           }
           if (isSuccess) {
-            const result = tmp3(13530).showMarketingMomentRewardScreen(length[0]);
-            const tmp3Result = tmp3(13530);
+            const result = tmp3(13538).showMarketingMomentRewardScreen(length[0]);
+            const tmp3Result = tmp3(13538);
           }
         }
       };

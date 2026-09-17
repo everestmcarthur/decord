@@ -1,10 +1,10 @@
-// Module ID: 10462
-// Function ID: 10463
+// Module ID: 10470
+// Function ID: 10471
 // Name: PortalKeyboardModalContext
 // Dependencies: [19, 2]
 // Exports: useIsPortalKeyboardInModal
 
-// Module 10462 (PortalKeyboardModalContext)
+// Module 10470 (PortalKeyboardModalContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(false);

@@ -1,21 +1,21 @@
-// Module ID: 7251
-// Function ID: 7252
+// Module ID: 7255
+// Function ID: 7256
 // Name: FormArrow
-// Dependencies: [19, 17, 21, 4638, 576, 4634, 1177, 7252, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 4636, 1177, 7256, 2]
 // Exports: default
 
-// Module 7251 (FormArrow)
+// Module 7255 (FormArrow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import _modDef7252 from "module_7252" /* 7252 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import _modDef7256 from "module_7256" /* 7256 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { wrapper: { flexDirection: "row", alignItems: "center" }, icon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function FormArrow(arg0) {
     const obj4 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj4.style = items1;
-    obj4.source = _modDef7252;
+    obj4.source = _modDef7256;
     obj4.size = native.Icon.Sizes.MEDIUM;
     items[1] = React4(native.Icon, obj4);
     obj2.children = items;
@@ -40,7 +40,7 @@ export default function FormArrow(arg0) {
     const obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj.style = items2;
-    obj.source = _modDef7252;
+    obj.source = _modDef7256;
     obj.size = native.Icon.Sizes.MEDIUM;
     tmp6 = React4(native.Icon, obj);
   }

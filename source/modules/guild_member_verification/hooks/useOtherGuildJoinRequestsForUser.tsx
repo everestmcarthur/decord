@@ -1,13 +1,13 @@
-// Module ID: 16718
-// Function ID: 16719
+// Module ID: 16748
+// Function ID: 16749
 // Name: useOtherGuildJoinRequestsForUser
-// Dependencies: [19, 5628, 504, 5627, 2]
+// Dependencies: [19, 5630, 504, 5629, 2]
 // Exports: useOtherGuildJoinRequestsForUser
 
-// Module 16718 (useOtherGuildJoinRequestsForUser)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5627 */;
+// Module 16748 (useOtherGuildJoinRequestsForUser)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5629 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5628 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5630 */;
 
 const require = fn;
 const size = fn(2);

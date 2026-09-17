@@ -1,10 +1,10 @@
-// Module ID: 17437
-// Function ID: 17438
-// Dependencies: [17438, 17486, 2]
+// Module ID: 17478
+// Function ID: 17479
+// Dependencies: [17479, 17527, 2]
 
-// Module 17437
-import i18n from "i18n" /* 17438 */;
-import updateRulesDefault from "updateRules" /* 17486 */;
+// Module 17478
+import i18n from "i18n" /* 17479 */;
+import updateRulesDefault from "updateRules" /* 17527 */;
 import size from "module_2" /* 2 */;
 
 const updateRules = i18n.setUpdateRules(updateRulesDefault);

@@ -1,14 +1,14 @@
-// Module ID: 17619
-// Function ID: 17620
+// Module ID: 17661
+// Function ID: 17662
 // Name: JankStatsManager
-// Dependencies: [1074, 7228, 17620, 1241, 7585, 2]
+// Dependencies: [1074, 7232, 16169, 1241, 7589, 2]
 
-// Module 17619 (JankStatsManager)
+// Module 17661 (JankStatsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7585 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17620 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7589 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 16169 */;
 import Constants from "Constants" /* 1074 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 import size from "module_2" /* 2 */;
 
 ({ AppStates: c3, AnalyticEvents: closure_4 } = Constants);

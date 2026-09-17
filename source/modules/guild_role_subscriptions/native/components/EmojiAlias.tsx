@@ -1,18 +1,18 @@
-// Module ID: 17957
-// Function ID: 17958
+// Module ID: 18021
+// Function ID: 18022
 // Name: EmojiAlias
-// Dependencies: [19, 17, 21, 4638, 4634, 2]
+// Dependencies: [19, 17, 21, 4640, 4636, 2]
 // Exports: default
 
-// Module 17957 (EmojiAlias)
-import Text_Text from "Text/Text" /* 4634 */;
+// Module 18021 (EmojiAlias)
+import Text_Text from "Text/Text" /* 4636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_5 = createStyles.createStyles({ emojiAlias: { alignItems: "center", flexDirection: "row" }, emojiColon: { width: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiAlias.tsx");

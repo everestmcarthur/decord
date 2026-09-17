@@ -1,9 +1,9 @@
-// Module ID: 4804
-// Function ID: 4805
+// Module ID: 4806
+// Function ID: 4807
 // Name: GuildRoomBackgroundPositions
 // Dependencies: [2]
 
-// Module 4804 (GuildRoomBackgroundPositions)
+// Module 4806 (GuildRoomBackgroundPositions)
 import size from "module_2" /* 2 */;
 
 const obj = { 0: null, 1: null };

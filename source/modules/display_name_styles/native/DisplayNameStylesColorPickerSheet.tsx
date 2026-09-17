@@ -1,16 +1,16 @@
-// Module ID: 15464
-// Function ID: 15465
+// Module ID: 15469
+// Function ID: 15470
 // Name: DisplayNameStylesColorPickerSheet
-// Dependencies: [32, 19, 17, 1390, 1074, 21, 4638, 576, 8299, 11049, 4606, 4605, 14709, 1241, 7260, 7259, 1115, 2787, 5060, 12, 1092, 1391, 15462, 2]
+// Dependencies: [32, 19, 17, 1390, 1074, 21, 4640, 576, 8318, 11057, 4608, 4607, 14717, 1241, 7264, 7263, 1115, 2787, 5062, 12, 1092, 1391, 15467, 2]
 // Exports: default
 
-// Module 15464 (DisplayNameStylesColorPickerSheet)
+// Module 15469 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import HapticUtils from "HapticUtils" /* 4606 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14709 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import HapticUtils from "HapticUtils" /* 4608 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14717 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const getColorPresetsForEffect = fn(1390).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, presetGrid: null, presetRow: null, presetColor: null, presetColorSelected: null, buttonsContainer: null, button: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

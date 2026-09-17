@@ -1,12 +1,12 @@
-// Module ID: 16321
-// Function ID: 16322
+// Module ID: 16351
+// Function ID: 16352
 // Name: GameClaimCardStack
-// Dependencies: [19, 17, 21, 576, 672, 4638, 9006, 2]
+// Dependencies: [19, 17, 21, 576, 672, 4640, 9022, 2]
 // Exports: default
 
-// Module 16321 (GameClaimCardStack)
+// Module 16351 (GameClaimCardStack)
 import nativeDefault from "native" /* 576 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9006 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9022 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_672" /* 672 */;
 
@@ -28,7 +28,7 @@ let n = n_mod;
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
 const hexResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex();
 obj.container = { flexDirection: "row", alignItems: "flex-start", justifyContent: "center", width: "100%", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16 + 4 };

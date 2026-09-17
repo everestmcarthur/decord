@@ -1,21 +1,21 @@
-// Module ID: 11497
-// Function ID: 11498
+// Module ID: 11505
+// Function ID: 11506
 // Name: ChatViewWrapperAnimatedKeyboard
-// Dependencies: [19, 17, 21, 4374, 4642, 11498, 4639, 5665, 11503, 11505, 7266, 11506, 2]
+// Dependencies: [19, 17, 21, 4376, 4644, 11506, 4641, 5667, 11511, 11513, 7270, 11514, 2]
 // Exports: default
 
-// Module 11497 (ChatViewWrapperAnimatedKeyboard)
-import timing from "timing" /* 4639 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5665 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11503 */;
+// Module 11505 (ChatViewWrapperAnimatedKeyboard)
+import timing from "timing" /* 4641 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5667 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const Easing = fn(4374).Easing;
-let obj = { duration: fn(4642).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const Easing = fn(4376).Easing;
+let obj = { duration: fn(4644).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 const __initData = { code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}" };
 const __initData2 = { code: "function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){const{animatedAdjustedMargin,animatedAdjustedMarginPending}=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}}" };
 const __initData3 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{animatedAdjustedMargin,withTiming,animatedHeight,INSET_ANIMATION_CONFIG2,animatedAdjustedMarginPending}=this.__closure;return{flex:1,marginTop:animatedAdjustedMargin.get(),transform:[{translateY:withTiming(-animatedHeight.get(),INSET_ANIMATION_CONFIG2,'respect-motion-settings',function(finished){if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})}]};}" };

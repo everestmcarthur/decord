@@ -1,9 +1,9 @@
-// Module ID: 8826
-// Function ID: 8827
+// Module ID: 8838
+// Function ID: 8839
 // Name: SteamReleaseStatus
 // Dependencies: [2]
 
-// Module 8826 (SteamReleaseStatus)
+// Module 8838 (SteamReleaseStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx");

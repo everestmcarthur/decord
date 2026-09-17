@@ -1,12 +1,12 @@
-// Module ID: 7683
-// Function ID: 7684
+// Module ID: 7687
+// Function ID: 7688
 // Name: FeaturedBlockRecord
-// Dependencies: [7684, 7682, 7685, 2]
+// Dependencies: [7688, 7686, 7689, 2]
 
-// Module 7683 (FeaturedBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7682 */;
-import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7684 */;
-import FeaturedSubblockType from "FeaturedSubblockType" /* 7685 */;
+// Module 7687 (FeaturedBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7686 */;
+import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7688 */;
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7689 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = FeaturedCategorySubblockRecord.FeaturedCategorySubblockRecord;

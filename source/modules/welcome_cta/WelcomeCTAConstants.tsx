@@ -1,9 +1,9 @@
-// Module ID: 8118
-// Function ID: 8119
+// Module ID: 8138
+// Function ID: 8139
 // Name: WelcomeCTAConstants
 // Dependencies: [2]
 
-// Module 8118 (WelcomeCTAConstants)
+// Module 8138 (WelcomeCTAConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAConstants.tsx");

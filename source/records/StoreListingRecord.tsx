@@ -1,10 +1,10 @@
-// Module ID: 14616
-// Function ID: 14617
+// Module ID: 14624
+// Function ID: 14625
 // Name: StoreListingRecord
-// Dependencies: [1387, 1386, 14617, 2]
+// Dependencies: [1387, 1386, 14625, 2]
 
-// Module 14616 (StoreListingRecord)
-import GameStoreAsset from "GameStoreAsset" /* 14617 */;
+// Module 14624 (StoreListingRecord)
+import GameStoreAsset from "GameStoreAsset" /* 14625 */;
 import Record from "Record" /* 1387 */;
 import UserRecord from "UserRecord" /* 1386 */;
 

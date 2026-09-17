@@ -1,14 +1,14 @@
-// Module ID: 13309
-// Function ID: 13310
+// Module ID: 13317
+// Function ID: 13318
 // Name: useCanGiftProduct
-// Dependencies: [8307, 7664, 7663, 4295, 1890, 4308, 2]
+// Dependencies: [8326, 7668, 7667, 4297, 1890, 4310, 2]
 // Exports: useCanGiftProduct
 
-// Module 13309 (useCanGiftProduct)
-import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7663 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7664 */;
-import useCurrentUser from "useCurrentUser" /* 8307 */;
+// Module 13317 (useCanGiftProduct)
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7667 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7668 */;
+import useCurrentUser from "useCurrentUser" /* 8326 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
@@ -35,12 +35,12 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     if (result3 != null) {
       currency = result3.currency;
     }
-    result = tmp(7664).shouldHideGiftingForCurrency(currency);
-    const tmpResult = tmp(7664);
+    result = tmp(7668).shouldHideGiftingForCurrency(currency);
+    const tmpResult = tmp(7668);
   }
   if (!result) {
-    result = !tmp(4308).isCollectibleGiftingSupported();
-    const tmpResult2 = tmp(4308);
+    result = !tmp(4310).isCollectibleGiftingSupported();
+    const tmpResult2 = tmp(4310);
   }
   return !result;
 };

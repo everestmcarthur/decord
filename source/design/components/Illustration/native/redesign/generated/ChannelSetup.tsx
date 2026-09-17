@@ -1,12 +1,12 @@
-// Module ID: 17880
-// Function ID: 17881
+// Module ID: 17921
+// Function ID: 17922
 // Name: ChannelSetup
-// Dependencies: [19, 17, 21, 8361, 17881, 17882, 17883, 4489, 2]
+// Dependencies: [19, 17, 21, 8380, 17922, 17923, 17924, 4491, 2]
 // Exports: ChannelSetup, getChannelSetupSource, useChannelSetupSource
 
-// Module 17880 (ChannelSetup)
-import shared from "shared" /* 4489 */;
-import _mod8361 from "module_8361" /* 8361 */;
+// Module 17921 (ChannelSetup)
+import shared from "shared" /* 4491 */;
+import _mod8380 from "module_8380" /* 8380 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,44 +18,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/ChannelSetup.tsx");
 
 export const getChannelSetupSource = function getChannelSetupSource(theme) {
-  return _mod8361.getIllustrationSource(theme, {
+  return _mod8380.getIllustrationSource(theme, {
     dark() {
-      return require("module_17881");
+      return require("module_17922");
     },
     darker() {
-      return require("module_17882");
+      return require("module_17923");
     },
     light() {
-      return require("module_17883");
+      return require("module_17924");
     }
   });
 };
 export const useChannelSetupSource = function useChannelSetupSource() {
   const obj = shared;
-  return _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17881");
+      return require("module_17922");
     },
     darker() {
-      return require("module_17882");
+      return require("module_17923");
     },
     light() {
-      return require("module_17883");
+      return require("module_17924");
     }
   });
 };
 export const ChannelSetup = function ChannelSetup(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17881");
+      return require("module_17922");
     },
     darker() {
-      return require("module_17882");
+      return require("module_17923");
     },
     light() {
-      return require("module_17883");
+      return require("module_17924");
     }
   });
   const merged = Object.assign(arg0);

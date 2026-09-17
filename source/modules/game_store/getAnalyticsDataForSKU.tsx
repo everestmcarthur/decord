@@ -1,11 +1,11 @@
-// Module ID: 4973
-// Function ID: 4974
+// Module ID: 4975
+// Function ID: 4976
 // Name: getAnalyticsDataForSKU
-// Dependencies: [4866, 1074, 2]
+// Dependencies: [4868, 1074, 2]
 // Exports: default
 
-// Module 4973 (getAnalyticsDataForSKU)
-import ApplicationStore from "ApplicationStore" /* 4866 */;
+// Module 4975 (getAnalyticsDataForSKU)
+import ApplicationStore from "ApplicationStore" /* 4868 */;
 
 const SKUFeatureTypes = fn(1074).SKUFeatureTypes;
 const size = fn(2);

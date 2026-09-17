@@ -1,17 +1,17 @@
-// Module ID: 17944
-// Function ID: 17945
+// Module ID: 18008
+// Function ID: 18009
 // Name: GuildRoleSubscriptionTierEditStep
-// Dependencies: [19, 17, 21, 4638, 576, 7233, 4634, 15327, 1115, 1612, 5060, 1484, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 7237, 4636, 15332, 1115, 1612, 5062, 1484, 2]
 // Exports: default
 
-// Module 17944 (GuildRoleSubscriptionTierEditStep)
+// Module 18008 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useNavigation from "useNavigation" /* 1484 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7233 */;
-import FormSeparatorDefault from "FormSeparator" /* 15327 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7237 */;
+import FormSeparatorDefault from "FormSeparator" /* 15332 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,14 +39,14 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5060).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = timestampProducer(tmp5(5062).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" }, title: { marginTop: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, separator: { marginTop: 24 }, footerContainer: { width: "100%", padding: 16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

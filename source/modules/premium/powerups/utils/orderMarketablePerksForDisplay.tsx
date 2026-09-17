@@ -1,15 +1,15 @@
-// Module ID: 13680
-// Function ID: 13681
+// Module ID: 13688
+// Function ID: 13689
 // Name: orderMarketablePerksForDisplay
-// Dependencies: [32, 4528, 4530, 2]
+// Dependencies: [32, 4530, 4532, 2]
 // Exports: default
 
-// Module 13680 (orderMarketablePerksForDisplay)
-import Powerups from "Powerups" /* 4530 */;
+// Module 13688 (orderMarketablePerksForDisplay)
+import Powerups from "Powerups" /* 4532 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_3 = fn(4528).GAME_SERVER_POWERUP_SKU_ID;
+let closure_3 = fn(4530).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 

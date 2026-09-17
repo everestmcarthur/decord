@@ -1,8 +1,8 @@
-// Module ID: 5986
-// Function ID: 5987
+// Module ID: 5988
+// Function ID: 5989
 // Dependencies: [2]
 
-// Module 5986
+// Module 5988
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CrosshairIllocon-2x.png.js");

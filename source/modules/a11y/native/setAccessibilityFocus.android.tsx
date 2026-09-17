@@ -1,10 +1,10 @@
-// Module ID: 5054
-// Function ID: 5055
+// Module ID: 5056
+// Function ID: 5057
 // Name: setAccessibilityFocus
 // Dependencies: [17, 2]
 // Exports: setAccessibilityFocus
 
-// Module 5054 (setAccessibilityFocus)
+// Module 5056 (setAccessibilityFocus)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

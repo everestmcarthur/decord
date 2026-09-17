@@ -1,20 +1,20 @@
-// Module ID: 16663
-// Function ID: 16664
+// Module ID: 16694
+// Function ID: 16695
 // Name: NavTTIView
-// Dependencies: [109, 19, 17, 21, 16664, 16668, 2]
+// Dependencies: [109, 19, 17, 21, 16695, 16690, 2]
 // Exports: NavTTIView
 
-// Module 16663 (NavTTIView)
-import useComponentRenderSpan from "useComponentRenderSpan" /* 16664 */;
+// Module 16694 (NavTTIView)
+import useComponentRenderSpan from "useComponentRenderSpan" /* 16695 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function IncludedNavTTIView(onLayout) {
   onLayout = onLayout.onLayout;
-  ({ spanComponent, children } = onLayout);
-  const merged = Object.assign(onLayout, Object.assign({ spanComponent: 0, onLayout: 0, children: 0 }));
-  const onLayout2 = useComponentRenderSpan.useComponentRenderSpan(spanComponent).onLayout;
+  ({ name, children } = onLayout);
+  const merged = Object.assign(onLayout, Object.assign({ name: 0, onLayout: 0, children: 0 }));
+  const onLayout2 = useComponentRenderSpan.useComponentRenderSpan(name).onLayout;
   const items = [onLayout2, onLayout];
   const obj2 = {};
   const callback = noop.useCallback((arg0) => {
@@ -34,7 +34,7 @@ function IncludedNavTTIView(onLayout) {
   return <View />;
 }
 let closure_2 = ["tracking"];
-let closure_3 = ["tracking", "spanComponent"];
+let closure_3 = ["tracking", "name"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -52,7 +52,7 @@ export const NavTTIView = function NavTTIView(tracking) {
     if (obj.isNavigationTTIEnabled()) {
       const obj3 = {};
       const merged1 = Object.assign(tmp3);
-      obj3.spanComponent = tracking.spanComponent;
+      obj3.name = tracking.name;
       let tmp6Result = tmp6(IncludedNavTTIView, obj3);
     } else {
       const obj4 = {};

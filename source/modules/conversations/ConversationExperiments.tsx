@@ -1,10 +1,10 @@
-// Module ID: 8021
-// Function ID: 8022
+// Module ID: 8027
+// Function ID: 8028
 // Name: ConversationExperiments
 // Dependencies: [1980, 1074, 1434, 504, 2]
 // Exports: isConversationDebugUXEnabled, isTopicalNavEnabled, useIsConversationDebugUXEnabled, useIsTopicalNavEnabled
 
-// Module 8021 (ConversationExperiments)
+// Module 8027 (ConversationExperiments)
 import GuildStore from "GuildStore" /* 1980 */;
 
 const require = globalThis.__r;

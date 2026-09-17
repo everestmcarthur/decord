@@ -1,14 +1,14 @@
-// Module ID: 13312
-// Function ID: 13313
+// Module ID: 13320
+// Function ID: 13321
 // Name: HeadlessCollectiblesPurchaseRunner
-// Dependencies: [19, 7534, 13313, 2]
+// Dependencies: [19, 7538, 13321, 2]
 // Exports: HeadlessCollectiblesPurchaseRunner
 
-// Module 13312 (HeadlessCollectiblesPurchaseRunner)
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 13313 */;
+// Module 13320 (HeadlessCollectiblesPurchaseRunner)
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 13321 */;
 import noop from "module_19" /* 19 */;
 
-const useNativeCheckoutStore = fn(7534).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7538).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
 

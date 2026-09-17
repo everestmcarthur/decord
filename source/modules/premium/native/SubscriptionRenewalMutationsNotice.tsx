@@ -1,29 +1,29 @@
-// Module ID: 13491
-// Function ID: 13492
+// Module ID: 13499
+// Function ID: 13500
 // Name: SubscriptionRenewalMutationsNotice
-// Dependencies: [19, 17, 4296, 21, 4638, 576, 5527, 1177, 1115, 4295, 2]
+// Dependencies: [19, 17, 4298, 21, 4640, 576, 5529, 1177, 1115, 4297, 2]
 // Exports: default
 
-// Module 13491 (SubscriptionRenewalMutationsNotice)
+// Module 13499 (SubscriptionRenewalMutationsNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import PremiumUtils from "PremiumUtils" /* 4295 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
 const View = fn(17).View;
-const isNoneSubscription = fn(4296).isNoneSubscription;
+const isNoneSubscription = fn(4298).isNoneSubscription;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
-const obj2 = { container: { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5527).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: null, text: null };
-let obj3 = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5527).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5527).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5527).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5527).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+const createStyles = fn(4640);
+const obj2 = { container: { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5529).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: null, text: null };
+let obj3 = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5529).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5529).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5529).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5529).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/SubscriptionRenewalMutationsNotice.tsx");

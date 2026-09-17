@@ -1,11 +1,11 @@
-// Module ID: 9816
-// Function ID: 9817
+// Module ID: 9827
+// Function ID: 9828
 // Name: StageChannelHeightHooks
-// Dependencies: [8755, 2]
+// Dependencies: [8775, 2]
 // Exports: useGetActionBarHeight, useGetStageRTCPanelHeight
 
-// Module 9816 (StageChannelHeightHooks)
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8755 */;
+// Module 9827 (StageChannelHeightHooks)
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8775 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");

@@ -1,15 +1,15 @@
-// Module ID: 7264
-// Function ID: 7265
+// Module ID: 7268
+// Function ID: 7269
 // Name: ActionSheetHeaderBar
-// Dependencies: [19, 17, 21, 4638, 576, 1115, 1478, 4339, 5045, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 1115, 1478, 4341, 5047, 2]
 // Exports: ActionSheetHeaderBar
 
-// Module 7264 (ActionSheetHeaderBar)
+// Module 7268 (ActionSheetHeaderBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import useToken from "useToken" /* 4339 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5045 */;
+import useToken from "useToken" /* 4341 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, TouchableWithoutFeedback: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };

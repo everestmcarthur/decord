@@ -1,16 +1,16 @@
-// Module ID: 18134
-// Function ID: 18135
+// Module ID: 18198
+// Function ID: 18199
 // Name: AppShare
-// Dependencies: [32, 19, 17, 7570, 14511, 502, 1074, 12557, 21, 504, 6701, 1364, 14550, 12560, 7585, 1241, 5077, 14671, 14006, 1609, 8492, 7149, 17118, 17165, 4988, 2]
+// Dependencies: [32, 19, 17, 7574, 14519, 502, 1074, 12566, 21, 504, 6703, 1364, 14558, 12569, 7589, 1241, 5079, 14679, 14014, 1609, 8511, 7153, 17158, 17205, 4990, 2]
 // Exports: default
 
-// Module 18134 (AppShare)
+// Module 18198 (AppShare)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useMountEffectDefault from "useMountEffect" /* 5077 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6701 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7585 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 14550 */;
+import useMountEffectDefault from "useMountEffect" /* 5079 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6703 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7589 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14558 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -20,10 +20,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ BackHandler: hasOwnProperty, NativeModules: metroRequire } = get_ActivityIndicator);
-const AnalyticsTrackingStore = fn(7570);
-const ShareStore = fn(14511);
+const AnalyticsTrackingStore = fn(7574);
+const ShareStore = fn(14519);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_9 = fn(12557).MultiAccountSwitchLocation;
+let closure_9 = fn(12566).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const share = "share";
@@ -60,8 +60,8 @@ export default function AppShare(targetUserId) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_0(12560);
-        closure_0(12560).switchAccount(targetUserId, false, constants.SHARE_EXTENSION).then(() => {
+        const obj = closure_0(12569);
+        closure_0(12569).switchAccount(targetUserId, false, constants.SHARE_EXTENSION).then(() => {
           closure_1_3(true);
         });
       }, 18);
@@ -106,9 +106,9 @@ export default function AppShare(targetUserId) {
   const obj3 = { appEntryKey: share, children: null };
   if (first) {
     const obj4 = { appEntryKey: tmp18, sharedContent: targetUserId, onClose: null };
-    const tmp14Result = tmp14(14006);
+    const tmp14Result = tmp14(14014);
     if (tmp9Result.isMetaQuest()) {
-      exitApp = tmp14(8492).close;
+      exitApp = tmp14(8511).close;
     } else {
       exitApp = exitApp.exitApp;
     }
@@ -116,11 +116,11 @@ export default function AppShare(targetUserId) {
     tmp19(tmp14Result, obj4);
     tmp9Result = tmp9(1609);
   } else {
-    const items5 = [tmp19(tmp9(7149).SceneLoadingIndicator, {}), , , ];
+    const items5 = [tmp19(tmp9(7153).SceneLoadingIndicator, {}), , , ];
     const obj5 = { appEntryKey: tmp18 };
-    items5[1] = tmp19(tmp9(17118).ActionSheetContainer, obj5);
-    items5[2] = tmp19(tmp14(17165), {});
-    items5[3] = tmp19(tmp9(4988).AlertModalContainer, {});
+    items5[1] = tmp19(tmp9(17158).ActionSheetContainer, obj5);
+    items5[2] = tmp19(tmp14(17205), {});
+    items5[3] = tmp19(tmp9(4990).AlertModalContainer, {});
     obj3.children = items5;
     return closure_11(tmp17, obj3);
   }

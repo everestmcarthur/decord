@@ -1,12 +1,12 @@
-// Module ID: 11385
-// Function ID: 11386
+// Module ID: 11393
+// Function ID: 11394
 // Name: AddImageDescriptionModalActionCreators
-// Dependencies: [4605, 4841, 11386, 1897, 2]
+// Dependencies: [4607, 4843, 11394, 1897, 2]
 
-// Module 11385 (AddImageDescriptionModalActionCreators)
+// Module 11393 (AddImageDescriptionModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
 import size from "module_2" /* 2 */;
 
 const ADD_IMAGE_DESCRIPTION_MODAL_KEY = "ADD_IMAGE_DESCRIPTION_MODAL_KEY";
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/image_upload/native/AddImageD
 export default {
   open(merged) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11386, dependencyMap.paths), merged, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11394, dependencyMap.paths), merged, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);

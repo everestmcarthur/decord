@@ -1,11 +1,11 @@
-// Module ID: 13072
-// Function ID: 13073
+// Module ID: 13080
+// Function ID: 13081
 // Name: StageChannelAlertActionCreators
-// Dependencies: [8524, 2]
+// Dependencies: [8543, 2]
 // Exports: openStageChannelAudienceNoticeModal
 
-// Module 13072 (StageChannelAlertActionCreators)
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8524 */;
+// Module 13080 (StageChannelAlertActionCreators)
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8543 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");

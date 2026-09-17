@@ -1,13 +1,13 @@
-// Module ID: 6665
-// Function ID: 6666
+// Module ID: 6667
+// Function ID: 6668
 // Name: VideoCameraSpotIllustration
-// Dependencies: [21, 5673, 6666, 2]
+// Dependencies: [21, 5675, 6668, 2]
 // Exports: VideoCameraSpotIllustration
 
-// Module 6665 (VideoCameraSpotIllustration)
+// Module 6667 (VideoCameraSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6666 from "module_6666" /* 6666 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6668 from "module_6668" /* 6668 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const VideoCameraSpotIllustration = function VideoCameraSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6666 };
+  const obj2 = { uri: _modDef6668 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

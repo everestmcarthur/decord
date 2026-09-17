@@ -1,21 +1,21 @@
-// Module ID: 12788
-// Function ID: 12789
+// Module ID: 12796
+// Function ID: 12797
 // Name: VoiceMessageOverlay
-// Dependencies: [32, 19, 17, 4630, 1958, 12102, 12103, 1074, 12104, 21, 4374, 1177, 4634, 12, 8586, 4638, 576, 5527, 504, 4339, 5672, 1115, 4639, 5153, 10388, 12789, 7091, 12550, 5045, 5054, 1110, 12016, 9779, 12403, 12790, 8214, 4596, 12398, 12381, 4582, 10144, 2]
+// Dependencies: [32, 19, 17, 4632, 1958, 12111, 12112, 1074, 12113, 21, 4376, 1177, 4636, 12, 8606, 4640, 576, 5529, 504, 4341, 5674, 1115, 4641, 5155, 10396, 12797, 7095, 12559, 5047, 5056, 1110, 12025, 9790, 12412, 12798, 8057, 4598, 12407, 12390, 4584, 10155, 2]
 
-// Module 12788 (VoiceMessageOverlay)
+// Module 12796 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5054 */;
-import LegacyTokens from "LegacyTokens" /* 5527 */;
-import useRefValueDefault from "useRefValue" /* 5672 */;
-import inlineStyles from "inlineStyles" /* 8586 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5056 */;
+import LegacyTokens from "LegacyTokens" /* 5529 */;
+import useRefValueDefault from "useRefValue" /* 5674 */;
+import inlineStyles from "inlineStyles" /* 8606 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import apply from "module_12" /* 12 */;
 
@@ -235,20 +235,20 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12102).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12103).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12111).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12112).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12104).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12113).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1177).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4634).Text);
+let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4636).Text);
 let closure_18 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c19 = 68;
 let c20 = 56;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { innerContainer: { flexDirection: "row", alignItems: "flex-end", paddingTop: 8, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL, paddingBottom: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM }, contentContainer: { position: "absolute", bottom: 0, width: "100%", alignItems: "center", overflow: "hidden" }, contentContainerFloating: { justifyContent: "flex-end", overflow: "visible" }, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
   const size = { width: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
@@ -412,9 +412,9 @@ let closure_44 = noop.memo((channelId) => {
       const result = ref.set(timing.withTiming(1, obj2));
       const _performance = performance;
       if (performance.now() - _undefined.current < 500) {
-        const obj3 = { easing: tmp2(4374).Easing.quad, duration: 250 };
-        const result1 = sharedValue.set(tmp2(4639).withTiming(1, obj3));
-        const tmp2Result = tmp2(4639);
+        const obj3 = { easing: tmp2(4376).Easing.quad, duration: 250 };
+        const result1 = sharedValue.set(tmp2(4641).withTiming(1, obj3));
+        const tmp2Result = tmp2(4641);
       }
     }
   }, items2);

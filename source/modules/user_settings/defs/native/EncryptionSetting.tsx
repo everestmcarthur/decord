@@ -1,16 +1,16 @@
-// Module ID: 15974
-// Function ID: 15975
+// Module ID: 15996
+// Function ID: 15997
 // Name: EncryptionSetting
-// Dependencies: [9294, 8091, 1074, 504, 15975, 1115, 11614, 15976, 2]
+// Dependencies: [9305, 8111, 1074, 504, 15997, 1115, 11622, 15998, 2]
 
-// Module 15974 (EncryptionSetting)
+// Module 15996 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 15975 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9294 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 15997 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9305 */;
 
 require = fn;
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -21,7 +21,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
   },
-  parent: fn(8091).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8111).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
     const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

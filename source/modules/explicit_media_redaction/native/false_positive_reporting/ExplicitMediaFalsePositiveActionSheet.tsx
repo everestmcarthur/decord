@@ -1,19 +1,19 @@
-// Module ID: 9543
-// Function ID: 9544
+// Module ID: 9554
+// Function ID: 9555
 // Name: ExplicitMediaFalsePositiveActionSheet
-// Dependencies: [19, 17, 21, 5223, 8438, 4638, 576, 1177, 4605, 4336, 9544, 9545, 1115, 4335, 7708, 7260, 4634, 5060, 2]
+// Dependencies: [19, 17, 21, 5225, 8457, 4640, 576, 1177, 4607, 4338, 9555, 9556, 1115, 4337, 7714, 7264, 4636, 5062, 2]
 // Exports: ExplicitMediaFalsePositiveActionSheet, handleError, handleSuccess
 
-// Module 9543 (ExplicitMediaFalsePositiveActionSheet)
+// Module 9554 (ExplicitMediaFalsePositiveActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastUtils from "ToastUtils" /* 4335 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7708 */;
-import _modDef8438 from "module_8438" /* 8438 */;
-import _modDef9544 from "module_9544" /* 9544 */;
-import ShieldIcon from "ShieldIcon" /* 9545 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7714 */;
+import _modDef8457 from "module_8457" /* 8457 */;
+import _modDef9555 from "module_9555" /* 9555 */;
+import ShieldIcon from "ShieldIcon" /* 9556 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,7 +55,7 @@ function ExplicitMediaFalsePositivePreview(url) {
     const obj3 = { volume: 0, resizeMode: "cover", repeat: true, style: tmp.media, source: null, controls: true, paused: true };
     const obj4 = { uri: url };
     obj3.source = obj4;
-    let tmp3Result = tmp3(_modDef8438, obj3);
+    let tmp3Result = tmp3(_modDef8457, obj3);
   } else {
     const obj5 = { style: null, source: null };
     const items1 = [, ];
@@ -72,7 +72,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { content: { padding: nativeDefault.space.PX_16 }, contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" }, heading: null, mediaContainer: null, elevationShadow: null, image: null, media: null, footer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.heading = { marginBottom: nativeDefault.space.PX_8 };
@@ -91,7 +91,7 @@ let result = size.fileFinishedImporting("modules/explicit_media_redaction/native
 
 export const handleSuccess = function handleSuccess(arg0) {
   ActionSheetActionCreatorsDefault.hideActionSheet(arg0);
-  const obj3 = { key: "explicit_media_report_false_positive_success", icon: _modDef9544, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: null };
+  const obj3 = { key: "explicit_media_report_false_positive_success", icon: _modDef9555, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: null };
   const intl = util.intl;
   obj3.content = intl.string(util.t.gFsTKu);
   ToastActionCreatorsDefault.open(obj3);

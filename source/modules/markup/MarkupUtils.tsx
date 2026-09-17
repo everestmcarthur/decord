@@ -1,13 +1,13 @@
-// Module ID: 4628
-// Function ID: 4629
+// Module ID: 4630
+// Function ID: 4631
 // Name: MarkupUtils
-// Dependencies: [4629, 5082, 12, 5083, 8103, 2]
+// Dependencies: [4631, 5084, 12, 5085, 8123, 2]
 
-// Module 4628 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 4629 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5082 */;
-import MarkupRulesDefault from "MarkupRules" /* 5083 */;
-import MarkupParserAll from "MarkupParser" /* 8103 */;
+// Module 4630 (MarkupUtils)
+import MarkupReactRules from "MarkupReactRules" /* 4631 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5084 */;
+import MarkupRulesDefault from "MarkupRules" /* 5085 */;
+import MarkupParserAll from "MarkupParser" /* 8123 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;

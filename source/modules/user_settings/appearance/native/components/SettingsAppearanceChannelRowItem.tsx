@@ -1,13 +1,13 @@
-// Module ID: 15402
-// Function ID: 15403
+// Module ID: 15407
+// Function ID: 15408
 // Name: SettingsAppearanceChannelRowItem
-// Dependencies: [19, 17, 1074, 21, 4638, 576, 1177, 11059, 4634, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 576, 1177, 11067, 4636, 2]
 // Exports: default
 
-// Module 15402 (SettingsAppearanceChannelRowItem)
+// Module 15407 (SettingsAppearanceChannelRowItem)
 import nativeDefault from "native" /* 576 */;
 import native2 from "native" /* 1177 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 11059 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 11067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { channelItemContainer: { flexDirection: "row", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, paddingVertical: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_8 }, channelItemLeft: { alignItems: "center", justifyContent: "center" }, channelItemUnreadIndicator: null, channelItemAvatar: null, channelItemContent: null, channelItemTop: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 8, width: 8, borderRadius: nativeDefault.radii.round, margin: nativeDefault.space.PX_8 };
 obj2.channelItemUnreadIndicator = size;
@@ -74,7 +74,7 @@ export default function ChannelRowItem(isUnread) {
   items1[1] = React4(View, obj3);
   obj6 = { style: tmp2.channelItemContent, children: null };
   const obj7 = { style: tmp2.channelItemTop, children: null };
-  const items3 = [React4(tmp6(4634).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(4634).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
+  const items3 = [React4(tmp6(4636).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(4636).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
   obj7.children = items3;
   const items4 = [hasOwnProperty(View, obj7), ];
   if (null == preview) {
@@ -87,7 +87,7 @@ export default function ChannelRowItem(isUnread) {
     animatedStyles = { animated: true, style: null, variant: "redesign/message-preview/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    tmp5(tmp6(4634).Text, animatedStyles);
+    tmp5(tmp6(4636).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
 };

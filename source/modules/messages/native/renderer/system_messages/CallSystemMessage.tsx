@@ -1,21 +1,21 @@
-// Module ID: 8095
-// Function ID: 8096
+// Module ID: 8115
+// Function ID: 8116
 // Name: CallSystemMessage
-// Dependencies: [4654, 502, 4657, 1074, 4659, 8096, 8097, 1115, 1400, 4319, 8080, 2]
+// Dependencies: [4656, 502, 4659, 1074, 4661, 8116, 8117, 1115, 1400, 4321, 8100, 2]
 // Exports: createCallSystemMessage
 
-// Module 8095 (CallSystemMessage)
+// Module 8115 (CallSystemMessage)
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8096 */;
-import useIsCallActive from "useIsCallActive" /* 8097 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8100 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8116 */;
+import useIsCallActive from "useIsCallActive" /* 8117 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 4657 */;
+import VoiceStateStore from "VoiceStateStore" /* 4659 */;
 
 require = fn;
 const ME = fn(1074).ME;
-const ParticipantTypes = fn(4659).ParticipantTypes;
+const ParticipantTypes = fn(4661).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 
@@ -65,12 +65,12 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
     }
     if (null != tmp6) {
       const intl2 = tmp7(1115).intl;
-      const obj2 = { duration: tmp6, timestamp: tmp7(4319).calendarFormat(message.timestamp) };
+      const obj2 = { duration: tmp6, timestamp: tmp7(4321).calendarFormat(message.timestamp) };
       formatToPlainStringResult = intl2.formatToPlainString(tmp7(1115).t.SBDnp1, obj2);
-      const tmp7Result = tmp7(4319);
+      const tmp7Result = tmp7(4321);
     } else {
-      formatToPlainStringResult = tmp7(4319).calendarFormat(message.timestamp);
-      const tmp7Result3 = tmp7(4319);
+      formatToPlainStringResult = tmp7(4321).calendarFormat(message.timestamp);
+      const tmp7Result3 = tmp7(4321);
     }
     const author = message.author;
     mapped = [tmp7(1400).ensureAvatarSource(author.getAvatarSource(undefined)).uri];

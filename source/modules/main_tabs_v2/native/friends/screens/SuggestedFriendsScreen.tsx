@@ -1,13 +1,13 @@
-// Module ID: 16983
-// Function ID: 16984
+// Module ID: 17022
+// Function ID: 17023
 // Name: SuggestedFriendsScreen
-// Dependencies: [19, 17, 1074, 21, 4638, 576, 7272, 7292, 1241, 16176, 8308, 16980, 5210, 11012, 11145, 1115, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 576, 7276, 7296, 1241, 16206, 8327, 17019, 5212, 11020, 11153, 1115, 2]
 // Exports: default
 
-// Module 16983 (SuggestedFriendsScreen)
+// Module 17022 (SuggestedFriendsScreen)
 import nativeDefault from "native" /* 576 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16980 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8327 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 17019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

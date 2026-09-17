@@ -1,33 +1,33 @@
-// Module ID: 17009
-// Function ID: 17010
+// Module ID: 17048
+// Function ID: 17049
 // Name: YouScreenUserProfileContent
-// Dependencies: [32, 19, 17, 1950, 5365, 7729, 8312, 7318, 1955, 14703, 21, 17002, 16499, 1364, 8384, 8369, 13211, 8809, 13212, 8319, 9320, 11344, 17010, 12109, 1944, 7498, 13143, 5060, 10389, 576, 1115, 17011, 17012, 16998, 1485, 8315, 11263, 8370, 504, 8355, 8366, 13089, 17013, 9175, 13222, 13223, 13224, 11269, 17014, 13227, 15815, 13145, 11353, 8734, 13233, 17016, 13198, 13238, 13244, 9932, 4374, 7266, 11265, 11305, 9910, 12757, 12759, 2]
+// Dependencies: [32, 19, 17, 1950, 5367, 7735, 8331, 7322, 1955, 14711, 21, 17041, 16529, 1364, 8403, 8388, 13219, 8821, 13220, 8338, 9331, 11352, 17049, 12118, 1944, 7502, 13151, 5062, 10397, 576, 1115, 17050, 17051, 17037, 1485, 8334, 11271, 8389, 504, 8374, 8385, 13097, 17052, 9186, 13230, 13231, 13232, 11277, 17053, 13235, 15832, 13153, 11361, 8754, 13241, 17055, 13206, 13246, 13252, 9943, 4376, 7270, 11273, 11313, 9921, 12765, 12767, 2]
 // Exports: default
 
-// Module 17009 (YouScreenUserProfileContent)
+// Module 17048 (YouScreenUserProfileContent)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8369 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8384 */;
-import FormDividerDefault from "FormDivider" /* 8734 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8809 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11269 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11353 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 13145 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 13198 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13211 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13212 */;
-import UserProfileConnections from "UserProfileConnections" /* 13233 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13238 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13244 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16499 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 17002 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17014 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17016 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8388 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8403 */;
+import FormDividerDefault from "FormDivider" /* 8754 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8821 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11277 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11361 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 13153 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 13206 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13219 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13220 */;
+import UserProfileConnections from "UserProfileConnections" /* 13241 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13246 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13252 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16529 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 17041 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17053 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5365 */;
-import UserProfileStore from "UserProfileStore" /* 7729 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5367 */;
+import UserProfileStore from "UserProfileStore" /* 7735 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
@@ -156,10 +156,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(1950).useIsContentShown;
-let UserProfileSections = fn(8312).UserProfileSections;
-const UserProfileThemeTypes = fn(7318).UserProfileThemeTypes;
+let UserProfileSections = fn(8331).UserProfileSections;
+const UserProfileThemeTypes = fn(7322).UserProfileThemeTypes;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-let closure_13 = fn(14703).UserProfileEditAutoFocusElement;
+let closure_13 = fn(14711).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -277,12 +277,12 @@ export default function YouScreenUserProfileContent(user) {
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj4 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
-      tmp3Result = tmp3(tmp4(13227), obj4);
+      tmp3Result = tmp3(tmp4(13235), obj4);
     }
     items2[1] = tmp3Result;
     let tmp3Result2 = enabled;
     if (enabled) {
-      tmp3Result2 = tmp3(tmp4(15815), {});
+      tmp3Result2 = tmp3(tmp4(15832), {});
     }
     items2[2] = tmp3Result2;
     items2[3] = closure_2_14(UserProfileActivityDefault, { user, currentUser: user, style: items });
@@ -413,7 +413,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         setActiveProfileTabSection(initialTab === UserProfileSections.WISHLIST ? UserProfileSections.WISHLIST : UserProfileSections.MAIN);
         ref.current(num, false, true);
-        navigation.setParams({ initialTab: "Array" });
+        navigation.setParams({ initialTab: "r" });
       }, 80);
     }
     return () => {

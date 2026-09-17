@@ -1,12 +1,12 @@
-// Module ID: 10331
-// Function ID: 10332
+// Module ID: 10339
+// Function ID: 10340
 // Name: serializeAppStartLogs
-// Dependencies: [10, 12, 7895, 2]
+// Dependencies: [10, 12, 7901, 2]
 // Exports: default
 
-// Module 10331 (serializeAppStartLogs)
+// Module 10339 (serializeAppStartLogs)
 import _modDef12 from "module_12" /* 12 */;
-import ThreadUtils from "ThreadUtils" /* 7895 */;
+import ThreadUtils from "ThreadUtils" /* 7901 */;
 import size from "module_2" /* 2 */;
 
 function getDisplayName(tag) {

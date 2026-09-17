@@ -1,9 +1,9 @@
-// Module ID: 4277
-// Function ID: 4278
+// Module ID: 4279
+// Function ID: 4280
 // Name: LurkingStore
 // Dependencies: [1976, 2022, 1980, 1372, 1074, 504, 573, 2]
 
-// Module 4277 (LurkingStore)
+// Module 4279 (LurkingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildRecord from "GuildRecord" /* 1976 */;

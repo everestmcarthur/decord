@@ -1,15 +1,15 @@
-// Module ID: 17813
-// Function ID: 17814
+// Module ID: 17854
+// Function ID: 17855
 // Name: GuildSettingsModalRolesStore
-// Dependencies: [2016, 1980, 1074, 12559, 4489, 1115, 1086, 504, 573, 2]
+// Dependencies: [2016, 1980, 1074, 12568, 4491, 1115, 1086, 504, 573, 2]
 
-// Module 17813 (GuildSettingsModalRolesStore)
+// Module 17854 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1115 */;
-import shared from "shared" /* 4489 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12559 */;
+import shared from "shared" /* 4491 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12568 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
 

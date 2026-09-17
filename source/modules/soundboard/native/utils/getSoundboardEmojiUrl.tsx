@@ -1,10 +1,10 @@
-// Module ID: 12077
-// Function ID: 12078
+// Module ID: 12086
+// Function ID: 12087
 // Name: getSoundboardEmojiUrl
 // Dependencies: [1397, 2]
 // Exports: default
 
-// Module 12077 (getSoundboardEmojiUrl)
+// Module 12086 (getSoundboardEmojiUrl)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import size from "module_2" /* 2 */;
 

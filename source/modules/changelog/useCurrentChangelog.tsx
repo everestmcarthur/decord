@@ -1,15 +1,15 @@
-// Module ID: 8209
-// Function ID: 8210
+// Module ID: 8229
+// Function ID: 8230
 // Name: useCurrentChangelog
-// Dependencies: [19, 2026, 4652, 2011, 563, 8210, 2]
+// Dependencies: [19, 2026, 4654, 2011, 563, 8230, 2]
 // Exports: useCurrentChangelog
 
-// Module 8209 (useCurrentChangelog)
+// Module 8229 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8210 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8230 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import ChangelogStore from "ChangelogStore" /* 4652 */;
+import ChangelogStore from "ChangelogStore" /* 4654 */;
 
 require = fn;
 function useChangelog(changelogId, stateFromStores) {

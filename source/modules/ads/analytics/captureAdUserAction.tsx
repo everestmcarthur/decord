@@ -1,22 +1,22 @@
-// Module ID: 7838
-// Function ID: 7839
+// Module ID: 7844
+// Function ID: 7845
 // Name: captureAdUserAction
-// Dependencies: [5, 7811, 1074, 5537, 7826, 7807, 7836, 7839, 1241, 1255, 1364, 7785, 7840, 7843, 7817, 7848, 2]
+// Dependencies: [5, 7817, 1074, 5539, 7832, 7813, 7842, 7845, 1241, 1255, 1364, 7791, 7846, 7849, 7823, 7854, 2]
 // Exports: captureAdUserAction
 
-// Module 7838 (captureAdUserAction)
+// Module 7844 (captureAdUserAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AdCreativeType from "AdCreativeType" /* 5537 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7785 */;
-import getQuestLogger from "getQuestLogger" /* 7817 */;
-import AnalyticsActions from "AnalyticsActions" /* 7826 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 7840 */;
-import AdDataUtils from "AdDataUtils" /* 7843 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7848 */;
+import AdCreativeType from "AdCreativeType" /* 5539 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7791 */;
+import getQuestLogger from "getQuestLogger" /* 7823 */;
+import AnalyticsActions from "AnalyticsActions" /* 7832 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7842 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 7846 */;
+import AdDataUtils from "AdDataUtils" /* 7849 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7811 */;
+import QuestStore from "QuestStore" /* 7817 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -305,21 +305,21 @@ function handleViewImpression(minViewTimeSeconds) {
     const obj7 = {};
     const merged3 = Object.assign(obj);
     obj6.properties = obj7;
-    tmp9(7826).trackAdContentEvent(obj6);
-    const tmp9Result = tmp9(7826);
+    tmp9(7832).trackAdContentEvent(obj6);
+    const tmp9Result = tmp9(7832);
   } else {
     const adCreativeId = minViewTimeSeconds.adCreativeId;
     const obj8 = { event: AnalyticEvents.QUEST_CONTENT_VIEWED, questId: adCreativeId, trackGuildAndChannelMetadata, shouldExtendSession, sourceQuestContent, properties: null };
     const obj10 = {};
     const merged4 = Object.assign(obj);
-    const tmp9Result5 = tmp9(7826);
-    let adMetadataSealed = tmp9(7807).getAdMetadataSealed(sourceQuestContent, adCreativeId);
+    const tmp9Result5 = tmp9(7832);
+    let adMetadataSealed = tmp9(7813).getAdMetadataSealed(sourceQuestContent, adCreativeId);
     if (adMetadataSealed == null) {
       adMetadataSealed = null;
     }
     obj10.metadata_sealed = adMetadataSealed;
-    const tmp9Result6 = tmp9(7807);
-    const currentQuestHomeSearchSession = tmp9(7839).getCurrentQuestHomeSearchSession();
+    const tmp9Result6 = tmp9(7813);
+    const currentQuestHomeSearchSession = tmp9(7845).getCurrentQuestHomeSearchSession();
     let uuid;
     if (currentQuestHomeSearchSession != null) {
       uuid = currentQuestHomeSearchSession.uuid;
@@ -328,15 +328,15 @@ function handleViewImpression(minViewTimeSeconds) {
       uuid = null;
     }
     obj10.search_session_id = uuid;
-    const tmp9Result7 = tmp9(7839);
-    let adTrafficMetadataSealed = tmp9(7807).getAdTrafficMetadataSealed(sourceQuestContent, adCreativeId);
+    const tmp9Result7 = tmp9(7845);
+    let adTrafficMetadataSealed = tmp9(7813).getAdTrafficMetadataSealed(sourceQuestContent, adCreativeId);
     if (adTrafficMetadataSealed == null) {
       adTrafficMetadataSealed = null;
     }
     obj10.traffic_metadata_sealed = adTrafficMetadataSealed;
     obj8.properties = obj10;
     tmp9Result5.trackQuestEvent(obj8);
-    const tmp9Result8 = tmp9(7807);
+    const tmp9Result8 = tmp9(7813);
   }
 }
 let closure_11 = async function _handleViewInternalSurfaceImpressionAction(arg0) {
@@ -482,7 +482,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           const tmp2Result10 = tmp2(tmp3[6]);
         }
       })(captureAdUserActionResult1);
-    } else if (tmp2(7848).AdUserActionType.CLICK_INTERNAL === type) {
+    } else if (tmp2(7854).AdUserActionType.CLICK_INTERNAL === type) {
       (function handleClickInternalAction() {
         const self = this;
         const apply = closure_1_8.apply;
@@ -503,7 +503,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
         }
         return applyArgumentsResult;
       })(captureAdUserActionResult1);
-    } else if (tmp2(7848).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
+    } else if (tmp2(7854).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
       (function handleClickExternalAdvertiserCtaAction() {
         const self = this;
         const apply = closure_1_9.apply;
@@ -524,7 +524,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
         }
         return applyArgumentsResult;
       })(captureAdUserActionResult1);
-    } else if (tmp2(7848).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
+    } else if (tmp2(7854).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
       (function handleViewInternalSurfaceImpressionAction() {
         const self = this;
         const apply = closure_1_11.apply;
@@ -545,7 +545,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
         }
         return applyArgumentsResult;
       })(captureAdUserActionResult1);
-    } else if (tmp2(7848).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
+    } else if (tmp2(7854).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
       handleViewImpression(captureAdUserActionResult1);
     }
   } catch (tmp13) {

@@ -1,19 +1,19 @@
-// Module ID: 9298
-// Function ID: 9299
+// Module ID: 9309
+// Function ID: 9310
 // Name: SecureFramesUserVerificationModal
-// Dependencies: [32, 19, 17, 1958, 1372, 9295, 1074, 1181, 21, 4638, 576, 504, 4790, 9299, 9301, 9274, 9302, 9293, 4841, 4336, 4597, 1115, 9303, 9304, 8491, 7272, 8308, 9305, 1177, 7233, 5208, 5714, 4634, 5058, 9306, 9308, 5060, 2]
+// Dependencies: [32, 19, 17, 1958, 1372, 9306, 1074, 1181, 21, 4640, 576, 504, 4792, 9310, 9312, 9285, 9313, 9304, 4843, 4338, 4599, 1115, 9314, 9315, 8510, 7276, 8327, 9316, 1177, 7237, 5210, 5716, 4636, 5060, 9317, 9319, 5062, 2]
 // Exports: default
 
-// Module 9298 (SecureFramesUserVerificationModal)
+// Module 9309 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4597 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9293 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9304 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4599 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8327 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9304 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9315 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -22,14 +22,14 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9295);
+const SecureFramesConstants = fn(9306);
 ({ USER_VERIFICATION_CHUNK_SIZE: closure_9, USER_VERIFICATION_LENGTH: c10, USER_VERIFICATION_NUM_COLUMNS: closure_11, USER_VERIFIED_TOAST_KEY: closure_12 } = SecureFramesConstants);
 const Constants = fn(1074);
 ({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = Constants);
 const ANDROID_FOREGROUND_RIPPLE = fn(1181).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, padding: 16, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, footer: { flex: 1, gap: 16, justifyContent: "flex-end" }, footerText: { textAlign: "center" }, header: { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, subtitle: { textAlign: "center" }, code: { marginTop: 24 }, helpMessage: { marginBottom: 16 } };
 let closure_18 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -103,16 +103,16 @@ export default function SecureFramesUserVerificationModal(userId) {
         const obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9293).getUserVerificationDeeplink(tmp8, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9293);
+          let userVerificationDeeplink = showShareActionSheet(9304).getUserVerificationDeeplink(tmp8, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9304);
         } else {
           userVerificationDeeplink = obj3.join(" ");
         }
         tmp8 = userId;
-        showShareActionSheet = showShareActionSheet(8491).showShareActionSheet;
+        showShareActionSheet = showShareActionSheet(8510).showShareActionSheet;
         obj2 = { message: userVerificationDeeplink };
         showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-        const showShareActionSheetResult1 = showShareActionSheet(8491);
+        const showShareActionSheetResult1 = showShareActionSheet(8510);
       }
       obj3 = readableSecureFramesFingerprint;
     }

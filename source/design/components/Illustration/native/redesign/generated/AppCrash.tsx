@@ -1,12 +1,12 @@
-// Module ID: 9989
-// Function ID: 9990
+// Module ID: 10000
+// Function ID: 10001
 // Name: AppCrash
-// Dependencies: [19, 17, 21, 8361, 9990, 9991, 9992, 4489, 2]
+// Dependencies: [19, 17, 21, 8380, 10001, 10002, 10003, 4491, 2]
 // Exports: AppCrash, getAppCrashSource, useAppCrashSource
 
-// Module 9989 (AppCrash)
-import shared from "shared" /* 4489 */;
-import _mod8361 from "module_8361" /* 8361 */;
+// Module 10000 (AppCrash)
+import shared from "shared" /* 4491 */;
+import _mod8380 from "module_8380" /* 8380 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,44 +18,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/AppCrash.tsx");
 
 export const getAppCrashSource = function getAppCrashSource(theme) {
-  return _mod8361.getIllustrationSource(theme, {
+  return _mod8380.getIllustrationSource(theme, {
     dark() {
-      return require("module_9990");
+      return require("module_10001");
     },
     darker() {
-      return require("module_9991");
+      return require("module_10002");
     },
     light() {
-      return require("module_9992");
+      return require("module_10003");
     }
   });
 };
 export const useAppCrashSource = function useAppCrashSource() {
   const obj = shared;
-  return _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9990");
+      return require("module_10001");
     },
     darker() {
-      return require("module_9991");
+      return require("module_10002");
     },
     light() {
-      return require("module_9992");
+      return require("module_10003");
     }
   });
 };
 export const AppCrash = function AppCrash(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9990");
+      return require("module_10001");
     },
     darker() {
-      return require("module_9991");
+      return require("module_10002");
     },
     light() {
-      return require("module_9992");
+      return require("module_10003");
     }
   });
   const merged = Object.assign(arg0);

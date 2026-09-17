@@ -1,26 +1,26 @@
-// Module ID: 17003
-// Function ID: 17004
+// Module ID: 17042
+// Function ID: 17043
 // Name: YouScreenNavIcon
-// Dependencies: [19, 17, 21, 16535, 576, 8954, 4638, 1115, 9045, 4634, 2]
+// Dependencies: [19, 17, 21, 16565, 576, 8970, 4640, 1115, 9060, 4636, 2]
 
-// Module 17003 (YouScreenNavIcon)
+// Module 17042 (YouScreenNavIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import ClipViewDefault from "ClipView" /* 8954 */;
-import native from "native" /* 9045 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import ClipViewDefault from "ClipView" /* 8970 */;
+import native from "native" /* 9060 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16535).ICON_SIZE.md;
+const md = fn(16565).ICON_SIZE.md;
 const result = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
-const point = { shape: fn(8954).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(8970).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj = { container: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, marginHorizontal: nativeDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result }, label: null, dot: null };
 let obj2 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, marginHorizontal: nativeDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result };
 obj.label = { marginTop: nativeDefault.space.PX_4 };

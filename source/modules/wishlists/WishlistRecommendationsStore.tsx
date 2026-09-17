@@ -1,9 +1,9 @@
-// Module ID: 10939
-// Function ID: 10940
+// Module ID: 10947
+// Function ID: 10948
 // Name: WishlistRecommendationsStore
 // Dependencies: [2026, 504, 573, 2]
 
-// Module 10939 (WishlistRecommendationsStore)
+// Module 10947 (WishlistRecommendationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import LocaleStore from "LocaleStore" /* 2026 */;

@@ -1,20 +1,20 @@
-// Module ID: 14006
-// Function ID: 14007
+// Module ID: 14014
+// Function ID: 14015
 // Name: ShareScreen
-// Dependencies: [5, 32, 19, 17, 1962, 1958, 4276, 1074, 11825, 11006, 21, 4638, 576, 1364, 1115, 14007, 11132, 1370, 14008, 4881, 1241, 10081, 4649, 8492, 11845, 1897, 4984, 14009, 14010, 5717, 7978, 1609, 5710, 11135, 14011, 2]
+// Dependencies: [5, 32, 19, 17, 1962, 1958, 4278, 1074, 11833, 11014, 21, 4640, 576, 1364, 1115, 14015, 11140, 1370, 14016, 4883, 1241, 10092, 4651, 8511, 11854, 1897, 4986, 14017, 14018, 5719, 7984, 1609, 5712, 11143, 14019, 2]
 // Exports: default
 
-// Module 14006 (ShareScreen)
+// Module 14014 (ShareScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import HeaderShared from "HeaderShared" /* 7978 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 14009 */;
-import ShareEmbedDefault from "ShareEmbed" /* 14010 */;
+import HeaderShared from "HeaderShared" /* 7984 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 14017 */;
+import ShareEmbedDefault from "ShareEmbed" /* 14018 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -36,11 +36,11 @@ const ChannelRecord = fn(1962);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11825).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(11006).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11833).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(11014).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null };
 let PlatformUtils = fn(1364);
 let num = 0;

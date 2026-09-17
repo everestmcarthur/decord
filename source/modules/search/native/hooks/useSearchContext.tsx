@@ -1,10 +1,10 @@
-// Module ID: 12442
-// Function ID: 12443
+// Module ID: 12451
+// Function ID: 12452
 // Name: useSearchContext
 // Dependencies: [19, 1958, 1074, 38, 563, 2]
 // Exports: getChannelDetailsSearchContext, useChannelDetailsSearchContext, useGuildChannelSearchContext, useGuildSearchContext
 
-// Module 12442 (useSearchContext)
+// Module 12451 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;

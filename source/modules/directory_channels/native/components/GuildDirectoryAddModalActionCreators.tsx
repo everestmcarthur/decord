@@ -1,11 +1,11 @@
-// Module ID: 12451
-// Function ID: 12452
+// Module ID: 12460
+// Function ID: 12461
 // Name: GuildDirectoryAddModalActionCreators
-// Dependencies: [4841, 12452, 1897, 2]
+// Dependencies: [4843, 12461, 1897, 2]
 
-// Module 12451 (GuildDirectoryAddModalActionCreators)
+// Module 12460 (GuildDirectoryAddModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
 import size from "module_2" /* 2 */;
 
 const GUILD_DIRECTORY_ADD_MODAL_KEY = "GUILD_DIRECTORY_ADD_MODAL_KEY";
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/native/com
 
 export default {
   open(merged) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12452, dependencyMap.paths), merged, GUILD_DIRECTORY_ADD_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12461, dependencyMap.paths), merged, GUILD_DIRECTORY_ADD_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(GUILD_DIRECTORY_ADD_MODAL_KEY);

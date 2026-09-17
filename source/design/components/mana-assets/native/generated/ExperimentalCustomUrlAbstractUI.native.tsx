@@ -1,13 +1,13 @@
-// Module ID: 6077
-// Function ID: 6078
+// Module ID: 6079
+// Function ID: 6080
 // Name: ExperimentalCustomUrlAbstractUI
-// Dependencies: [21, 5673, 6078, 2]
+// Dependencies: [21, 5675, 6080, 2]
 // Exports: ExperimentalCustomUrlAbstractUI
 
-// Module 6077 (ExperimentalCustomUrlAbstractUI)
+// Module 6079 (ExperimentalCustomUrlAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6078 from "module_6078" /* 6078 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6080 from "module_6080" /* 6080 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ExperimentalCustomUrlAbstractUI = function ExperimentalCustomUrlAbs
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6078 };
+  const obj2 = { uri: _modDef6080 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,17 +1,17 @@
-// Module ID: 15010
-// Function ID: 15011
+// Module ID: 15018
+// Function ID: 15019
 // Name: useFamilyCenterActivities
-// Dependencies: [7647, 7648, 563, 7702, 7344, 2]
+// Dependencies: [7651, 7652, 563, 7706, 7348, 2]
 // Exports: useActionTotalsForDisplayType, useActionsForDisplayType, useFormattedTotalForDisplayType, useHasActionForAnyDisplayType
 
-// Module 15010 (useFamilyCenterActivities)
+// Module 15018 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const TeenActionDisplayType = fn(7648).TeenActionDisplayType;
+const TeenActionDisplayType = fn(7652).TeenActionDisplayType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActivities.tsx");
 
@@ -40,7 +40,7 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    return tmp(7702).formatTotalTime(num);
+    return tmp(7706).formatTotalTime(num);
   } else if (displayType === tmp3.PURCHASES) {
     const totalSpendAmount = obj2.getTotalSpendAmount();
     const totalSpendCurrency = obj2.getTotalSpendCurrency();
@@ -48,8 +48,8 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     if (null != totalSpendAmount) {
       result = num;
       if (null != totalSpendCurrency) {
-        result = tmp(7344).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
-        const tmpResult3 = tmp(7344);
+        result = tmp(7348).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
+        const tmpResult3 = tmp(7348);
       }
     }
     return result;
@@ -57,8 +57,8 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     const totalGiftValue = obj2.getTotalGiftValue();
     let result1 = num;
     if (null != totalGiftValue) {
-      result1 = tmp(7344).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
-      const tmpResult4 = tmp(7344);
+      result1 = tmp(7348).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
+      const tmpResult4 = tmp(7348);
     }
     return result1;
   } else {

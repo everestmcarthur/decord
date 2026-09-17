@@ -1,21 +1,21 @@
-// Module ID: 7416
-// Function ID: 7417
+// Module ID: 7420
+// Function ID: 7421
 // Name: ThreadMessageStore
-// Dependencies: [1962, 4287, 1386, 1958, 4859, 1114, 1074, 12, 11, 4861, 504, 573, 2]
+// Dependencies: [1962, 4289, 1386, 1958, 4861, 1114, 1074, 12, 11, 4863, 504, 573, 2]
 
-// Module 7416 (ThreadMessageStore)
+// Module 7420 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import ThreadConstants from "ThreadConstants" /* 1114 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4863 */;
 import ChannelRecord from "ChannelRecord" /* 1962 */;
-import MessageRecord from "MessageRecord" /* 4287 */;
+import MessageRecord from "MessageRecord" /* 4289 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4859 */;
+import MessageStore from "MessageStore" /* 4861 */;
 import size from "module_2" /* 2 */;
 
 function updateState(type, fn) {

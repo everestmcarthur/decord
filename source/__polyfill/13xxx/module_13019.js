@@ -1,83 +1,67 @@
 // Module ID: 13019
 // Function ID: 13020
-// Dependencies: [12941]
-// Exports: addMetadataToStackFrames, stripMetadataFromStackFrames
+// Dependencies: [12944, 12947, 12976, 12962, 12975, 12996, 12966, 12967, 12953, 12984, 12961, 12960, 12948]
+// Exports: getTraceData
 
 // Module 13019
-import _mod12941 from "module_12941" /* 12941 */;
+import errorCallback from "errorCallback" /* 12944 */;
+import _mod12975 from "module_12975" /* 12975 */;
+import "module_12947";
+import __SENTRY_DEBUG__ from "module_12976" /* 12976 */;
+import dateTimestampInSeconds from "module_12962" /* 12962 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12941.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12941.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp11 = item10026;
-        let tmp16 = _mod12941.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        let obj = set;
-        if (!set.has(item10026)) {
-          let addResult = obj.add(tmp11);
-          let obj2 = arg0(tmp11);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
+errorCallback;
+
+export const getTraceData = function getTraceData() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  const client = _mod12975.getClient();
+  if (obj3.isEnabled()) {
+    if (client) {
+      const mainCarrier = tmp(12966).getMainCarrier();
+      const tmpResult = tmp(12966);
+      const asyncContextStrategy = tmp(12967).getAsyncContextStrategy(mainCarrier);
+      if (asyncContextStrategy.getTraceData) {
+        return asyncContextStrategy.getTraceData(obj);
+      } else {
+        const currentScope = tmp(12975).getCurrentScope();
+        let span = obj.span;
+        if (!span) {
+          span = tmp(12953).getActiveSpan();
+          const tmpResult10 = tmp(12953);
         }
-        continue;
+        if (span) {
+          let spanToTraceHeaderResult = tmp(12953).spanToTraceHeader(span);
+          const tmpResult11 = tmp(12953);
+        } else {
+          const propagationContext = currentScope.getPropagationContext();
+          ({ traceId, sampled, spanId } = propagationContext);
+          spanToTraceHeaderResult = tmp(12960).generateSentryTraceHeader(traceId, spanId, sampled);
+          const tmpResult12 = tmp(12960);
+        }
+        const tmpResult13 = tmp(12984);
+        if (span) {
+          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
+        } else {
+          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
+        }
+        const tmpResult9 = tmp(12975);
+        const result = tmp(12961).dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = tmp(12960).TRACEPARENT_REGEXP;
+        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
+          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
+          let obj5 = obj4;
+        } else {
+          const logger = tmp(12948).logger;
+          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
+          obj5 = {};
+        }
+        return obj5;
       }
+      const tmpResult8 = tmp(12967);
     }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
-
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          let tmp4 = item10010;
-          if (item10010.filename) {
-            if (!tmp4.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, tmp4.filename);
-              if (tmp9) {
-                tmp4.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
-        }
-      }
-    });
-  } catch (err) {
   }
-};
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
-        }
-      }
-    });
-  } catch (err) {
-  }
+  return {};
 };

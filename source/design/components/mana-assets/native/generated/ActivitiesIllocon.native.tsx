@@ -1,13 +1,13 @@
-// Module ID: 5821
-// Function ID: 5822
+// Module ID: 5823
+// Function ID: 5824
 // Name: ActivitiesIllocon
-// Dependencies: [21, 5673, 5822, 2]
+// Dependencies: [21, 5675, 5824, 2]
 // Exports: ActivitiesIllocon
 
-// Module 5821 (ActivitiesIllocon)
+// Module 5823 (ActivitiesIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5822 from "module_5822" /* 5822 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5824 from "module_5824" /* 5824 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const ActivitiesIllocon = function ActivitiesIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5822 };
+  const obj2 = { uri: _modDef5824 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

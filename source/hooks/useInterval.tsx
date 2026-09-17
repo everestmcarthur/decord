@@ -1,10 +1,10 @@
-// Module ID: 7555
-// Function ID: 7556
+// Module ID: 7559
+// Function ID: 7560
 // Name: useInterval
 // Dependencies: [19, 38, 2]
 // Exports: default
 
-// Module 7555 (useInterval)
+// Module 7559 (useInterval)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

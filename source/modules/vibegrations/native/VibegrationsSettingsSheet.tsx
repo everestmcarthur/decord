@@ -1,26 +1,26 @@
-// Module ID: 16757
-// Function ID: 16758
+// Module ID: 16787
+// Function ID: 16788
 // Name: VibegrationsSettingsSheet
-// Dependencies: [5, 32, 19, 17, 2013, 1980, 4286, 1372, 16722, 16725, 16723, 21, 4638, 576, 7091, 504, 1115, 3591, 9932, 13401, 4605, 5771, 5774, 5773, 5690, 6714, 4634, 5060, 7307, 7259, 9933, 7354, 5691, 5700, 4791, 11476, 2]
+// Dependencies: [5, 32, 19, 17, 2013, 1980, 4288, 1372, 16753, 16752, 16754, 21, 4640, 576, 7095, 504, 1115, 3593, 9943, 13409, 4607, 5773, 5776, 5775, 5692, 6717, 4636, 5062, 7311, 7263, 9944, 7358, 5693, 5702, 4793, 11484, 2]
 // Exports: default
 
-// Module 16757 (VibegrationsSettingsSheet)
+// Module 16787 (VibegrationsSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4605 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7354 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11476 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4607 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7358 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11484 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16722 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16725 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16753 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16752 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16754 */;
 
 require = fn;
 function VibegrationsChannelSettingRow(projectId) {
@@ -72,7 +72,7 @@ function VibegrationsChannelSettingRow(projectId) {
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3591.aO4AM6);
+        obj3.noChannelOptionLabel = intl.string(_modDef3593.aO4AM6);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -93,13 +93,13 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(16725);
+let VibegrationsConnectionStore = fn(16752);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_21 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom }, section: null, secretRow: null, secretRowInfo: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingBottom };
@@ -234,7 +234,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         if (tmp25 == null) {
           tmp25 = memo1[found.key];
         }
-        const obj11 = { label: found.label, description: joined, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+        const obj11 = { label: found.label, description: joined, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, disabled: null };
         let str4 = "";
         if (typeof tmp25 === "string") {
           str4 = tmp25;
@@ -249,7 +249,7 @@ export default function VibegrationsSettingsSheet(projectId) {
             return obj;
           });
         };
-        obj11.isDisabled = first2;
+        obj11.disabled = first2;
         obj5.fallback = found(projectId(flag[25]).TextInput, obj11, found.key);
         let tmp12Result = found(renderValueSetting, obj5, found.key);
       } else {
@@ -258,7 +258,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         if (tmp11 == null) {
           tmp11 = memo1[found.key];
         }
-        let obj = { label: found.label, description: joined, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+        let obj = { label: found.label, description: joined, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, disabled: null };
         let str3 = "";
         if (typeof tmp11 === "string") {
           str3 = tmp11;
@@ -273,7 +273,7 @@ export default function VibegrationsSettingsSheet(projectId) {
             return obj;
           });
         };
-        obj.isDisabled = first2;
+        obj.disabled = first2;
         tmp12Result = found(projectId(flag[25]).TextInput, obj, found.key);
       }
       return tmp12Result;
@@ -351,7 +351,7 @@ export default function VibegrationsSettingsSheet(projectId) {
       }
       return tmp12Result;
     }
-    let obj = { label, description: joined, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+    let obj = { label, description: joined, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, disabled: null };
     let str3;
     if (value.set) {
       str3 = "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022";
@@ -372,7 +372,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         return obj;
       });
     };
-    obj.isDisabled = first2;
+    obj.disabled = first2;
     tmp12Result = found(projectId(flag[25]).TextInput, obj, value.name);
   }
   let tmp3 = closure_21(notifyAgent(flag[14])({ includeKeyboardHeight: true }).insets.bottom);
@@ -475,12 +475,12 @@ export default function VibegrationsSettingsSheet(projectId) {
   const memo3 = obj2.useMemo(() => {
     const obj = { id: "settings", label: null, count: null, page: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3591.jczqxT);
+    obj.label = intl.string(_modDef3593.jczqxT);
     obj.count = found.length;
     const items = [obj, ];
     const obj2 = { id: "secrets", label: null, count: null, page: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3591.iD7xfZ);
+    obj2.label = intl2.string(_modDef3593.iD7xfZ);
     obj2.count = memo2.length;
     items[1] = obj2;
     return items;
@@ -623,9 +623,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(13401)(_null);
+                  _null2(13409)(_null);
                   let prop;
-                  const tmp19 = _null2(13401);
+                  const tmp19 = _null2(13409);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -633,16 +633,16 @@ export default function VibegrationsSettingsSheet(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(13401)(_null2);
-                  const tmp27 = _null2(13401);
+                  _null2(13409)(_null2);
+                  const tmp27 = _null2(13409);
                 }
               }
-              _null2(4605).hideActionSheet(closure_1_20);
+              _null2(4607).hideActionSheet(closure_1_20);
               c5 = 1;
-              const obj = _null2(4605);
+              const obj = _null2(4607);
             }
             const intl = _null(1115).intl;
-            closure_1_13(closure_131_0, intl.string(_null2(3591).gqJFu0));
+            closure_1_13(closure_131_0, intl.string(_null2(3593).gqJFu0));
           }
           c5 = 0;
           closure_131_12(false);

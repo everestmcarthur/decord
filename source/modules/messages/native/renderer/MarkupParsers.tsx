@@ -1,18 +1,18 @@
-// Module ID: 8206
-// Function ID: 8207
+// Module ID: 8226
+// Function ID: 8227
 // Name: MarkupParsers
-// Dependencies: [1074, 1091, 1438, 4628, 8207, 8208, 8222, 8004, 8224, 1231, 2]
+// Dependencies: [1074, 1091, 1438, 4630, 8227, 8228, 8240, 8010, 8242, 1231, 2]
 // Exports: parseEmbedDescriptionMarkup, parseEmbedTitleMarkup, parseEmbedTitleMarkupWithoutLinks, parseMessageMarkup
 
-// Module 8206 (MarkupParsers)
+// Module 8226 (MarkupParsers)
 import Constants from "Constants" /* 1074 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4628 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8004 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8207 */;
-import trackMarkdownParse from "trackMarkdownParse" /* 8222 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 8224 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4630 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8010 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8227 */;
+import trackMarkdownParse from "trackMarkdownParse" /* 8240 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8242 */;
 import priv from "priv" /* 1438 */;
 import size from "module_2" /* 2 */;
 
@@ -115,7 +115,7 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
       const obj6 = MarkupUtilsDefault;
       const obj2 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
       let tmp15 = flag2;
-      const tmpResult = tmp(8208);
+      const tmpResult = tmp(8228);
       if (!flag2) {
         tmp15 = flag3;
       }
@@ -127,7 +127,7 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
       obj2.allowList = flag2;
       obj2.allowLinks = flag4;
       obj2.previewLinkTarget = flag4;
-      obj3.content = obj6.astParserFor(tmp(8208).changelogRules(message.changelogId, true))(message.content, false, obj2);
+      obj3.content = obj6.astParserFor(tmp(8228).changelogRules(message.changelogId, true))(message.content, false, obj2);
       obj3.nativeMarkdownEnabled = enabled;
       const result1 = obj.set(message, obj3);
       return obj3;

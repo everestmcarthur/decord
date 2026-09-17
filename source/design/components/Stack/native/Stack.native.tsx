@@ -1,15 +1,15 @@
-// Module ID: 5058
-// Function ID: 5059
+// Module ID: 5060
+// Function ID: 5061
 // Name: Stack/Stack
-// Dependencies: [19, 17, 21, 4638, 2]
+// Dependencies: [19, 17, 21, 4640, 2]
 // Exports: Stack
 
-// Module 5058 (Stack/Stack)
+// Module 5060 (Stack/Stack)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_2 = createStyles.createStyles((gap, arg1, alignItems, justifyContent) => {
   const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
   let str = "column";

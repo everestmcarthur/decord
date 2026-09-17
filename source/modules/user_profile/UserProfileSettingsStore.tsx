@@ -1,15 +1,15 @@
-// Module ID: 8289
-// Function ID: 8290
+// Module ID: 8308
+// Function ID: 8309
 // Name: UserProfileSettingsStore
-// Dependencies: [1074, 1971, 8290, 1075, 504, 8291, 573, 2]
+// Dependencies: [1074, 1971, 8309, 1075, 504, 8310, 573, 2]
 
-// Module 8289 (UserProfileSettingsStore)
+// Module 8308 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RouteConstants from "RouteConstants" /* 1075 */;
 import FavoritesConstants from "FavoritesConstants" /* 1971 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8290 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8291 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8309 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8310 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

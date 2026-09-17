@@ -1,18 +1,18 @@
-// Module ID: 9551
-// Function ID: 9552
+// Module ID: 9562
+// Function ID: 9563
 // Name: AppLauncherStore
-// Dependencies: [9552, 504, 573, 2]
+// Dependencies: [9563, 504, 573, 2]
 
-// Module 9551 (AppLauncherStore)
+// Module 9562 (AppLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9552 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9563 */;
 
 require = fn;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherTypes.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(9552).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(9563).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherTypes.AppLauncherEntrypoint.NONE;
@@ -23,7 +23,7 @@ function handleDismissWithDismissed() {
 function handleSetActiveCommand() {
   let DISMISSED = AppLauncherTypes.AppLauncherCloseReason.COMMAND;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(9552).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(9563).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherTypes.AppLauncherEntrypoint.NONE;
@@ -31,7 +31,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-const obj = { show: false, entrypoint: fn(9552).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9552).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9552).AppLauncherCloseReason.DISMISSED, initialState: "accessible" };
+const obj = { show: false, entrypoint: fn(9563).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9563).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9563).AppLauncherCloseReason.DISMISSED, initialState: "accessible" };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }

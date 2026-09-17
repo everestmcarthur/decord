@@ -1,23 +1,23 @@
-// Module ID: 16656
-// Function ID: 16657
+// Module ID: 16686
+// Function ID: 16687
 // Name: PostCallDisconnectNudge
-// Dependencies: [32, 19, 2012, 4657, 12552, 12553, 21, 16655, 1115, 15595, 12554, 504, 7498, 1944, 12555, 4605, 16656, 1897, 2]
+// Dependencies: [32, 19, 2012, 4659, 12561, 12562, 21, 16685, 1115, 15601, 12563, 504, 7502, 1944, 12564, 4607, 16686, 1897, 2]
 // Exports: default, usePostCallDisconnectNudge
 
-// Module 16656 (PostCallDisconnectNudge)
+// Module 16686 (PostCallDisconnectNudge)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12555 */;
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16655 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12564 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import VoiceStateStore from "VoiceStateStore" /* 4657 */;
+import VoiceStateStore from "VoiceStateStore" /* 4659 */;
 
 require = fn;
-const PermissionPromptType = fn(12552).PermissionPromptType;
-const NotificationPermissionConstants = fn(12553);
+const PermissionPromptType = fn(12561).PermissionPromptType;
+const NotificationPermissionConstants = fn(12562);
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: closure_9 } = NotificationPermissionConstants);
 const jsx = fn(21).jsx;
 let c11 = "post-call-disconnect-nudge-key";
@@ -40,10 +40,10 @@ export default function PostCallDisconnectNudge(arg0) {
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(15595);
+  let obj = stateFromStores1(15601);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(12554).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(12554);
+  const canSeePushNotificationNudge = stateFromStores(12563).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(12563);
   const items = [VoiceStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
   let obj3 = stateFromStores(504);
@@ -78,7 +78,7 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
       }
     }
   }
-  const tmp6Result = tmp6(stateFromStores(7498).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  const tmp6Result = tmp6(stateFromStores(7502).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
   first = tmp6Result[0];
   markAsDismissed = tmp12;
   const items3 = [first, tmp6Result[1]];
@@ -86,7 +86,7 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (null != first) {
       const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET);
       const obj3 = { markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16656, dependencyMap.paths), c11, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16686, dependencyMap.paths), c11, obj3);
     }
   }, items3);
 };

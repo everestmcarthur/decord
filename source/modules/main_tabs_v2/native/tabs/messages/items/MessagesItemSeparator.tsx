@@ -1,9 +1,9 @@
-// Module ID: 16226
-// Function ID: 16227
+// Module ID: 16256
+// Function ID: 16257
 // Name: MessagesItemSeparator
-// Dependencies: [19, 17, 21, 576, 4638, 2]
+// Dependencies: [19, 17, 21, 576, 4640, 2]
 
-// Module 16226 (MessagesItemSeparator)
+// Module 16256 (MessagesItemSeparator)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_0 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { height: PX_12 }, separator: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: StyleSheet.hairlineWidth };
 const merged = Object.assign(StyleSheet.absoluteFillObject);

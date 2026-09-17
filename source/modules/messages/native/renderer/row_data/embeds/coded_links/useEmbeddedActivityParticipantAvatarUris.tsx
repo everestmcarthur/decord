@@ -1,10 +1,10 @@
-// Module ID: 13363
-// Function ID: 13364
+// Module ID: 13371
+// Function ID: 13372
 // Name: useEmbeddedActivityParticipantAvatarUris
 // Dependencies: [19, 1957, 1372, 1370, 563, 2]
 // Exports: default, getEmbeddedActivityParticipantAvatarUris
 
-// Module 13363 (useEmbeddedActivityParticipantAvatarUris)
+// Module 13371 (useEmbeddedActivityParticipantAvatarUris)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;

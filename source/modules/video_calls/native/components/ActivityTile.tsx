@@ -1,15 +1,15 @@
-// Module ID: 9771
-// Function ID: 9772
+// Module ID: 9782
+// Function ID: 9783
 // Name: ActivityTile
-// Dependencies: [5, 32, 19, 17, 1957, 1372, 1074, 1181, 1921, 21, 1177, 4638, 576, 504, 1370, 7278, 4790, 4482, 9772, 7272, 7292, 9759, 1115, 9674, 9676, 9774, 9673, 5208, 9775, 9791, 4634, 5061, 4348, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 1372, 1074, 1181, 1921, 21, 1177, 4640, 576, 504, 1370, 7282, 4792, 4484, 9783, 7276, 7296, 9770, 1115, 9685, 9687, 9785, 9684, 5210, 9786, 9802, 4636, 5063, 4350, 2]
 // Exports: default
 
-// Module 9771 (ActivityTile)
+// Module 9782 (ActivityTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import native2 from "native" /* 4348 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9673 */;
+import native2 from "native" /* 4350 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9684 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -68,7 +68,7 @@ function ActivityTileInner(participant) {
               const obj4 = { applicationId: tmp23.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(9676)(obj4), done: false };
+              const obj5 = { value: v1(9687)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -79,8 +79,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(9774).setOrientationLockState(closure_128_3);
-          const obj = tmp2(9774);
+          const result = tmp2(9785).setOrientationLockState(closure_128_3);
+          const obj = tmp2(9785);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -253,7 +253,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1177).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1181).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 obj2.pressableOpacity = size;

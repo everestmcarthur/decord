@@ -1,15 +1,15 @@
-// Module ID: 7200
-// Function ID: 7201
+// Module ID: 7204
+// Function ID: 7205
 // Name: MemberVerificationAlertUpdate
-// Dependencies: [19, 17, 1074, 21, 4638, 5079, 1115, 4332, 7201, 4634, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 5081, 1115, 4334, 7205, 4636, 2]
 // Exports: default
 
-// Module 7200 (MemberVerificationAlertUpdate)
+// Module 7204 (MemberVerificationAlertUpdate)
 import util from "util" /* 1115 */;
-import LinkingDefault from "Linking" /* 4332 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import common_AlertDefault from "common/Alert" /* 5079 */;
-import _modDef7201 from "module_7201" /* 7201 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import common_AlertDefault from "common/Alert" /* 5081 */;
+import _modDef7205 from "module_7205" /* 7205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const Image = fn(17).Image;
 const DownloadLinks = fn(1074).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx");
@@ -35,7 +35,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   };
   obj.onCancel = onClose.onClose;
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(Image, { source: _modDef7201, style: tmp.headerImage }), , ];
+  const items = [hasOwnProperty(Image, { source: _modDef7205, style: tmp.headerImage }), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.kkjNHU);

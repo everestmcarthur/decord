@@ -1,10 +1,10 @@
-// Module ID: 12304
-// Function ID: 12305
+// Module ID: 12313
+// Function ID: 12314
 // Name: useAwaitAnimationComplete
 // Dependencies: [19, 21, 2]
 // Exports: AwaitAnimationContext, useAwaitAnimationCompletion
 
-// Module 12304 (useAwaitAnimationComplete)
+// Module 12313 (useAwaitAnimationComplete)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

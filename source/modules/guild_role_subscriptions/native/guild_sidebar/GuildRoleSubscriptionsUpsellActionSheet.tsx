@@ -1,17 +1,17 @@
-// Module ID: 16372
-// Function ID: 16373
+// Module ID: 16402
+// Function ID: 16403
 // Name: GuildRoleSubscriptionsUpsellActionSheet
-// Dependencies: [19, 17, 1074, 1955, 21, 4638, 7260, 5673, 16373, 4634, 1115, 5060, 9206, 2]
+// Dependencies: [19, 17, 1074, 1955, 21, 4640, 7264, 5675, 16403, 4636, 1115, 5062, 9217, 2]
 // Exports: default
 
-// Module 16372 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 16402 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9206 */;
-import _modDef16373 from "module_16373" /* 16373 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7264 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9217 */;
+import _modDef16403 from "module_16403" /* 16403 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_8 = createStyles.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null
   };
-  const obj2 = { source: _modDef16373 };
+  const obj2 = { source: _modDef16403 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

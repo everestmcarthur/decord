@@ -1,12 +1,12 @@
-// Module ID: 14593
-// Function ID: 14594
+// Module ID: 14601
+// Function ID: 14602
 // Name: CONTEXT_MENU_ICON_NAMES
-// Dependencies: [14594, 14595, 2, 14596]
+// Dependencies: [14602, 14603, 2, 14604]
 // Exports: createRPCCommand
 
-// Module 14593 (CONTEXT_MENU_ICON_NAMES)
-import helpers from "helpers" /* 14595 */;
-import contextMenuIcons from "contextMenuIcons" /* 14596 */;
+// Module 14601 (CONTEXT_MENU_ICON_NAMES)
+import helpers from "helpers" /* 14603 */;
+import contextMenuIcons from "contextMenuIcons" /* 14604 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
@@ -16,7 +16,7 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
   let obj = { scope: scope.scope, handler: scope.handler };
-  const tmp = request(14594).RPCCommandSchemas[AUTHENTICATE];
+  const tmp = request(14602).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;

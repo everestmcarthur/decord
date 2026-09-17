@@ -1,25 +1,25 @@
-// Module ID: 4704
-// Function ID: 4705
+// Module ID: 4706
+// Function ID: 4707
 // Name: Connection
-// Dependencies: [32, 4663, 4695, 4705, 1911, 4, 4693, 4753, 4754, 4755, 4703, 4757, 4706, 4758, 4710, 4759, 4762, 2]
+// Dependencies: [32, 4665, 4697, 4707, 1911, 4, 4695, 4755, 4756, 4757, 4705, 4759, 4708, 4760, 4712, 4761, 4764, 2]
 
-// Module 4704 (Connection)
+// Module 4706 (Connection)
 import inject from "inject" /* 1911 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4693 */;
-import VideoQualityManager from "VideoQualityManager" /* 4706 */;
-import cloneDeepDefault from "cloneDeep" /* 4710 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 4753 */;
-import transformStatsDefault from "transformStats" /* 4755 */;
-import _modDef4757 from "module_4757" /* 4757 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4758 */;
-import reduceDefault from "reduce" /* 4759 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4695 */;
+import VideoQualityManager from "VideoQualityManager" /* 4708 */;
+import cloneDeepDefault from "cloneDeep" /* 4712 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 4755 */;
+import transformStatsDefault from "transformStats" /* 4757 */;
+import _modDef4759 from "module_4759" /* 4759 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4760 */;
+import reduceDefault from "reduce" /* 4761 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseConnection from "BaseConnection" /* 4705 */;
+import BaseConnection from "BaseConnection" /* 4707 */;
 
 require = fn;
-let Constants = fn(4663);
+let Constants = fn(4665);
 ({ StatsFilter: closure_4, ExperimentFlags: hasOwnProperty, DESKTOP_BITRATE_ENHANCED: metroRequire, DESKTOP_BITRATE: closure_7, MEDIA_SINK_WANTS_PROPERTIES: closure_8, MediaTypes: closure_9, SIMULCAST_HQ_QUALITY: c10 } = Constants);
-Constants = fn(4695);
+Constants = fn(4697);
 ({ NATIVE_MODE_VALUES: closure_11, InputModes: closure_12, ConnectionStates: map1, Codecs: closure_14, MediaEngineContextTypes: closure_15, SpeakingFlags: closure_16, ResolutionTypes: closure_17, NativeFeatures: closure_18, NoiseCancellerError: closure_19, DEFAULT_VOLUME: closure_20, DEFAULT_STREAM_VOLUME: closure_21, DEFAULT_SOUNDSHARE_VOICE_BITRATE: closure_22, DEFAULT_CALL_BITRATE: closure_23, DEFAULT_CALL_MIN_BITRATE: closure_24, DEFAULT_CALL_MAX_BITRATE: closure_25, DEFAULT_PRIORITY_SPEAKER_DUCKING: closure_26, PING_INTERVAL: closure_27 } = Constants);
 let c28 = 0;
 let Connection;
@@ -108,7 +108,7 @@ class Connection extends tmp4 {
           tmp11 = false === obj.soundshareSentSpeakingEvent;
         }
         if (tmp11) {
-          obj.emit(tmp3(4693).BaseConnectionEvent.SoundshareSpeaking);
+          obj.emit(tmp3(4695).BaseConnectionEvent.SoundshareSpeaking);
           obj.soundshareSentSpeakingEvent = true;
         }
         tmp3 = require;
@@ -366,8 +366,8 @@ class Connection extends tmp4 {
               obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * tmp24(4762)(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = tmp24(4762)(diff1 / (diff + diff1), 0, 1);
+                obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * tmp24(4764)(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = tmp24(4764)(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -394,9 +394,9 @@ class Connection extends tmp4 {
                             if (null != first1.noiseCancellerProcessTime) {
                               const diff3 = first.noiseCancellerProcessTime - first1.noiseCancellerProcessTime;
                               if (diff3 / tmp13 > 8) {
-                                obj.emit(tmp14(4693).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_CPU_OVERUSE);
+                                obj.emit(tmp14(4695).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_CPU_OVERUSE);
                               } else if (0 === diff3) {
-                                obj.emit(tmp14(4693).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_FAILED);
+                                obj.emit(tmp14(4695).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_FAILED);
                               }
                             }
                           }
@@ -409,7 +409,7 @@ class Connection extends tmp4 {
                               if (null != first.voiceActivityDetectorProcessTime) {
                                 if (null != first1.voiceActivityDetectorProcessTime) {
                                   if ((first.voiceActivityDetectorProcessTime - first1.voiceActivityDetectorProcessTime) / diff2 > 4) {
-                                    obj.emit(tmp14(4693).BaseConnectionEvent.VoiceActivityDetectorError, constants9.KRISP_VAD_CPU_OVERUSE);
+                                    obj.emit(tmp14(4695).BaseConnectionEvent.VoiceActivityDetectorError, constants9.KRISP_VAD_CPU_OVERUSE);
                                   }
                                 }
                               }
@@ -783,13 +783,13 @@ prototype["getStats"] = function getStats() {
         const obj = self(1911);
       }
     });
-    let obj = self(4754);
-    resolved = self(4754).timeout(promise, self(4703).STATS_INTERVAL).catch((error) => {
-      if (!(error instanceof self(4754).TimeoutError)) {
+    let obj = self(4756);
+    resolved = self(4756).timeout(promise, self(4705).STATS_INTERVAL).catch((error) => {
+      if (!(error instanceof self(4756).TimeoutError)) {
         throw error;
       }
     });
-    const timeoutResult = self(4754).timeout(promise, self(4703).STATS_INTERVAL);
+    const timeoutResult = self(4756).timeout(promise, self(4705).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1458,7 +1458,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
         const obj = { capture: size2, encode: size2, bitrateMax: calcMaxBitrateFuncResult };
         videoQualityManager2.setGoliveQuality(obj);
         if (self.videoStreamParameters.length <= num5) {
-          const Video = tmp9(4693).BaseConnectionEvent.Video;
+          const Video = tmp9(4695).BaseConnectionEvent.Video;
           ({ userId, audioSSRC } = self);
           const ssrc = self.videoStreamParameters[num5].ssrc;
           const ssrc2 = self.videoStreamParameters[num5].ssrc;
@@ -1600,10 +1600,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "Array" };
+        return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef4757(self.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
+        if (!_modDef4759(self.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(tmp[findIndexResult]);
           tmp18.videoStreamParameters[findIndexResult] = obj;

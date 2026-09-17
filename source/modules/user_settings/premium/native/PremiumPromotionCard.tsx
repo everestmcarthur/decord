@@ -1,14 +1,14 @@
-// Module ID: 13574
-// Function ID: 13575
+// Module ID: 13582
+// Function ID: 13583
 // Name: PremiumPromotionCard
-// Dependencies: [19, 17, 4630, 1074, 1374, 21, 4638, 576, 504, 7272, 7532, 5673, 4634, 1115, 2025, 5060, 8797, 2]
+// Dependencies: [19, 17, 4632, 1074, 1374, 21, 4640, 576, 504, 7276, 7536, 5675, 4636, 1115, 2025, 5062, 8817, 2]
 // Exports: default
 
-// Module 13574 (PremiumPromotionCard)
+// Module 13582 (PremiumPromotionCard)
 import nativeDefault from "native" /* 576 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7532 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7536 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const Constants = fn(1074);
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { width: "100%" }, card: { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, marginBottom: nativeDefault.space.PX_24, overflow: "hidden" }, image: null, nitroWheelIcon: null };
 let size = { alignSelf: "center", marginBottom: nativeDefault.space.PX_24, borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.none, borderBottomLeftRadius: nativeDefault.radii.none, width: "110%", height: 95 };
 obj2.image = size;

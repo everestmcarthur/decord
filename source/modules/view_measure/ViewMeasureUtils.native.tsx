@@ -1,10 +1,10 @@
-// Module ID: 11300
-// Function ID: 11301
+// Module ID: 11308
+// Function ID: 11309
 // Name: ViewMeasureUtils
 // Dependencies: [2]
 // Exports: measureView, measureViewInView, measureViewInWindow, measureViewRef, measureViewRefInView, measureViewRefInWindow
 
-// Module 11300 (ViewMeasureUtils)
+// Module 11308 (ViewMeasureUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");

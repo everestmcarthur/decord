@@ -1,17 +1,17 @@
-// Module ID: 12763
-// Function ID: 12764
+// Module ID: 12771
+// Function ID: 12772
 // Name: UserProfileAlertUtils
-// Dependencies: [19, 21, 4984, 12764, 12765, 12766, 12767, 12768, 12769, 2]
+// Dependencies: [19, 21, 4986, 12772, 12773, 12774, 12775, 12776, 12777, 2]
 // Exports: alertUserReported, confirmCancelFriendRequest, confirmRemoveFriend, confirmRemoveGameFriend, confirmThreadRemove, confirmVideoUnstableConnection
 
-// Module 12763 (UserProfileAlertUtils)
-import useAlertStore from "useAlertStore" /* 4984 */;
-import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 12764 */;
-import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 12765 */;
-import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 12766 */;
-import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 12767 */;
-import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 12768 */;
-import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 12769 */;
+// Module 12771 (UserProfileAlertUtils)
+import useAlertStore from "useAlertStore" /* 4986 */;
+import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 12772 */;
+import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 12773 */;
+import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 12774 */;
+import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 12775 */;
+import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 12776 */;
+import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 12777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

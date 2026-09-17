@@ -1,19 +1,19 @@
-// Module ID: 16469
-// Function ID: 16470
+// Module ID: 16499
+// Function ID: 16500
 // Name: getGuildsBarGuildAccessibilityActions
-// Dependencies: [1980, 5524, 1115, 9501, 4489, 16470, 5606, 2]
+// Dependencies: [1980, 5526, 1115, 9512, 4491, 16500, 5608, 2]
 // Exports: default
 
-// Module 16469 (getGuildsBarGuildAccessibilityActions)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5606 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9501 */;
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16470 */;
+// Module 16499 (getGuildsBarGuildAccessibilityActions)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9512 */;
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16500 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import SortedGuildStore from "SortedGuildStore" /* 5524 */;
+import SortedGuildStore from "SortedGuildStore" /* 5526 */;
 
 const require = globalThis.__r;
 
-const shared = tmp4(4489);
+const shared = tmp4(4491);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx");
@@ -85,7 +85,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
                 tmp3Result.moveById(tmp, node.id, true, true);
                 UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
                 if (null != tmp2) {
-                  const AccessibilityAnnouncer = tmp10(4489).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = tmp10(4491).AccessibilityAnnouncer;
                   AccessibilityAnnouncer.announce(tmp2);
                 }
                 tmp10 = require;
@@ -171,7 +171,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
                 tmp3Result.moveById(tmp, node.id, true, true);
                 UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
                 if (null != tmp2) {
-                  const AccessibilityAnnouncer = tmp10(4489).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = tmp10(4491).AccessibilityAnnouncer;
                   AccessibilityAnnouncer.announce(tmp2);
                 }
                 tmp10 = require;
@@ -252,7 +252,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               tmp3Result.moveById(tmp, containingFolder.id, false, false);
               UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
               if (null != tmp2) {
-                const AccessibilityAnnouncer = tmp9(4489).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = tmp9(4491).AccessibilityAnnouncer;
                 AccessibilityAnnouncer.announce(tmp2);
               }
               tmp9 = require;
@@ -277,7 +277,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               tmp3Result.moveById(tmp, containingFolder.id, true, false);
               UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
               if (null != tmp2) {
-                const AccessibilityAnnouncer = tmp9(4489).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = tmp9(4491).AccessibilityAnnouncer;
                 AccessibilityAnnouncer.announce(tmp2);
               }
               tmp9 = require;

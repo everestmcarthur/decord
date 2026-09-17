@@ -1,12 +1,12 @@
-// Module ID: 17012
-// Function ID: 17013
+// Module ID: 17051
+// Function ID: 17052
 // Name: BadgeCustomizationProfileCoachmark
-// Dependencies: [19, 1372, 1955, 504, 4295, 1115, 4348, 11280, 2]
+// Dependencies: [19, 1372, 1955, 504, 4297, 1115, 4350, 11288, 2]
 // Exports: default
 
-// Module 17012 (BadgeCustomizationProfileCoachmark)
+// Module 17051 (BadgeCustomizationProfileCoachmark)
 import util from "util" /* 1115 */;
-import native from "native" /* 4348 */;
+import native from "native" /* 4350 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

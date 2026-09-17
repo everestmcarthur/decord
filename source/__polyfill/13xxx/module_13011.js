@@ -1,67 +1,131 @@
 // Module ID: 13011
 // Function ID: 13012
-// Dependencies: [12936, 12939, 12968, 12954, 12967, 12988, 12958, 12959, 12945, 12976, 12953, 12952, 12940]
-// Exports: getTraceData
+// Dependencies: [13012, 12992, 13013, 12972, 12976, 12948, 13005]
+// Exports: createTransport
 
 // Module 13011
-import errorCallback from "errorCallback" /* 12936 */;
-import _mod12967 from "module_12967" /* 12967 */;
-import "module_12939";
-import __SENTRY_DEBUG__ from "module_12968" /* 12968 */;
-import dateTimestampInSeconds from "module_12954" /* 12954 */;
+import _mod12992 from "module_12992" /* 12992 */;
+import _mod13005 from "module_13005" /* 13005 */;
 
-errorCallback;
+const require = globalThis.__r;
 
-export const getTraceData = function getTraceData() {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  const client = _mod12967.getClient();
-  if (obj3.isEnabled()) {
-    if (client) {
-      const mainCarrier = tmp(12958).getMainCarrier();
-      const tmpResult = tmp(12958);
-      const asyncContextStrategy = tmp(12959).getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
-      } else {
-        const currentScope = tmp(12967).getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          span = tmp(12945).getActiveSpan();
-          const tmpResult10 = tmp(12945);
-        }
-        if (span) {
-          let spanToTraceHeaderResult = tmp(12945).spanToTraceHeader(span);
-          const tmpResult11 = tmp(12945);
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = tmp(12952).generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult12 = tmp(12952);
-        }
-        const tmpResult13 = tmp(12976);
-        if (span) {
-          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
-        }
-        const tmpResult9 = tmp(12967);
-        const result = tmp(12953).dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = tmp(12952).TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          let obj5 = obj4;
-        } else {
-          const logger = tmp(12940).logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj5 = {};
-        }
-        return obj5;
-      }
-      const tmpResult8 = tmp(12959);
+require = arg1;
+let dependencyMap = arg6;
+
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export const createTransport = function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
     }
+    promiseBuffer = require("module_13012").makePromiseBuffer(num);
+    let obj = require("module_13012");
   }
-  return {};
+  closure_3 = {};
+  return {
+    send(arg0) {
+      const items = [];
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod12992.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
+            }
+            const tmp4 = tmp6;
+          }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
+        } else {
+          items.push(arg0);
+        }
+      });
+      if (0 === items.length) {
+        return tmp(tmp2[3]).resolvedSyncPromise({});
+      } else {
+        dependencyMap = tmp(tmp2[1]).createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {
+
+        }
+        const tmpResult2 = tmp(tmp2[1]);
+        return recordEnvelopeLoss.add(() => {
+          const obj = { body: _mod12992.serializeEnvelope(dependencyMap) };
+          return dependencyMap(obj).then((statusCode) => {
+            let DEBUG_BUILD = undefined !== statusCode.statusCode;
+            if (DEBUG_BUILD) {
+              let tmp = statusCode.statusCode < 200;
+              if (!tmp) {
+                tmp = statusCode.statusCode >= 300;
+              }
+              DEBUG_BUILD = tmp;
+            }
+            if (DEBUG_BUILD) {
+              DEBUG_BUILD = items(12976).DEBUG_BUILD;
+            }
+            if (DEBUG_BUILD) {
+              const logger = items(12948).logger;
+              const _HermesInternal = HermesInternal;
+              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
+            }
+            closure_3 = items(13013).updateRateLimits(closure_3, statusCode);
+            return statusCode;
+          }, (arg0) => {
+            if (typeof recordEnvelopeLoss === "function") {
+              const network_error = "network_error";
+              closure_0(12992).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                if ("event" === arg1) {
+                  const _Array = Array;
+                  let tmp4;
+                  if (Array.isArray(arg0)) {
+                    tmp4 = arg0[1];
+                  }
+                  const tmp = tmp4;
+                }
+                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              });
+              throw arg0;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+        }).then((result) => result, (arg0) => {
+          if (arg0 instanceof _mod13005.SentryError) {
+            if (tmp(12976).DEBUG_BUILD) {
+              const logger = tmp(12948).logger;
+              logger.error("Skipped sending event because buffer is full.");
+            }
+            if (typeof recordEnvelopeLoss === "function") {
+              const queue_overflow = "queue_overflow";
+              tmp(12992).forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                if ("event" === arg1) {
+                  const _Array = Array;
+                  let tmp4;
+                  if (Array.isArray(arg0)) {
+                    tmp4 = arg0[1];
+                  }
+                  const tmp = tmp4;
+                }
+                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              });
+              const tmpResult = tmp(12992);
+              return tmp(12972).resolvedSyncPromise({});
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw arg0;
+          }
+        });
+      }
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
+    }
+  };
 };

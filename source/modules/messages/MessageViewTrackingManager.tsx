@@ -1,16 +1,16 @@
-// Module ID: 11451
-// Function ID: 11452
+// Module ID: 11459
+// Function ID: 11460
 // Name: MessageViewTrackingManager
-// Dependencies: [1074, 1249, 7292, 1370, 7228, 1438, 1241, 2]
+// Dependencies: [1074, 1249, 7296, 1370, 7232, 1438, 1241, 2]
 
-// Module 11451 (MessageViewTrackingManager)
+// Module 11459 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import privDefault from "priv" /* 1438 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 import size from "module_2" /* 2 */;
 
 function getAnalyticsConfig(type) {

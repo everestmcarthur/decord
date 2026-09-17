@@ -1,12 +1,12 @@
-// Module ID: 13330
-// Function ID: 13331
+// Module ID: 13338
+// Function ID: 13339
 // Name: VoiceChannelBadgeExperiment
-// Dependencies: [4554, 4551, 2]
+// Dependencies: [4556, 4553, 2]
 // Exports: getVoiceChannelBadgeExperiment, useVoiceChannelBadgeExperiment
 
-// Module 13330 (VoiceChannelBadgeExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4554 */;
-import createExperiment from "module_4551" /* 4551 */;
+// Module 13338 (VoiceChannelBadgeExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4556 */;
+import createExperiment from "module_4553" /* 4553 */;
 import size from "module_2" /* 2 */;
 
 const obj = { id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: null };

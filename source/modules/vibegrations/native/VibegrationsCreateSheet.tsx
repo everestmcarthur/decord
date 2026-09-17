@@ -1,15 +1,15 @@
-// Module ID: 16736
-// Function ID: 16737
+// Module ID: 16766
+// Function ID: 16767
 // Name: VibegrationsCreateSheet
-// Dependencies: [5, 32, 19, 17, 16725, 21, 4638, 576, 16737, 16730, 4605, 16731, 16739, 1115, 3591, 7305, 16740, 16741, 16742, 7307, 7259, 7195, 5773, 5691, 4634, 5060, 2]
+// Dependencies: [5, 32, 19, 17, 16752, 21, 4640, 576, 16767, 16760, 4607, 16761, 16769, 1115, 3593, 7309, 16770, 16771, 16772, 7311, 7263, 7199, 5775, 5693, 4636, 5062, 2]
 // Exports: default
 
-// Module 16736 (VibegrationsCreateSheet)
+// Module 16766 (VibegrationsCreateSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4605 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7305 */;
-import VibegrationsEffortPicker from "VibegrationsEffortPicker" /* 16741 */;
-import VibegrationsTemplates from "VibegrationsTemplates" /* 16742 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4607 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7309 */;
+import VibegrationsEffortPicker from "VibegrationsEffortPicker" /* 16771 */;
+import VibegrationsTemplates from "VibegrationsTemplates" /* 16772 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,12 +18,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16725);
+const VibegrationsConnectionStore = fn(16752);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsCreateSheet = "VibegrationsCreateSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -380,11 +380,11 @@ export default function VibegrationsCreateSheet(guildId) {
   obj3.header = closure_10(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj4);
   let obj5 = { style: tmp.content, children: null };
   let obj6 = { style: tmp.form, children: null };
-  let obj7 = { placeholder: null, autoComplete: "off", value: null, onChange: null, isDisabled: null };
+  let obj7 = { placeholder: null, autoComplete: "off", value: null, onChange: null, disabled: null };
   const intl6 = require("util").intl;
   obj7.placeholder = intl6.string(onCreated(str[14]).TU9IGR);
   obj7.value = str;
-  obj7.isDisabled = first2;
+  obj7.disabled = first2;
   const items5 = [closure_10(require("TextArea").TextArea, obj7), , , , ];
   let obj8 = { hasIcons: false, children: null };
   const obj9 = { label: stringResult, trailing: closure_10(require("Text/Text").Text, { variant: "text-md/normal", color: "text-muted", children: memo[first] }), arrow: true, disabled: first2, onPress: callback };

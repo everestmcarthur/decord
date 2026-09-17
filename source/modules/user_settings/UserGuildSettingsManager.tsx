@@ -1,15 +1,15 @@
-// Module ID: 7226
-// Function ID: 7227
+// Module ID: 7230
+// Function ID: 7231
 // Name: UserGuildSettingsManager
-// Dependencies: [5, 7227, 1958, 1074, 1091, 1271, 7228, 2]
+// Dependencies: [5, 7231, 1958, 1074, 1091, 1271, 7232, 2]
 
-// Module 7226 (UserGuildSettingsManager)
+// Module 7230 (UserGuildSettingsManager)
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7227 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7231 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 
 require = fn;
 function handleConnectionOpen() {

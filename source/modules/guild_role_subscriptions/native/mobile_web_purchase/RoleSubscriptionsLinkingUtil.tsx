@@ -1,9 +1,9 @@
-// Module ID: 7425
-// Function ID: 7426
+// Module ID: 7429
+// Function ID: 7430
 // Name: RoleSubscriptionsLinkingUtil
-// Dependencies: [5, 1074, 1965, 7426, 1897, 3, 2]
+// Dependencies: [5, 1074, 1965, 7430, 1897, 3, 7434, 2]
 
-// Module 7425 (RoleSubscriptionsLinkingUtil)
+// Module 7429 (RoleSubscriptionsLinkingUtil)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -259,7 +259,7 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
           closure_129_1 = value.default;
           c5 = 3;
           c6 = 1;
-          const obj7 = { value: closure_129_1.redirectDeveloperPortalWithHandoffToken(closure_129_0), done: false };
+          const obj7 = { value: closure_129_1.redirectDeveloperPortalWithHandoffToken(closure_129_0, closure_130_0(closure_130_2[6]).LoginHandoffSource.ROLE_SUBSCRIPTION_SETTING), done: false };
           return obj7;
         }
       } else if (arg0 === 1) {
@@ -275,11 +275,11 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
         c6 = 3;
         return { value: true, done: true };
       }
-    } catch (tmp27) {
-      closure_3 = tmp27;
+    } catch (tmp30) {
+      closure_3 = tmp30;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp27;
+        throw tmp30;
       } else {
         c5 = tmp;
       }

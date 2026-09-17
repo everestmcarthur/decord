@@ -1,13 +1,13 @@
-// Module ID: 7818
-// Function ID: 7819
+// Module ID: 7824
+// Function ID: 7825
 // Name: QuestServerUtils
-// Dependencies: [32, 4823, 7819, 7816, 2]
+// Dependencies: [32, 4825, 7825, 7822, 2]
 // Exports: excludedQuestFromServer, getClaimedQuestWithUserStatusFromServer, isQuestWithKnownConfigVersion, questConfigFromServer, questUserStatusFromServer, questWithUserStatusFromServer, questsEntitlementsFromServer, questsRewardCodeFromServer
 
-// Module 7818 (QuestServerUtils)
-import _mod4823 from "module_4823" /* 4823 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7816 */;
-import Quest from "Quest" /* 7819 */;
+// Module 7824 (QuestServerUtils)
+import _mod4825 from "module_4825" /* 4825 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7822 */;
+import Quest from "Quest" /* 7825 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -60,7 +60,7 @@ function _questsEntitlementFromServer(skuId) {
       obj3.reward = obj4;
       obj2.questRewards = obj3;
       tmp2 = obj2;
-    } else if (tmp3(7816).QuestRewardTypes.REWARD_CODE === tag) {
+    } else if (tmp3(7822).QuestRewardTypes.REWARD_CODE === tag) {
       const obj5 = { tag: quest_rewards.reward.tag, rewardCode: null };
       const obj6 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };
       ({ user_id: obj8.userId, quest_id: obj8.questId, code: obj8.code, platform: obj8.platform, claimed_at: obj8.claimedAt, tier } = quest_rewards.reward.reward_code);
@@ -86,14 +86,14 @@ const result = size.fileFinishedImporting("modules/quests/utils/QuestServerUtils
 
 export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = _mod4823.match(config.config);
+    const match = _mod4825.match(config.config);
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
 };
 export const questConfigFromServer = function questConfigFromServer(body) {
-  const match = _mod4823.match(body);
+  const match = _mod4825.match(body);
   return match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
 };
 export const questUserStatusFromServer = function questUserStatusFromServer(body) {
@@ -114,7 +114,7 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
 };
 export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
   const obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
-  const match = _mod4823.match(body.config);
+  const match = _mod4825.match(body.config);
   obj.config = match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {

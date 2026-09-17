@@ -1,10 +1,10 @@
-// Module ID: 4301
-// Function ID: 4302
+// Module ID: 4303
+// Function ID: 4304
 // Name: SubscriptionStore
-// Dependencies: [1373, 4296, 4302, 502, 1074, 504, 573, 2]
+// Dependencies: [1373, 4298, 4304, 502, 1074, 504, 573, 2]
 // Exports: getSubscriptionOfType
 
-// Module 4301 (SubscriptionStore)
+// Module 4303 (SubscriptionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1373 */;
@@ -21,8 +21,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(4296).isNoneSubscription;
-const SubscriptionRecord = fn(4302).SubscriptionRecord;
+const isNoneSubscription = fn(4298).isNoneSubscription;
+const SubscriptionRecord = fn(4304).SubscriptionRecord;
 const Constants = fn(1074);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;

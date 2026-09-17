@@ -1,9 +1,9 @@
-// Module ID: 12592
-// Function ID: 12593
+// Module ID: 12601
+// Function ID: 12602
 // Name: ChatInputGuardSpamMessageRequest
-// Dependencies: [19, 1372, 21, 1484, 504, 12593, 12585, 4336, 1115, 5683, 12591, 4649, 2]
+// Dependencies: [19, 1372, 21, 1484, 504, 12602, 12594, 4338, 1115, 5685, 12600, 4651, 2]
 
-// Module 12592 (ChatInputGuardSpamMessageRequest)
+// Module 12601 (ChatInputGuardSpamMessageRequest)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -21,20 +21,20 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   const items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj2 = channel(504);
-  dependencyMap = channel(12593).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(12602).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(12593);
-  const messageRequestActions = channel(12585).useMessageRequestActions({
+  const obj3 = channel(12602);
+  const messageRequestActions = channel(12594).useMessageRequestActions({
     user: stateFromStores,
     onError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = channel(1115).intl;
       obj2.content = intl.string(channel(1115).t["EDYbS+"]);
-      obj2.icon = navigation(5683);
-      navigation(4336).open(obj2);
+      obj2.icon = navigation(5685);
+      navigation(4338).open(obj2);
     },
     onRejectSuccess: callback
   });
@@ -47,15 +47,15 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
     tmp7 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(12585);
+  const obj4 = channel(12594);
   const obj5 = {
     user: stateFromStores,
     onError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = channel(1115).intl;
       obj2.content = intl.string(channel(1115).t["EDYbS+"]);
-      obj2.icon = navigation(5683);
-      navigation(4336).open(obj2);
+      obj2.icon = navigation(5685);
+      navigation(4338).open(obj2);
     },
     onRejectSuccess: callback
   };
@@ -83,5 +83,5 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   };
   obj6.buttonSecondaryDisabled = tmp7;
   obj6.buttonSecondaryLoading = isUserProfileLoading;
-  return tmp8(navigation(12591), obj6);
+  return tmp8(navigation(12600), obj6);
 });

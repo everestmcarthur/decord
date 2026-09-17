@@ -1,10 +1,10 @@
-// Module ID: 16819
-// Function ID: 16820
+// Module ID: 16858
+// Function ID: 16859
 // Name: getFrameLaunchContextQueryParams
 // Dependencies: [2]
 // Exports: default
 
-// Module 16819 (getFrameLaunchContextQueryParams)
+// Module 16858 (getFrameLaunchContextQueryParams)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameLaunchContextQueryParams.tsx");

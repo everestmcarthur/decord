@@ -1,13 +1,13 @@
-// Module ID: 10062
-// Function ID: 10063
+// Module ID: 10073
+// Function ID: 10074
 // Name: RequestToSpeakParticipantList
-// Dependencies: [19, 17, 1074, 21, 4638, 576, 7272, 5208, 8308, 10063, 1177, 4634, 10064, 1115, 10065, 4785, 7102, 5517, 8528, 5673, 10066, 7182, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 576, 7276, 5210, 8327, 10074, 1177, 4636, 10075, 1115, 10076, 4787, 7106, 5519, 8547, 5675, 10077, 7186, 2]
 // Exports: default
 
-// Module 10062 (RequestToSpeakParticipantList)
+// Module 10073 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 576 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8528 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8327 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8547 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -84,7 +84,7 @@ function RequestToSpeakParticipant(participant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 }, listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 }, participantItemContainer: { padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, touchableContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, participantAvatarContainer: { paddingLeft: 4 }, participantNameplateContainer: { paddingHorizontal: 16, flex: 1 }, participantNameplateText: { fontSize: 16, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, participantActionContainer: { flexDirection: "row", paddingRight: 4 }, participantActionIcon: null, emptyContainer: null, emptyParticipant: null, emptyTitle: null, emptyBody: null };
 let obj3 = { fontSize: 16, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.participantActionIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -105,7 +105,7 @@ export default function RequestToSpeakParticipantList(channel) {
   if (0 === sortedRequestToSpeakParticipants.length) {
     let obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.emptyContainer, children: null };
-    const obj4 = { source: require("module_10066") };
+    const obj4 = { source: require("module_10077") };
     const items = [closure_4(require("FastImage"), obj4), , ];
     const obj5 = { style: tmp.emptyTitle, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[13]).intl;

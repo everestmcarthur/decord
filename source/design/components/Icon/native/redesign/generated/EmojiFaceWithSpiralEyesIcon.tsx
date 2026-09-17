@@ -1,13 +1,13 @@
-// Module ID: 15487
-// Function ID: 15488
+// Module ID: 15492
+// Function ID: 15493
 // Name: EmojiFaceWithSpiralEyesIcon
-// Dependencies: [19, 21, 576, 4338, 15488, 2]
+// Dependencies: [19, 21, 576, 4340, 15493, 2]
 // Exports: EmojiFaceWithSpiralEyesIcon
 
-// Module 15487 (EmojiFaceWithSpiralEyesIcon)
+// Module 15492 (EmojiFaceWithSpiralEyesIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod15488 from "module_15488" /* 15488 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod15493 from "module_15493" /* 15493 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiFaceWithSpiralEyesIcon = function EmojiFaceWithSpiralEyesIcon(
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15488, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15493, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

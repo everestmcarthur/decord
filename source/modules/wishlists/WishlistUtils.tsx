@@ -1,19 +1,19 @@
-// Module ID: 13221
-// Function ID: 13222
+// Module ID: 13229
+// Function ID: 13230
 // Name: WishlistUtils
-// Dependencies: [32, 5597, 8920, 8921, 8922, 1074, 1374, 1115, 7341, 2]
+// Dependencies: [32, 5599, 8936, 8937, 8938, 1074, 1374, 1115, 7345, 2]
 // Exports: buildReorderedOwnedItemsLastWishlistItems, buildReorderedWishlistData, createNitroSuggestedSku, isEligibleWishlistItemOnMobile
 
-// Module 13221 (WishlistUtils)
+// Module 13229 (WishlistUtils)
 import util from "util" /* 1115 */;
-import StorefrontUtils from "StorefrontUtils" /* 7341 */;
+import StorefrontUtils from "StorefrontUtils" /* 7345 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKURecord from "SKURecord" /* 5597 */;
+import SKURecord from "SKURecord" /* 5599 */;
 
 require = fn;
-let closure_4 = fn(8920).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(8921).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(8922).isSKUWishlistItemRecord;
+let closure_4 = fn(8936).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(8937).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(8938).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1074).SKUProductLines;
 const PremiumSubscriptionSKUs = fn(1374).PremiumSubscriptionSKUs;
 const size = fn(2);

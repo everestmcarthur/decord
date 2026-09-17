@@ -1,24 +1,24 @@
-// Module ID: 15084
-// Function ID: 15085
+// Module ID: 15092
+// Function ID: 15093
 // Name: PlayStationTwoWayLinkUpsell
-// Dependencies: [19, 1074, 21, 4638, 2025, 15082, 1115, 5673, 15085, 1944, 9396, 2]
+// Dependencies: [19, 1074, 21, 4640, 2025, 15090, 1115, 5675, 15093, 1944, 9407, 2]
 // Exports: PlayStationTwoWayLinkUpsell
 
-// Module 15084 (PlayStationTwoWayLinkUpsell)
+// Module 15092 (PlayStationTwoWayLinkUpsell)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9396 */;
-import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 15082 */;
-import _modDef15085 from "module_15085" /* 15085 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9407 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 15090 */;
+import _modDef15093 from "module_15093" /* 15093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx");
@@ -32,7 +32,7 @@ export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell(
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef15085;
+  obj3.source = _modDef15093;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

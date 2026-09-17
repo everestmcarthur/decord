@@ -1,13 +1,13 @@
-// Module ID: 11902
-// Function ID: 11903
+// Module ID: 11911
+// Function ID: 11912
 // Name: getRemoteJoinableActivityPlatform
-// Dependencies: [7218, 4656, 1074, 1365, 1385, 11608, 2]
+// Dependencies: [7222, 4658, 1074, 1365, 1385, 11616, 2]
 // Exports: getRemoteJoinableActivityPlatform
 
-// Module 11902 (getRemoteJoinableActivityPlatform)
+// Module 11911 (getRemoteJoinableActivityPlatform)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 7218 */;
-import SessionsStore from "SessionsStore" /* 4656 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 7222 */;
+import SessionsStore from "SessionsStore" /* 4658 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -64,7 +64,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
               }
             }
           }
-          tmp11Result = tmp11(11608);
+          tmp11Result = tmp11(11616);
         }
         return tmp4;
       }

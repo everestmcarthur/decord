@@ -1,9 +1,9 @@
-// Module ID: 17160
-// Function ID: 17161
+// Module ID: 17200
+// Function ID: 17201
 // Name: PremiumTrialOfferActionSheetKillSwitchExperiment
 // Dependencies: [1434, 2]
 
-// Module 17160 (PremiumTrialOfferActionSheetKillSwitchExperiment)
+// Module 17200 (PremiumTrialOfferActionSheetKillSwitchExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

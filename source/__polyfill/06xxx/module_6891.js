@@ -1,6 +1,6 @@
 // Module ID: 6891
 // Function ID: 6892
-// Dependencies: [41, 42, 93, 95, 98, 6784]
+// Dependencies: [41, 42, 93, 95, 98, 6787]
 
 // Module 6891
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-class NativeGesture {
+class FlingGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, NativeGesture);
+    tmp = closure_0(this, FlingGesture);
     tmp2 = c2;
-    obj = c2(NativeGesture);
+    obj = c2(FlingGesture);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -45,28 +45,28 @@ class NativeGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
+    tmp3Result.handlerName = "FlingGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6784).BaseGesture);
+_classCallCheck = FlingGesture;
+_inherits(FlingGesture, fn(6787).BaseGesture);
 const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
+  key: "numberOfPointers",
+  value: function numberOfPointers(numberOfPointers) {
+    this.config.numberOfPointers = numberOfPointers;
     return this;
   }
 };
 const items = [
   entry,
   {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
+    key: "direction",
+    value: function direction(dependencyMap) {
+      this.config.direction = dependencyMap;
       return this;
     }
   }
 ];
 
-export const NativeGesture = _createClass(NativeGesture, items);
+export const FlingGesture = _createClass(FlingGesture, items);

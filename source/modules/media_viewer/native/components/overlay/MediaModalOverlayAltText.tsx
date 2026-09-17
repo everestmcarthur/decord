@@ -1,16 +1,16 @@
-// Module ID: 13113
-// Function ID: 13114
+// Module ID: 13121
+// Function ID: 13122
 // Name: MediaModalOverlayAltText
-// Dependencies: [19, 21, 4638, 576, 1612, 1936, 5208, 11677, 4634, 1115, 2]
+// Dependencies: [19, 21, 4640, 576, 1612, 1936, 5210, 11685, 4636, 1115, 2]
 
-// Module 13113 (MediaModalOverlayAltText)
+// Module 13121 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 576 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11677 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11685 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" } };
   return obj;
@@ -42,8 +42,8 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
       const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1115).intl;
       obj2.children = intl.string(tmp3(1115).t.Q5VqrN);
-      obj.children = jsx(tmp3(4634).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5208).PressableOpacity, {
+      obj.children = jsx(tmp3(4636).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5210).PressableOpacity, {
         style: tmp2.container,
         onPress() {
               if (str == null) {

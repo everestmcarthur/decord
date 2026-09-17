@@ -1,15 +1,15 @@
-// Module ID: 11016
-// Function ID: 11017
+// Module ID: 11024
+// Function ID: 11025
 // Name: PeopleUtils
-// Dependencies: [4286, 1074, 11017, 9185, 5509, 7409, 11018, 11019, 573, 4482, 2]
+// Dependencies: [4288, 1074, 11025, 9196, 5511, 7413, 11026, 11027, 573, 4484, 2]
 
-// Module 11016 (PeopleUtils)
+// Module 11024 (PeopleUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserUtilsDefault from "UserUtils" /* 4482 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9185 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 11017 */;
-import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 11019 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9196 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 11025 */;
+import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 11027 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 require = fn;
 const AbortCodes = fn(1074).AbortCodes;

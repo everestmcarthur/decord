@@ -1,14 +1,14 @@
-// Module ID: 15193
-// Function ID: 15194
+// Module ID: 15198
+// Function ID: 15199
 // Name: QuestHomeOrbShopRewardCard
-// Dependencies: [19, 17, 1372, 1076, 21, 4638, 576, 8904, 504, 4295, 8905, 7272, 8907, 8968, 7663, 9003, 4605, 8305, 15194, 8986, 5208, 2]
+// Dependencies: [19, 17, 1372, 1076, 21, 4640, 576, 8920, 504, 4297, 8921, 7276, 8923, 8984, 7667, 9019, 4607, 8324, 15199, 9002, 5210, 2]
 // Exports: default
 
-// Module 15193 (QuestHomeOrbShopRewardCard)
+// Module 15198 (QuestHomeOrbShopRewardCard)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7663 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8305 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7667 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8324 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { card: { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" }, assetTile: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.assetTile = {};

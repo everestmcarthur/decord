@@ -1,12 +1,12 @@
-// Module ID: 13182
-// Function ID: 13183
+// Module ID: 13190
+// Function ID: 13191
 // Name: isActivityJoinableOnCurrentPlatform
-// Dependencies: [1074, 1365, 1609, 7423, 2]
+// Dependencies: [1074, 1365, 1609, 7427, 2]
 // Exports: default, getCurrentActivityGamePlatform, isActivityJoinable
 
-// Module 13182 (isActivityJoinableOnCurrentPlatform)
+// Module 13190 (isActivityJoinableOnCurrentPlatform)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import hasFlagDefault from "hasFlag" /* 7423 */;
+import hasFlagDefault from "hasFlag" /* 7427 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

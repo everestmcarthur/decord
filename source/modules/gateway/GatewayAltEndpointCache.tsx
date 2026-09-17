@@ -1,9 +1,9 @@
-// Module ID: 14670
-// Function ID: 14671
+// Module ID: 14678
+// Function ID: 14679
 // Name: GatewayAltEndpointCache
 // Dependencies: [2]
 
-// Module 14670 (GatewayAltEndpointCache)
+// Module 14678 (GatewayAltEndpointCache)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewayAltEndpointCache.tsx");

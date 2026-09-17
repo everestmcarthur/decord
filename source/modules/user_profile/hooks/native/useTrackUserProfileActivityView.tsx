@@ -1,12 +1,12 @@
-// Module ID: 13168
-// Function ID: 13169
+// Module ID: 13176
+// Function ID: 13177
 // Name: useTrackUserProfileActivityView
-// Dependencies: [32, 19, 8932, 504, 2]
+// Dependencies: [32, 19, 8948, 504, 2]
 // Exports: default
 
-// Module 13168 (useTrackUserProfileActivityView)
+// Module 13176 (useTrackUserProfileActivityView)
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8932 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8948 */;
 
 const require = globalThis.__r;
 

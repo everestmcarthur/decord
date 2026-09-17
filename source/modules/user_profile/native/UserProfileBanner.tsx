@@ -1,11 +1,11 @@
-// Module ID: 8374
-// Function ID: 8375
+// Module ID: 8393
+// Function ID: 8394
 // Name: UserProfileBanner
-// Dependencies: [32, 19, 17, 1074, 21, 4638, 1936, 8375, 1397, 8382, 5208, 1115, 8383, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4640, 1936, 8394, 1397, 8401, 5210, 1115, 8402, 2]
 // Exports: default
 
-// Module 8374 (UserProfileBanner)
-import BannerDefault from "Banner" /* 8382 */;
+// Module 8393 (UserProfileBanner)
+import BannerDefault from "Banner" /* 8401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const BANNER_HEIGHT = fn(1074).BANNER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");

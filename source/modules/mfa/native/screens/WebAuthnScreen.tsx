@@ -1,19 +1,20 @@
-// Module ID: 15789
-// Function ID: 15790
+// Module ID: 15795
+// Function ID: 15796
 // Name: WebAuthnScreen
-// Dependencies: [32, 19, 17, 21, 4638, 576, 1115, 1177, 1364, 1271, 7059, 15790, 14789, 7057, 15793, 2]
+// Dependencies: [32, 19, 21, 4640, 576, 6710, 1115, 1177, 1364, 1271, 7063, 15796, 14797, 7061, 15799, 2]
 // Exports: default
 
-// Module 15789 (WebAuthnScreen)
+// Module 15795 (WebAuthnScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 7057 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15790 */;
+import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 6710 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 7061 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 15796 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const buttonDefault = tmp15(15793);
+const buttonDefault = tmp15(15799);
 require = fn;
 function AndroidAuthRadioGroup(setAuthenticator) {
   setAuthenticator = setAuthenticator.setAuthenticator;
@@ -38,13 +39,13 @@ function AndroidAuthRadioGroup(setAuthenticator) {
     withSpacing: true
   });
 }
-const NativeModules = fn(17).NativeModules;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { AUTHENTICATE: 0, [0]: "AUTHENTICATE", ANDROID_PASSKEY: 1, [1]: "ANDROID_PASSKEY" };
-let closure_8 = { [obj4.AUTHENTICATE]: NativeModules.DCDSecurityKeyManager.authenticate, [obj4.ANDROID_PASSKEY]: NativeModules.DCDSecurityKeyManager.authenticatePasskey };
+let obj5 = { [AUTHENTICATE]: NativeSecurityKeyManagerModuleDefault.authenticate, [ANDROID_PASSKEY]: NativeSecurityKeyManagerModuleDefault.authenticatePasskey };
+({ AUTHENTICATE, ANDROID_PASSKEY } = obj4);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/mfa/native/screens/WebAuthnScreen.tsx");
 
@@ -64,7 +65,7 @@ export default function WebAuthnScreen(arg0) {
   const methods = mfaChallenge.methods;
   const challenge = methods.find((type) => "webauthn" === type.type).challenge;
   const items = [authenticatorSelection];
-  const memo = obj.useMemo(() => closure_8[first], items);
+  const memo = obj.useMemo(() => obj5[first], items);
   const items1 = [memo, challenge, finish];
   const callback = obj.useCallback(() => {
     dependencyMap(undefined);
@@ -77,9 +78,9 @@ export default function WebAuthnScreen(arg0) {
         const intl = tmp(1115).intl;
         dependencyMap(intl.string(tmp(1115).t.xSCvBf));
       } else {
-        const result = tmp(7059).captureWebAuthnException(error, {});
+        const result = tmp(7063).captureWebAuthnException(error, {});
         dependencyMap(error.message);
-        const tmpResult = tmp(7059);
+        const tmpResult = tmp(7063);
       }
     }).finally(() => _undefined(false));
   }, items1);
@@ -89,7 +90,7 @@ export default function WebAuthnScreen(arg0) {
   obj3.headerText = intl.string(finish(1115).t.saHocI);
   const intl2 = tmp5(1115).intl;
   obj3.subtitle = intl2.string(finish(1115).t.YpMrqM);
-  obj3.headerImage = challenge(finish(14789).KeyImage, {});
+  obj3.headerImage = challenge(finish(14797).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };
@@ -101,7 +102,7 @@ export default function WebAuthnScreen(arg0) {
     shouldDisplayAndroidFidoSelector = tmp14(AndroidAuthRadioGroup, obj4);
   }
   obj3.content = shouldDisplayAndroidFidoSelector;
-  const obj5 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
+  obj5 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
   const tmp16 = MfaOptionScreenDefault;
   const intl3 = tmp5(1115).intl;
   obj5.text = intl3.string(finish(1115).t.Xr3Eks);

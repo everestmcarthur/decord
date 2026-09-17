@@ -1,13 +1,13 @@
-// Module ID: 5167
-// Function ID: 5168
+// Module ID: 5169
+// Function ID: 5170
 // Name: ForumWarningIcon
-// Dependencies: [19, 21, 576, 4338, 5135, 2]
+// Dependencies: [19, 21, 576, 4340, 5137, 2]
 // Exports: ForumWarningIcon
 
-// Module 5167 (ForumWarningIcon)
+// Module 5169 (ForumWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod5135 from "module_5135" /* 5135 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod5137 from "module_5137" /* 5137 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ForumWarningIcon = function ForumWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5135, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5137, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

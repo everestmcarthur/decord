@@ -1,13 +1,13 @@
-// Module ID: 16723
-// Function ID: 16724
+// Module ID: 16754
+// Function ID: 16755
 // Name: VibegrationsProjectStore
-// Dependencies: [32, 1372, 7355, 504, 573, 2]
+// Dependencies: [32, 1372, 7359, 504, 573, 2]
 // Exports: canPublishProject, canRemixProject
 
-// Module 16723 (VibegrationsProjectStore)
+// Module 16754 (VibegrationsProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -175,8 +175,8 @@ prototype["getProjectsFetchState"] = function getProjectsFetchState() {
 prototype["hasFetchedGuildProjects"] = function hasFetchedGuildProjects(arg0) {
   return set.has(arg0);
 };
-prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(arg0) {
-  let str = map3.get(arg0);
+prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(guildId) {
+  let str = map3.get(guildId);
   if (str == null) {
     str = "unattempted";
   }

@@ -1,13 +1,13 @@
-// Module ID: 5943
-// Function ID: 5944
+// Module ID: 5945
+// Function ID: 5946
 // Name: ChatEmojisSpotIllustration
-// Dependencies: [21, 5673, 5944, 2]
+// Dependencies: [21, 5675, 5946, 2]
 // Exports: ChatEmojisSpotIllustration
 
-// Module 5943 (ChatEmojisSpotIllustration)
+// Module 5945 (ChatEmojisSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5944 from "module_5944" /* 5944 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5946 from "module_5946" /* 5946 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ChatEmojisSpotIllustration = function ChatEmojisSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5944 };
+  const obj2 = { uri: _modDef5946 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,13 +1,13 @@
-// Module ID: 6569
-// Function ID: 6570
+// Module ID: 6571
+// Function ID: 6572
 // Name: SkullIllocon
-// Dependencies: [21, 5673, 6570, 2]
+// Dependencies: [21, 5675, 6572, 2]
 // Exports: SkullIllocon
 
-// Module 6569 (SkullIllocon)
+// Module 6571 (SkullIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6570 from "module_6570" /* 6570 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6572 from "module_6572" /* 6572 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const SkullIllocon = function SkullIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6570 };
+  const obj2 = { uri: _modDef6572 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

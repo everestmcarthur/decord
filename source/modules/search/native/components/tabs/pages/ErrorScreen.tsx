@@ -1,18 +1,18 @@
-// Module ID: 16842
-// Function ID: 16843
+// Module ID: 16881
+// Function ID: 16882
 // Name: pages/ErrorScreen
-// Dependencies: [19, 17, 21, 4638, 7091, 4349, 4634, 2]
+// Dependencies: [19, 17, 21, 4640, 7095, 4351, 4636, 2]
 
-// Module 16842 (pages/ErrorScreen)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4349 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7091 */;
+// Module 16881 (pages/ErrorScreen)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" }, text: { textAlign: "center", width: "75%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ErrorScreen.tsx");

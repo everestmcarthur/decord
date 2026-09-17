@@ -1,12 +1,12 @@
-// Module ID: 16141
-// Function ID: 16142
+// Module ID: 16171
+// Function ID: 16172
 // Name: SidebarCoachmarkOverlay
-// Dependencies: [32, 19, 17, 1074, 21, 5684, 7267, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 5686, 7271, 2]
 // Exports: SidebarCoachmarkOverlay
 
-// Module 16141 (SidebarCoachmarkOverlay)
-import useInitialValueDefault from "useInitialValue" /* 5684 */;
-import LayerContext from "LayerContext" /* 7267 */;
+// Module 16171 (SidebarCoachmarkOverlay)
+import useInitialValueDefault from "useInitialValue" /* 5686 */;
+import LayerContext from "LayerContext" /* 7271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

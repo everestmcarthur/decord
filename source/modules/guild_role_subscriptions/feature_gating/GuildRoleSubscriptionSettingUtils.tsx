@@ -1,13 +1,13 @@
-// Module ID: 7370
-// Function ID: 7371
+// Module ID: 7374
+// Function ID: 7375
 // Name: GuildRoleSubscriptionSettingUtils
-// Dependencies: [1976, 4276, 1372, 1074, 504, 7371, 7363, 2]
+// Dependencies: [1976, 4278, 1372, 1074, 504, 7375, 7367, 2]
 // Exports: canManageGuildRoleSubscriptions, canSeeGuildRoleSubscriptionSettings, canSeeGuildRoleSubscriptionSettingsContent, getGuildRoleSubscriptionSettingsVisibility, useCanManageGuildRoleSubscriptions, useCanSeeGuildRoleSubscriptionSettings
 
-// Module 7370 (GuildRoleSubscriptionSettingUtils)
+// Module 7374 (GuildRoleSubscriptionSettingUtils)
 import GuildRecord from "GuildRecord" /* 1976 */;
-import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7371 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7375 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

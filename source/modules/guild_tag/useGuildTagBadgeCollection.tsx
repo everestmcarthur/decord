@@ -1,14 +1,14 @@
-// Module ID: 17799
-// Function ID: 17800
+// Module ID: 17840
+// Function ID: 17841
 // Name: useGuildTagBadgeCollection
-// Dependencies: [19, 9207, 4526, 8060, 504, 2]
+// Dependencies: [19, 9218, 4528, 8080, 504, 2]
 // Exports: default
 
-// Module 17799 (useGuildTagBadgeCollection)
+// Module 17840 (useGuildTagBadgeCollection)
 import _mod19 from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9207 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4526 */;
-import GuildTagConstants from "GuildTagConstants" /* 8060 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9218 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
+import GuildTagConstants from "GuildTagConstants" /* 8080 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

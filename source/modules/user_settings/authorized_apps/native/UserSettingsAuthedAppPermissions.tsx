@@ -1,11 +1,11 @@
-// Module ID: 15060
-// Function ID: 15061
+// Module ID: 15068
+// Function ID: 15069
 // Name: UserSettingsAuthedAppPermissions
-// Dependencies: [19, 17, 21, 4638, 9381, 8469, 1115, 4634, 4597, 576, 9383, 15054, 2]
+// Dependencies: [19, 17, 21, 4640, 9392, 8488, 1115, 4636, 4599, 576, 9394, 15062, 2]
 // Exports: default
 
-// Module 15060 (UserSettingsAuthedAppPermissions)
-import disclosures from "disclosures" /* 9383 */;
+// Module 15068 (UserSettingsAuthedAppPermissions)
+import disclosures from "disclosures" /* 9394 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
@@ -51,8 +51,8 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(4597).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(4634).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(4599).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(4636).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });
@@ -64,9 +64,9 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
           if (null != textForDisclosure) {
             const obj2 = { style: items.permissionContainer, children: null };
             const obj3 = { style: items.permissionIcon, disclosure };
-            items = [hasOwnProperty(tmp(15054).DisclosureIcon, obj3), ];
+            items = [hasOwnProperty(tmp(15062).DisclosureIcon, obj3), ];
             const obj4 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
-            items[1] = hasOwnProperty(tmp(4634).Text, obj4);
+            items[1] = hasOwnProperty(tmp(4636).Text, obj4);
             obj2.children = items;
             tmp4 = timestampProducer(React4, obj2, index + items.length);
           }

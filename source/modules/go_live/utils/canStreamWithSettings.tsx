@@ -1,13 +1,13 @@
-// Module ID: 10095
-// Function ID: 10096
+// Module ID: 10106
+// Function ID: 10107
 // Name: canStreamWithSettings
-// Dependencies: [4685, 10096, 10097, 2]
+// Dependencies: [4687, 10107, 10108, 2]
 // Exports: default
 
-// Module 10095 (canStreamWithSettings)
-import GoLiveAutoQualityExperiment from "GoLiveAutoQualityExperiment" /* 10096 */;
-import canUseStreamSettingDefault from "canUseStreamSetting" /* 10097 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4685 */;
+// Module 10106 (canStreamWithSettings)
+import GoLiveAutoQualityExperiment from "GoLiveAutoQualityExperiment" /* 10107 */;
+import canUseStreamSettingDefault from "canUseStreamSetting" /* 10108 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4687 */;
 import size from "module_2" /* 2 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: closure_4 } = StreamSettingsConstants);

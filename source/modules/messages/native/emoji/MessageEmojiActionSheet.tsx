@@ -1,13 +1,13 @@
-// Module ID: 10469
-// Function ID: 10470
+// Module ID: 10477
+// Function ID: 10478
 // Name: MessageEmojiActionSheet
-// Dependencies: [19, 17, 1074, 21, 4638, 1364, 1255, 7260, 1241, 10470, 10477, 10478, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 1364, 1255, 7264, 1241, 10478, 10485, 10486, 2]
 // Exports: default
 
-// Module 10469 (MessageEmojiActionSheet)
+// Module 10477 (MessageEmojiActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 10470 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 10478 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 10478 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 10486 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -54,7 +54,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
     const obj5 = { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result };
     obj4.children = jsx(CustomEmojiContentDefault, { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result });
     obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-    return jsx(tmp2(7260).BottomSheet, {
+    return jsx(tmp2(7264).BottomSheet, {
       startExpanded: true,
       onDismiss() {
           AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
@@ -68,7 +68,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const PlatformUtils = fn(1364);
 let num = 0;
 if (PlatformUtils.isAndroid()) {

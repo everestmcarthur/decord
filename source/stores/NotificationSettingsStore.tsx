@@ -1,9 +1,9 @@
-// Module ID: 10220
-// Function ID: 10221
+// Module ID: 10231
+// Function ID: 10232
 // Name: NotificationSettingsStore
 // Dependencies: [1074, 1364, 504, 573, 2]
 
-// Module 10220 (NotificationSettingsStore)
+// Module 10231 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;

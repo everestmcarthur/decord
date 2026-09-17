@@ -1,14 +1,14 @@
-// Module ID: 9233
-// Function ID: 9234
+// Module ID: 9244
+// Function ID: 9245
 // Name: CertifiedDeviceStore
-// Dependencies: [4663, 510, 504, 12, 573, 2]
+// Dependencies: [4665, 510, 504, 12, 573, 2]
 
-// Module 9233 (CertifiedDeviceStore)
+// Module 9244 (CertifiedDeviceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 4663 */;
+import Constants from "Constants" /* 4665 */;
 import size from "module_2" /* 2 */;
 
 const DeviceTypes = Constants.DeviceTypes;

@@ -1,10 +1,10 @@
-// Module ID: 17001
-// Function ID: 17002
+// Module ID: 17040
+// Function ID: 17041
 // Name: MobileReferralSubscriberProfileEntrypointButtonExperiment
 // Dependencies: [1091, 1434, 2]
 // Exports: useMobileReferralSubscriberProfileEntrypointButtonConfig
 
-// Module 17001 (MobileReferralSubscriberProfileEntrypointButtonExperiment)
+// Module 17040 (MobileReferralSubscriberProfileEntrypointButtonExperiment)
 import DurationsDefault from "Durations" /* 1091 */;
 
 const result = 3 * DurationsDefault.Millis.DAYS_30;

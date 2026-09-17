@@ -1,9 +1,9 @@
-// Module ID: 12584
-// Function ID: 12585
+// Module ID: 12593
+// Function ID: 12594
 // Name: MessageRequestRestrictionExperiment
 // Dependencies: [1434, 2]
 
-// Module 12584 (MessageRequestRestrictionExperiment)
+// Module 12593 (MessageRequestRestrictionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// Module ID: 9730
-// Function ID: 9731
+// Module ID: 9741
+// Function ID: 9742
 // Name: PopoutMenu
-// Dependencies: [32, 19, 17, 21, 4638, 576, 7247, 1177, 8728, 1478, 1612, 12, 4374, 4639, 4608, 6763, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 576, 7251, 1177, 8748, 1478, 1612, 12, 4376, 4641, 4610, 6766, 2]
 
-// Module 9730 (PopoutMenu)
+// Module 9741 (PopoutMenu)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import Patterns from "Patterns" /* 4608 */;
-import timing from "timing" /* 4639 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6763 */;
-import FormRowDefault from "FormRow" /* 7247 */;
-import Form from "Form" /* 8728 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import Patterns from "Patterns" /* 4610 */;
+import timing from "timing" /* 4641 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
+import FormRowDefault from "FormRow" /* 7251 */;
+import Form from "Form" /* 8748 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ function PopoutMenuRow(onClose) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
 let closure_9 = createStyles.createStyles(obj);
 let closure_11 = { code: "function PopoutMenuTsx1(){const{withTiming,animateIn,STANDARD_EASING,ANIMATION_DURATION,runOnJS,handleClose,EXTRA_PADDING}=this.__closure;return{opacity:withTiming(animateIn?1:0,{easing:STANDARD_EASING,duration:ANIMATION_DURATION},'respect-motion-settings',function(finished){if(finished){runOnJS(handleClose)();}}),transform:[{translateY:withTiming(animateIn?-EXTRA_PADDING:0,{easing:STANDARD_EASING,duration:ANIMATION_DURATION})}]};}" };

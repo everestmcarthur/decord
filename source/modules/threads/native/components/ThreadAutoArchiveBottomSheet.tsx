@@ -1,10 +1,10 @@
-// Module ID: 17025
-// Function ID: 17026
+// Module ID: 17064
+// Function ID: 17065
 // Name: ThreadAutoArchiveBottomSheet
-// Dependencies: [19, 1965, 21, 9449, 5771, 1115, 5774, 2]
+// Dependencies: [19, 1965, 21, 9460, 5773, 1115, 5776, 2]
 
-// Module 17025 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 5774 */;
+// Module 17064 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 5776 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

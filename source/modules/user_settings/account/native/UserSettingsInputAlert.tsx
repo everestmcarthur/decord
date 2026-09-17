@@ -1,20 +1,20 @@
-// Module ID: 14912
-// Function ID: 14913
+// Module ID: 14920
+// Function ID: 14921
 // Name: UserSettingsInputAlert
-// Dependencies: [19, 21, 1271, 5058, 4634, 6714, 5079, 5664, 2]
+// Dependencies: [19, 21, 1271, 5060, 4636, 6717, 5081, 5666, 2]
 
-// Module 14912 (UserSettingsInputAlert)
+// Module 14920 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import Stack_Stack from "Stack/Stack" /* 5058 */;
-import common_AlertDefault from "common/Alert" /* 5079 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5664 */;
-import TextInput from "TextInput" /* 6714 */;
+import Stack_Stack from "Stack/Stack" /* 5060 */;
+import common_AlertDefault from "common/Alert" /* 5081 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5666 */;
+import TextInput from "TextInput" /* 6717 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "assign" };
+const hasOwnProperty = { input: "", error: "call" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -79,7 +79,7 @@ prototype["renderContent"] = function renderContent() {
     let tmp7 = null != helpText;
     if (tmp7) {
       const obj = { variant: "text-md/normal", children: helpText };
-      tmp7 = React3(tmp5(4634).Text, obj);
+      tmp7 = React3(tmp5(4636).Text, obj);
     }
     const items = [tmp7, ];
     const obj2 = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };

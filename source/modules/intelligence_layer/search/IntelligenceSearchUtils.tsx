@@ -1,15 +1,15 @@
-// Module ID: 13818
-// Function ID: 13819
+// Module ID: 13826
+// Function ID: 13827
 // Name: IntelligenceSearchUtils
-// Dependencies: [4286, 1074, 12489, 12483, 4861, 13817, 2]
-// Exports: getIntelligenceSearchQuery, hydrateAndFilterCitations, isSupportedSearchContext, resolveSearchStatus
+// Dependencies: [4288, 1074, 12498, 12492, 4863, 13825, 2]
+// Exports: getIntelligenceSearchQuery, hydrateAndFilterCitations, isSupportedSearchContext, parseConversationId, resolveSearchStatus
 
-// Module 13818 (IntelligenceSearchUtils)
-import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
-import SearchUtils from "SearchUtils" /* 12483 */;
-import QueryTokenizer from "QueryTokenizer" /* 12489 */;
-import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 13817 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+// Module 13826 (IntelligenceSearchUtils)
+import MessageRecordUtils from "MessageRecordUtils" /* 4863 */;
+import SearchUtils from "SearchUtils" /* 12492 */;
+import QueryTokenizer from "QueryTokenizer" /* 12498 */;
+import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 13825 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -73,4 +73,15 @@ export const resolveSearchStatus = function resolveSearchStatus(response, length
   } else {
     return IntelligenceSearchTypes.IntelligenceSearchStatus.ERROR;
   }
+};
+export const parseConversationId = function parseConversationId(sourceId) {
+  const match = /\/(\d+)$/.exec(sourceId);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (tmp2 == null) {
+    tmp2 = sourceId;
+  }
+  return tmp2;
 };

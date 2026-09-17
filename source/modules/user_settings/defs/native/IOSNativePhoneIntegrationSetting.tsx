@@ -1,16 +1,16 @@
-// Module ID: 15604
-// Function ID: 15605
+// Module ID: 15610
+// Function ID: 15611
 // Name: IOSNativePhoneIntegrationSetting
-// Dependencies: [8091, 15605, 1364, 1115, 1936, 11614, 14566, 15600, 2]
+// Dependencies: [8111, 15611, 1364, 1115, 1936, 11622, 14574, 15606, 2]
 
-// Module 15604 (IOSNativePhoneIntegrationSetting)
+// Module 15610 (IOSNativePhoneIntegrationSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8091 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15600 */;
-import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15605 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11614 */;
+import SettingsConstants from "SettingsConstants" /* 8111 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15606 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15611 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

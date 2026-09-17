@@ -1,13 +1,13 @@
-// Module ID: 6471
-// Function ID: 6472
+// Module ID: 6473
+// Function ID: 6474
 // Name: PrivacyShieldLaptopSpotIllustration
-// Dependencies: [21, 5673, 6472, 2]
+// Dependencies: [21, 5675, 6474, 2]
 // Exports: PrivacyShieldLaptopSpotIllustration
 
-// Module 6471 (PrivacyShieldLaptopSpotIllustration)
+// Module 6473 (PrivacyShieldLaptopSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6472 from "module_6472" /* 6472 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6474 from "module_6474" /* 6474 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PrivacyShieldLaptopSpotIllustration = function PrivacyShieldLaptopS
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6472 };
+  const obj2 = { uri: _modDef6474 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

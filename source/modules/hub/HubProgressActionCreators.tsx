@@ -1,17 +1,17 @@
-// Module ID: 9970
-// Function ID: 9971
+// Module ID: 9981
+// Function ID: 9982
 // Name: HubProgressActionCreators
-// Dependencies: [1980, 9971, 1074, 1941, 1385, 2]
+// Dependencies: [1980, 9982, 1074, 1941, 1385, 2]
 // Exports: setHubProgressActionComplete, skipHubProgress
 
-// Module 9970 (HubProgressActionCreators)
+// Module 9981 (HubProgressActionCreators)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9971).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9982).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");

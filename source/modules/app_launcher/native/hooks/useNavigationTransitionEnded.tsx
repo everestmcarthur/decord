@@ -1,10 +1,10 @@
-// Module ID: 12270
-// Function ID: 12271
+// Module ID: 12279
+// Function ID: 12280
 // Name: useNavigationTransitionEnded
 // Dependencies: [32, 19, 1483, 1485, 2]
 // Exports: default
 
-// Module 12270 (useNavigationTransitionEnded)
+// Module 12279 (useNavigationTransitionEnded)
 import Link from "Link" /* 1485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

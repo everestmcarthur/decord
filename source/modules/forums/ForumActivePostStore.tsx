@@ -1,22 +1,22 @@
-// Module ID: 7415
-// Function ID: 7416
+// Module ID: 7419
+// Function ID: 7420
 // Name: ForumActivePostStore
-// Dependencies: [5593, 7416, 502, 1958, 4653, 2012, 1967, 1969, 12, 7417, 11, 504, 1975, 573, 2]
+// Dependencies: [5595, 7420, 502, 1958, 4655, 2012, 1967, 1969, 12, 7421, 11, 504, 1975, 573, 2]
 // Exports: computeThreadIdsSnapshot
 
-// Module 7415 (ForumActivePostStore)
+// Module 7419 (ForumActivePostStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 1967 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 1969 */;
 import SetUtils from "SetUtils" /* 1975 */;
-import ForumUtils from "ForumUtils" /* 7417 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5593 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7416 */;
+import ForumUtils from "ForumUtils" /* 7421 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5595 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7420 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4653 */;
+import ReadStateStore from "ReadStateStore" /* 4655 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 import apply_mod from "module_12" /* 12 */;
 
@@ -108,7 +108,7 @@ function rebuildState(refreshThreadIds) {
           } else {
             compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          tmpResult = tmp(7417);
+          tmpResult = tmp(7421);
         }
         return num;
       });
@@ -135,7 +135,7 @@ function rebuildState(refreshThreadIds) {
           } else {
             compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          tmpResult = tmp(7417);
+          tmpResult = tmp(7421);
         }
         return num;
       });
@@ -396,7 +396,7 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
         } else {
           compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
         }
-        tmpResult = tmp(7417);
+        tmpResult = tmp(7421);
       }
       return num;
     });

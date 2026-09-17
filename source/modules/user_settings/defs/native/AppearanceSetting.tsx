@@ -1,16 +1,16 @@
-// Module ID: 15371
-// Function ID: 15372
+// Module ID: 15376
+// Function ID: 15377
 // Name: AppearanceSetting
-// Dependencies: [4457, 1185, 1074, 4572, 504, 1228, 7989, 1115, 2627, 11614, 15372, 15374, 2]
+// Dependencies: [4459, 1185, 1074, 4574, 504, 1228, 7995, 1115, 2627, 11622, 15377, 15379, 2]
 // Exports: useAppearanceSettingTrailing
 
-// Module 15371 (AppearanceSetting)
+// Module 15376 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
-import useThemeDefault from "useTheme" /* 4572 */;
-import useActiveTheme from "useActiveTheme" /* 7989 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4457 */;
+import useThemeDefault from "useTheme" /* 4574 */;
+import useActiveTheme from "useActiveTheme" /* 7995 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4459 */;
 
 const _modDef2627 = tmp(2627);
 require = fn;
@@ -43,14 +43,14 @@ function useAppearanceSettingTrailing() {
   }
 }
 const ActiveThemeType = fn(1185).ActiveThemeType;
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15372).PaintPaletteIcon,
+  IconComponent: fn(15377).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE,

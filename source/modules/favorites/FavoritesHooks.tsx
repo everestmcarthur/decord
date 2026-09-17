@@ -1,23 +1,23 @@
-// Module ID: 10363
-// Function ID: 10364
+// Module ID: 10371
+// Function ID: 10372
 // Name: FavoritesHooks
-// Dependencies: [4459, 1372, 1961, 1971, 1374, 10364, 10365, 504, 1886, 11, 1186, 1983, 2]
+// Dependencies: [4461, 1372, 1961, 1971, 1374, 10372, 10373, 504, 1886, 11, 1186, 1983, 2]
 // Exports: getFavoritesAccess, getFavoritesCategories, useFavorite, useFavoritedChannelIds, useFavorites, useFavoritesAwareChannel, useFavoritesLimitUpsell, useIsFavoritesGuildSelected
 
-// Module 10363 (FavoritesHooks)
+// Module 10371 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1886 */;
 import FavoritesUtils from "FavoritesUtils" /* 1983 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10365 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10373 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 import UserStore from "UserStore" /* 1372 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 const require = globalThis.__r;
 
-const FavoritesLimits = tmp(10364);
+const FavoritesLimits = tmp(10372);
 require = fn;
 function useFavoritesAccess(FavoritesGuildActionSheet) {
   let str = FavoritesGuildActionSheet;

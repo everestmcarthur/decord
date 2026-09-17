@@ -1,10 +1,10 @@
-// Module ID: 9783
-// Function ID: 9784
+// Module ID: 9794
+// Function ID: 9795
 // Name: WebViewContext
-// Dependencies: [32, 19, 17, 21, 4638, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 2]
 // Exports: WebViewContextProvider
 
-// Module 9783 (WebViewContext)
+// Module 9794 (WebViewContext)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const context = noop.createContext(0);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_6 = createStyles.createStyles({ placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/WebViewContext.tsx");

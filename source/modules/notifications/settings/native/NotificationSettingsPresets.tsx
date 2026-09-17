@@ -1,14 +1,14 @@
-// Module ID: 10290
-// Function ID: 10291
+// Module ID: 10298
+// Function ID: 10299
 // Name: NotificationSettingsPresets
-// Dependencies: [19, 17, 21, 1115, 4822, 4597, 10291, 9202, 4638, 576, 9932, 4634, 5060, 9933, 10293, 10287, 2]
+// Dependencies: [19, 17, 21, 1115, 4824, 4599, 10299, 9213, 4640, 576, 9943, 4636, 5062, 9944, 10301, 10295, 2]
 // Exports: NotificationSettingsChannelPresets, NotificationSettingsGuildPresets
 
-// Module 10290 (NotificationSettingsPresets)
+// Module 10298 (NotificationSettingsPresets)
 import nativeDefault from "native" /* 576 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4822 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 10287 */;
-import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 10293 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4824 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 10295 */;
+import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 10301 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -119,7 +119,7 @@ function NotificationSettingsPresets(preset) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { customContainer: { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

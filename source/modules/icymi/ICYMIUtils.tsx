@@ -1,27 +1,27 @@
-// Module ID: 8480
-// Function ID: 8481
+// Module ID: 8499
+// Function ID: 8500
 // Name: ICYMIUtils
-// Dependencies: [5, 7636, 1962, 1958, 1980, 4859, 4653, 8465, 8479, 1074, 8478, 8481, 4861, 11, 504, 8482, 8486, 8259, 8487, 8013, 1115, 7220, 1897, 1074, 2]
+// Dependencies: [5, 7640, 1962, 1958, 1980, 4861, 4655, 8484, 8498, 1074, 8497, 8500, 4863, 11, 504, 8501, 8505, 8278, 8506, 8019, 1115, 7224, 1897, 1074, 2]
 // Exports: compareGravityUnreadIds, contentTypeToText, createGravityMessageFromServer, customScoreToNumber, customStatusToContentInventoryEntry, determineContentType, getViewableFeedItemsArray, hydrateNextPage, icymiEnabled, isChannelCustomScoreEligible, isGuildItem, isItemNSFW, isItemUnreadInChannel, itemToType, numberToCustomScore, regenerateFeedAndClearReadStates, useGravityMessage, useGravityMessageItem, useICYMIMessage
 
-// Module 8480 (ICYMIUtils)
+// Module 8499 (ICYMIUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8013 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8259 */;
-import ICYMITypes from "ICYMITypes" /* 8478 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8481 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8482 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8486 */;
-import ICYMIItemTypes from "ICYMIItemTypes" /* 8487 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4863 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8019 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8278 */;
+import ICYMITypes from "ICYMITypes" /* 8497 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8500 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8501 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8505 */;
+import ICYMIItemTypes from "ICYMIItemTypes" /* 8506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7636 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7640 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import MessageStore from "MessageStore" /* 4859 */;
-import ReadStateStore from "ReadStateStore" /* 4653 */;
-import ICYMIStore from "ICYMIStore" /* 8465 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8479 */;
+import MessageStore from "MessageStore" /* 4861 */;
+import ReadStateStore from "ReadStateStore" /* 4655 */;
+import ICYMIStore from "ICYMIStore" /* 8484 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8498 */;
 
 const require = globalThis.__r;
 
@@ -69,10 +69,10 @@ let closure_17 = async function _hydrateItems(arg0, value) {
           if (0 !== substr.length) {
             const hydratedAttempt = ICYMIActionCreatorsDefault.loadHydratedAttempt(generateHydrationId(tmp23, tmp24));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8478).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8497).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8478).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8497).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -108,7 +108,7 @@ let closure_17 = async function _hydrateItems(arg0, value) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8478).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8497).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj6 = { messageItems: null, activityItems: null };
@@ -661,13 +661,13 @@ export const determineContentType = function determineContentType(channel, messa
     if (message.attachments.length > 0) {
       let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        ContentType = tmp6(8478).ContentType;
+        ContentType = tmp6(8497).ContentType;
         let IMAGE = ContentType.IMAGE;
       } else {
-        const result = tmp6(8013).isValidVideoAttachment(message.attachments[0]);
-        const ContentType2 = tmp6(8478).ContentType;
+        const result = tmp6(8019).isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = tmp6(8497).ContentType;
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
-        const tmp6Result = tmp6(8013);
+        const tmp6Result = tmp6(8019);
       }
       obj = ForumPostMediaUtils;
     } else {
@@ -688,28 +688,28 @@ export const contentTypeToText = function contentTypeToText(arg0) {
   if (ICYMITypes.ContentType.POPULAR_MESSAGE === arg0) {
     const intl10 = tmp(1115).intl;
     return intl10.string(tmp(1115).t["H/2+cl"]);
-  } else if (tmp(8478).ContentType.IMAGE === arg0) {
+  } else if (tmp(8497).ContentType.IMAGE === arg0) {
     const intl9 = tmp(1115).intl;
     return intl9.string(tmp(1115).t.gmOWAo);
-  } else if (tmp(8478).ContentType.VIDEO === arg0) {
+  } else if (tmp(8497).ContentType.VIDEO === arg0) {
     const intl8 = tmp(1115).intl;
     return intl8.string(tmp(1115).t.swhcPM);
-  } else if (tmp(8478).ContentType.LINK === arg0) {
+  } else if (tmp(8497).ContentType.LINK === arg0) {
     const intl7 = tmp(1115).intl;
     return intl7.string(tmp(1115).t.oj5yvD);
-  } else if (tmp(8478).ContentType.THREAD === arg0) {
+  } else if (tmp(8497).ContentType.THREAD === arg0) {
     const intl6 = tmp(1115).intl;
     return intl6.string(tmp(1115).t.DwLrLK);
-  } else if (tmp(8478).ContentType.FORUM_POST === arg0) {
+  } else if (tmp(8497).ContentType.FORUM_POST === arg0) {
     const intl5 = tmp(1115).intl;
     return intl5.string(tmp(1115).t["Q9/6BS"]);
-  } else if (tmp(8478).ContentType.CHANGED_STATUS === arg0) {
+  } else if (tmp(8497).ContentType.CHANGED_STATUS === arg0) {
     const intl4 = tmp(1115).intl;
     return intl4.string(tmp(1115).t.TGrUmi);
-  } else if (tmp(8478).ContentType.INTERESTING === arg0) {
+  } else if (tmp(8497).ContentType.INTERESTING === arg0) {
     const intl3 = tmp(1115).intl;
     return intl3.string(tmp(1115).t["TahE/i"]);
-  } else if (tmp(8478).ContentType.ANNOUNCEMENT === arg0) {
+  } else if (tmp(8497).ContentType.ANNOUNCEMENT === arg0) {
     const intl2 = tmp(1115).intl;
     const string = intl2.string;
     const t = tmp(1115).t;
@@ -719,7 +719,7 @@ export const contentTypeToText = function contentTypeToText(arg0) {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (tmp(8478).ContentType.FILE === arg0) {
+  } else if (tmp(8497).ContentType.FILE === arg0) {
     const intl = tmp(1115).intl;
     return intl.string(tmp(1115).t.pYrnTY);
   }

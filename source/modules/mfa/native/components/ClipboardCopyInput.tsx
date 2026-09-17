@@ -1,10 +1,10 @@
-// Module ID: 15796
-// Function ID: 15797
+// Module ID: 15802
+// Function ID: 15803
 // Name: ClipboardCopyInput
-// Dependencies: [5, 19, 17, 1896, 1074, 21, 4638, 504, 7072, 7148, 7299, 6714, 2]
+// Dependencies: [5, 19, 17, 1896, 1074, 21, 4640, 504, 7076, 7152, 7303, 6717, 2]
 // Exports: default
 
-// Module 15796 (ClipboardCopyInput)
+// Module 15802 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1896 */;
@@ -15,7 +15,7 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
@@ -139,5 +139,5 @@ export default function ClipboardCopyInput(arg0) {
     }
   }, items1);
   const tmp4 = ref(stateFromStores[8])(onChangeCode);
-  return <View style={tmp.inputContainer}>{jsx(require("TextInput").TextInput, { ref, autoFocus, autoCorrect: false, autoCapitalize: "none", errorMessage: error, maxLength, onChange: onChangeCode, label, placeholder, isClearable: true, textContentType, autoComplete, keyboardType, isDisabled })}</View>;
+  return <View style={tmp.inputContainer}>{jsx(require("TextInput").TextInput, { ref, autoFocus, autoCorrect: false, autoCapitalize: "none", errorMessage: error, maxLength, onChange: onChangeCode, label, placeholder, clearable: true, textContentType, autoComplete, keyboardType, disabled: isDisabled })}</View>;
 };

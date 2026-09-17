@@ -1,13 +1,13 @@
-// Module ID: 14818
-// Function ID: 14819
+// Module ID: 14826
+// Function ID: 14827
 // Name: UserSettingsChangeUsername
-// Dependencies: [5, 32, 19, 17, 1372, 1074, 21, 4638, 576, 4823, 14819, 4634, 1115, 1484, 504, 4295, 14820, 7100, 7094, 1271, 1485, 7978, 6714, 7108, 7046, 2]
+// Dependencies: [5, 32, 19, 17, 1372, 1074, 21, 4640, 576, 4825, 14827, 4636, 1115, 1484, 504, 4297, 14828, 7104, 7098, 1271, 1485, 7984, 6717, 7112, 7050, 2]
 // Exports: default
 
-// Module 14818 (UserSettingsChangeUsername)
+// Module 14826 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
+import Text_Text from "Text/Text" /* 4636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,16 +16,16 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(4823).match(showHint.usernameStatus);
-  let obj = { type: showHint(14819).NameValidationState.ERROR, message: null };
-  const P = showHint(4823).P;
+  const match = showHint(4825).match(showHint.usernameStatus);
+  let obj = { type: showHint(14827).NameValidationState.ERROR, message: null };
+  const P = showHint(4825).P;
   obj.message = P.select();
-  const str = showHint(4823);
-  const obj2 = { type: showHint(14819).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(4823).P;
+  const str = showHint(4825);
+  const obj2 = { type: showHint(14827).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(4825).P;
   obj2.message = P2.select();
-  const withResult = match.with(obj, (children) => closure_1_11(showHint(4634).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => closure_1_11(showHint(4634).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(4634).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(4636).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(4636).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(4636).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 }, inputs: { flex: 1, flexDirection: "row", marginTop: 8 }, username: { flex: 2 }, discriminator: { flex: 1 }, divider: null, dividerInner: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.divider = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -142,7 +142,7 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        closure_129_0 = yield closure_2_2(7094).saveAccountChanges(user, { close: false });
+        closure_129_0 = yield closure_2_2(7098).saveAccountChanges(user, { close: false });
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1271).V6OrEarlierAPIError(closure_129_0);
           closure_129_1 = v6OrEarlierAPIError;
@@ -220,10 +220,10 @@ export default function UserSettingsChangeUsername() {
       tmp31 = obj3;
     }
     if (canEditDiscriminatorResult) {
-      const obj7 = { ref, containerStyle: tmp.discriminator, keyboardType: "numeric", value: first1, onChange: tmp9Result[1], onSubmitEditing, placeholder: "1337", returnKeyType: "done", autoCapitalize: "none", isClearable: true, leadingText: "#", maxLength: 4 };
+      const obj7 = { ref, containerStyle: tmp.discriminator, keyboardType: "numeric", value: first1, onChange: tmp9Result[1], onSubmitEditing, placeholder: "1337", returnKeyType: "done", autoCapitalize: "none", clearable: true, leadingText: "#", maxLength: 4 };
       let obj9 = obj7;
     } else {
-      obj9 = { ref, containerStyle: tmp.discriminator, value: `#${tmp13}`, isClearable: false, isDisabled: true };
+      obj9 = { ref, containerStyle: tmp.discriminator, value: `#${tmp13}`, clearable: false, disabled: true };
     }
     const obj10 = { style: tmp.background, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const items4 = [closure_11(tmp5(tmp3[23]), {}), ];

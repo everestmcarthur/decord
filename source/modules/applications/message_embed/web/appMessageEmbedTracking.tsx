@@ -1,10 +1,10 @@
-// Module ID: 7802
-// Function ID: 7803
+// Module ID: 7808
+// Function ID: 7809
 // Name: appMessageEmbedTracking
-// Dependencies: [19, 1074, 1241, 7803, 7804, 2]
+// Dependencies: [19, 1074, 1241, 7809, 7810, 2]
 // Exports: trackAppEmbedClick, trackAppEmbedLinkSent, trackAppEmbedViewed, useTrackAppEmbedViewed
 
-// Module 7802 (appMessageEmbedTracking)
+// Module 7808 (appMessageEmbedTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
 

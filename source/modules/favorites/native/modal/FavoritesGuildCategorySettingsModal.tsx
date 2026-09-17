@@ -1,15 +1,15 @@
-// Module ID: 16242
-// Function ID: 16243
+// Module ID: 16272
+// Function ID: 16273
 // Name: FavoritesGuildCategorySettingsModal
-// Dependencies: [32, 19, 17, 1961, 1971, 21, 4638, 576, 1484, 504, 1983, 10362, 7978, 1115, 4982, 1177, 5058, 6714, 5773, 5691, 4595, 11071, 11073, 2]
+// Dependencies: [32, 19, 17, 1961, 1971, 21, 4640, 576, 1484, 504, 1983, 10370, 7984, 1115, 4984, 1177, 5060, 6717, 5775, 5693, 4597, 11079, 11081, 2]
 // Exports: default
 
-// Module 16242 (FavoritesGuildCategorySettingsModal)
+// Module 16272 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4982 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10362 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
@@ -101,7 +101,7 @@ function FavoritesGuildCategorySettings(categoryId) {
     AlertActionCreatorsDefault.show(obj2);
   }, items7);
   const obj7 = { spacing: onGoBack(navigation[7]).space.PX_24, children: null };
-  const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, isClearable: true };
+  const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, clearable: true };
   let intl = tmp2(tmp3[13]).intl;
   obj8.label = intl.string(categoryId(navigation[13]).t.OCAkGP);
   let intl2 = tmp2(tmp3[13]).intl;
@@ -125,7 +125,7 @@ const ScrollView = fn(17).ScrollView;
 let maxLength = fn(1971).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -136,12 +136,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11071)().onGoBack;
+  onGoBack = onGoBack(11079)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1115).intl;
   obj.title = intl.string(categoryId(1115).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11073), obj);
+  return closure_8(onGoBack(11081), obj);
 };

@@ -1,9 +1,9 @@
-// Module ID: 7833
-// Function ID: 7834
+// Module ID: 7839
+// Function ID: 7840
 // Name: QuestSharePolicy
 // Dependencies: [2]
 
-// Module 7833 (QuestSharePolicy)
+// Module 7839 (QuestSharePolicy)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx");

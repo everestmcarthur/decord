@@ -1,10 +1,10 @@
-// Module ID: 16963
-// Function ID: 16964
+// Module ID: 17002
+// Function ID: 17003
 // Name: useOnMessageSend
 // Dependencies: [19, 1074, 573, 2]
 // Exports: default
 
-// Module 16963 (useOnMessageSend)
+// Module 17002 (useOnMessageSend)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
 

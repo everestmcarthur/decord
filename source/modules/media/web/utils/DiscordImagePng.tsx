@@ -1,9 +1,9 @@
-// Module ID: 5296
-// Function ID: 5297
+// Module ID: 5298
+// Function ID: 5299
 // Name: DiscordImagePng
-// Dependencies: [5, 1893, 5297, 2]
+// Dependencies: [5, 1893, 5299, 2]
 
-// Module 5296 (DiscordImagePng)
+// Module 5298 (DiscordImagePng)
 import decodeImageDefault from "decodeImage" /* 1893 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

@@ -1,11 +1,11 @@
-// Module ID: 11526
-// Function ID: 11527
+// Module ID: 11534
+// Function ID: 11535
 // Name: LikelyAtoMoreTipsModalActionItems
-// Dependencies: [19, 1372, 21, 504, 4482, 5773, 5691, 1115, 9202, 2]
+// Dependencies: [19, 1372, 21, 504, 4484, 5775, 5693, 1115, 9213, 2]
 // Exports: default
 
-// Module 11526 (LikelyAtoMoreTipsModalActionItems)
-import UserUtilsDefault from "UserUtils" /* 4482 */;
+// Module 11534 (LikelyAtoMoreTipsModalActionItems)
+import UserUtilsDefault from "UserUtils" /* 4484 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -28,7 +28,7 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   const intl2 = senderId(1115).intl;
   obj3.subLabel = intl2.string(senderId(1115).t.w2ve0t);
   obj3.onPress = senderId.handleMutePressed;
-  obj3.icon = jsx(senderId(9202).BellSlashIcon, {});
-  obj2.children = jsx(senderId(5691).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(5773).TableRowGroup, { hasIcons: true, children: null });
+  obj3.icon = jsx(senderId(9213).BellSlashIcon, {});
+  obj2.children = jsx(senderId(5693).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(5775).TableRowGroup, { hasIcons: true, children: null });
 };

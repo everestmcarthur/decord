@@ -1,13 +1,13 @@
-// Module ID: 15580
-// Function ID: 15581
+// Module ID: 15585
+// Function ID: 15586
 // Name: EmojiReactionsOnMessagesSetting
-// Dependencies: [8091, 11614, 1115, 1936, 2]
+// Dependencies: [8111, 11622, 1115, 1936, 2]
 
-// Module 15580 (EmojiReactionsOnMessagesSetting)
+// Module 15585 (EmojiReactionsOnMessagesSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8091 */;
-import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingsConstants from "SettingsConstants" /* 8111 */;
+import SettingBuilders from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

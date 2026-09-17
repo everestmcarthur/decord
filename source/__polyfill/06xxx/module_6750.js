@@ -1,20 +1,12 @@
 // Module ID: 6750
 // Function ID: 6751
-// Dependencies: [19, 6746]
-// Exports: useBottomSheetModalInternal
+// Dependencies: [19]
 
 // Module 6750
 import _mod19 from "module_19" /* 19 */;
-import BottomSheetContext from "BottomSheetContext" /* 6746 */;
 
-const useContext = _mod19.useContext;
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
-  if (true !== arg0) {
-    if (null === tmp) {
-      throw "'BottomSheetModalInternalContext' cannot be null!";
-    }
-  }
-  return tmp;
-};
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

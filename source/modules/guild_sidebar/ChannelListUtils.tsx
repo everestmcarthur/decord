@@ -1,10 +1,10 @@
-// Module ID: 4784
-// Function ID: 4785
+// Module ID: 4786
+// Function ID: 4787
 // Name: ChannelListUtils
 // Dependencies: [2]
 // Exports: hasStream
 
-// Module 4784 (ChannelListUtils)
+// Module 4786 (ChannelListUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");

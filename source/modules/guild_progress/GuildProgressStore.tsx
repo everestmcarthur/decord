@@ -1,9 +1,9 @@
-// Module ID: 12618
-// Function ID: 12619
+// Module ID: 12627
+// Function ID: 12628
 // Name: GuildProgressStore
-// Dependencies: [502, 1958, 1980, 12612, 11, 504, 573, 2]
+// Dependencies: [502, 1958, 1980, 12621, 11, 504, 573, 2]
 
-// Module 12618 (GuildProgressStore)
+// Module 12627 (GuildProgressStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -26,7 +26,7 @@ function completeStep(guild_id, CHANNEL) {
   }
   return tmp;
 }
-const Steps = fn(12612).Steps;
+const Steps = fn(12621).Steps;
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildProgressStore extends PersistedStore {

@@ -1,23 +1,23 @@
-// Module ID: 16027
-// Function ID: 16028
+// Module ID: 16049
+// Function ID: 16050
 // Name: ParentalControlsUseDataToImproveDiscordSetting
-// Dependencies: [7647, 8091, 1074, 7649, 14940, 11614, 1115, 2]
+// Dependencies: [7651, 8111, 1074, 7653, 14948, 11622, 1115, 2]
 
-// Module 16027 (ParentalControlsUseDataToImproveDiscordSetting)
+// Module 16049 (ParentalControlsUseDataToImproveDiscordSetting)
 import util from "util" /* 1115 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7649 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14940 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7653 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14948 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8091).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8111).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },

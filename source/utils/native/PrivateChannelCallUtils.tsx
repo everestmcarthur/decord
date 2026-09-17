@@ -1,26 +1,26 @@
-// Module ID: 4845
-// Function ID: 4846
+// Module ID: 4847
+// Function ID: 4848
 // Name: PrivateChannelCallUtils
-// Dependencies: [5, 19, 4328, 4846, 1958, 4286, 2012, 1372, 1074, 1099, 4848, 21, 4849, 4839, 9821, 1110, 4841, 9609, 1897, 7148, 7321, 4605, 13872, 5497, 4983, 1115, 5224, 4504, 13907, 4984, 9325, 4495, 8524, 2]
+// Dependencies: [5, 19, 4330, 4848, 1958, 4288, 2012, 1372, 1074, 1099, 4850, 21, 4851, 4841, 9832, 1110, 4843, 9620, 1897, 7152, 7325, 4607, 13880, 5499, 4985, 1115, 5226, 4506, 13915, 4986, 9336, 4497, 8543, 2]
 // Exports: dismissVoiceChannelScreens, getVoiceChannelKey, getVoiceChannelKeyByChannelId, handleJoinCall, handleRedesignGroupDMCall, handleRedesignJoinCall, handleStartCall, hideVoiceChannelActionSheet, isVoiceChannelModalKey, maybeShowAgeGateModal, navigateToVoiceChannel, openGuildVoiceModal, openVoiceChannelActionSheet, showGuardCallAlert
 
-// Module 4845 (PrivateChannelCallUtils)
+// Module 4847 (PrivateChannelCallUtils)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4839 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5497 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7148 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8524 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4841 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5499 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7152 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4328 */;
-import VoicePanelStore from "VoicePanelStore" /* 4846 */;
+import ActionSheetStore from "ActionSheetStore" /* 4330 */;
+import VoicePanelStore from "VoicePanelStore" /* 4848 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -40,11 +40,11 @@ function openChannelCallModal(channel) {
     } else {
       const obj4 = { channel };
       const _HermesInternal = HermesInternal;
-      const tmp3Result = tmp3(4841);
-      tmp3Result.pushLazy(tmp(1897)(9609, dependencyMap.paths), obj4, "" + c17 + "-" + channel.id);
-      const tmp5 = tmp(1897)(9609, dependencyMap.paths);
+      const tmp3Result = tmp3(4843);
+      tmp3Result.pushLazy(tmp(1897)(9620, dependencyMap.paths), obj4, "" + c17 + "-" + channel.id);
+      const tmp5 = tmp(1897)(9620, dependencyMap.paths);
     }
-    tmpResult = tmp(9821);
+    tmpResult = tmp(9832);
   }
 }
 function monkeyPatchCall() {
@@ -55,8 +55,8 @@ function monkeyPatchCall() {
       const combined = "" + closure_1_17 + "-" + channel.id;
       ModalActionCreatorsDefault.popWithKey(combined, undefined);
       if (key.getKey() === combined) {
-        tmp5(4605).hideActionSheet();
-        const tmp5Result = tmp5(4605);
+        tmp5(4607).hideActionSheet();
+        const tmp5Result = tmp5(4607);
       }
       tmp5 = importDefault;
     }
@@ -141,7 +141,7 @@ function guardPrivateCallForChannel(id, fn) {
 const Constants = fn(1074);
 ({ ChannelTypes: closure_11, ComponentActions: closure_12, NOOP: map1 } = Constants);
 const AgeGateSource = fn(1099).AgeGateSource;
-const NativePermissionTypes = fn(4848).NativePermissionTypes;
+const NativePermissionTypes = fn(4850).NativePermissionTypes;
 const jsx = fn(21).jsx;
 let c17 = "voice-channel";
 const size = fn(2);
@@ -167,7 +167,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(channel) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13872, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
+  obj.openLazy(asyncRequireImpl(13880, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("" + c17 + "-" + id.id);
@@ -229,7 +229,7 @@ export const handleJoinCall = function handleJoinCall(channel, flag) {
           } else if (flag) {
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: v1(5224).requestPermission(constants.CAMERA), done: false };
+            const obj7 = { value: v1(5226).requestPermission(constants.CAMERA), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -243,9 +243,9 @@ export const handleJoinCall = function handleJoinCall(channel, flag) {
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp4(4504).dismissKeyboard();
-        const obj2 = tmp4(4504);
-        const voiceChannel = v1(5497).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(4506).dismissKeyboard();
+        const obj2 = tmp4(4506);
+        const voiceChannel = v1(5499).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp17) {
@@ -300,7 +300,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
             if (flag) {
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(5224).requestPermission(constants2.CAMERA), done: false };
+              const obj6 = { value: tmp5(5226).requestPermission(constants2.CAMERA), done: false };
               return obj6;
             }
           }
@@ -315,7 +315,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp2(4504).dismissKeyboard();
+        tmp2(4506).dismissKeyboard();
         let isFriendResult = closure_129_0.type !== constants.DM;
         if (!isFriendResult) {
           isFriendResult = friend.isFriend(closure_129_0.getRecipientId());
@@ -326,7 +326,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
           recipientId = closure_129_0.getRecipientId();
         }
         closure_128_1 = recipientId;
-        const tmp25 = tmp5(9325);
+        const tmp25 = tmp5(9336);
         const call = tmp25.call;
         const id = closure_129_0.id;
         let tmp28 = closure_128_0;
@@ -340,7 +340,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
           call(id, tmp27, tmp28, tmp25Result);
         }
         c3 = 3;
-        const obj2 = tmp2(4504);
+        const obj2 = tmp2(4506);
       } catch (tmp36) {
         c3 = tmp;
         throw tmp36;
@@ -408,7 +408,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           } else if (flag) {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: v1(5224).requestPermission(constants.CAMERA), done: false };
+            const obj6 = { value: v1(5226).requestPermission(constants.CAMERA), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -422,8 +422,8 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp4(4504).dismissKeyboard();
-        const tmp11 = v1(9325);
+        tmp4(4506).dismissKeyboard();
+        const tmp11 = v1(9336);
         const call = tmp11.call;
         id = closure_128_0.id;
         if (typeof call === "unknown") {
@@ -432,7 +432,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           call(id, tmp13, true);
         }
         dependencyMap = 3;
-        const obj2 = tmp4(4504);
+        const obj2 = tmp4(4506);
       } catch (tmp18) {
         dependencyMap = tmp;
         throw tmp18;
@@ -483,7 +483,7 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
           } else if (flag) {
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: v1(5224).requestPermission(constants.CAMERA), done: false };
+            const obj7 = { value: v1(5226).requestPermission(constants.CAMERA), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -497,9 +497,9 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp4(4504).dismissKeyboard();
-        const obj2 = tmp4(4504);
-        const voiceChannel = v1(5497).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(4506).dismissKeyboard();
+        const obj2 = tmp4(4506);
+        const voiceChannel = v1(5499).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp17) {

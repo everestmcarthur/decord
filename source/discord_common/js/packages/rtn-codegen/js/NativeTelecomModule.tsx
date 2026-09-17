@@ -1,9 +1,9 @@
-// Module ID: 17702
-// Function ID: 17703
+// Module ID: 17743
+// Function ID: 17744
 // Name: NativeTelecomModule
 // Dependencies: [17, 2]
 
-// Module 17702 (NativeTelecomModule)
+// Module 17743 (NativeTelecomModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

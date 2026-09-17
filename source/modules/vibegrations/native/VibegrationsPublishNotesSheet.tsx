@@ -1,24 +1,24 @@
-// Module ID: 16753
-// Function ID: 16754
+// Module ID: 16785
+// Function ID: 16786
 // Name: VibegrationsPublishNotesSheet
-// Dependencies: [5, 32, 19, 17, 2013, 1980, 4286, 1372, 1074, 4631, 21, 4638, 576, 7091, 504, 7354, 9447, 16754, 4605, 11476, 1115, 3591, 1101, 7790, 7566, 7307, 7259, 4634, 7195, 4791, 5060, 2]
+// Dependencies: [5, 32, 19, 17, 2013, 1980, 4288, 1372, 1074, 4633, 21, 4640, 576, 7095, 504, 7358, 9458, 16786, 4607, 11484, 1115, 3593, 1101, 7796, 7570, 7311, 7263, 4636, 7199, 4793, 5062, 2]
 // Exports: default
 
-// Module 16753 (VibegrationsPublishNotesSheet)
+// Module 16785 (VibegrationsPublishNotesSheet)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4605 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7354 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11476 */;
-import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16754 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4607 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7358 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11484 */;
+import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16786 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -26,11 +26,11 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 let closure_9 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4631).MessageSendLocation;
+const MessageSendLocation = fn(4633).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_18 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -199,7 +199,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3591.IcSdnu);
+    obj4.title = intl.string(_modDef3593.IcSdnu);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -262,8 +262,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + tmp26 + tmp34;
                 }
-                const parsed = tmp3(7790).parse(found, combined);
-                const tmp31Result = tmp3(7566);
+                const parsed = tmp3(7796).parse(found, combined);
+                const tmp31Result = tmp3(7570);
                 const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -292,10 +292,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(16754).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
+              const result = guildId(16786).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
               closure_129_20();
               dependencyMap = 0;
-              const obj = guildId(16754);
+              const obj = guildId(16786);
             }
           }
           const _Error = Error;
@@ -357,7 +357,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   let tmp33Result2 = null;
   if (stateFromStores.length > 0) {
     const obj16 = { style: tmp3.notesSection, children: null };
-    const obj17 = { label: null, placeholder: null, description: null, errorMessage: null, maxLength: null, value: null, onChange: null, isDisabled: null };
+    const obj17 = { label: null, placeholder: null, description: null, errorMessage: null, maxLength: null, value: null, onChange: null, disabled: null };
     const intl7 = tmp4(tmp2[20]).intl;
     obj17.label = intl7.string(tmp(tmp2[21]).oouynk);
     const intl8 = tmp4(tmp2[20]).intl;
@@ -378,7 +378,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     obj17.maxLength = diff;
     obj17.value = str;
     obj17.onChange = callback;
-    obj17.isDisabled = tmp18;
+    obj17.disabled = tmp18;
     const items12 = [tmp32(tmp4(tmp2[28]).TextArea, obj17), ];
     const intl11 = tmp4(tmp2[20]).intl;
     if (null != found) {

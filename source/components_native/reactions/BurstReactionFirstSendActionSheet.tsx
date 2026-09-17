@@ -1,22 +1,22 @@
-// Module ID: 7937
-// Function ID: 7938
+// Module ID: 7943
+// Function ID: 7944
 // Name: BurstReactionFirstSendActionSheet
-// Dependencies: [19, 17, 21, 4638, 576, 4605, 7938, 1115, 7260, 7898, 7939, 7877, 1177, 4634, 5060, 4458, 1944, 7937, 1897, 573, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 4607, 7944, 1115, 7264, 7904, 7945, 7883, 1177, 4636, 5062, 4460, 1944, 7943, 1897, 573, 2]
 // Exports: default, openBurstReactionFirstSendActionSheet
 
-// Module 7937 (BurstReactionFirstSendActionSheet)
+// Module 7943 (BurstReactionFirstSendActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7877 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7898 */;
-import getDeviceSpecificString from "getDeviceSpecificString" /* 7938 */;
-import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7939 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7264 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7883 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7904 */;
+import getDeviceSpecificString from "getDeviceSpecificString" /* 7944 */;
+import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7945 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 }, fill: null, nitroWheel: null, textContainer: null, body: null, content: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -87,10 +87,10 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     tmp(573).dispatch(obj3);
     const tmpResult = tmp(573);
   } else {
-    const result = tmp4(4458).UNSAFE_markDismissibleContentAsDismissed(tmp4(1944).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
-    const tmp4Result = tmp4(4458);
+    const result = tmp4(4460).UNSAFE_markDismissibleContentAsDismissed(tmp4(1944).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
+    const tmp4Result = tmp4(4460);
     const obj4 = { channelId, messageId, emoji };
-    tmp(4605).openLazy(tmp4(1897)(7937, tmp2.paths), "BurstReactionFirstSendActionSheet", obj4);
-    const tmpResult2 = tmp(4605);
+    tmp(4607).openLazy(tmp4(1897)(7943, tmp2.paths), "BurstReactionFirstSendActionSheet", obj4);
+    const tmpResult2 = tmp(4607);
   }
 };

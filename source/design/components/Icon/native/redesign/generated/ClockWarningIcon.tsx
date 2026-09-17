@@ -1,13 +1,13 @@
-// Module ID: 11996
-// Function ID: 11997
+// Module ID: 12005
+// Function ID: 12006
 // Name: ClockWarningIcon
-// Dependencies: [19, 21, 576, 4338, 11997, 2]
+// Dependencies: [19, 21, 576, 4340, 12006, 2]
 // Exports: ClockWarningIcon
 
-// Module 11996 (ClockWarningIcon)
+// Module 12005 (ClockWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod11997 from "module_11997" /* 11997 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod12006 from "module_12006" /* 12006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ClockWarningIcon = function ClockWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11997, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12006, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

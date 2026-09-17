@@ -1,11 +1,11 @@
-// Module ID: 16003
-// Function ID: 16004
+// Module ID: 16025
+// Function ID: 16026
 // Name: useAllowFriendsFromMutualGuildsOnly
-// Dependencies: [19, 1936, 7105, 2]
+// Dependencies: [19, 1936, 7109, 2]
 // Exports: useAllowFriendsFromMutualGuildsOnly
 
-// Module 16003 (useAllowFriendsFromMutualGuildsOnly)
-import UserSettingsUtils from "UserSettingsUtils" /* 7105 */;
+// Module 16025 (useAllowFriendsFromMutualGuildsOnly)
+import UserSettingsUtils from "UserSettingsUtils" /* 7109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

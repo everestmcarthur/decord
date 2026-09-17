@@ -1,9 +1,9 @@
-// Module ID: 10423
-// Function ID: 10424
+// Module ID: 10431
+// Function ID: 10432
 // Name: EmojiPicker
-// Dependencies: [19, 17, 1074, 1375, 21, 4638, 576, 1241, 4374, 10424, 7272, 7292, 10427, 10422, 7160, 1115, 10428, 10468, 5072, 4487, 10487, 2]
+// Dependencies: [19, 17, 1074, 1375, 21, 4640, 576, 1241, 4376, 10432, 7276, 7296, 10435, 10430, 7164, 1115, 10436, 10476, 5074, 4489, 10495, 2]
 
-// Module 10423 (EmojiPicker)
+// Module 10431 (EmojiPicker)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 }, headerGradientColor: null, headerGradient: null };
 let obj3 = { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 };
 obj.headerGradientColor = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
@@ -67,7 +67,7 @@ export default noop.memo(function EmojiPicker(inPortalKeyboard) {
   const obj3 = { value: tmp7(ref1(handleTextChange[11]).EMOJI_PICKER).analyticsLocations, children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.header, children: null };
-  const obj6 = { ref: ref1, size: "md", placeholder: null, onChange: null, onFocus: null, isRound: true };
+  const obj6 = { ref: ref1, size: "md", placeholder: null, onChange: null, onFocus: null, round: true };
   const intl = channel(handleTextChange[15]).intl;
   obj6.placeholder = intl.string(channel(handleTextChange[15]).t.KgK5qg);
   obj6.onChange = handleTextChange;

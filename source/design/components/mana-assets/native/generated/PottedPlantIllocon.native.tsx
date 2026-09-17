@@ -1,13 +1,13 @@
-// Module ID: 6463
-// Function ID: 6464
+// Module ID: 6465
+// Function ID: 6466
 // Name: PottedPlantIllocon
-// Dependencies: [21, 5673, 6464, 2]
+// Dependencies: [21, 5675, 6466, 2]
 // Exports: PottedPlantIllocon
 
-// Module 6463 (PottedPlantIllocon)
+// Module 6465 (PottedPlantIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6464 from "module_6464" /* 6464 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6466 from "module_6466" /* 6466 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const PottedPlantIllocon = function PottedPlantIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6464 };
+  const obj2 = { uri: _modDef6466 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

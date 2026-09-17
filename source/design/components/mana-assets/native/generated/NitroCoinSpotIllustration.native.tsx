@@ -1,13 +1,13 @@
-// Module ID: 6365
-// Function ID: 6366
+// Module ID: 6367
+// Function ID: 6368
 // Name: NitroCoinSpotIllustration
-// Dependencies: [21, 5673, 6366, 2]
+// Dependencies: [21, 5675, 6368, 2]
 // Exports: NitroCoinSpotIllustration
 
-// Module 6365 (NitroCoinSpotIllustration)
+// Module 6367 (NitroCoinSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6366 from "module_6366" /* 6366 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6368 from "module_6368" /* 6368 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroCoinSpotIllustration = function NitroCoinSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6366 };
+  const obj2 = { uri: _modDef6368 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

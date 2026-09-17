@@ -1,16 +1,16 @@
-// Module ID: 15347
-// Function ID: 15348
+// Module ID: 15352
+// Function ID: 15353
 // Name: GuildRoleSubscriptionCard
-// Dependencies: [32, 19, 17, 21, 4638, 576, 7089, 4634, 15337, 10486, 1115, 1177, 15348, 15349, 15352, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 576, 7093, 4636, 15342, 10494, 1115, 1177, 15353, 15354, 15357, 2]
 // Exports: Content
 
-// Module 15347 (GuildRoleSubscriptionCard)
+// Module 15352 (GuildRoleSubscriptionCard)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7089 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15337 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15349 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15352 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7093 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15342 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15354 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15357 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 obj2.separator = size;
@@ -63,7 +63,7 @@ export const Content = function Content(arg0) {
   const obj7 = { children: null };
   const intl = guildId(1115).intl;
   obj7.children = intl.string(guildId(1115).t["DJ+bGu"]);
-  const items = [closure_6(SectionTitle, obj7), closure_6(guildId(1177).Spacer, { size: 8 }), closure_6(guildId(15348).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  const items = [closure_6(SectionTitle, obj7), closure_6(guildId(1177).Spacer, { size: 8 }), closure_6(guildId(15353).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , , ];
   let tmp4Result = null;
@@ -93,7 +93,7 @@ export const Content = function Content(arg0) {
     obj13.children = intl3.format(tmp5(1115).t.l40GUu, obj14);
     const items4 = [tmp7(tmp8, obj13), tmp7(tmp5(1177).Spacer, { size: 14 }), ];
     const obj15 = { gap: 14, children: first1.map((benefit) => timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id)) };
-    items4[2] = tmp7(tmp5(10486).GappedList, obj15);
+    items4[2] = tmp7(tmp5(10494).GappedList, obj15);
     obj12.children = items4;
     tmp4Result3 = tmp4(tmp6, obj12);
   }
@@ -107,11 +107,11 @@ export const Content = function Content(arg0) {
     obj17.children = intl4.format(tmp5(1115).t["4V/Mfi"], obj18);
     const items5 = [tmp7(tmp8, obj17), tmp7(tmp5(1177).Spacer, { size: 14 }), ];
     const obj19 = { gap: 14, children: first2.map((benefit, index) => timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index)) };
-    items5[2] = tmp7(tmp5(10486).GappedList, obj19);
+    items5[2] = tmp7(tmp5(10494).GappedList, obj19);
     obj16.children = items5;
     tmp4Result4 = tmp4(tmp6, obj16);
   }
   items1[3] = tmp4Result4;
   obj5.children = items1;
-  return closure_8(guildId(10486).GappedList, obj5);
+  return closure_8(guildId(10494).GappedList, obj5);
 };

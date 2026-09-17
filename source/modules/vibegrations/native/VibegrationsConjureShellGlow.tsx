@@ -1,17 +1,17 @@
-// Module ID: 16786
-// Function ID: 16787
+// Module ID: 16819
+// Function ID: 16820
 // Name: VibegrationsConjureShellGlow
-// Dependencies: [32, 19, 17, 4630, 1182, 21, 1364, 576, 672, 4638, 504, 4490, 4374, 4639, 5072, 16787, 5750, 2]
+// Dependencies: [32, 19, 17, 4632, 1182, 21, 1364, 576, 672, 4640, 504, 4492, 4376, 4641, 5074, 16820, 5752, 2]
 // Exports: default
 
-// Module 16786 (VibegrationsConjureShellGlow)
+// Module 16819 (VibegrationsConjureShellGlow)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
@@ -51,7 +51,7 @@ const start = { x: 0.5, y: 0 };
 const end = { x: 0.5, y: 1 };
 const start2 = { x: 0, y: 0.5 };
 const end2 = { x: 1, y: 0.5 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_22 = createStyles.createStyles({ root: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", zIndex: 0 }, band: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 }, sweep: { position: "absolute", top: 0, bottom: 0, left: 0, width: "200%" }, fill: { flex: 1 }, ditherClip: { position: "absolute", left: 0, right: 0, bottom: 0, overflow: "hidden" }, ditherField: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 } });
 const __initData = { code: "function VibegrationsConjureShellGlowTsx2(){const{lift,pulseAt,pulse,BAND_HEIGHT}=this.__closure;const scale=lift.get()*pulseAt(pulse.get());return{transform:[{translateY:BAND_HEIGHT*(1-scale)/2},{scaleY:scale}]};}" };
 const __initData2 = { code: "function VibegrationsConjureShellGlowTsx3(){const{chromaMix,layerAlpha,driftBase,width}=this.__closure;return{opacity:(1-chromaMix.get())*layerAlpha,transform:[{translateX:-driftBase.get()*width}]};}" };

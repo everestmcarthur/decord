@@ -1,13 +1,13 @@
-// Module ID: 18051
-// Function ID: 18052
+// Module ID: 18115
+// Function ID: 18116
 // Name: AVErrorStreamBadNetworkQuality
-// Dependencies: [4677, 1074, 9253, 18044, 1370, 2]
+// Dependencies: [4679, 1074, 9264, 18108, 1370, 2]
 
-// Module 18051 (AVErrorStreamBadNetworkQuality)
+// Module 18115 (AVErrorStreamBadNetworkQuality)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import AVError from "AVError" /* 9253 */;
-import AVErrorContext from "AVErrorContext" /* 18044 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4677 */;
+import AVError from "AVError" /* 9264 */;
+import AVErrorContext from "AVErrorContext" /* 18108 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4679 */;
 
 require = fn;
 const RTCConnectionQuality = fn(1074).RTCConnectionQuality;

@@ -1,13 +1,13 @@
-// Module ID: 17945
-// Function ID: 17946
+// Module ID: 18009
+// Function ID: 18010
 // Name: GuildSettingsRoleSubscriptionContainer
-// Dependencies: [19, 17, 1980, 1074, 21, 4638, 504, 17921, 12365, 17894, 1115, 15323, 17935, 2]
+// Dependencies: [19, 17, 1980, 1074, 21, 4640, 504, 17985, 12374, 17958, 1115, 15328, 17999, 2]
 // Exports: default
 
-// Module 17945 (GuildSettingsRoleSubscriptionContainer)
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15323 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17921 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17935 */;
+// Module 18009 (GuildSettingsRoleSubscriptionContainer)
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15328 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17985 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17999 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -29,39 +29,39 @@ function ApplicationRejectedNotice(guildId) {
   ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     const obj2 = { children: resubmissionError.getAnyErrorMessage() };
-    let tmp14 = closure_7(tmp9(12365), obj2);
-    const tmp9Result = tmp9(12365);
+    let tmp14 = closure_7(tmp9(12374), obj2);
+    const tmp9Result = tmp9(12374);
   } else if (null != requestRejectedNoticeText) {
     const obj3 = { notice: requestRejectedNoticeText };
-    tmp14 = closure_7(tmp9(17894), obj3);
+    tmp14 = closure_7(tmp9(17958), obj3);
   } else if (tmp13) {
     const obj4 = { notice: null };
     const intl3 = tmp2(1115).intl;
     obj4.notice = intl3.string(tmp2(1115).t.MyJpJT);
-    tmp14 = closure_7(tmp9(17894), obj4);
-    const tmp9Result5 = tmp9(17894);
+    tmp14 = closure_7(tmp9(17958), obj4);
+    const tmp9Result5 = tmp9(17958);
   } else if (null != reapplyNoticeText) {
     const obj5 = { notice: reapplyNoticeText, ctaLabel: null, onClick: null, submitting: null };
     const intl2 = tmp2(1115).intl;
     obj5.ctaLabel = intl2.string(tmp2(1115).t["YKw/NQ"]);
     obj5.onClick = tmp12;
     obj5.submitting = tmp11;
-    tmp14 = closure_7(tmp9(17894), obj5);
-    const tmp9Result6 = tmp9(17894);
+    tmp14 = closure_7(tmp9(17958), obj5);
+    const tmp9Result6 = tmp9(17958);
   } else if (true === hasItem1) {
     const obj6 = { notice: null };
     const intl = tmp2(1115).intl;
     obj6.notice = intl.string(tmp2(1115).t.e2g9sW);
-    tmp14 = closure_7(tmp9(17894), obj6);
-    const tmp9Result7 = tmp9(17894);
+    tmp14 = closure_7(tmp9(17958), obj6);
+    const tmp9Result7 = tmp9(17958);
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj7 = { notice: null };
       const intl4 = tmp2(1115).intl;
       obj7.notice = intl4.string(tmp2(1115).t.rxI9sl);
-      tmp14 = closure_7(tmp9(17894), obj7);
-      const tmp9Result8 = tmp9(17894);
+      tmp14 = closure_7(tmp9(17958), obj7);
+      const tmp9Result8 = tmp9(17958);
     }
   }
   let tmp24 = null;
@@ -91,7 +91,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");

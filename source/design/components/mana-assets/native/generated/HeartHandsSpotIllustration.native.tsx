@@ -1,13 +1,13 @@
-// Module ID: 6299
-// Function ID: 6300
+// Module ID: 6301
+// Function ID: 6302
 // Name: HeartHandsSpotIllustration
-// Dependencies: [21, 5673, 6300, 2]
+// Dependencies: [21, 5675, 6302, 2]
 // Exports: HeartHandsSpotIllustration
 
-// Module 6299 (HeartHandsSpotIllustration)
+// Module 6301 (HeartHandsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6300 from "module_6300" /* 6300 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6302 from "module_6302" /* 6302 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const HeartHandsSpotIllustration = function HeartHandsSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6300 };
+  const obj2 = { uri: _modDef6302 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

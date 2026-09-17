@@ -1,22 +1,22 @@
-// Module ID: 17268
-// Function ID: 17269
+// Module ID: 17308
+// Function ID: 17309
 // Name: useSoundGrid
-// Dependencies: [32, 19, 1958, 1980, 4276, 2012, 1372, 5097, 5099, 1374, 5105, 4531, 17269, 504, 4295, 17270, 9811, 17271, 5077, 17272, 2]
+// Dependencies: [32, 19, 1958, 1980, 4278, 2012, 1372, 5100, 5102, 1374, 5108, 4533, 17309, 504, 4297, 17310, 9822, 17311, 5079, 17312, 2]
 // Exports: default, useSearchCategories
 
-// Module 17268 (useSoundGrid)
-import SoundboardTypes from "SoundboardTypes" /* 5105 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9811 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17269 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17272 */;
+// Module 17308 (useSoundGrid)
+import SoundboardTypes from "SoundboardTypes" /* 5108 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9822 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 17309 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17312 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 import UserStore from "UserStore" /* 1372 */;
-import SoundboardStore from "SoundboardStore" /* 5097 */;
+import SoundboardStore from "SoundboardStore" /* 5100 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ function addTopSoundsSection(items, stateFromStores3, arg2) {
     items.push(obj2);
   }
 }
-const SoundboardConstants = fn(5099);
+const SoundboardConstants = fn(5102);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
@@ -279,7 +279,7 @@ export default function useSoundGrid(guild_id) {
           tmp57Result = tmp57(value6);
         }
         const mapped = tmp57Result.map((sound, index) => ({ type: categories(length[10]).SoundboardSoundItemType.SOUND, sound, index }));
-        const tmp24 = value6.length < tmp13(4531).getMaxSoundboardSlots(tmp23) && stateFromStores2;
+        const tmp24 = value6.length < tmp13(4533).getMaxSoundboardSlots(tmp23) && stateFromStores2;
         let tmp26 = !tmp24;
         if (!tmp24) {
           tmp26 = !tmp25;
@@ -288,7 +288,7 @@ export default function useSoundGrid(guild_id) {
           tmp26 = tmp28;
         }
         if (!tmp26) {
-          const obj8 = { type: tmp13(5105).SoundboardSoundItemType.ADD_SOUND, guild: tmp23 };
+          const obj8 = { type: tmp13(5108).SoundboardSoundItemType.ADD_SOUND, guild: tmp23 };
           mapped.push(obj8);
         }
         if (tmp28) {
@@ -296,23 +296,23 @@ export default function useSoundGrid(guild_id) {
         }
         if (!tmp28) {
           const obj9 = { categoryInfo: null, key: null, items: null };
-          const obj10 = { type: tmp13(5105).SoundboardSoundGridSectionType.GUILD, guild: tmp23, isNitroLocked: false };
+          const obj10 = { type: tmp13(5108).SoundboardSoundGridSectionType.GUILD, guild: tmp23, isNitroLocked: false };
           obj9.categoryInfo = obj10;
           obj9.key = tmp23.id;
           obj9.items = mapped;
           items.push(obj9);
         }
-        const tmp13Result = tmp13(4531);
+        const tmp13Result = tmp13(4533);
       }
       if (!c11) {
         let value7 = obj3.get(closure_2_11);
         if (value7 == null) {
           value7 = closure_2_12;
         }
-        const obj11 = { key: tmp13(5105).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj12 = { type: tmp13(5105).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj11 = { key: tmp13(5108).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj12 = { type: tmp13(5108).SoundboardSoundGridSectionType.DEFAULTS };
         obj11.categoryInfo = obj12;
-        const sortSoundsOldestToNewestCreationDate = tmp13(17269).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate = tmp13(17309).sortSoundsOldestToNewestCreationDate;
         let result1 = value7;
         if (null != sortSoundsOldestToNewestCreationDate) {
           result1 = sortSoundsOldestToNewestCreationDate(value7);
@@ -363,10 +363,10 @@ export default function useSoundGrid(guild_id) {
         if (value8 == null) {
           value8 = closure_2_12;
         }
-        const obj14 = { key: tmp13(5105).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj15 = { type: tmp13(5105).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj14 = { key: tmp13(5108).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj15 = { type: tmp13(5108).SoundboardSoundGridSectionType.DEFAULTS };
         obj14.categoryInfo = obj15;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(17269).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = tmp13(17309).sortSoundsOldestToNewestCreationDate;
         let result2 = value8;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result2 = sortSoundsOldestToNewestCreationDate2(value8);

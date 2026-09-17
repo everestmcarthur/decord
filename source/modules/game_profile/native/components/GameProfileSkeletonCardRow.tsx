@@ -1,16 +1,16 @@
-// Module ID: 8891
-// Function ID: 8892
+// Module ID: 8907
+// Function ID: 8908
 // Name: GameProfileSkeletonCardRow
-// Dependencies: [19, 17, 21, 4638, 576, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 2]
 // Exports: default
 
-// Module 8891 (GameProfileSkeletonCardRow)
+// Module 8907 (GameProfileSkeletonCardRow)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_4 = createStyles.createStyles((gap) => {
   const obj = { viewport: { overflow: "hidden" }, row: { flexDirection: "row", gap } };
   return obj;

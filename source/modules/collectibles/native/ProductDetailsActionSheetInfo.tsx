@@ -1,20 +1,20 @@
-// Module ID: 13294
-// Function ID: 13295
+// Module ID: 13302
+// Function ID: 13303
 // Name: ProductDetailsActionSheetInfo
-// Dependencies: [17, 21, 4638, 576, 13295, 4634, 7664, 8981, 1115, 13296, 1890, 2]
+// Dependencies: [17, 21, 4640, 576, 13303, 4636, 7668, 8997, 1115, 13304, 1890, 2]
 // Exports: default
 
-// Module 13294 (ProductDetailsActionSheetInfo)
+// Module 13302 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7664 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8981 */;
-import useProductDescription from "useProductDescription" /* 13295 */;
-import InlinePriceTagDefault from "InlinePriceTag" /* 13296 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7668 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8997 */;
+import useProductDescription from "useProductDescription" /* 13303 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 13304 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import size from "module_2" /* 2 */;
 
 function ProductNameAndDescription(product) {
@@ -34,12 +34,12 @@ function ProductPurchaseStatus(product) {
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
     const intl2 = tmp(1115).intl;
     obj3.children = intl2.string(tmp(1115).t["6cfuDj"]);
-    let children = tmp6(tmp(4634).Text, obj3);
+    let children = tmp6(tmp(4636).Text, obj3);
   } else if (tmp5) {
     const obj4 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
     const intl = tmp(1115).intl;
     obj4.children = intl.string(tmp(1115).t.BEjTij);
-    children = tmp6(tmp(4634).Text, obj4);
+    children = tmp6(tmp(4636).Text, obj4);
   } else {
     children = !result;
     if (!result) {

@@ -1,23 +1,23 @@
-// Module ID: 16940
-// Function ID: 16941
+// Module ID: 16979
+// Function ID: 16980
 // Name: ChannelDetailsLinkedLobby
-// Dependencies: [19, 17, 1074, 21, 4638, 576, 7278, 4634, 1115, 2025, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 576, 7282, 4636, 1115, 2025, 2]
 // Exports: default
 
-// Module 16940 (ChannelDetailsLinkedLobby)
+// Module 16979 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7278 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7282 */;
 import noop from "module_19" /* 19 */;
 
 const util = BPDKoA(1115);
-const Text_Text = BPDKoA(4634);
+const Text_Text = BPDKoA(4636);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;

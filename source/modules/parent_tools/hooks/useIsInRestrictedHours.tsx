@@ -1,14 +1,14 @@
-// Module ID: 17505
-// Function ID: 17506
+// Module ID: 17546
+// Function ID: 17547
 // Name: useIsInRestrictedHours
-// Dependencies: [1372, 7647, 504, 17506, 2]
+// Dependencies: [1372, 7651, 504, 17547, 2]
 // Exports: default
 
-// Module 17505 (useIsInRestrictedHours)
+// Module 17546 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
-import RestrictedHoursManager from "RestrictedHoursManager" /* 17506 */;
+import RestrictedHoursManager from "RestrictedHoursManager" /* 17547 */;
 import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
 
 require = fn;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// Module ID: 13239
-// Function ID: 13240
+// Module ID: 13247
+// Function ID: 13248
 // Name: MobileWishlistSuggestionsExperiment
 // Dependencies: [1434, 2]
 // Exports: getIsMobileWishlistSuggestionsEnabled, useIsMobileWishlistSuggestionsEnabled
 
-// Module 13239 (MobileWishlistSuggestionsExperiment)
+// Module 13247 (MobileWishlistSuggestionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

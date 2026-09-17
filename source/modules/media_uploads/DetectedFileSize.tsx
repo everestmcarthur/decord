@@ -1,10 +1,10 @@
-// Module ID: 5264
-// Function ID: 5265
+// Module ID: 5266
+// Function ID: 5267
 // Name: DetectedFileSize
 // Dependencies: [5, 2]
 // Exports: getDetectedFileSize
 
-// Module 5264 (DetectedFileSize)
+// Module 5266 (DetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _getDetectedFileSize(arg0, value) {

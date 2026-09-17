@@ -1,12 +1,12 @@
-// Module ID: 17038
-// Function ID: 17039
+// Module ID: 17077
+// Function ID: 17078
 // Name: ChannelSettingsPermissionsList
-// Dependencies: [32, 19, 17, 1958, 2022, 2016, 1372, 1074, 21, 4638, 576, 504, 5603, 1484, 1612, 7159, 4651, 4281, 5691, 10409, 1895, 11092, 7160, 1115, 7165, 1177, 8360, 2]
+// Dependencies: [32, 19, 17, 1958, 2022, 2016, 1372, 1074, 21, 4640, 576, 504, 5605, 1484, 1612, 7163, 4653, 4283, 5693, 10417, 1895, 11100, 7164, 1115, 7169, 1177, 8379, 2]
 
-// Module 17038 (ChannelSettingsPermissionsList)
+// Module 17077 (ChannelSettingsPermissionsList)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1895 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5603 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -21,7 +21,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };
@@ -201,7 +201,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       return null;
     }
   }, items7);
-  const obj7 = { size: "md", placeholder: null, onChange: null, isRound: true };
+  const obj7 = { size: "md", placeholder: null, onChange: null, round: true };
   const intl = tmp2(tmp3[23]).intl;
   obj7.placeholder = intl.string(channelId(stateFromStores[23]).t["5h0QOP"]);
   obj7.onChange = tmp5[1];

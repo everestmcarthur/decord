@@ -1,14 +1,14 @@
-// Module ID: 10178
-// Function ID: 10179
+// Module ID: 10189
+// Function ID: 10190
 // Name: RTCDebugActionCreators
-// Dependencies: [10177, 573, 9237, 4258, 2]
+// Dependencies: [10188, 573, 9248, 4260, 2]
 // Exports: chooseReplayPath, close, open, openReplay, setSection, setShouldRecordNextConnection, setSimulcastDebugOverride
 
-// Module 10178 (RTCDebugActionCreators)
+// Module 10189 (RTCDebugActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DiscordNativeDefault from "DiscordNative" /* 4258 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9237 */;
-import RTCDebugStore from "RTCDebugStore" /* 10177 */;
+import DiscordNativeDefault from "DiscordNative" /* 4260 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9248 */;
+import RTCDebugStore from "RTCDebugStore" /* 10188 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");

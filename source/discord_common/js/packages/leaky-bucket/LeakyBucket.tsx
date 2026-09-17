@@ -1,9 +1,9 @@
-// Module ID: 9704
-// Function ID: 9705
+// Module ID: 9715
+// Function ID: 9716
 // Name: LeakyBucket
 // Dependencies: [2]
 
-// Module 9704 (LeakyBucket)
+// Module 9715 (LeakyBucket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");

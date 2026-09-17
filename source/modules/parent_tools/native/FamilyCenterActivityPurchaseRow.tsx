@@ -1,21 +1,21 @@
-// Module ID: 15017
-// Function ID: 15018
+// Module ID: 15025
+// Function ID: 15026
 // Name: FamilyCenterActivityPurchaseRow
-// Dependencies: [19, 17, 21, 4638, 576, 8302, 15018, 7344, 15019, 4634, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 8321, 15026, 7348, 15027, 4636, 2]
 // Exports: default
 
-// Module 15017 (FamilyCenterActivityPurchaseRow)
+// Module 15025 (FamilyCenterActivityPurchaseRow)
 import nativeDefault from "native" /* 576 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8302 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15018 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8321 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15026 */;
 import noop from "module_19" /* 19 */;
 
-const FamilyCenterActivityItemPreviewDefault = tmp2(15019);
+const FamilyCenterActivityItemPreviewDefault = tmp2(15027);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -43,14 +43,14 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(7344);
+    const tmp5Result = tmp5(7348);
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
     }
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    const formatPriceResult = tmp5(7344).formatPrice(total, currency);
+    const formatPriceResult = tmp5(7348).formatPrice(total, currency);
     if (product == null) {
       product = null;
     }
@@ -60,9 +60,9 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     const items = [React4(FamilyCenterActivityItemPreviewDefault, obj3), ];
     const obj4 = { style: tmp.textContainer, children: null };
     const obj5 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
-    const items1 = [React4(tmp5(4634).Text, obj5), ];
+    const items1 = [React4(tmp5(4636).Text, obj5), ];
     const obj6 = { variant: "text-xs/medium", color: "text-muted", children: formatPriceResult };
-    items1[1] = React4(tmp5(4634).Text, obj6);
+    items1[1] = React4(tmp5(4636).Text, obj6);
     obj4.children = items1;
     items[1] = hasOwnProperty(View, obj4);
     obj2.children = items;

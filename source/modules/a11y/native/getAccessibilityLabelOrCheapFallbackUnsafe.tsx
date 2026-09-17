@@ -1,10 +1,10 @@
-// Module ID: 8067
-// Function ID: 8068
+// Module ID: 8087
+// Function ID: 8088
 // Name: getAccessibilityLabelOrCheapFallbackUnsafe
-// Dependencies: [8068, 2]
+// Dependencies: [8088, 2]
 // Exports: getAccessibilityLabelOrCheapFallbackUnsafe
 
-// Module 8067 (getAccessibilityLabelOrCheapFallbackUnsafe)
+// Module 8087 (getAccessibilityLabelOrCheapFallbackUnsafe)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx");

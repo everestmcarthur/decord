@@ -1,11 +1,11 @@
-// Module ID: 14812
-// Function ID: 14813
+// Module ID: 14820
+// Function ID: 14821
 // Name: UserSettingSearchManager
-// Dependencies: [5603, 14813, 2]
+// Dependencies: [5605, 14821, 2]
 
-// Module 14812 (UserSettingSearchManager)
-import fuzzysearchDefault from "fuzzysearch" /* 5603 */;
-import StringMatchUtils from "StringMatchUtils" /* 14813 */;
+// Module 14820 (UserSettingSearchManager)
+import fuzzysearchDefault from "fuzzysearch" /* 5605 */;
+import StringMatchUtils from "StringMatchUtils" /* 14821 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");

@@ -1,10 +1,10 @@
-// Module ID: 11637
-// Function ID: 11638
+// Module ID: 11645
+// Function ID: 11646
 // Name: IosAttributionNativeModule
 // Dependencies: [2]
 // Exports: endImpression, getActiveIosAttributionFramework, startImpression
 
-// Module 11637 (IosAttributionNativeModule)
+// Module 11645 (IosAttributionNativeModule)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionNativeModule.tsx");

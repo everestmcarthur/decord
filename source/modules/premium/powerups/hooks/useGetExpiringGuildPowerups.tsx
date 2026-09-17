@@ -1,14 +1,14 @@
-// Module ID: 12701
-// Function ID: 12702
+// Module ID: 12710
+// Function ID: 12711
 // Name: useGetExpiringGuildPowerups
-// Dependencies: [19, 4526, 504, 12636, 1370, 2]
+// Dependencies: [19, 4528, 504, 12645, 1370, 2]
 // Exports: default
 
-// Module 12701 (useGetExpiringGuildPowerups)
+// Module 12710 (useGetExpiringGuildPowerups)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12636 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12645 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4526 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
 
 const require = globalThis.__r;
 

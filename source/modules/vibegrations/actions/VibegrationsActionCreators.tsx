@@ -1,18 +1,18 @@
-// Module ID: 16730
-// Function ID: 16731
+// Module ID: 16760
+// Function ID: 16761
 // Name: VibegrationsActionCreators
-// Dependencies: [5, 9653, 16723, 1074, 9654, 573, 16726, 9650, 1271, 7355, 16731, 7273, 9170, 2]
+// Dependencies: [5, 9664, 16754, 1074, 9665, 573, 16756, 9661, 1271, 7359, 16761, 7277, 9181, 2]
 // Exports: createProject, deleteProject, markLogsSeen, refreshPublishedProject, reloadVibegrationsProjectFrames, renameProject, setBuilderPreviewApplicationId, setBuilderPreviewMobile, setChatSidebarWidth, setComposerDraft, setGuildHints, setProjectIcon, setSelectedProjectForGuild, trackPublishFailed, updateProjectSettings
 
-// Module 16730 (VibegrationsActionCreators)
+// Module 16760 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9650 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16726 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7359 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9661 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16756 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9653 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
+import FramesStore from "FramesStore" /* 9664 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16754 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -532,7 +532,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9654).isLaunched;
+const isLaunched = fn(9665).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);

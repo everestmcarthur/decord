@@ -1,24 +1,24 @@
-// Module ID: 7390
-// Function ID: 7391
+// Module ID: 7394
+// Function ID: 7395
 // Name: ChannelSectionStore
-// Dependencies: [4553, 7391, 1962, 1958, 1980, 4276, 2012, 4459, 1372, 1074, 1965, 1085, 7392, 7393, 1110, 11, 4879, 504, 1434, 573, 2]
+// Dependencies: [4555, 7395, 1962, 1958, 1980, 4278, 2012, 4461, 1372, 1074, 1965, 1085, 7396, 7397, 1110, 11, 4881, 504, 1434, 573, 2]
 // Exports: isViewChannelSidebar
 
-// Module 7390 (ChannelSectionStore)
+// Module 7394 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import ApexExperiment from "ApexExperiment" /* 1434 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7392 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7393 */;
-import ExperimentStore from "ExperimentStore" /* 4553 */;
-import SearchMessageStore from "SearchMessageStore" /* 7391 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7396 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7397 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
+import SearchMessageStore from "SearchMessageStore" /* 7395 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -576,7 +576,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (sidebars[channelId] != null) {
           type = tmp10.type;
         }
-        if (type === tmp(7392).SidebarType.VIEW_CHANNEL) {
+        if (type === tmp(7396).SidebarType.VIEW_CHANNEL) {
           if (tmp10.channelId === channelId) {
             return flag;
           }
@@ -586,8 +586,8 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (null != channel) {
           flag2 = flag;
           if (isChannelChatInSidebar(channel.type)) {
-            const obj = { type: tmp(7392).SidebarType.VIEW_CHANNEL, channelId, details: null };
-            const obj2 = { type: tmp(7392).ViewChannelDetailType.CHAT, initialMessageId: messageId };
+            const obj = { type: tmp(7396).SidebarType.VIEW_CHANNEL, channelId, details: null };
+            const obj2 = { type: tmp(7396).ViewChannelDetailType.CHAT, initialMessageId: messageId };
             obj.details = obj2;
             sidebars[channelId] = obj;
             flag2 = true;

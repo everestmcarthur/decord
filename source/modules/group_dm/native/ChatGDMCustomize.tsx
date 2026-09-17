@@ -1,9 +1,9 @@
-// Module ID: 11075
-// Function ID: 11076
+// Module ID: 11083
+// Function ID: 11084
 // Name: ChatGDMCustomize
-// Dependencies: [5, 32, 19, 17, 1958, 1074, 21, 4638, 576, 7091, 504, 4791, 5684, 1397, 11076, 4651, 1115, 4336, 6718, 11077, 5208, 4634, 6714, 5060, 11079, 2]
+// Dependencies: [5, 32, 19, 17, 1958, 1074, 21, 4640, 576, 7095, 504, 4793, 5686, 1397, 11084, 4653, 1115, 4338, 6721, 11085, 5210, 4636, 6717, 5062, 11087, 2]
 
-// Module 11075 (ChatGDMCustomize)
+// Module 11083 (ChatGDMCustomize)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -17,7 +17,7 @@ const MAX_CHANNEL_NAME_LENGTH = fn(1074).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.iconUploader = { marginTop: nativeDefault.space.PX_24, alignSelf: "center" };
@@ -288,14 +288,14 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
     }
     items5[1] = tmp46Result;
     let obj10 = { style: tmp.textInput, children: null };
-    let obj11 = { label: null, placeholder: null, defaultValue: null, maxLength: null, onChange: null, isDisabled: null, isClearable: true };
+    let obj11 = { label: null, placeholder: null, defaultValue: null, maxLength: null, onChange: null, disabled: null, clearable: true };
     let intl2 = tmp4(tmp3[16]).intl;
     obj11.label = intl2.string(tmp4(tmp3[16]).t.GEGW3P);
     obj11.placeholder = str;
     obj11.defaultValue = tmp2ResultResult;
     obj11.maxLength = maxLength;
     obj11.onChange = tmp8[1];
-    obj11.isDisabled = tmp28;
+    obj11.disabled = tmp28;
     obj10.children = c10(tmp4(tmp3[22]).TextInput, obj11);
     items5[2] = c10(hasUnsavedChanges, obj10);
     let obj12 = { onPress: callback1, text: null, variant: null, disabled: null, loading: null };

@@ -1,9 +1,10 @@
 // Module ID: 11102
 // Function ID: 11103
-// Dependencies: [1121]
+// Dependencies: [8534, 11103]
 
 // Module 11102
-import registerAsset from "module_1121" /* 1121 */;
+import baseRest from "baseRest" /* 8534 */;
+import baseDelay from "baseDelay" /* 11103 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "925ba669dce4508a3d121b3e5d7504b9", name: "PlusLargeIcon", type: "png" });
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

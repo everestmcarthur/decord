@@ -1,12 +1,12 @@
-// Module ID: 17889
-// Function ID: 17890
+// Module ID: 17953
+// Function ID: 17954
 // Name: GuildSettingsRoleSubscriptionsEmpty
-// Dependencies: [19, 1980, 1074, 1349, 21, 1484, 17890, 17891, 17892, 504, 2]
+// Dependencies: [19, 1980, 1074, 1349, 21, 1484, 17954, 17955, 17956, 504, 2]
 // Exports: default
 
-// Module 17889 (GuildSettingsRoleSubscriptionsEmpty)
+// Module 17953 (GuildSettingsRoleSubscriptionsEmpty)
 import useNavigation from "useNavigation" /* 1484 */;
-import PlaceholderDefault from "Placeholder" /* 17891 */;
+import PlaceholderDefault from "Placeholder" /* 17955 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -15,14 +15,14 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
   const str = useNavigation.useNavigation();
   if (tmp3.loading) {
-    let tmp7 = jsx(tmp2(17891), {});
+    let tmp7 = jsx(tmp2(17955), {});
   } else {
     const features = guild.features;
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
       const features2 = guild.features;
       if (!features2.has(tmp5.CREATOR_MONETIZABLE_PROVISIONAL)) {
         const obj2 = { guild };
-        tmp7 = jsx(tmp2(17892), { guild });
+        tmp7 = jsx(tmp2(17956), { guild });
       }
     }
     if (null == tmp4) {

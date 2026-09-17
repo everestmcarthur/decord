@@ -1,15 +1,15 @@
-// Module ID: 18032
-// Function ID: 18033
+// Module ID: 18096
+// Function ID: 18097
 // Name: ApiRequestConfigManager
-// Dependencies: [17, 502, 1271, 1241, 7228, 1364, 2]
+// Dependencies: [17, 502, 1271, 1241, 7232, 1364, 2]
 
-// Module 18032 (ApiRequestConfigManager)
+// Module 18096 (ApiRequestConfigManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 import size from "module_2" /* 2 */;
 
 function updateApiRequestConfig() {

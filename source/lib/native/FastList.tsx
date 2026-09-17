@@ -1,17 +1,17 @@
-// Module ID: 7182
-// Function ID: 7183
+// Module ID: 7186
+// Function ID: 7187
 // Name: FastList
-// Dependencies: [109, 32, 19, 17, 21, 12, 558, 5675, 4634, 1364, 4374, 7183, 7184, 6735, 7185, 2]
+// Dependencies: [109, 32, 19, 17, 21, 12, 558, 5677, 4636, 1364, 4376, 7187, 7188, 6738, 7189, 2]
 // Exports: getItemSizeOverrideKey
 
-// Module 7182 (FastList)
+// Module 7186 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4374 */;
-import NativeViewDefault from "NativeView" /* 5675 */;
-import BottomSheetModal from "BottomSheetModal" /* 6735 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7185 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
+import NativeViewDefault from "NativeView" /* 5677 */;
+import BottomSheetModal from "BottomSheetModal" /* 6738 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7189 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -1623,8 +1623,7 @@ class FastList extends PureComponent {
           const result = obj.queueViewabilityChange();
         };
         tmp1.handleLayout = function handleLayout(nativeEvent) {
-          const state = closure_0.state;
-          const fastListComputer = state.fastListComputer;
+          ({ isFirstLayout, fastListComputer } = closure_0.state);
           ({ contentInset, onLayout, horizontal, chunkBase } = closure_0.props);
           const layout = nativeEvent.nativeEvent.layout;
           let num = horizontal ? contentInset.left : contentInset.top;
@@ -1642,11 +1641,14 @@ class FastList extends PureComponent {
           if (onLayout != null) {
             onLayout(nativeEvent, obj);
           }
-          if (state.isFirstLayout) {
+          if (isFirstLayout) {
             if (null == chunkBase) {
               obj.setState(obj.getInitialState(obj.containerSize, fastListComputer, false));
             }
             const result = obj.queueViewabilityChange();
+          }
+          if (isFirstLayout) {
+            const result1 = obj.clampInitialScrollPosition();
           }
           const blocks = obj.computeBlocks();
         };
@@ -2043,6 +2045,28 @@ prototype4["restoreScrollPosition"] = function restoreScrollPosition() {
       const _requestAnimationFrame = requestAnimationFrame;
       self.deferredCompute = requestAnimationFrame(() => self.computeBlocks());
     }
+  }
+};
+prototype4["clampInitialScrollPosition"] = function clampInitialScrollPosition() {
+  const self = this;
+  ({ fastListComputer, initialContentOffset } = this.state);
+  if (null != initialContentOffset) {
+    const horizontal = self.props.horizontal;
+    if (horizontal != null) {
+      if (horizontal) {
+        let y = initialContentOffset.x;
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      const _Math3 = Math;
+      const bound = Math.max(0, Math.min(y, Math.max(0, fastListComputer.getSize() - self.containerSize)));
+      if (bound !== y) {
+        self.scrollPos = bound;
+        const scrollPosValue = self.scrollPosValue;
+        const result = scrollPosValue.set(bound);
+      }
+    }
+    y = initialContentOffset.y;
   }
 };
 prototype4["computeBlocks"] = function computeBlocks() {

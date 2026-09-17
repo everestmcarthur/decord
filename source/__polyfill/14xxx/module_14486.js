@@ -1,11 +1,12 @@
 // Module ID: 14486
 // Function ID: 14487
-// Dependencies: [14487, 14494]
+// Dependencies: [14465, 14464]
 
 // Module 14486
-import _mod14487 from "module_14487" /* 14487 */;
-import _mod14494 from "module_14494" /* 14494 */;
+import _mod14464 from "module_14464" /* 14464 */;
+import _mod14465 from "module_14465" /* 14465 */;
 
 
-export const URL = _mod14487;
-export const URLSearchParams = _mod14494;
+export default Object.keys || (function keys(arg0) {
+  return _mod14465(arg0, _mod14464);
+});

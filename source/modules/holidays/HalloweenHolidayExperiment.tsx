@@ -1,9 +1,9 @@
-// Module ID: 17591
-// Function ID: 17592
+// Module ID: 17632
+// Function ID: 17633
 // Name: HalloweenHolidayExperiment
 // Dependencies: [1434, 2]
 
-// Module 17591 (HalloweenHolidayExperiment)
+// Module 17632 (HalloweenHolidayExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

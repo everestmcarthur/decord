@@ -1,17 +1,17 @@
-// Module ID: 8505
-// Function ID: 8506
+// Module ID: 8524
+// Function ID: 8525
 // Name: LinkAnalyticsUtils
-// Dependencies: [1074, 8506, 1366, 4792, 1241, 2]
+// Dependencies: [1074, 8525, 1366, 4794, 1241, 2]
 
-// Module 8505 (LinkAnalyticsUtils)
+// Module 8524 (LinkAnalyticsUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import LinkUtils from "LinkUtils" /* 4792 */;
+import LinkUtils from "LinkUtils" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
-const constants = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };
+const constants = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link", USER_PROFILE: "Discord User Profile Link" };
 const items = [
   (substr) => {
     let SERVER_INVITE = null;
@@ -50,6 +50,18 @@ const items = [
       DISCOVERY = constants.DISCOVERY;
     }
     return DISCOVERY;
+  },
+  (target) => {
+    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(target);
+    let USER_PROFILE = null;
+    if (null != safeParseWithQueryResult) {
+      USER_PROFILE = null;
+      if (null != obj2.tryParseUserProfilePath(safeParseWithQueryResult.pathname)) {
+        USER_PROFILE = constants.USER_PROFILE;
+      }
+      obj2 = LinkUtils;
+    }
+    return USER_PROFILE;
   }
 ];
 const result = size.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");

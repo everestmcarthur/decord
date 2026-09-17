@@ -1,13 +1,13 @@
-// Module ID: 14890
-// Function ID: 14891
+// Module ID: 14898
+// Function ID: 14899
 // Name: AccountChangePasswordSetting
-// Dependencies: [8091, 1074, 11614, 1115, 14891, 2]
+// Dependencies: [8111, 1074, 11622, 1115, 14899, 2]
 
-// Module 14890 (AccountChangePasswordSetting)
+// Module 14898 (AccountChangePasswordSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8091 */;
-import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingsConstants from "SettingsConstants" /* 8111 */;
+import SettingBuilders from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,21 +1,21 @@
-// Module ID: 15300
-// Function ID: 15301
+// Module ID: 15305
+// Function ID: 15306
 // Name: QuestDockBlurredHeaderPlaceholder
-// Dependencies: [19, 17, 5530, 15202, 21, 4638, 15203, 15301, 4374, 2]
+// Dependencies: [19, 17, 5532, 15207, 21, 4640, 15208, 15306, 4376, 2]
 
-// Module 15300 (QuestDockBlurredHeaderPlaceholder)
-import thumbHashToRGBA from "thumbHashToRGBA" /* 15301 */;
+// Module 15305 (QuestDockBlurredHeaderPlaceholder)
+import thumbHashToRGBA from "thumbHashToRGBA" /* 15306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(5530).QuestDockMode;
-const QuestDockConstants = fn(15202);
+const QuestDockMode = fn(5532).QuestDockMode;
+const QuestDockConstants = fn(15207);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { image: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

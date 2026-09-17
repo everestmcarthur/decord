@@ -1,9 +1,9 @@
-// Module ID: 12797
-// Function ID: 12798
+// Module ID: 12805
+// Function ID: 12806
 // Name: WelcomeScreenStore
 // Dependencies: [504, 573, 2]
 
-// Module 12797 (WelcomeScreenStore)
+// Module 12805 (WelcomeScreenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

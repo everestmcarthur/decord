@@ -1,10 +1,10 @@
-// Module ID: 11070
-// Function ID: 11071
+// Module ID: 11078
+// Function ID: 11079
 // Name: useNavigatorConfirmChangesOnBack
-// Dependencies: [19, 17, 1074, 11071, 11072, 2]
+// Dependencies: [19, 17, 1074, 11079, 11080, 2]
 // Exports: default
 
-// Module 11070 (useNavigatorConfirmChangesOnBack)
+// Module 11078 (useNavigatorConfirmChangesOnBack)
 import noop from "module_19" /* 19 */;
 
 const Keyboard = fn(17).Keyboard;
@@ -16,7 +16,7 @@ export default function useNavigatorConfirmChangesOnBack() {
   const ref = noop.useRef(null);
   dependencyMap = noop.useRef(false);
   let obj = {
-    onGoBack: ref(11071)({
+    onGoBack: ref(11079)({
       onBeforeGoBack(navigation) {
         if (navigation.preventable) {
           let current = ref2.current;

@@ -1,21 +1,21 @@
-// Module ID: 4849
-// Function ID: 4850
+// Module ID: 4851
+// Function ID: 4852
 // Name: AgeGateUtils
-// Dependencies: [1976, 1958, 4850, 1980, 1372, 1099, 1074, 1115, 11, 4851, 5509, 5510, 504, 8543, 2025, 7321, 7439, 2]
+// Dependencies: [1976, 1958, 4852, 1980, 1372, 1099, 1074, 1115, 11, 4853, 5511, 5512, 504, 8562, 2025, 7325, 7443, 2]
 // Exports: guildNeedsAgeGate, isChannelAgeVerificationGated, isChannelOrGuildNSFW, isCurrentUserMissingDateOfBirth, maybeOpenAgeGateForVoiceChannel, maybeShowAgeGate, shouldAgeVerifyForAgeGate, shouldAgeVerifyForSettingsToggles, shouldShowAgeGateForChannelId, shouldShowAgeGateForCurrentUser, shouldShowAgeGateForGuildContentLevel, useAgeGateVerifyContent, useAgeGateVerifyContentForGuild, useShouldAgeVerifyForAgeGate, useShouldAgeVerifyForSettingsToggles, useShouldHideChannelContent, userCannotSeeNSFWContent, userNeedsAgeGate
 
-// Module 4849 (AgeGateUtils)
+// Module 4851 (AgeGateUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import AgeGateConstants from "AgeGateConstants" /* 1099 */;
 import GuildRecord from "GuildRecord" /* 1976 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4851 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5509 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5510 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 7321 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4853 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5511 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5512 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 7325 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 4850 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 4852 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
@@ -30,12 +30,12 @@ function shouldShowAgeGateForVoiceChannel(channelId) {
     const currentUser = UserStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      const result1 = tmp(4851).shouldShowTiggerPawtect();
-      const tmpResult = tmp(4851);
-      const tmpResult2 = tmp(5509);
-      const tmp9 = tmp(5509).isFeatureAgeGated(tmp(5510).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      flag = true !== currentUser.nsfwAllowed || tmp(5509).isFeatureAgeGated(tmp(5510).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      const tmp10 = true !== currentUser.nsfwAllowed || tmp(5509).isFeatureAgeGated(tmp(5510).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      const result1 = tmp(4853).shouldShowTiggerPawtect();
+      const tmpResult = tmp(4853);
+      const tmpResult2 = tmp(5511);
+      const tmp9 = tmp(5511).isFeatureAgeGated(tmp(5512).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      flag = true !== currentUser.nsfwAllowed || tmp(5511).isFeatureAgeGated(tmp(5512).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      const tmp10 = true !== currentUser.nsfwAllowed || tmp(5511).isFeatureAgeGated(tmp(5512).AgeGatedFeature.AGE_GATED_SPACES) && result1;
     }
     let tmp12 = !flag;
     if (flag) {
@@ -241,7 +241,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
       string2 = intl9.string;
       formatResult = string2(tmp(1115).t.Zt4Mf4);
       obj5.agreement = formatResult;
-      NSFW_CHANNEL_AGE_VERIFY = tmp(8543).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+      NSFW_CHANNEL_AGE_VERIFY = tmp(8562).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
       obj5.modalType = NSFW_CHANNEL_AGE_VERIFY;
       obj5.emphasiseDisagree = false;
       let obj6 = obj5;
@@ -249,7 +249,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
       obj6 = { title: string2, description: stringResult1, agreement: null, modalType: null };
       const intl8 = tmp(1115).intl;
       obj6.agreement = intl8.string(tmp(1115).t.FDSSia);
-      obj6.modalType = tmp(8543).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+      obj6.modalType = tmp(8562).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     }
   } else {
     const obj7 = { title: null, description: null, agreement: null, modalType: null };
@@ -261,7 +261,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
       let NSFW_CHANNEL_UNDERAGE = tmp(1115).t;
       const obj9 = { helpURL: HelpdeskUtilsDefault.getArticleURL(constants.NSFW_AGE_GATING) };
       obj7.description = intl7.format(tmp4 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"], obj9);
-      NSFW_CHANNEL_UNDERAGE = tmp(8543).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
+      NSFW_CHANNEL_UNDERAGE = tmp(8562).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
       obj7.modalType = NSFW_CHANNEL_UNDERAGE;
       const tmp13 = tmp4 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"];
     } else {
@@ -269,7 +269,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
       obj7.description = stringResult;
       const intl5 = tmp(1115).intl;
       obj7.agreement = intl5.string(tmp(1115).t.wVq7uo);
-      obj7.modalType = tmp(8543).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
+      obj7.modalType = tmp(8562).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
       return obj7;
     }
   }
@@ -292,7 +292,7 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
     return false === nsfwAllowed;
   });
   const tmpResult = initialize;
-  const isFeatureAgeGated1 = RegionalFeatureConfigUtils.useIsFeatureAgeGated(tmp(5510).AgeGatedFeature.AGE_GATED_SPACES);
+  const isFeatureAgeGated1 = RegionalFeatureConfigUtils.useIsFeatureAgeGated(tmp(5512).AgeGatedFeature.AGE_GATED_SPACES);
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
     if (source !== tmp6.ACCESS_LARGE_GUILD_UNDERAGE) {
       if (isAgeVerified) {

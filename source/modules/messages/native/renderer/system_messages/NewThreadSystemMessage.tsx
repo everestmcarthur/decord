@@ -1,18 +1,18 @@
-// Module ID: 8127
-// Function ID: 8128
+// Module ID: 8147
+// Function ID: 8148
 // Name: NewThreadSystemMessage
-// Dependencies: [1958, 4286, 1372, 8076, 1115, 8078, 4791, 8080, 2]
+// Dependencies: [1958, 4288, 1372, 8096, 1115, 8098, 4793, 8100, 2]
 // Exports: createNewThreadSystemMessage
 
-// Module 8127 (NewThreadSystemMessage)
+// Module 8147 (NewThreadSystemMessage)
 import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8096 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8098 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
-const createCommonMessageDefault = tmp7(8080);
+const createCommonMessageDefault = tmp7(8100);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
@@ -29,8 +29,8 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   const intl = tmp(1115).intl;
   const obj2 = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4791).computeChannelName(channel, UserStore, RelationshipStore);
-    const tmpResult = tmp(4791);
+    let content = tmp(4793).computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = tmp(4793);
   } else {
     content = message.content;
   }

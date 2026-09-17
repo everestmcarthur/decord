@@ -1,11 +1,11 @@
 // Module ID: 4024
 // Function ID: 4025
-// Dependencies: [3726, 3727]
+// Dependencies: [3728, 3729]
 // Exports: default
 
 // Module 4024
-import _typeof_mod from "module_3726" /* 3726 */;
-import requiredArgs_mod from "requiredArgs" /* 3727 */;
+import _typeof_mod from "module_3728" /* 3728 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,8 +24,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+export default function isEqual(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

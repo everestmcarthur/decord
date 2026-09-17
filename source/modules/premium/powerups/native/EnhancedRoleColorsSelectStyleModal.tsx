@@ -1,29 +1,29 @@
-// Module ID: 17839
-// Function ID: 17840
+// Module ID: 17880
+// Function ID: 17881
 // Name: EnhancedRoleColorsSelectStyleModal
-// Dependencies: [17, 17819, 17821, 17818, 1085, 21, 4638, 576, 4572, 5089, 17840, 1115, 8048, 7260, 7259, 4605, 8787, 2019, 8077, 13442, 4634, 2429, 2]
+// Dependencies: [17, 17860, 17862, 17859, 1085, 21, 4640, 576, 4574, 5091, 17881, 1115, 8068, 7264, 7263, 4607, 8807, 2019, 8097, 13450, 4636, 2429, 2]
 // Exports: default
 
-// Module 17839 (EnhancedRoleColorsSelectStyleModal)
+// Module 17880 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1115 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2019 */;
-import useThemeDefault from "useTheme" /* 4572 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5089 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7259 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
-import RowGeneratorDefault from "RowGenerator" /* 8048 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8077 */;
-import _modDef13442 from "module_13442" /* 13442 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17818 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17819 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17821 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17840 */;
+import useThemeDefault from "useTheme" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5091 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7263 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7264 */;
+import RowGeneratorDefault from "RowGenerator" /* 8068 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8097 */;
+import _modDef13450 from "module_13450" /* 13450 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17859 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17860 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17862 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17881 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -120,7 +120,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef13442;
+              message.message.avatarURL = _modDef13450;
             }
           }),
 
@@ -147,13 +147,13 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     obj10.gradientColors = items1;
     const intl4 = tmp4(1115).intl;
     obj10.children = intl4.string(tmp(2429)["+/IHLl"]);
-    obj9.magical = tmp7(tmp4(4634).Text, obj10);
+    obj9.magical = tmp7(tmp4(4636).Text, obj10);
     obj8.children = intl3.format(tmp(2429).VpEDJc, obj9);
-    const items2 = [tmp7(tmp4(4634).Text, obj8), ];
+    const items2 = [tmp7(tmp4(4636).Text, obj8), ];
     const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
     const intl5 = tmp4(1115).intl;
     obj11.children = intl5.string(tmp(2429).FJZeZF);
-    items2[1] = tmp7(tmp4(4634).Text, obj11);
+    items2[1] = tmp7(tmp4(4636).Text, obj11);
     obj7.children = items2;
     tmp8Result = tmp8(tmp9, obj7);
   }

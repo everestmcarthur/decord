@@ -1,27 +1,27 @@
-// Module ID: 14653
-// Function ID: 14654
+// Module ID: 14661
+// Function ID: 14662
 // Name: MediaPlayerManager
-// Dependencies: [17, 1957, 4846, 1958, 4859, 4276, 1896, 1074, 9648, 14654, 1085, 3, 560, 1248, 1899, 4496, 573, 1364, 558, 7566, 10228, 2]
+// Dependencies: [17, 1957, 4848, 1958, 4861, 4278, 1896, 1074, 9659, 14662, 1085, 3, 560, 1248, 1899, 4498, 573, 1364, 558, 7570, 10239, 2]
 // Exports: isPlaybackComplete
 
-// Module 14653 (MediaPlayerManager)
+// Module 14661 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1085 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import RootNavigationRef from "RootNavigationRef" /* 4496 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9648 */;
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7570 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9659 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import VoicePanelStore from "VoicePanelStore" /* 4846 */;
+import VoicePanelStore from "VoicePanelStore" /* 4848 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4859 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import MessageStore from "MessageStore" /* 4861 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import AppStateStore from "AppStateStore" /* 1896 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14654 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14662 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;
 import size from "module_2" /* 2 */;
@@ -44,12 +44,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_16",
-    showPip: "Georgia",
+    showPip: "four_leaf_clover",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: null
+    currentlyDisplayedChannelId: "face"
   };
   return obj;
 });

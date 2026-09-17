@@ -1,28 +1,28 @@
-// Module ID: 17265
-// Function ID: 17266
+// Module ID: 17305
+// Function ID: 17306
 // Name: SoundboardSoundPicker
-// Dependencies: [32, 19, 17, 17266, 4661, 1372, 5099, 17267, 1074, 21, 4638, 576, 4374, 563, 17268, 7453, 7091, 7272, 7292, 8908, 1249, 1364, 10414, 7260, 4511, 4634, 1115, 7160, 17273, 17283, 17284, 2]
+// Dependencies: [32, 19, 17, 17306, 4663, 1372, 5102, 17307, 1074, 21, 4640, 576, 4376, 563, 17308, 7457, 7095, 7276, 7296, 8924, 1249, 1364, 10422, 7264, 4513, 4636, 1115, 7164, 17313, 17323, 17324, 2]
 
-// Module 17265 (SoundboardSoundPicker)
+// Module 17305 (SoundboardSoundPicker)
 import nativeDefault from "native" /* 576 */;
-import searchSounds from "searchSounds" /* 7453 */;
+import searchSounds from "searchSounds" /* 7457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(17266);
+const ExpressionPickerStore = fn(17306);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(5099).SoundboardPickerType;
+const SoundboardPickerType = fn(5102).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4638);
-let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(17267).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
+const createStyles = fn(4640);
+let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(17307).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
 let closure_14 = createStyles.createStyles(obj);
-let obj3 = { paddingHorizontal: fn(17267).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
+let obj3 = { paddingHorizontal: fn(17307).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
 

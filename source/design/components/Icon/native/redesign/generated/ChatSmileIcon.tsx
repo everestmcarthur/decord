@@ -1,13 +1,13 @@
-// Module ID: 9564
-// Function ID: 9565
+// Module ID: 9575
+// Function ID: 9576
 // Name: ChatSmileIcon
-// Dependencies: [19, 21, 576, 4338, 9565, 2]
+// Dependencies: [19, 21, 576, 4340, 9576, 2]
 // Exports: ChatSmileIcon
 
-// Module 9564 (ChatSmileIcon)
+// Module 9575 (ChatSmileIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod9565 from "module_9565" /* 9565 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod9576 from "module_9576" /* 9576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ChatSmileIcon = function ChatSmileIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9565, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9576, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

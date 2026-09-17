@@ -1,0 +1,10 @@
+// Module ID: 6957
+// Function ID: 6958
+// Dependencies: [17]
+
+// Module 6957
+import _mod17 from "module_17" /* 17 */;
+
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

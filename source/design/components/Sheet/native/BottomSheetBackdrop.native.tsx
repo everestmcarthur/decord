@@ -1,15 +1,15 @@
-// Module ID: 7265
-// Function ID: 7266
+// Module ID: 7269
+// Function ID: 7270
 // Name: Sheet/BottomSheetBackdrop
-// Dependencies: [19, 21, 4638, 6735, 6763, 4374, 5046, 2]
+// Dependencies: [19, 21, 4640, 6738, 6766, 4376, 5048, 2]
 
-// Module 7265 (Sheet/BottomSheetBackdrop)
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+// Module 7269 (Sheet/BottomSheetBackdrop)
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_4 = createStyles.createStyles({ container: { flex: 1 } });
 let closure_5 = { code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
 let closure_6 = { code: "function BottomSheetBackdropNativeTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity}=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};}" };

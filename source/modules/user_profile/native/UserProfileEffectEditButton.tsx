@@ -1,26 +1,26 @@
-// Module ID: 14740
-// Function ID: 14741
+// Module ID: 14748
+// Function ID: 14749
 // Name: UserProfileEffectEditButton
-// Dependencies: [19, 17, 7318, 8939, 1085, 21, 4638, 576, 8295, 11195, 4605, 14741, 1897, 1115, 14732, 5663, 5673, 11164, 8942, 1177, 13319, 2]
+// Dependencies: [19, 17, 7322, 8955, 1085, 21, 4640, 576, 8314, 11203, 4607, 14749, 1897, 1115, 14740, 5665, 5675, 11172, 8958, 1177, 13327, 2]
 // Exports: default
 
-// Module 14740 (UserProfileEffectEditButton)
+// Module 14748 (UserProfileEffectEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7318).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7322).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
 obj2.profileEffectPreviewContainer = size;
-obj2.sampleProfile = { aspectRatio: fn(8939).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj2.sampleProfile = { aspectRatio: fn(8955).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj2.noneIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -66,7 +66,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   const items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14741, dependencyMap.paths), "Profile Effect", { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14749, dependencyMap.paths), "Profile Effect", { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut });
   }, items);
   if (product != null) {
     name = product.name;

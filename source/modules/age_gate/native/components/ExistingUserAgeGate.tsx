@@ -1,10 +1,10 @@
-// Module ID: 17516
-// Function ID: 17517
+// Module ID: 17557
+// Function ID: 17558
 // Name: ExistingUserAgeGate
-// Dependencies: [5, 32, 19, 17, 1952, 1372, 1099, 17514, 1074, 21, 4638, 1484, 504, 1241, 1115, 2025, 38, 16090, 4841, 4229, 16113, 7233, 4634, 17517, 5060, 2]
+// Dependencies: [5, 32, 19, 17, 1952, 1372, 1099, 17555, 1074, 21, 4640, 1484, 504, 1241, 1115, 2025, 38, 16112, 4843, 4231, 16135, 7237, 4636, 17558, 5062, 2]
 // Exports: default
 
-// Module 17516 (ExistingUserAgeGate)
+// Module 17557 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -16,12 +16,12 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1099);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: c10 } = AgeGateConstants);
-let closure_11 = fn(17514).ExistingUserAgeGateScreens;
+let closure_11 = fn(17555).ExistingUserAgeGateScreens;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_16 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
@@ -159,7 +159,7 @@ export default function ExistingUserAgeGate(onSuccess) {
             return obj3;
           } else {
             v1(38)(null != date, "Cannot submit null birthday.");
-            const diffResult = v1(4229)().diff(date, "years");
+            const diffResult = v1(4231)().diff(date, "years");
             if (diffResult < 18) {
               const obj4 = {
                 source,
@@ -175,7 +175,7 @@ export default function ExistingUserAgeGate(onSuccess) {
               const obj5 = { value: submitBirthday(tmp17), done: false };
               return obj5;
             }
-            const obj6 = v1(4229)();
+            const obj6 = v1(4231)();
             tmp17 = date;
           }
         } else if (arg0 === 1) {

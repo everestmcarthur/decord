@@ -1,13 +1,13 @@
-// Module ID: 11849
-// Function ID: 11850
+// Module ID: 11858
+// Function ID: 11859
 // Name: BookmarkIcon
-// Dependencies: [19, 21, 576, 4338, 11850, 2]
+// Dependencies: [19, 21, 576, 4340, 11859, 2]
 // Exports: BookmarkIcon
 
-// Module 11849 (BookmarkIcon)
+// Module 11858 (BookmarkIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod11850 from "module_11850" /* 11850 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod11859 from "module_11859" /* 11859 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const BookmarkIcon = function BookmarkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11850, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11859, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

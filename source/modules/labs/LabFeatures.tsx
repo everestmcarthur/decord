@@ -1,9 +1,9 @@
-// Module ID: 8484
-// Function ID: 8485
+// Module ID: 8503
+// Function ID: 8504
 // Name: LabFeatures
 // Dependencies: [2]
 
-// Module 8484 (LabFeatures)
+// Module 8503 (LabFeatures)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/labs/LabFeatures.tsx");

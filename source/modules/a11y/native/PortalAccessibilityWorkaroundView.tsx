@@ -1,10 +1,10 @@
-// Module ID: 12778
-// Function ID: 12779
+// Module ID: 12786
+// Function ID: 12787
 // Name: PortalAccessibilityWorkaroundView
-// Dependencies: [19, 17, 21, 1364, 12779, 2]
+// Dependencies: [19, 17, 21, 1364, 12787, 2]
 // Exports: default
 
-// Module 12778 (PortalAccessibilityWorkaroundView)
+// Module 12786 (PortalAccessibilityWorkaroundView)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ let _default = fn(17).View;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1364);
 if (PlatformUtils.isIOS()) {
-  _default = fn(12779).default;
+  _default = fn(12787).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");

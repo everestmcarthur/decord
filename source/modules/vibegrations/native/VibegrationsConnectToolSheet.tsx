@@ -1,16 +1,16 @@
-// Module ID: 16758
-// Function ID: 16759
+// Module ID: 16788
+// Function ID: 16789
 // Name: VibegrationsConnectToolSheet
-// Dependencies: [5, 32, 19, 17, 16725, 21, 4638, 576, 7299, 4335, 4988, 1115, 3591, 7307, 7259, 4634, 5693, 5060, 2]
+// Dependencies: [5, 32, 19, 17, 16752, 21, 4640, 576, 7303, 4337, 4990, 1115, 3593, 7311, 7263, 4636, 5695, 5062, 2]
 // Exports: default
 
-// Module 16758 (VibegrationsConnectToolSheet)
+// Module 16788 (VibegrationsConnectToolSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import ToastUtils from "ToastUtils" /* 4335 */;
-import AlertModal from "AlertModal" /* 4988 */;
-import ClipboardUtils from "ClipboardUtils" /* 7299 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import AlertModal from "AlertModal" /* 4990 */;
+import ClipboardUtils from "ClipboardUtils" /* 7303 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,10 +19,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const fetchProjectMcpConnection = fn(16725).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(16752).fetchProjectMcpConnection;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, section: null, actions: null, action: null, failedRow: null, failedText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
@@ -158,11 +158,11 @@ export default function VibegrationsConnectToolSheet(projectId) {
   const callback2 = callback.useCallback(() => {
     const obj2 = { key: "VibegrationsConnectToolRegenerate", title: null, content: null, confirmText: null, onConfirm: null };
     const intl = util.intl;
-    obj2.title = intl.string(_modDef3591.jKNAzJ);
+    obj2.title = intl.string(_modDef3593.jKNAzJ);
     const intl2 = util.intl;
-    obj2.content = intl2.string(_modDef3591.oWzC0r);
+    obj2.content = intl2.string(_modDef3593.oWzC0r);
     const intl3 = util.intl;
-    obj2.confirmText = intl3.string(_modDef3591.dZxnCn);
+    obj2.confirmText = intl3.string(_modDef3593.dZxnCn);
     obj2.onConfirm = function onConfirm() {
       callback(true).catch(() => {
 
@@ -173,45 +173,45 @@ export default function VibegrationsConnectToolSheet(projectId) {
   let obj = { header: null, children: null };
   let obj2 = { title: null };
   let intl = require("util").intl;
-  obj2.title = intl.string(first(3591)["xMOS+Z"]);
+  obj2.title = intl.string(first(3593)["xMOS+Z"]);
   obj.header = closure_8(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.content, children: null };
   let obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
   let intl2 = require("util").intl;
-  obj4.children = intl2.string(first(3591)["1Ew5/j"]);
+  obj4.children = intl2.string(first(3593)["1Ew5/j"]);
   const items4 = [closure_8(require("Text/Text").Text, obj4), , ];
   if (null != first) {
     let obj5 = { style: tmp.section, children: null };
     const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     const intl4 = tmp12(1115).intl;
-    obj6.children = intl4.string(tmp14(3591).DRgXyU);
-    const items5 = [tmp11(tmp12(4634).Text, obj6), , , ];
+    obj6.children = intl4.string(tmp14(3593).DRgXyU);
+    const items5 = [tmp11(tmp12(4636).Text, obj6), , , ];
     const obj7 = { variant: "primary", children: null };
     const obj8 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: first.url };
-    obj7.children = tmp11(tmp12(4634).Text, obj8);
-    items5[1] = tmp11(tmp12(5693).Card, obj7);
+    obj7.children = tmp11(tmp12(4636).Text, obj8);
+    items5[1] = tmp11(tmp12(5695).Card, obj7);
     const obj9 = { style: tmp.actions, children: null };
     const obj10 = { style: tmp.action, children: null };
     const obj11 = { variant: "primary", size: "md", text: null, onPress: null };
     const intl5 = tmp12(1115).intl;
     obj11.text = intl5.string(tmp12(1115).t.OpuAlK);
     obj11.onPress = callback1;
-    obj10.children = tmp11(tmp12(5060).Button, obj11);
+    obj10.children = tmp11(tmp12(5062).Button, obj11);
     const items6 = [tmp11(tmp16, obj10), ];
     const obj12 = { style: tmp.action, children: null };
     const obj13 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
     const intl6 = tmp12(1115).intl;
-    obj13.text = intl6.string(tmp14(3591).bsDgiq);
+    obj13.text = intl6.string(tmp14(3593).bsDgiq);
     obj13.loading = tmp5;
     obj13.onPress = callback2;
-    obj12.children = tmp11(tmp12(5060).Button, obj13);
+    obj12.children = tmp11(tmp12(5062).Button, obj13);
     items6[1] = tmp11(tmp16, obj12);
     obj9.children = items6;
     items5[2] = tmp15(tmp16, obj9);
     const obj14 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp12(1115).intl;
-    obj14.children = intl7.string(tmp14(3591).lTtxBT);
-    items5[3] = tmp11(tmp12(4634).Text, obj14);
+    obj14.children = intl7.string(tmp14(3593).lTtxBT);
+    items5[3] = tmp11(tmp12(4636).Text, obj14);
     obj5.children = items5;
     let tmp11Result = tmp15(tmp16, obj5);
   } else {
@@ -219,8 +219,8 @@ export default function VibegrationsConnectToolSheet(projectId) {
     if (tmp5) {
       const obj15 = { variant: "text-sm/normal", color: "text-muted", children: null };
       let intl3 = tmp12(1115).intl;
-      obj15.children = intl3.string(tmp14(3591).c3R8Tx);
-      tmp11Result = tmp11(tmp12(4634).Text, obj15);
+      obj15.children = intl3.string(tmp14(3593).c3R8Tx);
+      tmp11Result = tmp11(tmp12(4636).Text, obj15);
     }
   }
   items4[1] = tmp11Result;
@@ -230,19 +230,19 @@ export default function VibegrationsConnectToolSheet(projectId) {
     const obj17 = { style: tmp.failedText, children: null };
     const obj18 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl8 = tmp12(1115).intl;
-    obj18.children = intl8.string(tmp14(3591).QJKw6N);
-    obj17.children = tmp11(tmp12(4634).Text, obj18);
+    obj18.children = intl8.string(tmp14(3593).QJKw6N);
+    obj17.children = tmp11(tmp12(4636).Text, obj18);
     const items7 = [tmp11(tmp16, obj17), ];
     const obj19 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
     const intl9 = tmp12(1115).intl;
-    obj19.text = intl9.string(tmp14(3591)["7xdKYd"]);
+    obj19.text = intl9.string(tmp14(3593)["7xdKYd"]);
     obj19.loading = tmp5;
     obj19.onPress = function onPress() {
       callback(false).catch(() => {
 
       });
     };
-    items7[1] = tmp11(tmp12(5060).Button, obj19);
+    items7[1] = tmp11(tmp12(5062).Button, obj19);
     obj16.children = items7;
     tmp15Result2 = tmp15(tmp16, obj16);
   }

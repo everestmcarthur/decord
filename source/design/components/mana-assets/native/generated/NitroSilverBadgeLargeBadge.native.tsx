@@ -1,13 +1,13 @@
-// Module ID: 6401
-// Function ID: 6402
+// Module ID: 6403
+// Function ID: 6404
 // Name: NitroSilverBadgeLargeBadge
-// Dependencies: [21, 5673, 6402, 2]
+// Dependencies: [21, 5675, 6404, 2]
 // Exports: NitroSilverBadgeLargeBadge
 
-// Module 6401 (NitroSilverBadgeLargeBadge)
+// Module 6403 (NitroSilverBadgeLargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6402 from "module_6402" /* 6402 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6404 from "module_6404" /* 6404 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroSilverBadgeLargeBadge = function NitroSilverBadgeLargeBadge(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6402 };
+  const obj2 = { uri: _modDef6404 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

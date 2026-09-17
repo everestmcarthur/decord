@@ -1,13 +1,13 @@
-// Module ID: 16283
-// Function ID: 16284
+// Module ID: 16313
+// Function ID: 16314
 // Name: FavoritesGuildAddCategoryActionSheet
-// Dependencies: [32, 19, 1971, 21, 4638, 576, 1983, 10362, 4605, 7260, 7259, 1115, 6714, 5060, 2]
+// Dependencies: [32, 19, 1971, 21, 4640, 576, 1983, 10370, 4607, 7264, 7263, 1115, 6717, 5062, 2]
 // Exports: openFavoritesGuildAddCategoryActionSheet
 
-// Module 16283 (FavoritesGuildAddCategoryActionSheet)
+// Module 16313 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4605 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10362 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4607 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,8 +30,8 @@ function FavoritesGuildAddCategoryActionSheet() {
   const obj3 = { title: null };
   const intl = value(1115).intl;
   obj3.title = intl.string(value(1115).t["ISN+NM"]);
-  obj2.header = closure_6(value(7259).BottomSheetTitleHeader, obj3);
-  const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
+  obj2.header = closure_6(value(7263).BottomSheetTitleHeader, obj3);
+  const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = value(1115).intl;
   obj4.label = intl2.string(value(1115).t.OCAkGP);
   const intl3 = value(1115).intl;
@@ -39,21 +39,21 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(6714).TextInput, obj4), ];
+  const items1 = [closure_6(value(6717).TextInput, obj4), ];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1115).intl;
   obj5.text = intl4.string(value(1115).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5060).Button, obj5);
+  items1[1] = closure_6(value(5062).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(7260).BottomSheet, obj2);
+  return closure_7(value(7264).BottomSheet, obj2);
 }
 const maxLength = fn(1971).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };

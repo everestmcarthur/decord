@@ -1,21 +1,21 @@
-// Module ID: 10976
-// Function ID: 10977
+// Module ID: 10984
+// Function ID: 10985
 // Name: PremiumGiftBackgroundAnimation
-// Dependencies: [32, 19, 17, 4630, 21, 4638, 504, 8199, 10977, 5615, 2]
+// Dependencies: [32, 19, 17, 4632, 21, 4640, 504, 8219, 10985, 5617, 2]
 // Exports: default
 
-// Module 10976 (PremiumGiftBackgroundAnimation)
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8199 */;
-import GiftAnimationData from "GiftAnimationData" /* 10977 */;
+// Module 10984 (PremiumGiftBackgroundAnimation)
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8219 */;
+import GiftAnimationData from "GiftAnimationData" /* 10985 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({ container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" }, consistentHeight: { height: 300 }, animation: { maxWidth: 375, width: "100%", height: "auto" }, baseAnimation: { position: "absolute", bottom: 0 }, lottie: { height: 275 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");
@@ -69,8 +69,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       closure_11(false);
     } else {
       if (!tmp4) {
-        closure_9(tmp2(8199).AnimationState.ACTION);
-        closure_5(tmp2(8199).AnimationState.LOOP);
+        closure_9(tmp2(8219).AnimationState.ACTION);
+        closure_5(tmp2(8219).AnimationState.LOOP);
       }
       tmp4 = first === PremiumGiftingUtils.AnimationState.LOOP || arg0;
     }

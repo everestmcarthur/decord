@@ -1,11 +1,11 @@
-// Module ID: 10238
-// Function ID: 10239
+// Module ID: 10249
+// Function ID: 10250
 // Name: guild_automod/ExperimentUtils
-// Dependencies: [10239, 2]
-// Exports: isInMentionRaidExperiment, useIsMentionRaidExperimentEnabled
+// Dependencies: [10250, 2]
+// Exports: isInMentionRaidExperiment, useIsApplicationRuleEnabled, useIsMentionRaidExperimentEnabled
 
-// Module 10238 (guild_automod/ExperimentUtils)
-import AutomodExperiment from "AutomodExperiment" /* 10239 */;
+// Module 10249 (guild_automod/ExperimentUtils)
+import AutomodExperiment from "AutomodExperiment" /* 10250 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
@@ -21,4 +21,8 @@ export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperi
   }
   const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
   return AutomodMentionRaidLimit.useExperiment({ guildId: id, location: "988d4e_4" }, { autoTrackExposure }).enabled;
+};
+export const useIsApplicationRuleEnabled = function useIsApplicationRuleEnabled(guildId) {
+  const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;
+  return AutomodApplicationRules.useConfig({ guildId, location: "automod_settings" }).enabled;
 };

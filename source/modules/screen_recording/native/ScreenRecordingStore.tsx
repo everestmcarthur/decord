@@ -1,10 +1,10 @@
-// Module ID: 16062
-// Function ID: 16063
+// Module ID: 16084
+// Function ID: 16085
 // Name: ScreenRecordingStore
-// Dependencies: [560, 16063, 2]
+// Dependencies: [560, 16085, 2]
 
-// Module 16062 (ScreenRecordingStore)
-import ScreenRecordingUtils from "ScreenRecordingUtils" /* 16063 */;
+// Module 16084 (ScreenRecordingStore)
+import ScreenRecordingUtils from "ScreenRecordingUtils" /* 16085 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// Module ID: 10806
-// Function ID: 10807
+// Module ID: 10814
+// Function ID: 10815
 // Name: PromotionsStore
-// Dependencies: [1220, 10807, 1372, 10808, 10838, 504, 10839, 573, 2]
+// Dependencies: [1220, 10815, 1372, 10816, 10846, 504, 10847, 573, 2]
 
-// Module 10806 (PromotionsStore)
+// Module 10814 (PromotionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 10839 */;
+import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 10847 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import PromotionRecord from "PromotionRecord" /* 10807 */;
+import PromotionRecord from "PromotionRecord" /* 10815 */;
 import UserStore from "UserStore" /* 1372 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 10808 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 10816 */;
 
 const require = fn;
 function createEmptyPromotionsByType() {

@@ -1,9 +1,9 @@
-// Module ID: 13865
-// Function ID: 13866
+// Module ID: 13873
+// Function ID: 13874
 // Name: GuildMFAWarningStore
 // Dependencies: [2013, 1372, 1074, 504, 573, 2]
 
-// Module 13865 (GuildMFAWarningStore)
+// Module 13873 (GuildMFAWarningStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;

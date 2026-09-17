@@ -1,22 +1,22 @@
 // Module ID: 2013
 // Function ID: 2014
 // Name: GuildChannelStore
-// Dependencies: [2014, 1961, 4275, 1962, 502, 1958, 2022, 1980, 4276, 4286, 1372, 1074, 1983, 12, 4791, 1086, 4281, 504, 573, 2]
+// Dependencies: [2014, 1961, 4277, 1962, 502, 1958, 2022, 1980, 4278, 4288, 1372, 1074, 1983, 12, 4793, 1086, 4283, 504, 573, 2]
 
 // Module 2013 (GuildChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4281 */;
-import useChannelName from "useChannelName" /* 4791 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
+import useChannelName from "useChannelName" /* 4793 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -192,7 +192,7 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4275).createFavoritesGuildChannelRecord;
+let closure_6 = fn(4277).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(1962);
 ({ isGuildSelectableChannelType: closure_7, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
 const Constants = fn(1074);
@@ -283,8 +283,8 @@ prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id, flag) {
 prototype["getSelectableChannelIds"] = function getSelectableChannelIds(guildId) {
   return this.getChannels(guildId)[SELECTABLE].map((channel) => channel.channel.id);
 };
-prototype["getSelectableChannels"] = function getSelectableChannels(arg0) {
-  return this.getChannels(arg0)[SELECTABLE];
+prototype["getSelectableChannels"] = function getSelectableChannels(id) {
+  return this.getChannels(id)[SELECTABLE];
 };
 prototype["getVocalChannelIds"] = function getVocalChannelIds(set) {
   return this.getChannels(set)[VOCAL].map((channel) => channel.channel.id);

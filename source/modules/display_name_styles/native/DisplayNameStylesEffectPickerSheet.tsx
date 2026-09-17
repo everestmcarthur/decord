@@ -1,18 +1,18 @@
-// Module ID: 15455
-// Function ID: 15456
+// Module ID: 15460
+// Function ID: 15461
 // Name: DisplayNameStylesEffectPickerSheet
-// Dependencies: [32, 19, 17, 21, 4638, 576, 8299, 15450, 15451, 4606, 4605, 7260, 7259, 1115, 2787, 5060, 5058, 11048, 11045, 11046, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 576, 8318, 15455, 15456, 4608, 4607, 7264, 7263, 1115, 2787, 5062, 5060, 11056, 11053, 11054, 2]
 // Exports: default
 
-// Module 15455 (DisplayNameStylesEffectPickerSheet)
+// Module 15460 (DisplayNameStylesEffectPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2787 from "module_2787" /* 2787 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import HapticUtils from "HapticUtils" /* 4606 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11045 */;
-import types from "types" /* 11046 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 11048 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import HapticUtils from "HapticUtils" /* 4608 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11053 */;
+import types from "types" /* 11054 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 11056 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" }, gridContainer: { flexWrap: "wrap", width: 350 }, effectCard: null, effectCardSelected: null, effectName: null, tileNewDot: null };
 let size = { width: 109, height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
 obj2.effectCard = size;
@@ -77,10 +77,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   first = undefined;
   closure_5 = undefined;
   const tmp = closure_9();
-  let obj = userId(8299);
-  const visibleEffectOrder = userId(15450).useVisibleEffectOrder();
-  const obj2 = userId(15450);
-  const displayNameStylesNewEffects = userId(15451).useDisplayNameStylesNewEffects(visibleEffectOrder);
+  let obj = userId(8318);
+  const visibleEffectOrder = userId(15455).useVisibleEffectOrder();
+  const obj2 = userId(15455);
+  const displayNameStylesNewEffects = userId(15456).useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -100,9 +100,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1115).intl;
     obj8.text = intl2.string(tmp2(1115).t.XqMe3N);
     obj8.onPress = tmp8;
-    obj7.children = closure_7(tmp2(5060).Button, obj8);
+    obj7.children = closure_7(tmp2(5062).Button, obj8);
     obj6.trailing = closure_7(closure_5, obj7);
-    obj5.children = closure_7(tmp2(7259).BottomSheetTitleHeader, obj6);
+    obj5.children = closure_7(tmp2(7263).BottomSheetTitleHeader, obj6);
     obj4.header = closure_7(closure_5, obj5);
     const obj9 = { style: tmp.container, children: null };
     const obj10 = { style: tmp.contentContainer, children: null };
@@ -126,10 +126,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
           }, effectId);
         })
     };
-    obj10.children = closure_7(tmp2(5058).Stack, obj11);
+    obj10.children = closure_7(tmp2(5060).Stack, obj11);
     obj9.children = closure_7(closure_5, obj10);
     obj4.children = closure_7(closure_5, obj9);
-    tmp9 = closure_7(tmp2(7260).BottomSheet, obj4);
+    tmp9 = closure_7(tmp2(7264).BottomSheet, obj4);
   }
   return tmp9;
 };

@@ -1,9 +1,9 @@
-// Module ID: 13125
-// Function ID: 13126
+// Module ID: 13133
+// Function ID: 13134
 // Name: MediaModalLoader
-// Dependencies: [32, 19, 17, 21, 4638, 576, 4634, 1115, 13126, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 576, 4636, 1115, 13134, 2]
 
-// Module 13125 (MediaModalLoader)
+// Module 13133 (MediaModalLoader)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { loader: null, loaderIndicator: null, loaderText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

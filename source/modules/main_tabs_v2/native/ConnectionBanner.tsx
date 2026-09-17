@@ -1,22 +1,22 @@
-// Module ID: 16526
-// Function ID: 16527
+// Module ID: 16556
+// Function ID: 16557
 // Name: ConnectionBanner
-// Dependencies: [32, 19, 17, 13790, 15205, 1074, 21, 4638, 576, 1115, 4339, 16527, 16529, 4634, 672, 4374, 5750, 5072, 504, 1241, 15204, 5059, 13791, 2]
+// Dependencies: [32, 19, 17, 13798, 15210, 1074, 21, 4640, 576, 1115, 4341, 16557, 16559, 4636, 672, 4376, 5752, 5074, 504, 1241, 15209, 5061, 13799, 2]
 // Exports: default
 
-// Module 16526 (ConnectionBanner)
+// Module 16556 (ConnectionBanner)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import useToken from "useToken" /* 4339 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import spring from "spring" /* 5059 */;
-import LinearGradientDefault from "LinearGradient" /* 5072 */;
-import _modDef5750 from "module_5750" /* 5750 */;
+import useToken from "useToken" /* 4341 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import spring from "spring" /* 5061 */;
+import LinearGradientDefault from "LinearGradient" /* 5074 */;
+import _modDef5752 from "module_5752" /* 5752 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13790 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13798 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -33,12 +33,12 @@ function ConnectionBannerIcon(state) {
   } else if (tmp7.NO_CONNECTION === state) {
     const obj4 = { style: tmp.leadingSlot, children: null };
     const obj5 = { size: "xs", color: tmp5(576).colors.INTERACTIVE_ICON_DEFAULT };
-    obj4.children = closure_1_12(tmp2(16527).ConnectionUnknownIcon, obj5);
+    obj4.children = closure_1_12(tmp2(16557).ConnectionUnknownIcon, obj5);
     return closure_1_12(timestampProducer, obj4);
   } else if (tmp7.BACK_ONLINE === state) {
     const obj = { style: tmp.leadingSlot, children: null };
     const obj6 = { size: "xs", color: tmp5(576).colors.ICON_FEEDBACK_POSITIVE };
-    obj.children = closure_1_12(tmp2(16529).ConnectionFineIcon, obj6);
+    obj.children = closure_1_12(tmp2(16559).ConnectionFineIcon, obj6);
     return closure_1_12(timestampProducer, obj);
   }
 }
@@ -69,7 +69,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(4339).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(4341).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef672(token);
@@ -86,10 +86,10 @@ function BackOnlineGlow(opacity) {
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(4339);
+  let obj = token(4341);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 });
-  obj2.children = closure_12(_modDef5750, obj3);
+  obj2.children = closure_12(_modDef5752, obj3);
   return closure_12(ReanimatedRexportDefault.View, obj2);
 }
 function ConnectionBannerInner() {
@@ -178,8 +178,8 @@ function ConnectionBannerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(13790).ConnectivityIndicatorState;
-const YouBarConstants = fn(15205);
+const constants = fn(13798).ConnectivityIndicatorState;
+const YouBarConstants = fn(15210);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -192,7 +192,7 @@ const end = { x: 1, y: 0.5 };
 const locations2 = [0, 0.4, 0.75, 1];
 const start2 = { x: 0, y: 0 };
 const end2 = { x: 0, y: 1 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0 }, glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, glowMaskGradient: { flex: 1 }, content: null, leadingSlot: null, spinner: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.content = rect;
@@ -208,10 +208,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13791).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13799).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(13791);
+  let obj = stateFromStores(13799);
   const items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

@@ -1,12 +1,12 @@
-// Module ID: 16829
-// Function ID: 16830
+// Module ID: 16868
+// Function ID: 16869
 // Name: useSearchSuggestionsGesture
-// Dependencies: [19, 4374, 12481, 1612, 1364, 6763, 2]
+// Dependencies: [19, 4376, 12490, 1612, 1364, 6766, 2]
 // Exports: useSearchSuggestionsGesture
 
-// Module 16829 (useSearchSuggestionsGesture)
-import LegacyBaseButton from "LegacyBaseButton" /* 6763 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12481 */;
+// Module 16868 (useSearchSuggestionsGesture)
+import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12490 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

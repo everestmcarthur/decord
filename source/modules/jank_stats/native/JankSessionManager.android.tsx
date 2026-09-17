@@ -1,14 +1,15 @@
-// Module ID: 17617
-// Function ID: 17618
+// Module ID: 17658
+// Function ID: 17659
 // Name: JankSessionManager
-// Dependencies: [7570, 1074, 3, 7228, 17618, 1339, 7585, 2]
+// Dependencies: [7574, 1074, 3, 7232, 17659, 1339, 16163, 17660, 7589, 2]
 
-// Module 17617 (JankSessionManager)
+// Module 17658 (JankSessionManager)
 import LoggerDefault from "Logger" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 1339 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17618 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7570 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17659 */;
+import JankNavigationReporterDefault from "JankNavigationReporter" /* 17660 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7574 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -34,10 +35,8 @@ class JankSessionManager extends tmp4 {
 }
 const prototype = JankSessionManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const obj = NativeJankSessionModuleDefault;
-  if (obj != null) {
-    obj.hydrateLaunchId(clientLaunchId.clientLaunchId);
-  }
+  NativeJankSessionModuleDefault.hydrateLaunchId(clientLaunchId.clientLaunchId);
+  const result = this.attachScreenReporters();
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   const self = this;
@@ -45,71 +44,104 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
     const result = self.deliverPendingSessions();
   }
 };
+prototype["attachScreenReporters"] = function attachScreenReporters() {
+  if (obj.isJankScreenReportingEnabled()) {
+    JankNavigationReporterDefault.attach();
+  }
+};
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let obj = self(17618);
-    if (null != obj) {
-      tmp._isDelivering = true;
-      const pendingReports = obj.getPendingReports();
-      const nextPromise = pendingReports.then((arr) => {
-        closure_0 = arr;
-        if (0 !== arr.length) {
-          const result = AnalyticsTrackingStore.submitEventsImmediately(arr.map((item) => {
-            obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            const obj4 = {};
-            const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-            obj4.schema_version = 1;
-            ({ sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count } = item);
-            obj.properties = obj4;
-            return obj;
-          }));
-          return result.then(() => {
-            obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
-          });
-        }
-      });
-      pendingReports.then((arr) => {
-        closure_0 = arr;
-        if (0 !== arr.length) {
-          const result = AnalyticsTrackingStore.submitEventsImmediately(arr.map((item) => {
-            obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            const obj4 = {};
-            const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-            obj4.schema_version = 1;
-            ({ sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count } = item);
-            obj.properties = obj4;
-            return obj;
-          }));
-          return result.then(() => {
-            obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
-          });
-        }
-      }).catch((error) => {
-        logger.error("Failed to deliver pending jank sessions", error);
-      }).finally(() => {
-        self._isDelivering = false;
-      });
-      const catchPromise = pendingReports.then((arr) => {
-        closure_0 = arr;
-        if (0 !== arr.length) {
-          const result = AnalyticsTrackingStore.submitEventsImmediately(arr.map((item) => {
-            obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            const obj4 = {};
-            const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-            obj4.schema_version = 1;
-            ({ sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count } = item);
-            obj.properties = obj4;
-            return obj;
-          }));
-          return result.then(() => {
-            obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
-          });
-        }
-      }).catch((error) => {
-        logger.error("Failed to deliver pending jank sessions", error);
-      });
-    }
+    let obj = self(17659);
+    tmp._isDelivering = true;
+    const pendingReports = obj.getPendingReports();
+    const nextPromise = pendingReports.then((arr) => {
+      closure_0 = arr;
+      if (0 !== arr.length) {
+        const result = AnalyticsTrackingStore.submitEventsImmediately(arr.flatMap((screens) => {
+          obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+          let merged = Object.assign(screens(7589).getDeviceMetadata());
+          ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count, totalFrameTimeMs: obj2.total_frame_time_ms, jankFrameTimeMs: obj2.jank_frame_time_ms, screensOverCap: obj2.screens_over_cap } = screens);
+          obj.properties = {};
+          const items = [
+            obj,
+            ...screens.map((item) => {
+              obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
+              const merged = Object.assign(screens(7589).getDeviceMetadata());
+              ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, sessionStartMs: obj2.session_start_ms } = screens);
+              ({ screen: obj2.screen, transitionFrameCount: obj2.transition_frame_count, transitionJankFrameCount: obj2.transition_jank_frame_count, transitionJankFrameTimeMs: obj2.transition_jank_frame_time_ms, transitionTotalFrameTimeMs: obj2.transition_total_frame_time_ms, steadyFrameCount: obj2.steady_frame_count, steadyJankFrameCount: obj2.steady_jank_frame_count, steadyJankFrameTimeMs: obj2.steady_jank_frame_time_ms, steadyTotalFrameTimeMs: obj2.steady_total_frame_time_ms } = item);
+              obj.properties = {};
+              return obj;
+            })
+          ];
+          screens = screens.screens;
+          return items;
+        }));
+        return result.then(() => {
+          obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
+        });
+      }
+    });
+    pendingReports.then((arr) => {
+      closure_0 = arr;
+      if (0 !== arr.length) {
+        const result = AnalyticsTrackingStore.submitEventsImmediately(arr.flatMap((screens) => {
+          obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+          let merged = Object.assign(screens(7589).getDeviceMetadata());
+          ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count, totalFrameTimeMs: obj2.total_frame_time_ms, jankFrameTimeMs: obj2.jank_frame_time_ms, screensOverCap: obj2.screens_over_cap } = screens);
+          obj.properties = {};
+          const items = [
+            obj,
+            ...screens.map((item) => {
+              obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
+              const merged = Object.assign(screens(7589).getDeviceMetadata());
+              ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, sessionStartMs: obj2.session_start_ms } = screens);
+              ({ screen: obj2.screen, transitionFrameCount: obj2.transition_frame_count, transitionJankFrameCount: obj2.transition_jank_frame_count, transitionJankFrameTimeMs: obj2.transition_jank_frame_time_ms, transitionTotalFrameTimeMs: obj2.transition_total_frame_time_ms, steadyFrameCount: obj2.steady_frame_count, steadyJankFrameCount: obj2.steady_jank_frame_count, steadyJankFrameTimeMs: obj2.steady_jank_frame_time_ms, steadyTotalFrameTimeMs: obj2.steady_total_frame_time_ms } = item);
+              obj.properties = {};
+              return obj;
+            })
+          ];
+          screens = screens.screens;
+          return items;
+        }));
+        return result.then(() => {
+          obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
+        });
+      }
+    }).catch((error) => {
+      logger.error("Failed to deliver pending jank sessions", error);
+    }).finally(() => {
+      self._isDelivering = false;
+    });
+    const catchPromise = pendingReports.then((arr) => {
+      closure_0 = arr;
+      if (0 !== arr.length) {
+        const result = AnalyticsTrackingStore.submitEventsImmediately(arr.flatMap((screens) => {
+          obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+          let merged = Object.assign(screens(7589).getDeviceMetadata());
+          ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count, totalFrameTimeMs: obj2.total_frame_time_ms, jankFrameTimeMs: obj2.jank_frame_time_ms, screensOverCap: obj2.screens_over_cap } = screens);
+          obj.properties = {};
+          const items = [
+            obj,
+            ...screens.map((item) => {
+              obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
+              const merged = Object.assign(screens(7589).getDeviceMetadata());
+              ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, sessionStartMs: obj2.session_start_ms } = screens);
+              ({ screen: obj2.screen, transitionFrameCount: obj2.transition_frame_count, transitionJankFrameCount: obj2.transition_jank_frame_count, transitionJankFrameTimeMs: obj2.transition_jank_frame_time_ms, transitionTotalFrameTimeMs: obj2.transition_total_frame_time_ms, steadyFrameCount: obj2.steady_frame_count, steadyJankFrameCount: obj2.steady_jank_frame_count, steadyJankFrameTimeMs: obj2.steady_jank_frame_time_ms, steadyTotalFrameTimeMs: obj2.steady_total_frame_time_ms } = item);
+              obj.properties = {};
+              return obj;
+            })
+          ];
+          screens = screens.screens;
+          return items;
+        }));
+        return result.then(() => {
+          obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
+        });
+      }
+    }).catch((error) => {
+      logger.error("Failed to deliver pending jank sessions", error);
+    });
   }
 };
 const jankSessionManager = new JankSessionManager();

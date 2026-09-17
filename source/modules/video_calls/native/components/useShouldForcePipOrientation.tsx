@@ -1,19 +1,19 @@
-// Module ID: 9632
-// Function ID: 9633
+// Module ID: 9643
+// Function ID: 9644
 // Name: useShouldForcePipOrientation
-// Dependencies: [1957, 4654, 502, 1921, 4659, 9633, 504, 9619, 8462, 2]
+// Dependencies: [1957, 4656, 502, 1921, 4661, 9644, 504, 9630, 8481, 2]
 // Exports: useShouldForcePipOrientation
 
-// Module 9632 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9619 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9633 */;
+// Module 9643 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9630 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9644 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const OrientationLockState = fn(1921).OrientationLockState;
-const CallConstants = fn(4659);
+const CallConstants = fn(4661);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -83,17 +83,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8462).OrientationType.LANDSCAPE;
+        return tmp2(8481).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8462).OrientationType;
+    OrientationType = tmp2(8481).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8462).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8481).OrientationType.PORTRAIT;
     }
   }
 };

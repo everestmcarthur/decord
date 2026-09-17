@@ -1,13 +1,13 @@
-// Module ID: 12455
-// Function ID: 12456
+// Module ID: 12464
+// Function ID: 12465
 // Name: GuildDirectoryStore
-// Dependencies: [12448, 12447, 504, 573, 2]
+// Dependencies: [12457, 12456, 504, 573, 2]
 
-// Module 12455 (GuildDirectoryStore)
+// Module 12464 (GuildDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12447 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12448 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12456 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12457 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;

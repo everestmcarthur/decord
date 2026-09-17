@@ -1,12 +1,12 @@
-// Module ID: 5234
-// Function ID: 5235
+// Module ID: 5236
+// Function ID: 5237
 // Name: PermissionsAlertModal
-// Dependencies: [19, 21, 4988, 4988, 1115, 2]
+// Dependencies: [19, 21, 4990, 4990, 1115, 2]
 // Exports: default
 
-// Module 5234 (PermissionsAlertModal)
+// Module 5236 (PermissionsAlertModal)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 4988 */;
+import AlertModal from "AlertModal" /* 4990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

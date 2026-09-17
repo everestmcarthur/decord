@@ -1,14 +1,14 @@
-// Module ID: 16342
-// Function ID: 16343
+// Module ID: 16372
+// Function ID: 16373
 // Name: HubUnreadUtils
-// Dependencies: [12455, 4653, 504, 11, 12447, 2]
+// Dependencies: [12464, 4655, 504, 11, 12456, 2]
 // Exports: useHubUnreadCount
 
-// Module 16342 (HubUnreadUtils)
+// Module 16372 (HubUnreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12447 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12455 */;
-import ReadStateStore from "ReadStateStore" /* 4653 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12456 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12464 */;
+import ReadStateStore from "ReadStateStore" /* 4655 */;
 
 const require = globalThis.__r;
 

@@ -1,12 +1,9 @@
 // Module ID: 6785
 // Function ID: 6786
-// Dependencies: []
-// Exports: getNextHandlerTag
+// Dependencies: [19]
 
 // Module 6785
-let closure_0 = 1;
+import noop from "module_19" /* 19 */;
 
-export const getNextHandlerTag = function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
-};
+
+export default noop.createContext(false);

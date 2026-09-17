@@ -1,12 +1,12 @@
-// Module ID: 7221
-// Function ID: 7222
+// Module ID: 7225
+// Function ID: 7226
 // Name: GuildCategoryStore
-// Dependencies: [1961, 502, 1958, 2013, 1980, 1074, 7222, 504, 573, 2]
+// Dependencies: [1961, 502, 1958, 2013, 1980, 1074, 7226, 504, 573, 2]
 
-// Module 7221 (GuildCategoryStore)
+// Module 7225 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7222 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7226 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;

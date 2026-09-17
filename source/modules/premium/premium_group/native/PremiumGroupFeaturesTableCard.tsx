@@ -1,20 +1,20 @@
-// Module ID: 13589
-// Function ID: 13590
+// Module ID: 13597
+// Function ID: 13598
 // Name: PremiumGroupFeaturesTableCard
-// Dependencies: [17, 7542, 21, 4638, 576, 4634, 1115, 13590, 1177, 5072, 4487, 9524, 2]
+// Dependencies: [17, 7546, 21, 4640, 576, 4636, 1115, 13598, 1177, 5074, 4489, 9535, 2]
 // Exports: default
 
-// Module 13589 (PremiumGroupFeaturesTableCard)
+// Module 13597 (PremiumGroupFeaturesTableCard)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import ColorUtils from "ColorUtils" /* 4487 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import ColorConstants from "ColorConstants" /* 7542 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13590 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import ColorConstants from "ColorConstants" /* 7546 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13598 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import size from "module_2" /* 2 */;
 
 class BetaPill {
@@ -53,7 +53,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     ({ subheaderString, bodyString } = tmp4);
     const obj = { borderWidth: 2, direction: native.GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: tmp2(576).radii.sm, style, children: null };
     const obj2 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, locations: null, style: null, children: null };
-    const tmp2Result = tmp2(5072);
+    const tmp2Result = tmp2(5074);
     const items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), , ];
     items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
     items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
@@ -61,7 +61,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj2.locations = [0, 0.4996, 0.9593];
     obj2.style = tmp.premiumGroupCard;
     const obj6 = { style: tmp.headerContainer, children: null };
-    const items1 = [hasOwnProperty(tmp2(9524), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
+    const items1 = [hasOwnProperty(tmp2(9535), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
     obj6.children = items1;
     const items2 = [timestampProducer(View, obj6), , ];
     const obj7 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };

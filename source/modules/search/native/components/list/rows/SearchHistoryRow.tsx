@@ -1,18 +1,18 @@
-// Module ID: 16858
-// Function ID: 16859
+// Module ID: 16897
+// Function ID: 16898
 // Name: SearchHistoryRow
-// Dependencies: [5, 19, 17, 1958, 4653, 1372, 7994, 21, 4638, 576, 12504, 5208, 5766, 16846, 12501, 16856, 4634, 7161, 563, 16857, 8310, 4651, 16855, 16859, 16872, 1115, 2]
+// Dependencies: [5, 19, 17, 1958, 4655, 1372, 8000, 21, 4640, 576, 12513, 5210, 5768, 16885, 12510, 16895, 4636, 7165, 563, 16896, 8329, 4653, 16894, 16898, 16911, 1115, 2]
 
-// Module 16858 (SearchHistoryRow)
+// Module 16897 (SearchHistoryRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import UserActionCreators from "UserActionCreators" /* 8310 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12501 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12504 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import UserActionCreators from "UserActionCreators" /* 8329 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12510 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12513 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4653 */;
+import ReadStateStore from "ReadStateStore" /* 4655 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -23,14 +23,14 @@ function SearchHistoryRemoveIcon(searchContext) {
   const callback = noop.useCallback(() => {
     const result = SearchPlatformActionCreatorsDefault.removeSearchHistoryItem(searchContext, searchHistoryItem);
   }, items);
-  return closure_10(searchContext(5208).PressableHighlight, { onPress: callback, accessibilityRole: "button", unstable_pressDelay: 130, style: { marginLeft: 16 }, hitSlop: { bottom: 16, left: 16, right: 16, top: 16 }, children: closure_10(searchContext(5766).XSmallIcon, { size: "sm", color: "interactive-text-default" }) });
+  return closure_10(searchContext(5210).PressableHighlight, { onPress: callback, accessibilityRole: "button", unstable_pressDelay: 130, style: { marginLeft: 16 }, hitSlop: { bottom: 16, left: 16, right: 16, top: 16 }, children: closure_10(searchContext(5768).XSmallIcon, { size: "sm", color: "interactive-text-default" }) });
 }
 function SearchHistoryTextRow(searchContext) {
   searchContext = searchContext.searchContext;
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  const onPressSearchHistoryText = searchContext(16846).useOnPressSearchHistoryText({ searchContext });
+  const onPressSearchHistoryText = searchContext(16885).useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = noop.useCallback(() => {
@@ -47,16 +47,16 @@ function SearchHistoryTextRow(searchContext) {
     });
   }
   const obj3 = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
-  const items1 = [mapped, closure_10(searchContext(4634).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
+  const items1 = [mapped, closure_10(searchContext(4636).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
   obj2.children = items1;
   obj3.label = closure_11(View, obj2);
   obj3.onPress = callback;
   obj3.trailing = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj3.iconContainerStyle = tmp.textIconContainer;
-  let obj = searchContext(16846);
+  let obj = searchContext(16885);
   const obj4 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text };
-  obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7161).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(16856).SearchListRow, obj3);
+  obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7165).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
+  return closure_10(searchContext(16895).SearchListRow, obj3);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;
@@ -290,10 +290,10 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   return tmp9Result;
 }
 const View = fn(17).View;
-const SearchHistoryItemTypes = fn(7994).SearchHistoryItemTypes;
+const SearchHistoryItemTypes = fn(8000).SearchHistoryItemTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { iconContainer: null, text: null, textContainer: null, textIconContainer: null, tag: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;

@@ -1,23 +1,23 @@
-// Module ID: 12162
-// Function ID: 12163
+// Module ID: 12171
+// Function ID: 12172
 // Name: ForumPostContainer
-// Dependencies: [19, 17, 21, 4638, 576, 7184, 4374, 10358, 5693, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 7188, 4376, 10366, 5695, 2]
 // Exports: ForumPostDisabledContainer, ForumPostPressableContainer, useForumPostContainerPressedIn
 
-// Module 12162 (ForumPostContainer)
+// Module 12171 (ForumPostContainer)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import Card from "Card" /* 5693 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10358 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import Card from "Card" /* 5695 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(7184);
+const ReanimatedHelperTypes = fn(7188);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");

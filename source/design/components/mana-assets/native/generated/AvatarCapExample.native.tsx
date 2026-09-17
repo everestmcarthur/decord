@@ -1,13 +1,13 @@
-// Module ID: 5859
-// Function ID: 5860
+// Module ID: 5861
+// Function ID: 5862
 // Name: AvatarCapExample
-// Dependencies: [21, 5673, 5860, 2]
+// Dependencies: [21, 5675, 5862, 2]
 // Exports: AvatarCapExample
 
-// Module 5859 (AvatarCapExample)
+// Module 5861 (AvatarCapExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5860 from "module_5860" /* 5860 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5862 from "module_5862" /* 5862 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarCapExample = function AvatarCapExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5860 };
+  const obj2 = { uri: _modDef5862 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

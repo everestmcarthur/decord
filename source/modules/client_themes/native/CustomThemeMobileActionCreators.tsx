@@ -1,10 +1,10 @@
-// Module ID: 12090
-// Function ID: 12091
+// Module ID: 12099
+// Function ID: 12100
 // Name: CustomThemeMobileActionCreators
 // Dependencies: [573, 2]
 // Exports: clearPreviewTheme, previewCustomTheme, resetCustomTheme, updateCustomTheme
 
-// Module 12090 (CustomThemeMobileActionCreators)
+// Module 12099 (CustomThemeMobileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

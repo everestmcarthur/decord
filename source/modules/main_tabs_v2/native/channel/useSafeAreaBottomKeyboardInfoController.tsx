@@ -1,12 +1,12 @@
-// Module ID: 11501
-// Function ID: 11502
+// Module ID: 11509
+// Function ID: 11510
 // Name: useSafeAreaBottomKeyboardInfoController
-// Dependencies: [19, 1609, 1364, 1624, 1625, 1481, 1626, 4374, 1874, 2]
+// Dependencies: [19, 1609, 1364, 1624, 1625, 1481, 1626, 4376, 1874, 2]
 // Exports: default
 
-// Module 11501 (useSafeAreaBottomKeyboardInfoController)
+// Module 11509 (useSafeAreaBottomKeyboardInfoController)
 import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1874 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// Module ID: 14978
-// Function ID: 14979
+// Module ID: 14986
+// Function ID: 14987
 // Name: RequestDataContent
-// Dependencies: [32, 19, 17, 1074, 21, 4638, 1484, 1115, 5690, 4634, 2025, 5773, 5060, 4982, 14979, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4640, 1484, 1115, 5692, 4636, 2025, 5775, 5062, 4984, 14987, 2]
 
-// Module 14978 (RequestDataContent)
+// Module 14986 (RequestDataContent)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4982 */;
-import DataHarvestActionCreators from "DataHarvestActionCreators" /* 14979 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
+import DataHarvestActionCreators from "DataHarvestActionCreators" /* 14987 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const constants = { USERS: "Account", MESSAGES: "Messages", GUILDS: "Servers", ANALYTICS: "Analytics", ACTIVITIES: "Activities", ADS: "Ads", ZENDESK: "Zendesk" };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_11 = createStyles.createStyles({ content: { padding: 16 }, header: { marginBottom: 8 }, title: { marginBottom: 8 }, description: { marginBottom: 0 }, checkboxContainer: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
@@ -151,7 +151,7 @@ export default noop.memo(() => {
         const intl2 = closure_1_0(1115).intl;
         obj2.title = intl2.string(closure_1_0(1115).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(4982).show(obj2);
+        closure_1_1(4984).show(obj2);
       }).finally(() => closure_1_1(false));
       const nextPromise = dataHarvest.then((body) => {
         if (null != body) {
@@ -195,7 +195,7 @@ export default noop.memo(() => {
         const intl2 = closure_1_0(1115).intl;
         obj2.title = intl2.string(closure_1_0(1115).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(4982).show(obj2);
+        closure_1_1(4984).show(obj2);
       });
     } else {
       let obj3 = { title: null, body: null };

@@ -1,11 +1,11 @@
-// Module ID: 14797
-// Function ID: 14798
+// Module ID: 14805
+// Function ID: 14806
 // Name: TinyBroncoExperiment
-// Dependencies: [1434, 14798, 2]
+// Dependencies: [1434, 14806, 2]
 // Exports: isTinyBroncoEnabled, useIsTinyBroncoEnabled
 
-// Module 14797 (TinyBroncoExperiment)
-import TinyBroncoGate from "TinyBroncoGate" /* 14798 */;
+// Module 14805 (TinyBroncoExperiment)
+import TinyBroncoGate from "TinyBroncoGate" /* 14806 */;
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 4664
-// Function ID: 4665
+// Module ID: 4666
+// Function ID: 4667
 // Name: discord_common/DiscordNative
 // Dependencies: [2]
 
-// Module 4664 (discord_common/DiscordNative)
+// Module 4666 (discord_common/DiscordNative)
 import size from "module_2" /* 2 */;
 
 class SystemServiceNotAvailableError extends Error {

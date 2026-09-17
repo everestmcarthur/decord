@@ -1,12 +1,12 @@
-// Module ID: 7287
-// Function ID: 7288
+// Module ID: 7291
+// Function ID: 7292
 // Name: ConnectionCardView
-// Dependencies: [19, 17, 21, 4638, 576, 4634, 1115, 4597, 5060, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 4636, 1115, 4599, 5062, 2]
 // Exports: default
 
-// Module 7287 (ConnectionCardView)
+// Module 7291 (ConnectionCardView)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4634 */;
+import Text_Text from "Text/Text" /* 4636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftContent: null, icon: null, textContent: null, connectedStatus: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj2.leftContent = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: nativeDefault.space.PX_12 };
@@ -42,7 +42,7 @@ export default function ConnectionCardView(description) {
   }
   if (tmp4Result) {
     const obj5 = { variant: "text-sm/normal", color: "text-subtle", children: description };
-    tmp4Result = tmp4(tmp5(4634).Text, obj5);
+    tmp4Result = tmp4(tmp5(4636).Text, obj5);
   }
   items1[1] = tmp4Result;
   obj4.children = items1;
@@ -56,7 +56,7 @@ export default function ConnectionCardView(description) {
     const obj7 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
     const intl2 = tmp5(1115).intl;
     obj7.children = intl2.string(tmp5(1115).t["LV+CXH"]);
-    const items3 = [tmp4(tmp5(4634).Text, obj7), tmp4(tmp5(4597).CircleCheckIcon, { size: "sm", color: "status-positive" })];
+    const items3 = [tmp4(tmp5(4636).Text, obj7), tmp4(tmp5(4599).CircleCheckIcon, { size: "sm", color: "status-positive" })];
     obj6.children = items3;
     tmp4Result2 = tmp2(tmp3, obj6);
   } else {
@@ -64,7 +64,7 @@ export default function ConnectionCardView(description) {
     const intl = tmp5(1115).intl;
     obj8.text = intl.string(tmp5(1115).t.S0W8Z5);
     obj8.disabled = !canConnect;
-    tmp4Result2 = tmp4(tmp5(5060).Button, obj8);
+    tmp4Result2 = tmp4(tmp5(5062).Button, obj8);
   }
   items2[1] = tmp4Result2;
   obj.children = items2;

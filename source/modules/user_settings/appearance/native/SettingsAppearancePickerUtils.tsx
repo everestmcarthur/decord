@@ -1,17 +1,17 @@
-// Module ID: 15411
-// Function ID: 15412
+// Module ID: 15416
+// Function ID: 15417
 // Name: SettingsAppearancePickerUtils
-// Dependencies: [19, 1085, 4569, 1230, 4488, 4487, 576, 1219, 4339, 1115, 2]
+// Dependencies: [19, 1085, 4571, 1230, 4490, 4489, 576, 1219, 4341, 1115, 2]
 // Exports: convertThemesToAnimatedThemes, useLaunchWelcomeSystemTheme
 
-// Module 15411 (SettingsAppearancePickerUtils)
+// Module 15416 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1219 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
-import ColorUtils from "ColorUtils" /* 4487 */;
-import utils_ColorDefault from "utils/Color" /* 4488 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4569 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import utils_ColorDefault from "utils/Color" /* 4490 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -147,8 +147,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4488)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4488)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4490)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4490)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (tmp.customThemeSettings.colors.length - 1));
@@ -212,7 +212,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 };
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(4339).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(4341).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

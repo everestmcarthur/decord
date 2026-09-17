@@ -1,9 +1,9 @@
-// Module ID: 17166
-// Function ID: 17167
+// Module ID: 17206
+// Function ID: 17207
 // Name: ToastStore
 // Dependencies: [504, 573, 2]
 
-// Module 17166 (ToastStore)
+// Module 17206 (ToastStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

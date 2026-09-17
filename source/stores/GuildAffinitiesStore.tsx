@@ -1,12 +1,12 @@
-// Module ID: 8475
-// Function ID: 8476
+// Module ID: 8494
+// Function ID: 8495
 // Name: GuildAffinitiesStore
-// Dependencies: [1980, 8476, 504, 573, 2]
+// Dependencies: [1980, 8495, 504, 573, 2]
 
-// Module 8475 (GuildAffinitiesStore)
+// Module 8494 (GuildAffinitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8476 */;
+import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8495 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;

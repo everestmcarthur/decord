@@ -1,9 +1,9 @@
-// Module ID: 14224
-// Function ID: 14225
+// Module ID: 14232
+// Function ID: 14233
 // Name: PassthroughTouchNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 14224 (PassthroughTouchNativeComponent)
+// Module 14232 (PassthroughTouchNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

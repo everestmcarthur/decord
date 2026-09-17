@@ -1,16 +1,16 @@
 // Module ID: 8651
 // Function ID: 8652
-// Dependencies: [41, 42, 93, 95, 98, 8602, 8625]
+// Dependencies: [41, 42, 93, 95, 98, 8622, 8645]
 
 // Module 8651
-import _modDef8625 from "module_8625" /* 8625 */;
+import _modDef8645 from "module_8645" /* 8645 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeTile = arg1;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTile {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
+    tmp = c2(this, FeConvolveMatrix);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(FeConvolveMatrix);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,17 +50,17 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTile, _modDef8625);
+_inherits(FeConvolveMatrix, _modDef8645);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(8602).warnUnimplementedFilter();
+    const result = FeConvolveMatrix(8622).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
+const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

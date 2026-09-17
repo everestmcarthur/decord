@@ -1,11 +1,11 @@
-// Module ID: 18147
-// Function ID: 18148
+// Module ID: 18211
+// Function ID: 18212
 // Name: GenerateInvite
-// Dependencies: [17, 18139, 8508, 7873, 2]
+// Dependencies: [17, 18203, 8527, 7879, 2]
 
-// Module 18147 (GenerateInvite)
+// Module 18211 (GenerateInvite)
 import _mod17 from "module_17" /* 17 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8508 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8527 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -15,11 +15,11 @@ export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    channelId(18139).awaitStorage(() => {
+    channelId(18203).awaitStorage(() => {
       const invite = InstantInviteActionCreatorsDefault.createInvite(channelId, {}, "Mobile Voice Overlay");
       invite.then((code) => {
         RNCClipboard = RNCClipboard.RNCClipboard;
-        RNCClipboard.setString(channelId(7873)(code.code));
+        RNCClipboard.setString(channelId(7879)(code.code));
         closure_1_0(true);
       });
     });

@@ -1,15 +1,15 @@
-// Module ID: 15018
-// Function ID: 15019
+// Module ID: 15026
+// Function ID: 15027
 // Name: FamilyCenterActivityPurchaseRowUtils
-// Dependencies: [7657, 7658, 1374, 1890, 1115, 2397, 1397, 2]
+// Dependencies: [7661, 7662, 1374, 1890, 1115, 2397, 1397, 2]
 // Exports: getAvatarDecorationPreviewUrl, getProfileEffectPreviewUrl, getPurchaseDisplayInfo, isGuildBoostSubscription
 
-// Module 15018 (FamilyCenterActivityPurchaseRowUtils)
+// Module 15026 (FamilyCenterActivityPurchaseRowUtils)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7657 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7658 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7661 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7662 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import size from "module_2" /* 2 */;
 

@@ -54,8 +54,8 @@ export const adjustTransactionDuration = (on, activeSpan, arg2) => {
   }
 };
 export const ignoreEmptyBackNavigation = (on, c4) => {
-  const f72773 = (arg0) => {
-    const data = c4(f72773[2]).spanToJSON(arg0).data;
+  const f73026 = (arg0) => {
+    const data = c4(f73026[2]).spanToJSON(arg0).data;
     let prop;
     if (null !== data) {
       if (undefined !== data) {
@@ -64,8 +64,8 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
     }
     return true === prop;
   };
-  const f72774 = () => {
-    const debug = c4(f72773[2]).debug;
+  const f73027 = () => {
+    const debug = c4(f73026[2]).debug;
     debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
   };
   if (on) {

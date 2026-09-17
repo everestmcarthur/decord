@@ -1,21 +1,21 @@
-// Module ID: 12106
-// Function ID: 12107
+// Module ID: 12115
+// Function ID: 12116
 // Name: TypingIndicator
-// Dependencies: [19, 17, 9628, 4637, 5547, 7795, 12107, 1372, 1074, 21, 12108, 504, 4638, 576, 12109, 12110, 12121, 12113, 4790, 1241, 4374, 4339, 4348, 5059, 5063, 12122, 1177, 4634, 12125, 2]
+// Dependencies: [19, 17, 9639, 4639, 5549, 7801, 12116, 1372, 1074, 21, 12117, 504, 4640, 576, 12118, 12119, 12130, 12122, 4792, 1241, 4376, 4341, 4350, 5061, 5065, 12131, 1177, 4636, 12134, 2]
 // Exports: hasTypingIndicatorContent, useTypingUserIdsForDisplay
 
-// Module 12106 (TypingIndicator)
+// Module 12115 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import native from "native" /* 4348 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4790 */;
-import spring from "spring" /* 5059 */;
-import springPresets from "springPresets" /* 5063 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12113 */;
+import native from "native" /* 4350 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4792 */;
+import spring from "spring" /* 5061 */;
+import springPresets from "springPresets" /* 5065 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12122 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4637 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5547 */;
-import TypingStore from "TypingStore" /* 12107 */;
+import DevSettingsStore from "DevSettingsStore" /* 4639 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5549 */;
+import TypingStore from "TypingStore" /* 12116 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -218,12 +218,12 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return closure_1_12(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(9628).useChatShowingAutoComplete;
-const SlowmodeType = fn(7795).SlowmodeType;
+let closure_5 = fn(9639).useChatShowingAutoComplete;
+const SlowmodeType = fn(7801).SlowmodeType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
   const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };

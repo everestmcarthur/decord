@@ -1,18 +1,18 @@
-// Module ID: 9350
-// Function ID: 9351
+// Module ID: 9361
+// Function ID: 9362
 // Name: useOpenProfileSettings
-// Dependencies: [19, 1372, 9351, 1074, 1084, 8289, 9352, 9353, 7492, 2]
+// Dependencies: [19, 1372, 9362, 1074, 1084, 8308, 9363, 9364, 7496, 2]
 // Exports: default
 
-// Module 9350 (useOpenProfileSettings)
+// Module 9361 (useOpenProfileSettings)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1074 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
-import openUserSettings from "openUserSettings" /* 7492 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9353 */;
+import openUserSettings from "openUserSettings" /* 7496 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9364 */;
 import UserStore from "UserStore" /* 1372 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9351 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8289 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9362 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8308 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;

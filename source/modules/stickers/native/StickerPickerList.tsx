@@ -1,32 +1,32 @@
-// Module ID: 10554
-// Function ID: 10555
+// Module ID: 10562
+// Function ID: 10563
 // Name: StickerPickerList
-// Dependencies: [32, 19, 17, 5588, 10530, 10412, 21, 4638, 576, 1177, 10555, 4634, 1115, 10446, 5354, 4374, 10462, 10430, 504, 10556, 10445, 10557, 10541, 12, 7172, 10558, 7165, 5665, 10453, 10467, 7967, 2]
+// Dependencies: [32, 19, 17, 5590, 10538, 10420, 21, 4640, 576, 1177, 10563, 4636, 1115, 10454, 5356, 4376, 10470, 10438, 504, 10564, 10453, 10565, 10549, 12, 7176, 10566, 7169, 5667, 10461, 10475, 7973, 2]
 
-// Module 10554 (StickerPickerList)
+// Module 10562 (StickerPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7172 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10445 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10446 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10541 */;
-import _modDef10555 from "module_10555" /* 10555 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10556 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10557 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7176 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10453 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10454 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10549 */;
+import _modDef10563 from "module_10563" /* 10563 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 10564 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5588 */;
+import StickersStore from "StickersStore" /* 5590 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10530).useStickerPickerStore;
-const StickerPickerConstants = fn(10412);
+const useStickerPickerStore = fn(10538).useStickerPickerStore;
+const StickerPickerConstants = fn(10420);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED }, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
 let obj3 = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.section = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -41,7 +41,7 @@ let closure_15 = noop.memo((height) => {
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [closure_1_11(native.Icon, { source: _modDef10555, size: native.Icon.Sizes.SMALL }), ];
+  const items1 = [closure_1_11(native.Icon, { source: _modDef10563, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);
@@ -230,7 +230,7 @@ export default noop.memo((bottomSheetRef) => {
         const obj2 = { containerWidth, stickers: tmp.stickersByRow[arg1], rowSize, isSectionNitroLocked: sectionNitroLocked[arg0], onPressSticker, onLongPressStickerDetail, focusedSticker, setFocusedSticker, channel };
         let tmp5 = closure_2_11(StickerPickerListRowDefault, obj2);
         let tmp2 = closure_2_11;
-      } else if (tmp21(10556).StickerPickerSectionType.NSFW === type) {
+      } else if (tmp21(10564).StickerPickerSectionType.NSFW === type) {
         tmp2 = closure_2_11;
         const obj = { height: rowHeight };
         tmp5 = closure_2_11(closure_15, obj);
@@ -240,7 +240,7 @@ export default noop.memo((bottomSheetRef) => {
       let tmp18 = tmp5;
       if (true === sectionNitroLocked[arg0]) {
         const obj3 = { children: null };
-        const items = [tmp2(tmp21(10446).PremiumUpsellGradientBackground, {}), tmp5];
+        const items = [tmp2(tmp21(10454).PremiumUpsellGradientBackground, {}), tmp5];
         obj3.children = items;
         tmp18 = closure_2_12(map1, obj3);
       }

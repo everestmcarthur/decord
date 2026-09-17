@@ -1,13 +1,13 @@
-// Module ID: 15572
-// Function ID: 15573
+// Module ID: 15577
+// Function ID: 15578
 // Name: DisplayMediaLinksSetting
-// Dependencies: [8091, 11614, 1115, 1936, 2]
+// Dependencies: [8111, 11622, 1115, 1936, 2]
 
-// Module 15572 (DisplayMediaLinksSetting)
+// Module 15577 (DisplayMediaLinksSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8091 */;
-import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingsConstants from "SettingsConstants" /* 8111 */;
+import SettingBuilders from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

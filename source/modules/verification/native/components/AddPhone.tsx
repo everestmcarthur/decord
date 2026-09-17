@@ -1,16 +1,16 @@
-// Module ID: 7154
-// Function ID: 7155
+// Module ID: 7158
+// Function ID: 7159
 // Name: AddPhone
-// Dependencies: [5, 32, 19, 17, 7051, 1952, 1372, 1074, 1085, 21, 4638, 576, 504, 6700, 7155, 4538, 4634, 1115, 7156, 7071, 4841, 7157, 1897, 5060, 4983, 7187, 2]
+// Dependencies: [5, 32, 19, 17, 7055, 1952, 1372, 1074, 1085, 21, 4640, 576, 504, 6702, 7159, 4540, 4636, 1115, 7160, 7075, 4843, 7161, 1897, 5062, 4985, 7191, 2]
 // Exports: default
 
-// Module 7154 (AddPhone)
+// Module 7158 (AddPhone)
 import nativeDefault from "native" /* 576 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7051 */;
+import PhoneStore from "PhoneStore" /* 7055 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -23,7 +23,7 @@ const UserFlags = fn(1074).UserFlags;
 const NOOP_NULL = fn(1085).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };

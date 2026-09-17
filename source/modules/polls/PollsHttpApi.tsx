@@ -1,10 +1,10 @@
-// Module ID: 11868
-// Function ID: 11869
+// Module ID: 11877
+// Function ID: 11878
 // Name: PollsHttpApi
-// Dependencies: [5, 1074, 1271, 4538, 2]
+// Dependencies: [5, 1074, 1271, 4540, 2]
 // Exports: endPollEarly, submitPollVote
 
-// Module 11868 (PollsHttpApi)
+// Module 11877 (PollsHttpApi)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

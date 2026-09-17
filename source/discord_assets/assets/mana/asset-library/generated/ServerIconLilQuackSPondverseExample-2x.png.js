@@ -1,8 +1,8 @@
-// Module ID: 6540
-// Function ID: 6541
+// Module ID: 6542
+// Function ID: 6543
 // Dependencies: [2]
 
-// Module 6540
+// Module 6542
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconLilQuackSPondverseExample-2x.png.js");

@@ -1,13 +1,13 @@
-// Module ID: 6237
-// Function ID: 6238
+// Module ID: 6239
+// Function ID: 6240
 // Name: GiftCardAvatar3dIllustration
-// Dependencies: [21, 5673, 6238, 2]
+// Dependencies: [21, 5675, 6240, 2]
 // Exports: GiftCardAvatar3dIllustration
 
-// Module 6237 (GiftCardAvatar3dIllustration)
+// Module 6239 (GiftCardAvatar3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6238 from "module_6238" /* 6238 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6240 from "module_6240" /* 6240 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GiftCardAvatar3dIllustration = function GiftCardAvatar3dIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6238 };
+  const obj2 = { uri: _modDef6240 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,13 +1,13 @@
-// Module ID: 6515
-// Function ID: 6516
+// Module ID: 6517
+// Function ID: 6518
 // Name: SecurityKeySpotIllustration
-// Dependencies: [21, 5673, 6516, 2]
+// Dependencies: [21, 5675, 6518, 2]
 // Exports: SecurityKeySpotIllustration
 
-// Module 6515 (SecurityKeySpotIllustration)
+// Module 6517 (SecurityKeySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6516 from "module_6516" /* 6516 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6518 from "module_6518" /* 6518 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SecurityKeySpotIllustration = function SecurityKeySpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6516 };
+  const obj2 = { uri: _modDef6518 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

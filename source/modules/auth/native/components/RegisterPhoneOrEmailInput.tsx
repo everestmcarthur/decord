@@ -1,17 +1,17 @@
-// Module ID: 16093
-// Function ID: 16094
+// Module ID: 16115
+// Function ID: 16116
 // Name: RegisterPhoneOrEmailInput
-// Dependencies: [19, 7051, 16076, 21, 1484, 16094, 504, 7071, 1094, 1115, 7070, 2]
+// Dependencies: [19, 7055, 16098, 21, 1484, 16116, 504, 7075, 1094, 1115, 7074, 2]
 // Exports: RegisterPhoneOrEmailInput
 
-// Module 16093 (RegisterPhoneOrEmailInput)
+// Module 16115 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7071 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7075 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7051 */;
+import PhoneStore from "PhoneStore" /* 7055 */;
 
 require = fn;
-const RegistrationUIStore = fn(16076);
+const RegistrationUIStore = fn(16098);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -97,7 +97,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     const intl3 = tmp(tmp2[9]).intl;
     stringResult1 = intl3.string(tmp(tmp2[9]).t.a17rBk);
   }
-  const obj4 = { ref, alpha2: stateFromStores.alpha2, countryCode: stateFromStores.code, onChange: callback1, onSubmitEditing: onSubmit, placeholder: stringResult, returnKeyType: "next", autoCapitalize: "none", accessibilityHint: stringResult1, label: stringResult, errorMessage: inputError, onPressCountrySelector: callback2, forceMode: inputMode, submitBehavior, autoComplete: null, keyboardType: null, isClearable: true, status: null };
+  const obj4 = { ref, alpha2: stateFromStores.alpha2, countryCode: stateFromStores.code, onChange: callback1, onSubmitEditing: onSubmit, placeholder: stringResult, returnKeyType: "next", autoCapitalize: "none", accessibilityHint: stringResult1, label: stringResult, errorMessage: inputError, onPressCountrySelector: callback2, forceMode: inputMode, submitBehavior, autoComplete: null, keyboardType: null, clearable: true, status: null };
   const tmp16 = closure_7;
   const tmpResult = loginPhone(setLoginPhone[6]);
   let str = "email";

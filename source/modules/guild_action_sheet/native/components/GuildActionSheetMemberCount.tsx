@@ -1,19 +1,19 @@
-// Module ID: 13420
-// Function ID: 13421
+// Module ID: 13428
+// Function ID: 13429
 // Name: GuildActionSheetMemberCount
-// Dependencies: [19, 17, 21, 4638, 576, 1365, 1115, 4634, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 1365, 1115, 4636, 2]
 
-// Module 13420 (GuildActionSheetMemberCount)
+// Module 13428 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
+import Text_Text from "Text/Text" /* 4636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;

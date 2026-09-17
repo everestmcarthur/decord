@@ -1,9 +1,9 @@
-// Module ID: 14240
-// Function ID: 14241
+// Module ID: 14248
+// Function ID: 14249
 // Name: AILoaderConstants
 // Dependencies: [2]
 
-// Module 14240 (AILoaderConstants)
+// Module 14248 (AILoaderConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/visual-identities/ai/AILoader/AILoaderConstants.tsx");

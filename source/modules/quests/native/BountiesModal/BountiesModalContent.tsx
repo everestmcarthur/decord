@@ -1,23 +1,23 @@
-// Module ID: 15169
-// Function ID: 15170
+// Module ID: 15177
+// Function ID: 15178
 // Name: BountiesModalContent
-// Dependencies: [32, 5, 19, 17, 7810, 1074, 1085, 21, 1478, 1612, 4638, 576, 504, 8989, 15133, 11667, 15134, 15136, 7826, 5537, 7836, 5535, 11658, 15118, 15139, 11920, 15170, 15167, 7233, 15160, 7807, 4348, 2]
+// Dependencies: [32, 5, 19, 17, 7816, 1074, 1085, 21, 1478, 1612, 4640, 576, 504, 9005, 15141, 11675, 15142, 15144, 7832, 5539, 7842, 5537, 11666, 15126, 15147, 11929, 15178, 15175, 7237, 15168, 7813, 4350, 2]
 // Exports: default
 
-// Module 15169 (BountiesModalContent)
+// Module 15177 (BountiesModalContent)
 import nativeDefault from "native" /* 576 */;
-import QuestContent from "QuestContent" /* 5535 */;
-import AdCreativeType from "AdCreativeType" /* 5537 */;
-import QuestDataUtils from "QuestDataUtils" /* 7807 */;
-import AnalyticsActions from "AnalyticsActions" /* 7826 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11658 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11920 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15118 */;
+import QuestContent from "QuestContent" /* 5537 */;
+import AdCreativeType from "AdCreativeType" /* 5539 */;
+import QuestDataUtils from "QuestDataUtils" /* 7813 */;
+import AnalyticsActions from "AnalyticsActions" /* 7832 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7842 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11666 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11929 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7810 */;
+import BountyStore from "BountyStore" /* 7816 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -109,12 +109,12 @@ function BountiesModalContentInner(bounty) {
     }
     return arg1;
   }), items5);
-  let obj2 = bounty(8989);
-  const bountiesModalVideoAnalytics = bounty(15136).useBountiesModalVideoAnalytics({ bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, wasPreloaded: false, verticalScrollingPosition: null, isActive: true });
+  let obj2 = bounty(9005);
+  const bountiesModalVideoAnalytics = bounty(15144).useBountiesModalVideoAnalytics({ bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, wasPreloaded: false, verticalScrollingPosition: null, isActive: true });
   ({ handleVideoProgressAnalytics, handleVideoEndAnalytics, handleVideoLoopedAnalytics, handleVideoPausedAnalytics, handleVideoResumedAnalytics, handleVideoErrorAnalytics, handleLoadStartAnalytics, handleVideoTracksAnalytics, handleReadyForDisplayAnalytics, handleBufferAnalytics } = bountiesModalVideoAnalytics);
-  let obj3 = bounty(15136);
+  let obj3 = bounty(15144);
   let obj4 = { bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, wasPreloaded: false, verticalScrollingPosition: null, isActive: true };
-  const bountiesModalTiming = bounty(15133).useBountiesModalTiming({ endMode: bounty(15133).BountyVideoEndMode.END_CARD, rewardDurationMs: result, isCompleted: stateFromStores, onRewardEarned: callback, onVideoProgress: handleVideoProgressAnalytics, onVideoEnd: handleVideoEndAnalytics, onVideoLooped: handleVideoLoopedAnalytics, onVideoPaused: handleVideoPausedAnalytics, onVideoResumed: handleVideoResumedAnalytics, playerRef: ref });
+  const bountiesModalTiming = bounty(15141).useBountiesModalTiming({ endMode: bounty(15141).BountyVideoEndMode.END_CARD, rewardDurationMs: result, isCompleted: stateFromStores, onRewardEarned: callback, onVideoProgress: handleVideoProgressAnalytics, onVideoEnd: handleVideoEndAnalytics, onVideoLooped: handleVideoLoopedAnalytics, onVideoPaused: handleVideoPausedAnalytics, onVideoResumed: handleVideoResumedAnalytics, playerRef: ref });
   isEndCardVisible = bountiesModalTiming.isEndCardVisible;
   const maxVideoProgressSeconds = bountiesModalTiming.maxVideoProgressSeconds;
   videoDuration = bountiesModalTiming.videoDuration;
@@ -197,12 +197,12 @@ function BountiesModalContentInner(bounty) {
       });
     }
   };
-  obj7.children = closure_10(bounty(15139).BountyVideo, size1);
+  obj7.children = closure_10(bounty(15147).BountyVideo, size1);
   const items8 = [closure_10(maxVideoProgressSeconds, obj7), , ];
-  let obj5 = bounty(15133);
-  items8[1] = closure_10(maxVideoProgressSeconds, { style: memo1, children: closure_10(sourceQuestContent(15167), { onPress: callback1 }) });
-  let rect = { left: size2.isFullWidth, right: size2.isFullWidth, bottom: true, style: memo2, pointerEvents: "box-none", children: closure_10(sourceQuestContent(15160), { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback2 }) };
-  items8[2] = closure_10(bounty(7233).SafeAreaPaddingView, rect);
+  let obj5 = bounty(15141);
+  items8[1] = closure_10(maxVideoProgressSeconds, { style: memo1, children: closure_10(sourceQuestContent(15175), { onPress: callback1 }) });
+  let rect = { left: size2.isFullWidth, right: size2.isFullWidth, bottom: true, style: memo2, pointerEvents: "box-none", children: closure_10(sourceQuestContent(15168), { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback2 }) };
+  items8[2] = closure_10(bounty(7237).SafeAreaPaddingView, rect);
   obj6.children = items8;
   return closure_12(closure_11, obj6);
 }
@@ -213,7 +213,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_15 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };

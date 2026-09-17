@@ -1,15 +1,15 @@
-// Module ID: 8357
-// Function ID: 8358
+// Module ID: 8376
+// Function ID: 8377
 // Name: UserProfileGradientUtils
-// Dependencies: [32, 1074, 1092, 4488, 12, 4489, 672, 2]
+// Dependencies: [32, 1074, 1092, 4490, 12, 4491, 672, 2]
 // Exports: calculateGradientSplitColors, calculateOverlayedColor, getGradientPercentageColorInRgb, getProfileTheme, getUserProfileGradientContainerColors, getValueInColorGradientByPercentage
 
-// Module 8357 (UserProfileGradientUtils)
+// Module 8376 (UserProfileGradientUtils)
 import _mod12 from "module_12" /* 12 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import utils_ColorDefault from "utils/Color" /* 4488 */;
-import shared from "shared" /* 4489 */;
+import utils_ColorDefault from "utils/Color" /* 4490 */;
+import shared from "shared" /* 4491 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

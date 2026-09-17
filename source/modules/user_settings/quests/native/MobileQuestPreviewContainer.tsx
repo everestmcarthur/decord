@@ -1,15 +1,15 @@
-// Module ID: 15280
-// Function ID: 15281
+// Module ID: 15285
+// Function ID: 15286
 // Name: MobileQuestPreviewContainer
-// Dependencies: [17, 21, 4638, 576, 4634, 2]
+// Dependencies: [17, 21, 4640, 576, 4636, 2]
 // Exports: default
 
-// Module 15280 (MobileQuestPreviewContainer)
+// Module 15285 (MobileQuestPreviewContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4634 */;
+import Text_Text from "Text/Text" /* 4636 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

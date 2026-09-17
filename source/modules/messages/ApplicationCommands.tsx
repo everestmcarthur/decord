@@ -1,10 +1,10 @@
-// Module ID: 8126
-// Function ID: 8127
+// Module ID: 8146
+// Function ID: 8147
 // Name: ApplicationCommands
 // Dependencies: [32, 2]
 // Exports: getApplicationCommand
 
-// Module 8126 (ApplicationCommands)
+// Module 8146 (ApplicationCommands)
 import _slicedToArray from "module_32" /* 32 */;
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;

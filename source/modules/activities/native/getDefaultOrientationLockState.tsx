@@ -1,13 +1,13 @@
-// Module ID: 9774
-// Function ID: 9775
+// Module ID: 9785
+// Function ID: 9786
 // Name: getDefaultOrientationLockState
-// Dependencies: [1478, 4499, 573, 2]
+// Dependencies: [1478, 4501, 573, 2]
 // Exports: getDefaultOrientationLockState, getIsTabletActivitySurface, setOrientationLockState
 
-// Module 9774 (getDefaultOrientationLockState)
+// Module 9785 (getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import useWindowDimensions from "useWindowDimensions" /* 1478 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4499 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4501 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");

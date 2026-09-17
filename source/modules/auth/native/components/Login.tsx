@@ -1,19 +1,19 @@
-// Module ID: 7050
-// Function ID: 7051
+// Module ID: 7054
+// Function ID: 7055
 // Name: Login
-// Dependencies: [5, 32, 19, 17, 7051, 502, 1074, 21, 4638, 5208, 4634, 4983, 1115, 1364, 5233, 7052, 1484, 504, 1487, 6701, 7054, 4984, 7055, 7056, 7057, 4538, 7058, 7062, 7063, 7065, 7059, 5060, 7066, 1609, 7068, 7070, 6714, 7076, 7078, 7080, 5058, 7087, 7049, 2]
+// Dependencies: [5, 32, 19, 17, 7055, 502, 1074, 21, 4640, 5210, 4636, 4985, 1115, 1364, 5235, 7056, 1484, 504, 1487, 6703, 7058, 4986, 7059, 7060, 7061, 4540, 7062, 7066, 7067, 7069, 7063, 5062, 7070, 1609, 7072, 7074, 6717, 7080, 7082, 7084, 5060, 7091, 7053, 2]
 // Exports: default
 
-// Module 7050 (Login)
+// Module 7054 (Login)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
-import Pressables from "Pressables" /* 5208 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5233 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
+import Pressables from "Pressables" /* 5210 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5235 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7051 */;
+import PhoneStore from "PhoneStore" /* 7055 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ const View = fn(17).View;
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -467,7 +467,7 @@ export default function Login(isMultiAccount) {
     errorMessage: null,
     testID: "login_login_input",
     onPressCountrySelector: null,
-    isClearable: true,
+    clearable: true,
     autoComplete: "username"
   };
   tmp4Result = require("MetaQuestUtils");

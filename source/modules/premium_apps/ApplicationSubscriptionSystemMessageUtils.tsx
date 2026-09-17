@@ -1,10 +1,10 @@
-// Module ID: 8111
-// Function ID: 8112
+// Module ID: 8131
+// Function ID: 8132
 // Name: ApplicationSubscriptionSystemMessageUtils
 // Dependencies: [1115, 2]
 // Exports: getApplicationSubscriptionSystemMessageASTContent
 
-// Module 8111 (ApplicationSubscriptionSystemMessageUtils)
+// Module 8131 (ApplicationSubscriptionSystemMessageUtils)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

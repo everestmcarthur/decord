@@ -1,15 +1,15 @@
-// Module ID: 10201
-// Function ID: 10202
+// Module ID: 10212
+// Function ID: 10213
 // Name: useFetchStreamPreview
-// Dependencies: [19, 4782, 1958, 4276, 2012, 1085, 504, 4780, 2]
+// Dependencies: [19, 4784, 1958, 4278, 2012, 1085, 504, 4782, 2]
 // Exports: default
 
-// Module 10201 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 4780 */;
+// Module 10212 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 4782 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4782 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4784 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 const require = globalThis.__r;

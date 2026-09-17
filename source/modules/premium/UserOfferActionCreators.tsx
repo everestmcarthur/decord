@@ -1,17 +1,17 @@
-// Module ID: 8179
-// Function ID: 8180
+// Module ID: 8199
+// Function ID: 8200
 // Name: UserOfferActionCreators
-// Dependencies: [5, 8180, 7564, 7560, 1374, 1074, 1364, 573, 1241, 1271, 8181, 1231, 4458, 1944, 1941, 2]
+// Dependencies: [5, 8200, 7568, 7564, 1374, 1074, 1364, 573, 1241, 1271, 8201, 1231, 4460, 1944, 1941, 2]
 // Exports: acknowledgeUserOffer, fetchChurnDiscountOffer, fetchExistingChurnDiscountOffer, fetchUserOffer, triggerUserOffer
 
-// Module 8179 (UserOfferActionCreators)
+// Module 8199 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8180 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7564 */;
-import UserOfferStore from "UserOfferStore" /* 7560 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8200 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7568 */;
+import UserOfferStore from "UserOfferStore" /* 7564 */;
 
 const require = globalThis.__r;
 

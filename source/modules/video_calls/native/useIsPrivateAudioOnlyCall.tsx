@@ -1,16 +1,16 @@
-// Module ID: 9612
-// Function ID: 9613
+// Module ID: 9623
+// Function ID: 9624
 // Name: useIsPrivateAudioOnlyCall
-// Dependencies: [32, 1957, 4654, 4660, 1909, 4657, 4659, 504, 2]
+// Dependencies: [32, 1957, 4656, 4662, 1909, 4659, 4661, 504, 2]
 // Exports: default
 
-// Module 9612 (useIsPrivateAudioOnlyCall)
+// Module 9623 (useIsPrivateAudioOnlyCall)
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4660 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4662 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import VoiceStateStore from "VoiceStateStore" /* 4657 */;
+import VoiceStateStore from "VoiceStateStore" /* 4659 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ function areParticipantStatesEqual(arg0, arg1) {
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const isActivityParticipant = fn(4659).isActivityParticipant;
+const isActivityParticipant = fn(4661).isActivityParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 

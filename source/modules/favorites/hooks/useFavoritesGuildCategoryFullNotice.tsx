@@ -1,13 +1,13 @@
-// Module ID: 16237
-// Function ID: 16238
+// Module ID: 16267
+// Function ID: 16268
 // Name: useFavoritesGuildCategoryFullNotice
-// Dependencies: [1961, 1971, 1074, 504, 10363, 1983, 1115, 3237, 2]
+// Dependencies: [1961, 1971, 1074, 504, 10371, 1983, 1115, 3239, 2]
 // Exports: default
 
-// Module 16237 (useFavoritesGuildCategoryFullNotice)
+// Module 16267 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
-import _modDef3237 from "module_3237" /* 3237 */;
-import FavoritesHooks from "FavoritesHooks" /* 10363 */;
+import _modDef3239 from "module_3239" /* 3239 */;
+import FavoritesHooks from "FavoritesHooks" /* 10371 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 require = fn;
@@ -35,9 +35,9 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = tmp(1115).intl;
-              obj2.label = intl.string(_modDef3237.WsUrMD);
+              obj2.label = intl.string(_modDef3239.WsUrMD);
               const intl2 = tmp(1115).intl;
-              obj2.tooltip = intl2.string(_modDef3237.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3239.dW9Kov);
               tmp6 = obj2;
             }
             str = str.trim();

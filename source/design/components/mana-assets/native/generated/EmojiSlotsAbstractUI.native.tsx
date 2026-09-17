@@ -1,13 +1,13 @@
-// Module ID: 6059
-// Function ID: 6060
+// Module ID: 6061
+// Function ID: 6062
 // Name: EmojiSlotsAbstractUI
-// Dependencies: [21, 5673, 6060, 2]
+// Dependencies: [21, 5675, 6062, 2]
 // Exports: EmojiSlotsAbstractUI
 
-// Module 6059 (EmojiSlotsAbstractUI)
+// Module 6061 (EmojiSlotsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6060 from "module_6060" /* 6060 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6062 from "module_6062" /* 6062 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiSlotsAbstractUI = function EmojiSlotsAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6060 };
+  const obj2 = { uri: _modDef6062 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

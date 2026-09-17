@@ -1,23 +1,23 @@
-// Module ID: 12122
-// Function ID: 12123
+// Module ID: 12131
+// Function ID: 12132
 // Name: CustomTypingIndicatorDisplay
-// Dependencies: [19, 21, 4638, 1115, 12113, 5058, 12123, 4634, 5208, 576, 2]
+// Dependencies: [19, 21, 4640, 1115, 12122, 5060, 12132, 4636, 5210, 576, 2]
 // Exports: default
 
-// Module 12122 (CustomTypingIndicatorDisplay)
+// Module 12131 (CustomTypingIndicatorDisplay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12113 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12123 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12122 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12132 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp3(4634);
-const Stack_Stack = tmp3(5058);
-const Pressables = tmp3(5208);
+const Text_Text = tmp3(4636);
+const Stack_Stack = tmp3(5060);
+const Pressables = tmp3(5210);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");

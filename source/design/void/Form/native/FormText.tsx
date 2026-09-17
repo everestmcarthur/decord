@@ -1,17 +1,17 @@
-// Module ID: 8741
-// Function ID: 8742
+// Module ID: 8761
+// Function ID: 8762
 // Name: FormText
-// Dependencies: [19, 21, 4638, 5527, 576, 1177, 2]
+// Dependencies: [19, 21, 4640, 5529, 576, 1177, 2]
 
-// Module 8741 (FormText)
+// Module 8761 (FormText)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import LegacyTokens from "LegacyTokens" /* 5527 */;
+import LegacyTokens from "LegacyTokens" /* 5529 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_3 = createStyles.createStyles((arg0) => {
   const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: null };
   let num = 16;

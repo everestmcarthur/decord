@@ -1,12 +1,12 @@
-// Module ID: 13229
-// Function ID: 13230
+// Module ID: 13237
+// Function ID: 13238
 // Name: PrivateProfilesExperiment
-// Dependencies: [1434, 13230, 13231, 2]
+// Dependencies: [1434, 13238, 13239, 2]
 // Exports: getIsInPrivateProfilesExperiment, useIsInPrivateProfilesExperiment
 
-// Module 13229 (PrivateProfilesExperiment)
-import PrivateProfilesStrictExperiment from "PrivateProfilesStrictExperiment" /* 13230 */;
-import PrivateProfilesStrictGbExperiment from "PrivateProfilesStrictGbExperiment" /* 13231 */;
+// Module 13237 (PrivateProfilesExperiment)
+import PrivateProfilesStrictExperiment from "PrivateProfilesStrictExperiment" /* 13238 */;
+import PrivateProfilesStrictGbExperiment from "PrivateProfilesStrictGbExperiment" /* 13239 */;
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 9583
-// Function ID: 9584
+// Module ID: 9594
+// Function ID: 9595
 // Name: XboxLinkSuccess
-// Dependencies: [32, 19, 17, 9362, 9376, 21, 4638, 576, 9369, 1364, 1484, 9584, 4634, 1115, 9585, 9586, 1177, 9587, 7233, 5060, 2]
+// Dependencies: [32, 19, 17, 9373, 9387, 21, 4640, 576, 9380, 1364, 1484, 9595, 4636, 1115, 9596, 9597, 1177, 9598, 7237, 5062, 2]
 // Exports: default
 
-// Module 9583 (XboxLinkSuccess)
+// Module 9594 (XboxLinkSuccess)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9362).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9376);
+const XboxLinkModalScenes = fn(9373).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9387);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { image: { width: 58, height: 85, marginBottom: 24 }, getApp: { alignItems: "center", alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: nativeDefault.radii.sm, flexDirection: "row" }, appLogoBox: null, appLogo: null, getAppTitle: null, icon: null, externalLinkIcon: null };
 let size = { marginRight: 12, width: 40, height: 40, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_XBOX };
 obj2.appLogoBox = size;
@@ -61,7 +61,7 @@ export default function XboxLinkDiscordSuccess() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj5.source = require("module_9584");
+  obj5.source = require("module_9595");
   obj5.style = tmp.image;
   const items2 = [closure_13(closure_5, obj5), , , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -76,7 +76,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj2 = first(navigation[10]);
   const tmp14 = closure_5;
-  obj9.children = closure_13(closure_5, { source: require("module_9585"), style: tmp.appLogo });
+  obj9.children = closure_13(closure_5, { source: require("module_9596"), style: tmp.appLogo });
   const items3 = [closure_13(closure_6, obj9), , ];
   const obj11 = { style: tmp.getAppTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = first(navigation[13]).intl;

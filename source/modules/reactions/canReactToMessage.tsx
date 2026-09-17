@@ -1,16 +1,16 @@
-// Module ID: 8086
-// Function ID: 8087
+// Module ID: 8106
+// Function ID: 8107
 // Name: canReactToMessage
-// Dependencies: [2022, 5499, 4276, 1372, 1074, 8087, 1385, 4264, 504, 2]
+// Dependencies: [2022, 5501, 4278, 1372, 1074, 8107, 1385, 4266, 504, 2]
 // Exports: canReactToMessage, useCanReactToMessage
 
-// Module 8086 (canReactToMessage)
+// Module 8106 (canReactToMessage)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4264 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8087 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4266 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8107 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5499 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5501 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

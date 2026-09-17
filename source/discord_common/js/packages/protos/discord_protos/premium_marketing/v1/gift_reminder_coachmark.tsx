@@ -1,12 +1,12 @@
-// Module ID: 10826
-// Function ID: 10827
+// Module ID: 10834
+// Function ID: 10835
 // Name: gift_reminder_coachmark
-// Dependencies: [32, 1187, 10821, 10811, 2]
+// Dependencies: [32, 1187, 10829, 10819, 2]
 
-// Module 10826 (gift_reminder_coachmark)
+// Module 10834 (gift_reminder_coachmark)
 import _mod1187 from "module_1187" /* 1187 */;
-import localized_string from "localized_string" /* 10811 */;
-import theme_aware_asset from "theme_aware_asset" /* 10821 */;
+import localized_string from "localized_string" /* 10819 */;
+import theme_aware_asset from "theme_aware_asset" /* 10829 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

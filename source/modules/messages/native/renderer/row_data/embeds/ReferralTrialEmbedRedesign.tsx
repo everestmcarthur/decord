@@ -1,17 +1,17 @@
-// Module ID: 8170
-// Function ID: 8171
+// Module ID: 8190
+// Function ID: 8191
 // Name: ReferralTrialEmbedRedesign
-// Dependencies: [1958, 1372, 4301, 7560, 7347, 1074, 1374, 4638, 576, 7350, 8171, 1115, 4482, 2025, 4295, 7559, 8172, 1609, 8062, 8168, 2]
+// Dependencies: [1958, 1372, 4303, 7564, 7351, 1074, 1374, 4640, 576, 7354, 8191, 1115, 4484, 2025, 4297, 7563, 8192, 1609, 8082, 8188, 2]
 // Exports: createReferralTrialEmbedRedesign
 
-// Module 8170 (ReferralTrialEmbedRedesign)
+// Module 8190 (ReferralTrialEmbedRedesign)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4301 */;
-import UserOfferStore from "UserOfferStore" /* 7560 */;
-import IAPStore from "IAPStore" /* 7347 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import UserOfferStore from "UserOfferStore" /* 7564 */;
+import IAPStore from "IAPStore" /* 7351 */;
 
 require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -40,10 +40,10 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
         const user1 = UserStore.getUser(referrerId);
         if (null != user) {
           if (null != user1) {
-            const name = tmp41(4482).getName(user1);
+            const name = tmp41(4484).getName(user1);
             const intl10 = tmp39(1115).intl;
             const obj3 = { sender: name, helpdeskArticle: null };
-            const tmp41Result = tmp41(4482);
+            const tmp41Result = tmp41(4484);
             obj3.helpdeskArticle = tmp41(2025).getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
             const tmp41Result8 = tmp41(2025);
             const intl11 = tmp39(1115).intl;
@@ -55,7 +55,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             obj4.helpdeskArticle = obj5;
             const obj6 = { titleText: formatToPlainStringResult, titleColor, headerImageUrl: null, headerText: null, headerColor: null, backgroundColor: null, borderColor: null, learnMoreLink: null };
             const tmp41Result9 = tmp41(2025);
-            obj6.headerImageUrl = tmp41(8171);
+            obj6.headerImageUrl = tmp41(8191);
             const intl12 = tmp39(1115).intl;
             obj6.headerText = intl12.string(tmp39(1115).t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -74,14 +74,14 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
               const userTrialOffer = UserOfferStore.getUserTrialOffer(closure_9);
               IAPStore.getOfferIds();
               const _Object = Object;
-              const values = Object.values(tmp39(7350).TrialIdToProductOfferId[closure_9]);
+              const values = Object.values(tmp39(7354).TrialIdToProductOfferId[closure_9]);
               id = undefined;
               if (userTrialOffer != null) {
                 id = userTrialOffer.id;
               }
               const tmp7 = relevantUserTrialOffer.id === id && values.every((item) => set.has(item));
               const everyResult = values.every((item) => set.has(item));
-              const isPremiumResult = tmp41(4295).isPremium(user);
+              const isPremiumResult = tmp41(4297).isPremium(user);
               let tmp10 = isPremiumResult;
               if (!isPremiumResult) {
                 tmp10 = isPremiumResult;
@@ -89,11 +89,11 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                   tmp10 = null != SubscriptionStore.getPremiumTypeSubscription();
                 }
               }
-              const tmp41Result10 = tmp41(4295);
-              const result = tmp39(7559).hasUserTrialOfferExpired(relevantUserTrialOffer);
-              const tmp39Result = tmp39(7559);
+              const tmp41Result10 = tmp41(4297);
+              const result = tmp39(7563).hasUserTrialOfferExpired(relevantUserTrialOffer);
+              const tmp39Result = tmp39(7563);
               let tmp15 = null == relevantUserTrialOffer.expiresAt;
-              const name1 = tmp41(4482).getName(user);
+              const name1 = tmp41(4484).getName(user);
               if (!tmp15) {
                 tmp15 = result;
               }
@@ -105,9 +105,9 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
               }
               if (!tmp15) {
                 const expiresAt = relevantUserTrialOffer.expiresAt;
-                const referralTrialOfferExpirationCopy = tmp39(8172).getReferralTrialOfferExpirationCopy(expiresAt.getTime());
+                const referralTrialOfferExpirationCopy = tmp39(8192).getReferralTrialOfferExpirationCopy(expiresAt.getTime());
                 const intl = tmp39(1115).intl;
-                const tmp39Result5 = tmp39(8172);
+                const tmp39Result5 = tmp39(8192);
                 const subscriptionTrial = relevantUserTrialOffer.subscriptionTrial;
                 let interval;
                 if (subscriptionTrial != null) {
@@ -121,8 +121,8 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                 }
                 const obj9 = { duration: null };
                 obj8.intervalCount = intervalCount;
-                obj9.duration = tmp39(4295).formatIntervalDuration(obj8);
-                const tmp39Result6 = tmp39(4295);
+                obj9.duration = tmp39(4297).formatIntervalDuration(obj8);
+                const tmp39Result6 = tmp39(4297);
                 const replaced = intl.formatToPlainString(tmp39(1115).t.uj94C5, obj9).replace(/\*/g, "");
                 const str = intl.formatToPlainString(tmp39(1115).t.uj94C5, obj9);
                 const tmp17 = referralTrialOfferExpirationCopy;
@@ -165,9 +165,9 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                     const intl7 = tmp39(1115).intl;
                     obj13.acceptLabelText = intl7.string(tmp39(1115).t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = tmp39(8062).getAssetUriForEmbed(tmp41(8168));
+                    obj13.acceptLabelIconUrl = tmp39(8082).getAssetUriForEmbed(tmp41(8188));
                     tmp31 = obj13;
-                    const tmp39Result7 = tmp39(8062);
+                    const tmp39Result7 = tmp39(8082);
                   }
                   return tmp31;
                 }
@@ -209,12 +209,12 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                 formatToPartsResult2 = intl5.formatToParts(tmp39(1115).t.mVzEG8, obj17);
                 const tmp41Result14 = tmp41(2025);
               }
-              const tmp41Result11 = tmp41(4482);
+              const tmp41Result11 = tmp41(4484);
             }
             const formatToPartsResult = intl11.formatToParts(tmp39(1115).t.yisueA, obj4);
           }
         }
-        const obj19 = { titleText: "", titleColor, headerImageUrl: tmp41(8171), headerText: "", headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, bodyText: null, bodyTextColor: null, canBeAccepted: false };
+        const obj19 = { titleText: "", titleColor, headerImageUrl: tmp41(8191), headerText: "", headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, bodyText: null, bodyTextColor: null, canBeAccepted: false };
         const intl9 = tmp39(1115).intl;
         obj19.bodyText = intl9.string(tmp39(1115).t.eEz1N5);
         obj19.bodyTextColor = bodyTextColor;

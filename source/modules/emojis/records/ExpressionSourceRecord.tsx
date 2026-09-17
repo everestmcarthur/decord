@@ -1,9 +1,9 @@
-// Module ID: 5671
-// Function ID: 5672
+// Module ID: 5673
+// Function ID: 5674
 // Name: ExpressionSourceRecord
 // Dependencies: [5, 1387, 1074, 1271, 1397, 1975, 1972, 2]
 
-// Module 5671 (ExpressionSourceRecord)
+// Module 5673 (ExpressionSourceRecord)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;

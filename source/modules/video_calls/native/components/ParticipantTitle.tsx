@@ -1,18 +1,18 @@
-// Module ID: 10205
-// Function ID: 10206
+// Module ID: 10216
+// Function ID: 10217
 // Name: ParticipantTitle
-// Dependencies: [19, 21, 4638, 576, 1177, 10187, 2]
+// Dependencies: [19, 21, 4640, 576, 1177, 10198, 2]
 // Exports: default
 
-// Module 10205 (ParticipantTitle)
+// Module 10216 (ParticipantTitle)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import getParticipantTitleDefault from "getParticipantTitle" /* 10187 */;
+import getParticipantTitleDefault from "getParticipantTitle" /* 10198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

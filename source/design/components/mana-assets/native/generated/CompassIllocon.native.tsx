@@ -1,13 +1,13 @@
-// Module ID: 5973
-// Function ID: 5974
+// Module ID: 5975
+// Function ID: 5976
 // Name: CompassIllocon
-// Dependencies: [21, 5673, 5974, 2]
+// Dependencies: [21, 5675, 5976, 2]
 // Exports: CompassIllocon
 
-// Module 5973 (CompassIllocon)
+// Module 5975 (CompassIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5974 from "module_5974" /* 5974 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5976 from "module_5976" /* 5976 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const CompassIllocon = function CompassIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5974 };
+  const obj2 = { uri: _modDef5976 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

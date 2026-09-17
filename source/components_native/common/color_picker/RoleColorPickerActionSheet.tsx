@@ -1,14 +1,14 @@
-// Module ID: 16421
-// Function ID: 16422
+// Module ID: 16451
+// Function ID: 16452
 // Name: RoleColorPickerActionSheet
-// Dependencies: [32, 19, 17, 1074, 21, 4638, 576, 14711, 8018, 4605, 14709, 7260, 7259, 1115, 5060, 15462, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4640, 576, 14719, 8024, 4607, 14717, 7264, 7263, 1115, 5062, 15467, 2]
 // Exports: default
 
-// Module 16421 (RoleColorPickerActionSheet)
+// Module 16451 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14709 */;
-import ColorBlockDefault from "ColorBlock" /* 14711 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14717 */;
+import ColorBlockDefault from "ColorBlock" /* 14719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [...ROLE_COLORS.slice(0, 5), ...ROLE_COLORS.slice(10, 15), ...ROLE_COLORS.slice(5, 10), ...ROLE_COLORS.slice(15, 18)];
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { body: { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" }, colorWrap: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
 obj2.colorWrap = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: nativeDefault.space.PX_16 };

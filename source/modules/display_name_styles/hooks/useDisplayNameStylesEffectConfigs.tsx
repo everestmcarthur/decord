@@ -1,14 +1,14 @@
-// Module ID: 11048
-// Function ID: 11049
+// Module ID: 11056
+// Function ID: 11057
 // Name: useDisplayNameStylesEffectConfigs
-// Dependencies: [19, 1391, 2787, 11049, 1115, 1392, 2]
+// Dependencies: [19, 1391, 2787, 11057, 1115, 1392, 2]
 // Exports: useDisplayNameStylesEffectConfig
 
-// Module 11048 (useDisplayNameStylesEffectConfigs)
+// Module 11056 (useDisplayNameStylesEffectConfigs)
 import util from "util" /* 1115 */;
 import DisplayNameFont from "DisplayNameFont" /* 1392 */;
 import _modDef2787 from "module_2787" /* 2787 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 11049 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 11057 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

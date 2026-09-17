@@ -1,12 +1,12 @@
-// Module ID: 8216
-// Function ID: 8217
+// Module ID: 8234
+// Function ID: 8235
 // Name: XNeutralIcon
-// Dependencies: [19, 21, 4338, 8217, 2]
+// Dependencies: [19, 21, 4340, 8235, 2]
 // Exports: XNeutralIcon
 
-// Module 8216 (XNeutralIcon)
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod8217 from "module_8217" /* 8217 */;
+// Module 8234 (XNeutralIcon)
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod8235 from "module_8235" /* 8235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,5 +21,5 @@ export const XNeutralIcon = function XNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8217, color: str, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8235, color: str, style: color.style });
 };

@@ -1,17 +1,17 @@
-// Module ID: 14941
-// Function ID: 14942
+// Module ID: 14949
+// Function ID: 14950
 // Name: ParentalControlledUserSettings
-// Dependencies: [1938, 1074, 14942, 1936, 558, 1217, 1186, 14943, 2]
+// Dependencies: [1938, 1074, 14950, 1936, 558, 1217, 1186, 14951, 2]
 
-// Module 14941 (ParentalControlledUserSettings)
+// Module 14949 (ParentalControlledUserSettings)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import Constants from "Constants" /* 1074 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import wrappers from "wrappers" /* 1217 */;
 import UserSettings from "UserSettings" /* 1936 */;
 import DMSafetyConstants from "DMSafetyConstants" /* 1938 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14943 */;
-import ParentalControlledUserSettingsDefinitions_mod from "ParentalControlledUserSettingsDefinitions" /* 14942 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14951 */;
+import ParentalControlledUserSettingsDefinitions_mod from "ParentalControlledUserSettingsDefinitions" /* 14950 */;
 import size from "module_2" /* 2 */;
 
 const constants = DMSafetyConstants.ExplicitContentFilterTypes;

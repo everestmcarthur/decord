@@ -1,16 +1,16 @@
-// Module ID: 14588
-// Function ID: 14589
+// Module ID: 14596
+// Function ID: 14597
 // Name: getCurrentEmbeddedChannel
-// Dependencies: [9653, 1958, 4542, 9654, 14584, 2]
+// Dependencies: [9664, 1958, 4544, 9665, 14592, 2]
 // Exports: default
 
-// Module 14588 (getCurrentEmbeddedChannel)
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14584 */;
-import FramesStore from "FramesStore" /* 9653 */;
+// Module 14596 (getCurrentEmbeddedChannel)
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14592 */;
+import FramesStore from "FramesStore" /* 9664 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
-const TransportTypes = fn(4542).TransportTypes;
-const EmbeddedSurfaceType = fn(9654).EmbeddedSurfaceType;
+const TransportTypes = fn(4544).TransportTypes;
+const EmbeddedSurfaceType = fn(9665).EmbeddedSurfaceType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedChannel.tsx");
 

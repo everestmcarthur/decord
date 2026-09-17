@@ -1,22 +1,22 @@
-// Module ID: 16801
-// Function ID: 16802
+// Module ID: 16840
+// Function ID: 16841
 // Name: VibegrationsTraceTab
-// Dependencies: [32, 19, 17, 16723, 21, 4638, 576, 16802, 16804, 1115, 3591, 16803, 5693, 4634, 1612, 504, 16805, 16806, 4605, 16807, 16799, 9017, 7160, 2]
+// Dependencies: [32, 19, 17, 16754, 21, 4640, 576, 16841, 16843, 1115, 3593, 16842, 5695, 4636, 1612, 504, 16844, 16845, 4607, 16846, 16838, 8873, 7164, 2]
 // Exports: default
 
-// Module 16801 (VibegrationsTraceTab)
+// Module 16840 (VibegrationsTraceTab)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 16802 */;
-import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16803 */;
-import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 16804 */;
-import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 16807 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 16841 */;
+import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16842 */;
+import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 16843 */;
+import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 16846 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16754 */;
 
 const require = globalThis.__r;
 const VibegrationsTraceDetailSheetDefault = VibegrationsTraceDetailSheet;
@@ -32,9 +32,9 @@ function TraceRow(entry) {
   if ("model" === entry.kind) {
     if (null != entry.promptTokens) {
       const intl = tmp2(1115).intl;
-      const obj3 = { tokens: tmp2(16803).formatTokens(entry.promptTokens) };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef3591["PYO+Jv"], obj3);
-      const tmp2Result = tmp2(16803);
+      const obj3 = { tokens: tmp2(16842).formatTokens(entry.promptTokens) };
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef3593["PYO+Jv"], obj3);
+      const tmp2Result = tmp2(16842);
     }
     const items = [tmp.rowSlot, ];
     let rowNested = "tool" === entry.kind;
@@ -58,15 +58,15 @@ function TraceRow(entry) {
     const obj6 = { style: tmp.rowBody, children: null };
     const obj7 = { style: tmp.rowTop, children: null };
     const obj8 = { status: entry.status };
-    const items1 = [React5(tmp2(16802).TraceStatusDot, obj8), , , ];
-    const obj9 = { variant: "text-xs/semibold", style: traceCategoryTextStyles[traceCategoryResult], children: tmp2(16803).categoryLabel(traceCategoryResult) };
-    items1[1] = React5(tmp2(4634).Text, obj9);
+    const items1 = [React5(tmp2(16841).TraceStatusDot, obj8), , , ];
+    const obj9 = { variant: "text-xs/semibold", style: traceCategoryTextStyles[traceCategoryResult], children: tmp2(16842).categoryLabel(traceCategoryResult) };
+    items1[1] = React5(tmp2(4636).Text, obj9);
     const obj10 = { variant: "text-xs/semibold", color: "text-default", style: tmp.rowTitle, lineClamp: 1, children: tmp6 };
-    items1[2] = React5(tmp2(4634).Text, obj10);
+    items1[2] = React5(tmp2(4636).Text, obj10);
     let tmp10Result = null;
     if (null != formatToPlainStringResult) {
       const obj11 = { variant: "text-xs/normal", color: "text-subtle", children: formatToPlainStringResult };
-      tmp10Result = tmp10(tmp2(4634).Text, obj11);
+      tmp10Result = tmp10(tmp2(4636).Text, obj11);
     }
     items1[3] = tmp10Result;
     obj7.children = items1;
@@ -76,25 +76,25 @@ function TraceRow(entry) {
       tmp10Result3 = null;
       if (null != entry.summary) {
         const obj12 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 2, children: entry.summary };
-        tmp10Result3 = tmp10(tmp2(4634).Text, obj12);
+        tmp10Result3 = tmp10(tmp2(4636).Text, obj12);
       }
     }
     items2[1] = tmp10Result3;
     let tmp10Result4 = null;
     if (null != entry.error) {
       const obj13 = { variant: "text-xs/normal", color: "text-feedback-critical", lineClamp: 2, children: entry.error };
-      tmp10Result4 = tmp10(tmp2(4634).Text, obj13);
+      tmp10Result4 = tmp10(tmp2(4636).Text, obj13);
     }
     items2[2] = tmp10Result4;
     obj6.children = items2;
     obj5.children = React6(View, obj6);
-    obj4.children = React5(tmp2(5693).Card, obj5);
+    obj4.children = React5(tmp2(5695).Card, obj5);
     return React5(View, obj4);
   }
   formatToPlainStringResult = null;
   if (null != entry.durationMs) {
-    formatToPlainStringResult = tmp2(16803).formatDuration(entry.durationMs);
-    const tmp2Result4 = tmp2(16803);
+    formatToPlainStringResult = tmp2(16842).formatDuration(entry.durationMs);
+    const tmp2Result4 = tmp2(16842);
   }
 }
 function TraceOverview(arg0) {
@@ -102,7 +102,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(16802).useTraceCategoryFillStyles();
+  dependencyMap = entries(16841).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -127,7 +127,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3), ];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(16804).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(16843).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);
@@ -152,7 +152,7 @@ function TraceOverview(arg0) {
     items1[1] = React5(Text_Text.Text, obj3);
     const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj5.children = intl.formatToPlainString(_modDef3591.UffawN, { percent: num2 });
+    obj5.children = intl.formatToPlainString(_modDef3593.UffawN, { percent: num2 });
     items1[2] = React5(Text_Text.Text, obj5);
     const intl2 = util.intl;
     let num4;
@@ -164,12 +164,12 @@ function TraceOverview(arg0) {
     }
     const tmp4 = React6;
     const tmp5 = View;
-    items1[3] = React5(Text_Text.Text, { variant: "text-xs/normal", color: "text-subtle", children: intl2.formatToPlainString(_modDef3591.w8vPbe, { count: num4 }) });
+    items1[3] = React5(Text_Text.Text, { variant: "text-xs/normal", color: "text-subtle", children: intl2.formatToPlainString(_modDef3593.w8vPbe, { count: num4 }) });
     let tmp6Result = null;
     if (0 !== num) {
-      const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: tmp7(16803).formatDuration(num) };
-      tmp6Result = tmp6(tmp7(4634).Text, obj7);
-      const tmp7Result = tmp7(16803);
+      const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: tmp7(16842).formatDuration(num) };
+      tmp6Result = tmp6(tmp7(4636).Text, obj7);
+      const tmp7Result = tmp7(16842);
     }
     items1[4] = tmp6Result;
     obj.children = items1;
@@ -188,7 +188,7 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { list: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null, placeholder: null, overview: null, overviewBar: null, legend: null, legendItem: null, swatch: null, groupHead: null, rowSlot: null, rowNested: null, rowBody: null, rowTop: null, rowTitle: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
@@ -253,8 +253,8 @@ export default function VibegrationsTraceTab(projectId) {
         obj2.key = "group-" + turnId;
         const intl = tmp(1115).intl;
         const obj3 = { number: index + 1 };
-        obj2.label = intl.formatToPlainString(_modDef3591["Y/j+TD"], obj3);
-        obj2.started = tmp(16806).formatClockTime(turnId.startedAt);
+        obj2.label = intl.formatToPlainString(_modDef3593["Y/j+TD"], obj3);
+        obj2.started = tmp(16845).formatClockTime(turnId.startedAt);
         obj2.spanMs = turnId.spanMs;
         items.push(obj2);
         for (const item10041 of filterTraceResult) {
@@ -262,7 +262,7 @@ export default function VibegrationsTraceTab(projectId) {
           let arr3 = items.push(obj4);
           continue;
         }
-        const tmpResult = tmp(16806);
+        const tmpResult = tmp(16845);
       }
     });
     return items;

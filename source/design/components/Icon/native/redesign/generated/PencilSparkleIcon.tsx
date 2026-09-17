@@ -1,13 +1,13 @@
-// Module ID: 11389
-// Function ID: 11390
+// Module ID: 11397
+// Function ID: 11398
 // Name: PencilSparkleIcon
-// Dependencies: [19, 21, 576, 4338, 11390, 2]
+// Dependencies: [19, 21, 576, 4340, 11398, 2]
 // Exports: PencilSparkleIcon
 
-// Module 11389 (PencilSparkleIcon)
+// Module 11397 (PencilSparkleIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod11390 from "module_11390" /* 11390 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod11398 from "module_11398" /* 11398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const PencilSparkleIcon = function PencilSparkleIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11390, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11398, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

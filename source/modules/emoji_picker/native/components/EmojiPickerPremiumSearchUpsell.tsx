@@ -1,15 +1,15 @@
-// Module ID: 10452
-// Function ID: 10453
+// Module ID: 10460
+// Function ID: 10461
 // Name: EmojiPickerPremiumSearchUpsell
-// Dependencies: [19, 1372, 1074, 1374, 21, 4638, 1241, 7971, 9456, 10105, 7967, 10106, 4295, 4605, 9535, 9505, 10453, 1115, 8797, 576, 1177, 10454, 2]
+// Dependencies: [19, 1372, 1074, 1374, 21, 4640, 1241, 7977, 9467, 10116, 7973, 10117, 4297, 4607, 9546, 9516, 10461, 1115, 8817, 576, 1177, 10462, 2]
 // Exports: useEmojiPickerPremiumSearchUpsellClick, useEmojiPickerPremiumSearchUpsellViewed
 
-// Module 10452 (EmojiPickerPremiumSearchUpsell)
+// Module 10460 (EmojiPickerPremiumSearchUpsell)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9505 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9535 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9516 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9546 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx");

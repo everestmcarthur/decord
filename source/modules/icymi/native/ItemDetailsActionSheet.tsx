@@ -1,27 +1,27 @@
-// Module ID: 16588
-// Function ID: 16589
+// Module ID: 16618
+// Function ID: 16619
 // Name: ItemDetailsActionSheet
-// Dependencies: [19, 17, 1958, 1980, 8465, 21, 4638, 576, 504, 4791, 5712, 5670, 1177, 8480, 7307, 11151, 16589, 5773, 5691, 2]
+// Dependencies: [19, 17, 1958, 1980, 8484, 21, 4640, 576, 504, 4793, 5714, 5672, 1177, 8499, 7311, 11159, 16619, 5775, 5693, 2]
 // Exports: default
 
-// Module 16588 (ItemDetailsActionSheet)
+// Module 16618 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4791 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5712 */;
-import ActionSheet from "ActionSheet" /* 7307 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11151 */;
+import useChannelNameDefault from "useChannelName" /* 4793 */;
+import useDesignToggleDefault from "useDesignToggle" /* 5714 */;
+import ActionSheet from "ActionSheet" /* 7311 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11159 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import ICYMIStore from "ICYMIStore" /* 8465 */;
+import ICYMIStore from "ICYMIStore" /* 8484 */;
 
-const GuildIconDefault = tmp5(5670);
+const GuildIconDefault = tmp5(5672);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -43,7 +43,7 @@ export default function ItemDetailsActionSheet(arg0) {
     return dehydratedItem;
   });
   if (null != stateFromStores1) {
-    const obj4 = { guild: stateFromStores1, size: tmp(5670).GuildIconSizes.LARGE };
+    const obj4 = { guild: stateFromStores1, size: tmp(5672).GuildIconSizes.LARGE };
     let tmp9 = closure_7(GuildIconDefault, obj4);
     const tmp5Result = GuildIconDefault;
   } else if (null != stateFromStores) {
@@ -56,8 +56,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8480).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8480);
+    result = tmp(8499).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(8499);
   }
   const obj6 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -72,7 +72,7 @@ export default function ItemDetailsActionSheet(arg0) {
   let tmp16Result = result;
   if (result) {
     const obj8 = { channel: stateFromStores, guild: stateFromStores1 };
-    tmp16Result = tmp16(tmp(16589).ChannelScoreSettings, obj8);
+    tmp16Result = tmp16(tmp(16619).ChannelScoreSettings, obj8);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -84,7 +84,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const obj10 = { children: null };
     const items4 = [result, ];
     const obj11 = { guild: stateFromStores1 };
-    items4[1] = tmp16(tmp(16589).GuildScoreSettings, obj11);
+    items4[1] = tmp16(tmp(16619).GuildScoreSettings, obj11);
     obj10.children = items4;
     tmp15Result = tmp15(closure_8, obj10);
   }
@@ -97,8 +97,8 @@ export default function ItemDetailsActionSheet(arg0) {
       const obj13 = { label: `Total Score: ${tmp7.score}`, subLabel: null };
       const _JSON = JSON;
       obj13.subLabel = JSON.stringify(stateFromStores2.score_components);
-      obj12.children = tmp16(tmp(5691).TableRow, obj13);
-      tmp16Result2 = tmp16(tmp(5773).TableRowGroup, obj12);
+      obj12.children = tmp16(tmp(5693).TableRow, obj13);
+      tmp16Result2 = tmp16(tmp(5775).TableRowGroup, obj12);
     }
   }
   items3[2] = tmp16Result2;

@@ -1,16 +1,16 @@
-// Module ID: 8747
-// Function ID: 8748
+// Module ID: 8767
+// Function ID: 8768
 // Name: LegacyText/LegacyText
-// Dependencies: [19, 17, 1074, 21, 4638, 8748, 2]
+// Dependencies: [19, 17, 1074, 21, 4640, 8768, 2]
 
-// Module 8747 (LegacyText/LegacyText)
-import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8748 */;
+// Module 8767 (LegacyText/LegacyText)
+import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_4 = createStyles.createStyles({ text: { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } });
 const obj = { text: { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } };
 const size = fn(2);

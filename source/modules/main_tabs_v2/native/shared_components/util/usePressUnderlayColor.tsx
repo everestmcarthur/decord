@@ -1,14 +1,14 @@
-// Module ID: 17192
-// Function ID: 17193
+// Module ID: 17232
+// Function ID: 17233
 // Name: usePressUnderlayColor
-// Dependencies: [17193, 4572, 4339, 576, 4487, 4489, 2]
+// Dependencies: [17233, 4574, 4341, 576, 4489, 4491, 2]
 // Exports: default
 
-// Module 17192 (usePressUnderlayColor)
+// Module 17232 (usePressUnderlayColor)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4339 */;
-import useThemeDefault from "useTheme" /* 4572 */;
-import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17193 */;
+import useToken from "useToken" /* 4341 */;
+import useThemeDefault from "useTheme" /* 4574 */;
+import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17233 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ChannelEmojiConstants.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
@@ -25,13 +25,13 @@ export default function usePressUnderlayColor(arr) {
   if (null != substr) {
     hexWithOpacityResult = token;
     if (arr !== closure_3) {
-      const tmp3Result = tmp3(4487);
+      const tmp3Result = tmp3(4489);
       let num3 = 0.08;
       if (tmp3Result2.isThemeDark(tmp2)) {
         num3 = 0.12;
       }
       hexWithOpacityResult = tmp3Result.hexWithOpacity(substr, num3);
-      tmp3Result2 = tmp3(4489);
+      tmp3Result2 = tmp3(4491);
     }
   }
   return hexWithOpacityResult;

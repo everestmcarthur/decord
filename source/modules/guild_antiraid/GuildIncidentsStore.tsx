@@ -1,16 +1,16 @@
-// Module ID: 10219
-// Function ID: 10220
+// Module ID: 10230
+// Function ID: 10231
 // Name: GuildIncidentsStore
-// Dependencies: [4553, 1220, 1980, 4276, 8131, 504, 573, 2]
+// Dependencies: [4555, 1220, 1980, 4278, 8151, 504, 573, 2]
 
-// Module 10219 (GuildIncidentsStore)
+// Module 10230 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8131 */;
-import ExperimentStore from "ExperimentStore" /* 4553 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8151 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function computeAlertSettings() {
@@ -38,8 +38,8 @@ function updateGuildIncident(id) {
   if (null != incidentsData) {
     let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
     if (!hasDetectedActivityResult) {
-      hasDetectedActivityResult = tmp6(8131).isUnderLockdown(incidentsData);
-      const tmp6Result = tmp6(8131);
+      hasDetectedActivityResult = tmp6(8151).isUnderLockdown(incidentsData);
+      const tmp6Result = tmp6(8151);
     }
     if (hasDetectedActivityResult) {
       tmp5 = incidentsData;
@@ -98,8 +98,8 @@ const guildIncidentsStore = new GuildIncidentsStore(DispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8131).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8131);
+        hasDetectedActivityResult = tmp6(8151).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(8151);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
@@ -129,8 +129,8 @@ const guildIncidentsStore = new GuildIncidentsStore(DispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8131).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8131);
+        hasDetectedActivityResult = tmp6(8151).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(8151);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;

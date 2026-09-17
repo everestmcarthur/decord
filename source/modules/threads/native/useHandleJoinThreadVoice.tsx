@@ -1,12 +1,12 @@
-// Module ID: 8019
-// Function ID: 8020
+// Module ID: 8025
+// Function ID: 8026
 // Name: useHandleJoinThreadVoice
-// Dependencies: [5, 4278, 5142, 5655, 1897, 7879, 4845, 2]
+// Dependencies: [5, 4280, 5144, 5657, 1897, 7885, 4847, 2]
 // Exports: default
 
-// Module 8019 (useHandleJoinThreadVoice)
+// Module 8025 (useHandleJoinThreadVoice)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4278 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
 
 const require = fn;
 const size = fn(2);

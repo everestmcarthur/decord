@@ -1,10 +1,10 @@
-// Module ID: 7219
-// Function ID: 7220
+// Module ID: 7223
+// Function ID: 7224
 // Name: useFlattenedChannels
 // Dependencies: [1958, 12, 1370, 504, 2]
 // Exports: useFlattenedChannels
 
-// Module 7219 (useFlattenedChannels)
+// Module 7223 (useFlattenedChannels)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import ChannelStore from "ChannelStore" /* 1958 */;

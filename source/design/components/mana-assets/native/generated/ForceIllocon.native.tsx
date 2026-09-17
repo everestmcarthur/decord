@@ -1,13 +1,13 @@
-// Module ID: 6109
-// Function ID: 6110
+// Module ID: 6111
+// Function ID: 6112
 // Name: ForceIllocon
-// Dependencies: [21, 5673, 6110, 2]
+// Dependencies: [21, 5675, 6112, 2]
 // Exports: ForceIllocon
 
-// Module 6109 (ForceIllocon)
+// Module 6111 (ForceIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6110 from "module_6110" /* 6110 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6112 from "module_6112" /* 6112 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const ForceIllocon = function ForceIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6110 };
+  const obj2 = { uri: _modDef6112 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

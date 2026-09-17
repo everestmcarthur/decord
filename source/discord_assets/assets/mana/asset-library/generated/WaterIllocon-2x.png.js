@@ -1,8 +1,8 @@
-// Module ID: 6674
-// Function ID: 6675
+// Module ID: 6676
+// Function ID: 6677
 // Dependencies: [2]
 
-// Module 6674
+// Module 6676
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaterIllocon-2x.png.js");

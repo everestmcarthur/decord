@@ -1,17 +1,17 @@
-// Module ID: 14906
-// Function ID: 14907
+// Module ID: 14914
+// Function ID: 14915
 // Name: TwoFASetupSuccess
-// Dependencies: [5, 32, 19, 17, 21, 4638, 576, 6705, 1115, 14896, 7057, 14897, 14907, 4634, 1177, 5060, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4640, 576, 6707, 1115, 14904, 7061, 14905, 14915, 4636, 1177, 5062, 2]
 // Exports: default
 
-// Module 14906 (TwoFASetupSuccess)
+// Module 14914 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14897 */;
-import _mod14907 from "module_14907" /* 14907 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14905 */;
+import _mod14915 from "module_14915" /* 14915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
 let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -86,7 +86,7 @@ export default function TwoFASetupSuccess() {
               const intl = setRegistering(1115).intl;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: setRegistering(6705).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              const obj5 = { value: setRegistering(6707).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
               return obj5;
             }
           } else {
@@ -98,9 +98,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(14896).close();
+              setError(14904).close();
               c4 = 0;
-              const obj = setError(14896);
+              const obj = setError(14904);
             }
             c4 = 0;
             c6 = 3;
@@ -137,7 +137,7 @@ export default function TwoFASetupSuccess() {
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod14907, style: tmp.image });
+  items[1] = closure_8(closure_7, { source: _mod14915, style: tmp.image });
   let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);

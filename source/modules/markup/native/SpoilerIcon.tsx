@@ -1,11 +1,11 @@
-// Module ID: 12152
-// Function ID: 12153
+// Module ID: 12161
+// Function ID: 12162
 // Name: SpoilerIcon
-// Dependencies: [19, 21, 8586, 2]
+// Dependencies: [19, 21, 8606, 2]
 // Exports: default
 
-// Module 12152 (SpoilerIcon)
-import inlineStyles from "inlineStyles" /* 8586 */;
+// Module 12161 (SpoilerIcon)
+import inlineStyles from "inlineStyles" /* 8606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

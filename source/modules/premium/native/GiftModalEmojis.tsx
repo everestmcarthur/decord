@@ -1,18 +1,18 @@
-// Module ID: 11592
-// Function ID: 11593
+// Module ID: 11600
+// Function ID: 11601
 // Name: GiftModalEmojis
-// Dependencies: [32, 19, 17, 21, 4638, 4294, 7240, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 4296, 7244, 2]
 // Exports: default
 
-// Module 11592 (GiftModalEmojis)
-import EmojiDefault from "Emoji" /* 7240 */;
+// Module 11600 (GiftModalEmojis)
+import EmojiDefault from "Emoji" /* 7244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let items = [[100, 0, -40], [120, 40, -10], [100, 80, 10], [180, 20, 20], [140, 95, 15], [250, 0, 0], [250, 80, -20], [400, 90, 10], [400, 20, -20], [410, 0, 40]];
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_6 = createStyles.createStyles({ emojisContainer: { alignItems: "center", justifyContent: "center", height: 250, width: "100%", position: "absolute", zIndex: 1, paddingBottom: 210 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/GiftModalEmojis.tsx");

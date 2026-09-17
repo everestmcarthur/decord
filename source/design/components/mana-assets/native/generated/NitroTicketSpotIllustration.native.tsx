@@ -1,13 +1,13 @@
-// Module ID: 6411
-// Function ID: 6412
+// Module ID: 6413
+// Function ID: 6414
 // Name: NitroTicketSpotIllustration
-// Dependencies: [21, 5673, 6412, 2]
+// Dependencies: [21, 5675, 6414, 2]
 // Exports: NitroTicketSpotIllustration
 
-// Module 6411 (NitroTicketSpotIllustration)
+// Module 6413 (NitroTicketSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6412 from "module_6412" /* 6412 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6414 from "module_6414" /* 6414 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroTicketSpotIllustration = function NitroTicketSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6412 };
+  const obj2 = { uri: _modDef6414 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,12 +1,12 @@
-// Module ID: 12909
-// Function ID: 12910
+// Module ID: 12917
+// Function ID: 12918
 // Name: ForumChannelEmptyState
-// Dependencies: [19, 17, 21, 4638, 4489, 1612, 12910, 12911, 4634, 1115, 2]
+// Dependencies: [19, 17, 21, 4640, 4491, 1612, 12918, 12919, 4636, 1115, 2]
 
-// Module 12909 (ForumChannelEmptyState)
+// Module 12917 (ForumChannelEmptyState)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import shared from "shared" /* 4489 */;
-import Text_Text from "Text/Text" /* 4634 */;
+import shared from "shared" /* 4491 */;
+import Text_Text from "Text/Text" /* 4636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
@@ -35,9 +35,9 @@ export default noop.memo((topViewHeight) => {
   const tmp7 = React3;
   const tmp9 = React4;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(12910);
+    let tmp4Result = tmp4(12918);
   } else {
-    tmp4Result = tmp4(12911);
+    tmp4Result = tmp4(12919);
   }
   const items1 = [hasOwnProperty(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

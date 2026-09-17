@@ -1,8 +1,8 @@
-// Module ID: 6414
-// Function ID: 6415
+// Module ID: 6416
+// Function ID: 6417
 // Dependencies: [2]
 
-// Module 6414
+// Module 6416
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWishlistTileAbstractUI-2x.png.js");

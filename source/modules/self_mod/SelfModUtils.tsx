@@ -1,10 +1,10 @@
-// Module ID: 7401
-// Function ID: 7402
+// Module ID: 7405
+// Function ID: 7406
 // Name: SelfModUtils
 // Dependencies: [1372, 2]
 // Exports: isCurrentUserTeen
 
-// Module 7401 (SelfModUtils)
+// Module 7405 (SelfModUtils)
 import UserStore from "UserStore" /* 1372 */;
 
 const size = fn(2);

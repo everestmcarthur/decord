@@ -1,13 +1,13 @@
-// Module ID: 9520
-// Function ID: 9521
+// Module ID: 9531
+// Function ID: 9532
 // Name: UserSquareIcon
-// Dependencies: [19, 21, 576, 4338, 9521, 2]
+// Dependencies: [19, 21, 576, 4340, 9532, 2]
 // Exports: UserSquareIcon
 
-// Module 9520 (UserSquareIcon)
+// Module 9531 (UserSquareIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod9521 from "module_9521" /* 9521 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod9532 from "module_9532" /* 9532 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const UserSquareIcon = function UserSquareIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9521, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9532, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

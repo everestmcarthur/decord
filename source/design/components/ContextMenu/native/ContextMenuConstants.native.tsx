@@ -1,10 +1,10 @@
-// Module ID: 8803
-// Function ID: 8804
+// Module ID: 8054
+// Function ID: 8055
 // Name: ContextMenuConstants
-// Dependencies: [1364, 4606, 2]
+// Dependencies: [1364, 4608, 2]
 
-// Module 8803 (ContextMenuConstants)
-import HapticUtils from "HapticUtils" /* 4606 */;
+// Module 8054 (ContextMenuConstants)
+import HapticUtils from "HapticUtils" /* 4608 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 

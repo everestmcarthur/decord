@@ -1,11 +1,11 @@
-// Module ID: 16822
-// Function ID: 16823
+// Module ID: 16861
+// Function ID: 16862
 // Name: ThreadCreationTitleInput
-// Dependencies: [19, 1958, 1074, 21, 16823, 7891, 7384, 1482, 1610, 504, 9448, 1115, 6714, 5672, 2]
+// Dependencies: [19, 1958, 1074, 21, 16862, 7897, 7388, 1482, 1610, 504, 9459, 1115, 6717, 5674, 2]
 
-// Module 16822 (ThreadCreationTitleInput)
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7384 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7891 */;
+// Module 16861 (ThreadCreationTitleInput)
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7388 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7897 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -21,7 +21,7 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
   const optional = chatInputRef.optional;
   ref = undefined;
   dependencyMap = ref;
-  let obj = chatInputRef(16823);
+  let obj = chatInputRef(16862);
   let obj2 = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];
@@ -39,8 +39,8 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
         const tmp4 = sanitizeThreadNameDefault(tmp.name, true);
         if (tmp4 !== tmp.name) {
           const obj = { name: tmp4 };
-          tmp2(7891).changeThreadSettings(tmp.parentChannelId, obj);
-          const tmp2Result = tmp2(7891);
+          tmp2(7897).changeThreadSettings(tmp.parentChannelId, obj);
+          const tmp2Result = tmp2(7897);
         }
         tmp2 = importDefault;
       }
@@ -72,13 +72,13 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
       }
     }
   }, items3);
-  const renderErrorResult = chatInputRef(16823).renderError(chatInputRef.threadNameError, { content: threadSettingsDraft.name });
+  const renderErrorResult = chatInputRef(16862).renderError(chatInputRef.threadNameError, { content: threadSettingsDraft.name });
   const items4 = [ChannelStore];
   const stateFromStores = chatInputRef(504).useStateFromStores(items4, () => ChannelStore.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";
   if (null != stateFromStores) {
-    str = tmp(9448).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
-    const tmpResult = tmp(9448);
+    str = tmp(9459).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
+    const tmpResult = tmp(9459);
   }
   const intl = tmp(1115).intl;
   const string = intl.string;
@@ -88,7 +88,7 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
   } else {
     stringResult = string(t.j3XWjD);
   }
-  const obj4 = { defaultValue: threadSettingsDraft(5672)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onFocus: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" };
+  const obj4 = { defaultValue: threadSettingsDraft(5674)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityHint: null, required: null, clearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onFocus: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" };
   let stringResult1;
   if (!optional) {
     const intl2 = tmp(1115).intl;
@@ -107,5 +107,5 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
   }
   obj4.placeholder = str;
   obj4.ref = ref;
-  return jsx(chatInputRef(6714).TextInput, { defaultValue: threadSettingsDraft(5672)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onFocus: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
+  return jsx(chatInputRef(6717).TextInput, { defaultValue: threadSettingsDraft(5674)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityHint: null, required: null, clearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onFocus: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
 }));

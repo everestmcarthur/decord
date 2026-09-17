@@ -1,11 +1,11 @@
-// Module ID: 13857
-// Function ID: 13858
+// Module ID: 13865
+// Function ID: 13866
 // Name: TwitchApplicationRecord
-// Dependencies: [1919, 1115, 5369, 2]
+// Dependencies: [1919, 1115, 5371, 2]
 
-// Module 13857 (TwitchApplicationRecord)
+// Module 13865 (TwitchApplicationRecord)
 import util from "util" /* 1115 */;
-import PlatformsDefault from "Platforms" /* 5369 */;
+import PlatformsDefault from "Platforms" /* 5371 */;
 import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 
 require = fn;

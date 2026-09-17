@@ -1,11 +1,11 @@
-// Module ID: 17831
-// Function ID: 17832
+// Module ID: 17872
+// Function ID: 17873
 // Name: GuildSettingsRoleItem
-// Dependencies: [5, 19, 17, 1074, 21, 4638, 576, 4634, 5089, 7296, 4983, 1115, 11715, 5606, 5079, 8214, 4595, 7315, 7313, 5072, 1370, 1092, 9892, 5691, 5174, 1177, 10441, 5180, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 4640, 576, 4636, 5091, 7300, 4985, 1115, 11723, 5608, 5081, 8057, 4597, 7319, 7317, 5074, 1370, 1092, 9903, 5693, 5176, 1177, 10449, 5182, 2]
 
-// Module 17831 (GuildSettingsRoleItem)
+// Module 17872 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5606 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,9 +18,9 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1074).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { row: { flexDirection: "row", gap: 4, alignItems: "center" }, everyone: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 }, label: null, sparkleIcon: null, dragHandlePressable: null, container: null, gradient: null, image: null };
-let prop = fn(4634).TextStyleSheet["text-md/semibold"];
+let prop = fn(4636).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -139,7 +139,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11715).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11723).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {

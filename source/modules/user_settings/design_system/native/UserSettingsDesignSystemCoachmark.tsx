@@ -1,13 +1,13 @@
-// Module ID: 15909
-// Function ID: 15910
+// Module ID: 15926
+// Function ID: 15927
 // Name: UserSettingsDesignSystemCoachmark
-// Dependencies: [32, 19, 17, 21, 4638, 15907, 5860, 11280, 5060, 5072, 5773, 7310, 5771, 5774, 7233, 7266, 2]
+// Dependencies: [32, 19, 17, 21, 4640, 15924, 5862, 11288, 5062, 5074, 5775, 7314, 5773, 5776, 7237, 7270, 2]
 // Exports: default
 
-// Module 15909 (UserSettingsDesignSystemCoachmark)
-import _modDef5860 from "module_5860" /* 5860 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7233 */;
-import LayerScope from "LayerScope" /* 7266 */;
+// Module 15926 (UserSettingsDesignSystemCoachmark)
+import _modDef5862 from "module_5862" /* 5862 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7237 */;
+import LayerScope from "LayerScope" /* 7270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,7 +57,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef5860 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef5862 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;
@@ -143,7 +143,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_10 = createStyles.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");

@@ -1,20 +1,20 @@
-// Module ID: 12653
-// Function ID: 12654
+// Module ID: 12662
+// Function ID: 12663
 // Name: useGuildPowerupsNewBadge
-// Dependencies: [32, 19, 4526, 4527, 1955, 1944, 504, 12646, 7498, 1946, 2]
+// Dependencies: [32, 19, 4528, 4529, 1955, 1944, 504, 12655, 7502, 1946, 2]
 // Exports: default, useAutoDismissGuildPowerupsNewBadge
 
-// Module 12653 (useGuildPowerupsNewBadge)
+// Module 12662 (useGuildPowerupsNewBadge)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12646 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4526 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(4527).GuildPowerupNewPerkMarketingVersion;
+const constants = fn(4529).GuildPowerupNewPerkMarketingVersion;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 let closure_8 = fn(1944).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 const size = fn(2);
@@ -44,11 +44,11 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = _slicedToArray(tmp(7498).useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = _slicedToArray(tmp(7502).useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
-  const tmpResult = tmp(7498);
+  const tmpResult = tmp(7502);
   return {
     showNewBadgeOnRow: tmp7[0] === closure_8,
     dismissNewBadgeIfShown: noop.useCallback(() => {
@@ -68,7 +68,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let obj = require("initialize");
-  const tmp2Result = num(12646)(guildId, stateFromStores);
+  const tmp2Result = num(12655)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

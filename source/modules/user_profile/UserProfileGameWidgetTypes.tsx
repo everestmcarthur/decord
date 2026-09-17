@@ -1,13 +1,13 @@
-// Module ID: 7731
-// Function ID: 7732
+// Module ID: 7737
+// Function ID: 7738
 // Name: UserProfileGameWidgetTypes
-// Dependencies: [7730, 5195, 7732, 2]
+// Dependencies: [7736, 5197, 7738, 2]
 // Exports: isGameWidget, isGameWidgetType
 
-// Module 7731 (UserProfileGameWidgetTypes)
-import GameWidgetLimits from "GameWidgetLimits" /* 5195 */;
-import WidgetType from "WidgetType" /* 7730 */;
-import WidgetUtils from "WidgetUtils" /* 7732 */;
+// Module 7737 (UserProfileGameWidgetTypes)
+import GameWidgetLimits from "GameWidgetLimits" /* 5197 */;
+import WidgetType from "WidgetType" /* 7736 */;
+import WidgetUtils from "WidgetUtils" /* 7738 */;
 import size from "module_2" /* 2 */;
 
 const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];

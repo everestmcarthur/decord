@@ -1,10 +1,10 @@
-// Module ID: 9048
-// Function ID: 9049
+// Module ID: 9063
+// Function ID: 9064
 // Name: Button/HeaderButton
-// Dependencies: [19, 21, 5065, 4634, 4638, 5061, 2]
+// Dependencies: [19, 21, 5067, 4636, 4640, 5063, 2]
 
-// Module 9048 (Button/HeaderButton)
-import BaseTextButton from "BaseTextButton" /* 5061 */;
+// Module 9063 (Button/HeaderButton)
+import BaseTextButton from "BaseTextButton" /* 5063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,11 +22,11 @@ class HeaderButton {
 }
 const jsx = fn(21).jsx;
 const React3 = "heading-md/bold";
-const diff = fn(5065).SMALL_BUTTON_HEIGHT - 2 * fn(5065).BUTTON_BORDER_WIDTH;
-const diff1 = diff - fn(4634).TextStyleSheet["heading-md/bold"].lineHeight;
-const createStyles = fn(4638);
+const diff = fn(5067).SMALL_BUTTON_HEIGHT - 2 * fn(5067).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(4636).TextStyleSheet["heading-md/bold"].lineHeight;
+const createStyles = fn(4640);
 const React4 = createStyles.createStyles({ pill: { paddingVertical: diff1 / 2 } });
-HeaderButton.Icon = fn(5061).BaseTextButton.Icon;
+HeaderButton.Icon = fn(5063).BaseTextButton.Icon;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 

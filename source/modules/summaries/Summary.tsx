@@ -1,10 +1,10 @@
-// Module ID: 11494
-// Function ID: 11495
+// Module ID: 11502
+// Function ID: 11503
 // Name: Summary
 // Dependencies: [2]
 // Exports: createSummaryFromServer
 
-// Module 11494 (Summary)
+// Module 11502 (Summary)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/summaries/Summary.tsx");

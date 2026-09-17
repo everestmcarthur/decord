@@ -1,9 +1,9 @@
-// Module ID: 13802
-// Function ID: 13803
+// Module ID: 13810
+// Function ID: 13811
 // Name: NativeAppRatingRequestModule
 // Dependencies: [17, 2]
 
-// Module 13802 (NativeAppRatingRequestModule)
+// Module 13810 (NativeAppRatingRequestModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

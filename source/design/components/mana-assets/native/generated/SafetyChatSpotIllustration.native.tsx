@@ -1,13 +1,13 @@
-// Module ID: 6505
-// Function ID: 6506
+// Module ID: 6507
+// Function ID: 6508
 // Name: SafetyChatSpotIllustration
-// Dependencies: [21, 5673, 6506, 2]
+// Dependencies: [21, 5675, 6508, 2]
 // Exports: SafetyChatSpotIllustration
 
-// Module 6505 (SafetyChatSpotIllustration)
+// Module 6507 (SafetyChatSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6506 from "module_6506" /* 6506 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6508 from "module_6508" /* 6508 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SafetyChatSpotIllustration = function SafetyChatSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6506 };
+  const obj2 = { uri: _modDef6508 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

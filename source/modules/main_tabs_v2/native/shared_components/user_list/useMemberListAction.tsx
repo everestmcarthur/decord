@@ -1,16 +1,16 @@
-// Module ID: 11731
-// Function ID: 11732
+// Module ID: 11739
+// Function ID: 11740
 // Name: useMemberListAction
-// Dependencies: [32, 19, 17, 1958, 4276, 4286, 1372, 10352, 1074, 21, 4638, 563, 9878, 7159, 11732, 11741, 11742, 1115, 10170, 10171, 4458, 1944, 11744, 11749, 7490, 11750, 1875, 9960, 8730, 2]
+// Dependencies: [32, 19, 17, 1958, 4278, 4288, 1372, 10360, 1074, 21, 4640, 563, 9889, 7163, 11740, 11749, 11750, 1115, 10181, 10182, 4460, 1944, 11752, 11757, 7494, 11758, 1875, 9971, 8750, 2]
 // Exports: default
 
-// Module 11731 (useMemberListAction)
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11732 */;
+// Module 11739 (useMemberListAction)
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11740 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -21,8 +21,8 @@ const Constants = fn(1074);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
 let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
-const createStyles = fn(4638);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10352).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+const createStyles = fn(4640);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10360).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 

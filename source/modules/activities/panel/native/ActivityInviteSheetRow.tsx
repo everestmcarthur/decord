@@ -1,9 +1,9 @@
-// Module ID: 17234
-// Function ID: 17235
+// Module ID: 17274
+// Function ID: 17275
 // Name: ActivityInviteSheetRow
-// Dependencies: [19, 17, 1958, 1980, 1372, 7850, 21, 4638, 576, 504, 4791, 9962, 5208, 1177, 9943, 4482, 1115, 1397, 1926, 4634, 5691, 10036, 2]
+// Dependencies: [19, 17, 1958, 1980, 1372, 7856, 21, 4640, 576, 504, 4793, 9973, 5210, 1177, 9954, 4484, 1115, 1397, 1926, 4636, 5693, 10047, 2]
 
-// Module 17234 (ActivityInviteSheetRow)
+// Module 17274 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -14,9 +14,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7850).InviteSendStates;
+const InviteSendStates = fn(7856).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;

@@ -1,11 +1,11 @@
-// Module ID: 5110
-// Function ID: 5111
+// Module ID: 5112
+// Function ID: 5113
 // Name: MarkupListRule
-// Dependencies: [4334, 38, 2]
+// Dependencies: [4336, 38, 2]
 
-// Module 5110 (MarkupListRule)
+// Module 5112 (MarkupListRule)
 import _modDef38 from "module_38" /* 38 */;
-import _modDef4334 from "module_4334" /* 4334 */;
+import _modDef4336 from "module_4336" /* 4336 */;
 
 const re2 = /\n{2,}$/;
 const re3 = /(?:^|\n)( *)$/;
@@ -18,7 +18,7 @@ const re9 = /\n *$/;
 let closure_10 = "\n".charCodeAt(0);
 const re11 = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/;
 let obj = {};
-let merged = Object.assign(_modDef4334.defaultRules.list);
+let merged = Object.assign(_modDef4336.defaultRules.list);
 obj.requiredFirstCharacters = "\n *-0123456789".split("");
 obj.match = function match(str, allowList) {
   if (allowList.allowList) {

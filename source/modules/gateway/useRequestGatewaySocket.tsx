@@ -1,12 +1,12 @@
-// Module ID: 14677
-// Function ID: 14678
+// Module ID: 14685
+// Function ID: 14686
 // Name: useRequestGatewaySocket
-// Dependencies: [19, 11446, 7871, 2]
+// Dependencies: [19, 11454, 7877, 2]
 // Exports: useRequestGatewaySocket
 
-// Module 14677 (useRequestGatewaySocket)
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7871 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11446 */;
+// Module 14685 (useRequestGatewaySocket)
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7877 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11454 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

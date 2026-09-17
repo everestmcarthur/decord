@@ -1,13 +1,13 @@
-// Module ID: 6227
-// Function ID: 6228
+// Module ID: 6229
+// Function ID: 6230
 // Name: GemRightUpwards3dIllustration
-// Dependencies: [21, 5673, 6228, 2]
+// Dependencies: [21, 5675, 6230, 2]
 // Exports: GemRightUpwards3dIllustration
 
-// Module 6227 (GemRightUpwards3dIllustration)
+// Module 6229 (GemRightUpwards3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6228 from "module_6228" /* 6228 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6230 from "module_6230" /* 6230 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GemRightUpwards3dIllustration = function GemRightUpwards3dIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6228 };
+  const obj2 = { uri: _modDef6230 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

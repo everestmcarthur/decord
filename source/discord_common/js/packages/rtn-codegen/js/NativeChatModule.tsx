@@ -1,9 +1,9 @@
-// Module ID: 11420
-// Function ID: 11421
+// Module ID: 11428
+// Function ID: 11429
 // Name: NativeChatModule
 // Dependencies: [17, 2]
 
-// Module 11420 (NativeChatModule)
+// Module 11428 (NativeChatModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

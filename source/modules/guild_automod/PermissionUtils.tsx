@@ -1,12 +1,12 @@
-// Module ID: 17043
-// Function ID: 17044
+// Module ID: 17082
+// Function ID: 17083
 // Name: guild_automod/PermissionUtils
-// Dependencies: [1980, 4276, 1074, 504, 2]
+// Dependencies: [1980, 4278, 1074, 504, 2]
 // Exports: canCurrentUserManageAutomod, canCurrentUserManageMessageFilters, useCanCurrentUserManageAutomod, useIsUserProfileRuleEnabled
 
-// Module 17043 (guild_automod/PermissionUtils)
+// Module 17082 (guild_automod/PermissionUtils)
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 const require = globalThis.__r;
 
@@ -54,10 +54,10 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
     }
   }, items1);
 };
-export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(arg0) {
-  _require = arg0;
+export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(guildId) {
+  _require = guildId;
   const items = [GuildStore];
-  const items1 = [arg0];
+  const items1 = [guildId];
   return require("initialize").useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(closure_0);
     let flag;

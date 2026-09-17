@@ -1,17 +1,17 @@
-// Module ID: 8850
-// Function ID: 8851
+// Module ID: 8862
+// Function ID: 8863
 // Name: useGameProfileInvite
-// Dependencies: [5, 19, 1917, 1960, 4622, 1074, 8824, 504, 1091, 8508, 7419, 2]
+// Dependencies: [5, 19, 1917, 1960, 4624, 1074, 8836, 504, 1091, 8527, 7423, 2]
 // Exports: default, hasGameProfileDiscordWebsite, preloadGameProfileInvite
 
-// Module 8850 (useGameProfileInvite)
+// Module 8862 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1091 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8508 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8527 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 1917 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 1960 */;
-import InviteStore from "InviteStore" /* 4622 */;
+import InviteStore from "InviteStore" /* 4624 */;
 
 const require = globalThis.__r;
 

@@ -1,14 +1,14 @@
-// Module ID: 12919
-// Function ID: 12920
+// Module ID: 12927
+// Function ID: 12928
 // Name: useIsViewingPremiumMemberships
-// Dependencies: [1074, 1965, 4470, 4477, 2]
+// Dependencies: [1074, 1965, 4472, 4479, 2]
 // Exports: default
 
-// Module 12919 (useIsViewingPremiumMemberships)
+// Module 12927 (useIsViewingPremiumMemberships)
 import Constants from "Constants" /* 1074 */;
 import ChannelConstants from "ChannelConstants" /* 1965 */;
-import _mod4470 from "module_4470" /* 4470 */;
-import RouteUtils from "RouteUtils" /* 4477 */;
+import _mod4472 from "module_4472" /* 4472 */;
+import RouteUtils from "RouteUtils" /* 4479 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -17,5 +17,5 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useI
 
 export default function useIsViewingPremiumMemberships() {
   const RouteParam = RouteUtils.RouteParam;
-  return null != _mod4470.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  return null != _mod4472.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
 };

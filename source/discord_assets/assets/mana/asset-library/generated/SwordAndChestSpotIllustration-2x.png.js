@@ -1,8 +1,8 @@
-// Module ID: 6640
-// Function ID: 6641
+// Module ID: 6642
+// Function ID: 6643
 // Dependencies: [2]
 
-// Module 6640
+// Module 6642
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordAndChestSpotIllustration-2x.png.js");

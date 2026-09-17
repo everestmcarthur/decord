@@ -1,19 +1,19 @@
-// Module ID: 8904
-// Function ID: 8905
+// Module ID: 8920
+// Function ID: 8921
 // Name: CollectiblesShopCardV2
-// Dependencies: [19, 17, 1182, 7652, 1076, 21, 4638, 576, 8905, 7663, 8906, 8307, 8909, 8910, 1115, 4336, 7272, 8968, 8970, 504, 4489, 5208, 7664, 4634, 8971, 8973, 8975, 8797, 8976, 8978, 8983, 8986, 8907, 4605, 8305, 4295, 8981, 9008, 9009, 1255, 2]
+// Dependencies: [19, 17, 1182, 7656, 1076, 21, 4640, 576, 8921, 7667, 8922, 8326, 8925, 8926, 1115, 4338, 7276, 8984, 8986, 504, 4491, 5210, 7668, 4636, 8987, 8989, 8991, 8817, 8992, 8994, 8999, 9002, 8923, 4607, 8324, 4297, 8997, 9024, 9025, 1255, 2]
 
-// Module 8904 (CollectiblesShopCardV2)
+// Module 8920 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8305 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8907 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8324 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8923 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7652 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7656 */;
 
 require = fn;
 function CollectiblesShopCardInternalV2(product) {
@@ -299,7 +299,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
 let size = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.card = size;

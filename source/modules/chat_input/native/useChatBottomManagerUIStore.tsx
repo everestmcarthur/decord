@@ -1,12 +1,12 @@
-// Module ID: 9628
-// Function ID: 9629
+// Module ID: 9639
+// Function ID: 9640
 // Name: useChatBottomManagerUIStore
-// Dependencies: [510, 560, 4504, 2]
+// Dependencies: [510, 560, 4506, 2]
 // Exports: updateChatInputContainerHeight, updateIsAtBottom, updateShouldShowJumpToPresentButton, updateShowingAutoComplete, updateSmallSuggestionBarHeight, useBestActiveChatInputContainerHeight, useChatInputContainerHeight, useChatIsAtBottom, useChatShowingAutoComplete, useSmallSuggestionBarHeight
 
-// Module 9628 (useChatBottomManagerUIStore)
+// Module 9639 (useChatBottomManagerUIStore)
 import Storage3 from "Storage" /* 510 */;
-import ChatInputUtils from "ChatInputUtils" /* 4504 */;
+import ChatInputUtils from "ChatInputUtils" /* 4506 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

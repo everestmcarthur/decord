@@ -1,14 +1,14 @@
-// Module ID: 15737
-// Function ID: 15738
+// Module ID: 15743
+// Function ID: 15744
 // Name: GameCommunityUpsellDevTools
-// Dependencies: [19, 17, 13819, 15738, 21, 4638, 576, 504, 15739, 13821, 13820, 5773, 5691, 15265, 5698, 2]
+// Dependencies: [19, 17, 13827, 15744, 21, 4640, 576, 504, 15745, 13829, 13828, 5775, 5693, 15270, 5700, 2]
 // Exports: default
 
-// Module 15737 (GameCommunityUpsellDevTools)
+// Module 15743 (GameCommunityUpsellDevTools)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13819 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15738 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13827 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15744 */;
 
 const require = fn;
 function MultiGuildDevTools() {
@@ -132,7 +132,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollView: { flex: 1 }, section: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

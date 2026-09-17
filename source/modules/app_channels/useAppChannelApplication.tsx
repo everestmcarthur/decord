@@ -1,12 +1,12 @@
-// Module ID: 11753
-// Function ID: 11754
+// Module ID: 11761
+// Function ID: 11762
 // Name: useAppChannelApplication
-// Dependencies: [1074, 7273, 2]
+// Dependencies: [1074, 7277, 2]
 // Exports: useAppChannelApplication
 
-// Module 11753 (useAppChannelApplication)
+// Module 11761 (useAppChannelApplication)
 import Constants from "Constants" /* 1074 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7273 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7277 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

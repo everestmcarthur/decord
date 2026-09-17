@@ -1,15 +1,15 @@
-// Module ID: 13073
-// Function ID: 13074
+// Module ID: 13081
+// Function ID: 13082
 // Name: shouldShowVoiceChannelChangeConfirmation
-// Dependencies: [4655, 1184, 502, 1980, 4657, 2]
+// Dependencies: [4657, 1184, 502, 1980, 4659, 2]
 // Exports: shouldShowVoiceChannelChangeConfirmation
 
-// Module 13073 (shouldShowVoiceChannelChangeConfirmation)
-import GameConsoleStore from "GameConsoleStore" /* 4655 */;
+// Module 13081 (shouldShowVoiceChannelChangeConfirmation)
+import GameConsoleStore from "GameConsoleStore" /* 4657 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import VoiceStateStore from "VoiceStateStore" /* 4657 */;
+import VoiceStateStore from "VoiceStateStore" /* 4659 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");

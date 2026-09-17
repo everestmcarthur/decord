@@ -1,15 +1,15 @@
-// Module ID: 12069
-// Function ID: 12070
+// Module ID: 12078
+// Function ID: 12079
 // Name: ModalFooter
-// Dependencies: [19, 17, 21, 4638, 2]
+// Dependencies: [19, 17, 21, 4640, 2]
 // Exports: ModalFooter
 
-// Module 12069 (ModalFooter)
+// Module 12078 (ModalFooter)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_2 = createStyles.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");

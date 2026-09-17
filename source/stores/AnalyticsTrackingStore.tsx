@@ -1,13 +1,13 @@
-// Module ID: 7570
-// Function ID: 7571
+// Module ID: 7574
+// Function ID: 7575
 // Name: stores/AnalyticsTrackingStore
-// Dependencies: [502, 1074, 1249, 573, 7571, 1241, 7582, 7583, 2]
+// Dependencies: [502, 1074, 1249, 573, 7575, 1241, 7586, 7587, 2]
 
-// Module 7570 (stores/AnalyticsTrackingStore)
+// Module 7574 (stores/AnalyticsTrackingStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1241 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7571 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7575 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -53,8 +53,8 @@ const obj2 = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(7582).requestSafeIdleCallback,
-  sendUnloadRequest: fn(7583).sendUnloadRequest
+  scheduleWhenIdle: fn(7586).requestSafeIdleCallback,
+  sendUnloadRequest: fn(7587).sendUnloadRequest
 };
 const items = [AuthenticationStore];
 obj2.waitFor = items;

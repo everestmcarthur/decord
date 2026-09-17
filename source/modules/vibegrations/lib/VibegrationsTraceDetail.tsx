@@ -1,10 +1,10 @@
-// Module ID: 16805
-// Function ID: 16806
+// Module ID: 16844
+// Function ID: 16845
 // Name: VibegrationsTraceDetail
-// Dependencies: [5, 16727, 2]
+// Dependencies: [5, 16757, 2]
 // Exports: cachedTraceDetail, clearTraceDetailCache, fetchTraceDetail
 
-// Module 16805 (VibegrationsTraceDetail)
+// Module 16844 (VibegrationsTraceDetail)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

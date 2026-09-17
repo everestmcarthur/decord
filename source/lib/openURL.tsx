@@ -1,10 +1,10 @@
-// Module ID: 4326
-// Function ID: 4327
+// Module ID: 4328
+// Function ID: 4329
 // Name: openURL
-// Dependencies: [5, 4327, 8507, 1897, 2]
+// Dependencies: [5, 4329, 8526, 1897, 2]
 // Exports: default
 
-// Module 4326 (openURL)
+// Module 4328 (openURL)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,10 +1,10 @@
-// Module ID: 8703
-// Function ID: 8704
+// Module ID: 8723
+// Function ID: 8724
 // Name: AppStoreAgeSignalActionCreators
 // Dependencies: [5, 1074, 1271, 2]
 // Exports: requestAgeSignalChallenge, submitAgeSignal
 
-// Module 8703 (AppStoreAgeSignalActionCreators)
+// Module 8723 (AppStoreAgeSignalActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

@@ -1,21 +1,21 @@
-// Module ID: 17086
-// Function ID: 17087
+// Module ID: 17126
+// Function ID: 17127
 // Name: MessageRequestRowSenderDetails
-// Dependencies: [19, 17, 4286, 21, 4638, 1177, 576, 504, 4482, 17087, 1400, 4634, 1115, 17088, 17089, 2]
+// Dependencies: [19, 17, 4288, 21, 4640, 1177, 576, 504, 4484, 17127, 1400, 4636, 1115, 17128, 17129, 2]
 // Exports: default
 
-// Module 17086 (MessageRequestRowSenderDetails)
+// Module 17126 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1400 */;
-import UserUtilsDefault from "UserUtils" /* 4482 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { avatar: { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
 let obj3 = { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -46,7 +46,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(17087).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(17127).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -80,24 +80,24 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = intl.string(tmp2(1115).t["30mdIx"]);
   }
   obj9.children = stringResult;
-  const items2 = [closure_5(otherUser(4634).Text, obj9), ];
+  const items2 = [closure_5(otherUser(4636).Text, obj9), ];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", tmp2(4482).getUserTag(otherUser)];
+    const items3 = [" ", tmp2(4484).getUserTag(otherUser)];
     obj10.children = items3;
-    tmp9Result = tmp9(tmp2(4634).Text, obj10);
-    const tmp2Result = tmp2(4482);
+    tmp9Result = tmp9(tmp2(4636).Text, obj10);
+    const tmp2Result = tmp2(4484);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;
-  const items4 = [closure_6(otherUser(4634).Text, obj8), closure_5(otherUser(4634).Text, { style: tmp.timestampSeparator, variant: "text-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(4634).Text, { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
+  const items4 = [closure_6(otherUser(4636).Text, obj8), closure_5(otherUser(4636).Text, { style: tmp.timestampSeparator, variant: "text-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(4636).Text, { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
   obj7.children = items4;
   const items5 = [closure_6(View, obj7), , ];
   let tmp11Result = !flag;
   if (!flag) {
     const obj12 = { style: tmp.messagePreview, channel };
-    tmp11Result = tmp11(tmp7(17088), obj12);
+    tmp11Result = tmp11(tmp7(17128), obj12);
   }
   items5[1] = tmp11Result;
   if (flag) {
@@ -107,8 +107,8 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const obj13 = { style: tmp.messagePreview, userId: otherUser.id, suffix: null };
     const intl2 = tmp2(1115).intl;
     obj13.suffix = intl2.string(tmp2(1115).t.hTltPn);
-    flag = tmp11(tmp7(17089), obj13);
-    const tmp7Result = tmp7(17089);
+    flag = tmp11(tmp7(17129), obj13);
+    const tmp7Result = tmp7(17129);
   }
   const obj14 = { children: null };
   items5[2] = flag;

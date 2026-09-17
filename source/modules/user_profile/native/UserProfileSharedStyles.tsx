@@ -1,13 +1,13 @@
-// Module ID: 8369
-// Function ID: 8370
+// Module ID: 8388
+// Function ID: 8389
 // Name: UserProfileSharedStyles
-// Dependencies: [7318, 4638, 576, 2]
+// Dependencies: [7322, 4640, 576, 2]
 // Exports: default, useUserProfileCardRadius
 
-// Module 8369 (UserProfileSharedStyles)
+// Module 8388 (UserProfileSharedStyles)
 import nativeDefault from "native" /* 576 */;
-import Constants from "Constants" /* 7318 */;
-import createStyles from "createStyles" /* 4638 */;
+import Constants from "Constants" /* 7322 */;
+import createStyles from "createStyles" /* 4640 */;
 import size from "module_2" /* 2 */;
 
 ({ AVATAR_CONTAINER_SIZE: c2, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: closure_4, CARD_PADDING: hasOwnProperty, PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_SIDE_PADDING: closure_7, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = Constants);

@@ -1,18 +1,18 @@
-// Module ID: 17905
-// Function ID: 17906
+// Module ID: 17969
+// Function ID: 17970
 // Name: HowItWorksSection
-// Dependencies: [19, 17, 21, 4638, 576, 4634, 5673, 1115, 17906, 1177, 17907, 17908, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 4636, 5675, 1115, 17970, 1177, 17971, 17972, 2]
 // Exports: default
 
-// Module 17905 (HowItWorksSection)
+// Module 17969 (HowItWorksSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef17906 from "module_17906" /* 17906 */;
-import _modDef17907 from "module_17907" /* 17907 */;
-import _modDef17908 from "module_17908" /* 17908 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef17970 from "module_17970" /* 17970 */;
+import _modDef17971 from "module_17971" /* 17971 */;
+import _modDef17972 from "module_17972" /* 17972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function HowItWorksCard(iconSource) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1 }, horizontalContainer: { flex: 1, flexDirection: "row" }, card: { flex: 1, marginVertical: 6, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, cardNumber: null, howItWorksCardDescription: null, howItWorksCardIcon: null };
 let size = { width: 18, height: 18, position: "absolute", top: 9, start: 9, textAlign: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: 9, overflow: "hidden" };
 obj2.cardNumber = size;
@@ -48,19 +48,19 @@ export default function HowItWorksSection() {
   const obj3 = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
   obj3.description = intl.string(util.t.lT0ZNS);
-  obj3.iconSource = _modDef17906;
+  obj3.iconSource = _modDef17970;
   const items = [React4(HowItWorksCard, obj3), React4(native.Spacer, { size: 12 }), ];
   const obj4 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
   obj4.description = intl2.string(util.t.ihN2Wb);
-  obj4.iconSource = _modDef17907;
+  obj4.iconSource = _modDef17971;
   items[2] = React4(HowItWorksCard, obj4);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), ];
   const obj5 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
   obj5.description = intl3.string(util.t.c8krDQ);
-  obj5.iconSource = _modDef17908;
+  obj5.iconSource = _modDef17972;
   items1[1] = React4(HowItWorksCard, obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);

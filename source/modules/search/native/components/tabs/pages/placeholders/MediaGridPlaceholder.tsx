@@ -1,29 +1,29 @@
-// Module ID: 16851
-// Function ID: 16852
+// Module ID: 16890
+// Function ID: 16891
 // Name: MediaGridPlaceholder
-// Dependencies: [19, 17, 7994, 21, 4638, 576, 16850, 4374, 16852, 12, 4634, 1115, 12481, 16853, 2]
+// Dependencies: [19, 17, 8000, 21, 4640, 576, 16889, 4376, 16891, 12, 4636, 1115, 12490, 16892, 2]
 // Exports: RecentsMediaGridPlaceholder, default
 
-// Module 16851 (MediaGridPlaceholder)
+// Module 16890 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4374 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12481 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16850 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16852 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12490 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16889 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16891 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7994);
+const SearchConstants = fn(8000);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, sectionText: { opacity: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -91,5 +91,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     })
   ];
   obj2.children = items4;
-  return closure_8(numRows(4374).View, obj2);
+  return closure_8(numRows(4376).View, obj2);
 };

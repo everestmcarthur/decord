@@ -1,15 +1,15 @@
-// Module ID: 7507
-// Function ID: 7508
+// Module ID: 7511
+// Function ID: 7512
 // Name: LibraryApplicationStore
-// Dependencies: [7508, 502, 1074, 510, 7509, 1385, 504, 12, 573, 2]
+// Dependencies: [7512, 502, 1074, 510, 7513, 1385, 504, 12, 573, 2]
 
-// Module 7507 (LibraryApplicationStore)
+// Module 7511 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7509 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7508 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7513 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7512 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -164,7 +164,7 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       if (tmp2Result.isUserEntitledToLibraryApplication(obj2)) {
         return obj2;
       }
-      tmp2Result = tmp2(7509);
+      tmp2Result = tmp2(7513);
     }
     tmp2 = require;
   }

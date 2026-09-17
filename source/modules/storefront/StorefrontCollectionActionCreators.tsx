@@ -1,17 +1,17 @@
-// Module ID: 9016
-// Function ID: 9017
+// Module ID: 9032
+// Function ID: 9033
 // Name: StorefrontCollectionActionCreators
-// Dependencies: [5, 2026, 9014, 7670, 1074, 1091, 573, 4880, 4539, 2]
+// Dependencies: [5, 2026, 9030, 7674, 1074, 1091, 573, 4882, 4541, 2]
 // Exports: maybeFetchCollectionsAfter, maybeFetchCollectionsForApplication, maybeFetchCollectionsForApplicationPage, maybeFetchCollectionsWithProducts
 
-// Module 9016 (StorefrontCollectionActionCreators)
+// Module 9032 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import StoreUtils from "StoreUtils" /* 4880 */;
+import StoreUtils from "StoreUtils" /* 4882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9014 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7670 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9030 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7674 */;
 
 require = fn;
 let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0, value) {

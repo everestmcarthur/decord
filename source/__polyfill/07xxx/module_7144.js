@@ -1,21 +1,18 @@
 // Module ID: 7144
 // Function ID: 7145
-// Dependencies: [19, 7117]
-// Exports: useGestureHandlerRef
+// Dependencies: [17]
+// Exports: getShadowStyle
 
 // Module 7144
-import GestureHandlerRefContext from "GestureHandlerRefContext" /* 7117 */;
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
+const Platform = _mod17.Platform;
 
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const getShadowStyle = function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
   }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 };

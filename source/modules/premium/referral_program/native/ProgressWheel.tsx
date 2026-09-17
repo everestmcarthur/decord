@@ -1,15 +1,15 @@
-// Module ID: 13549
-// Function ID: 13550
+// Module ID: 13557
+// Function ID: 13558
 // Name: ProgressWheel
-// Dependencies: [19, 17, 21, 4638, 4339, 576, 13538, 5673, 13550, 8586, 13551, 2]
+// Dependencies: [19, 17, 21, 4640, 4341, 576, 13546, 5675, 13558, 8606, 13559, 2]
 // Exports: default
 
-// Module 13549 (ProgressWheel)
+// Module 13557 (ProgressWheel)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4339 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import inlineStyles from "inlineStyles" /* 8586 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13538 */;
+import useToken from "useToken" /* 4341 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import inlineStyles from "inlineStyles" /* 8606 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13546 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 160;
 const strokeDasharray = 2 * Math.PI * 77;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_8 = createStyles.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
@@ -33,9 +33,9 @@ export default function ProgressWheel(arg0) {
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    const obj4 = { source: tmp4(13550), style: tmp.glowImage };
-    tmp9 = React4(tmp4(5673), obj4);
-    const tmp4Result = tmp4(5673);
+    const obj4 = { source: tmp4(13558), style: tmp.glowImage };
+    tmp9 = React4(tmp4(5675), obj4);
+    const tmp4Result = tmp4(5675);
   }
   const items = [tmp9, , ];
   const size = { width: v160, height: v160, children: null };
@@ -47,7 +47,7 @@ export default function ProgressWheel(arg0) {
   const tmp13 = React4;
   const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = tmp4(13551);
+    altImage = tmp4(13559);
   }
   items[2] = tmp13(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj3.children = items;

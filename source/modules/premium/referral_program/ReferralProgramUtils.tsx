@@ -1,19 +1,19 @@
-// Module ID: 8172
-// Function ID: 8173
+// Module ID: 8192
+// Function ID: 8193
 // Name: ReferralProgramUtils
-// Dependencies: [7562, 1955, 1091, 1115, 4458, 1944, 11, 1946, 8173, 504, 8183, 2]
+// Dependencies: [7566, 1955, 1091, 1115, 4460, 1944, 11, 1946, 8193, 504, 8203, 2]
 // Exports: getReferralTrialOfferExpirationCopy, isReferralProgramBadgeAcknowledged, isReferralProgramPopoverSeen, markReferralProgramBadgeAcknowledged, markReferralProgramEntrypointBadgeAcknowledged, markReferralProgramPopoverSeen, useIsReferralProgramBadgeShowable, useIsReferralProgramEntrypointBadgeAcknowledged, useIsReferralProgramPopoverShowable
 
-// Module 8172 (ReferralProgramUtils)
+// Module 8192 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4458 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8173 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7562 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8193 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7566 */;
 
 require = fn;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
@@ -95,13 +95,13 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      tmp8 = !tmp(4458).UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1944).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
-      const tmpResult = tmp(4458);
+      tmp8 = !tmp(4460).UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1944).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
+      const tmpResult = tmp(4460);
     }
     let tmp6 = tmp8;
   } else {
-    tmp6 = !tmp(4458).UNSAFE_isDismissibleContentDismissed(tmp(1944).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
-    const tmpResult2 = tmp(4458);
+    tmp6 = !tmp(4460).UNSAFE_isDismissibleContentDismissed(tmp(1944).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+    const tmpResult2 = tmp(4460);
   }
   if (isEligibleSenderForReferralProgram) {
     isEligibleSenderForReferralProgram = tmp6;

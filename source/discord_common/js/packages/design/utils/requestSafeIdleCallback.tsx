@@ -1,10 +1,10 @@
-// Module ID: 7582
-// Function ID: 7583
+// Module ID: 7586
+// Function ID: 7587
 // Name: requestSafeIdleCallback
 // Dependencies: [1356, 2]
 // Exports: requestSafeIdleCallback, setOriginWindow
 
-// Module 7582 (requestSafeIdleCallback)
+// Module 7586 (requestSafeIdleCallback)
 import GlobalUtils from "utils/GlobalUtils" /* 1356 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 10257
-// Function ID: 10258
+// Module ID: 10268
+// Function ID: 10269
 // Name: useScaledTextLineHeight
-// Dependencies: [10258, 4634, 5067, 2]
+// Dependencies: [10269, 4636, 5069, 2]
 // Exports: scaleLineHeight, scaleTextLineHeight, useScaledTextLineHeight
 
-// Module 10257 (useScaledTextLineHeight)
-import Text_Text from "Text/Text" /* 4634 */;
-import useFontScale from "useFontScale" /* 5067 */;
-import NativeFontModuleDefault from "NativeFontModule" /* 10258 */;
+// Module 10268 (useScaledTextLineHeight)
+import Text_Text from "Text/Text" /* 4636 */;
+import useFontScale from "useFontScale" /* 5069 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 10269 */;
 import size from "module_2" /* 2 */;
 
 const map = new Map();

@@ -1,13 +1,13 @@
-// Module ID: 6091
-// Function ID: 6092
+// Module ID: 6093
+// Function ID: 6094
 // Name: FamilyShieldSpotIllustration
-// Dependencies: [21, 5673, 6092, 2]
+// Dependencies: [21, 5675, 6094, 2]
 // Exports: FamilyShieldSpotIllustration
 
-// Module 6091 (FamilyShieldSpotIllustration)
+// Module 6093 (FamilyShieldSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6092 from "module_6092" /* 6092 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6094 from "module_6094" /* 6094 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const FamilyShieldSpotIllustration = function FamilyShieldSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6092 };
+  const obj2 = { uri: _modDef6094 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

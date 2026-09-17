@@ -1,21 +1,21 @@
-// Module ID: 16337
-// Function ID: 16338
+// Module ID: 16367
+// Function ID: 16368
 // Name: GuildHomeChannelRow
-// Dependencies: [19, 1074, 1965, 10256, 21, 4638, 576, 1101, 12522, 1115, 13948, 2]
+// Dependencies: [19, 1074, 1965, 10267, 21, 4640, 576, 1101, 12531, 1115, 13956, 2]
 // Exports: default
 
-// Module 16337 (GuildHomeChannelRow)
+// Module 16367 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12522 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(1965).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
-let obj2 = { container: { marginVertical: fn(10256).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4640);
+let obj2 = { container: { marginVertical: fn(10267).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
@@ -27,7 +27,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
-  const ChannelModes = id(12522).ChannelModes;
+  const ChannelModes = id(12531).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -45,7 +45,7 @@ export default function GuildHomeChannelRow(selected) {
   const intl2 = tmp5(1115).intl;
   obj2.name = intl2.string(tmp5(1115).t.VbpLyU);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(12522).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(12522).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13948).SignPostIcon });
+  obj.name = jsx(tmp5(12531).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12531).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13956).SignPostIcon });
   return <tmp7 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

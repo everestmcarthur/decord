@@ -1,16 +1,16 @@
-// Module ID: 12321
-// Function ID: 12322
+// Module ID: 12330
+// Function ID: 12331
 // Name: AppLauncherOptionIcon
-// Dependencies: [19, 17, 21, 4638, 576, 2]
+// Dependencies: [19, 17, 21, 4640, 576, 2]
 // Exports: default
 
-// Module 12321 (AppLauncherOptionIcon)
+// Module 12330 (AppLauncherOptionIcon)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { iconWrapper: { justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round } };
 const styles = createStyles.createStyles(obj2);
 const size = fn(2);
