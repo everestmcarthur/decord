@@ -42,51 +42,53 @@ async function downloadApks(channel: ChannelContext) {
 	if (!(await exists(channel.apksFolder))) await mkdir(channel.apksFolder, { recursive: true });
 
 	if (!reuseFolder) {
-		log("Downloading APKs...");
+		log("Downloading & extracting APKs...");
 
-		const downloadProgress = makeProgress(
-			Object.fromEntries(Object.keys(apkAssets).map((apk) => [apk, `Downloading ${apk}.apk`])),
-		);
-		await Promise.allSettled(
-			Object.keys(apkAssets).map((apk) => {
-				return wrapPromise(
-					fetch(cdnUrl + apk, {
-						headers: {
-							"User-Agent": trackerUserAgent,
-							"Cache-Control": "public, max-age=3600",
-						},
-					})
-						.then((res) => res.arrayBuffer())
-						.then((data) => Bun.write(join(channel.workFolder, `${apk}.zip`), data)),
-					downloadProgress,
-					apk,
-				);
-			}),
-		);
-		if (downloadProgress.anyFailed())
-			throw new Error(`Failed to download all APKs!\n${downloadProgress.prettyErrors()}`);
-
-		log("\nUnzipping APKs...");
-
-		const unzipProgress = makeProgress(
-			Object.fromEntries(Object.keys(apkAssets).map((apk) => [apk, `Unzipping ${apk}.apk`])),
-		);
+		const apkProgress = makeProgress(Object.fromEntries(Object.keys(apkAssets).map((apk) => [apk, `${apk}.apk`])));
 
 		await Promise.allSettled(
 			Object.entries(apkAssets).map(([apk, assets]) =>
 				wrapPromise(
-					Bun.$`unzip -o ${join(channel.workFolder, `${apk}.zip`)} ${{
-						raw: assets.map((file) => Bun.$.escape(file)).join(" "),
-					}} -d ${channel.apksFolder} 2>/dev/null`
-						.quiet()
-						.nothrow()
-						.then(handleShellErr),
-					unzipProgress,
+					(async () => {
+						const dest = join(channel.workFolder, `${apk}.zip`);
+						const pattern = assets.map((file) => Bun.$.escape(file)).join(" ");
+
+						for (let attempt = 1; ; attempt++) {
+							try {
+								const res = await fetch(cdnUrl + apk, {
+									headers: {
+										"User-Agent": trackerUserAgent,
+										"Cache-Control": "public, max-age=3600",
+									},
+								});
+								if (!res.ok) throw new Error(`HTTP ${res.status}`);
+								const expected = Number(res.headers.get("content-length") ?? NaN);
+								const data = await res.arrayBuffer();
+								if (!Number.isNaN(expected) && expected > 0 && data.byteLength !== expected)
+									throw new Error(`truncated download: expected ${expected} bytes, got ${data.byteLength}`);
+								await Bun.write(dest, data);
+
+								const out = await Bun.$`unzip -o ${dest} ${{ raw: pattern }} -d ${channel.apksFolder}`
+									.quiet()
+									.nothrow();
+								if (out.exitCode !== 0 && out.exitCode !== 11)
+									throw new Error(out.stderr.toString().trim() || `unzip failed (exit code ${out.exitCode})`);
+								return;
+							} catch (e) {
+								await rm(dest, { force: true }).catch(() => {});
+								if (attempt >= 3) throw e;
+								log(`⚠ ${apk}.apk attempt ${attempt} failed, retrying...`);
+								await Bun.sleep(5000);
+							}
+						}
+					})(),
+					apkProgress,
 					apk,
 				),
 			),
 		);
-		if (unzipProgress.anyFailed()) throw new Error(`Failed to unzip all APKs!\n${unzipProgress.prettyErrors()}`);
+
+		if (apkProgress.anyFailed()) throw new Error(`Failed to download all APKs!\n${apkProgress.prettyErrors()}`);
 
 		await Bun.write(join(channel.workFolder, "ver"), channel.version);
 	} else log("Reusing folder!");
