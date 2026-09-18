@@ -1,16 +1,21 @@
+import mock from "../mock";
+import type { Differs } from "../types";
 import type { ChannelContext } from "./channel";
 import { commit } from "./git";
 import { log, makeProgress, wrapPromise } from "./progress";
-import { isMock } from "./shared";
+import { isMock, isQuiet, oprevFiles, prevFiles } from "./shared";
 import codeTask from "./tasks/code";
 import colorsTask from "./tasks/colors";
 import decompile from "./tasks/decompile";
+import diffs from "./tasks/diffs";
 import { formatError, join } from "./utils";
 
 export async function runTasks(channel: ChannelContext) {
 	log(`\nRunning tasks for ${channel.cuteVersion}...`);
 	const progress = makeProgress(
 		{
+			preinit: "Preinit",
+			preinit_save: "Caching original files",
 			decompile: "Decompilation",
 			decompile_downloading: "Downloading decompiler",
 			decompile_decompiling: "Decompiling index.android.bundle",
@@ -25,13 +30,40 @@ export async function runTasks(channel: ChannelContext) {
 			icons: "Icon parser",
 			icons_getting: "Writing icons.json",
 			icons_copying: "Copying images",
+			diff: "Diffs",
+			diff_code: "Diffing code",
+			diff_raw: "Diffing raw colors",
+			diff_semantic: "Diffing semantic colors",
+			diff_icons: "Diffing icons",
 		},
 		true,
 	);
+	let differs: Differs = { raw: new Map(), semantic: new Map(), icons: new Map(), code: new Map() };
 
 	let gzipDone: Promise<void> | undefined;
 
 	if (!isMock) {
+		try {
+			progress.start("preinit");
+
+			progress.start("preinit_save");
+			prevFiles.clear();
+			for (const oprev of oprevFiles) {
+				for (const base of [channel.dataDir, channel.canvasDir] as const) {
+					const file = Bun.file(join(base, oprev));
+					if (await file.exists()) {
+						prevFiles.set(oprev, await file.arrayBuffer());
+						break;
+					}
+				}
+			}
+			progress.update("preinit_save", true);
+			progress.update("preinit", true);
+		} catch (e) {
+			progress.update("preinit", false);
+			throw new Error(`Failed to cache original files!\n${e}`);
+		}
+
 		try {
 			gzipDone = (await wrapPromise(
 				decompile(channel, progress, join(channel.apksFolder, "base", "assets", "index.android.bundle")),
@@ -65,6 +97,7 @@ export async function runTasks(channel: ChannelContext) {
 		// 	console.warn("Icons task failed (non-critical):", e);
 		// });
 		progress.update("icons", null);
+		progress.update("diff_icons", null);
 
 		if (gzipDone) {
 			try {
@@ -78,6 +111,30 @@ export async function runTasks(channel: ChannelContext) {
 
 		if (progress.someFailed("decompile_gzip"))
 			throw new Error(`Failed at the decompile gzip task!\n${progress.prettyErrors("decompile_gzip")}`);
+
+		try {
+			const result = await diffs(channel, progress);
+			if (result) {
+				differs = result;
+				progress.update("diff", true);
+			}
+		} catch (e: any) {
+			progress.update("diff", false, formatError(e));
+			throw new Error(`Failed to generate diffs!\n${formatError(e)}`);
+		}
+	} else {
+		differs = mock;
+	}
+
+	if (!isQuiet) {
+		try {
+			const { webhook } = await import("./tasks/webhook");
+			await wrapPromise(webhook(differs), progress, "webhook");
+		} catch (e: any) {
+			throw new Error(`Failed to send webhook messages!\n${formatError(e)}`);
+		}
+	} else {
+		progress.update("webhook", null);
 	}
 
 	await commit(["version.txt"], `chore: bump app version to ${channel.cuteVersion}`, channel.dataDir);
