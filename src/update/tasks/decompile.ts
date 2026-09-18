@@ -8,16 +8,9 @@ import { handleShellErr, join } from "../utils";
 
 const gzipWorkerURL = new URL("decompile-gzip.ts", import.meta.url).href;
 
-const DECOMPILE_TIMEOUT_MS = 60 * 60 * 1000;
-
 async function runDecompiler(cmd: string[], label: string) {
 	const proc = spawn({ cmd, stdout: "pipe", stderr: "pipe", stdin: "ignore" });
-	const timer = setTimeout(() => {
-		console.warn(`${label} exceeded ${DECOMPILE_TIMEOUT_MS / 1000}s, killing it`);
-		proc.kill();
-	}, DECOMPILE_TIMEOUT_MS);
 	const exitCode = await proc.exited;
-	clearTimeout(timer);
 	const out = `${await new Response(proc.stdout).text().catch(() => "")}${await new Response(proc.stderr)
 		.text()
 		.catch(() => "")}`.trim();
