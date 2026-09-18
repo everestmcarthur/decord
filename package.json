@@ -10,8 +10,7 @@
 	},
 	"dependencies": {
 		"@napi-rs/canvas": "^0.1.97",
-		"color": "^5.0.3",
-		"discord-api-types": "^0.38.46"
+		"color": "^5.0.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.11",
