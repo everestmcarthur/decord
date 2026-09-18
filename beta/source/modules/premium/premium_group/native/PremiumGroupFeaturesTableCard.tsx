@@ -1,0 +1,76 @@
+// Module ID: 13575
+// Function ID: 13576
+// Name: PremiumGroupFeaturesTableCard
+// Dependencies: [17, 7535, 21, 4636, 576, 4632, 1114, 13576, 1176, 5068, 4486, 9511, 2]
+// Exports: default
+
+// Module 13575 (PremiumGroupFeaturesTableCard)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1176 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ColorConstants from "ColorConstants" /* 7535 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13576 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createStyles from "createStyles" /* 4636 */;
+import size from "module_2" /* 2 */;
+
+class BetaPill {
+  constructor() {
+    tmp = closure_7();
+    obj = { style: tmp.betaPill, children: null };
+    obj1 = { variant: "text-xs/bold", style: tmp.betaText, children: null };
+    intl = closure_0(closure_2[6]).intl;
+    obj1.children = intl.string(closure_0(closure_2[6]).t.oW0eUd);
+    obj.children = jsx(closure_0(closure_2[5]).Text, obj1);
+    return jsx(View, obj);
+  }
+}
+const View = _mod17.View;
+const Gradients = ColorConstants.Gradients;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { premiumGroupCard: { padding: 16, borderRadius: nativeDefault.radii.sm - 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" }, headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 }, betaPill: null, betaText: null, title: null, description: null };
+let obj2 = { padding: 16, borderRadius: nativeDefault.radii.sm - 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
+obj.betaPill = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+let obj3 = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+obj.betaText = { color: nativeDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+let obj4 = { color: nativeDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+obj.title = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+const obj5 = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+obj.description = { color: nativeDefault.colors.TEXT_DEFAULT };
+const React5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
+
+export default function PremiumGroupFeaturesTableCard(arg0) {
+  ({ style, premiumGroupRole } = arg0);
+  const tmp = closure_7();
+  const tmp4 = usePremiumGroupFeaturesTableCardTextDefault(premiumGroupRole, false);
+  if (null == tmp4) {
+    return null;
+  } else {
+    ({ subheaderString, bodyString } = tmp4);
+    const obj = { borderWidth: 2, direction: native.GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: tmp2(576).radii.sm, style, children: null };
+    const obj2 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, locations: null, style: null, children: null };
+    const tmp2Result = tmp2(5068);
+    const items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), , ];
+    items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
+    items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
+    obj2.colors = items;
+    obj2.locations = [0, 0.4996, 0.9593];
+    obj2.style = tmp.premiumGroupCard;
+    const obj6 = { style: tmp.headerContainer, children: null };
+    const items1 = [hasOwnProperty(tmp2(9511), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
+    obj6.children = items1;
+    const items2 = [timestampProducer(View, obj6), , ];
+    const obj7 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };
+    items2[1] = hasOwnProperty(Text_Text.Text, obj7);
+    const obj8 = { variant: "text-sm/normal", style: tmp.description, children: bodyString };
+    items2[2] = hasOwnProperty(Text_Text.Text, obj8);
+    obj2.children = items2;
+    obj.children = timestampProducer(tmp2Result, obj2);
+    return hasOwnProperty(native.GradientBorder, obj);
+  }
+};
+export { BetaPill };

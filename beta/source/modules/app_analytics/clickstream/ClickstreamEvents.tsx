@@ -1,0 +1,72 @@
+// Module ID: 7570
+// Function ID: 7571
+// Name: ClickstreamEvents
+// Dependencies: [1074, 2]
+// Exports: getClickstreamDrainEvent
+
+// Module 7570 (ClickstreamEvents)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
+
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");
+
+export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, arr) {
+  const date = new Date();
+  if (AnalyticEvents.GUILD_VIEWED_CLICKSTREAM === arg0) {
+    const obj2 = {
+      time_minus: arr.map((timestamp) => {
+          timestamp = timestamp.timestamp;
+          const time = date.getTime();
+          return time - timestamp.getTime();
+        }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      guild_ids: arr.map((guild_id) => guild_id.guild_id)
+    };
+    return obj2;
+  } else if (tmp2.FRIENDS_LIST_VIEWED_CLICKSTREAM === arg0) {
+    const obj3 = {
+      time_minus: arr.map((timestamp) => {
+          timestamp = timestamp.timestamp;
+          const time = date.getTime();
+          return time - timestamp.getTime();
+        }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      tab_opened: arr.map((tab_opened) => tab_opened.tab_opened),
+      num_friends: arr.map((num_friends) => num_friends.num_friends),
+      now_playing_visible: arr.map((now_playing_visible) => now_playing_visible.now_playing_visible),
+      now_playing_num_cards: arr.map((now_playing_num_cards) => now_playing_num_cards.now_playing_num_cards)
+    };
+    return obj3;
+  } else if (tmp2.CHANNEL_OPENED_CLICKSTREAM === arg0) {
+    const obj4 = {
+      time_minus: arr.map((timestamp) => {
+          timestamp = timestamp.timestamp;
+          const time = date.getTime();
+          return time - timestamp.getTime();
+        }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      channel_ids: arr.map((channel_id) => channel_id.channel_id),
+      channel_types: arr.map((channel_type) => channel_type.channel_type)
+    };
+    return obj4;
+  } else if (tmp2.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM === arg0) {
+    const obj = {
+      time_minus: arr.map((timestamp) => {
+          timestamp = timestamp.timestamp;
+          const time = date.getTime();
+          return time - timestamp.getTime();
+        }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      load_duration_ms: arr.map((load_duration_ms) => load_duration_ms.load_duration_ms),
+      were_messages_cached: arr.map((were_messages_cached) => were_messages_cached.were_messages_cached),
+      is_first_load: arr.map((is_first_load) => is_first_load.is_first_load)
+    };
+    return obj;
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("getClickstreamDrainEvent: Unknown event: " + arg0);
+    throw error;
+  }
+};

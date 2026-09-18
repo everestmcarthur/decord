@@ -1,0 +1,106 @@
+// Module ID: 8035
+// Function ID: 8036
+// Name: ConversationPreviewMessage
+// Dependencies: [19, 17, 4628, 2021, 21, 8036, 8243, 4636, 576, 504, 4788, 8065, 1935, 4318, 1176, 4632, 8775, 2]
+// Exports: default
+
+// Module 8035 (ConversationPreviewMessage)
+import nativeDefault from "native" /* 576 */;
+import DateUtils from "DateUtils" /* 4318 */;
+import RowGeneratorDefault from "RowGenerator" /* 8036 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+
+require = fn;
+function modifyRow(arg0) {
+  arg0.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
+  arg0.renderContentOnly = true;
+}
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let rowGenerator = new RowGeneratorDefault();
+rowGenerator.setOptions({ renderReplies: false, renderReactions: false });
+const createStyles = fn(4636);
+let obj3 = { container: { gap: nativeDefault.space.PX_4 }, header: null, authorRow: null, headerTimestamp: null };
+let obj4 = { gap: nativeDefault.space.PX_4 };
+obj3.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj3.authorRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj3.headerTimestamp = { flex: 1 };
+let closure_11 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewMessage.tsx");
+
+export default function ConversationPreviewMessage(message) {
+  message = message.message;
+  const guildId = message.guildId;
+  let setting;
+  const tmp = closure_11();
+  rowGenerator = message(setting[9]);
+  const items = [AccessibilityStore];
+  const stateFromStores = rowGenerator.useStateFromStores(items, () => roleStyle.roleStyle);
+  const items1 = [GuildMemberStore];
+  const items2 = [guildId, message.author.id];
+  const stateFromStores1 = message(setting[9]).useStateFromStores(items1, () => GuildMemberStore.getMember(guildId, message.author.id), items2);
+  message(setting[10]);
+  if ("username" === stateFromStores) {
+    let colorString;
+    if (stateFromStores1 != null) {
+      colorString = stateFromStores1.colorString;
+    }
+    if (null != colorString) {
+      const obj3 = { color: stateFromStores1.colorString };
+    }
+    let colorStrings;
+    if (stateFromStores1 != null) {
+      colorStrings = stateFromStores1.colorStrings;
+    }
+    const processColorStringsArray = tmp2(tmp3[11]).useProcessColorStringsArray(colorStrings);
+    const tmp2Result2 = tmp2(tmp3[11]);
+    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result2.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, message.author.id, stateFromStores, processColorStringsArray);
+    const TimestampHourCycle = tmp2(tmp3[12]).TimestampHourCycle;
+    setting = TimestampHourCycle.useSetting();
+    const items3 = [message.timestamp, setting];
+    const obj4 = { style: tmp.container, children: null };
+    const obj5 = { style: tmp.header, children: null };
+    const memo = noop.useMemo(() => DateUtils.calendarFormat(message.timestamp, true, setting), items3);
+    const obj6 = { user: message.author, guildId, size: tmp2(tmp3[14]).AvatarSizes.XXSMALL };
+    const items4 = [closure_7(tmp2(tmp3[14]).Avatar, obj6), , ];
+    const obj7 = { style: tmp.authorRow, children: null };
+    let tmp24Result = "dot" === stateFromStores;
+    if (tmp24Result) {
+      let colorString1;
+      if (stateFromStores1 != null) {
+        colorString1 = stateFromStores1.colorString;
+      }
+      tmp24Result = null != colorString1;
+    }
+    if (tmp24Result) {
+      ({ colorString: obj10.color, colorStrings: obj10.colors } = stateFromStores1);
+      tmp24Result = tmp24(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
+      const obj8 = { size: "small", color: null, colors: null };
+    }
+    const items5 = [tmp24Result, ];
+    const obj9 = { variant: "text-md/medium", lineClamp: 1, style: {}, gradientColors: null, children: null };
+    let tmp27;
+    if (isRoleStyleAndRoleColorsEligibleForERC) {
+      tmp27 = processColorStringsArray;
+    }
+    obj9.gradientColors = tmp27;
+    obj9.children = tmp7;
+    items5[1] = closure_7(tmp2(tmp3[15]).Text, obj9);
+    obj7.children = items5;
+    items4[1] = closure_8(View, obj7);
+    const obj11 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 1, style: tmp.headerTimestamp, children: memo };
+    items4[2] = closure_7(tmp2(tmp3[15]).Text, obj11);
+    obj5.children = items4;
+    const items6 = [closure_8(View, obj5), ];
+    const obj12 = { pointerEvents: "none", horizontalOffset: 0, modifyRow, message, rowGenerator };
+    items6[1] = closure_7(guildId(tmp3[16]), obj12);
+    obj4.children = items6;
+    return closure_8(View, obj4);
+  }
+};

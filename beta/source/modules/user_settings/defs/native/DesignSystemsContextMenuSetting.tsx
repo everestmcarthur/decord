@@ -1,0 +1,28 @@
+// Module ID: 15869
+// Function ID: 15870
+// Name: DesignSystemsContextMenuSetting
+// Dependencies: [8079, 1074, 11605, 15870, 2]
+
+// Module 15869 (DesignSystemsContextMenuSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
+  useTitle() {
+    return "Context Menu";
+  },
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
+    getComponent() {
+      return require("UserSettingsDesignSystemContextMenu").default;
+    }
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsContextMenuSetting.tsx");
+
+export default route;

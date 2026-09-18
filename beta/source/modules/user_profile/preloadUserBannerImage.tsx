@@ -1,0 +1,59 @@
+// Module ID: 8305
+// Function ID: 8306
+// Name: preloadUserBannerImage
+// Dependencies: [1396, 1935, 2]
+// Exports: default
+
+// Module 8305 (preloadUserBannerImage)
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
+
+export default function preloadUserBannerImage(user, guildId) {
+  if (typeof globalThis.Image !== "undefined") {
+    user = user.user;
+    let id;
+    if (user != null) {
+      id = user.id;
+    }
+    if (null != id) {
+      if ("" !== id) {
+        let tmp3 = null != guildId;
+        if (tmp3) {
+          const guild_member_profile = user.guild_member_profile;
+          let banner;
+          if (guild_member_profile != null) {
+            banner = guild_member_profile.banner;
+          }
+          tmp3 = null != banner;
+        }
+        let guildMemberBannerURL;
+        if (tmp3) {
+          const obj2 = { id, guildId, banner: user.guild_member_profile.banner, canAnimate: null, size: 600 };
+          const GifAutoPlay = UserSettings.GifAutoPlay;
+          obj2.canAnimate = GifAutoPlay.getSetting();
+          guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
+        }
+        let banner1;
+        if (user != null) {
+          const user_profile = user.user_profile;
+          if (user_profile != null) {
+            banner1 = user_profile.banner;
+          }
+        }
+        if (null != banner1) {
+          const obj4 = { id, banner: user.user_profile.banner, canAnimate: null, size: 600 };
+          const GifAutoPlay2 = UserSettings.GifAutoPlay;
+          obj4.canAnimate = GifAutoPlay2.getSetting();
+          guildMemberBannerURL = AvatarUtils.getUserBannerURL(obj4);
+        }
+        if (null != guildMemberBannerURL) {
+          const image = new globalThis.Image();
+          image.src = guildMemberBannerURL;
+        }
+      }
+    }
+  }
+};

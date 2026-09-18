@@ -1,0 +1,37 @@
+// Module ID: 7851
+// Function ID: 7852
+// Name: DeviceState
+// Dependencies: [7852, 2, 7853]
+// Exports: logDeviceState
+
+// Module 7851 (DeviceState)
+import device_DeviceState from "device/DeviceState" /* 7852 */;
+import constants_DeviceState from "constants/DeviceState" /* 7853 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/device/DeviceState.tsx");
+
+export const DeviceState = constants_DeviceState.DeviceState;
+export const ThermalState = constants_DeviceState.ThermalState;
+export const getDeviceState = device_DeviceState.getDeviceState;
+export const logDeviceState = function logDeviceState(thermalState) {
+  if (null !== thermalState) {
+    const logger2 = device_DeviceState.logger;
+    logger2.info("Device State Information:");
+    const logger3 = device_DeviceState.logger;
+    const _HermesInternal = HermesInternal;
+    logger3.info("- Thermal State: " + thermalState.thermalState);
+    const logger4 = device_DeviceState.logger;
+    const _HermesInternal2 = HermesInternal;
+    logger4.info("- Battery Level: " + 100 * thermalState.batteryLevel + "%");
+    const logger5 = device_DeviceState.logger;
+    let str6 = "Disabled";
+    if (thermalState.isLowPowerMode) {
+      str6 = "Enabled";
+    }
+    logger5.info(`- Low Power Mode: ${str6}`);
+  } else {
+    const logger = device_DeviceState.logger;
+    logger.info("Device state not available");
+  }
+};

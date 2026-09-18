@@ -1,0 +1,53 @@
+// Module ID: 7625
+// Function ID: 7626
+// Name: IntegrationPermissionUtils
+// Dependencies: [32, 1894, 7626, 2]
+// Exports: commandName, commandPermissionChannels, commandPermissionMembersRoles, keyPermissions, toPermissionKey
+
+// Module 7625 (IntegrationPermissionUtils)
+import Server from "Server" /* 1894 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+require = fn;
+function commandPermissions(arg0, items) {
+  const obj = {};
+  const entries = Object.entries(arg0);
+  while (tmp2 !== undefined) {
+    let tmp5 = _slicedToArray(tmp3, 2);
+    [tmp6, tmp7] = tmp5;
+    let tmp8 = tmp7;
+    if (items.includes(tmp7.type)) {
+      obj[tmp6] = tmp8;
+    }
+    continue;
+  }
+  return obj;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx");
+
+export const commandName = function commandName(arg0, arg1) {
+  let text = arg1;
+  if (arg0 === Server.ApplicationCommandType.CHAT) {
+    text = `/${arg1}`;
+  }
+  return text;
+};
+export const commandPermissionChannels = function commandPermissionChannels(arg0) {
+  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL];
+  return commandPermissions(arg0, items);
+};
+export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
+  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.ROLE, ApplicationCommandTypes.ApplicationCommandPermissionType.USER];
+  return commandPermissions(arg0, items);
+};
+export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {
+  return "" + allChannelsSentinelResult + ":" + CHANNEL;
+};
+export const keyPermissions = function keyPermissions(permissions) {
+  return Object.fromEntries(permissions.map((id) => {
+    const items = ["" + id.id + ":" + id.type, id];
+    return items;
+  }));
+};

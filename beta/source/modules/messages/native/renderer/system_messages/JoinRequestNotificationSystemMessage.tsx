@@ -1,0 +1,94 @@
+// Module ID: 8150
+// Function ID: 8151
+// Name: JoinRequestNotificationSystemMessage
+// Dependencies: [5623, 4459, 1979, 1371, 1074, 1114, 11, 8068, 2]
+// Exports: createJoinRequestNotificationSystemMessage
+
+// Module 8150 (JoinRequestNotificationSystemMessage)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import util from "util" /* 1114 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5623 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+const MessageTypes = fn(1074).MessageTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
+
+export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
+  message = message.message;
+  const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
+  let tmp4;
+  if (null != request) {
+    let guild = GuildStore.getGuild(request.guildId);
+    if (guild == null) {
+      guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
+    }
+    tmp4 = guild;
+  }
+  let userId;
+  if (request != null) {
+    userId = request.userId;
+  }
+  const user1 = UserStore.getUser(userId);
+  let username;
+  if (user1 != null) {
+    username = user1.username;
+  }
+  if (username == null) {
+    let username1;
+    if (request != null) {
+      const user = request.user;
+      if (user != null) {
+        username1 = user.username;
+      }
+    }
+    username = username1;
+  }
+  const type = message.type;
+  if (tmp4 != null) {
+    const name = tmp4.name;
+  }
+  if (MessageTypes.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION === type) {
+    if (null == username) {
+      const intl5 = util.intl;
+      let stringResult = intl5.string(util.t["2VLV0d"]);
+    }
+    const intl6 = util.intl;
+    const obj2 = { username, guildName: name };
+    stringResult = intl6.formatToParts(util.t.EloBG4, obj2);
+  } else {
+    if (tmp13.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
+      if (null != username) {
+        if (null != name) {
+          const intl4 = util.intl;
+          const obj3 = { username, guildName: name };
+          let formatToPartsResult = intl4.formatToParts(util.t["UGN/Yy"], obj3);
+        }
+        let str = formatToPartsResult;
+      }
+      const intl3 = util.intl;
+      formatToPartsResult = intl3.string(util.t.FVF6qU);
+    } else {
+      str = "";
+      if (tmp13.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
+        if (null != username) {
+          if (null != name) {
+            const intl2 = util.intl;
+            const obj4 = { username, guildName: name };
+            let formatToPartsResult1 = intl2.formatToParts(util.t.u4movT, obj4);
+          }
+          str = formatToPartsResult1;
+        }
+        const intl = util.intl;
+        formatToPartsResult1 = intl.string(util.t.BMlbE7);
+      }
+    }
+    const obj5 = { content: str };
+    const merged = Object.assign(createCommonMessageDefault(message));
+    return obj5;
+  }
+};

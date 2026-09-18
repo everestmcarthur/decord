@@ -1,0 +1,11 @@
+// Module ID: 6281
+// Function ID: 6282
+// Dependencies: [2]
+
+// Module 6281
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GroupGamingSpotIllustration-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/80aa4de0a67623931ae5119f9ffb7c15ce11a92914130c60393ee2fc9331297d.png";
+export const metadata = { fileBytes: 80063 };

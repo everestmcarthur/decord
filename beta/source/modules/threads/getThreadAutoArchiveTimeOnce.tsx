@@ -1,0 +1,69 @@
+// Module ID: 5589
+// Function ID: 5590
+// Name: getThreadAutoArchiveTimeOnce
+// Dependencies: [4651, 1090, 11, 2]
+// Exports: default, getThreadLastActivityTime
+
+// Module 5589 (getThreadAutoArchiveTimeOnce)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ReadStateStore from "ReadStateStore" /* 4651 */;
+
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
+
+export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
+  if (null == threadMetadata.threadMetadata) {
+    return 0;
+  } else {
+    let num3 = 0;
+    const result = threadMetadata.threadMetadata.autoArchiveDuration * DurationsDefault.Millis.MINUTE;
+    if (null != threadMetadata.threadMetadata) {
+      let id = ReadStateStore.lastMessageId(threadMetadata.id);
+      if (id == null) {
+        id = threadMetadata.id;
+      }
+      let num = 0;
+      const tmp12Result = SnowflakeUtilsDefault;
+      if (null != threadMetadata.lastNonMessageActivityTimestamp) {
+        const _Date = Date;
+        const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
+        num = date.getTime();
+      }
+      let num2 = 0;
+      if (null != threadMetadata.threadMetadata.archiveTimestamp) {
+        const _Date2 = Date;
+        const date1 = new Date(threadMetadata.threadMetadata.archiveTimestamp);
+        num2 = date1.getTime();
+      }
+      const _Math = Math;
+      num3 = Math.max(SnowflakeUtilsDefault.extractTimestamp(id), num, num2);
+      const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id);
+    }
+    return num3 + result;
+  }
+};
+export const getThreadLastActivityTime = function getThreadLastActivityTime(threadMetadata) {
+  if (null == threadMetadata.threadMetadata) {
+    return 0;
+  } else {
+    let id = ReadStateStore.lastMessageId(threadMetadata.id);
+    if (id == null) {
+      id = threadMetadata.id;
+    }
+    let num = 0;
+    if (null != threadMetadata.lastNonMessageActivityTimestamp) {
+      const _Date = Date;
+      const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
+      num = date.getTime();
+    }
+    let num2 = 0;
+    if (null != threadMetadata.threadMetadata.archiveTimestamp) {
+      const _Date2 = Date;
+      const date1 = new Date(threadMetadata.threadMetadata.archiveTimestamp);
+      num2 = date1.getTime();
+    }
+    const _Math = Math;
+    return Math.max(SnowflakeUtilsDefault.extractTimestamp(id), num, num2);
+  }
+};

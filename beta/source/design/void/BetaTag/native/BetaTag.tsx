@@ -1,0 +1,70 @@
+// Module ID: 13432
+// Function ID: 13433
+// Name: BetaTag
+// Dependencies: [19, 17, 7535, 21, 4636, 576, 5068, 1093, 4632, 1114, 2]
+// Exports: default
+
+// Module 13432 (BetaTag)
+import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const Gradients = fn(7535).Gradients;
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };
+let closure_6 = createStyles.createStyles(obj2);
+let obj4 = { SMALL: "small", MEDIUM: "medium" };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
+
+export default function BetaTag(gradient) {
+  ({ style, textStyle, size } = gradient);
+  if (size === undefined) {
+    size = obj4.MEDIUM;
+  }
+  let flag = gradient.gradient;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const tmp2 = closure_6();
+  let str = "text-xs/bold";
+  if (obj4.SMALL !== size) {
+    if (obj4.MEDIUM === size) {
+      str = "text-sm/bold";
+    }
+  }
+  if (flag) {
+    const obj2 = { style: null, start: null, end: null, colors: null, children: null };
+    const items = [tmp2.container, style];
+    obj2.style = items;
+    obj2.start = ConstantsIOS.HorizontalGradient.START;
+    obj2.end = ConstantsIOS.HorizontalGradient.END;
+    obj2.colors = Gradients.PREMIUM_TIER_2_TRI_COLOR;
+    const obj3 = { variant: str, color: "text-overlay-light", style: null, children: null };
+    const items1 = [tmp2.text, textStyle];
+    obj3.style = items1;
+    const intl2 = util.intl;
+    obj3.children = intl2.string(util.t.oW0eUd);
+    obj2.children = tmp3(Text_Text.Text, obj3);
+    let tmp3Result = tmp3(LinearGradientDefault, obj2);
+  } else {
+    const obj = { style: null, children: null };
+    const items2 = [tmp2.container, style];
+    obj.style = items2;
+    obj4 = { variant: str, color: "text-overlay-light", style: null, children: null };
+    const items3 = [tmp2.text, textStyle];
+    obj4.style = items3;
+    const intl = util.intl;
+    obj4.children = intl.string(util.t.oW0eUd);
+    obj.children = tmp3(Text_Text.Text, obj4);
+    tmp3Result = tmp3(View, obj);
+  }
+  return tmp3Result;
+};
+export const BetaSizes = obj4;

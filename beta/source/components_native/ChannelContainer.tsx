@@ -1,0 +1,124 @@
+// Module ID: 10206
+// Function ID: 10207
+// Name: ChannelContainer
+// Dependencies: [19, 17, 4276, 1957, 2011, 1074, 1954, 21, 4636, 4497, 10207, 504, 9713, 8390, 4457, 1943, 11460, 11461, 9825, 2]
+// Exports: ChannelContainer
+
+// Module 10206 (ChannelContainer)
+import initialize from "initialize" /* 504 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+import useChatLayoutDefault from "useChatLayout" /* 4497 */;
+import common_NotificationsDefault from "common/Notifications" /* 10207 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11460 */;
+import noop from "module_19" /* 19 */;
+import LurkingStore from "LurkingStore" /* 4276 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+
+require = fn;
+function NotificationsContainer() {
+  let tmp4 = null;
+  if (useChatLayoutDefault().isChatBesideChannelList) {
+    const obj = { style: tmp.container, children: closure_1_10(common_NotificationsDefault, {}) };
+    tmp4 = closure_1_10(View, obj);
+  }
+  return tmp4;
+}
+const View = fn(17).View;
+const ChannelTypes = fn(1074).ChannelTypes;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4636);
+let closure_12 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/ChannelContainer.tsx");
+
+export const ChannelContainer = function ChannelContainer(children) {
+  ({ guildId: require, channelId } = children);
+  dependencyMap = undefined;
+  noop = undefined;
+  closure_4 = undefined;
+  const items = [SelectedChannelStore, ChannelStore];
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
+    const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
+    const obj = { channel: ChannelStore.getChannel(channelId), voiceChannelId, isStageChannel: null };
+    const channel = ChannelStore.getChannel(voiceChannelId);
+    let isGuildStageVoiceResult;
+    if (channel != null) {
+      isGuildStageVoiceResult = channel.isGuildStageVoice();
+    }
+    obj.isStageChannel = Boolean(isGuildStageVoiceResult);
+    return obj;
+  });
+  ({ channel, isStageChannel } = stateFromStoresObject);
+  let tmp5 = !isStageChannel;
+  if (isStageChannel) {
+    tmp5 = channelId(9713)(stateFromStoresObject.voiceChannelId);
+  }
+  const items1 = [LurkingStore];
+  let isPrivateResult = null != channel;
+  const stateFromStores = initialize.useStateFromStores(items1, () => {
+    let isLurkingResult = null != require;
+    if (isLurkingResult) {
+      isLurkingResult = LurkingStore.isLurking(tmp);
+    }
+    return isLurkingResult;
+  });
+  if (isPrivateResult) {
+    isPrivateResult = channel.isPrivate();
+  }
+  dependencyMap = isPrivateResult;
+  const tmp8 = channelId(8390)(isPrivateResult);
+  noop = tmp8;
+  const tmp9 = channelId(8390)(channelId);
+  closure_4 = tmp9;
+  const items2 = [channelId, tmp9, isPrivateResult, tmp8];
+  const effect = noop.useEffect(() => {
+    let tmp = closure_3;
+    let tmp2 = closure_3;
+    if (closure_3) {
+      tmp2 = !c2;
+    }
+    if (!tmp2) {
+      if (tmp) {
+        tmp = c2;
+      }
+      if (tmp) {
+        tmp = channelId !== closure_4;
+      }
+      tmp2 = tmp;
+    }
+    if (tmp2) {
+      const obj2 = { dismissAction: ContentDismissActionType.AUTO };
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj2);
+    }
+  }, items2);
+  const tmpResult = initialize;
+  const channelStyles = useChannelStylesShared.useChannelStyles();
+  let obj2 = { style: channelStyles.scene, children: null };
+  const obj3 = { style: channelStyles.flex, children: null };
+  let type;
+  if (channel != null) {
+    type = channel.type;
+  }
+  let tmp15 = null;
+  if (type === ChannelTypes.GUILD_ANNOUNCEMENT) {
+    tmp15 = null;
+    if (stateFromStores) {
+      const obj4 = { channel };
+      tmp15 = closure_10(tmp4(11461), obj4);
+    }
+  }
+  const items3 = [tmp15, children.children, ];
+  if (tmp5) {
+    const obj5 = { style: channelStyles.callPTTButton };
+    tmp5 = closure_10(tmp4(9825), obj5);
+  }
+  items3[2] = tmp5;
+  obj3.children = items3;
+  const items4 = [closure_11(closure_4, obj3), closure_10(NotificationsContainer, {})];
+  obj2.children = items4;
+  return closure_11(closure_4, obj2);
+};

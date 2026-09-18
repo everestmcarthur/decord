@@ -1,0 +1,85 @@
+// Module ID: 17691
+// Function ID: 17692
+// Name: useLoadGuildStickerWithCreator
+// Dependencies: [5, 32, 19, 1371, 5584, 504, 10517, 2]
+// Exports: default
+
+// Module 17691 (useLoadGuildStickerWithCreator)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import GuildStickersStore from "GuildStickersStore" /* 5584 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
+
+export default function useLoadGuildStickersWithCreator(arg0) {
+  _require = arg0;
+  [tmp2, dependencyMap] = noop.useState("loading");
+  const tmp = _slicedToArray(noop.useState("loading"), 2);
+  const items = [GuildStickersStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStickersStore.getStickersByGuildId(closure_0));
+  const items1 = [arg0];
+  const effect = noop.useEffect(() => {
+    closure_2 = async function _fetch() {
+      closure_0 = tmp3;
+      await abortController(signal[6]).fetchGuildStickersWithCreator(closure_0, signal);
+      if (1 === tmp7) {
+        c3 = 0;
+        v2("error");
+        closure_128_0 = null;
+        c4 = 3;
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        v2("success");
+        closure_128_0 = null;
+        c3 = 0;
+      }
+      return arg1;
+    };
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+    (function fetch() {
+      const self = this;
+      const apply = closure_2.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
+    return () => {
+      dependencyMap("loading");
+      if (abortController != null) {
+        abortController.abort();
+      }
+    };
+  }, items1);
+  if ("success" === tmp2) {
+    const obj2 = {
+      status: tmp2,
+      stickers: stateFromStores.map((user_id) => {
+          user = user.getUser(user_id.user_id);
+          let tmp2 = user_id;
+          if (null != user) {
+            const obj = {};
+            const merged = Object.assign(user_id);
+            obj.user = user;
+            tmp2 = obj;
+          }
+          return tmp2;
+        })
+    };
+    let obj3 = obj2;
+  } else {
+    obj3 = { status: tmp2 };
+  }
+  return obj3;
+};

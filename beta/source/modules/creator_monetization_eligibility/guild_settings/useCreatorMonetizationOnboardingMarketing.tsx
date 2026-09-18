@@ -1,0 +1,112 @@
+// Module ID: 17833
+// Function ID: 17834
+// Name: useCreatorMonetizationOnboardingMarketing
+// Dependencies: [5, 32, 19, 17802, 4537, 2]
+// Exports: default
+
+// Module 17833 (useCreatorMonetizationOnboardingMarketing)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 17802 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx");
+
+export default function useCreatorMonetizationOnboardingMarketing(arg0) {
+  [tmp2, importAll] = callback(noop.useState(true), 2);
+  const tmp = callback(noop.useState(true), 2);
+  [tmp4, dependencyMap] = callback(noop.useState(), 2);
+  const creatorMonetizationOnboardingMarketing = callback(noop.useState(), 2);
+  asyncGeneratorStep = creatorMonetizationOnboardingMarketing[1];
+  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp8;
+            closure_129_0 = undefined;
+            closure_1(true);
+            tmp4(undefined);
+            c4 = 2;
+            c5 = 3;
+            c6 = 1;
+            const obj5 = { value: CreatorMonetizationEligibilityActionCreatorsAll.getCreatorMonetizationOnboardingMarketing(closure_0), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_1(false);
+          throw tmp45;
+        } else {
+          if (2 === tmp8) {
+            c4 = 1;
+            closure_129_1 = tmp45;
+            const aPIError = new closure_0(4537).APIError(closure_129_1);
+            tmp4(aPIError);
+            c4 = 0;
+            closure_1(false);
+            c6 = 3;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_0 = value;
+            tmp45(closure_129_0);
+            c4 = 1;
+          }
+          c4 = 0;
+          closure_1(false);
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp45) {
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp45;
+        } else if (tmp2 === tmp47) {
+          c5 = tmp2;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  });
+  callback = noop.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  }, []);
+  const items = [arg0, callback];
+  const effect = noop.useEffect(() => {
+    callback(closure_0);
+  }, items);
+  return { isLoading, error, creatorMonetizationOnboardingMarketing: creatorMonetizationOnboardingMarketing[0] };
+};

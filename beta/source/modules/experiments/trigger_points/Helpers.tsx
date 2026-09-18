@@ -1,0 +1,44 @@
+// Module ID: 10941
+// Function ID: 10942
+// Name: Helpers
+// Dependencies: [1234, 4553, 2]
+
+// Module 10941 (Helpers)
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
+
+const CommonTriggerPoints = fn(4553).CommonTriggerPoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
+class CommonTriggerPointConfiguration {
+  constructor(arg0, arg1, arg2) {
+    obj = Object.create(new.target.prototype);
+    obj.experiments = global;
+    obj.triggerPoint = fn;
+    obj.params = importDefault;
+    return obj;
+  }
+}
+const prototype = CommonTriggerPointConfiguration.prototype;
+prototype["registeredExperimentIds"] = function registeredExperimentIds() {
+  const experiments = this.experiments;
+  return experiments.map((definition) => definition.definition.id);
+};
+prototype["trigger"] = function trigger() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  const result = ApexExperimentStore.trackCommonTriggerPointExposures(this.params.location);
+  ({ triggerPoint, experiments } = this);
+  const obj2 = {};
+  const merged = Object.assign(this.params);
+  const merged1 = Object.assign(obj);
+  const item = experiments.forEach((trackExposure) => {
+    trackExposure.trackExposure(obj2);
+  });
+};
+prototype["getExperiments"] = function getExperiments() {
+  return this.experiments;
+};
+
+export { CommonTriggerPointConfiguration };

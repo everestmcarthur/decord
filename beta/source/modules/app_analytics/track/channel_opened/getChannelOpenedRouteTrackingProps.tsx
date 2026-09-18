@@ -1,0 +1,39 @@
+// Module ID: 16854
+// Function ID: 16855
+// Name: getChannelOpenedRouteTrackingProps
+// Dependencies: [1957, 7876, 1100, 2]
+// Exports: getChannelOpenedRouteTrackingProps
+
+// Module 16854 (getChannelOpenedRouteTrackingProps)
+import router_utils from "router_utils" /* 1100 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7876 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
+
+export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
+  const result = ThreadAnalyticsUtils.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
+  let _location;
+  if (result != null) {
+    _location = result.location;
+  }
+  if (_location == null) {
+    _location = router_utils.getLastRouteChangeSource();
+    const tmpResult = router_utils;
+  }
+  let obj2 = result;
+  if (result == null) {
+    obj2 = {};
+  }
+  const merged = Object.assign(obj2);
+  if (null != _location) {
+    const obj4 = { location: _location };
+    let obj5 = obj4;
+  } else {
+    obj5 = {};
+  }
+  const merged1 = Object.assign(obj5);
+  return {};
+};

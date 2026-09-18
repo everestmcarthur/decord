@@ -1,0 +1,43 @@
+// Module ID: 15953
+// Function ID: 15954
+// Name: SponsoredContentPreferencesScreen
+// Dependencies: [19, 8079, 1074, 21, 1114, 2024, 11605, 14776, 2]
+// Exports: default
+
+// Module 15953 (SponsoredContentPreferencesScreen)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const MobileUserSettings = fn(8079).MobileUserSettings;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx");
+
+export default function SponsoredContentPreferencesScreen() {
+  const obj = { settings: null, subLabel: null };
+  const items = [MobileUserSettings.USE_DATA_FOR_QUESTS_SPONSORED_CONTENT];
+  obj.settings = items;
+  const intl = items1(1114).intl;
+  const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
+  obj.subLabel = intl.format(items1(1114).t.cf9mvV, obj2);
+  items1 = [obj, , ];
+  const obj4 = { settings: null, subLabel: null };
+  const items2 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT];
+  obj4.settings = items2;
+  const intl2 = items1(1114).intl;
+  const obj5 = { helpdeskArticle: null };
+  obj5.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
+  obj4.subLabel = intl2.format(items1(1114).t["2QFDU/"], obj5);
+  items1[1] = obj4;
+  const obj7 = { settings: null };
+  const items3 = [MobileUserSettings.MANAGE_SPONSORED_CONTENT];
+  obj7.settings = items3;
+  items1[2] = obj7;
+  const items4 = [items1];
+  const node = noop.useMemo(() => SettingBuilders.createList({ sections: items1 }), items4);
+  return jsx(SettingLayoutDefault, { node });
+};

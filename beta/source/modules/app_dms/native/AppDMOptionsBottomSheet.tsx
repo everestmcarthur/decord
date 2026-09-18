@@ -1,0 +1,79 @@
+// Module ID: 13413
+// Function ID: 13414
+// Name: AppDMOptionsBottomSheet
+// Dependencies: [19, 17, 7210, 1074, 21, 4636, 576, 504, 8296, 4603, 7485, 7273, 7253, 5768, 5686, 1114, 2]
+// Exports: default
+
+// Module 13413 (AppDMOptionsBottomSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import openUserSettings from "openUserSettings" /* 7485 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import noop from "module_19" /* 19 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
+
+require = fn;
+const View = fn(17).View;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_dms/native/AppDMOptionsBottomSheet.tsx");
+
+export default function AppDMOptionsBottomSheet(userId) {
+  userId = userId.userId;
+  const channel = userId.channel;
+  const application = userId.application;
+  let tmp = closure_9();
+  const items = [AuthorizedAppsStore];
+  const stateFromStores = userId(application[7]).useStateFromStores(items, () => {
+    let id;
+    if (application != null) {
+      id = application.id;
+    }
+    return AuthorizedAppsStore.getNewestTokenForApplication(id);
+  });
+  const items1 = [channel.id, userId];
+  const items2 = [application, stateFromStores];
+  const callback = stateFromStores.useCallback(() => {
+    showUserProfileActionSheetDefault({ userId, channelId: channel.id });
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+  }, items1);
+  const callback1 = stateFromStores.useCallback(() => {
+    let tmp = null != application;
+    if (tmp) {
+      tmp = null != stateFromStores;
+    }
+    if (tmp) {
+      const obj2 = { screen: UserSettingsSections.AUTHORIZED_APP, params: null };
+      const obj3 = { oauth2Token: stateFromStores };
+      obj2.params = obj3;
+      openUserSettings.openUserSettings(obj2);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+    }
+  }, items2);
+  const effect = stateFromStores.useEffect(() => {
+    const response = channel(application[11]).fetch();
+  }, []);
+  let obj2 = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
+  let obj3 = { style: tmp.content, children: null };
+  let obj4 = { hasIcons: false, children: null };
+  const obj5 = { label: null, onPress: null };
+  const intl = userId(application[15]).intl;
+  obj5.label = intl.string(userId(application[15]).t.iXAna6);
+  obj5.onPress = callback;
+  const items3 = [closure_7(userId(application[14]).TableRow, obj5), ];
+  const obj6 = { label: null, onPress: null, disabled: null };
+  const intl2 = userId(application[15]).intl;
+  obj6.label = intl2.string(userId(application[15]).t.KUsDNI);
+  obj6.onPress = callback1;
+  obj6.disabled = null == stateFromStores;
+  items3[1] = closure_7(userId(application[14]).TableRow, obj6);
+  obj4.children = items3;
+  obj3.children = closure_8(userId(application[13]).TableRowGroup, obj4);
+  obj2.children = closure_7(View, obj3);
+  return closure_7(userId(application[12]).BottomSheet, obj2);
+};

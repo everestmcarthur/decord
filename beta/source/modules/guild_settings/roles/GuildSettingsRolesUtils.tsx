@@ -1,0 +1,207 @@
+// Module ID: 17729
+// Function ID: 17730
+// Name: GuildSettingsRolesUtils
+// Dependencies: [19, 2021, 1371, 17720, 1074, 504, 4481, 7232, 5600, 1240, 5598, 1369, 2]
+// Exports: filterFullMembersByQuery, filterRole, getSectionAnalyticsName, useGuildMembers, useGuildRoleMembers, useQueryGuildMembers
+
+// Module 17729 (GuildSettingsRolesUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
+import GuildUtilsDefault from "GuildUtils" /* 5600 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7232 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const constants = fn(17720).GuildSettingsRoleEditSections;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
+
+export const ADD_MEMBER_QUERY_LIMIT = 50;
+export const MAX_PREFETCH_MEMBER_COUNT = 1000;
+export const useGuildMembers = function useGuildMembers(id, callback) {
+  _require = id;
+  closure_1 = callback;
+  const items = [GuildMemberStore];
+  const items1 = [id, callback];
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
+    const members = GuildMemberStore.getMembers(closure_0);
+    let found = members;
+    if (null != closure_1) {
+      found = members.filter(tmp);
+    }
+    return found;
+  }, items1);
+  const obj = require("initialize");
+  const items2 = [UserStore];
+  const items3 = [stateFromStoresArray];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => current.reduce((acc, userId) => {
+    user = user.getUser(userId.userId);
+    if (null != user) {
+      acc[userId.userId] = user;
+    }
+    return acc;
+  }, {}), items3);
+  const items4 = [stateFromStoresArray, stateFromStoresObject, id];
+  return stateFromStoresObject.useMemo(() => {
+    const items = [];
+    const iter = current[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp3 = nextResult;
+      let tmp5 = ref[nextResult.userId];
+      let obj = tmp5;
+      if (null != tmp5) {
+        let nick = tmp3.nick;
+        if (nick == null) {
+          let obj2 = UserUtilsDefault;
+          nick = obj2.getName(obj);
+        }
+        let obj5 = { name: nick, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
+        let obj4 = UserUtilsDefault;
+        obj5.userTag = obj4.getUserTag(obj);
+        obj5.id = tmp3.userId;
+        obj5.avatarSource = obj.getAvatarSource(closure_0);
+        obj5.avatarURL = obj.getAvatarURL(closure_0, 80);
+        obj5.bot = obj.bot;
+        obj5.verifiedBot = obj.isVerifiedBot();
+        ({ roles: obj3.roles, userId: obj3.key } = tmp3);
+        obj5.user = obj;
+        let arr = items.push(obj5);
+      }
+      continue;
+    }
+    return items;
+  }, items4);
+};
+export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembersLoadFail) {
+  _require = id;
+  closure_1 = id2;
+  dependencyMap = onMembersLoadFail;
+  noop = noop.useRef(onMembersLoadFail);
+  const effect = noop.useEffect(() => {
+    closure_3.current = current;
+  });
+  let items = [id, id2];
+  const effect1 = noop.useEffect(() => {
+    const membersForRole = GuildRoleMemberActionCreators.requestMembersForRole(closure_0, closure_1);
+    membersForRole.catch(ref.current);
+  }, items);
+  const items1 = [id2];
+  const callback = noop.useCallback((roles) => {
+    roles = roles.roles;
+    return roles.includes(closure_1);
+  }, items1);
+  closure_129_0 = id;
+  closure_129_1 = callback;
+  const items2 = [GuildMemberStore];
+  const items3 = [id, callback];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () => {
+    const members = GuildMemberStore.getMembers(closure_0);
+    let found = members;
+    if (null != closure_1) {
+      found = members.filter(tmp);
+    }
+    return found;
+  }, items3);
+  closure_129_2 = stateFromStoresArray;
+  let obj = require("initialize");
+  const items4 = [UserStore];
+  const items5 = [stateFromStoresArray];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items4, () => current.reduce((acc, userId) => {
+    user = user.getUser(userId.userId);
+    if (null != user) {
+      acc[userId.userId] = user;
+    }
+    return acc;
+  }, {}), items5);
+  closure_129_3 = stateFromStoresObject;
+  const items6 = [stateFromStoresArray, stateFromStoresObject, id];
+  return noop.useMemo(() => {
+    const items = [];
+    const iter = current[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp3 = nextResult;
+      let tmp5 = ref[nextResult.userId];
+      let obj = tmp5;
+      if (null != tmp5) {
+        let nick = tmp3.nick;
+        if (nick == null) {
+          let obj2 = UserUtilsDefault;
+          nick = obj2.getName(obj);
+        }
+        let obj5 = { name: nick, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
+        let obj4 = UserUtilsDefault;
+        obj5.userTag = obj4.getUserTag(obj);
+        obj5.id = tmp3.userId;
+        obj5.avatarSource = obj.getAvatarSource(closure_0);
+        obj5.avatarURL = obj.getAvatarURL(closure_0, 80);
+        obj5.bot = obj.bot;
+        obj5.verifiedBot = obj.isVerifiedBot();
+        ({ roles: obj3.roles, userId: obj3.key } = tmp3);
+        obj5.user = obj;
+        let arr = items.push(obj5);
+      }
+      continue;
+    }
+    return items;
+  }, items6);
+};
+export const useQueryGuildMembers = function useQueryGuildMembers(id, formatted) {
+  closure_0 = id;
+  closure_1 = formatted;
+  noop.useRef(false);
+  const items = [id, formatted];
+  const effect = noop.useEffect(() => {
+    const members = GuildUtilsDefault.requestMembers(closure_0, closure_1, 200);
+    let current = "" === closure_1;
+    if (!current) {
+      current = ref.current;
+    }
+    if (!current) {
+      AnalyticsUtilsDefault.track(AnalyticEvents.SEARCH_STARTED, { search_type: "Role Members" });
+      ref.current = true;
+      const tmpResult = AnalyticsUtilsDefault;
+    }
+  }, items);
+};
+export const filterFullMembersByQuery = function filterFullMembersByQuery(str, id) {
+  const formatted = str.trim().toLowerCase();
+  let tmp8Result = id.id === formatted;
+  if (!tmp8Result) {
+    tmp8Result = fuzzysearchDefault(formatted, id.name.toLowerCase());
+  }
+  if (!tmp8Result) {
+    tmp8Result = fuzzysearchDefault(formatted, id.userTag.toLowerCase());
+  }
+  return tmp8Result;
+};
+export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY) {
+  if (constants.MEMBERS === DISPLAY) {
+    return "Members";
+  } else if (tmp.PERMISSIONS === DISPLAY) {
+    return "Permissions";
+  } else if (tmp.DISPLAY === DISPLAY) {
+    return "Role Settings";
+  } else if (tmp.VERIFICATIONS === DISPLAY) {
+    return "Connections";
+  } else {
+    GlobalUtils.assertNever(DISPLAY);
+  }
+};
+export const filterRole = function filterRole(name, str) {
+  let hasItem = "" === str;
+  if (!hasItem) {
+    const formatted = name.name.toLowerCase();
+    hasItem = formatted.includes(str.toLowerCase());
+    str = name.name;
+  }
+  return hasItem;
+};

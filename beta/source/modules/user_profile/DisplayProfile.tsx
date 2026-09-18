@@ -1,0 +1,360 @@
+// Module ID: 8306
+// Function ID: 8307
+// Name: DisplayProfile
+// Dependencies: [1373, 7725, 4294, 1396, 8283, 2]
+
+// Module 8306 (DisplayProfile)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8283 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+const PremiumTypes = PremiumConstants.PremiumTypes;
+const result = size.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
+class DisplayProfile {
+  constructor(arg0, arg1) {
+    obj = Object.create(new.target.prototype);
+    obj.userId = global.userId;
+    guildId = undefined;
+    if (require != null) {
+      guildId = require.guildId;
+    }
+    obj.guildId = guildId;
+    banner = undefined;
+    if (require != null) {
+      banner = require.banner;
+    }
+    if (banner == null) {
+      banner = global.banner;
+    }
+    obj.banner = banner;
+    bio = undefined;
+    if (require != null) {
+      bio = require.bio;
+    }
+    if (null == bio) {
+      bio = global.bio;
+    } else {
+      str = "";
+    }
+    obj.bio = bio;
+    pronouns = undefined;
+    if (require != null) {
+      pronouns = require.pronouns;
+    }
+    if (null == pronouns) {
+      pronouns = global.pronouns;
+    } else {
+      str2 = "";
+    }
+    obj.pronouns = pronouns;
+    obj.accentColor = global.accentColor;
+    themeColors = undefined;
+    if (require != null) {
+      themeColors = require.themeColors;
+    }
+    if (themeColors == null) {
+      themeColors = global.themeColors;
+    }
+    obj.themeColors = themeColors;
+    profileEffect = undefined;
+    if (require != null) {
+      profileEffect = require.profileEffect;
+    }
+    if (profileEffect == null) {
+      profileEffect = global.profileEffect;
+    }
+    obj.profileEffect = profileEffect;
+    profileFrame = undefined;
+    if (require != null) {
+      profileFrame = require.profileFrame;
+    }
+    if (profileFrame == null) {
+      profileFrame = global.profileFrame;
+    }
+    obj.profileFrame = profileFrame;
+    prop = undefined;
+    if (require != null) {
+      prop = require.popoutAnimationParticleType;
+    }
+    if (prop == null) {
+      prop = global.popoutAnimationParticleType;
+    }
+    obj.popoutAnimationParticleType = prop;
+    ({ fetchStartedAt: tmp.fetchStartedAt, fetchEndedAt: tmp.fetchEndedAt } = global);
+    obj._userProfile = global;
+    obj._guildMemberProfile = require;
+    return obj;
+  }
+}
+const prototype = DisplayProfile.prototype;
+Object.defineProperty(prototype, "premiumSince", {
+  get: function premiumSince() {
+    return this._userProfile.premiumSince;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "premiumGuildSince", {
+  get: function premiumGuildSince() {
+    return this._userProfile.premiumGuildSince;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "premiumType", {
+  get: function premiumType() {
+    return this._userProfile.premiumType;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "private", {
+  get: function private() {
+    return this._userProfile.private;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "widgets", {
+  get: function widgets() {
+    return this._userProfile.widgets;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "gameWidgets", {
+  get: function gameWidgets() {
+    const widgets = this._userProfile.widgets;
+    let found;
+    if (widgets != null) {
+      found = widgets.filter(require("UserProfileGameWidgetTypes").isGameWidget);
+    }
+    return found;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "primaryColor", {
+  get: function primaryColor() {
+    const themeColors = this.themeColors;
+    let first;
+    if (themeColors != null) {
+      first = themeColors[0];
+    }
+    if (first == null) {
+      first = this.accentColor;
+    }
+    return first;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
+  get: function canUsePremiumProfileCustomization() {
+    return require("PremiumUtils").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "canEditThemes", {
+  get: function canEditThemes() {
+    return this.canUsePremiumProfileCustomization;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "application", {
+  get: function application() {
+    return this._userProfile.application;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isLoaded", {
+  get: function isLoaded() {
+    const self = this;
+    let tmp = undefined !== this._userProfile;
+    if (tmp) {
+      tmp = null == self.guildId || undefined !== self._guildMemberProfile;
+      const tmp3 = null == self.guildId || undefined !== self._guildMemberProfile;
+    }
+    return tmp;
+  },
+  set: undefined
+});
+prototype["hasThemeColors"] = function hasThemeColors() {
+  const themeColors = this.themeColors;
+  let first;
+  if (themeColors != null) {
+    first = themeColors[0];
+  }
+  let tmp2 = null != first;
+  if (!tmp2) {
+    const themeColors2 = this.themeColors;
+    let tmp3;
+    if (themeColors2 != null) {
+      tmp3 = themeColors2[1];
+    }
+    tmp2 = null != tmp3;
+  }
+  return tmp2;
+};
+prototype["hasPremiumCustomization"] = function hasPremiumCustomization() {
+  const self = this;
+  let hasThemeColorsResult = this.isUsingGuildMemberBanner() || self.isUsingGuildMemberBio();
+  if (!hasThemeColorsResult) {
+    hasThemeColorsResult = null != self.banner;
+  }
+  if (!hasThemeColorsResult) {
+    hasThemeColorsResult = self.hasThemeColors();
+  }
+  if (!hasThemeColorsResult) {
+    hasThemeColorsResult = null != self.popoutAnimationParticleType;
+  }
+  return hasThemeColorsResult;
+};
+prototype["isUsingGuildMemberBanner"] = function isUsingGuildMemberBanner() {
+  const _guildMemberProfile = this._guildMemberProfile;
+  let banner;
+  if (_guildMemberProfile != null) {
+    banner = _guildMemberProfile.banner;
+  }
+  return null != banner;
+};
+prototype["isUsingGuildMemberBio"] = function isUsingGuildMemberBio() {
+  const _guildMemberProfile = this._guildMemberProfile;
+  let bio;
+  if (_guildMemberProfile != null) {
+    bio = _guildMemberProfile.bio;
+  }
+  let tmp2 = null != bio;
+  if (tmp2) {
+    const _guildMemberProfile2 = this._guildMemberProfile;
+    let bio1;
+    if (_guildMemberProfile2 != null) {
+      bio1 = _guildMemberProfile2.bio;
+    }
+    tmp2 = "" !== bio1;
+  }
+  return tmp2;
+};
+prototype["isUsingGuildMemberPronouns"] = function isUsingGuildMemberPronouns() {
+  const _guildMemberProfile = this._guildMemberProfile;
+  let pronouns;
+  if (_guildMemberProfile != null) {
+    pronouns = _guildMemberProfile.pronouns;
+  }
+  let tmp2 = null != pronouns;
+  if (tmp2) {
+    const _guildMemberProfile2 = this._guildMemberProfile;
+    let pronouns1;
+    if (_guildMemberProfile2 != null) {
+      pronouns1 = _guildMemberProfile2.pronouns;
+    }
+    tmp2 = "" !== pronouns1;
+  }
+  return tmp2;
+};
+prototype["getBannerURL"] = function getBannerURL(arg0) {
+  const self = this;
+  ({ canAnimate, size } = arg0);
+  if (null != this.guildId) {
+    if (self.isUsingGuildMemberBanner()) {
+      const obj2 = { id: null, guildId: null, banner: null, canAnimate: null, size: null };
+      ({ userId: obj4.id, guildId: obj4.guildId, banner: obj4.banner } = self);
+      obj2.canAnimate = canAnimate;
+      obj2.size = size;
+      let guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
+    }
+    return guildMemberBannerURL;
+  }
+  guildMemberBannerURL = AvatarUtils.getUserBannerURL({ id: self.userId, banner: self.banner, canAnimate, size });
+};
+prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, canAnimate, arg2) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 480;
+  }
+  if (null != pendingBanner) {
+    if (canAnimate) {
+      let imageUri = pendingBanner.imageUri;
+    } else {
+      imageUri = pendingBanner.staticImageUri;
+      if (imageUri == null) {
+        imageUri = pendingBanner.imageUri;
+      }
+    }
+  } else {
+    const self = this;
+    if (null === pendingBanner) {
+      let userBannerURL = null;
+      if (self.isUsingGuildMemberBanner()) {
+        const obj3 = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
+        userBannerURL = AvatarUtils.getUserBannerURL(obj3);
+      }
+      let bannerURL = userBannerURL;
+    } else {
+      const obj = { canAnimate, size: num };
+      bannerURL = self.getBannerURL(obj);
+    }
+    return bannerURL;
+  }
+};
+prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
+  const obj2 = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
+  const _guildMemberProfile = this._guildMemberProfile;
+  let bio;
+  if (_guildMemberProfile != null) {
+    bio = _guildMemberProfile.bio;
+  }
+  obj2.guildValue = bio;
+  obj2.guildId = this.guildId;
+  return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
+};
+prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
+  const obj2 = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
+  const _guildMemberProfile = this._guildMemberProfile;
+  let pronouns;
+  if (_guildMemberProfile != null) {
+    pronouns = _guildMemberProfile.pronouns;
+  }
+  obj2.guildValue = pronouns;
+  obj2.guildId = this.guildId;
+  return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
+};
+prototype["getPreviewThemeColors"] = function getPreviewThemeColors(pendingThemeColors) {
+  let first;
+  if (pendingThemeColors != null) {
+    first = pendingThemeColors[0];
+  }
+  if (null != first) {
+    let tmp2;
+    if (pendingThemeColors != null) {
+      tmp2 = pendingThemeColors[1];
+    }
+    if (null != tmp2) {
+      return pendingThemeColors;
+    }
+  }
+  _userProfile = this;
+  if (undefined !== pendingThemeColors) {
+    ({ _userProfile, themeColors } = _userProfile);
+  } else {
+    themeColors = _userProfile.themeColors;
+  }
+};
+prototype["getBadges"] = function getBadges() {
+  let badges = this._userProfile.badges;
+  if (badges == null) {
+    badges = [];
+  }
+  const items = [...badges];
+  const _guildMemberProfile = this._guildMemberProfile;
+  let badges1;
+  if (_guildMemberProfile != null) {
+    badges1 = _guildMemberProfile.badges;
+  }
+  if (badges1 == null) {
+    badges1 = [];
+  }
+  HermesBuiltin.arraySpread(badges1, tmp);
+  return items;
+};
+prototype["getLegacyUsername"] = function getLegacyUsername() {
+  return this._userProfile.legacyUsername;
+};
+
+export default DisplayProfile;

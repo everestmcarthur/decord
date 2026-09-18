@@ -1,0 +1,42 @@
+// Module ID: 8406
+// Function ID: 8407
+// Name: MediaModalSheetWrapper
+// Dependencies: [19, 1074, 21, 7255, 4603, 8407, 2]
+// Exports: default
+
+// Module 8406 (MediaModalSheetWrapper)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import noop from "module_19" /* 19 */;
+
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
+
+export default function MediaModalSheetWrapper(onCloseCallback) {
+  onCloseCallback = onCloseCallback.onCloseCallback;
+  const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
+  let context;
+  context = noop.useContext(onCloseCallback(context[3]));
+  const items = [context];
+  const effect = noop.useEffect(() => {
+    let transitionState;
+    if (context != null) {
+      transitionState = obj.transitionState;
+    }
+    if ("exiting" === transitionState) {
+      obj.onLeave();
+    }
+  }, items);
+  const items1 = [onCloseCallback];
+  const callback = noop.useCallback(() => {
+    if (onCloseCallback != null) {
+      tmp();
+    }
+    ActionSheetActionCreatorsDefault.hideActionSheet(MEDIA_MODAL_KEY);
+  }, items1);
+  const obj = {};
+  const merged1 = Object.assign(merged);
+  obj.onClose = callback;
+  return jsx(onCloseCallback(context[5]), {});
+};

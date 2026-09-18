@@ -1,0 +1,79 @@
+// Module ID: 14895
+// Function ID: 14896
+// Name: BlockedUserRowV2
+// Dependencies: [19, 1371, 21, 9171, 7265, 5686, 1176, 1114, 8296, 5056, 504, 2]
+// Exports: default
+
+// Module 14895 (BlockedUserRowV2)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = fn;
+function BlockedUserRow(userRecord) {
+  userRecord = userRecord.userRecord;
+  let analyticsLocations;
+  analyticsLocations = analyticsLocations(7265)().analyticsLocations;
+  const obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
+  const obj2 = { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj.icon = jsx(userRecord(1176).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 });
+  let tmp4 = null != userRecord;
+  if (tmp4) {
+    let username = userRecord.globalName;
+    if (username == null) {
+      username = userRecord.username;
+    }
+    tmp4 = username;
+  }
+  obj.label = tmp4;
+  let globalName;
+  if (userRecord != null) {
+    globalName = userRecord.globalName;
+  }
+  let tmp6;
+  if (null != globalName) {
+    let username1;
+    if (userRecord != null) {
+      username1 = userRecord.username;
+    }
+    tmp6 = username1;
+  }
+  obj.subLabel = tmp6;
+  const obj3 = { name: "unblock", label: null };
+  const intl = tmp3(1114).intl;
+  obj3.label = intl.string(userRecord(1114).t.XyHpKH);
+  const items = [obj3];
+  obj.accessibilityActions = items;
+  obj.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
+    if ("unblock" === nativeEvent.nativeEvent.actionName) {
+      RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
+    }
+  };
+  obj.onPress = function onPress() {
+    return showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
+  };
+  const obj4 = { size: "sm", variant: "secondary", text: null, onPress: null };
+  const intl2 = tmp3(1114).intl;
+  obj4.text = intl2.string(userRecord(1114).t["PR/xUz"]);
+  obj4.onPress = function onPress() {
+    RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
+  };
+  obj.trailing = jsx(userRecord(5056).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5686).TableRow, { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
+}
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx");
+
+export default function ConnectedBlockedUserRow(userId) {
+  userId = userId.userId;
+  const items = [UserStore];
+  const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
+  let tmp2 = null;
+  if (null != stateFromStores) {
+    const obj2 = { userRecord: stateFromStores };
+    tmp2 = <BlockedUserRow userRecord={stateFromStores} />;
+  }
+  return tmp2;
+};

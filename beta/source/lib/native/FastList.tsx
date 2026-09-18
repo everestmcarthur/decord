@@ -1,0 +1,2310 @@
+// Module ID: 7175
+// Function ID: 7176
+// Name: FastList
+// Dependencies: [109, 32, 19, 17, 21, 12, 558, 5670, 4632, 1363, 4373, 7176, 7177, 6728, 7178, 2]
+// Exports: getItemSizeOverrideKey
+
+// Module 7175 (FastList)
+import _modDef12 from "module_12" /* 12 */;
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
+import NativeViewDefault from "NativeView" /* 5670 */;
+import BottomSheetModal from "BottomSheetModal" /* 6728 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7178 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+const discord_common_shallowEqualDefault = discord_common_shallowEqual;
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
+function renderDefaultEmpty() {
+  return null;
+}
+function defaultRecyclerKey() {
+
+}
+function FastListScrollWorklet(scrollViewRef) {
+  scrollViewRef = scrollViewRef.scrollViewRef;
+  const scrollPosValue = scrollViewRef.scrollPosValue;
+  const horizontal = scrollViewRef.horizontal;
+  const onScrollWorklet = scrollViewRef.onScrollWorklet;
+  const mutable = scrollViewRef(horizontal[10]).makeMutable(false);
+  obj = scrollViewRef(horizontal[10]);
+  const fn = function l(contentOffset) {
+    contentOffset = contentOffset.contentOffset;
+    const tmp2 = horizontal ? contentOffset.x : contentOffset.y;
+    const contentSize = contentOffset.contentSize;
+    const tmp3 = horizontal ? contentSize.width : contentSize.height;
+    if (0 !== tmp3) {
+      const result = mutable.set(true);
+      const _Math = Math;
+      const result1 = scrollPosValue.set(Math.min(tmp2, tmp3));
+      if (null != onScrollWorklet) {
+        const layoutMeasurement = contentOffset.layoutMeasurement;
+        tmp10(tmp2, tmp3, tmp ? layoutMeasurement.width : layoutMeasurement.height);
+      }
+    }
+  };
+  fn.__closure = { horizontal, workletMounted: mutable, scrollPosValue, onScrollWorklet };
+  fn.__workletHash = 16225357996403;
+  fn.__initData = __initData2;
+  const event = scrollViewRef(horizontal[10]).useEvent(fn, ["onScroll"]);
+  const items = [event, scrollViewRef];
+  const effect = noop.useEffect(() => {
+    const tmp = closure_1_9(scrollViewRef.current);
+    scrollViewRef = tmp;
+    if (null != tmp) {
+      event.workletEventHandler.registerForEvents(tmp);
+      return () => {
+        event.workletEventHandler.unregisterFromEvents(closure_0);
+      };
+    }
+  }, items);
+  return null;
+}
+let closure_3 = ["manualRef", "onScroll", "onScrollWorklet", "onScrollEnd", "onLayout", "renderHeader", "renderFooter", "renderSection", "renderItem", "renderSectionFooter", "getRecyclerKey", "onEndReached", "endReachedThreshold", "headerSize", "footerSize", "sectionSize", "sectionFooterSize", "itemSize", "sections", "scrollPosValue", "batchesToRender", "optimizeListItemRender", "initialScrollSection", "initialScrollItem", "initialScrollOrientation", "initialScrollStart", "getAnchorIdFromIndex", "getAnchorIndexFromId", "EXPERIMENTAL_enableAnchorWhileScrolling", "chunkBase", "disableContentWrappers", "childrenWrapper", "stickyHeaderFooter", "stickySectionsVariant", "persistantKeys", "disableRecyclingOnFullCompute", "disableLegacyGestureHandling", "viewabilityConfig", "onViewableItemsChanged", "debugLayout", "renderAccessory", "removeClippedSubviews", "inActionSheet"];
+get_ActivityIndicator = fn(17);
+({ PixelRatio: closure_7, ScrollView: closure_8, StyleSheet, findNodeHandle: closure_9 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: c10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
+let map = new Map();
+const FastListItemTypes = { SPACER: "SPACER", HEADER: "HEADER", FOOTER: "FOOTER", SECTION: "SECTION", ITEM: "ITEM", SECTION_FOOTER: "SECTION_FOOTER" };
+let FastListItemRecycler;
+class FastListItemRecycler {
+  constructor(arg0) {
+    obj = Object.create(new.target.prototype);
+    closure_0 = obj;
+    obj._items = {};
+    obj._pendingItems = {};
+    item = global.forEach((recyclerKey) => {
+      _slicedToArray(obj._itemsForType(recyclerKey.type), 1)[0][recyclerKey.recyclerKey] = recyclerKey;
+    });
+    return obj;
+  }
+}
+const prototype = FastListItemRecycler.prototype;
+prototype["_itemsForType"] = function _itemsForType(type) {
+  const self = this;
+  let tmp = this._items[type];
+  if (tmp == null) {
+    obj = {};
+    self._items[type] = obj;
+    tmp = obj;
+  }
+  const items = [tmp, ];
+  let tmp2 = self._pendingItems[type];
+  if (tmp2 == null) {
+    const items1 = [];
+    self._pendingItems[type] = items1;
+    tmp2 = items1;
+  }
+  items[1] = tmp2;
+  return items;
+};
+prototype["get"] = function get(type, layoutStart, layoutSize, customKey) {
+  let num = arg4;
+  if (arg4 === undefined) {
+    num = 0;
+  }
+  let num2 = arg5;
+  if (arg5 === undefined) {
+    num2 = -1;
+  }
+  const tmp = _slicedToArray(this._itemsForType(type), 2);
+  return this._get({ type, layoutStart, layoutSize, customKey, section: num, item: num2, items: tmp[0], pendingItems: tmp[1] });
+};
+prototype["_get"] = function _get(arg0) {
+  ({ type, layoutStart, layoutSize, customKey, section, item, pendingItems } = arg0);
+  if (customKey == null) {
+    const _HermesInternal = HermesInternal;
+    customKey = "" + type + ":" + section + ":" + item;
+  }
+  if (null == arg0.items[customKey]) {
+    const obj2 = { type, key: -1, layoutStart, layoutSize, section, item, recyclerKey: customKey };
+    pendingItems.push(obj2);
+    obj = obj2;
+  } else {
+    obj = {};
+    const merged = Object.assign(tmp7);
+    obj.layoutStart = layoutStart;
+    obj.layoutSize = layoutSize;
+    obj.section = section;
+    obj.item = item;
+    delete tmp[tmp2];
+  }
+  return obj;
+};
+prototype["fill"] = function fill(arg0) {
+  const self = this;
+  closure_0 = arg0;
+  const item = self(12).forEach(obj, (type) => {
+    const tmp = _slicedToArray(self._itemsForType(type), 2);
+    self._fill(tmp[0], tmp[1], closure_0);
+  });
+};
+prototype["_fill"] = function _fill(arg0, arg1, arg2) {
+  let length;
+  let sum1;
+  closure_0 = arg1;
+  closure_1 = 0;
+  if (!arg2) {
+    const item = _modDef12.forEach(arg0, (arg0) => {
+      if (null == closure_0[closure_1]) {
+        return false;
+      } else {
+        tmp2.key = tmp;
+        closure_1 = closure_1 + 1;
+      }
+    });
+  }
+  if (closure_1 < arg1.length) {
+    do {
+      let sum = FastListItemRecycler._LAST_KEY + 1;
+      FastListItemRecycler._LAST_KEY = sum;
+      arg1[closure_1].key = sum;
+      sum1 = closure_1 + 1;
+      closure_1 = sum1;
+      length = arg1.length;
+    } while (sum1 < length);
+  }
+  arg1.length = 0;
+};
+FastListItemRecycler._LAST_KEY = 0;
+class FastListComputer {
+  constructor(arg0) {
+    merged = Object.assign({ chunkSize: 0, uniform: false, dataCache: null, size: 0, dirty: true, lastStartChunk: -1, lastEndChunk: -1, items: null, persistantItemData: null, disableRecycling: false });
+    merged[2] = [];
+    merged[7] = [];
+    merged[8] = [];
+    merged.props = global;
+    updatePropsResult = merged.updateProps(global);
+    return merged;
+  }
+}
+const prototype2 = FastListComputer.prototype;
+prototype2["updateProps"] = function updateProps(props) {
+  const self = this;
+  let dirty = this.dirty;
+  if (!dirty) {
+    dirty = !discord_common_shallowEqualDefault(props, self.props);
+  }
+  self.dirty = dirty;
+  self.props = props;
+  self.uniform = typeof props.itemSize === "number";
+};
+prototype2["setInfo"] = function setInfo(containerSize) {
+  const self = this;
+  const rounded = Math.ceil(containerSize / 4);
+  self.dirty = this.dirty || rounded !== self.chunkSize;
+  self.chunkSize = rounded;
+};
+prototype2["getSizeForHeader"] = function getSizeForHeader() {
+  const headerSize = this.props.headerSize;
+  let num = 0;
+  if (undefined !== headerSize) {
+    num = headerSize;
+  }
+  let numResult = num;
+  if (typeof num !== "number") {
+    numResult = num();
+  }
+  return numResult;
+};
+prototype2["getSizeForFooter"] = function getSizeForFooter() {
+  const footerSize = this.props.footerSize;
+  let num = 0;
+  if (undefined !== footerSize) {
+    num = footerSize;
+  }
+  let numResult = num;
+  if (typeof num !== "number") {
+    numResult = num();
+  }
+  return numResult;
+};
+prototype2["getSizeForSection"] = function getSizeForSection(arg0) {
+  const sectionSize = this.props.sectionSize;
+  let num = 0;
+  if (undefined !== sectionSize) {
+    num = sectionSize;
+  }
+  let numResult = num;
+  if (typeof num !== "number") {
+    numResult = num(arg0);
+  }
+  return numResult;
+};
+prototype2["getSizeForItem"] = function getSizeForItem(arg0, arg1) {
+  const itemSize = this.props.itemSize;
+  let itemSizeResult = itemSize;
+  if (typeof itemSize !== "number") {
+    itemSizeResult = itemSize(arg0, arg1);
+  }
+  return itemSizeResult;
+};
+prototype2["getSizeForSectionFooter"] = function getSizeForSectionFooter(arg0) {
+  const sectionFooterSize = this.props.sectionFooterSize;
+  let num = 0;
+  if (undefined !== sectionFooterSize) {
+    num = sectionFooterSize;
+  }
+  let numResult = num;
+  if (typeof num !== "number") {
+    numResult = num(arg0);
+  }
+  return numResult;
+};
+prototype2["getChunk"] = function getChunk(arg0) {
+  const self = this;
+  const dataCache = this.dataCache;
+  let diff = dataCache.length - 1;
+  if (null != this.chunkCache) {
+    if (arg0 >= self.chunkCache.start) {
+      if (arg0 <= self.chunkCache.end) {
+        return self.chunkCache;
+      }
+    }
+  }
+  let num = 0;
+  if (0 <= diff) {
+    const sum = num + ((diff - num) / 2 | 0);
+    let diff1 = diff;
+    while (null != dataCache[sum]) {
+      if (arg0 >= tmp3.start) {
+        if (arg0 <= tmp3.end) {
+          self.chunkCache = tmp3;
+          return tmp3;
+        }
+      }
+      if (arg0 < tmp3.start) {
+        diff1 = sum - 1;
+        let sum1 = num;
+        diff = diff1;
+        num = sum1;
+        if (sum1 <= diff1) {
+          continue;
+        } else {
+          break;
+        }
+        break;
+      } else if (arg0 <= tmp3.end) {
+        break;
+      } else {
+        sum1 = sum + 1;
+      }
+      break;
+    }
+  }
+};
+prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
+  closure_0 = lastStartChunk;
+  closure_1 = lastEndChunk;
+  let flag = arg3;
+  if (arg3 === undefined) {
+    flag = false;
+  }
+  const self = this;
+  getRecyclerKey = undefined;
+  let items;
+  let obj3;
+  closure_6 = undefined;
+  function addInitialSection(section, layoutStart, layoutSize, layoutStart2) {
+    items.push(obj3.get(obj3.SECTION, layoutStart, layoutSize, getRecyclerKey(obj3.SECTION, section), section));
+    const sum = layoutStart + layoutSize;
+    if (sum < layoutStart2) {
+      closure_6 = closure_6 + 1;
+      items.push(obj.get(obj3.SPACER, sum, layoutStart2 - sum, undefined, 0, closure_6));
+    }
+  }
+  function isVisible(layoutStart, layoutSize) {
+    let tmp = !flag;
+    if (flag) {
+      let tmp5 = layoutStart >= closure_0 - layoutSize;
+      if (tmp5) {
+        tmp5 = layoutStart < closure_1;
+      }
+      tmp = tmp5;
+    }
+    return tmp;
+  }
+  if (this.dirty) {
+    self.fullCompute();
+    let flag2 = true;
+  } else {
+    flag2 = false;
+    if (lastStartChunk === self.lastStartChunk) {
+      flag2 = false;
+      if (lastEndChunk === self.lastEndChunk) {
+        obj = { size: null, items: null };
+        ({ size: obj.size, items: obj.items } = self);
+        return obj;
+      }
+    }
+  }
+  ({ stickyHeaderFooter, getRecyclerKey } = self.props);
+  if (undefined === getRecyclerKey) {
+    getRecyclerKey = defaultRecyclerKey;
+  }
+  self.lastStartChunk = lastStartChunk;
+  self.lastEndChunk = lastEndChunk;
+  map = new Map();
+  const iter = self.persistantItemData[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp4 = nextResult;
+    let item1;
+    ({ type, section } = nextResult);
+    if (nextResult.type === obj.ITEM) {
+      item1 = tmp4.item;
+    }
+    let recyclerKey = getRecyclerKey(type, section, item1);
+    if (null != recyclerKey) {
+      let result = map.set(tmp10, tmp4);
+    }
+    continue;
+  }
+  let rounded = Math.floor(lastStartChunk / self.chunkSize);
+  const bound = Math.max(Math.ceil(lastEndChunk / self.chunkSize), rounded);
+  let result1 = rounded * self.chunkSize;
+  items = [];
+  self.items = items;
+  obj3 = new FastListItemRecycler(arr);
+  section2 = -1;
+  let num = -1;
+  section3 = -1;
+  closure_6 = 0;
+  const set = new Set();
+  if (rounded <= bound) {
+    do {
+      let chunk = self.getChunk(rounded);
+      if (null != chunk) {
+        let addResult = set.add(chunk);
+      }
+      rounded = rounded + 1;
+    } while (rounded <= bound);
+  }
+  for (const item10103 of set) {
+    if (null != item10103) {
+      let data = tmp21.data;
+      for (const item10107 of data) {
+        let tmp23 = item10107;
+        if (item10107.layoutStart + item10107.layoutSize >= result1) {
+          let type4 = tmp23.type;
+          let tmp224 = obj;
+          if (obj.HEADER === type4) {
+            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+              arr = items.push(obj3.get(tmp224.HEADER, tmp23.layoutStart, tmp23.layoutSize, undefined));
+            }
+            result1 = tmp23.layoutStart + tmp23.layoutSize;
+          } else if (tmp224.SECTION === type4) {
+            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+              if (-1 === section2) {
+                ({ section: section2, section: section3 } = tmp23);
+              } else {
+                section3 = tmp23.section;
+              }
+              let recyclerKey1 = getRecyclerKey(tmp224.SECTION, tmp23.section);
+              let tmp104 = recyclerKey1;
+              let hasItem = null != recyclerKey1;
+              if (hasItem) {
+                hasItem = map.has(tmp104);
+              }
+              if (hasItem) {
+                let deleteResult = map.delete(tmp104);
+              }
+              let arr2 = items.push(obj3.get(tmp224.SECTION, tmp23.layoutStart, tmp23.layoutSize, tmp104, tmp23.section));
+            }
+            result1 = tmp23.layoutStart + tmp23.layoutSize;
+          } else if (tmp224.ITEM === type4) {
+            if (null == tmp23.uniform) {
+              if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+                if (0 === items.length) {
+                  let addInitialSectionResult = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, tmp23.layoutStart);
+                }
+                if (-1 === section2) {
+                  section2 = tmp23.section;
+                }
+                if (-1 === num) {
+                  num = tmp23.item;
+                }
+                ({ section: section3, item } = tmp23);
+                let recyclerKey2 = getRecyclerKey(tmp224.ITEM, tmp23.section, tmp23.item);
+                let tmp86 = recyclerKey2;
+                let hasItem1 = null != recyclerKey2;
+                if (hasItem1) {
+                  hasItem1 = map.has(tmp86);
+                }
+                if (hasItem1) {
+                  let deleteResult1 = map.delete(tmp86);
+                }
+                let arr3 = items.push(obj3.get(tmp224.ITEM, tmp23.layoutStart, tmp23.layoutSize, tmp86, tmp23.section, tmp23.item));
+              }
+              result1 = tmp23.layoutStart + tmp23.layoutSize;
+            } else {
+              let num3 = 0;
+              if (result1 > tmp23.layoutStart) {
+                let _Math = Math;
+                num3 = Math.floor((result1 - tmp23.layoutStart) / tmp23.itemSize);
+              }
+              let sum2 = num3;
+              let sum = tmp23.layoutStart + tmp23.itemSize * num3;
+              result1 = sum;
+              if (sum < bound * self.chunkSize) {
+                if (sum2 < tmp23.items) {
+                  while (true) {
+                    if (isVisible(result1, tmp23.itemSize)) {
+                      if (0 === items.length) {
+                        let addInitialSectionResult1 = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, result1);
+                      }
+                      if (-1 === section2) {
+                        section2 = tmp23.section;
+                      }
+                      if (-1 === num) {
+                        num = sum2;
+                      }
+                      section3 = tmp23.section;
+                      let tmp58 = obj;
+                      let recyclerKey3 = getRecyclerKey(obj.ITEM, tmp23.section, sum2);
+                      let tmp60 = recyclerKey3;
+                      let hasItem2 = null != recyclerKey3;
+                      if (hasItem2) {
+                        hasItem2 = map.has(tmp60);
+                      }
+                      if (hasItem2) {
+                        let deleteResult2 = map.delete(tmp60);
+                      }
+                      let arr4 = items.push(obj3.get(tmp58.ITEM, result1, tmp23.itemSize, tmp60, tmp23.section, sum2));
+                    }
+                    let sum1 = result1 + tmp23.itemSize;
+                    result1 = sum1;
+                    sum2 = sum2 + 1;
+                    if (sum1 >= bound * self.chunkSize) {
+                      break;
+                    } else {
+                      if (sum2 < tmp23.items) {
+                        continue;
+                      } else {
+                        break;
+                      }
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+          } else if (tmp224.SECTION_FOOTER === type4) {
+            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+              if (0 === items.length) {
+                let addInitialSectionResult2 = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, tmp23.layoutStart);
+              }
+              let SECTION_FOOTER = tmp224.SECTION_FOOTER;
+              let layoutStart = tmp23.layoutStart;
+              let arr5 = items.push(obj3.get(SECTION_FOOTER, layoutStart, tmp23.layoutSize, getRecyclerKey(tmp224.SECTION_FOOTER, tmp23.section), tmp23.section));
+            }
+            result1 = tmp23.layoutStart + tmp23.layoutSize;
+          } else if (tmp224.FOOTER === type4) {
+            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+              let arr6 = items.push(obj3.get(tmp224.FOOTER, tmp23.layoutStart, tmp23.layoutSize, undefined));
+            }
+            result1 = tmp23.layoutStart + tmp23.layoutSize;
+          }
+        }
+        continue;
+      }
+    }
+    continue;
+  }
+  const items1 = [];
+  const items2 = [];
+  let num6 = 0;
+  let num7 = 0;
+  while (tmp121 !== undefined) {
+    let tmp124 = obj3(tmp122, 2);
+    [tmp125, tmp126] = tmp124;
+    let tmp127 = tmp126;
+    if (tmp126.section < section2) {
+      num6 = num6 + tmp127.layoutSize;
+      let items3 = [tmp125, tmp127];
+      let arr7 = items1.push(items3);
+    } else if (tmp127.section > section3) {
+      num7 = num7 + tmp127.layoutSize;
+      let items4 = [tmp125, tmp127];
+      let arr25 = items2.push(items4);
+    } else if (tmp127.type === obj.ITEM) {
+      if (tmp127.section === section2) {
+        if (tmp127.item < num) {
+          num6 = num6 + tmp127.layoutSize;
+          let items5 = [tmp125, tmp127];
+          let arr26 = items1.push(items5);
+        }
+      }
+      num7 = num7 + tmp127.layoutSize;
+      let items6 = [tmp125, tmp127];
+      let arr27 = items2.push(items6);
+    }
+    continue;
+  }
+  const first = items[0];
+  if (null != first) {
+    if (first.layoutStart > 0) {
+      const headerDataCache = self.headerDataCache;
+      const layoutStart5 = first.layoutStart;
+      let tmp148 = stickyHeaderFooter;
+      if (stickyHeaderFooter) {
+        tmp148 = null != headerDataCache;
+      }
+      if (tmp148) {
+        tmp148 = "HEADER" !== first.type;
+      }
+      let layoutStart2 = layoutStart5;
+      if (tmp148) {
+        if (layoutStart5 - headerDataCache.layoutStart - headerDataCache.layoutSize > 0) {
+          items.unshift(obj3.get(obj.SPACER, headerDataCache.layoutStart + headerDataCache.layoutSize, layoutStart5 - headerDataCache.layoutStart - headerDataCache.layoutSize, undefined, 0, 0));
+        }
+        items.unshift(obj3.get(obj.HEADER, headerDataCache.layoutStart, headerDataCache.layoutSize, undefined));
+        layoutStart2 = headerDataCache.layoutStart;
+      }
+      const _Math2 = Math;
+      const bound1 = Math.max(layoutStart2 - num6, 0);
+      for (const item10429 of items1) {
+        let tmp161 = obj3(item10429, 2);
+        [tmp162, tmp163] = tmp161;
+        ({ type: type2, layoutStart: layoutStart3, layoutSize, section: section4 } = tmp163);
+        let item2;
+        if (tmp163.type === obj.ITEM) {
+          item2 = tmp164.item;
+        }
+        let arr30 = items.unshift(obj3.get(type2, layoutStart3, layoutSize, tmp162, section4, item2));
+        continue;
+      }
+      if (bound1 > 0) {
+        items.unshift(obj3.get(obj.SPACER, 0, bound1, undefined, 0, 1));
+      }
+    }
+  }
+  if (null != items[items.length - 1]) {
+    let size = tmp182.layoutStart + tmp182.layoutSize;
+  } else {
+    size = self.size;
+  }
+  if (size < self.size) {
+    const footerDataCache = self.footerDataCache;
+    if (stickyHeaderFooter) {
+      stickyHeaderFooter = null != footerDataCache;
+    }
+    if (stickyHeaderFooter) {
+      stickyHeaderFooter = "FOOTER" !== tmp182.type;
+    }
+    let sum3 = size;
+    if (stickyHeaderFooter) {
+      if (size < footerDataCache.layoutStart) {
+        items.push(obj3.get(obj.SPACER, size, footerDataCache.layoutStart + footerDataCache.layoutSize - size, undefined, 1, 0));
+      }
+      items.push(obj3.get(obj.FOOTER, footerDataCache.layoutStart, footerDataCache.layoutSize, undefined));
+      sum3 = footerDataCache.layoutStart + footerDataCache.layoutSize;
+    }
+    const sum4 = sum3 + num7;
+    if (sum4 < self.size) {
+      items.push(obj3.get(obj.SPACER, sum4, self.size - sum4, undefined, 1, 1));
+    }
+    for (const item10531 of items2) {
+      let tmp202 = obj3(item10531, 2);
+      [tmp203, tmp204] = tmp202;
+      ({ type: type3, layoutStart: layoutStart4, layoutSize: layoutSize2, section: section5 } = tmp204);
+      let item3;
+      if (tmp204.type === obj.ITEM) {
+        item3 = tmp205.item;
+      }
+      let arr35 = items.push(obj3.get(type3, layoutStart4, layoutSize2, tmp203, section5, item3));
+      continue;
+    }
+  }
+  let disableRecycling = self.disableRecycling;
+  if (!disableRecycling) {
+    disableRecycling = self.props.disableRecyclingOnFullCompute && flag2;
+    const tmp218 = self.props.disableRecyclingOnFullCompute && flag2;
+  }
+  obj3.fill(disableRecycling);
+  return { size: self.size, items };
+};
+prototype2["fullCompute"] = function fullCompute() {
+  const self = this;
+  const props = this.props;
+  ({ sections, insetStart } = props);
+  let num = 0;
+  if (undefined !== insetStart) {
+    num = insetStart;
+  }
+  const insetEnd = props.insetEnd;
+  let num2 = 0;
+  if (undefined !== insetEnd) {
+    num2 = insetEnd;
+  }
+  let getRecyclerKey = props.getRecyclerKey;
+  if (undefined === getRecyclerKey) {
+    getRecyclerKey = defaultRecyclerKey;
+  }
+  const set = new Set(self.props.persistantKeys);
+  self.persistantItemData = [];
+  const items = [];
+  self.dataCache = items;
+  self.chunkCache = undefined;
+  const chunkSize = self.chunkSize;
+  _require = num;
+  self.headerDataCache = undefined;
+  self.footerDataCache = undefined;
+  function pushData(arg0, arg1, type) {
+    closure_0 = closure_0 + (arg1 - arg0);
+    const bound = Math.max(Math.floor(arg0 / chunkSize), 0);
+    const bound1 = Math.max(Math.floor(arg1 / chunkSize) - 1, bound);
+    let chunk = self.getChunk(bound);
+    if (null == chunk) {
+      obj = { start: bound, end: bound1, data: [] };
+      items.push(obj);
+      chunk = obj;
+    }
+    if (type.type === obj.HEADER) {
+      tmp3.headerDataCache = type;
+    } else if (type.type === tmp7.FOOTER) {
+      tmp3.footerDataCache = type;
+    }
+    chunk.end = bound1;
+    const data = chunk.data;
+    data.push(type);
+  }
+  const sizeForHeader = self.getSizeForHeader();
+  if (sizeForHeader > 0) {
+    obj = { type: null, layoutStart: null, layoutSize: null };
+    obj.type = obj.HEADER;
+    obj.layoutStart = _require;
+    obj.layoutSize = sizeForHeader;
+    pushData(_require, _require + sizeForHeader, obj);
+  }
+  for (let num3 = 0; num3 < sections.length; num3 = num3 + 1) {
+    let tmp5 = sections[num3];
+    if (0 !== tmp5) {
+      let tmp32 = _require;
+      let sizeForSection = self.getSizeForSection(num3);
+      let obj2 = { type: null, layoutStart: null, layoutSize: null, section: null };
+      let tmp34 = obj;
+      obj2.type = obj.SECTION;
+      obj2.layoutStart = _require;
+      obj2.layoutSize = sizeForSection;
+      obj2.section = num3;
+      if (set.size > 0) {
+        let recyclerKey = getRecyclerKey(tmp34.SECTION, num3);
+        let tmp8 = null != recyclerKey && set.has(recyclerKey);
+        if (tmp8) {
+          let persistantItemData = self.persistantItemData;
+          let arr = persistantItemData.push(obj2);
+          let deleteResult = set.delete(recyclerKey);
+        }
+      }
+      let pushDataResult1 = pushData(tmp32, tmp32 + sizeForSection, obj2);
+      if (self.uniform) {
+        let sizeForItem = self.getSizeForItem(num3, 0);
+        let obj3 = { type: tmp34.ITEM, uniform: true, layoutStart: _require, itemSize: sizeForItem, layoutSize: sizeForItem * tmp5, section: num3, items: tmp5, sectionData: obj2 };
+        let pushDataResult2 = pushData(_require, _require + sizeForItem * tmp5, obj3);
+        let tmp12 = tmp34;
+      } else {
+        let num4 = 0;
+        tmp12 = tmp34;
+        if (0 < tmp5) {
+          do {
+            let sizeForItem1 = self.getSizeForItem(num3, num4);
+            let obj4 = { type: null, layoutStart: null, layoutSize: null, section: null, item: null, sectionData: null };
+            let tmp15 = obj;
+            obj4.type = obj.ITEM;
+            obj4.layoutStart = _require;
+            obj4.layoutSize = sizeForItem1;
+            obj4.section = num3;
+            obj4.item = num4;
+            obj4.sectionData = obj2;
+            let pushDataResult3 = pushData(_require, _require + sizeForItem1, obj4);
+            if (set.size > 0) {
+              let recyclerKey1 = getRecyclerKey(tmp15.ITEM, num3, num4);
+              let tmp19 = null != recyclerKey1 && set.has(recyclerKey1);
+              if (tmp19) {
+                let persistantItemData1 = self.persistantItemData;
+                let arr2 = persistantItemData1.push(obj4);
+                let deleteResult1 = set.delete(recyclerKey1);
+              }
+            }
+            num4 = num4 + 1;
+            tmp12 = tmp15;
+          } while (num4 < tmp5);
+        }
+      }
+      let sizeForSectionFooter = self.getSizeForSectionFooter(num3);
+      if (sizeForSectionFooter > 0) {
+        let obj5 = { type: tmp12.SECTION_FOOTER, layoutStart: _require, layoutSize: sizeForSectionFooter, section: num3, sectionData: obj2 };
+        let pushDataResult4 = pushData(_require, _require + sizeForSectionFooter, obj5);
+      }
+    }
+  }
+  const sizeForFooter = self.getSizeForFooter();
+  if (sizeForFooter > 0) {
+    const obj6 = { type: obj.FOOTER, layoutStart: _require, layoutSize: sizeForFooter };
+    pushData(_require, _require + sizeForFooter, obj6);
+  }
+  _require = _require + num2;
+  self.size = closure_7.roundToNearestPixel(_require);
+  self.dirty = false;
+};
+prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem(arg0, arg1) {
+  const self = this;
+  if (this.dirty) {
+    self.fullCompute();
+  }
+  const iter = self.dataCache[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp3 = nextResult;
+    let data = nextResult.data;
+    for (const item10022 of data) {
+      let tmp6 = item10022;
+      let type = item10022.type;
+      if (obj.ITEM === type) {
+        if (null != arg1) {
+          if (true === tmp6.uniform) {
+            if (tmp6.section === arg0) {
+              if (arg1 > tmp6.items) {
+                obj.return();
+                iter.return();
+              } else {
+                obj.return();
+                iter.return();
+                return tmp3;
+              }
+            }
+          }
+          if (null == tmp6.uniform) {
+            if (tmp6.section === arg0) {
+              if (tmp6.item === arg1) {
+                obj.return();
+                iter.return();
+                return tmp3;
+              }
+            }
+          }
+        }
+      } else {
+        if (tmp7.SECTION === type) {
+          if (tmp6.section > arg0) {
+            obj.return();
+            iter.return();
+          } else if (null != arg1) {
+            continue;
+          } else {
+            obj.return();
+            iter.return();
+            return tmp3;
+          }
+        }
+        continue;
+      }
+      continue;
+    }
+    continue;
+  }
+};
+prototype2["getChunkIndexFromSectionItem"] = function getChunkIndexFromSectionItem(arg0) {
+  const self = this;
+  ({ targetSection, targetItem, padBottom } = arg0);
+  if (padBottom === undefined) {
+    padBottom = 16;
+  }
+  const iter = arg0.chunk.data[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let type = nextResult.type;
+    if (obj.ITEM === type) {
+      if (tmp2.section !== targetSection) {
+        continue;
+      } else {
+        if (null == targetItem) {
+          continue;
+        } else if (tmp2.uniform) {
+          if (targetItem >= tmp2.items) {
+            iter.return();
+          } else {
+            let sum = tmp2.layoutStart + tmp2.sectionData.layoutSize + tmp2.itemSize * targetItem;
+            let obj2 = { startIndex: null, endIndex: null };
+            let tmp22 = globalThis;
+            let _Math5 = Math;
+            obj2.startIndex = Math.floor(sum / self.chunkSize);
+            let _Math6 = Math;
+            obj2.endIndex = Math.floor((sum + tmp2.itemSize + padBottom) / self.chunkSize);
+            iter.return();
+            return obj2;
+          }
+        } else if (tmp2.item >= targetItem) {
+          iter.return();
+        } else if (tmp2.item !== targetItem) {
+          continue;
+        } else {
+          let obj3 = { startIndex: null, endIndex: null };
+          let tmp18 = globalThis;
+          let _Math3 = Math;
+          obj3.startIndex = Math.floor((tmp2.layoutStart - tmp2.sectionData.layoutSize) / self.chunkSize);
+          let _Math4 = Math;
+          obj3.endIndex = Math.floor((tmp2.layoutStart + tmp2.layoutSize + padBottom) / self.chunkSize);
+          iter.return();
+          return obj3;
+        }
+        continue;
+      }
+      continue;
+    } else {
+      if (tmp3.SECTION !== type) {
+        continue;
+      } else if (null != targetItem) {
+        continue;
+      } else if (targetSection < tmp2.section) {
+        iter.return();
+      } else if (targetSection === tmp2.section) {
+        obj = { startIndex: null, endIndex: null };
+        let tmp4 = globalThis;
+        let _Math = Math;
+        obj.startIndex = Math.floor(tmp2.layoutStart / self.chunkSize);
+        let _Math2 = Math;
+        obj.endIndex = Math.floor((tmp2.layoutStart + tmp2.layoutSize + padBottom) / self.chunkSize);
+        iter.return();
+        return obj;
+      }
+      continue;
+    }
+    continue;
+  }
+};
+prototype2["computeScrollPosition"] = function computeScrollPosition(arg0, arg1, arg2) {
+  if (null == arg2) {
+    const self = this;
+    if (this.dirty) {
+      self.fullCompute();
+    }
+    const dataCache = self.dataCache;
+    if (arg1 < 0) {
+      return { scrollPosition: 0, size: 0, sectionOffset: 0 };
+    } else {
+      const iter = dataCache[Symbol.iterator]();
+      while (iter !== undefined) {
+        let data = iter.next().data;
+        for (const item10020 of data) {
+          let tmp7 = item10020;
+          let type = item10020.type;
+          if (obj.ITEM === type) {
+            if (null != arg2) {
+              if (true === tmp7.uniform) {
+                if (tmp7.section === arg1) {
+                  if (arg2 > tmp7.items) {
+                    obj.return();
+                    iter.return();
+                  } else {
+                    let obj3 = { scrollPosition: null, size: null, sectionOffset: null };
+                    obj3.scrollPosition = tmp7.sectionData.layoutStart + tmp7.sectionData.layoutSize + tmp7.itemSize * arg2;
+                    obj3.size = tmp7.itemSize;
+                    let num4 = 0;
+                    if (arg0) {
+                      num4 = tmp7.sectionData.layoutSize;
+                    }
+                    obj3.sectionOffset = num4;
+                    obj.return();
+                    iter.return();
+                    return obj3;
+                  }
+                }
+              }
+              if (null == tmp7.uniform) {
+                if (tmp7.section === arg1) {
+                  if (tmp7.item === arg2) {
+                    let obj7 = { scrollPosition: null, size: null, sectionOffset: null };
+                    ({ layoutStart: obj4.scrollPosition, layoutSize: obj4.size } = tmp7);
+                    let num3 = 0;
+                    if (arg0) {
+                      num3 = tmp7.sectionData.layoutSize;
+                    }
+                    obj7.sectionOffset = num3;
+                    obj.return();
+                    iter.return();
+                    return obj7;
+                  }
+                }
+              }
+            }
+          } else {
+            if (tmp8.SECTION === type) {
+              if (tmp7.section > arg1) {
+                obj.return();
+                iter.return();
+              } else {
+                if (null == arg2) {
+                  if (tmp7.section === arg1) {
+                    let obj8 = { scrollPosition: null, size: null, sectionOffset: 0 };
+                    ({ layoutStart: obj2.scrollPosition, layoutSize: obj2.size } = tmp7);
+                    obj.return();
+                    iter.return();
+                    return obj8;
+                  }
+                }
+                continue;
+              }
+            }
+            continue;
+          }
+          continue;
+        }
+        continue;
+      }
+    }
+  }
+};
+prototype2["getSectionItemFromPosition"] = function getSectionItemFromPosition(arg0) {
+  obj = arg1;
+  if (arg1 === undefined) {
+    obj = map;
+  }
+  const self = this;
+  if (this.dirty) {
+    self.fullCompute();
+  }
+  let num = 0;
+  let num2 = 0;
+  const iter = self.items[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp4 = nextResult;
+    let sum = nextResult.layoutStart + num;
+    let layoutSize = obj.get(nextResult.recyclerKey);
+    let tmp7 = layoutSize;
+    if (layoutSize == null) {
+      layoutSize = tmp4.layoutSize;
+    }
+    if (layoutSize > 0) {
+      if (arg0 >= sum) {
+        if (arg0 <= sum + tmp9) {
+          num2 = (arg0 - sum) / layoutSize;
+          let tmp = nextResult;
+          iter.return();
+          break;
+        }
+        let obj2 = { item: tmp, positionPercentage: num2 };
+        return obj2;
+      }
+    }
+    let num3 = 0;
+    if (null != tmp7) {
+      num3 = tmp7 - tmp4.layoutSize;
+    }
+    num = num + num3;
+    continue;
+  }
+};
+prototype2["setDisableRecycling"] = function setDisableRecycling(disableRecycling) {
+  this.disableRecycling = disableRecycling;
+};
+prototype2["getSize"] = function getSize() {
+  const self = this;
+  if (this.dirty) {
+    self.fullCompute();
+  }
+  return self.size;
+};
+prototype2["isDirty"] = function isDirty() {
+  return this.dirty;
+};
+const __initData = { code: "function FastListTsx1(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}" };
+let closure_20 = noop.memo(function FastListStickySectionRendererComponent(children) {
+  ({ layoutStart, layoutSize, horizontal } = children);
+  ({ nextSectionLayoutPosition, scrollPosValue } = children);
+  ({ fastListInstance, section, debug, recyclerKey } = children);
+  let items = [-1, 0];
+  const items1 = [0, 0];
+  items.push(layoutStart);
+  items1.push(0);
+  if (nextSectionLayoutPosition == null) {
+    nextSectionLayoutPosition = 0;
+  }
+  const diff = nextSectionLayoutPosition - layoutSize;
+  if (diff >= layoutStart) {
+    let num2 = 0;
+    if (obj.isAndroid()) {
+      num2 = -1;
+    }
+    items.push(diff, diff + 1);
+    items1.push(diff - layoutStart + num2, diff - layoutStart + num2);
+    obj = horizontal(items[9]);
+  } else {
+    items.push(layoutStart + 1);
+    items1.push(1);
+  }
+  class I {
+    constructor() {
+      obj = scrollPosValue;
+      interpolateResult = null;
+      if (null != scrollPosValue) {
+        tmp2 = closure_0;
+        tmp3 = closure_2;
+        obj2 = closure_0(closure_2[10]);
+        tmp4 = closure_2;
+        tmp5 = closure_3;
+        interpolateResult = obj2.interpolate(obj.get(), closure_2, closure_3);
+      }
+      if (null == interpolateResult) {
+        obj1 = { transform: null };
+        obj1.transform = undefined;
+        return obj1;
+      } else {
+        tmp6 = horizontal;
+        if (horizontal) {
+          obj6 = { translateX: null };
+          obj6.translateX = interpolateResult;
+          obj7 = obj6;
+        } else {
+          obj7 = { translateY: null };
+          obj7.translateY = interpolateResult;
+        }
+        items = [];
+        items[0] = obj7;
+        tmp7 = items;
+      }
+      return;
+    }
+  }
+  let obj2 = horizontal(items[10]);
+  I.__closure = { scrollPosValue, interpolate: horizontal(items[10]).interpolate, inputRange: items, outputRange: items1, horizontal };
+  I.__workletHash = 699810682881;
+  I.__initData = __initData;
+  const Children = noop.Children;
+  const animatedStyle = obj2.useAnimatedStyle(I);
+  const onlyResult = Children.only(children.children(section, fastListInstance, scrollPosValue, layoutStart));
+  let style;
+  let obj3 = { scrollPosValue, interpolate: horizontal(items[10]).interpolate, inputRange: items, outputRange: items1, horizontal };
+  let obj4 = noop;
+  const tmp12 = closure_10;
+  if (null != onlyResult) {
+    if ("props" in onlyResult) {
+      style = onlyResult.props.style;
+    }
+  }
+  const items2 = [style, , ];
+  let tmp15;
+  if (!horizontal) {
+    tmp15 = layoutSize;
+  }
+  const size = { zIndex: 10, position: "relative", height: tmp15, width: null };
+  let tmp16;
+  if (horizontal) {
+    tmp16 = layoutSize;
+  }
+  let obj5 = { style: items2, collapsable: false, children: null };
+  size.width = tmp16;
+  items2[1] = size;
+  items2[2] = animatedStyle;
+  let cloneElementResult;
+  if (null != onlyResult) {
+    const obj6 = { style: { flex: 1 } };
+    cloneElementResult = obj4.cloneElement(onlyResult, obj6);
+  }
+  const items3 = [cloneElementResult, false];
+  obj5.children = items3;
+  return tmp12(scrollPosValue(items[11]), obj5);
+});
+let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
+  ({ layoutSize, children, fastListInstance, section, recyclerKey, horizontal } = disableWrapper);
+  if (disableWrapper.disableWrapper) {
+    if (!disableWrapper.debug) {
+      obj = { children: children(section, fastListInstance) };
+      return closure_1_11(closure_1_12, obj);
+    }
+  }
+  if (horizontal) {
+    const obj2 = { width: layoutSize };
+    let obj3 = obj2;
+  } else {
+    obj3 = { height: layoutSize };
+  }
+  const obj4 = { collapsable: false, style: obj3, preventClipping: true, children: null };
+  fastListInstance = children(section, fastListInstance);
+  section = [fastListInstance, false];
+  obj4.children = section;
+  closure_1_10(NativeViewDefault, obj4);
+});
+let closure_22 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
+  ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
+  if (disableWrapper.disableWrapper) {
+    if (!disableWrapper.debug) {
+      obj = { children: children(section, fastListInstance) };
+      return closure_1_11(closure_1_12, obj);
+    }
+  }
+  if (horizontal) {
+    const obj2 = { width: layoutSize };
+    let obj3 = obj2;
+  } else {
+    obj3 = { height: layoutSize };
+  }
+  const obj4 = { collapsable: false, style: obj3, children: null };
+  children = children(section, fastListInstance);
+  section = [children, false];
+  obj4.children = section;
+  closure_1_10(NativeViewDefault, obj4);
+});
+let closure_23 = noop.memo(function _FastListItemRenderer(disableWrapper) {
+  ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
+  if (disableWrapper.disableWrapper) {
+    if (!disableWrapper.debug) {
+      if (children != null) {
+        let childrenResult = children(section, item, fastListInstance);
+      }
+    }
+    return childrenResult;
+  }
+  if (horizontal) {
+    const obj2 = { width: layoutSize };
+    let style = obj2;
+  } else {
+    style = { height: layoutSize };
+  }
+  const obj3 = { collapsable: false, style, children: null };
+  let childrenResult1;
+  if (children != null) {
+    childrenResult1 = children(section, item, fastListInstance);
+  }
+  const items = [childrenResult1, false];
+  obj3.children = items;
+  childrenResult = closure_1_10(NativeViewDefault, obj3);
+});
+let closure_24 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
+  ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
+  if (disableWrapper.disableWrapper) {
+    if (!disableWrapper.debug) {
+      obj = { children: children(fastListInstance) };
+      return closure_1_11(closure_1_12, obj);
+    }
+  }
+  if (horizontal) {
+    const obj2 = { width: layoutSize };
+    let obj3 = obj2;
+  } else {
+    obj3 = { height: layoutSize };
+  }
+  const obj4 = { collapsable: false, style: obj3, preventClipping: true, children: null };
+  children = children(fastListInstance);
+  fastListInstance = [children, false];
+  obj4.children = fastListInstance;
+  closure_1_10(NativeViewDefault, obj4);
+});
+let closure_25 = noop.memo(function _FastListSpacer(layoutSize) {
+  layoutSize = layoutSize.layoutSize;
+  if (layoutSize.horizontal) {
+    obj = { width: layoutSize };
+    let style = obj;
+  } else {
+    style = { height: layoutSize };
+  }
+  return closure_1_11(NativeViewDefault, { collapsable: false, style });
+});
+let c26 = 1000;
+let c27 = 0.5;
+class FastListScrollAnchor {
+  constructor(arg0) {
+    merged = Object.assign({ isCustomAnchor: false });
+    merged.getScrollPosition = global;
+    return merged;
+  }
+}
+const prototype3 = FastListScrollAnchor.prototype;
+prototype3["hasAnchor"] = function hasAnchor() {
+  return null != this.anchorId;
+};
+prototype3["cleanAnchor"] = function cleanAnchor(arg0) {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
+  }
+  const self = this;
+  let isCustomAnchor = !flag;
+  if (!flag) {
+    isCustomAnchor = self.isCustomAnchor;
+  }
+  if (!isCustomAnchor) {
+    self.isCustomAnchor = false;
+    self.anchorId = undefined;
+    self.anchorOffset = undefined;
+  }
+};
+prototype3["handleUserScroll"] = function handleUserScroll() {
+  this.cleanAnchor(true);
+};
+prototype3["setCustomAnchor"] = function setCustomAnchor(getAnchorIdFromIndex, anchorOffset, section, item) {
+  const self = this;
+  this.isCustomAnchor = true;
+  this.anchorOffset = anchorOffset;
+  this.anchorId = getAnchorIdFromIndex(section, item);
+  if (null == this.anchorId) {
+    self.cleanAnchor(true);
+  }
+};
+prototype3["findOrUpdateAnchor"] = function findOrUpdateAnchor(getAnchorIdFromIndex, items) {
+  const self = this;
+  const scrollPosition = this.getScrollPosition();
+  this.cleanAnchor();
+  const iter = items[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp4 = nextResult;
+    if (nextResult.type === obj.ITEM) {
+      if (self.isCustomAnchor) {
+        let num = tmp4.item;
+        if (num == null) {
+          num = 0;
+        }
+        if (self.anchorId === getAnchorIdFromIndex(tmp4.section, num)) {
+          self.anchorOffset = nextResult.layoutStart - scrollPosition;
+          iter.return();
+        }
+      }
+      if (!self.isCustomAnchor) {
+        if (tmp4.layoutStart >= scrollPosition) {
+          self.anchorOffset = tmp4.layoutStart - scrollPosition;
+          ({ item, section } = tmp4);
+          if (item == null) {
+            item = 0;
+          }
+          self.anchorId = getAnchorIdFromIndex(section, item);
+          iter.return();
+        }
+      }
+    }
+    continue;
+  }
+};
+prototype3["getAnchorIndex"] = function getAnchorIndex(getAnchorIndexFromId) {
+  const self = this;
+  if (null != this.anchorId) {
+    self.cleanAnchor();
+    return getAnchorIndexFromId(self.anchorId);
+  }
+};
+const PureComponent = noop.PureComponent;
+class FastList extends PureComponent {
+  constructor(arg0) {
+    tmp1 = new tmp(global, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2);
+    closure_0 = tmp1;
+    tmp1.containerSize = 0;
+    tmp1.scrollPos = 0;
+    obj2 = closure_0(closure_2[12]);
+    tmp1.scrollPosValue = obj2.createFakeSharedValue(0);
+    manualRef = tmp1.props.manualRef;
+    if (manualRef == null) {
+      tmp8 = closure_6;
+      manualRef = closure_6.createRef();
+    }
+    tmp1.scrollView = manualRef;
+    tmp1.getItems = function getItems() {
+      return closure_0.state.items;
+    };
+    tmp1.getScrollPosition = function getScrollPosition() {
+      return closure_0.scrollPos;
+    };
+    tmp1.disableAnchoringTimeout = undefined;
+    tmp1.deferredCompute = -1;
+    tmp1.deferNextCompute = false;
+    if (typeof FastListScrollAnchor === "function") {
+      merged = Object.assign({ isCustomAnchor: false });
+      merged.getScrollPosition = tmp9;
+      tmp1.scrollAnchor = merged;
+      tmp1.viewabilityDebounce = -1;
+      tmp1.previouslyViewableItems = [];
+      tmp1._scrollPositionToPoint = function _scrollPositionToPoint(initialScrollStart) {
+        const horizontal = closure_0.props.horizontal;
+        let num = 0;
+        if (horizontal) {
+          num = initialScrollStart;
+        }
+        const point = { x: num, y: null };
+        let num2 = 0;
+        if (!horizontal) {
+          num2 = initialScrollStart;
+        }
+        point.y = num2;
+        return point;
+      };
+      tmp1._calculateScrollPosition = function _calculateScrollPosition(paddingStart) {
+        ({ itemCoords, orientation } = paddingStart);
+        if (orientation === undefined) {
+          orientation = "top";
+        }
+        let num = paddingStart.paddingStart;
+        if (num === undefined) {
+          num = 0;
+        }
+        let num2 = paddingStart.paddingEnd;
+        if (num2 === undefined) {
+          num2 = 0;
+        }
+        ({ scrollPosition, size, sectionOffset } = itemCoords);
+        if (closure_0.containerSize > 0) {
+          let num3 = tmp.containerSize;
+        } else {
+          num3 = tmp.props.chunkBase;
+          if (num3 == null) {
+            num3 = 0;
+          }
+        }
+        if (size >= num3) {
+          orientation = "top";
+        }
+        if ("visible" === orientation) {
+          if (scrollPosition + sectionOffset >= tmp.scrollPos + num) {
+            if (scrollPosition + size <= tmp.scrollPos + (num3 - num2)) {
+              return null;
+            }
+          }
+          if (size <= num3) {
+            if (scrollPosition >= tmp.scrollPos) {
+              let diff = scrollPosition + size + num2 - num3;
+            }
+          }
+          diff = scrollPosition - (sectionOffset + num);
+        } else if ("top" === orientation) {
+          diff = scrollPosition - (sectionOffset + num);
+        } else {
+          diff = scrollPosition;
+          if ("center" === orientation) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const sum = itemCoords.scrollPosition + Math.floor(itemCoords.size / 2);
+            diff = sum - Math.floor(num3 / 2);
+          }
+        }
+        return Math.max(0, Math.min(diff, paddingStart.fullSize - num3));
+      };
+      props = tmp1.props;
+      num = props.chunkBase;
+      obj1 = { headerSize: null, footerSize: null, sectionSize: null, itemSize: null, sectionFooterSize: null, sections: null, insetStart: null, insetEnd: null, stickyHeaderFooter: null, getRecyclerKey: null, persistantKeys: null, disableRecyclingOnFullCompute: null };
+      ({ headerSize: obj3.headerSize, footerSize: obj3.footerSize, sectionSize: obj3.sectionSize, itemSize: obj3.itemSize, sectionFooterSize: obj3.sectionFooterSize, sections: obj3.sections, insetStart: obj3.insetStart, insetEnd: obj3.insetEnd, stickyHeaderFooter: obj3.stickyHeaderFooter, getRecyclerKey: obj3.getRecyclerKey, persistantKeys: obj3.persistantKeys, disableRecyclingOnFullCompute: obj3.disableRecyclingOnFullCompute } = props);
+      tmp11 = new.target;
+      if (typeof FastListComputer === "function") {
+        merged1 = Object.assign({ chunkSize: 0, uniform: false, dataCache: null, size: 0, dirty: true, lastStartChunk: -1, lastEndChunk: -1, items: null, persistantItemData: null, disableRecycling: false });
+        merged1[2] = [];
+        merged1[7] = [];
+        merged1[8] = [];
+        merged1.props = obj1;
+        updatePropsResult = merged1.updateProps(obj1);
+        if (num == null) {
+          num = 0;
+        }
+        flag = true;
+        tmp1.state = tmp1.getInitialState(num, merged1, true);
+        tmp1.handleViewabilityChange = function handleViewabilityChange() {
+          const onViewableItemsChanged = closure_0.props.onViewableItemsChanged;
+          if (null != onViewableItemsChanged) {
+            const items = tmp.state.items;
+            const sum = tmp.scrollPos + tmp.containerSize;
+            const items1 = [];
+            const iter = items[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let tmp5 = nextResult;
+              if (nextResult.layoutStart > sum) {
+                iter.return();
+                break;
+              } else {
+                let _Math = Math;
+                let bound = Math.max(tmp5.layoutStart, tmp22);
+                let _Math2 = Math;
+                let tmp8 = bound;
+                let bound1 = Math.min(tmp5.layoutStart + tmp5.layoutSize, sum);
+                if (bound < bound1) {
+                  if ((tmp10 - tmp8) / tmp5.layoutSize >= tmp21) {
+                    let arr = items1.push(tmp5.recyclerKey);
+                  }
+                }
+                continue;
+              }
+              obj = discord_common_shallowEqual;
+              let tmp19 = closure_0;
+              if (!obj.areArraysShallowEqual(items1, closure_0.previouslyViewableItems)) {
+                tmp19.previouslyViewableItems = items1;
+                let result = onViewableItemsChanged(items1);
+              }
+            }
+          }
+        };
+        tmp1.isVisible = function isVisible(arg0) {
+          let num = arg1;
+          if (arg1 === undefined) {
+            num = 0;
+          }
+          let num2 = arg2;
+          if (arg2 === undefined) {
+            num2 = 0;
+          }
+          return arg0 >= closure_0.scrollPos + num && arg0 <= closure_0.scrollPos + closure_0.containerSize - num2;
+        };
+        tmp1.scrollToTop = function scrollToTop() {
+          let flag = arg0;
+          if (arg0 === undefined) {
+            flag = true;
+          }
+          const scrollView = closure_0.scrollView;
+          if (scrollView != null) {
+            const current = scrollView.current;
+            if (current != null) {
+              const point = { x: 0, y: 0, animated: flag };
+              current.scrollTo(point);
+            }
+          }
+        };
+        tmp1.scrollToLocation = function scrollToLocation(orientation) {
+          ({ section, item, animated } = orientation);
+          if (animated === undefined) {
+            animated = false;
+          }
+          let str = orientation.orientation;
+          if (str === undefined) {
+            str = "top";
+          }
+          let num = orientation.paddingStart;
+          if (num === undefined) {
+            num = 0;
+          }
+          let num2 = orientation.paddingEnd;
+          if (num2 === undefined) {
+            num2 = 0;
+          }
+          let flag = orientation.setAnchor;
+          if (flag === undefined) {
+            flag = false;
+          }
+          const current = closure_0.scrollView.current;
+          if (null == current) {
+            return false;
+          } else {
+            ({ getAnchorIdFromIndex, stickySectionsVariant } = obj.props);
+            let str2 = "default";
+            if (undefined !== stickySectionsVariant) {
+              str2 = stickySectionsVariant;
+            }
+            const fastListComputer = obj.state.fastListComputer;
+            const scrollPosition = fastListComputer.computeScrollPosition("default" === str2, section, item);
+            if (null == scrollPosition) {
+              return false;
+            } else {
+              if ("visible" === str) {
+                if (obj.isVisible(scrollPosition.scrollPosition, num, num2)) {
+                  return false;
+                }
+              }
+              const obj2 = { itemCoords: scrollPosition, fullSize: fastListComputer.getSize(), orientation: str, paddingStart: num, paddingEnd: num2 };
+              const result = obj._calculateScrollPosition(obj2);
+              let tmp3 = !animated;
+              if (!animated) {
+                tmp3 = flag;
+              }
+              if (tmp3) {
+                tmp3 = null != getAnchorIdFromIndex;
+              }
+              if (tmp3) {
+                const scrollAnchor = obj.scrollAnchor;
+                let num3 = result;
+                if (result == null) {
+                  num3 = 0;
+                }
+                scrollAnchor.setCustomAnchor(getAnchorIdFromIndex, scrollPosition.scrollPosition - num3, section, item);
+              }
+              let flag2 = null != result && result !== obj.scrollPos;
+              if (flag2) {
+                if (!animated) {
+                  obj.scrollPos = result;
+                  const blocks = obj.computeBlocks();
+                }
+                const obj3 = {};
+                const merged = Object.assign(obj._scrollPositionToPoint(result));
+                obj3.animated = animated;
+                current.scrollTo(obj3);
+                flag2 = true;
+              }
+              return flag2;
+            }
+          }
+        };
+        tmp1.scrollTo = function scrollTo(initialScrollStart) {
+          let flag = arg1;
+          if (arg1 === undefined) {
+            flag = false;
+          }
+          const current = closure_0.scrollView.current;
+          const fastListComputer = closure_0.state.fastListComputer;
+          let tmp = null != current;
+          if (tmp) {
+            let flag2 = initialScrollStart <= fastListComputer.getSize() - obj.containerSize && initialScrollStart !== obj.scrollPos;
+            if (flag2) {
+              const obj2 = {};
+              const merged = Object.assign(obj._scrollPositionToPoint(initialScrollStart));
+              obj2.animated = flag;
+              current.scrollTo(obj2);
+              flag2 = true;
+            }
+            tmp = flag2;
+          }
+          return tmp;
+        };
+        tmp1.handleScroll = function handleScroll(nativeEvent) {
+          ({ contentInset, horizontal, onScroll, onEndReached, endReachedThreshold, EXPERIMENTAL_enableAnchorWhileScrolling } = closure_0.props);
+          ({ fastListComputer, hasReachedEndBefore } = closure_0.state);
+          const layoutMeasurement = nativeEvent.nativeEvent.layoutMeasurement;
+          const tmp2 = horizontal ? layoutMeasurement.width : layoutMeasurement.height;
+          let num = horizontal ? contentInset.left : contentInset.top;
+          if (num == null) {
+            num = 0;
+          }
+          let num2 = horizontal ? contentInset.right : contentInset.bottom;
+          if (num2 == null) {
+            num2 = 0;
+          }
+          closure_0.containerSize = tmp2 - num - num2;
+          const bound = Math.max(0, obj.getScrollPositionFromEvent(nativeEvent));
+          const bound1 = Math.min(bound, fastListComputer.getSize() - obj.containerSize);
+          closure_0.scrollPos = bound1;
+          if (onScroll != null) {
+            onScroll(nativeEvent);
+          }
+          if (closure_0.deferNextCompute) {
+            obj.deferNextCompute = false;
+            if (-1 !== obj.deferredCompute) {
+              const _cancelAnimationFrame = cancelAnimationFrame;
+              cancelAnimationFrame(obj.deferredCompute);
+            }
+            const _requestAnimationFrame = requestAnimationFrame;
+            obj.deferredCompute = requestAnimationFrame(() => closure_1_0.computeBlocks());
+          } else {
+            const blocks = obj.computeBlocks();
+          }
+          if (!tmp) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(obj.disableAnchoringTimeout);
+            const _setTimeout = setTimeout;
+            obj.disableAnchoringTimeout = setTimeout(() => {
+              clearTimeout(closure_1_0.disableAnchoringTimeout);
+              closure_1_0.disableAnchoringTimeout = undefined;
+            }, 100);
+          }
+          if (null != onEndReached) {
+            const contentSize = nativeEvent.nativeEvent.contentSize;
+            if (endReachedThreshold == null) {
+              endReachedThreshold = 0;
+            }
+            const rounded = Math.ceil((horizontal ? contentSize.width : contentSize.height) - endReachedThreshold - tmp2);
+            const _Math = Math;
+            const rounded1 = Math.ceil(bound1);
+            if (rounded1 >= rounded) {
+              if (!hasReachedEndBefore) {
+                obj.setState({ hasReachedEndBefore: true });
+                const obj2 = { distanceFromEnd: rounded1 - rounded };
+                onEndReached(obj2);
+              }
+            }
+            let tmp15 = !tmp12;
+            if (rounded1 < rounded) {
+              tmp15 = hasReachedEndBefore;
+            }
+            if (tmp15) {
+              obj.setState({ hasReachedEndBefore: false });
+            }
+            const tmp9 = horizontal ? contentSize.width : contentSize.height;
+          }
+          const result = obj.queueViewabilityChange();
+        };
+        tmp1.handleLayout = function handleLayout(nativeEvent) {
+          const state = closure_0.state;
+          const fastListComputer = state.fastListComputer;
+          ({ contentInset, onLayout, horizontal, chunkBase } = closure_0.props);
+          const layout = nativeEvent.nativeEvent.layout;
+          let num = horizontal ? contentInset.left : contentInset.top;
+          if (num == null) {
+            num = 0;
+          }
+          let num2 = horizontal ? contentInset.right : contentInset.bottom;
+          if (num2 == null) {
+            num2 = 0;
+          }
+          closure_0.containerSize = (horizontal ? layout.width : layout.height) - num - num2;
+          if (null == chunkBase) {
+            fastListComputer.setInfo(obj.containerSize);
+          }
+          if (onLayout != null) {
+            onLayout(nativeEvent, obj);
+          }
+          if (state.isFirstLayout) {
+            if (null == chunkBase) {
+              obj.setState(obj.getInitialState(obj.containerSize, fastListComputer, false));
+            }
+            const result = obj.queueViewabilityChange();
+          }
+          const blocks = obj.computeBlocks();
+        };
+        tmp1.handleMomentumScrollEnd = function handleMomentumScrollEnd(arg0) {
+          const onScrollEnd = closure_0.props.onScrollEnd;
+          if (onScrollEnd != null) {
+            onScrollEnd(arg0);
+          }
+        };
+        tmp1.handleScrollBeginDrag = function handleScrollBeginDrag(arg0) {
+          const scrollAnchor = closure_0.scrollAnchor;
+          scrollAnchor.handleUserScroll();
+          const props = closure_0.props;
+          const onScrollBeginDrag = props.onScrollBeginDrag;
+          if (onScrollBeginDrag != null) {
+            onScrollBeginDrag(arg0);
+          }
+        };
+        props2 = tmp1.props;
+        ({ getAnchorIdFromIndex, getAnchorIndexFromId } = props2);
+        num2 = 5;
+        if (props2.batchesToRender < 5) {
+          tmp29 = globalThis;
+          _Error4 = Error;
+          tmp30 = new.target;
+          str4 = "FastList: `batchesToRender` must be >= 6";
+          tmp31 = new.target;
+          error = new Error("FastList: `batchesToRender` must be >= 6");
+          tmp33 = error;
+          throw error;
+        } else {
+          if (null != getAnchorIdFromIndex) {
+            if (null != getAnchorIdFromIndex) {
+            }
+            tmp13 = globalThis;
+            _Error = Error;
+            tmp14 = new.target;
+            str = "FastList: You must define BOTH `getAnchorIndexFromId` and `getAnchorIdFromIndex`, or neither";
+            tmp15 = new.target;
+            error1 = new Error("FastList: You must define BOTH `getAnchorIndexFromId` and `getAnchorIdFromIndex`, or neither");
+            tmp17 = error1;
+            throw error1;
+          }
+          viewabilityConfig = tmp1.getViewabilityConfig();
+          if (viewabilityConfig.minimumViewTime <= 0) {
+            tmp24 = globalThis;
+            _Error3 = Error;
+            tmp25 = new.target;
+            str3 = "FastList: `viewabilityConfig.minimumViewTime` must be greater than 0";
+            tmp26 = new.target;
+            error2 = new Error("FastList: `viewabilityConfig.minimumViewTime` must be greater than 0");
+            tmp28 = error2;
+            throw error2;
+          } else {
+            if (viewabilityConfig.visibilityThreshold > 0) {
+              num3 = 1;
+              if (viewabilityConfig.visibilityThreshold <= 1) {
+                return tmp1;
+              }
+            }
+            tmp19 = globalThis;
+            _Error2 = Error;
+            tmp20 = new.target;
+            str2 = "FastList: `viewabilityConfig.visibilityThreshold` must be floating point value greater than 0 and less than 1";
+            tmp21 = new.target;
+            error3 = new Error("FastList: `viewabilityConfig.visibilityThreshold` must be floating point value greater than 0 and less than 1");
+            tmp23 = error3;
+            throw error3;
+          }
+        }
+      } else {
+        str6 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      str5 = "Trying to call a non-function";
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+}
+const prototype4 = FastList.prototype;
+FastList["getDerivedStateFromProps"] = function getDerivedStateFromProps(headerSize, fastListComputer) {
+  fastListComputer = fastListComputer.fastListComputer;
+  fastListComputer.updateProps({ headerSize: headerSize.headerSize, footerSize: headerSize.footerSize, sectionSize: headerSize.sectionSize, itemSize: headerSize.itemSize, sectionFooterSize: headerSize.sectionFooterSize, sections: headerSize.sections, insetStart: headerSize.insetStart, insetEnd: headerSize.insetEnd, stickyHeaderFooter: headerSize.stickyHeaderFooter, getRecyclerKey: headerSize.getRecyclerKey, persistantKeys: headerSize.persistantKeys, disableRecyclingOnFullCompute: headerSize.disableRecyclingOnFullCompute });
+  if (0 === fastListComputer.batchSize) {
+    const obj2 = {};
+    const merged = Object.assign(fastListComputer);
+    let num = headerSize.insetStart;
+    if (num == null) {
+      num = 0;
+    }
+    let num2 = headerSize.insetEnd;
+    if (num2 == null) {
+      num2 = 0;
+    }
+    obj2.size = num + num2;
+    obj2.items = [];
+    let tmp3 = obj2;
+  } else {
+    tmp3 = null;
+    if (fastListComputer.isDirty()) {
+      const obj3 = {};
+      const merged1 = Object.assign(fastListComputer);
+      let items = fastListComputer.items;
+      ({ blockStart, blockEnd } = fastListComputer);
+      if (items == null) {
+        items = [];
+      }
+      const merged2 = Object.assign(fastListComputer.compute(blockStart, blockEnd, items));
+      tmp3 = obj3;
+    }
+  }
+  return tmp3;
+};
+prototype4["computeScrollPosition"] = function computeScrollPosition(arg0, arg1) {
+  const fastListComputer = this.state.fastListComputer;
+  return fastListComputer.computeScrollPosition(false, arg0, arg1);
+};
+prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo, isFirstLayout) {
+  let items = arg3;
+  if (arg3 === undefined) {
+    items = [];
+  }
+  const self = this;
+  const props = this.props;
+  ({ batchesToRender, initialScrollSection } = props);
+  let num = 0;
+  if (undefined !== initialScrollSection) {
+    num = initialScrollSection;
+  }
+  ({ initialScrollItem, initialScrollOrientation } = props);
+  let str = "visible";
+  if (undefined !== initialScrollOrientation) {
+    str = initialScrollOrientation;
+  }
+  ({ initialScrollStart, stickySectionsVariant } = props);
+  let str2 = "default";
+  if (undefined !== stickySectionsVariant) {
+    str2 = stickySectionsVariant;
+  }
+  const horizontal = props.horizontal;
+  const scrollPosValue = props.scrollPosValue;
+  setInfo.setInfo(endImportTime);
+  let num2 = initialScrollStart;
+  if (initialScrollStart == null) {
+    num2 = 0;
+  }
+  if (null != initialScrollStart) {
+    let point = self._scrollPositionToPoint(initialScrollStart);
+    let tmp3 = num2;
+  } else if (num > 0) {
+    tmp3 = num2;
+    if (endImportTime > 0) {
+      const scrollPosition = setInfo.computeScrollPosition("default" === str2, num, initialScrollItem);
+      tmp3 = num2;
+      if (null != scrollPosition) {
+        obj = { itemCoords: scrollPosition, fullSize: setInfo.getSize(), orientation: str, paddingEnd: 16 };
+        const result = self._calculateScrollPosition(obj);
+        let diff = result;
+        if (result == null) {
+          diff = scrollPosition.scrollPosition - scrollPosition.sectionOffset;
+        }
+        tmp3 = diff;
+        if (null != result) {
+          point = self._scrollPositionToPoint(result);
+          tmp3 = diff;
+        }
+      }
+    }
+  } else {
+    tmp3 = num2;
+  }
+  if (isFirstLayout) {
+    if (endImportTime > 0) {
+      if (0 === endImportTime) {
+        let obj2 = { batchSize: 0, blockStart: 0, blockEnd: 0 };
+      } else {
+        const _Math = Math;
+        const rounded = Math.ceil(endImportTime);
+        const _Math2 = Math;
+        const _Math3 = Math;
+        const rounded1 = Math.floor(tmp3);
+        const rounded2 = Math.ceil(rounded / 4);
+        const _Math4 = Math;
+        const _Math5 = Math;
+        const result1 = Math.max(0, Math.round((rounded1 + rounded / 2) / rounded2) - batchesToRender / 2) * rounded2;
+        obj2 = { batchSize: rounded2, blockStart: result1, blockEnd: result1 + rounded2 * batchesToRender };
+      }
+      ({ batchSize, blockStart, blockEnd } = obj2);
+    }
+  }
+  const sum = tmp3 + endImportTime;
+  const rounded3 = Math.ceil(endImportTime / 4);
+  if (point == null) {
+    point = { x: 0, y: 0 };
+  }
+  const tmp10 = undefined !== horizontal && horizontal ? point.x : point.y;
+  self.scrollPos = tmp10;
+  if (null != scrollPosValue) {
+    const result2 = scrollPosValue.set(tmp10);
+    self.scrollPosValue = scrollPosValue;
+  } else {
+    self.scrollPosValue = ReanimatedRexport2.makeMutable(tmp10);
+  }
+  if (endImportTime > 0) {
+    let computeResult = setInfo.compute(tmp3, sum, items, true);
+  } else {
+    computeResult = { size: 0, items: [] };
+  }
+  const obj4 = {};
+  const merged = Object.assign(computeResult);
+  obj4.batchSize = rounded3;
+  obj4.blockStart = tmp3;
+  obj4.blockEnd = sum;
+  obj4.isFirstLayout = isFirstLayout;
+  obj4.fastListComputer = setInfo;
+  obj4.initialContentOffset = point;
+  obj4.hasReachedEndBefore = false;
+  return obj4;
+};
+prototype4["componentDidMount"] = function componentDidMount() {
+  const result = this.queueViewabilityChange();
+};
+prototype4["getSnapshotBeforeUpdate"] = function getSnapshotBeforeUpdate(getAnchorIdFromIndex, isFirstLayout) {
+  const self = this;
+  getAnchorIdFromIndex = getAnchorIdFromIndex.getAnchorIdFromIndex;
+  const EXPERIMENTAL_enableAnchorWhileScrolling = this.props.EXPERIMENTAL_enableAnchorWhileScrolling;
+  isFirstLayout = self.state.isFirstLayout;
+  if (tmp) {
+    let tmp4 = null == getAnchorIdFromIndex || isFirstLayout;
+    if (!tmp4) {
+      tmp4 = isFirstLayout !== isFirstLayout.isFirstLayout;
+    }
+    if (!tmp4) {
+      const scrollAnchor = self.scrollAnchor;
+      scrollAnchor.findOrUpdateAnchor(getAnchorIdFromIndex, isFirstLayout.items);
+    }
+    const scrollAnchor2 = self.scrollAnchor;
+    let tmp2 = scrollAnchor2.hasAnchor() || null;
+    const tmp7 = scrollAnchor2.hasAnchor() || null;
+  } else {
+    tmp2 = null;
+  }
+  return tmp2;
+};
+prototype4["componentDidUpdate"] = function componentDidUpdate(scrollPosValue, isFirstLayout, arg2) {
+  const self = this;
+  if (scrollPosValue.scrollPosValue !== this.props.scrollPosValue) {
+    const _Error = Error;
+    const error = new Error("FastList: scrollPosValue cannot changed after mounting");
+    throw error;
+  } else {
+    if (!self.state.isFirstLayout) {
+      if (isFirstLayout.isFirstLayout) {
+        if (null == self.props.chunkBase) {
+          const current = self.scrollView.current;
+          if (current != null) {
+            current.measure(() => self.restoreScrollPosition());
+          }
+        }
+      }
+      if (self.state.items !== isFirstLayout.items) {
+        const result = self.queueViewabilityChange();
+      }
+    }
+    if (arg2) {
+      self.anchorScroll();
+    }
+  }
+};
+prototype4["getViewabilityConfig"] = function getViewabilityConfig() {
+  const viewabilityConfig = this.props.viewabilityConfig;
+  let minimumViewTime;
+  if (viewabilityConfig != null) {
+    minimumViewTime = viewabilityConfig.minimumViewTime;
+  }
+  if (minimumViewTime == null) {
+    minimumViewTime = c26;
+  }
+  obj = { minimumViewTime, visibilityThreshold: null };
+  let visibilityThreshold;
+  if (viewabilityConfig != null) {
+    visibilityThreshold = viewabilityConfig.visibilityThreshold;
+  }
+  if (visibilityThreshold == null) {
+    visibilityThreshold = c27;
+  }
+  obj.visibilityThreshold = visibilityThreshold;
+  return obj;
+};
+prototype4["queueViewabilityChange"] = function queueViewabilityChange() {
+  const self = this;
+  if (null != this.props.onViewableItemsChanged) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(self.viewabilityDebounce);
+    const _setTimeout = setTimeout;
+    self.viewabilityDebounce = setTimeout(self.handleViewabilityChange, self.getViewabilityConfig().minimumViewTime);
+  }
+};
+prototype4["reset"] = function reset() {
+  const self = this;
+  let num = this.props.chunkBase;
+  const state = this.state;
+  ({ fastListComputer, items } = state);
+  if (!state.isFirstLayout) {
+    ({ setState, getInitialState } = self);
+    if (num == null) {
+      num = 0;
+    }
+    setState(getInitialState(num, fastListComputer, false, items));
+  }
+};
+prototype4["componentWillUnmount"] = function componentWillUnmount() {
+  const self = this;
+  if (-1 !== this.deferredCompute) {
+    const _cancelAnimationFrame = cancelAnimationFrame;
+    cancelAnimationFrame(self.deferredCompute);
+  }
+  if (-1 !== self.viewabilityDebounce) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(self.viewabilityDebounce);
+  }
+};
+prototype4["anchorScroll"] = function anchorScroll() {
+  const self = this;
+  ({ getAnchorIndexFromId, stickySectionsVariant } = this.props);
+  let str = "default";
+  if (undefined !== stickySectionsVariant) {
+    str = stickySectionsVariant;
+  }
+  const fastListComputer = self.state.fastListComputer;
+  if (null != getAnchorIndexFromId) {
+    const anchorOffset = self.scrollAnchor.anchorOffset;
+    if (null != anchorOffset) {
+      const scrollAnchor = self.scrollAnchor;
+      const anchorIndex = scrollAnchor.getAnchorIndex(getAnchorIndexFromId);
+      if (null != anchorIndex) {
+        const scrollPosition = fastListComputer.computeScrollPosition("default" === str, anchorIndex.section, anchorIndex.item);
+        if (tmp3) {
+          self.scrollTo(scrollPosition.scrollPosition - anchorOffset);
+        }
+        tmp3 = null != scrollPosition && self.scrollPos !== scrollPosition.scrollPosition - anchorOffset;
+      }
+    }
+  }
+};
+prototype4["getSectionItemFromPosition"] = function getSectionItemFromPosition(arg0, arg1) {
+  const fastListComputer = this.state.fastListComputer;
+  return fastListComputer.getSectionItemFromPosition(arg0, arg1);
+};
+prototype4["getScrollPositionFromEvent"] = function getScrollPositionFromEvent(nativeEvent) {
+  const contentOffset = nativeEvent.nativeEvent.contentOffset;
+  return this.props.horizontal ? contentOffset.x : contentOffset.y;
+};
+prototype4["restoreScrollPosition"] = function restoreScrollPosition() {
+  const self = this;
+  const props = this.props;
+  ({ initialScrollItem, initialScrollSection } = props);
+  let num = 0;
+  if (undefined !== initialScrollSection) {
+    num = initialScrollSection;
+  }
+  const initialScrollOrientation = props.initialScrollOrientation;
+  let str = "visible";
+  if (undefined !== initialScrollOrientation) {
+    str = initialScrollOrientation;
+  }
+  const initialScrollStart = props.initialScrollStart;
+  if (null == initialScrollItem) {
+    if (num <= 0) {
+      if (null == initialScrollStart) {
+        const blocks = self.computeBlocks();
+      }
+    }
+  }
+  if (null != initialScrollStart) {
+    self.scrollTo(initialScrollStart, false);
+  } else {
+    obj = { section: num, item: null, orientation: null, paddingEnd: 16, setAnchor: true };
+    if (initialScrollItem == null) {
+      initialScrollItem = -1;
+    }
+    obj.item = initialScrollItem;
+    obj.orientation = str;
+    if (self.scrollToLocation(obj)) {
+      self.deferNextCompute = true;
+    } else {
+      const scrollPosValue = self.scrollPosValue;
+      const result = scrollPosValue.set(0);
+      if (-1 !== self.deferredCompute) {
+        const _cancelAnimationFrame = cancelAnimationFrame;
+        cancelAnimationFrame(self.deferredCompute);
+      }
+      const _requestAnimationFrame = requestAnimationFrame;
+      self.deferredCompute = requestAnimationFrame(() => self.computeBlocks());
+    }
+  }
+};
+prototype4["computeBlocks"] = function computeBlocks() {
+  const self = this;
+  ({ batchesToRender, chunkBase } = this.props);
+  const state = this.state;
+  const fastListComputer = state.fastListComputer;
+  ({ isFirstLayout, items } = state);
+  if (chunkBase == null) {
+    chunkBase = self.containerSize;
+  }
+  if (0 === chunkBase) {
+    obj = { batchSize: 0, blockStart: 0, blockEnd: 0 };
+  } else {
+    const _Math = Math;
+    const rounded = Math.ceil(chunkBase);
+    const _Math2 = Math;
+    const _Math3 = Math;
+    const rounded1 = Math.floor(tmp);
+    const rounded2 = Math.ceil(rounded / 4);
+    const _Math4 = Math;
+    const _Math5 = Math;
+    const result = Math.max(0, Math.round((rounded1 + rounded / 2) / rounded2) - batchesToRender / 2) * rounded2;
+    obj = { batchSize: rounded2, blockStart: result, blockEnd: result + rounded2 * batchesToRender };
+  }
+  if (obj.batchSize === self.state.batchSize) {
+    if (obj.blockStart === self.state.blockStart) {
+      if (obj.blockEnd === self.state.blockEnd) {
+        if (isFirstLayout) {
+          self.setState({ isFirstLayout: false });
+        }
+      }
+    }
+  }
+  const obj2 = {};
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(fastListComputer.compute(obj.blockStart, obj.blockEnd, items));
+  obj2.isFirstLayout = false;
+  self.setState(obj2);
+};
+prototype4["renderItems"] = function renderItems() {
+  const self = this;
+  const props = this.props;
+  const stickySectionsVariant = props.stickySectionsVariant;
+  let str = "default";
+  if (undefined !== stickySectionsVariant) {
+    str = stickySectionsVariant;
+  }
+  let renderHeader = props.renderHeader;
+  if (undefined === renderHeader) {
+    renderHeader = renderDefaultEmpty;
+  }
+  let renderFooter = props.renderFooter;
+  if (undefined === renderFooter) {
+    renderFooter = renderDefaultEmpty;
+  }
+  let renderSection = props.renderSection;
+  if (undefined === renderSection) {
+    renderSection = renderDefaultEmpty;
+  }
+  const renderItem = props.renderItem;
+  let renderSectionFooter = props.renderSectionFooter;
+  if (undefined === renderSectionFooter) {
+    renderSectionFooter = renderDefaultEmpty;
+  }
+  const optimizeListItemRender = props.optimizeListItemRender;
+  const items = self.state.items;
+  let flag = self.props.horizontal;
+  if (flag == null) {
+    flag = false;
+  }
+  const items1 = [];
+  const item1 = items.forEach((type) => {
+    if (type.type === obj.SECTION) {
+      items1.push(tmp);
+    }
+  });
+  const items2 = [];
+  const iter = items[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    ({ type, key, layoutStart, recyclerKey, layoutSize } = nextResult);
+    let tmp5 = layoutSize;
+    ({ section, item } = nextResult);
+    if (0 !== layoutSize) {
+      let tmp45 = obj;
+      if (obj.SPACER === type) {
+        let obj2 = { horizontal: flag, layoutSize: null };
+        obj2.layoutSize = tmp5;
+        let _HermesInternal7 = HermesInternal;
+        let arr = items2.push(closure_11(closure_25, obj2, "" + key));
+      } else if (tmp45.HEADER === type) {
+        let obj3 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
+        obj3.recyclerKey = recyclerKey;
+        obj3.horizontal = flag;
+        obj3.disableWrapper = tmp2;
+        obj3.fastListInstance = self;
+        obj3.layoutSize = tmp5;
+        let fn6 = renderHeader;
+        let tmp33 = closure_11;
+        let tmp34 = closure_24;
+        if (!tmp) {
+          fn6 = () => renderHeader(...HermesBuiltin.copyRestArgs());
+        }
+        obj3.children = fn6;
+        let _HermesInternal6 = HermesInternal;
+        let arr2 = items2.push(tmp33(tmp34, obj3, "" + key));
+      } else if (tmp45.FOOTER === type) {
+        let obj4 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
+        obj4.recyclerKey = recyclerKey;
+        obj4.horizontal = flag;
+        obj4.disableWrapper = tmp2;
+        obj4.fastListInstance = self;
+        obj4.layoutSize = tmp5;
+        let fn5 = renderFooter;
+        let tmp27 = closure_11;
+        let tmp28 = closure_24;
+        if (!tmp) {
+          fn5 = () => renderFooter(...HermesBuiltin.copyRestArgs());
+        }
+        obj4.children = fn5;
+        let _HermesInternal5 = HermesInternal;
+        let arr3 = items2.push(tmp27(tmp28, obj4, "" + key));
+      } else if (tmp45.SECTION === type) {
+        let arr11 = items1.shift();
+        if ("default" !== str) {
+          let obj5 = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutStart: null, layoutSize: null, fastListInstance: null, section: null, debug: false, children: null };
+          obj5.recyclerKey = recyclerKey;
+          obj5.horizontal = flag;
+          obj5.disableWrapper = tmp2;
+          obj5.layoutStart = layoutStart;
+          obj5.layoutSize = tmp5;
+          obj5.fastListInstance = self;
+          obj5.section = section;
+          let fn4 = renderSection;
+          let tmp19 = closure_11;
+          let tmp20 = closure_21;
+          if (!tmp) {
+            fn4 = () => renderSection(...HermesBuiltin.copyRestArgs());
+          }
+          obj5.children = fn4;
+          let _HermesInternal4 = HermesInternal;
+          let arr12 = items2.push(tmp19(tmp20, obj5, "" + key));
+        } else {
+          let obj6 = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutStart: null, layoutSize: null, nextSectionLayoutPosition: null, scrollPosValue: null, fastListInstance: null, section: null, debug: false, children: null };
+          obj6.recyclerKey = recyclerKey;
+          obj6.horizontal = flag;
+          obj6.disableWrapper = tmp2;
+          obj6.layoutStart = layoutStart;
+          obj6.layoutSize = tmp5;
+          obj6.nextSectionLayoutPosition = items1[0];
+          obj6.scrollPosValue = self.scrollPosValue;
+          obj6.fastListInstance = self;
+          obj6.section = section;
+          let fn3 = renderSection;
+          let tmp51 = closure_11;
+          let tmp52 = closure_20;
+          if (!tmp) {
+            fn3 = () => renderSection(...HermesBuiltin.copyRestArgs());
+          }
+          obj6.children = fn3;
+          let _HermesInternal3 = HermesInternal;
+          let arr13 = items2.push(tmp51(tmp52, obj6, "" + key));
+        }
+      } else if (tmp45.ITEM === type) {
+        obj = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutSize: null, fastListInstance: null, section: null, item: null, debug: false, children: null };
+        obj.recyclerKey = recyclerKey;
+        obj.horizontal = flag;
+        obj.disableWrapper = tmp2;
+        obj.layoutSize = tmp5;
+        obj.fastListInstance = self;
+        obj.section = section;
+        obj.item = item;
+        let fn2 = renderItem;
+        let tmp8 = closure_11;
+        let tmp9 = closure_23;
+        if (!tmp) {
+          fn2 = () => renderItem(...HermesBuiltin.copyRestArgs());
+        }
+        obj.children = fn2;
+        let _HermesInternal2 = HermesInternal;
+        let arr14 = items2.push(tmp8(tmp9, obj, "" + key));
+      } else if (tmp45.SECTION_FOOTER === type) {
+        let obj7 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, section: null, debug: false, children: null };
+        obj7.recyclerKey = recyclerKey;
+        obj7.horizontal = flag;
+        obj7.disableWrapper = tmp2;
+        obj7.fastListInstance = self;
+        obj7.layoutSize = tmp5;
+        obj7.section = section;
+        let fn = renderSectionFooter;
+        let tmp46 = closure_11;
+        let tmp47 = closure_22;
+        if (!tmp) {
+          fn = () => renderSectionFooter(...HermesBuiltin.copyRestArgs());
+        }
+        obj7.children = fn;
+        let _HermesInternal = HermesInternal;
+        let arr15 = items2.push(tmp46(tmp47, obj7, "" + key));
+      }
+    }
+    continue;
+  }
+  return items2;
+};
+prototype4["isEmpty"] = function isEmpty() {
+  const sections = this.props.sections;
+  return 0 === sections.reduce((acc, item) => acc + item, 0);
+};
+prototype4["setDisableRecycling"] = function setDisableRecycling(arg0) {
+  const fastListComputer = this.state.fastListComputer;
+  fastListComputer.setDisableRecycling(arg0);
+};
+prototype4["render"] = function render() {
+  const self = this;
+  const props = this.props;
+  ({ manualRef, onScroll, onScrollEnd, onLayout, renderHeader, renderFooter, renderSection, renderItem, renderSectionFooter, getRecyclerKey, onEndReached, endReachedThreshold, headerSize, footerSize, sectionSize, sectionFooterSize, itemSize, sections, scrollPosValue, batchesToRender, optimizeListItemRender, initialScrollSection, initialScrollItem, initialScrollOrientation, initialScrollStart, getAnchorIdFromIndex, getAnchorIndexFromId, EXPERIMENTAL_enableAnchorWhileScrolling, chunkBase, disableContentWrappers, childrenWrapper, stickyHeaderFooter, stickySectionsVariant, persistantKeys, disableRecyclingOnFullCompute, disableLegacyGestureHandling, viewabilityConfig, onViewableItemsChanged, debugLayout, renderAccessory, removeClippedSubviews } = props);
+  if (undefined === removeClippedSubviews) {
+    removeClippedSubviews = PlatformUtils.isAndroid();
+  }
+  if (props.inActionSheet) {
+    let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
+  } else {
+    BottomSheetScrollView = React6;
+  }
+  const obj3 = {};
+  const merged = Object.assign(_objectWithoutProperties(props, closure_3));
+  obj3.accessibilityRole = "list";
+  obj3.ref = refObjectUnionAsPropDefault(self.scrollView);
+  obj3.scrollEventThrottle = 16;
+  obj3.contentOffset = self.state.initialContentOffset;
+  ({ handleScroll: obj2.onScroll, handleLayout: obj2.onLayout, handleMomentumScrollEnd: obj2.onMomentumScrollEnd, handleScrollBeginDrag: obj2.onScrollBeginDrag } = self);
+  obj3.removeClippedSubviews = removeClippedSubviews;
+  obj3.children = self.renderItems();
+  const children = [closure_1_11(BottomSheetScrollView, obj3), , ];
+  const obj5 = { scrollViewRef: self.scrollView, scrollPosValue: self.scrollPosValue, horizontal: null, onScrollWorklet: null };
+  let flag = self.props.horizontal;
+  if (flag == null) {
+    flag = false;
+  }
+  obj5.horizontal = flag;
+  obj5.onScrollWorklet = props.onScrollWorklet;
+  children[1] = closure_1_11(FastListScrollWorklet, obj5);
+  let renderAccessoryResult = null;
+  if (null != renderAccessory) {
+    renderAccessoryResult = renderAccessory(self);
+  }
+  children[2] = renderAccessoryResult;
+  return closure_1_10(closure_1_12, { children });
+};
+FastList.defaultProps = { batchesToRender: 12, contentInset: { top: 0, right: 0, left: 0, bottom: 0 }, disableLegacyGestureHandling: false, disableRecyclingOnFullCompute: false, stickyHeaderFooter: false };
+const __initData2 = { code: "function FastListTsx2(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
+const animatedComponent = ReanimatedRexport.createAnimatedComponent(FastList);
+let size = fn(2);
+let result = size.fileFinishedImporting("lib/native/FastList.tsx");
+
+export default FastList;
+export const DEFAULT_BATCHES_TO_RENDER = 12;
+export const MINIMUM_BATCHES_TO_RENDER = 5;
+export const getItemSizeOverrideKey = function getItemSizeOverrideKey(arg0, arg1, arg2) {
+  return "" + arg0 + ":" + arg1 + ":" + arg2;
+};
+export { FastListItemTypes };
+export { FastListComputer };
+export const AnimatedFastList = animatedComponent;

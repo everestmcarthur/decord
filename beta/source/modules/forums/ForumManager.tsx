@@ -1,0 +1,34 @@
+// Module ID: 17481
+// Function ID: 17482
+// Name: ForumManager
+// Dependencies: [1957, 1964, 7221, 7407, 2]
+
+// Module 17481 (ForumManager)
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7407 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+
+require = fn;
+const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+class ForumManager extends tmp2 {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    applyArgumentsResult.actions = { CHANNEL_PRELOAD: applyArgumentsResult.handleChannelPreload };
+    return applyArgumentsResult;
+  }
+}
+ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(channelId) {
+  channelId = channelId.channelId;
+  if (!isStaticChannelRoute(channelId)) {
+    const channel = ChannelStore.getChannel(channelId);
+    if (tmp3) {
+      ForumPostDataLoader.preloadForumThreads(channel);
+    }
+    tmp3 = null != channel && channel.isForumLikeChannel();
+  }
+};
+const forumManager = new ForumManager();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/ForumManager.tsx");
+
+export default forumManager;

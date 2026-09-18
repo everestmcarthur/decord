@@ -1,0 +1,54 @@
+// Module ID: 12045
+// Function ID: 12046
+// Name: CtaButtonUtils
+// Dependencies: [4850, 12046, 4849, 504, 2]
+// Exports: getCtaButtonType, useCtaButtonType
+
+// Module 12045 (CtaButtonUtils)
+import initialize from "initialize" /* 504 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
+import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 12046 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4850 */;
+
+require = fn;
+const CtaButtonType = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen", AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/CtaButtonUtils.tsx");
+
+export { CtaButtonType };
+export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
+  const obj = useShouldRenderReportFalsePositiveButton;
+  if (obj.shouldRenderReportFalsePositiveButton(id)) {
+    let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
+  } else {
+    if (tmpResult.isAgeVerificationMessageWithRetryCta(channel_id, id)) {
+      CONNECT_TO_TEEN = obj.AGE_VERIFICATION_RETRY;
+    } else {
+      if (tmpResult2.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id)) {
+        CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
+      }
+      tmpResult2 = tmp(4849);
+    }
+    tmpResult = tmp(4849);
+  }
+  return CONNECT_TO_TEEN;
+};
+export const useCtaButtonType = function useCtaButtonType(id, channel_id) {
+  const obj = useShouldRenderReportFalsePositiveButton;
+  const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
+  const result = AgeVerificationUtils.isAgeVerificationMessageWithRetryCta(channel_id, id);
+  const items = [FamilyCenterPendingConnectionStore];
+  let result1 = null != initialize.useStateFromStores(items, () => pendingConnection.getPendingConnection());
+  if (result1) {
+    result1 = AgeVerificationUtils.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);
+    const tmpResult = AgeVerificationUtils;
+  }
+  if (shouldRenderReportFalsePositiveButton) {
+    let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
+  } else if (result) {
+    CONNECT_TO_TEEN = obj.AGE_VERIFICATION_RETRY;
+  } else if (result1) {
+    CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
+  }
+  return CONNECT_TO_TEEN;
+};

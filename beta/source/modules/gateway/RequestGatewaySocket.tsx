@@ -1,0 +1,172 @@
+// Module ID: 7859
+// Function ID: 7860
+// Name: RequestGatewaySocket
+// Dependencies: [5, 1074, 7575, 1240, 2]
+// Exports: describeConnectionReasons, isRequested, recordStartHeadlessTask, startBridgeTo, withRequest
+
+// Module 7859 (RequestGatewaySocket)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+const require = fn;
+function setRequestedBy(arg0) {
+  c6 = false;
+  let num = map.get(arg0);
+  if (num == null) {
+    num = 0;
+  }
+  const result = obj.set(arg0, num + 1);
+  const combined = "BRIDGE:" + arg0;
+  let num2 = obj.get(combined);
+  if (num2 == null) {
+    num2 = 0;
+  }
+  const diff = num2 - 1;
+  if (diff <= 0) {
+    obj.delete(combined);
+  } else {
+    const result1 = obj.set(combined, diff);
+  }
+}
+function stopRequest(arg0) {
+  c6 = false;
+  let num = map.get(arg0);
+  if (num == null) {
+    num = 0;
+  }
+  const diff = num - 1;
+  if (diff <= 0) {
+    obj.delete(arg0);
+  } else {
+    const result = obj.set(arg0, diff);
+  }
+}
+let closure_10 = async function _withRequest(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_0;
+          c5 = 1;
+          setRequestedBy(closure_0);
+          c6 = 2;
+          c7 = 1;
+          const obj4 = { value: importDefault(), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp7) {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        throw closure_4;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        c7 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        c7 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp29) {
+      closure_4 = tmp29;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp29;
+      } else {
+        c6 = tmp;
+      }
+    }
+  }
+};
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_5 = ["COLD_START"];
+let c6 = true;
+const map = new Map();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
+
+export const isRequested = function isRequested() {
+  return map.size > 0 || c6;
+};
+export function recordStartHeadlessTask() {
+  c6 = false;
+}
+export const describeConnectionReasons = function describeConnectionReasons() {
+  const items = [...c6 ? closure_5 : [], ...map.keys()];
+  const sorted = items.sort();
+  let str = "NO_REASONS";
+  if (sorted.length > 0) {
+    str = sorted.join(",");
+  }
+  return str;
+};
+export { setRequestedBy };
+export const startBridgeTo = function startBridgeTo(arg0) {
+  const combined = "BRIDGE:" + arg0;
+  closure_1 = performance.now();
+  c6 = false;
+  let num = map.get(combined);
+  if (num == null) {
+    num = 0;
+  }
+  let result = map.set(combined, num + 1);
+  combined(7575).requestSafeIdleCallback(() => {
+    if (map.has(combined)) {
+      const obj3 = { bridge_token: tmp, cleared_after: null };
+      const _performance = performance;
+      obj3.cleared_after = performance.now() - closure_1;
+      AnalyticsUtilsDefault.track(AnalyticEvents.GATEWAY_BRIDGE_TIMEOUT, obj3);
+    }
+    c6 = false;
+    let num = obj.get(tmp);
+    if (num == null) {
+      num = 0;
+    }
+    const diff = num - 1;
+    if (diff <= 0) {
+      obj.delete(tmp);
+    } else {
+      const result = obj.set(tmp, diff);
+    }
+  }, { timeout: 5000 });
+};
+export { stopRequest };
+export const withRequest = function withRequest() {
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};

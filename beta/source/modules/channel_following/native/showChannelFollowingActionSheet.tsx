@@ -1,0 +1,115 @@
+// Module ID: 11462
+// Function ID: 11463
+// Name: showChannelFollowingActionSheet
+// Dependencies: [19, 21, 4603, 11463, 1896, 4981, 11470, 2]
+// Exports: showChannelFollowingActionSheet
+
+// Module 11462 (showChannelFollowingActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");
+
+export const showChannelFollowingActionSheet = function showChannelFollowingActionSheet(id, guildId, targetChannelId, targetGuildId) {
+  _require = id;
+  importDefault = guildId;
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(require("asyncRequireImpl")(11463, dependencyMap.paths), "NewChannelFollower." + id, {
+    sourceChannelId: id,
+    sourceGuildId: guildId,
+    targetChannelId,
+    targetGuildId,
+    reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
+      closure_0 = closure_1_0;
+      closure_1 = closure_1_1;
+      let obj = closure_2_1(closure_2_2[2]);
+      obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, {
+        sourceChannelId: closure_1_0,
+        sourceGuildId: closure_1_1,
+        targetChannelId,
+        targetGuildId,
+        reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
+          closure_0 = closure_1_0;
+          closure_1 = closure_1_1;
+          let obj = closure_2_1(closure_2_2[2]);
+          obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, {
+            sourceChannelId: closure_1_0,
+            sourceGuildId: closure_1_1,
+            targetChannelId,
+            targetGuildId,
+            reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
+              closure_0 = closure_1_0;
+              closure_1 = closure_1_1;
+              let obj = closure_2_1(closure_2_2[2]);
+              obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, {
+                sourceChannelId: closure_1_0,
+                sourceGuildId: closure_1_1,
+                targetChannelId,
+                targetGuildId,
+                reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
+                  closure_0 = closure_1_0;
+                  closure_1 = closure_1_1;
+                  let obj = closure_2_1(closure_2_2[2]);
+                  obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, { sourceChannelId: closure_1_0, sourceGuildId: closure_1_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } });
+                },
+                onSuccess() {
+                  closure_1(dependencyMap[5]).openLazy({ importer() { ... }, hideActionSheet: true });
+                },
+                onCancel() {
+                  return closure_1(dependencyMap[2]).hideActionSheet();
+                }
+              });
+            },
+            onSuccess() {
+              closure_1(dependencyMap[5]).openLazy({
+                importer() {
+                  return closure_1_0(paths[4])(paths[6], paths.paths).then(() => { ... });
+                },
+                hideActionSheet: true
+              });
+            },
+            onCancel() {
+              return closure_1(dependencyMap[2]).hideActionSheet();
+            }
+          });
+        },
+        onSuccess() {
+          closure_1(dependencyMap[5]).openLazy({
+            importer() {
+              return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
+                closure_0 = result.default;
+                return () => { ... };
+              });
+            },
+            hideActionSheet: true
+          });
+        },
+        onCancel() {
+          return closure_1(dependencyMap[2]).hideActionSheet();
+        }
+      });
+    },
+    onSuccess() {
+      closure_1(dependencyMap[5]).openLazy({
+        importer() {
+          return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
+            closure_0 = result.default;
+            return (arg0) => {
+              const merged = Object.assign(arg0);
+              return closure_2_3(closure_0, {});
+            };
+          });
+        },
+        hideActionSheet: true
+      });
+    },
+    onCancel() {
+      return closure_1(dependencyMap[2]).hideActionSheet();
+    }
+  });
+};

@@ -1,0 +1,141 @@
+// Module ID: 15331
+// Function ID: 15332
+// Name: SettingsVoiceScreen
+// Dependencies: [19, 17, 1908, 8079, 1074, 21, 2024, 4636, 4571, 4488, 10127, 10128, 1114, 6756, 10126, 4632, 10123, 11605, 14776, 2]
+// Exports: default
+
+// Module 15331 (SettingsVoiceScreen)
+import util from "util" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4571 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import KrispLogo2 from "KrispLogo" /* 10126 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;
+
+require = fn;
+function KrispLogo() {
+  const tmp = closure_13();
+  const tmp4 = useThemeDefault();
+  if (obj.isThemeLight(tmp4)) {
+    let tmp2Result = tmp2(10127);
+  } else {
+    tmp2Result = tmp2(10128);
+  }
+  const obj2 = { style: tmp.krisp, children: null };
+  const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
+  const intl = tmp5(1114).intl;
+  obj3.accessibilityLabel = intl.string(util.t.vFiCSx);
+  const items = [React7(hasOwnProperty, obj3), ];
+  const obj4 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
+  const intl2 = tmp5(1114).intl;
+  obj4.accessibilityLabel = intl2.string(util.t.hvVgAZ);
+  obj4.onPress = KrispLogo2.handleKrispLinkPressed;
+  const obj5 = { variant: "text-sm/medium", color: "text-link", children: null };
+  const intl3 = tmp5(1114).intl;
+  obj5.children = intl3.string(util.t.hvVgAZ);
+  obj4.children = React7(Text_Text.Text, obj5);
+  items[1] = React7(LegacyBaseButton.LegacyPressable, obj4);
+  obj2.children = items;
+  return closure_1_10(React4, obj2);
+}
+function SystemProcessingSubLabel() {
+  let tmp3 = null;
+  if (obj.useNoiseCancellationDeferredToSystem()) {
+    const obj2 = { variant: "text-sm/medium", children: null };
+    const intl = tmp(1114).intl;
+    const obj3 = {
+      onSettingsClick() {
+          mediaEngine = mediaEngine.getMediaEngine();
+          const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
+        }
+    };
+    obj2.children = intl.format(tmp(1114).t.EUNgko, obj3);
+    tmp3 = React7(tmp(4632).Text, obj2);
+  }
+  return tmp3;
+}
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const MobileUserSettings = fn(8079).MobileUserSettings;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+let closure_12 = "" + HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
+const createStyles = fn(4636);
+let closure_13 = createStyles.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
+
+export default function SettingsVoiceScreen() {
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null };
+    const obj3 = { label: null, settings: null };
+    const intl = util.intl;
+    obj3.label = intl.string(util.t.LKCupB);
+    const items = [, , ];
+    ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
+    obj3.settings = items;
+    const items1 = [obj3, , , , , , , ];
+    const obj4 = { label: null, settings: null, subLabel: null };
+    const intl2 = util.intl;
+    obj4.label = intl2.string(util.t.UXxPGB);
+    const items2 = [, ];
+    ({ OUTPUT_VOLUME: arr3[0], STREAM_OUTPUT_VOLUME: arr3[1] } = constants);
+    obj4.settings = items2;
+    const intl3 = util.intl;
+    obj4.subLabel = intl3.format(util.t["V+B3FH"], { guideURL });
+    items1[1] = obj4;
+    const obj6 = { label: null, settings: null, subLabel: null };
+    const intl4 = util.intl;
+    obj6.label = intl4.string(util.t.xbMc8r);
+    const items3 = [constants.SOUNDBOARD_VOLUME];
+    obj6.settings = items3;
+    const intl5 = util.intl;
+    const obj7 = { helpCenterArticle: null };
+    const obj = SettingBuilders;
+    const obj5 = { guideURL };
+    obj7.helpCenterArticle = HelpdeskUtils.getArticleURL(constants2.SOUNDBOARD);
+    obj6.subLabel = intl5.format(util.t.BPbGq7, obj7);
+    items1[2] = obj6;
+    const obj9 = { label: null, settings: null };
+    const intl6 = util.intl;
+    obj9.label = intl6.string(util.t.bNqkD9);
+    const items4 = [constants.ANDROID_MOBILE_OVERLAY];
+    obj9.settings = items4;
+    items1[3] = obj9;
+    const obj10 = { settings: null, subLabel: null };
+    const items5 = [constants.NOISE_SUPPRESSION_KRISP];
+    obj10.settings = items5;
+    const obj11 = { children: null };
+    const items6 = [closure_1_9(SystemProcessingSubLabel, {}), closure_1_9(KrispLogo, {})];
+    obj11.children = items6;
+    obj10.subLabel = closure_1_10(closure_1_11, obj11);
+    items1[4] = obj10;
+    const obj12 = { label: null, settings: null };
+    const intl7 = util.intl;
+    obj12.label = intl7.string(util.t.t8Qhib);
+    const items7 = [constants.NOISE_SUPPRESSION];
+    obj12.settings = items7;
+    items1[5] = obj12;
+    const obj13 = { label: null, settings: null };
+    const intl8 = util.intl;
+    obj13.label = intl8.string(util.t["6I6GUv"]);
+    const items8 = [, , , ];
+    ({ ECHO_CANCELLATION: arr9[0], SIDECHAIN_COMPRESSION: arr9[1], AUTOMATIC_GAIN_CONTROL: arr9[2], ADVANCED_VOICE_ACTIVITY: arr9[3] } = constants);
+    obj13.settings = items8;
+    items1[6] = obj13;
+    const obj14 = { label: null, settings: null };
+    const intl9 = util.intl;
+    obj14.label = intl9.string(util.t.OBwCXF);
+    const items9 = [constants.DISABLE_STREAM_PREVIEWS];
+    obj14.settings = items9;
+    items1[7] = obj14;
+    obj2.sections = items1;
+    return obj.createList(obj2);
+  }, []);
+  return React7(SettingLayoutDefault, { node });
+};

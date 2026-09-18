@@ -1,0 +1,19 @@
+// Module ID: 16327
+// Function ID: 16328
+// Name: MentionsBadge
+// Dependencies: [19, 21, 1176, 2]
+// Exports: default
+
+// Module 16327 (MentionsBadge)
+import native from "native" /* 1176 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
+
+export default function MentionsBadge(arg0) {
+  ({ mentionsCount, isMentionLowImportance } = arg0);
+  return jsx(native.Badge, { value, isMentionLowImportance });
+};

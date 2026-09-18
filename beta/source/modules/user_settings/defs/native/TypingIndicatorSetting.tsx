@@ -1,0 +1,46 @@
+// Module ID: 15440
+// Function ID: 15441
+// Name: TypingIndicatorSetting
+// Dependencies: [1074, 14806, 1943, 11605, 1114, 3592, 15441, 12100, 15443, 15492, 2]
+
+// Module 15440 (TypingIndicatorSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import _modDef3592 from "module_3592" /* 3592 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12100 */;
+import ChatDotsIcon from "ChatDotsIcon" /* 15441 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15492 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14806 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeRouteProps(dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);
+({ useTrailing, usePreNavigationAction } = dismissibleBadgeRouteProps);
+const route = SettingBuilders.createRoute({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef3592["pT+BVM"]);
+  },
+  parent: null,
+  IconComponent: ChatDotsIcon.ChatDotsIcon,
+  useTrailing,
+  usePreNavigationAction,
+  usePredicate() {
+    return "settings" === CustomTypingIndicatorExperiment.useCustomTypingIndicatorConfig("TypingIndicatorSetting").entryPoint;
+  },
+  screen: {
+    route: Constants.UserSettingsSections.TYPING_INDICATOR,
+    getComponent() {
+      return require("CustomTypingIndicatorEditScreen").default;
+    },
+    usePersistentBadge() {
+      return { badgeType: SettingRendererTypes.SettingsBadgeType.BETA };
+    }
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");
+
+export default route;

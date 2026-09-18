@@ -1,0 +1,27 @@
+// Module ID: 4342
+// Function ID: 4343
+// Name: utils/getNodeText
+// Dependencies: [19, 2]
+
+// Module 4342 (utils/getNodeText)
+import noop from "module_19" /* 19 */;
+
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/utils/getNodeText.tsx");
+function getNodeText(label) {
+  if (typeof label !== "string") {
+    if (typeof label !== "number") {
+      const _Array = Array;
+      if (label instanceof Array) {
+        const mapped = label.map(getNodeText);
+        let joined = mapped.join("");
+      } else if (noop.isValidElement(label)) {
+        joined = getNodeText(label.props.children);
+      }
+    }
+    return joined;
+  }
+  joined = label.toString();
+}
+
+export { getNodeText };

@@ -1,0 +1,30 @@
+// Module ID: 15798
+// Function ID: 15799
+// Name: useManaTextMigrationHighlightRestartNotice
+// Dependencies: [19, 4635, 504, 4981, 2]
+// Exports: useManaTextMigrationHighlightRestartNotice
+
+// Module 15798 (useManaTextMigrationHighlightRestartNotice)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import noop from "module_19" /* 19 */;
+import DevSettingsStore from "DevSettingsStore" /* 4635 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");
+
+export const useManaTextMigrationHighlightRestartNotice = function useManaTextMigrationHighlightRestartNotice() {
+  const items = [DevSettingsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"));
+  _require = noop.useRef(true);
+  const items1 = [stateFromStores];
+  const effect = noop.useEffect(() => {
+    if (ref.current) {
+      tmp.current = false;
+    } else {
+      actions_AlertActionCreatorsDefault.show({ title: "Mana Text Migration Highlighter", body: "Restart the app (force quit and reopen) to see the change." });
+    }
+  }, items1);
+};

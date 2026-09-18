@@ -1,0 +1,33 @@
+// Module ID: 16537
+// Function ID: 16538
+// Name: ChannelPressableWrapper
+// Dependencies: [19, 17, 21, 10249, 2]
+// Exports: renderChannelPressableWrapper
+
+// Module 16537 (ChannelPressableWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 10249 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");
+
+export const renderChannelPressableWrapper = function renderChannelPressableWrapper(children, panelVariant) {
+  let flag = panelVariant.panelVariant;
+  ({ layout, launchpad, isThread } = panelVariant);
+  if (flag === undefined) {
+    flag = false;
+  }
+  const layout2 = ChannelListLayout.getLayoutStyles(layout, launchpad).layout;
+  if (isThread) {
+    let marginThread = layout2.marginThread;
+  } else {
+    marginThread = flag ? layout2.marginPanels : layout2.margin;
+  }
+  const obj2 = { style: null, children };
+  const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
+  obj2.style = items;
+  return <View style={null}>{arg0}</View>;
+};

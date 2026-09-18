@@ -1,0 +1,184 @@
+// Module ID: 12607
+// Function ID: 12608
+// Name: GuildProgressUtils
+// Dependencies: [2012, 1979, 4275, 12608, 12602, 1074, 4603, 12609, 1896, 12610, 504, 12605, 12721, 1114, 11, 2]
+// Exports: createGuildProgress, hideActionSheet, openActionSheet, useGuildProgressStep, useIsEligibleForGuildProgress
+
+// Module 12607 (GuildProgressUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12610 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import GuildProgressStore from "GuildProgressStore" /* 12608 */;
+
+const require = globalThis.__r;
+
+require = fn;
+function useIOSCompletionStates(guild) {
+  _require = guild;
+  const items = [PermissionStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants.ADMINISTRATOR, closure_0));
+  const obj = require("initialize");
+  const guildPersonalized = require("GuildProgressHooks").useGuildPersonalized(guild);
+  const obj2 = require("GuildProgressHooks");
+  const guildPopulated = require("GuildProgressHooks").useGuildPopulated(guild);
+  const obj3 = require("GuildProgressHooks");
+  const items1 = [GuildChannelStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildChannelStore.getDefaultChannel(guild.id));
+  const obj4 = require("initialize");
+  if (null != stateFromStores1) {
+    const items2 = [stateFromStores1];
+    let items3 = items2;
+  } else {
+    items3 = [];
+  }
+  const channelsMessaged = require("GuildProgressHooks").useChannelsMessaged(items3);
+  const obj5 = require("GuildProgressHooks");
+  const items4 = [GuildProgressStore];
+  let stateFromStores2 = channelsMessaged;
+  if (!channelsMessaged) {
+    stateFromStores2 = tmpResult.useStateFromStores(items4, () => {
+      const progress = GuildProgressStore.getProgress(guild.id);
+      let flag;
+      if (progress != null) {
+        flag = progress.has(Steps.MESSAGE);
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      return flag;
+    });
+  }
+  const tmp8 = GuildProgressStore;
+  tmpResult = require("initialize");
+  const items5 = [GuildStore];
+  const stateFromStores3 = require("initialize").useStateFromStores(items5, () => {
+    guild = GuildStore.getGuild(guild.id);
+    let num;
+    if (guild != null) {
+      num = guild.premiumSubscriberCount;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    return num > 0;
+  });
+  const tmpResult3 = require("initialize");
+  const items6 = [tmp8];
+  const stateFromStores4 = require("initialize").useStateFromStores(items6, () => GuildProgressStore.getProgress(guild.id));
+  if (stateFromStores) {
+    const ServerSetupBoostCtaExperiment = tmp(12721).ServerSetupBoostCtaExperiment;
+    const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
+    const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
+    if (enabled) {
+      items7.push(stateFromStores3);
+    }
+    let length = items7.filter((item) => item).length;
+    let hasItem;
+    if (stateFromStores4 != null) {
+      hasItem = stateFromStores4.has(Steps.COMPLETED);
+    }
+    if (!hasItem) {
+      hasItem = length === length2;
+    }
+    const obj6 = { guildPopulated, guildPersonalized, guildMessaged: stateFromStores2, guildBoosted: stateFromStores3, showBoostStep: enabled, completed: hasItem, dismissed: null, numFinished: null, totalSteps: null };
+    let hasItem1 = null == stateFromStores4;
+    if (!hasItem1) {
+      hasItem1 = stateFromStores4.has(Steps.DISMISSED);
+    }
+    obj6.dismissed = hasItem1;
+    if (hasItem) {
+      length = length2;
+    }
+    obj6.numFinished = length;
+    obj6.totalSteps = items7.length;
+    return obj6;
+  } else {
+    return { guildPopulated: false, guildPersonalized: false, guildMessaged: false, guildChannelCreated: false, guildBoosted: false, showBoostStep: false, completed: true, dismissed: true, numFinished: 0, totalSteps: 0 };
+  }
+  const tmpResult4 = require("initialize");
+}
+const Steps = fn(12602).Steps;
+const Constants = fn(1074);
+({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_progress/native/GuildProgressUtils.tsx");
+
+export const MIN_PROGRESS_PERCENT = 3;
+export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
+export const openActionSheet = function openActionSheet(guild) {
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(asyncRequireImpl(12609, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+};
+export const hideActionSheet = function hideActionSheet(arg0) {
+  ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + arg0);
+};
+export const createGuildProgress = function createGuildProgress(id) {
+  if (null != GuildStore.getGuild(id)) {
+    const progress = GuildProgressActionCreatorsDefault.createProgress(id);
+  }
+};
+export { useIOSCompletionStates };
+export const useGuildProgressStep = function useGuildProgressStep(guild) {
+  const tmp = useIOSCompletionStates(guild);
+  const totalSteps = tmp.totalSteps;
+  let stringResult = null;
+  ({ guildPersonalized, guildMessaged, guildBoosted, showBoostStep, completed } = tmp);
+  if (!tmp.guildPopulated) {
+    const intl = util.intl;
+    stringResult = intl.string(util.t.q9n0Ta);
+  }
+  const items = [stringResult, , ];
+  let stringResult1 = null;
+  if (!guildPersonalized) {
+    const intl2 = util.intl;
+    stringResult1 = intl2.string(util.t.DWB2YZ);
+  }
+  items[1] = stringResult1;
+  let stringResult2 = null;
+  if (!guildMessaged) {
+    const intl3 = util.intl;
+    stringResult2 = intl3.string(util.t.dNktpr);
+  }
+  items[2] = stringResult2;
+  if (showBoostStep) {
+    let stringResult3 = null;
+    if (!guildBoosted) {
+      const intl4 = util.intl;
+      stringResult3 = intl4.string(util.t["6Qbqxw"]);
+    }
+    items.push(stringResult3);
+  }
+  const length = items.filter((item) => null == item).length;
+  let found = items.find((item) => null != item);
+  if (found == null) {
+    const intl5 = util.intl;
+    found = intl5.string(util.t["+Gyklt"]);
+  }
+  const obj = { percentComplete: Math.max(3, 100 * length / totalSteps), subtitle: null, completed: null };
+  if (length < totalSteps) {
+    const intl7 = util.intl;
+    const obj2 = { currStep: length + 1, total: totalSteps, step: found };
+    let formatToPlainStringResult = intl7.formatToPlainString(util.t.zhHW5c, obj2);
+  } else {
+    const intl6 = util.intl;
+    formatToPlainStringResult = intl6.string(util.t["+Gyklt"]);
+  }
+  obj.subtitle = formatToPlainStringResult;
+  obj.completed = completed;
+  return obj;
+};
+export const useIsEligibleForGuildProgress = function useIsEligibleForGuildProgress(guild) {
+  _require = guild;
+  const items = [PermissionStore];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants.ADMINISTRATOR, closure_0));
+  const obj = require("initialize");
+  if (stateFromStores) {
+    stateFromStores = extractTimestampResult >= Date.now() - closure_8;
+  }
+  return stateFromStores;
+};

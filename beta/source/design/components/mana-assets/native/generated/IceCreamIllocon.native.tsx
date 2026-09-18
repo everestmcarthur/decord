@@ -1,0 +1,31 @@
+// Module ID: 6308
+// Function ID: 6309
+// Name: IceCreamIllocon
+// Dependencies: [21, 5668, 6309, 2]
+// Exports: IceCreamIllocon
+
+// Module 6308 (IceCreamIllocon)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6309 from "module_6309" /* 6309 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/IceCreamIllocon.native.tsx");
+
+export const IceCreamIllocon = function IceCreamIllocon(size) {
+  let num = size.size;
+  ({ accessible, accessibilityLabel, resizeMode } = size);
+  if (num === undefined) {
+    num = 64;
+  }
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6309 };
+  obj.source = obj2;
+  const items = [{ width: num, height: num }];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+};

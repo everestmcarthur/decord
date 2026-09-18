@@ -1,0 +1,37 @@
+// Module ID: 18016
+// Function ID: 18017
+// Name: i18nMessagesProvider
+// Dependencies: [17, 1363, 18017, 1153, 1114, 2]
+// Exports: default
+
+// Module 18016 (i18nMessagesProvider)
+import _mod17 from "module_17" /* 17 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 18017 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import size from "module_2" /* 2 */;
+
+if (PlatformUtils.isAndroid()) {
+  let i18nManager = NativeI18nModuleDefault;
+} else {
+  i18nManager = _mod17.NativeModules.i18nManager;
+}
+let result = size.fileFinishedImporting("i18n/native/i18nMessagesProvider.tsx");
+
+export default function newIntlMessagesProvider() {
+  return new Promise((arg0) => {
+    closure_0 = arg0;
+    closure_2.keysRequest((arr) => {
+      i18nManager.valuesResult(arr.map((item) => {
+        const result = closure_1_0(1153).runtimeHashMessageKey(item);
+        const tmp4 = closure_1_0(1114).t[result];
+        let str = "";
+        if (null != tmp4) {
+          const intl = closure_1_0(1114).intl;
+          str = intl.reserialize(tmp4);
+        }
+        return str;
+      }));
+      closure_0(true);
+    });
+  });
+};

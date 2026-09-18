@@ -1,0 +1,70 @@
+// Module ID: 14842
+// Function ID: 14843
+// Name: AccountAgeGroupAdultSetting
+// Dependencies: [8079, 4849, 5504, 14769, 11605, 1114, 2]
+
+// Module 14842 (AccountAgeGroupAdultSetting)
+import util from "util" /* 1114 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5504 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14769 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+let obj = {
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["/52UYy"]);
+  },
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  useTrailing() {
+    const intl = util.intl;
+    return intl.string(util.t.XxRj7f);
+  },
+  usePredicate: function useAccountAgeGroupAdultSettingPredicate() {
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = isAgeVerified;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isVerifiedTeen;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+    }
+    return hasAgeGatedFeatures;
+  }
+};
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
+
+export default SettingBuilders.createStatic({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["/52UYy"]);
+  },
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  useTrailing() {
+    const intl = util.intl;
+    return intl.string(util.t.XxRj7f);
+  },
+  usePredicate: function useAccountAgeGroupAdultSettingPredicate() {
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = isAgeVerified;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isVerifiedTeen;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+    }
+    return hasAgeGatedFeatures;
+  }
+});

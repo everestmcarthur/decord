@@ -1,0 +1,45 @@
+// Module ID: 16985
+// Function ID: 16986
+// Name: ContextMenuCommandAppScreen
+// Dependencies: [19, 21, 4636, 576, 7084, 7152, 16984, 7158, 2]
+// Exports: default
+
+// Module 16985 (ContextMenuCommandAppScreen)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+const obj2 = { list: { marginHorizontal: nativeDefault.space.PX_16 } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
+
+export default function ContextMenuCommandAppScreen(route) {
+  const params = route.route.params;
+  let section = params.section;
+  const commands = params.commands;
+  const onPressCommand = params.onPressCommand;
+  let items = [commands.length];
+  const items1 = [commands, onPressCommand, section];
+  const memo = onPressCommand.useMemo(() => {
+    const items = [commands.length];
+    return items;
+  }, items);
+  const callback = onPressCommand.useCallback((arg0, arg1) => {
+    section = tmp;
+    const diff = commands.length - 1;
+    return jsx(section(commands[6]), {
+      item: commands[arg1],
+      onPress() {
+        return onPressCommand(closure_0);
+      },
+      section,
+      start: 0 === arg1,
+      end: arg1 === diff
+    }, commands[arg1].id);
+  }, items1);
+  const tmp = section(commands[5])();
+  const tmp4 = closure_4();
+  return jsx(section(commands[7]), { style: closure_4().list, sections: memo, estimatedListSize: "windowSize", itemSize: tmp, insetEnd: section(commands[4])({ includeKeyboardHeight: true }).insets.bottom, renderItem: callback });
+};

@@ -1,0 +1,21 @@
+// Module ID: 9346
+// Function ID: 9347
+// Name: XboxLinkModalActionCreators
+// Dependencies: [4839, 9347, 1896, 2]
+
+// Module 9346 (XboxLinkModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import size from "module_2" /* 2 */;
+
+let c3 = "USER_SETTINGS_CONNECTIONS_XBOX_LINK_MODAL_KEY";
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx");
+
+export default {
+  showModal(locationStack) {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9347, dependencyMap.paths), { locationStack }, c3);
+  },
+  hideModal() {
+    ModalActionCreatorsDefault.popWithKey(c3);
+  }
+};

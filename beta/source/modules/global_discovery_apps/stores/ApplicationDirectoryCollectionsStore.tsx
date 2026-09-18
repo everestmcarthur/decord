@@ -1,0 +1,71 @@
+// Module ID: 12206
+// Function ID: 12207
+// Name: ApplicationDirectoryCollectionsStore
+// Dependencies: [12, 504, 573, 2]
+
+// Module 12206 (ApplicationDirectoryCollectionsStore)
+import _modDef12 from "module_12" /* 12 */;
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+
+let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
+let closure_3 = [];
+let obj2 = {};
+obj = {};
+const Store = initializeDefault.Store;
+class ApplicationDirectoryCollectionsStore extends Store {
+}
+const prototype = ApplicationDirectoryCollectionsStore.prototype;
+prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs(arg0) {
+  return obj4["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+};
+prototype["getFetchState"] = function getFetchState(arg0) {
+  return obj["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+};
+prototype["getCollections"] = function getCollections(arg0) {
+  let tmp = obj2["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+  if (tmp == null) {
+    tmp = closure_3;
+  }
+  return tmp;
+};
+obj2 = {
+  APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function handleFetchAppDirectoryCollections(arg0) {
+    obj = {};
+    ({ surface, activeState } = arg0);
+    const merged = Object.assign(obj);
+    obj["surface:" + surface + " activeState:" + activeState] = obj.FETCHING;
+  },
+  APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: function handleFetchAppDirectoryCollectionsSuccess(collections) {
+    collections = collections.collections;
+    const combined = "surface:" + collections.surface + " activeState:" + collections.activeState;
+    const mapped = collections.map((application_directory_collection_items) => {
+      application_directory_collection_items.application_directory_collection_items = _modDef12.sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
+      return application_directory_collection_items;
+    });
+    obj = _modDef12;
+    obj2 = {};
+    const merged = Object.assign(obj2);
+    obj2[combined] = obj.sortBy(mapped, ["position", "id"]);
+    const obj3 = {};
+    const merged1 = Object.assign(obj);
+    obj3[combined] = obj.FETCHED;
+    obj = obj3;
+    obj4 = {};
+    const timestamp = Date.now();
+    const merged2 = Object.assign(obj4);
+    obj4[combined] = timestamp;
+  },
+  APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function handleFetchAppDirectoryCollectionsFailure(arg0) {
+    obj = {};
+    ({ surface, activeState } = arg0);
+    const merged = Object.assign(obj);
+    obj["surface:" + surface + " activeState:" + activeState] = obj.ERROR;
+  }
+};
+const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(DispatcherDefault, obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx");
+
+export default applicationDirectoryCollectionsStore;
+export const FetchState = obj;

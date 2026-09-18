@@ -1,0 +1,55 @@
+// Module ID: 8807
+// Function ID: 8808
+// Name: GameUtils
+// Dependencies: [2]
+
+// Module 8807 (GameUtils)
+import size from "module_2" /* 2 */;
+
+let c0 = "not supported";
+const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
+
+export default {
+  waitSubscribed() {
+    return Promise.resolve();
+  },
+  waitParentSubscribed() {
+    return Promise.resolve();
+  },
+  waitConnected() {
+    return Promise.resolve();
+  },
+  waitParentConnected() {
+    return Promise.resolve();
+  },
+  isLaunchable() {
+    return Promise.resolve(false);
+  },
+  isGameLaunchable() {
+    return Promise.resolve(false);
+  },
+  launch() {
+    const error = new Error(c0);
+    return Promise.reject(error);
+  },
+  launchDispatchApplication() {
+    const error = new Error(c0);
+    return Promise.reject(error);
+  },
+  removeShortcuts() {
+    return Promise.resolve(false);
+  },
+  createShortcuts() {
+    return Promise.resolve(false);
+  },
+  launchGame() {
+    const error = new Error(c0);
+    return Promise.reject(error);
+  },
+  isProtocolRegistered() {
+    return Promise.resolve(false);
+  },
+  setRecentGames() {
+
+  }
+};

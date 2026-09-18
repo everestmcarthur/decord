@@ -1,0 +1,74 @@
+// Module ID: 11818
+// Function ID: 11819
+// Name: isStaffToNonStaffForward
+// Dependencies: [1957, 1979, 1371, 1074, 2]
+// Exports: default
+
+// Module 11818 (isStaffToNonStaffForward)
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
+
+export default function isStaffToNonStaffForward(channel_id, arr) {
+  const currentUser = UserStore.getCurrentUser();
+  let isStaffResult;
+  if (currentUser != null) {
+    isStaffResult = currentUser.isStaff();
+  }
+  if (isStaffResult) {
+    const channel = ChannelStore.getChannel(channel_id.channel_id);
+    let tmp4 = null != channel;
+    if (tmp4) {
+      if (channel.isPrivate()) {
+        let recipients = channel.recipients;
+        let everyResult = recipients.every((item) => {
+          user = user.getUser(item);
+          return null != user && user.isStaff();
+        });
+      } else {
+        let guild = GuildStore.getGuild(channel.guild_id);
+        everyResult = null != guild;
+        if (everyResult) {
+          let features = guild.features;
+          everyResult = features.has(GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+        }
+      }
+      let someResult = everyResult;
+      if (someResult) {
+        someResult = arr.some((item) => {
+          let every = channel.getChannel(item);
+          let tmp = null != every;
+          if (tmp) {
+            const isPrivateResult = every.isPrivate();
+            if (isPrivateResult) {
+              tmp = !isPrivateResult;
+            } else if (every.isPrivate()) {
+              const recipients = every.recipients;
+              every = recipients.every;
+              let everyResult = every((item) => {
+                user = user.getUser(item);
+                return null != user && user.isStaff();
+              });
+            } else {
+              guild = guild.getGuild(every.guild_id);
+              everyResult = null != guild;
+              if (everyResult) {
+                const features = guild.features;
+                everyResult = features.has(constants.INTERNAL_EMPLOYEE_ONLY);
+              }
+            }
+          }
+          return tmp;
+        });
+      }
+      tmp4 = someResult;
+    }
+    return tmp4;
+  } else {
+    return false;
+  }
+};

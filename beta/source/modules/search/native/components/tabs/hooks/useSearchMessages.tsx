@@ -1,0 +1,27 @@
+// Module ID: 16807
+// Function ID: 16808
+// Name: useSearchMessages
+// Dependencies: [7384, 12472, 504, 12473, 2]
+// Exports: useSearchMessages
+
+// Module 16807 (useSearchMessages)
+import SearchUtils from "SearchUtils" /* 12473 */;
+import SearchMessageStore from "SearchMessageStore" /* 7384 */;
+import SearchQueryStore from "SearchQueryStore" /* 12472 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
+
+export const useSearchMessages = function useSearchMessages(searchContext, tab) {
+  _require = searchContext;
+  dependencyMap = tab;
+  const items = [SearchQueryStore, SearchMessageStore];
+  const items1 = [searchContext, tab];
+  return require("initialize").useStateFromStores(items, () => {
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_0);
+    return SearchMessageStore.getMessages(SearchUtils.getSearchTabFetchId(closure_0, closure_1, searchResultsQuery));
+  }, items1);
+};

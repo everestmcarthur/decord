@@ -1,0 +1,298 @@
+// Module ID: 4869
+// Function ID: 4870
+// Name: useMessageAuthor
+// Dependencies: [1957, 2021, 2015, 1979, 4285, 1371, 38, 504, 4481, 4870, 2]
+// Exports: default, getMessageAuthor, useUserNickAndColor
+
+// Module 4869 (useMessageAuthor)
+import _modDef38 from "module_38" /* 38 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = fn;
+function useNullableMessageAuthor(message) {
+  _require = message;
+  const items = [guild_id];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let channel = null;
+    if (null != closure_0) {
+      channel = ChannelStore.getChannel(tmp.channel_id);
+    }
+    return channel;
+  });
+  id = undefined;
+  if (message != null) {
+    const author = message.author;
+    if (author != null) {
+      id = author.id;
+    }
+  }
+  guild_id = undefined;
+  if (stateFromStores != null) {
+    guild_id = stateFromStores.guild_id;
+  }
+  let obj = require("initialize");
+  const items1 = [colorRoleId];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    let member = null;
+    if (null != guild_id) {
+      member = null;
+      if (null != id) {
+        member = GuildMemberStore.getMember(tmp, tmp3);
+      }
+    }
+    return member;
+  });
+  const tmpResult = require("initialize");
+  const items2 = [UserStore];
+  const items3 = [id];
+  let stateFromStores2 = require("initialize").useStateFromStores(items2, () => UserStore.getUser(id), items3);
+  const tmpResult5 = require("initialize");
+  let bot;
+  if (message != null) {
+    bot = message.author.bot;
+  }
+  if (bot) {
+    let author1;
+    if (message != null) {
+      author1 = message.author;
+    }
+    stateFromStores2 = author1;
+  }
+  const name = stateFromStores(id[8]).useName(stateFromStores2);
+  const obj4 = stateFromStores(id[8]);
+  const items4 = [GuildStore];
+  const items5 = [guild_id];
+  colorRoleId = undefined;
+  const stateFromStores3 = require("initialize").useStateFromStores(items4, () => GuildStore.getGuild(guild_id), items5);
+  if (stateFromStores1 != null) {
+    colorRoleId = stateFromStores1.colorRoleId;
+  }
+  const tmpResult6 = require("initialize");
+  const items6 = [GuildRoleStore];
+  const items7 = [guild_id, colorRoleId];
+  const stateFromStores4 = require("initialize").useStateFromStores(items6, () => {
+    let role;
+    if (null != guild_id) {
+      if (null != colorRoleId) {
+        role = GuildRoleStore.getRole(tmp, tmp3);
+      }
+    }
+    return role;
+  }, items7);
+  const tmpResult7 = require("initialize");
+  const items8 = [RelationshipStore];
+  const stateFromStores5 = require("initialize").useStateFromStores(items8, () => {
+    let nickname = null;
+    if (null != id) {
+      let isPrivateResult;
+      if (stateFromStores != null) {
+        isPrivateResult = obj.isPrivate();
+      }
+      nickname = null;
+      if (isPrivateResult) {
+        nickname = RelationshipStore.getNickname(tmp);
+      }
+      obj = stateFromStores;
+    }
+    return nickname;
+  });
+  let tmp16 = null;
+  if (null != message) {
+    const obj2 = { user: message.author, channel: stateFromStores, guild: stateFromStores3, memberColorRole: stateFromStores4, userName: name, member: stateFromStores1, friendNickname: stateFromStores5, displayNameStyles: tmp15 };
+    tmp16 = computeMessageAuthor(obj2);
+  }
+  return tmp16;
+}
+function useNullableUserAuthor(author, channel) {
+  _require = channel;
+  let id;
+  if (author != null) {
+    id = author.id;
+  }
+  let guild_id;
+  if (channel != null) {
+    guild_id = channel.guild_id;
+  }
+  const items = [GuildMemberStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let member = null;
+    if (null != guild_id) {
+      member = null;
+      if (null != id) {
+        member = GuildMemberStore.getMember(tmp, tmp3);
+      }
+    }
+    return member;
+  });
+  let obj = require("initialize");
+  const items1 = [GuildStore];
+  const items2 = [guild_id];
+  let colorRoleId;
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(guild_id), items2);
+  if (stateFromStores != null) {
+    colorRoleId = stateFromStores.colorRoleId;
+  }
+  const obj2 = require("initialize");
+  const items3 = [GuildRoleStore];
+  const items4 = [guild_id, colorRoleId];
+  const stateFromStores2 = require("initialize").useStateFromStores(items3, () => {
+    let role;
+    if (null != guild_id) {
+      if (null != colorRoleId) {
+        role = GuildRoleStore.getRole(tmp, tmp3);
+      }
+    }
+    return role;
+  }, items4);
+  const tmp3Result = require("initialize");
+  const items5 = [RelationshipStore];
+  const stateFromStores3 = require("initialize").useStateFromStores(items5, () => {
+    let nickname = null;
+    if (null != id) {
+      let isPrivateResult;
+      if (closure_0 != null) {
+        isPrivateResult = obj.isPrivate();
+      }
+      nickname = null;
+      if (isPrivateResult) {
+        nickname = RelationshipStore.getNickname(tmp);
+      }
+      obj = closure_0;
+    }
+    return nickname;
+  });
+  const tmp3Result2 = require("initialize");
+  const name = id(guild_id[8]).useName(author);
+  const obj5 = id(guild_id[8]);
+  return computeMessageAuthor({ user: author, channel, guild: stateFromStores1, memberColorRole: stateFromStores2, member: stateFromStores, userName: name, friendNickname: stateFromStores3, displayNameStyles: id(guild_id[9])({ userId: id, guildId: guild_id }) });
+}
+function getUserAuthor(user, channel) {
+  let id;
+  if (user != null) {
+    id = user.id;
+  }
+  let guild_id;
+  if (channel != null) {
+    guild_id = channel.guild_id;
+  }
+  let member = null;
+  const guild = GuildStore.getGuild(guild_id);
+  if (null != guild_id) {
+    member = null;
+    if (null != id) {
+      member = GuildMemberStore.getMember(guild_id, id);
+    }
+  }
+  let role;
+  if (null != guild_id) {
+    let colorRoleId;
+    if (member != null) {
+      colorRoleId = member.colorRoleId;
+    }
+    if (null != colorRoleId) {
+      role = GuildRoleStore.getRole(guild_id, member.colorRoleId);
+    }
+  }
+  let nickname = null;
+  if (null != id) {
+    nickname = null;
+    if (null != channel) {
+      nickname = null;
+      if (channel.isPrivate()) {
+        nickname = RelationshipStore.getNickname(id);
+      }
+    }
+  }
+  const obj = { user, channel, guild, memberColorRole: role, member, friendNickname: nickname, displayNameStyles: null };
+  let displayNameStyles;
+  if (user != null) {
+    displayNameStyles = user.displayNameStyles;
+  }
+  obj.displayNameStyles = displayNameStyles;
+  return computeMessageAuthor(obj);
+}
+function computeMessageAuthor(channel) {
+  ({ user, guild, memberColorRole, member, userName, friendNickname, displayNameStyles } = channel);
+  let str = "???";
+  if (null != user) {
+    if (userName == null) {
+      userName = UserUtilsDefault.getName(user);
+    }
+    str = userName;
+  }
+  let id;
+  if (user != null) {
+    id = user.id;
+  }
+  if (null != id) {
+    if (null != channel.channel) {
+      let id1;
+      if (guild != null) {
+        id1 = guild.id;
+      }
+      if (null == id1) {
+        if (friendNickname == null) {
+          friendNickname = str;
+        }
+        const obj3 = { nick: friendNickname, colorString: null, colorStrings: null, displayNameStyles };
+        let obj7 = obj3;
+      } else if (null == member) {
+        const obj4 = { nick: str, colorString: null, colorStrings: null, displayNameStyles };
+        obj7 = obj4;
+      } else {
+        let nick = member.nick;
+        if (nick == null) {
+          nick = str;
+        }
+        obj7 = { nick, colorString: null, colorStrings: null, colorRoleName: null, colorRoleId: null, iconRoleId: null, guildMemberAvatar: null, guildMemberAvatarDecoration: null, primaryGuild: null, guildId: null, authorId: null, displayNameStyles: null };
+        ({ colorString: obj2.colorString, colorStrings: obj2.colorStrings } = member);
+        let name;
+        if (memberColorRole != null) {
+          name = memberColorRole.name;
+        }
+        obj7.colorRoleName = name;
+        let id2;
+        if (memberColorRole != null) {
+          id2 = memberColorRole.id;
+        }
+        obj7.colorRoleId = id2;
+        ({ iconRoleId: obj2.iconRoleId, avatar: obj2.guildMemberAvatar, avatarDecoration: obj2.guildMemberAvatarDecoration } = member);
+        const primaryGuild = user.primaryGuild;
+        obj7.primaryGuild = primaryGuild;
+        obj7.guildId = guild.id;
+        obj7.authorId = user.id;
+        obj7.displayNameStyles = displayNameStyles;
+      }
+    }
+    return obj7;
+  }
+  obj7 = { nick: str, colorString: null, colorStrings: null, displayNameStyles };
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useMessageAuthor.tsx");
+
+export default function useMessageNickAndColor(message, arg1) {
+  let tmp = arg1;
+  const tmp2 = useNullableMessageAuthor(message);
+  _modDef38(null != tmp2, "Result cannot be null because the message is not null");
+  if (arg1 == null) {
+    tmp = tmp2;
+  }
+  return tmp;
+};
+export { useNullableMessageAuthor };
+export const getMessageAuthor = function getMessageAuthor(message) {
+  return getUserAuthor(message.author, ChannelStore.getChannel(message.channel_id));
+};
+export const useUserNickAndColor = function useUserNickAndColor(author, channel) {
+  _modDef38(true, "Result cannot be null because user and channel are not null");
+  return useNullableUserAuthor(author, channel);
+};
+export { useNullableUserAuthor };
+export { getUserAuthor };

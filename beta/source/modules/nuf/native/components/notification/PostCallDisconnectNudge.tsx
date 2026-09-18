@@ -1,0 +1,92 @@
+// Module ID: 16623
+// Function ID: 16624
+// Name: PostCallDisconnectNudge
+// Dependencies: [32, 19, 2011, 4655, 12542, 12543, 21, 16622, 1114, 15568, 12544, 504, 7491, 1943, 12545, 4603, 16623, 1896, 2]
+// Exports: default, usePostCallDisconnectNudge
+
+// Module 16623 (PostCallDisconnectNudge)
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12545 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16622 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+
+require = fn;
+const PermissionPromptType = fn(12542).PermissionPromptType;
+const NotificationPermissionConstants = fn(12543);
+({ EventActionLocation: closure_8, NotificationNudgeSurface: closure_9 } = NotificationPermissionConstants);
+const jsx = fn(21).jsx;
+let c11 = "post-call-disconnect-nudge-key";
+let closure_12 = { cooldownDurationMs: 604800000 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx");
+
+export default function PostCallDisconnectNudge(arg0) {
+  ({ markAsDismissed, onHide } = arg0);
+  const obj = { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.pJbYq1);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t.vegtFT);
+  obj.actionLocation = constants.CALL_DISCONNECT;
+  obj.surface = constants2.CALL_DISCONNECT_BOTTOM_SHEET;
+  obj.markAsDismissed = markAsDismissed;
+  obj.onHide = onHide;
+  return jsx(NotificationNudgeBottomSheetDefault, { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
+};
+export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
+export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
+  let obj = stateFromStores1(15568);
+  let tmp2 = stateFromStores;
+  const canSeePushNotificationNudge = stateFromStores(12544).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(12544);
+  const items = [VoiceStateStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
+  let obj3 = stateFromStores(504);
+  const items1 = [markAsDismissed];
+  stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => markAsDismissed.getChannelId());
+  dependencyMap = first.useRef(stateFromStores);
+  const tmp7 = _slicedToArray(first.useState(false), 2);
+  _slicedToArray = tmp7[1];
+  const items2 = [stateFromStores, stateFromStores1];
+  const effect = first.useEffect(() => {
+    const current = ref.current;
+    ref.current = stateFromStores;
+    let tmp2 = null != current;
+    if (tmp2) {
+      tmp2 = null == stateFromStores;
+    }
+    if (tmp2) {
+      tmp2 = current === stateFromStores1;
+    }
+    closure_3(tmp2);
+  }, items2);
+  const obj4 = stateFromStores(504);
+  const obj5 = first;
+  const tmp6 = _slicedToArray;
+  let prop = null;
+  if (tmp7[0]) {
+    prop = null;
+    if (!obj.useConfig({ location: "usePostCallDisconnectNudge" }).inHoldout) {
+      prop = null;
+      if (canSeePushNotificationNudge) {
+        prop = tmp2(1943).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
+      }
+    }
+  }
+  const tmp6Result = tmp6(stateFromStores(7491).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  first = tmp6Result[0];
+  markAsDismissed = tmp12;
+  const items3 = [first, tmp6Result[1]];
+  const effect1 = obj5.useEffect(() => {
+    if (null != first) {
+      const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET);
+      const obj3 = { markAsDismissed };
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16623, dependencyMap.paths), c11, obj3);
+    }
+  }, items3);
+};

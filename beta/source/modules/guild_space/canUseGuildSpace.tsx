@@ -1,0 +1,59 @@
+// Module ID: 7327
+// Function ID: 7328
+// Name: canUseGuildSpace
+// Dependencies: [1979, 4275, 1074, 504, 7328, 2]
+// Exports: canUseGuildSpace, isGuildSpaceAdmin, useCanUseGuildSpace, useIsGuildSpaceAdmin
+
+// Module 7327 (canUseGuildSpace)
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
+
+export const isGuildSpaceAdmin = function isGuildSpaceAdmin(arg0) {
+  let canResult = null != arg0;
+  if (canResult) {
+    canResult = PermissionStore.can(Permissions.MANAGE_GUILD, arg0);
+  }
+  return canResult;
+};
+export const useIsGuildSpaceAdmin = function useIsGuildSpaceAdmin(arg0) {
+  _require = arg0;
+  const items = [PermissionStore];
+  const items1 = [arg0];
+  return require("initialize").useStateFromStores(items, () => {
+    let canResult = null != closure_0;
+    if (canResult) {
+      canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
+    }
+    return canResult;
+  }, items1);
+};
+export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
+  return false;
+}
+export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActionRows) {
+  _require = id;
+  const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const obj = require("GuildSpaceExperiment");
+  const items = [GuildStore];
+  const items1 = [id];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+  closure_129_0 = stateFromStores;
+  const tmpResult = require("initialize");
+  const items2 = [PermissionStore];
+  const items3 = [stateFromStores];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    let canResult = null != closure_0;
+    if (canResult) {
+      canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
+    }
+    return canResult;
+  }, items3);
+  return false;
+};

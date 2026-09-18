@@ -1,0 +1,13 @@
+// Module ID: 7429
+// Function ID: 7430
+// Name: GuildTemplatesConstants
+// Dependencies: [2]
+
+// Module 7429 (GuildTemplatesConstants)
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
+
+export const GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD = 50;
+export const GuildTemplateStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", EXPIRED: "EXPIRED", ACCEPTED: "ACCEPTED", ACCEPTING: "ACCEPTING" };
+export const InternalTemplateCodes = { CLASSROOM: "fVfBazbqjhXg", LOCAL_COMMUNITIES: "64UDvRNCC52Y", CREATORS_HOBBIES: "6exdzMgjZgah", GLOBAL_COMMUNITIES: "4sgbPdCjzAYU", FRIENDS_FAMILY: "hgM48av5Q69A", STUDY_GROUPS: "FbwUwRp4j8Es", CREATE_FROM_SCRATCH: "WYAQmEzjw3Pj", CAMPUS_CLUBS: "Ctg7PUHcQmZu", LEAGUE_CLUBS: "PJ6VvgEJYg45", GITHUB_HACKATHON: "UqzZCTj2zfwy" };

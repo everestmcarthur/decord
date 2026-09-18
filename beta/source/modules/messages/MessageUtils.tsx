@@ -1,0 +1,32 @@
+// Module ID: 10213
+// Function ID: 10214
+// Name: MessageUtils
+// Dependencies: [1957, 1371, 4847, 2]
+// Exports: canViewPotentiallyNSFWChannel, getGuildIdFromMessage
+
+// Module 10213 (MessageUtils)
+import AgeGateUtils from "AgeGateUtils" /* 4847 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/MessageUtils.tsx");
+
+export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChannel(channel_id) {
+  const currentUser = UserStore.getCurrentUser();
+  const channel = ChannelStore.getChannel(channel_id);
+  let tmp3 = null != currentUser && null != channel;
+  if (tmp3) {
+    tmp3 = !AgeGateUtils.isChannelContentGated(channel);
+  }
+  return tmp3;
+};
+export const getGuildIdFromMessage = function getGuildIdFromMessage(channel_id) {
+  const channel = ChannelStore.getChannel(channel_id.channel_id);
+  let guild_id;
+  if (channel != null) {
+    guild_id = channel.guild_id;
+  }
+  return guild_id;
+};

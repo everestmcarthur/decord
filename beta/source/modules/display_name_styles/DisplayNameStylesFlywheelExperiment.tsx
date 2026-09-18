@@ -1,0 +1,32 @@
+// Module ID: 9306
+// Function ID: 9307
+// Name: DisplayNameStylesFlywheelExperiment
+// Dependencies: [1433, 2]
+// Exports: useIsDisplayNameStylesFlywheelSettersEnabled, useIsDisplayNameStylesFlywheelViewersEnabled
+
+// Module 9306 (DisplayNameStylesFlywheelExperiment)
+import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
+
+let ApexExperiment = ApexExperiment_mod;
+const obj = { kind: "user", name: "2026-06-gummy-bears", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+let ApexExperiment = ApexExperiment_mod;
+const obj3 = { kind: "user", name: "2026-06-gummy-viewers", defaultConfig: { enabled: false }, variations: null };
+const obj4 = { 1: null };
+obj4[1] = { enabled: true };
+obj3.variations = obj4;
+const apexExperiment1 = ApexExperiment.createApexExperiment(obj3);
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFlywheelExperiment.tsx");
+
+export const DisplayNameStylesFlywheelSettersExperiment = apexExperiment;
+export const DisplayNameStylesFlywheelViewersExperiment = apexExperiment1;
+export const useIsDisplayNameStylesFlywheelViewersEnabled = function useIsDisplayNameStylesFlywheelViewersEnabled(UsernameWithEffects) {
+  return apexExperiment1.useConfig({ location: UsernameWithEffects }).enabled;
+};
+export const useIsDisplayNameStylesFlywheelSettersEnabled = function useIsDisplayNameStylesFlywheelSettersEnabled(DisplayNameStylesEditScreen) {
+  return apexExperiment.useConfig({ location: DisplayNameStylesEditScreen }).enabled;
+};

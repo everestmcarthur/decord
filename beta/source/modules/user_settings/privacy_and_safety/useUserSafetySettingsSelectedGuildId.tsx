@@ -1,0 +1,36 @@
+// Module ID: 15964
+// Function ID: 15965
+// Name: useUserSafetySettingsSelectedGuildId
+// Dependencies: [1979, 15962, 1074, 504, 2]
+// Exports: useAllServersOptionSelected, useIsSelectedGuildAHub, useUserSafetySettingsSelectedGuildId
+
+// Module 15964 (useUserSafetySettingsSelectedGuildId)
+import GuildStore from "GuildStore" /* 1979 */;
+
+const require = fn;
+const UserSettingsSafetySelectedGuildStore = fn(15962);
+({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } = UserSettingsSafetySelectedGuildStore);
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx");
+
+export const useUserSafetySettingsSelectedGuildId = function useUserSafetySettingsSelectedGuildId() {
+  return React4().selectedGuildId;
+};
+export const useAllServersOptionSelected = function useAllServersOptionSelected() {
+  return React4().selectedGuildId === React3;
+};
+export const useIsSelectedGuildAHub = function useIsSelectedGuildAHub() {
+  const selectedGuildId = closure_4().selectedGuildId;
+  const items = [GuildStore];
+  const stateFromStores = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
+  let flag;
+  if (stateFromStores != null) {
+    const features = stateFromStores.features;
+    flag = features.has(GuildFeatures.HUB);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};

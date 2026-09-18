@@ -1,0 +1,24 @@
+// Module ID: 14691
+// Function ID: 14692
+// Name: UserProfileEditFormSharedStyles
+// Dependencies: [7311, 4636, 576, 2]
+
+// Module 14691 (UserProfileEditFormSharedStyles)
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 7311 */;
+import createStyles from "createStyles" /* 4636 */;
+import size from "module_2" /* 2 */;
+
+({ ARBITRARY_LARGE_OFFSET, FLOATING_UPSELL_HEIGHT } = Constants);
+const obj = { container: { flex: 1 }, bounceOffset: null, avatarContainer: null, formContainer: null, errorContainer: null, floatingUpsell: null };
+const rect = { position: "absolute", top: -ARBITRARY_LARGE_OFFSET, height: ARBITRARY_LARGE_OFFSET, right: 0, left: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.bounceOffset = rect;
+obj.avatarContainer = { zIndex: 1 };
+obj.formContainer = { marginTop: 16, padding: 16, borderRadius: nativeDefault.radii.lg, rowGap: 20 };
+obj.errorContainer = { flex: 1, flexDirection: "row", justifyContent: "center" };
+const rect1 = { position: "absolute", marginBottom: nativeDefault.space.PX_4, left: 0, right: 0, maxHeight: FLOATING_UPSELL_HEIGHT - 12 };
+obj.floatingUpsell = rect1;
+const styles = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormSharedStyles.tsx");
+
+export default styles;

@@ -1,0 +1,121 @@
+// Module ID: 12825
+// Function ID: 12826
+// Name: ContactSyncLandingOnboardingRedesign
+// Dependencies: [5, 19, 17, 4846, 21, 4636, 576, 5763, 5220, 12826, 4632, 1114, 5056, 12827, 12819, 2]
+// Exports: default
+
+// Module 12825 (ContactSyncLandingOnboardingRedesign)
+import nativeDefault from "native" /* 576 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12819 */;
+import _modDef12826 from "module_12826" /* 12826 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12827 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const NativePermissionTypes = fn(4846).NativePermissionTypes;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5763).NAV_BAR_HEIGHT };
+obj2.content = obj3;
+let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
+obj2.headerImage = size;
+const tmp4 = -nativeDefault.space.PX_32;
+obj2.title = { marginBottom: nativeDefault.space.PX_8 };
+let obj4 = { marginBottom: nativeDefault.space.PX_8 };
+obj2.subtitle = { marginBottom: nativeDefault.space.PX_24 };
+const size1 = { height: 48, width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.buttonContainer = size1;
+let obj5 = { marginBottom: nativeDefault.space.PX_24 };
+obj2.trailing = { paddingBottom: nativeDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
+
+export default function ContactSyncLandingOnboardingRedesign(onNext) {
+  onNext = onNext.onNext;
+  ({ loading, error, discoverabilityEnabled, setDiscoverabilityEnabled } = onNext);
+  const tmp = closure_11();
+  const items = [onNext];
+  let obj = { children: null };
+  const obj2 = { style: tmp.content, children: null };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: null };
+  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === v1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_0 = tmp4;
+            v1 = 1;
+            c2 = 1;
+            const obj5 = { value: v1(c2[8]).requestPermission(constants.CONTACTS), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          if (value) {
+            closure_128_0();
+          }
+          c2 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp11) {
+        c2 = tmp;
+        throw tmp11;
+      }
+    }
+  }), items);
+  obj3.source = _modDef12826;
+  const items1 = [closure_8(closure_6, obj3), , , , ];
+  let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
+  const intl = onNext(1114).intl;
+  obj4.children = intl.string(onNext(1114).t["/G+nci"]);
+  items1[1] = closure_8(onNext(4632).Text, obj4);
+  let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
+  const intl2 = onNext(1114).intl;
+  obj5.children = intl2.string(onNext(1114).t.G8zcHt);
+  items1[2] = closure_8(onNext(4632).Text, obj5);
+  const obj6 = { style: tmp.buttonContainer, children: null };
+  const obj7 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
+  const intl3 = onNext(1114).intl;
+  obj7.text = intl3.string(onNext(1114).t.LhlgY9);
+  obj7.onPress = callback;
+  obj7.loading = loading;
+  obj6.children = closure_8(onNext(5056).Button, obj7);
+  items1[3] = closure_8(closure_5, obj6);
+  items1[4] = closure_8(ContactSyncErrorDefault, { error });
+  obj2.children = items1;
+  const items2 = [closure_9(closure_5, obj2), closure_8(closure_5, { style: tmp.trailing, children: closure_8(RedesignContactSyncDiscoverabilityFooterDefault, { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
+  obj.children = items2;
+  return closure_9(closure_10, obj);
+};

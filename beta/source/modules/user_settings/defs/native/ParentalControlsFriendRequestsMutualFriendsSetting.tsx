@@ -1,0 +1,50 @@
+// Module ID: 15988
+// Function ID: 15989
+// Name: ParentalControlsFriendRequestsMutualFriendsSetting
+// Dependencies: [19, 7640, 8079, 1074, 8770, 14915, 7098, 1384, 11605, 1114, 2]
+
+// Module 15988 (ParentalControlsFriendRequestsMutualFriendsSetting)
+import util from "util" /* 1114 */;
+import FlagUtilsAll from "FlagUtils" /* 1384 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14915 */;
+import noop from "module_19" /* 19 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+
+require = fn;
+const FriendSourceFlags = fn(1074).FriendSourceFlags;
+const SettingBuilders = fn(11605);
+const toggle = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.IqlCSq);
+  },
+  parent: fn(8079).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: function useFriendRequestsMutualFriendsSettingValue() {
+    const selectedTeenId = controlledSetting(8770).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(14915).ParentalControlledFriendSourceFlags;
+    controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
+    const items = [controlledSetting];
+    return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualFriends;
+  },
+  onValueChange: function onFriendRequestsMutualFriendsSettingValueChange(arg0) {
+    const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
+    if (null != selectedTeenId) {
+      const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
+      const controlledSetting = ParentalControlledFriendSourceFlags.getControlledSetting(selectedTeenId);
+      const ParentalControlledFriendSourceFlags2 = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
+      const obj = FlagUtilsAll;
+      if (arg0) {
+        let addFlagResult = obj.addFlag(controlledSetting, FriendSourceFlags.MUTUAL_FRIENDS);
+      } else {
+        addFlagResult = obj.removeFlags(controlledSetting, FriendSourceFlags.MUTUAL_FRIENDS, FriendSourceFlags.NO_RELATION);
+      }
+      const result = ParentalControlledFriendSourceFlags2.updateControlledSetting(selectedTeenId, addFlagResult);
+    }
+  },
+  unsearchable: true
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualFriendsSetting.tsx");
+
+export default toggle;

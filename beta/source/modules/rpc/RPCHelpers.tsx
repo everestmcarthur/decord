@@ -1,0 +1,583 @@
+// Module ID: 9689
+// Function ID: 9690
+// Name: RPCHelpers
+// Dependencies: [5, 4864, 1918, 1961, 1385, 1957, 1979, 1908, 4857, 4676, 1371, 4655, 4541, 1074, 1365, 4623, 1090, 12, 7559, 4626, 4869, 9690, 4788, 1367, 8457, 1270, 9684, 9642, 9691, 2]
+// Exports: containsSameValues, getDeprecatedVoiceSettingsWithShortcut, getRemoteIconURL, getVoiceConnectionState, getVoiceSettingsWithShortcut, hasMessageReadPermission, isMatchingOrigin, processSocketThrottlers, transformApplicationRelationship, transformBaseRelationship, transformChannel, transformVoiceState, validateActivityInvite, validateApplication, validateOriginAndUpdateSocket, validatePostMessageTransport, validateSocketApplication
+
+// Module 9689 (RPCHelpers)
+import _modDef12 from "module_12" /* 12 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import UrlDefault from "Url" /* 1367 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
+import useMessageAuthor from "useMessageAuthor" /* 4869 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9642 */;
+import RPCErrorDefault from "RPCError" /* 9684 */;
+import LeakyBucketDefault from "LeakyBucket" /* 9691 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import UserRecord from "UserRecord" /* 1385 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import MessageStore from "MessageStore" /* 4857 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
+import UserStore from "UserStore" /* 1371 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import URLUtils from "URLUtils" /* 1365 */;
+import "RegexUtils";
+import RegexUtils from "RegexUtils" /* 4623 */;
+
+const transformUserDefault = tmp(9690);
+require = fn;
+function recurseReplaceContentTree(type) {
+  if ("customEmoji" === type.type) {
+    type.type = "emoji";
+  }
+  if (tmp) {
+    let combined = str2;
+    if (!obj.test(type.src)) {
+      const _location = location;
+      const _location2 = location;
+      let str3 = "/";
+      if ("/" === str2.charAt(0)) {
+        str3 = "";
+      }
+      const _HermesInternal = HermesInternal;
+      combined = "" + protocol + "//" + host + str3 + str2;
+    }
+    type.src = combined;
+    obj = /^http/;
+  }
+  if (Array.isArray(type.content)) {
+    const content = type.content;
+    type.content = content.map(recurseReplaceContentTree);
+  }
+  return type;
+}
+function validateOrigin(arg0) {
+  let items = arg1;
+  if (arg1 === undefined) {
+    items = [];
+  }
+  return items.indexOf(arg0) > -1;
+}
+function transformInternalTextMessage(message) {
+  const obj2 = { channelId: message.channel_id };
+  const mapped = MarkupUtilsDefault.parseToAST(message.content, true, { channelId: message.channel_id }).map(recurseReplaceContentTree);
+  let tmp4;
+  const channel = ChannelStore.getChannel(message.channel_id);
+  if (null != message.author) {
+    tmp4 = new UserRecord(message.author);
+  }
+  let userAuthor;
+  if (null != message.author) {
+    userAuthor = useMessageAuthor.getUserAuthor(tmp4, channel);
+  }
+  const obj6 = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
+  let tmp10;
+  if (mapped.length) {
+    tmp10 = mapped;
+  }
+  obj6.content_parsed = tmp10;
+  let nick;
+  if (userAuthor != null) {
+    nick = userAuthor.nick;
+  }
+  obj6.nick = nick;
+  let colorString;
+  if (userAuthor != null) {
+    colorString = userAuthor.colorString;
+  }
+  obj6.author_color = colorString;
+  obj6.edited_timestamp = message.edited_timestamp || message.editedTimestamp;
+  ({ timestamp: obj4.timestamp, tts: obj4.tts, mentions: obj4.mentions } = message);
+  obj6.mention_everyone = message.mention_everyone || message.mentionEveryone;
+  obj6.mention_roles = message.mention_roles || message.mentionRoles;
+  ({ embeds: obj4.embeds, attachments: obj4.attachments } = message);
+  let tmp13;
+  if (null != tmp4) {
+    tmp13 = transformUserDefault(tmp4);
+  }
+  obj6.author = tmp13;
+  ({ pinned: obj4.pinned, type: obj4.type } = message);
+  return obj6;
+}
+function fetchApplicationRPC(arg0) {
+  const HTTP = HTTPUtils.HTTP;
+  value = HTTP.get({ url: closure_1_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
+  return value.then((body) => body.body, () => {
+    throw new RPCErrorDefault({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
+  });
+}
+let closure_31 = async function _validateSocketApplication(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_5 = tmp4;
+          closure_6 = tmp2;
+          closure_134_0 = closure_0;
+          closure_134_1 = closure_1;
+          closure_134_2 = closure_2;
+          let application2;
+          closure_134_4 = undefined;
+          closure_134_5 = undefined;
+          let id;
+          let name;
+          let icon;
+          let coverImage;
+          let flags;
+          let parentId;
+          application2 = application.getApplication(closure_1);
+          if (typeof closure_2 === "string") {
+            if (tmp66.transport === constants.POST_MESSAGE) {
+              const tmp21 = getURLForApplicationDefault(tmp67);
+              if (null != tmp21) {
+                const items = [tmp21];
+              }
+              const obj4 = { closeCode: constants2.INVALID_ORIGIN };
+              const tmp52 = new RPCErrorDefault(obj4, "Invalid Origin");
+              throw tmp52;
+            } else {
+              c7 = 1;
+              c8 = 1;
+              const obj5 = { value: fetchApplicationRPC(tmp67), done: false };
+              return obj5;
+            }
+          }
+          if (null == application2) {
+            closure_4 = closure_133_5;
+            const createFromServer = closure_133_5.createFromServer;
+            c7 = 2;
+            c8 = 1;
+            const obj6 = { value: closure_133_30(closure_134_1), done: false };
+            return obj6;
+          } else {
+            closure_134_5 = application2;
+            id = closure_134_5.id;
+            name = closure_134_5.name;
+            icon = closure_134_5.icon;
+            coverImage = closure_134_5.coverImage;
+            flags = closure_134_5.flags;
+            parentId = closure_134_5.parentId;
+            const obj7 = { id, parentId, name, icon, coverImage, flags };
+            closure_134_0.application = obj7;
+            c8 = 3;
+          }
+          tmp66 = closure_0;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          closure_134_4 = value;
+          application2 = closure_133_5.createFromServer(closure_134_4);
+          if (!closure_133_28(closure_134_2, closure_134_4.rpc_origins)) {
+            const obj9 = { closeCode: closure_133_21.INVALID_ORIGIN };
+            const tmp16 = new closure_133_1(closure_133_2[26])(obj9, "Invalid Origin");
+            throw tmp16;
+          }
+        }
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        application2 = createFromServer(value);
+      }
+      c8 = 3;
+      const obj = { value, done: true };
+      return obj;
+    } catch (tmp54) {
+      c8 = tmp;
+      throw tmp54;
+    }
+  }
+};
+let closure_32 = async function _processSocketThrottlers(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_3 = tmp3;
+          let obj3 = VALIDATE_SOCKET_THROTTLERS[closure_0];
+          if (null == obj3) {
+            let num5 = 60;
+            if (tmp35) {
+              num5 = 2;
+            }
+            const tmp24 = new LeakyBucketDefault(num5, MINUTE);
+            tmp37[tmp34] = tmp24;
+            obj3 = tmp24;
+          }
+          c6 = 1;
+          c4 = 2;
+          c7 = 1;
+          const obj5 = { value: obj3.process(closure_2), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp7) {
+        c6 = 0;
+        const obj6 = { closeCode: closure_131_21.CLOSE_ABNORMAL };
+        const tmp16 = new closure_131_1(closure_131_2[26])(obj6, "Socket closed during throttle");
+        throw tmp16;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c7 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        c6 = 0;
+        c7 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp26) {
+      closure_5 = tmp26;
+      if (tmp4 === c6) {
+        c7 = tmp2;
+        throw tmp26;
+      } else {
+        c4 = tmp;
+      }
+    }
+  }
+};
+const GUILD_VOCAL_CHANNEL_TYPES = fn(1961).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(4541);
+({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
+Constants = fn(1074);
+({ ActivityActionTypes: closure_17, ChannelTypes: closure_18, Endpoints: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, RPCCloseCodes: closure_21, RPCErrors: closure_22, RTCConnectionStates: closure_23 } = Constants);
+const toURLSafeResult = URLUtils.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT);
+let str;
+if (toURLSafeResult != null) {
+  str = toURLSafeResult.host;
+}
+if (str == null) {
+  str = "localhost";
+}
+let str2 = str.split(":")[0];
+let tmp5 = str2;
+if (str2.includes(".")) {
+  const parts = str2.split(".");
+  if (!obj2.test(parts[parts.length - 1])) {
+    const substr = parts.slice(-2);
+    str2 = substr.join(".");
+  }
+  tmp5 = str2;
+  obj2 = /^\d+$/;
+}
+function getRemoteIconURL(icon) {
+  let combined = icon;
+  if (!obj.test(icon)) {
+    const _location = location;
+    const _location2 = location;
+    let str = "/";
+    if ("/" === icon.charAt(0)) {
+      str = "";
+    }
+    const _HermesInternal = HermesInternal;
+    combined = "" + protocol + "//" + host + str + icon;
+  }
+  return combined;
+}
+function transformVoiceState(arg0, id, userId) {
+  userId = userId.userId;
+  ({ mute, deaf, selfMute, selfDeaf, suppress } = userId);
+  const user = UserStore.getUser(userId);
+  if (null == user) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("Invalid user id: " + userId);
+    throw error;
+  } else {
+    const obj = { nick: NicknameUtilsDefault.getName(arg0, id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+    const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
+    obj.voice_state = obj3;
+    obj.user = transformUserDefault(user);
+    return obj;
+  }
+}
+const regExp = new RegExp("^" + RegexUtils.escape("https://") + "(?:[a-z]+\\.)?(" + RegexUtils.escape(tmp5) + "|discordapp.com|discord.com)$");
+const MINUTE = DurationsDefault.Millis.MINUTE;
+const VALIDATE_SOCKET_THROTTLERS = {};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/RPCHelpers.tsx");
+
+export const VALIDATE_SOCKET_CALLS_PER_PERIOD_LOW = 2;
+export const VALIDATE_SOCKET_CALLS_PER_PERIOD_HIGH = 60;
+export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
+export { VALIDATE_SOCKET_THROTTLERS };
+export { getRemoteIconURL };
+export const containsSameValues = function containsSameValues(arg0, arg1) {
+  const obj = _modDef12;
+  return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
+};
+export { validateOrigin };
+export const transformChannel = function transformChannel(channel, arg1) {
+  let nSFW = channel;
+  closure_1 = arg1;
+  const items = [];
+  const guild_id = channel.getGuildId();
+  const items1 = [constants3.GUILD_CATEGORY, ...GUILD_VOCAL_CHANNEL_TYPES];
+  if (!items1.includes(channel.type)) {
+    const promise = new Promise((arg0) => {
+      nSFW = arg0;
+      MessageStore.whenReady(nSFW.id, () => closure_0());
+      const messages = MessageActionCreatorsDefault.fetchMessages({ channelId: nSFW.id, limit });
+    });
+    items.push(promise);
+  }
+  return Promise.all(items).then(() => {
+    if (!nSFW.isNSFW()) {
+      if (closure_1) {
+        const messages = MessageStore.getMessages(tmp.id);
+        const mapped = messages.toArray().map(transformInternalTextMessage);
+        const toArrayResult = messages.toArray();
+      }
+      const _Object = Object;
+      const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(tmp.id));
+      let obj = { id: null, name: null, type: null, topic: null, bitrate: null, user_limit: null, guild_id: null, position: null, messages: null, voice_states: null };
+      ({ id: obj2.id, name: obj2.name, type: obj2.type, topic: obj2.topic, bitrate: obj2.bitrate, userLimit: obj2.user_limit } = tmp);
+      obj.guild_id = guild_id;
+      obj.position = tmp.position;
+      obj.messages = [];
+      obj.voice_states = values.map((userId) => {
+        userId = userId.userId;
+        ({ mute, deaf, selfMute, selfDeaf, suppress } = userId);
+        user = user.getUser(userId);
+        if (null == user) {
+          const _Error = Error;
+          const _HermesInternal = HermesInternal;
+          const error = new Error("Invalid user id: " + userId);
+          throw error;
+        } else {
+          const obj = { nick: closure_1(4788).getName(tmp, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
+          obj.voice_state = obj3;
+          obj.user = closure_1(9690)(user);
+          return obj;
+        }
+        tmp = dependencyMap;
+      });
+      return obj;
+    } else {
+      const currentUser = UserStore.getCurrentUser();
+      let nsfwAllowed;
+      if (currentUser != null) {
+        nsfwAllowed = currentUser.nsfwAllowed;
+      }
+    }
+  });
+};
+export { transformInternalTextMessage };
+export { transformVoiceState };
+export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
+  const obj = { type: relationshipType, user: transformUserDefault(user), presence: { status: PresenceStore.getStatus(user.id, null), activity: null } };
+  return obj;
+};
+export const transformApplicationRelationship = function transformApplicationRelationship(presence, id) {
+  let tmp = presence;
+  if (null != id) {
+    const obj = {};
+    const merged = Object.assign(presence);
+    const obj2 = {};
+    const merged1 = Object.assign(presence.presence);
+    let applicationActivity = PresenceStore.getApplicationActivity(presence.user.id, id);
+    if (applicationActivity == null) {
+      applicationActivity = null;
+    }
+    obj2.activity = applicationActivity;
+    obj.presence = obj2;
+    tmp = obj;
+  }
+  return tmp;
+};
+export const isMatchingOrigin = function isMatchingOrigin(str) {
+  if (null == str) {
+    return false;
+  } else {
+    const _window2 = window;
+    if (str === origin) {
+      return true;
+    } else {
+      try {
+        const hostname = UrlDefault.parse(str).hostname;
+        const _window = window;
+        let tmp4 = window.location.hostname === hostname;
+        if (tmp4) {
+          tmp4 = "localhost" === hostname;
+        }
+        if (!tmp4) {
+          let tmp6 = null == str.match("staging");
+          if (tmp6) {
+            const isMatch = regExp.test(str);
+            let tmp8 = !isMatch;
+            if (isMatch) {
+              tmp8 = !obj2.test(origin);
+            }
+            tmp6 = !tmp8;
+            obj2 = regExp;
+          }
+          tmp4 = tmp6;
+        }
+        return tmp4;
+      } catch (err) {
+        return false;
+      }
+    }
+  }
+};
+export const hasMessageReadPermission = function hasMessageReadPermission(channel, id, scopes) {
+  const guild = GuildStore.getGuild(channel.getGuildId());
+  if (null != guild) {
+    let application_id = guild.application_id;
+  } else {
+    application_id = channel.getApplicationId();
+  }
+  let tmp2 = application_id === id;
+  if (!tmp2) {
+    tmp2 = scopes.indexOf(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ) > -1;
+  }
+  return tmp2;
+};
+export const getVoiceConnectionState = function getVoiceConnectionState(state) {
+  if (constants5.RTC_CONNECTED !== state) {
+    if (tmp.RTC_CONNECTING !== state) {
+      if (tmp.RTC_DISCONNECTED !== state) {
+        return state;
+      }
+    }
+  }
+  return state.replace(/^RTC_/, "VOICE_");
+};
+export const validateActivityInvite = function validateActivityInvite(arg0, id, join) {
+  let tmp = arg0 === constants2.JOIN;
+  if (tmp) {
+    let tmp4 = null != id && null != id.id;
+    if (tmp4) {
+      tmp4 = null != join.join;
+    }
+    tmp = tmp4;
+  }
+  return tmp;
+};
+export const validateSocketApplication = function validateSocketApplication() {
+  const self = this;
+  const apply = closure_31.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const processSocketThrottlers = function processSocketThrottlers() {
+  const self = this;
+  const apply = closure_32.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
+  if (null == arg1) {
+    const items = [__initData];
+    authorization.authorization.scopes = items;
+  }
+};
+export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {
+  const settings = MediaEngineStore.getSettings();
+  const obj = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
+  const obj3 = { available_devices: null, device_id: null, volume: null };
+  const values = Object.values(MediaEngineStore.getInputDevices());
+  const sorted = values.sort((index, index2) => index.index - index2.index);
+  obj3.available_devices = sorted.map((id) => ({ id: id.id, name: id.name }));
+  ({ inputDeviceId: obj2.device_id, inputVolume: obj2.volume } = settings);
+  obj.input = obj3;
+  const obj5 = { available_devices: null, device_id: null, volume: null };
+  const values2 = Object.values(MediaEngineStore.getOutputDevices());
+  const sorted1 = values2.sort((index, index2) => index.index - index2.index);
+  obj5.available_devices = sorted1.map((id) => ({ id: id.id, name: id.name }));
+  ({ outputDeviceId: obj4.device_id, outputVolume: obj4.volume } = settings);
+  obj.output = obj5;
+  obj.mode = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: fn(settings), delay: settings.modeOptions.delay };
+  ({ automaticGainControl: obj.automatic_gain_control, echoCancellation: obj.echo_cancellation, noiseSuppression: obj.noise_suppression, qos: obj.qos, silenceWarning: obj.silence_warning, deaf: obj.deaf, mute: obj.mute } = settings);
+  return obj;
+};
+export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, fn) {
+  const settings = MediaEngineStore.getSettings(arg0);
+  const obj = { input_mode: { type: settings.mode, shortcut: fn(settings) }, local_mutes: Object.keys(settings.localMutes), local_volumes: null, self_mute: null, self_deaf: null };
+  ({ localVolumes: obj.local_volumes, mute: obj.self_mute, deaf: obj.self_deaf } = settings);
+  return obj;
+};
+export const validatePostMessageTransport = function validatePostMessageTransport(transport) {
+  if (transport !== constants.POST_MESSAGE) {
+    const obj = { errorCode: constants4.INVALID_COMMAND };
+    const _HermesInternal = HermesInternal;
+    const tmp32 = new RPCErrorDefault(obj, "command not available from \"" + transport + " transport");
+    throw tmp32;
+  }
+};
+export const validateApplication = function validateApplication(application) {
+  if (null == application.id) {
+    const obj = { errorCode: constants4.INVALID_COMMAND };
+    const tmp7 = new RPCErrorDefault(obj, "Invalid application");
+    throw tmp7;
+  } else {
+    return application.id;
+  }
+};

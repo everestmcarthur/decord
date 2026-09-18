@@ -1,0 +1,40 @@
+// Module ID: 17429
+// Function ID: 17430
+// Name: ATTManager
+// Dependencies: [7221, 7834, 1230, 2]
+
+// Module 17429 (ATTManager)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import AdUserActionCreators from "AdUserActionCreators" /* 7834 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+
+require = fn;
+class ATTManager extends tmp2 {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    applyArgumentsResult._openATTPrePromptOrFlowTimeoutId = null;
+    applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.onPostConnectionOpen };
+    return applyArgumentsResult;
+  }
+}
+const prototype = ATTManager.prototype;
+prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
+  try {
+    const adUser = AdUserActionCreators.fetchAdUser("post_connection_open");
+  } catch (tmp4) {
+    SentryUtilsDefault.captureException(tmp4);
+  }
+};
+prototype["_terminate"] = function _terminate() {
+  const self = this;
+  if (null != this._openATTPrePromptOrFlowTimeoutId) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(self._openATTPrePromptOrFlowTimeoutId);
+    self._openATTPrePromptOrFlowTimeoutId = null;
+  }
+};
+const aTTManager = new ATTManager();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/ATTModal/ATTManager.android.tsx");
+
+export default aTTManager;

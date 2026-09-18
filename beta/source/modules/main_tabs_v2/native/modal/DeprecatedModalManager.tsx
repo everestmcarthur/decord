@@ -1,0 +1,173 @@
+// Module ID: 17620
+// Function ID: 17621
+// Name: DeprecatedModalManager
+// Dependencies: [9193, 502, 9951, 17621, 1951, 1074, 4495, 4494, 4841, 6693, 17622, 17623, 17631, 7221, 17632, 17908, 17910, 2]
+
+// Module 17620 (DeprecatedModalManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 4841 */;
+import VerificationUtilsDefault from "VerificationUtils" /* 6693 */;
+import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 17622 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9951 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17621 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+
+require = fn;
+function handlePushedModal(modal) {
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  if (null != rootNavigationRef) {
+    const obj2 = { modal };
+    rootNavigationRef.navigate("modal", obj2);
+  }
+}
+function handlePoppedModal() {
+  NavigationRouteUtils.popModal();
+}
+function pushFirstOpenModal(arg0, arg1) {
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let key = nextResult;
+    let isOpenResult;
+    if (nextResult != null) {
+      let isOpen = nextResult.isOpen;
+      if (isOpen != null) {
+        isOpenResult = isOpen(APP, arg1);
+      }
+    }
+    let component = key.getComponent();
+    let store = key.store;
+    let getProps;
+    if (store != null) {
+      getProps = store.getProps;
+    }
+    if (typeof getProps === "function") {
+      let store2 = key.store;
+      let props = store2.getProps();
+    } else {
+      props = {};
+    }
+    let obj = { key: null };
+    key = key.key;
+    obj.key = key;
+    component = handlePushedModal(getDeprecatedModalDataDefault(component, obj, props));
+  }
+}
+function createPushModalHandler() {
+  closure_0 = [...arguments];
+  return () => {
+    pushFirstOpenModal(closure_0);
+  };
+}
+const Constants = fn(1074);
+const UserRequiredActions = Constants.UserRequiredActions;
+const APP = Constants.AppContext.APP;
+const EMAIL_VERIFICATION_MODAL_OPEN = "EMAIL_VERIFICATION_MODAL_OPEN";
+let closure_15 = {
+  key: "EMAIL_VERIFICATION_MODAL_OPEN",
+  store: UserRequiredActionStore,
+  closable: false,
+  center: true,
+  isOpen(arg0, action) {
+    if (action == null) {
+      action = UserRequiredActionStore.getAction();
+    }
+    let result = VerificationUtilsDefault.isFullScreenVerification(action);
+    if (result) {
+      result = null != AuthenticationStore.getToken();
+    }
+    if (result) {
+      result = !SafetyFlowsExperiment.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+    }
+    return result;
+  },
+  getComponent() {
+    return require("VerificationModal").default;
+  }
+};
+const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
+let closure_17 = {
+  key: "USER_REQUIRED_ACTION_UPDATE",
+  store: UserRequiredActionStore,
+  center: true,
+  isOpen(arg0, arg1) {
+    let action = arg1;
+    if (arg1 == null) {
+      action = UserRequiredActionStore.getAction();
+    }
+    return action === UserRequiredActions.AGREEMENTS;
+  },
+  getComponent() {
+    return require("NewTermsModal").default;
+  }
+};
+const prototype = function DeprecatedModalManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  let obj = {
+    CONNECTION_OPEN_SUPPLEMENTAL: createPushModalHandler(closure_17, closure_15),
+    EMAIL_VERIFICATION_MODAL_OPEN: createPushModalHandler(closure_15),
+    USER_REQUIRED_ACTION_UPDATE(requiredAction) {
+      if (null == requiredAction.requiredAction) {
+        if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
+          tmp5(4494).popModal(tmp7);
+          const tmp5Result = tmp5(4494);
+        }
+        obj = NavigationRouteUtils;
+        tmp7 = USER_REQUIRED_ACTION_UPDATE;
+        if (tmp5Result3.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
+          tmp5(4494).popModal(tmp9);
+          const tmp5Result4 = tmp5(4494);
+        }
+        tmp5Result3 = NavigationRouteUtils;
+        tmp9 = EMAIL_VERIFICATION_MODAL_OPEN;
+      } else {
+        const items = [closure_1_17, closure_1_15];
+        pushFirstOpenModal(items, requiredAction.requiredAction);
+      }
+    },
+    GUILD_SETTINGS_OPEN: createPushModalHandler({
+      key: "GUILD_SETTINGS_OPEN",
+      store: GuildSettingsStore,
+      closable: false,
+      getComponent() {
+        return require("GuildSettingsModal").default;
+      }
+    }),
+    NOTIFICATION_SETTINGS_MODAL_OPEN: createPushModalHandler({
+      key: "NOTIFICATION_SETTINGS_MODAL_OPEN",
+      store: NotificationSettingsModalStore,
+      closable: false,
+      getComponent() {
+        return require("NotificationSettingsModal").default;
+      }
+    }),
+    CREATE_INVITE_MODAL_OPEN: createPushModalHandler({
+      key: "CREATE_INVITE_MODAL_OPEN",
+      store: CreateInviteModalStore,
+      closable: false,
+      getComponent() {
+        return require("InviteSettingsModal").default;
+      }
+    }),
+    GUILD_SETTINGS_CLOSE: handlePoppedModal,
+    NOTIFICATION_SETTINGS_MODAL_CLOSE: handlePoppedModal,
+    PREMIUM_PAYMENT_MODAL_CLOSE: handlePoppedModal,
+    EMAIL_VERIFICATION_MODAL_CLOSE: handlePoppedModal,
+    CREATE_INVITE_MODAL_CLOSE: handlePoppedModal,
+    QUICKSWITCHER_HIDE: handlePoppedModal,
+    IFE_EXPERIMENT_SEARCH_MODAL_CLOSE: handlePoppedModal
+  };
+  applyArgumentsResult.actions = obj;
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp4 {
+}
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
+
+export default prototype1;

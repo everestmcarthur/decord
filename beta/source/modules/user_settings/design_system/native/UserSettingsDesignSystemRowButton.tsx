@@ -1,0 +1,147 @@
+// Module ID: 15856
+// Function ID: 15857
+// Name: UserSettingsDesignSystemRowButton
+// Dependencies: [19, 17, 21, 8716, 5054, 576, 4632, 8718, 7484, 2]
+// Exports: default
+
+// Module 15856 (UserSettingsDesignSystemRowButton)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import _modDef7484 from "module_7484" /* 7484 */;
+import Form from "Form" /* 8716 */;
+import RowButton from "RowButton" /* 8718 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx");
+
+export default function UserSettingsDesignSystemRowButton() {
+  const obj = { children: null };
+  const obj2 = { title: "Row Buttons", description: null, children: null };
+  const obj3 = { style: { padding: nativeDefault.space.PX_16 }, children: null };
+  const items = [hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", children: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page." }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", children: "Only stack up to 2 Row Buttons in a row to to prevent decision fatigue." })];
+  obj3.children = items;
+  obj2.description = timestampProducer(Stack_Stack.Stack, obj3);
+  obj2.children = hasOwnProperty(React3, {});
+  const items1 = [hasOwnProperty(Form.FormSection, obj2), ];
+  const obj5 = { style: { padding: 16 }, children: null };
+  const obj6 = { children: null };
+  const obj4 = { padding: nativeDefault.space.PX_16 };
+  const items2 = [
+    hasOwnProperty(RowButton.RowButton, {
+      variant: "primary",
+      icon: _modDef7484,
+      label: "Primary Row Button",
+      onPress() {
+
+      }
+    }),
+  ,
+  ,
+  ,
+  ,
+  ,
+
+  ];
+  const obj7 = {
+    variant: "primary",
+    icon: _modDef7484,
+    label: "Primary Row Button",
+    onPress() {
+
+    }
+  };
+  items2[1] = hasOwnProperty(RowButton.RowButton, {
+    variant: "primary",
+    icon: _modDef7484,
+    label: "Primary Row Button",
+    subLabel: "I am a high emphasis button with a subLabel",
+    onPress() {
+
+    }
+  });
+  const obj8 = {
+    variant: "primary",
+    icon: _modDef7484,
+    label: "Primary Row Button",
+    subLabel: "I am a high emphasis button with a subLabel",
+    onPress() {
+
+    }
+  };
+  items2[2] = hasOwnProperty(RowButton.RowButton, {
+    variant: "secondary",
+    icon: _modDef7484,
+    label: "Secondary Row Button",
+    onPress() {
+
+    }
+  });
+  const obj9 = {
+    variant: "secondary",
+    icon: _modDef7484,
+    label: "Secondary Row Button",
+    onPress() {
+
+    }
+  };
+  items2[3] = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7484,
+    label: "Secondary Row Button",
+    subLabel: "I am a high emphasis button with a subLabel",
+    onPress() {
+
+    }
+  });
+  const obj10 = {
+    icon: _modDef7484,
+    label: "Secondary Row Button",
+    subLabel: "I am a high emphasis button with a subLabel",
+    onPress() {
+
+    }
+  };
+  items2[4] = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7484,
+    label: "Secondary Row Button",
+    subLabel: "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
+    onPress() {
+
+    }
+  });
+  const obj12 = { icon: null, label: "Row Button", subLabel: "With a custom RowButton.Icon", onPress: null };
+  const obj11 = {
+    icon: _modDef7484,
+    label: "Secondary Row Button",
+    subLabel: "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
+    onPress() {
+
+    }
+  };
+  obj12.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7484 });
+  obj12.onPress = function onPress() {
+
+  };
+  items2[5] = hasOwnProperty(RowButton.RowButton, obj12);
+  const obj13 = { source: _modDef7484 };
+  items2[6] = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7484,
+    label: "Row Button",
+    subLabel: "I am disabled",
+    onPress() {
+
+    },
+    disabled: true
+  });
+  obj6.children = items2;
+  obj5.children = timestampProducer(Stack_Stack.Stack, obj6);
+  items1[1] = hasOwnProperty(React3, obj5);
+  obj.children = items1;
+  return timestampProducer(React4, obj);
+};

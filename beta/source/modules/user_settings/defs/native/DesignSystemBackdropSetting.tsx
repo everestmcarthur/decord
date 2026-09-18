@@ -1,0 +1,28 @@
+// Module ID: 15883
+// Function ID: 15884
+// Name: DesignSystemBackdropSetting
+// Dependencies: [8079, 1074, 11605, 15884, 2]
+
+// Module 15883 (DesignSystemBackdropSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
+  useTitle() {
+    return "Backdrop";
+  },
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_BACKDROP,
+    getComponent() {
+      return require("UserSettingsDesignSystemBackdrop").default;
+    }
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemBackdropSetting.tsx");
+
+export default route;

@@ -1,0 +1,27 @@
+// Module ID: 1834
+// Function ID: 1835
+// Dependencies: [1835, 1836, 1837, 1838, 1839]
+
+// Module 1834
+const require = globalThis.__r;
+
+for (const key10013 in require("module_1835")) {
+  arg5[key10013] = require("module_1835")[key10013];
+  continue;
+}
+for (const key10017 in require("module_1836")) {
+  arg5[key10017] = require("module_1836")[key10017];
+  continue;
+}
+for (const key10021 in require("module_1837")) {
+  arg5[key10021] = require("module_1837")[key10021];
+  continue;
+}
+for (const key10025 in require("module_1838")) {
+  arg5[key10025] = require("module_1838")[key10025];
+  continue;
+}
+for (const key10029 in require("module_1839")) {
+  arg5[key10029] = require("module_1839")[key10029];
+  continue;
+}

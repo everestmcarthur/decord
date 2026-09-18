@@ -1,0 +1,36 @@
+// Module ID: 5514
+// Function ID: 5515
+// Name: ButtonGroup
+// Dependencies: [19, 21, 4636, 5054, 2]
+// Exports: ButtonGroup
+
+// Module 5514 (ButtonGroup)
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let closure_3 = createStyles.createStyles({ container: { paddingVertical: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
+
+export const ButtonGroup = function ButtonGroup(size) {
+  let str = size.size;
+  if (str === undefined) {
+    str = "md";
+  }
+  ({ children, style } = size);
+  const merged = Object.assign(size, Object.assign({ size: 0, children: 0, style: 0 }));
+  let num = 8;
+  if ("sm" === str) {
+    num = 12;
+  }
+  const obj = {};
+  const merged1 = Object.assign(merged);
+  obj.spacing = num;
+  const items = [closure_3().container, style];
+  obj.style = items;
+  obj.children = children;
+  return jsx(Stack_Stack.Stack, {});
+};

@@ -1,0 +1,25 @@
+// Module ID: 1925
+// Function ID: 1926
+// Name: StringUtils
+// Dependencies: [2, 1926]
+// Exports: isNullOrEmpty
+
+// Module 1925 (StringUtils)
+import utils_StringUtils from "utils/StringUtils" /* 1926 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("utils/StringUtils.tsx");
+
+export const isNullOrEmpty = function isNullOrEmpty(application_id) {
+  let tmp = null == application_id;
+  if (!tmp) {
+    tmp = 0 === application_id.length;
+  }
+  return tmp;
+};
+export const upperCaseFirstChar = utils_StringUtils.upperCaseFirstChar;
+export const getAcronym = utils_StringUtils.getAcronym;
+export const cssValueToNumber = utils_StringUtils.cssValueToNumber;
+export const stripDiacritics = utils_StringUtils.stripDiacritics;
+export const truncateText = utils_StringUtils.truncateText;
+export const normalize = utils_StringUtils.normalize;

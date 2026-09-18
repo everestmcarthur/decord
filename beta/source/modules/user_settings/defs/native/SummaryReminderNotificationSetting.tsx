@@ -1,0 +1,32 @@
+// Module ID: 15600
+// Function ID: 15601
+// Name: SummaryReminderNotificationSetting
+// Dependencies: [8079, 11605, 1114, 1935, 15601, 2]
+
+// Module 15600 (SummaryReminderNotificationSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SummaryReminderNotificationUtils from "SummaryReminderNotificationUtils" /* 15601 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const toggle = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.xEqC6q);
+  },
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(util.t.KmVXll);
+  },
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableSummaryReminderNotifications.useSetting,
+  onValueChange: SummaryReminderNotificationUtils.onSummaryReminderNotificationSettingsChanged,
+  usePredicate() {
+    return false;
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
+
+export default toggle;

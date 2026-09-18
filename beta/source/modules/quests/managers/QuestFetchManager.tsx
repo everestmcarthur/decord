@@ -1,0 +1,136 @@
+// Module ID: 17929
+// Function ID: 17930
+// Name: QuestFetchManager
+// Dependencies: [7805, 1090, 7221, 11621, 1230, 11413, 1363, 11437, 17930, 2]
+
+// Module 17929 (QuestFetchManager)
+import DurationsDefault from "Durations" /* 1090 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import QuestsEligibility from "QuestsEligibility" /* 11621 */;
+import QuestStore from "QuestStore" /* 7805 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+
+require = fn;
+const DAY = DurationsDefault.Millis.DAY;
+let closure_5 = 30 * DurationsDefault.Millis.MINUTE;
+let closure_6 = 5 * DurationsDefault.Millis.MINUTE;
+const HOUR = DurationsDefault.Millis.HOUR;
+let closure_7 = 5 * DurationsDefault.Millis.MINUTE;
+class QuestFetchManager extends tmp2 {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    applyArgumentsResult.instantiatedAt = Date.now();
+    applyArgumentsResult.initialFetchTimerId = null;
+    applyArgumentsResult.initialQuestHomeHeroFetchTimerId = null;
+    applyArgumentsResult.recurringFetchTimerId = null;
+    applyArgumentsResult.lastFetchAttemptedAt = 0;
+    applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = 0;
+    applyArgumentsResult.hasHandledConnectionOpen = false;
+    applyArgumentsResult.handleQuestsFetchCurrentQuestsBegin = function handleQuestsFetchCurrentQuestsBegin() {
+      applyArgumentsResult.lastFetchAttemptedAt = Date.now();
+    };
+    applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
+      window.clearTimeout(applyArgumentsResult.initialFetchTimerId);
+      window.clearTimeout(applyArgumentsResult.initialQuestHomeHeroFetchTimerId);
+      window.clearTimeout(applyArgumentsResult.recurringFetchTimerId);
+      applyArgumentsResult.recurringFetchTimerId = window.setInterval(() => {
+        if (Date.now() - closure_1_0.lastFetchAttemptedAt > DAY) {
+          closure_1_0._fetch("post_connect_recurring");
+        }
+      }, closure_5);
+      const isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
+      applyArgumentsResult.hasHandledConnectionOpen = true;
+      if (applyArgumentsResult.hasHandledConnectionOpen) {
+        if (isEligibleForQuests) {
+          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17930).getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
+          const tmp5Result = tmp5(17930);
+        }
+        const _Math = Math;
+        const _Math2 = Math;
+        ({ questFetchJitterMs, questHomeHeroJitterMs } = DEFAULT_QUEST_FETCH_JITTER_CONFIG);
+        const rounded = Math.floor(Math.random() * questFetchJitterMs);
+        const _window = window;
+        tmp.initialFetchTimerId = window.setTimeout(() => {
+          if (Date.now() - QuestStore.lastFetchedCurrentQuests > closure_2_7) {
+            closure_1_0._fetch("post_connect_initial");
+          }
+        }, rounded);
+        if (isEligibleForQuests) {
+          const _Math3 = Math;
+          const _Math4 = Math;
+          const _window2 = window;
+          tmp.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
+            try {
+              const questHomeHero = closure_1_0(closure_1_2[5]).fetchQuestHomeHero();
+            } catch (err) {
+            }
+          }, rounded + Math.floor(Math.random() * questHomeHeroJitterMs));
+        }
+      }
+      DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17930).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
+    };
+    applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {
+
+    };
+    applyArgumentsResult.handleUserSettingsProtoUpdate = function handleUserSettingsProtoUpdate(settings) {
+      let wasSaved = !("localization" in settings.settings.proto);
+      if (!wasSaved) {
+        wasSaved = !settings.partial;
+      }
+      if (!wasSaved) {
+        wasSaved = settings.wasSaved;
+      }
+      if (!wasSaved) {
+        const _Date = Date;
+        wasSaved = Date.now() - applyArgumentsResult.lastFetchedQuestForLocaleChangeAt <= closure_6;
+      }
+      if (!wasSaved) {
+        const _Date2 = Date;
+        applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = Date.now();
+        applyArgumentsResult._fetch("user_settings");
+      }
+    };
+    applyArgumentsResult.handleStartSession = function handleStartSession() {
+      applyArgumentsResult.hasHandledConnectionOpen = false;
+    };
+    applyArgumentsResult.handleLogout = function handleLogout() {
+      window.clearTimeout(applyArgumentsResult.initialFetchTimerId);
+      window.clearTimeout(applyArgumentsResult.initialQuestHomeHeroFetchTimerId);
+      window.clearTimeout(applyArgumentsResult.recurringFetchTimerId);
+      applyArgumentsResult.lastFetchAttemptedAt = 0;
+      applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = 0;
+      applyArgumentsResult.hasHandledConnectionOpen = false;
+    };
+    applyArgumentsResult.actions = { QUESTS_FETCH_CURRENT_QUESTS_BEGIN: applyArgumentsResult.handleQuestsFetchCurrentQuestsBegin, POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, RUNNING_GAMES_CHANGE: applyArgumentsResult.handleRunningGamesChange, RUNNING_NON_GAMES_CHANGE: applyArgumentsResult.handleRunningGamesChange, USER_SETTINGS_PROTO_UPDATE: applyArgumentsResult.handleUserSettingsProtoUpdate, START_SESSION: applyArgumentsResult.handleStartSession, LOGOUT: applyArgumentsResult.handleLogout };
+    return applyArgumentsResult;
+  }
+}
+QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
+  let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
+  if (isEligibleForQuests) {
+    isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
+  }
+  if (isEligibleForQuests) {
+    const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
+    const obj4 = { callerSource, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
+    const _Date = Date;
+    obj4.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
+    obj4.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
+    obj3.data = obj4;
+    SentryUtilsDefault.addBreadcrumb(obj3);
+    const tmp6 = importDefault;
+    const currentQuests = tmp(11413).fetchCurrentQuests();
+    const tmpResult = tmp(11413);
+    if (tmpResult2.isMac()) {
+      const state = tmp6(11437).getState();
+      const tmp6Result = tmp6(11437);
+    }
+    tmpResult2 = tmp(1363);
+  }
+};
+const questFetchManager = new QuestFetchManager();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/managers/QuestFetchManager.tsx");
+
+export default questFetchManager;

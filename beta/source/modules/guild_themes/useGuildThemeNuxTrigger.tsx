@@ -1,0 +1,69 @@
+// Module ID: 16263
+// Function ID: 16264
+// Name: guild_themes/useGuildThemeNuxTrigger
+// Dependencies: [32, 19, 1954, 4521, 7491, 1943, 2]
+// Exports: default
+
+// Module 16263 (guild_themes/useGuildThemeNuxTrigger)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 4521 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+let constants = fn(1954).DismissibleContentGroupName;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
+
+export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
+  closure_0 = guildId;
+  isNuxOpen = isNuxOpen.isNuxOpen;
+  const openNux = isNuxOpen.openNux;
+  closure_3 = undefined;
+  constants = undefined;
+  const enabledGuildThemeForGuildId = GuildThemeResolver.useEnabledGuildThemeForGuildId(guildId, "GuildThemeNuxTrigger");
+  if (null != enabledGuildThemeForGuildId) {
+    const items = [tmp(1943).DismissibleContent.GUILD_THEME_NUX];
+    let items1 = items;
+  } else {
+    items1 = [];
+  }
+  const tmp4 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(items1, constants.GUILD_THEME_NUX), 2);
+  closure_3 = tmp5;
+  const tmp6 = tmp4[0] === dismissible_content.DismissibleContent.GUILD_THEME_NUX;
+  constants = tmp6;
+  noop.useRef(false);
+  const items2 = [guildId];
+  const effect = noop.useEffect(() => {
+    closure_5.current = false;
+  }, items2);
+  const items3 = [tmp6, isNuxOpen, guildId, tmp4[1], openNux];
+  const effect1 = noop.useEffect(() => {
+    if (closure_4) {
+      if (!isNuxOpen) {
+        if (!ref.current) {
+          const _setTimeout = setTimeout;
+          guildId = setTimeout(() => {
+            closure_5.current = true;
+            guildId = false;
+            const resolved = Promise.resolve(closure_2({
+              guildId,
+              markAsDismissed(arg0) {
+                if (!c0) {
+                  c0 = true;
+                  closure_2_3(arg0, true);
+                }
+              }
+            }));
+            resolved.catch(() => {
+              closure_1_5.current = false;
+            });
+          }, 2000);
+          return () => clearTimeout(closure_0);
+        }
+      }
+    }
+  }, items3);
+};
+export const GUILD_THEME_NUX_DELAY_MS = 2000;

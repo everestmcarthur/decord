@@ -1,0 +1,48 @@
+// Module ID: 8881
+// Function ID: 8882
+// Name: ImageWithPlaceholder
+// Dependencies: [17, 21, 1363, 8882, 5668, 2]
+// Exports: ImageWithPlaceholder
+
+// Module 8881 (ImageWithPlaceholder)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8882 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import size from "module_2" /* 2 */;
+
+({ View: c2, requireNativeComponent } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
+const style = { flex: 1 };
+const ImagePlaceholderVersions = { THUMBHASH: 1, [1]: "THUMBHASH" };
+if (PlatformUtils.isAndroid()) {
+  let importDefaultResult = ImageWithThumbhashPlaceholderNativeComponentDefault;
+} else {
+  importDefaultResult = requireNativeComponent("DCDImageWithThumbhashPlaceholderView");
+}
+const metroRequire = importDefaultResult;
+const result = size.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
+
+export { ImagePlaceholderVersions };
+export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
+  ({ uri, placeholder, placeholderVersion, alt, style } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ uri: 0, placeholder: 0, placeholderVersion: 0, alt: 0, style: 0 }));
+  if (null != placeholder) {
+    if (placeholderVersion === obj.THUMBHASH) {
+      const obj2 = {};
+      const merged1 = Object.assign(merged);
+      obj2.style = style;
+      obj2.uri = uri;
+      obj2.placeholder = placeholder;
+      obj2.placeholderVersion = placeholderVersion;
+      obj2.alt = alt;
+      let tmp4 = <importDefaultResult />;
+    }
+    return tmp4;
+  }
+  obj = { style };
+  const merged2 = Object.assign(merged);
+  obj.children = jsx(FastImageDefault, { style, resizeMode: "cover", source: { uri }, alt });
+  tmp4 = <React2 style={style} />;
+};

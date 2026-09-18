@@ -1,0 +1,105 @@
+// Module ID: 17297
+// Function ID: 17298
+// Name: VoicePanelConnectButton
+// Dependencies: [19, 1957, 21, 4636, 576, 12405, 17237, 504, 4847, 7432, 5492, 4982, 17298, 17301, 17302, 13067, 17296, 1114, 4632, 2]
+// Exports: default
+
+// Module 17297 (VoicePanelConnectButton)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useAlertStore from "useAlertStore" /* 4982 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13067 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17298 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17301 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17302 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+
+const require = globalThis.__r;
+const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
+const VoicePanelNoJoinPermissionsAlertDefault = VoicePanelNoJoinPermissionsAlert;
+const VoicePanelMaxCapacityAlertDefault = VoicePanelMaxCapacityAlert;
+const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let obj2 = { connectButton: { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingLeft: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 }, connectText: { textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
+
+export default function ConnectButton(props) {
+  let channelId;
+  let guildId;
+  let canConnect;
+  let isChannelSpoilerGated;
+  const tmp = isChannelSpoilerGated();
+  _require = tmp;
+  const context = canConnect.useContext(channelId(guildId[5]));
+  channelId = context.channelId;
+  guildId = context.guildId;
+  const tmp5 = channelId(guildId[6])(channelId);
+  canConnect = tmp5.canConnect;
+  const isAtMaxCapacity = tmp5.isAtMaxCapacity;
+  const items = [isAtMaxCapacity];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj2 = require("initialize");
+  const tmp2 = channelId;
+  let isChannelContentGated = require("AgeGateUtils").useIsChannelContentGated(stateFromStores);
+  if (isChannelContentGated) {
+    isChannelContentGated = null != guildId;
+  }
+  if (isChannelContentGated) {
+    isChannelContentGated = null != channelId;
+  }
+  let obj3 = require("AgeGateUtils");
+  isChannelSpoilerGated = require("SpoilerChannelUtils").useIsChannelSpoilerGated(stateFromStores);
+  if (isChannelSpoilerGated) {
+    isChannelSpoilerGated = null != guildId;
+  }
+  if (isChannelSpoilerGated) {
+    isChannelSpoilerGated = null != channelId;
+  }
+  const items1 = [canConnect, isAtMaxCapacity, channelId, isChannelContentGated, isChannelSpoilerGated, guildId];
+  const callback = obj.useCallback(() => {
+    if (canConnect) {
+      if (!isAtMaxCapacity) {
+        if (!isChannelContentGated) {
+          if (!isChannelSpoilerGated) {
+            const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channelId);
+          }
+        }
+      }
+    }
+    if (canConnect) {
+      if (isAtMaxCapacity) {
+        const obj4 = { channelId };
+        useAlertStore.openAlert(VoicePanelMaxCapacityAlert.VOICE_PANEL_MAX_CAPACITY_KEY, jsx(VoicePanelMaxCapacityAlertDefault, { channelId }));
+      } else if (isChannelContentGated) {
+        const obj6 = { guildId, channelId };
+        useAlertStore.openAlert(VoicePanelNsfwAlert.VOICE_PANEL_NSFW_KEY, jsx(VoicePanelNsfwAlertDefault, { guildId, channelId }));
+      } else if (isChannelSpoilerGated) {
+        const obj8 = { channelId };
+        useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId }));
+      }
+    } else {
+      useAlertStore.openAlert(VoicePanelNoJoinPermissionsAlert.VOICE_PANEL_NO_JOIN_PERMS_KEY, jsx(VoicePanelNoJoinPermissionsAlertDefault, {}));
+    }
+  }, items1);
+  const element = { onPress: callback, props: props.props, accessibilityLabel: null, style: null, children: null };
+  const tmp6Result = require("SpoilerChannelUtils");
+  let intl = tmp6(tmp3[17]).intl;
+  element.accessibilityLabel = intl.string(require("util").t["96ANUN"]);
+  element.style = tmp.connectButton;
+  const items2 = [tmp.connectText];
+  element.children = canConnect.useMemo(() => {
+    const obj = { variant: "text-sm/semibold", color: "text-overlay-light", style: connectText.connectText, children: null };
+    const intl = util.intl;
+    obj.children = intl.string(util.t["96ANUN"]);
+    return jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", style: connectText.connectText, children: null });
+  }, items2);
+  return isChannelContentGated(tmp2(guildId[16]), element);
+};

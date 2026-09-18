@@ -1,0 +1,30 @@
+// Module ID: 15337
+// Function ID: 15338
+// Name: SoundboardVolumeSetting
+// Dependencies: [8079, 11605, 1114, 7447, 7441, 7285, 2]
+
+// Module 15337 (SoundboardVolumeSetting)
+import util from "util" /* 1114 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7441 */;
+import SoundboardUtils from "SoundboardUtils" /* 7447 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const volumeSlider = SettingBuilders.createVolumeSlider({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.kbFsAD);
+  },
+  parent: SettingsConstants.MobileUserSettings.VOICE,
+  maximum: 100,
+  useValue: SoundboardUtils.getAmplitudinalSoundboardVolume,
+  onValueChange(volume) {
+    const items = [AnalyticsLocationDefault.USER_SETTINGS];
+    return SoundboardActionCreators.updateUserSoundboardVolume(volume, items);
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
+
+export default volumeSlider;

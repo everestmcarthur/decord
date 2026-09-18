@@ -1,0 +1,17 @@
+// Module ID: 14775
+// Function ID: 14776
+// Name: SafetySettingsUtils
+// Dependencies: [1074, 1240, 2]
+// Exports: trackSafetySettingsNoticeAnalytics
+
+// Module 14775 (SafetySettingsUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import size from "module_2" /* 2 */;
+
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/safety_common/SafetySettingsUtils.tsx");
+
+export const trackSafetySettingsNoticeAnalytics = function trackSafetySettingsNoticeAnalytics(AGE_CONFIRMATION_NOTICE, LEARN_MORE) {
+  AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_SETTINGS_NOTICE_ACTION, { notice_type: AGE_CONFIRMATION_NOTICE, action: LEARN_MORE });
+};

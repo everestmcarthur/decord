@@ -1,0 +1,26 @@
+// Module ID: 15030
+// Function ID: 15031
+// Name: AuthorizedAppScreen
+// Dependencies: [19, 21, 7097, 1483, 15031, 2]
+// Exports: default
+
+// Module 15030 (AuthorizedAppScreen)
+import useNavigation from "useNavigation" /* 1483 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7097 */;
+import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 15031 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
+
+export default function AuthorizedAppScreen() {
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
+  const stackNavigation = useNavigation.useStackNavigation();
+  const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    stackNavigation.setOptions({ title: settingNavigationRoute.params.oauth2Token.application.name, headerShown: true });
+  }, items);
+  return jsx(UserSettingsAuthedAppDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
+};

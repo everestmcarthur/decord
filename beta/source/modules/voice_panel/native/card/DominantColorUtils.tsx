@@ -1,0 +1,206 @@
+// Module ID: 8953
+// Function ID: 8954
+// Name: DominantColorUtils
+// Dependencies: [32, 19, 17, 1437, 4486, 576, 558, 2]
+// Exports: getCachedSourceFromURI, useDominantColorFromImage, useDominantRGBFromImage
+
+// Module 8953 (DominantColorUtils)
+import nativeDefault from "native" /* 576 */;
+import privDefault from "priv" /* 1437 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ NativeModules: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+let closure_7 = new privDefault({ max: 1000 });
+let tmp3 = new privDefault({ max: 1000 });
+let closure_8 = new privDefault({ max: 1000 });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/card/DominantColorUtils.tsx");
+
+export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI) {
+  value = closure_8.get(avatarURI);
+  if (value == null) {
+    let tmp2 = avatarURI;
+    if (typeof avatarURI !== "number") {
+      let tmp3 = null;
+      if (null != avatarURI) {
+        tmp3 = null;
+        if ("" !== avatarURI.trim()) {
+          const obj2 = { uri: avatarURI };
+          tmp3 = obj2;
+        }
+      }
+      tmp2 = tmp3;
+    }
+    value = tmp2;
+  }
+  const result = closure_8.set(avatarURI, value);
+  return value;
+};
+export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
+  _require = arg0;
+  importDefault = noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
+    closure_1_1.current = false;
+  }, []);
+  let hexToRgbResult;
+  if (null != arg0) {
+    hexToRgbResult = closure_7.get(arg0);
+  }
+  if (hexToRgbResult == null) {
+    hexToRgbResult = require("ColorUtils").hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+    const obj2 = require("ColorUtils");
+  }
+  const tmp7 = _slicedToArray(noop.useState(hexToRgbResult), 2);
+  dependencyMap = tmp7[1];
+  const items = [arg0];
+  const effect1 = noop.useEffect(() => {
+    value = undefined;
+    if (null != closure_0) {
+      value = closure_1_7.get(str);
+    }
+    closure_0 = value;
+    if (null != closure_0) {
+      if (null == value) {
+        value2 = closure_1_8.get(str);
+        if (value2 == null) {
+          let tmp6 = str;
+          if (typeof str !== "number") {
+            let tmp7 = null;
+            if (null != str) {
+              tmp7 = null;
+              if ("" !== str.trim()) {
+                const obj2 = { uri: str };
+                tmp7 = obj2;
+              }
+            }
+            tmp6 = tmp7;
+          }
+          value2 = tmp6;
+        }
+        let result = closure_1_8.set(str, value2);
+        if (null != value2) {
+          if (typeof value2 === "number") {
+            const ImageManager = closure_1_5.ImageManager;
+            let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_6.resolveAssetSource(value2));
+          } else {
+            const ImageManager2 = closure_1_5.ImageManager;
+            dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value2));
+          }
+          dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
+            const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
+            result = closure_2_7.set(value, obj);
+            if (ref.current) {
+              closure_1_2(obj);
+            }
+          }).catch(() => {
+
+          });
+          const nextPromise = dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
+            const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
+            result = closure_2_7.set(value, obj);
+            if (ref.current) {
+              closure_1_2(obj);
+            }
+          });
+        }
+      } else {
+        closure_2((arg0) => {
+          let tmp = value;
+          if (value === arg0) {
+            tmp = arg0;
+          }
+          return tmp;
+        });
+      }
+    }
+  }, items);
+  return tmp7[0];
+};
+export const useDominantColorFromImage = function useDominantColorFromImage(arg0) {
+  _require = arg0;
+  importDefault = noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
+    closure_1_1.current = false;
+  }, []);
+  let hexToRgbResult;
+  if (null != arg0) {
+    hexToRgbResult = closure_7.get(arg0);
+  }
+  if (hexToRgbResult == null) {
+    hexToRgbResult = require("ColorUtils").hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+    let obj2 = require("ColorUtils");
+  }
+  [tmp8, dependencyMap] = noop.useState(hexToRgbResult);
+  const items = [arg0];
+  const effect1 = noop.useEffect(() => {
+    value = undefined;
+    if (null != closure_0) {
+      value = closure_1_7.get(str);
+    }
+    closure_0 = value;
+    if (null != closure_0) {
+      if (null == value) {
+        value2 = closure_1_8.get(str);
+        if (value2 == null) {
+          let tmp6 = str;
+          if (typeof str !== "number") {
+            let tmp7 = null;
+            if (null != str) {
+              tmp7 = null;
+              if ("" !== str.trim()) {
+                const obj2 = { uri: str };
+                tmp7 = obj2;
+              }
+            }
+            tmp6 = tmp7;
+          }
+          value2 = tmp6;
+        }
+        let result = closure_1_8.set(str, value2);
+        if (null != value2) {
+          if (typeof value2 === "number") {
+            const ImageManager = closure_1_5.ImageManager;
+            let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_6.resolveAssetSource(value2));
+          } else {
+            const ImageManager2 = closure_1_5.ImageManager;
+            dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value2));
+          }
+          dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
+            const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
+            result = closure_2_7.set(value, obj);
+            if (ref.current) {
+              closure_1_2(obj);
+            }
+          }).catch(() => {
+
+          });
+          const nextPromise = dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
+            const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
+            result = closure_2_7.set(value, obj);
+            if (ref.current) {
+              closure_1_2(obj);
+            }
+          });
+        }
+      } else {
+        closure_2((arg0) => {
+          let tmp = value;
+          if (value === arg0) {
+            tmp = arg0;
+          }
+          return tmp;
+        });
+      }
+    }
+  }, items);
+  return "rgb(" + tmp8.r + ", " + tmp8.g + ", " + tmp8.b + ")";
+};

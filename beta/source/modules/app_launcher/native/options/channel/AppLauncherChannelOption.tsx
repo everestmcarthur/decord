@@ -1,0 +1,86 @@
+// Module ID: 12323
+// Function ID: 12324
+// Name: AppLauncherChannelOption
+// Dependencies: [32, 19, 1957, 21, 504, 4789, 12309, 12324, 4603, 12324, 1896, 2]
+// Exports: default
+
+// Module 12323 (AppLauncherChannelOption)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12324 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx");
+
+export default function AppLauncherChannelOption(option) {
+  option = option.option;
+  ({ initialValue: importDefault, onChannelPress } = option);
+  ({ onActionSheetDismiss: _slicedToArray, channel: noop, onPress: ChannelStore } = option);
+  first = undefined;
+  closure_7 = undefined;
+  ({ style, autoFocus, hasError } = option);
+  [first, closure_7] = noop.useState(() => {
+    let channelId = null;
+    if (null != importDefault) {
+      channelId = null;
+      if ("channelMention" === tmp.type) {
+        channelId = tmp.channelId;
+      }
+    }
+    return channelId;
+  });
+  const items = [ChannelStore];
+  const items1 = [first];
+  const stateFromStores = option(onChannelPress[4]).useStateFromStores(items, () => ChannelStore.getChannel(first), items1);
+  const items2 = [onChannelPress, first, stateFromStores];
+  const effect = noop.useEffect(() => {
+    let tmp = null != first;
+    if (tmp) {
+      tmp = null == stateFromStores;
+    }
+    if (tmp) {
+      closure_7(null);
+      onChannelPress({ channel: null });
+    }
+  }, items2);
+  let obj = option(onChannelPress[4]);
+  const tmp3 = option;
+  const tmp4 = onChannelPress;
+  const obj2 = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, leading: null, onPress: null, autoFocus: null };
+  let tmp10;
+  const tmp7 = require("useChannelName")(stateFromStores);
+  if (null != stateFromStores) {
+    tmp10 = tmp7;
+  }
+  obj2.selectedItemName = tmp10;
+  obj2.leading = first(tmp3(tmp4[7]).ChannelIcon, { channel: stateFromStores });
+  obj2.onPress = function onPress() {
+    if (ChannelStore != null) {
+      tmp();
+    }
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(12324, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
+      option,
+      channel,
+      onChannelPress(channel) {
+        channel = channel.channel;
+        let id;
+        if (channel != null) {
+          id = channel.id;
+        }
+        closure_1_7(id);
+        onChannelPress({ channel });
+      },
+      onActionSheetDismiss
+    });
+  };
+  obj2.autoFocus = autoFocus;
+  return first(require("AppLauncherSelectOptionFormRow"), obj2);
+};

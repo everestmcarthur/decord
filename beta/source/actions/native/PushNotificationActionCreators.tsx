@@ -1,0 +1,255 @@
+// Module ID: 12545
+// Function ID: 12546
+// Name: PushNotificationActionCreators
+// Dependencies: [5, 12546, 502, 1074, 12547, 6697, 3, 1099, 1270, 1230, 12550, 510, 4829, 1363, 1248, 1369, 573, 2]
+// Exports: setPushNotificationPermissionEligibleForPrompt, setPushPermissionReactivationSeen, setPushPermissionState, updateNotificationAuthorizationStatus
+
+// Module 12545 (PushNotificationActionCreators)
+import LoggerDefault from "Logger" /* 3 */;
+import Storage2 from "Storage" /* 510 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import TokenManagerAll from "TokenManager" /* 1099 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import MultiAccountStore from "MultiAccountStore" /* 12546 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+
+require = fn;
+function getOrRefreshPushSyncToken() {
+  const self = this;
+  const apply = closure_17.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
+  let pushSyncToken = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp5;
+            closure_129_0 = pushSyncToken;
+            let token2;
+            if (null == pushSyncToken.pushSyncToken) {
+              const token = TokenManagerAll.getToken(tmp39.id);
+              if (null == token) {
+                c6 = 3;
+                return { value: null, done: true };
+              } else {
+                c4 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const obj5 = { url: constants.DEVICES_SYNC_TOKEN, headers: null, rejectWithError: false };
+                const obj7 = { authorization: token };
+                obj5.headers = obj7;
+                c5 = 2;
+                c6 = 1;
+                const obj8 = { value: HTTP.get(obj5), done: false };
+                return obj8;
+              }
+            } else {
+              c6 = 3;
+              const obj9 = { value: tmp39.pushSyncToken, done: true };
+              return obj9;
+            }
+          }
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          closure_130_1(closure_130_3[9]).captureException(closure_129_2);
+          c6 = 3;
+          return { value: null, done: true };
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          token2 = value.body.token;
+          c4 = 0;
+          closure_130_2(closure_130_3[10]).updatePushSyncToken(closure_129_0.id, token2);
+          c6 = 3;
+          const obj11 = { value: token2, done: true };
+          return obj11;
+        }
+      } catch (tmp31) {
+        closure_3 = tmp31;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp31;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  })();
+};
+const Constants = fn(1074);
+({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12547).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6697);
+({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
+const logger = new LoggerDefault("PushNotificationActionCreators");
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
+
+export default {
+  registerDevice(token, flag) {
+    if (flag === undefined) {
+      flag = false;
+    }
+    const canUseMultiAccountNotifications = MultiAccountStore.canUseMultiAccountNotifications;
+    logger.log("Registering push notification token: " + token + ", is voip:" + flag + ", multi-account:" + canUseMultiAccountNotifications);
+    const Storage = Storage2.Storage;
+    const result = Storage.set(flag ? React6 : React5, token);
+    if (canUseMultiAccountNotifications) {
+      const self = this;
+      let syncDeviceResult = this.syncDevice(token, flag);
+    } else {
+      const request = { url: constants.DEVICES, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
+      if (flag) {
+        let tmp8 = closure_1_12;
+      } else {
+        tmp8 = map1();
+      }
+      const obj2 = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
+      const obj = TrackedHTTPUtilsDefault;
+      let isAndroidResult = tmp2(1363).isAndroid();
+      if (isAndroidResult) {
+        isAndroidResult = !closure_1_14;
+      }
+      obj2.bypass_server_throttling_supported = isAndroidResult;
+      obj2.bundle_id = bundle_id;
+      request.body = obj2;
+      const obj3 = { event: tmp2(1248).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
+      request.trackedActionData = obj3;
+      syncDeviceResult = obj.post(request);
+      const tmp2Result = tmp2(1363);
+    }
+    return syncDeviceResult;
+  },
+  syncDevice(token, flag) {
+    closure_0 = token;
+    if (flag === undefined) {
+      flag = false;
+    }
+    return (async (arg0, value) => {
+      const id2 = id.getId();
+      validUsers = validUsers.getValidUsers();
+      const sorted = validUsers.sort((id, id2) => {
+        let num = -1;
+        if (id.id !== closure_1_0) {
+          let num2 = 0;
+          if (id2.id === tmp) {
+            num2 = 1;
+          }
+          num = num2;
+        }
+        return num;
+      });
+      const substr = sorted.slice(0, MAX_PUSH_SYNC_ACCOUNTS);
+      await Promise.all(substr.map(closure_1_16));
+      if (1 === tmp5) {
+        if (arg0 === 1) {
+          dependencyMap = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          dependencyMap = 3;
+          return { value, done: true };
+        } else {
+          closure_128_1 = value;
+          if (closure_128_1.length >= 1) {
+            if (null != closure_128_1[0]) {
+              const HTTP = tmp2(1270).HTTP;
+              const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
+              if (closure_129_1) {
+                let tmp9 = closure_1_12;
+              } else {
+                tmp9 = closure_1_13();
+              }
+              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1369).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
+              let isAndroidResult = tmp2(1363).isAndroid();
+              if (isAndroidResult) {
+                isAndroidResult = !closure_1_14;
+              }
+              obj7.bypass_server_throttling_supported = isAndroidResult;
+              obj7.bundle_id = bundle_id;
+              request.body = obj7;
+              const v2 = 2;
+              dependencyMap = 1;
+              return { value: HTTP.put(request), done: false };
+            }
+          }
+          dependencyMap = 3;
+        }
+      } else if (arg0 === 1) {
+        dependencyMap = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_2 = value;
+        if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
+          const result = v2(12550).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12550);
+        }
+      }
+      return value;
+    })();
+  },
+  unregisterDevice(token) {
+    logger.log("Unregistering push notification token: " + token);
+    const request = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
+    const obj = TrackedHTTPUtilsDefault;
+    request.body = { provider: map1(), token };
+    const obj2 = { provider: map1(), token };
+    request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
+    return obj.delete(request);
+  }
+};
+export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
+  const permissionState = PROMPT_SEEN;
+  DispatcherDefault.wait(() => {
+    DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState });
+  });
+};
+export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType });
+};
+export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(CHANNEL_BANNER) {
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER });
+};
+export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(authorizationStatus) {
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus });
+};

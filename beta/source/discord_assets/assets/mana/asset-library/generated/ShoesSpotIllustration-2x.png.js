@@ -1,0 +1,11 @@
+// Module ID: 6557
+// Function ID: 6558
+// Dependencies: [2]
+
+// Module 6557
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ShoesSpotIllustration-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/6d4751ff57e3c8299bc6b5ace0b44a3ff371e61f9a2909b590915ecb73c1509c.png";
+export const metadata = { fileBytes: 15800 };

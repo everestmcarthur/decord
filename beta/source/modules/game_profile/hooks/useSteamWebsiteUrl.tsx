@@ -1,0 +1,76 @@
+// Module ID: 8813
+// Function ID: 8814
+// Name: useSteamWebsiteUrl
+// Dependencies: [1916, 1074, 504, 8814, 8812, 1925, 2]
+// Exports: buildSteamStoreUrl, useSteamWebsiteUrl
+
+// Module 8813 (useSteamWebsiteUrl)
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8814 */;
+import GameStore from "GameStore" /* 1916 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const Distributors = fn(1074).Distributors;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
+
+export const buildSteamStoreUrl = function buildSteamStoreUrl(arg0) {
+  return "https://store.steampowered.com/app/" + encodeURIComponent(arg0);
+};
+export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
+  _require = id;
+  const items = [GameStore];
+  const items1 = [id];
+  return require("initialize").useStateFromStores(items, () => {
+    if (null == closure_0) {
+      return null;
+    } else {
+      const game = GameStore.getGame(tmp);
+      if (null == game) {
+        return null;
+      } else if (game.steamReleaseStatus === SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED) {
+        return null;
+      } else {
+        const websites = game.websites;
+        const found = websites.find((category) => category.category === id(8812).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+        if (found != null) {
+          const url = found.url;
+        }
+        const thirdPartySkus = game.thirdPartySkus;
+        const found1 = thirdPartySkus.filter((distributor) => {
+          let tmp = distributor.distributor === constants.STEAM;
+          if (tmp) {
+            tmp = !id(1925).isNullOrEmpty(distributor.id);
+            const obj = id(1925);
+          }
+          return tmp;
+        });
+        const first = found1[0];
+        id = undefined;
+        if (first != null) {
+          id = first.id;
+        }
+        let combined = null;
+        if (!tmp11Result.isNullOrEmpty(id)) {
+          const _encodeURIComponent = encodeURIComponent;
+          const _HermesInternal = HermesInternal;
+          combined = "https://store.steampowered.com/app/" + encodeURIComponent(id);
+        }
+        if (found1.length <= 1) {
+          if (null == combined) {
+            let tmp8 = null;
+            if (null != url) {
+              tmp8 = url;
+            }
+            combined = tmp8;
+          }
+          let tmp7 = combined;
+        } else {
+          tmp7 = url;
+        }
+        return tmp7;
+      }
+    }
+  }, items1);
+};

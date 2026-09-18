@@ -1,0 +1,50 @@
+// Module ID: 12024
+// Function ID: 12025
+// Name: ClassificationEvidence
+// Dependencies: [19, 17, 21, 4636, 1176, 576, 4632, 1114, 12025, 2]
+// Exports: default
+
+// Module 12024 (ClassificationEvidence)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 12025 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
+const native = fn(1176);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1176).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+obj2.flaggedContent = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
+let obj4 = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
+obj2.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
+
+export default function ClassificationEvidence(flaggedContent) {
+  flaggedContent = flaggedContent.flaggedContent;
+  const tmp = closure_6();
+  let tmp2 = null;
+  if (0 !== flaggedContent.length) {
+    const obj = { style: tmp.sectionContainer, children: null };
+    const obj2 = { variant: "eyebrow", color: "text-default", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.s64CMg);
+    const items = [React4(Text_Text.Text, obj2), ];
+    const obj3 = { style: null, children: null };
+    const items1 = [, ];
+    ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);
+    obj3.style = items1;
+    const obj4 = { flaggedContent };
+    obj3.children = React4(ClassificationMessageEvidenceDefault, obj4);
+    items[1] = React4(View, obj3);
+    obj.children = items;
+    tmp2 = hasOwnProperty(View, obj);
+  }
+  return tmp2;
+};

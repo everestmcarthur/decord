@@ -1,0 +1,11 @@
+// Module ID: 5971
+// Function ID: 5972
+// Dependencies: [2]
+
+// Module 5971
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/e8c2700ceaf7f67875c8b21c6a0b3a7315ee528b38609c7b62d260c034c4278d.png";
+export const metadata = { fileBytes: 34888 };

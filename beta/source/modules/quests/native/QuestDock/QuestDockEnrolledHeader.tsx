@@ -1,0 +1,43 @@
+// Module ID: 15271
+// Function ID: 15272
+// Name: QuestDockEnrolledHeader
+// Dependencies: [32, 19, 17, 21, 4636, 15183, 11620, 11908, 5528, 15212, 4632, 2]
+
+// Module 15271 (QuestDockEnrolledHeader)
+import Text_Text from "Text/Text" /* 4632 */;
+import QuestTypes from "QuestTypes" /* 5528 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11620 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 11908 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15183 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15212 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4636);
+let closure_7 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: 8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");
+
+export default noop.memo(function QuestDockEnrolledHeader() {
+  const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
+  const tmp2 = closure_7();
+  const questTaskDetails = hooks_QuestHooks.useQuestTaskDetails(questDockQuest);
+  const obj3 = hooks_QuestHooks;
+  const questBarTitle = QuestCopyHooks.useQuestBarTitle(questDockQuest);
+  const obj5 = QuestCopyHooks;
+  const obj7 = { style: tmp2.wrapper, children: null };
+  const obj8 = { style: tmp2.progressIndicatorWrapper, children: null };
+  const questBarSubtitle = obj5.useQuestBarSubtitle({ quest: questDockQuest, isExpanded: false, activeScreen: _slicedToArray(obj3.useTaskPlatformScreen(questDockQuest, questTaskDetails), 1)[0], sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE });
+  obj8.children = hasOwnProperty(QuestProgressIndicatorDefault, { quest: questDockQuest, size: "x-sm", progress: questTaskDetails.percentComplete, loading: false, hasConfetti: true });
+  const items = [hasOwnProperty(View, obj8), ];
+  const obj10 = { style: tmp2.copy, children: null };
+  const items1 = [hasOwnProperty(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: questBarTitle }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: questBarSubtitle })];
+  obj10.children = items1;
+  items[1] = timestampProducer(View, obj10);
+  obj7.children = items;
+  return timestampProducer(View, obj7);
+});

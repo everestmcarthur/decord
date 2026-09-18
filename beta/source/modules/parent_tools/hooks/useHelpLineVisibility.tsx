@@ -1,0 +1,75 @@
+// Module ID: 11530
+// Function ID: 11531
+// Name: useHelpLineVisibility
+// Dependencies: [19, 2025, 7640, 8769, 563, 11095, 2]
+// Exports: useShouldShowHelplineLink, useShouldShowThroughlineLink
+
+// Module 11530 (useHelpLineVisibility)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11095 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+
+require = fn;
+const set = new Set(["US"]);
+const set1 = new Set(["en-US", "es-ES"]);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
+
+export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
+  const tmp = useIsInAdultAgeGroupDefault();
+  const items = [FamilyCenterStore];
+  stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
+  const obj = stateFromStores(563);
+  const items1 = [LocaleStore];
+  const items2 = [stateFromStores];
+  const stateFromStores1 = stateFromStores(563).useStateFromStores(items1, () => locale.locale);
+  const effect = noop.useEffect(() => {
+    if (null == stateFromStores) {
+      const userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
+    }
+  }, items2);
+  let hasItem = !tmp;
+  if (!tmp) {
+    hasItem = null != stateFromStores;
+  }
+  if (hasItem) {
+    hasItem = set.has(stateFromStores.alpha2);
+  }
+  if (hasItem) {
+    hasItem = set1.has(stateFromStores1);
+  }
+  return hasItem;
+};
+export const useShouldShowThroughlineLink = function useShouldShowThroughlineLink() {
+  const tmp = useIsInAdultAgeGroupDefault();
+  let stateFromStores;
+  const tmp2 = useIsInAdultAgeGroupDefault();
+  const items = [FamilyCenterStore];
+  stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
+  let obj = stateFromStores(563);
+  const items1 = [LocaleStore];
+  const items2 = [stateFromStores];
+  const stateFromStores1 = stateFromStores(563).useStateFromStores(items1, () => locale.locale);
+  const effect = noop.useEffect(() => {
+    if (null == stateFromStores) {
+      const userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
+    }
+  }, items2);
+  let hasItem = !tmp2;
+  if (!tmp2) {
+    hasItem = null != stateFromStores;
+  }
+  if (hasItem) {
+    hasItem = set.has(stateFromStores.alpha2);
+  }
+  if (hasItem) {
+    hasItem = set1.has(stateFromStores1);
+  }
+  let tmp10 = !tmp;
+  if (!tmp) {
+    tmp10 = !hasItem;
+  }
+  return tmp10;
+};

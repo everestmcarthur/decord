@@ -1,0 +1,11 @@
+// Module ID: 6529
+// Function ID: 6530
+// Dependencies: [2]
+
+// Module 6529
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconEyespyExample-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/2add1e6bedd4b5872361922c710b3c7b400107c3b716a6e92e3f70c4949687e4.png";
+export const metadata = { fileBytes: 32608 };

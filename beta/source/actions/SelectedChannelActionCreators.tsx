@@ -1,0 +1,68 @@
+// Module ID: 5492
+// Function ID: 5493
+// Name: SelectedChannelActionCreators
+// Dependencies: [4653, 1957, 1908, 1074, 5493, 573, 1100, 9578, 2]
+
+// Module 5492 (SelectedChannelActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import router_utils from "router_utils" /* 1100 */;
+import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional" /* 5493 */;
+import GameConsoleActionCreatorsAll from "GameConsoleActionCreators" /* 9578 */;
+import GameConsoleStore from "GameConsoleStore" /* 4653 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+
+require = fn;
+const Constants = fn(1074);
+({ ME: closure_7, PopoutWindowKeys, Routes: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
+
+export default {
+  selectChannel(guildId) {
+    guildId = guildId.guildId;
+    ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel } = guildId);
+    const channelSelectionOrigin = SelectedChannelActionCreatorsAdditional.getChannelSelectionOrigin();
+    ({ fromGuildId, fromChannelId } = channelSelectionOrigin);
+    let tmp2 = null;
+    if (guildId !== React5) {
+      tmp2 = guildId;
+    }
+    DispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp2, channelId, fromGuildId, fromChannelId, messageId, jumpType, source, skipMessageFetch, opensChannel });
+  },
+  selectPrivateChannel(id) {
+    router_utils.transitionTo(React6.CHANNEL(React5, id));
+  },
+  selectVoiceChannel(id, MediaEngineStore, flag2) {
+    let flag = MediaEngineStore;
+    if (MediaEngineStore === undefined) {
+      flag = false;
+    }
+    if (flag2 === undefined) {
+      flag2 = false;
+    }
+    let obj = arg3;
+    if (arg3 === undefined) {
+      obj = {};
+    }
+    const channel = ChannelStore.getChannel(id);
+    if (channel != null) {
+      const guildId = channel.getGuildId();
+    }
+    if (MediaEngineStore.isSupported()) {
+      if (null != id) {
+        const mediaEngine = MediaEngineStore.getMediaEngine();
+        mediaEngine.interact();
+      }
+      const obj5 = SelectedChannelActionCreatorsAdditional;
+      const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
+    }
+  },
+  disconnect() {
+    const remoteSessionId = GameConsoleStore.getRemoteSessionId();
+    if (null != remoteSessionId) {
+      GameConsoleActionCreatorsAll.remoteDisconnect(remoteSessionId);
+    }
+    const voiceChannel = this.selectVoiceChannel(null);
+  }
+};

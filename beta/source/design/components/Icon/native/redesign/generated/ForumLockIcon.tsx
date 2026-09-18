@@ -1,0 +1,26 @@
+// Module ID: 5167
+// Function ID: 5168
+// Name: ForumLockIcon
+// Dependencies: [19, 21, 576, 4337, 5147, 2]
+// Exports: ForumLockIcon
+
+// Module 5167 (ForumLockIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod5147 from "module_5147" /* 5147 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ForumLockIcon.tsx");
+
+export const ForumLockIcon = function ForumLockIcon(color) {
+  let INTERACTIVE_ICON_DEFAULT = color.color;
+  if (INTERACTIVE_ICON_DEFAULT === undefined) {
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
+  }
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5147, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+};

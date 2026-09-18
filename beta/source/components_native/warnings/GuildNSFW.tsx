@@ -1,0 +1,91 @@
+// Module ID: 12798
+// Function ID: 12799
+// Name: GuildNSFW
+// Dependencies: [109, 19, 1979, 21, 504, 4847, 5601, 8529, 8531, 1114, 12799, 2]
+// Exports: default
+
+// Module 12798 (GuildNSFW)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
+import GatedContentDefault from "GatedContent" /* 12799 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+let closure_3 = ["modalType", "emphasiseDisagree"];
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
+
+export default function GuildNSFW(channelId) {
+  _require = channelId;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(channelId.guildId));
+  let obj = require("initialize");
+  const ageGateVerifyContentForGuild = require("AgeGateUtils").useAgeGateVerifyContentForGuild(stateFromStores);
+  const modalType = ageGateVerifyContentForGuild.modalType;
+  const obj2 = require("AgeGateUtils");
+  const obj3 = {};
+  const callback = noop.useCallback(() => {
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: channelId(8531).AgeVerificationModalEntryPoint.NSFW_GUILD });
+  }, []);
+  const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_3));
+  let id;
+  if (stateFromStores != null) {
+    id = stateFromStores.id;
+  }
+  function handleDisagree() {
+    GuildActionCreatorsDefault.nsfwReturnToSafety(channelId.guildId);
+    if (channelId.onReturnToSafety != null) {
+      onReturnToSafety();
+    }
+  }
+  obj3.guildId = id;
+  obj3.channelId = channelId.channelId;
+  const intl = tmp(1114).intl;
+  obj3.disagreement = intl.string(require("util").t["/g10LC"]);
+  if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
+    if (tmp(8531).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+      if (tmp(8531).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+        const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
+        const merged1 = Object.assign(obj3);
+        return jsx(GatedContentDefault, { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree });
+      } else {
+        const obj5 = {
+          modalType,
+          onAgree: function handleAgree() {
+                  GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
+                },
+          onDisagree: handleDisagree
+        };
+        const merged2 = Object.assign(obj3);
+        return jsx(GatedContentDefault, {
+          modalType,
+          onAgree: function handleAgree() {
+                  GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
+                },
+          onDisagree: handleDisagree
+        });
+      }
+    }
+  }
+  const obj6 = { modalType, onAgree: callback, onDisagree: handleDisagree, agreementButtonVariant: null, disagreementButtonVariant: null };
+  let str = "primary";
+  const tmp21 = jsx;
+  const tmp5 = _objectWithoutProperties(ageGateVerifyContentForGuild, closure_3);
+  if (true === ageGateVerifyContentForGuild.emphasiseDisagree) {
+    str = "secondary";
+  }
+  obj6.agreementButtonVariant = str;
+  let str2 = "secondary";
+  if (true === ageGateVerifyContentForGuild.emphasiseDisagree) {
+    str2 = "primary";
+  }
+  obj6.disagreementButtonVariant = str2;
+  const merged3 = Object.assign(obj3);
+  return tmp21(GatedContentDefault, obj6);
+};

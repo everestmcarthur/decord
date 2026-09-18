@@ -1,0 +1,36 @@
+// Module ID: 14847
+// Function ID: 14848
+// Name: AgeGroupResetSetting
+// Dependencies: [8079, 21, 11605, 1114, 2946, 14848, 4982, 14844, 2]
+
+// Module 14847 (AgeGroupResetSetting)
+import jsxProd from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import _modDef2946 from "module_2946" /* 2946 */;
+import useAlertStore from "useAlertStore" /* 4982 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14844 */;
+import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 14848 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const pressable = SettingBuilders.createPressable({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2946["bD//cU"]);
+  },
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2946.Gn0SAj);
+  },
+  onPress() {
+    useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));
+  },
+  withArrow: true,
+  usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
+
+export default pressable;

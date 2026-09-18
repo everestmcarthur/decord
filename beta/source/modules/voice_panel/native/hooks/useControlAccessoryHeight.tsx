@@ -1,0 +1,51 @@
+// Module ID: 17317
+// Function ID: 17318
+// Name: useControlAccessoryHeight
+// Dependencies: [19, 12405, 17284, 4373, 17290, 17165, 17288, 2]
+// Exports: default
+
+// Module 17317 (useControlAccessoryHeight)
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17290 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+let closure_4 = { code: "function useControlAccessoryHeightTsx1(){const{consoleStatusHeight,floatingCTAHeight}=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
+
+export default function useControlAccessoryHeight() {
+  const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[1])).channelId;
+  const isConnectingOrConnectedToConsole = sharedValue(shouldShowFloatingCTA[2])(channelId).isConnectingOrConnectedToConsole;
+  sharedValue = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]).useSharedValue(0);
+  const items = [sharedValue, isConnectingOrConnectedToConsole];
+  const effect = sharedValue1.useEffect(() => {
+    let num = 0;
+    if (isConnectingOrConnectedToConsole) {
+      num = VoicePanelConsoleStatus.CONSOLE_STATUS_HEIGHT;
+    }
+    const result = sharedValue.set(num);
+  }, items);
+  const obj = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]);
+  shouldShowFloatingCTA = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[5]).useShouldShowFloatingCTA(channelId);
+  const obj2 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[5]);
+  sharedValue1 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]).useSharedValue(0);
+  const obj3 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]);
+  const floatingCTATotalViewHeight = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[6]).getFloatingCTATotalViewHeight();
+  const items1 = [sharedValue1, shouldShowFloatingCTA, floatingCTATotalViewHeight];
+  const effect1 = sharedValue1.useEffect(() => {
+    let num = 0;
+    if (shouldShowFloatingCTA) {
+      num = floatingCTATotalViewHeight;
+    }
+    const result = sharedValue1.set(num);
+  }, items1);
+  const obj4 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[6]);
+  const fn = function l() {
+    value = sharedValue.get();
+    return value + sharedValue1.get();
+  };
+  fn.__closure = { consoleStatusHeight: sharedValue, floatingCTAHeight: sharedValue1 };
+  fn.__workletHash = 7974849446653;
+  fn.__initData = floatingCTATotalViewHeight;
+  return isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]).useDerivedValue(fn);
+};

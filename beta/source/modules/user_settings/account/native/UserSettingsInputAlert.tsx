@@ -1,0 +1,118 @@
+// Module ID: 14886
+// Function ID: 14887
+// Name: UserSettingsInputAlert
+// Dependencies: [19, 21, 1270, 5054, 4632, 6707, 5075, 5659, 2]
+
+// Module 14886 (UserSettingsInputAlert)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import common_AlertDefault from "common/Alert" /* 5075 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5659 */;
+import TextInput from "TextInput" /* 6707 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const hasOwnProperty = { input: "", error: "ti" };
+const PureComponent = noop.PureComponent;
+class UserSettingsInputAlert extends PureComponent {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    applyArgumentsResult.state = closure_5;
+    applyArgumentsResult.close = function close() {
+      const onClose = applyArgumentsResult.props.onClose;
+      if (null != onClose) {
+        onClose();
+      }
+    };
+    applyArgumentsResult.handleSubmit = function handleSubmit() {
+      ({ isLoading, onSubmit, onSuccess: closure_0, closeOnSuccess: closure_1, onError: closure_2, skipErrorMsgAbortCode: closure_3 } = applyArgumentsResult.props);
+      if (!isLoading) {
+        isLoading = null == onSubmit;
+      }
+      if (!isLoading) {
+        const onSubmitResult = onSubmit(applyArgumentsResult.state.input);
+        onSubmit(applyArgumentsResult.state.input).then(() => {
+          if (closure_1_0 != null) {
+            tmp();
+          }
+          if (closure_1_1) {
+            applyArgumentsResult.close();
+          }
+        }).catch((error) => {
+          if (closure_1_2 != null) {
+            tmp(error);
+          }
+          if (error) {
+            if (error.body) {
+              const v6OrEarlierAPIError = new HTTPUtils.V6OrEarlierAPIError(error);
+              if (v6OrEarlierAPIError.code !== closure_1_3) {
+                const obj = { error: v6OrEarlierAPIError.message };
+                applyArgumentsResult.setState(obj);
+              }
+            }
+          }
+        });
+        const nextPromise = onSubmit(applyArgumentsResult.state.input).then(() => {
+          if (closure_1_0 != null) {
+            tmp();
+          }
+          if (closure_1_1) {
+            applyArgumentsResult.close();
+          }
+        });
+      }
+    };
+    return applyArgumentsResult;
+  }
+}
+const prototype = UserSettingsInputAlert.prototype;
+prototype["renderContent"] = function renderContent() {
+  const self = this;
+  const helpText = this.props.helpText;
+  if (null != this.props.error) {
+    if ("" !== self.props.error) {
+      let error = self.props.error;
+    }
+    let tmp7 = null != helpText;
+    if (tmp7) {
+      const obj = { variant: "text-md/normal", children: helpText };
+      tmp7 = React3(tmp5(4632).Text, obj);
+    }
+    const items = [tmp7, ];
+    const obj2 = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
+    let str2 = "default";
+    if (null != error) {
+      str2 = "error";
+    }
+    const obj3 = { spacing: 16, children: null };
+    obj2.status = str2;
+    obj2.errorMessage = error;
+    obj2.onSubmitEditing = self.handleSubmit;
+    obj2.onChange = function onChange(input) {
+      return self.setState({ input });
+    };
+    items[1] = React3(TextInput.TextInput, obj2);
+    obj3.children = items;
+    return React4(Stack_Stack.Stack, obj3);
+  }
+  error = self.state.error;
+};
+prototype["render"] = function render() {
+  ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
+  const obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: this.renderContent() };
+  const tmp5 = React3(common_AlertDefault, obj);
+  let tmpResult = tmp5;
+  if (useKeyboardAwareWrapper) {
+    const obj2 = { children: tmp5 };
+    tmpResult = React3(KeyboardAwareViewDefault, obj2);
+  }
+  return tmpResult;
+};
+UserSettingsInputAlert.defaultProps = { isLoading: false, useKeyboardAwareWrapper: false, secureTextEntry: true };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
+
+export default UserSettingsInputAlert;

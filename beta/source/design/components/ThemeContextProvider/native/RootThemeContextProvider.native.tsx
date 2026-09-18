@@ -1,0 +1,75 @@
+// Module ID: 10204
+// Function ID: 10205
+// Name: ThemeContextProvider/RootThemeContextProvider
+// Dependencies: [19, 1085, 21, 4347, 2]
+// Exports: DisableCustomTheme, RootThemeContextProvider
+
+// Module 10204 (ThemeContextProvider/RootThemeContextProvider)
+import native from "native" /* 4347 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const ThemeTypes = fn(1085).ThemeTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");
+
+export const RootThemeContextProvider = function RootThemeContextProvider(children) {
+  let DARK = children.theme;
+  if (DARK === undefined) {
+    DARK = gradient.DARK;
+  }
+  let primaryColor = children.primaryColor;
+  if (primaryColor === undefined) {
+    primaryColor = null;
+  }
+  let secondaryColor = children.secondaryColor;
+  if (secondaryColor === undefined) {
+    secondaryColor = null;
+  }
+  gradient = children.gradient;
+  if (gradient === undefined) {
+    gradient = null;
+  }
+  let num = children.flags;
+  if (num === undefined) {
+    num = 0;
+  }
+  let num2 = children.contrast;
+  if (num2 === undefined) {
+    num2 = 1;
+  }
+  let num3 = children.saturation;
+  if (num3 === undefined) {
+    num3 = 1;
+  }
+  const enabledExperiments = children.enabledExperiments;
+  let str = children.density;
+  if (str === undefined) {
+    str = "compact";
+  }
+  let flag = children.disableAdaptiveTheme;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let flag2 = children.reduceAdaptiveTheme;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  const items = [DARK, primaryColor, secondaryColor, gradient, num, num2, num3, enabledExperiments, str, flag, flag2];
+  value = secondaryColor.useMemo(() => native.createThemedContext({ theme: DARK, primaryColor, secondaryColor, gradient, flags: num, contrast: num2, saturation: num3, enabledExperiments, density: str, disableAdaptiveTheme: flag, reduceAdaptiveTheme: flag2 }), items);
+  return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
+};
+export const DisableCustomTheme = function DisableCustomTheme(children) {
+  themeContext = themeContext(4347).useThemeContext();
+  const items = [themeContext];
+  const memo = noop.useMemo(() => {
+    const obj2 = {};
+    const merged = Object.assign(themeContext);
+    obj2.primaryColor = null;
+    obj2.secondaryColor = null;
+    obj2.gradient = null;
+    return native.createThemedContext(obj2);
+  }, items);
+  return jsx(themeContext(4347).ThemeContext.Provider, { value: memo, children: children.children });
+};

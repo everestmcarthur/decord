@@ -1,0 +1,64 @@
+// Module ID: 11172
+// Function ID: 11173
+// Name: CollectiblesWishlistItemCard
+// Dependencies: [19, 7649, 11173, 21, 504, 8895, 8898, 8899, 2]
+// Exports: default
+
+// Module 11172 (CollectiblesWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8898 */;
+import noop from "module_19" /* 19 */;
+import SentGiftsStore from "SentGiftsStore" /* 11173 */;
+
+require = fn;
+let closure_4 = fn(7649).transformSKUToCollectiblesItem;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
+
+export default function CollectiblesWishlistItemCard(sku) {
+  sku = sku.sku;
+  let flag = sku.isOwned;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const wishlistOwnerId = sku.wishlistOwnerId;
+  const size = sku.size;
+  const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
+  let memo;
+  const items = [SentGiftsStore];
+  const items1 = [sku.id, wishlistOwnerId];
+  const stateFromStores = sku(size[4]).useStateFromStores(items, () => {
+    let hasSentGiftResult = null != wishlistOwnerId;
+    if (hasSentGiftResult) {
+      hasSentGiftResult = SentGiftsStore.hasSentGift(sku.id, tmp);
+    }
+    return hasSentGiftResult;
+  }, items1);
+  let obj = sku(size[4]);
+  let tmp2 = sku;
+  const tmp3 = size;
+  const items2 = [sku];
+  const productNameAndTypeFromSku = sku(size[5]).getProductNameAndTypeFromSku(sku);
+  memo = memo.useMemo(() => closure_4(sku), items2);
+  const items3 = [memo, size];
+  const callback = memo.useCallback(() => {
+    let tmp2 = null;
+    if (null != memo) {
+      const obj = { collectiblesItemData: tmp, size };
+      tmp2 = jsx(SKUPreview.CollectiblesPreview, { collectiblesItemData: tmp, size });
+    }
+    return tmp2;
+  }, items3);
+  const obj3 = { accessibilityLabel: productNameAndTypeFromSku, renderPreview: callback, source: sku.source, size };
+  const obj2 = sku(size[5]);
+  const tmp8 = jsx;
+  const merged1 = Object.assign(merged);
+  if (!flag) {
+    if (!stateFromStores) {
+      let OWNED = merged.overlay;
+    }
+    obj3.overlay = OWNED;
+    return tmp8(tmp9, obj3);
+  }
+  OWNED = tmp2(tmp3[7]).WishlistItemCardOverlay.OWNED;
+};

@@ -1,0 +1,71 @@
+// Module ID: 15132
+// Function ID: 15133
+// Name: BountiesEndCardPressableCta
+// Dependencies: [19, 17, 15133, 21, 4636, 576, 11623, 15129, 11422, 11633, 5532, 5530, 7830, 5668, 4632, 2]
+// Exports: default
+
+// Module 15132 (BountiesEndCardPressableCta)
+import nativeDefault from "native" /* 576 */;
+import QuestContent from "QuestContent" /* 5530 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11633 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const END_CARD_IMAGE_SIZE = fn(15133).END_CARD_IMAGE_SIZE;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4636);
+let closure_9 = createStyles.createStyles(() => {
+  const obj = { image: null, info: null, ctaContainer: null };
+  const size = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+  obj.image = size;
+  obj.info = { gap: nativeDefault.space.PX_4, alignItems: "center", marginTop: nativeDefault.space.PX_12 };
+  obj.ctaContainer = { position: "relative", alignItems: "center" };
+  return obj;
+});
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx");
+
+export default function BountiesEndCardPressableCta(bounty) {
+  bounty = bounty.bounty;
+  const sourceQuestContent = bounty.sourceQuestContent;
+  let flag = bounty.disabled;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let getQuestImpressionId;
+  const tmp = closure_9();
+  getQuestImpressionId = bounty(getQuestImpressionId[6]).useGetQuestImpressionId();
+  let obj = bounty(getQuestImpressionId[6]);
+  const bountyCtaInfo = bounty(getQuestImpressionId[7]).getBountyCtaInfo(bounty);
+  let scaledImageUrl;
+  if (null != bountyCtaInfo.iconImageUri) {
+    const size = { assetUrl: bountyCtaInfo.iconImageUri, width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE };
+    scaledImageUrl = tmp2(tmp3[8]).getScaledImageUrl(size);
+    const tmp2Result = tmp2(tmp3[8]);
+  }
+  const items = [, , , ];
+  ({ id: arr[0], cta: arr[1] } = bounty);
+  items[2] = getQuestImpressionId;
+  items[3] = sourceQuestContent;
+  let callback;
+  if (!flag) {
+    callback = noop.useCallback(() => {
+      const obj = QuestPlatformUtils;
+      const obj2 = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, cta: bounty.cta };
+      const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_ICON_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
+    }, items);
+  }
+  const obj3 = { onPress: callback, disabled: flag, hitSlop: 16, accessibilityRole: "button", accessibilityLabel: bountyCtaInfo.label, style: tmp.ctaContainer, children: null };
+  const items1 = [closure_7(sourceQuestContent(getQuestImpressionId[13]), { source: { uri: scaledImageUrl }, style: tmp.image }), ];
+  const obj5 = { style: tmp.info, children: null };
+  const items2 = [closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "text-md/semibold", color: "text-strong", children: bountyCtaInfo.label }), closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "text-sm/medium", color: "text-default", children: bountyCtaInfo.subtext })];
+  obj5.children = items2;
+  items1[1] = closure_8(closure_5, obj5);
+  obj3.children = items1;
+  return closure_8(closure_4, obj3);
+};

@@ -1,0 +1,174 @@
+// Module ID: 11820
+// Function ID: 11821
+// Name: ForwardActionCreators
+// Dependencies: [32, 5, 1957, 4275, 1074, 4629, 8466, 7784, 1096, 7786, 1384, 7559, 11817, 4879, 2]
+
+// Module 11820 (ForwardActionCreators)
+import allSettledDefault from "allSettled" /* 4879 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = fn;
+const MessageFlags = fn(1074).MessageFlags;
+const MessageSendLocation = fn(4629).MessageSendLocation;
+let obj = {
+  sendForward(messageRecord, alsoForwardToChannelId, arg2) {
+    closure_0 = messageRecord;
+    closure_2 = arg2;
+    return (async (arg0, value) => {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              v3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v3 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              alsoForwardToChannelId = tmp5;
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              closure_128_2 = undefined;
+              const channel = ChannelStore.getChannel(alsoForwardToChannelId);
+              closure_128_0 = channel;
+              const channel1 = ChannelStore.getChannel(tmp2.channel_id);
+              let prop;
+              if (closure_2 != null) {
+                prop = tmp73.isICYMIGameContentForwarding;
+              }
+              if (prop) {
+                let guild_id = tmp2(8466).GAME_CONTENT_GUILD_ID;
+              } else if (channel1 != null) {
+                guild_id = channel1.guild_id;
+              }
+              if (null == channel1) {
+                if (null == guild_id) {
+                  const _Error2 = Error;
+                  const error = new Error("Unable to find original channel for message");
+                  throw error;
+                }
+              }
+              if (null == channel) {
+                const _Error = Error;
+                const error1 = new Error("Unable to find destination channel for message");
+                throw error1;
+              } else {
+                const parsed = alsoForwardToChannelId(7784).parse(channel, "");
+                const obj7 = { guild_id, channel_id: null, message_id: null, type: null, forward_only: null };
+                ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp71);
+                obj7.type = tmp2(1096).MessageReferenceTypes.FORWARD;
+                let onlyAttachmentIds;
+                if (tmp73 != null) {
+                  onlyAttachmentIds = tmp73.onlyAttachmentIds;
+                }
+                if (null != onlyAttachmentIds) {
+                  ({ onlyAttachmentIds: obj8.attachment_ids, onlyEmbedIndices: obj8.embed_indices } = tmp73);
+                  const obj11 = { attachment_ids: null, embed_indices: null };
+                  const tmp34 = { attachment_ids: null, embed_indices: null };
+                } else {
+                  let onlyEmbedIndices;
+                  if (tmp73 != null) {
+                    onlyEmbedIndices = tmp73.onlyEmbedIndices;
+                  }
+                }
+                obj7.forward_only = tmp34;
+                closure_128_1 = 0;
+                let withMessage;
+                if (tmp73 != null) {
+                  withMessage = tmp73.withMessage;
+                }
+                closure_128_2 = withMessage;
+                let num9 = 0;
+                if (null != withMessage) {
+                  const tmp39 = v3(alsoForwardToChannelId(7786)(withMessage), 2);
+                  num9 = 0;
+                  if (tmp39[0]) {
+                    closure_128_2 = tmp39[1];
+                    const addFlagResult = tmp2(1384).addFlag(0, constants.SUPPRESS_NOTIFICATIONS);
+                    closure_128_1 = addFlagResult;
+                    num9 = addFlagResult;
+                    const obj9 = tmp2(1384);
+                  }
+                }
+                const obj10 = alsoForwardToChannelId(7559);
+                const obj12 = { messageReference: obj7, location: constants2.FORWARDING, eagerDispatch: false, flags: num9 };
+                dependencyMap = 1;
+                v3 = 1;
+                const obj13 = { value: obj10.sendMessage(channel.id, parsed, false, obj12), done: false };
+                return obj13;
+              }
+              tmp71 = tmp2;
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                v3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                v3 = 3;
+                const obj14 = { value, done: true };
+                return obj14;
+              } else {
+                let result = null == closure_128_2;
+                if (!result) {
+                  result = "" === closure_128_2;
+                }
+                if (!result) {
+                  result = tmp2(11817).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(11817);
+                }
+                if (!result) {
+                  const obj3 = alsoForwardToChannelId(7559);
+                  const id = closure_128_0.id;
+                  const obj25 = { location: constants2.FORWARDING, flags: closure_128_1 };
+                  dependencyMap = 2;
+                  v3 = 1;
+                  const obj26 = { value: obj3.sendMessage(id, alsoForwardToChannelId(7784).parse(closure_128_0, closure_128_2), false, obj25), done: false };
+                  return obj26;
+                }
+              }
+            } else if (arg0 === 1) {
+              v3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v3 = 3;
+              obj = { value, done: true };
+              return obj;
+            }
+            v3 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp60) {
+          v3 = tmp;
+          throw tmp60;
+        }
+      }
+    })();
+  },
+  sendForwards(arg0, arr, arg2) {
+    closure_0 = arg0;
+    importDefault = arg2;
+    return allSettledDefault(arr.map((item) => obj.sendForward(closure_0, item, closure_1)));
+  }
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forwarding/ForwardActionCreators.tsx");
+
+export default obj;

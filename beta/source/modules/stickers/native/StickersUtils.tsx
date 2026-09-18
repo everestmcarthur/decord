@@ -1,0 +1,119 @@
+// Module ID: 10518
+// Function ID: 10519
+// Name: stickers/StickersUtils
+// Dependencies: [19, 17, 1979, 1371, 10519, 1074, 1217, 5349, 7440, 10516, 504, 9451, 10520, 10521, 1609, 2]
+// Exports: dropPreloadedSticker, openStickerPickerToPackId, preloadSticker, useStickerCategories
+
+// Module 10518 (stickers/StickersUtils)
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const NativeModules = fn(17).NativeModules;
+const useStickerPickerStore = fn(10519).useStickerPickerStore;
+const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");
+
+export const useStickerCategories = function useStickerCategories(channel) {
+  _require = channel;
+  const stickerPackCategories = require("StickersHooks").useStickerPackCategories(channel);
+  let obj = require("StickersHooks");
+  const items = [UserStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const guilds = GuildStore.getGuilds();
+  let obj2 = require("initialize");
+  const mobileStickerPickerUpsellRestyleEnabled = require("MobileStickerPickerUpsellRestyleExperiment").useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
+  const items1 = [channel, guilds, stickerPackCategories, mobileStickerPickerUpsellRestyleEnabled, stateFromStores];
+  return guilds.useMemo(() => {
+    const found = stickerPackCategories.filter((stickers) => stickers.stickers.length > 0);
+    const found1 = found.filter((type) => {
+      let tmp2 = type.type !== closure_0(stateFromStores[7]).StickerCategoryTypes.GUILD;
+      if (!tmp2) {
+        nsfwAllowed = undefined;
+        if (nsfwAllowed != null) {
+          nsfwAllowed = nsfwAllowed.nsfwAllowed;
+        }
+        tmp2 = nsfwAllowed;
+      }
+      if (!tmp2) {
+        tmp2 = null == tmp;
+      }
+      if (!tmp2) {
+        tmp2 = tmp.nsfwLevel !== constants.AGE_RESTRICTED && tmp.nsfwLevel !== tmp6.EXPLICIT;
+        const tmp7 = tmp.nsfwLevel !== constants.AGE_RESTRICTED && tmp.nsfwLevel !== tmp6.EXPLICIT;
+      }
+      return tmp2;
+    });
+    return found1.map((type) => {
+      let tmp = mobileStickerPickerUpsellRestyleEnabled;
+      if (mobileStickerPickerUpsellRestyleEnabled) {
+        closure_0 = nsfwAllowed;
+        closure_1 = channel;
+        let everyResult = type.type === closure_0(stateFromStores[7]).StickerCategoryTypes.GUILD;
+        if (everyResult) {
+          everyResult = 0 !== type.stickers.length;
+        }
+        if (everyResult) {
+          const stickers = type.stickers;
+          everyResult = stickers.every((item) => {
+            const stickerSendability = channel(nsfwAllowed[8]).getStickerSendability(item, closure_0, closure_1);
+            return stickerSendability === channel(nsfwAllowed[8]).StickerSendability.SENDABLE_WITH_PREMIUM;
+          });
+        }
+        tmp = everyResult;
+      }
+      if (type.type !== closure_0(stateFromStores[7]).StickerCategoryTypes.FAVORITE) {
+        if (type.type !== closure_0(stateFromStores[7]).StickerCategoryTypes.RECENT) {
+          let tmp9 = type;
+          if (tmp) {
+            const obj = {};
+            const merged = Object.assign(type);
+            obj.isNitroLocked = tmp;
+            tmp9 = obj;
+          }
+          return tmp9;
+        }
+      }
+      if (type.type === closure_0(stateFromStores[7]).StickerCategoryTypes.FAVORITE) {
+        let tmp15 = stickerPackCategories(stateFromStores[12]);
+      } else {
+        tmp15 = stickerPackCategories(stateFromStores[13]);
+      }
+      const obj2 = {};
+      const merged1 = Object.assign(type);
+      obj2.icon = tmp15;
+      if (tmp) {
+        obj2.isNitroLocked = tmp;
+        let tmp19 = obj2;
+      } else {
+        tmp19 = obj2;
+      }
+      return tmp19;
+    });
+  }, items1);
+};
+export const preloadSticker = function preloadSticker(hash) {
+  const NativeLottieUtils = NativeModules.NativeLottieUtils;
+  NativeLottieUtils.preload(hash.hash, hash.url, hash.width, hash.height, hash.frames, hash.callback);
+};
+export const dropPreloadedSticker = function dropPreloadedSticker(arg0) {
+  const NativeLottieUtils = NativeModules.NativeLottieUtils;
+  NativeLottieUtils.dropPreload(arg0);
+};
+export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0, dependencyMap) {
+  const state = useStickerPickerStore.getState();
+  state.setPackToScrollTo(dependencyMap);
+  const timerId = setTimeout(() => {
+    const current = ref.current;
+    if (current != null) {
+      const obj = { type: KeyboardTypes.KeyboardTypes.EXPRESSION, context: ExpressionPickerViewType.STICKER };
+      current.openCustomKeyboard(obj);
+    }
+  }, 1);
+};

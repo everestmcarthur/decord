@@ -1,0 +1,62 @@
+// Module ID: 1350
+// Function ID: 1351
+// Name: LIBDISCORE_JSI
+// Dependencies: [17, 1351, 2, 1352]
+// Exports: consumeLogs, crash, generateLaunchSignature, getFluxApi, getHttpClientAPI, registerDevLogListener, rustMultiply
+
+// Module 1350 (LIBDISCORE_JSI)
+import _mod17 from "module_17" /* 17 */;
+import global_types from "global_types" /* 1351 */;
+import clock from "clock" /* 1352 */;
+import size from "module_2" /* 2 */;
+
+const NativeModules = _mod17.NativeModules;
+if (NativeModules.LibDiscoreModule) {
+  let LibDiscoreModule = NativeModules.LibDiscoreModule;
+} else {
+  const _Proxy = Proxy;
+  const obj = {
+    get() {
+        const error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
+        throw error;
+      }
+  };
+  LibDiscoreModule = new Proxy({}, obj);
+}
+LibDiscoreModule.bridgeJSIFunctions();
+const LIBDISCORE_JSI = global_types.typedGlobal.LIBDISCORE_JSI;
+let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
+const prototype = function BlockedDomainsStore() {
+  return Object.create(new.target.prototype);
+}.prototype;
+prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
+  return LIBDISCORE_JSI.isBlockedDomain(arg0);
+};
+prototype["startFetchingBlockedDomains"] = function startFetchingBlockedDomains(arg0) {
+  const result = LIBDISCORE_JSI.startFetchingBlockedDomains(arg0);
+};
+
+export const ExperimentCacher = LIBDISCORE_JSI.ExperimentCacher;
+export const rustMultiply = function rustMultiply(arg0, arg1) {
+  return LIBDISCORE_JSI.rustMultiply(arg0, arg1);
+};
+export const consumeLogs = function consumeLogs() {
+  return LIBDISCORE_JSI.consumeLogs();
+};
+export const monotonicNowMs = clock.monotonicNowMs;
+export const BlockedDomainsStore = prototype;
+export const getFluxApi = function getFluxApi() {
+  return LIBDISCORE_JSI.fluxApi;
+};
+export const crash = function crash() {
+  LIBDISCORE_JSI.crash();
+};
+export const registerDevLogListener = function registerDevLogListener(arg0) {
+  const result = LIBDISCORE_JSI.registerDevLogListener(arg0);
+};
+export const generateLaunchSignature = function generateLaunchSignature(globalObject) {
+  return LIBDISCORE_JSI.generateLaunchSignature(globalObject);
+};
+export const getHttpClientAPI = function getHttpClientAPI() {
+  return { httpRequest: LIBDISCORE_JSI.httpRequest, getHttpRequestStatus: LIBDISCORE_JSI.getHttpRequestStatus, cancelHttpRequest: LIBDISCORE_JSI.cancelHttpRequest, getTrackedRequestCount: LIBDISCORE_JSI.getTrackedRequestCount };
+};

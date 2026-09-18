@@ -1,0 +1,98 @@
+// Module ID: 12400
+// Function ID: 12401
+// Name: JumpToPresentButton
+// Dependencies: [19, 17, 9615, 5358, 4857, 21, 4636, 576, 1363, 4338, 504, 9811, 1114, 12401, 12402, 12403, 2]
+// Exports: default
+
+// Module 12400 (JumpToPresentButton)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4338 */;
+import noop from "module_19" /* 19 */;
+import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9615 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
+import MessageStore from "MessageStore" /* 4857 */;
+
+require = fn;
+const View = fn(17).View;
+let useChatBottomManagerUIStore = fn(9615);
+({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
+let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let obj2 = { container: { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING }, containerIOS: { bottom: "100%", pointerEvents: "box-none" } };
+let closure_10 = createStyles.createStyles(obj2);
+const PlatformUtils = fn(1363);
+let closure_11 = PlatformUtils.isIOS() ? ((arg0) => {
+  const obj = { marginBottom: null };
+  const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
+  obj.marginBottom = token + hasOwnProperty(arg0);
+  return obj;
+}) : ((arg0) => {
+  const obj2 = { bottom: null };
+  const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
+  const sum = React4(arg0) + token;
+  obj2.bottom = sum + hasOwnProperty(arg0);
+  return obj2;
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/chat/JumpToPresentButton.tsx");
+
+export default function JumpToPresentButton(channelId) {
+  channelId = channelId.channelId;
+  const screenIndex = channelId.screenIndex;
+  let tmp = closure_10();
+  const tmp2 = closure_11(screenIndex);
+  const items = [GatewayConnectionStore];
+  dependencyMap = channelId(504).useStateFromStores(items, () => connected.isConnected(), []);
+  let tmp5 = useChatBottomManagerUIStore((showingAutoComplete) => {
+    let tmp = closure_2;
+    if (tmp) {
+      showingAutoComplete = showingAutoComplete.showingAutoComplete;
+      value = showingAutoComplete.get(screenIndex);
+      let tmp5 = !value;
+      if (!value) {
+        const showJumpToPresentButtonChannelId = showingAutoComplete.showJumpToPresentButtonChannelId;
+        tmp5 = showJumpToPresentButtonChannelId.get(tmp3) === channelId;
+      }
+      tmp = tmp5;
+      tmp3 = screenIndex;
+    }
+    return tmp;
+  });
+  const obj = channelId(504);
+  const isVoicePanelMounted = channelId(9811).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9811);
+  const isVoicePanelOpen = channelId(9811).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9811);
+  const items1 = [MessageStore];
+  const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
+  if (!tmp5) {
+    return null;
+  }
+  const obj4 = channelId(504);
+  let tmp10 = tmp2;
+  if (tmp3Result.isIOS()) {
+    const items2 = [tmp.containerIOS, tmp2];
+    tmp10 = items2;
+  }
+  const intl = tmp3(1114).intl;
+  const string = intl.string;
+  const t = tmp3(1114).t;
+  if (stateFromStores) {
+    let stringResult = string(t.dpjpOp);
+  } else {
+    stringResult = string(t.gpoQsB);
+  }
+  const obj5 = { style: null, children: null };
+  const items3 = [tmp.container, tmp10];
+  obj5.style = items3;
+  if (tmp5) {
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12402), onPress: channelId.onJumpToPresent };
+    let tmp12Result = tmp12(screenIndex(12401), obj6);
+    const tmp16 = screenIndex(12401);
+  } else {
+    tmp12Result = tmp12(tmp3(12403).MemoedVoicePanelDismissChatButton, {});
+  }
+  obj5.children = tmp12Result;
+  return <View style={null}>{null}</View>;
+};

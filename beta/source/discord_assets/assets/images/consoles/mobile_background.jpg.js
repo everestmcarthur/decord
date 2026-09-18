@@ -1,0 +1,11 @@
+// Module ID: 13975
+// Function ID: 13976
+// Dependencies: [2]
+
+// Module 13975
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/images/consoles/mobile_background.jpg.js");
+
+export default "https://cdn.discordapp.com/assets/content/d9cf6b91365ad4ae12ccf7a06339af14feb61c71b75a681f0fec51604cad3c7a.jpg";
+export const metadata = { fileBytes: 76282 };

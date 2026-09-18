@@ -1,0 +1,92 @@
+// Module ID: 12318
+// Function ID: 12319
+// Name: AppLauncherUserListActionSheet
+// Dependencies: [19, 1482, 21, 4636, 4603, 7624, 1176, 12301, 1114, 12299, 12319, 11721, 12300, 5686, 2]
+// Exports: default
+
+// Module 12318 (AppLauncherUserListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import TableRow from "TableRow" /* 5686 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function EmptyStateWithSnowflakeQuery(onPressRow) {
+  onPressRow = onPressRow.onPressRow;
+  const obj = {
+    contentContainerStyle: closure_6().emptyState,
+    data: null,
+    renderItem(label) {
+      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
+    },
+    keyboardShouldPersistTaps: "always",
+    keyboardDismissMode: "on-drag"
+  };
+  const items = [onPressRow.query];
+  obj.data = items;
+  return jsx(onPressRow(12300).AppLauncherList, {
+    contentContainerStyle: closure_6().emptyState,
+    data: null,
+    renderItem(label) {
+      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
+    },
+    keyboardShouldPersistTaps: "always",
+    keyboardDismissMode: "on-drag"
+  });
+}
+const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
+const jsx = fn(21).jsx;
+const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
+const createStyles = fn(4636);
+let closure_6 = createStyles.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
+
+export default function AppLauncherUserListActionSheet(onUserPress) {
+  onUserPress = onUserPress.onUserPress;
+  const onActionSheetDismiss = onUserPress.onActionSheetDismiss;
+  const channel = onUserPress.channel;
+  let callback1;
+  const id = channel.id;
+  const items = [onActionSheetDismiss];
+  const callback = callback1.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherUserListActionSheet);
+    onActionSheetDismiss();
+  }, items);
+  const items1 = [callback, onUserPress];
+  callback1 = callback1.useCallback((user) => {
+    onUserPress({ user: user.user });
+    callback();
+  }, items1);
+  const items2 = [callback1];
+  const callback2 = callback1.useCallback((query) => {
+    const user = query;
+    if (obj.isSnowflake(query)) {
+      const obj2 = {
+        query,
+        onPressRow() {
+            return callback1({ user });
+          }
+      };
+      let tmp3Result = tmp3(EmptyStateWithSnowflakeQuery, obj2);
+    } else {
+      const obj3 = { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(tmp2[7]), darkSource: onActionSheetDismiss(tmp2[7]), title: null, body: null };
+      const intl = tmp(tmp2[8]).intl;
+      obj3.title = intl.string(tmp(tmp2[8]).t.vYocDz);
+      const intl2 = tmp(tmp2[8]).intl;
+      obj3.body = intl2.string(tmp(tmp2[8]).t.V6nAfF);
+      tmp3Result = tmp3(tmp(tmp2[6]).EmptyState, obj3);
+    }
+    return tmp3Result;
+  }, items2);
+  const obj = { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null };
+  if (channel.isPrivate()) {
+    let obj2 = { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false };
+    let tmp4Result = tmp4(tmp6(tmp5[10]), obj2);
+  } else {
+    let obj3 = { channelId: id, guildId: channel.guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true };
+    tmp4Result = tmp4(tmp6(tmp5[11]), obj3);
+  }
+  obj.children = tmp4Result;
+  return jsx(onUserPress(callback[9]).AppLauncherCommandOptionActionSheet, { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null });
+};
+export const APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY = "AppLauncherUserListActionSheet";

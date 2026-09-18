@@ -1,0 +1,54 @@
+// Module ID: 5254
+// Function ID: 5255
+// Name: CloudUploaderUtils
+// Dependencies: [2025, 502, 1345, 5210, 12, 1240, 2]
+// Exports: getUploadPayload, prepareMessagePayload
+
+// Module 5254 (CloudUploaderUtils)
+import _modDef12 from "module_12" /* 12 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import UploadUtils from "UploadUtils" /* 5210 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1345 */;
+
+require = fn;
+function getUploadPayload(self) {
+  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "a" };
+  return obj;
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
+
+export default { getUploadPayload };
+export const prepareMessagePayload = function prepareMessagePayload(Authorization, arr, arg2, arg3) {
+  const items = [];
+  const item = arr.forEach((item, index) => {
+    const merged = Object.assign(UploadUtils.getAttachmentPayload(item, index));
+    items.push({});
+  });
+  if (null != arg3) {
+    if (null != arg2) {
+      const obj = {};
+      let merged = Object.assign(arg2);
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(_modDef12.get(obj, arg3, []), 0));
+      let result = _modDef12.set(obj, arg3, items1);
+    }
+    const obj2 = { Authorization, "X-Debug-Options": DeveloperOptionsStore.getDebugOptionsHeaderValue(), "Accept-Language": LocaleStore.locale };
+    const superPropertiesBase64 = AnalyticsUtilsDefault.getSuperPropertiesBase64();
+    if (null != superPropertiesBase64) {
+      obj2["X-Super-Properties"] = superPropertiesBase64;
+    }
+    const fingerprint = AuthenticationStore.getFingerprint();
+    if (null != fingerprint) {
+      obj2["X-Fingerprint"] = fingerprint;
+    }
+    const obj5 = { headers: obj2, body: result };
+    return obj5;
+  }
+  result = {};
+  const merged1 = Object.assign(arg2);
+  result.attachments = items;
+};
+export { getUploadPayload };

@@ -1,0 +1,112 @@
+// Module ID: 15087
+// Function ID: 15088
+// Name: useQuestHomeHeader
+// Dependencies: [19, 17, 5525, 1074, 1076, 21, 4636, 576, 15084, 4632, 1114, 8976, 4603, 11239, 1896, 1240, 7285, 7644, 11228, 15088, 8203, 15089, 1483, 13079, 2]
+// Exports: default
+
+// Module 15087 (useQuestHomeHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import QuestsIcon from "QuestsIcon" /* 15084 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function QuestHomeHeaderTitle() {
+  const tmp = closure_10();
+  const obj = { style: tmp.headerTitleContainer, children: null };
+  const items = [React6(QuestsIcon.QuestsIcon, { size: "md", color: "icon-strong" }), ];
+  const obj2 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.JALI2K);
+  items[1] = React6(Text_Text.Heading, obj2);
+  obj.children = items;
+  return React7(View, obj);
+}
+function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
+  isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
+  const merged = Object.assign(isVirtualCurrencyEnabled, Object.assign({ isVirtualCurrencyEnabled: 0 }));
+  let balance;
+  const tmp2 = closure_10();
+  const tmp3 = balance;
+  balance = balance(8976).useFetchVirtualCurrencyBalance().balance;
+  [][0] = balance;
+  let obj2 = { style: tmp2.headerRightContainer, children: null };
+  if (isVirtualCurrencyEnabled) {
+    let obj3 = { balance, onPress: tmp5 };
+    isVirtualCurrencyEnabled = closure_8(tmp3(11228).BalanceWidgetPillButton, obj3);
+  }
+  let items = [isVirtualCurrencyEnabled, ];
+  const merged1 = Object.assign(merged);
+  items[1] = closure_8(FiltersButton, {});
+  obj2.children = items;
+  return closure_9(View, obj2);
+}
+function FiltersButton(setSelectedSortMethod) {
+  setSelectedSortMethod = setSelectedSortMethod.setSelectedSortMethod;
+  const setSelectedFilters = setSelectedSortMethod.setSelectedFilters;
+  const selectedFilters = setSelectedSortMethod.selectedFilters;
+  const selectedSortMethod = setSelectedSortMethod.selectedSortMethod;
+  let tmp = selectedFilters.length > 0;
+  if (!tmp) {
+    tmp = selectedSortMethod !== QuestHomeSortMethods.SUGGESTED;
+  }
+  const colors = setSelectedFilters(selectedFilters[7]).colors;
+  if (tmp) {
+    let INTERACTIVE_TEXT_DEFAULT = colors.WHITE;
+    let tmp3 = tmp2;
+  } else {
+    INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
+    tmp3 = tmp2;
+  }
+  let str = "tertiary";
+  if (tmp) {
+    str = "primary";
+  }
+  const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
+  const callback = selectedSortMethod.useCallback(() => {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15088, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+  }, items);
+  const obj = { icon: closure_8(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
+  const intl = setSelectedSortMethod(tmp3[10]).intl;
+  obj.accessibilityLabel = intl.string(setSelectedSortMethod(tmp3[10]).t.UdhTtk);
+  return closure_8(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
+}
+const View = fn(17).View;
+const QuestHomeSortMethods = fn(5525).QuestHomeSortMethods;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_7 = fn(1076).CollectiblesMobileShopScreen;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { headerTitleContainer: { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, headerTitle: { flexShrink: 1 }, headerRightContainer: null };
+let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+obj2.headerRightContainer = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/useQuestHomeHeader.tsx");
+
+export default function useQuestHomeHeader(setSelectedSortMethod) {
+  setSelectedSortMethod = setSelectedSortMethod.setSelectedSortMethod;
+  const setSelectedFilters = setSelectedSortMethod.setSelectedFilters;
+  const selectedFilters = setSelectedSortMethod.selectedFilters;
+  const selectedSortMethod = setSelectedSortMethod.selectedSortMethod;
+  const navigation = setSelectedSortMethod(selectedFilters[22]).useNavigation();
+  const obj = setSelectedSortMethod(selectedFilters[22]);
+  const enabled = setSelectedSortMethod(selectedFilters[23]).useVirtualCurrencyMobileEnabled().enabled;
+  const items = [navigation, enabled, setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
+  const layoutEffect = selectedSortMethod.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerTitle() {
+        return closure_1_8(closure_1_11, {});
+      },
+      headerRight() {
+        return closure_2_8(QuestHomeHeaderRight, { isVirtualCurrencyEnabled, setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod });
+      }
+    });
+  }, items);
+};

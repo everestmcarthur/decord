@@ -1,0 +1,54 @@
+// Module ID: 9629
+// Function ID: 9630
+// Name: CircleWithCutoutUtils
+// Dependencies: [19, 21, 8574, 2]
+// Exports: default, getBadgeLeft, getBadgeTop, getCutoutCenterX, getCutoutCenterY
+
+// Module 9629 (CircleWithCutoutUtils)
+import inlineStyles from "inlineStyles" /* 8574 */;
+import noop from "module_19" /* 19 */;
+
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let closure_5 = Math.PI / 180;
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
+
+export default function CircleWithCutout(arg0) {
+  ({ circleRadius, cutoutPositionInDegrees } = arg0);
+  const result = 2 * circleRadius;
+  ({ cutoutRadius, enableCutout, circleFillColor } = arg0);
+  const sum = circleRadius + circleRadius * Math.sin(cutoutPositionInDegrees * closure_5);
+  const diff = circleRadius - circleRadius * Math.cos(cutoutPositionInDegrees * closure_5);
+  const size = { height: result, width: result, children: null };
+  const obj = { children: null };
+  const obj2 = { id: "mask", children: null };
+  const items = [React3(inlineStyles.Rect, { width: result, height: result, fill: "white" }), React3(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
+  obj2.children = items;
+  obj.children = React4(inlineStyles.Mask, obj2);
+  const items1 = [React3(inlineStyles.Defs, obj), ];
+  const obj3 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
+  let str;
+  if (enableCutout) {
+    str = "url(#mask)";
+  }
+  obj3.mask = str;
+  items1[1] = React3(inlineStyles.Circle, obj3);
+  size.children = items1;
+  return React4(inlineStylesDefault, size);
+};
+export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, arg2) {
+  return buttonRadius - buttonRadius * Math.cos(arg2 * closure_5) - badgeRadius;
+};
+export const getBadgeLeft = function getBadgeLeft(badgeRadius, buttonRadius, arg2) {
+  return buttonRadius + buttonRadius * Math.sin(arg2 * closure_5) - badgeRadius;
+};
+export const getCutoutCenterX = function getCutoutCenterX(result, cutoutPositionInDegrees) {
+  return result + result * Math.sin(cutoutPositionInDegrees * closure_5);
+};
+export const getCutoutCenterY = function getCutoutCenterY(result, cutoutPositionInDegrees) {
+  return result - result * Math.cos(cutoutPositionInDegrees * closure_5);
+};

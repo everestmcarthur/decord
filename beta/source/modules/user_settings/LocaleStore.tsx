@@ -1,0 +1,175 @@
+// Module ID: 2025
+// Function ID: 2026
+// Name: LocaleStore
+// Dependencies: [5, 2026, 1219, 4257, 1114, 504, 573, 2]
+
+// Module 2025 (LocaleStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DiscordNativeDefault from "DiscordNative" /* 4257 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+
+const require = fn;
+let closure_6 = async function _getSystemLocale(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp2;
+          closure_0 = tmp3;
+          closure_128_0 = undefined;
+          const tmp24 = DiscordNativeDefault;
+          let prop;
+          if (tmp24 != null) {
+            const app = tmp24.app;
+            if (app != null) {
+              prop = app.getPreferredSystemLanguages;
+            }
+          }
+          if (null != prop) {
+            const app2 = tmp22(4257).app;
+            const preferredSystemLanguages = app2.getPreferredSystemLanguages();
+            c2 = 1;
+            c3 = 1;
+            const obj4 = { value: preferredSystemLanguages.then((result) => result[0]), done: false };
+            return obj4;
+          }
+          tmp22 = importDefault;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_128_0 = value;
+        if (null != closure_128_0) {
+          if ("" !== closure_128_0) {
+            c3 = 3;
+            const obj = { value: closure_128_0, done: true };
+            return obj;
+          }
+        }
+      }
+      c3 = 3;
+      const obj6 = { value: closure_129_0(closure_129_2[4]).systemLocale, done: true };
+      return obj6;
+    } catch (tmp15) {
+      c3 = tmp;
+      throw tmp15;
+    }
+  }
+};
+function handleUpdate() {
+  const localization = UserSettingsProtoStore.settings.localization;
+  value = undefined;
+  if (localization != null) {
+    if (localization.locale != null) {
+      value = iter.value;
+    }
+  }
+  let flag = null != value;
+  if (flag) {
+    flag = "" !== value;
+  }
+  if (flag) {
+    flag = value !== locale;
+  }
+  if (flag) {
+    locale = value;
+    setAppLocale(value);
+    flag = true;
+  }
+  return flag;
+}
+const setAppLocale = fn(2026).setAppLocale;
+let locale = fn(1114).intl.currentLocale;
+let global = fn(1114).systemLocale;
+(function getSystemLocale() {
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+})().then((result) => {
+  global = result;
+});
+const Store = initializeDefault.Store;
+class LocaleStore extends Store {
+}
+const prototype = LocaleStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(UserSettingsProtoStore);
+  const localization = UserSettingsProtoStore.settings.localization;
+  value = undefined;
+  if (localization != null) {
+    if (localization.locale != null) {
+      value = iter.value;
+    }
+  }
+  let tmp3 = null != value;
+  if (tmp3) {
+    tmp3 = "" !== value;
+  }
+  if (tmp3) {
+    tmp3 = value !== locale;
+  }
+  if (tmp3) {
+    locale = value;
+    setAppLocale(value);
+  }
+  setAppLocale(locale);
+};
+Object.defineProperty(prototype, "locale", {
+  get: function locale() {
+    return locale;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "systemLocale", {
+  get: function systemLocale() {
+    return global;
+  },
+  set: undefined
+});
+LocaleStore.displayName = "LocaleStore";
+const localeStore = new LocaleStore(DispatcherDefault, {
+  OVERLAY_INITIALIZE: handleUpdate,
+  CACHE_LOADED: handleUpdate,
+  CONNECTION_OPEN: handleUpdate,
+  USER_SETTINGS_PROTO_UPDATE: handleUpdate,
+  USER_SETTINGS_LOCALE_OVERRIDE: function handleLocaleOverride(locale) {
+    locale = locale.locale;
+    setAppLocale(locale);
+  }
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/LocaleStore.tsx");
+
+export default localeStore;

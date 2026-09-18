@@ -1,0 +1,149 @@
+// Module ID: 13426
+// Function ID: 13427
+// Name: ForLaterIntro
+// Dependencies: [17, 7254, 21, 4636, 576, 7963, 13427, 13428, 4632, 1114, 13429, 11840, 4599, 7312, 2]
+// Exports: default
+
+// Module 13426 (ForLaterIntro)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ClockIcon from "ClockIcon" /* 4599 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7254 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7312 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
+import BookmarkIcon from "BookmarkIcon" /* 11840 */;
+import _modDef13429 from "module_13429" /* 13429 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createStyles from "createStyles" /* 4636 */;
+import size_mod from "module_2" /* 2 */;
+
+function IntroDemo(isReminder) {
+  isReminder = isReminder.isReminder;
+  const tmp = closure_8();
+  const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj2 = { style: tmp.messages, children: null };
+  const obj3 = { source: { uri: _modDef13429 }, style: tmp.avatar };
+  const items = [timestampProducer(React3, obj3), ];
+  const obj5 = { style: tmp.messageLines, children: null };
+  const obj6 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const intl = util.intl;
+  obj6.children = intl.string(util.t.cqpybK);
+  const items1 = [timestampProducer(Text_Text.Text, obj6), , , ];
+  const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj7.children = intl2.string(util.t["h+KPxy"]);
+  items1[1] = timestampProducer(Text_Text.Text, obj7);
+  const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const intl3 = util.intl;
+  obj8.children = intl3.string(util.t["63EVpI"]);
+  items1[2] = timestampProducer(Text_Text.Text, obj8);
+  const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const intl4 = util.intl;
+  obj9.children = intl4.string(util.t["KT/TDX"]);
+  items1[3] = timestampProducer(Text_Text.Text, obj9);
+  obj5.children = items1;
+  items[1] = React5(hasOwnProperty, obj5);
+  obj2.children = items;
+  const items2 = [React5(hasOwnProperty, obj2), ];
+  const obj10 = { style: tmp.sheet, children: null };
+  const items3 = [timestampProducer(hasOwnProperty, { style: tmp.grabber }), , ];
+  const obj12 = { icon: BookmarkIcon.BookmarkIcon, label: null, highlighted: null };
+  const intl5 = util.intl;
+  obj12.label = intl5.string(util.t.tpxJto);
+  obj12.highlighted = !isReminder;
+  items3[1] = timestampProducer(SheetRow, obj12);
+  const obj13 = { icon: ClockIcon.ClockIcon, label: null, highlighted: null, hasArrow: true };
+  const intl6 = util.intl;
+  obj13.label = intl6.string(util.t.mJ3P0N);
+  obj13.highlighted = isReminder;
+  items3[2] = timestampProducer(SheetRow, obj13);
+  obj10.children = items3;
+  items2[1] = React5(hasOwnProperty, obj10);
+  obj.children = items2;
+  return React5(hasOwnProperty, obj);
+}
+function SheetRow(hasArrow) {
+  let flag = hasArrow.hasArrow;
+  ({ icon, label, highlighted } = hasArrow);
+  if (flag === undefined) {
+    flag = false;
+  }
+  const tmp = closure_8();
+  const items = [tmp.sheetRow, ];
+  let sheetRowHighlighted = null;
+  if (highlighted) {
+    sheetRowHighlighted = tmp.sheetRowHighlighted;
+  }
+  const obj = { style: items, children: null };
+  items[1] = sheetRowHighlighted;
+  const items1 = [timestampProducer(icon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", style: tmp.sheetRowLabel, children: label }), ];
+  let tmp5Result = null;
+  if (flag) {
+    const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+    tmp5Result = timestampProducer(ChevronSmallRightIcon.ChevronSmallRightIcon, obj4);
+  }
+  items1[2] = tmp5Result;
+  obj.children = items1;
+  return React5(hasOwnProperty, obj);
+}
+({ Image: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const ACTION_SHEET_BORDER_RADIUS = ActionSheetConstants.ACTION_SHEET_BORDER_RADIUS;
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let obj = { scrollView: { flex: 1 }, pageContainer: { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32 }, container: { alignItems: "center" }, upsellImage: null, textContainer: null, text: null, demo: null, messages: null, avatar: null, messageLines: null, sheet: null, grabber: null, sheetRow: null, sheetRowHighlighted: null, sheetRowLabel: null };
+let size = { width: 180, height: 144, marginBottom: nativeDefault.space.PX_16 };
+obj.upsellImage = size;
+let obj2 = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32 };
+obj.textContainer = { gap: nativeDefault.space.PX_8 };
+obj.text = { textAlign: "center" };
+let obj3 = { gap: nativeDefault.space.PX_8 };
+obj.demo = { alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md, borderWidth: 1, marginTop: nativeDefault.space.PX_24, overflow: "hidden" };
+let obj4 = { alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md, borderWidth: 1, marginTop: nativeDefault.space.PX_24, overflow: "hidden" };
+obj.messages = { flexDirection: "row", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12 };
+const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.round };
+obj.avatar = size1;
+let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12 };
+obj.messageLines = { flex: 1, gap: nativeDefault.space.PX_4 };
+let obj6 = { flex: 1, gap: nativeDefault.space.PX_4 };
+obj.sheet = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8 };
+const size2 = { alignSelf: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, height: 4, marginVertical: nativeDefault.space.PX_8, width: 36 };
+obj.grabber = size2;
+let obj7 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8 };
+obj.sheetRow = { alignItems: "center", borderRadius: nativeDefault.radii.sm, flexDirection: "row", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
+let obj8 = { alignItems: "center", borderRadius: nativeDefault.radii.sm, flexDirection: "row", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
+obj.sheetRowHighlighted = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.sheetRowLabel = { flex: 1 };
+let closure_8 = createStyles.createStyles(obj);
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterIntro.tsx");
+
+export default function ForLaterIntro(type) {
+  const tmp = closure_8();
+  const tmp4 = type.type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
+  const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const items = [timestampProducer(React3, { source: importDefault(tmp4 ? 13427 : 13428), style: tmp.upsellImage }), , ];
+  const obj4 = { style: tmp.textContainer, children: null };
+  const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const intl = tmp2(1114).intl;
+  const t = tmp2(1114).t;
+  obj5.children = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
+  const items1 = [timestampProducer(Text_Text.Heading, obj5), ];
+  const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
+  const intl2 = tmp2(1114).intl;
+  const t2 = tmp2(1114).t;
+  const intl3 = tmp2(1114).intl;
+  const t3 = tmp2(1114).t;
+  const obj3 = { source: importDefault(tmp4 ? 13427 : 13428), style: tmp.upsellImage };
+  const tmp10 = tmp4 ? t2.YI4UjI : t2["5TSj/g"];
+  const tmp6 = React4;
+  obj6.children = intl2.format(tmp10, { itemName: intl3.string(tmp4 ? t3.mJ3P0N : t3.tpxJto) });
+  items1[1] = timestampProducer(Text_Text.Text, obj6);
+  obj4.children = items1;
+  items[1] = React5(hasOwnProperty, obj4);
+  items[2] = timestampProducer(IntroDemo, { isReminder: tmp4 });
+  obj2.children = items;
+  obj.children = React5(hasOwnProperty, obj2);
+  return timestampProducer(tmp6, obj);
+};

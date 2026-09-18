@@ -1,0 +1,196 @@
+// Module ID: 12498
+// Function ID: 12499
+// Name: SearchPeopleTabStore
+// Dependencies: [1957, 5590, 12, 12499, 10994, 1114, 504, 573, 2]
+
+// Module 12498 (SearchPeopleTabStore)
+import _modDef12 from "module_12" /* 12 */;
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import useUserListData from "useUserListData" /* 10994 */;
+import NewMessageUserList from "NewMessageUserList" /* 12499 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import FrecencyStore from "FrecencyStore" /* 5590 */;
+
+require = fn;
+let closure_5 = [];
+class PeopleSearchManager {
+  constructor() {
+    obj = Object.create(new.target.prototype);
+    closure_0 = obj;
+    obj.count = null;
+    obj.searchQueryString = "";
+    obj.groupDMs = [];
+    obj.userIndexes = {};
+    obj.results = [];
+    userSearch1 = new closure_0(closure_2[4]).UserSearch(() => obj2.processResults());
+    obj.userSearch = userSearch1;
+    userSearch = obj.userSearch;
+    subscription = userSearch.subscribe(() => obj2.processResults(), true);
+    return obj;
+  }
+}
+const prototype = PeopleSearchManager.prototype;
+prototype["teardown"] = function teardown() {
+  const userSearch = this.userSearch;
+  userSearch.unsubscribe();
+};
+prototype["search"] = function search(str) {
+  const self = this;
+  const trimmed = str.toLowerCase().trim();
+  this.searchQueryString = trimmed;
+  if ("" === trimmed) {
+    self.processResults();
+  } else {
+    const userSearch1 = self.userSearch;
+    self.userIndexes = userSearch1.filter(trimmed);
+    const userSearch = self.userSearch;
+    const response = userSearch.fetch(trimmed, true);
+    const trimmed1 = trimmed.toLocaleLowerCase().trim();
+    if (0 === trimmed1.length) {
+      let items = [];
+    } else {
+      const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
+      const found = values.filter(trimmed1(12499).filterGroupDMs);
+      const mapped = found.map((id) => {
+        const items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
+        return items;
+      });
+      const found1 = mapped.filter((item) => {
+        [, tmp] = item;
+        return tmp > 0;
+      });
+      const sorted = found1.sort((arg0, arg1) => {
+        let diff = arg1[1] - arg0[1];
+        if (0 === diff) {
+          diff = arg1[2] - arg0[2];
+        }
+        return diff;
+      });
+      const chainResult = _modDef12.chain(ChannelStore.getMutablePrivateChannels());
+      items = sorted.map((item) => {
+        [tmp] = item;
+        return tmp;
+      }).value();
+      const iter = sorted.map((item) => {
+        [tmp] = item;
+        return tmp;
+      });
+    }
+    self.groupDMs = items;
+    const str2 = trimmed.toLocaleLowerCase();
+  }
+};
+prototype["processResults"] = function processResults() {
+  const self = this;
+  const userSearch = this.userSearch;
+  this.userIndexes = userSearch.filter(this.searchQueryString);
+  const result = useUserListData.parseUserSearchResults({ data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true });
+  let arr3 = result;
+  if (this.groupDMs.length > 0) {
+    arr3 = result;
+    if ("" !== self.searchQueryString) {
+      const obj3 = { title: null, items: null };
+      let intl = tmp(1114).intl;
+      obj3.title = intl.string(tmp(1114).t.qGlQrW);
+      obj3.items = self.groupDMs;
+      const findIndexResult = result.findIndex((title) => {
+        const intl = util.intl;
+        return title.title === intl.string(util.t.y29JXs);
+      });
+      if (-1 === findIndexResult) {
+        const items = [];
+        items[HermesBuiltin.arraySpread(result, 0)] = obj3;
+        arr3 = items;
+      } else {
+        const items1 = [];
+        const arraySpreadResult = HermesBuiltin.arraySpread(result.slice(0, findIndexResult), 0);
+        items1[arraySpreadResult] = obj3;
+        HermesBuiltin.arraySpread(result.slice(findIndexResult), arraySpreadResult + 1);
+        arr3 = items1;
+      }
+    }
+  }
+  if (self.searchQueryString.length > 0) {
+    self.count = arr3.reduce((acc, items) => acc + items.items.length, 0);
+  } else {
+    self.count = null;
+  }
+  self.results = arr3;
+  searchPeopleTabStoreImpl.emitChange();
+};
+prototype["getResults"] = function getResults() {
+  return this.results;
+};
+prototype["getCount"] = function getCount() {
+  return this.count;
+};
+const map = new Map();
+const Store = initializeDefault.Store;
+class SearchPeopleTabStoreImpl extends Store {
+}
+const prototype2 = SearchPeopleTabStoreImpl.prototype;
+prototype2["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, FrecencyStore);
+};
+prototype2["getResults"] = function getResults(arg0) {
+  value = map.get(arg0);
+  let results;
+  if (value != null) {
+    results = value.getResults();
+  }
+  if (results == null) {
+    results = closure_5;
+  }
+  return results;
+};
+prototype2["getCount"] = function getCount(arg0) {
+  value = map.get(arg0);
+  let count;
+  if (value != null) {
+    count = value.getCount();
+  }
+  if (count == null) {
+    count = null;
+  }
+  return count;
+};
+SearchPeopleTabStoreImpl.displayName = "SearchPeopleTabStore";
+const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(DispatcherDefault, {
+  SEARCH_PEOPLE_TAB_SEARCH: function handleSearchPeopleTabSearch(id) {
+    id = id.id;
+    value = map.get(id);
+    if (value == null) {
+      if (typeof PeopleSearchManager === "function") {
+        const obj2 = Object.create(PeopleSearchManager.prototype);
+        obj2.count = null;
+        obj2.searchQueryString = "";
+        obj2.groupDMs = [];
+        obj2.userIndexes = {};
+        obj2.results = [];
+        const userSearch1 = new useUserListData.UserSearch(() => obj2.processResults());
+        obj2.userSearch = userSearch1;
+        const userSearch = obj2.userSearch;
+        const subscription = userSearch.subscribe(() => obj2.processResults(), true);
+        value = obj2;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    const result = map.set(id, value);
+    value.search(id.searchQueryString);
+  },
+  SEARCH_PEOPLE_TAB_CLEANUP: function handleSearchPeopleTabCleanup(id) {
+    id = id.id;
+    value = map.get(id);
+    if (value != null) {
+      value.teardown();
+    }
+    map.delete(id);
+  }
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
+
+export default searchPeopleTabStoreImpl;

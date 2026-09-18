@@ -1,0 +1,137 @@
+// Module ID: 17909
+// Function ID: 17910
+// Name: NotificationSettingChannelOverrides
+// Dependencies: [32, 19, 17, 1961, 7214, 4285, 1371, 1074, 21, 4636, 576, 504, 7084, 7215, 4789, 5598, 1114, 4348, 7152, 5686, 5692, 5109, 10999, 7153, 1176, 8348, 7158, 2]
+
+// Module 17909 (NotificationSettingChannelOverrides)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7215 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7214 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const isGuildReadableType = fn(1961).isGuildReadableType;
+const Constants = fn(1074);
+({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4636);
+let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
+let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
+obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };
+let closure_14 = createStyles.createStyles(obj);
+let obj4 = { paddingVertical: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx");
+
+export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
+  ({ guildId: require, navigation } = arg0);
+  let stateFromStores;
+  let first;
+  let channels;
+  let tmp = closure_14();
+  let items = [GuildCategoryStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => GuildCategoryStore.getCategories(require));
+  const tmp6 = first(channels.useState(""), 2);
+  first = tmp6[0];
+  const items1 = [stateFromStores, first];
+  const memo = channels.useMemo(() => {
+    const mapped = getFlattedChannelListDefault(stateFromStores._categories, stateFromStores, (channel) => {
+      channel = channel.channel;
+      let tmp = isGuildReadableType(channel.type);
+      if (!tmp) {
+        let tmp3 = channel.type === constants.GUILD_CATEGORY;
+        if (tmp3) {
+          tmp3 = null != dependencyMap[channel.id];
+        }
+        if (tmp3) {
+          tmp3 = dependencyMap[channel.id].length > 0;
+        }
+        tmp = tmp3;
+      }
+      if (tmp) {
+        if ("" !== first) {
+          if (null != str) {
+            const obj = require("useChannelName");
+            const formatted = require("useChannelName").computeChannelName(channel, UserStore, RelationshipStore).toLowerCase();
+            const str3 = require("useChannelName").computeChannelName(channel, UserStore, RelationshipStore);
+            return navigation(stateFromStores[15])(str.toLowerCase(), formatted);
+          }
+        }
+        return tmp;
+      } else {
+        return false;
+      }
+    }).map((channel) => channel.channel);
+    let obj = { channels: mapped, sections: null };
+    const items = [mapped.length];
+    obj.sections = items;
+    return obj;
+  }, items1);
+  channels = memo.channels;
+  const items2 = [channels, first];
+  const effect = channels.useEffect(() => {
+    if (null != first) {
+      if ("" !== tmp) {
+        if (channels.length > 0) {
+          const intl2 = util.intl;
+          const obj = { count: length };
+          let formatToPlainStringResult = intl2.formatToPlainString(util.t.ZGVL3g, obj);
+        } else {
+          const intl = util.intl;
+          formatToPlainStringResult = intl.string(util.t.f5cMAg);
+        }
+        const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+        AccessibilityAnnouncer.announce(formatToPlainStringResult);
+      }
+    }
+  }, items2);
+  const items3 = [channels, navigation];
+  let obj = require("initialize");
+  const tmp5 = navigation;
+  const callback = channels.useCallback((arg0, arg1) => {
+    const id = tmp;
+    const obj = { icon: null, start: null, end: null, label: null, labelLineClamp: 1, arrow: true, onPress: null };
+    const obj2 = { IconComponent: require("utils/ChannelUtils").getChannelIconComponent(channels[arg1]) };
+    obj.icon = closure_1_12(require("TableRowIcon").TableRowIcon, obj2);
+    obj.start = 0 === arg1;
+    obj.end = arg1 === channels.length - 1;
+    const obj3 = require("utils/ChannelUtils");
+    obj.label = require("useChannelName").computeChannelName(channels[arg1], UserStore, RelationshipStore);
+    obj.onPress = function onPress() {
+      navigation.push(constants.CHANNEL_OVERRIDE, { channelId: id.id });
+    };
+    return closure_1_12(require("TableRow").TableRow, obj);
+  }, items3);
+  let obj2 = { style: tmp.container, children: null };
+  let obj3 = { style: tmp.searchContainer, children: null };
+  const tmp10 = navigation(stateFromStores[18])();
+  const obj4 = { placeholder: null, onChange: null };
+  let intl = require("util").intl;
+  obj4.placeholder = intl.string(require("util").t["5h0QOP"]);
+  obj4.onChange = tmp6[1];
+  obj3.children = closure_12(require("SearchField").SearchField, obj4);
+  const items4 = [closure_12(View, obj3), ];
+  if (0 === channels.length) {
+    const obj5 = { Illustration: tmp2(tmp3[25]).NoResults, title: null, body: null };
+    let intl2 = tmp2(tmp3[16]).intl;
+    obj5.title = intl2.string(tmp2(tmp3[16]).t.wM7uRI);
+    const intl3 = tmp2(tmp3[16]).intl;
+    obj5.body = intl3.string(tmp2(tmp3[16]).t.f5cMAg);
+    let tmp15Result = tmp15(tmp2(tmp3[24]).EmptyState, obj5);
+  } else {
+    const obj6 = { sections: memo.sections, renderItem: callback, itemSize: tmp10, insetEnd: navigation(stateFromStores[12])().insets.bottom, estimatedListSize: "windowSize", placeholderConfig: tmp12, wrapChildren: true };
+    tmp15Result = tmp15(tmp5(tmp3[26]), obj6);
+  }
+  items4[1] = tmp15Result;
+  obj2.children = items4;
+  return closure_13(View, obj2);
+});

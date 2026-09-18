@@ -1,0 +1,152 @@
+// Module ID: 8744
+// Function ID: 8745
+// Name: StageSettingsActionSheet
+// Dependencies: [19, 17, 4652, 1957, 4275, 1962, 5495, 1074, 21, 4636, 576, 4603, 504, 1965, 5503, 7300, 8716, 1114, 1176, 8745, 8512, 8746, 7485, 8747, 8748, 8750, 8751, 8752, 2]
+// Exports: default
+
+// Module 8744 (StageSettingsActionSheet)
+import nativeDefault from "native" /* 576 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8512 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;
+import ReportModals from "ReportModals" /* 8752 */;
+import noop from "module_19" /* 19 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+
+require = fn;
+const View = fn(17).View;
+const STAGE_SETTINGS_SHEET_KEY = fn(5495).STAGE_SETTINGS_SHEET_KEY;
+const Constants = fn(1074);
+({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { container: { marginTop: 8 }, icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, warning: null };
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };
+let closure_14 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSettingsActionSheet.tsx");
+
+export default function StageSettingsActionSheet(channelId) {
+  channelId = channelId.channelId;
+  const onOpenRTCDebugOverlay = channelId.onOpenRTCDebugOverlay;
+  let stateFromStores;
+  const tmp = closure_14();
+  const items = [ChannelStore];
+  stateFromStores = channelId(stateFromStores[12]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj = channelId(stateFromStores[12]);
+  const items1 = [PermissionStore];
+  const stateFromStores1 = channelId(stateFromStores[12]).useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, stateFromStores));
+  let obj2 = channelId(stateFromStores[12]);
+  const isStageSpeakingDisabledForCurrentUser = channelId(stateFromStores[14]).useIsStageSpeakingDisabledForCurrentUser();
+  let obj3 = channelId(stateFromStores[14]);
+  const items2 = [ChannelRTCStore];
+  const items3 = [channelId];
+  const stateFromStores2 = channelId(stateFromStores[12]).useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipant(channelId), items3);
+  const obj4 = channelId(stateFromStores[12]);
+  const items4 = [StageInstanceStore];
+  const items5 = [stateFromStores];
+  const stateFromStores3 = channelId(stateFromStores[12]).useStateFromStores(items4, () => StageInstanceStore.getStageInstanceByChannel(channelId));
+  const effect = noop.useEffect(() => {
+    if (null == stateFromStores) {
+      ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
+    }
+  }, items5);
+  let tmp11Result4 = null;
+  if (null != stateFromStores) {
+    const obj6 = { style: tmp.container, children: null };
+    let tmp14 = null;
+    if (stateFromStores1) {
+      tmp14 = null;
+      if (null == stateFromStores2) {
+        tmp14 = null;
+        if (!isStageSpeakingDisabledForCurrentUser) {
+          if (null != stateFromStores3) {
+            const intl2 = tmp2(tmp3[17]).intl;
+            let stringResult = intl2.string(tmp2(tmp3[17]).t["5BKP4y"]);
+          } else {
+            const intl = tmp2(tmp3[17]).intl;
+            stringResult = intl.string(tmp2(tmp3[17]).t.s8mM8A);
+          }
+          const obj7 = { label: stringResult, leading: null, onPress: null };
+          const obj8 = { source: onOpenRTCDebugOverlay(tmp3[19]), color: tmp.icon.color };
+          obj7.leading = tmp11(tmp2(tmp3[18]).Icon, obj8);
+          obj7.onPress = function onPress() {
+            if (null != stateFromStores) {
+              const result = StageChannelActionCreatorExtras.openStageChannelSettings(tmp);
+              ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
+            }
+          };
+          tmp11(tmp2(tmp3[16]).FormRow, obj7);
+        }
+      }
+    }
+    const items6 = [tmp14, , , , ];
+    const obj9 = { label: null, leading: null, onPress: null };
+    const intl3 = tmp2(tmp3[17]).intl;
+    obj9.label = intl3.string(tmp2(tmp3[17]).t.NiTd0e);
+    const obj10 = { source: onOpenRTCDebugOverlay(tmp3[21]), color: tmp.icon.color };
+    obj9.leading = closure_12(tmp2(tmp3[18]).Icon, obj10);
+    obj9.onPress = function onPress() {
+      channelId(stateFromStores[22]).openUserSettings({ screen: constants.VOICE });
+      const obj = channelId(stateFromStores[22]);
+      const obj2 = { screen: constants.VOICE };
+      onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
+    };
+    items6[1] = closure_12(tmp2(tmp3[16]).FormRow, obj9);
+    const obj11 = { label: null, leading: null, onPress: null };
+    const intl4 = tmp2(tmp3[17]).intl;
+    obj11.label = intl4.string(tmp2(tmp3[17]).t.h850Ss);
+    const obj12 = { source: onOpenRTCDebugOverlay(tmp3[23]), color: tmp.icon.color };
+    obj11.leading = closure_12(tmp2(tmp3[18]).Icon, obj12);
+    obj11.onPress = function onPress() {
+      if (null != stateFromStores) {
+        ChannelSettingsActionCreatorsDefault.setSection(constants.NOTIFICATIONS);
+        ChannelSettingsActionCreatorsDefault.open(tmp.id);
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
+      }
+    };
+    items6[2] = closure_12(tmp2(tmp3[16]).FormRow, obj11);
+    let tmp11Result3 = null != onOpenRTCDebugOverlay;
+    if (tmp11Result3) {
+      const obj13 = { label: null, leading: null, onPress: null };
+      const intl5 = tmp2(tmp3[17]).intl;
+      obj13.label = intl5.string(tmp2(tmp3[17]).t.X8bCMe);
+      const obj14 = { source: tmp18(tmp3[25]), color: tmp.icon.color };
+      obj13.leading = tmp11(tmp2(tmp3[18]).Icon, obj14);
+      obj13.onPress = function onPress() {
+        if (onOpenRTCDebugOverlay != null) {
+          tmp();
+        }
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
+      };
+      tmp11Result3 = tmp11(tmp2(tmp3[16]).FormRow, obj13);
+    }
+    const obj15 = { keyboardShouldPersistTaps: "always", children: null };
+    items6[3] = tmp11Result3;
+    const obj16 = { label: null, leading: null, onPress: null };
+    const obj17 = { text: null, style: null };
+    const intl6 = tmp2(tmp3[17]).intl;
+    obj17.text = intl6.string(tmp2(tmp3[17]).t["+78Pfm"]);
+    obj17.style = tmp.warning;
+    obj16.label = closure_12(tmp2(tmp3[16]).FormLabel, obj17);
+    const obj18 = { color: onOpenRTCDebugOverlay(tmp3[10]).unsafe_rawColors.RED_400, source: onOpenRTCDebugOverlay(tmp3[26]) };
+    obj16.leading = closure_12(tmp2(tmp3[18]).Icon, obj18);
+    obj16.onPress = function onPress() {
+      if (null != stateFromStores) {
+        const result = ReportModals.showReportModalForStageChannel(tmp);
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
+      }
+    };
+    items6[4] = closure_12(tmp2(tmp3[16]).FormRow, obj16);
+    obj6.children = items6;
+    obj15.children = closure_13(View, obj6);
+    tmp11Result4 = tmp11(tmp2(tmp3[15]).ActionSheet, obj15);
+  }
+  return tmp11Result4;
+};

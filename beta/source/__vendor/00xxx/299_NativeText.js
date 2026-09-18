@@ -1,0 +1,38 @@
+// Module ID: 299
+// Function ID: 300
+// Name: NativeText
+// Dependencies: [300, 103, 68, 27]
+
+// Module 299 (NativeText)
+import measureDefault from "measure" /* 68 */;
+import _mod103 from "module_103" /* 103 */;
+import _modDef300 from "module_300" /* 300 */;
+
+require = fn;
+let obj = { validAttributes: { isHighlighted: true, isPressable: true, numberOfLines: true, ellipsizeMode: true, allowFontScaling: true, dynamicTypeRamp: true, maxFontSizeMultiplier: true, disabled: true, selectable: true, selectionColor: true, adjustsFontSizeToFit: true, minimumFontScale: true, textBreakStrategy: true, onTextLayout: true, dataDetectorType: true, android_hyphenationFrequency: true, lineBreakStrategyIOS: true, gradientColors: true, gradientAngle: true, gradientLength: true, gradientMode: true, textStrokeWidth: true, textStrokeColor: true }, directEventTypes: { topTextLayout: { registrationName: "onTextLayout" } }, uiViewClassName: "RCTText" };
+let closure_3 = { validAttributes: { isHighlighted: true, isPressable: true, maxFontSizeMultiplier: true, gradientColors: true, gradientAngle: true, gradientLength: true, gradientMode: true, textStrokeWidth: true, textStrokeColor: true }, uiViewClassName: "RCTVirtualText" };
+const tmp2 = _modDef300("RCTText", () => {
+  obj = _mod103;
+  return obj.createViewConfig(obj);
+});
+if (global.RN$Bridgeless) {
+  let tmp3 = _modDef300("RCTVirtualText", () => _mod103.createViewConfig(closure_3));
+} else {
+  tmp3 = tmp2;
+  const importDefaultResult = measureDefault;
+}
+const javaScriptFlagGetter = fn(27);
+let tmp4 = tmp2;
+if (javaScriptFlagGetter.enablePreparedTextLayout()) {
+  tmp4 = _modDef300("RCTSelectableText", () => {
+    obj = _mod103;
+    const obj2 = {};
+    const merged = Object.assign(obj);
+    obj2.uiViewClassName = "RCTSelectableText";
+    return obj.createViewConfig(obj2);
+  });
+}
+
+export const NativeText = tmp2;
+export const NativeVirtualText = tmp3;
+export const NativeSelectableText = tmp4;

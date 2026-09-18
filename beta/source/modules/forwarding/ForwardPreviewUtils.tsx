@@ -1,0 +1,91 @@
+// Module ID: 11828
+// Function ID: 11829
+// Name: ForwardPreviewUtils
+// Dependencies: [4275, 504, 4973, 2]
+// Exports: useForwardPreviewContent
+
+// Module 11828 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 4973 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+
+export const useForwardPreviewContent = function useForwardPreviewContent(message) {
+  message = message.message;
+  ({ channel: dependencyMap, forwardOptions } = message);
+  let onlyEmbedIndices;
+  let onlyAttachmentIds;
+  if (forwardOptions != null) {
+    onlyAttachmentIds = forwardOptions.onlyAttachmentIds;
+  }
+  onlyEmbedIndices = undefined;
+  if (forwardOptions != null) {
+    onlyEmbedIndices = forwardOptions.onlyEmbedIndices;
+  }
+  const first = message.messageSnapshots[0];
+  let message1;
+  if (first != null) {
+    message1 = first.message;
+  }
+  if (message1 == null) {
+    message1 = message;
+  }
+  let attachments = message1.attachments;
+  if (null != onlyAttachmentIds) {
+    const attachments1 = message1.attachments;
+    attachments = attachments1.filter((id) => onlyAttachmentIds.includes(id.id));
+  } else if (null != onlyEmbedIndices) {
+    attachments = [];
+  }
+  const items = [];
+  const items1 = [onlyAttachmentIds];
+  if (obj.useStateFromStores(items1, () => {
+    let shouldStripEmbedsResult = null != dependencyMap;
+    if (shouldStripEmbedsResult) {
+      shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
+    }
+    if (shouldStripEmbedsResult) {
+      shouldStripEmbedsResult = EmbedUtils.shouldStripEmbeds(message);
+    }
+    return shouldStripEmbedsResult;
+  })) {
+    let tmp6 = null != onlyEmbedIndices;
+    if (!tmp6) {
+      let tmp7 = "" === message1.content;
+      if (tmp7) {
+        tmp7 = items.length > 0;
+      }
+      tmp6 = tmp7;
+    }
+    let result = message1;
+    if (tmp6) {
+      const mapped = items.map((url) => url.url);
+      result = message1.set("content", mapped.join("\n"));
+    }
+    let tmp8 = "" === result.content;
+    if (tmp8) {
+      const first1 = result.embeds[0];
+      let rawDescription;
+      if (first1 != null) {
+        rawDescription = first1.rawDescription;
+      }
+      tmp8 = null != rawDescription;
+    }
+    let result1 = result;
+    if (tmp8) {
+      result1 = result.set("content", result.embeds[0].rawDescription);
+    }
+    let obj2 = { attachments, embeds: items, hasContent: "" !== result1.content && null == onlyAttachmentIds, contentMessage: result1 };
+    return obj2;
+  } else {
+    let embeds = message1.embeds;
+    if (null != onlyEmbedIndices) {
+      const embeds1 = message1.embeds;
+      embeds = embeds1.filter((item, index) => onlyEmbedIndices.includes(index));
+    } else if (null != onlyAttachmentIds) {
+      embeds = [];
+    }
+  }
+};

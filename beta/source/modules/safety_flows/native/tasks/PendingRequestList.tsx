@@ -1,0 +1,324 @@
+// Module ID: 17998
+// Function ID: 17999
+// Name: PendingRequestList
+// Dependencies: [19, 17, 1371, 21, 4636, 576, 1176, 504, 17996, 17999, 1396, 4632, 1114, 2690, 5204, 2396, 8922, 15013, 14967, 4335, 5054, 5773, 9182, 14972, 2]
+// Exports: default
+
+// Module 17998 (PendingRequestList)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import _modDef2690 from "module_2690" /* 2690 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 14967 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+class PendingRequestRow {
+  constructor(arg0) {
+    request = global.request;
+    ({ hasMaxConnections, actionsDisabled, onAccept, onDecline } = global);
+    ({ isAcceptLoading, isDeclineLoading } = global);
+    tmp = closure_9();
+    tmp2 = request;
+    tmp3 = onDecline;
+    obj = request(onDecline[7]);
+    items = [];
+    items[0] = closure_6;
+    stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(request.parent_id));
+    globalName = undefined;
+    if (stateFromStores != null) {
+      globalName = stateFromStores.globalName;
+    }
+    if (globalName == null) {
+      username = undefined;
+      if (stateFromStores != null) {
+        username = stateFromStores.username;
+      }
+      globalName = username;
+    }
+    if (globalName == null) {
+      globalName = request.parent_username;
+    }
+    username1 = undefined;
+    if (stateFromStores != null) {
+      username1 = stateFromStores.username;
+    }
+    if (username1 == null) {
+      username1 = request.parent_username;
+    }
+    avatar = undefined;
+    if (stateFromStores != null) {
+      avatar = stateFromStores.avatar;
+    }
+    if (avatar == null) {
+      avatar = request.parent_avatar;
+    }
+    tmp2Result = tmp2(tmp3[8]);
+    pendingRequestResolution = tmp2Result.usePendingRequestResolution(request.parent_id);
+    ({ isConnected, isResolved } = pendingRequestResolution);
+    tmp2Result1 = tmp2(tmp3[9]);
+    tmp11 = jsxs;
+    tmp12 = View;
+    obj1 = { style: tmp.row, children: null };
+    tmp13 = jsx;
+    result = tmp2Result1.formatPendingRequestSentText(request.created_at);
+    obj20 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
+    tmp14 = onAccept;
+    obj6 = onAccept(tmp3[10]);
+    obj21 = { id: request.parent_id, avatar };
+    obj20.source = obj6.getUserAvatarSource(obj21);
+    items1 = [, , ];
+    items1[0] = jsx(tmp2(tmp3[6]).Avatar, obj20);
+    obj22 = { style: tmp.details, children: null };
+    items2 = [, , ];
+    items2[0] = jsx(tmp2(tmp3[11]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName });
+    tmp13Result = username1 !== globalName;
+    if (tmp13Result) {
+      obj23 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
+      obj23.children = username1;
+      tmp13Result = tmp13(tmp2(tmp3[11]).Text, obj23);
+    }
+    items2[1] = tmp13Result;
+    items2[2] = tmp13(tmp2(tmp3[11]).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
+    obj22.children = items2;
+    items1[1] = tmp11(tmp12, obj22);
+    if (isResolved) {
+      intl3 = tmp2(tmp3[12]).intl;
+      tmp14Result = tmp14(tmp3[13]);
+      tmp22 = isConnected ? tmp14Result.YQP5dE : tmp14Result["2HvOvh"];
+      tmp14Result = { variant: "text-sm/normal", color: "text-muted", children: null };
+      tmp14Result.children = intl3.string(tmp22);
+      tmp13Result1 = tmp13(tmp2(tmp3[11]).Text, tmp14Result);
+    } else {
+      obj24 = { style: null, children: null };
+      obj24.style = tmp.actions;
+      if (hasMaxConnections) {
+        items3 = [, ];
+        items3[0] = tmp16;
+        obj25 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
+        intl2 = tmp2(tmp3[12]).intl;
+        obj26 = { name: null };
+        obj26.name = request.parent_username;
+        obj25.accessibilityLabel = intl2.formatToPlainString(tmp14(tmp3[15])["4GtllP"], obj26);
+        obj25.disabled = actionsDisabled;
+        obj25.onPress = function onPress() {
+          return dependencyMap(request.parent_id);
+        };
+        items4 = [, ];
+        ({ actionButton: arr6[0], declineButton: arr6[1] } = tmp);
+        obj25.style = items4;
+        if (isDeclineLoading) {
+          tmp21 = ActivityIndicator;
+          obj27 = { size: "small", color: null };
+          obj27.color = tmp.declineIcon.color;
+          tmp13Result2 = tmp13(ActivityIndicator, obj27);
+        } else {
+          obj28 = { size: null, color: null, source: null };
+          obj28.size = tmp2(tmp3[6]).Icon.Sizes.SMALL;
+          obj28.color = tmp.declineIcon.color;
+          obj28.source = tmp14(tmp3[17]);
+          tmp13Result2 = tmp13(tmp2(tmp3[6]).Icon, obj28);
+        }
+        obj25.children = tmp13Result2;
+        items3[1] = tmp13(tmp2(tmp3[14]).PressableOpacity, obj25);
+        obj24.children = items3;
+        items1[2] = tmp11(tmp12, obj24);
+        obj1.children = items1;
+        return tmp11(tmp12, obj1);
+      } else {
+        obj29 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
+        intl = tmp2(tmp3[12]).intl;
+        obj30 = { name: null };
+        obj30.name = request.parent_username;
+        obj29.accessibilityLabel = intl.formatToPlainString(tmp14(tmp3[15]).jc1Ip7, obj30);
+        obj29.disabled = actionsDisabled;
+        obj29.onPress = function onPress() {
+          return importDefault(request.parent_id);
+        };
+        items5 = [, ];
+        ({ actionButton: arr4[0], acceptButton: arr4[1] } = tmp);
+        obj29.style = items5;
+        if (isAcceptLoading) {
+          tmp18 = ActivityIndicator;
+          obj31 = { size: "small", color: null };
+          obj31.color = tmp.acceptIcon.color;
+          tmp13Result3 = tmp13(ActivityIndicator, obj31);
+        } else {
+          obj32 = { size: "sm", color: null };
+          obj32.color = tmp14(tmp3[5]).colors.WHITE;
+          tmp13Result3 = tmp13(tmp2(tmp3[16]).CheckmarkLargeBoldIcon, obj32);
+        }
+        obj29.children = tmp13Result3;
+        tmp13Result4 = tmp13(tmp2(tmp3[14]).PressableOpacity, obj29);
+      }
+    }
+    return;
+  }
+}
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
+let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj5 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: null };
+const sum = nativeDefault.space.PX_16 + fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL];
+obj5.marginLeft = sum + nativeDefault.space.PX_12;
+obj2.divider = obj5;
+let obj4 = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.avatar = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj6 = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+obj2.details = { flexGrow: 1, flexShrink: 1, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4 };
+obj2.actions = { flexDirection: "row", alignItems: "center" };
+let size = { height: 36, width: 36, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj2.actionButton = size;
+let obj7 = { flexGrow: 1, flexShrink: 1, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4 };
+obj2.acceptButton = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE, marginRight: nativeDefault.space.PX_8 };
+let obj8 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE, marginRight: nativeDefault.space.PX_8 };
+obj2.declineButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj2.acceptIcon = { color: nativeDefault.colors.WHITE };
+let obj10 = { color: nativeDefault.colors.WHITE };
+obj2.declineIcon = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const size1 = { width: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL], height: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL], alignItems: "center", justifyContent: "center" };
+obj2.inviteIconContainer = size1;
+let obj11 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.inviteQrButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj12 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj2.inviteShareButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, marginRight: nativeDefault.space.PX_8 };
+obj2.dividerRow = { flexDirection: "row", alignItems: "center" };
+let obj13 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, marginRight: nativeDefault.space.PX_8 };
+obj2.dividerLine = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj14 = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.dividerLabel = { marginHorizontal: nativeDefault.space.PX_12 };
+const React7 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/PendingRequestList.tsx");
+
+export default function PendingRequestList(arg0) {
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  ({ pendingRequests, linkedUsersProcessed, expiresAt, onRefreshLinkCode, onInviteAnotherGuardian, onShare } = arg0);
+  const tmp = closure_9();
+  _require = tmp;
+  useRefreshLinkCodeOnExpiryDefault(expiresAt, onRefreshLinkCode);
+  const pendingRequestListController = require("usePendingParentRequests").usePendingRequestListController({
+    pendingRequests,
+    linkedUsersProcessed,
+    onActionError() {
+      const obj2 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_LINK_UPDATE_ERROR", content: null };
+      const intl = closure_0(_undefined[12]).intl;
+      obj2.content = intl.string(hasMaxConnections(_undefined[15]).Wu8BK2);
+      hasMaxConnections(_undefined[19]).open(obj2);
+    }
+  });
+  ({ seenRequests, hasMaxConnections: c1, actioningUserId: c2, isAcceptLoading: c3, isDeclineLoading: c4, actionsDisabled: c5, handleAccept: c6, handleDecline: c7 } = pendingRequestListController);
+  let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
+  let tmp8 = seenRequests.length > 0;
+  if (tmp8) {
+    const obj4 = {
+      style: tmp.card,
+      children: seenRequests.map((request, index) => {
+          let tmp2 = index > 0;
+          if (tmp2) {
+            const obj = { style: closure_0.divider };
+            tmp2 = React5(hasOwnProperty, obj);
+          }
+          const items = [tmp2, ];
+          const obj2 = { request, hasMaxConnections, isAcceptLoading: null, isDeclineLoading: null, actionsDisabled: null, onAccept: null, onDecline: null };
+          let tmp8 = c3;
+          if (c3) {
+            tmp8 = c2 === request.parent_id;
+          }
+          obj2.isAcceptLoading = tmp8;
+          let tmp10 = c4;
+          if (c4) {
+            tmp10 = c2 === request.parent_id;
+          }
+          const obj3 = { children: null };
+          obj2.isDeclineLoading = tmp10;
+          obj2.actionsDisabled = actionsDisabled;
+          obj2.onAccept = onAccept;
+          obj2.onDecline = onDecline;
+          items[1] = React5(PendingRequestRow, obj2);
+          obj3.children = items;
+          return React6(noop.Fragment, obj3, request.parent_id);
+        })
+    };
+    tmp8 = c7(c5, obj4);
+  }
+  let items = [tmp8, , ];
+  const obj5 = { style: tmp.dividerRow, children: null };
+  const items1 = [c7(c5, { style: tmp.dividerLine }), , ];
+  const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
+  let intl = tmp5(1114).intl;
+  obj7.children = intl.string(_modDef2690["/SbB94"]);
+  items1[1] = c7(require("Text/Text").Text, obj7);
+  items1[2] = c7(c5, { style: tmp.dividerLine });
+  obj5.children = items1;
+  items[1] = closure_8(c5, obj5);
+  const obj9 = { style: null, children: null };
+  const items2 = [, ];
+  ({ card: arr3[0], row: arr3[1] } = tmp);
+  obj9.style = items2;
+  let obj = require("usePendingParentRequests");
+  let obj2 = {
+    pendingRequests,
+    linkedUsersProcessed,
+    onActionError() {
+      const obj2 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_LINK_UPDATE_ERROR", content: null };
+      const intl = closure_0(_undefined[12]).intl;
+      obj2.content = intl.string(hasMaxConnections(_undefined[15]).Wu8BK2);
+      hasMaxConnections(_undefined[19]).open(obj2);
+    }
+  };
+  const obj6 = { style: tmp.dividerLine };
+  const obj8 = { style: tmp.dividerLine };
+  const items3 = [c7(c5, { style: tmp.inviteIconContainer, children: c7(require("native").PlaneIllocon, { size: 32 }) }), , ];
+  const obj11 = { style: tmp.details, children: null };
+  const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl2 = tmp5(1114).intl;
+  obj12.children = intl2.string(_modDef2690.z9gkwZ);
+  const items4 = [c7(require("Text/Text").Text, obj12), ];
+  const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const intl3 = tmp5(1114).intl;
+  obj13.children = intl3.string(_modDef2690["9t4+vC"]);
+  items4[1] = c7(require("Text/Text").Text, obj13);
+  obj11.children = items4;
+  items3[1] = closure_8(c5, obj11);
+  const obj14 = { style: tmp.actions, children: null };
+  const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  const intl4 = tmp5(1114).intl;
+  obj15.accessibilityLabel = intl4.string(require("util").t.Ej3B3Y);
+  obj15.onPress = onShare;
+  const items5 = [, ];
+  ({ actionButton: arr6[0], inviteShareButton: arr6[1] } = tmp);
+  obj15.style = items5;
+  obj15.children = c7(require("ShareIcon").ShareIcon, { size: "sm", color: tmp.declineIcon.color });
+  const items6 = [c7(require("Pressables").PressableOpacity, obj15), ];
+  const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  const intl5 = tmp5(1114).intl;
+  obj17.accessibilityLabel = intl5.string(_modDef2690.z9gkwZ);
+  obj17.onPress = onInviteAnotherGuardian;
+  const items7 = [, ];
+  ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);
+  obj17.style = items7;
+  obj17.children = c7(require("QrCodeIcon").QrCodeIcon, { size: "sm", color: tmp.declineIcon.color });
+  items6[1] = c7(require("Pressables").PressableOpacity, obj17);
+  obj14.children = items6;
+  items3[2] = closure_8(c5, obj14);
+  obj9.children = items3;
+  items[2] = closure_8(c5, obj9);
+  obj3.children = items;
+  return closure_8(require("Stack/Stack").Stack, obj3);
+};
+export { PendingRequestRow };

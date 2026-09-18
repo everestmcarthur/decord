@@ -1,0 +1,385 @@
+// Module ID: 8516
+// Function ID: 8517
+// Name: StageChannelActionCreators
+// Dependencies: [5, 2011, 4655, 1074, 8517, 38, 4816, 8518, 1270, 8522, 4783, 5503, 5601, 1894, 4280, 1086, 4649, 8511, 8524, 2]
+// Exports: editStage, endStage, inviteUserToStage, moveSelfToAudience, moveUserToAudience, removeUserFromChannel, setEveryoneRolePermissionAllowed, setUserSuppress, startStage, toggleRequestToSpeak
+
+// Module 8516 (StageChannelActionCreators)
+import _modDef38 from "module_38" /* 38 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import Server from "Server" /* 1894 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4783 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8511 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8522 */;
+import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8524 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+
+const HTTPUtils = obj(1270);
+const AppAnalyticsUtils = obj(4816);
+const useStageSpeakingForCurrentUser = obj(5503);
+const StageChannelUtils = obj(8518);
+require = fn;
+function audienceAckRequestToSpeak(channel, suppress) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  let guildId;
+  if (channel != null) {
+    guildId = channel.getGuildId();
+  }
+  let result = dependencyMap;
+  _modDef38(null != guildId, "This channel cannot be guildless.");
+  let obj = require;
+  const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(channel.id);
+  const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
+  if (!suppress) {
+    if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
+      return Promise.resolve();
+    }
+    objResult = useStageSpeakingForCurrentUser;
+  }
+  if (!tmp7) {
+    const obj3 = {};
+    const objResult3 = AppAnalyticsUtils;
+    const merged = Object.assign(StageChannelUtils.getStageChannelMetadata(channel));
+    objResult3.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj3);
+    const objResult4 = StageChannelUtils;
+  }
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  if (flag) {
+    const obj5 = { silent: flag };
+    let obj6 = obj5;
+  } else {
+    obj6 = {};
+  }
+  const merged1 = Object.assign(obj6);
+  request.body = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
+  obj = HTTPUtils;
+  result = obj.rejectWithMigratedError();
+  request.rejectWithError = result;
+  HTTP.patch(request);
+}
+let closure_12 = async function _startStage(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_5 = tmp2;
+          closure_4 = tmp3;
+          closure_132_0 = closure_0;
+          closure_132_1 = undefined;
+          if ("" !== closure_1) {
+            if (voiceChannelId.getVoiceChannelId() !== tmp27.id) {
+              StageChannelModalActionCreators.connectToStage(tmp27);
+            }
+            const obj4 = StageInstanceActionCreators;
+            c6 = 1;
+            c7 = 1;
+            const obj6 = { value: obj4.startStageInstance(tmp27.id, tmp28, tmp29, tmp30), done: false };
+            return obj6;
+          } else {
+            c7 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_132_1 = value;
+        closure_133_11(closure_132_0, false, true);
+        c7 = 3;
+        const obj = { value: closure_132_1, done: true };
+        return obj;
+      }
+    } catch (tmp22) {
+      c7 = tmp;
+      throw tmp22;
+    }
+  }
+};
+let closure_13 = async function _editStage(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else if ("" !== closure_1) {
+          c4 = 1;
+          c3 = 1;
+          const obj5 = { value: StageInstanceActionCreators.updateStageInstance(tmp5.id, tmp6, tmp7), done: false };
+          return obj5;
+        } else {
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp10) {
+      c3 = tmp;
+      throw tmp10;
+    }
+  }
+};
+let closure_14 = async function _endStage(arg0) {
+  let id = arg0;
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0, value) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c1 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            c2 = 1;
+            c1 = 1;
+            const obj5 = { value: StageInstanceActionCreators.endStageInstance(id.id), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c1 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp8) {
+        c1 = tmp;
+        throw tmp8;
+      }
+    }
+  })();
+};
+const Constants = fn(1074);
+({ AbortCodes: closure_7, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
+const SafetyToastType = fn(8517).SafetyToastType;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
+
+export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, arg1) {
+  const guildId = channel_id.getGuildId();
+  _modDef38(null != guildId, "This channel cannot be guildless.");
+  if (arg1) {
+    const obj2 = {};
+    const obj = AppAnalyticsUtils;
+    const merged = Object.assign(StageChannelUtils.getStageChannelMetadata(channel_id));
+    obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj2);
+  }
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  let toISOStringResult = null;
+  if (arg1) {
+    const _Date = Date;
+    const date = new Date();
+    toISOStringResult = date.toISOString();
+  }
+  request.body = { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id };
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  return HTTP.patch(request);
+};
+export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
+  const guildId = voiceChannel.getGuildId();
+  _modDef38(null != guildId, "This channel cannot be guildless.");
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: React7.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
+  let obj = { suppress: false, request_to_speak_timestamp: new Date().toISOString(), channel_id: voiceChannel.id };
+  request.body = obj;
+  const date = new Date();
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  return HTTP.patch(request).catch((error) => {
+    if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+      SafetyToastsActionCreatorsDefault.showFailedToast(constants2.GENERIC_ERROR);
+    }
+    return error;
+  });
+};
+export { audienceAckRequestToSpeak };
+export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
+  let guildId;
+  if (channel_id != null) {
+    guildId = channel_id.getGuildId();
+  }
+  _modDef38(null != guildId, "This channel cannot be guildless.");
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  return HTTP.patch(request);
+};
+export const setUserSuppress = function setUserSuppress(channel, id, suppress) {
+  const guildId = channel.getGuildId();
+  _modDef38(null != guildId, "This channel cannot be guildless.");
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: React7.UPDATE_VOICE_STATE(guildId, id), body: { suppress, channel_id: channel.id }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const obj = { suppress, channel_id: channel.id };
+  return HTTP.patch(request).catch((error) => {
+    if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+      SafetyToastsActionCreatorsDefault.showFailedToast(constants2.GENERIC_ERROR);
+    }
+    return error;
+  });
+};
+export const moveUserToAudience = function moveUserToAudience(user, voiceChannel) {
+  if (null != voiceChannel) {
+    if (null != user) {
+      const guildId = voiceChannel.getGuildId();
+      _modDef38(null != guildId, "This channel cannot be guildless.");
+      const guildId1 = voiceChannel.getGuildId();
+      _modDef38(null != guildId1, "This channel cannot be guildless.");
+      const HTTP = HTTPUtils.HTTP;
+      const request = { url: React7.UPDATE_VOICE_STATE(guildId1, user.id), body: null, rejectWithError: null };
+      let obj = { suppress: true, channel_id: voiceChannel.id };
+      request.body = obj;
+      request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+      HTTP.patch(request).catch((error) => {
+        if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+          SafetyToastsActionCreatorsDefault.showFailedToast(constants2.GENERIC_ERROR);
+        }
+        return error;
+      });
+      const HTTP2 = HTTPUtils.HTTP;
+      const request1 = { url: React7.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
+      const obj2 = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
+      request1.body = obj2;
+      const patchResult = HTTP.patch(request);
+      request1.rejectWithError = HTTPUtils.rejectWithMigratedError();
+      return HTTP2.patch(request1);
+    }
+  }
+};
+export const removeUserFromChannel = function removeUserFromChannel(id, getGuildId) {
+  let guildId;
+  if (getGuildId != null) {
+    guildId = getGuildId.getGuildId();
+  }
+  if (tmp2) {
+    GuildActionCreatorsDefault.setChannel(guildId, id.id, null);
+  }
+};
+export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
+  const guildId = getGuildId.getGuildId();
+  _modDef38(null != guildId, "Channel cannot be guildless");
+  const obj = { id: guildId, type: Server.PermissionOverwriteType.ROLE, allow: PermissionUtilsAll.NONE, deny: PermissionUtilsAll.NONE };
+  const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
+  const obj2 = BigFlagUtilsAll;
+  if (arg2) {
+    obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
+    obj.deny = tmp5(1086).remove(obj.deny, REQUEST_TO_SPEAK);
+    const tmp5Result = tmp5(1086);
+  } else {
+    obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
+    obj.deny = tmp5(1086).add(obj.deny, REQUEST_TO_SPEAK);
+    const tmp5Result2 = tmp5(1086);
+  }
+  const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(getGuildId.id, obj);
+};
+export const startStage = function startStage() {
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const editStage = function editStage() {
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const endStage = function endStage() {
+  const self = this;
+  const apply = closure_14.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};

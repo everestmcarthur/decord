@@ -1,0 +1,200 @@
+// Module ID: 15834
+// Function ID: 15835
+// Name: DevToolsContent
+// Dependencies: [32, 19, 17, 11562, 4552, 1234, 21, 4636, 576, 504, 11923, 15835, 4632, 5204, 4604, 15836, 15838, 1483, 1611, 5768, 5686, 4335, 14669, 2]
+
+// Module 15834 (DevToolsContent)
+import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import HapticUtils from "HapticUtils" /* 4604 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14669 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 15835 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15836 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 15838 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11562 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
+
+const require = globalThis.__r;
+const useSortedDevToolsScreensDefault = useSortedDevToolsScreens;
+
+require = fn;
+function DevToolsContentSortButtons(arg0) {
+  ({ screenKey: require, start, end } = arg0);
+  const tmp = closure_12();
+  let obj = { style: tmp.sortingIcons, children: null };
+  const obj2 = {
+    onPress() {
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+      useSortedDevToolsScreens.updateSortOrder(_require, "up");
+    },
+    disabled: start,
+    style: null,
+    accessibilityRole: "button",
+    accessibilityLabel: "Shift up",
+    children: null
+  };
+  const items = [tmp.button, ];
+  if (start) {
+    start = tmp.disabledButton;
+  }
+  items[1] = start;
+  obj2.style = items;
+  obj2.children = closure_10(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
+  const items1 = [closure_10(Pressables.PressableOpacity, obj2), ];
+  const obj3 = {
+    onPress() {
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+      useSortedDevToolsScreens.updateSortOrder(_require, "down");
+    },
+    disabled: end,
+    style: null,
+    accessibilityRole: "button",
+    accessibilityLabel: "Shift down",
+    children: null
+  };
+  const items2 = [tmp.button, ];
+  if (end) {
+    end = tmp.disabledButton;
+  }
+  items2[1] = end;
+  obj3.style = items2;
+  obj3.children = closure_10(ArrowSmallDownIcon.ArrowSmallDownIcon, {});
+  items1[1] = closure_10(Pressables.PressableOpacity, obj3);
+  obj.children = items1;
+  return closure_11(closure_5, obj);
+}
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4636);
+let obj = { devToolsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 }, sortingIcons: null, button: null, disabledButton: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
+obj.sortingIcons = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let size = { backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center" };
+obj.button = size;
+obj.disabledButton = { opacity: 0.5 };
+let closure_12 = createStyles.createStyles(obj);
+const memoResult = noop.memo((arg0) => {
+  ({ label, value } = arg0);
+  const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
+  const items = [label, closure_1_10(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
+  obj.children = items;
+  return closure_1_11(Text_Text.Text, obj);
+});
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsContent.tsx");
+
+export default noop.memo(function DevToolsContent(arg0) {
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  let arr5;
+  ({ title, embedded } = arg0);
+  const tmp = closure_12();
+  _require = require("useNavigation").useNavigation();
+  let obj = require("useNavigation");
+  let tmp4 = useSafeAreaInsetsDefault();
+  const items = [BuildOverrideStore];
+  closure_129_0 = require("initialize").useStateFromStores(items, () => {
+    const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
+    let id;
+    if (overrides != null) {
+      const tmp4 = overrides[closure_0(undefined, _undefined[10]).DEVICE_FIELD];
+      if (tmp4 != null) {
+        id = tmp4.id;
+      }
+    }
+    return id;
+  });
+  let obj2 = require("initialize");
+  const items1 = [ExperimentStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  const obj3 = require("initialize");
+  const items2 = [ApexExperimentStore];
+  closure_129_1 = stateFromStores + require("initialize").useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  const obj4 = require("initialize");
+  importDefault = useSortedDevToolsScreensDefault().map((item) => {
+    [tmp] = item;
+    if ("buildOverride" === tmp) {
+      let tmp7;
+      if (null != closure_0) {
+        const obj2 = { label: "Build override: ", value: tmp5 };
+        tmp7 = closure_2_10(memoResult, obj2, tmp);
+      }
+      return tmp7;
+    } else if ("experiments" === tmp) {
+      let tmp2;
+      if (closure_1 > 0) {
+        const obj = { label: "Experiments overridden: ", value: closure_1.toString() };
+        tmp2 = closure_2_10(memoResult, obj, tmp);
+      }
+      return tmp2;
+    }
+  });
+  const arr4 = useSortedDevToolsScreensDefault();
+  [c2, c3] = arr5.useState(false);
+  arr5 = useSortedDevToolsScreensDefault();
+  const tmp6 = _slicedToArray(arr5.useState(false), 2);
+  let tmp7 = closure_10;
+  const tmp8 = closure_10(require("TableRowGroup").TableRowGroup, {
+    title,
+    hasIcons: true,
+    children: arr5.map((item, index) => {
+      [tmp, ] = item;
+      let obj = { label: tmp2, subLabel: closure_1[index], icon: closure_1_10(screenKey(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }), arrow: !_undefined, trailing: null, onLongPress: null, onPress: null };
+      let tmp4Result;
+      if (_undefined) {
+        let obj2 = { screenKey: tmp, start: 0 === index, end: index === arr5.length - 1 };
+        tmp4Result = tmp4(DevToolsContentSortButtons, obj2);
+      }
+      obj.trailing = tmp4Result;
+      obj.onLongPress = function onLongPress() {
+        let str = "sorting-enabled";
+        if (_undefined) {
+          str = "sorting-disabled";
+        }
+        const obj2 = { key: str, content: null };
+        let str2 = "Sorting enabled";
+        if (tmp2) {
+          str2 = "Sorting disabled";
+        }
+        obj2.content = str2;
+        closure_1(dependencyMap[21]).open(obj2);
+        const obj = closure_1(dependencyMap[21]);
+        tmp2 = _undefined;
+        const result = screenKey(dependencyMap[14]).triggerHapticFeedback(screenKey(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+        closure_1_3((arg0) => !arg0);
+      };
+      obj.onPress = function onPress() {
+        if (!c2) {
+          if (null != screenKey.push) {
+            arr.push(screenKey);
+          } else {
+            const obj2 = { screenKey };
+            DevToolsNavigator.navigateToDevTools(obj2);
+          }
+          arr = screenKey;
+        }
+      };
+      return closure_1_10(screenKey(_undefined[20]).TableRow, obj, tmp);
+    })
+  });
+  let tmp7Result = tmp8;
+  if (!embedded) {
+    const obj6 = { style: tmp.devToolsContainer, contentContainerStyle: null, children: null };
+    const obj7 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
+    obj6.contentContainerStyle = obj7;
+    obj6.children = tmp8;
+    tmp7Result = tmp7(closure_6, obj6);
+  }
+  return tmp7Result;
+});
+export const DevToolsContentSubLabel = memoResult;

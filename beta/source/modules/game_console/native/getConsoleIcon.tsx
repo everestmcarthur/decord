@@ -1,0 +1,32 @@
+// Module ID: 9593
+// Function ID: 9594
+// Name: getConsoleIcon
+// Dependencies: [1074, 4657, 9572, 9594, 2]
+// Exports: default, getConsoleIconForVoicePlatform
+
+// Module 9593 (getConsoleIcon)
+import Constants from "Constants" /* 1074 */;
+import CallConstants from "CallConstants" /* 4657 */;
+import _modDef9572 from "module_9572" /* 9572 */;
+import _modDef9594 from "module_9594" /* 9594 */;
+import size from "module_2" /* 2 */;
+
+const VoicePlatforms = CallConstants.VoicePlatforms;
+const obj = { [XBOX]: _modDef9572, [PLAYSTATION]: _modDef9594, [PLAYSTATION_STAGING]: _modDef9594 };
+({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = Constants.PlatformTypes);
+const result = size.fileFinishedImporting("modules/game_console/native/getConsoleIcon.tsx");
+
+export default function getConsoleIcon(arg0) {
+  return obj[arg0];
+};
+export const getConsoleIconForVoicePlatform = function getConsoleIconForVoicePlatform(voicePlatform) {
+  if (voicePlatform === VoicePlatforms.XBOX) {
+    let tmp2 = _modDef9572;
+  } else {
+    tmp2 = null;
+    if (voicePlatform === tmp.PLAYSTATION) {
+      tmp2 = _modDef9594;
+    }
+  }
+  return tmp2;
+};

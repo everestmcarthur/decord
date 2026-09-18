@@ -1,0 +1,21 @@
+// Module ID: 16036
+// Function ID: 16037
+// Name: RiveAppStatePlaybackExperiment
+// Dependencies: [1433, 2]
+// Exports: useRiveAppStatePlaybackExperiment
+
+// Module 16036 (RiveAppStatePlaybackExperiment)
+import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
+
+const obj = { name: "2026-06-rive-app-state-playback", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/design/RiveAppStatePlaybackExperiment.tsx");
+
+export default apexExperiment;
+export const useRiveAppStatePlaybackExperiment = function useRiveAppStatePlaybackExperiment(AppContainer) {
+  return apexExperiment.useConfig({ location: AppContainer }).enabled;
+};

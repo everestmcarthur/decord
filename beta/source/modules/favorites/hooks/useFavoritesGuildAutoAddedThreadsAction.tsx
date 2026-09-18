@@ -1,0 +1,50 @@
+// Module ID: 16237
+// Function ID: 16238
+// Name: useFavoritesGuildAutoAddedThreadsAction
+// Dependencies: [19, 1371, 1960, 10353, 504, 10352, 1114, 3236, 2]
+// Exports: default
+
+// Module 16237 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10352 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import FavoriteStore from "FavoriteStore" /* 1960 */;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
+
+export default function useFavoritesGuildAutoAddedThreadsAction() {
+  hasAccess = hasAccess(10353).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  let obj = hasAccess(10353);
+  const items = [UserStore];
+  if (hasAccess) {
+    hasAccess = obj2.useStateFromStores(items, () => {
+      currentUser = currentUser.getCurrentUser();
+      let flag;
+      if (currentUser != null) {
+        flag = currentUser.isStaff();
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      return flag;
+    });
+  }
+  obj2 = hasAccess(504);
+  const items1 = [FavoriteStore];
+  const stateFromStores = hasAccess(504).useStateFromStores(items1, () => autoAddJoinedThreads.autoAddJoinedThreads);
+  const items2 = [hasAccess, stateFromStores];
+  const obj3 = { isAvailable: hasAccess, isEnabled: stateFromStores, label: null, subLabel: null, toggle: null };
+  const callback = noop.useCallback(() => {
+    if (hasAccess) {
+      const result = FavoritesActionCreators.setFavoritesAutoAddJoinedThreads(!stateFromStores);
+    }
+  }, items2);
+  const intl = tmp(1114).intl;
+  obj3.label = intl.string(stateFromStores(3236).DIyQIF);
+  const intl2 = tmp(1114).intl;
+  obj3.subLabel = intl2.string(stateFromStores(3236).g2vHYJ);
+  obj3.toggle = callback;
+  return obj3;
+};

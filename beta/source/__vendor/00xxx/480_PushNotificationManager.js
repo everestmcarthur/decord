@@ -1,0 +1,16 @@
+// Module ID: 480
+// Function ID: 481
+// Name: PushNotificationManager
+// Dependencies: [481]
+
+// Module 480 (PushNotificationManager)
+import _modDef481 from "module_481" /* 481 */;
+
+const require = globalThis.__r;
+
+for (const key10016 in require("module_481")) {
+  arg5[key10016] = require("module_481")[key10016];
+  continue;
+}
+
+export default _modDef481;

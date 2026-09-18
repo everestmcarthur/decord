@@ -1,0 +1,11 @@
+// Module ID: 5919
+// Function ID: 5920
+// Dependencies: [2]
+
+// Module 5919
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BumpingFistsSpotIllustration-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/0830976830e01b68a35cf6d066964d973d8102bda6d683d0d2e9c012fe8c5f4e.png";
+export const metadata = { fileBytes: 23409 };

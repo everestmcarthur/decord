@@ -1,0 +1,143 @@
+// Module ID: 4958
+// Function ID: 4959
+// Name: BrowserUtils
+// Dependencies: [4959, 2]
+// Exports: canUseWebp, getChromeVersion, getEdgeVersion, getElectronVersion, getFirefoxVersion, getSafariVersion, isFirefox, isSafari, supportsHEVCAlpha
+
+// Module 4958 (BrowserUtils)
+import _modDef4959 from "module_4959" /* 4959 */;
+
+let str = _modDef4959.name;
+if (str == null) {
+  str = "unknown";
+}
+const str2 = str.toLowerCase();
+let num = -1;
+if ("chrome" === str2.toLowerCase()) {
+  let str3 = _modDef4959.version;
+  if (str3 == null) {
+    str3 = "";
+  }
+  const num2 = parseInt(str3, 10);
+}
+let parsed = num;
+if ("electron" === str2.toLowerCase()) {
+  let str4 = _modDef4959.version;
+  if (str4 == null) {
+    str4 = "";
+  }
+  parsed = parseInt(str4, 10);
+}
+let parsed1 = num;
+if ("firefox" === str2.toLowerCase()) {
+  let str5 = _modDef4959.version;
+  if (str5 == null) {
+    str5 = "";
+  }
+  parsed1 = parseInt(str5, 10);
+}
+let parsed2 = num;
+if ("edge" === str2.toLowerCase()) {
+  let str6 = _modDef4959.version;
+  if (str6 == null) {
+    str6 = "";
+  }
+  parsed2 = parseInt(str6, 10);
+}
+if ("safari" === str2.toLowerCase()) {
+  let str7 = _modDef4959.version;
+  if (str7 == null) {
+    str7 = "";
+  }
+  num = parseInt(str7, 10);
+}
+function getChromeVersion() {
+  return num2;
+}
+function getElectronVersion() {
+  return parsed;
+}
+function getFirefoxVersion() {
+  return parsed1;
+}
+function getEdgeVersion() {
+  return parsed2;
+}
+function getSafariVersion() {
+  return num;
+}
+function isSafari() {
+  let str = arg0;
+  if (arg0 === undefined) {
+    const _navigator = navigator;
+    str = navigator.userAgent;
+  }
+  const formatted = str.toLowerCase();
+  let tmp2 = -1 !== formatted.indexOf("safari");
+  if (tmp2) {
+    tmp2 = -1 === formatted.indexOf("chrome");
+  }
+  if (tmp2) {
+    tmp2 = -1 !== formatted.indexOf("version/");
+  }
+  return tmp2;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/BrowserUtils.tsx");
+
+export { getChromeVersion };
+export { getElectronVersion };
+export { getFirefoxVersion };
+export { getEdgeVersion };
+export { getSafariVersion };
+export const canUseWebp = function canUseWebp() {
+  let tmp = -1 !== num2;
+  if (!tmp) {
+    tmp = -1 !== parsed;
+  }
+  if (!tmp) {
+    tmp = -1 !== parsed1;
+  }
+  if (!tmp) {
+    tmp = -1 !== parsed2;
+  }
+  if (!tmp) {
+    tmp = num >= 14;
+  }
+  return tmp;
+};
+export { isSafari };
+export const isFirefox = function isFirefox() {
+  let str = arg0;
+  if (arg0 === undefined) {
+    const _navigator = navigator;
+    str = navigator.userAgent;
+  }
+  const formatted = str.toLowerCase();
+  return -1 !== formatted.indexOf("firefox");
+};
+export const supportsHEVCAlpha = function supportsHEVCAlpha() {
+  const _navigator = window.navigator;
+  const mediaCapabilities = _navigator.mediaCapabilities;
+  let decodingInfo;
+  if (mediaCapabilities != null) {
+    decodingInfo = mediaCapabilities.decodingInfo;
+  }
+  let str = _navigator.userAgent;
+  if (str === undefined) {
+    const _navigator2 = navigator;
+    str = navigator.userAgent;
+  }
+  const formatted = str.toLowerCase();
+  let tmp3 = -1 !== formatted.indexOf("safari");
+  if (tmp3) {
+    tmp3 = -1 === formatted.indexOf("chrome");
+  }
+  if (tmp3) {
+    tmp3 = -1 !== formatted.indexOf("version/");
+  }
+  if (tmp3) {
+    tmp3 = tmp2;
+  }
+  return tmp3;
+};

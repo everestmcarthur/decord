@@ -1,0 +1,33 @@
+// Module ID: 5594
+// Function ID: 5595
+// Name: getPricesFromServer
+// Dependencies: [4295, 2]
+// Exports: default
+
+// Module 5594 (getPricesFromServer)
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4295 */;
+import size from "module_2" /* 2 */;
+
+const getPriceFromServer = SubscriptionPlanRecord.getPriceFromServer;
+const result = size.fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");
+
+export default function getPricesFromServer(arg0) {
+  if (null == arg0) {
+    let reduced = {};
+  } else {
+    const _Object = Object;
+    const entries = Object.entries(arg0);
+    reduced = entries.reduce((acc, item) => {
+      [tmp, tmp2] = item;
+      const obj = { countryPrices: null, paymentSourcePrices: null };
+      const obj2 = { countryCode: tmp2.country_prices.country_code, prices: null };
+      const prices = tmp2.country_prices.prices;
+      obj2.prices = prices.map((item) => closure_1_0(item, true));
+      obj.countryPrices = obj2;
+      obj.paymentSourcePrices = {};
+      acc[tmp] = obj;
+      return acc;
+    }, {});
+  }
+  return reduced;
+};

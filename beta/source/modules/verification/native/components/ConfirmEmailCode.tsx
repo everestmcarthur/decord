@@ -1,0 +1,185 @@
+// Module ID: 6705
+// Function ID: 6706
+// Name: ConfirmEmailCode
+// Dependencies: [5, 32, 19, 17, 1371, 5704, 21, 4636, 576, 504, 4538, 4632, 1114, 6706, 7043, 4335, 5056, 2]
+// Exports: default
+
+// Module 6705 (ConfirmEmailCode)
+import nativeDefault from "native" /* 576 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const ChangeEmailStore = fn(5704);
+({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: null, contentContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.input = { marginTop: nativeDefault.space.PX_24 };
+let obj4 = { marginTop: nativeDefault.space.PX_24 };
+obj2.contentContainer = { gap: nativeDefault.space.PX_24 };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailCode.tsx");
+
+export default function ConfirmEmailCode(onFormSubmit) {
+  onFormSubmit = onFormSubmit.onFormSubmit;
+  const onSuccess = onFormSubmit.onSuccess;
+  const onResend = onFormSubmit.onResend;
+  _slicedToArray = undefined;
+  noop = undefined;
+  ({ headerText, confirmButtonText } = onFormSubmit);
+  const tmp = closure_13();
+  const items = [UserStore];
+  const stateFromStores = onFormSubmit(onResend[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const tmp5 = _slicedToArray(noop.useState(""), 2);
+  value = tmp5[0];
+  const tmp7 = _slicedToArray(closure_9(constants.EMAIL_TOKEN), 2);
+  _slicedToArray = tmp8;
+  let obj = onFormSubmit(onResend[9]);
+  [tmp10, c5] = noop.useState(false);
+  const items1 = [value, tmp7[1], onFormSubmit, onSuccess];
+  const callback = noop.useCallback(value(function*(arg0, value) {
+    if (v32 === 2) {
+      v32 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v32 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            v32 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v32 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_0 = tmp8;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            c3 = 2;
+            v3(null);
+            v32(true);
+            c4 = 3;
+            v32 = 1;
+            const obj4 = { value: onFormSubmit(first), done: false };
+            return obj4;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_129_5(false);
+          throw tmp45;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_2 = tmp45;
+            const tmp26 = new tmp4(tmp45[10])(closure_128_2);
+            closure_128_1 = tmp26;
+            closure_129_4(closure_128_1.getAnyErrorMessage());
+            c3 = 0;
+            closure_129_5(false);
+            v32 = 3;
+          } else if (arg0 === 1) {
+            v32 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_128_0 = value;
+            let token;
+            if (closure_128_0 != null) {
+              token = closure_128_0.token;
+            }
+            closure_129_1(token);
+            c3 = 1;
+          }
+          c3 = 0;
+          closure_129_5(false);
+          v32 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp45) {
+        if (tmp5 === c3) {
+          v32 = tmp3;
+          throw tmp45;
+        } else if (tmp2 === tmp47) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
+        }
+      }
+    }
+  }), items1);
+  let tmp13 = null;
+  if (null != stateFromStores) {
+    let obj3 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+    ({ background: obj2.style, contentContainer: obj2.contentContainerStyle } = tmp);
+    let obj4 = { children: null };
+    const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: headerText };
+    const items2 = [closure_11(tmp2(tmp3[11]).Text, obj5), , , ];
+    const obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
+    let intl = tmp2(tmp3[12]).intl;
+    obj6.children = intl.string(tmp2(tmp3[12]).t.SZJowy);
+    items2[1] = closure_11(tmp2(tmp3[11]).Text, obj6);
+    const obj7 = { style: tmp.input, label: null, textContentType: "emailAddress", keyboardType: "email-address", value: null, onChangeText: null, onSubmitEditing: null, returnKeyType: "done", autoCapitalize: "none", error: null, autoFocus: true };
+    const intl2 = tmp2(tmp3[12]).intl;
+    obj7.label = intl2.string(tmp2(tmp3[12]).t["8mZX6M"]);
+    obj7.value = value;
+    obj7.onChangeText = tmp5[1];
+    obj7.onSubmitEditing = callback;
+    obj7.error = tmp7[0];
+    items2[2] = closure_11(onSuccess(tmp3[13]), obj7);
+    let obj8 = { text: null, variant: "text-sm/medium", onPress: null };
+    const intl3 = tmp2(tmp3[12]).intl;
+    obj8.text = intl3.string(tmp2(tmp3[12]).t.K0NPQ6);
+    obj8.onPress = value(function*() {
+      yield onResend();
+      if (1 === tmp7) {
+        c3 = 0;
+        closure_128_1 = tmp33;
+        const anyErrorMessage = new tmp3(tmp33[10])(closure_128_1).getAnyErrorMessage();
+        if (null != anyErrorMessage) {
+          tmp3(tmp33[15]).open({ key: "CONFIRM_EMAIL_ERROR", content: anyErrorMessage });
+          tmp3(tmp33[15]);
+        }
+        c5 = 3;
+        new tmp3(tmp33[10])(closure_128_1);
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj8 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
+        const intl = onFormSubmit(tmp33[12]).intl;
+        obj8.content = intl.string(onFormSubmit(tmp33[12]).t["84yeoz"]);
+        tmp3(tmp33[15]).open(obj8);
+        c3 = 0;
+        tmp3(tmp33[15]);
+      }
+      return arg1;
+    });
+    items2[3] = closure_11(tmp2(tmp3[14]).LinkButton, obj8);
+    obj4.children = items2;
+    const items3 = [closure_12(closure_6, obj4), ];
+    const obj15 = { text: confirmButtonText, onPress: callback, loading: tmp10, disabled: "" === value };
+    items3[1] = closure_11(tmp2(tmp3[16]).Button, obj15);
+    obj3.children = items3;
+    tmp13 = closure_12(closure_7, obj3);
+    const tmp19 = onSuccess(tmp3[13]);
+  }
+  return tmp13;
+};

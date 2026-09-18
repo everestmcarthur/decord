@@ -1,0 +1,14 @@
+// Module ID: 4501
+// Function ID: 4502
+// Name: NativeTTIManagerModule
+// Dependencies: [17, 2]
+
+// Module 4501 (NativeTTIManagerModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
+
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const enforcing = TurboModuleRegistry.getEnforcing("NativeTTIManagerModule");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx");
+
+export default enforcing;

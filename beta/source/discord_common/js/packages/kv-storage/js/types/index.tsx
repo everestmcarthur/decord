@@ -1,0 +1,15 @@
+// Module ID: 1993
+// Function ID: 1994
+// Name: TableId
+// Dependencies: [2]
+
+// Module 1993 (TableId)
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
+
+export const TableId = { Kv: "kv", KvCache: "kv_cache", Messages: "messages" };
+export const MAXIMUM_KEY_BITS = 5;
+export const Ordering = { Ascending: 0, [0]: "Ascending", Descending: 1, [1]: "Descending" };
+export const DatabaseState = { Closed: 0, [0]: "Closed", Open: 1, [1]: "Open", Disabled: 2, [2]: "Disabled" };
+export const ConflictOptions = { Skip: 0, [0]: "Skip", Replace: 1, [1]: "Replace" };

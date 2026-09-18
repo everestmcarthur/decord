@@ -1,0 +1,46 @@
+// Module ID: 15646
+// Function ID: 15647
+// Name: DeviceInfoSetting
+// Dependencies: [15645, 4615, 11605, 1114, 15647, 1935, 2]
+
+// Module 15646 (DeviceInfoSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import DeviceUtils from "DeviceUtils" /* 4615 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15645 */;
+import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 15647 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+let obj = {
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["+ynK0W"]);
+  },
+  parent: null,
+  IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
+  useTrailing: function useDeviceInfo() {
+    const obj = CopyClientInfoSetting;
+    const clientInfoString = obj.getClientInfoString(DeviceUtils.getDeviceInfo());
+    const obj3 = CopyClientInfoSetting;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DeviceUtils.getSystemVersion()) + ")";
+  },
+  usePredicate: UserSettings.DeveloperMode.useSetting
+};
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
+
+export default SettingBuilders.createStatic({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["+ynK0W"]);
+  },
+  parent: null,
+  IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
+  useTrailing: function useDeviceInfo() {
+    const obj = CopyClientInfoSetting;
+    const clientInfoString = obj.getClientInfoString(DeviceUtils.getDeviceInfo());
+    const obj3 = CopyClientInfoSetting;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DeviceUtils.getSystemVersion()) + ")";
+  },
+  usePredicate: UserSettings.DeveloperMode.useSetting
+});

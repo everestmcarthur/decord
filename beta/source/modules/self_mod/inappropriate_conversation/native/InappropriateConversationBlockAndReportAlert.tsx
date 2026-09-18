@@ -1,0 +1,70 @@
+// Module ID: 11525
+// Function ID: 11526
+// Name: InappropriateConversationBlockAndReportAlert
+// Dependencies: [19, 21, 11507, 11526, 1114, 2]
+
+// Module 11525 (InappropriateConversationBlockAndReportAlert)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11507 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+class InappropriateConversationBlockAndReportAlert {
+  constructor(arg0) {
+    channelId = global.channelId;
+    warningId = global.warningId;
+    warningType = global.warningType;
+    senderId = global.senderId;
+    analyticsBlockContext = global.analyticsBlockContext;
+    analyticsBlockAndReportContext = global.analyticsBlockAndReportContext;
+    closure_5 = analyticsBlockAndReportContext;
+    analyticsCancelContext = global.analyticsCancelContext;
+    onDismiss = global.onDismiss;
+    closure_8 = undefined;
+    items = [, , , ];
+    items[0] = channelId;
+    items[1] = warningId;
+    items[2] = senderId;
+    items[3] = warningType;
+    callback = senderId.useCallback((cta) => {
+      SafetyWarningUtils.trackCtaEvent({ channelId, warningId, senderId, warningType, cta });
+    }, items);
+    closure_8 = callback;
+    items1 = [, ];
+    items1[0] = callback;
+    items1[1] = analyticsCancelContext;
+    items2 = [, , ];
+    items2[0] = onDismiss;
+    items2[1] = callback;
+    items2[2] = analyticsBlockContext;
+    callback1 = senderId.useCallback(() => {
+      callback(analyticsCancelContext);
+    }, items1);
+    items3 = [, , ];
+    items3[0] = onDismiss;
+    items3[1] = callback;
+    items3[2] = analyticsBlockAndReportContext;
+    callback2 = senderId.useCallback(() => {
+      if (onDismiss != null) {
+        tmp();
+      }
+      callback(analyticsBlockContext);
+    }, items2);
+    callback3 = senderId.useCallback(() => {
+      if (onDismiss != null) {
+        tmp();
+      }
+      callback(analyticsBlockAndReportContext);
+    }, items3);
+    obj = { userId: senderId, channelId, onClose: global.onClose, onCancel: callback1, onBlock: callback2, onBlockAndReport: callback3, blockButtonVariant: "primary", description: null };
+    tmp5 = warningId(warningType[3]);
+    intl = channelId(warningType[4]).intl;
+    obj.description = intl.string(channelId(warningType[4]).t["5NhTvu"]);
+    return analyticsBlockContext(tmp5, obj);
+  }
+}
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
+
+export default InappropriateConversationBlockAndReportAlert;
+export { InappropriateConversationBlockAndReportAlert };

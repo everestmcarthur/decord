@@ -1,0 +1,35 @@
+// Module ID: 17126
+// Function ID: 17127
+// Name: ActivityPanelStateContext
+// Dependencies: [19, 9635, 7177, 2]
+
+// Module 17126 (ActivityPanelStateContext)
+import noop from "module_19" /* 19 */;
+
+const obj = {
+  mode: fn(9635).ActivityPanelModes.PANEL,
+  setMode() {
+    const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
+    throw error;
+  },
+  wrapperDimensions: { width: 9, height: 16, isLandscape: false, isWindowLandscape: false },
+  pipState: null,
+  pipAvoidanceSpecs: null,
+  wrapperOffset: null,
+  useActivityWebViewLock: null
+};
+let ReanimatedHelperTypes = fn(7177);
+obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
+ReanimatedHelperTypes = fn(7177);
+obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
+ReanimatedHelperTypes = fn(7177);
+obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
+obj.useActivityWebViewLock = function useActivityWebViewLock() {
+  return true;
+};
+const context = noop.createContext(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
+
+export default context;
+export const activityPanelStateContextDefault = obj;

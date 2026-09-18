@@ -1,0 +1,89 @@
+// Module ID: 12534
+// Function ID: 12535
+// Name: ApplicationCommandList
+// Dependencies: [19, 17, 10392, 21, 9546, 1894, 9427, 7626, 12532, 12533, 2]
+// Exports: default
+
+// Module 12534 (ApplicationCommandList)
+import noop from "module_19" /* 19 */;
+
+const require = fn;
+const FlatList = fn(17).FlatList;
+const jsx = fn(21).jsx;
+let closure_7 = 3 * fn(10392).AUTOCOMPLETE_ROW_HEIGHT;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
+
+export default function ApplicationCommandList(channel) {
+  channel = channel.channel;
+  const onPressCommandItem = channel.onPressCommandItem;
+  const onCommandsChange = channel.onCommandsChange;
+  let commands;
+  ({ style, query, ItemSeparatorComponent, getItemLayout } = channel);
+  const obj2 = { text: query, commandTypes: null };
+  const items = [channel(commands[5]).ApplicationCommandType.CHAT];
+  obj2.commandTypes = items;
+  let obj = onCommandsChange(commands[4]);
+  const query1 = obj.useQuery({ channel, type: "channel" }, obj2, { placeholderCount: 3, limit: 7, scoreMethod: channel(commands[6]).ScoreMethod.COMMAND_OR_APPLICATION });
+  commands = query1.commands;
+  const sections = query1.sections;
+  const scrollDown = query1.scrollDown;
+  const items1 = [sections, channel.guild_id, onPressCommandItem];
+  let length;
+  const callback = sections.useCallback((item) => {
+    item = item.item;
+    let found;
+    if (item.inputType === channel(commands[7]).ApplicationCommandInputType.PLACEHOLDER) {
+      return jsx(onPressCommandItem(tmp[8]), {});
+    } else {
+      found = undefined;
+      if (sections != null) {
+        found = sections.find((id) => id.id === item.applicationId);
+      }
+      const obj = {
+        command: item,
+        section: found,
+        onPress() {
+            return onPressCommandItem(item, found);
+          },
+        guildId: item.guild_id,
+        highlighted: 0 === item.index
+      };
+      return jsx(onPressCommandItem(tmp[9]), {
+        command: item,
+        section: found,
+        onPress() {
+            return onPressCommandItem(item, found);
+          },
+        guildId: item.guild_id,
+        highlighted: 0 === item.index
+      });
+    }
+  }, items1);
+  if (commands != null) {
+    length = commands.length;
+  }
+  const items2 = [length, onCommandsChange];
+  const effect = sections.useEffect(() => {
+    if (onCommandsChange != null) {
+      let num;
+      if (commands != null) {
+        num = commands.length;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      tmp(num);
+    }
+  }, items2);
+  const items3 = [scrollDown];
+  const obj3 = { placeholderCount: 3, limit: 7, scoreMethod: channel(commands[6]).ScoreMethod.COMMAND_OR_APPLICATION };
+  return <scrollDown style={style} keyExtractor={function keyExtractor(id) {
+    return id.id;
+  }} data={commands} renderItem={callback} ItemSeparatorComponent={ItemSeparatorComponent} getItemLayout={getItemLayout} onScroll={sections.useCallback((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_7) {
+      scrollDown();
+    }
+  }, items3)} />;
+};

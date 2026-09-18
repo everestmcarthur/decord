@@ -1,0 +1,90 @@
+// Module ID: 13712
+// Function ID: 13713
+// Name: SequencedLottieAnimationView
+// Dependencies: [109, 19, 17, 21, 5611, 2]
+
+// Module 13712 (SequencedLottieAnimationView)
+import _modDef5611 from "module_5611" /* 5611 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+
+let closure_2 = ["source", "style"];
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const PureComponent = noop.PureComponent;
+class SequencedLottieAnimationView extends PureComponent {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    applyArgumentsResult.animationRef = null;
+    applyArgumentsResult.currentScene = applyArgumentsResult.props.nextScene;
+    applyArgumentsResult.isUnmounted = false;
+    applyArgumentsResult.handleComplete = function handleComplete() {
+      const onSceneComplete = applyArgumentsResult.props.onSceneComplete;
+      if (null != onSceneComplete) {
+        onSceneComplete(applyArgumentsResult.currentScene);
+      }
+    };
+    applyArgumentsResult.handleSetRef = function handleSetRef(animationRef) {
+      applyArgumentsResult.animationRef = animationRef;
+    };
+    return applyArgumentsResult;
+  }
+}
+const prototype = SequencedLottieAnimationView.prototype;
+prototype["componentDidMount"] = function componentDidMount() {
+  this.playScene(this.props.nextScene);
+};
+prototype["componentDidUpdate"] = function componentDidUpdate() {
+  const self = this;
+  const nextScene = this.props.nextScene;
+  if (nextScene !== this.currentScene) {
+    self.playScene(nextScene);
+  }
+};
+prototype["playScene"] = function playScene(nextScene) {
+  const self = this;
+  const sceneSegments = this.props.sceneSegments;
+  let tmp3 = null == this.animationRef;
+  if (!tmp3) {
+    tmp3 = nextScene !== self.currentScene && tmp.BEG === tmp2.BEG && tmp.END === tmp2.END;
+    const tmp4 = nextScene !== self.currentScene && tmp.BEG === tmp2.BEG && tmp.END === tmp2.END;
+  }
+  if (!tmp3) {
+    const animationRef = self.animationRef;
+    animationRef.play(tmp.BEG, tmp.END);
+  }
+  self.currentScene = nextScene;
+};
+prototype["render"] = function render() {
+  const props = this.props;
+  ({ source, style } = props);
+  let json;
+  if (typeof source === "object") {
+    if (!source.uri) {
+      const _JSON = JSON;
+      json = JSON.stringify(source);
+    }
+  }
+  let tmp4;
+  if (undefined !== json) {
+    const obj = { aspectRatio: source.w / source.h };
+    tmp4 = obj;
+  }
+  const obj2 = { style: null, children: null };
+  const items = [tmp4, style];
+  obj2.style = items;
+  const obj5 = { source, style: null };
+  const items1 = [tmp4, style];
+  obj5.style = items1;
+  const tmp = _objectWithoutProperties(props, closure_2);
+  const merged = Object.assign(tmp);
+  ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
+  obj2.children = jsx(_modDef5611, { source, style: null });
+  return <View style={null}>{null}</View>;
+};
+SequencedLottieAnimationView.defaultProps = { autoPlay: true };
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
+
+export default SequencedLottieAnimationView;

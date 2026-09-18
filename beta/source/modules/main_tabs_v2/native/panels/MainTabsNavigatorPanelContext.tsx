@@ -1,0 +1,22 @@
+// Module ID: 16107
+// Function ID: 16108
+// Name: MainTabsNavigatorPanelContext
+// Dependencies: [19, 6756, 7177, 2]
+
+// Module 16107 (MainTabsNavigatorPanelContext)
+import noop from "module_19" /* 19 */;
+
+const obj = { gesture: null, disallowGesture: null, translateX: null };
+const Gesture = fn(6756).Gesture;
+obj.gesture = Gesture.Pan();
+let ReanimatedHelperTypes = fn(7177);
+obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
+ReanimatedHelperTypes = fn(7177);
+obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
+const context = noop.createContext(obj);
+const context1 = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx");
+
+export default context;
+export const MainTabsChannelScreenStackContext = context1;

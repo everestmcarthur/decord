@@ -1,0 +1,65 @@
+// Module ID: 8278
+// Function ID: 8279
+// Name: NotificationsInboxConstants
+// Dependencies: [1074, 1090, 1114, 1971, 2]
+// Exports: getFilterMap, getNotificationsInboxGuild
+
+// Module 8278 (NotificationsInboxConstants)
+import Constants from "Constants" /* 1074 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
+
+const NOTIFICATIONS_INBOX = Constants.NOTIFICATIONS_INBOX;
+let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
+const obj2 = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
+const obj3 = {};
+obj3[obj.UNREAD] = util.t.sRUdB8;
+obj3[obj.TODAY] = util.t.F4jZQs;
+obj3[obj.YESTERDAY] = util.t.gnv4pE;
+obj3[obj.OLDER] = util.t.exrPZv;
+const result = size.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
+
+export const ANALYTICS_NAME = "Notifications Inbox";
+export const NOTIFICATIONS_INBOX_RAW_GUILD_ID = "notifications_inbox_guild_id";
+export const GUILD_HEADER_HEIGHT = 88;
+export const INBOX_MESSAGE_AGE_THRESHOLD = DurationsDefault.Millis.WEEK;
+export const MAX_MESSAGES_PER_CHANNEL = 50;
+export const MAX_UNREAD_MESSAGES_PER_CHANNEL = 10;
+export const NOTIFICATIONS_INBOX_FEATURE = "notifications-inbox";
+export const getNotificationsInboxGuild = function getNotificationsInboxGuild(arg0) {
+  if (arg0 === obj2.BOOKMARKS) {
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t["2pAkDA"]);
+    let tmp2 = require;
+  } else if (arg0 === tmp.MENTIONS) {
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t.jbV6MM);
+    tmp2 = require;
+  } else {
+    tmp2 = require;
+    const intl = util.intl;
+    stringResult = intl.string(util.t.HcoRu0);
+  }
+  const obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: [] };
+  return tmp2(1971).fromGuildBasic(obj);
+};
+export const MessageCategory = obj;
+export const InboxFilters = obj2;
+export const InboxReadState = { READ: "READ", UNREAD: "UNREAD" };
+export const InboxMessageType = { ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL", MENTION: "MENTION", BOOKMARK: "BOOKMARK" };
+export const MESSAGE_CATEGORY_DISPLAY_MAP = obj3;
+export const getFilterMap = function getFilterMap() {
+  const obj = {};
+  const intl = util.intl;
+  obj[obj2.ALL] = intl.string(util.t.iWyjNt);
+  const intl2 = util.intl;
+  obj[obj2.MENTIONS] = intl2.string(util.t.jbV6MM);
+  const intl3 = util.intl;
+  obj[obj2.BOOKMARKS] = intl3.string(util.t["+rlGYW"]);
+  return obj;
+};
+export const ChannelLoadState = { UNLOADED: "unloaded", LOADED: "loaded", LOADED_UNREAD: "loadedUnread" };
+export const LoadingTrigger = { AUTO_LOAD: "auto_load", ON_OPEN: "on_open", FILL_SCROLLER: "fill_scroller", USER_SCROLL: "user_scroll", UNKNOWN: "unknown" };
+export const NotificationInboxItemType = { MENTION: "MENTION", REPLY: "REPLY", REACTION: "REACTION", ANNOUNCEMENT: "ANNOUNCEMENT", MESSAGE: "MESSAGE" };
+export const NotificationInboxActionType = { ACK: "ACK", BOOKMARK: "BOOKMARK", SETTINGS: "SETTINGS" };

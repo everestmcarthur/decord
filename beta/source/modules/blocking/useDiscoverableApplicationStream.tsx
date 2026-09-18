@@ -1,0 +1,52 @@
+// Module ID: 11010
+// Function ID: 11011
+// Name: useDiscoverableApplicationStream
+// Dependencies: [4658, 4285, 1074, 504, 2]
+// Exports: default
+
+// Module 11010 (useDiscoverableApplicationStream)
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+function getDiscoverableApplicationStream(userId, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [ApplicationStreamingStore, RelationshipStore];
+    tmp = items;
+  }
+  [obj, obj2] = tmp;
+  if (null != userId) {
+    let NONE = obj2.getRelationshipType(userId);
+  } else {
+    NONE = RelationshipTypes.NONE;
+  }
+  let anyDiscoverableStreamForUser = null;
+  if (null != userId) {
+    anyDiscoverableStreamForUser = obj.getAnyDiscoverableStreamForUser(userId);
+  }
+  let tmp6 = null;
+  if (NONE !== RelationshipTypes.BLOCKED) {
+    tmp6 = null;
+    if (null != userId) {
+      tmp6 = anyDiscoverableStreamForUser;
+    }
+  }
+  return tmp6;
+}
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
+
+export default function useDiscoverableApplicationStream(arg0) {
+  _require = arg0;
+  let items = [ApplicationStreamingStore, RelationshipStore];
+  const items1 = [arg0];
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [ApplicationStreamingStore, RelationshipStore];
+    return getDiscoverableApplicationStream(closure_0, items);
+  }, items1);
+};
+export { getDiscoverableApplicationStream };

@@ -1,0 +1,135 @@
+// Module ID: 7284
+// Function ID: 7285
+// Name: useProviderConnection
+// Dependencies: [5, 19, 5362, 504, 5487, 2]
+// Exports: useProviderConnection
+
+// Module 7284 (useProviderConnection)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5487 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
+
+export const useProviderConnection = function useProviderConnection(provider_id) {
+  _require = provider_id;
+  const items = [ConnectedAccountsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let account = null;
+    if (null != closure_0) {
+      account = ConnectedAccountsStore.getAccount(null, tmp);
+    }
+    return account;
+  });
+  const obj = require("initialize");
+  const items1 = [ConnectedAccountsStore];
+  let tmp3 = null != stateFromStores;
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => fetching.isFetching());
+  if (tmp3) {
+    tmp3 = !stateFromStores.revoked;
+  }
+  _require = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp4;
+            closure_130_0 = undefined;
+            if (null == closure_0) {
+              c6 = 3;
+              const obj4 = { value: { success: false }, done: true };
+              return obj4;
+            } else {
+              c5 = 1;
+              let _location = tmp26;
+              if (tmp26 == null) {
+                _location = "Account Linking";
+              }
+              const obj6 = { location: _location };
+              c3 = 2;
+              c6 = 1;
+              const obj7 = { value: ConnectedAccountsActionCreatorsDefault.authorize(tmp27, obj6), done: false };
+              return obj7;
+            }
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          c6 = 3;
+          const obj8 = { value: { success: false }, done: true };
+          return obj8;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c6 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_130_0 = value;
+          const body = closure_130_0.body;
+          let url;
+          if (body != null) {
+            url = body.url;
+          }
+          if (null != url) {
+            const obj10 = { success: true, url: closure_130_0.body.url };
+          }
+          c5 = 0;
+          c6 = 3;
+        }
+      } catch (tmp18) {
+        closure_4 = tmp18;
+        if (tmp3 === c5) {
+          c6 = tmp2;
+          throw tmp18;
+        } else {
+          c3 = tmp;
+        }
+      }
+    }
+  });
+  const items2 = [provider_id];
+  let obj2 = require("initialize");
+  return {
+    loading: stateFromStores1,
+    hasConnection: tmp3,
+    canConnect: null != provider_id,
+    startConnection: noop.useCallback(function() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    }, items2),
+    account: stateFromStores
+  };
+};

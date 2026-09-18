@@ -1,0 +1,162 @@
+// Module ID: 9813
+// Function ID: 9814
+// Name: GlobalStatusIndicator
+// Dependencies: [19, 17, 4327, 4652, 9814, 1957, 4659, 21, 9344, 504, 9719, 4843, 1114, 9815, 4373, 9809, 2]
+// Exports: default, useGlobalStatusIndicatorHeightSharedValue
+
+// Module 9813 (GlobalStatusIndicator)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
+import noop from "module_19" /* 19 */;
+import ActionSheetStore from "ActionSheetStore" /* 4327 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
+import NativeMenuStore from "NativeMenuStore" /* 9814 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty, TouchableWithoutFeedback: metroRequire, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
+const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDStatusBarOverlayViewManager);
+function GlobalStatusIndicatorWrapper(onPress) {
+  importDefault = undefined;
+  let stateFromStores;
+  onPress = undefined;
+  closure_6 = undefined;
+  const tmp3 = require("useVoiceStateForRemoteSession")();
+  importDefault = tmp3;
+  const items = [RTCConnectionStore];
+  const items1 = [tmp3];
+  stateFromStores = onPress(stateFromStores[9]).useStateFromStores(items, () => {
+    channelId = undefined;
+    if (channelId != null) {
+      channelId = channelId.channelId;
+    }
+    if (channelId == null) {
+      channelId = RTCConnectionStore.getChannelId();
+    }
+    return channelId;
+  }, items1);
+  let obj = onPress(stateFromStores[9]);
+  const tmp = importDefault;
+  const items2 = [ChannelStore];
+  const items3 = [stateFromStores];
+  const stateFromStores1 = onPress(stateFromStores[9]).useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores), items3);
+  const obj2 = onPress(stateFromStores[9]);
+  const voiceChatNavigationContext = onPress(stateFromStores[10]).useVoiceChatNavigationContext();
+  let openVoice;
+  if (voiceChatNavigationContext != null) {
+    openVoice = voiceChatNavigationContext.openVoice;
+  }
+  const items4 = [stateFromStores1, onPress, openVoice];
+  onPress = stateFromStores1.useCallback(() => {
+    if (null != stateFromStores1) {
+      if (null != openVoice) {
+        if (ChannelRTCStore.getChatOpen(tmp.id)) {
+          tmp2();
+        }
+        if (onPress != null) {
+          tmp8();
+        }
+      }
+      const result = PrivateChannelCallUtils.navigateToVoiceChannel(tmp, "RTC Panel");
+    }
+  }, items4);
+  closure_6 = stateFromStores1.useRef(onPress);
+  const effect = stateFromStores1.useEffect(() => {
+    closure_6.current = current;
+  });
+  const items5 = [stateFromStores];
+  const effect1 = stateFromStores1.useEffect(() => {
+    closure_0 = nativeEventEmitter.addListener("StatusBarTapped", () => {
+      ref.current();
+    });
+    return () => {
+      if (null != closure_0) {
+        closure_0.remove();
+      }
+    };
+  }, items5);
+  let str = "text";
+  if (null != stateFromStores1) {
+    str = "button";
+  }
+  const obj4 = { accessibilityRole: str, accessibilityHint: null, onPress: null, children: null };
+  let stringResult;
+  if (null != stateFromStores1) {
+    const intl = tmp4(tmp2[12]).intl;
+    stringResult = intl.string(tmp4(tmp2[12]).t.GaCMgX);
+  }
+  obj4.accessibilityHint = stringResult;
+  obj4.onPress = onPress;
+  const obj3 = onPress(stateFromStores[10]);
+  const tmp13 = closure_6;
+  obj4.children = closure_12(openVoice, { children: closure_12(tmp(stateFromStores[13]), {}) });
+  return closure_12(tmp13, obj4);
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
+
+export default function GlobalStatusIndicator(children) {
+  children = children.children;
+  let flag = children.showWhenParticipantOnScreen;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let flag2 = children.forceHide;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  const onPress = children.onPress;
+  const globalStatusIndicatorState = children(onPress[15]).useGlobalStatusIndicatorState(flag);
+  let obj = children(onPress[15]);
+  let items = [ActionSheetStore];
+  const stateFromStores = children(onPress[9]).useStateFromStores(items, () => null != content.getContent());
+  let obj2 = children(onPress[9]);
+  const items1 = [NativeMenuStore];
+  const height = globalStatusIndicatorState.height;
+  let isVisible = globalStatusIndicatorState.isVisible;
+  let stateFromStores1 = children(onPress[9]).useStateFromStores(items1, () => open.isOpen());
+  if (isVisible) {
+    isVisible = !flag2;
+  }
+  let tmp4 = stateFromStores;
+  if (!stateFromStores) {
+    tmp4 = stateFromStores1;
+  }
+  stateFromStores1 = tmp4;
+  const items2 = [children, tmp4, isVisible, onPress, height, flag2];
+  return height.useMemo(() => {
+    let str;
+    if (stateFromStores1) {
+      str = "no-hide-descendants";
+    }
+    const obj = { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores1, style: null, children: null };
+    const items = [absoluteFill.absoluteFill, ];
+    let num = 0;
+    if (!flag2) {
+      num = height;
+    }
+    items[1] = { marginTop: num, overflow: "hidden" };
+    obj.style = items;
+    obj.children = children;
+    children = [closure_2_12(React4, obj), ];
+    let tmp3Result = null;
+    if (isVisible) {
+      const obj2 = { onPress };
+      tmp3Result = tmp3(GlobalStatusIndicatorWrapper, obj2);
+    }
+    children[1] = tmp3Result;
+    return closure_2_14(map1, { children });
+  }, items2);
+};
+export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
+  const sharedValue = ReanimatedRexport.useSharedValue(globalStatusIndicatorState.height);
+  const items = [globalStatusIndicatorState.height, sharedValue];
+  const effect = noop.useEffect(() => {
+    const result = sharedValue.set(globalStatusIndicatorState.height);
+  }, items);
+  return sharedValue;
+};

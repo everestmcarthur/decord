@@ -1,0 +1,379 @@
+// Module ID: 16100
+// Function ID: 16101
+// Name: MainTabsNavigatorPanel
+// Dependencies: [32, 19, 17, 1074, 21, 3, 4636, 576, 1484, 4497, 11661, 11660, 16101, 4502, 16102, 4495, 4647, 1109, 16103, 4649, 16106, 4373, 5707, 7977, 16107, 6756, 16108, 16109, 16624, 16625, 16626, 16848, 2]
+
+// Module 16100 (MainTabsNavigatorPanel)
+import LoggerDefault from "Logger" /* 3 */;
+import nativeDefault from "native" /* 576 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16101 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16102 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 16106 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ ComponentActions: closure_8, ME: closure_9 } = Constants);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
+const createStyles = fn(4636);
+let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
+const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
+obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj.tabsContainer = { flex: 1 };
+let closure_13 = createStyles.createStyles(obj);
+let closure_14 = { code: "function MainTabsNavigatorPanelTsx1(){const{translateX,highestFullyRenderedScreenIndex}=this.__closure;return{opacity:translateX.get()>0&&highestFullyRenderedScreenIndex.get()<1?1:0};}" };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx");
+
+export default noop.memo(function MainTabsNavigatorPanel() {
+  let tmp = closure_13();
+  navigation = navigation(drawerWidth[8]).useNavigation();
+  let tmp6 = isChatLockedOpen(drawerWidth[9])();
+  isChatLockedOpen = tmp6.isChatLockedOpen;
+  let obj = navigation(drawerWidth[8]);
+  drawerWidth = navigation(drawerWidth[10]).useDrawerWidth();
+  let obj2 = navigation(drawerWidth[10]);
+  _slicedToArray = noop.useRef(isChatLockedOpen);
+  noop = noop.useRef(false);
+  const items = [isChatLockedOpen];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    if (ref.current !== isChatLockedOpen) {
+      tmp.current = tmp2;
+      let obj = require;
+      let result = dependencyMap;
+      if (tmp2) {
+        obj = obj(16101);
+        result = obj.convertPortraitToLandscapeScreens();
+      } else {
+        obj(4502).dismissKeyboard();
+        const objResult = obj(4502);
+        const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
+      }
+      closure_4.current = true;
+    }
+  }, items);
+  const arr2 = isChatLockedOpen(drawerWidth[14])(navigation);
+  [screenStackActive, closure_7] = noop.useState(() => {
+    const first = arr2[0];
+    let type;
+    if (first != null) {
+      type = first.type;
+    }
+    return type === useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
+  });
+  const first1 = arr2[0];
+  noop.useRef(first1);
+  const items1 = [first1];
+  const effect = noop.useEffect(() => {
+    closure_9.current = first1;
+  }, items1);
+  const items2 = [navigation];
+  const handleExit = noop.useCallback(() => {
+    let name1;
+    closure_7(false);
+    const state = navigation.getState();
+    let index = state.index;
+    let name;
+    if (state.routes[index] != null) {
+      name = tmp3.name;
+    }
+    let num = 0;
+    let num2 = 0;
+    if ("channel" === name) {
+      do {
+        let diff = index - 1;
+        let tmp6 = state.routes[diff];
+        name1 = undefined;
+        if (tmp6 != null) {
+          name1 = tmp6.name;
+        }
+        num = num + 1;
+        index = diff;
+        num2 = num;
+      } while ("channel" === name1);
+    }
+    if (0 < num2) {
+      navigation.pop(num2);
+    }
+  }, items2);
+  [first2, logger] = noop.useState(() => useChannelScreensFromNavigation.isActiveTabsGuilds(navigation.getState()));
+  const tmp8 = isChatLockedOpen(drawerWidth[11])();
+  [isChatBesideChannelList, closure_13] = noop.useState(() => first2);
+  const items3 = [navigation];
+  const effect1 = noop.useEffect(() => {
+    function handleStateChange(data) {
+      logger(navigation(drawerWidth[14]).isActiveTabsGuilds(data.data.state));
+    }
+    handleStateChange.addListener("state", handleStateChange);
+    return () => {
+      navigation.removeListener("state", handleStateChange);
+    };
+  }, items3);
+  const items4 = [first2];
+  const effect2 = noop.useEffect(() => {
+    closure_1_13(first2);
+  }, items4);
+  if (isChatBesideChannelList) {
+    isChatBesideChannelList = tmp6.isChatBesideChannelList;
+  }
+  noop.useRef(false);
+  const items5 = [navigation, handleExit];
+  const callback1 = obj3.useCallback((arg0) => {
+    closure_7(arg0);
+    closure_15.current = false;
+    if (arg0) {
+      if (null != ref2.current) {
+        if ("channel" !== navigation.getState().routes[navigation.getState(navigation).index].name) {
+          const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+          let name;
+          if (rootNavigationRef != null) {
+            const state = rootNavigationRef.getState();
+            if (state != null) {
+              let index;
+              if (rootNavigationRef != null) {
+                const state1 = rootNavigationRef.getState();
+                if (state1 != null) {
+                  index = state1.index;
+                }
+              }
+              if (state.routes[index] != null) {
+                name = tmp11.name;
+              }
+            }
+          }
+          if ("modal" !== name) {
+            tmp2.current = true;
+            tmp14(4647).transitionToChannel(tmp5.current.channelId);
+            const tmp14Result = tmp14(4647);
+          }
+          tmp14 = require;
+        }
+      }
+    } else {
+      callback();
+    }
+  }, items5);
+  let tmp22 = null != first1;
+  const callback2 = obj3.useCallback(() => {
+    const ComponentDispatch = navigation(drawerWidth[17]).ComponentDispatch;
+    ComponentDispatch.dispatch(first1.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+    navigation(drawerWidth[13]).dismissKeyboard();
+  }, []);
+  if (tmp22) {
+    tmp22 = first1.type !== tmp2(tmp3[14]).ChannelScreenType.FALLBACK_RENDERED;
+  }
+  closure_16 = tmp22;
+  let tmp24 = isChatBesideChannelList;
+  const tmp17 = _slicedToArray(noop.useState(() => first2), 2);
+  if (isChatBesideChannelList) {
+    tmp24 = isChatLockedOpen;
+  }
+  let tmp25 = !tmp24;
+  if (!tmp24) {
+    tmp25 = tmp22;
+  }
+  const obj4 = { canDrag: tmp25, onVisibilityChange: callback1, onDragStart: callback2, startShown: null, openWidth: null };
+  const first3 = arr2[0];
+  let type;
+  if (first3 != null) {
+    type = first3.type;
+  }
+  obj4.startShown = type === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
+  let tmp28;
+  if (isChatBesideChannelList) {
+    tmp28 = drawerWidth;
+  }
+  obj4.openWidth = tmp28;
+  const tmp5ResultResult = isChatLockedOpen(drawerWidth[18])(obj4);
+  const translateX = tmp5ResultResult.translateX;
+  const movePanel = tmp5ResultResult.movePanel;
+  const maxWidth = tmp5ResultResult.maxWidth;
+  const isDraggingRef = tmp5ResultResult.isDraggingRef;
+  const items6 = [isChatBesideChannelList, drawerWidth];
+  ({ gesture, panelGestureContext, isDragging } = tmp5ResultResult);
+  const effect3 = obj3.useEffect(() => {
+    logger.log("Chat Layout Changed", { isNavigatorPanelsBesideChannelList: isChatBesideChannelList, drawerWidth });
+  }, items6);
+  const obj5 = { handleExit, maxWidth, movePanel, screens: arr2, firstScreen: first1 };
+  noop.useRef(obj5);
+  const effect4 = obj3.useEffect(() => {
+    closure_22.current = obj5;
+  });
+  let type1;
+  if (first1 != null) {
+    type1 = first1.type;
+  }
+  const items7 = [type1, translateX, isDraggingRef];
+  const effect5 = obj3.useEffect(() => {
+    if (!isDraggingRef.current) {
+      const current = ref4.current;
+      ({ maxWidth, movePanel } = current);
+      let type;
+      ({ handleExit, screens } = current);
+      if (first1 != null) {
+        type = first1.type;
+      }
+      const tmp6 = type === useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
+      if (screens.length >= 2) {
+        let num4 = 0;
+        if (!tmp6) {
+          num4 = maxWidth;
+        }
+        const result = translateX.set(num4);
+        closure_7(tmp6);
+      } else if (tmp6) {
+        if (ref3.current) {
+          ref3.current = false;
+          if (translateX.get() === maxWidth) {
+            handleExit();
+          }
+        } else {
+          movePanel(true, false, 0, true);
+        }
+      } else if (movePanel(false, false, 0, false)) {
+        tmp4(4502).dismissKeyboard();
+        const tmp4Result = tmp4(4502);
+      }
+      tmp4 = require;
+    }
+  }, items7);
+  let channelId;
+  if (first1 != null) {
+    channelId = first1.channelId;
+  }
+  const items8 = [channelId];
+  const effect6 = obj3.useEffect(() => {
+    const firstScreen = ref4.current.firstScreen;
+    let type;
+    if (firstScreen != null) {
+      type = firstScreen.type;
+    }
+    if (type === useChannelScreensFromNavigation.ChannelScreenType.BACKGROUND_SAVED) {
+      let guildId = firstScreen.guildId;
+      if (guildId == null) {
+        guildId = React7;
+      }
+      ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
+    }
+  }, items8);
+  const items9 = [movePanel, tmp22];
+  const callback3 = obj3.useCallback(() => {
+    if (closure_16) {
+      movePanel(true, false, 0, false);
+    }
+  }, items9);
+  const items10 = [callback3, screenStackActive, isChatLockedOpen, isChatBesideChannelList];
+  if (isChatBesideChannelList) {
+    if (isChatLockedOpen) {
+      let tmp38 = arr2.length <= 1;
+    }
+    const items11 = [isChatLockedOpen, isChatBesideChannelList, maxWidth, translateX];
+    const memo = obj3.useMemo(() => {
+      let tmp = null;
+      if (isChatBesideChannelList) {
+        const obj = { translateX, maxWidth, isChatLockedOpen };
+        tmp = closure_2_10(ChannelScreenAnimatedFrameDefault, obj);
+      }
+      return tmp;
+    }, items11);
+    let num3 = 0;
+    if (translateX.get() > 0) {
+      num3 = -1;
+    }
+    const sharedValue = tmp2(tmp3[21]).useSharedValue(num3);
+    const tmp2Result = tmp2(tmp3[21]);
+    function re() {
+      let opacity = 0;
+      if (translateX.get() > 0) {
+        opacity = 0;
+        if (sharedValue.get() < 1) {
+          opacity = 1;
+        }
+      }
+      return { opacity };
+    }
+    const obj6 = { translateX, highestFullyRenderedScreenIndex: sharedValue };
+    re.__closure = obj6;
+    re.__workletHash = 10839500061449;
+    re.__initData = isChatBesideChannelList;
+    const animatedStyle = tmp2(tmp3[21]).useAnimatedStyle(re);
+    const tmp2Result3 = tmp2(tmp3[21]);
+    const tmp43 = tmp5(tmp3[22])("channel_list_scrim");
+    const isCustomThemeActive = tmp2(tmp3[23]).useIsCustomThemeActive();
+    const obj7 = { value: panelGestureContext, children: null };
+    const obj8 = { gesture, children: null };
+    const items12 = [tmp.container, ];
+    let containerBackground = !isCustomThemeActive;
+    if (!isCustomThemeActive) {
+      containerBackground = tmp.containerBackground;
+    }
+    const obj9 = { style: null, collapsable: false, children: null };
+    items12[1] = containerBackground;
+    obj9.style = items12;
+    const obj10 = { enabled: isChatBesideChannelList, children: null };
+    const obj11 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+    const items13 = [tmp.tabsContainer, animatedStyle];
+    obj11.style = items13;
+    obj11.accessibilityElementsHidden = !tmp38;
+    obj11.importantForAccessibility = "no-hide-descendants";
+    const items14 = [handleExit(tmp5(tmp3[27]), {}), ];
+    let tmp45Result;
+    if (tmp43) {
+      const obj12 = { translateX, maxWidth };
+      tmp45Result = tmp45(tmp2(tmp3[28]).MainTabsContentScrim, obj12);
+    }
+    items14[1] = tmp45Result;
+    obj11.children = items14;
+    const items15 = [first2(tmp5(tmp3[21]).View, obj11), handleExit(tmp5(tmp3[29]), {}), ];
+    if (arr2.length > 0) {
+      const obj13 = { screens: arr2, screenStackActive: null, translateX: null, isDragging: null, maxWidth: null, highestFullyRenderedScreenIndex: null, shouldFreeze: null, focusChatPressableComponent: null, firstScreenWidth: null, firstScreenFrame: null };
+      if (!screenStackActive) {
+        let tmp52 = isChatBesideChannelList;
+        if (isChatBesideChannelList) {
+          tmp52 = isChatLockedOpen;
+        }
+        screenStackActive = tmp52;
+      }
+      obj13.screenStackActive = screenStackActive;
+      obj13.translateX = translateX;
+      obj13.isDragging = isDragging;
+      obj13.maxWidth = maxWidth;
+      obj13.highestFullyRenderedScreenIndex = sharedValue;
+      obj13.shouldFreeze = !isChatBesideChannelList;
+      obj13.focusChatPressableComponent = tmp37;
+      let tmp53;
+      if (isChatBesideChannelList) {
+        if (isChatLockedOpen) {
+          tmp53 = tmp8;
+        }
+      }
+      obj13.firstScreenWidth = tmp53;
+      obj13.firstScreenFrame = memo;
+      let tmp45Result2 = tmp45(tmp5(tmp3[30]), obj13);
+      const tmp5Result2 = tmp5(tmp3[30]);
+    } else {
+      tmp45Result2 = null;
+      if (isChatBesideChannelList) {
+        tmp45Result2 = null;
+        if (isChatLockedOpen) {
+          tmp45Result2 = tmp45(tmp5(tmp3[31]), {});
+        }
+      }
+    }
+    items15[2] = tmp45Result2;
+    obj10.children = items15;
+    obj9.children = first2(tmp2(tmp3[26]).SidebarCoachmarkOverlay, obj10);
+    obj8.children = handleExit(arr2, obj9);
+    obj7.children = handleExit(tmp2(tmp3[25]).GestureDetector, obj8);
+    return handleExit(tmp5(tmp3[24]).Provider, obj7);
+  }
+  tmp38 = !screenStackActive;
+});

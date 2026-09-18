@@ -1,0 +1,42 @@
+// Module ID: 15510
+// Function ID: 15511
+// Name: flags
+// Dependencies: [15511, 15512, 15513, 15514, 15515, 15516, 15517, 15518, 15519, 15520, 15521, 15522, 15523, 15524, 15525, 15526, 15527, 15528, 15529, 15530, 15531, 15532, 15533, 15534, 15535, 15536, 15537, 15538, 15539, 15540, 15541, 2]
+
+// Module 15510 (flags)
+import _mod15511 from "module_15511" /* 15511 */;
+import _mod15512 from "module_15512" /* 15512 */;
+import _mod15513 from "module_15513" /* 15513 */;
+import _mod15514 from "module_15514" /* 15514 */;
+import _mod15515 from "module_15515" /* 15515 */;
+import _mod15516 from "module_15516" /* 15516 */;
+import _mod15517 from "module_15517" /* 15517 */;
+import _mod15518 from "module_15518" /* 15518 */;
+import _mod15519 from "module_15519" /* 15519 */;
+import _mod15520 from "module_15520" /* 15520 */;
+import _mod15521 from "module_15521" /* 15521 */;
+import _mod15522 from "module_15522" /* 15522 */;
+import _mod15523 from "module_15523" /* 15523 */;
+import _mod15524 from "module_15524" /* 15524 */;
+import _mod15525 from "module_15525" /* 15525 */;
+import _mod15526 from "module_15526" /* 15526 */;
+import _mod15527 from "module_15527" /* 15527 */;
+import _mod15528 from "module_15528" /* 15528 */;
+import _mod15529 from "module_15529" /* 15529 */;
+import _mod15530 from "module_15530" /* 15530 */;
+import _mod15531 from "module_15531" /* 15531 */;
+import _mod15532 from "module_15532" /* 15532 */;
+import _mod15533 from "module_15533" /* 15533 */;
+import _mod15534 from "module_15534" /* 15534 */;
+import _mod15535 from "module_15535" /* 15535 */;
+import _mod15536 from "module_15536" /* 15536 */;
+import _mod15537 from "module_15537" /* 15537 */;
+import _mod15538 from "module_15538" /* 15538 */;
+import _mod15539 from "module_15539" /* 15539 */;
+import _mod15540 from "module_15540" /* 15540 */;
+import _mod15541 from "module_15541" /* 15541 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
+
+export const flags = { bg: _mod15511, cs: _mod15512, da: _mod15513, de: _mod15514, el: _mod15515, "en-GB": _mod15516, "en-US": _mod15517, "es-ES": _mod15518, "es-419": _mod15519, fi: _mod15520, fr: _mod15521, hi: _mod15522, hr: _mod15523, hu: _mod15524, it: _mod15525, ja: _mod15526, ko: _mod15527, lt: _mod15528, nl: _mod15529, no: _mod15530, pl: _mod15531, "pt-BR": _mod15532, ro: _mod15533, ru: _mod15534, "sv-SE": _mod15535, th: _mod15536, tr: _mod15537, uk: _mod15538, vi: _mod15539, "zh-CN": _mod15540, "zh-TW": _mod15541 };

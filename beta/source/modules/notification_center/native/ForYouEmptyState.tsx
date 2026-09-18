@@ -1,0 +1,41 @@
+// Module ID: 16545
+// Function ID: 16546
+// Name: ForYouEmptyState
+// Dependencies: [19, 17, 21, 4636, 5773, 4632, 1114, 2]
+// Exports: ForYouEmptyState
+
+// Module 16545 (ForYouEmptyState)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import native from "native" /* 5773 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4636);
+let closure_5 = createStyles.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");
+
+export const ForYouEmptyState = function ForYouEmptyState(height) {
+  const tmp = closure_5();
+  const obj = { style: null, children: null };
+  const items = [tmp.container, { height: height.height }];
+  obj.style = items;
+  const items1 = [React3(View, { style: tmp.image, children: React3(native.MailboxSpotIllustration, { scale: 0.75 }) }), , ];
+  const obj3 = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
+  const items2 = [, ];
+  ({ text: arr3[0], headerText: arr3[1] } = tmp);
+  obj3.style = items2;
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.MwjTvn);
+  items1[1] = React3(Text_Text.Text, obj3);
+  const obj4 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t.AKBgPy);
+  items1[2] = React3(Text_Text.Text, obj4);
+  obj.children = items1;
+  return React4(View, obj);
+};

@@ -1,0 +1,363 @@
+// Module ID: 17179
+// Function ID: 17180
+// Name: SoundboardSoundPickerList
+// Dependencies: [19, 17, 1371, 17173, 21, 4636, 576, 5101, 1114, 10473, 504, 4294, 10095, 10436, 17180, 5063, 12, 5665, 1176, 17188, 10520, 4599, 8842, 10435, 7175, 4632, 2]
+
+// Module 17179 (SoundboardSoundPickerList)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1176 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
+import ClockIcon from "ClockIcon" /* 4599 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import SoundboardTypes from "SoundboardTypes" /* 5101 */;
+import GuildIcon from "GuildIcon" /* 5665 */;
+import FastListDefault from "FastList" /* 7175 */;
+import TrophyIcon from "TrophyIcon" /* 8842 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10095 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10435 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10436 */;
+import chunkDefault from "chunk" /* 10473 */;
+import _modDef10520 from "module_10520" /* 10520 */;
+import _modDef17188 from "module_17188" /* 17188 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const GuildIconDefault = GuildIcon;
+const PremiumUpsellSectionDividerDefault = PremiumUpsellSectionDivider;
+
+require = fn;
+function getSectionLabel(category) {
+  const type = category.category.categoryInfo.type;
+  if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
+    return category.category.categoryInfo.guild.name;
+  } else if (tmp(5101).SoundboardSoundGridSectionType.DEFAULTS === type) {
+    const intl4 = tmp(1114).intl;
+    return intl4.string(tmp(1114).t.Rtvk9X);
+  } else if (tmp(5101).SoundboardSoundGridSectionType.FAVORITES === type) {
+    const intl3 = tmp(1114).intl;
+    return intl3.string(tmp(1114).t.y3LQCG);
+  } else if (tmp(5101).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+    const intl2 = tmp(1114).intl;
+    return intl2.string(tmp(1114).t["+cGVV6"]);
+  } else if (tmp(5101).SoundboardSoundGridSectionType.SEARCH === type) {
+    return null;
+  } else if (tmp(5101).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+    const intl = tmp(1114).intl;
+    const obj = { guildName: category.category.categoryInfo.guild.name };
+    return intl.formatToPlainString(tmp(1114).t.GXs41w, obj);
+  }
+}
+function SoundPickerButtonRow(row) {
+  row = row.row;
+  ({ sectionIndex: importDefault, section } = row);
+  const channel = row.channel;
+  c5 = undefined;
+  const tmp = closure_10();
+  let soundButtonNotFirst = tmp;
+  const items = [c5];
+  const stateFromStores = row(section[10]).useStateFromStores(items, () => section(section[11]).canUseSoundboardEverywhere(isSectionLocked.getCurrentUser()));
+  if (null == section) {
+    return null;
+  } else {
+    let result = !stateFromStores;
+    if (!stateFromStores) {
+      result = tmp2(tmp3[12]).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
+      const tmp2Result = tmp2(tmp3[12]);
+    }
+    c5 = result;
+    let obj2 = { style: null, children: null };
+    const items1 = [tmp.row];
+    obj2.style = items1;
+    if (result) {
+      result = closure_7(tmp2(tmp3[13]).PremiumUpsellGradientBackground, {});
+    }
+    const items2 = [
+      result,
+      section.soundsByRow[row].map((type, index) => {
+          type = type.type;
+          if (SoundboardTypes.SoundboardSoundItemType.SOUND === type) {
+            const sound = type.sound;
+            const obj = { sound, channel, soundGridLocation: null, style: null, isSectionLocked: null };
+            const obj2 = { section, item: row };
+            obj.soundGridLocation = obj2;
+            soundButtonNotFirst = null;
+            if (index > 0) {
+              soundButtonNotFirst = soundButtonNotFirst.soundButtonNotFirst;
+            }
+            obj.style = soundButtonNotFirst;
+            obj.isSectionLocked = isSectionLocked;
+            const _HermesInternal = HermesInternal;
+            return React5(tmp(17180).SoundButton, obj, "" + section.category.key + "-" + sound.soundId);
+          } else if (tmp(5101).SoundboardSoundItemType.ADD_SOUND === type) {
+            const _Error = Error;
+            const error = new Error("ADD_SOUND Not implemented");
+            throw error;
+          }
+        })
+    ];
+    obj2.children = items2;
+    return closure_8(soundButtonNotFirst, obj2);
+  }
+  let obj = row(section[10]);
+}
+const View = fn(17).View;
+const SoundboardStyleConstants = fn(17173);
+({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let sum = SOUND_BUTTON_HEIGHT + 8;
+const createStyles = fn(4636);
+let obj = { row: { height: sum, display: "flex", flexDirection: "row", paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionHeader: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionIcon: { height: 16, width: 16, borderRadius: 8, marginRight: 4 }, soundButtonNotFirst: { marginLeft: SOUND_ROW_SPACING } };
+let closure_10 = createStyles.createStyles(obj);
+let obj3 = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerList.tsx");
+
+export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPickerListComponent(channel) {
+  channel = channel.channel;
+  let num = channel.insetBottom;
+  if (num === undefined) {
+    num = 0;
+  }
+  ({ scrollPosition: importDefault, onScroll: dependencyMap, setCategoryIndex: noop, shouldShowPremiumUpsell: View, categories } = channel);
+  closure_6 = undefined;
+  closure_10 = undefined;
+  function getSectionPosition(arg0) {
+    const diff = arg0 - 1;
+    let result = !closure_10;
+    if (!closure_10) {
+      result = null != closure_6[diff];
+    }
+    if (result) {
+      result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, closure_6[diff].category.categoryInfo);
+    }
+    let result1 = !tmp2;
+    if (!closure_10) {
+      result1 = null != closure_6[arg0];
+    }
+    if (result1) {
+      result1 = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, closure_6[arg0].category.categoryInfo);
+    }
+    sum = arg0 + 1;
+    let result2 = !tmp2;
+    if (!closure_10) {
+      result2 = null != closure_6[sum];
+    }
+    if (result2) {
+      result2 = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, closure_6[sum].category.categoryInfo);
+    }
+    if (!result1) {
+      if (result2) {
+        if (!result) {
+          let START = PremiumUpsellSectionDivider.PremiumUpsellSectionDividerPosition.START;
+        }
+        return START;
+      }
+    }
+    let END = null;
+    if (result1) {
+      END = null;
+      if (!result2) {
+        END = PremiumUpsellSectionDivider.PremiumUpsellSectionDividerPosition.END;
+      }
+    }
+    START = END;
+  }
+  const currentUser = closure_10();
+  const fontScale = channel(5063).useFontScale();
+  let obj = channel(5063);
+  let tmp3 = (function getFastListSectionsFromCategories(categories, arg1, fontScale) {
+    const items = [];
+    const iter = categories[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let arr2 = chunkDefault(nextResult.items, arg1);
+      let obj = { category: nextResult, height: arr2.length * closure_9 + (18 * fontScale + 8), soundsByRow: arr2 };
+      let arr = items.push(obj);
+      continue;
+    }
+    return items;
+  })(categories, closure_6, fontScale);
+  closure_6 = tmp3;
+  let items = [tmp3];
+  closure_7 = noop.useMemo(() => closure_6.map((height) => height.height), items);
+  const items1 = [tmp3, channel];
+  const callback = noop.useCallback((sectionIndex, row) => React5(SoundPickerButtonRow, { row, sectionIndex, section: closure_6[sectionIndex], channel }), items1);
+  let tmp2 = (function calculateRowsPerSection(categories, arg1) {
+    const items = [];
+    const iter = categories[Symbol.iterator]();
+    while (iter !== undefined) {
+      let _Math = Math;
+      let arr = items.push(Math.ceil(iter.next().items.length / arg1));
+      continue;
+    }
+    return items;
+  })(categories, closure_6);
+  closure_8 = channel(12).debounce((arg0) => {
+    const rounded = Math.round(arg0);
+    let num = 0;
+    if (0 < closure_7.length) {
+      let first = closure_7[0];
+      let num3 = 0;
+      let num4 = 0;
+      num = 0;
+      if (rounded >= first) {
+        sum = num4 + 1;
+        const sum1 = num3 + 1;
+        num = sum;
+        while (sum1 < closure_7.length) {
+          first = first + closure_7[sum1];
+          num3 = sum1;
+          num4 = sum;
+          num = sum;
+          if (rounded < first) {
+            break;
+          }
+        }
+      }
+    }
+    noop(num);
+  });
+  let obj2 = channel(12);
+  closure_9 = channel(12).debounce((arg0, arg1) => {
+    const result = -arg1 / 2;
+    const rounded = Math.round(arg0);
+    let arr = closure_7;
+    let num = 0;
+    if (0 < closure_7.length) {
+      sum = result + tmp3[0];
+      let num3 = 0;
+      let num4 = 0;
+      arr = tmp3;
+      num = 0;
+      if (rounded >= sum) {
+        const sum1 = num4 + 1;
+        const sum2 = num3 + 1;
+        arr = closure_7;
+        num = sum1;
+        while (sum2 < closure_7.length) {
+          sum = sum + tmp7[sum2];
+          num3 = sum2;
+          num4 = sum1;
+          arr = tmp7;
+          num = sum1;
+          if (rounded < sum) {
+            break;
+          }
+        }
+      }
+    }
+    const bound = Math.min(num, arr.length - 1);
+    let result1 = !closure_10;
+    if (!closure_10) {
+      result1 = null != closure_6[bound];
+    }
+    if (result1) {
+      result1 = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, closure_6[bound].category.categoryInfo);
+    }
+    const result2 = View.set(result1);
+  });
+  let obj3 = channel(12);
+  const items2 = [currentUser];
+  closure_10 = channel(504).useStateFromStores(items2, () => PremiumUtilsDefault.canUseSoundboardEverywhere(currentUser.getCurrentUser()));
+  return closure_7(FastListDefault, {
+    onLayout(nativeEvent) {
+      return closure_9(0, nativeEvent.nativeEvent.layout.height);
+    },
+    sections: tmp2,
+    sectionSize(arg0) {
+      if (null == closure_6[arg0]) {
+        let num2 = 0;
+      } else {
+        num2 = 42;
+      }
+      return num2;
+    },
+    itemSize(arg0) {
+      let num = 0;
+      if (null != closure_6[arg0]) {
+        num = sum;
+      }
+      return num;
+    },
+    sectionFooterSize(arg0) {
+      let num = 0;
+      if (null != getSectionPosition(arg0)) {
+        num = PremiumUpsellSectionDivider.PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + PremiumUpsellSectionDivider.PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+      }
+      return num;
+    },
+    ref: channel.listRef,
+    renderItem: callback,
+    renderSection(arg0) {
+      let result = !closure_10;
+      if (!closure_10) {
+        result = null != tmp[arg0];
+      }
+      if (result) {
+        result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, tmp[arg0].category.categoryInfo);
+      }
+      const obj2 = { style: currentUser.sectionHeader, children: null };
+      if (result) {
+        result = tmp8(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+      }
+      const items = [result, , ];
+      const type = tmp2.category.categoryInfo.type;
+      if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
+        const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: tmp11.sectionIcon };
+        let tmp8Result = tmp8(GuildIconDefault, obj3);
+      } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
+        const obj4 = { source: _modDef17188, style: tmp11.sectionIcon };
+        tmp8Result = tmp8(native.Icon, obj4);
+      } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
+        const obj5 = { source: _modDef10520, style: tmp11.sectionIcon };
+        tmp8Result = tmp8(native.Icon, obj5);
+      } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+        const obj6 = { style: tmp11.sectionIcon };
+        tmp8Result = tmp8(ClockIcon.ClockIcon, obj6);
+      } else {
+        tmp8Result = null;
+        if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH !== type) {
+          if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+            const obj7 = { style: tmp11.sectionIcon };
+            tmp8Result = tmp8(TrophyIcon.TrophyIcon, obj7);
+          }
+        }
+      }
+      const obj8 = { children: null };
+      items[1] = tmp8Result;
+      items[2] = React5(Text_Text.Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-sm/semibold", children: getSectionLabel(closure_6[arg0]) });
+      obj2.children = items;
+      obj8.children = React6(View, obj2);
+      return React5(View, obj8, closure_6[arg0].category.key);
+    },
+    renderSectionFooter(arg0) {
+      const tmp = getSectionPosition(arg0);
+      let tmp2 = null;
+      if (null != tmp) {
+        const obj = { position: tmp };
+        tmp2 = React5(PremiumUpsellSectionDividerDefault, obj);
+      }
+      return tmp2;
+    },
+    insetEnd: num,
+    onScroll(nativeEvent) {
+      nativeEvent = nativeEvent.nativeEvent;
+      const y = nativeEvent.contentOffset.y;
+      closure_8(y);
+      closure_9(y, nativeEvent.layoutMeasurement.height);
+      if (nativeEvent.layoutMeasurement.height + nativeEvent.contentOffset.y < nativeEvent.contentSize.height - 20) {
+        if (null != importDefault) {
+          const result = obj.set(y);
+        }
+        if (dependencyMap != null) {
+          dependencyMap(nativeEvent);
+        }
+        obj = importDefault;
+      }
+    },
+    keyboardShouldPersistTaps: "handled",
+    optimizeListItemRender: true,
+    inActionSheet: true
+  });
+});

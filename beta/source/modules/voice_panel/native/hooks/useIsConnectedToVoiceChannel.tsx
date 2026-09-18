@@ -1,0 +1,43 @@
+// Module ID: 17148
+// Function ID: 17149
+// Name: useIsConnectedToVoiceChannel
+// Dependencies: [502, 4659, 4655, 1074, 504, 2]
+// Exports: default
+
+// Module 17148 (useIsConnectedToVoiceChannel)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const RTCConnectionStates = fn(1074).RTCConnectionStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
+
+export default function useIsConnectedToVoiceChannel(arg0) {
+  _require = arg0;
+  const items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const channelId = RTCConnectionStore.getChannelId();
+    let tmp2 = closure_0;
+    if (closure_0 == null) {
+      tmp2 = channelId;
+    }
+    if (tmp2 !== channelId) {
+      return false;
+    } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
+      return true;
+    } else {
+      const state = obj.getState();
+      if (RTCConnectionStates.DISCONNECTED !== state) {
+        if (RTCConnectionStates.NO_ROUTE !== state) {
+          return true;
+        }
+      }
+      return false;
+    }
+    obj = RTCConnectionStore;
+  });
+};

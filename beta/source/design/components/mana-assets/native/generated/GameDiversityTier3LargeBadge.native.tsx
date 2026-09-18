@@ -1,0 +1,40 @@
+// Module ID: 6162
+// Function ID: 6163
+// Name: GameDiversityTier3LargeBadge
+// Dependencies: [21, 5668, 6163, 2]
+// Exports: GameDiversityTier3LargeBadge
+
+// Module 6162 (GameDiversityTier3LargeBadge)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6163 from "module_6163" /* 6163 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier3LargeBadge.native.tsx");
+
+export const GameDiversityTier3LargeBadge = function GameDiversityTier3LargeBadge(width) {
+  let num = width.width;
+  ({ accessible, accessibilityLabel, resizeMode } = width);
+  if (num === undefined) {
+    num = 100;
+  }
+  let num2 = width.height;
+  if (num2 === undefined) {
+    num2 = 100;
+  }
+  let num3 = width.scale;
+  if (num3 === undefined) {
+    num3 = 1;
+  }
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6163 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+};

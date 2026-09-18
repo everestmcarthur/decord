@@ -1,0 +1,113 @@
+// Module ID: 10509
+// Function ID: 10510
+// Name: GIFPickerItemActionSheet
+// Dependencies: [19, 17, 21, 4636, 576, 10499, 10495, 1477, 4603, 4335, 1114, 10510, 7292, 4334, 5056, 7253, 5668, 5514, 2]
+// Exports: default
+
+// Module 10509 (GIFPickerItemActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ToastUtils from "ToastUtils" /* 4334 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import ClipboardUtils from "ClipboardUtils" /* 7292 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10495 */;
+import GifIcon from "GifIcon" /* 10510 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 }, gifContainer: { flexDirection: "column", alignItems: "center" }, gifImage: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.gifImage = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_7 = createStyles.createStyles(obj2);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
+
+export default function GIFPickerItemActionSheet(item) {
+  item = item.item;
+  let width;
+  const tmp = closure_7();
+  let obj = item(width[5]);
+  const isFavoriteGIF = obj.useIsFavoriteGIF(item(width[6]).gifUrlKey(item.url));
+  let size = isFavoriteGIF(width[7])();
+  width = size.width;
+  const height = size.height;
+  const items = [, , , ];
+  ({ width: arr[0], height: arr[1] } = item);
+  items[2] = width;
+  items[3] = height;
+  const memo = height.useMemo(() => {
+    const bound = Math.min((width - 2 * nativeDefault.space.PX_16) / item.width, 0.5 * height / item.height);
+    const size = { width: item.width * bound, height: item.height * bound };
+    return size;
+  }, items);
+  const callback = height.useCallback(() => {
+    isFavoriteGIF(width[8]).hideActionSheet();
+  }, []);
+  const items1 = [callback, isFavoriteGIF, item];
+  const callback1 = height.useCallback(() => {
+    callback();
+    const obj = GIFPickerActionCreators;
+    if (isFavoriteGIF) {
+      obj.removeFavoriteGIF(item.url);
+      const obj3 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+      const intl2 = util.intl;
+      obj3.content = intl2.string(util.t.in1rga);
+      obj3.IconComponent = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open(obj3);
+    } else {
+      obj.addFavoriteGIF(item);
+      const obj5 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+      const intl = util.intl;
+      obj5.content = intl.string(util.t.okQonm);
+      obj5.IconComponent = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open(obj5);
+    }
+  }, items1);
+  const items2 = [callback, item.url];
+  const items3 = [callback1, isFavoriteGIF];
+  const callback2 = height.useCallback(() => {
+    callback();
+    ClipboardUtils.copy(item.url, ToastUtils.presentLinkCopied);
+  }, items2);
+  const callback3 = height.useCallback(() => {
+    let str = "primary";
+    if (isFavoriteGIF) {
+      str = "destructive";
+    }
+    const obj = { variant: str, onPress: callback1, text: null, grow: true };
+    const intl = tmp2(1114).intl;
+    const string = intl.string;
+    const t = tmp2(1114).t;
+    if (isFavoriteGIF) {
+      let stringResult = string(t["5/NS74"]);
+    } else {
+      stringResult = string(t.nIH0v8);
+    }
+    obj.text = stringResult;
+    return hasOwnProperty(components_Button_Button.Button, obj);
+  }, items3);
+  let obj3 = { startExpanded: true, children: null };
+  let obj4 = { style: tmp.contentWrapper, children: null };
+  let obj5 = { style: tmp.gifContainer, children: null };
+  const obj6 = { style: null, source: { uri: item.src } };
+  const items4 = [tmp.gifImage, memo];
+  obj6.style = items4;
+  const items5 = [callback1(isFavoriteGIF(width[16]), obj6), ];
+  const obj7 = { children: null };
+  const items6 = [callback3(), ];
+  const obj8 = { variant: "secondary", onPress: callback2, text: null, grow: true };
+  let intl = item(width[10]).intl;
+  obj8.text = intl.string(item(width[10]).t.WqhZss);
+  items6[1] = callback1(item(width[14]).Button, obj8);
+  obj7.children = items6;
+  items5[1] = closure_6(item(width[17]).ButtonGroup, obj7);
+  obj5.children = items5;
+  obj4.children = closure_6(callback, obj5);
+  obj3.children = callback1(callback, obj4);
+  return callback1(item(width[15]).BottomSheet, obj3);
+};

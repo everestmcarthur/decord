@@ -1,0 +1,31 @@
+// Module ID: 15946
+// Function ID: 15947
+// Name: SecureFramesVerifiedDevicesSetting
+// Dependencies: [8079, 1074, 11605, 1114, 15947, 2]
+
+// Module 15946 (SecureFramesVerifiedDevicesSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["5b3FNI"]);
+  },
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
+  unsearchable: true,
+  screen: {
+    route: Constants.UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
+    getComponent() {
+      return require("SettingsSecureFramesVerificationsScreen").default;
+    }
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx");
+
+export default route;

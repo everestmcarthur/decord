@@ -1,0 +1,139 @@
+// Module ID: 13097
+// Function ID: 13098
+// Name: MediaViewerThumbnails
+// Dependencies: [32, 19, 17, 8410, 21, 13098, 4338, 576, 4373, 5046, 1363, 4636, 5668, 8383, 4374, 7175, 2]
+// Exports: default
+
+// Module 13097 (MediaViewerThumbnails)
+import useToken from "useToken" /* 4338 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4374 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13098 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+const PlatformUtils = tmp(1363);
+require = fn;
+function ObscuredView(source) {
+  source = source.source;
+  [tmp4, tmp5] = useMediaItemSpoilerState.useMediaItemSpoilerState(source.index);
+  useToken;
+  let tmp10Result = null;
+  if (tmp4) {
+    if (source.spoiler) {
+      const obj2 = { style: null, children: null };
+      const items = [absoluteFill.absoluteFill, tmp5];
+      obj2.style = items;
+      const tmp11 = absoluteFill;
+      const tmp7Result = tmp7(5046);
+      let str = "light";
+      if (tmpResult.isAndroid()) {
+        str = "dark";
+      }
+      const obj3 = { blurTheme: str, style: tmp11.absoluteFill, android_fallbackColor: tmp8 };
+      obj2.children = React6(tmp7Result, obj3);
+      tmp10Result = tmp10(tmp7(4373).View, obj2);
+      tmpResult = PlatformUtils;
+    } else {
+      tmp10Result = null;
+    }
+  }
+  return tmp10Result;
+}
+get_ActivityIndicator = fn(17);
+({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const Constants = fn(8410);
+({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4636);
+let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
+let closure_12 = noop.memo((onSelect) => {
+  ({ source, index } = onSelect);
+  onSelect = onSelect.onSelect;
+  ({ numSources, selectedIndex, useThumbnailStyle } = onSelect);
+  const tmp = closure_11();
+  let first = source;
+  if (Array.isArray(source)) {
+    first = source[0];
+  }
+  const items = [onSelect, index];
+  const thumbnailStyle = useThumbnailStyle(first, index);
+  const callback = noop.useCallback(() => onSelect(index), items);
+  const obj = { style: null, children: null };
+  const items1 = [tmp.thumbnailButtonPortrait, thumbnailStyle];
+  obj.style = items1;
+  const obj2 = { needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, accessibilityRole: "imagebutton", accessibilityLabel: "Thumbnail preview, " + index + 1 + " of " + numSources, accessibilityHint: "Double tap to focus", accessibilityState: { selected: selectedIndex === index }, onPress: callback, children: null };
+  const obj3 = { style: tmp.thumbnailImagePortrait, source: null, enableAnimation: false };
+  let thumbnail = first.thumbnail;
+  if (thumbnail == null) {
+    thumbnail = first;
+  }
+  obj3.source = thumbnail;
+  const items2 = [React6(FastImageDefault, obj3), React6(ObscuredView, { source: first, index })];
+  obj2.children = items2;
+  obj.children = React7(hasOwnProperty, obj2);
+  return React6(ReanimatedRexportDefault.View, obj);
+});
+const __initData = { code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerThumbnails.tsx");
+
+export default function MediaViewerThumbnails(syncer) {
+  syncer = syncer.syncer;
+  let onSelect;
+  const sources = syncer.sources;
+  const index = syncer.index;
+  const variableWidthThumbnailsEnabled = syncer.variableWidthThumbnailsEnabled;
+  const thumbnailScrollPositions = syncer.thumbnailScrollPositions;
+  ({ onEndReached, onEndReachedThreshold } = syncer);
+  const thumbnailsProps = syncer.useThumbnailsProps(onSelect, sources.length - 1);
+  const headerBufferStyle = thumbnailsProps.headerBufferStyle;
+  const footerBufferStyle = thumbnailsProps.footerBufferStyle;
+  const scrollEnabled = thumbnailsProps.scrollEnabled;
+  onSelect = thumbnailsProps.onSelect;
+  const useThumbnailStyle = thumbnailsProps.useThumbnailStyle;
+  let items = [thumbnailScrollPositions, variableWidthThumbnailsEnabled];
+  ({ ref, headerBufferSize, footerBufferSize, onScroll, screenWidth, itemSize } = thumbnailsProps);
+  const memo = headerBufferStyle.useMemo(() => {
+    const items = [];
+    let num = 0;
+    if (0 < thumbnailScrollPositions.length) {
+      do {
+        let push = items.push;
+        if (variableWidthThumbnailsEnabled) {
+          let arr = push(thumbnailScrollPositions[num].scrollStart);
+        } else {
+          let arr3 = push(num * React5);
+        }
+        num = num + 1;
+      } while (num < thumbnailScrollPositions.length);
+    }
+    return items;
+  }, items);
+  let tmp = closure_11();
+  const selectedIndex = thumbnailScrollPositions(sources(variableWidthThumbnailsEnabled[13]).useSelectedMediaSource(syncer), 1)[0];
+  const items1 = [sources, selectedIndex, onSelect, useThumbnailStyle];
+  const items2 = [sources.length];
+  const callback = headerBufferStyle.useCallback((arg0, index) => React6(closure_12, { index, source: sources[index], numSources: sources.length, selectedIndex, onSelect, useThumbnailStyle }), items1);
+  const memo1 = headerBufferStyle.useMemo(() => {
+    const items = [sources.length];
+    return items;
+  }, items2);
+  const obj = sources(variableWidthThumbnailsEnabled[13]);
+  const fn = function n() {
+    return { scrollEnabled: scrollEnabled.get() };
+  };
+  fn.__closure = { scrollEnabled };
+  fn.__workletHash = 13439565264141;
+  fn.__initData = __initData;
+  const items3 = [headerBufferStyle];
+  const animatedProps = sources(variableWidthThumbnailsEnabled[8]).useAnimatedProps(fn);
+  const items4 = [footerBufferStyle];
+  const callback1 = headerBufferStyle.useCallback(() => React6(REAWorkaroundViewDefault, { style: headerBufferStyle }), items3);
+  const items5 = [index];
+  const callback2 = headerBufferStyle.useCallback(() => React6(REAWorkaroundViewDefault, { style: footerBufferStyle }), items4);
+  const memo2 = headerBufferStyle.useMemo(() => index.get(), items5);
+  return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[15]).AnimatedFastList, { ref, style: tmp.containerPortrait, sections: memo1, stickyHeaderFooter: true, disableContentWrappers: true, automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, initialScrollOrientation: "center", initialScrollItem: memo2, itemSize, renderItem: callback, onScroll, horizontal: true, headerSize: headerBufferSize, footerSize: footerBufferSize, renderHeader: callback1, renderFooter: callback2, onEndReached, endReachedThreshold: onEndReachedThreshold, chunkBase: screenWidth, snapToOffsets: memo, animatedProps });
+};

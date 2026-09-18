@@ -1,0 +1,130 @@
+// Module ID: 8805
+// Function ID: 8806
+// Name: GameProfileStore
+// Dependencies: [504, 573, 2]
+
+// Module 8805 (GameProfileStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+
+let closure_0 = {};
+let closure_1 = {};
+let closure_2 = {};
+let closure_3 = {};
+let closure_4 = {};
+let closure_5 = {};
+let closure_6 = {};
+let c7 = null;
+const Store = initializeDefault.Store;
+class GameProfileStore extends Store {
+}
+const prototype = GameProfileStore.prototype;
+prototype["getSimilarGames"] = function getSimilarGames(arg0) {
+  return closure_0[arg0];
+};
+prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(skuIds) {
+  return closure_1[skuIds];
+};
+prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(skuIds) {
+  let flag = closure_2[skuIds];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["isShopCollectionFetching"] = function isShopCollectionFetching(skuIds) {
+  let flag = closure_3[skuIds];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["getAnnouncements"] = function getAnnouncements(arg0) {
+  return closure_4[arg0];
+};
+prototype["hasAnnouncementsBeenFetched"] = function hasAnnouncementsBeenFetched(arg0) {
+  let flag = closure_5[arg0];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["isAnnouncementsFetching"] = function isAnnouncementsFetching(arg0) {
+  let flag = closure_6[arg0];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["getPendingReturn"] = function getPendingReturn() {
+  return c7;
+};
+GameProfileStore.displayName = "GameProfileStore";
+const gameProfileStore = new GameProfileStore(DispatcherDefault, {
+  GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function handleGetSimilarGamesSuccess(gameId) {
+    closure_0[gameId.gameId] = gameId.games;
+  },
+  GAME_PROFILE_GET_SHOP_COLLECTION_START: function handleGetShopCollectionStart(collectionId) {
+    closure_3[collectionId.collectionId] = true;
+  },
+  GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS: function handleGetShopCollectionSuccess(collectionId) {
+    collectionId = collectionId.collectionId;
+    closure_1[collectionId] = collectionId.skuIds;
+    closure_2[collectionId] = true;
+    closure_3[collectionId] = false;
+  },
+  GAME_PROFILE_GET_SHOP_COLLECTION_ERROR: function handleGetShopCollectionError(collectionId) {
+    collectionId = collectionId.collectionId;
+    closure_2[collectionId] = true;
+    closure_3[collectionId] = false;
+  },
+  GAME_PROFILE_GET_ANNOUNCEMENTS_START: function handleGetAnnouncementsStart(gameId) {
+    closure_6[gameId.gameId] = true;
+  },
+  GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS: function handleGetAnnouncementsSuccess(gameId) {
+    gameId = gameId.gameId;
+    closure_4[gameId] = { messages: gameId.messages, channelId: gameId.channelId, guildId: gameId.guildId };
+    closure_5[gameId] = true;
+    closure_6[gameId] = false;
+  },
+  GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR: function handleGetAnnouncementsError(gameId) {
+    gameId = gameId.gameId;
+    closure_5[gameId] = true;
+    closure_6[gameId] = false;
+  },
+  GAME_PROFILE_SET_PENDING_RETURN: function handleSetPendingReturn(arg0) {
+    ({ gameId, channelId, initialScrollOffset } = arg0);
+    let gameId1;
+    if (_null != null) {
+      gameId1 = _null.gameId;
+    }
+    if (gameId1 === gameId) {
+      let channelId1;
+      if (_null != null) {
+        channelId1 = _null.channelId;
+      }
+      if (channelId1 === channelId) {
+        let initialScrollOffset1;
+        if (_null != null) {
+          initialScrollOffset1 = _null.initialScrollOffset;
+        }
+        if (initialScrollOffset1 === initialScrollOffset) {
+          return false;
+        }
+      }
+    }
+    _null = { gameId, channelId, initialScrollOffset };
+  },
+  GAME_PROFILE_CLEAR_PENDING_RETURN: function handleClearPendingReturn(arg0) {
+    if (null != _null) {
+      if (_null.gameId === tmp) {
+        _null = null;
+      }
+    }
+    return false;
+  }
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
+
+export default gameProfileStore;

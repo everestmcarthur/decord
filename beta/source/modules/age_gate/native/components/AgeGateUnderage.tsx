@@ -1,0 +1,108 @@
+// Module ID: 16083
+// Function ID: 16084
+// Name: AgeGateUnderage
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 7045, 1483, 5705, 5711, 1114, 7076, 7079, 5773, 7075, 4632, 2024, 5056, 2]
+// Exports: default
+
+// Module 16083 (AgeGateUnderage)
+import nativeDefault from "native" /* 576 */;
+import NavigatorHeader from "NavigatorHeader" /* 5705 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4636);
+let closure_9 = createStyles.createStyles((arg0) => {
+  let num = 0;
+  if (arg0) {
+    num = 80;
+  }
+  const obj = { container: { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: { marginTop: 16 }, body: { marginTop: 8, lineHeight: 20, textAlign: "center" }, buttonWrapper: { width: "100%", marginTop: 24 } };
+  return obj;
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateUnderage.tsx");
+
+export default function AgeGateUnderage(onClose) {
+  onClose = onClose.onClose;
+  ({ underageMessage, existingUser } = onClose);
+  if (existingUser === undefined) {
+    existingUser = false;
+  }
+  let flag = onClose.fromRegister;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let flag2 = onClose.disableSwipe;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  const tmp3 = existingUser(flag2[6])();
+  const tmp4 = closure_9(tmp3);
+  const navigation = onClose(flag2[7]).useNavigation();
+  const items = [onClose, existingUser, navigation, flag2];
+  const layoutEffect = navigation.useLayoutEffect(() => {
+    if (existingUser) {
+      let fn = () => null;
+    } else {
+      fn = NavigatorHeader.getHeaderBackButton(onClose);
+    }
+    navigation.setOptions({ headerLeft: fn, gestureEnabled: !flag2 });
+  }, items);
+  let obj = onClose(flag2[7]);
+  onClose(flag2[9]).useNavigatorBackPressHandler(() => {
+    onClose();
+    return true;
+  });
+  const intl = onClose(flag2[10]).intl;
+  const string = intl.string;
+  const t = onClose(flag2[10]).t;
+  if (existingUser) {
+    let stringResult = string(t["NR/zrG"]);
+  } else {
+    stringResult = string(t.nCB6Ga);
+  }
+  const obj3 = { style: tmp4.container, children: null };
+  let tmp12 = null;
+  if (!tmp3) {
+    tmp12 = closure_6(tmp(tmp2[11]), {});
+  }
+  const items1 = [tmp12, closure_6(existingUser(flag2[12]), {}), closure_6(onClose(flag2[13]).ShieldSpotIllustration, {}), closure_6(existingUser(flag2[14]), { style: tmp4.header, children: stringResult }), , ];
+  const obj5 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  const intl2 = tmp5(tmp2[10]).intl;
+  if (flag) {
+    let stringResult1 = intl2.string(tmp5(tmp2[10]).t.GDQgHL);
+  } else {
+    if (underageMessage == null) {
+      const intl3 = tmp5(tmp2[10]).intl;
+      underageMessage = intl3.string(tmp5(tmp2[10]).t.WqEH4D);
+    }
+    const obj6 = { underageMessage, helpURL: tmp(tmp2[16]).getArticleURL(HelpdeskArticles.AGE_GATE) };
+    stringResult1 = intl2.format(tmp5(tmp2[10]).t.b0QzXe, obj6);
+    const tmpResult = tmp(tmp2[16]);
+  }
+  obj5.children = stringResult1;
+  items1[4] = closure_6(onClose(flag2[15]).Text, obj5);
+  let tmp10Result = null;
+  if (existingUser) {
+    const obj7 = { children: null };
+    const obj8 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+    const intl4 = tmp5(tmp2[10]).intl;
+    obj8.children = intl4.format(tmp5(tmp2[10]).t["3axQdB"], { days: 30 });
+    const items2 = [tmp14(tmp5(tmp2[15]).Text, obj8), ];
+    const obj9 = { style: tmp4.buttonWrapper, children: null };
+    const obj10 = { onPress: onClose, text: null, grow: true };
+    const intl5 = tmp5(tmp2[10]).intl;
+    obj10.text = intl5.string(tmp5(tmp2[10]).t.JhDw5o);
+    obj9.children = tmp14(tmp5(tmp2[17]).Button, obj10);
+    items2[1] = tmp14(tmp11, obj9);
+    obj7.children = items2;
+    tmp10Result = tmp10(closure_7, obj7);
+  }
+  items1[5] = tmp10Result;
+  obj3.children = items1;
+  return closure_8(View, obj3);
+};

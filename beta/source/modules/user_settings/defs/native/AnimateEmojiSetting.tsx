@@ -1,0 +1,24 @@
+// Module ID: 15504
+// Function ID: 15505
+// Name: AnimateEmojiSetting
+// Dependencies: [8079, 11605, 1114, 1935, 2]
+
+// Module 15504 (AnimateEmojiSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+const toggle = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.iIaOlc);
+  },
+  parent: SettingsConstants.MobileUserSettings.ACCESSIBILITY,
+  useValue: UserSettings.AnimateEmoji.useSetting,
+  onValueChange: UserSettings.AnimateEmoji.updateSetting
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AnimateEmojiSetting.tsx");
+
+export default toggle;

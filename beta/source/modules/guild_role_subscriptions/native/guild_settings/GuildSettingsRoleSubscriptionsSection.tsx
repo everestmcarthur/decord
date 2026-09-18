@@ -1,0 +1,88 @@
+// Module ID: 17640
+// Function ID: 17641
+// Name: GuildSettingsRoleSubscriptionsSection
+// Dependencies: [19, 1975, 1371, 1074, 21, 504, 5768, 1114, 5686, 17641, 17642, 17643, 17644, 7363, 2]
+// Exports: default
+
+// Module 17640 (GuildSettingsRoleSubscriptionsSection)
+import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
+import TableRow from "TableRow" /* 5686 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import _modDef17641 from "module_17641" /* 17641 */;
+import _modDef17642 from "module_17642" /* 17642 */;
+import _modDef17644 from "module_17644" /* 17644 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+function HasCreatedListingsSection(arg0) {
+  ({ guild: require, pushScreen: importDefault } = arg0);
+  const items = [UserStore];
+  let stateFromStores = initialize.useStateFromStores(items, () => isGuildOwner(id, UserStore.getCurrentUser()));
+  const obj2 = { title: null, hasIcons: true, children: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["KzCF/6"]);
+  const obj3 = { label: null, arrow: true, icon: null, onPress: null };
+  const intl2 = util.intl;
+  obj3.label = intl2.string(util.t["/CfKoD"]);
+  const tmp4 = closure_8;
+  obj3.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef17641 });
+  obj3.onPress = function onPress() {
+    return importDefault(constants2.ROLE_SUBSCRIPTIONS_BASIC);
+  };
+  const items1 = [closure_7(TableRow.TableRow, obj3, "guild-role-subscriptions-basic"), , , ];
+  const obj5 = { label: null, arrow: true, icon: null, onPress: null };
+  const intl3 = util.intl;
+  obj5.label = intl3.string(util.t.pXbGYc);
+  const obj4 = { source: _modDef17641 };
+  obj5.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef17642 });
+  obj5.onPress = function onPress() {
+    return importDefault(constants2.ROLE_SUBSCRIPTIONS_TIERS);
+  };
+  items1[1] = closure_7(TableRow.TableRow, obj5, "guild-role-subscriptions-tiers");
+  if (stateFromStores) {
+    const obj7 = { label: null, arrow: true, icon: null, onPress: null };
+    const intl4 = tmp(1114).intl;
+    obj7.label = intl4.string(tmp(1114).t.p2Rsdl);
+    const obj8 = { source: tmp6(17643) };
+    obj7.icon = tmp5(tmp(5686).TableRow.Icon, obj8);
+    obj7.onPress = function onPress() {
+      return importDefault(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: id.id });
+    };
+    stateFromStores = tmp5(tmp(5686).TableRow, obj7, "guild-role-subscriptions-payments");
+  }
+  items1[2] = stateFromStores;
+  const obj9 = { label: null, arrow: true, icon: null, onPress: null };
+  const intl5 = tmp(1114).intl;
+  obj9.label = intl5.string(util.t.C5Dbwn);
+  const obj6 = { source: _modDef17642 };
+  obj9.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef17644 });
+  obj9.onPress = function onPress() {
+    return importDefault(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
+  };
+  items1[3] = closure_7(TableRow.TableRow, obj9, "guild-role-subscriptions-emojis");
+  obj2.children = items1;
+  return tmp4(TableRowGroup.TableRowGroup, obj2);
+}
+const isGuildOwner = fn(1975).isGuildOwner;
+const Constants = fn(1074);
+({ GuildFeatures: hasOwnProperty, GuildSettingsSections: metroRequire } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx");
+
+export default function GuildSettingsRoleSubscriptionsSection(guild) {
+  guild = guild.guild;
+  let tmp = null;
+  if (obj.useCanSeeGuildRoleSubscriptionSettings(guild)) {
+    const features = guild.features;
+    tmp = null;
+    if (features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED)) {
+      const obj2 = { pushScreen: guild.pushScreen, guild };
+      tmp = React5(HasCreatedListingsSection, obj2);
+    }
+  }
+  return tmp;
+};

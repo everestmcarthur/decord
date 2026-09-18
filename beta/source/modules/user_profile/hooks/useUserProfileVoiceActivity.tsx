@@ -1,0 +1,60 @@
+// Module ID: 13176
+// Function ID: 13177
+// Name: useUserProfileVoiceActivity
+// Dependencies: [4676, 4655, 7841, 11011, 504, 2]
+// Exports: default, isUserProfileVoiceActivityForChannel
+
+// Module 13176 (useUserProfileVoiceActivity)
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7841 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");
+
+export default function useUserProfileVoiceActivity(guildId) {
+  const userId = guildId.userId;
+  let id;
+  const tmp2 = id(11011)({ userId, guildId: guildId.guildId });
+  const voiceChannel = tmp2.voiceChannel;
+  id = undefined;
+  if (voiceChannel != null) {
+    id = voiceChannel.id;
+  }
+  const obj = { voiceState: tmp2.voiceState, voiceChannel, voiceActivity: null };
+  const items = [PresenceStore, VoiceStateStore];
+  obj.voiceActivity = userId(504).useStateFromStores(items, () => {
+    if (null != userId) {
+      if (null != id) {
+        const findActivityResult = PresenceStore.findActivity(tmp, (session_id) => {
+          voiceStateForSession = voiceStateForSession.getVoiceStateForSession(userId, session_id.session_id);
+          let tmp3 = id(dependencyMap[2])(session_id);
+          if (tmp3) {
+            let channelId;
+            if (voiceStateForSession != null) {
+              channelId = voiceStateForSession.channelId;
+            }
+            tmp3 = channelId === closure_1_1;
+          }
+          return tmp3;
+        });
+        return findActivityResult;
+      }
+    }
+  });
+  return obj;
+};
+export const isUserProfileVoiceActivityForChannel = function isUserProfileVoiceActivityForChannel(voiceStateForSession) {
+  voiceStateForSession = voiceStateForSession.voiceStateForSession;
+  ({ activity, voiceChannelId } = voiceStateForSession);
+  let tmp = isEmbeddedActivityDefault(activity);
+  if (tmp) {
+    let channelId;
+    if (voiceStateForSession != null) {
+      channelId = voiceStateForSession.channelId;
+    }
+    tmp = channelId === voiceChannelId;
+  }
+  return tmp;
+};

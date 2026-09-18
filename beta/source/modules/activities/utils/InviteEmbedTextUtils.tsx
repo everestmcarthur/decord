@@ -1,0 +1,154 @@
+// Module ID: 13366
+// Function ID: 13367
+// Name: InviteEmbedTextUtils
+// Dependencies: [1371, 1074, 1114, 2882, 4788, 2]
+// Exports: getDeadGameInviteText, getHeaderText, getPartyText, getRequestToStreamText
+
+// Module 13366 (InviteEmbedTextUtils)
+import util from "util" /* 1114 */;
+import _modDef2882 from "module_2882" /* 2882 */;
+import NicknameUtils from "NicknameUtils" /* 4788 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+function getAskToJoinText(author, appName, isPrivate, id2, arg4) {
+  if (author.author.id === id2) {
+    if (isPrivate.isPrivate()) {
+      const user = UserStore.getUser(isPrivate.getRecipientId());
+      if (null != user) {
+        const intl2 = util.intl;
+        const formatToPlainString2 = intl2.formatToPlainString;
+        const t2 = util.t;
+        if (arg4) {
+          const obj2 = { username: user.globalName, appName };
+          let formatToPlainString2Result = formatToPlainString2(t2.JddpN2, obj2);
+        } else {
+          const obj3 = { username: user.globalName, appName };
+          formatToPlainString2Result = formatToPlainString2(t2.gYVkSW, obj3);
+        }
+        return formatToPlainString2Result;
+      }
+    }
+    const intl = util.intl;
+    const formatToPlainString = intl.formatToPlainString;
+    const t = util.t;
+    if (arg4) {
+      const obj4 = { appName };
+      let formatToPlainStringResult = formatToPlainString(t["2N1kNS"], obj4);
+    } else {
+      const obj5 = { appName };
+      formatToPlainStringResult = formatToPlainString(t.IA6uDV, obj5);
+    }
+    return formatToPlainStringResult;
+  } else {
+    const intl3 = util.intl;
+    const formatToPlainString3 = intl3.formatToPlainString;
+    const t3 = util.t;
+    if (arg4) {
+      const obj6 = { username: author.author.globalName, appName };
+      let formatToPlainString3Result = formatToPlainString3(t3.XE8axA, obj6);
+    } else {
+      const obj = { username: author.author.globalName, appName };
+      formatToPlainString3Result = formatToPlainString3(t3.hgcjOn, obj);
+    }
+    return formatToPlainString3Result;
+  }
+}
+const ActivityActionTypes = fn(1074).ActivityActionTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
+
+export const getHeaderText = function getHeaderText(name, arg1, arg2) {
+  if (ActivityActionTypes.LISTEN === arg1) {
+    const intl5 = util.intl;
+    const obj2 = { name };
+    return intl5.formatToPlainString(util.t["/8czH4"], obj2);
+  } else if (tmp.WATCH === arg1) {
+    const intl4 = util.intl;
+    const obj = { name };
+    return intl4.formatToPlainString(util.t.BBJXVk, obj);
+  } else if (tmp.JOIN === arg1) {
+    let stringResult;
+    if (!arg2) {
+      const intl3 = util.intl;
+      stringResult = intl3.string(util.t.pkq6Vq);
+    }
+    return stringResult;
+  } else if (tmp.STREAM_REQUEST === arg1) {
+    const intl2 = util.intl;
+    return intl2.string(_modDef2882.DKHhec);
+  } else {
+    const JOIN_REQUEST = tmp.JOIN_REQUEST;
+    const intl = util.intl;
+    return intl.string(util.t.Ckxb6j);
+  }
+};
+export const getRequestToStreamText = function getRequestToStreamText(author, guild_id, id) {
+  if (author.author.id === id) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(_modDef2882["8B3U5O"]);
+  } else {
+    const intl = util.intl;
+    const obj = { username: NicknameUtils.getName(guild_id.guild_id, guild_id.id, author.author) };
+    stringResult = intl.formatToPlainString(_modDef2882["d/qbC0"], obj);
+  }
+  return stringResult;
+};
+export { getAskToJoinText };
+export const getDeadGameInviteText = function getDeadGameInviteText(activity, name_override, guild_id, id2, arg4) {
+  activity = activity.activity;
+  let type;
+  if (activity != null) {
+    type = activity.type;
+  }
+  if (ActivityActionTypes.LISTEN !== type) {
+    if (tmp2.WATCH !== type) {
+      if (tmp2.JOIN !== type) {
+        if (tmp2.STREAM_REQUEST === type) {
+          if (activity.author.id === id2) {
+            const intl2 = util.intl;
+            let stringResult = intl2.string(_modDef2882["8B3U5O"]);
+          } else {
+            const intl = util.intl;
+            const obj = { username: NicknameUtils.getName(guild_id.guild_id, guild_id.id, activity.author) };
+            stringResult = intl.formatToPlainString(_modDef2882["d/qbC0"], obj);
+          }
+          return stringResult;
+        } else {
+          const JOIN_REQUEST = tmp2.JOIN_REQUEST;
+          return getAskToJoinText(activity, name_override, guild_id, id2, true);
+        }
+      }
+    }
+  }
+  const intl3 = util.intl;
+  const t = util.t;
+  return intl3.string(arg4 ? t.x1UXGR : t["Ek+51n"]);
+};
+export const getPartyText = function getPartyText(arg0) {
+  ({ activityActionType, maxPartySize, partySize } = arg0);
+  if (activityActionType === ActivityActionTypes.STREAM_REQUEST) {
+    return "";
+  } else {
+    if (activityActionType !== tmp.LISTEN) {
+      if (maxPartySize > 0) {
+        const intl2 = util.intl;
+        const obj2 = { partySize, maxPartySize };
+        let formatToPlainStringResult = intl2.formatToPlainString(util.t.gLu7NU, obj2);
+      } else {
+        const intl = util.intl;
+        const obj = { partySize };
+        formatToPlainStringResult = intl.formatToPlainString(util.t["65JnWC"], obj);
+      }
+    }
+    if (maxPartySize > 0) {
+      const intl4 = util.intl;
+      const obj3 = { partySize, maxPartySize };
+      let formatToPlainStringResult1 = intl4.formatToPlainString(util.t.Zogoou, obj3);
+    } else {
+      const intl3 = util.intl;
+      const obj4 = { partySize };
+      formatToPlainStringResult1 = intl3.formatToPlainString(util.t.UGei0j, obj4);
+    }
+  }
+};

@@ -1,0 +1,22 @@
+// Module ID: 14530
+// Function ID: 14531
+// Name: CallKitManager
+// Dependencies: [1898, 2]
+
+// Module 14530 (CallKitManager)
+import LifecycleManager from "LifecycleManager" /* 1898 */;
+
+class CallKitLifecycleManager extends tmp2 {
+}
+const prototype = CallKitLifecycleManager.prototype;
+prototype["_initialize"] = function _initialize() {
+
+};
+prototype["_terminate"] = function _terminate() {
+
+};
+const callKitLifecycleManager = new CallKitLifecycleManager();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
+
+export default callKitLifecycleManager;

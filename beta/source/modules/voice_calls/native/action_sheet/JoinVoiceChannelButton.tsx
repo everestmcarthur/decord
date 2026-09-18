@@ -1,0 +1,53 @@
+// Module ID: 13872
+// Function ID: 13873
+// Name: JoinVoiceChannelButton
+// Dependencies: [19, 17, 4275, 1074, 21, 4636, 10067, 504, 1114, 1874, 5492, 5056, 2]
+// Exports: default
+
+// Module 13872 (JoinVoiceChannelButton)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10067 */;
+import noop from "module_19" /* 19 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = fn;
+const View = fn(17).View;
+const Permissions = fn(1074).Permissions;
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/JoinVoiceChannelButton.tsx");
+
+export default function JoinVoiceChannelButton(channel) {
+  channel = channel.channel;
+  const tmp = closure_9();
+  const tmp3 = useIsVoiceChannelFullDefault(channel);
+  const items = [PermissionStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => !PermissionStore.can(Permissions.CONNECT, channel));
+  const intl = channel(1114).intl;
+  let stringResult = intl.string(channel(1114).t.eIi3Om);
+  if (tmp3) {
+    const intl3 = tmp4(1114).intl;
+    stringResult = intl3.string(tmp4(1114).t.rZfiNq);
+    let flag = true;
+  } else {
+    flag = false;
+    if (stateFromStores) {
+      const intl2 = tmp4(1114).intl;
+      stringResult = intl2.string(tmp4(1114).t.TVBCKZ);
+      flag = true;
+    }
+  }
+  const items1 = [channel.id];
+  const obj2 = { style: null, children: null };
+  const items2 = [tmp.container, channel.style];
+  obj2.style = items2;
+  const callback = noop.useCallback(() => {
+    const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+    const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
+  }, items1);
+  obj2.children = jsx(channel(5056).Button, { disabled: flag, text: stringResult, onPress: callback });
+  return <View style={null}>{null}</View>;
+};

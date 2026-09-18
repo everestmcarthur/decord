@@ -1,0 +1,44 @@
+// Module ID: 6727
+// Function ID: 6728
+// Name: useBottomSheetKeyboardHandling
+// Dependencies: [19, 6728, 2]
+// Exports: default
+
+// Module 6727 (useBottomSheetKeyboardHandling)
+import BottomSheetModal from "BottomSheetModal" /* 6728 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
+
+export default function useBottomSheetKeyboardHandling(onFocus) {
+  onFocus = onFocus.onFocus;
+  const onBlur = onFocus.onBlur;
+  const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);
+  const items = [bottomSheetInternal, onBlur, onFocus];
+  return noop.useMemo(() => {
+    if (null == bottomSheetInternal) {
+      const obj2 = { onFocus, onBlur };
+      let obj = obj2;
+    } else {
+      obj = {
+        onFocus(arg0) {
+            const shouldHandleKeyboardEvents = bottomSheetInternal.shouldHandleKeyboardEvents;
+            const result = shouldHandleKeyboardEvents.set(true);
+            if (onFocus != null) {
+              tmp2(arg0);
+            }
+          },
+        onBlur(arg0) {
+            const shouldHandleKeyboardEvents = bottomSheetInternal.shouldHandleKeyboardEvents;
+            const result = shouldHandleKeyboardEvents.set(false);
+            if (onBlur != null) {
+              tmp2(arg0);
+            }
+          }
+      };
+    }
+    return obj;
+  }, items);
+};

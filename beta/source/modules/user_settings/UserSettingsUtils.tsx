@@ -1,0 +1,226 @@
+// Module ID: 1221
+// Function ID: 1222
+// Name: user_settings/UserSettingsUtils
+// Dependencies: [32, 1084, 1074, 1185, 1220, 1222, 1214, 12, 2]
+// Exports: b64ToPreloadedUserSettingsProto, b64ToProtoWithType, mergeTopLevelFields, mutateUserChannelSettings, mutateUserChannelSettingsInternal, mutateUserGuildSettings, mutateUserGuildSettingsInternal, protoToB64, protoToB64WithType, runMigrations, serializeUsageHistory
+
+// Module 1221 (user_settings/UserSettingsUtils)
+import _modDef12 from "module_12" /* 12 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import user_settings_shared from "user_settings_shared" /* 1214 */;
+import frecency_user_settings from "frecency_user_settings" /* 1220 */;
+import ProtoUtils from "ProtoUtils" /* 1222 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+require = fn;
+function b64ToProto(arg0, arg1) {
+  if (null == arg1) {
+    return null;
+  } else {
+    try {
+      return ProtoUtils.b64ToProto(arg0, arg1);
+    } catch (tmp4) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp4);
+      throw error;
+    }
+  }
+}
+const ZERO_STRING_GUILD_ID = fn(1074).ZERO_STRING_GUILD_ID;
+let obj = { [PRELOADED_USER_SETTINGS]: fn(1185).PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1220).FrecencyUserSettings };
+({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1084).UserSettingsTypes);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
+
+export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
+  let tmp = null;
+  if (null != proto) {
+    let tmp4 = null;
+    if (type in obj) {
+      tmp4 = b64ToProto(tmp3[type], proto);
+    }
+    tmp = tmp4;
+  }
+  return tmp;
+};
+export { b64ToProto };
+export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
+  return b64ToProto(preloaded_user_settings.PreloadedUserSettings, settings);
+};
+export const protoToB64WithType = function protoToB64WithType(arg0, arg1) {
+  obj = ProtoUtils;
+  return obj.protoToB64(obj[arg0], arg1);
+};
+export const protoToB64 = function protoToB64(arg0, arg1) {
+  return ProtoUtils.protoToB64(arg0, arg1);
+};
+export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
+  obj = {};
+  const merged = Object.assign(proto);
+  for (const key10007 in arg2) {
+    delete tmp[tmp2];
+    continue;
+  }
+  ProtoClass.mergePartial(obj, proto2);
+  return obj;
+};
+export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds, arg1, fn) {
+  if (null == guilds.guilds) {
+    const AllGuildSettings = preloaded_user_settings.AllGuildSettings;
+    guilds.guilds = AllGuildSettings.create();
+  }
+  let tmp3 = arg1;
+  guilds = guilds.guilds;
+  let tmp4 = null != arg1;
+  if (tmp4) {
+    tmp4 = "null" !== tmp3;
+  }
+  if (!tmp4) {
+    tmp3 = ZERO_STRING_GUILD_ID;
+  }
+  if (!(tmp3 in guilds.guilds)) {
+    const GuildSettings = preloaded_user_settings.GuildSettings;
+    guilds.guilds[tmp3] = GuildSettings.create();
+  }
+  return fn(guilds.guilds[tmp3]);
+};
+export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, arg1, fn) {
+  let tmp = arg1;
+  let tmp2 = null != arg1;
+  if (tmp2) {
+    tmp2 = "null" !== tmp;
+  }
+  if (!tmp2) {
+    tmp = ZERO_STRING_GUILD_ID;
+  }
+  if (!(tmp in guilds.guilds)) {
+    const GuildSettings = preloaded_user_settings.GuildSettings;
+    guilds.guilds[tmp] = GuildSettings.create();
+  }
+  return fn(guilds.guilds[tmp]);
+};
+export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, fn) {
+  if (null == guilds.guilds) {
+    const AllGuildSettings = preloaded_user_settings.AllGuildSettings;
+    guilds.guilds = AllGuildSettings.create();
+  }
+  let tmp3 = arg1;
+  guilds = guilds.guilds;
+  let tmp4 = null != arg1;
+  if (tmp4) {
+    tmp4 = "null" !== tmp3;
+  }
+  if (!tmp4) {
+    tmp3 = ZERO_STRING_GUILD_ID;
+  }
+  if (!(tmp3 in guilds.guilds)) {
+    const GuildSettings = preloaded_user_settings.GuildSettings;
+    guilds.guilds[tmp3] = GuildSettings.create();
+  }
+  if (!(id in guilds.guilds[tmp3].channels)) {
+    const ChannelSettings = preloaded_user_settings.ChannelSettings;
+    tmp7.channels[id] = ChannelSettings.create();
+  }
+  return fn(guilds.guilds[tmp3].channels[id]);
+};
+export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, arg1, fn) {
+  if (!(arg1 in channels.channels)) {
+    const ChannelSettings = preloaded_user_settings.ChannelSettings;
+    channels.channels[arg1] = ChannelSettings.create();
+  }
+  return fn(channels.channels[arg1]);
+};
+export const runMigrations = function runMigrations(proto, arg1) {
+  if (null == proto.versions) {
+    const Versions = user_settings_shared.Versions;
+    proto.versions = Versions.create();
+  }
+  let num = 0;
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    if (nextResult.version <= num) {
+      let tmp7 = globalThis;
+      let _Error = Error;
+      let str = "Migrations are out of order or there is a duplicate version";
+      throw Error("Migrations are out of order or there is a duplicate version");
+    } else {
+      num = tmp4.version;
+      continue;
+    }
+  }
+  let flag = false;
+  const items = [];
+  const iter2 = arg1[Symbol.iterator]();
+  const nextResult1 = iter2.next();
+  while (iter2 !== undefined) {
+    obj = nextResult1;
+    if (nextResult1.version <= proto.versions.clientVersion) {
+      if (tmp8) {
+        let cleanup2 = obj.cleanup;
+        if (cleanup2 != null) {
+          let cleanup2Result = cleanup2();
+        }
+      }
+    } else {
+      proto.versions.clientVersion = obj.version;
+      if (false !== obj.run(proto)) {
+        flag = true;
+        if (null != obj.cleanup) {
+          let arr = items.push(obj.cleanup);
+        }
+      } else {
+        let cleanup = obj.cleanup;
+        if (cleanup != null) {
+          let cleanupResult = cleanup();
+        }
+      }
+    }
+    continue;
+  }
+  return { proto, isDirty: flag, cleanupFuncs: items };
+};
+export const serializeUsageHistory = function serializeUsageHistory(usageHistory, arg1) {
+  let length;
+  const entries = Object.entries(usageHistory);
+  if (entries.length > arg1) {
+    const reversed = _modDef12.sortBy(entries, (arg0) => {
+      [, tmp] = arg0;
+      return tmp.recentUses[tmp.recentUses.length - 1];
+    }).reverse();
+    if (reversed.length > arg1) {
+      do {
+        let arr = reversed.pop();
+        length = reversed.length;
+      } while (length > arg1);
+    }
+    const sortByResult = _modDef12.sortBy(entries, (arg0) => {
+      [, tmp] = arg0;
+      return tmp.recentUses[tmp.recentUses.length - 1];
+    });
+  }
+  const obj2 = {};
+  while (tmp5 !== undefined) {
+    let tmp8 = _slicedToArray(tmp6, 2);
+    let tmp9 = tmp8[1];
+    let FrecencyItem = frecency_user_settings.FrecencyItem;
+    let obj3 = FrecencyItem.create();
+    ({ frecency: tmp12.frecency, recentUses } = tmp9);
+    let found = recentUses.filter((item) => {
+      let tmp = null != item;
+      if (tmp) {
+        tmp = item > 0;
+      }
+      return tmp;
+    });
+    let _String = String;
+    obj3.recentUses = found.map(String);
+    let _Math = Math;
+    obj3.score = Math.round(tmp9.score);
+    obj3.totalUses = tmp9.totalUses;
+    obj2[tmp8[0]] = obj3;
+    continue;
+  }
+  return obj2;
+};

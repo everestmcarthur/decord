@@ -1,0 +1,78 @@
+// Module ID: 17471
+// Function ID: 17472
+// Name: UploadLogsActionSheet
+// Dependencies: [19, 17, 1074, 21, 4636, 576, 7253, 7252, 1114, 4632, 5056, 10316, 1240, 4603, 2]
+// Exports: default
+
+// Module 17471 (UploadLogsActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import DebugUploadManager from "DebugUploadManager" /* 10316 */;
+import noop from "module_19" /* 19 */;
+
+const ActionSheetActionCreatorsDefault = tmp3(4603);
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4636);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj4 = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.buttonSpacer = { height: nativeDefault.space.PX_8 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/feedback/native/UploadLogsActionSheet.tsx");
+
+export default function UploadLogsActionSheet(arg0) {
+  ({ mediaSessionId: require, rtcConnectionId: importDefault } = arg0);
+  const tmp = closure_8();
+  let obj = { header: null, children: null };
+  let obj2 = { title: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.KTjjrG);
+  obj.header = closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  let obj3 = { style: tmp.container, children: null };
+  const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t["ZvRR/t"]);
+  const items = [closure_6(Text_Text.Text, obj4), , , ];
+  const obj5 = { text: null, onPress: null };
+  const intl3 = util.intl;
+  obj5.text = intl3.string(util.t.EbwFfR);
+  obj5.onPress = function onPress() {
+    DebugUploadManager.uploadDebugLogFiles(constants2.RTC);
+    let tmp4 = closure_1_0;
+    if (closure_1_0 == null) {
+      tmp4 = null;
+    }
+    const obj3 = { media_session_id: tmp4, rtc_connection_id: null };
+    let tmp5 = closure_1_1;
+    if (closure_1_1 == null) {
+      tmp5 = null;
+    }
+    obj3.rtc_connection_id = tmp5;
+    AnalyticsUtilsDefault.track(constants.DEBUG_LOG_UPLOADED, obj3);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+  };
+  items[1] = closure_6(components_Button_Button.Button, obj5);
+  items[2] = closure_6(View, { style: tmp.buttonSpacer });
+  const obj7 = { text: null, variant: "secondary", onPress: null };
+  const intl4 = util.intl;
+  obj7.text = intl4.string(util.t["ETE/oC"]);
+  obj7.onPress = function onPress() {
+    return ActionSheetActionCreatorsDefault.hideActionSheet();
+  };
+  items[3] = closure_6(components_Button_Button.Button, obj7);
+  obj3.children = items;
+  obj.children = closure_7(View, obj3);
+  return closure_6(Sheet_BottomSheet.BottomSheet, obj);
+};

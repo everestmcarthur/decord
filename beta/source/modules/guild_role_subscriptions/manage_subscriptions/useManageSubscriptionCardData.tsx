@@ -1,0 +1,99 @@
+// Module ID: 15307
+// Function ID: 15308
+// Name: useManageSubscriptionCardData
+// Dependencies: [32, 19, 1979, 4269, 1074, 4228, 7337, 1114, 15298, 504, 15296, 2]
+// Exports: default
+
+// Module 15307 (useManageSubscriptionCardData)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4269 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx");
+
+export default function useManageSubscriptionCardData(currentPeriodEnd) {
+  _require = require("subscriptionUtils").getRoleSubscriptionPlanId(currentPeriodEnd);
+  const obj = require("subscriptionUtils");
+  const items = [fetchSubscriptionsSettings];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListingForPlan(closure_0));
+  const obj2 = require("initialize");
+  const items1 = [fetchSubscriptionsSettings];
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    let subscriptionGroupListingForSubscriptionListing = null;
+    if (null != stateFromStores) {
+      subscriptionGroupListingForSubscriptionListing = GuildRoleSubscriptionsStore.getSubscriptionGroupListingForSubscriptionListing(tmp.id);
+    }
+    return subscriptionGroupListingForSubscriptionListing;
+  });
+  const obj3 = require("initialize");
+  const items2 = [closure_5];
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
+    let guild_id;
+    if (stateFromStores1 != null) {
+      guild_id = stateFromStores1.guild_id;
+    }
+    return GuildStore.getGuild(guild_id);
+  });
+  const tmp6 = stateFromStores2(expanded.useState(false), 2);
+  expanded = tmp6[0];
+  closure_5 = tmp6[1];
+  const obj4 = require("initialize");
+  fetchSubscriptionsSettings = require("GuildRoleSubscriptionsHooks").useFetchSubscriptionsSettings().fetchSubscriptionsSettings;
+  const items3 = [expanded, stateFromStores2, fetchSubscriptionsSettings];
+  const effect = expanded.useEffect(() => {
+    let tmp = first;
+    if (first) {
+      tmp = null != stateFromStores2;
+    }
+    if (tmp) {
+      tmp = null == GuildRoleSubscriptionsStore.getSubscriptionSettings(stateFromStores2.id);
+    }
+    if (tmp) {
+      fetchSubscriptionsSettings(stateFromStores2.id);
+    }
+  }, items3);
+  if (null == stateFromStores) {
+    const obj7 = {
+      guild: stateFromStores2,
+      expanded,
+      handleToggleExpanded() {
+          return closure_5((arg0) => !arg0);
+        },
+      listing: stateFromStores,
+      groupListing: stateFromStores1,
+      subscriptionInfo: undefined
+    };
+    return obj7;
+  } else {
+    let str2 = "";
+    const obj6 = stateFromStores(tmp2[5])(currentPeriodEnd.currentPeriodEnd);
+    const tmp9 = stateFromStores;
+    if (null != currentPeriodEnd.price) {
+      str2 = tmp(tmp2[6]).formatPrice(currentPeriodEnd.price, currentPeriodEnd.currency);
+      const tmpResult = tmp(tmp2[6]);
+    }
+    const formatResult = stateFromStores(tmp2[5])(currentPeriodEnd.currentPeriodEnd).format("M/D/YY");
+    const obj9 = { memberSince: tmp9(tmp2[5])(currentPeriodEnd.createdAt).format("M/D/YY"), nextRenewalDate: formatResult, nextRenewalLabel: null, subscriptionPrice: null, isCancelled: null, isPastDue: null, isTrial: null };
+    const intl = tmp(tmp2[7]).intl;
+    const string = intl.string;
+    let UAfot2 = tmp(tmp2[7]).t;
+    if (currentPeriodEnd.status === SubscriptionStatusTypes.CANCELED) {
+      UAfot2 = UAfot2.UAfot2;
+      let stringResult = string(UAfot2);
+    } else {
+      stringResult = string(UAfot2.CVjLcM);
+    }
+    obj9.nextRenewalLabel = stringResult;
+    obj9.subscriptionPrice = str2;
+    obj9.isCancelled = currentPeriodEnd.status === SubscriptionStatusTypes.CANCELED;
+    obj9.isPastDue = currentPeriodEnd.status === SubscriptionStatusTypes.PAST_DUE;
+    obj9.isTrial = currentPeriodEnd.hasActiveTrial;
+    const obj8 = tmp9(tmp2[5])(currentPeriodEnd.createdAt);
+  }
+};

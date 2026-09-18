@@ -1,0 +1,26 @@
+// Module ID: 16496
+// Function ID: 16497
+// Name: ConnectionFineIcon
+// Dependencies: [19, 21, 576, 4337, 16497, 2]
+// Exports: ConnectionFineIcon
+
+// Module 16496 (ConnectionFineIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod16497 from "module_16497" /* 16497 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx");
+
+export const ConnectionFineIcon = function ConnectionFineIcon(color) {
+  let ICON_FEEDBACK_POSITIVE = color.color;
+  if (ICON_FEEDBACK_POSITIVE === undefined) {
+    ICON_FEEDBACK_POSITIVE = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
+  }
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16497, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+};

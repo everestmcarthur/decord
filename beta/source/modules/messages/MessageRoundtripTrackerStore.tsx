@@ -1,0 +1,158 @@
+// Module ID: 7561
+// Function ID: 7562
+// Name: MessageRoundtripTrackerStore
+// Dependencies: [1957, 4556, 4685, 1074, 3, 7562, 1240, 7779, 504, 573, 2]
+
+// Module 7561 (MessageRoundtripTrackerStore)
+import LoggerDefault from "Logger" /* 3 */;
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import NetStats from "NetStats" /* 7562 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7779 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
+import NetworkStore from "NetworkStore" /* 4685 */;
+
+require = fn;
+function trackRoundtrip(channelId) {
+  const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
+  if (null != basicChannel) {
+    const _Math = Math;
+    if (Math.random() <= 0.1) {
+      let diff = null;
+      if (null != channelId.apiResponseTimestamp) {
+        diff = channelId.apiResponseTimestamp - channelId.initialSendTimestamp;
+      }
+      let diff1 = null;
+      if (null != channelId.gatewaySeenTimestamp) {
+        diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
+      }
+      const signalStrength = NetStats.getSignalStrength();
+      const obj4 = {};
+      const merged = Object.assign(getDeviceMetadataDefault());
+      obj4.api_latency_ms = diff;
+      obj4.gateway_latency_ms = diff1;
+      ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);
+      obj4.guild_size = GuildMemberCountStore.getMemberCount(basicChannel.guild_id);
+      obj4.mobile_network_type = NetworkStore.getType();
+      obj4.num_attachments = channelId.attachmentCount;
+      let tmp17 = null != signalStrength;
+      if (tmp17) {
+        const obj6 = { mobile_signal_strength_level: signalStrength };
+        tmp17 = obj6;
+      }
+      const merged1 = Object.assign(tmp17);
+      AnalyticsUtilsDefault.track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj4);
+    }
+  } else {
+    const _HermesInternal = HermesInternal;
+    logger.warn("Ignoring a messageData for channel " + channelId.channelId + " because we can't find that channel.");
+  }
+}
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const logger = new LoggerDefault("MessageRoundtripTrackerStore");
+const Store = initializeDefault.Store;
+class MessageRoundtripTrackerStoreClass extends Store {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    map = new Map();
+    applyArgumentsResult.pendingMessages = map;
+    return applyArgumentsResult;
+  }
+}
+const prototype = MessageRoundtripTrackerStoreClass.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, GuildMemberCountStore, NetworkStore);
+};
+prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(channelId, arg1, arg2) {
+  const self = this;
+  closure_0 = arg1;
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  const attachments = obj.attachments;
+  let num;
+  if (attachments != null) {
+    num = attachments.length;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  const attachmentsToUpload = obj.attachmentsToUpload;
+  let num2;
+  if (attachmentsToUpload != null) {
+    num2 = attachmentsToUpload.length;
+  }
+  if (num2 == null) {
+    num2 = 0;
+  }
+  let pendingMessages = this.pendingMessages;
+  const result = pendingMessages.set(arg1, { initialSendTimestamp: Date.now(), apiResponseTimestamp: null, gatewaySeenTimestamp: null, channelId, attachmentCount: num + num2 });
+  const timerId = setTimeout(() => {
+    const pendingMessages = self.pendingMessages;
+    value = pendingMessages.get(closure_0);
+    if (null != value) {
+      trackRoundtrip(value);
+      const pendingMessages2 = self.pendingMessages;
+      pendingMessages2.delete(closure_0);
+    }
+  }, 30000);
+};
+prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(arg0) {
+  const self = this;
+  const pendingMessages = this.pendingMessages;
+  value = pendingMessages.get(arg0);
+  if (null != value) {
+    const obj = {};
+    const merged = Object.assign(value);
+    const _Date = Date;
+    obj.apiResponseTimestamp = Date.now();
+    if (tmp6) {
+      trackRoundtrip(obj);
+      const pendingMessages3 = self.pendingMessages;
+      pendingMessages3.delete(arg0);
+    } else {
+      const pendingMessages2 = self.pendingMessages;
+      const result = pendingMessages2.set(arg0, obj);
+    }
+    tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
+  }
+};
+prototype["recordGatewayResponse"] = function recordGatewayResponse(nonce) {
+  const self = this;
+  const pendingMessages = this.pendingMessages;
+  value = pendingMessages.get(nonce);
+  if (null != value) {
+    const obj = {};
+    const merged = Object.assign(value);
+    const _Date = Date;
+    obj.gatewaySeenTimestamp = Date.now();
+    if (tmp6) {
+      trackRoundtrip(obj);
+      const pendingMessages3 = self.pendingMessages;
+      pendingMessages3.delete(nonce);
+    } else {
+      const pendingMessages2 = self.pendingMessages;
+      const result = pendingMessages2.set(nonce, obj);
+    }
+    tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
+  }
+};
+const messageRoundtripTrackerStoreClass = new MessageRoundtripTrackerStoreClass(DispatcherDefault, {
+  MESSAGE_CREATE: function handleMessageCreate(optimistic) {
+    optimistic = optimistic.optimistic;
+    const nonce = optimistic.message.nonce;
+    if (!optimistic) {
+      optimistic = null == nonce;
+    }
+    if (!optimistic) {
+      const result = messageRoundtripTrackerStoreClass.recordGatewayResponse(nonce);
+    }
+  }
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/MessageRoundtripTrackerStore.tsx");
+
+export default messageRoundtripTrackerStoreClass;

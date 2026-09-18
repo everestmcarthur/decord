@@ -1,0 +1,30 @@
+// Module ID: 7595
+// Function ID: 7596
+// Name: timeRequire
+// Dependencies: [10, 2]
+// Exports: default
+
+// Module 7595 (timeRequire)
+import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
+
+export default function timeRequire(arg0, fn) {
+  const timestamp = Date.now();
+  const diff = Date.now() - timestamp;
+  if (diff >= 5) {
+    if (typeof require.getModules === "function") {
+      const modules = obj2.getModules();
+      const _Object = Object;
+      const keys = Object.keys(modules);
+      const _HermesInternal = HermesInternal;
+      AppStartPerformanceDefault.mark("\u{1F3C3}", "Require " + arg0 + " (" + keys.filter((item) => modules[item].isInitialized).length + " modules)", diff);
+    } else {
+      const _HermesInternal2 = HermesInternal;
+      AppStartPerformanceDefault.mark("\u{1F3C3}", "Require " + arg0, diff);
+    }
+    obj2 = require;
+  }
+  return fn();
+};

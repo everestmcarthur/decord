@@ -1,0 +1,17 @@
+// Module ID: 11420
+// Function ID: 11421
+// Name: BountiesMobileQuestBarExperiment
+// Dependencies: [1433, 2]
+
+// Module 11420 (BountiesMobileQuestBarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
+
+const obj = { name: "2026-08-bounties-mobile-quest-bar", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/BountiesMobileQuestBarExperiment.tsx");
+
+export const BountiesMobileQuestBarExperiment = apexExperiment;

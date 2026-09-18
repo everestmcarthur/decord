@@ -1,0 +1,186 @@
+// Module ID: 16593
+// Function ID: 16594
+// Name: ICYMIMessageRowPreview
+// Dependencies: [19, 1074, 21, 8001, 7983, 8038, 7405, 4571, 4636, 576, 1935, 8036, 8775, 8243, 1114, 2]
+
+// Module 16593 (ICYMIMessageRowPreview)
+import UserSettings from "UserSettings" /* 1935 */;
+import createStyles from "createStyles" /* 4636 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
+import RowGeneratorDefault from "RowGenerator" /* 8036 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function ICYMIMessageRowPreview(pointerEvents) {
+  ({ lineClamp: require, messageOptions } = pointerEvents);
+  let str = pointerEvents.pointerEvents;
+  ({ message, messageSizeCacheRef, maxHeight } = pointerEvents);
+  if (str === undefined) {
+    str = "none";
+  }
+  const tmp = messageOptions(4571)();
+  let obj = createStyles;
+  dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(576).colors.TEXT_DEFAULT })(tmp);
+  const RenderEmbeds = UserSettings.RenderEmbeds;
+  const setting = RenderEmbeds.getSetting();
+  const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
+  const setting1 = InlineEmbedMedia.getSetting();
+  const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
+  const setting2 = InlineAttachmentMedia.getSetting();
+  const items = [setting, setting1, setting2, messageOptions];
+  const memo = setting.useMemo(() => {
+    const obj = new RowGeneratorDefault();
+    const merged = Object.assign(messageOptions);
+    obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
+    return obj;
+  }, items);
+  return setting2(messageOptions(8775), {
+    pointerEvents: str,
+    horizontalOffset: 0,
+    modifyRow(arg0) {
+      arg0.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
+      if (null != closure_1_0) {
+        const obj = { numberOfLines: tmp3, expandable: false, seeMoreLabel: null, seeMoreLabelColor: null };
+        const intl = tmp(1114).intl;
+        obj.seeMoreLabel = intl.string(tmp(1114).t.qCozu3);
+        obj.seeMoreLabelColor = seeMoreLabelColor.seeMoreLabelColor;
+        arg0.truncation = obj;
+      }
+    },
+    message,
+    rowGenerator: memo,
+    messageSizeCacheRef,
+    maxHeight
+  });
+}
+const MessageEmbedTypes = fn(1074).MessageEmbedTypes;
+const jsx = fn(21).jsx;
+const memoResult = noop.memo((message) => {
+  message = message.message;
+  const merged = Object.assign(message, Object.assign({ message: 0, messageOptions: 0 }));
+  const items = [message];
+  const memo = noop.useMemo(() => {
+    const result = message.set("content", null);
+    const embeds = result.embeds;
+    const result1 = result.set("embeds", embeds.filter((type) => {
+      type = type.type;
+      return type === constants.IMAGE || type === constants.GIFV;
+    }));
+    const attachments = result1.attachments;
+    const result2 = result1.set("attachments", attachments.filter((item) => message(memo[3]).isMediaAttachment(item)));
+    return result2.set("editedTimestamp", null);
+  }, items);
+  const items1 = [memo, , ];
+  ({ muted: arr2[1], lineClamp: arr2[2] } = merged);
+  let obj = {};
+  const merged1 = Object.assign(noop.useMemo(() => {
+    const obj = { message: memo, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY, muted: null, lineClamp: null };
+    let flag = merged.muted;
+    if (flag == null) {
+      flag = false;
+    }
+    obj.muted = flag;
+    obj.lineClamp = merged.lineClamp;
+    return obj;
+  }, items1));
+  const obj2 = {};
+  const merged2 = Object.assign(message(memo[5]).DEFAULT_OPTIONS);
+  obj2.ignoreMentioned = true;
+  obj2.renderReplies = false;
+  obj2.renderThreadEmbeds = false;
+  obj2.renderReactions = false;
+  obj2.renderEmbeds = true;
+  obj2.gifAutoPlay = true;
+  obj2.animateEmoji = true;
+  obj2.renderPolls = true;
+  obj2.inlineEmbedMedia = true;
+  obj2.renderForumPostActions = false;
+  obj2.renderAttachments = true;
+  const merged3 = Object.assign(message.messageOptions);
+  obj.messageOptions = obj2;
+  return <ICYMIMessageRowPreview />;
+});
+const memoResult1 = noop.memo((message) => {
+  message = message.message;
+  const merged = Object.assign(message, Object.assign({ message: 0, messageOptions: 0 }));
+  const items = [message];
+  const memo = noop.useMemo(() => {
+    const result = message.set("content", null);
+    const embeds = result.embeds;
+    const found = embeds.filter((type) => {
+      type = type.type;
+      return !(type === constants.IMAGE || type === constants.GIFV);
+    });
+    const result1 = result.set("embeds", found.slice(0, 1));
+    const attachments = result1.attachments;
+    const found1 = attachments.filter((item) => !message(memo[3]).isMediaAttachment(item));
+    const result2 = result1.set("attachments", found1.slice(0, 1));
+    return result2.set("editedTimestamp", null);
+  }, items);
+  const items1 = [memo, , ];
+  ({ muted: arr2[1], lineClamp: arr2[2] } = merged);
+  let obj = {};
+  const merged1 = Object.assign(noop.useMemo(() => {
+    const obj = { message: memo, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY, muted: null, lineClamp: null };
+    let flag = merged.muted;
+    if (flag == null) {
+      flag = false;
+    }
+    obj.muted = flag;
+    obj.lineClamp = merged.lineClamp;
+    return obj;
+  }, items1));
+  const obj2 = {};
+  const merged2 = Object.assign(message(memo[5]).DEFAULT_OPTIONS);
+  obj2.ignoreMentioned = true;
+  obj2.renderReplies = false;
+  obj2.renderThreadEmbeds = false;
+  obj2.renderReactions = false;
+  obj2.renderEmbeds = true;
+  obj2.renderAttachments = true;
+  const merged3 = Object.assign(message.messageOptions);
+  obj.messageOptions = obj2;
+  return <ICYMIMessageRowPreview />;
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRowPreview.tsx");
+
+export const MediaOnlyRowPreview = memoResult;
+export const NonMediaEmbedsRowPreview = memoResult1;
+export const MessageRowPreview = noop.memo((message) => {
+  message = message.message;
+  const merged = Object.assign(message, Object.assign({ message: 0, messageOptions: 0 }));
+  const items = [message, , , ];
+  ({ lineClamp: arr[1], muted: arr[2], pointerEvents: arr[3] } = merged);
+  const memo = noop.useMemo(() => {
+    const obj = { message, lineClamp: merged.lineClamp, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY, muted: null, pointerEvents: null };
+    let flag = merged.muted;
+    if (flag == null) {
+      flag = false;
+    }
+    obj.muted = flag;
+    obj.pointerEvents = merged.pointerEvents;
+    return obj;
+  }, items);
+  const tmp3 = merged(7405)(message);
+  let obj = {};
+  const merged1 = Object.assign(memo);
+  const obj2 = {};
+  const merged2 = Object.assign(message(8038).DEFAULT_OPTIONS);
+  obj2.ignoreMentioned = true;
+  obj2.renderReplies = false;
+  obj2.renderThreadEmbeds = false;
+  obj2.renderReactions = false;
+  obj2.gifAutoPlay = true;
+  obj2.animateEmoji = true;
+  obj2.renderPolls = true;
+  obj2.renderForumPostActions = false;
+  obj2.renderAttachments = tmp3;
+  obj2.renderEmbeds = tmp3;
+  obj2.inlineEmbedMedia = tmp3;
+  const merged3 = Object.assign(message.messageOptions);
+  obj.messageOptions = obj2;
+  obj.seeMoreLabel = "...";
+  return <ICYMIMessageRowPreview />;
+});

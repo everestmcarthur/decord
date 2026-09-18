@@ -1,0 +1,44 @@
+// Module ID: 10061
+// Function ID: 10062
+// Name: useLocalStorageState
+// Dependencies: [32, 19, 510, 5073, 2]
+// Exports: useLocalStorageState
+
+// Module 10061 (useLocalStorageState)
+import Storage3 from "Storage" /* 510 */;
+import useMountEffectDefault from "useMountEffect" /* 5073 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("hooks/useLocalStorageState.tsx");
+
+export const useLocalStorageState = function useLocalStorageState(arg0, arg1) {
+  closure_0 = arg0;
+  importDefault = arg1;
+  const tmp = _slicedToArray(noop.useState(() => {
+    const Storage = Storage3.Storage;
+    value = Storage.get(closure_0);
+    if (null == value) {
+      value = closure_1;
+    }
+    return value;
+  }), 2);
+  dependencyMap = tmp[1];
+  useMountEffectDefault(() => {
+    const Storage = Storage3.Storage;
+    if (null == Storage.get(closure_0)) {
+      const Storage2 = Storage3.Storage;
+      const result = Storage2.set(closure_0, closure_1);
+    }
+  });
+  const items = [tmp[0], ];
+  const items1 = [arg0];
+  items[1] = noop.useCallback((arg0) => {
+    closure_2(arg0);
+    const Storage = Storage3.Storage;
+    const result = Storage.set(closure_0, arg0);
+  }, items1);
+  return items;
+};

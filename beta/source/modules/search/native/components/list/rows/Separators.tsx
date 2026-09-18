@@ -1,0 +1,27 @@
+// Module ID: 16758
+// Function ID: 16759
+// Name: Separators
+// Dependencies: [19, 17, 7982, 21, 4636, 2]
+// Exports: CardVerticalSeparator, MediaVerticalSeparator, MessageVerticalSeparator
+
+// Module 16758 (Separators)
+import noop from "module_19" /* 19 */;
+
+const View = fn(17).View;
+const SearchConstants = fn(7982);
+({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let closure_2 = createStyles.createStyles({ filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH }, mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH }, messageSeparator: { height: 4 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/Separators.tsx");
+
+export const MessageVerticalSeparator = function MessageVerticalSeparator() {
+  return <View style={closure_2().messageSeparator} />;
+};
+export const MediaVerticalSeparator = function MediaVerticalSeparator() {
+  return <View style={closure_2().mediaSeparator} />;
+};
+export const CardVerticalSeparator = function CardVerticalSeparator() {
+  return <View style={closure_2().filesOrLinksSeparator} />;
+};

@@ -1,0 +1,26 @@
+// Module ID: 17254
+// Function ID: 17255
+// Name: useActivityShelfItemData
+// Dependencies: [19, 12172, 2]
+// Exports: useActivityShelfItemData
+
+// Module 17254 (useActivityShelfItemData)
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12172 */;
+import noop from "module_19" /* 19 */;
+
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
+
+export const useActivityShelfItemData = function useActivityShelfItemData(guild_id1, applicationId) {
+  closure_0 = applicationId;
+  const tmp = useActivityShelfItemsDefault({ guildId: guild_id1 });
+  closure_1 = tmp;
+  const items = [tmp, applicationId];
+  return noop.useMemo(() => {
+    let found = closure_1.find((application) => application.application.id === applicationId);
+    if (found == null) {
+      found = null;
+    }
+    return found;
+  }, items);
+};

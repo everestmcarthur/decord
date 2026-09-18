@@ -1,0 +1,46 @@
+// Module ID: 15576
+// Function ID: 15577
+// Name: CustomStatusNotificationSettings
+// Dependencies: [8079, 1074, 4288, 1935, 1185, 1240, 11605, 1114, 2]
+// Exports: onChange
+
+// Module 15576 (CustomStatusNotificationSettings)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4288 */;
+import SettingsConstants from "SettingsConstants" /* 8079 */;
+import SettingBuilders from "SettingBuilders" /* 11605 */;
+import size from "module_2" /* 2 */;
+
+function onChange(custom_status_push_notifications) {
+  const CustomStatusPushNotifications = UserSettings.CustomStatusPushNotifications;
+  const CustomStatusPushNotificationType = preloaded_user_settings.CustomStatusPushNotificationType;
+  CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, custom_status_push_notifications });
+}
+const AnalyticEvents = Constants.AnalyticEvents;
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const toggle = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.PTtxi9);
+  },
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(util.t["/+OQEs"]);
+  },
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue() {
+    const CustomStatusPushNotifications = UserSettings.CustomStatusPushNotifications;
+    const setting = CustomStatusPushNotifications.useSetting();
+    return setting !== preloaded_user_settings.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
+  },
+  onValueChange: onChange
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx");
+
+export default toggle;
+export { onChange };

@@ -1,0 +1,244 @@
+// Module ID: 1118
+// Function ID: 1119
+// Name: AssetJsonUtils
+// Dependencies: [5, 17, 1119, 1121, 1122, 1123, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1149, 1150, 2]
+
+// Module 1118 (AssetJsonUtils)
+import _mod1119 from "module_1119" /* 1119 */;
+import _mod1121 from "module_1121" /* 1121 */;
+import _mod1122 from "module_1122" /* 1122 */;
+import _mod1123 from "module_1123" /* 1123 */;
+import _mod1124 from "module_1124" /* 1124 */;
+import _mod1125 from "module_1125" /* 1125 */;
+import _mod1126 from "module_1126" /* 1126 */;
+import _mod1127 from "module_1127" /* 1127 */;
+import _mod1128 from "module_1128" /* 1128 */;
+import _mod1129 from "module_1129" /* 1129 */;
+import _mod1130 from "module_1130" /* 1130 */;
+import _mod1131 from "module_1131" /* 1131 */;
+import _mod1132 from "module_1132" /* 1132 */;
+import _mod1133 from "module_1133" /* 1133 */;
+import _mod1134 from "module_1134" /* 1134 */;
+import _mod1135 from "module_1135" /* 1135 */;
+import _mod1136 from "module_1136" /* 1136 */;
+import _mod1137 from "module_1137" /* 1137 */;
+import _mod1138 from "module_1138" /* 1138 */;
+import _mod1139 from "module_1139" /* 1139 */;
+import _mod1140 from "module_1140" /* 1140 */;
+import _mod1141 from "module_1141" /* 1141 */;
+import _mod1142 from "module_1142" /* 1142 */;
+import _mod1143 from "module_1143" /* 1143 */;
+import _mod1144 from "module_1144" /* 1144 */;
+import _mod1145 from "module_1145" /* 1145 */;
+import _mod1146 from "module_1146" /* 1146 */;
+import _mod1147 from "module_1147" /* 1147 */;
+import _mod1148 from "module_1148" /* 1148 */;
+import _mod1149 from "module_1149" /* 1149 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+require = fn;
+function loadJsonAsset() {
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_7 = async function _loadJsonAsset(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          c3 = 0;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = true;
+          }
+          closure_130_1 = flag;
+          let uri;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          if (null != closure_131_5[closure_130_0]) {
+            if (closure_130_1) {
+              c5 = 3;
+              const obj6 = { value: closure_131_5[closure_130_0], done: true };
+              return obj6;
+            }
+          }
+          uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
+          c4 = 2;
+          c5 = 1;
+          const obj7 = { value: closure_131_1(closure_131_2[32]).readAsset(uri, "utf8"), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_130_3 = value;
+        if (null == closure_130_3) {
+          c5 = 3;
+          return { value: null, done: true };
+        } else {
+          if (null != closure_131_5[closure_130_0]) {
+            if (closure_130_1) {
+              c5 = 3;
+              const obj9 = { value: closure_131_5[closure_130_0], done: true };
+              return obj9;
+            }
+          }
+          const _JSON = JSON;
+          closure_130_4 = JSON.parse(closure_130_3);
+          closure_131_5[closure_130_0] = closure_130_4;
+          c5 = 3;
+          const obj = { value: closure_130_4, done: true };
+          return obj;
+        }
+      }
+    } catch (tmp31) {
+      c5 = tmp;
+      throw tmp31;
+    }
+  }
+};
+const Image = fn(17).Image;
+let closure_5 = {};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/asset_json/native/AssetJsonUtils.tsx");
+
+export const jsonAssets = {
+  i18n_bg() {
+    return loadJsonAsset(_mod1119);
+  },
+  i18n_cs() {
+    return loadJsonAsset(_mod1121);
+  },
+  i18n_da() {
+    return loadJsonAsset(_mod1122);
+  },
+  i18n_de() {
+    return loadJsonAsset(_mod1123);
+  },
+  i18n_el() {
+    return loadJsonAsset(_mod1124);
+  },
+  i18n_enGB() {
+    return loadJsonAsset(_mod1125);
+  },
+  i18n_esES() {
+    return loadJsonAsset(_mod1126);
+  },
+  i18n_es419() {
+    return loadJsonAsset(_mod1127);
+  },
+  i18n_fi() {
+    return loadJsonAsset(_mod1128);
+  },
+  i18n_fr() {
+    return loadJsonAsset(_mod1129);
+  },
+  i18n_hr() {
+    return loadJsonAsset(_mod1130);
+  },
+  i18n_hu() {
+    return loadJsonAsset(_mod1131);
+  },
+  i18n_it() {
+    return loadJsonAsset(_mod1132);
+  },
+  i18n_ja() {
+    return loadJsonAsset(_mod1133);
+  },
+  i18n_ko() {
+    return loadJsonAsset(_mod1134);
+  },
+  i18n_lt() {
+    return loadJsonAsset(_mod1135);
+  },
+  i18n_nl() {
+    return loadJsonAsset(_mod1136);
+  },
+  i18n_no() {
+    return loadJsonAsset(_mod1137);
+  },
+  i18n_pl() {
+    return loadJsonAsset(_mod1138);
+  },
+  i18n_ptBR() {
+    return loadJsonAsset(_mod1139);
+  },
+  i18n_ro() {
+    return loadJsonAsset(_mod1140);
+  },
+  i18n_ru() {
+    return loadJsonAsset(_mod1141);
+  },
+  i18n_svSE() {
+    return loadJsonAsset(_mod1142);
+  },
+  i18n_th() {
+    return loadJsonAsset(_mod1143);
+  },
+  i18n_tr() {
+    return loadJsonAsset(_mod1144);
+  },
+  i18n_uk() {
+    return loadJsonAsset(_mod1145);
+  },
+  i18n_vi() {
+    return loadJsonAsset(_mod1146);
+  },
+  i18n_zhCN() {
+    return loadJsonAsset(_mod1147);
+  },
+  i18n_zhTW() {
+    return loadJsonAsset(_mod1148);
+  },
+  i18n_hi() {
+    return loadJsonAsset(_mod1149);
+  }
+};
+export { loadJsonAsset };

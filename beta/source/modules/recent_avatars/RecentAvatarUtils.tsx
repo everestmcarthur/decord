@@ -1,0 +1,228 @@
+// Module ID: 8286
+// Function ID: 8287
+// Name: RecentAvatarUtils
+// Dependencies: [1074, 1396, 1430, 1471, 1114, 7092, 1369, 2]
+// Exports: generateAvatarDescription, generateRecentAvatarFileDetails, getImageFormat, getPendingAvatarSrc
+
+// Module 8286 (RecentAvatarUtils)
+import Constants from "Constants" /* 1074 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import _modDef1471 from "module_1471" /* 1471 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7092 */;
+import size from "module_2" /* 2 */;
+
+function getArchivedAvatarURL(allowWebp) {
+  ({ userId, avatarId, storageHash, canAnimate } = allowWebp);
+  if (canAnimate === undefined) {
+    canAnimate = false;
+  }
+  let flag = allowWebp.allowWebp;
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (null != CDN_HOST) {
+    const _HermesInternal = HermesInternal;
+    let combined = "https://" + CDN_HOST;
+  } else {
+    const _location = location;
+    const _window = window;
+    combined = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
+  }
+  let flag2 = canAnimate;
+  if (canAnimate === undefined) {
+    flag2 = false;
+  }
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (flag2) {
+    if (obj.isAnimatedIconHash(storageHash)) {
+      let str6 = "gif";
+      if (flag) {
+        str6 = "gif";
+        if (tmp2(1396).SUPPORTS_WEBP) {
+          str6 = "webp";
+        }
+      }
+      let str2 = str6;
+    }
+    const obj2 = { size: null };
+    obj = AvatarUtils;
+    tmp2 = require;
+    const tmp6 = require;
+    const obj3 = ImageLoaderUtils;
+    obj2.size = obj3.getBestMediaProxySize(allowWebp.size * ImageLoaderUtils.getDevicePixelRatio());
+    let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
+    if (isAnimatedIconHashResult) {
+      isAnimatedIconHashResult = tmp6(1396).isAnimatedIconHash(storageHash);
+      const tmp6Result = tmp6(1396);
+    }
+    if (isAnimatedIconHashResult) {
+      obj2.animated = true;
+    }
+    const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
+    const _HermesInternal2 = HermesInternal;
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1471.stringify(obj2);
+  }
+  str2 = "jpg";
+  if (null != window.GLOBAL_ENV.CDN_HOST) {
+    let str4 = "png";
+    if (flag) {
+      str4 = "png";
+      if (AvatarUtils.SUPPORTS_WEBP) {
+        str4 = "webp";
+      }
+    }
+    str2 = str4;
+  }
+}
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
+
+export const getImageFormat = function getImageFormat(canAnimate) {
+  let flag = canAnimate.canAnimate;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let flag2 = canAnimate.allowWebp;
+  if (flag2 === undefined) {
+    flag2 = true;
+  }
+  if (flag) {
+    if (obj.isAnimatedIconHash(canAnimate.storageHash)) {
+      let str5 = "gif";
+      if (flag2) {
+        str5 = "gif";
+        if (AvatarUtils.SUPPORTS_WEBP) {
+          str5 = "webp";
+        }
+      }
+      let str = str5;
+    }
+    return str;
+  }
+  str = "jpg";
+  if (null != window.GLOBAL_ENV.CDN_HOST) {
+    let str3 = "png";
+    if (flag2) {
+      str3 = "png";
+      if (AvatarUtils.SUPPORTS_WEBP) {
+        str3 = "webp";
+      }
+    }
+    str = str3;
+  }
+};
+export { getArchivedAvatarURL };
+export const generateAvatarDescription = function generateAvatarDescription(arg0) {
+  let obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
+  ({ filename, assetOrigin } = obj);
+  if (undefined === assetOrigin) {
+    assetOrigin = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
+  }
+  if (assetOrigin !== ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+    if (filename == null) {
+      const intl = tmp3(1114).intl;
+      filename = intl.string(tmp3(1114).t.lqaIxI);
+    }
+    const _Date = Date;
+    const date = new Date();
+    const intl2 = tmp3(1114).intl;
+    if (assetOrigin === tmp3(7092).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+      let DYil93 = tmp3(1114).t.eC2sZi;
+    } else {
+      DYil93 = tmp3(1114).t.DYil93;
+    }
+    const obj2 = { name: filename, dateTime: date.toLocaleString(tmp3(1114).intl.currentLocale, { year: "numeric", day: "numeric", month: "long", hour: "numeric", minute: "numeric" }) };
+    return intl2.formatToPlainString(DYil93, obj2);
+  }
+};
+export const generateRecentAvatarFileDetails = function generateRecentAvatarFileDetails(storageHash, arg1) {
+  let flag = AvatarUtils.SUPPORTS_WEBP;
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (tmpResult.isAnimatedIconHash(storageHash)) {
+    let str5 = "gif";
+    if (flag) {
+      str5 = "gif";
+      if (tmp(1396).SUPPORTS_WEBP) {
+        str5 = "webp";
+      }
+    }
+    let str = str5;
+  } else {
+    const _window = window;
+    str = "jpg";
+    if (null != window.GLOBAL_ENV.CDN_HOST) {
+      let str3 = "png";
+      if (flag) {
+        str3 = "png";
+        if (tmp(1396).SUPPORTS_WEBP) {
+          str3 = "webp";
+        }
+      }
+      str = str3;
+    }
+  }
+  if (null == arg1) {
+    const intl = tmp(1114).intl;
+    let stringResult = intl.string(tmp(1114).t.lqaIxI);
+  } else {
+    stringResult = arg1.split(",")[0];
+  }
+  const obj = { filename: "" + stringResult + "." + str, type: null };
+  if ("gif" === str) {
+    let str9 = "image/gif";
+  } else if ("png" === str) {
+    str9 = "image/png";
+  } else if ("jpg" === str) {
+    str9 = "image/jpeg";
+  } else {
+    str9 = "image/webp";
+    if ("webp" !== str) {
+      tmp(1369).assertNever(str);
+      const tmpResult2 = tmp(1369);
+    }
+  }
+  obj.type = str9;
+  return obj;
+};
+export const getPendingAvatarSrc = function getPendingAvatarSrc(canAnimate) {
+  ({ userId, image, size } = canAnimate);
+  if (size === undefined) {
+    size = 80;
+  }
+  let flag = canAnimate.canAnimate;
+  if (flag === undefined) {
+    flag = true;
+  }
+  let tmp = image;
+  if (null != image) {
+    tmp = image;
+    if (typeof image !== "string") {
+      if (image.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+        const obj = { userId, avatarId: null, storageHash: null, size: null, canAnimate: null };
+        userId = image.originalAsset.id;
+        obj.avatarId = userId;
+        image = image.originalAsset.storageHash;
+        obj.storageHash = image;
+        obj.size = size;
+        obj.canAnimate = flag;
+        let imageUri = getArchivedAvatarURL(obj);
+      } else if (flag) {
+        imageUri = image.imageUri;
+      } else {
+        imageUri = image.staticImageUri;
+        if (imageUri == null) {
+          imageUri = image.imageUri;
+        }
+      }
+    }
+  }
+  return tmp;
+};

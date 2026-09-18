@@ -1,0 +1,50 @@
+// Module ID: 12357
+// Function ID: 12358
+// Name: MessageBlock
+// Dependencies: [19, 17, 21, 576, 4636, 1176, 2]
+// Exports: default
+
+// Module 12357 (MessageBlock)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1176 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const MessageBlockColors = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
+const createStyles = fn(4636);
+let closure_6 = createStyles.createStyles((arg0) => {
+  if (obj.RED === arg0) {
+    obj = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
+    let tmp2 = obj;
+  } else if (tmp.YELLOW === arg0) {
+    const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
+    tmp2 = obj2;
+  }
+  const obj3 = { container: null, text: null };
+  const obj4 = {};
+  const merged = Object.assign(tmp2);
+  obj4.alignItems = "center";
+  obj4.borderRadius = nativeDefault.radii.xs;
+  obj4.borderWidth = 1;
+  obj4.padding = 8;
+  obj4.width = "100%";
+  obj3.container = obj4;
+  if (obj.RED === arg0) {
+    let TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_CRITICAL;
+  } else if (tmp.YELLOW === arg0) {
+    TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_WARNING;
+  }
+  obj3.text = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
+  return obj3;
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
+
+export default function MessageBlock(children) {
+  const tmp = closure_6(children.color);
+  const obj = { style: tmp.container, children: jsx(native.LegacyText, { style: tmp.text, children: children.children }) };
+  return <View style={tmp.container}>{jsx(native.LegacyText, { style: tmp.text, children: arg0.children })}</View>;
+};
+export { MessageBlockColors };

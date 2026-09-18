@@ -1,0 +1,79 @@
+// Module ID: 15916
+// Function ID: 15917
+// Name: VisibilitySensor
+// Dependencies: [19, 17, 21, 1477, 2]
+// Exports: default
+
+// Module 15916 (VisibilitySensor)
+import _mod17 from "module_17" /* 17 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import noop_mod from "module_19" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import size from "module_2" /* 2 */;
+
+let noop = noop_mod;
+({ useEffect: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+const View = _mod17.View;
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+
+export default function _default(onChange) {
+  onChange = onChange.onChange;
+  function stopWatching() {
+    if (null !== ref.current) {
+      const _clearInterval = clearInterval;
+      clearInterval(tmp.current);
+      tmp.current = null;
+    }
+  }
+  ({ children, resetKey } = onChange);
+  let tmp = React3(null);
+  closure_1 = tmp;
+  closure_2 = React3(false);
+  const size = useWindowDimensionsDefault();
+  const width = size.width;
+  const height = size.height;
+  React3(null);
+  const items = [resetKey];
+  React2(() => {
+    closure_2.current = false;
+  }, items);
+  const items1 = [onChange];
+  const callback = noop.useCallback((arg0, arg1) => {
+    closure_0 = arg0;
+    if (null === arg1.current) {
+      const _setInterval = setInterval;
+      tmp.current = setInterval(() => {
+        if (null !== ref.current) {
+          const current = ref.current;
+          current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
+            let tmp = arg5 + arg3 > 0;
+            if (tmp) {
+              tmp = arg5 < ref;
+            }
+            if (tmp) {
+              tmp = arg4 < closure_1_0;
+            }
+            if (tmp) {
+              tmp = arg4 + arg2 > 0;
+            }
+            if (tmp !== ref2.current) {
+              ref2.current = tmp;
+              closure_0(tmp);
+            }
+          });
+        }
+      }, 1000);
+    }
+  }, items1);
+  const items2 = [callback, height, width];
+  React2(() => {
+    callback(width, height);
+    return stopWatching;
+  }, items2);
+  const obj = { collapsable: false, ref: tmp, children: null };
+  const items3 = [children, timestampProducer(View, {})];
+  obj.children = items3;
+  return React5(View, obj);
+};

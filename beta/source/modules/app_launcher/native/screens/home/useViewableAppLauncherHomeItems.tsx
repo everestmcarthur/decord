@@ -1,0 +1,60 @@
+// Module ID: 12220
+// Function ID: 12221
+// Name: useViewableAppLauncherHomeItems
+// Dependencies: [19, 9538, 4373, 12221, 8894, 1248, 2]
+// Exports: useViewableAppLauncherHomeItems
+
+// Module 12220 (useViewableAppLauncherHomeItems)
+import noop from "module_19" /* 19 */;
+import AppLauncherStore from "AppLauncherStore" /* 9538 */;
+
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
+
+export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHomeItems() {
+  sharedValue = sharedValue(sharedValue1[2]).useSharedValue(false);
+  let obj = sharedValue(sharedValue1[2]);
+  sharedValue1 = sharedValue(sharedValue1[2]).useSharedValue(false);
+  ref = ref.useRef({});
+  const obj3 = { handleViewableItemsChanged: null, hasViewedActivityItem: sharedValue, hasViewedLearnMoreItem: sharedValue1 };
+  const items = [sharedValue, sharedValue1, ref];
+  obj3.handleViewableItemsChanged = ref.useCallback((viewableItems) => {
+    viewableItems = viewableItems.viewableItems;
+    let item = viewableItems.forEach((item) => {
+      item = item.item;
+      value = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.SHELF_ITEM;
+      if (!value) {
+        value = closure_1_0.get();
+      }
+      if (!value) {
+        const result = closure_1_0.set(true);
+      }
+      value2 = item.type !== tmp(tmp2[3]).AppLauncherHomeListItemType.LEARN_MORE;
+      if (!value2) {
+        value2 = closure_1_1.get();
+      }
+      if (!value2) {
+        const result1 = closure_1_1.set(true);
+      }
+      let tmp11 = item.type !== tmp(tmp2[3]).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
+      if (tmp11) {
+        tmp11 = item.type !== tmp(tmp2[3]).AppLauncherHomeListItemType.SECTION_HEADER;
+      }
+      if (!tmp11) {
+        tmp11 = null != ref.current[item.sectionName];
+      }
+      if (!tmp11) {
+        ref.current[item.sectionName] = true;
+        const obj = { type: tmp(tmp2[5]).ImpressionTypes.VIEW, name: tmp(tmp2[5]).ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
+        const obj2 = { section_name: null, num_items: null, num_visible_items: null, source: null };
+        ({ sectionName: obj3.section_name, numItems: obj3.num_items, numVisibleItems: obj3.num_visible_items } = item);
+        obj2.source = AppLauncherStore.entrypoint();
+        obj.properties = obj2;
+        tmp(tmp2[4]).trackImpression(obj);
+        const tmpResult = tmp(tmp2[4]);
+      }
+    });
+  }, items);
+  return obj3;
+};

@@ -1,0 +1,63 @@
+// Module ID: 8190
+// Function ID: 8191
+// Name: EphemeralIndication
+// Dependencies: [8042, 1074, 8191, 1114, 2024, 2]
+// Exports: createEphemeralIndication
+
+// Module 8190 (EphemeralIndication)
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8191 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8042 */;
+
+require = fn;
+const Constants = fn(1074);
+({ HelpdeskArticles: closure_4, MessageFlags: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");
+
+export const createEphemeralIndication = function createEphemeralIndication(message) {
+  if (message.hasFlag(constants2.EPHEMERAL)) {
+    const interactionMetadata = message.interactionMetadata;
+    let ephemerality_reason;
+    if (interactionMetadata != null) {
+      ephemerality_reason = interactionMetadata.ephemerality_reason;
+    }
+    if (null != ephemerality_reason) {
+      const interactionMetadata2 = message.interactionMetadata;
+      let ephemerality_reason1;
+      if (interactionMetadata2 != null) {
+        ephemerality_reason1 = interactionMetadata2.ephemerality_reason;
+      }
+      const obj = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
+      const ephemeralReasonMessage = ApplicationCommandUserAppUtils.getEphemeralReasonMessage(ephemerality_reason1);
+      const intl2 = tmp3(1114).intl;
+      const obj3 = { handleDelete: null, reason: null };
+      const obj4 = { action: "bindDismissMessage", message };
+      obj3.handleDelete = obj4;
+      obj3.reason = ephemeralReasonMessage;
+      obj.content = intl2.formatToParts(util.t.xgCMRQ, obj3);
+      obj.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.USING_APPS_FAQ);
+      const intl3 = tmp3(1114).intl;
+      obj.helpButtonAccessibilityLabel = intl3.string(util.t.OIWSJe);
+      return obj;
+    } else {
+      const obj5 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
+      const intl4 = util.intl;
+      const obj7 = { count: 1, countMessages: 1, handleDelete: null };
+      const obj8 = { action: "bindDismissMessage", message };
+      obj7.handleDelete = obj8;
+      obj5.content = intl4.formatToParts(util.t.uX3ecL, obj7);
+      obj5.helpArticleLink = HelpdeskUtilsDefault.getAppsSupportURL(constants.EPHEMERAL_MESSAGES);
+      const intl5 = util.intl;
+      obj5.helpButtonAccessibilityLabel = intl5.string(util.t.htHOrp);
+      if (null != GuildAutomodMessageStore.getMessage(message.id)) {
+        obj5.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
+        const intl = tmp9(1114).intl;
+        obj5.helpButtonAccessibilityLabel = intl.string(tmp9(1114).t.OiCBhP);
+        const tmp11Result = HelpdeskUtilsDefault;
+      }
+      return obj5;
+    }
+  }
+};

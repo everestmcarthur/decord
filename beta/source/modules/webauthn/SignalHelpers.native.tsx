@@ -1,0 +1,203 @@
+// Module ID: 6699
+// Function ID: 6700
+// Name: SignalHelpers
+// Dependencies: [5, 17, 3, 6700, 2]
+
+// Module 6699 (SignalHelpers)
+import LoggerDefault from "Logger" /* 3 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+const require = fn;
+const NativeModules = fn(17).NativeModules;
+let closure_4 = new LoggerDefault("SignalHelpers.native");
+const prototype = function SignalHelpers() {
+  return Object.create(new.target.prototype);
+}.prototype;
+prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredentials(credentials, id) {
+  closure_0 = credentials;
+  closure_1 = id;
+  return (async (arg0, value) => {
+    if (credentials === 2) {
+      credentials = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        credentials = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            credentials = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            credentials = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (undefined !== NativeModules.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
+            const result = credentials(c1[3]).encodeUserIdForWebAuthn(closure_1);
+            const mapped = credentials.map((cred_id) => cred_id.cred_id);
+            const found = mapped.filter((item) => "" !== item);
+            const obj5 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
+            logger.info("signalAllAcceptedCredentials", obj5);
+            const DCDSecurityKeyManager = tmp19.DCDSecurityKeyManager;
+            const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(rpId, result, found);
+            c1 = 1;
+            credentials = 1;
+            const obj6 = { value: result1.catch(logger.warn), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          credentials = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          credentials = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        credentials = 3;
+        return { value: "HermesInternal", done: null };
+      } catch (tmp14) {
+        credentials = tmp;
+        throw tmp14;
+      }
+    }
+  })();
+};
+prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) {
+  closure_0 = user;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (undefined !== c3.DCDSecurityKeyManager.signalCurrentUserDetails) {
+            const result = username(global_name[3]).encodeUserIdForWebAuthn(username.id);
+            const email = username.email;
+            global_name = email;
+            if (email == null) {
+              global_name = tmp7.global_name;
+            }
+            username = global_name;
+            if (global_name == null) {
+              username = tmp7.username;
+            }
+            username = tmp7.username;
+            const obj5 = { rpId, encodedId: result, name: username, displayName: username };
+            logger.info("signalCurrentUserDetails", obj5);
+            const DCDSecurityKeyManager = tmp25.DCDSecurityKeyManager;
+            const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(rpId, result, username, username);
+            c3 = 1;
+            c2 = 1;
+            const obj6 = { value: result1.catch(logger.warn), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c2 = 3;
+        return { value: "HermesInternal", done: null };
+      } catch (tmp20) {
+        c2 = tmp;
+        throw tmp20;
+      }
+    }
+  })();
+};
+prototype["signalUnknownCredential"] = function signalUnknownCredential(credential) {
+  closure_0 = credential;
+  return (async (arg0, value) => {
+    if (c0 === 2) {
+      c0 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c0 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let _catch = NativeModules;
+            if (undefined !== NativeModules.DCDSecurityKeyManager.signalUnknownCredential) {
+              let obj4 = closure_0;
+              if (typeof closure_0 === "string") {
+                const _JSON = JSON;
+                let cred_id = JSON.parse(obj4).id;
+              } else {
+                cred_id = obj4.cred_id;
+              }
+              obj4 = { rpId, credentialId: cred_id };
+              logger.info("signalUnknownCredential", obj4);
+              const DCDSecurityKeyManager = _catch.DCDSecurityKeyManager;
+              const result = DCDSecurityKeyManager.signalUnknownCredential(rpId, cred_id);
+              _catch = result.catch;
+              _catch(logger.warn);
+              c1 = 1;
+              c0 = 1;
+            }
+          }
+        } else if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c0 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c0 = 3;
+        return { value: "HermesInternal", done: null };
+      } catch (tmp10) {
+        c0 = tmp;
+        throw tmp10;
+      }
+    }
+  })();
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
+
+export default prototype;

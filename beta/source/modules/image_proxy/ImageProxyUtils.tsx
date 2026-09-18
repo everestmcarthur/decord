@@ -1,0 +1,93 @@
+// Module ID: 1929
+// Function ID: 1930
+// Name: ImageProxyUtils
+// Dependencies: [1930, 1430, 1365, 2]
+// Exports: getSizedImageAssetURL, isImageProxyURL
+
+// Module 1929 (ImageProxyUtils)
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import UrlHostUtils from "UrlHostUtils" /* 1930 */;
+import size from "module_2" /* 2 */;
+
+function getSizedImageProxyURL(value, size) {
+  const str = URLUtilsDefault.toURLSafe(value);
+  if (null != str) {
+    let startsWithResult = set.has(str.hostname);
+    if (startsWithResult) {
+      const pathname = str.pathname;
+      startsWithResult = pathname.startsWith("/external/");
+    }
+    if (startsWithResult) {
+      if (null != size.size) {
+        const _String = String;
+        const obj2 = ImageLoaderUtils;
+        const StringResult = String(obj2.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio()));
+        const searchParams = str.searchParams;
+        const result = searchParams.set("width", StringResult);
+        const searchParams2 = str.searchParams;
+        const result1 = searchParams2.set("height", StringResult);
+      }
+      ({ keepAspectRatio, format } = size);
+      if (null != keepAspectRatio) {
+        const searchParams3 = str.searchParams;
+        const _String2 = String;
+        const result2 = searchParams3.set("keep_aspect_ratio", String(keepAspectRatio));
+      }
+      if (null != format) {
+        const searchParams4 = str.searchParams;
+        const result3 = searchParams4.set("format", format);
+      }
+      return str.toString();
+    }
+  }
+  return value;
+}
+let parts;
+if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {
+  parts = str.split(",");
+}
+if (parts == null) {
+  parts = [];
+}
+function isImageProxyURL(hostname) {
+  let startsWithResult = set.has(hostname.hostname);
+  if (startsWithResult) {
+    const pathname = hostname.pathname;
+    startsWithResult = pathname.startsWith("/external/");
+  }
+  return startsWithResult;
+}
+const mapped = parts.map((item) => item.substring(2));
+const mapped1 = mapped.map(UrlHostUtils.getHostWithoutPort);
+const set = new Set(mapped1.filter(Boolean));
+let result = size.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
+
+export { isImageProxyURL };
+export { getSizedImageProxyURL };
+export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size) {
+  const str = URLUtilsDefault.toURLSafe(value);
+  if (null == str) {
+    return value;
+  } else {
+    let startsWithResult = set.has(str.hostname);
+    if (startsWithResult) {
+      const pathname = str.pathname;
+      startsWithResult = pathname.startsWith("/external/");
+    }
+    if (startsWithResult) {
+      let str1 = getSizedImageProxyURL(value, size);
+    } else {
+      if (tmpResult.isDiscordCdnUrl(value)) {
+        if (null != size.size) {
+          const searchParams = str.searchParams;
+          const _String = String;
+          const obj3 = ImageLoaderUtils;
+          const result = searchParams.set("size", String(obj3.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio())));
+        }
+        str1 = str.toString();
+      }
+      tmpResult = URLUtilsDefault;
+    }
+  }
+};

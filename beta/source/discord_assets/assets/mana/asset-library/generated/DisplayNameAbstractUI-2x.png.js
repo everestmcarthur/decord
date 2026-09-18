@@ -1,0 +1,11 @@
+// Module ID: 6023
+// Function ID: 6024
+// Dependencies: [2]
+
+// Module 6023
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisplayNameAbstractUI-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/0b8398abcf7d8170e53a1119938dec5ca2eddcf6474981a022a1255f182eb7df.png";
+export const metadata = { fileBytes: 18110 };

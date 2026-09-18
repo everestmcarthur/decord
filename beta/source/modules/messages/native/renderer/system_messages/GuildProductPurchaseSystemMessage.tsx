@@ -1,0 +1,68 @@
+// Module ID: 8129
+// Function ID: 8130
+// Name: GuildProductPurchaseSystemMessage
+// Dependencies: [4286, 1957, 1074, 4869, 8064, 1399, 1396, 8098, 8066, 1114, 8068, 2]
+// Exports: createGuildProductPurchaseSystemMessage
+
+// Module 8129 (GuildProductPurchaseSystemMessage)
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
+import useMessageAuthor from "useMessageAuthor" /* 4869 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
+import MessageRecord from "MessageRecord" /* 4286 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+
+require = fn;
+const MessageTypes = fn(1074).MessageTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
+
+export const createGuildProductPurchaseSystemMessage = function createGuildProductPurchaseSystemMessage(message) {
+  const obj = {};
+  const merged = Object.assign(message);
+  obj.message = new MessageRecord(message.message);
+  obj.message.type = MessageTypes.ROLE_SUBSCRIPTION_PURCHASE;
+  const purchaseNotification = obj.message.purchaseNotification;
+  let product_name;
+  if (purchaseNotification != null) {
+    const guild_product_purchase = purchaseNotification.guild_product_purchase;
+    if (guild_product_purchase != null) {
+      product_name = guild_product_purchase.product_name;
+    }
+  }
+  if (null == product_name) {
+    return null;
+  } else {
+    message = obj.message;
+    const author = message.author;
+    const channel = ChannelStore.getChannel(message.getChannelId());
+    if (channel != null) {
+      const guildId = channel.getGuildId();
+    }
+    const guildMemberAvatar = useMessageAuthor.getMessageAuthor(message).guildMemberAvatar;
+    const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+    utils_AvatarUtils;
+    if (null != guildMemberAvatar) {
+      if (null != guildId) {
+        const obj4 = { userId: author.id, avatar: guildMemberAvatar, guildId };
+        let guildMemberAvatarSource = tmp5(1396).getGuildMemberAvatarSource(obj4, author);
+        const tmp5Result = tmp5(1396);
+      }
+      const obj5 = { content: null, totalMonthsSubscribed: 0, username: null, avatarURL: null, welcomeLabel: null };
+      const tmp9Result = tmp9(guildMemberAvatarSource);
+      const obj6 = { username: messageAuthorWithProcessedColor.nick, usernameOnClickHandler: null, productName: null };
+      const obj7 = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
+      obj6.usernameOnClickHandler = formatUsernameOnClickDefault(obj7);
+      obj6.productName = product_name;
+      obj5.content = tmp5(8098).getGuildProductPurchaseSystemMessageContentMobile(obj6);
+      obj5.username = messageAuthorWithProcessedColor.nick;
+      obj5.avatarURL = tmp9Result.uri;
+      const intl = tmp5(1114).intl;
+      obj5.welcomeLabel = intl.string(tmp5(1114).t.s2N5HS);
+      const merged1 = Object.assign(createCommonMessageDefault(obj));
+      return obj5;
+    }
+    guildMemberAvatarSource = author.getAvatarSource(undefined);
+  }
+};

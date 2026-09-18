@@ -1,0 +1,205 @@
+// Module ID: 1215
+// Function ID: 1216
+// Name: timestamp
+// Dependencies: [32, 1186, 2]
+
+// Module 1215 (timestamp)
+import _mod1186 from "module_1186" /* 1186 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+require = fn;
+const MessageType = fn(1186).MessageType;
+class Timestamp$Type extends MessageType {
+  constructor() {
+    items = [, ];
+    items[0] = { no: 1, name: "seconds", kind: "scalar", T: 3 };
+    items[1] = { no: 2, name: "nanos", kind: "scalar", T: 5 };
+    tmp1 = new tmp("google.protobuf.Timestamp", items, new.target);
+    return tmp1;
+  }
+}
+const prototype = Timestamp$Type.prototype;
+prototype["now"] = function now() {
+  const obj = this.create();
+  const timestamp = Date.now();
+  const PbLong = _mod1186.PbLong;
+  obj.seconds = PbLong.from(Math.floor(timestamp / 1000)).toString();
+  obj.nanos = timestamp % 1000 * 1000000;
+  return obj;
+};
+prototype["toDate"] = function toDate(seconds) {
+  const PbLong = _mod1186.PbLong;
+  const result = 1000 * PbLong.from(seconds.seconds).toNumber();
+  const fromResult = PbLong.from(seconds.seconds);
+  return new Date(result + Math.ceil(seconds.nanos / 1000000));
+};
+prototype["fromDate"] = function fromDate(getTime) {
+  const obj = this.create();
+  const time = getTime.getTime();
+  const PbLong = _mod1186.PbLong;
+  obj.seconds = PbLong.from(Math.floor(time / 1000)).toString();
+  obj.nanos = time % 1000 * 1000000;
+  return obj;
+};
+prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
+  const PbLong = _mod1186.PbLong;
+  const result = 1000 * PbLong.from(seconds.seconds).toNumber();
+  if (result >= Date.parse("0001-01-01T00:00:00Z")) {
+    const _Date2 = Date;
+    if (result <= Date.parse("9999-12-31T23:59:59Z")) {
+      if (seconds.nanos < 0) {
+        const _Error = Error;
+        const error = new Error("Unable to encode invalid Timestamp to JSON. Nanos must not be negative.");
+        throw error;
+      } else if (seconds.nanos <= 0) {
+        const _Date = Date;
+        const date = new Date(result);
+        return date.toISOString().replace(".000Z", "Z");
+      } else {
+        let str3 = seconds.nanos + 1000000000.toString().substring(1);
+        if ("000000" === str3.substring(3)) {
+          str3 = str3.substring(0, 3);
+          let text = `${"." + str3}Z`;
+        } else if ("000" === str3.substring(6)) {
+          text = `${"." + str3.substring(0, 6)}Z`;
+        } else {
+          text = `${"." + str3}Z`;
+        }
+        const str = seconds.nanos + 1000000000;
+        const str2 = seconds.nanos + 1000000000.toString();
+      }
+    }
+  }
+  const error1 = new Error("Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.");
+  throw error1;
+};
+prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
+  if (typeof str !== "string") {
+    const _Error3 = Error;
+    const error = new Error("Unable to parse Timestamp from JSON " + _mod1186.typeofJsonValue(str) + ".");
+    throw error;
+  } else {
+    const match = str.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
+    if (match) {
+      let str5 = "Z";
+      const text = `${tmp26[1]}-${tmp26[2]}-${tmp26[3]}T${tmp26[4]}:${tmp26[5]}:${tmp26[6]}`;
+      if (match[8]) {
+        str5 = match[8];
+      }
+      const parsed = Date.parse(text + str5);
+      const _Number = Number;
+      if (Number.isNaN(parsed)) {
+        const _Error2 = Error;
+        const error1 = new Error("Unable to parse Timestamp from JSON. Invalid value.");
+        throw error1;
+      } else {
+        const _Date = Date;
+        if (parsed >= Date.parse("0001-01-01T00:00:00Z")) {
+          const _Date2 = Date;
+          if (parsed <= Date.parse("9999-12-31T23:59:59Z")) {
+            let obj2 = arg2;
+            if (!arg2) {
+              const self = this;
+              obj2 = this.create();
+            }
+            const PbLong = _mod1186.PbLong;
+            obj2.seconds = PbLong.from(parsed / 1000).toString();
+            obj2.nanos = 0;
+            if (match[7]) {
+              const _parseInt = parseInt;
+              const repeat = "0".repeat;
+              const text1 = `1${tmp26[7]}`;
+              obj2.nanos = parseInt(`1${tmp26[7]}` + "0".repeat(9 - match[7].length)) - 1000000000;
+            }
+            return obj2;
+          }
+        }
+        const _globalThis = globalThis;
+        const error2 = new Error("Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.");
+        throw error2;
+      }
+    } else {
+      const _Error = Error;
+      const error3 = new Error("Unable to parse Timestamp from JSON. Invalid format.");
+      throw error3;
+    }
+  }
+};
+prototype["create"] = function create(arr) {
+  const obj = { seconds: "0", nanos: 0 };
+  const _Object = Object;
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  if (undefined !== arr) {
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
+  }
+  return obj;
+};
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+  const self = this;
+  let obj = arg3;
+  if (arg3 == null) {
+    obj = self.create();
+  }
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    do {
+      let tmp4 = _slicedToArray(pos.tag(), 2);
+      [tmp5, tmp6] = tmp4;
+      if (1 === tmp5) {
+        let str4 = pos.int64();
+        obj.seconds = str4.toString();
+      } else if (2 === tmp5) {
+        obj.nanos = pos.int32();
+      } else {
+        let onRead = readUnknownField.readUnknownField;
+        if ("throw" === onRead) {
+          let tmp15 = globalThis;
+          let _globalThis = globalThis;
+          let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp18 = new.target;
+          let tmp19 = new.target;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          throw error;
+        } else {
+          let skipResult = pos.skip(tmp6);
+          if (false !== onRead) {
+            if (true === onRead) {
+              onRead = _mod1186.UnknownFieldHandler.onRead;
+            }
+            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
+          }
+        }
+      }
+    } while (pos.pos < sum);
+  }
+  return obj;
+};
+prototype["internalBinaryWrite"] = function internalBinaryWrite(seconds, tag, writeUnknownFields) {
+  if ("0" !== seconds.seconds) {
+    tag.tag(1, _mod1186.WireType.Varint).int64(seconds.seconds);
+    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+  }
+  if (0 !== seconds.nanos) {
+    tag.tag(2, _mod1186.WireType.Varint).int32(seconds.nanos);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
+  }
+  let onWrite = writeUnknownFields.writeUnknownFields;
+  if (false !== onWrite) {
+    if (1 == onWrite) {
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+    }
+    const self = this;
+    onWrite(this.typeName, seconds, tag);
+  }
+  return tag;
+};
+let items = [{ no: 1, name: "seconds", kind: "scalar", T: 3 }, { no: 2, name: "nanos", kind: "scalar", T: 5 }];
+const prototype1 = new prototype("google.protobuf.Timestamp", items, tmp, Timestamp$Type, prototype, items, fn);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/timestamp.tsx");
+
+export const Timestamp = prototype1;

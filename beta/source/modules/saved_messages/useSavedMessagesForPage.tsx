@@ -1,0 +1,112 @@
+// Module ID: 13418
+// Function ID: 13419
+// Name: useSavedMessagesForPage
+// Dependencies: [32, 19, 11793, 7963, 13419, 504, 1369, 2]
+// Exports: default
+
+// Module 13418 (useSavedMessagesForPage)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13419 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11793 */;
+
+require = fn;
+function getSavedMessagesForType(arg0) {
+  if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === arg0) {
+    return SavedMessagesStore.getMessageBookmarks();
+  } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === arg0) {
+    return SavedMessagesStore.getMessageReminders();
+  } else {
+    return SavedMessagesStore.getSavedMessages();
+  }
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/useSavedMessagesForPage.tsx");
+
+export default function useSavedMessagesForPage() {
+  let ALL = arg0;
+  if (arg0 === undefined) {
+    ALL = ALL(7963).SavedMessageSortTypes.ALL;
+  }
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [c1, c2] = noop.useState(() => {
+    if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
+      let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
+    } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
+      messageBookmarks = SavedMessagesStore.getMessageReminders();
+    } else {
+      messageBookmarks = SavedMessagesStore.getSavedMessages();
+    }
+    return messageBookmarks.map((saveData) => saveData.saveData);
+  });
+  _slicedToArray = noop.useRef(SavedMessagesStore.getIsStale());
+  let items = [ALL];
+  const effect = noop.useEffect(() => {
+    function handleChange() {
+      lastChanged = SavedMessagesStore.getLastChanged();
+      if (lastChanged !== lastChanged) {
+        if (ref.current) {
+          if (!obj.getIsStale()) {
+            tmp9.current = false;
+            if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
+              let messageBookmarks = obj.getMessageBookmarks();
+            } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
+              messageBookmarks = obj.getMessageReminders();
+            } else {
+              messageBookmarks = obj.getSavedMessages();
+            }
+            c2(messageBookmarks.map((saveData) => saveData.saveData));
+          }
+        }
+        c2((arg0) => {
+          let items = [...arg0];
+          const map = new Map(closure_2_6(lastChanged).map((saveData) => {
+            const items = [saveData.saveData.messageId, saveData];
+            return items;
+          }));
+          const iter = arg0[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp2 = nextResult;
+            if (map.has(nextResult.messageId)) {
+              let deleteResult = map.delete(tmp2.messageId);
+            } else {
+              let spliceResult = items.splice(items.indexOf(tmp2), 1);
+            }
+            continue;
+          }
+          const values = map.values();
+          for (const item10046 of values) {
+            let arr = items.push(item10046.saveData);
+            continue;
+          }
+          return items;
+        });
+      }
+    }
+    let lastChanged = SavedMessagesStore.getLastChanged();
+    SavedMessagesStore.addChangeListener(handleChange);
+    return () => {
+      SavedMessagesStore.removeChangeListener(handleChange);
+    };
+  }, items);
+  useRefreshSavedMessagesDefault();
+  let tmp3 = _slicedToArray(noop.useState(() => {
+    if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
+      let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
+    } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
+      messageBookmarks = SavedMessagesStore.getMessageReminders();
+    } else {
+      messageBookmarks = SavedMessagesStore.getSavedMessages();
+    }
+    return messageBookmarks.map((saveData) => saveData.saveData);
+  }), 2);
+  const items1 = [SavedMessagesStore];
+  return ALL(504).useStateFromStoresArray(items1, () => {
+    const mapped = _undefined.map((channelId) => savedMessage.getSavedMessage(channelId.channelId, channelId.messageId));
+    return mapped.filter(GlobalUtils.isNotNullish);
+  });
+};

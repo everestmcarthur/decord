@@ -1,0 +1,23 @@
+// Module ID: 9777
+// Function ID: 9778
+// Name: getIFrameSandboxAttributes
+// Dependencies: [2]
+// Exports: default
+
+// Module 9777 (getIFrameSandboxAttributes)
+import size from "module_2" /* 2 */;
+
+let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
+const result = size.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
+
+export default function getIFrameSandboxAttributes(allowPopups) {
+  let obj = closure_0;
+  if (allowPopups.allowPopups) {
+    const items = [, ];
+    const arraySpreadResult = HermesBuiltin.arraySpread(tmp, 0);
+    items[arraySpreadResult] = "allow-popups";
+    items[arraySpreadResult + 1] = "allow-popups-to-escape-sandbox";
+    obj = items;
+  }
+  return obj.join(" ");
+};
