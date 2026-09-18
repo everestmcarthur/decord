@@ -8,8 +8,7 @@ import { handleShellErr, join } from "../utils";
 
 const gzipWorkerURL = new URL("decompile-gzip.ts", import.meta.url).href;
 
-// generous cap so a hanging decompiler is aborted deterministically instead of wedging the job
-const DECOMPILE_TIMEOUT_MS = 20 * 60 * 1000;
+const DECOMPILE_TIMEOUT_MS = 60 * 60 * 1000;
 
 async function runDecompiler(cmd: string[], label: string) {
 	const proc = spawn({ cmd, stdout: "pipe", stderr: "pipe", stdin: "ignore" });
