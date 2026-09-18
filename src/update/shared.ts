@@ -1,21 +1,12 @@
-import { join } from "node:path";
-
 export const trackerUserAgent = "Themelings <https://github.com/nexpid/Themelings/>";
 export const maxDiffChanges = 20;
 
-export const workFolder = "tmp";
-export const apksFolder = join(workFolder, "apks");
-export const codePath = join(workFolder, "code.js");
-export const modulesPath = join(workFolder, "modules");
-export const modulePathsDest = join("..", "data", "module-paths.json");
 export const apkSplits = ["base", "config.hdpi", "config.xxhdpi"] as const;
 
 export const oprevFiles = ["source.jsonl", "raw.json", "semantic.json", "semantic_simple.json", "icons.json"] as const;
 export const prevFiles = new Map<(typeof oprevFiles)[number], ArrayBuffer>();
 
-export const version = await Bun.file("../data/version.txt").text();
-export const cuteVersion = `${["stable", "beta", "alpha"][Number(version[3])] ?? "version"} ${version.slice(0, 3)}.${Number(version.slice(-2))}`;
-
+export const force = process.argv.includes("--force");
 export const isMock = process.argv.includes("--mock");
 export const diffAnyway = process.argv.includes("--diff-anyway");
 export const commitAnyway = process.argv.includes("--commit-anyway");

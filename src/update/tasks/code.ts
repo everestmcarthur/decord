@@ -1,8 +1,9 @@
 import { mkdir, readdir, rm, stat } from "node:fs/promises";
 import { join as pathJoin } from "node:path";
+import type { ChannelContext } from "../channel";
 import { commit } from "../git";
 import type { Progress } from "../progress";
-import { commitAnyway, cuteVersion, modulePathsDest, modulesPath } from "../shared";
+import { commitAnyway } from "../shared";
 import { formatBytes, join, sortEntries } from "../utils";
 
 const MAX_FILE_SIZE = 100 * 1024 * 1024;
@@ -21,16 +22,16 @@ function sanitizePath(p: string): string {
 		.replace(/[<>:"|?*]/g, "_");
 }
 
-export default async function code(progress: Progress, _code: string[]) {
+export default async function code(channel: ChannelContext, progress: Progress, _code: string[]) {
 	progress.start("code_getting");
 
-	if (!(await stat(modulesPath).catch(() => false))) {
-		throw new Error(`Modules directory not found at ${modulesPath}`);
+	if (!(await stat(channel.modulesPath).catch(() => false))) {
+		throw new Error(`Modules directory not found at ${channel.modulesPath}`);
 	}
 
 	const modulePaths = new Map<number, string>();
 	try {
-		const arr: { id: number; path: string }[] = await Bun.file(modulePathsDest).json();
+		const arr: { id: number; path: string }[] = await Bun.file(channel.modulePathsDest).json();
 		for (const { id, path } of arr) modulePaths.set(id, path);
 		console.log(`Loaded ${modulePaths.size} module path mappings`);
 	} catch {
@@ -54,7 +55,7 @@ export default async function code(progress: Progress, _code: string[]) {
 		return files;
 	}
 
-	const rawFiles = await scanDir(modulesPath, modulesPath);
+	const rawFiles = await scanDir(channel.modulesPath, channel.modulesPath);
 
 	function classifyUnmapped(relativePath: string): string {
 		if (/^module_\d+\.js$/.test(relativePath)) return "__polyfill";
@@ -88,7 +89,7 @@ export default async function code(progress: Progress, _code: string[]) {
 	}
 
 	await Bun.write(
-		"../data/source.jsonl",
+		join(channel.dataDir, "source.jsonl"),
 		sortEntries([...files.entries()])
 			.map(([file, size]) => `{ "file": ${JSON.stringify(file)}, "size": ${size} }`)
 			.join("\n"),
@@ -99,7 +100,7 @@ export default async function code(progress: Progress, _code: string[]) {
 	if (process.env.NODE_ENV !== "test" && !commitAnyway) {
 		progress.start("code_remaking");
 
-		const filePrefix = "../data/source";
+		const filePrefix = join(channel.dataDir, "source");
 		await rm(filePrefix, { recursive: true, force: true });
 
 		await Promise.all(
@@ -107,7 +108,7 @@ export default async function code(progress: Progress, _code: string[]) {
 				if (fileSize > MAX_FILE_SIZE) return;
 				const dest = join(filePrefix, resolveDest(relativePath));
 				await mkdir(pathJoin(dest, ".."), { recursive: true });
-				await Bun.write(dest, Bun.file(join(modulesPath, relativePath)));
+				await Bun.write(dest, Bun.file(join(channel.modulesPath, relativePath)));
 			}),
 		);
 
@@ -119,9 +120,9 @@ export default async function code(progress: Progress, _code: string[]) {
 		if (skipped.length) console.warn(`Skipped ${skipped.length} file(s) >100MB (GitHub limit):\n${skipped.join("\n")}`);
 
 		const message = skipped.length
-			? `chore: update source for ${cuteVersion}\n\nSkipped ${skipped.length} file(s) >100MB (GitHub limit): ${skipped.join(", ")}`
-			: `chore: update source for ${cuteVersion}`;
-		await commit(["source.jsonl", "source/*"], message);
+			? `chore: update source for ${channel.cuteVersion}\n\nSkipped ${skipped.length} file(s) >100MB (GitHub limit): ${skipped.join(", ")}`
+			: `chore: update source for ${channel.cuteVersion}`;
+		await commit(["source.jsonl", "source/*"], message, channel.dataDir);
 		progress.update("code_pushing", true);
 	} else {
 		progress.update("code_remaking", null);

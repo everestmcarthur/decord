@@ -1,11 +1,10 @@
 import { exists } from "node:fs/promises";
 import { spawn } from "bun";
+import type { ChannelContext } from "../channel";
 import { commit } from "../git";
 import type { Progress } from "../progress";
-import { codePath, commitAnyway, cuteVersion, modulePathsDest, modulesPath, workFolder } from "../shared";
+import { commitAnyway } from "../shared";
 import { handleShellErr, join } from "../utils";
-
-const bundleDest = join("..", "data", "index.android.bundle");
 
 const gzipWorkerURL = new URL("decompile-gzip.ts", import.meta.url).href;
 
@@ -26,8 +25,9 @@ async function runDecompiler(cmd: string[], label: string) {
 	if (exitCode !== 0 && exitCode !== 11) throw new Error(`${label} failed (exit ${exitCode})\n${out}`.trim());
 }
 
-export default async function decompile(progress: Progress, pathToBundle: string) {
-	const pathToDecompiler = join(workFolder, "decompiler");
+export default async function decompile(channel: ChannelContext, progress: Progress, pathToBundle: string) {
+	// shared across all channels within a run (built once)
+	const pathToDecompiler = join("tmp", "decompiler");
 
 	progress.start("decompile_downloading");
 	if (!(await exists(pathToDecompiler))) {
@@ -47,18 +47,18 @@ export default async function decompile(progress: Progress, pathToBundle: string
 		await Bun.$`cargo build --release -p hbc-decomp-cli`.cwd(pathToDecompiler).quiet().nothrow().then(handleShellErr);
 	}
 
-	if (!(await Bun.file(codePath).exists())) {
-		await runDecompiler([decompilerBin, "decompile", pathToBundle, "--output", codePath], "decompile");
+	if (!(await Bun.file(channel.codePath).exists())) {
+		await runDecompiler([decompilerBin, "decompile", pathToBundle, "--output", channel.codePath], "decompile");
 	}
 
-	if (!(await exists(modulesPath))) {
-		await runDecompiler([decompilerBin, "extract", pathToBundle, "--output", modulesPath], "extract");
+	if (!(await exists(channel.modulesPath))) {
+		await runDecompiler([decompilerBin, "extract", pathToBundle, "--output", channel.modulesPath], "extract");
 	}
 
 	progress.update("decompile_decompiling", true);
 
 	progress.start("decompile_paths");
-	const codeJs = await Bun.file(codePath).text();
+	const codeJs = await Bun.file(channel.codePath).text();
 	const modulePaths: { id: number; path: string }[] = [];
 	const moduleSections = codeJs.split(/\/\/ === Module (\d+): .+ ===\n?/);
 	for (let i = 1; i < moduleSections.length; i += 2) {
@@ -67,13 +67,14 @@ export default async function decompile(progress: Progress, pathToBundle: string
 		const m = content.match(/fileFinishedImporting\("([^"]+)"\)/);
 		if (m) modulePaths.push({ id: modId, path: m[1] });
 	}
-	await Bun.write(modulePathsDest, JSON.stringify(modulePaths));
+	await Bun.write(channel.modulePathsDest, JSON.stringify(modulePaths));
 	console.log(`Extracted ${modulePaths.length} module paths`);
 	progress.update("decompile_paths", true);
 
 	if (process.env.NODE_ENV !== "test" && !commitAnyway) {
 		const gzFile = "code.js.gz";
 
+		const bundleDest = join("..", "data", channel.channel, "index.android.bundle");
 		await Bun.write(bundleDest, Bun.file(pathToBundle));
 
 		const gzipper = new Worker(gzipWorkerURL);
@@ -83,14 +84,15 @@ export default async function decompile(progress: Progress, pathToBundle: string
 			if (data === true) {
 				await commit(
 					[gzFile, "module-paths.json", "index.android.bundle"],
-					`chore: update decompiled code for ${cuteVersion}`,
+					`chore: update decompiled code for ${channel.cuteVersion}`,
+					channel.dataDir,
 				);
 				progress.update("decompile_gzip", true);
 			}
 			gzipper.terminate();
 			resolveGzip();
 		});
-		gzipper.postMessage({ path: codePath, target: join("../data", gzFile) });
+		gzipper.postMessage({ path: channel.codePath, target: join("../data", channel.channel, gzFile) });
 		return gzipDone;
 	}
 	progress.update("decompile_gzip", null);

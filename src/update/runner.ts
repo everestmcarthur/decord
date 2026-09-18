@@ -1,20 +1,20 @@
 import mock from "../mock";
 import type { Differs } from "../types";
+import type { ChannelContext } from "./channel";
 import { commit } from "./git";
 import { log, makeProgress, wrapPromise } from "./progress";
-import { apksFolder, codePath, cuteVersion, isMock, isQuiet, oprevFiles, prevFiles, version } from "./shared";
+import { isMock, isQuiet, oprevFiles, prevFiles } from "./shared";
 import codeTask from "./tasks/code";
 import colorsTask from "./tasks/colors";
 import decompile from "./tasks/decompile";
 import diffs from "./tasks/diffs";
-import { formatError, handleShellErr, join } from "./utils";
+import { formatError, join } from "./utils";
 
-export async function runTasks() {
-	log("\nRunning tasks...");
+export async function runTasks(channel: ChannelContext) {
+	log(`\nRunning tasks for ${channel.cuteVersion}...`);
 	const progress = makeProgress(
 		{
 			preinit: "Preinit",
-			preinit_discard: "Discarding changes",
 			preinit_save: "Caching original files",
 			decompile: "Decompilation",
 			decompile_downloading: "Downloading decompiler",
@@ -46,34 +46,10 @@ export async function runTasks() {
 		try {
 			progress.start("preinit");
 
-			progress.start("preinit_discard");
-			await Bun.$`git clean -f -- .update-skipped`
-				.cwd("../data")
-				.nothrow()
-				.quiet()
-				.catch(() => {});
-			await Bun.$`git reset --hard`.cwd("../data").nothrow().quiet().then(handleShellErr);
-			await Bun.write("../data/version.txt", version);
-			// canvas branch may not exist in test
-			await Bun.$`git reset --hard`
-				.cwd("../canvas")
-				.nothrow()
-				.quiet()
-				.then(() => {});
-			await Bun.write("../canvas/version.txt", version).catch(() => {});
-
-			await Bun.$`git restore --staged .`.cwd("../data").nothrow().quiet().then(handleShellErr);
-			await Bun.$`git restore --staged .`
-				.cwd("../canvas")
-				.nothrow()
-				.quiet()
-				.then(() => {});
-
-			progress.update("preinit_discard", true);
-
 			progress.start("preinit_save");
+			prevFiles.clear();
 			for (const oprev of oprevFiles) {
-				for (const base of ["../data", "../canvas"] as const) {
+				for (const base of [channel.dataDir, channel.canvasDir] as const) {
 					const file = Bun.file(join(base, oprev));
 					if (await file.exists()) {
 						prevFiles.set(oprev, await file.arrayBuffer());
@@ -85,12 +61,12 @@ export async function runTasks() {
 			progress.update("preinit", true);
 		} catch (e) {
 			progress.update("preinit", false);
-			throw new Error(`Failed to discard changes!\n${e}`);
+			throw new Error(`Failed to cache original files!\n${e}`);
 		}
 
 		try {
 			gzipDone = (await wrapPromise(
-				decompile(progress, join(apksFolder, "base", "assets", "index.android.bundle")),
+				decompile(channel, progress, join(channel.apksFolder, "base", "assets", "index.android.bundle")),
 				progress,
 				"decompile",
 			)) as Promise<void> | undefined;
@@ -98,30 +74,20 @@ export async function runTasks() {
 			const detail = (formatError(e) || String(e)).split("\n")[0];
 			console.warn(
 				`\nDecompile failed or timed out (${detail}).` +
-					`\nSkipping update for this release so the next run can retry.\n`,
+					`\nSkipping ${channel.channel} for this release so the next run can retry.\n`,
 			);
-			// restore version.txt so the next check sees the release as still pending and re-runs
-			await Bun.$`git checkout -- version.txt`
-				.cwd("../data")
-				.nothrow()
-				.quiet()
-				.catch(() => {});
-			await Bun.$`git checkout -- version.txt`
-				.cwd("../canvas")
-				.nothrow()
-				.quiet()
-				.catch(() => {});
-			// mark the run as skipped so the workflow won't publish/tag a release that never decompiled
-			await Bun.write("../data/.update-skipped", version).catch(() => {});
 			return;
 		}
 
-		const code = (await Bun.file(codePath).text()).replace(/\r/g, "").split("\n");
+		await Bun.write(join(channel.dataDir, "version.txt"), channel.version);
+		await Bun.write(join(channel.canvasDir, "version.txt"), channel.version).catch(() => {});
 
-		await wrapPromise(codeTask(progress, code), progress, "code");
+		const code = (await Bun.file(channel.codePath).text()).replace(/\r/g, "").split("\n");
+
+		await wrapPromise(codeTask(channel, progress, code), progress, "code");
 		if (progress.someFailed("code")) throw new Error(`Failed at parser tasks!\n${progress.prettyErrors("code")}`);
 		// colors is non-critical, run in background
-		wrapPromise(colorsTask(code), progress, "colors").catch((e) => {
+		wrapPromise(colorsTask(channel, code), progress, "colors").catch((e) => {
 			progress.update("colors", false, String(e));
 			console.warn("Colors task failed (non-critical):", e);
 		});
@@ -147,7 +113,7 @@ export async function runTasks() {
 			throw new Error(`Failed at the decompile gzip task!\n${progress.prettyErrors("decompile_gzip")}`);
 
 		try {
-			const result = await diffs(progress);
+			const result = await diffs(channel, progress);
 			if (result) {
 				differs = result;
 				progress.update("diff", true);
@@ -171,9 +137,9 @@ export async function runTasks() {
 		progress.update("webhook", null);
 	}
 
-	await commit(["version.txt"], `chore: bump app version to ${cuteVersion}`);
+	await commit(["version.txt"], `chore: bump app version to ${channel.cuteVersion}`, channel.dataDir);
 	// canvas version bump (if canvas checkout exists)
 	try {
-		await commit(["version.txt"], `chore: bump app version to ${cuteVersion}`, "../canvas");
+		await commit(["version.txt"], `chore: bump app version to ${channel.cuteVersion}`, channel.canvasDir);
 	} catch {}
 }

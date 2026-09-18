@@ -2,7 +2,6 @@
 	"name": "themelings",
 	"type": "module",
 	"scripts": {
-		"check": "bun run src/check.ts",
 		"update:test": "bun run --env-file local.env src/update/index.ts",
 		"update:commit": "bun run --env-file local.env src/update/index.ts --commit-anyway",
 		"update:mock": "bun run --env-file local.env src/update/index.ts --mock",

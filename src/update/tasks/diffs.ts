@@ -7,6 +7,7 @@ import {
 	type RawColors,
 	type SemanticColors,
 } from "../../types";
+import type { ChannelContext } from "../channel";
 import { fetchGitChanged, gitChanged } from "../git";
 import { type Progress, wrapPromise } from "../progress";
 import { diffAnyway, prevFiles } from "../shared";
@@ -100,11 +101,11 @@ function diffEntriesCode(
 	return changes;
 }
 
-async function diffRaw() {
+async function diffRaw(channel: ChannelContext) {
 	if (!prevFiles.has("raw.json")) throw new Error("Missing prevFile: raw.json");
 
 	const oldRaw = JSON.parse(new TextDecoder().decode(prevFiles.get("raw.json"))) as RawColors;
-	const newRaw: RawColors = await Bun.file(join("../canvas", "raw.json")).json();
+	const newRaw: RawColors = await Bun.file(join(channel.canvasDir, "raw.json")).json();
 
 	return diffEntries(oldRaw, newRaw, {
 		getSource: (_, val) => val,
@@ -122,11 +123,11 @@ function getSemanticLabel(semantic: Record<string, [string, unknown]>) {
 		.join(", ");
 }
 
-async function diffSemantic() {
+async function diffSemantic(channel: ChannelContext) {
 	if (!prevFiles.has("semantic.json")) throw new Error("Missing prevFile: semantic.json");
 
 	const oldSemantic = JSON.parse(new TextDecoder().decode(prevFiles.get("semantic.json"))) as SemanticColors;
-	const newSemantic: SemanticColors = await Bun.file(join("../canvas", "semantic.json")).json();
+	const newSemantic: SemanticColors = await Bun.file(join(channel.canvasDir, "semantic.json")).json();
 
 	const changes = diffEntries(oldSemantic, newSemantic, {
 		getSource: (_, val) =>
@@ -173,13 +174,16 @@ async function diffSemantic() {
 	return changes;
 }
 
-async function diffIcons() {
+async function diffIcons(channel: ChannelContext) {
 	if (!prevFiles.has("icons.json")) throw new Error("Missing prevFile: icons.json");
 
 	const oldIcons = JSON.parse(new TextDecoder().decode(prevFiles.get("icons.json"))) as Icons;
-	const newIcons: Icons = await Bun.file(join("../canvas", "icons.json")).json();
+	const newIcons: Icons = await Bun.file(join(channel.canvasDir, "icons.json")).json();
 
-	const iconDir = { old: join("../canvas", "oldicons"), new: join("../canvas", "icons") };
+	const iconDir = {
+		old: join(channel.canvasDir, "oldicons"),
+		new: join(channel.canvasDir, "icons"),
+	};
 
 	return diffEntries(oldIcons, newIcons, {
 		getSource: (_, val) => join(iconDir.new, val.file),
@@ -198,19 +202,23 @@ function parseSource(text: string) {
 	) as Record<string, { size: number; compSize: number }>;
 }
 
-async function diffCode() {
+async function diffCode(channel: ChannelContext) {
 	if (!prevFiles.has("source.jsonl")) throw new Error("Missing prevFile: source.jsonl");
 
 	const oldCode = parseSource(new TextDecoder().decode(prevFiles.get("source.jsonl")));
-	const newCode = parseSource(await Bun.file(join("../data", "source.jsonl")).text());
+	const newCode = parseSource(await Bun.file(join(channel.dataDir, "source.jsonl")).text());
 
 	return diffEntriesCode(oldCode, newCode);
 }
 
-export default async function diffs(progress: Progress) {
+export default async function diffs(channel: ChannelContext, progress: Progress) {
 	await fetchGitChanged();
 
-	if (!(gitChanged.has("version.txt") || diffAnyway)) {
+	const prefix = `${channel.channel}/`;
+	const changed = (name: string) => gitChanged.has(prefix + name);
+	const hasBaseline = (name: string) => prevFiles.has(name as typeof prevFiles extends Map<infer K, any> ? K : never);
+
+	if (!(changed("version.txt") || diffAnyway)) {
 		progress.update("diff", null);
 		progress.update("diff_raw", null);
 		progress.update("diff_semantic", null);
@@ -222,30 +230,30 @@ export default async function diffs(progress: Progress) {
 	const differs: Differs = { raw: new Map(), semantic: new Map(), icons: new Map(), code: new Map() };
 
 	await Promise.all([
-		gitChanged.has("raw.json")
+		changed("raw.json") && hasBaseline("raw.json")
 			? wrapPromise(
-					diffRaw().then((x) => (differs.raw = x)),
+					diffRaw(channel).then((x) => (differs.raw = x)),
 					progress,
 					"diff_raw",
 				)
 			: progress.update("diff_raw", null),
-		gitChanged.has("semantic.json")
+		changed("semantic.json") && hasBaseline("semantic.json")
 			? wrapPromise(
-					diffSemantic().then((x) => (differs.semantic = x)),
+					diffSemantic(channel).then((x) => (differs.semantic = x)),
 					progress,
 					"diff_semantic",
 				)
 			: progress.update("diff_semantic", null),
-		gitChanged.has("icons.json")
+		changed("icons.json") && hasBaseline("icons.json")
 			? wrapPromise(
-					diffIcons().then((x) => (differs.icons = x)),
+					diffIcons(channel).then((x) => (differs.icons = x)),
 					progress,
 					"diff_icons",
 				)
 			: progress.update("diff_icons", null),
-		gitChanged.has("source.jsonl")
+		changed("source.jsonl") && hasBaseline("source.jsonl")
 			? wrapPromise(
-					diffCode().then((x) => (differs.code = x)),
+					diffCode(channel).then((x) => (differs.code = x)),
 					progress,
 					"diff_code",
 				)

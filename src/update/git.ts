@@ -1,3 +1,4 @@
+import { channels } from "./channel";
 import { commitAnyway } from "./shared";
 import { handleShellErr } from "./utils";
 
@@ -15,7 +16,7 @@ export async function fetchGitChanged() {
 				.split("\x00")
 				.filter((x) => x !== "")
 				.map((x) => x.slice(3)))
-				if (changed) gitChanged.add(changed);
+				if (changed && channels.some((channel) => changed.startsWith(`${channel}/`))) gitChanged.add(changed);
 		} catch {}
 	}
 }
@@ -28,7 +29,7 @@ export async function commit(files: string[], message: string, cwd = "../data") 
 			await fetchGitChanged();
 		} else {
 			await Bun.$`git restore --staged .`.cwd(cwd).nothrow().quiet().then(handleShellErr);
-			if (cwd === "../data") await fetchGitChanged();
+			if (cwd === "../data" || cwd.startsWith("../data/")) await fetchGitChanged();
 			await Bun.$`git add ${{ raw: files.map((x) => Bun.$.escape(x)).join(" ") }}`
 				.cwd(cwd)
 				.nothrow()

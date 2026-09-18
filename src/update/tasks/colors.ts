@@ -1,9 +1,9 @@
 import { runInNewContext } from "node:vm";
 import Color, { type ColorInstance } from "color";
 import type { RawColors, SemanticColors } from "../../types";
+import type { ChannelContext } from "../channel";
 import { commit } from "../git";
-import { cuteVersion } from "../shared";
-import { sortObj } from "../utils";
+import { join, sortObj } from "../utils";
 
 function hex(color: ColorInstance) {
 	return (color.alpha() === 1 ? color.hex() : color.hexa()).toLowerCase();
@@ -97,17 +97,20 @@ export function convertSimpleSemantic(semantic: SemanticColors) {
 	return simpleSemantic;
 }
 
-export default async function colors(code: string[]) {
+export default async function colors(channel: ChannelContext, code: string[]) {
 	const raw = getInternalRawColors(code);
-	await Bun.write("../canvas/raw.json", JSON.stringify(sortObj(raw), null, 4));
+	await Bun.write(join(channel.canvasDir, "raw.json"), JSON.stringify(sortObj(raw), null, 4));
 
 	const semantic = getInternalSemanticColors(code, raw);
-	await Bun.write("../canvas/semantic.json", JSON.stringify(sortObj(semantic), null, 4));
-	await Bun.write("../canvas/semantic_simple.json", JSON.stringify(sortObj(convertSimpleSemantic(semantic)), null, 4));
+	await Bun.write(join(channel.canvasDir, "semantic.json"), JSON.stringify(sortObj(semantic), null, 4));
+	await Bun.write(
+		join(channel.canvasDir, "semantic_simple.json"),
+		JSON.stringify(sortObj(convertSimpleSemantic(semantic)), null, 4),
+	);
 
 	await commit(
 		["raw.json", "semantic.json", "semantic_simple.json"],
-		`chore: update colors for ${cuteVersion}`,
-		"../canvas",
+		`chore: update colors for ${channel.cuteVersion}`,
+		channel.canvasDir,
 	);
 }

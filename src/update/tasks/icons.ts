@@ -2,20 +2,16 @@ import { copyFile, mkdir, readdir, rename } from "node:fs/promises";
 import { basename } from "node:path";
 import { runInNewContext } from "node:vm";
 import type { Icons } from "../../types";
+import type { ChannelContext } from "../channel";
 import { commit } from "../git";
 import type { Progress } from "../progress";
-import { apkSplits, apksFolder, cuteVersion } from "../shared";
+import { apkSplits } from "../shared";
 import { discordPath, join, listRequiredDirs, sortObj } from "../utils";
 
 const infoObjRegex = /({.+?})/;
 const scalesArrayRegex = /(\[.+?\])/;
 
-// canvas branch stores icons
-const iconsJsonPath = "../canvas/icons.json";
-const iconsDir = "../canvas/icons";
-const oldIconsDir = "../canvas/oldicons";
-
-export async function parseAssets(code: string[]) {
+export async function parseAssets(channel: ChannelContext, code: string[]) {
 	const retrievedAssets: {
 		httpServerLocation: string;
 		width: number;
@@ -58,9 +54,11 @@ export async function parseAssets(code: string[]) {
 
 	const apkPaths = new Map<string, string>();
 	for (const split of apkSplits) {
-		const folder = join(apksFolder, split);
+		const folder = join(channel.apksFolder, split);
 		for (const path of await readdir(folder, { recursive: true })) apkPaths.set(basename(path), join(folder, path));
 	}
+
+	const iconsDir = join(channel.canvasDir, "icons");
 
 	const icons: Icons = {};
 	const toCopy: { from: string; to: string }[] = [];
@@ -95,21 +93,23 @@ export async function parseAssets(code: string[]) {
 	return { icons, toCopy };
 }
 
-export default async function icons(progress: Progress, code: string[]) {
+export default async function icons(channel: ChannelContext, progress: Progress, code: string[]) {
 	progress.start("icons_getting");
 
-	const { icons, toCopy } = await parseAssets(code);
-	await Bun.write(iconsJsonPath, JSON.stringify(sortObj(icons), undefined, 4));
+	const { icons, toCopy } = await parseAssets(channel, code);
+	await Bun.write(join(channel.canvasDir, "icons.json"), JSON.stringify(sortObj(icons), undefined, 4));
 	progress.update("icons_getting", true);
 
 	progress.start("icons_copying");
 
+	const iconsDir = join(channel.canvasDir, "icons");
+	const oldIconsDir = join(channel.canvasDir, "oldicons");
 	await rename(iconsDir, oldIconsDir).catch(() => {});
 	const dirs = listRequiredDirs(toCopy.map((x) => x.to));
 
 	await Promise.all(dirs.map((dir) => mkdir(dir, { recursive: true })));
 	await Promise.all(toCopy.map(({ from, to }) => copyFile(from, to)));
 
-	await commit(["icons.json", "icons"], `chore: update icons for ${cuteVersion}`, "../canvas");
+	await commit(["icons.json", "icons"], `chore: update icons for ${channel.cuteVersion}`, channel.canvasDir);
 	progress.update("icons_copying", true);
 }

@@ -11,7 +11,8 @@ import {
 import { drawSections } from "../../canvas";
 import { makeSections } from "../../canvas/factory";
 import { type CodeDiff, type Diff, type Differs, DiffType } from "../../types";
-import { cuteVersion, maxDiffChanges, version } from "../shared";
+import { ctx } from "../channel";
+import { maxDiffChanges } from "../shared";
 import { formatBytes, sortEntries } from "../utils";
 
 function fileBase(path: string, other?: string) {
@@ -143,7 +144,7 @@ async function sendWebhook(webhook: string, role: string, embeds: WebhookEmbed[]
 							components: [
 								{
 									type: ComponentType.TextDisplay,
-									content: `## ${title}\n-# ${version} (${cuteVersion})`,
+									content: `## ${title}\n-# ${ctx().version} (${ctx().cuteVersion})`,
 								},
 								...body.embed.map((content) => ({
 									type: ComponentType.TextDisplay,
